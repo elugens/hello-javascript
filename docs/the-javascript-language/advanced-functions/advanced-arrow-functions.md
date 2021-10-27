@@ -1,6 +1,6 @@
 ---
 title: Arrow Functions
-sidebar_position: 10
+sidebar_position: 11
 ---
 
 # Advanced - Arrow Functions - Q&A

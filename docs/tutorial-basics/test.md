@@ -7,15 +7,13 @@ description: How to implement live coding in Docusaurus
 
 ## Questions and Answers: Introduction
 
-### Introduction: WHAT IS JAVASCRIPT?
-
-**Question:** **What is JavaScript?**
+### WHAT IS JAVASCRIPT?
 
 **Interview Answer:** JavaScript is a high-level, dynamically typed, and interpreted scripting language used to create interactive effects in the browser or server.
 
 Source: <https://javascript.info/intro#what-is-javascript>
 
-**Question:** **What is the difference between a high-level and low-level programming language?**
+### What is the difference between a high and low level programming language?
 
 **Interview Answer:** When a language is high-level, it means it is built without requiring detailed knowledge of the underlying computer. For example, managing memory, knowing what processor is running, and keeping track of things like pointers are not necessary. High-level languages are easier to write and manage than low or mid-level programing languages, because they are platform independent.
 

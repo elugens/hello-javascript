@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Hello JavaScript',
+  title: 'PASS YOUR NEXT JAVASCRIPT INTERVIEW',
   tagline: 'The biggest archive of Javascript questions and answers online.',
   url: 'https://www.hellojavascript.info',
   baseUrl: '/',
