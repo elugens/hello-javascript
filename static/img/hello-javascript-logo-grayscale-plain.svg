@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 291.70311 45.640626"
+   height="172.5"
+   width="1102.5">
+  <defs
+     id="defs2" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(0,-251.35937)"
+     id="layer1">
+    <g
+       transform="translate(-3.8848303,83.928903)"
+       id="g3925">
+      <text
+         id="text165"
+         y="209.06195"
+         x="16.899845"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:35.32287979px;line-height:1.25;font-family:'Bebas Neue';-inkscape-font-specification:'Bebas Neue Bold';letter-spacing:0px;word-spacing:0px;fill:#303846;fill-opacity:1;stroke:none;stroke-width:0.18397333;"
+         xml:space="preserve"
+         transform="scale(1.03894,0.96251949)"><tspan
+           style="font-size:35.24436951px;fill:#303846;stroke-width:0.18397333;fill-opacity:1;"
+           y="209.06195"
+           x="16.899845"
+           id="tspan163">JS</tspan></text>
+      <text
+         id="text169"
+         y="208.97508"
+         x="56.504028"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:37.64071655px;line-height:1.25;font-family:'Bebas Neue';-inkscape-font-specification:'Bebas Neue Bold';letter-spacing:0px;word-spacing:0px;fill:#303846;fill-opacity:1;stroke:none;stroke-width:0.1960454;"
+         xml:space="preserve"
+         transform="scale(1.03894,0.96251949)"><tspan
+           style="font-size:37.55705643px;letter-spacing:0.34751001px;fill:#303846;stroke-width:0.1960454;fill-opacity:1;"
+           y="208.97508"
+           x="56.504028"
+           id="tspan167"><tspan
+   id="tspan4797"
+   style="fill:#000000">Hello</tspan>JavaScript</tspan></text>
+      <text
+         transform="scale(1.1523164,0.8678172)"
+         id="text173"
+         y="231.64972"
+         x="234.24042"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.85937309px;line-height:1.25;font-family:'Bebas Neue';-inkscape-font-specification:'Bebas Neue Bold';letter-spacing:0.34751004px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.05655923;"
+         xml:space="preserve"><tspan
+           dx="0"
+           style="letter-spacing:0.34751004px;fill:#000000;stroke-width:0.05655923;"
+           y="231.64972"
+           x="234.24042"
+           id="tspan171">.info?</tspan></text>
+      <path
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:2.62684751;stroke-opacity:1.0"
+         d="m 8.7721758,183.07251 a 21.323971,21.323971 0 0 1 20.0794492,-14.1457 21.323971,21.323971 0 0 1 21.323968,21.32397 v 0 A 21.323971,21.323971 0 0 1 28.851625,211.57475 21.323971,21.323971 0 0 1 8.2932321,195.91331"
+         id="path3910" />
+      <circle
+         style="opacity:1;fill:#303846;fill-opacity:1;stroke:none;stroke-width:0.10253484;stroke-opacity:1"
+         id="path3914"
+         cx="6.9667082"
+         cy="189.48335"
+         r="3.0276628" />
+    </g>
+  </g>
+</svg>
