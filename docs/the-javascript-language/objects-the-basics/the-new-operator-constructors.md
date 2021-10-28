@@ -4,3 +4,114 @@ sidebar_position: 5
 ---
 
 # Constructor, operator "new" - Q&A
+
+**Objects the Basics: CONSTRUCTOR, OPERATOR “NEW”**
+
+**Question:** **What is the difference between a regular function and a constructor function.**
+
+**Answer:** The conventional differences is the constructor function name is capitalized and it should be invoked with the “new” operator.
+
+Example:
+
+```js
+function User(name) {
+  this.name = name;
+
+  this.isAdmin = false;
+}
+
+let user = new User('Jack');
+
+alert(user.name); // Jack
+alert(user.isAdmin); // false
+```
+
+Source: <https://javascript.info/constructor-new#constructor-function>
+
+**Question:** **What steps are taken by a constructor function when it is invoked, in relation to the “this” keyword?**
+
+**Answer:** First, a new object is created and assigned to “this”, the function body executes. Usually it modifies “this”, adds new properties, and the value of this is returned.
+
+Example:
+
+```js
+function User(name) {
+  // this = {};  (implicitly)
+
+  // add properties to this
+
+  this.name = name;
+
+  this.isAdmin = false;
+
+  // return this;  (implicitly)
+}
+
+// So let user = new User("Jack") gives the same result as:
+
+let user = {
+  name: 'Jack',
+
+  isAdmin: false,
+};
+```
+
+Source: <https://javascript.info/constructor-new#constructor-function>
+
+**Question:** **What is the main purpose of constructor functions?**
+
+**Answer:** The main purpose of constructors is to act as the framework of an object creation. It quickly allows the code to create new objects in its image. All functions accept the arrow function can be used as a constructor.
+
+Source: <https://javascript.info/constructor-new#constructor-function>
+
+**Question:** **What is the result when you try to use an arrow function as a constructor?**
+
+**Answer:** Any attempt to resolve this in an arrow function will result in a type error. This is especially notable when you try to use an arrow function as a constructor. It will result in a type error. A cardinal rule to remember in JavaScript development is that arrow functions have no “THIS”.
+
+Example:
+
+```js
+const Car = (color) => {
+  this.color = color;
+};
+
+const redCar = new Car('red'); // TypeError: Car is not a constructor
+```
+
+Source: <https://javascript.info/constructor-new#constructor-function>
+
+**Question:** **Can you omit the parentheses when you invoke a constructor function?**
+
+**Answer:** Yes, it is technically possible when you have no arguments and permitted by the specification, but it is not considered a good style. You should always use the parentheses even when you have no arguments in your constructor.
+
+Example:
+
+```js
+let user = new User(); // <-- no parentheses
+// same as
+
+let user = new User(); // <-- proper implementation
+```
+
+Source: <https://javascript.info/constructor-new#return-from-constructors>
+
+**Question:** **What are the explicit rules on return statements in constructor functions?**
+
+**Answer:** Usually, constructors do not have a return statement. Their task is to write all necessary stuff into this, and it automatically becomes the result, but if there is a return statement, then the rule is simple.
+
+- If return is called with an object, then the object is returned instead of this.
+- If return is called with a primitive, it is ignored.
+
+Example:
+
+```js
+function BigUser() {
+  this.name = 'John';
+
+  return { name: 'Godzilla' }; // <-- returns this object
+}
+
+alert(new BigUser().name); // Godzilla, got that object
+```
+
+Source: <https://javascript.info/constructor-new#return-from-constructors>
