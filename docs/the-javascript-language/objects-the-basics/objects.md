@@ -7,7 +7,7 @@ sidebar_position: 1
 
 **Objects the Basics: OBJECTS**
 
-**Question:** **What are the seven (7) primitive JavaScript data types?**
+### What are the seven (7) primitive JavaScript data types?
 
 **Interview Answer:** String, symbol, bigint, Boolean, undefined, number, and null data types.
 
@@ -15,7 +15,7 @@ sidebar_position: 1
 
 Source: <https://developer.mozilla.org/en-US/docs/Glossary/Primitive>
 
-**Question:** **Are JavaScript primitive immutable or mutable?**
+### Are JavaScript primitive immutable or mutable?
 
 **Interview Answer:** All primitives are immutable, meaning that they cannot be altered.
 
@@ -45,7 +45,7 @@ bar = bar.toUpperCase(); // BAZ
 
 Source: <https://developer.mozilla.org/en-US/docs/Glossary/Primitive>
 
-**Question:** **What is the purpose of an Object in JavaScript?**
+### What is the purpose of an Object in JavaScript?
 
 **Interview Answer:** Objects are used to store keyed collections of various data and more complex entities.
 
@@ -64,7 +64,7 @@ let user = {
 
 Source: <https://javascript.info/object>
 
-**Question:** **What are the two ways to implement an empty Object?**
+### What are the two ways to implement an empty Object?
 
 **Interview Answer:** You can use an object constructor or an object literal.
 
@@ -79,7 +79,7 @@ let user = {}; // "object literal" syntax
 
 Source: <https://javascript.info/object#literals-and-properties>
 
-**Question:** **What is the delimitator that separates a key from the value in an Object?**
+### What is the delimitator that separates a key from the value in an Object?
 
 **Interview Answer:** The key value pair is separated by a semicolon.
 
@@ -96,13 +96,13 @@ let user = {
 
 Source: <https://javascript.info/object#literals-and-properties>
 
-**Question:** **Can a value be of any type in JavaScript?**
+### Can a value be of any type in JavaScript?
 
 **Interview Answer:** Yes since all values in JavaScript are dynamically typed and observed while the script executes.
 
 Source: <https://javascript.info/object#literals-and-properties>
 
-**Question:** **What are the two ways to access a value in an Object?**
+### What are the two ways to access a value in an Object?
 
 **Interview Answer:** The dot notation and bracket notation both are used to access the object property values in JavaScript.
 
@@ -136,7 +136,7 @@ console.log(sound);
 
 Source: <https://javascript.info/object#literals-and-properties>
 
-**Question:** **Can you use multi-word property name in JavaScript?**
+### Can you use multi-word property name in JavaScript?
 
 **Interview Answer:** Technically, JavaScript allows multi-word properties in Objects, but it is not recommended because it can lead to errors. We should use camel case as recommended by most style guides.
 
@@ -162,7 +162,7 @@ console.log(user.likes birds); // returns a SyntaxError
 
 Source: <https://javascript.info/object#square-brackets>
 
-**Question:** **Is JavaScript capable of handling computed properties using object literal notation?**
+### Is JavaScript capable of handling computed properties using object literal notation?
 
 **Interview Answer:** Yes, you can use object literal notation to assign the expression as a property on the object without having to create it first.
 
@@ -178,6 +178,7 @@ function objectify(key, value) {
 }
 
 objectify('name', 'Tyler'); // { name: 'Tyler' }
+
 //////////////////////////
 
 let fruit = 'apple';
@@ -189,7 +190,7 @@ let bag = {
 
 Source: <https://javascript.info/object#computed-properties>
 
-**Question:** **Are there any restrictions on Object property names?**
+### Are there any restrictions on Object property names?
 
 **Interview Answer:** No, there are no known restrictions on Object property names, but we should avoid reserved words even though we can technically use them.
 
@@ -213,7 +214,7 @@ alert(obj.for + obj.let + obj.return); // 6
 
 Source: <https://javascript.info/object#property-names-limitations>
 
-**Question:** **What is the minor gotcha with the special property name `__proto__`?**
+### What is the minor gotcha with the special property name `__proto__`?
 
 **Interview Answer:** The special property name proto cannot be set to non-object value such as a primitive value.
 
@@ -228,7 +229,7 @@ alert(obj.__proto__); // [object Object] - the value is an object, didn
 
 Source: <https://javascript.info/object#property-names-limitations>
 
-**Question:** **Why does the “in” operator exist? Isn’t it enough to compare against undefined?**
+### Why does the “in” operator exist? Isn’t it enough to compare against undefined?
 
 **Interview Answer:** The “in” operator is used to check if a property exists or loop over object properties. Using it to compare against undefined can have less than truthy results.
 
@@ -250,7 +251,7 @@ console.log('test' in obj); // true, the property does exist!
 
 Source: <https://javascript.info/object#property-existence-test-in-operator>
 
-**Question:** **Are objects ordered? In other words, if we loop over an object, do we get all properties in the same order they were added? Can we rely on this?**
+### Are objects ordered? In other words, if we loop over an object, do we get all properties in the same order they were added? Can we rely on this?
 
 **Interview Answer:** The short answer is that they are ordered in a special fashion, integer properties are sorted, and others appear in creation order. This is not a reliable approach we are seeking a specific numbered order.
 
@@ -291,7 +292,7 @@ for (let prop in user) {
 
 Source: <https://javascript.info/object#ordered-like-an-object>
 
-**Question:** **Explain, what is a JavaScript integer property?**
+### Explain, what is a JavaScript integer property?
 
 **Interview Answer:** The “integer property” term here means a string that can be converted to-and-from an integer without a change.
 

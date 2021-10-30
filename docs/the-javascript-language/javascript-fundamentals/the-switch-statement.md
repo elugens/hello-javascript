@@ -7,7 +7,7 @@ sidebar_position: 14
 
 **JavaScript Fundamentals: The "switch" statement**
 
-**Question:** **What are the benefits of using a Switch statement?**
+### What are the benefits of using a Switch statement?
 
 **Interview Answer:** A switch statement can replace multiple if checks, it is more descriptive, and easier to read.
 
@@ -15,7 +15,7 @@ sidebar_position: 14
 
 Source: <https://javascript.info/switch>
 
-**Question:** **How does the Switch statement work?**
+### How does the Switch statement work?
 
 **Interview Answer:** The switch statement works by checking the initial value against the case values. If the initial value equals one of the case values, then it stops. A default value is used if the case is not found to equal the initial value.
 
@@ -47,7 +47,7 @@ switch(x) {
 
 Source: <https://javascript.info/switch#the-syntax>
 
-**Question:** **Do you have to use the break directive in the Switch statement?**
+### Do you have to use the break directive in the Switch statement?
 
 **Interview Answer:** No, but caution should be used because the execution continues with the next case without any checks. It is recommended that we use a break statement.
 
@@ -81,7 +81,7 @@ switch (a) {
 
 Source: <https://javascript.info/switch#an-example>
 
-**Question:** **Can you use expressions in switch/case arguments?**
+### Can you use expressions in switch/case arguments?
 
 **Interview Answer:** Yes, both switch and case allow arbitrary expressions.
 
@@ -128,12 +128,12 @@ console.log("this doesn't run");
 
 }
 
-// Output: this runs, because a \* 10 = 100
+// Output: this runs, because a * 10 = 100
 ```
 
 Source: <https://javascript.info/switch#an-example>
 
-**Question:** **Can you group switch cases as variant options?**
+### Can you group switch cases as variant options?
 
 **Interview Answer:** Yes, several variants of the case which share the same return code can be grouped.
 
@@ -148,7 +148,7 @@ switch (a) {
 
     break;
 
-  case 3: // (\*) grouped two cases
+  case 3: // (*) grouped two cases
   case 5:
     alert('Wrong!');
 
@@ -163,7 +163,7 @@ switch (a) {
 
 Source: <https://javascript.info/switch#grouping-of-case>
 
-**Question:** **Does a switch statement have a strict equality check on value matching?**
+### Does a switch statement have a strict equality check on value matching?
 
 **Interview Answer:** Yes, the values must be of the same data type to match. The case value that does not, will not execute.
 

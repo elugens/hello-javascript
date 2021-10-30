@@ -7,7 +7,7 @@ sidebar_position: 3
 
 **Forms, controls: Events: change, input, cut, copy, paste**
 
-**Question:** **How does an event change function or work?**
+### How does an event change function or work?
 
 **Interview Answer:** The change event triggers when the element has finished changing. Depending on the kind of element being changed and the way the user interacts with the element, the change event fires at a different moment. For text inputs that means that the event occurs when it loses focus.
 
@@ -37,7 +37,7 @@ Example:
 
 Source: <https://javascript.info/events-change-input#event-change>
 
-**Question:** **Can you explain how an input event functions when triggered?**
+### Can you explain how an input event functions when triggered?
 
 **Interview Answer:** The input event triggers every time after a value is modified by the user. Unlike keyboard events, it triggers on any value change, even those that does not involve keyboard actions: pasting with a mouse or using speech recognition to dictate the text. If we want to handle every modification of an `<input>` then this event is the best choice. On the other hand, input event does not trigger on keyboard input and other actions that do not involve value change, e.g., pressing arrow keys ⇦ ⇨ while in the input.
 
@@ -57,13 +57,13 @@ Example:
 
 Source: <https://javascript.info/events-change-input#event-input>
 
-**Question:** **What class doe the cut, copy, paste events belong too?**
+### What class doe the cut, copy, paste events belong too?
 
 **Interview Answer:** They belong to ClipboardEvent class and provide access to the data that is copied/pasted.
 
 Source: <https://javascript.info/events-change-input#events-cut-copy-paste>
 
-**Question:** **Can you explain how the cut, copy, and paste events work?**
+### Can you explain how the cut, copy, and paste events work?
 
 **Interview Answer:** These events occur on cutting/copying/pasting a value. They belong to ClipboardEvent class and provide access to the data that is copied/pasted. We also can use `event.preventDefault()` to abort the action, then nothing gets copied/pasted.
 
@@ -88,7 +88,7 @@ Example:
 
 Source: <https://javascript.info/events-change-input#events-cut-copy-paste>
 
-**Question:** **Are there any user related safety restrictions in relation to the ClipboardAPI?**
+### Are there any user related safety restrictions in relation to the ClipboardAPI?
 
 **Interview Answer:** Yes, the clipboard is a “global” OS-level application program interface. So, most browsers allow read/write access to the clipboard only in the scope of certain user actions for the safety, e.g., in onclick event handlers. Also, it is forbidden to generate “custom” clipboard events with dispatchEvent in all browsers except Firefox.
 

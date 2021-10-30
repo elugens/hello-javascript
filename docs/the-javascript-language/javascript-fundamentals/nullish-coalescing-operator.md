@@ -7,7 +7,7 @@ sidebar_position: 12
 
 **JavaScript Fundamentals: NULLISH COALESCING OPERATOR (??)**
 
-**Question:** **Explain how the nullish coalescing operator works.**
+### Explain how the nullish coalescing operator works.
 
 **Interview Answer:** The nullish coalescing operator returns the first argument if it is not null or undefined. Otherwise, the second one.
 
@@ -38,7 +38,7 @@ console.log(baz);
 
 Source: <https://javascript.info/nullish-coalescing-operator>
 
-**Question:** **Is there another way to achieve the same results as the nullish coalescing operator?**
+### Is there another way to achieve the same results as the nullish coalescing operator?
 
 **Interview Answer:** The not equals operator checks the first value to see if it is null or undefined if it is null or undefined it returns the second value.
 
@@ -54,7 +54,7 @@ result = a !== null && a !== undefined ? a : b;
 
 Source: <https://javascript.info/nullish-coalescing-operator>
 
-**Question:** **What is a common use case for nullish coalescing operator?**
+### What is a common use case for nullish coalescing operator?
 
 **Interview Answer:** A common use case for the nullish coalescing operator is to provide a default value for a potentially undefined variable.
 
@@ -76,7 +76,7 @@ alert(user ?? 'Anonymous'); // John
 
 Source: <https://javascript.info/nullish-coalescing-operator>
 
-**Question:** **Can you use a chain or sequence of nullish coalescing operators?**
+### Can you use a chain or sequence of nullish coalescing operators?
 
 **Interview Answer:** Yes, we can use a sequence of nullish coalescing operator to select the first value from a list that is not null or undefined.
 
@@ -96,7 +96,7 @@ alert(firstName ?? lastName ?? nickName ?? 'Anonymous'); // Supercoder
 
 Source: <https://javascript.info/nullish-coalescing-operator>
 
-**Question:** **Is there another operator that can be used to perform the same task as the nullish coalescing operator?**
+### Is there another operator that can be used to perform the same task as the nullish coalescing operator?
 
 **Interview Answer:** The OR operator can be used in the same way as nullish coalescing operator.
 
@@ -116,7 +116,7 @@ alert(firstName || lastName || nickName || 'Anonymous'); // Supercoder
 
 Source: <https://javascript.info/nullish-coalescing-operator#comparison-with>
 
-**Question:** **What is the main difference between the Nullish Coalescing Operator and the Logical OR operator?**
+### What is the main difference between the Nullish Coalescing Operator and the Logical OR operator?
 
 **Interview Answer:** The difference is that OR operator returns the first truthy value and nullish operator returns the first defined value.
 
@@ -137,7 +137,7 @@ alert(height ?? 100); // 0
 
 Source: <https://javascript.info/nullish-coalescing-operator#comparison-with>
 
-**Question:** **Does the nullish coalescing operator have a high or low operator precedence?**
+### Does the nullish coalescing operator have a high or low operator precedence?
 
 **Interview Answer:** The precedence of the nullish coalescing operators is low according to the MDN.
 
@@ -146,20 +146,20 @@ Source: <https://javascript.info/nullish-coalescing-operator#comparison-with>
 Example:
 
 ```js
-let height = null;
+let height = null;
 
-let width = null;
+let width = null;
 
 // important: use parentheses
 
-let area = (height ?? 100) \* (width ?? 50);
+let area = (height ?? 100) * (width ?? 50);
 
-alert(area); // 5000
+alert(area); // 5000
 ```
 
 Source: <https://javascript.info/nullish-coalescing-operator#comparison-with>
 
-**Question:** **What is the proper way to use the Nullish Coalescing Operator with the AND (&&) and OR (||) operator?**
+### What is the proper way to use the Nullish Coalescing Operator with the AND (&&) and OR (||) operator?
 
 **Interview Answer:** It is not recommended to use the AND operator directly in line with the nullish coalescing operator. You should wrap the AND and OR operator in parentheses as a work around.
 

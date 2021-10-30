@@ -5,7 +5,7 @@ sidebar_position: 3
 
 # Variable Scope / Closures - Q&A
 
-**Question:** **What are the three types of variable declarations in JavaScript?**
+### What are the three types of variable declarations in JavaScript?
 
 **Interview Answer:** There are three types of variable declarations in JavaScript including let, const, the var legacy variable.
 
@@ -21,7 +21,7 @@ var num = 1;
 
 Source: <https://javascript.info/closure>
 
-**Question:** **What is a code block or block statement (compound statement) in JavaScript?**
+### What is a code block or block statement (compound statement) in JavaScript?
 
 **Interview Answer:** A block statement or compound statement is used to group zero or more statements encapsulated in curly brackets.
 
@@ -57,7 +57,7 @@ alert(message); // Error: message is not defined
 
 Source: <https://javascript.info/closure#code-blocks>
 
-**Question:** **What are the benefits of using a code block or block statement in JavaScript?**
+### What are the benefits of using a code block or block statement in JavaScript?
 
 **Interview Answer:** The main benefit is the ability to isolate a portion of your code. This improves control and reduces errors in your application.
 
@@ -78,7 +78,7 @@ alert(message);
 
 Source: <https://javascript.info/closure#code-blocks>
 
-**Question:** **Does JavaScript support nested functions? How do they work?**
+### Does JavaScript support nested functions? How do they work?
 
 **Interview Answer:** Yes, nested functions have interesting scoping rules in JavaScript. A nested function can access any variables and parameters of their outer parent function(s). This allows us to give the parent function additional dynamic features.
 
@@ -102,7 +102,7 @@ function sayHiBye(firstName, lastName) {
 
 Source: <https://javascript.info/closure#nested-functions>
 
-**Question:** **Explain, what the Lexical Environment is in JavaScript?**
+### Explain, what the Lexical Environment is in JavaScript?
 
 **Interview Answer:** The Lexical Environment is a theoretical specification object. It is used to describe how things work. The Lexical Environment object consists of two parts including the environment record and a reference to the outer lexical environment.
 
@@ -112,7 +112,7 @@ Source: <https://javascript.info/closure#nested-functions>
 
 Source: <https://javascript.info/closure#lexical-environment>
 
-**Question:** **Explain, How a variable works in the context of a JavaScript engine?**
+### Explain, How a variable works in the context of a JavaScript engine?
 
 **Interview Answer:** A variable is just a property of the special internal object called the Environment Record. To get or change a variable means to get or change a property of that object.
 
@@ -133,7 +133,7 @@ word = 'Hello'; // word: "Hello"
 
 Source: <https://javascript.info/closure#lexical-environment>
 
-**Question:** **What is the difference between function and variable declaration?**
+### What is the difference between function and variable declaration?
 
 **Interview Answer:** A function is also a value, like a variable. The difference is that a Function Declaration is fully initialized when the script loads. When a Lexical Environment is created, a Function Declaration immediately becomes a ready-to-use function.
 
@@ -141,7 +141,7 @@ Source: <https://javascript.info/closure#lexical-environment>
 
 Source: <https://javascript.info/closure#step-2-function-declarations>
 
-**Question:** **What is a closure in JavaScript?**
+### What is a closure in JavaScript?
 
 **Interview Answer:** A closure is a function that remembers its outer variables and can access them. In JavaScript, all functions are naturally Closures (there is only one exception, The "new Function" syntax). Functions automatically remember where they were created using a hidden `[[Environment]]` property, and then their code can access outer variables.
 
@@ -151,7 +151,7 @@ Source: <https://javascript.info/closure#step-2-function-declarations>
 
 Source: <https://javascript.info/closure#step-2-function-declarations>
 
-**Question:** **How does garbage collection work with the Lexical Environment and nested functions in JavaScript?**
+### How does garbage collection work with the Lexical Environment and nested functions in JavaScript?
 
 **Interview Answer:** Usually, a Lexical Environment is removed from memory with all the variables after the function call finishes. That is because there are no references to it. As any JavaScript object, it is only kept in memory while it is reachable. A Lexical Environment object dies when it becomes unreachable (just like any other object). In other words, it exists only while there is at least one nested function referencing it.
 

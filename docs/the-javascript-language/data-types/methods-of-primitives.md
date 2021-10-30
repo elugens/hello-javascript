@@ -5,7 +5,7 @@ sidebar_position: 1
 
 # Methods of primitives in JavaScript - Q&A
 
-**Question:** **What are the seven (7) primitive JavaScript data types?**
+### What are the seven (7) primitive JavaScript data types?
 
 **Interview Answer:** String, Symbol, Boolean, BigInt, number, null, and undefined.
 
@@ -13,7 +13,7 @@ sidebar_position: 1
 
 Source: <https://developer.mozilla.org/en-US/docs/Glossary/Primitive>
 
-**Question:** **What are the five (5) primitive wrapper objects in JavaScript?**
+### What are the five (5) primitive wrapper objects in JavaScript?
 
 **Interview Answer:** String, Symbol, BigInt, Boolean, and Number.
 
@@ -40,7 +40,7 @@ temp = null;
 
 Source: <https://developer.mozilla.org/en-US/docs/Glossary/Primitive>
 
-**Question:** **Why isn’t an Object a primitive data type?**
+### Why isn’t an Object a primitive data type?
 
 **Answer:** A primitive data type has only a single value. Objects on the other hand can contain more than one value stored in collections and more complex structures.
 
@@ -60,7 +60,7 @@ let user = {
 
 Source: <https://javascript.info/types>
 
-**Question:** **Can an object store a function as a property?**
+### Can an object store a function as a property?
 
 **Interview Answer:** Yes, a function can be used as a property of an object. It is more commonly called an object method.
 
@@ -80,7 +80,7 @@ john.sayHi(); // Hi buddy!
 
 Source: <https://javascript.info/primitives-methods>
 
-**Question:** **Does a primitive remain a primitive or return a primitive value when you use it in conjunction with one of its methods?**
+### Does a primitive remain a primitive or return a primitive value when you use it in conjunction with one of its methods?
 
 **Interview Answer:** Yes, a primitive remains a primitive regardless of what method is called on it.
 
@@ -96,7 +96,7 @@ alert(str.toUpperCase()); // HELLO
 
 Source: <https://javascript.info/primitives-methods#a-primitive-as-an-object>
 
-**Question:** **Some languages like Java allow us to explicitly create “wrapper objects” for primitives using a syntax like new Number(1) or new Boolean(false). Is this a best practice in JavaScript?**
+### Some languages like Java allow us to explicitly create “wrapper objects” for primitives using a syntax like new Number(1) or new Boolean(false). Is this a best practice in JavaScript?
 
 **Interview Answer:** Technically, using the “new” syntax can be done, but it is not recommended because it will return an object and not the primitive value as intended.
 
@@ -124,7 +124,7 @@ let num = Number('123'); // convert a string to number
 
 Source: <https://javascript.info/primitives-methods#a-primitive-as-an-object>
 
-**Question:** **Do the null and undefined primitive data types have methods?**
+### Do the null and undefined primitive data types have methods?
 
 **Interview Answer:** No, they are considered the most primitive data types of all. They both have no wrapper objects and do not provide any methods.
 

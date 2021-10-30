@@ -7,13 +7,13 @@ sidebar_position: 16
 
 **JavaScript Fundamentals: FUNCTION EXPRESSIONS**
 
-**Question:** **Is a function a function, object, or both?**
+### Is a function a function, object, or both?
 
 **Interview Answer:** Both, In JavaScript, functions are first-class objects, because they can have properties and methods just like any other object. What distinguishes them from other objects is that functions can be called. In simple terms, they are Function objects.
 
 Source: <https://javascript.info/function-basics>
 
-**Question:** **What is the difference between function declaration and function expression?**
+### What is the difference between function declaration and function expression?
 
 **Interview Answer:** Function declarations load immediately and function expressions load when the interpreter has passed them on the right side of the expression.
 
@@ -37,7 +37,7 @@ Example: Function Expression
 ```js
 sayHi('John'); // error!
 let sayHi = function (name) {
-  // (\*) no magic any more
+  // (*) no magic any more
 
   alert(`Hello, ${name}`);
 };
@@ -45,7 +45,7 @@ let sayHi = function (name) {
 
 Source: <https://javascript.info/function-expressions>
 
-**Question:** **What is hoisting and how does it affect function declarations?**
+### What is hoisting and how does it affect function declarations?
 
 **Interview Answer:** Hoisting is the default behavior of moving all hoist-able declarations to the top of the current scope.
 
@@ -53,7 +53,7 @@ Source: <https://javascript.info/function-expressions>
 
 Source: <https://javascript.info/function-basics>
 
-**Question:** **What is the difference in use of a function declaration verses function expression?**
+### What is the difference in use of a function declaration verses function expression?
 
 **Interview Answer:** Function declarations are used to create a function in the global scope. A function expression is used to limit where function can be used, keep your global scope light, and maintain a clean syntax.
 
@@ -61,25 +61,23 @@ Source: <https://javascript.info/function-basics>
 
 Source: <https://javascript.info/function-expressions>
 
-**Question:** **Describe a function expressions code structure and behavior?**
+### Describe a function expressions code structure and behavior?
 
 **Interview Answer:** The function expression structure creates and assigns a variable to the function explicitly. A function name can be omitted making it an anonymous function. If a name is assigned, the name is localized to the function itself. The function expression can also assign parameters, if necessary. The expression body, like regular functions, encloses the actions that will be performed by the function.
 
 Example:
 
 ```js
-const getRectArea = function(width, height) {
-
-    return width \* height;
-
+const getRectArea = function (width, height) {
+  return width * height;
 };
 
-console.log(getRectArea(3, 4)); // returns 12
+console.log(getRectArea(3, 4)); // returns 12
 ```
 
 Source: <https://javascript.info/function-expressions>
 
-**Question:** **Are functions values in JavaScript? If Yes, explain**
+### Are functions values in JavaScript? If Yes, explain
 
 **Interview Answer:** Yes, a function is a value, so we can deal with it as a value. You can copy a function by reference to create a new copy like you would with a regular variable and value.
 
@@ -100,7 +98,7 @@ sayHi(); // Hello  ...this still works too (why wouldn't it)
 
 Source: <https://javascript.info/function-expressions>
 
-**Question:** **Why is there a semicolon at the end of a function expression?**
+### Why is there a semicolon at the end of a function expression?
 
 **Interview Answer:** The reason a function expression uses a semi-colon is that it is declared by assignment. All assignments must use a semi-colon to terminate the statement.
 
@@ -118,7 +116,7 @@ let sayHi = function () {
 
 Source: <https://javascript.info/function-expressions>
 
-**Question:** **What is a callback function in JavaScript?**
+### What is a callback function in JavaScript?
 
 **Interview Answer:** A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete a routine or action.
 
@@ -140,7 +138,7 @@ processUserInput(greeting); // function is calling the greeting.
 
 Source: <https://javascript.info/function-expressions#callback-functions>
 
-**Question:** **Can a function declaration be isolated or moved out of the global scope? Is a function expression a better way to handle the needed action or behavior?**
+### Can a function declaration be isolated or moved out of the global scope? Is a function expression a better way to handle the needed action or behavior?
 
 **Answer:** Yes, in strict mode, when a Function Declaration is within a code block, it is visible everywhere inside that block. But not outside of it. CAUTION: This can lead to erroneous outcomes.
 
@@ -204,7 +202,7 @@ welcome(); // ok now
 
 Source: <https://javascript.info/function-expressions#function-expression-vs-function-declaration>
 
-**Question:** **Can a function declaration be called earlier than it is defined?**
+### Can a function declaration be called earlier than it is defined?
 
 **Technical Answer:** Yes, a global Function Declaration is visible in the whole script, no matter where it is. As soon as it is initialized, it is available.
 
@@ -234,7 +232,7 @@ alert( `Hello, ${name}` );
 
 Source: <https://javascript.info/function-expressions#function-expression-vs-function-declaration>
 
-**Question:** **When is the best time to use Function Declaration vs a Function Expression?**
+### When is the best time to use Function Declaration vs a Function Expression?
 
 **Interview Answer:** We should consider is Function Declaration syntax first. It gives more freedom in how to organize our code and we can call it when it is initialized. A function expression should be used when a function declaration does not suit our needs, or we need conditional declaration.
 

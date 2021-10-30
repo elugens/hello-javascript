@@ -7,7 +7,7 @@ sidebar_position: 5
 
 **Classes: Extending built-in classes**
 
-**Question:** **When extending built-in classes, what is used in their internal implementation to extend the built-in class?**
+### When extending built-in classes, what is used in their internal implementation to extend the built-in class?
 
 **Interview Answer:** Built-in methods like array, filter, map, and others return new objects of exactly the inherited type. Their internal implementation uses the object’s constructor property for that. If you test the strict equality between the newly created object and child class on the constructor, it will return true.
 
@@ -29,7 +29,7 @@ console.log(arr.constructor === PowerArray); // returns true
 
 Source: <https://javascript.info/extend-natives>
 
-**Question:** **Explain the function and syntax of the Symbol.species accessor property?**
+### Explain the function and syntax of the Symbol.species accessor property?
 
 **Interview Answer:** The species accessor property allows subclasses to override the default constructor for objects. Symbol.species is used when we may want to return Array objects in our derived array class. When using methods such as map() that return the default constructor, we may want these methods to return a parent Array object, instead of the extending object.
 
@@ -69,7 +69,7 @@ console.log(a); // returns Array - [ 1, 2, 3 ]
 
 Source: <https://javascript.info/extend-natives>
 
-**Question:** **How does static inheritance work between native built-in classes?**
+### How does static inheritance work between native built-in classes?
 
 **Interview Answer:** Normally, when one class extends another, both static and non-static methods are inherited. But built-in classes are an exception. They do not inherit statics from each other.
 

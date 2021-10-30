@@ -5,7 +5,7 @@ sidebar_position: 5
 
 # Global Object - Q&A
 
-**Question:** **Explain, what the global object is in JavaScript?**
+### Explain, what the global object is in JavaScript?
 
 **Interview Answer:** A global object is an object that always exists in the global scope. In JavaScript, there is always a global object defined. In a web browser, when scripts create global variables defined with the var keyword, they are created as members of the global object.
 
@@ -43,7 +43,7 @@ greeting: function greeting() {
 
 Source: <https://javascript.info/global-object>
 
-**Question:** **How should you use the global (window) object in JavaScript?**
+### How should you use the global (window) object in JavaScript?
 
 **Interview Answer:** Using global variables is generally discouraged. There should be as few global variables as possible to avoid errors and bugs.
 

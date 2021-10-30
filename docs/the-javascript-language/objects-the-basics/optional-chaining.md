@@ -5,7 +5,7 @@ sidebar_position: 6
 
 # Optional chaining '?.' - Q&A
 
-**Question:** **Explain, what the optional chaining operator (?.) does in JavaScript.**
+### Explain, what the optional chaining operator (?.) does in JavaScript.
 
 **Interview Answer:** The optional chaining operator is a safe way to access nested object properties, even if an intermediate property does not exist.
 
@@ -23,7 +23,7 @@ alert(user2.address.street); // returns a type error
 
 Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining>
 
-**Question:** **If, an object does not exist, what will the optional chaining operator (?.) return?**
+### If, an object does not exist, what will the optional chaining operator (?.) return?
 
 **Answer:** If, the object does not exist (equals null) the optional chaining operator returns undefined. This can be seen when an object is set to null. If, the object is not defined then it will result in a reference error.
 
@@ -39,7 +39,7 @@ alert(myUser?.address.street); // returns a reference error
 
 Source: <https://javascript.info/optional-chaining#optional-chaining>
 
-**Question:** **When should the optional chaining (?.) operator be used?**
+### When should the optional chaining (?.) operator be used?
 
 **Interview Answer:** It should be used with then intent to handle object properties that are already known to be optional.
 
@@ -58,7 +58,7 @@ alert(x); // 0, value not incremented.
 
 Source: <https://javascript.info/optional-chaining#optional-chaining>
 
-**Question:** **Is optional chaining (?.) merely an operator or a syntax construct?**
+### Is optional chaining (?.) merely an operator or a syntax construct?
 
 **Interview Answer:** Technically, it is a syntax construct, but it is commonly referred to as an operator.
 
@@ -96,7 +96,7 @@ alert(user2?.[key]); // undefined
 
 Source: <https://javascript.info/optional-chaining#optional-chaining>
 
-**Question:** **Can the optional chaining (syntax construct) operator be used to store or write values?**
+### Can the optional chaining (syntax construct) operator be used to store or write values?
 
 **Answer:** No, you can use the (?.) for safe reading and deleting, but not writing. The optional chaining (?.) has no use at the left side of an assignment.
 

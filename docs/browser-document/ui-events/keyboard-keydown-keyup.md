@@ -7,13 +7,13 @@ sidebar_position: 5
 
 **UI Events: Keyboard: keydown and keyup**
 
-**Question:** **When should you use keyboard events during user interaction?**
+### When should you use keyboard events during user interaction?
 
 **Interview Answer:** Keyboard events should be used when we want to handle keyboard actions (virtual keyboard also counts). For instance, to react on arrow keys Up and Down or hotkeys (including combinations of keys).
 
 Source: <https://javascript.info/keyboard-events>
 
-**Question:** **What does the event.code and event.key properties do?**
+### What does the event.code and event.key properties do?
 
 **Interview Answer:** The key property of the event object allows us to get the character, while the code property of the event object allows us to get the “physical key code”. For instance, the same key Z can be pressed with or without Shift. That gives us two different characters: lowercase z and uppercase Z. The event.key is exactly the character, and it will be different. But event.code is the exactly the same for both.
 
@@ -24,13 +24,13 @@ Source: <https://javascript.info/keyboard-events>
 
 Source: <https://javascript.info/keyboard-events#event-code-and-event-key>
 
-**Question:** **When dealing with event codes for key actions, does the case matter?**
+### When dealing with event codes for key actions, does the case matter?
 
 **Interview Answer:** Yes, case matters and all event codes must use Pascal case to receive the appropriate return value, otherwise it will not work. Please evade mistypes: it is KeyZ, not keyZ. The check like event.code=="keyZ" won’t work: the first letter of "Key" must be uppercase.
 
 Source: <https://javascript.info/keyboard-events#event-code-and-event-key>
 
-**Question:** **What happens when a key does not have a letter-based character?**
+### What happens when a key does not have a letter-based character?
 
 **Interview Answer:** For instance, special keys like Shift or F1 or others. For those keys, event.key is approximately the same as event.code. Please note that event.code specifies exactly which key is pressed. For instance, most keyboards have two Shift keys: on the left and on the right side. The event.code tells us exactly which one was pressed, and event.key is responsible for the “meaning” of the key: what it is (a “Shift”).
 
@@ -44,13 +44,13 @@ Example:
 
 Source: <https://javascript.info/keyboard-events#event-code-and-event-key>
 
-**Question:** **What happens when a key is suppressed for more than a second?**
+### What happens when a key is suppressed for more than a second?
 
 **Interview Answer:** If a key is being pressed for a long enough time, it starts to “auto-repeat”: the keydown triggers again and again, and then when it’s released, we finally get keyup. So, it is kind of normal to have many keydown and a single keyup. For events triggered by auto-repeat, the event object has event.repeat property set to true.
 
 Source: <https://javascript.info/keyboard-events#auto-repeat>
 
-**Question:** **Can you prevent the default actions on OS-based special keys using the preventDefault method?**
+### Can you prevent the default actions on OS-based special keys using the preventDefault method?
 
 **Interview Answer:** No, preventing the default action on keydown can cancel most of them except for OS-based special keys. For instance, on Windows Alt+F4 closes the current browser window. And there is no way to stop it by preventing the default action in JavaScript. Basically, any behavior outside of the scope of the browser like closing the browser window is not captured by the browser. It is considered an OS level event.
 

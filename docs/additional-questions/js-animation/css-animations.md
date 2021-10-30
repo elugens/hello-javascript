@@ -7,13 +7,13 @@ sidebar_position: 2
 
 **Animation: CSS-animations**
 
-**Question:** **Why do we use CSS animation in web development?**
+### Why do we use CSS animation in web development?
 
 **Interview Answer:** CSS animations make it possible to do simple animations without JavaScript at all. JavaScript can be used to control CSS animations and make them even better, with little code. The general idea is that when you can use CSS versus JavaScript you should because it reduces the load on the browser.
 
 Source: <https://javascript.info/css-animations>
 
-**Question:** **Briefly define the idea around CSS transitions?**
+### Briefly define the idea around CSS transitions?
 
 **Interview Answer:** The idea of CSS transitions is simple. We describe a property and how its changes should be animated. When the property changes, the browser paints the animation. That is, all we need is to change the property, and the fluid transition will be done by the browser.
 
@@ -39,13 +39,13 @@ Code Example:
 
 Source: <https://javascript.info/css-animations>
 
-**Question:** **What are the four properties used to describe CSS transitions?**
+### What are the four properties used to describe CSS transitions?
 
 **Interview Answer:** There are 4 properties to describe CSS transitions including transition-property, transition-duration, transition-timing-function, and transition-delay.
 
 Source: <https://javascript.info/css-animations>
 
-**Question:** **Is there way to use the transition property to animate multiple CSS properties at the same time?**
+### Is there way to use the transition property to animate multiple CSS properties at the same time?
 
 **Interview Answer:** Yes, we can transition multiple CSS properties, like font-size and color.
 
@@ -71,7 +71,7 @@ Code Example:
 
 Source: <https://javascript.info/css-animations>
 
-**Question:** **Can you explain how to use the CSS transition-property?**
+### Can you explain how to use the CSS transition-property?
 
 **Interview Answer:** The transition-property CSS property sets the CSS properties to which a transition effect should be applied. In transition-property, we write a list of properties to animate, for instance left, margin-left, height, color, or we could write all, which means “animate all properties”. It should be noted, there are properties which cannot be animated. However, most of the generally used properties are MDN animatable.
 
@@ -97,7 +97,7 @@ div:hover  {
 
 Source: <https://javascript.info/css-animations#transition-property>
 
-**Question:** **What does the CSS transition-duration property set?**
+### What does the CSS transition-duration property set?
 
 **Interview Answer:** The transition-duration CSS property sets the length of time a transition animation should take to complete. By default, the value is 0s, meaning that no animation will occur.
 
@@ -125,7 +125,7 @@ div:hover  {
 
 Source: <https://javascript.info/css-animations#transition-duration>
 
-**Question:** **What does the CSS transition-delay property do?**
+### What does the CSS transition-delay property do?
 
 **Interview Answer:** The transition-delay CSS property specifies the duration to wait before starting a property's transition effect when its value changes.
 
@@ -151,7 +151,7 @@ div:hover  {
 
 Source: <https://javascript.info/css-animations#transition-delay>
 
-**Question:** **What does the CSS transition-timing-function CSS property do?**
+### What does the CSS transition-timing-function CSS property do?
 
 **Interview Answer:** The transition-timing-function CSS property sets how intermediate values are calculated for CSS properties being affected by a transition effect. The timing function describes how the animation process is distributed along its timeline. Will it start slowly and then go fast, or vice versa? It appears to be the most complicated property at first. But it becomes quite simple if we devote a bit time to it. The transition-timing-function property accepts two kinds of values: a Bezier curve or steps.
 
@@ -199,7 +199,7 @@ div:hover  {
 
 Source: <https://javascript.info/css-animations#transition-delay>
 
-**Question:** **What does the cubic-bezier() CSS function do?**
+### What does the cubic-bezier() CSS function do?
 
 **Interview Answer:** The cubic-bezier() function defines a Cubic Bezier curve. A Cubic Bezier curve is defined by four points P0, P1, P2, and P3. P0 and P3 are the start and the end of the curve and, in CSS, these points are fixed as the coordinates are ratios. P0 is (0, 0) and represents the initial time and the initial state, P3 is (1, 1) and represents the final time and the final state. The cubic-bezier() function can be used with the animation-timing-function property and the transition-timing-function property..
 
@@ -225,7 +225,7 @@ div:hover  {
 
 Source: <https://javascript.info/css-animations#bezier-curve>
 
-**Question:** **What is the difference between the built-in curves and the cubic-bezier() function?**
+### What is the difference between the built-in curves and the cubic-bezier() function?
 
 **Interview Answer:** The main difference between the CSS built-in curves and the cubic-bezier() function is that the function can make the animation exceed its range. The control points on the curve can have any y coordinates: even negative or huge ones. Then the Bezier curve would also extend exceptionally low or high, making the animation go beyond its normal range.
 
@@ -251,7 +251,7 @@ CSS Example:
 
 Source: <https://javascript.info/css-animations#bezier-curve>
 
-**Question:** **Explain the function and syntax of the timing function CSS steps() function.**
+### Explain the function and syntax of the timing function CSS steps() function.\*\*
 
 **Interview Answer:** The steps() function allows you to specify intervals for the timing function. It takes one or two parameters, separated by a comma: a positive integer and an optional value of either start or end. If no second parameter is included, it will default to end.
 
@@ -273,7 +273,7 @@ CSS Example:
 
 Source: <https://javascript.info/css-animations#steps>
 
-**Question:** **Explain the function and syntax of the CSS transitionend event.**
+### Explain the function and syntax of the CSS transitionend event.\*\*
 
 **Interview Answer:** The transitionend event is fired when a CSS transition has completed. In the case where a transition is removed before completion, such as if the transition-property is removed or display is set to none, then the event will not be generated.
 
@@ -289,7 +289,7 @@ transition.addEventListener('transitionend', () => {
 
 Source: <https://javascript.info/css-animations#event-transitionend>
 
-**Question:** **Can you explain what CSS keyframes are used for in web development?**
+### Can you explain what CSS keyframes are used for in web development?
 
 **Interview Answer:** The @keyframes CSS at-rule controls the intermediate steps in a CSS animation sequence by defining styles for keyframes (or waypoints) along the animation sequence. This gives more control over the intermediate steps of the animation sequence than transitions.
 

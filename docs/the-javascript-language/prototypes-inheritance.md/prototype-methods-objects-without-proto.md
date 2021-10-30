@@ -5,7 +5,7 @@ sidebar_position: 4
 
 # Prototype Methods - Q&A
 
-**Question:** **Is there a way to implement prototypal inheritance without calling proto accessor property (deprecated) in JavaScript?**
+### Is there a way to implement prototypal inheritance without calling proto accessor property (deprecated) in JavaScript?
 
 **Interview Answer:** Since, the proto property is deprecated based the JavaScript specification. There are three modern methods that can be used in prototypal inheritance including Object.create(obj), Object.getPrototypeOf(obj), and Object.setPrototypeOf(obj, proto).
 
@@ -32,7 +32,7 @@ console.log(Object.getPrototypeOf(rabbit) === animal); // false
 
 Source: <https://javascript.info/prototype-methods>
 
-**Question:** **Explain, what is the function and syntax of the Object.create(obj) method in JavaScript?**
+### Explain, what is the function and syntax of the Object.create(obj) method in JavaScript?
 
 **Interview Answer:** The Object.create() method creates a new object, using an existing object as the prototype of the newly created object. It has two parameters including the proto and the descriptors. The proto parameter is the object which should be the prototype of the newly created object. The descriptors are defined as an object whose enumerable properties specify property descriptors to be added to the newly created object.
 
@@ -58,7 +58,7 @@ alert(rabbit.jumps); // true
 
 Source: <https://javascript.info/prototype-methods>
 
-**Question:** **What is the function and syntax of the Object.getPrototypeOf() method in JavaScript?**
+### What is the function and syntax of the Object.getPrototypeOf() method in JavaScript?
 
 **Interview Answer:** The Object.getPrototypeOf(obj) method returns the prototype of the specified object. If there are no inherited properties, null is returned.
 
@@ -78,7 +78,7 @@ console.log(Object.getPrototypeOf(object1) === prototype1);
 
 Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf>
 
-**Question:** **What is the function and syntax of the Object.setPrototypeOf(obj, proto) method in JavaScript?**
+### What is the function and syntax of the Object.setPrototypeOf(obj, proto) method in JavaScript?
 
 **Interview Answer:** The Object.setPrototypeOf() method sets the prototype of a specified object to another object or null.
 
@@ -88,7 +88,7 @@ Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Globa
 
 Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf>
 
-**Question:** **Can you change [[Prototype]] on existing objects, in JavaScript?**
+### Can you change [[Prototype]] on existing objects, in JavaScript?
 
 **Interview Answer:** Yes, but it is considered a bad idea. We can get/set [[Prototype]] at any time. But usually, we only set it once at the object creation time and not modify it after that time.
 
@@ -98,7 +98,7 @@ Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Globa
 
 Source: <https://javascript.info/prototype-methods#brief-history>
 
-**Question:** **Why was `__proto__` replaced by the functions getPrototypeOf / setPrototypeOf?**
+### Why was `__proto__` replaced by the functions getPrototypeOf / setPrototypeOf?
 
 **Interview Answer:** According to the MDN, it was replaced with getPrototypeOf and setPrototypeOf, because of the performance issues related to its use.
 
@@ -106,13 +106,13 @@ Source: <https://javascript.info/prototype-methods#brief-history>
 
 Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto>
 
-**Question:** **Do you have a preference between class inheritance and prototypal inheritance in JavaScript? If so, why?**
+### Do you have a preference between class inheritance and prototypal inheritance in JavaScript? If so, why?
 
 **Interview Answer:** When using class inheritance, instances inherit from classes. This creates hierarchical class taxonomies. On the other hand, with prototypal inheritance, instances inherit from other objects, and they can be created from multiple objects. I prefer prototypal inheritance because it is easier and more flexible.
 
 Source: <https://www.indeed.com/hire/interview-questions/javascript>
 
-**Question:** **When is classical inheritance an appropriate choice?**
+### When is classical inheritance an appropriate choice?
 
 **Interview Answer:** The answer is never, or almost never. Certainly, never more than one level. Multi-level class hierarchies are an anti-pattern. It can lead to problems like method collision, which is not good.
 
@@ -120,7 +120,7 @@ Source: <https://www.indeed.com/hire/interview-questions/javascript>
 
 Source: <https://www.indeed.com/hire/interview-questions/javascript>
 
-**Question:** **What is the difference between class inheritance and prototypal inheritance?**
+### What is the difference between class inheritance and prototypal inheritance?
 
 **Interview Answer:** Classes inherit from classes created in sub-classes using a hierarchical class taxonomy. Prototypal inheritance is based on a prototype working as an object instance where objects inherit directly from other objects. The difference is that class taxonomy is not a derivative of prototypal inheritance.
 

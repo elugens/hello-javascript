@@ -7,7 +7,7 @@ sidebar_position: 17
 
 **JavaScript Fundamentals: ARROW FUNCTIONS**
 
-**Question:** **What is the definition of an arrow function?**
+### What is the definition of an arrow function?
 
 **Interview Answer:** An arrow function expression is a compact alternative to a traditional function expression, but it is limited and cannot be used in all situations.
 
@@ -31,7 +31,7 @@ console.log(sayHello('Stacey'));
 
 Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions>
 
-**Question:** **What are the difference and limitations between Arrow Functions and Function Expressions?**
+### What are the difference and limitations between Arrow Functions and Function Expressions?
 
 **Interview Answer:** An arrow function does not have bindings to this or super and cannot be used as a method or constructor. Also, it is not suitable for call, apply, bind.
 
@@ -68,7 +68,7 @@ obj.c(); // prints 10, Object {...}
 
 Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions>
 
-**Question:** **If there are no arguments in an arrow function do you need to add the paratheses?**
+### If there are no arguments in an arrow function do you need to add the paratheses?
 
 **Interview Answer:** Yes, if there are no arguments, then the paratheses should be present in your arrow function. Otherwise, it will throw a syntax error.
 
@@ -84,7 +84,7 @@ sayHi(); // returns Hello!
 
 Source: <https://javascript.info/arrow-functions-basics>
 
-**Question:** **Can you dynamically create a function with an arrow function?**
+### Can you dynamically create a function with an arrow function?
 
 **Interview Answer:** Yes, it is possible to dynamically create an arrow function in JavaScript. An example of this is a ternary statement that returns two anonymous arrow functions.
 
@@ -100,7 +100,7 @@ welcome();
 
 Source: <https://javascript.info/arrow-functions-basics>
 
-**Question:** **What is the difference between single and multiline statement in an arrow function?**
+### What is the difference between single and multiline statement in an arrow function?
 
 **Interview Answer:** A multiline statement must be enclosed in curly brackets, but we can omit the curly brackets in a single line statement.
 

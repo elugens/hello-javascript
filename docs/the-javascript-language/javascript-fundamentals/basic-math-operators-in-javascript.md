@@ -7,7 +7,7 @@ sidebar_position: 8
 
 ## BASIC OPERATORS, MATH
 
-**Question:** **What is an operand in JavaScript?**
+### What is an operand in JavaScript?
 
 **Interview Answer:** An operand is what operators are applied to in programming. They are left or right operands and, in some cases, can be a single argument or value.
 
@@ -15,7 +15,7 @@ sidebar_position: 8
 
 Source: <https://javascript.info/operators#terms-unary-binary-operand>
 
-**Question:** **Explain the difference between a Binary and a Unary operand?**
+### Explain the difference between a Binary and a Unary operand?
 
 **Interview Answer:** A binary operand has two arguments on the left and right sides of the operator. A Unary operand has a single operand.
 
@@ -42,7 +42,7 @@ alert(y - x); // 2, binary minus subtracts values
 
 Source: <https://javascript.info/operators#terms-unary-binary-operand>
 
-**Question:** **What basic mathematical operations are allowed in JavaScript?**
+### What basic mathematical operations are allowed in JavaScript?
 
 **Interview Answer:** The basic mathematical operations include addition, subtraction, multiplication, division, remainder or modulo, and exponentiation.
 
@@ -50,7 +50,7 @@ Source: <https://javascript.info/operators#terms-unary-binary-operand>
 
 Source: <https://javascript.info/operators#maths>
 
-**Question:** **What remainder/modulo operator used in JavaScript?**
+### What remainder/modulo operator used in JavaScript?
 
 **Interview Answer:** The remainder operator is used to find the remainder of two arguments (operands/values).
 
@@ -63,7 +63,7 @@ alert(8 % 3); // 2, a remainder of 8 divided by 3
 
 Source: <https://javascript.info/operators#remainder>
 
-**Question:** **How does the exponentiation operator function in JavaScript?**
+### How does the exponentiation operator function in JavaScript?
 
 **Interview Answer:** The exponentiation operator multiplies a number by itself a specified number of times.
 
@@ -81,7 +81,7 @@ alert( 2 \*\* 4 ); // 16 (2 \* 2 \* 2 \* 2, 4 times)
 
 Source: <https://javascript.info/operators#exponentiation>
 
-**Question:** **Can exponentiation be defined for non-integer numbers?**
+### Can exponentiation be defined for non-integer numbers?
 
 **Interview Answer:** Mathematically, exponentiation can be defined for non-integer numbers.
 
@@ -95,7 +95,7 @@ alert( 8 \*\* (1/3) ); // 2 (power of 1/3 is the same as a cubic�
 
 Source: <https://javascript.info/operators#exponentiation>
 
-**Question:** **Is it possible to concatenate strings in JavaScript?**
+### Is it possible to concatenate strings in JavaScript?
 
 **Interview Answer:** Strings can be concatenated using the binary plus operator or the concat method.
 
@@ -125,7 +125,7 @@ alert(2 + 2 + '1'); // returns 2 + 2 = 4 and 4 + '1' = 41
 
 Source: <https://javascript.info/operators#string-concatenation-with-binary>
 
-**Question:** **How does unary plus work on single values?**
+### How does unary plus work on single values?
 
 **Interview Answer:** Unary plus has no effect on numbers, but it does convert non-number strings into numbers.
 
@@ -151,7 +151,7 @@ alert(+'7'); // converts string “7” to number 7
 
 Source: <https://javascript.info/operators#numeric-conversion-unary>
 
-**Question:** **If, you have two strings and you want to sum up the two values. What process would you use to convert both strings to numbers to ensure that they are not concatenated as a string?**
+### If, you have two strings and you want to sum up the two values. What process would you use to convert both strings to numbers to ensure that they are not concatenated as a string?
 
 **Interview Answer:** We can use unary plus or the number object to convert the strings to numbers and then attempt to sum the two values.
 
@@ -172,13 +172,13 @@ alert(Number(apples) + Number(oranges)); // 5
 
 Source: <https://javascript.info/operators#numeric-conversion-unary>
 
-**Question:** **What is the most obvious characteristic that all operators have in JavaScript?**
+### What is the most obvious characteristic that all operators have in JavaScript?
 
 **Interview Answer:** All JavaScript operators return a value including the assignment (=) operator.
 
 Source: <https://javascript.info/operators#assignment-returns-a-value>
 
-**Question:** **In what direction do chained assignments evaluate?**
+### In what direction do chained assignments evaluate?
 
 **Interview Answer:** Chained assignments evaluate from right to left.
 
@@ -195,13 +195,13 @@ alert(c); // 4
 
 Source: <https://javascript.info/operators#chaining-assignments>
 
-**Question:** **What is the major issue with chained assignments?**
+### What is the major issue with chained assignments?
 
 **Interview Answer:** If chained assignments are not implemented correctly it can lead to memory leaks.
 
 Source: <https://javascript.info/operators#chaining-assignments>
 
-**Question:** **What is the difference between increment and decrement?**
+### What is the difference between increment and decrement?
 
 **Interview Answer:** Increment increases a variable by one and decrement decreases a variable by one.
 
@@ -222,13 +222,13 @@ alert(counter); // 1
 
 Source: <https://javascript.info/operators#increment-decrement>
 
-**Question:** **Can increment/decrement operators be applied to numbers?**
+### Can increment/decrement operators be applied to numbers?
 
 **Interview Answer:** No, Increment/decrement can only be applied to **variables**. Trying to use it on a value like 5++ will give an error.
 
 Source: <https://javascript.info/operators#increment-decrement>
 
-**Question:** **Are operators ++ and -- placed before or after a variable?**
+### Are operators ++ and -- placed before or after a variable?
 
 **Interview Answer:** The operators can be placed either before or after a variable. Before the variable is a prefix position and after is postfix position.
 
@@ -253,7 +253,7 @@ alert(a); // 1
 
 Source: <https://javascript.info/operators#increment-decrement>
 
-**Question:** **Is there any difference between the postfix and prefix increment/decrement positions?**
+### Is there any difference between the postfix and prefix increment/decrement positions?
 
 **Interview Answer:** Prefix increments counter and returns the new value. Postfix increments counter but returns the old value before being incremented.
 
@@ -278,7 +278,7 @@ alert(b); // alerts 5
 
 Source: <https://javascript.info/operators#increment-decrement>
 
-**Question:** **Can operators ++/-- be used inside of expressions?**
+### Can operators ++/-- be used inside of expressions?
 
 **Interview Answer:** Technical yes, but it is not advisable, because it reduces the readability of our code.
 
@@ -297,13 +297,13 @@ counter++;
 
 Source: <https://javascript.info/operators#increment-decrement>
 
-**Question:** **How do Bitwise operators treat arguments as numbers: 16-Bit, 24-Bit, or 32-Bit integer numbers?**
+### How do Bitwise operators treat arguments as numbers: 16-Bit, 24-Bit, or 32-Bit integer numbers?
 
 **Interview Answer:** Bitwise operators treat arguments as 32-bit integer numbers and work on the level of their binary representation.
 
 Source: <https://javascript.info/operators#bitwise-operators>
 
-**Question:** **What is the comma operator used for in JavaScript?**
+### What is the comma operator used for in JavaScript?
 
 **Interview Answer:** The comma operator allows us to evaluate several expressions, dividing them with a comma. Each of them is evaluated but only the result of the last one is returned.
 
@@ -317,7 +317,7 @@ alert(a); // 7 (the result of 3 + 4)
 
 Source: <https://javascript.info/operators#comma>
 
-**Question:** **Why do we need the comma operator that throws away everything except the last expression?**
+### Why do we need the comma operator that throws away everything except the last expression?
 
 **Interview Answer:** Sometimes, people use it in more complex constructs to put several actions in one line. It is not a normal or recommended approach.
 
@@ -332,7 +332,7 @@ for (a = 1, b = 3, c = a \* b; a < 10; a++) {
 
 Source: <https://javascript.info/operators#comma>
 
-**Question:** **Does the comma operator have high or low precedence?**
+### Does the comma operator have high or low precedence?
 
 **Interview Answer:** The comma operator has exceptionally low precedence, lower than the assignment operator.
 

@@ -7,7 +7,7 @@ sidebar_position: 9
 
 **Document: Element size and scrolling**
 
-**Question:** **Why should you take the scrollbar into account when assessing content width?**
+### Why should you take the scrollbar into account when assessing content width?
 
 **Interview Answer:** If the scrollbar is 16px wide then only 300 - 16 = 284px remains, and we should take it into account. Some browsers (not all) reserve the space for it by taking it from the content. Our content may look off or overlapping if we do not account for the scrollbar width.
 
@@ -15,7 +15,7 @@ sidebar_position: 9
 
 Sources: <https://javascript.info/size-and-scroll>
 
-**Question:** **Explain what the offsetParent is in relation to an HTML element.**
+### Explain what the offsetParent is in relation to an HTML element.\*\*
 
 **Interview Answer:** The HTMLElement.offsetParent read-only property returns a reference to the element which is the closest (nearest in the containment hierarchy) positioned ancestor element.
 
@@ -41,7 +41,7 @@ Example:
 
 Sources: <https://javascript.info/size-and-scroll#offsetparent-offsetleft-top>
 
-**Question:** **Explain what the offsetWidth is in relation to an HTML element.**
+### Explain what the offsetWidth is in relation to an HTML element.\*\*
 
 **Interview Answer:** The HTMLElement.offsetWidth read-only property returns the layout width of an element as an integer.
 
@@ -51,7 +51,7 @@ Sources: <https://javascript.info/size-and-scroll#offsetparent-offsetleft-top>
 
 Sources: <https://javascript.info/size-and-scroll#offsetwidth-height>
 
-**Question:** **Explain what the offsetHeight is in relation to an HTML element.**
+### Explain what the offsetHeight is in relation to an HTML element.\*\*
 
 **Interview Answer:** The HTMLElement.offsetHeight read-only property returns the height of an element, including vertical padding and borders, as an integer.
 
@@ -61,7 +61,7 @@ Sources: <https://javascript.info/size-and-scroll#offsetwidth-height>
 
 Sources: <https://javascript.info/size-and-scroll#offsetwidth-height>
 
-**Question:** **How do geometry properties work on elements when they are zero or null?**
+### How do geometry properties work on elements when they are zero or null?
 
 **Interview Answer:** Geometry properties are calculated only for displayed elements. If an element (or any of its ancestors) has display:none or is not in the document, then all geometry properties are zero (or null for offsetParent).
 
@@ -77,7 +77,7 @@ function isHidden(elem) {
 
 Sources: <https://javascript.info/size-and-scroll#offsetwidth-height>
 
-**Question:** **Explain what the clientTop is in relation to an HTML element.**
+### Explain what the clientTop is in relation to an HTML element.\*\*
 
 **Interview Answer:** Inside the element we have the borders. The width of the top border of an element in pixels. It is a read-only, integer property of element.
 
@@ -87,7 +87,7 @@ Sources: <https://javascript.info/size-and-scroll#offsetwidth-height>
 
 Sources: <https://javascript.info/size-and-scroll#clienttop-left>
 
-**Question:** **Explain what the clientLeft is in relation to an HTML element.**
+### Explain what the clientLeft is in relation to an HTML element.\*\*
 
 **Interview Answer:** Inside the element we have the borders. The width of the left border of an element in pixels. It includes the width of the vertical scrollbar if the text direction of the element is right–to–left and if there is an overflow causing a left vertical scrollbar to be rendered. clientLeft does not include the left margin or the left padding. clientLeft is read-only.
 
@@ -97,7 +97,7 @@ Sources: <https://javascript.info/size-and-scroll#clienttop-left>
 
 Sources: <https://javascript.info/size-and-scroll#clienttop-left>
 
-**Question:** **Explain what the clientWidth is in relation to an HTML element.**
+### Explain what the clientWidth is in relation to an HTML element.\*\*
 
 **Interview Answer:** The Element.clientWidth property is zero for inline elements and elements with no CSS; otherwise, it's the inner width of an element in pixels. It includes padding but excludes borders, margins, and vertical scrollbars (if present). When clientWidth is used on the root element (the `<html>` element), (or on `<body>` if the document is in quirks mode), the viewport's width (excluding any scrollbar) is returned.
 
@@ -105,7 +105,7 @@ Sources: <https://javascript.info/size-and-scroll#clienttop-left>
 
 Sources: <https://javascript.info/size-and-scroll#clientwidth-height>
 
-**Question:** **Explain what the clientHeight is in relation to an HTML element.**
+### Explain what the clientHeight is in relation to an HTML element.\*\*
 
 **Interview Answer:** The Element.clientHeight read-only property is zero for elements with no CSS or inline layout boxes; otherwise, it's the inner height of an element in pixels. It includes padding but excludes borders, margins, and horizontal scrollbars (if present). clientHeight can be calculated as: CSS height + CSS padding - height of horizontal scrollbar (if present). When clientHeight is used on the root element (the `<html>` element), (or on `<body>` if the document is in quirks mode), the viewport's height (excluding any scrollbar) is returned.
 
@@ -113,7 +113,7 @@ Sources: <https://javascript.info/size-and-scroll#clientwidth-height>
 
 Sources: <https://javascript.info/size-and-scroll#clientwidth-height>
 
-**Question:** **Explain what the scrollWidth is in relation to an HTML element.**
+### Explain what the scrollWidth is in relation to an HTML element.\*\*
 
 **Interview Answer:** The Element.scrollWidth read-only property is a measurement of the width of an element's content, including content not visible on the screen due to overflow. The scrollWidth value is equal to the minimum width the element would require to fit all the content in the viewport without using a horizontal scrollbar.
 
@@ -123,7 +123,7 @@ Sources: <https://javascript.info/size-and-scroll#clientwidth-height>
 
 Sources: <https://javascript.info/size-and-scroll#scrollwidth-height>
 
-**Question:** **Explain what the scrollLeft is in relation to an HTML element.**
+### Explain what the scrollLeft is in relation to an HTML element.\*\*
 
 **Interview Answer:** The Element.scrollLeft property gets or sets the number of pixels that an element's content is scrolled from its left edge. If the element's direction is rtl (right-to-left), then scrollLeft is 0 when the scrollbar is at its rightmost position (at the start of the scrolled content), and then increasingly negative as you scroll towards the end of the content. On systems using display scaling, scrollLeft may give you a decimal value.
 
@@ -131,7 +131,7 @@ Sources: <https://javascript.info/size-and-scroll#scrollwidth-height>
 
 Sources: <https://javascript.info/size-and-scroll#scrollleft-scrolltop>
 
-**Question:** **Explain what the scrollTop is in relation to an HTML element.**
+### Explain what the scrollTop is in relation to an HTML element.\*\*
 
 **Interview Answer:** The Element.scrollTop property gets or sets the number of pixels that an element's content is scrolled vertically. An element's scrollTop value is a measurement of the distance from the element's top to its topmost visible content. When an element's content does not generate a vertical scrollbar, then its scrollTop value is 0. When scrollTop is used on the root element (the `<html>` element), the scrollY of the window is returned.
 
@@ -139,7 +139,7 @@ Sources: <https://javascript.info/size-and-scroll#scrollleft-scrolltop>
 
 Sources: <https://javascript.info/size-and-scroll#scrollleft-scrolltop>
 
-**Question:** **Why should we use geometry properties vs taking the width/height from CSS using getComputedStyle?**
+### Why should we use geometry properties vs taking the width/height from CSS using getComputedStyle?
 
 **Interview Answer:** First, CSS width/height depend on another property: box-sizing that defines “what is” CSS width and height. A change in box-sizing for CSS purposes may break such JavaScript. Second, CSS width/height may be set to auto. From the CSS standpoint, width:auto is perfectly normal, but in JavaScript we need an exact size in pixels that we can use in calculations. So in this case CSS width is useless. And there is one more reason: a scrollbar. Sometimes the code that works fine without a scrollbar becomes buggy with it, because a scrollbar takes the space from the content in some browsers. So, the real width available for the content is less than CSS width. And clientWidth/clientHeight take that into account. Another issue is browser inconsistencies with returned values. Some browsers like firefox do not account for the scrollbar in their calculations for the width of an element.
 

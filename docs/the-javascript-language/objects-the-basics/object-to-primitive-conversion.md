@@ -5,13 +5,13 @@ sidebar_position: 8
 
 # Object to Primitive Conversion - Q&A
 
-**Question:** **What is the rule for objects in a Boolean context?**
+### What is the rule for objects in a Boolean context?
 
 **Interview Answer:** All objects are true in a Boolean context.
 
 Source: <https://javascript.info/object-toprimitive>
 
-**Question:** **What are the three variants of type conversion in JavaScript?**
+### What are the three variants of type conversion in JavaScript?
 
 **Interview Answer:** String, number, and default conversions.
 
@@ -19,7 +19,7 @@ Source: <https://javascript.info/object-toprimitive>
 
 Source: <https://javascript.info/object-toprimitive#toprimitive>
 
-**Question:** **To implement conversions, what are the three object methods that JavaScript tries to find and call?**
+### To implement conversions, what are the three object methods that JavaScript tries to find and call?
 
 **Answer:** The three object methods include Symbol.toPrimtive (system symbol) if it exists. Otherwise, if the hint is a string, it will try Obj.toString() or Obj.valueOf(). Finally, if the hint is a number or default it will try Obj.valueOf() and Obj.toString().
 
@@ -27,7 +27,7 @@ Simplified: The three object methods include Symbol.toPrimitive, Obj.toString(),
 
 Source: <https://javascript.info/object-toprimitive#toprimitive>
 
-**Question:** **Explain, what Symbol.toPrimitive() is and what it does?**
+### Explain, what Symbol.toPrimitive() is and what it does?
 
 **Answer:** The Symbol.toPrimitive is a symbol that specifies a function valued property that is called to convert an object to a corresponding primitive value.
 
@@ -55,7 +55,7 @@ alert(user + 500); // hint: default -> 1500
 
 Source: <https://javascript.info/object-toprimitive#symbol-toprimitive>
 
-**Question:** **What is the outcome when you try to use a for…loop to expose the properties of an object using Symbol.toPrimitive()?**
+### What is the outcome when you try to use a for…loop to expose the properties of an object using Symbol.toPrimitive()?
 
 **Answer:** The result will be a return of all properties except for the Symbol.toPrimitive because Symbol cannot be seen in the global symbol registry.
 
@@ -81,7 +81,7 @@ for (let prop in user) {
 
 Source: <https://javascript.info/object-toprimitive#symbol-toprimitive>
 
-**Question:** **Methods toString and valueOf come from ancient times. Are they considered Symbols?**
+### Methods toString and valueOf come from ancient times. Are they considered Symbols?
 
 **Interview Answer:** No because they were created before Symbols were implemented into JavaScript. They are regular string-name methods.
 
@@ -89,7 +89,7 @@ Source: <https://javascript.info/object-toprimitive#symbol-toprimitive>
 
 Source: <https://javascript.info/object-toprimitive#tostring-valueof>
 
-**Question:** **By default, a plain object has following toString and valueOf methods. What do each of these object methods return?**
+### By default, a plain object has following toString and valueOf methods. What do each of these object methods return?
 
 **Interview Answer:** The toString method returns a string "[object Object]" and the valueOf method returns the object itself.
 
@@ -102,7 +102,7 @@ alert(user.valueOf() === user); // true
 
 Source: <https://javascript.info/object-toprimitive#tostring-valueof>
 
-**Question:** **What happens if toString or valueOf returns an object?**
+### What happens if toString or valueOf returns an object?
 
 **Technical Answer:** There is no error, but such value is ignored.
 
@@ -110,7 +110,7 @@ Source: <https://javascript.info/object-toprimitive#tostring-valueof>
 
 Source: <https://javascript.info/object-toprimitive#return-types>
 
-**Question:** **As you pass an object as an argument, what are the stages that take place?**
+### As you pass an object as an argument, what are the stages that take place?
 
 **Interview Answer:** The object is converted to a primitive. If the resulting primitive is not the right type, it is converted.
 

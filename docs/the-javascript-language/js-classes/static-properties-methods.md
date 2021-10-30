@@ -7,7 +7,7 @@ sidebar_position: 3
 
 **Classes: STATIC PROPERTIES AND METHODS**
 
-**Question:** **Can you explain how a static properties and methods function in JavaScript?**
+### Can you explain how a static properties and methods function in JavaScript?
 
 **Interview Answer:** The static keyword defines a static method or property for a class. Neither static methods nor static properties can be called on instances of the class. Instead, they are called on the class itself. Static methods are often utility functions, such as functions to create or clone objects, whereas static properties are useful for caches, fixed configuration, or any other data you do not need to be replicated across instances. To call a static method or property within another static method of the same class, you can use the “this” keyword.
 
@@ -19,45 +19,42 @@ Syntax:
 Method: static methodName() { ... }
 
 Property: static propertyName [= value]
+```
 
 Example: Static Method and Static Property
 
-class User {
+```js
+class User {
+  static staticProp = 'I see you...'; // static property
+  static staticMethod() {
+    // static method
 
-    static staticProp = 'I see you...'; // static property
+    console.log(this === User);
 
-    static staticMethod() {            // static method
-
-      console.log(this === User);
-
-      console.log(this.staticProp);
-
-    }
-
+    console.log(this.staticProp);
+  }
 }
 
-User.staticMethod(); // true, I see you...
+User.staticMethod(); // true, I see you...
 
 //////////////////////////////////////
 
 // That does the same as assigning it as a property directly:
 
-class User { }
+class User {}
 
 // The value of this in User.staticMethod() call is the class constructor User itself
 
-User.staticMethod = function() {
-
-    console.log(this === User);
-
+User.staticMethod = function () {
+  console.log(this === User);
 };
 
-User.staticMethod(); // true
+User.staticMethod(); // true
 ```
 
 Source: <https://javascript.info/static-properties-methods>
 
-**Question:** **Are static properties and methods inherited when inheriting from a base class?**
+### Are static properties and methods inherited when inheriting from a base class?
 
 **Interview Answer:** Yes, by default both static properties and methods are inherited.
 

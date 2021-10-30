@@ -7,7 +7,7 @@ sidebar_position: 12
 
 **Regular expressions: Backreferences in pattern: \N and `\k<name>`**
 
-**Question:** **What is backreferencing in JavaScript regular expressions?**
+### What is backreferencing in JavaScript regular expressions?
 
 **Interview Answer:** When matching string patterns using regular expressions, we might wish to match the same piece of text more than once. When the pattern used to perform the first match includes non-literal elements, we can look for the repeated text using a backreference. A backreference in a regular expression identifies a previously matched group and looks for the same text again.
 

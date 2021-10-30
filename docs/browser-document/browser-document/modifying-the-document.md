@@ -7,7 +7,7 @@ sidebar_position: 7
 
 **Document: Modifying the document**
 
-**Question:** **How do you create new DOM nodes in JavaScript?**
+### How do you create new DOM nodes in JavaScript?
 
 **Interview Answer:** To create DOM nodes, there are two methods including the createElement and createTextNode methods. The document.createElement(tag) creates a new element node. The document.createTextNode(‘text’) creates a new text node with the give ‘text’. Most of the time we need to create element nodes, such as a div.
 
@@ -29,7 +29,7 @@ div.innerHTML = "<strong>Hi there!</strong> You've read an important messa
 
 Sources: <https://javascript.info/modifying-document#creating-an-element>
 
-**Question:** **How do you place a DOM node into a HTML document using JavaScript?**
+### How do you place a DOM node into a HTML document using JavaScript?
 
 **Interview Answer:** There is a special append method used to insert a new DOM node into an HTML document. Additional methods such as the prepend, before, after, and replaceWith that can be used to place the new DOM node into a specific place in the document.
 
@@ -80,7 +80,7 @@ Example:
 
 Sources: <https://javascript.info/modifying-document#insertion-methods>
 
-**Question:** **How do you insert HTML into a document using JavaScript?**
+### How do you insert HTML into a document using JavaScript?
 
 **Interview Answer:** If you want to insert HTML into a document we use the insertAdjacentHTML(where, html). It has two parameters that we use to specify where and the second parameter of what or the HTML (it must be a string type, just add quotes) to be inserted.
 
@@ -116,7 +116,7 @@ Example:
 
 Sources: <https://javascript.info/modifying-document#insertadjacenthtml-text-element>
 
-**Question:** **Is there a way to remove a DOM node in JavaScript?**
+### Is there a way to remove a DOM node in JavaScript?
 
 **Interview Answer:** Yes, to remove a node, there’s a method node.remove(). Please note: if we want to move an element to another place – there is no need to remove it from the old one.
 
@@ -153,7 +153,7 @@ Example:
 
 Sources: <https://javascript.info/modifying-document#node-removal>
 
-**Question:** **Can you swap elements using JavaScript?**
+### Can you swap elements using JavaScript?
 
 **Interview Answer:** Yes, there is a simple approach to doing this in JavaScript. For example, if we want to swap adjacent elements, we can use the after method by specifying what we want to go after a specific element node.
 
@@ -179,7 +179,7 @@ First
 
 Sources: <https://javascript.info/modifying-document#node-removal>
 
-**Question:** **Can you clone an element node in JavaScript?**
+### Can you clone an element node in JavaScript?
 
 **Interview Answer:** Yes, you can clone an element node using the cloneNode method in JavaScript. The cloneNode() method creates a copy of a node, and returns the clone.
 
@@ -215,7 +215,7 @@ Example:
 
 Sources: <https://javascript.info/modifying-document#cloning-nodes-clonenode>
 
-**Question:** **Explain the function and syntax of the DocumentFragment Object.**
+### Explain the function and syntax of the DocumentFragment Object.\*\*
 
 **Interview Answer:** DocumentFragment is a special DOM node that serves as a wrapper to pass around lists of nodes. We can append other nodes to it, but when we insert it somewhere, then its content is inserted instead.
 
@@ -241,7 +241,7 @@ Example:
     return fragment;
   }
 
-  ul.append(getListContent()); // (\*)
+  ul.append(getListContent()); // (*)
 </script>
 
 <!-- Output: -->
@@ -260,7 +260,7 @@ Example:
 
 Sources: <https://javascript.info/modifying-document#document-fragment>
 
-**Question:** **At some point in your career, you will run across older methods of inserting and removing elements. Can you explain what these methods are and why you should know them?**
+### At some point in your career, you will run across older methods of inserting and removing elements. Can you explain what these methods are and why you should know them?
 
 **Interview Answer:** There are several methods that including appendChild, insertBefore, replaceChild, and removeChild.
 
@@ -304,7 +304,7 @@ Output:
 
 Sources: <https://javascript.info/modifying-document#old-school-insert-remove-methods>
 
-**Question:** **Explain the function and syntax of the document.write method.**
+### Explain the function and syntax of the document.write method.
 
 **Answer:** The document.write() method writes a string of text to a document stream opened by document.open().
 

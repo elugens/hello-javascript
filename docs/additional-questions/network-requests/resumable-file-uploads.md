@@ -7,7 +7,7 @@ sidebar_position: 9
 
 **Network requests: Resumable file upload**
 
-**Question:** **Is there a way to resume an upload after lost upload connection?**
+### Is there a way to resume an upload after lost upload connection?
 
 **Interview Answer:** There is no built-in option for that, but we have the pieces to implement it. Resumable uploads should come with upload progress indication, as we expect big files (if we may need to resume). So, as fetch does not allow to track upload progress, we can use XMLHttpRequest.
 

@@ -7,7 +7,7 @@ sidebar_position: 11
 
 **Regular expressions: Capturing Groups**
 
-**Question:** **What is a capturing group in relation to a match in regular expressions?**
+### What is a capturing group in relation to a match in regular expressions?
 
 **Interview Answer:** A capturing group is a pattern enclosed in parentheses. It two affects consisting of getting part of match as a separate or isolated item in an array of items. If we add a quantifier after the parentheses, it is combined with the parentheses as a group on the string.
 
@@ -33,7 +33,7 @@ alert('my@mail.com @ his@site.com.uk'.match(regexp));
 
 Source: <https://javascript.info/regexp-groups>
 
-**Question:** **How does the regex engine memorize the matches in parentheses?**
+### How does the regex engine memorize the matches in parentheses?
 
 **Interview Answer:** Parentheses are numbered from left to right. The search engine memorizes the content matched by each of them and allows to get it in the result. They are indexed in an array structure in the order the matched. The method str.match(regexp), if regexp has no flag g, looks for the first match and returns it as an array.
 
@@ -50,7 +50,7 @@ alert(tag[1]); // h1
 
 Source: <https://javascript.info/regexp-groups#parentheses-contents-in-the-match>
 
-**Question:** **How nested group of parentheses work in regular expressions?**
+### How nested group of parentheses work in regular expressions?
 
 **Interview Answer:** When parentheses are nested in regular expressions it uses an outward in and left to right behavior (algorithm). Basically, the outer bounds of the parentheses are collected and pushed into an array structure, then each parenthesis with the parent are collected and pushed to the array in order from left to right.
 
@@ -71,7 +71,7 @@ alert(result[3]); // class="my"
 
 Source: <https://javascript.info/regexp-groups#parentheses-contents-in-the-match>
 
-**Question:** **What happens when an option group does not exist in a regex match?**
+### What happens when an option group does not exist in a regex match?
 
 **Interview Answer:** Even if a group is optional and does not exist in the match (e.g., has the quantifier (...)?), the corresponding result array item is present and equals undefined.
 
@@ -96,7 +96,7 @@ alert(match[2]); // c
 
 Source: <https://javascript.info/regexp-groups#optional-groups>
 
-**Question:** **What is the outcome on parentheses when we use regex.matchAll()?**
+### What is the outcome on parentheses when we use regex.matchAll()?
 
 **Interview Answer:** The outcome is a deep search for all matches within the regex pattern. The return values will include the both the inner and outer values including the capturing group. It should be noted, that the matchAll method returns an iterable object and it may require a Polyfill, because it is relatively new.
 
@@ -144,7 +144,7 @@ alert(tag1.input); // <h1> <h2>
 
 Source: <https://javascript.info/regexp-groups#searching-for-all-matches-with-groups-matchall>
 
-**Question:** **What are named groups in capturing used for in regex?**
+### What are named groups in capturing used for in regex?
 
 **Interview Answer:** Named groups is the process of capturing the text matched by “regex” into the group “name”. The name can contain letters and numbers but must start with a letter. These can be achieved by putting `?<name>` immediately after the opening parentheses. Named groups are perfect for extremely complex patterns that need to split hairs (filter) amongst a group of names.
 
@@ -187,7 +187,7 @@ for (let result of results) {
 
 Source: <https://javascript.info/regexp-groups#named-groups>
 
-**Question:** **How do capturing groups work in a replacement string?**
+### How do capturing groups work in a replacement string?
 
 **Interview Answer:** Method str.replace(regexp, replacement) that replaces all matches with regexp in str allows to use parentheses contents in the replacement string. That has done using $n, where n is the group number (Example: $2 would be the second value we are targeting, kind of like index[1]).
 
@@ -214,7 +214,7 @@ alert(str.replace(regexp, '$<day>.$<month>.$<year>'));
 
 Source: <https://javascript.info/regexp-groups#capturing-groups-in-replacement>
 
-**Question:** **How do non-capturing groups work in regular expressions?**
+### How do non-capturing groups work in regular expressions?
 
 **Interview Answer:** Sometimes we need parentheses to correctly apply a quantifier, but we do not want their contents in results. A group may be excluded by adding ?: in the beginning. For instance, if we want to find (go)+, but don’t want the parentheses contents (go) as a separate array item, we can write: (?:go)+.
 

@@ -7,7 +7,7 @@ sidebar_position: 6
 
 **Classes: MIXINS**
 
-**Question:** **What is a Mixin in JavaScript and why do you use them instead of a class inheritance?**
+### What is a Mixin in JavaScript and why do you use them instead of a class inheritance?
 
 **Interview Answer:** A mixin is a class containing methods that can be used by other classes without a need to inherit from it. In other words, a mixin provides methods that implement a certain behavior, but we do not use it alone, we use it to add the behavior to other classes.
 
@@ -57,7 +57,7 @@ new User("Dude").sayHi(); // Hello Dude!
 
 Source: <https://javascript.info/mixins#a-mixin-example>
 
-**Question:** **What is the simplest way to create a mixin in JavaScript?**
+### What is the simplest way to create a mixin in JavaScript?
 
 **Answer:** The simplest way to implement a mixin in JavaScript is to make an object with useful methods, so that we can easily merge them into a prototype of any class. There is no inheritance, but a simple method copying.
 

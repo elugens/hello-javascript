@@ -7,7 +7,7 @@ sidebar_position: 4
 
 **Data Types: ARRAYS**
 
-**Question:** **An object is a keyed collection of values, what is an array in JavaScript?**
+### An object is a keyed collection of values, what is an array in JavaScript?
 
 **Interview Answer:** An array is used to store an ordered collection of values.
 
@@ -25,7 +25,7 @@ alert(fruits[2]); // Plum
 
 Source: <https://javascript.info/array>
 
-**Question:** **What are the two syntaxes to create an empty array in JavaScript?**
+### What are the two syntaxes to create an empty array in JavaScript?
 
 **Interview Answer:** The array global object and an array literal using square brackets are used to create an empty array.
 
@@ -41,7 +41,7 @@ let arr = [];
 
 Source: <https://javascript.info/array#declaration>
 
-**Question:** **How do you get the length of an array in JavaScript?**
+### How do you get the length of an array in JavaScript?
 
 **Answer:** In order, to extract the length of an array you must use the array length property.
 
@@ -55,7 +55,7 @@ alert(fruits.length); // 3
 
 Source: <https://javascript.info/array#declaration>
 
-**Question:** **What type of elements can you store in an array?**
+### What type of elements can you store in an array?
 
 **Interview Answer:** Technically in JavaScript, arrays can have elements of different types without producing an error.
 
@@ -83,7 +83,7 @@ for (rand of rands) {
 
 Source: <https://javascript.info/array>
 
-**Question:** **What is the benefit of using a trailing comma in an array?**
+### What is the benefit of using a trailing comma in an array?
 
 **Interview Answer:** The trailing comma style makes it easier to insert and remove items because all lines become alike.
 
@@ -101,7 +101,7 @@ let fruits = [
 
 Source: <https://javascript.info/array>
 
-**Question:** **What are the two common data structures arrays are used for in JavaScript?**
+### What are the two common data structures arrays are used for in JavaScript?
 
 **Answer:** JavaScript arrays can be used as a queue or stack data structures. An array can also act as a deque data structure.
 
@@ -119,7 +119,7 @@ let fruits = [
 
 Source: <https://javascript.info/array#methods-pop-push-shift-unshift>
 
-**Question:** **Explain, the function and syntax of the array pop() method?**
+### Explain, the function and syntax of the array pop() method?
 
 **Interview Answer:** The array pop() method removes the last element of an array and returns the element. It has no arguments or parameters.
 
@@ -151,7 +151,7 @@ console.log(popped); // 'sturgeon'
 
 Source: <https://javascript.info/array#methods-pop-push-shift-unshift>
 
-**Question:** **Explain, the function and syntax of the array push() method?**
+### Explain, the function and syntax of the array push() method?
 
 **Interview Answer:** The array push method appends one or more elements to the end of an array.
 
@@ -181,7 +181,7 @@ console.log(total); // 4
 
 Source: <https://javascript.info/array#methods-pop-push-shift-unshift>
 
-**Question:** **Explain, the function and syntax of the array shift() method?**
+### Explain, the function and syntax of the array shift() method?
 
 **Interview Answer:** The array shift() method removes the first element at the beginning array and returns the removed element.
 
@@ -200,7 +200,7 @@ alert(fruits); // Orange, Pear
 
 Source: <https://javascript.info/array#methods-pop-push-shift-unshift>
 
-**Question:** **Explain, the function and syntax of the array unshift() method?**
+### Explain, the function and syntax of the array unshift() method?
 
 **Interview Answer:** The unshift method adds one or more elements to the beginning of an array and returns the new length of the array.
 
@@ -233,7 +233,7 @@ console.log(arr);
 
 Source: <https://javascript.info/array#methods-pop-push-shift-unshift>
 
-**Question:** **Explain, why is an array a special kind of object?**
+### Explain, why is an array a special kind of object?
 
 **Interview Answer:** An array is a special kind of object because the square brackets used to access a property arr[0] actually come from the object syntax.
 
@@ -269,7 +269,7 @@ console.log(arrFruits.length); // length returns 2
 
 Source: <https://javascript.info/array#internals>
 
-**Question:** **What happens when you try to use an array like an object in JavaScript?**
+### What happens when you try to use an array like an object in JavaScript?
 
 **Interview Answer:** When you attempt to use an array as an object, it loses all its optimizations and benefits.
 
@@ -283,7 +283,7 @@ Examples: Misusing an array
 
 Source: <https://javascript.info/array#internals>
 
-**Question:** **Why is it faster to work with the end of an array than with its beginning?**
+### Why is it faster to work with the end of an array than with its beginning?
 
 **Interview Answer:** The performance difference with working the end of array versus the beginning is tangible. Anytime an element must be removed or pushed onto the front of an array all the other existing elements must be reindexed.
 
@@ -297,7 +297,7 @@ Examples: The shift operation must do 3 things…
 
 Source: <https://javascript.info/array#performance>
 
-**Question:** **What are the two common ways to loop over an array?**
+### What are the two common ways to loop over an array?
 
 **Interview Answer:** The two common ways to loop an array is using the for and for…of loops. Both looping structures are optimized for performance with arrays.
 
@@ -327,7 +327,7 @@ for (let fruit of fruits) {
 
 Source: <https://javascript.info/array#loops>
 
-**Question:** **Can you explain some of the drawbacks of using a for…in loop on arrays?**
+### Can you explain some of the drawbacks of using a for…in loop on arrays?
 
 **Interview Answer:** There are several problems that make it a bad idea. The loop for..in iterates over all properties, not only the numeric ones. The for..in loop is optimized for generic objects, not arrays, and thus is 10-100 times slower.
 
@@ -341,7 +341,7 @@ Examples:
 
 Source: <https://javascript.info/array#loops>
 
-**Question:** **Explain, some of the limitations related to the length property?**
+### Explain, some of the limitations related to the length property?
 
 **Interview Answer:** The range limitation for the length property must be lower than 2 to the 32nd power. Another limitation is the length property’s inability to return the correct number of elements.
 
@@ -383,7 +383,7 @@ console.log(colors.length);
 
 Source: <https://javascript.info/array#loops>
 
-**Question:** **What is the difference between an Array and an array literal?**
+### What is the difference between an Array and an array literal?
 
 **Interview Answer:** The constructor is rarely used in modern JavaScript because array literals use the short square bracket syntax. If “new” Array is called with a single argument which is a number, then it creates an array without items, but with the given length.
 
@@ -399,8 +399,7 @@ alert(arr.length); // length 3
 
 Source: <https://javascript.info/array#new-array>
 
-**Question:** **Are there any rules in governing the equality comparison of two
-arrays?**
+### Are there any rules in governing the equality comparison of two arrays?
 
 **Interview Answer:** The basic rule is to always use the strict equality operator because the equality operator can produce some adverse effects, like 0 == [] returns true, when it should return false.
 

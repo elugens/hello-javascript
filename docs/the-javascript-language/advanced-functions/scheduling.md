@@ -5,7 +5,7 @@ sidebar_position: 8
 
 # Scheduling: setTimeout / setInterval - Q&A
 
-**Question:** **What are the two most common JavaScript methods used for scheduling a call?**
+### What are the two most common JavaScript methods used for scheduling a call?
 
 **Interview Answer:** There are two methods that are commonly used for scheduling calls in JavaScript including the setTimeout and setInterval methods. setTimeout allows us to run a function once after the interval of time. setInterval allows us to run a function repeatedly, starting after the interval of time, then repeating it continuously. Both methods are useful when you need to schedule specific events or actions in JavaScript.
 
@@ -13,7 +13,7 @@ sidebar_position: 8
 
 Source: <https://javascript.info/settimeout-setinterval>
 
-**Question:** **Explain, the function and syntax of the setTimeout() method?**
+### Explain, the function and syntax of the setTimeout() method?
 
 **Interview Answer:** The setTimeout method sets a timer which executes a function or piece of code once the timer expires. It takes several arguments and parameters including the callback function, delay time, and optional parameters. The delay time is optional and can be set in milliseconds of time, but it must be a positive integer. The optional parameters can be used to set values in the callback.
 
@@ -46,7 +46,7 @@ setTimeout(() => alert('Hello'), 1000);
 
 Source: <https://javascript.info/settimeout-setinterval#settimeout>
 
-**Question:** **Explain, the function and syntax of the clearTimeout() method?**
+### Explain, the function and syntax of the clearTimeout() method?
 
 **Interview Answer:** The clearTimeout method clears a timer set with the setTimeout method. The timer value returned by setTimeout is used as the parameter for the clearTimeout method.
 
@@ -67,7 +67,7 @@ alert(timerID); // same identifier (does not become null after canceling)
 
 Source: <https://javascript.info/settimeout-setinterval#canceling-with-cleartimeout>
 
-**Question:** **Explain, the function and syntax of the setInterval() method?**
+### Explain, the function and syntax of the setInterval() method?
 
 **Interview Answer:** The setInterval method sets an interval which executes a function or piece of code repeatedly until the interval cleared using the cleartInterval method. It takes several arguments and parameters including the callback function, interval time, and optional parameters. The interval delay time is optional and can be set in milliseconds of time to control the interval delay, but it must be a positive integer. The optional parameters can be used to set values in the callback function.
 
@@ -92,7 +92,7 @@ setTimeout(() => {
 
 Source: <https://javascript.info/settimeout-setinterval#setinterval>
 
-**Question:** **How does garbage collection work with the setInterval and setTimeout callbacks?**
+### How does garbage collection work with the setInterval and setTimeout callbacks?
 
 **Interview Answer:** When a function is passed in setInterval or setTimeout, an internal reference is created to it and saved in the scheduler. It prevents the function from being garbage collected, even if there are no other references to it. For setInterval the function stays in memory until clearInterval is called, but for setTimeout the variables are alive until the callback is complete.
 
@@ -110,7 +110,7 @@ setTimeout(function() {...}, 100);
 
 Source: <https://javascript.info/settimeout-setinterval>
 
-**Question:** **How does zero delay setTimeout execute in JavaScript?**
+### How does zero delay setTimeout execute in JavaScript?
 
 **Interview Answer:** In JavaScript, zero delay setTimeout schedules the execution of the function call after the current execution is complete. The function is scheduled to run after the current script.
 

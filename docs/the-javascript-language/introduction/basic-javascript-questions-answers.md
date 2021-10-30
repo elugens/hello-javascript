@@ -7,19 +7,19 @@ sidebar_position: 1
 
 ## Introduction: WHAT IS JAVASCRIPT?
 
-**Question:** **What is JavaScript?**
+### What is JavaScript?
 
 **Interview Answer:** JavaScript is a high-level, dynamically typed, and interpreted scripting language used to create interactive effects in the browser or server.
 
 Source: <https://javascript.info/intro#what-is-javascript>
 
-**Question:** **What is the difference between a high-level and low-level programming language?**
+### What is the difference between a high-level and low-level programming language?
 
 **Interview Answer:** When a language is high-level, it means it is built without requiring detailed knowledge of the underlying computer. For example, managing memory, knowing what processor is running, and keeping track of things like pointers are not necessary. High-level languages are easier to write and manage than low or mid-level programing languages, because they are platform independent.
 
 Source: <https://www.geeksforgeeks.org/difference-between-high-level-and-low-level-languages/>
 
-**Question:** **Is JavaScript a compiled or interpreted programming language?**
+### Is JavaScript a compiled or interpreted programming language?
 
 **Interview Answer:** JavaScript is an interpreted language.
 
@@ -27,19 +27,19 @@ Source: <https://www.geeksforgeeks.org/difference-between-high-level-and-low-lev
 
 Source: <https://www.freecodecamp.org/news/compiled-versus-interpreted-languages/>
 
-**Question:** **What is the name of JavaScript scripting language specification called?**
+### What is the name of JavaScript scripting language specification called?
 
 **Interview Answer:** ECMAscript with a reference guide named ECMA-262.
 
 Source: https://www.freecodecamp.org/news/whats-the-difference-between-javascript-and-ecmascript-cba48c73a2b5/
 
-**Question:** **Why is it called JavaScript?**
+### Why is it called JavaScript?
 
 **Interview Answer:** JavaScript was originally named “LiveScript”, but because of the popularity of Java. It was renamed too JavaScript as a play on the notoriety of the Java programming language, but they are considerably different. JavaScript is a high-level programming language and Java is a mid-level programming language.
 
 Source: <https://javascript.info/intro#what-is-javascript>
 
-**Question:** **What environments can JavaScript be developed on?**
+### What environments can JavaScript be developed on?
 
 **Interview Answer:** JavaScript works in any environment that has a JS engine.
 
@@ -47,7 +47,7 @@ Source: <https://javascript.info/intro#what-is-javascript>
 
 Source: <https://javascript.info/intro#what-is-javascript>
 
-**Question:** **What are the code names for Chrome, Opera, FireFox, IE, Edge, and Safari?**
+### What are the code names for Chrome, Opera, FireFox, IE, Edge, and Safari?
 
 **Technical Answer:**
 
@@ -59,7 +59,7 @@ Source: <https://javascript.info/intro#what-is-javascript>
 
 Source: <https://javascript.info/intro#what-is-javascript>
 
-**Question:** **Why is it good to remember codenames for different JavaScript Engines?**
+### Why is it good to remember codenames for different JavaScript Engines?
 
 **Interview Answer:** It is good to remember the names of engines to ensure features work in all environments. If not, we must write a polyfill.
 
@@ -67,7 +67,7 @@ Source: <https://javascript.info/intro#what-is-javascript>
 
 Source: <https://javascript.info/intro#what-is-javascript>
 
-**Question:** **What can in-browser JavaScript do?**
+### What can in-browser JavaScript do?
 
 **Interview Answer:** In-browser JavaScript can do everything related to webpage like manipulation, interaction with the user, and the webserver.
 
@@ -85,7 +85,7 @@ In-browser JavaScript can do everything related to webpage manipulation, interac
 
 Source: <https://javascript.info/intro#what-can-in-browser-javascript-do>
 
-**Question:** **What CAN’T in-browser JavaScript do and why?**
+### What CAN’T in-browser JavaScript do and why?
 
 **Interview Answer:** In the browser, JavaScript's abilities are limited to ensure a user's safety. The aim is to prevent a malicious website from accessing user’s data or harming them.
 
@@ -105,7 +105,7 @@ Source: <https://javascript.info/intro#what-can-in-browser-javascript-do>
 
 Source: <https://javascript.info/intro#what-can-t-in-browser-javascript-do>
 
-**Question:** **What makes JavaScript unique?**
+### What makes JavaScript unique?
 
 **Interview Answer:** JavaScript is unique because it has full integration with HTML, CSS and it is supported by all major browsers.\*\*
 
@@ -119,7 +119,7 @@ JavaScript is the only browser technology that combines these three things. That
 
 Source: <https://javascript.info/intro#what-makes-javascript-unique>
 
-**Question:** **Name some modern alternative languages that convert to JavaScript?**
+### Name some modern alternative languages that convert to JavaScript?
 
 **Interview Answer:** Some of the alternatives to JavaScript include Coffee Script, Type Script, Flow, Brython, Dart and Kotlin.
 

@@ -7,7 +7,7 @@ sidebar_position: 7
 
 ## JavaScript Fundamentals: TYPE CONVERSION
 
-**Question:** **What are the two types of type conversion in JavaScript?**
+### What are the two types of type conversion in JavaScript?
 
 **Interview Answer:** Explicit and Implicit type conversion.
 
@@ -15,7 +15,7 @@ sidebar_position: 7
 
 Source: <https://javascript.info/type-conversions>
 
-**Question:** **What is the difference between explicit and automatic (implicit) JavaScript type conversion?**
+### What is the difference between explicit and automatic (implicit) JavaScript type conversion?
 
 **Interview Answer:** Implicit type conversion is manual conversion of type and explicit is automatic.
 
@@ -23,19 +23,19 @@ Source: <https://javascript.info/type-conversions>
 
 Source: <https://javascript.info/type-conversions>
 
-**Question:** **How is explicit type conversion implemented in JavaScript?**
+### How is explicit type conversion implemented in JavaScript?
 
 **Interview Answer:** Explicit type conversions are achieved using built-in methods and objects.
 
 Source: <https://javascript.info/type-conversions>
 
-**Question:** **Name one method that automatically converts a value to a string?**
+### Name one method that automatically converts a value to a string?
 
 **Answer:** The alert method returns a string value; this is automatic type conversion.
 
 Source: <https://javascript.info/type-conversions#string-conversion>
 
-**Question:** **What built-in object is used to explicitly convert values to a string?**
+### What built-in object is used to explicitly convert values to a string?
 
 **Interview Answer:** The string object is used to explicitly convert values to a string.
 
@@ -53,13 +53,13 @@ alert(typeof value); // string
 
 Source: <https://javascript.info/type-conversions#string-conversion>
 
-**Question:** **When do numeric conversions happen in JavaScript?**
+### When do numeric conversions happen in JavaScript?
 
 **Interview Answer:** Numeric conversion happens in mathematical functions and expressions automatically.
 
 Source: <https://javascript.info/type-conversions#numeric-conversion>
 
-**Question:** **What Object is used to explicitly convert values to a Number?**
+### What Object is used to explicitly convert values to a Number?
 
 **Interview Answer:** The number object is used to explicitly convert values to a number.
 
@@ -75,7 +75,7 @@ alert(typeof num); // number
 
 Source: <https://javascript.info/type-conversions#numeric-conversion>
 
-**Question:** **What is the result when there is an explicit attempt to convert a non-number to a number?**
+### What is the result when there is an explicit attempt to convert a non-number to a number?
 
 **Interview Answer:** If the string is not a valid number the return value is NaN.
 
@@ -89,7 +89,7 @@ alert(age); // NaN, conversion failed
 
 Source: <https://javascript.info/type-conversions#numeric-conversion>
 
-**Question:** **If, there is an attempt to convert an undefined value. What is the return result?**
+### If, there is an attempt to convert an undefined value. What is the return result?
 
 **Interview Answer:** Numeric conversions on undefined values returns NaN (Not-a-Number).
 
@@ -105,7 +105,7 @@ alert(result); // returns NaN, conversion failed
 
 Source: <https://javascript.info/type-conversions#numeric-conversion>
 
-**Question:** **If, there is an attempt to convert a NULL value to a number. What is the return result?**
+### If, there is an attempt to convert a NULL value to a number. What is the return result?
 
 **Interview Answer:** Numeric conversions on Null values returns zero (0).
 
@@ -121,13 +121,13 @@ alert(result); // returns 0
 
 Source: <https://javascript.info/type-conversions#numeric-conversion>
 
-**Question:** **What is returned on a numeric conversion of true and false in JavaScript?**
+### What is returned on a numeric conversion of true and false in JavaScript?
 
 **Interview Answer:** True returns 1 and False returns 0.
 
 Source: <https://javascript.info/type-conversions#numeric-conversion>
 
-**Question:** **Give a brief description of the potential outcomes when converting a string to a number?**
+### Give a brief description of the potential outcomes when converting a string to a number?
 
 **Interview Answer:** Whitespaces from the start and end are removed. If the remaining string is empty, the result is 0. Otherwise, the number is “read” from the string. If there is an error it will return NaN.
 
@@ -143,13 +143,13 @@ alert(outcome); // returns 0
 
 Source: <https://javascript.info/type-conversions#numeric-conversion>
 
-**Question:** **Do Boolean conversions happen implicitly, explicitly, or both?**
+### Do Boolean conversions happen implicitly, explicitly, or both?
 
 **Interview Answer:** Both, it happens in logical operations automatically, but can also be performed explicitly.
 
 Source: <https://javascript.info/type-conversions#boolean-conversion>
 
-**Question:** **Is there an object that can be used for explicit Boolean conversions?**
+### Is there an object that can be used for explicit Boolean conversions?
 
 **Interview Answer:** The Boolean object converts strings and numerical values to Boolean true or false.
 
@@ -164,7 +164,7 @@ alert(Boolean('')); // false
 
 Source: <https://javascript.info/type-conversions#boolean-conversion>
 
-**Question:** **What are the two basic Boolean conversion rules in JavaScript?**
+### What are the two basic Boolean conversion rules in JavaScript?
 
 **Interview Answer:** Values that are intuitively empty are false, all other values are true.
 
@@ -175,7 +175,7 @@ Source: <https://javascript.info/type-conversions#boolean-conversion>
 
 Source: <https://javascript.info/type-conversions#boolean-conversion>
 
-**Question:** **In JavaScript, what is the Boolean return value for the string “0”?**
+### In JavaScript, what is the Boolean return value for the string “0”?
 
 **Interview Answer:** In JavaScript, a non-empty string is always true. Zero is considered empty and returns false.
 
@@ -192,7 +192,7 @@ console.log(stringZero); // returns true
 
 Source: <https://javascript.info/type-conversions#boolean-conversion>
 
-**Question:** **What are the three widely used type conversions in JavaScript?**
+### What are the three widely used type conversions in JavaScript?
 
 **Interview Answer:** String, number, and Boolean conversions.
 

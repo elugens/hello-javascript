@@ -5,7 +5,7 @@ sidebar_position: 7
 
 # Map and Set in JavaScript - Q&A
 
-**Question:** **What is the difference between Map and Object in JavaScript?**
+### What is the difference between Map and Object in JavaScript?
 
 **Interview Answer:** The main difference is that Map allows keys of any type. Objects also convert keys to strings, which is another known difference. As you begin to look at Objects and Maps another apparent difference is that Objects cannot use another Object as a key.
 
@@ -30,7 +30,7 @@ alert(map.size); // 3
 
 Source: <https://javascript.info/map-set#map>
 
-**Question:** **What are some of the methods and properties that the Map Object implements?**
+### What are some of the methods and properties that the Map Object implements?
 
 **Interview Answer:** There are several built-in methods and properties of the Map Object including new Map(), set, get, has, delete, clear, and size.
 
@@ -68,7 +68,7 @@ console.log(contacts.size); // 1
 
 Source: <https://javascript.info/map-set#map>
 
-**Question:** **What is one of the most notable and important Map features in JavaScript?**
+### What is one of the most notable and important Map features in JavaScript?
 
 **Interview Answer:** Using objects as keys is one of the most notable and important Map features. The same does not count for objects. String as a key in object is fine, but we cannot use another Object as a key in Object.
 
@@ -90,13 +90,13 @@ alert(visitsCountObj[ben]); // ben returns 123 because it was overwritten
 
 Source: <https://javascript.info/map-set#map>
 
-**Question:** **How does the Map Object compare keys?**
+### How does the Map Object compare keys?
 
 **Interview Answer:** Map uses the algorithm SameValueZero. It is roughly the same as strict equality ===, but the difference is that NaN is considered equal to NaN. So, NaN can be used as the key as well. This algorithm cannot be changed or customized.
 
 Source: <https://javascript.info/map-set#map>
 
-**Question:** **Which map methods can be used to iterate over a Map Object?**
+### Which map methods can be used to iterate over a Map Object?
 
 **Interview Answer:** There are three Map methods that you can use to iterate over a map including the key, values, and entries methods.
 
@@ -140,7 +140,7 @@ recipeMap.forEach((quantity, veg) => console.log(`${veg}, ${quantity}`));
 
 Source: <https://javascript.info/map-set#iteration-over-map>
 
-**Question:** **Besides the key, values, and entries methods, is there another method that you can use to iterate over a Map Object?**
+### Besides the key, values, and entries methods, is there another method that you can use to iterate over a Map Object?
 
 **Interview Answer:** Yes, the forEach method can be used to iterate over the Map Object.
 
@@ -164,7 +164,7 @@ recipeMap.forEach((quantity, veg) => console.log(`${veg}, ${quantity}`));
 
 Source: <https://javascript.info/map-set#iteration-over-map>
 
-**Question:** **Can you set properties for Map the same way you add properties for a regular object literal?**
+### Can you set properties for Map the same way you add properties for a regular object literal?
 
 **Interview Answer:** Technically Yes, but it is not recommended because it uses the feature of a generic object. In fact, there is a significant loss of built-in Map methods like set and delete when it is transformed into a generic object.
 
@@ -203,7 +203,7 @@ console.log(contacts.size); // 1
 
 Source: <https://javascript.info/map-set#object-entries-map-from-object>
 
-**Question:** **Can you convert a plain object into a Map in JavaScript?**
+### Can you convert a plain object into a Map in JavaScript?
 
 **Interview Answer:** Yes, we can create a new map object and get the object entries using the object.entries method.
 
@@ -225,7 +225,7 @@ alert(map.get('name')); // John
 
 Source: <https://javascript.info/map-set#object-entries-map-from-object>
 
-**Question:** **What is the main difference between Object.entries and Object.fromEntries methods in relation to the Map Object?**
+### What is the main difference between Object.entries and Object.fromEntries methods in relation to the Map Object?
 
 **Interview Answer:** The Object.fromEntries method transforms a list of key-value (Map Object) pairs into an object. Object.entries gets the entries that we can place in a Map.
 
@@ -263,7 +263,7 @@ alert(map.get('name')); // John
 
 Source: <https://javascript.info/map-set#object-entries-map-from-object>
 
-**Question:** **Explain, how does the Set Object function in javaScript?**
+### Explain, how does the Set Object function in javaScript?
 
 **Interview Answer:** The Set object is a special type of object that lets you store “unique” values of any type, whether primitive values or object references.
 
@@ -302,7 +302,7 @@ for (let user of set) {
 
 Source: <https://javascript.info/map-set#set>
 
-**Question:** **What are the main differences between a Set and Array objects?**
+### What are the main differences between a Set and Array objects?
 
 **Interview Answer:** The main difference is that Set only allows unique data values, while an Array allows duplicates.
 
@@ -310,7 +310,7 @@ Source: <https://javascript.info/map-set#set>
 
 Source: <https://medium.com/front-end-weekly/es6-set-vs-array-what-and-when-efc055655e1a>
 
-**Question:** **What is the best way to loop/iterate over a Set in JavaScript?**
+### What is the best way to loop/iterate over a Set in JavaScript?
 
 **Interview Answer:** We can use the for..of and forEach loops. We can also use a traditional iteration, but it is not recommended.
 

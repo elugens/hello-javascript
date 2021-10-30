@@ -1,8 +1,8 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require('prism-react-renderer/themes/vsDark');
+const darkCodeTheme = require('prism-react-renderer/themes/nightOwl');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -24,14 +24,12 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl:
-            'https://github.com/elugens/hello-javascript/edit/main/website/',
+          editUrl: 'https://github.com/elugens/hello-javascript/edit/main/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
-          editUrl:
-            'https://github.com/elugens/hello-javascript/edit/main/website/blog/',
+          editUrl: 'https://github.com/elugens/hello-javascript/edit/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -43,6 +41,8 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      // hideable sidebar true | false
+      hideableSidebar: true,
       colorMode: {
         defaultMode: 'light',
         disableSwitch: false,
@@ -72,7 +72,7 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
+        style: 'light',
         links: [
           {
             title: 'Docs',

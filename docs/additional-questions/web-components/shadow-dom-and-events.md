@@ -7,7 +7,7 @@ sidebar_position: 7
 
 **Web components: Shadow DOM and events**
 
-**Question:** **What is event retargeting in relation to the Light DOM and Shadow DOM?**
+### What is event retargeting in relation to the Light DOM and Shadow DOM?
 
 **Interview Answer:** Basically, retargeting means that events that originate in the shadow DOM look like they come from the element itself. Event retargeting is a great thing to have because the outer document does not have to know about component internals. It should be noted, retargeting does not occur if the event occurs on a slotted element, that physically lives in the light DOM.
 
@@ -43,7 +43,7 @@ Code Example:
 
 Source: <https://javascript.info/shadow-dom-events>
 
-**Question:** **In the case of event bubbling, does it happen in the Shadow or Flattened DOM?**
+### In the case of event bubbling, does it happen in the Shadow or Flattened DOM?
 
 **Interview Answer:** For purposes of event bubbling, flattened DOM is used. So, if we have a slotted element, and an event occurs somewhere inside it, then it bubbles up to the `<slot>` and upwards. The full path to the original event target, with all the shadow elements, can be obtained using event.composedPath(). As we can see from the name of the method, that path is taken after the composition.
 
@@ -65,19 +65,19 @@ Code Example:
 
 Source: <https://javascript.info/shadow-dom-events#bubbling-event-composedpath>
 
-**Question:** **When the attachShadow method mode is set to closed, what happens to the shadow tree details?**
+### When the attachShadow method mode is set to closed, what happens to the shadow tree details?
 
 **Interview Answer:** If the shadow tree was created with {mode: 'closed'}, then the composed path starts from the host and upwards. That is the similar principle as for other methods that work with shadow DOM. Internals of closed trees are completely hidden.
 
 Source: <https://javascript.info/shadow-dom-events>
 
-**Question:** **Why is the flattened DOM, relative to the shadow DOM, used for event bubbling?**
+### Why is the flattened DOM, relative to the shadow DOM, used for event bubbling?
 
 **Interview Answer:** The flattened DOM is used because it gives us access to the full path necessary to for event targeting. The full path to the original event target, with all the shadow elements, can be obtained using event.composedPath(). As we can see from the name of the method, that path is taken after the composition.
 
 Source: <https://javascript.info/shadow-dom-events#bubbling-event-composedpath>
 
-**Question:** **Explain the function and syntax of the Event.composedPath() method?**
+### Explain the function and syntax of the Event.composedPath() method?
 
 **Interview Answer:** The composedPath() method returns the event’s path which is an array of the objects on which listeners will be invoked. This does not include nodes in shadow trees if the shadow root was created with its ShadowRoot.mode closed.
 
@@ -85,13 +85,13 @@ Source: <https://javascript.info/shadow-dom-events#bubbling-event-composedpath>
 
 Source: <https://developer.mozilla.org/en-US/docs/Web/API/Event/composedPath>
 
-**Question:** **Most events bubble through a shadow DOM boundary. What property is used to open composition in UI events?**
+### Most events bubble through a shadow DOM boundary. What property is used to open composition in UI events?
 
 **Interview Answer:** This is governed by the composed event object property. If it is true, then the event does cross the boundary. Otherwise, it only can be caught from inside the shadow DOM. The read-only composed property returns a Boolean which indicates whether the event will propagate across the shadow DOM boundary into the standard DOM. Most UI Events have the composed property set to true.
 
 Source: <https://javascript.info/shadow-dom-events#event-composed>
 
-**Question:** **What steps are needed to dispatch custom events?**
+### What steps are needed to dispatch custom events?
 
 **Interview Answer:** When we dispatch custom events, we need to set both bubbles and composed properties to true for it to bubble up and out of the component.
 

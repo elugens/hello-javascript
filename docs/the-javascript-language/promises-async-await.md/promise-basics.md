@@ -7,7 +7,7 @@ sidebar_position: 2
 
 **Promises, async/await: Promises**
 
-**Question: Explain, the function and Syntax of the Promise object in JavaScript?**
+### Explain, the function and Syntax of the Promise object in JavaScript?
 
 **Interview Answer:** A promise is an object that may produce a single value sometime in the future: either a resolved value, or a reason that it is not resolved, an error. A promise may be in one of 3 possible states: fulfilled, rejected, or pending. Promise users can attach callbacks to handle the fulfilled value or the reason for rejection.
 
@@ -23,7 +23,7 @@ let promise = new Promise(function (resolve, reject) {
 
 Source: <https://javascript.info/promise-basics>
 
-**Question: What is the function called that gets passed to the newly created Promise?**
+### What is the function called that gets passed to the newly created Promise?
 
 **Interview Answer:** The function passed to new Promise is called the executor. When new Promise is created, the executor runs automatically. It contains the producing code which should eventually produce the result if there is no error. When it is finished with the attempt it calls resolve if it was successful or reject if there was an error.
 
@@ -39,7 +39,7 @@ let promise = new Promise(function (resolve, reject) {
 
 Source: <https://javascript.info/promise-basics>
 
-**Question: Can you name the properties that the promise object returned by Promise constructor has internally?**
+### Can you name the properties that the promise object returned by Promise constructor has internally?
 
 **Interview Answer:** The promise object contains four internal properties including state and result. The state is initially "pending", then changes to either "fulfilled" when resolve is called or "rejected" when reject is called. The result property is initially undefined, then changes to value when resolve(value) called or error when reject(error) is called. So, the executor eventually moves promise to one of these states.
 
@@ -67,13 +67,13 @@ let promise = new Promise(function (resolve, reject) {
 
 Source: <https://javascript.info/promise-basics>
 
-**Question: What is a promise that is either resolved or rejected called?**
+### What is a promise that is either resolved or rejected called?
 
 **Interview Answer:** A promise that is either resolved or rejected is called “settled”, as opposed to an initially “pending” promise.
 
 Source: <https://javascript.info/promise-basics>
 
-**Question: What is the main limitation of a Promise in JavaScript?**
+### What is the main limitation of a Promise in JavaScript?
 
 **Interview Answer:** The main limitation is that there can be only a single result or error. The executor should call only one resolve or one reject. Any state change is final, all further calls of resolve and reject are ignored. The idea is that a job done by the executor may have only one result or an error. Also, resolve/reject expect only one argument (or none) and will ignore additional arguments.
 
@@ -90,13 +90,13 @@ let promise = new Promise(function (resolve, reject) {
 
 Source: <https://javascript.info/promise-basics>
 
-**Question: What are the three subscribing (consumers) methods/functions used in Promises?**
+### What are the three subscribing (consumers) methods/functions used in Promises?
 
 **Interview Answer:** A Promise object serves as a link between the executor and the consuming functions, which will receive the result or error. Consuming functions can be registered using methods .then, .catch and .finally.
 
 Source: <https://javascript.info/promise-basics#consumers-then-catch-finally>
 
-**Question: Explain, the function and syntax of the promise then() method/function in JS?**
+### Explain, the function and syntax of the promise then() method/function in JS?
 
 **Interview Answer:** The then method returns a Promise. It takes up to two arguments in the form of callbacks that handle resolved or rejected promises. The first argument of .then is a function that runs when the promise is resolved, and receives the result. The second argument of .then is a function that runs when the promise is rejected, and receives the error.
 
@@ -136,7 +136,7 @@ promise2.then(
 
 Source: <https://javascript.info/promise-basics#then>
 
-**Question: Explain, the function and syntax of the promise catch() method/function in JS?**
+### Explain, the function and syntax of the promise catch() method/function in JS?
 
 **Interview Answer:** The catch method returns a Promise and deals with rejected cases only. It behaves the same as calling dot then. This means that you must provide an onRejected function even if you want to fall back to an undefined result.
 
@@ -158,7 +158,7 @@ promise.catch(alert); // shows "Error: Whoops!" after 1 second
 
 Source: <https://javascript.info/promise-basics#catch>
 
-**Question: Explain, the function and syntax of the promise finally() method/function in JS?**
+### Explain, the function and syntax of the promise finally() method/function in JS?
 
 **Interview Answer:** The finally method schedules a function to execute when the promise is settled, either fulfilled or rejected.
 
@@ -182,7 +182,7 @@ new Promise((resolve, reject) => {
 
 Source: <https://javascript.info/promise-basics#finally>
 
-**Question: What are the benefits promises over callbacks in JavaScript?**
+### What are the benefits promises over callbacks in JavaScript?
 
 **Interview Answer:** Promises allow us to do things in the natural order. We can call .then on a Promise as many times as we want. Each time, we are adding a new subscribing function, to the “subscription list” it returns a new promise. This allows us to chain our promises without limitations of a callback. We can immediately see a few benefits over the callback-based pattern. So, promises give us better code flow and flexibility.
 

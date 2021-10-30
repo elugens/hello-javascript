@@ -5,7 +5,7 @@ sidebar_position: 12
 
 # JSON Methods & JavaScript - Q&A
 
-**Question:** **Explain, what is JSON in relation to the JavaScript development environment?**
+### Explain, what is JSON in relation to the JavaScript development environment?
 
 **Interview Answer:** JSON or JavaScript Object Notation is a simple and lightweight data exchange format used across multiple language platforms including JavaScript. JSON means JavaScript Object Notation and it is language and platform independent.
 
@@ -13,7 +13,7 @@ sidebar_position: 12
 
 Source: <https://javascript.info/json>
 
-**Question:** **Explain, what is the role of the JSON.stringfy() method in JavaScript?**
+### Explain, what is the role of the JSON.stringfy() method in JavaScript?
 
 **Interview Answer:** The JSON.stringify() method converts a JavaScript object or value to a JSON string, optionally replacing values if a replacer function is specified or optionally including only the specified properties if a replacer array is specified.
 
@@ -66,7 +66,7 @@ alert(json);
 
 Source: <https://javascript.info/json#json-stringify>
 
-**Question:** **What data types does JSON support in JavaScript?**
+### What data types does JSON support in JavaScript?
 
 **Interview Answer:** JSON supports the following data types including Objects, Arrays, (primitive) strings, Boolean values, numbers, and null.
 
@@ -85,7 +85,7 @@ alert(JSON.stringify([1, 2, 3])); // [1,2,3]
 
 Source: <https://javascript.info/json#json-stringify>
 
-**Question:** **JSON is data-only language-independent specification, what are some JavaScript-specific object properties that are skipped by JSON.stringify?**
+### JSON is data-only language-independent specification, what are some JavaScript-specific object properties that are skipped by JSON.stringify?
 
 **Interview Answer:** There are several JavaScript-specific object properties that are ignored by JSON.stringify() including function properties, Symbolic keys and values, and properties that hold a value of undefined.
 
@@ -108,13 +108,13 @@ alert(JSON.stringify(user)); // {} (empty object)
 
 Source: <https://javascript.info/json#json-stringify>
 
-**Question:** **What is the difference between JSON and JSONP in JavaScript?**
+### What is the difference between JSON and JSONP in JavaScript?
 
 **Interview Answer:** The difference between JSON and JSONP is that JSON is a simple data format for communication between different systems. JSONP is also known as JSON with Padding. JSONP is a methodology for using that format with cross domain ajax requests while not being affected by same origin policy issues. The important thing to remember with JSONP is that it is not actually a protocol or data type. It is just a way of loading a script on the fly and processing the script that is introduced to the page. In the spirit of JSONP, this means introducing a new JavaScript object from the server into the client application/ script.
 
 Source: <https://javascript.info/json#json-stringify>
 
-**Question:** **What is the third argument space used for in the JSON.stringify() method?**
+### What is the third argument space used for in the JSON.stringify() method?
 
 **Interview Answer:** The third argument of JSON.stringify(value, replacer, space) is the number of spaces to use for pretty object formatting.
 
@@ -183,19 +183,19 @@ alert(JSON.stringify(user, null, 2)); // value: user, replacer: null, space: 
 
 Source: <https://javascript.info/json#formatting-space>
 
-**Question:** **Who is known as the father of JSON?**
+### Who is known as the father of JSON?
 
 **Interview Answer:** Douglas Crockford is known as the father of JSON. Douglas Crockford was the person who originally defined the JSON format back in 2000.
 
 Source: <https://www.softwaretestinghelp.com/top-json-interview-questions/>
 
-**Question:** **What is the extension of the JSON file?**
+### What is the extension of the JSON file?
 
 **Interview Answer:** A JSON file has an extension of “.json”. Being in a text-based format, a JSON file can be viewed or edited using any text editor like notepad or notepad++.
 
 Source: <https://www.softwaretestinghelp.com/top-json-interview-questions/>
 
-**Question:** **Can a comment be added inside a JSON file?**
+### Can a comment be added inside a JSON file?
 
 **Interview Answer:** JSON does not support any comments. Although, a Key or data object can be used to hold your comments. We need to just make sure that during the processing of the JSON, our application ignores the given data element.
 
@@ -217,7 +217,7 @@ Example: Commenting in JSON (Technically it can be done, but is not supported in
 
 Source: <https://www.softwaretestinghelp.com/top-json-interview-questions/>
 
-**Question:** **Explain, the function and syntax of the JSON.parse() method in JavaScript?**
+### Explain, the function and syntax of the JSON.parse() method in JavaScript?
 
 **Interview Answer:** The JSON.parse() method parses a string and returns a JavaScript object. The string must be written in JSON format. The JSON.parse() method can optionally transform the result with a function.
 

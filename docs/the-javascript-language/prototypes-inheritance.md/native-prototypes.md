@@ -5,13 +5,13 @@ sidebar_position: 3
 
 # Native prototypes - Q&A
 
-**Question:** **Can you give a general overview about native prototypes and objects in JavaScript?**
+### Can you give a general overview about native prototypes and objects in JavaScript?
 
 **Interview Answer:** All the custom and built-in native objects have the prototype property which can be used to extend their functionality by adding new properties and methods to them. The native prototypes can only be edited, or new ones can be added to them, but they cannot be deleted.
 
 Source: <https://www.tutorialspoint.com/explain-native-prototypes-in-javascript>
 
-**Question:** **What future issues can happen with native prototype extensions (custom property) in web applications?**
+### What future issues can happen with native prototype extensions (custom property) in web applications?
 
 **Interview Answer:** If future browser versions implement Array.prototype.myExtension, their implementation will be overridden by our custom one, which will not only be less efficient, but more importantly, they might have a different, nonstandard outcome. Another issue that arises is conflicts between libraries either internally or externally.
 
@@ -21,7 +21,7 @@ Source: <https://www.tutorialspoint.com/explain-native-prototypes-in-javascript>
 
 Source: <https://javascriptweblog.wordpress.com/2011/12/05/extending-javascript-natives/>
 
-**Question:** **What is a specific case for native prototype extensions in JavaScript?**
+### What is a specific case for native prototype extensions in JavaScript?
 
 **Interview Answer:** The only time it is recommended to create a native prototype extension is when you need to create a Polyfill for a method that exists in the JavaScript specification, but is not yet supported by a particular JavaScript engine.
 
@@ -51,7 +51,7 @@ alert('La'.repeat(3)); // LaLaLa
 
 Source: <https://javascript.info/native-prototypes#native-prototype-change>
 
-**Question:** **Can you borrow functionality from native prototypes in JavaScript?**
+### Can you borrow functionality from native prototypes in JavaScript?
 
 **Interview Answer:** Yes, when you need the same functionality of a native prototype method, you can borrow it. The basic gist of it is taking a method from one object and copying it into another. Some methods of native prototypes are often borrowed.
 

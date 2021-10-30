@@ -7,7 +7,7 @@ sidebar_position: 4
 
 **Promises, async/await: Error handling with promises**
 
-**Question: How is error handling achieved with promises in JavaScript?**
+### How is error handling achieved with promises in JavaScript?
 
 **Interview Answer:** When a promise rejects, the control jumps to the closest rejection handler. In the effort to return a promise an error may occur. The easiest way to implement error handling is to use the catch method. The .catch doesn’t have to be immediate. It may appear after one or maybe several .then.
 
@@ -22,7 +22,7 @@ fetch('https://no-such-server.blabla') // rejects
 
 Source: <https://javascript.info/promise-error-handling>
 
-**Question: What is an implicit try…catch in relation to promises in JavaScript?**
+### What is an implicit try…catch in relation to promises in JavaScript?
 
 **Interview Answer:** The code of a promise executor and promise handlers has an "invisible try..catch" around it. If an exception happens, it gets caught and treated as a rejection. This happens not only in the executor function, but in its handlers as well. If we throw inside a .then handler, that means a rejected promise, so the control jumps to the nearest error handler. This happens for all errors, not just those caused by the throw statement including programming errors.
 
@@ -50,7 +50,7 @@ new Promise((resolve, reject) => {
 
 Source: <https://javascript.info/promise-error-handling#implicit-try-catch>
 
-**Question: In a regular try..catch we can analyze the error and maybe rethrow it if it can’t be handled. Is the same thing possible for promises?**
+### In a regular try..catch we can analyze the error and maybe rethrow it if it can’t be handled. Is the same thing possible for promises?
 
 **Interview Answer:** Yes, the same thing is possible for promises. If we throw inside .catch, then the control goes to the next closest error handler. And if we handle the error and finish normally, then it continues to the next closest successful .then handler.
 
@@ -70,7 +70,7 @@ new Promise((resolve, reject) => {
 
 Source: <https://javascript.info/promise-error-handling#rethrowing>
 
-**Question: What happens when an error is not handled in a promise?**
+### What happens when an error is not handled in a promise?
 
 **Interview Answer:** In practice, just like with regular unhandled errors in code, it means that something has gone terribly wrong. The script dies with a message in the console. A similar thing happens with unhandled promise rejections. The JavaScript engine tracks such rejections and generates a global error in that case. In the browser we can catch such errors using the event unhandledrejection.
 

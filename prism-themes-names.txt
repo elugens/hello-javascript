@@ -1,0 +1,24 @@
+prism-themes-names.txt
+Prism Themes names
+
+Prism allows you to change the color of embedded pre and code in your themes.
+
+Relative Path:
+
+node_modules\prism-react-renderer\themes
+
+dracula
+duotoneDark
+duotoneLight
+gitHub
+nightOwl
+nightOwlLight
+oceanicNext
+okaidia
+palenight
+shadesOfPurple
+synthwave84
+ultramin
+vsLight
+vsDark
+

@@ -7,7 +7,7 @@ sidebar_position: 9
 
 **JavaScript Fundamentals: COMPARISONS**
 
-**Question:** **Do all comparison operator return a Boolean value?**
+### Do all comparison operator return a Boolean value?
 
 **Interview Answer:** All JavaScript comparisons return a Boolean value of true or false.
 
@@ -26,7 +26,7 @@ alert(2 != 1); // true (correct)
 
 Source: <https://javascript.info/comparison#boolean-is-the-result>
 
-**Question:** **How does JavaScript compare strings to see if their greater or less than another?**
+### How does JavaScript compare strings to see if their greater or less than another?
 
 **Interview Answer:** JavaScript uses a “lexicographical” order. Strings are compared letter-by-letter based on their Unicode value.
 
@@ -46,7 +46,7 @@ console.log(myLetter.charCodeAt(1)); // returns Unicode value 101
 
 Source: <https://javascript.info/comparison#string-comparison>
 
-**Question:** **When comparing values of different types, does JavaScript converts the values to numbers?**
+### When comparing values of different types, does JavaScript converts the values to numbers?
 
 **Interview Answer:** Yes, when comparing values of different types, it converts the values to numbers.
 
@@ -67,7 +67,7 @@ alert( false == 0 ); // true
 
 Source: <https://javascript.info/comparison#comparison-of-different-types>
 
-**Question:** **Is it possible that at the same time, two values are equal, if one of them is true as a Boolean and the other one is false as a Boolean?**
+### Is it possible that at the same time, two values are equal, if one of them is true as a Boolean and the other one is false as a Boolean?
 
 **Interview Answer:** When there is an explicit conversion to a Boolean on values that are both a string and a number such as number 0 and string “0”. The return value for the string will be true and for the number it will be false. When we attempt to compare the two using the equality operator the return value will be true, but with the strict equality operator they will be false.
 
@@ -86,7 +86,7 @@ alert(a === b); // false!, strict equality operator
 
 Source: <https://javascript.info/comparison#comparison-of-different-types>
 
-**Question:** **What is the difference between a regular equality check and strict equality?**
+### What is the difference between a regular equality check and strict equality?
 
 **Interview Answer:** The main difference is that strict equality does a value type check without any conversion.
 
@@ -100,13 +100,13 @@ alert(0 === false); // false, because the types are different
 
 Source: <https://javascript.info/comparison#strict-equality>
 
-**Question:** **Is there a benefit of using the strict equality operator?**
+### Is there a benefit of using the strict equality operator?
 
 **Interview Answer:** The strict equality operator is a bit longer to write but makes it obvious what is going on and leaves less room for errors.
 
 Source: <https://javascript.info/comparison#strict-equality>
 
-**Question:** **What value is returned when null and undefined are compared using the strict equality operator?**
+### What value is returned when null and undefined are compared using the strict equality operator?
 
 **Interview Answer:** False because they are not the same type.
 
@@ -125,7 +125,7 @@ alert(null == undefined); // true
 
 Source: <https://javascript.info/comparison#comparison-with-null-and-undefined>
 
-**Question:** **Is it a good or bad idea to compare undefined to other values?**
+### Is it a good or bad idea to compare undefined to other values?
 
 **Interview Answer:** It is not recommended that you compare undefined to other values.
 
@@ -139,7 +139,7 @@ alert(undefined == 0); // false (3)
 
 Source: <https://javascript.info/comparison#comparison-with-null-and-undefined>
 
-**Question:** **What are two ways to avoid problems with undefined/null values?**
+### What are two ways to avoid problems with undefined/null values?
 
 **Technical Answer:** We should avoid using undefined or null in anything less than strict comparisons and never use comparisons with an undefined or null value.
 
@@ -150,7 +150,7 @@ Source: <https://javascript.info/comparison#comparison-with-null-and-undefined>
 
 Source: <https://javascript.info/comparison#comparison-with-null-and-undefined>
 
-**Question:** **How does the if statement work?**
+### How does the if statement work?
 
 **Interview Answer:** The “if” statement evaluates a condition and, if the result is true, executes a block of code.
 

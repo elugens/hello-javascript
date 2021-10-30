@@ -7,7 +7,7 @@ sidebar_position: 3
 
 **Storing data in the browser: IndexedDB**
 
-**Question:** **What is IndexedDB?**
+### What is IndexedDB?
 
 **Interview Answer:** IndexedDB is a database that is built into browser that is much more powerful than localStorage. It several powerful features that enhance client-side storage. IndexedDB stores almost any kind of values by keys, multiple key types. It supports transactions for reliability and key range queries, indexes. It can also store much bigger volumes of data than localStorage and it can be used in an asynchronous fashion (async/await) using promises. That power is usually excessive for traditional client-server apps. IndexedDB is intended for offline apps, to be combined with ServiceWorkers and other technologies.
 
@@ -29,13 +29,13 @@ localStorage.setItem('now', Date.now());
 
 Source: <https://javascript.info/indexeddb>
 
-**Question:** **Can you briefly explain where the data is stored in the IndexedDB?**
+### Can you briefly explain where the data is stored in the IndexedDB?
 
 **Interview Answer:** Technically, the data is usually stored in the visitor’s home directory, along with browser settings, extensions, etc. Different browsers and OS-level users have each their own independent storage.
 
 Source: <https://javascript.info/indexeddb>
 
-**Question:** **How do you initially open an IndexedDB database?**
+### How do you initially open an IndexedDB database?
 
 **Interview Answer:** To start working with IndexedDB, we first need to open (connect to) a database. The first step in opening a IndexedDB database using window.indexedDB in conjunction with the open method. The open method has two parameters including the database name (required, string type), and the version which is 1 by default (optional, positive integer). The call returns the declared object, we should listen to events on the opening request. The events include success, error, and upgradeneeded. Success means that the database is ready with an accessible database object. The obvious error event means that the database has failed to open. The upgradeneeded handler triggers when the database does not yet exist (technically, its version is 0), so we can perform the initialization.
 
@@ -64,13 +64,13 @@ openRequest.onsuccess = function () {
 
 Source: <https://javascript.info/indexeddb#open-database>
 
-**Question:** **What are the cross-domain rules that govern IndexedDB?**
+### What are the cross-domain rules that govern IndexedDB?
 
 **Interview Answer:** We can have many databases with different names, but all of them exist within the current origin (domain/protocol/port). Different websites cannot access each other’s databases. Some novice programmers may attempt to access the database within an `<iframe>`, but this is not recommended, because it is insecure.
 
 Source: <https://javascript.info/indexeddb#open-database>
 
-**Question:** **How do we delete a IndexedDB database using JavaScript?**
+### How do we delete a IndexedDB database using JavaScript?
 
 **Interview Answer:** There are two ways to delete an IndexedDB database. The manual approach is to delete the database in the application manifest pane. The programmatic approach using JavaScript requires us to use the deleteDatabase method. The deleteDatabase() method of the IDBFactory interface requests the deletion of a database. The method returns an IDBOpenDBRequest object immediately, and performs the deletion operation asynchronously. If the database is successfully deleted, then a success event is fired on the request object returned from this method, with its result set to undefined. If an error occurs while the database is being deleted, then an error event is fired on the request object that is returned from this method.
 
@@ -97,13 +97,13 @@ openRequest.onsuccess = function () {
 
 Source: <https://javascript.info/indexeddb#open-database>
 
-**Question:** **What is the reason a user cannot open an IndexedDB database based on versioning?**
+### What is the reason a user cannot open an IndexedDB database based on versioning?
 
 **Interview Answer:** If the current user database has a higher version than in the open call, e.g. the existing DB version is 3, and we try to open(...2), then that’s an error, openRequest.onerror triggers. That’s rare, but such a thing may happen when a visitor loads outdated JavaScript code, e.g. from a proxy cache. So the code is old, but his database is new.
 
 Source: <https://javascript.info/indexeddb#open-database>
 
-**Question:** **Is there a way to handle potential versioning issues with IndexedDB?**
+### Is there a way to handle potential versioning issues with IndexedDB?
 
 **Interview Answer:** Yes, we should do a version check programmatically to ensure that the user has the most update version. We will have to implement a parallel upgrade to ensure the right version is loaded in the client. This can be achieved by calling onversionchange to ensure that the client is updated properly. These update collisions happen rarely, but we should at least have some handling for them, at least onblocked handler, to prevent our script from dying silently.
 
@@ -145,37 +145,37 @@ openRequest.onblocked = function() {
 
 Source: <https://javascript.info/indexeddb#parallel-update-problem>
 
-**Question:** **What is the reason a user cannot open an IndexedDB database based on versioning?**
+### What is the reason a user cannot open an IndexedDB database based on versioning?
 
 **Interview Answer:** If the current user database has a higher version than in the open call, e.g. the existing DB version is 3, and we try to open(...2), then that’s an error, openRequest.onerror triggers. That is rare, but such a thing may happen when a visitor loads outdated JavaScript code, e.g., from a proxy cache. So, the code is old, but the user’s database is new.
 
 Source: <https://javascript.info/indexeddb#open-database>
 
-**Question:** **What do we need to use to store data in a IndexedDB database?**
+### What do we need to use to store data in a IndexedDB database?
 
 **Interview Answer:** To store something in IndexedDB, we need an object store. An object store is a core concept of IndexedDB. Counterparts in other databases are called “tables” or “collections”. It is where the data is stored. A database may have multiple stores: one for users, another one for goods, etc. Despite being named an “object store”, primitives can be stored too.
 
 Source: <https://javascript.info/indexeddb#object-store>
 
-**Question:** **What kind of values can be store in an IndexedDB database?**
+### What kind of values can be store in an IndexedDB database?
 
 **Interview Answer:** We can store almost any value (except objects with a circular reference), including complex objects. IndexedDB uses the standard serialization algorithm to clone-and-store an object. It is like JSON.stringify, but more powerful, capable of storing much more datatypes.
 
 Source: <https://javascript.info/indexeddb#object-store>
 
-**Question:** **Can you give an example of an object that can’t be stored in IndexedDB?**
+### Can you give an example of an object that can’t be stored in IndexedDB?
 
 **Interview Answer:** An example of an object that cannot be stored: an object with circular references. Such objects are not serializable. JSON.stringify also fails for such objects.
 
 Source: <https://javascript.info/indexeddb#object-store>
 
-**Question:** **Is there a specific type of key that we must use in IndexedDB?**
+### Is there a specific type of key that we must use in IndexedDB?
 
 **Interview Answer:** Yes, there must be a unique key for every value in the store. A key must be either a number, date, string, binary, or array. It is a unique identifier, so we can search/remove/update values by the key index.
 
 Source: <https://javascript.info/indexeddb#object-store>
 
-**Question:** **How are keys implemented in a IndexedDB when we store objects?**
+### How are keys implemented in a IndexedDB when we store objects?
 
 **Interview Answer:** We can provide a key when we add a value to the store, like localStorage. But when we store objects, IndexedDB allows setting up of an object property as the key, which is much more convenient, or we can auto-generate keys. But we need to create an object store first using the createObjectStore method.
 
@@ -183,7 +183,7 @@ Source: <https://javascript.info/indexeddb#object-store>
 
 Source: <https://javascript.info/indexeddb#object-store>
 
-**Question:** **Explain the function and syntax of the createObjectStore JavaScript method?**
+### Explain the function and syntax of the createObjectStore JavaScript method?
 
 **Interview Answer:** The createObjectStore() method of the IDBDatabase interface creates and returns a new object store or index. The method takes the name of the store as well as a parameter object that lets you define important optional properties. You can use the property to uniquely identify individual objects in the store. As the property is an identifier, it should be unique to every object, and every object should have that property. The options have two optional parameters including the key-path and autoincrement. The key-path is a path to an object property that IndexedDB will use as the key. The autoincrement option parameter if set to true will automatically generate a new ever-incrementing number for the key, like an id or number. If we do not supply keyOptions, then we will need to provide a key explicitly later, when storing an object.
 
@@ -199,13 +199,13 @@ let objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle"�
 
 Source: <https://javascript.info/indexeddb#object-store>
 
-**Question:** **When can an object store be created or modified in IndexedDB?**
+### When can an object store be created or modified in IndexedDB?
 
 **Interview Answer:** An object store can only be created/modified while updating the DB version, in upgradeneeded handler. That is a technical limitation. Outside of the handler we will be able to add/remove/update the data, but object stores can only be created/removed/altered during a version update.
 
 Source: <https://javascript.info/indexeddb#object-store>
 
-**Question:** **What are the two main approaches to performing a IndexedDB version upgrade?**
+### What are the two main approaches to performing a IndexedDB version upgrade?
 
 **Interview Answer:** To perform a database version upgrade, there are two main approaches.
 
@@ -235,13 +235,13 @@ openRequest.onupgradeneeded = function () {
 
 Source: <https://javascript.info/indexeddb#object-store>
 
-**Question:** **Can you define what a transaction is in relation to a database?**
+### Can you define what a transaction is in relation to a database?
 
 **Interview Answer:** In simple terms, a transaction is a group operation, they should either succeed or all fail. For example, when a person buys something, we need to do a group of operations related to their activities such as remove money from their account or adding an item to their shopping list.
 
 Source: <https://javascript.info/indexeddb#transactions>
 
-**Question:** **Example the function and syntax of the transaction method?**
+### Example the function and syntax of the transaction method?
 
 **Interview Answer:** The transaction method of the IDBDatabase interface immediately returns a transaction object (IDBTransaction) containing the IDBTransaction.objectStore method, which you can use to access your object store. All data operations must be made within a transaction in IndexedDB. The transaction method has three available arguments including the store, mode/type, and options. The store/storeNames refer to the names of the object stores that are in the scope of the new transaction, declared as an array of strings. Specify only the object stores that you need to access. If you need to access only one object store, you can specify its name as a string. The mode or type relates to the types of access that can be performed in the transaction. Transactions are opened in one of three modes: readonly, readwrite and readwriteflush (non-standard, Firefox-only.) The versionchange mode cannot be specified here. If you do not provide the parameter, the default access mode is readonly. To avoid slowing things down, do not open a readwrite transaction unless you need to write into the database. The options argument is a dictionary of option durability parameters including "default", "strict", or "relaxed". The default is "default". Using "relaxed" provides better performance, but with fewer guarantees. Web applications are encouraged to use "relaxed" for ephemeral data such as caches or quickly changing records, and "strict" in cases where reducing the risk of data loss outweighs the impact to performance and power. It should be noted that the mode/type and options are optional arguments.
 
@@ -276,7 +276,7 @@ request.onerror = function () {
 
 Source: <https://javascript.info/indexeddb#transactions>
 
-**Question:** **Why are there different types of IndexedDB transactions?**
+### Why are there different types of IndexedDB transactions?
 
 **Interview Answer:** Performance is the reason why transactions need to be labeled either readonly or readwrite. Many readonly transactions can access the same store concurrently, but readwrite transactions cannot. A readwrite transaction “locks” the store for writing. The next transaction must wait before the previous one finishes before accessing the same store.
 
@@ -288,7 +288,7 @@ let transaction = db.transaction('books', 'readwrite'); // (1)
 
 Source: <https://javascript.info/indexeddb#transactions>
 
-**Question:** **What the two methods used to store a value in an Object Store?**
+### What the two methods used to store a value in an Object Store?
 
 **Interview Answer:** There Object stores support two methods including the put() and add() methods to store values. The put(value, [key]) adds the value to the store. The key is supplied only if the object store did not have keyPath or autoIncrement option. If there is already a value with the same key, it will be replaced. The add(value, [key]) is the same as the put method, but if there’s already a value with the same key, then the request fails, and an error with the name "ConstraintError" is generated.
 
@@ -296,13 +296,13 @@ Source: <https://javascript.info/indexeddb#transactions>
 
 Source: <https://javascript.info/indexeddb#transactions>
 
-**Question:** **How do we mark a IndexedDB transaction as finished, with no more requests to come?**
+### How do we mark a IndexedDB transaction as finished, with no more requests to come?
 
 **Interview Answer:** There is no way to mark an IndexedDB transaction as finished (this is not the same as oncomplete) in the current version 2.0. When all transaction requests are finished, and the microtasks queue is empty, it is committed automatically. Usually, we can assume that a transaction commits when all its requests are complete, and the current code finishes.
 
 Source: <https://javascript.info/indexeddb#transactions-autocommit>
 
-**Question:** **What is one of the side-effects of the transaction auto-commit principle?**
+### What is one of the side-effects of the transaction auto-commit principle?
 
 **Interview Answer:** Transaction’s auto-commit principle has an important side effect. We cannot insert an async operation like fetch, setTimeout in the middle of transaction. IndexedDB will not keep the transaction waiting till these are done. This is notable when you use fetch of setTimeout in conjunction with a IndexedDB transaction. The Authors of IndexedDB spec believe that transactions should be short-lived. Mostly for performance reasons. Notably, readwrite transactions “lock” the stores for writing. So, if one part of application initiated readwrite on books object store, then another part that wants to do the same has to wait: the new transaction “hangs” till the first one is done. That can lead to strange delays if transactions take a long time.
 
@@ -323,7 +323,7 @@ request1.onsuccess = function () {
 
 Source: <https://javascript.info/indexeddb#transactions-autocommit>
 
-**Question:** **Do we need onerror/onsuccess for every request?**
+### Do we need onerror/onsuccess for every request?
 
 **Interview Answer:** Not every time. We can use event delegation instead. All events are DOM events, with capturing and bubbling, but usually only bubbling stage is used for event delegation. We can catch all errors using db.onerror handler, for reporting or other purposes that we choose. If an error is fully handled, then we do not want to report it. We can stop the bubbling and use db.onerror by using event.stopPropagation() in request.onerror.
 
@@ -345,13 +345,13 @@ request.onerror = function (event) {
 
 Source: <https://javascript.info/indexeddb#event-delegation>
 
-**Question:** **What are the two main types of searches in an object store?**
+### What are the two main types of searches in an object store?
 
 **Interview Answer:** There are two main types of search in an object store that include searching by key value or key range, or by another object field. This required an additional data structure, named “index”.
 
 Source: <https://javascript.info/indexeddb#searching>
 
-**Question:** **Can you explain how a search by key range or value is performed?**
+### Can you explain how a search by key range or value is performed?
 
 **Interview Answer:** To search a IndexedDB database by key range or value we must implement the IDBKeyrange object and call on the lowerbound and/or upperbound methods. The lowerBound() method creates a new key range with only a lower bound. By default, it includes the lower endpoint value and is closed. The upperBound() method creates a new upper-bound key range. By default, it includes the upper endpoint value and is closed. To perform the actual search, there are following methods including store get, getAll, getKey, getAllKeys, or count. They accept a query argument that can be either an exact key or a key range.
 
@@ -383,13 +383,13 @@ books.getAllKeys(IDBKeyRange.lowerBound('js', true));
 
 Source: <https://javascript.info/indexeddb#searching>
 
-**Question:** **By default, how does Object store sort values?**
+### By default, how does Object store sort values?
 
 **Interview Answer:** By default, an object store sorts values by key internally. So, requests that return many values always return them in sorted by key order.
 
 Source: <https://javascript.info/indexeddb#searching>
 
-**Question:** **How do you delete values in a IndexedDB Object store?**
+### How do you delete values in a IndexedDB Object store?
 
 **Interview Answer:** In simple terms, the delete method looks up values to delete by a query, the call format is similar to the getAll() method. If we want to delete everything, we can use the clear method to clear the entire storage.
 
@@ -411,7 +411,7 @@ books.clear(); // clear the storage.
 
 Source: <https://javascript.info/indexeddb#searching>
 
-**Question:** **Briefly explain what a cursor is in relation to the IndexedDB database.**
+### Briefly explain what a cursor is in relation to the IndexedDB database.\*\*
 
 **Interview Answer:** A cursor, simply put, is a pointer that iterates over all the documents in each data store or index, and on each iteration, it exposes the data for the document that the cursor is currently being “pointed” at.
 

@@ -7,7 +7,7 @@ sidebar_position: 2
 
 **Generators, Advanced Iteration: Async Iteration and Generators**
 
-**Question:** **What is a common use case for asynchronous iteration in JavaScript?**
+### What is a common use case for asynchronous iteration in JavaScript?
 
 **Interview Answer:** A common use for asynchronous iteration is when data is expected in an asynchronous behavior. The most common case is that the object needs to make a network request to deliver the next value. This is also a great way to handle controlled chunks of data to reduce the impact on resources.
 
@@ -54,7 +54,7 @@ let range = {
 
 Source: <https://javascript.info/async-iterators-generators#async-iterables>
 
-**Question:** **Is it possible to use a spread syntax with an asynchronous iterator?**
+### Is it possible to use a spread syntax with an asynchronous iterator?
 
 **Interview Answer:** No, because the spread syntax expects to find Symbol.iterator, not Symbol.asyncIterator. It’s also the case for for..of: the syntax without await needs Symbol.iterator.
 
@@ -90,6 +90,7 @@ let range = {
 };
 
 console.log([...range]); // [1,2,3,4,5] It works!!!
+
 ////////////////////////////////////
 
 // Spread Syntax fails with Symbol.asyncIterator

@@ -5,7 +5,7 @@ sidebar_position: 8
 
 # WeakMap & WeakSet in JavaScript - Q&A
 
-**Question:** **What is the difference between Map and WeakMap in JavaScript?**
+### What is the difference between Map and WeakMap in JavaScript?
 
 **Interview Answer:** The first difference between Map and WeakMap is that keys must be objects, not primitive values in a WeakMap. WeakMap does not support iteration and methods keys(), values(), entries(), so there’s no way to get all keys or values from it.
 
@@ -42,13 +42,13 @@ john = null; // overwrite the reference
 
 Source: <https://javascript.info/weakmap-weakset#weakmap>
 
-**Question:** **What are some use cases in applications for a WeakMap?**
+### What are some use cases in applications for a WeakMap?
 
 **Interview Answer:** The main area of application for WeakMap is an additional data storage such as third party data that you may not have an indefinite use. Another common example is caching. We can store (“cache”) results from a function, so that future calls on the same object can reuse it.
 
 Source: <https://javascript.info/weakmap-weakset#weakmap>
 
-**Question:** **What is the difference between a Set and WeakSet in JavaScript?**
+### What is the difference between a Set and WeakSet in JavaScript?
 
 **Interview Answer:** The main difference is that WeakSet can only contain objects & not any other type. Another difference between the two is that references to objects in a WeakSet are held “weakly”. This means that if there is no other reference to an object in the WeakSet it will get garbage collected.
 
@@ -85,7 +85,7 @@ john = null;
 
 Source: <https://javascript.info/weakmap-weakset#weakset>
 
-**Question:** **What is the most notable limitation of WeakMap and WeakSet in JS?**
+### What is the most notable limitation of WeakMap and WeakSet in JS?
 
 **Interview Answer:** The most notable limitation of WeakMap and WeakSet is the absence of iterations, and the inability to get all current content. That may appear inconvenient but does not prevent WeakMap/WeakSet from doing their main job in being “additional” storage of data for objects which are stored/managed at another place.
 

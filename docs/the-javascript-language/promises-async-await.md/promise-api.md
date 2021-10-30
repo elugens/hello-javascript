@@ -7,13 +7,13 @@ sidebar_position: 5
 
 **Promises, async/await: Promise API**
 
-**Question: What are the names of the 6 static methods in the Promise class?**
+### What are the names of the 6 static methods in the Promise class?
 
 **Interview Answer:** The promise class has 6 static methods including the promise.all, allSettled, race, any, resolve, and reject methods. Of all these, Promise.all is probably the most common in practice.
 
 Source: <https://javascript.info/promise-api>
 
-**Question: Explain, the function and syntax of the Promise.all static method?**
+### Explain, the function and syntax of the Promise.all static method?
 
 **Interview Answer:** The Promise.all() method takes an iterable of promises as an input, and returns a single Promise that resolves to an array of the results (it technically can be any iterable, but is usually an array) of the input promises. This returned promise will resolve when all the input's promises have resolved, or if the input iterable contains no promises. It rejects immediately upon any of the input promises rejecting or non-promises throwing an error and will reject with this first rejection message / error. The new promise resolves when all listed promises are settled, and the array of their results becomes its result.
 
@@ -46,7 +46,7 @@ Promise.all([promise1, promise2, promise3]).then((values) => {
 
 Source: <https://javascript.info/promise-api#promise-all>
 
-**Question: How does the map method work with Promise.all static method?**
+### How does the map method work with Promise.all static method?
 
 **Interview Answer:** Since, the map method creates a new array populated with the results of the calling function. The map method is a great adhesive for the Promise.all method because it carries some of the responsibility of providing the calling function on every array element.
 
@@ -78,7 +78,7 @@ Promise.all(requests).then((responses) =>
 
 Source: <https://javascript.info/promise-api#promise-all>
 
-**Question: What happens when there is an error with the Promise.all method?**
+### What happens when there is an error with the Promise.all method?
 
 **Interview Answer:** If one promise rejects, Promise.all immediately rejects, completely forgetting about the other ones in the list. Their results are ignored.
 
@@ -98,7 +98,7 @@ Promise.all([
 
 Source: <https://javascript.info/promise-api#promise-all>
 
-**Question: Does Promise.all allow regular values in the iterable?**
+### Does Promise.all allow regular values in the iterable?
 
 **Interview Answer:** Yes, Promise.all(iterable) allows non-promise “regular” values in the iterable. Normally, Promise.all(...) accepts an iterable (in most cases an array) of promises. But if any of those objects is not a promise, it is passed to the resulting array “as is”.
 
@@ -118,7 +118,7 @@ Promise.all([
 
 Source: <https://javascript.info/promise-api#promise-all>
 
-**Question: Explain, the function and syntax of the Promise.allSettled static method?**
+### Explain, the function and syntax of the Promise.allSettled static method?
 
 **Interview Answer:** The Promise.allSettled() method returns a promise that resolves after all the given promises have either fulfilled or rejected, with an array of objects that each describes the outcome of each promise. It is typically used when you have multiple asynchronous tasks that are not dependent on one another to complete successfully, or you would always like to know the result of each promise. In comparison, the Promise returned by Promise.all() may be more appropriate if the tasks are dependent on each other / if you'd like to immediately reject upon any of them rejecting.
 
@@ -164,7 +164,7 @@ Promise.allSettled(urls.map((url) => fetch(url))).then((results) => {
 
 Source: <https://javascript.info/promise-api#promise-allsettled>
 
-**Question: Explain, the function and syntax of the Promise.race static method?**
+### Explain, the function and syntax of the Promise.race static method?
 
 **Interview Answer:** Like Promise.all but waits only for the first settled promise and gets its result (or error). The Promise.race() method returns a promise that fulfills or rejects as soon as one of the promises in an iterable fulfills or rejects, with the value or reason from that promise.
 
@@ -192,7 +192,7 @@ Promise.race([promise1, promise2]).then((value) => {
 
 Source: <https://javascript.info/promise-api#promise-race>
 
-**Question: Explain, the function and syntax of the Promise.any static method?**
+### Explain, the function and syntax of the Promise.any static method?
 
 **Interview Answer:** Similar to Promise.race, but waits only for the first fulfilled promise and gets its result. If all of the given promises are rejected, then the returned promise is rejected with Aggregate Error – a special error object that stores all promise errors in its errors property.
 
@@ -234,7 +234,7 @@ Promise.any([
 
 Source: <https://javascript.info/promise-api#promise-any>
 
-**Question: Explain, the function and syntax of the Promise.resolve static method?**
+### Explain, the function and syntax of the Promise.resolve static method?
 
 **Interview Answer:** The Promise.resolve() method returns a Promise object that is resolved with a given value. If the value is a promise, that promise is returned; if the value is a thenable (i.e. has a "then" method), the returned promise will "follow" that thenable, adopting its eventual state; otherwise the returned promise will be fulfilled with the value.
 
@@ -265,7 +265,7 @@ function loadCached(url) {
 
 Source: <https://javascript.info/promise-api#promise-resolve>
 
-**Question: Explain, the function and syntax of the Promise.reject static method?**
+### Explain, the function and syntax of the Promise.reject static method?
 
 **Interview Answer:** The Promise.reject() method returns a Promise object that is rejected with a given reason. The static Promise.reject function returns a Promise that is rejected. For debugging purposes and selective error catching, it is useful to make reason an instanceof Error.
 

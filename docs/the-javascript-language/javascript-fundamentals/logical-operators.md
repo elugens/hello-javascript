@@ -7,13 +7,13 @@ sidebar_position: 11
 
 **JavaScript Fundamentals: LOGICAL OPERATORS**
 
-**Question:** **What makes the logical || (OR), && (AND), ! (NOT) operators unique?**
+### What makes the logical || (OR), && (AND), ! (NOT) operators unique?
 
 **Interview Answer:** Logical operators can be applied to values of any type; they are not limited to a Boolean type.
 
 Source: <https://javascript.info/logical-operators>
 
-**Question:** **If an operand is not a Boolean, what does the logical || OR do?**
+### If an operand is not a Boolean, what does the logical || OR do?
 
 **Technical Answer:** If an operand is not a Boolean, it is converted to a Boolean for the evaluation. For instance, the number 1 is treated as true, the number 0 is false.
 
@@ -31,7 +31,7 @@ console.log(0 || 0); // returns 0
 
 Source: <https://javascript.info/logical-operators#or>
 
-**Question:** **How does logical OR “||” function?**
+### How does logical OR “||” function?
 
 **Technical Answer:** The OR || operator does the following:
 
@@ -52,7 +52,7 @@ alert(undefined || null || 0); // 0 (all falsy, returns the last value)
 
 Source: <https://javascript.info/logical-operators#or-finds-the-first-truthy-value>
 
-**Question:** **What is the definition of a short-circuit evaluation in JavaScript?**
+### What is the definition of a short-circuit evaluation in JavaScript?
 
 **Interview Answer:** When JavaScript evaluates an OR expression, if the first operand is true, JavaScript will short-circuit by not proceeding to the second operand.
 
@@ -66,7 +66,7 @@ false || alert('printed');
 
 Source: <https://javascript.info/logical-operators#or-finds-the-first-truthy-value>
 
-**Question:** **What does the Logical && (AND) return?**
+### What does the Logical && (AND) return?
 
 **Answer:** Logical && (AND) returns true if both operands are truthy and false otherwise.
 
@@ -81,13 +81,13 @@ alert(false && false); // false
 
 Source: <https://javascript.info/logical-operators#and>
 
-**Question:** **What type of conversion does the Logical && (AND) perform?**
+### What type of conversion does the Logical && (AND) perform?
 
 **Interview Answer:** Logical && (AND) converts all operands to Boolean values, true or false.
 
 Source: <https://javascript.info/logical-operators#and-finds-the-first-falsy-value>
 
-**Question:** **What steps are performed in the use of the Logical && (AND) operator?**
+### What steps are performed in the use of the Logical && (AND) operator?
 
 **Technical Answer:** The AND && operator does the following:
 
@@ -114,13 +114,13 @@ alert(0 && 'no matter what'); // 0
 
 Source: <https://javascript.info/logical-operators#and-finds-the-first-falsy-value>
 
-**Question:** **What are the differences between Logical || (OR) and && (AND) operators?**
+### What are the differences between Logical || (OR) and && (AND) operators?
 
 **Interview Answer:** The difference is that AND returns the first falsie value while OR returns the first truthy.
 
 Source: <https://javascript.info/logical-operators#and-finds-the-first-falsy-value>
 
-**Question:** **Which of the two, Logical || `(OR)` and && `(AND)` operators have the higher operator precedence?**
+### Which of the two, Logical || `(OR)` and && `(AND)` operators have the higher operator precedence?
 
 **Interview Answer:** The AND operator has a higher precedence than the OR operator.
 
@@ -128,7 +128,7 @@ Source: <https://javascript.info/logical-operators#and-finds-the-first-falsy-val
 
 Source: <https://javascript.info/logical-operators#and-finds-the-first-falsy-value>
 
-**Question:** **Can you replace conditional if with OR (||) or && (AND)?**
+### Can you replace conditional if with OR (||) or && (AND)?
 
 **Interview Answer:** Technically Yes, but it is not recommended because it reduces readability.
 
@@ -150,7 +150,7 @@ if (x > 0) alert('Greater than zero!');
 
 Source: <https://javascript.info/logical-operators#and-finds-the-first-falsy-value>
 
-**Question:** **What steps are performed in the use of the Logical ! (NOT) operator?**
+### What steps are performed in the use of the Logical ! (NOT) operator?
 
 **Interview Answer:** The operator accepts a single argument, converts it to a boolean, and returns the inverse value.
 
@@ -168,7 +168,7 @@ alert(!0); // true
 
 Source: <https://javascript.info/logical-operators#not>
 
-**Question:** **What happens when we apply the !! (DOUBLE NOT) to a value?**
+### What happens when we apply the !! (DOUBLE NOT) to a value?
 
 **Interview Answer:** The value is inverted twice returning it to its original boolean value.
 
@@ -183,7 +183,7 @@ alert(!!null); // false
 
 Source: <https://javascript.info/logical-operators#not>
 
-**Question:** **Is there a built-in object that performs in the same fashion as the !! (DOUBLE NOT) operator?**
+### Is there a built-in object that performs in the same fashion as the !! (DOUBLE NOT) operator?
 
 **Interview Answer:** The Boolean object produces the same result as the double not.
 
@@ -203,7 +203,7 @@ alert(Boolean(null)); // false
 
 Source: <https://javascript.info/logical-operators#not>
 
-**Question:** **What has the highest operator precedence over all the logical operators?**
+### What has the highest operator precedence over all the logical operators?
 
 **Interview Answer:** Logical NOT is the highest of all logical operators, it always executes first.
 

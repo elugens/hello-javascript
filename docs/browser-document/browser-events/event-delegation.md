@@ -7,7 +7,7 @@ sidebar_position: 3
 
 **Introduction to Events: Event delegation**
 
-**Question:** **What is the behavior pattern in relation to event delegation?**
+### What is the behavior pattern in relation to event delegation?
 
 **Interview Answer:** In relation to events the behavior pattern has two parts. First, we add a custom attribute to an element that describes its behavior. Second, document-wide handler tracks events, and if an event happens on an attributed element – performs the action.
 

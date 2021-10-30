@@ -5,7 +5,7 @@ sidebar_position: 3
 
 # Garbage Collection - Q&A
 
-**Question:** **How does JavaScript manage memory manually or automatically?**
+### How does JavaScript manage memory manually or automatically?
 
 **Interview Answer:** JavaScript automatically allocates memory when objects are created and frees it when they are not used anymore (garbage collection).
 
@@ -13,7 +13,7 @@ sidebar_position: 3
 
 Source: <https://javascript.info/garbage-collection>
 
-**Question:** **Explain, the three steps of the memory life cycle in JavaScript?**
+### Explain, the three steps of the memory life cycle in JavaScript?
 
 **Interview Answer:** The memory life cycle includes allocating, using, and releasing the allocated memory when it is no longer needed.
 
@@ -53,13 +53,13 @@ var n = null;
 
 Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management>
 
-**Question:** **What is the main concept of memory management in JavaScript?**
+### What is the main concept of memory management in JavaScript?
 
 **Interview Answer:** The main concept of memory management in JavaScript is reachability. Simply put, “reachable” values are those that are accessible or usable somehow are guaranteed to be stored in memory.
 
 Source: <https://javascript.info/garbage-collection#reachability>
 
-**Question:** **In relation to JavaScript memory management. What is a GC root?**
+### In relation to JavaScript memory management. What is a GC root?
 
 **Answer:** A “root” is simply an object that the garbage collector assumes is reachable by default, which then has its references traced to find all other current objects that are reachable. Any object that is not reachable through any reference chain of any of the root objects is considered unreachable and will eventually be destroyed by the garbage collector.
 
@@ -67,7 +67,7 @@ Source: <https://javascript.info/garbage-collection#reachability>
 
 Addition: <https://stackoverflow.com/questions/9748358/when-does-the-js-engine-create-a-garbage-collection-root>
 
-**Question:** **There is a base set of inherently reachable values, that cannot be deleted for obvious reasons. Can you name at least one?**
+### There is a base set of inherently reachable values, that cannot be deleted for obvious reasons. Can you name at least one?
 
 **Answer:** Global variables cannot be deleted directly. The global variable must be set to null before the memory can be collected. However, the variable still exists and simply references null (nothingness).
 
@@ -91,7 +91,7 @@ Source: <https://javascript.info/garbage-collection#reachability>
 
 Addition: <https://stackoverflow.com/questions/16787246/does-javascript-garbage-collector-dispose-global-variables>
 
-**Question:** **In JavaScript, can interlinked objects be garbage collected based on nullification on a specific object on the GC root?**
+### In JavaScript, can interlinked objects be garbage collected based on nullification on a specific object on the GC root?
 
 **Answer:** Yes, the object that is deleted or nullified will be garbage collected even if it is part of a GC root or it one of its properties references another object.
 
@@ -119,7 +119,7 @@ delete family.mother.husband;
 
 Source: <https://javascript.info/garbage-collection#interlinked-objects>
 
-**Question:** **Is it possible that all the interlinked objects in a GC root become unreachable and removed from memory?**
+### Is it possible that all the interlinked objects in a GC root become unreachable and removed from memory?
 
 **Answer:** Yes, it is possible if the root is nullified in the program.
 
@@ -145,13 +145,13 @@ family = null;
 
 Source: <https://javascript.info/garbage-collection#unreachable-island>
 
-**Question:** **What is the basic collection algorithm called in JavaScript?**
+### What is the basic collection algorithm called in JavaScript?
 
 **Answer:** The basic garbage collection algorithm is called mark-and-sweep.
 
 Source: <https://javascript.info/garbage-collection#internal-algorithms>
 
-**Question:** **Explain, how the internal JavaScript garbage collector algorithm works?**
+### Explain, how the internal JavaScript garbage collector algorithm works?
 
 **Answer:** The following “garbage collection” steps are regularly performed:
 
@@ -163,7 +163,7 @@ Source: <https://javascript.info/garbage-collection#internal-algorithms>
 
 Source: <https://javascript.info/garbage-collection#internal-algorithms>
 
-**Question:** **Name the three of the common garbage collection optimizations?**
+### Name the three of the common garbage collection optimizations?
 
 **Interview Answer:** The three common garbage collection optimizations include generalization, incremental, and idle-time collection.
 

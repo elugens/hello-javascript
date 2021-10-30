@@ -5,7 +5,7 @@ sidebar_position: 4
 
 # Var Declaration - Q&A
 
-**Question:** **What is the difference between var and let declarations?**
+### What is the difference between var and let declarations?
 
 **Interview Answer:** The main difference between let and var is that scope of a variable defined with let is limited to the block in which it is declared, while variable declared with var has the global scope.
 
@@ -28,7 +28,7 @@ let b = 'world'; // SyntaxError: Iden```tifier 'b' has already been decla
 
 Source: <https://www.tutorialspoint.com/difference-between-var-and-let-in-javascript>
 
-**Question:** **Is the var declaration block scoped or globally scoped?**
+### Is the var declaration block scoped or globally scoped?
 
 **Interview Answer:** Variables, declared with var, are either function-scoped or globally-scoped. They are visible through blocks. So, technically they have no originating scope (besides function blocks) in JavaScript.
 
@@ -63,7 +63,7 @@ console.log(message); // out of scope - ReferenceError: message is not 
 
 Source: <https://javascript.info/var#var-has-no-block-scope>
 
-**Question:** **How does var work inside of a function block?**
+### How does var work inside of a function block?
 
 **Interview Answer:** If a code block is inside a function, then var becomes a function-level variable. Once, the var is used inside of a function, the function takes ownership of the var.
 
@@ -103,7 +103,7 @@ alert(phrase); // ReferenceError: phrase is not defined
 
 Source: <https://javascript.info/var#var-has-no-block-scope>
 
-**Question:** **What happens when you redeclare a var in JavaScript?**
+### What happens when you redeclare a var in JavaScript?
 
 **Interview Answer:** If we redeclare var in the global space, then JavaScript ignores it as an error and allows the new value to overwrite the old one.
 
@@ -127,7 +127,7 @@ let user; // SyntaxError: 'user' has already been declared
 
 Source: <https://javascript.info/var#var-tolerates-redeclarations>
 
-**Question:** **Explain, what is hoisting in JavaScript?**
+### Explain, what is hoisting in JavaScript?
 
 **Interview Answer:** Hoisting is JavaScript's default behavior of moving declarations to the top. It should be noted that they are not initialized, but they are put into memory without their assignments.
 
@@ -156,7 +156,7 @@ console.log(user); // ReferenceError: user is not defined
 
 Source: <https://javascript.info/var#var-variables-can-be-declared-below-their-use>
 
-**Question:** **What is a (IIFE) immediately invoked function expression and why is it used with the old var?**
+### What is a (IIFE) immediately invoked function expression and why is it used with the old var?
 
 **Interview Answer:** An IIFE or Immediately Invoked Function Expression is a JavaScript function that runs as soon as it is defined. There are at least five variations of their implementation that we should be familiar with.
 
@@ -188,7 +188,7 @@ Example: IIFE
 
 Source: <https://javascript.info/var#iife>
 
-**Question:** **Does JavaScript allow function declarations to be called immediately?**
+### Does JavaScript allow function declarations to be called immediately?
 
 **Interview Answer:** No, JavaScript does not allow Function Declarations to be called immediately. It will result in a syntax error.
 

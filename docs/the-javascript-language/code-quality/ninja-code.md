@@ -7,19 +7,19 @@ sidebar_position: 4
 
 **Code Quality: NINJA CODE**
 
-**Question:** **Are one-letter variables a good idea to use in programming?**
+### Are one-letter variables a good idea to use in programming?
 
 **Answer:** No, they can cause confusion, in a team environment, and make it harder to debug your code.
 
 Source: <https://javascript.info/ninja-code#one-letter-variables>
 
-**Question:** **Is it a good idea to abbreviate variable and function names?**
+### Is it a good idea to abbreviate variable and function names?
 
 **Answer:** No, they can cause confusion, in a team environment, and make it harder to debug your code.
 
 Source: <https://javascript.info/ninja-code#use-abbreviations>
 
-**Question:** **Is it a good idea to overlap variables in JavaScript?**
+### Is it a good idea to overlap variables in JavaScript?
 
 **Answer:** No, they can cause confusion, in a team environment, and make it harder to debug your code. Overlapping is not a good idea because it can cause errors further into the layers of your code.
 

@@ -7,13 +7,13 @@ sidebar_position: 2
 
 **Web components: Custom elements**
 
-**Question:** **What are the two types of custom elements in web development?**
+### What are the two types of custom elements in web development?
 
 **Interview Answer:** The two kinds of custom elements include autonomous custom elements and customized built-in elements. Autonomous custom elements – “all-new” elements, extending the abstract HTMLElement class. Customized built-in elements – extending built-in elements, like a customized button, based on HTMLButtonElement etc.
 
 Source: <https://javascript.info/custom-elements>
 
-**Question:** **What are the requirements needed to create a custom element?**
+### What are the requirements needed to create a custom element?
 
 **Interview Answer:** To create a custom element, we need a class extension, like HTMLElement, and a customElement defined to register the new element. These requirements cover both the customized and autonomous elements. In addition, there are several methods that we can use that are optional, like connectedCallBack, for custom elements.
 
@@ -35,25 +35,25 @@ customElements.define('my-element', MyElement);
 
 Source: <https://javascript.info/custom-elements>
 
-**Question:** **What is the naming convention for custom elements?**
+### What is the naming convention for custom elements?
 
 **Interview Answer:** Custom element name must have a hyphen -, e.g., my-element and super-button are valid names, but myelement is not. That is to ensure that there are no name conflicts between built-in and custom HTML elements.
 
 Source: <https://javascript.info/custom-elements>
 
-**Question:** **What are the five methods in the lifecycle callbacks?**
+### What are the five methods in the lifecycle callbacks?
 
 **Interview Answer:** The five methods included in the lifecycle callbacks are the connectedCallback, disconnected, adoptedCallback, attributeChangedCallback, and the observedAttributes methods.
 
 Source: <https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements#using_the_lifecycle_callbacks>
 
-**Question:** **Can you explain the function of the connectedCallBack method?**
+### Can you explain the function of the connectedCallBack method?
 
 **Interview Answer:** The connectedCallBack is invoked each time the custom element is appended into a document-connected element. This will happen each time the node is moved and may happen before the element's contents have been fully parsed.
 
 Source: <https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements#using_the_lifecycle_callbacks>
 
-**Question:** **What happens when a base-element, the one we are customizing, loads before customized element?**
+### What happens when a base-element, the one we are customizing, loads before customized element?
 
 **Interview Answer:** If the browser encounters any elements we are trying to customize before customElements.define, that is not an error. But the element is yet unknown, just like any non-standard tag.
 
@@ -63,7 +63,7 @@ When customElement.define is called, they are “upgraded”: a new instance of 
 
 Source: <https://javascript.info/custom-elements>
 
-**Question:** **What is the reason for not using the constructor, but opt to use connectedCallBack?**
+### What is the reason for not using the constructor, but opt to use connectedCallBack?
 
 **Interview Answer:** The reason is simple: when constructor is called, it is yet too early. The element is created, but the browser did not yet process/assign attributes at this stage: calls to getAttribute would return null. So, we cannot really render there. Besides, if you think about it, that is better performance-wise to delay the work until it is really needed.
 
@@ -71,7 +71,7 @@ The connectedCallback triggers when the element is added to the document. Not ju
 
 Source: <https://javascript.info/custom-elements>
 
-**Question:** **Can you explain how observedAttribute works in conjunction with attributeChangedCallback?**
+### Can you explain how observedAttribute works in conjunction with attributeChangedCallback?
 
 **Interview Answer:** The attributeChangedCallback is invoked each time one of the custom element's attributes is added, removed, or changed. Which attributes to notice change for is specified in a static get observedAttributes method.
 
@@ -151,7 +151,7 @@ Source: <https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custo
 
 Source: <https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements#using_the_lifecycle_callbacks>
 
-**Question:** **Can you explain the rendering order when HTML parser builds the DOM?**
+### Can you explain the rendering order when HTML parser builds the DOM?
 
 **Interview Answer:** When HTML parser builds the DOM, elements are processed one after another, parents before children. E.g., if we have `<outer><inner></inner></outer>`, then `<outer>` element is created and connected to DOM first, and then `<inner>`. That leads to important consequences for custom elements that we should prepare for in our code.
 
@@ -174,7 +174,7 @@ Code Example:
 
 Source: <https://javascript.info/custom-elements#rendering-order>
 
-**Question:** **Is there a way to ensure that custom element returns a value on a nested element?**
+### Is there a way to ensure that custom element returns a value on a nested element?
 
 **Interview Answer:** When HTML parser builds the DOM, elements are processed one after another, parents before children. E.g., if we have `<outer><inner></inner></outer>`, then `<outer>` element is created and connected to DOM first, and then `<inner>`. That leads to important consequences for custom elements that we should prepare for in our code. To handle inner elements, we can delay actions using setTimeout to ensure that the DOM has completed loaded our document. If we would like to pass information to custom element, we can use attributes. They are available immediately or, if we really need the children, we can defer access to them with zero-delay setTimeout.
 
@@ -200,7 +200,7 @@ customElements.define('user-info', class extends HTMLElement {
 
 Source: <https://javascript.info/custom-elements#rendering-order>
 
-**Question:** **Are there any issues with new or autonomous elements in relation to search engines?**
+### Are there any issues with new or autonomous elements in relation to search engines?
 
 **Interview Answer:** Yes, a new or autonomous element like `<my-element>` do not give a search engine enough information, like associated semantics. They are not known to search engines and accessibility devices cannot translate them. To fix this, we can extend and customize built-in HTML elements by inheriting from their classes.
 

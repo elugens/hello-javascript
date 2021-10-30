@@ -5,13 +5,13 @@ sidebar_position: 6
 
 # Function object / NFE - Q&A
 
-**Question:** **In JavaScript, what type is a function?**
+### In JavaScript, what type is a function?
 
 **Interview Answer:** In JavaScript, all functions are objects. A good way to imagine functions is as callable “action objects”. We can not only call them, but also treat them as objects. add/remove properties, pass by reference etc.
 
 Source: <https://javascript.info/function-object>
 
-**Question:** **Explain, why are functions Objects in JavaScript?**
+### Explain, why are functions Objects in JavaScript?
 
 **Interview Answer:** In JavaScript, functions are first-class objects, because they can have properties and methods just like any other object. What distinguishes them from other objects is that functions can be called. In brief, they are Function objects.
 
@@ -31,7 +31,7 @@ console.log(sayHi.length); // length = 1, using build length method
 
 Source: <https://javascript.info/function-object>
 
-**Question:** **What kind of naming logic does JavaScript use for functions?**
+### What kind of naming logic does JavaScript use for functions?
 
 **Interview Answer:** The function name-assigning logic in JavaScript is smart. It also assigns the correct name to a function even if it is created without one. It also works if the assignment is done via a default value. In the specification, this feature is called a “contextual name”. If the function does not provide one, then in an assignment it is figured out from the context.
 
@@ -81,7 +81,7 @@ alert(user.sayBye.name); // sayBye
 
 Source: <https://javascript.info/function-object#the-name-property>
 
-**Question:** **What does the function length property do?**
+### What does the function length property do?
 
 **Interview Answer:** The function length property returns the number of function parameters (arguments). The function length property does not count rest parameters. The length property is sometimes used for introspection in functions that operate on other functions.
 
@@ -101,13 +101,13 @@ alert(many.length); // 2, rest parament not counted
 
 Source: <https://javascript.info/function-object>
 
-**Question:** **Is a function property considered a variable in JavaScript?**
+### Is a function property considered a variable in JavaScript?
 
 **Interview Answer:** No, A property assigned to a function does not define as a local variable inside it. We can treat a function as an object, store properties in it, but that has no effect on its execution. Variables are not function properties and vice versa.
 
 Source: <https://javascript.info/function-object#custom-properties>
 
-**Question:** **Explain, what a named function expression is in JavaScript (NFE)?**
+### Explain, what a named function expression is in JavaScript (NFE)?
 
 **Interview Answer:** Named Function Expression, or NFE, is a term for Function Expressions that have a name. The named function acts as a value of it is assigned variable. This isolates it to the variable it has been assigned to. You can call the named function inside of the expression, but any attempts to call it outside of the function itself will result in an error.
 
@@ -130,7 +130,7 @@ func(); // Error, func is not defined (not visible outside of the fun
 
 Source: <https://javascript.info/function-object#named-function-expression>
 
-**Question:** **What is the actual purpose of the named function expression (NFE)?**
+### What is the actual purpose of the named function expression (NFE)?
 
 **Interview Answer:** There are times when a regular function expression will not meet our needs. A named function expression gives us access to the components of a function even if the reference is nullified on the main variable.
 

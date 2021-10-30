@@ -7,7 +7,7 @@ sidebar_position: 2
 
 **Miscellaneous: Eval: run a code string**
 
-**Question:** **What is the eval functions’ purpose in JavaScript?**
+### What is the eval functions’ purpose in JavaScript?
 
 **Interview Answer:** The honest answer is that you should never use eval in your applications, according to the MDN. However, the purpose for eval is to evaluate JavaScript code represented as a string value. There is one string parameter used in the eval built-in function. It returns the completion value of evaluated code. If the completion value is empty, undefined is returned.
 
@@ -21,7 +21,7 @@ eval(code); // alerts Hello
 
 Source: <https://javascript.info/eval>
 
-**Question:** **Should you use the eval built-in JavaScript function property JavaScript? Why or why not?**
+### Should you use the eval built-in JavaScript function property JavaScript? Why or why not?
 
 **Interview Answer:** We should never use eval in modern applications. There are many problems including security, optimization, speed, and minification compatibility issues. The MDN does not recommend its use in modern programming.
 
@@ -33,7 +33,7 @@ Using outer local variables inside eval is also considered a bad programming pra
 
 Source: <https://javascript.info/eval#using-eval>
 
-**Question:** **Is there a better option or built-in JavaScript object than eval that you can use?**
+### Is there a better option or built-in JavaScript object than eval that you can use?
 
 **Interview Answer:** Yes, the recommended option is to use the built-in Function() object. The benefits include increased application security and engine optimization. If your code needs some data from the outer scope, use new Function and pass it as arguments.
 

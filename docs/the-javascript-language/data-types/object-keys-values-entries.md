@@ -5,7 +5,7 @@ sidebar_position: 9
 
 # Object.keys, values, entries in JavaScript - Q&A
 
-**Question:** **What three data structures use the obj.keys, obj.values, and obj.entries generic methods?**
+### What three data structures use the obj.keys, obj.values, and obj.entries generic methods?
 
 **Interview Answer:** The three data structures that use the obj.keys, obj.values, and obj.entries generic methods include Map, Set, and Array structures. Plain objects also support similar methods, but the syntax is a bit different.
 
@@ -31,7 +31,7 @@ alert(doublePrices.meat); // 8
 
 Source: <https://javascript.info/keys-values-entries>
 
-**Question:** **Explain, the function and syntax of the Object.keys method?**
+### Explain, the function and syntax of the Object.keys method?
 
 **Interview Answer:** The Object.keys() method returns an array of a given object's own enumerable property names, iterated in the same order that a normal loop would.
 
@@ -79,7 +79,7 @@ console.log(Object.keys(myObj)); // console: ['foo']
 
 Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys>
 
-**Question:** **Explain, the function and syntax of the Object.values method?**
+### Explain, the function and syntax of the Object.values method?
 
 **Interview Answer:** Object.values() returns an array whose elements are the enumerable property values found on the object. The ordering of the properties is the same as that given by looping over the property values of the object manually.
 
@@ -121,7 +121,7 @@ console.log(Object.values('foo')); // ['f', 'o', 'o']
 
 Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values>
 
-**Question:** **Explain, the function and syntax of the Object.entries method?**
+### Explain, the function and syntax of the Object.entries method?
 
 **Interview Answer:** The Object.entries method returns an array of a given object's own enumerable string-keyed key-value pairs, in the same order as that provided by a for...in loop. The order is not guaranteed to be chronological. We should sort it first if that is a concern.
 
@@ -153,7 +153,7 @@ for (const [key, value] of Object.entries(object1)) {
 
 Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries>
 
-**Question:** **Explain, the difference between map.keys() and Object.keys(obj) in JavaScript?**
+### Explain, the difference between map.keys() and Object.keys(obj) in JavaScript?
 
 **Interview Answer:** The first difference is that we have to call Object.keys(obj), and not obj.keys(), the reason is flexibility, because objects are a base of all complex structures in JavaScript. The second difference is that Object.\* methods return “real” array, not just an iterable.
 
@@ -183,7 +183,7 @@ console.log(Object.entries(user));
 
 Source: <https://javascript.info/keys-values-entries#object-keys-values-entries>
 
-**Question:** **Do Object.keys/values/entries methods access symbolic properties in JavaScript?**
+### Do Object.keys/values/entries methods access symbolic properties in JavaScript?
 
 **Interview Answer:** Just like a for..in loop, these methods ignore properties that use Symbol(...) as keys. If we want symbolic keys too, we can use Object.getOwnPropertySymbols.
 
@@ -209,7 +209,7 @@ for (let i in obj) {
 
 Source: <https://javascript.info/keys-values-entries#object-keys-values-entries>
 
-**Question:** **Since, Objects lack the methods that exist for arrays, e.g. map, filter, and others. What Object methods can you use to access those methods (map or filter) on an Object?**
+### Since, Objects lack the methods that exist for arrays, e.g. map, filter, and others. What Object methods can you use to access those methods (map or filter) on an Object?
 
 **Interview Answer:** If we would like to apply them, then we can use Object.entries followed by Object.fromEntries. First, we will have to get an array of [key, value] pairs from the obj by invoking Object.entries(obj). Call map on the resulting array. Then, we will have to call Object.fromEntries(array) on the resulting array to turn it back into an object.
 

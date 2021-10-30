@@ -11,7 +11,7 @@ sidebar_position: 1
 
 **Generators, Advanced Iteration: Generators**
 
-**Question:** **What is the difference between Generator and a regular function?**
+### What is the difference between Generator and a regular function?
 
 **Interview Answer:** Regular functions return only one, single value (or nothing). Generators can return (“yield”) multiple values, one after another, on-demand.
 
@@ -39,7 +39,7 @@ console.log(generator); // creates: [object Generator]
 
 Source: <https://javascript.info/generators#generator-functions>
 
-**Question:** **Explain, the function of the generator next method in JavaScript.**
+### Explain, the function of the generator next method in JavaScript.\*\*
 
 **Interview Answer:** The next() method returns an object with two properties done and value. The done property will return false if a value exists, otherwise true if the value returns undefined.
 
@@ -65,7 +65,7 @@ g.next(); // "Object { value: undefined, done: true }"
 
 Source: <https://javascript.info/generators#generator-functions>
 
-**Question:** **What generator function creation syntax is acceptable in JavaScript?**
+### What generator function creation syntax is acceptable in JavaScript?
 
 **Interview Answer:** There are two syntaxes that are used to create generators including the pre (function\* f(…)) and post ( function \*f(…) ) function generator implementations. Both syntaxes are correct, but usually the first syntax is preferred, as the star (\*) denotes that it’s a generator function, it describes the kind, not the name, so it should stick with the function keyword.
 
@@ -95,7 +95,7 @@ function* gen() {
 
 Source: <https://javascript.info/generators#generator-functions>
 
-**Question:** **What is the difference between a generator and an iterator?**
+### What is the difference between a generator and an iterator?
 
 **Interview Answer:** While custom iterators are a useful tool, their creation requires careful programming due to the need to explicitly maintain their internal state. Generator functions provide a powerful alternative, they allow you to define an iterative algorithm by writing a single function whose execution is not continuous. Generator functions are written using the function\* syntax.
 
@@ -166,7 +166,7 @@ for (let num of generator) {
 
 Source: <https://javascript.info/generators#generator-functions>
 
-**Question:** **If you attempt to use the return keyword to return a value at the end of a generator. What happens when you iterate over the values with a for…of loop?**
+### If you attempt to use the return keyword to return a value at the end of a generator. What happens when you iterate over the values with a for…of loop?
 
 **Interview Answer:** Since the generator has the done property with a value of false for each value excluding the last value of done equaling true. When you attempt to return a value instead of yielding one. The last value will not be returned because done is set to true. It’s because for..of iteration ignores the last value, when done: true.
 
@@ -190,7 +190,7 @@ for (let value of generator) {
 
 Source: <https://javascript.info/generators#generators-are-iterable>
 
-**Question:** **Are function generators iterable in JavaScript?**
+### Are function generators iterable in JavaScript?
 
 **Interview Answer:** Yes, when called, generator functions do not initially execute their code. Instead, they return a special type of iterator, called a Generator. The function can be called as many times as desired and returns a new Generator each time. Each Generator may only be iterated once.
 
@@ -231,7 +231,7 @@ it[Symbol.iterator] = function* () {
 
 Source: <https://javascript.info/generators#generators-are-iterable>
 
-**Question:** **Can you explain the power of the yield keyword in JavaScript generator functions?**
+### Can you explain the power of the yield keyword in JavaScript generator functions?
 
 **Interview Answer:** Generators are both powerful and flexible because yield is multi-functional. It not only returns the result outward, but can pass a value inside the generator when we call generator.next(arg) with an argument. That argument becomes the result of yield.
 

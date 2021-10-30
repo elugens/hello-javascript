@@ -7,13 +7,13 @@ sidebar_position: 11
 
 **Document: Coordinates**
 
-**Question:** **To move elements around we should be familiar with coordinates. What are the two coordinate systems that you should be familiar with?**
+### To move elements around we should be familiar with coordinates. What are the two coordinate systems that you should be familiar with?
 
 **Interview Answer:** Most JavaScript methods deal with one of two coordinate systems including the relative to the window and document coordinate systems. Relative to the window – similar to position:fixed, calculated from the window top/left edge, we denote these coordinates as clientX/clientY. Relative to the document – similar to position:absolute in the document root, calculated from the document top/left edge, we denote them as pageX/pageY. When the page is scrolled to the very beginning, so that the top/left corner of the window is exactly the document top/left corner, these coordinates equal each other. But after the document shifts, window-relative coordinates of elements change, as elements move across the window, while document-relative coordinates remain the same.
 
 Sources: <https://javascript.info/coordinates>
 
-**Question:** **Explain the function and syntax of the element getBoundingClientRect method?**
+### Explain the function and syntax of the element getBoundingClientRect method?
 
 **Interview Answer:** The Element.getBoundingClientRect() method returns a DOMRect object providing information about the size of an element and its position relative to the viewport. The returned value is a DOMRect object which is the smallest rectangle which contains the entire element, including its padding and border-width.
 
@@ -67,7 +67,7 @@ style width of 400px and the padding 20px times two height : 240 top : 50 right
 
 Sources: <https://javascript.info/coordinates#element-coordinates-getboundingclientrect>
 
-**Question:** **Why derived properties are needed? Why does top/left exist if there’s x/y?**
+### Why derived properties are needed? Why does top/left exist if there’s x/y?
 
 **Interview Answer:** Mathematically, a rectangle is uniquely defined with its starting point (x,y) and the direction vector (width,height). So, the additional derived properties top/left are for convenience.
 
@@ -75,13 +75,13 @@ Sources: <https://javascript.info/coordinates#element-coordinates-getboundingcli
 
 Sources: <https://javascript.info/coordinates#element-coordinates-getboundingclientrect>
 
-**Question:** **Does Internet Explorer provide support for x/y coordinates?**
+### Does Internet Explorer provide support for x/y coordinates?
 
 **Interview Answer:** No, Internet Explorer does not support x/y properties for historical reasons. So we can either make a polyfill (add getters in DomRect.prototype) or just use top/left, as they are always the same as x/y for positive width/height, in particular in the result of elem.getBoundingClientRect().
 
 Sources: <https://javascript.info/coordinates#element-coordinates-getboundingclientrect>
 
-**Question:** **What does the method elementFromPoint(x,y) do in JavaScript?**
+### What does the method elementFromPoint(x,y) do in JavaScript?
 
 **Interview Answer:** The call to document.elementFromPoint(x, y) returns the most nested element at window coordinates (x, y).
 
@@ -105,7 +105,7 @@ alert(elem.tagName);
 
 Sources: <https://javascript.info/coordinates#elementFromPoint>
 
-**Question:** **For out-of-window coordinates, what does the elementFromPoint return?**
+### For out-of-window coordinates, what does the elementFromPoint return?
 
 **Interview Answer:** The method document.elementFromPoint(x,y) only works if (x,y) are inside the visible area. If any of the coordinates is negative or exceeds the window width/height, then it returns null.
 
@@ -121,7 +121,7 @@ elem.style.background = ''; // Error!
 
 Sources: <https://javascript.info/coordinates#elementFromPoint>
 
-**Question:** **Where do document relative coordinates start?**
+### Where do document relative coordinates start?
 
 **Interview Answer:** Document-relative coordinates start from the upper-left corner of the document, not the window. In CSS, window coordinates correspond to position:fixed, while document coordinates are similar to position: absolute on top.
 

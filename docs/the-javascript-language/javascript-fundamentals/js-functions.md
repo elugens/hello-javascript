@@ -7,7 +7,7 @@ sidebar_position: 15
 
 **JavaScript Fundamentals: FUNCTIONS**
 
-**Question:** **What are the SEVEN types of functions in JavaScript?**
+### What are the SEVEN types of functions in JavaScript?
 
 **Interview Answer:** The seven types of functions include the function declaration, function expression, arrow function, shorthand methods, generators, constructor functions, and JS built-in methods.
 
@@ -72,7 +72,7 @@ Source: <https://javascript.info/function-basics>
 
 Addition: <https://dev.to/jaamaal/different-type-of-function-in-javascript-364l>
 
-**Question:** **What is the definition of a JavaScript Function?**
+### What is the definition of a JavaScript Function?
 
 **Interview Answer:** A JavaScript function is a callable block of code designed to perform a particular task.
 
@@ -90,7 +90,7 @@ square(10); // returns 100
 
 Source: <https://javascript.info/function-basics>
 
-**Question:** **Describe the basic structure of a JavaScript function declaration?**
+### Describe the basic structure of a JavaScript function declaration?\*\*
 
 **Interview Answer:** A function declaration starts first with declaring the function keyword, then the function name, followed by a list of parameters between paratheses (comma-separated, or no parameters are okay) and finally the function body (code) inside of the curly brackets.
 
@@ -104,7 +104,7 @@ function name(parameters) {
 
 Source: <https://javascript.info/function-basics#function-declaration>
 
-**Question:** **What is one of the main purposes of JavaScript functions?**
+### What is one of the main purposes of JavaScript functions?
 
 **Interview Answer:** The main purpose of JS functions is to avoid code duplication.
 
@@ -123,7 +123,7 @@ showMessage('Jane'); // Jane
 
 Source: <https://javascript.info/function-basics#function-declaration>
 
-**Question:** **Is there a limitation on variables declared inside a function?**
+### Is there a limitation on variables declared inside a function?
 
 **Interview Answer:** Yes, they are only visible within the scope of the function and cannot be accessed from outside it.
 
@@ -141,7 +141,7 @@ alert(message); //<-- Error! The variable is local to the function.
 
 Source: <https://javascript.info/function-basics#local-variables>
 
-**Question:** **Can functions access variables outside the function body?**
+### Can functions access variables outside the function body?
 
 **Interview Answer:** Functions can access top level variables, variables inside of the function, and variables inside of a function that they are being called.
 
@@ -166,13 +166,13 @@ alert(userName); // Bob, the value was modified by the function
 
 Source: <https://javascript.info/function-basics#outer-variables>
 
-**Question:** **What is a Global variable?**
+### What is a Global variable?
 
 **Interview Answer:** Variables declared outside of any function or code block are called global. Global variables are visible from any function (unless shadowed by locals).
 
 Source: <https://javascript.info/function-basics#outer-variables>
 
-**Question:** **What is the Modern JavaScript rule for using Global Variables?**
+### What is the Modern JavaScript rule for using Global Variables?
 
 **Interview Answer:** It is a good practice to minimize the use of global variables. Modern code has few or no global variables.
 
@@ -180,7 +180,7 @@ Source: <https://javascript.info/function-basics#outer-variables>
 
 Source: <https://javascript.info/function-basics#outer-variables>
 
-**Question:** **Explain, how a parameter is used in functions.**
+### Explain, how a parameter is used in functions.
 
 **Interview Answer:** Parameters (function arguments) are used to pass arbitrary data to functions.
 
@@ -199,7 +199,7 @@ showMessage('Ann', "What's up?"); // Ann: What's up? (\*\*)
 
 Source: <https://javascript.info/function-basics#parameters>
 
-**Question:** **What happens when a function parameter is not provided?**
+### What happens when a function parameter is not provided?
 
 **Answer:** If a parameter (function argument) and it has no default. The value becomes undefined.
 
@@ -216,7 +216,7 @@ showMessage('Ann'); // "Ann: undefined"
 
 Source: <https://javascript.info/function-basics#default-values>
 
-**Question:** **How is a default function parameter evaluated in JavaScript?**
+### How is a default function parameter evaluated in JavaScript?
 
 **Answer:** In JavaScript, a default parameter is evaluated every time the function is called without the respective parameter.
 
@@ -231,7 +231,7 @@ function showMessage(from, text = anotherFunction()) {
 
 Source: <https://javascript.info/function-basics#default-values>
 
-**Question:** **Is there a way to check for an omitted function parameter and return a new value?**
+### Is there a way to check for an omitted function parameter and return a new value?
 
 **Interview Answer:** We can use a conditional statement using the strict equality or logical OR to check for the omitted parameter.
 
@@ -266,7 +266,7 @@ text = text || 'empty';
 
 Source: <https://javascript.info/function-basics#alternative-default-parameters>
 
-**Question:** **Can you implement multiple occurrences of the return statement in a single function?**
+### Can you implement multiple occurrences of the return statement in a single function?
 
 **Interview Answer:** We can use a conditional statement to handle multiple return statements, but this is not the recommended approach.
 
@@ -294,7 +294,7 @@ if (checkAge(age)) {
 
 Source: <https://javascript.info/function-basics#returning-a-value>
 
-**Question:** **Is it possible to use a return statement without a value?**
+### Is it possible to use a return statement without a value?
 
 **Interview Answer:** Yes, we can use a return statement without a value. It is called an empty return statement. An empty return statement will exit a program and return undefined in the place it is called.
 
@@ -306,7 +306,7 @@ function showMovie(age) {
     return;
   }
 
-  alert('Showing you the movie'); // (\*)
+  alert('Showing you the movie'); // (*)
 
   // ...
 }
@@ -314,7 +314,7 @@ function showMovie(age) {
 
 Source: <https://javascript.info/function-basics#returning-a-value>
 
-**Question:** **What does a return statement with an empty value output?**
+### What does a return statement with an empty value output?
 
 **Interview Answer:** A function with an empty return or without it returns undefined.
 
@@ -322,7 +322,7 @@ Example:
 
 ```js
 function doNothing() {
-  /\* empty \*/;
+  /* empty */
 }
 
 alert(doNothing() === undefined); // true
@@ -337,7 +337,7 @@ alert(doNothing() === undefined); // true
 
 Source: <https://javascript.info/function-basics#returning-a-value>
 
-**Question:** **Caution should be used when using the return statement. What is the most important thing to remember when using a return statement?**
+### Caution should be used when using the return statement. What is the most important thing to remember when using a return statement?
 
 **Interview Answer:** The most important thing to remember when using the return statement is add a semi-colon and never add a newline between return and the value.
 
@@ -348,20 +348,12 @@ Hint: If you want the returned expression to wrap across multiple lines, we shou
 Example:
 
 ```js
-return (
-
-some + long + expression
-
-+ or +
-
-whatever \* f(a) + f(b)
-
-)
+return some + long + expression + or + whatever * f(a) + f(b);
 ```
 
 Source: <https://javascript.info/function-basics#returning-a-value>
 
-**Question:** **What are good naming practices for function names?**
+### What are good naming practices for function names?
 
 **Interview Answer:** Functions should start with a verb as an action word as prefix. For example, a function that returns a user’s name should use “getUserName()” as the function name.
 
@@ -385,13 +377,13 @@ checkPermission(..) // checks a permission, returns true/false
 
 Source: <https://javascript.info/function-basics#function-naming>
 
-**Question:** **What are best practices for the creation of a function?**
+### What are best practices for the creation of a function?
 
 **Answer:** A function should do exactly what is suggested by its name, no more. Two independent actions usually deserve two functions, even if they are usually called together (in that case we can make a 3rd function that calls those two).
 
 Source: <https://javascript.info/function-basics#function-naming>
 
-**Question:** **Should there be a separation of the concerns in functions?**
+### Should there be a separation of the concerns in functions?
 
 **Answer:** Yes, it is particularly important to make every effort to apply separate actions in each function. Sometimes following this rule may not be that easy, but it is a good thing.
 

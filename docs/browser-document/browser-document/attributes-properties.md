@@ -7,7 +7,7 @@ sidebar_position: 6
 
 **Document: Attributes and properties**
 
-**Question:** **What happens to the HTML when the browser loads the page?**
+### What happens to the HTML when the browser loads the page?
 
 **Interview Answer:** When the browser loads the page, it parses the HTML and generates DOM objects from it.
 
@@ -15,7 +15,7 @@ sidebar_position: 6
 
 Sources: <https://javascript.info/dom-attributes-and-properties>
 
-**Question:** **Can you modify or customize a DOM node?**
+### Can you modify or customize a DOM node?
 
 **Interview Answer:** Since DOM nodes are regular JavaScript objects. We can alter them as we would with any other object. This can be used to modify or add methods and create new properties. We can also modify built-in prototypes like Element.prototype and add new methods to all elements.
 
@@ -54,7 +54,7 @@ document.body.sayHi(); // Hello, I'm BODY
 
 Sources: <https://javascript.info/dom-attributes-and-properties#dom-properties>
 
-**Question:** **Do different elements have different standard HTML attributes?**
+### Do different elements have different standard HTML attributes?
 
 **Interview Answer:** Yes, it should be noted that a standard attribute for one element can be unknown for another. An example of this is the input element which has a standard type attribute used to specify the input type.
 
@@ -77,7 +77,7 @@ Example:
 
 Sources: <https://javascript.info/dom-attributes-and-properties#html-attributes>
 
-**Question:** **What happens to non-standard attributes when the browser loads the page? Does it become a DOM property like standard element attributes?**
+### What happens to non-standard attributes when the browser loads the page? Does it become a DOM property like standard element attributes?
 
 **Interview Answer:** In HTML, tags may have attributes. When the browser parses the HTML to create DOM objects for tags, it recognizes standard attributes and creates DOM properties from them. In the case of non-standard attributes, DOM properties are not created, and any invocation of those attributes return undefined.
 
@@ -98,7 +98,7 @@ Example:
 
 Sources: <https://javascript.info/dom-attributes-and-properties#html-attributes>
 
-**Question:** **Is there a way to access non-standard HTML attributes?**
+### Is there a way to access non-standard HTML attributes?
 
 **Interview Answer:** Yes, there are several JavaScript methods that are used to access non-standard HTML attributes including hasAttribute, getAttribute, setAttribute, and removeAttribute. These methods operate exactly with what is written in HTML. Also one can read all attributes using elem.attributes: a collection of objects that belong to a built-in Attr class, with name and value properties.
 
@@ -114,7 +114,7 @@ Example:
 
 Sources: <https://javascript.info/dom-attributes-and-properties#html-attributes>
 
-**Question:** **What are the two basic features of HTML attributes?**
+### What are the two basic features of HTML attributes?
 
 **Interview Answer:** All HTML attributes have two basic features. Their name is case-insensitive (id is same as ID) and their values are always strings.
 
@@ -139,7 +139,7 @@ Example:
 
 Sources: <https://javascript.info/dom-attributes-and-properties#html-attributes>
 
-**Question:** **When a standard attribute changes, what happens to the corresponding property?**
+### When a standard attribute changes, what happens to the corresponding property?
 
 **Interview Answer:** When a standard attribute changes, the corresponding property is auto updated, and vice versa, but there are some exceptions to the rule. This behavior can be defined as property-attribute synchronization in JavaScript.
 
@@ -166,7 +166,7 @@ Example:
 
 Sources: <https://javascript.info/dom-attributes-and-properties#property-attribute-synchronization>
 
-**Question:** **Can you name one exception to the rule of property-attribute synchronization?**
+### Can you name one exception to the rule of property-attribute synchronization?
 
 **Interview Answer:** One exclusion or exception is input.value can only synchronize from attribute to property, but not back. Changing the attribute value updates the property, but the property change does not affect the attribute.
 
@@ -193,7 +193,7 @@ Example:
 
 Sources: <https://javascript.info/dom-attributes-and-properties#property-attribute-synchronization>
 
-**Question:** **Are DOM properties always strings like HTML attributes?**
+### Are DOM properties always strings like HTML attributes?
 
 **Interview Answer:** No, DOM properties are not always strings, because they have property types. For instance, the input.checked property (for checkboxes) is a Boolean (its either checked or not checked). There are other examples. The style attribute is a string, but the style property is an object. Most properties are strings though.
 
@@ -226,7 +226,7 @@ Example:
 
 Sources: <https://javascript.info/dom-attributes-and-properties#dom-properties-are-typed>
 
-**Question:** **Can you describe a case for use of non-standard attributes?**
+### Can you describe a case for use of non-standard attributes?
 
 **Interview Answer:** We can use non-standard attributes to pass custom data from HTML to JavaScript, or to “mark” HTML-elements for JavaScript.
 
@@ -262,7 +262,7 @@ Example:
 
 Sources: <https://javascript.info/dom-attributes-and-properties#non-standard-attributes-dataset>
 
-**Question:** **Is there a way to style an element using non-standard HTML attributes?**
+### Is there a way to style an element using non-standard HTML attributes?
 
 **Answer:** Yes, we can use non-standard HTML attributes to style our elements. This can be achieved by acting on the class or id of an element and changing the style via the styles. This works for both inline and external style sheets. This is a much better way to handle the style based on the state of our element.
 
@@ -296,7 +296,7 @@ Example:
 
 Sources: <https://javascript.info/dom-attributes-and-properties#non-standard-attributes-dataset>
 
-**Question:** **Is there a way to avoid conflicts when creating custom attributes?**
+### Is there a way to avoid conflicts when creating custom attributes?
 
 **Interview Answer:** Yes, custom attributes should be prepended with the `data-* `attribute to avoid conflicts in your code. All attributes starting with “data-” are reserved for programmers’ use. They are available in the dataset property. The main reason to use the data prepended attribute is if the standard attribute specification is updated. You will avoid any conflicts in your code. Using `data-*` attributes is a valid, safe way to pass custom data.
 
@@ -312,7 +312,7 @@ Example:
 
 Sources: <https://javascript.info/dom-attributes-and-properties#non-standard-attributes-dataset>
 
-**Question:** **Are multi-word attributes case sensitive in dataset properties?**
+### Are multi-word attributes case sensitive in dataset properties?
 
 **Interview Answer:** Yes, multi-word attributes case sensitive in dataset properties. We should use camel-cased styling when we are using dataset properties.
 

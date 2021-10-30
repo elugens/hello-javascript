@@ -7,7 +7,7 @@ sidebar_position: 5
 
 **Miscellaneous: BigInt**
 
-**Question:** **Can you briefly explain what a BigInt is in JavaScript?**
+### Can you briefly explain what a BigInt is in JavaScript?
 
 **Interview Answer:** BigInt is a special numeric type that provides support for integers of arbitrary length. A bigint is created by appending n to the end of an integer literal or by calling the function BigInt that creates bigints from strings, numbers etc.
 
@@ -38,7 +38,7 @@ alert(Number(bigint) + number); // 3
 
 Source: <https://javascript.info/bigint>
 
-**Question:** **How does the division operator interact with BigInts?**
+### How does the division operator interact with BigInts?
 
 **Interview Answer:** When BigInts are used with the division operator it will round the BigInt towards zero. All operations on bigints return bigints.
 
@@ -55,7 +55,7 @@ alert(5n / 2n); // 2, rounds towards zero
 
 Source: <https://javascript.info/bigint#math-operators>
 
-**Question:** **What happens when you mix regular numbers with BigInts?**
+### What happens when you mix regular numbers with BigInts?
 
 **Interview Answer:** BigInts and regular numbers should never be mixed in mathematical operations, it will result in an error. We should explicitly convert them if needed: using either BigInt() or Number().
 
@@ -79,7 +79,7 @@ alert(Number(bigint) + number); // 3
 
 Source: <https://javascript.info/bigint#math-operators>
 
-**Question:** **Is it possible to use the unary operator on BigInts?**
+### Is it possible to use the unary operator on BigInts?
 
 **Interview Answer:** No, we should use Number() to convert a bigint to a number.
 
@@ -94,7 +94,7 @@ console.log(+bigint); // TypeError
 
 Source: <https://javascript.info/bigint#math-operators>
 
-**Question:** **Although, comparisons work with BigInt, what should you always remember?**
+### Although, comparisons work with BigInt, what should you always remember?
 
 **Interview Answer:** Comparisons, such as (< >) work with bigints and numbers without issue, but as numbers and bigints belong to different types, they can be equal ==, but not strictly equal === each other.
 

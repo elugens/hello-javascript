@@ -7,7 +7,7 @@ sidebar_position: 9
 
 **Regular expressions: Quantifiers +, \*, ? and {n}**
 
-**Question:** **What is a quantifier used for in a regular expression?**
+### What is a quantifier used for in a regular expression?
 
 **Interview Answer:** A quantifier is used to find the exact count in a sequence of digits. For example, if we are looking for a sequence of numbers like 123-456. We can used \d{3} which will return 123,456.
 
@@ -34,7 +34,7 @@ alert(numbers); // 7,903,123,45,67
 
 Source: <https://javascript.info/regexp-quantifiers#quantity-n>
 
-**Question:** **Are there any shorthand alias quantifiers in regular expressions?**
+### Are there any shorthand alias quantifiers in regular expressions?
 
 **Interview Answer:** There are shorthands for most used quantifiers, like \d+ which looks for numbers and is a shorthand way for \d{1,},. Quantifiers are used very often. They serve as the main “building block” of complex regular expressions. Using shorthand aliases can help reduce the amount of code necessary to implement an expression.
 

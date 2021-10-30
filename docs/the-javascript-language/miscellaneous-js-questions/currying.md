@@ -7,7 +7,7 @@ sidebar_position: 3
 
 **Miscellaneous: Currying**
 
-**Question:** **What is currying in JavaScript?**
+### What is currying in JavaScript?
 
 **Interview Answer:** Currying is an advanced technique of working with functions. It is used not only in JavaScript, but in other languages as well. Currying is a transformation of functions that translates a function from callable as f(a, b, c) into callable as f(a)(b)(c). Currying does not call a function. It just transforms it. Currying allows us to easily get partials.
 
@@ -37,7 +37,7 @@ alert(curriedSum(1)(2)); // 3
 
 Source: <https://javascript.info/currying-partials>
 
-**Question:** **What is the main rule of currying functions in JavaScript?**
+### What is the main rule of currying functions in JavaScript?
 
 **Interview Answer:** Currying requires the function to have a fixed number of arguments. A function that uses rest parameters, such as f(...args), can’t be curried this way.
 

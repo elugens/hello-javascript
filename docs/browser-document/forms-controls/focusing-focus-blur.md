@@ -7,19 +7,19 @@ sidebar_position: 2
 
 **Forms, controls: Focusing: focus/blur**
 
-**Question:** **What does it mean to focus on an element?**
+### What does it mean to focus on an element?
 
 **Interview Answer:** An element receives the focus when the user either clicks on it or uses the Tab key on the keyboard. There is also an autofocus HTML attribute that puts the focus onto an element by default when a page loads and other means of getting the focus. Focusing on an element generally means: “prepare to accept the data here”, so that is the moment when we can run the code to initialize the required functionality.
 
 Source: <https://javascript.info/focus-blur>
 
-**Question:** **How does blur work in relation to focus on an element?**
+### How does blur work in relation to focus on an element?
 
 **Answer:** The moment of losing the focus results in a blur. That is when a user clicks somewhere else or presses Tab to go to the next form field, or there are other means as well. Losing the focus generally means: “the data has been entered”, so we can run the code to check it or even to save it to the server and so on.
 
 Source: <https://javascript.info/focus-blur>
 
-**Question:** **Explain how focus and blur events work in JavaScript?**
+### Explain how focus and blur events work in JavaScript?
 
 **Interview Answer:** The focus event is called on focusing, and blur when the element loses the focus. A common approach is a blur handler checking if a field has been entered correctly after the focus event. You can use the focus handler to hide validation error. Modern HTML allows us to do many validations using input attributes: required, pattern and so on. And sometimes they are just what we need. JavaScript can be used when we want more flexibility. Also we could automatically send the changed value to the server if it’s correct.
 
@@ -62,13 +62,13 @@ Your email please: <input type="email" id="input" />
 
 Source: <https://javascript.info/focus-blur>
 
-**Question:** **What is the cause of JavaScript-initiated focus loss?**
+### What is the cause of JavaScript-initiated focus loss?
 
 **Interview Answer:** A focus loss can occur for many reasons. One of them is when the visitor clicks somewhere else. But also, JavaScript itself may cause it. An alert moves focus to itself, so it causes the focus loss at the element (blur event), and when the alert is dismissed, the focus comes back (focus event). If an element is removed from DOM, then it also causes the focus loss. If it is reinserted later, then the focus does not return. These features sometimes cause focus/blur handlers to misbehave – to trigger when they are not needed. The best recipe is to be careful when using these events. If we want to track user-initiated focus-loss, then we should avoid causing it ourselves.
 
 Source: <https://javascript.info/focus-blur>
 
-**Question:** **Is there a way to focus/blur on any element in the DOM?**
+### Is there a way to focus/blur on any element in the DOM?
 
 **Interview Answer:** Any element becomes focusable if it has tabindex. The value of the attribute is the order number of the element when Tab (or something like that) is used to switch between them.
 
@@ -99,7 +99,7 @@ Click the first item and press Tab.
 
 Source: <https://javascript.info/focus-blur#allow-focusing-on-any-element-tabindex>
 
-**Question:** **Is there a way to focus/blur and ensure bubbling happens?**
+### Is there a way to focus/blur and ensure bubbling happens?
 
 **Interview Answer:** Yes, there are two approaches we can use to ensure bubbling. First, there is a funny historical feature: focus/blur do not bubble up but propagate down on the capturing phase. Second, there are focusin and focusout events – the same as focus/blur, but they bubble. Note that they must be assigned using `elem.addEventListener`, not `on<event>`.
 

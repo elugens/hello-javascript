@@ -5,7 +5,7 @@ sidebar_position: 2
 
 # Property getters and setters - Q&A
 
-**Question:** **Explain, what getters and setters are, as it pertains to JavaScript.**
+### Explain, what getters and setters are, as it pertains to JavaScript.\*\*
 
 **Interview Answer:** Accessor properties are represented by “getter” and “setter” methods. In an object literal they are denoted by get and set in JavaScript. Getters and setters allow you to define Object Accessors (Computed Properties). There are some advantages, Getters and Setters are easier to read because of their simplistic syntax. The also allow equal syntax for properties and methods, can secure better data quality, and are particularly useful for doing things behind the scenes.
 
@@ -25,7 +25,7 @@ let obj = {
 
 Source: <https://javascript.info/property-accessors#getters-and-setters>
 
-**Question:** **What is the difference between accessor property and a property function?**
+### What is the difference between accessor property and a property function?
 
 **Interview Answer:** The main difference between a property function and an accessor property is the simple syntax of the accessor and the way you invoke the accessor.
 
@@ -73,7 +73,7 @@ document.getElementById('demo').innerHTML = person.fullName;
 
 Source: <https://javascript.info/property-accessors#getters-and-setters>
 
-**Question:** **Is the difference between accessor property and a data property in JavaScript?**
+### Is the difference between accessor property and a data property in JavaScript?
 
 **Interview Answer:** Yes, descriptors for accessor properties are different from those for data properties. For accessor properties, there is no value or writable, but instead there are get and set functions. A named data property associates a name with a value. Which means you use the property to get and retrieve data directly, like a public field on a class. A named accessor property associates a name with one or two accessor functions. The accessor functions are used to store or retrieve a value that is associated with the property. Which means that you restrict the access to a certain value behind a get or/and set accessor property.
 
@@ -117,7 +117,7 @@ console.log(obj.prop); // 123
 
 Source: <https://javascript.info/property-accessors#accessor-descriptors>
 
-**Question:** **Can you use getters and setters as wrappers over real properties?**
+### Can you use getters and setters as wrappers over real properties?
 
 **Interview Answer:** Yes, Getters/setters can be used as wrappers over “real” property values to gain more control over operations with them. One example of this is a conditional statement used to check a values validity.
 

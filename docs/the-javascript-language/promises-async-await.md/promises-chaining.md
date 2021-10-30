@@ -7,7 +7,7 @@ sidebar_position: 3
 
 **Promises, async/await: Promise Chaining**
 
-**Question: What is the definition of promise chaining in JavaScript?**
+### What is the definition of promise chaining in JavaScript?
 
 **Interview Answer:** Chaining promises is the process of chaining subscribers of the initial promise. Typically, we will use the dot to chain each subscriber in the order that we want the subscribers to interact with the Promise.
 
@@ -43,7 +43,7 @@ new Promise(function(resolve, reject) {
 
 Source: <https://javascript.info/promise-chaining>
 
-**Question: What is a common mistake that new developers make when it comes to promises chaining JavaScript?**
+### What is a common mistake that new developers make when it comes to promises chaining JavaScript?
 
 **Interview Answer:** A classic mistake made by new developers is breaking the promises chain. New developers can often make the attempt to separate or break the chain for the sake of readability or simply lack of knowledge. Although technically we can also add many “.then” to a single promise. This is not considered chaining, because it is basically several handlers added to one promise without passing the result. Instead, they process the result independently from one another. In practice we rarely need multiple handlers for one promise. Chaining is used much more often.
 
@@ -85,7 +85,7 @@ promise.then(function(result) {
 
 Source: <https://javascript.info/promise-chaining>
 
-**Question: Can you briefly explain the benefits of returning a new promise in JavaScript?**
+### Can you briefly explain the benefits of returning a new promise in JavaScript?
 
 **Interview Answer:** A handler, used in .then(handler) may create and return a new promise. In that case further handlers wait until it settles, and then get its result. Returning promises allows us to build chains of asynchronous actions.
 
@@ -127,7 +127,7 @@ new Promise(function(resolve, reject) {
 
 Source: <https://javascript.info/promise-chaining#returning-promises>
 
-**Question: Briefly explain what a thenable is in JavaScript.**
+### Briefly explain what a thenable is in JavaScript.\*\*
 
 **Interview Answer:** A thenable object is an arbitrary object that has a method .then. It will be treated the same way as a promise. The idea is that 3rd-party libraries may implement “promise-compatible” objects of their own. They can have an extended set of methods, but also be compatible with native promises, because they implement .then. This feature allows us to integrate custom objects with promise chains without having to inherit from Promise
 

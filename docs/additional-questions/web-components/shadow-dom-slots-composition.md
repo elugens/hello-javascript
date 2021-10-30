@@ -7,19 +7,19 @@ sidebar_position: 5
 
 **Web components: Shadow DOM slots, composition**
 
-**Question:** **What is the HTML named `<slot>` element used for in web development?**
+### What is the HTML named `<slot>` element used for in web development?
 
 **Interview Answer:** The HTML `<slot>` element is part of the Web Components technology suite which acts as a placeholder inside a web component that you can fill with your own markup, which lets you create separate DOM trees and present them together.
 
 Source: <https://javascript.info/slots-composition#named-slots>
 
-**Question:** **What is the considered the flattened DOM?**
+### What is the considered the flattened DOM?
 
 **Interview Answer:** The combination of the Light DOM and the shadow DOM are considered the flattened DOM result. This is viewable in the developer tools for inspection, but not available in the source.
 
 Source: <https://javascript.info/slots-composition#named-slots>
 
-**Question:** **What is the main limitation of the slot attribute?**
+### What is the main limitation of the slot attribute?
 
 **Interview Answer:** The slot="..." attribute is only valid for direct children of the shadow host. For nested elements it is ignored. If there are multiple elements in light DOM with the same slot name, they are appended into the slot, one after another.
 
@@ -47,13 +47,13 @@ Source: <https://javascript.info/slots-composition#named-slots>
 
 Source: <https://javascript.info/slots-composition#named-slots>
 
-**Question:** **Can you explain, what slot fallback content is in browser rendering?**
+### Can you explain, what slot fallback content is in browser rendering?
 
 **Interview Answer:** If we put something inside a `<slot>`, it becomes the fallback, “default” content. The browser shows it if there is no corresponding filler in light DOM. Basically, if the slot is in the shadow DOM it will render if there is no slot available in the light DOM.
 
 Source: <https://javascript.info/slots-composition#slot-fallback-content>
 
-**Question:** **What is considered the default slot in the Shadow DOM?**
+### What is considered the default slot in the Shadow DOM?
 
 **Interview Answer:** The first `<slot>` in shadow DOM that does not have a name is a “default” slot. It gets all nodes from the light DOM that are not slotted elsewhere.
 
@@ -108,7 +108,7 @@ Code Example:
 
 Source: <https://javascript.info/slots-composition#default-slot-first-unnamed>
 
-**Question:** **What are the three methods that handle HTML slot element assignment?**
+### What are the three methods that handle HTML slot element assignment?
 
 **Interview Answer:** The HTML slot element has three main methods including assignedSlot, assignedNodes, and assignedElements used to handle or assess element node assignment. The assignedSlot method returns the `<slot>` element that the node is assigned to. The assignedElements() method returns a sequence of the nodes assigned to this slot, and if the flatten option is set to true, the assigned nodes of any other slots that are descendants of this slot. If no assigned nodes are found, it returns the slot's fallback content. The assignedSlot method returns an HTMLSlotElement representing the `<slot>` element the node is inserted in. These methods are useful when we need not just show the slotted content, but also track it in JavaScript.
 

@@ -7,7 +7,7 @@ sidebar_position: 10
 
 **Regular expressions: Greedy and lazy quantifiers**
 
-**Question:** **Can you explain the difference between greedy and lazy quantifiers?**
+### Can you explain the difference between greedy and lazy quantifiers?
 
 **Interview Answer:** By default, quantifiers are Greedy. Greedy quantifiers try to match the longest text that matches given pattern. Greedy quantifiers work by first reading the entire string before trying any match. If the entire text does not match, remove last character, and try again, repeating the process until a match is found. A lazy (also called non-greedy or reluctant) quantifier always attempts to repeat the sub-pattern as few times as possible, before exploring longer matches by expansion. Generally, a lazy pattern will match the shortest possible string. To make quantifiers lazy, just append (?) to the existing quantifier, e.g., +?, {0,5}?. It should be noted, that lazy quantifiers can fail to return
 

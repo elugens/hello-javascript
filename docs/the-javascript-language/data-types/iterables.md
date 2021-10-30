@@ -5,7 +5,7 @@ sidebar_position: 6
 
 # Iterables Types in JavaScript - Q&A
 
-**Question:** **What are iterables in JavaScript?**
+### What are iterables in JavaScript?
 
 **Interview Answer:** An iterable is a interface that specifies that an object can be accessible if it implements a method who is key is [symbol.iterator]. Some of the built-in data structures that use iterables are Strings, Arrays, Maps and custom objects.
 
@@ -13,7 +13,7 @@ sidebar_position: 6
 
 Source: <https://javascript.info/iterable>
 
-**Question:** **What can the Symbol.iterator be used for in JavaScript?**
+### What can the Symbol.iterator be used for in JavaScript?
 
 **Interview Answer:** The most common use case for Symbol.iterator is creating a custom object iterator.
 
@@ -61,7 +61,7 @@ for (let num of range) {
 
 Source: <https://javascript.info/iterable#symbol-iterator>
 
-**Question:** **Can you call an iterator explicitly and what are the benefits?**
+### Can you call an iterator explicitly and what are the benefits?
 
 **Interview Answer:** Yes, you can call an iterator explicitly in JavaScript. There are several benefits including more control over the process than for...of.
 
@@ -87,7 +87,7 @@ while (true) {
 
 Source: <https://javascript.info/iterable#calling-an-iterator-explicitly>
 
-**Question:** **What is the difference between an iterable and an array-like object?**
+### What is the difference between an iterable and an array-like object?
 
 **Interview Answer:** Iterables are objects that implement the Symbol.iterator method such as arrays and strings. Array-likes are objects that have indexes and length, so they look like arrays. When we use JavaScript for practical tasks in a browser or any other environment, we may meet objects that are iterables or array-likes, or both like strings.
 
@@ -112,7 +112,7 @@ for (let item of arrayLike) {
 
 Source: <https://javascript.info/iterable#array-like>
 
-**Question:** **What universal method can be used to turn an iterable or array- like value into an array?**
+### What universal method can be used to turn an iterable or array- like value into an array?
 
 **Interview Answer:** The Array.from method can turn an iterable or array-like value into an array. Then we can call array methods on it.
 

@@ -7,13 +7,13 @@ sidebar_position: 4
 
 **Network requests: Fetch: Abort**
 
-**Question:** **Is there a way to cancel or abort an ongoing Fetch?**
+### Is there a way to cancel or abort an ongoing Fetch?
 
 **Interview Answer:** Yes, there is a special built-in object for such purposes: AbortController. It can be used to abort not only fetch, but other asynchronous tasks as well. The usage is very straightforward. The AbortController interface represents a controller object that allows you to abort one or more Web requests as and when desired. You can create a new AbortController object using the AbortController.AbortController() constructor. Communicating with a DOM request is done using an AbortSignal object (calling abort()).
 
 Source: <https://javascript.info/fetch-abort>
 
-**Question:** **Can you explain the function of the AbortController Object?**
+### Can you explain the function of the AbortController Object?
 
 **Interview Answer:** To implement the AbortController object, we must create a new AbortController constructor. The controller is a remarkably simple object consisting of a single abort method and property signal that allows to set event listeners on it. When abort() is called the controller.signal emits the abort event and the controller.signal.aborted property becomes true. AbortController is just a mean to pass abort events when abort() is called on it.
 
@@ -42,13 +42,13 @@ alert(signal.aborted); // true
 
 Source: <https://javascript.info/fetch-abort#the-abortcontroller-object>
 
-**Question:** **Is there a way to abort an event without the AbortController?**
+### Is there a way to abort an event without the AbortController?
 
 **Interview Answer:** Yes, we could implement the same kind of event listening in our code on our own, without the AbortController object. But what is valuable is that fetch knows how to work with the AbortController object. It is integrated in it and optimized for its use.
 
 Source: <https://javascript.info/fetch-abort#the-abortcontroller-object>
 
-**Question:** **Can you cancel an ongoing fetch with the AbortController?**
+### Can you cancel an ongoing fetch with the AbortController?
 
 **Interview Answer:** Yes, to be able to cancel fetch, we must pass the signal property of an AbortController as a fetch option. The fetch method knows how to work with AbortController. It will listen to abort events on signal. Now, to abort, we call controller.abort(). At that point, fetch gets the event from signal and aborts the request.
 
@@ -86,7 +86,7 @@ try {
 
 Source: <https://javascript.info/fetch-abort#the-abortcontroller-object>
 
-**Question:** **Can the AbortController cancel or abort multiple fetches as once?**
+### Can the AbortController cancel or abort multiple fetches as once?
 
 **Interview Answer:** Yes, AbortController is scalable by default. It allows us to cancel multiple fetches at once. This can be exceptionally helpful when we are deal with an array.
 

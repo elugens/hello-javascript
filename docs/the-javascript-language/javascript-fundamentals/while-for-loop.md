@@ -7,13 +7,13 @@ sidebar_position: 13
 
 **JavaScript Fundamentals: LOOPS: WHILE and FOR**
 
-**Question:** **In Simple terms, what are loops used for in JavaScript?**
+### In Simple terms, what are loops used for in JavaScript?
 
 **Interview Answer:** Loops are a way to repeat the same code multiple times.
 
 Source: <https://javascript.info/while-for>
 
-**Question:** **Explain, how a while loop works?**
+### Explain, how a while loop works?
 
 **Interview Answer:** A while loop iterates if a specific condition exists.
 
@@ -33,7 +33,7 @@ while (i < 3) {
 
 Source: <https://javascript.info/while-for#the-while-loop>
 
-**Question:** **What is the definition of an iteration in a JavaScript loop?**
+### What is the definition of an iteration in a JavaScript loop?
 
 **Interview Answer:** A single execution of the loop body is called an iteration.
 
@@ -51,7 +51,7 @@ while (i < 3) {
 
 Source: <https://javascript.info/while-for#the-while-loop>
 
-**Question:** **Does a while loop require an explicit incrementor?**
+### Does a while loop require an explicit incrementor?
 
 **Interview Answer:** Yes, a while loop requires an explicit incrementor to maintain a controlled iteration.
 
@@ -60,20 +60,20 @@ Source: <https://javascript.info/while-for#the-while-loop>
 Code Example:
 
 ```js
-let i = 3;
+let i = 3;
 
-while (i) { // shows 0, then 1, then 2
+while (i) {
+  // shows 0, then 1, then 2
 
-` `alert( i );
+  alert(i);
 
-` `i--; // if the incrementor (i--) is missing then it results in an endless loop.
-
+  i--; // if the incrementor (i--) is missing then it results in an endless loop.
 }
 ```
 
 Source: <https://javascript.info/while-for#the-while-loop>
 
-**Question:** **Are curly brackets required in a single line loop body?**
+### Are curly brackets required in a single line loop body?
 
 **Interview Answer:** No, If the loop body has a single statement, we can omit the curly braces.
 
@@ -87,7 +87,7 @@ while (i) alert(i--);
 
 Source: <https://javascript.info/while-for#the-while-loop>
 
-**Question:** **What is the difference between Do-While and While Loop?**
+### What is the difference between Do-While and While Loop?
 
 **Interview Answer:** The do-while loop conditional check is at the end of the loop. In a while loop, the condition is at the beginning of the loop.
 
@@ -101,7 +101,7 @@ do {
 
 Source: <https://javascript.info/while-for#the-do-while-loop>
 
-**Question:** **Explain, How the Do-While loop works?**
+### Explain, How the Do-While loop works?
 
 **Interview Answer:** The loop will first execute the body, check the condition, and, while it is truthy, execute it again.
 
@@ -118,7 +118,7 @@ do {
 
 Source: <https://javascript.info/while-for#the-do-while-loop>
 
-**Question:** **Explain, How the For-Loop works?**
+### Explain, How the For-Loop works?
 
 **Interview Answer:** The for loop sets a starting point, condition, and steps. The starting point executes once upon entering the loop. The condition is checked before every loop iteration. The loop body runs again and again while the condition is truthy. If false, the loop stops.
 
@@ -169,7 +169,7 @@ if (i < 3) {
 
 Source: <https://javascript.info/while-for#the-for-loop>
 
-**Question:** **What is a For-Loop inline variable declaration?**
+### What is a For-Loop inline variable declaration?
 
 **Interview Answer:** In simple terms, an inline variable declaration is done inside of a for loop leaving it within the scope of the loop.
 
@@ -200,7 +200,7 @@ alert(i); // 3, visible, because declared outside of the loop
 
 Source: <https://javascript.info/while-for#the-for-loop>
 
-**Question:** **Is it possible to skip or omit parts of the for-loop settings?**
+### Is it possible to skip or omit parts of the for-loop settings?
 
 **Interview Answer:** We can omit any or all the parts of the for-loop. If all are removed it will result in an endless loop. The semi-colons must remain, or it will result in a syntax error.
 
@@ -218,7 +218,7 @@ for (; i < 3; i++) {
 
 Source: <https://javascript.info/while-for#skipping-parts>
 
-**Question:** **Can you stop a loop based on a specific condition?**
+### Can you stop a loop based on a specific condition?
 
 **Interview Answer:** We can call the break directive to stop the loop based on a specific condition.
 
@@ -241,7 +241,7 @@ alert('Sum: ' + sum);
 
 Source: <https://javascript.info/while-for#breaking-the-loop>
 
-**Question:** **How does the continue directive (statement) work?**
+### How does the continue directive (statement) work?
 
 **Interview Answer:** It does not stop the whole loop. Instead, it stops the current iteration and forces the loop to start a new one if a specific condition exists.
 
@@ -259,7 +259,7 @@ for (let i = 0; i < 10; i++) {
 
 Source: <https://javascript.info/while-for#continue>
 
-**Question:** **What is the difference between the break statement and the continue directive?**
+### What is the difference between the break statement and the continue directive?
 
 **Interview Answer:** If a specific condition exists, the break statement ends the loop and the continue directive stops the loop and forces to start over.
 
@@ -267,13 +267,13 @@ Source: <https://javascript.info/while-for#continue>
 
 Source: <https://javascript.info/while-for#continue>
 
-**Question:** **What is a potential benefit of using the continue directive?**
+### What is a potential benefit of using the continue directive?
 
 **Interview Answer:** The continue directive helps decrease nesting and increases code readability.
 
 Source: <https://javascript.info/while-for#continue>
 
-**Question:** **Can the continue or break directives be used with the shorthand ternary (?) expression?**
+### Can the continue or break directives be used with the shorthand ternary (?) expression?
 
 **Interview Answer:** No, the continue or break directives cannot be used in a ternary operator.
 
@@ -295,7 +295,7 @@ if (i > 5) {
 
 Source: <https://javascript.info/while-for#continue>
 
-**Question:** **How do you break out of two nested for loops?**
+### How do you break out of two nested for loops?
 
 **Interview Answer:** You can use a label to break out of two nested for loops. The label is targeted by the break directive to ensure that both loops are halted.
 
@@ -319,7 +319,7 @@ alert('Done!');
 
 Source: <https://javascript.info/while-for#labels-for-break-continue>
 
-**Question:** **Can labels jump to an arbitrary place in the code?**
+### Can labels jump to an arbitrary place in the code?
 
 **Interview Answer:** No, Labels do not allow us to jump into an arbitrary place in the code.
 

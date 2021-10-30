@@ -5,7 +5,7 @@ sidebar_position: 6
 
 # JavaScript Polyfills & Transpilers - Q&A
 
-**Question:** **Describe what a JavaScript Trans-piler does?**
+### Describe what a JavaScript Trans-piler does?
 
 **Interview Answer:** A transpiler is a special piece of software that can parse (“read and understand”) modern code, and rewrite it using older syntax constructs, so that the result would be the same.
 
@@ -25,7 +25,7 @@ height = height !== undefined && height !== null ? height : 100;
 
 Source: <https://javascript.info/polyfills#transpilers>
 
-**Question:** **What is a Polyfill in JavaScript?**
+### What is a Polyfill in JavaScript?
 
 **Interview Answer:** A polyfill fills in the gaps where newer JavaScript features may not be compatible with older browsers.
 

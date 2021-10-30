@@ -7,7 +7,7 @@ sidebar_position: 1
 
 **Forms, controls: Form properties and methods**
 
-**Question:** **What special collection are document forms apart of?**
+### What special collection are document forms apart of?
 
 **Interview Answer:** Document forms are members of the special collection document.forms. That is a so-called “named collection”: it is both named and ordered. We can use both the name and the number in the document to get the form.
 
@@ -42,7 +42,7 @@ Example:
 
 Source: <https://javascript.info/form-elements#navigation-form-and-elements>
 
-**Question:** **How do you handle multiple elements of a form collection with the same name?**
+### How do you handle multiple elements of a form collection with the same name?
 
 **Interview Answer:** There may be multiple elements with the same name. This is typical with radio buttons and checkboxes. that case, `form.elements[name]` is a collection. These navigation properties do not depend on the tag structure. All control elements, no matter how deep they are in the form, are available in form.elements.
 
@@ -66,7 +66,7 @@ Example:
 
 Source: <https://javascript.info/form-elements#navigation-form-and-elements>
 
-**Question:** **How do Fieldsets work as subforms inside of a form?**
+### How do Fieldsets work as subforms inside of a form?
 
 **Interview Answer:** A form may have one or many `<fieldset>` elements inside it. They also have elements property that lists form controls inside them. The HTML `<fieldset>` element is used to group several controls as well as labels `<label>` within a web form. Fieldset properties can be accessed via the form.elements property.
 
@@ -96,7 +96,7 @@ Example:
 
 Source: <https://javascript.info/form-elements#navigation-form-and-elements>
 
-**Question:** **Is there a shorter notation other than the form.elements property?**
+### Is there a shorter notation other than the form.elements property?
 
 **Interview Answer:** Yes, there is a shorter notation: we can access the element as `form[index/name]`. In other words, instead of form.elements.login we can write form.login. That also works, but there is a minor issue: if we access an element, and then change its name, then it is still available under the old name (as well as under the new one). That is usually not a problem, however, because we rarely change names of form elements.
 
@@ -122,7 +122,7 @@ Example:
 
 Source: <https://javascript.info/form-elements#navigation-form-and-elements>
 
-**Question:** **Can you explain what form backreferencing is in JavaScript?**
+### Can you explain what form backreferencing is in JavaScript?
 
 **Interview Answer:** For any element, the form is available as element.form. So, a form references all elements, and elements reference the form.
 
@@ -146,13 +146,13 @@ Example:
 
 Source: <https://javascript.info/form-elements#backreference-element-form>
 
-**Question:** **How do you access the value of a textarea inside of an input via JS?**
+### How do you access the value of a textarea inside of an input via JS?
 
 **Interview Answer:** You can access the value of a textarea using textarea.value. It is not recommended to access the value using innerHTML, because it stores only the HTML that was initially on the page, not the current value.
 
 Source: <https://javascript.info/form-elements#input-and-textarea>
 
-**Question:** **To select an option value, what are the three properties we can use to set the selected value(s)?**
+### To select an option value, what are the three properties we can use to set the selected value(s)?
 
 **Interview Answer:** A `<select>` element has 3 important properties including the select option, value, and selectedIndex properties. The select.options is a collection `<option>` sub-elements. The select.value property is the value of the current selected `<option>`. The select.selectedIndex is the number currently selected `<option>`. They provide three different ways of setting a value for a `<select>`. Find the corresponding `<option>` element (e.g. among select.options) and set its option.selected to true. If we know a new value: set, select.value to the new value. If we know the new option number: set select.selectedIndex to that number.
 
@@ -182,7 +182,7 @@ Example:
 
 Source: <https://javascript.info/form-elements#select-and-option>
 
-**Question:** **Explain the function and syntax of the new Option constructor?**
+### Explain the function and syntax of the new Option constructor?
 
 **Interview Answer:** The little-known JavaScript Option() constructor allows you to avoid the verbose syntax of creating DOM elements. The Option() constructor creates a new HTMLOptionElement. Text is a DOMString representing the content of the element, i.e. the displayed text. If this is not specified, a default value of "" (empty string) is used. The optional value argue is DOMString representing the value of the HTMLOptionElement, i.e. the value attribute of the equivalent `<option>`. If this is not specified, the value of text is used as the value, e.g. for the associated `<select>` element's value when the form is submitted to the server. The defaultSelected parameter is a Boolean that sets the selected attribute value, i.e. so that this `<option>` will be the default value selected in the `<select>` element when the page is first loaded. If this is not specified, a default value of false is used. Note that a value of true does not set the option to selected if it is not already selected. The optional selected is a Boolean that sets the option's selected state; the default is false (not selected). If omitted, even if the defaultSelected argument is true, the option is not selected. Basically, the Option constructor allows you to create new selection options on the fly.
 

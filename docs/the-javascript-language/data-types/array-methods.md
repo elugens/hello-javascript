@@ -7,7 +7,7 @@ sidebar_position: 5
 
 **Data Types: ARRAY METHODS**
 
-**Question:** **Explain, the function and syntax of the array splice() method?**
+### Explain, the function and syntax of the array splice() method?
 
 **Interview Answer:** The splice method is a swiss army knife for arrays, it can do everything. The splice method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
 
@@ -40,7 +40,7 @@ console.log(months);
 
 Source: <https://javascript.info/array-methods#splice>
 
-**Question:** **How do negative array indexes work?**
+### How do negative array indexes work?
 
 **Interview Answer:** A negative index begins at the end of an array and steps back towards the front of the array such as -1 being one index step from the end.
 
@@ -64,7 +64,7 @@ alert(arr); // 1,2,3,4,5
 
 Source: <https://javascript.info/array-methods#splice>
 
-**Question:** **Explain, the function and syntax of the array slice() method?**
+### Explain, the function and syntax of the array slice() method?
 
 **Interview Answer:** The method arr.slice returns a new array copying to it all items from index start to end (not including end).
 
@@ -83,7 +83,7 @@ console.log(arr.slice(-2)); // s,t (copy from -2 till the end)
 
 Source: <https://javascript.info/array-methods#slice>
 
-**Question:** **Explain, the basic difference between the array splice and slice methods?**
+### Explain, the basic difference between the array splice and slice methods?
 
 **Interview Answer:** The basic difference between slice and splice is splice() changes the original array on which it is called and returns it. The slice() method doesn't change the original array but it does return a new array.
 
@@ -109,7 +109,7 @@ console.log(arr2); // 1,2,3,4,5 – modified the original array
 
 Source: <https://javascript.info/array-methods#slice>
 
-**Question:** **Explain, the function and syntax of the array concat method?**
+### Explain, the function and syntax of the array concat method?
 
 **Interview Answer:** The concat() method is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array
 
@@ -161,7 +161,7 @@ alert(arr.concat(arrayLike)); // 1,2,something,else
 
 Source: <https://javascript.info/array-methods#concat>
 
-**Question:** **Explain, the function and syntax of the array forEach() method?**
+### Explain, the function and syntax of the array forEach() method?
 
 **Interview Answer:** The arr.forEach method allows us to run a function for every element in an array. The function is not executed for array elements without values.
 
@@ -195,7 +195,7 @@ function myFunction(item, index) {
 
 Source: <https://javascript.info/array-methods#iterate-foreach>
 
-**Question:** **Why can’t you use a return statement in a forEach loop?**
+### Why can’t you use a return statement in a forEach loop?
 
 **Interview Answer:** The foreEach is runs a callback function on every array item. Even if you attempt to write a return statement it only returns on that specific instance of the function.
 
@@ -203,7 +203,7 @@ Source: <https://javascript.info/array-methods#iterate-foreach>
 
 Source: <https://javascript.info/array-methods#iterate-foreach>
 
-**Question:** **What is the difference between the array indexOf, lastIndexOf, and includes methods and their string counterparts?**
+### What is the difference between the array indexOf, lastIndexOf, and includes methods and their string counterparts?
 
 **Interview Answer:** The operate on items instead characters, like their string counterparts.
 
@@ -211,7 +211,7 @@ Source: <https://javascript.info/array-methods#iterate-foreach>
 
 Source: <https://javascript.info/array-methods#indexof-lastindexof-and-includes>
 
-**Question:** **Explain, the function and syntax of the array indexOf() method?**
+### Explain, the function and syntax of the array indexOf() method?
 
 **Interview Answer:** The indexOf array method returns the first index at which a given element can be found in the array, or -1 if it is not present. It accepts two arguments include the searchElement and fromIndex.
 
@@ -231,7 +231,7 @@ alert(arr.indexOf(null)); // -1
 
 Source: <https://javascript.info/array-methods#indexof-lastindexof-and-includes>
 
-**Question:** **Explain, the function and syntax of the array lastIndexOf() method?**
+### Explain, the function and syntax of the array lastIndexOf() method?
 
 **Interview Answer:** The lastIndexOf array method returns the last index at which a given element can be found in the array, or -1 if it is not present. It accepts two arguments include the searchElement and fromIndex.
 
@@ -254,7 +254,7 @@ console.log(numbers.lastIndexOf(2, -1)); // 3
 
 Source: <https://javascript.info/array-methods#indexof-lastindexof-and-includes>
 
-**Question:** **Explain, the function and syntax of the array includes() method?**
+### Explain, the function and syntax of the array includes() method?
 
 **Interview Answer:** The includes array method determines whether an array includes a certain value among its entries, returning true or false as appropriate.
 
@@ -275,7 +275,7 @@ Example:
 
 Source: <https://javascript.info/array-methods#indexof-lastindexof-and-includes>
 
-**Question:** **What are some of the differences between includes and indexOf?**
+### What are some of the differences between includes and indexOf?
 
 **Interview Answer:** The only difference is that includes checks if you have passed it a regular expression instead of a string and throws an exception if you have. indexOf will accept a regular expression but always return -1.
 
@@ -303,7 +303,7 @@ if (array2.indexOf(NaN) == -1) {
 
 Source: <https://dev.to/adroitcoder/includes-vs-indexof-in-javascript>
 
-**Question:** **Explain, the function and syntax of the array find() method?**
+### Explain, the function and syntax of the array find() method?
 
 **Interview Answer:** The find method accepts a callback function on elements in an array where the item is the element, index is its index, and the array is the array itself. If it returns true, the search is stopped, the item is returned. If nothing found, undefined is returned.
 
@@ -343,7 +343,7 @@ alert(user.name); // expected output: John
 
 Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find>
 
-**Question:** **Explain, the function and syntax of the array findIndex() method?**
+### Explain, the function and syntax of the array findIndex() method?
 
 **Interview Answer:** The findIndex method returns the value of the first element in the array that satisfies the provided testing function. Otherwise, it returns -1, indicating that no element passed the test.
 
@@ -379,7 +379,7 @@ console.log(user); // expected output: 0
 
 Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex>
 
-**Question:** **Explain, the function and syntax of the array filter() method?**
+### Explain, the function and syntax of the array filter() method?
 
 **Interview Answer:** The filter method calls a provided callback function once for each element in an array, and constructs a new array of all the values for which callback returns a value that coerces to true.
 
@@ -416,7 +416,7 @@ let filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
 
 Source: <https://javascript.info/array-methods#filter>
 
-**Question:** **Explain, the function and syntax of the array sort(fn) method?**
+### Explain, the function and syntax of the array sort(fn) method?
 
 **Interview Answer:** The sort() method sorts the elements of an array in place and returns the sorted array in ascending order.
 
@@ -453,7 +453,7 @@ alert(arr); // 1, 2, 15
 
 Source: <https://javascript.info/array-methods#map>
 
-**Question:** **Explain, the function and syntax of the array map() method?**
+### Explain, the function and syntax of the array map() method?
 
 **Interview Answer:** The array map method accepts a call back function that is called for every element of array. Each time callback executes, the returned value is added to newArray. The callback accepts three arguments including the item, index, and array.
 
@@ -479,7 +479,7 @@ alert(lengths); // 5,7,6
 
 Source: <https://javascript.info/array-methods#map>
 
-**Question:** **Explain, the function and syntax of the array reverse() method?**
+### Explain, the function and syntax of the array reverse() method?
 
 **Interview Answer:** The reverse method reverses the order of elements in an array. The first array element becomes the last, and the last array element becomes the first.
 
@@ -514,7 +514,7 @@ console.log(wordArr); // wordArr = ["o", "l", "l", "e", "H"]
 
 Source: <https://javascript.info/array-methods#reverse>
 
-**Question:** **Explain, the function and syntax of the array split method?**
+### Explain, the function and syntax of the array split method?
 
 **Interview Answer:** A split method divides a string into an ordered list of substrings, places them in an array, and returns that array of substrings. The split method accepts two arguments including delimiter and an optional number. The optional number sets the number of values returned in the array.
 
@@ -544,7 +544,7 @@ alert(arr); // return Bilbo, Gandalf
 
 Source: <https://javascript.info/array-methods#split-and-join>
 
-**Question:** **Explain, the function and syntax of the array join() method?**
+### Explain, the function and syntax of the array join() method?
 
 **Interview Answer:** The join method creates and returns a new string by concatenating all the elements in an array or an array-like object, separated by commas or a specified separator string. If the array has only one item, then that item will be returned without using the separator in a string.
 
@@ -565,7 +565,7 @@ arr.join(''); // 'WindWaterFire'
 
 Source: <https://javascript.info/array-methods#split-and-join>
 
-**Question:** **Explain, the function and syntax of the array reduce() method?**
+### Explain, the function and syntax of the array reduce() method?
 
 **Interview Answer:** The reduce method reduces the array to a single value. The method executes a provided function for each value of the array, from left-to-right. The return value of the function is stored in an accumulator total.
 
@@ -596,7 +596,7 @@ alert(result); // 15
 
 Source: <https://javascript.info/array-methods#reduce-reduceright>
 
-**Question:** **Explain, the function and syntax of the array reduceRight() method?**
+### Explain, the function and syntax of the array reduceRight() method?
 
 **Interview Answer:** The reduceRight method applies a function against an accumulator and each value of the array, from right-to-left, to reduce it to a single value. The reduce method does the same, but goes from left to right.
 
@@ -623,7 +623,7 @@ alert(result); // 15
 
 Source: <https://javascript.info/array-methods#reduce-reduceright>
 
-**Question:** **Explain, the function and syntax of the array isArray() method?**
+### Explain, the function and syntax of the array isArray() method?
 
 **Interview Answer:** The Array.isArray() method determines whether the passed value is an Array. It returns true if it is an array, otherwise false. It is a much better option to using the typeof operator to determine the actual object type.
 
@@ -673,7 +673,7 @@ Array.isArray({ \_\_proto\_\_: Array.prototype });
 
 Source: <https://javascript.info/array-methods#array-isarray>
 
-**Question:** **Explain, what typed arrays are in JavaScript and their basic use?**
+### Explain, what typed arrays are in JavaScript and their basic use?
 
 **Interview Answer:** JavaScript typed arrays are array-like objects that provide a mechanism for reading and writing raw binary data in memory buffers.
 

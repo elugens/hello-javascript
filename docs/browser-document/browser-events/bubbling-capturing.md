@@ -7,7 +7,7 @@ sidebar_position: 2
 
 **Introduction to Events: Bubbling and capturing**
 
-**Question:** **What is the bubble up principle in relation to events?**
+### What is the bubble up principle in relation to events?
 
 **Interview Answer:** The bubbling up principle is self-explanatory based on its name. In principle, when an event happens on an element, it first runs the handlers on it, then on its parent, then all the way up on other ancestors.
 
@@ -37,7 +37,7 @@ Example:
 
 Source: <https://javascript.info/bubbling-and-capturing#bubbling>
 
-**Question:** **Explain what the event target is in JavaScript.**
+### Explain what the event target is in JavaScript.\*\*
 
 **Answer:** The most deeply nested element that caused the event is called a target element, accessible as event.target. The event target does not change through the bubbling process and can be viewed as the initial point of the event.
 
@@ -45,25 +45,25 @@ Source: <https://javascript.info/bubbling-and-capturing#bubbling>
 
 Source: <https://javascript.info/bubbling-and-capturing#event-target>
 
-**Question:** **Is there a way to stop an event from bubbling up?**
+### Is there a way to stop an event from bubbling up?
 
 **Interview Answer:** If necessary, there are two methods used to explicitly stop the bubbling up process including the stopPropagation and stopImmediatePropagation. Using these two approaches should be limited, because there are some drawbacks such click event failures.
 
 Source: <https://javascript.info/bubbling-and-capturing#stopping-bubbling>
 
-**Question:** **What is the difference between the event stopPropagation and stopImmediatePropagation methods?**
+### What is the difference between the event stopPropagation and stopImmediatePropagation methods?
 
 **Interview Answer:** If an element has multiple event handlers on a single event, then even if one of them stops the bubbling, the other ones still execute. In other words, event.stopPropagation() stops the move upwards, but on the current element all other handlers will run. To stop the bubbling and prevent handlers on the current element from running, we use event.stopImmediatePropagation(). After it, no other handlers execute.
 
 Source: <https://javascript.info/bubbling-and-capturing#stopping-bubbling>
 
-**Question:** **What are the three phases of event propagation?**
+### What are the three phases of event propagation?
 
 **Interview Answer:** There are three phases of event propagation including the capturing, targeting, and bubbling phases. The capturing phase is the process of the event traveling down to the target element ( {capture: true} ). The targeting phase is when we reach our target element, and the bubbling phase is the process of bubbling up from the target element.
 
 Source: <https://javascript.info/bubbling-and-capturing#capturing>
 
-**Question:** **Is there an explicit way to invoke capturing an event in the capturing phase?**
+### Is there an explicit way to invoke capturing an event in the capturing phase?
 
 **Interview Answer:** Yes, to catch an event on the capturing phase, we need to set the handler capture option to true. There are two possible values of the capture option true and false. If it is false (default), then the handler is set on the bubbling phase. If it is true, then the handler is set on the capturing phase.
 

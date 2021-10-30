@@ -7,7 +7,7 @@ sidebar_position: 7
 
 **Promises, async/await: Microtasks**
 
-**Question: Can you explain how the Job Queue (Microtasks Queue) works?**
+### Can you explain how the Job Queue (Microtasks Queue) works?
 
 **Interview Answer:** Apart from Callback Queue, browsers have introduced one more queue which is “Job Queue”, reserved only for new Promise() functionality. Asynchronous tasks need proper management. For that, the ECMA standard specifies an internal queue PromiseJobs, more often referred to as the “microtask queue” (V8 term). So when you use promises in your code, you add .then() method, which is a callback method. These `thenable` methods are added to Job Queue once the promise has returned/resolved, and then gets executed. Notably, any code in the ScriptsJob will return prior to the return of a promise in the microtasks queue.
 
@@ -50,7 +50,7 @@ console.log('Message no. 5: Sync');
 
 Source: <https://medium.com/@Rahulx1/understanding-event-loop-call-stack-event-job-queue-in-javascript-63dcd2c71ecd>
 
-**Question: What if the order matters for us? How can we make code run after promise done?**
+### What if the order matters for us? How can we make code run after promise done?
 
 **Interview Answer:** The simplest and recommended way to make code run after promise done is to put it into the queue with the .then method.
 
@@ -64,7 +64,7 @@ Promise.resolve()
 
 Source: <https://javascript.info/microtask-queue#microtasks-queue>
 
-**Question: When does an unhandled rejection occur in relation to a JavaScript promises?**
+### When does an unhandled rejection occur in relation to a JavaScript promises?
 
 **Interview Answer:** An “unhandled rejection” occurs when a promise error is not handled at the end of the microtask queue. Normally, if we expect an error, we add .catch to the promise chain to handle it.
 

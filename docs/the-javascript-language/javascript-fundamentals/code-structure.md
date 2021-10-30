@@ -9,7 +9,7 @@ sidebar_position: 2
 
 **JavaScript Fundamentals: CODE STRUCTURE**
 
-**Question:** **Define what a statement is in JavaScript code structure?**
+### Define what a statement is in JavaScript code structure?
 
 **Interview Answer:** Statements are syntax constructs and commands that perform actions. Usually, statements are written on separate lines to make the code more readable.
 
@@ -36,7 +36,7 @@ alert('World');
 
 Source: <https://javascript.info/structure#statements>
 
-**Question:** **How are statements separated in JavaScript?**
+### How are statements separated in JavaScript?
 
 **Answer:** Statements are separated in JavaScript with the implementation of a semi-colon.
 
@@ -49,7 +49,7 @@ alert('World');
 
 Source: <https://javascript.info/structure#semicolon>
 
-**Question:** **Can semi-colons be omitted in JavaScript?**
+### Can semi-colons be omitted in JavaScript?
 
 **Interview Answer:** Yes, but it is not recommended.
 
@@ -64,7 +64,7 @@ alert('World');
 
 Source: <https://javascript.info/structure#semicolon>
 
-**Question:** **Does JavaScript always interpret line breaks as the end of a statement?**
+### Does JavaScript always interpret line breaks as the end of a statement?
 
 **Interview Answer:** There are cases when a newline does not mean a semicolon and may result in an error.
 
@@ -89,7 +89,7 @@ alert('All fine now'); // uses a semi-colon alerts All fine now
 
 Source: <https://javascript.info/structure#semicolon>
 
-**Question:** **How are single-line comments created in JavaScript?**
+### How are single-line comments created in JavaScript?
 
 **Interview Answer:** Single-line comments start with two forward slash characters //.
 
@@ -105,14 +105,14 @@ alert('World'); // This comment follows the statement
 
 Source: <https://javascript.info/structure#code-comments>
 
-**Question:** **How are multi-line comments created in JavaScript?**
+### How are multi-line comments created in JavaScript?
 
 **Interview Answer:** Multiline comments start with a forward slash and an asterisk /\* and end with an asterisk and a forward slash \*/.
 
 Example:
 
 ```js
-\*
+/*
 An example with two messages.
 This is a multiline comment.
 */
@@ -124,20 +124,18 @@ alert('World');
 
 Source: <https://javascript.info/structure#code-comments>
 
-**Question:** **Are nested comments supported in JavaScript?**
+### Are nested comments supported in JavaScript?
 
 **Interview Answer:** No, nested comments are not supported. It will result in a syntax error.
 
 Example:
 
 ```js
-\*
+/* nested comment ?!? */
 
-  \* nested comment ?!? */
+// results in an error
 
-*/ // results in an error
-
-alert( 'World' );
+alert('World');
 ```
 
 Source: <https://javascript.info/structure#code-comments>

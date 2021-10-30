@@ -7,7 +7,7 @@ sidebar_position: 2
 
 **Regular expressions: Character classes**
 
-**Question:** **What is a character class used for in regular expressions?**
+### What is a character class used for in regular expressions?
 
 **Interview Answer:** A character class is a special notation that matches any symbol from a certain set. The most common character classes is \d, \s, and \w used to add additional parameters for regular expressions to manipulate strings. A RegExp may contain both regular symbols and character classes.
 
@@ -23,7 +23,7 @@ alert(str.match(regexp)); // alerts CSS4
 
 Source: <https://javascript.info/regexp-character-classes>
 
-**Question:** **Is it possible to use multiple character classes in regular expressions?**
+### Is it possible to use multiple character classes in regular expressions?
 
 **Answer:** Yes, we can use multiple character classes in regular expressions to manipulate string queries.
 
@@ -35,7 +35,7 @@ alert('I love HTML5!'.match(/\s\w\w\w\w\d/)); // alerts ' HTML5'
 
 Source: <https://javascript.info/regexp-character-classes>
 
-**Question:** **What is an inverse class in relation to regular expressions?**
+### What is an inverse class in relation to regular expressions?
 
 **Interview Answer:** For every character class there exists an “inverse class”, denoted with the same letter, but uppercased. An example of this is \D which finds a match for any character except \d, for instance a letter.
 
@@ -56,7 +56,7 @@ alert(str.replace(/\D/g, '')); // 79031234567
 
 Source: <https://javascript.info/regexp-character-classes#inverse-classes>
 
-**Question:** **What does the dot represent in a regular expression?**
+### What does the dot represent in a regular expression?
 
 **Interview Answer:** A dot (.) is a special character class that matches any character except a new line. It should be noted that a dot means “any character”, but not the “absence of a character”. There must be a character to match it. By default, a dot does not match the new line character \n.
 
@@ -76,7 +76,7 @@ alert('CS4'.match(/CS.4/)); // null
 
 Source: <https://javascript.info/regexp-character-classes#a-dot-is-any-character>
 
-**Question:** **What character class should you use with dot to accept all characters, like the (\n) new line character?**
+### What character class should you use with dot to accept all characters, like the (\n) new line character?
 
 **Interview Answer:** By default, a dot does not match the newline character \n. There are many situations when we would like a dot to mean literally “any character”, newline included. To include all characters, we must use the "s" flag. It should be noted, the “s” flag is not supported in Internet Explorer.
 
@@ -93,7 +93,7 @@ alert('A\nB'.match(/A.B/s)); // A\nB (match!)
 
 Source: <https://javascript.info/regexp-character-classes#dot-as-literally-any-character-with-s-flag>
 
-**Question:** **When we need to use the “s” flag, is there a way to ensure it works in all browsers?**
+### When we need to use the “s” flag, is there a way to ensure it works in all browsers?
 
 **Interview Answer:** Since, the s flag is not supported in IE. There is an alternative, that works everywhere, We can use a regular expression [\s\S] to match any character. The pattern [\s\S] literally says: “a space character OR not a space character”. In other words, “anything”. We could use another pair of complementary classes, such as [\d\D], that doesn’t matter. Or even the [^] – as it means match any character except nothing. Also we can use this trick if we want both kind of “dots” in the same pattern: the actual dot . behaving the regular way (“not including a newline”), and also a way to match “any character” with [\s\S] or alike.
 
@@ -105,7 +105,7 @@ alert('A\nB'.match(/A[\s\S]B/)); // A\nB (match!)
 
 Source: <https://javascript.info/regexp-character-classes#dot-as-literally-any-character-with-s-flag>
 
-**Question:** **Why is it important to pay attention to spaces for regular expressions?**
+### Why is it important to pay attention to spaces for regular expressions?
 
 **Interview Answer:** If a regular expression does not take spaces into account, it may fail to work. We can fix it by adding spaces into the regular expression. A space is a character. Equal in importance with any other character. We cannot add or remove spaces from a regular expression and expect it to work the same. In other words, in a regular expression all character’s matter, spaces too.
 

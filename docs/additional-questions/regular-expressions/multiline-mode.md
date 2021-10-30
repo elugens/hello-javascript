@@ -7,13 +7,13 @@ sidebar_position: 5
 
 **Regular expressions: Multiline mode of anchors ^ $, flag "m"**
 
-**Question:** **What is the function of the regular expression m flag?**
+### What is the function of the regular expression m flag?
 
 **Interview Answer:** The m flag is used to specify that a multiline input string should be treated as multiple lines. If the m flag is used, ^ and $ match at the start or end of any line within the input string instead of the start or end of the entire string.
 
 Source: <https://javascript.info/regexp-multiline-mode>
 
-**Question:** **How do Anchors (caret ^/ dollar sign $) behave in multiline mode?**
+### How do Anchors (caret ^/ dollar sign $) behave in multiline mode?
 
 **Interview Answer:** In the multiline mode they match not only at the beginning and the end of the string, but also at start/end of line. If we do not the m flag, we will only be searching the first line. Each additional line will be missed. That is because by default a caret ^ only matches at the beginning of the text, and in the multiline mode at the start of any line.
 
@@ -35,7 +35,7 @@ alert(str.match(/^\d/gm)); // 1, 2, 3
 
 Source: <https://javascript.info/regexp-multiline-mode>
 
-**Question:** **What is the difference between the \n and ^$ in regular expressions?**
+### What is the difference between the \n and ^$ in regular expressions?
 
 **Interview Answer:** To find a newline, we can use not only anchors ^ and $, but we can also use the newline character \n.  The most notable behavior between the \n and ^$ is that the new line only returns values in new lines. This can lead to odd behaviors where a value is not returned when it exists at the end of a line. So, a \n in the pattern is used when we need newline characters in the result, while anchors are used to find something at the beginning/end of a line. Yes, this can be confusing but we should be aware of it.
 

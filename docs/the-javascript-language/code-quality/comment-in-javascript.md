@@ -7,7 +7,7 @@ sidebar_position: 3
 
 **Code Quality: COMMENTS**
 
-**Question:** **How do you reduce the number of unnecessary comments in your code?**
+### How do you reduce the number of unnecessary comments in your code?
 
 **Interview Answer:** The key to reducing unnecessary comments in your code is to write self-descriptive code. The best way to achieve this is to replace a piece of code with a function.
 
@@ -51,14 +51,14 @@ function isPrime(n) {
 
 Source: <https://javascript.info/coding-style#automated-linters>
 
-**Question:** **What are Good comments in JavaScript?**
+### What are Good comments in JavaScript?
 
 **Answer:** Good comments are ones that describe the architecture and lean less toward explaining what the code is doing. Good comments provide the team with a high-level overview of the components and how they interact. Good comments give a bird’s eye view of the code. Good comments include documenting function parameters and there usage as well.
 
 Code Example:
 
 ```js
-\*
+/*
 * Returns x raised to the n-th power.
 *
 * @param {number} x The number to raise.

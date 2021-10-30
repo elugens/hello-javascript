@@ -7,13 +7,13 @@ sidebar_position: 3
 
 ## Modern Markup Use Strict in JavaScript
 
-**Question:** **When was ECMAScript 5 (ES5) released for use?**
+### When was ECMAScript 5 (ES5) released for use?\*\*
 
 **Interview Answer:** 2009
 
 Source: <https://javascript.info/strict-mode#use-strict>
 
-**Question:** **How do you explicitly enable ES5 features and modifications?**
+### How do you explicitly enable ES5 features and modifications?
 
 **Interview Answer:** You need to explicitly enable them with a special directive: "use strict".
 
@@ -27,7 +27,7 @@ Code Example:
 
 Source: <https://javascript.info/strict-mode#use-strict>
 
-**Question:** **Explain how you should implement strict mode in JavaScript?**
+### Explain how you should implement strict mode in JavaScript?
 
 **Interview Answer:** Strict mode is enabled by placing “use strict” at the top of your script.
 
@@ -45,19 +45,19 @@ alert('some code');
 
 Source: <https://javascript.info/strict-mode#use-strict>
 
-**Question:** **Can you cancel strict mode at a later point in your code?**
+### Can you cancel strict mode at a later point in your code?
 
 **Answer:** No, there is no directive like **"no use strict"** that reverts the engine to the old behavior. Once we enter strict mode, there is no going back.
 
 Source: <https://javascript.info/strict-mode#use-strict>
 
-**Question:** **Does the browser developer console implement strict mode by default?**
+### Does the browser developer console implement strict mode by default?
 
 **Interview Answer:** No, we must place it at the first console line for it to work.
 
 Source: <https://javascript.info/strict-mode#browser-console>
 
-**Question:** **How do you implement strict mode in the browser console?**
+### How do you implement strict mode in the browser console?
 
 **Interview Answer:** We must place it at the first console line for it to work, then add the rest of our code.
 
@@ -66,11 +66,13 @@ Source: <https://javascript.info/strict-mode#browser-console>
 Example: works in most browsers, namely Firefox and Chrome.
 
 ```js
-'use strict'; <Shift+Enter for a newline>
+'use strict';
+
+// <Shift+Enter for a newline>
 
 //  ...your code
 
-<Enter to run>
+// <Enter to run>
 ```
 
 In Older browsers you will have to put it a wrapper:
@@ -85,7 +87,7 @@ In Older browsers you will have to put it a wrapper:
 
 Source: <https://javascript.info/strict-mode#browser-console>
 
-**Question:** **Should we implement ‘use strict’ in modern applications?**
+### Should we implement ‘use strict’ in modern applications?
 
 **Interview Answer:** Yes, it is recommended.
 
@@ -93,13 +95,13 @@ Source: <https://javascript.info/strict-mode#browser-console>
 
 Source: <https://javascript.info/strict-mode#should-we-use-strict>
 
-**Question:** **Are there any language structures that implement strict mode by default?**
+### Are there any language structures that implement strict mode by default?
 
 **Interview Answer:** Yes, JavaScript classes and modules implement strict mode by default.
 
 Source: <https://javascript.info/strict-mode#should-we-use-strict>
 
-**Question:** **What is the script type attribute used in JS development?**
+### What is the script type attribute used in JS development?
 
 **Interview Answer:** The script type attribute in Modern JavaScript is used for JavaScript Modules.
 
@@ -107,7 +109,7 @@ Source: <https://javascript.info/strict-mode#should-we-use-strict>
 
 Source: <https://javascript.info/hello-world#modern-markup>
 
-**Question:** **What was the script language attribute used for in web development?**
+### What was the script language attribute used for in web development?
 
 **Interview Answer:** This attribute was meant to show the language of the script. We no longer use it because it is deprecated according the MDN.
 
@@ -117,56 +119,58 @@ Source: <https://javascript.info/hello-world#modern-markup>
 
 **JavaScript Fundamentals: EXTERNAL SCRIPTS**
 
-**Question:** **How do you access external script files in JavaScript development?**
+### How do you access external script files in JavaScript development?
 
 **Interview Answer:** Script files are attached to HTML with the src attribute including the absolute path to the JS file.
 
 Example:
 
-```js
-<script src="/path/to/script.js"></script>
+```html
+<script src="/path/to/script.js"></script>
 
-// Example of Multiple script Paths…
+<!-- Example of Multiple script Paths… -->
 
-<script src="/js/script1.js"></script>
+<script src="/js/script1.js"></script>
 
-<script src="/js/script2.js"></script>
+<script src="/js/script2.js"></script>
 ```
 
 Source: <https://javascript.info/hello-world#external-scripts>
 
-**Question:** **How do you access external script URLs in JavaScript development?**
+### How do you access external script URLs in JavaScript development?
 
 **Interview Answer:** We can access external scripts by using the script src attribute. Both secure and non-secure domains are permissible.
 
 Code Example:
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/ "></script>
+```html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/ "></script>
+```
 
 Source: <https://javascript.info/hello-world#external-scripts>
 
-**Question:** **What is the rule for putting scripts into HTML?**
+### What is the rule for putting scripts into HTML?
 
 **Interview Answer:** As a rule, only the simplest scripts are put into HTML pages. Complex scripts reside in separate files.
 
 Source: <https://javascript.info/hello-world#external-scripts>
 
-**Question:** **What is the benefit of using a separate script file in the browser?**
+### What is the benefit of using a separate script file in the browser?
 
 **Interview Answer:** The benefit of a separate file is that the browser will download it and store it in its cache. Other pages that reference the same script will take it from the cache instead of downloading it. That reduces traffic and makes pages faster.
 
 Source: <https://javascript.info/hello-world#external-scripts>
 
-**Question:** **What limitations exist in script tags using a source file?**
+### What limitations exist in script tags using a source file?
 
 **Interview Answer:** A single `<script>` tag cannot have both the source attribute and code inside.
 
 Example: This is not allowed
 
-// Bad Code
+<!-- Bad Code -->
 
-```js
-<script src='file.js'>
+```html
+<script src="file.js">
   alert(1); // the content is ignored, because src is set
 </script>
 ```
@@ -175,13 +179,11 @@ Example: This is not allowed
 
 // Good Code
 
-```js
-<script src="file.js"></script>
+```html
+<script src="file.js"></script>
 
 <script>
-
   alert(1);
-
 </script>
 ```
 

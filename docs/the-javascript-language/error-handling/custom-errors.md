@@ -7,7 +7,7 @@ sidebar_position: 2
 
 **Error Handling: Custom errors, extending the Error Object.**
 
-**Question:** **What are the benefits of inheriting from the Error object vs simply using the throw statement?**
+### What are the benefits of inheriting from the Error object vs simply using the throw statement?
 
 **Answer:** JavaScript allows to us use throw with any argument, so technically our custom error classes do not need to inherit from Error. But if we inherit, then it becomes possible to use obj instanceof Error to identify and track error objects. So, it is better to inherit from it. As the application grows, our own errors naturally form a hierarchy. For instance, ValidationError may inherit from the Error Object, and so on.
 
@@ -57,13 +57,13 @@ try {
 
 Source: <https://javascript.info/custom-errors#extending-error>
 
-**Question:** **Is there any difference in inheritance when inheriting/extending from the Error class object and regular class inheritance?**
+### Is there any difference in inheritance when inheriting/extending from the Error class object and regular class inheritance?
 
 **Interview Answer:** No, the same rules apply, you are only allowed to inherit from one base class by using the extends keyword. The extends keyword is used in class declarations or class expressions to create a class that is a child of another class.
 
 Source: <https://javascript.info/custom-errors#extending-error>
 
-**Question:** **How would you extend beyond the initial inheritance of the Error object?**
+### How would you extend beyond the initial inheritance of the Error object?
 
 **Interview Answer:** If, it is necessary to extend beyond a primary child class that has already extended the built-in Error Object. You must inherit/extend from the child class to have access to the base class.
 
@@ -127,7 +127,7 @@ try {
 
 Source: <https://javascript.info/custom-errors#further-inheritance>
 
-**Question:** **Is there a way to handle unknown or potential errors in JavaScript?**
+### Is there a way to handle unknown or potential errors in JavaScript?
 
 **Interview Answer:** When potential errors are relevant, we should handle them directly. However, it is not a good idea to handle every potential or unknown error. A much better approach is to rethrow the catch to at least log the error when wrapping exceptions.
 

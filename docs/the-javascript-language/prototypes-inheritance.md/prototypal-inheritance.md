@@ -5,7 +5,7 @@ sidebar_position: 1
 
 # Prototypal inheritance - Q&A
 
-**Question:** **What does a prototype refer to in JavaScript?**
+### What does a prototype refer to in JavaScript?
 
 **Interview Answer:** Prototypes are the mechanism by which JavaScript objects inherit features from one another. JavaScript is often described as a prototype-based language that is used to provide inheritance, objects can have a prototype object, which acts as a template object that it inherits methods and properties from.
 
@@ -39,7 +39,7 @@ alert( rabbit.jumps ); // true
 
 Source: <https://javascript.info/prototype-inheritance#prototype>
 
-**Question:** **What is prototype in relation to objects in JavaScript?**
+### What is prototype in relation to objects in JavaScript?
 
 **Interview Answer:** A prototype is an object. When you declare a function, a prototype is created and linked to that function. In addition, the prototype object forms a link with its function creating a circular relationship. This is true for any function. In JavaScript, we can create objects several different ways. One of the ways is the new keyword. When we declare a function with the intent of using new (a constructor function), we capitalize the first letter of the function name.
 
@@ -63,7 +63,7 @@ console.log(user instanceof User); // true
 
 Source: <https://javascript.info/prototype-inheritance#prototype>
 
-**Question:** **In JavaScript prototypal inheritance, what is the value of the “this” keyword?**
+### In JavaScript prototypal inheritance, what is the value of the “this” keyword?
 
 **Interview Answer:** The answer is simple: this is not affected by prototypes at all. No matter where the method is found in an object or its prototype. In a method call, this is always the object before the dot.
 
@@ -103,7 +103,7 @@ console.log(animal.isSleeping); // undefined (no such property
 
 Source: <https://javascript.info/prototype-inheritance#the-value-of-this>
 
-**Question:** **What behavior does the for-in loop use when it iterates over inherited properties?**
+### What behavior does the for-in loop use when it iterates over inherited properties?
 
 **Interview Answer:** When you loop over properties of an object that inherits from another object, for...in statement goes up in the prototype chain and enumerates over the inherited properties as well.
 

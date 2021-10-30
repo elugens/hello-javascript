@@ -7,7 +7,7 @@ sidebar_position: 1
 
 **Error Handling: Error handling, "try..catch"**
 
-**Question:** **Briefly explain the behavior of the “try..catch” error handling process.**
+### Briefly explain the behavior of the “try..catch” error handling process.\*\*
 
 **Interview Answer:** The try…catch construct has two main blocks, try and then catch blocks. First, the code in the try is executed on the try block. If there is no error, then it procedes to execute and exit the code, skipping the catch. If there is an error in the try block, then the catch is invoked and the error is returned.
 
@@ -31,7 +31,7 @@ try {
 
 Source: <https://javascript.info/try-catch#the-try-catch-syntax>
 
-**Question:** **Can you explain the how the JavaScript engine works with the “try..catch” block?**
+### Can you explain the how the JavaScript engine works with the “try..catch” block?
 
 **Interview Answer:** The most notable part of the interaction with JavaScript engine is that the try..catch only works for runtime errors. For try..catch to work, the code must be runnable. In other words, it should be valid JavaScript.
 
@@ -53,7 +53,7 @@ try {
 
 Source: <https://javascript.info/try-catch#the-try-catch-syntax>
 
-**Question:** **Does the “try..catch” block work synchronously or asynchronously?**
+### Does the “try..catch” block work synchronously or asynchronously?
 
 **Interview Answer:** The JavaScript try..catch works synchronously when executed. We cannot use asynchronous methods or functions inside of the try block, because the code is set to execute later, while the catch has already finished. The code will die inside of the try block.
 
@@ -85,7 +85,7 @@ setTimeout(function () {
 
 Source: <https://javascript.info/try-catch#the-try-catch-syntax>
 
-**Question:** **How does the JavaScript error object work inside the try..catch?**
+### How does the JavaScript error object work inside the try..catch?
 
 **Interview Answer:** For all built-in errors, the error object has two main properties including the name and message properties. The err.name reflects the name of the error like an undefined variable, which returns a ReferenceError. The err.message returns a text based message reflecting the error details.
 
@@ -112,7 +112,7 @@ try {
 
 Source: <https://javascript.info/try-catch#error-object>
 
-**Question:** **Explain, what the stack error object property does?**
+### Explain, what the stack error object property does?
 
 **Interview Answer:** The error object stack property returns a string with information about the sequence of nested calls that led to the error within the current call stack. It is commonly used for JavaScript debugging purposes and helps to resolve issues within the code.
 
@@ -128,7 +128,7 @@ try {
 
 Source: <https://javascript.info/try-catch#error-object>
 
-**Question:** **What does the throw operator do in JavaScript?**
+### What does the throw operator do in JavaScript?
 
 **Interview Answer:** In simple terms, the throw operator/statement throws a user-defined exception. Execution of the current function will stop and control will be passed to the first catch block in the call stack.
 
@@ -177,7 +177,7 @@ alert(error.message); // Things happen o_O
 
 Source: <https://javascript.info/try-catch#throw-operator>
 
-**Question:** **What does it mean to rethrow an error in JavaScript?**
+### What does it mean to rethrow an error in JavaScript?
 
 **Interview Answer:** When dealing with errors, handling them at the perimeter of your application is not always sufficient. By the time, the error bubbles up, we have often lost a lot of the context in which the error was thrown. As such, people will sometimes catch an error, record it locally in some way, and then rethrow it. Rethrowing is the basic concept of using a throw statement when there is no clear way to handle an error. This will maintain the original stack trace recorded by the error as you "pass it back up" the call-stack.
 
@@ -213,7 +213,7 @@ try {
 
 Source: <https://javascript.info/try-catch#rethrowing>
 
-**Question:** **How does the try..catch..finally function in JavaScript error handling?**
+### How does the try..catch..finally function in JavaScript error handling?
 
 **Interview Answer:** In JavaScript, the try..catch..finally statement works in an ordered fashion. The first try block is where code execution happens. The catch statement executes if there is an exception in thrown in the try block. The finally statement block is all code that is ran after try and catch statements are completed. If, the try block executes without errors, then the finally block is executed. If the try statement results in an error, it passes the error to the catch block and then an only then does the finally statement run.
 
@@ -231,7 +231,7 @@ try {
 
 Source: <https://javascript.info/try-catch#try-catch-finally>
 
-**Question:** **Are variables localized inside of the “try..catch..finally” blocks?**
+### Are variables localized inside of the “try..catch..finally” blocks?
 
 **Interview Answer:** Yes, as with everything in curly brackets ({}) variables are localized to the “try..catch..finally” blocks individually. If, a variable is declared with one of the blocks then it is only accessible within that block.
 
@@ -256,7 +256,7 @@ console.log(hello); // ReferenceError: hello is not defined
 
 Source: <https://javascript.info/try-catch#try-catch-finally>
 
-**Question:** **Errors can happen in any part the JavaScript environment including the global space. Is there a way to handle errors in the global window environment?**
+### Errors can happen in any part the JavaScript environment including the global space. Is there a way to handle errors in the global window environment?
 
 **Interview Answer:** Yes, we can use the global handler (global catch) window.onerror that is part of the Web API.
 

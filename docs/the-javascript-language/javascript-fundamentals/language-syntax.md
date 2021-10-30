@@ -7,7 +7,7 @@ sidebar_position: 1
 
 ## INTRODUCTION: JavaScript Language Syntax - Q&A
 
-**Question:** **What is the “script” tag used for in JavaScript?**
+### What is the “script” tag used for in JavaScript?
 
 **Interview Answer:** We can use the script tag to insert JS into HTML or import scripts from external sources.
 

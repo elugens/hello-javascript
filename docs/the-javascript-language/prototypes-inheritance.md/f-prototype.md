@@ -5,7 +5,7 @@ sidebar_position: 2
 
 # Function Prototype - Q&A
 
-**Question:** **What is the function.prototype property, in JavaScript?**
+### What is the function.prototype property, in JavaScript?
 
 **Interview Answer:** In simple terms, the function.prototype mean a regular property on a function. Every Object in JavaScript contains the prototype meaning a regular property with the prototype name.
 
@@ -28,7 +28,7 @@ alert(rabbit.eats); // true
 
 Source: <https://javascript.info/function-prototype>
 
-**Question:** **Can you explain how the function.prototype property works in JavaScript?**
+### Can you explain how the function.prototype property works in JavaScript?
 
 **Interview Answer:** Every function has the "prototype” property even if we do not supply it. The prototype object is special type of enumerable object to which additional properties can be attached to and be shared across all the instances of its constructor function. A function prototype property is only used when new Function is called, it assigns the prototype of the new object.
 
@@ -49,24 +49,22 @@ alert(rabbit.constructor == Rabbit); // true (from prototype)
 
 Source: <https://javascript.info/function-prototype>
 
-**Question:** **What happens when you replace the default function prototype in JavaScript?**
+### What happens when you replace the default function prototype in JavaScript?
 
 **Interview Answer:** When you override the default prototype in an object. We lose access to the function constructor property of the prototype.
 
 Example:
 
-```JS
-function Rabbit() {}
+```js
+function Rabbit() {}
 
-Rabbit.prototype = {
-
-    jumps: true
-
+Rabbit.prototype = {
+  jumps: true,
 };
 
-let rabbit = new Rabbit();
+let rabbit = new Rabbit();
 
-alert(rabbit.constructor === Rabbit); // false
+alert(rabbit.constructor === Rabbit); // false
 ```
 
 Source: <https://javascript.info/function-prototype#default-f-prototype-constructor-property>

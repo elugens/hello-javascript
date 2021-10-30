@@ -7,7 +7,7 @@ sidebar_position: 8
 
 **Document: Styles and classes**
 
-**Question:** **What is the most important rule to follow when you are choosing a way to style your page?**
+### What is the most important rule to follow when you are choosing a way to style your page?
 
 **Interview Answer:** We should always prefer CSS classes verses the style property methods. The latter should only be used if classes “can’t handle it”. For example, style is acceptable if we calculate coordinates of an element dynamically and want to set them from JavaScript.
 
@@ -27,7 +27,7 @@ elem.style.top = top; // e.g '456px'
 
 Sources: <https://javascript.info/styles-and-classes>
 
-**Question:** **How to do you return the name of a class in JavaScript?**
+### How to do you return the name of a class in JavaScript?
 
 **Interview Answer:** The process of exposing or returning the name of a class can be achieved by using the className property.
 
@@ -43,7 +43,7 @@ Example:
 
 Sources: <https://javascript.info/styles-and-classes#classname-and-classlist>
 
-**Question:** **Is there property or special object used to modify a class list in JavaScript?**
+### Is there property or special object used to modify a class list in JavaScript?
 
 **Interview Answer:** Yes, the elem.classList is a special object with methods to add/remove/toggle a single class. So, we can operate both on the full class string using className or on individual classes using classList.
 
@@ -63,7 +63,7 @@ Example:
 
 Sources: <https://javascript.info/styles-and-classes#classname-and-classlist>
 
-**Question:** **Explain the function and syntax of the elem.style object property.**
+### Explain the function and syntax of the elem.style object property.\*\*
 
 **Interview Answer:** The property elem.style is an object that corresponds to what’s written in the "style" attribute. Setting elem.style.width="100px" works the same as if we had in the attribute style a string width:100px.
 
@@ -79,7 +79,7 @@ Example:
 
 Sources: <https://javascript.info/styles-and-classes#element-style>
 
-**Question:** **What is the rule for prefixed browser properties in JavaScript?**
+### What is the rule for prefixed browser properties in JavaScript?
 
 **Interview Answer:** Browser-prefixed properties like -moz-border-radius, -webkit-border-radius also follow the same rule, a dash means upper case. For instance, the Mozilla border radius property it would look like this: MozBorderRadius.
 
@@ -95,7 +95,7 @@ Example:
 
 Sources: <https://javascript.info/styles-and-classes#element-style>
 
-**Question:** **What is the proper approach to resetting an element style property?**
+### What is the proper approach to resetting an element style property?
 
 **Interview Answer:** We should use elem.style.display and set the value to an empty string.
 
@@ -112,7 +112,7 @@ setTimeout(() => (document.body.style.display = ''), 1000); // back to normal
 
 Sources: <https://javascript.info/styles-and-classes#resetting-the-style-property>
 
-**Question:** **Is there a way to do a full style rewrite on DOM element node?**
+### Is there a way to do a full style rewrite on DOM element node?
 
 **Interview Answer:** To set the full style as a string, there’s a special property style.cssText to do a full rewrite. This property is rarely used, because such assignment removes all existing styles: it does not add but replaces them. The same can be accomplished by setting an attribute: div.setAttribute('style', 'color: red...').
 
@@ -142,7 +142,7 @@ Example:
 
 Sources: <https://javascript.info/styles-and-classes#resetting-the-style-property>
 
-**Question:** **Why is it important to mind your CSS units in JavaScript?**
+### Why is it important to mind your CSS units in JavaScript?
 
 **Interview Answer:** It is important to set our CSS style sizes including units to ensure proper parsing or outcomes that we present to the end-user.
 
@@ -171,7 +171,7 @@ Example:
 
 Sources: <https://javascript.info/styles-and-classes#mind-the-units>
 
-**Question:** **Can you explain how to read computed values in JavaScript?**
+### Can you explain how to read computed values in JavaScript?
 
 **Interview Answer:** Since, the style property operates only on the value of the "style" attribute, without any CSS cascade. We can’t read anything that comes from CSS classes using elem.style. We would have to find a built-in method to handle that procedure. The getComputedStyle() method gets all the actual (computed) CSS property and values of the specified element. The returned style is a live CSSStyleDeclaration object, which updates automatically when the element's styles are changed. Style sources can include: internal style sheets, external style sheets, inherited styles and browser default styles. The getComputedStyle method has two parameters including the element and the pseudo element. The pseudo element is a string specifying the pseudo-element to match. Omitted (or null) for real elements.
 
@@ -198,7 +198,7 @@ Example:
 
 Sources: <https://javascript.info/styles-and-classes#computed-styles-getcomputedstyle>
 
-**Question:** **What is the difference between a computed and resolved value?**
+### What is the difference between a computed and resolved value?
 
 **Interview Answer:** A computed style value is the value after all CSS rules and CSS inheritance is applied, as the result of the CSS cascade. A resolved style value is the one finally applied to the element.
 
@@ -208,7 +208,7 @@ Sources: <https://javascript.info/styles-and-classes#computed-styles-getcomputed
 
 Sources: <https://javascript.info/styles-and-classes#computed-styles-getcomputedstyle>
 
-**Question:** **Explain how the getComputedStyle method interacts with property names.**
+### Explain how the getComputedStyle method interacts with property names.\*\*
 
 **Interview Answer:** We should always ask for the exact (full property name) property that we want, like paddingLeft or marginTop or borderTopWidth. Otherwise the correct result is not guaranteed.
 
@@ -216,7 +216,7 @@ Sources: <https://javascript.info/styles-and-classes#computed-styles-getcomputed
 
 Sources: <https://javascript.info/styles-and-classes#computed-styles-getcomputedstyle>
 
-**Question:** **Why are styles applied to :visited links always hidden by getComputedStyles?**
+### Why are styles applied to :visited links always hidden by getComputedStyles?
 
 **Interview Answer:** Visited links may be colored using :visited CSS pseudoclass. But getComputedStyle does not give access to that color, because otherwise an arbitrary page could find out whether the user visited a link by creating it on the page and checking the styles. JavaScript may not see the styles applied by :visited. And also, there’s a limitation in CSS that forbids applying geometry-changing styles in :visited. That is to guarantee that there is no side way for an evil page to test if a link was visited and hence to break the privacy.
 

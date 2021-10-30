@@ -7,25 +7,25 @@ sidebar_position: 1
 
 **Document: Browser environment, specs**
 
-**Question:** **What was JavaScript initially created to work with?**
+### What was JavaScript initially created to work with?
 
 **Interview Answer:** The JavaScript language was initially created for web browsers. Since then, it has evolved and become a language with many uses and platforms.
 
 Source: <https://javascript.info/browser-environment>
 
-**Question:** **What types of technology platforms can JavaScript run on?**
+### What types of technology platforms can JavaScript run on?
 
 **Interview Answer:** The JavaScript language can run on a browser, or a webserver or another host, even a “smart” coffee machine, if it can run JavaScript. Each of them provides platform-specific functionality. The JavaScript specification calls that a host environment. A host environment provides its own objects and functions additional to the language core. Web browsers give a means to control web pages. Node.js provides server-side features, and so on.
 
 Source: <https://javascript.info/browser-environment>
 
-**Question:** **Briefly explain the general structure of the browser window environment.**
+### Briefly explain the general structure of the browser window environment.\*\*
 
 **Interview Answer:** A browser at its root consists of a window (root object), DOM, BOM, and the JavaScript Object. The DOM is the document object model and the BOM is the browser object model. JavaScript is the language used to interact with the window, DOM, and BOM.
 
 Source: <https://javascript.info/browser-environment>
 
-**Question:** **What is the Document Object Model in JavaScript?**
+### What is the Document Object Model in JavaScript?
 
 **Interview Answer:** Document Object Model, or DOM for short, represents all page content as objects that can be modified. The document object is the main “entry point” to the page. We can change or create anything on the page using it.
 
@@ -43,7 +43,7 @@ setTimeout(() => (document.body.style.background = ''), 1000);
 
 Source: <https://javascript.info/browser-environment#dom-document-object-model>
 
-**Question:** **Can you name a good reference document to find information about the document object model?**
+### Can you name a good reference document to find information about the document object model?
 
 **Interview Answer:** There are two good reference documents that can be used for referencing information about the DOM. They include the MDN Web Docs and the DOM Living Standard. The DOM Living Standard provides you with detailed information about the specification. The MDN is a detail guide expressed in a way that it is easy to learn.
 
@@ -53,13 +53,13 @@ MDN: <https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Int
 
 Living Standard: <https://dom.spec.whatwg.org/>
 
-**Question:** **Is the DOM only used in Browsers or can it be found in other platforms?**
+### Is the DOM only used in Browsers or can it be found in other platforms?
 
 **Interview Answer:** The DOM specification explains the structure of a document and provides objects to manipulate it. There are non-browser instruments that use DOM too. For instance, server-side scripts that download HTML pages and process them can also use DOM. They may support only a part of the specification though.
 
 Sources: <https://javascript.info/browser-environment#dom-document-object-model>
 
-**Question:** **What is the CSS Object Model (CSSOM) used for in a browser?**
+### What is the CSS Object Model (CSSOM) used for in a browser?
 
 **Interview Answer:** The CSS Object Model is a set of APIs allowing the manipulation of CSS from JavaScript. It is much like the DOM, but for the CSS rather than the HTML.
 
@@ -67,7 +67,7 @@ Sources: <https://javascript.info/browser-environment#dom-document-object-model>
 
 Sources: <https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model>
 
-**Question:** **What is the Browser Object Model in JavaScript?**
+### What is the Browser Object Model in JavaScript?
 
 **Interview Answer:** The Browser Object Model (BOM) represents additional objects provided by the browser (host environment) for working with everything except the document like the navigator and location objects.
 
@@ -89,13 +89,13 @@ if (confirm('Go to Wikipedia?')) {
 
 Source: <https://javascript.info/browser-environment#bom-browser-object-model>
 
-**Question:** **Are the alert, confirm, and prompt functions part of the DOM or BOM?**
+### Are the alert, confirm, and prompt functions part of the DOM or BOM?
 
 **Interview Answer:** Functions, alert/confirm/prompt are a part of BOM: they are directly not related to the document but represent pure browser methods of communicating with the user.
 
 Sources: <https://javascript.info/browser-environment#bom-browser-object-model>
 
-**Question:** **What specification is the BOM part of?**
+### What specification is the BOM part of?
 
 **Interview Answer:** BOM is the part of the general HTML specification.
 

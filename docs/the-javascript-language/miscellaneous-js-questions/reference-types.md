@@ -30,6 +30,9 @@ user.hi(); // works
 // now let's call user.hi or user.bye depending on the name
 
 (user.name == 'John' ? user.hi : user.bye)(); // Error!
+
+// this is undefined
+
 ////////////////////////////////////////
 
 // Solution: Losing this

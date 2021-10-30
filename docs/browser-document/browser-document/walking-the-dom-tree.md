@@ -7,7 +7,7 @@ sidebar_position: 2
 
 **Document: Walking the DOM**
 
-**Question:** **What does it mean to walk the DOM in JavaScript?**
+### What does it mean to walk the DOM in JavaScript?
 
 **Interview Answer:** The DOM allows us to do anything with elements and their contents, but first we need to reach the corresponding DOM object. This step through process is commonly referred to as walking the DOM. All operations on the DOM start with the document object. That is the main “entry point” to DOM. From it we can access any node.
 
@@ -19,7 +19,7 @@ alert(document.documentElement); // alerts [object HTMLHtmlElement] <html> 
 
 Sources: <https://javascript.info/dom-navigation>
 
-**Question:** **What are the topmost tree nodes available direct as document properties?**
+### What are the topmost tree nodes available direct as document properties?
 
 **Interview Answer:** The topmost tree nodes are available directly as document properties including the html, body, and head nodes document nodes.
 
@@ -33,7 +33,7 @@ alert(document.documentElement); // alerts [object HTMLHtmlElement] <html> 
 
 Sources: <https://javascript.info/dom-navigation#on-top-documentelement-and-body>
 
-**Question:** **What does null mean or equate to in the DOM?**
+### What does null mean or equate to in the DOM?
 
 **Interview Answer:** In the DOM, the null value means “doesn’t exist” or “no such node”. A script cannot access an element that does not exist at the moment of execution. In particular, if a script is inside `<head>`, then document.body is unavailable, because the browser did not read it yet.
 
@@ -57,13 +57,13 @@ Example:
 
 Sources: <https://javascript.info/dom-navigation#on-top-documentelement-and-body>
 
-**Question:** **What is difference between Child nodes and Descendants in the DOM?**
+### What is difference between Child nodes and Descendants in the DOM?
 
 **Interview Answer:** In the DOM, a child node is a direct child of the given parent. Descendants are all elements that are nested in the given one, including children, their children and so on.
 
 Sources: <https://javascript.info/dom-navigation#children-childnodes-firstchild-lastchild>
 
-**Question:** **Explain, what does the firstChild and lastChild properties do on elements?**
+### Explain, what does the firstChild and lastChild properties do on elements?
 
 **Interview Answer:** The firstChild and lastChild element properties give fast access to the first and last children of a parent element.
 
@@ -79,7 +79,7 @@ elem.childNodes[elem.childNodes.length - 1] === elem.lastChild; // true
 
 Sources: <https://javascript.info/dom-navigation#children-childnodes-firstchild-lastchild>
 
-**Question:** **What type of object structure are childNodes?**
+### What type of object structure are childNodes?
 
 **Interview Answer:** Child nodes make of a structure that is like an Array. In simple terms, its a special array-like iterable object that we can loop over.
 
@@ -102,7 +102,7 @@ alert(Array.from(document.body.childNodes).filter); // function
 
 Sources: <https://javascript.info/dom-navigation#dom-collections>
 
-**Question:** **Is it possible to loop over node collections with a for…in loop?**
+### Is it possible to loop over node collections with a for…in loop?
 
 **Interview Answer:** Yes, technically you can loop over collections with a for…in loop, but it is not recommended. The for..in loop iterates over all enumerable properties. And collections have some “extra” rarely used properties that we usually do not want to get like entries, forEach, and keys.
 
@@ -116,7 +116,7 @@ for (let prop in document.body.childNodes) alert(prop);
 
 Sources: <https://javascript.info/dom-navigation#dom-collections>
 
-**Question:** **Can you define what a sibling is in the DOM structure?**
+### Can you define what a sibling is in the DOM structure?
 
 **Interview Answer:** Siblings are nodes that are children of the same parent. An example of this is the head and body nodes that are siblings and both children of the html node. The `<body>` is said to be the “next” or “right” sibling of `<head>`, and the `<head>` is said to be the “previous” or “left” sibling of `<body>`.
 
@@ -135,7 +135,7 @@ Example:
 
 Sources: <https://javascript.info/dom-navigation#siblings-and-the-parent>
 
-**Question:** **Are there properties that we can use to access any of the next and previous siblings of a node (Note: including text and comment nodes)? How do you access the parent node?**
+### Are there properties that we can use to access any of the next and previous siblings of a node (Note: including text and comment nodes)? How do you access the parent node?
 
 **Interview Answer:** Yes, the next sibling can be accessed via the nextSibling property and the previous sibling node can be accessed via the previousSibling property. The parent node is accessed via the parentNode property. It should be noted that using these properties allows direct access to all nodes including the text and comment nodes.
 
@@ -155,13 +155,13 @@ alert(document.body.previousSibling); // HTMLHeadElement
 
 Sources: <https://javascript.info/dom-navigation#siblings-and-the-parent>
 
-**Question:** **There are times when we do not want to access the text and comment nodes. Is there a property that we can use to access the next sibling element node?**
+### There are times when we do not want to access the text and comment nodes. Is there a property that we can use to access the next sibling element node?
 
 **Interview Answer:** Yes when we are interested in only accessing element nodes. There are properties that serve that purpose for both the previous and the next sibling element nodes. For, the next sibling element node we can use nextElementSibling and the previous element node we use previousElementSibling. This is commonly referred to as element-only navigation.
 
 Sources: <https://javascript.info/dom-navigation#element-only-navigation>
 
-**Question:** **Why parentElement? Can the parent be not an element?**
+### Why parentElement? Can the parent be not an element?
 
 **Interview Answer:** The parent may not be an element when we are calling parentElement on the document.documentElement which is the first node of the document. It will return null, but we can access it using the parentNode property as an alternative.
 
@@ -176,7 +176,7 @@ alert(document.documentElement.parentElement); // null
 
 Sources: <https://javascript.info/dom-navigation#element-only-navigation>
 
-**Question:** **Besides the basic DOM elements, do elements provide additional properties based on their specific type?**
+### Besides the basic DOM elements, do elements provide additional properties based on their specific type?
 
 **Interview Answer:** There are several DOM elements that provide additional properties. For example, the table element provides the row, caption, tBodies and other properties that we can access.
 

@@ -7,7 +7,7 @@ sidebar_position: 4
 
 **Objects the Basics: OBJECT METHOD, “THIS”**
 
-**Question:** **What is a function that is a property of an object called?**
+### What is a function that is a property of an object called?
 
 **Interview Answer:** A function that is a property of an object is called its method.
 
@@ -29,13 +29,13 @@ user.sayHi(); // Hello, JavaScript
 
 Source: <https://javascript.info/object-methods#method-examples>
 
-**Question:** **What is the programming paradigm that uses objects to represent entities?**
+### What is the programming paradigm that uses objects to represent entities?
 
 **Interview Answer:** Object-oriented Programming or OOP, is the programming paradigm that uses objects to represent entities.
 
 Source: <https://javascript.info/object-methods>
 
-**Question:** **What does the “this” keyword refer to in JavaScript?**
+### What does the “this” keyword refer to in JavaScript?
 
 **Answer:** The JavaScript this keyword refers to the object that it belongs to. It has different values depending on where it is used.
 
@@ -49,61 +49,51 @@ Source: <https://javascript.info/object-methods>
 
 Source: <https://www.w3schools.com/js/js_this.asp>
 
-**Question:** **What is one of the advantages of using the “this” keyword in an object?**
+### What is one of the advantages of using the “this” keyword in an object?
 
 **Answer:** The “this” keyword holds a reference to the object and in return removes any effort to nullify it later in the code.
 
-Example: “THIS” refers to the object
+**Example:** “THIS” refers to the object
 
 ```js
-let user = {
+let user = {
+  name: 'John',
 
-  name: "John",
+  age: 30,
 
-  age: 30,
-
-  sayHi() {
-
-      alert( this.name ); // this works as intended
-
-  }
-
+  sayHi() {
+    alert(this.name); // this works as intended
+  },
 };
 
-let admin = user;
+let admin = user;
 
-user = null; // attempt to override the object fails
+user = null; // attempt to override the object fails
+admin.sayHi(); // alerts John
+```
 
-admin.sayHi(); // alerts John
+**Example:** Fails without the “THIS” keyword
 
+```js
+let user = {
+  name: 'John',
 
-Example: Fails without the “THIS” keyword
+  age: 30,
 
-let user = {
-
-  name: "John",
-
-  age: 30,
-
-  sayHi() {
-
-      alert( user.name ); // leads to an error
-
-  }
-
+  sayHi() {
+    alert(user.name); // leads to an error
+  },
 };
 
-let admin = user;
+let admin = user;
 
-user = null; // overwrite to make things obvious
-
-admin.sayHi(); // TypeError: Cannot read property 'name' of null
-
+user = null; // overwrite to make things obvious
+admin.sayHi(); // TypeError: Cannot read property 'name' of null
 ```
 
 Source: <https://javascript.info/object-methods#this-in-methods>
 
-**Question:** **What is the difference between “THIS” in a function in (strict mode) and (non-strict mode)?**
+### What is the difference between “THIS” in a function in (strict mode) and (non-strict mode)?
 
 **Answer:** In strict mode, “this” returns undefined and in non-strict mode it returns global window.
 
@@ -134,13 +124,13 @@ sayHi(); // returns global window
 
 Source: <https://javascript.info/object-methods#this-is-not-bound>
 
-**Question:** **What are the consequences of unbound “THIS”?**
+### What are the consequences of unbound “THIS”?
 
 **Answer:** In JavaScript this is “free”, its value is evaluated at call-time and does not depend on where the method was declared, but rather on what object is “before the dot”. The concept of run-time evaluated this has both pluses and minuses. On the one hand, a function can be reused for different objects. On the other hand, the greater flexibility creates more possibilities for mistakes.
 
 Source: <https://javascript.info/object-methods#this-is-not-bound>
 
-**Question:** **Since arrow functions have no “This”, What is the outcome when the “THIS” keyword is used in an arrow function?**
+### Since arrow functions have no “This”, What is the outcome when the “THIS” keyword is used in an arrow function?
 
 **Answer:** The outcome in an arrow function is a return of undefined. This is because there is no access to the global window.
 

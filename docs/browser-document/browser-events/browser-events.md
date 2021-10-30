@@ -9,25 +9,25 @@ sidebar_position: 1
 
 **Introduction to Events: Introduction to browser Events**
 
-**Question:** **What is an event in relation to the DOM, Browser, and JavaScript?**
+### What is an event in relation to the DOM, Browser, and JavaScript?
 
 **Interview Answer:** An event is a signal that something has happened. All DOM nodes generate such signals (but events are not limited to DOM).
 
 Source: <https://javascript.info/introduction-browser-events>
 
-**Question:** **Can you name at least three DOM events?**
+### Can you name at least three DOM events?
 
 **Interview Answer:** There several DOM events including mouse, keyboard, form element, document, and css events. The most common is mouse and keyboard events, like mouse click and keyboard keydown events.
 
 Source: <https://javascript.info/introduction-browser-events>
 
-**Question:** **What is a JavaScript event handler?**
+### What is a JavaScript event handler?
 
 **Interview Answer:** A JavaScript event handler is a function that runs in case of an event. Handlers are a way to run JavaScript code in case of user actions. There are several ways to assign a handler.
 
 Source: <https://javascript.info/introduction-browser-events#event-handlers>
 
-**Question:** **Can you execute an event in a HTML attribute?**
+### Can you execute an event in a HTML attribute?
 
 **Interview Answer:** An event handler can be set in HTML with an attribute named `on<event>`. The onevent handlers are properties on certain DOM elements to manage how that element reacts to events. The onevent handler is usually named with the event it reacts to, like onclick, onkeypress, onfocus, etc.
 
@@ -55,7 +55,7 @@ Example: Event Handler (recommended)
 
 Source: <https://javascript.info/introduction-browser-events#html-attribute>
 
-**Question:** **Is there a way to assign a handler to an `on<event>` DOM property?**
+### Is there a way to assign a handler to an `on<event>` DOM property?
 
 **Interview Answer:** Yes, we can assign a handler using a DOM property `on<event>`. If the handler is assigned using an HTML-attribute then the browser reads it, creates a new function from the attribute content and writes it to the DOM property. This is actually similar to using a function as an event handler, but it’s just a little less direct.
 
@@ -73,7 +73,7 @@ Example:
 
 Source: <https://javascript.info/introduction-browser-events#dom-property>
 
-**Question:** **Can use an event more the once on a DOM element?**
+### Can use an event more the once on a DOM element?
 
 **Interview Answer:** No not directly, the second event will overwrite the existing event and return the second value. We should have to implement an event listener if we intend to add more than one handler.
 
@@ -93,7 +93,7 @@ Example:
 
 Source: <https://javascript.info/introduction-browser-events#dom-property>
 
-**Question:** **What the reason for not using setAttribute for handlers?**
+### What the reason for not using setAttribute for handlers?
 
 **Interview Answer:** The reason behind not using setAttribute for handlers is that attributes are always string, so the function will become a string instead of a function.
 
@@ -111,13 +111,13 @@ document.body.setAttribute('onclick', function () {
 
 Source: <https://javascript.info/introduction-browser-events#possible-mistakes>
 
-**Question:** **Are DOM properties names case-sensitive or case-insensitive?**
+### Are DOM properties names case-sensitive or case-insensitive?
 
 **Interview Answer:** DOM property names are case-sensitive. We should assign a handler to elem.onclick, not elem.ONCLICK.
 
 Source: <https://javascript.info/introduction-browser-events#possible-mistakes>
 
-**Question:** **Explain the function and syntax of the EventTarget addEventListener method.**
+### Explain the function and syntax of the EventTarget addEventListener method.\*\*
 
 **Interview Answer:** The EventTarget method addEventListener(event, target, options) sets up a function that will be called whenever the specified event is delivered to the target. Common targets are Element, Document, and Window, but the target may be any object that supports events (such as XMLHttpRequest).
 
@@ -158,7 +158,7 @@ Example:
 
 Source: <https://javascript.info/introduction-browser-events#addeventlistener>
 
-**Question:** **How should you remove a previously added event listener?**
+### How should you remove a previously added event listener?
 
 **Interview Answer:** In order to remove a previously added event we must use the removeEventListener(event, handler) method. To remove a handler, we should pass the same function as was assigned. It should be noted, if we do not store the function in a variable, then we cannot remove it. There is no way to “read back” handlers assigned by addEventListener.
 
@@ -180,7 +180,7 @@ Example:
 
 Source: <https://javascript.info/introduction-browser-events#addeventlistener>
 
-**Question:** **Are there any events that cannot be assigned via a DOM property?**
+### Are there any events that cannot be assigned via a DOM property?
 
 **Interview Answer:** Yes, there exist events that cannot be assigned via a DOM-property. Only with addEventListener. For instance, the DOMContentLoaded event, that triggers when the document is loaded, and DOM is built. The addEventListener method is more flexible in this case.
 
@@ -204,7 +204,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 Source: <https://javascript.info/introduction-browser-events#addeventlistener>
 
-**Question:** **What is the event object used for in JavaScript?**
+### What is the event object used for in JavaScript?
 
 **Interview Answer:** The event object can be used for a variety of different actions including get the event type, current target, and window relative coordinates of the current during point events. The event object can be called directly in HTML attributes or inside of our scripts.
 
@@ -218,7 +218,7 @@ Example:
 
 Source: <https://javascript.info/introduction-browser-events#event-object>
 
-**Question:** **Are we limited to just function handler in JavaScript?**
+### Are we limited to just function handler in JavaScript?
 
 **Interview Answer:** We can assign not just a function, but also an object as an event handler using addEventListener. When an event occurs, the object handler method is invoked. We could also use a class as another approach.
 
