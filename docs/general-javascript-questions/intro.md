@@ -1,9 +1,8 @@
 ---
-title: Getting Started
 sidebar_position: 1
 ---
 
-# Getting Started
+# Introduction
 
 Let's discover the **the Basics of JavaScript during your Interview**.
 

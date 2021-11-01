@@ -1,0 +1,34 @@
+.linkDirectory {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1080px;
+}
+
+html[data-theme='dark'] .categoryTitle {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+html[data-theme='light'] .categorySubItem a {
+  text-decoration: none;
+  color: black;
+}
+
+html[data-theme='dark'] .categorySubItem a {
+  text-decoration: none;
+  color: white;
+}
+
+::marker {
+  color: rgb(255, 196, 0);
+}
+
+.categoryItems {
+  columns: 3;
+  column-gap: 15px;
+}
+
+.categorySubItem {
+  padding-bottom: 0.5rem;
+}

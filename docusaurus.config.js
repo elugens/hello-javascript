@@ -65,6 +65,11 @@ const config = {
           },
           { to: '/blog', label: 'Blog', position: 'left' },
           {
+            href: 'https://patreon.com/hellojavascript',
+            label: 'Patreon',
+            position: 'right',
+          },
+          {
             href: 'https://github.com/elugens/hello-javascript',
             label: 'GitHub',
             position: 'right',
@@ -109,11 +114,16 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/elugens/hello-javascript',
               },
             ],
           },
         ],
+        logo: {
+          alt: 'HelloJavaScript Logo',
+          src: 'img/hello-javascript-logo-dark-plain.svg',
+          href: '/',
+        },
         copyright: `Copyright © ${new Date().getFullYear()} HelloJavaScript.info . Built with Docusaurus.`,
       },
       prism: {

@@ -1,11 +1,15 @@
 prism-themes-names.txt
 Prism Themes names
 
-Prism allows you to change the color of embedded pre and code in your themes.
+Prism allows you to change the color of embedded code in your themes.
 
 Relative Path:
 
 node_modules\prism-react-renderer\themes
+
+NOTE: YOU WILL HAVE TO APPLY THE THEMES IN YOUR "docusaurus.config.js"
+
+example: const darkCodeTheme = require('prism-react-renderer/themes/nightOwl');
 
 dracula
 duotoneDark

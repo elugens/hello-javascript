@@ -6,14 +6,15 @@
 
 /* You can override the default Infima variables here. */
 /* rootoriginal colors */
+
 :root {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: rgb(33, 175, 144);
-  --ifm-color-primary-darker: rgb(31, 165, 136);
-  --ifm-color-primary-darkest: rgb(26, 136, 112);
-  --ifm-color-primary-light: rgb(70, 203, 174);
-  --ifm-color-primary-lighter: rgb(102, 212, 189);
-  --ifm-color-primary-lightest: rgb(146, 224, 208);
+  --ifm-color-primary: #2aabb5;
+  --ifm-color-primary-dark: #269aa3;
+  --ifm-color-primary-darker: #24919a;
+  --ifm-color-primary-darkest: #1d787f;
+  --ifm-color-primary-light: #2ebcc7;
+  --ifm-color-primary-lighter: #31c4cf;
+  --ifm-color-primary-lightest: #4cccd6;
   --ifm-code-font-size: 95%;
 }
 /* 
@@ -34,6 +35,24 @@
   padding: 0 var(--ifm-pre-padding);
 }
 
+html[data-theme='dark'] header.hero {
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    135deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
+}
+
+html[data-theme='light'] header.hero {
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    324deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
+}
+
 html[data-theme='dark'] {
   --ifm-color-primary: #fbbf24;
   --ifm-color-primary-dark: #fab708;
@@ -48,14 +67,20 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+.row.footer__links {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1080px;
+}
+
 /* footer light */
-html[data-theme='light'] footer {
+html[data-theme='light'] footer.footer {
   color: #25c2a0;
   background-color: rgb(27, 27, 27);
 }
 
 /* footer dark */
-html[data-theme='dark'] footer {
+html[data-theme='dark'] footer.footer {
   color: #fbbf24;
   background-color: rgb(27, 27, 27);
 }

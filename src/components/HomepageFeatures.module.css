@@ -9,3 +9,18 @@
   height: 200px;
   width: 200px;
 }
+
+.categoryTitle {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1rem;
+}
+
+.categoryItems {
+  padding-bottom: 0.5rem;
+  columns: 4;
+  column-gap: 10px;
+}
+
+.categorySubItem {
+  padding-bottom: 0.5rem;
+}
