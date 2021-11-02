@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/nightOwl');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'PASS YOUR NEXT JAVASCRIPT INTERVIEW',
+  title: 'JavaScript Questions and Answers',
   tagline: 'The biggest archive of Javascript questions and answers online.',
   url: 'https://www.hellojavascript.info',
   baseUrl: '/',
@@ -48,7 +48,7 @@ const config = {
           '<a target="_blank" rel="noopener noreferrer" href="https://buymeacoffee.com/hellojs"><strong>Buy Me a Coffee!</strong></a>',
         backgroundColor: '#fbbf24',
         textColor: '#000000',
-        isCloseable: false,
+        isCloseable: true,
       },
       // hideable sidebar true | false
       hideableSidebar: true,
@@ -69,10 +69,11 @@ const config = {
           {
             type: 'doc',
             docId: 'intro',
-            position: 'left',
-            label: 'Q&A',
+            position: 'right',
+            label: 'Get Started',
+            className: 'get__started',
           },
-          { to: '/blog', label: 'Blog', position: 'left' },
+          { to: '/blog', label: 'Blog', position: 'right' },
           {
             href: 'https://patreon.com/hellojavascript',
             label: 'Patreon',

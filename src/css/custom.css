@@ -84,3 +84,25 @@ html[data-theme='dark'] footer.footer {
   color: #fbbf24;
   background-color: rgb(27, 27, 27);
 }
+
+/* custom navbar link get started */
+
+.get__started {
+  font-size: 14px;
+  border-radius: 23px;
+  background-color: #f03d32;
+}
+
+.get__started:hover {
+  font-size: 14px;
+  color: white;
+  border-radius: 23px;
+  background-color: #f03d32;
+}
+
+.get__started.navbar__link--active {
+  font-size: 14px;
+  color: white;
+  border-radius: 23px;
+  background-color: #f03d32;
+}

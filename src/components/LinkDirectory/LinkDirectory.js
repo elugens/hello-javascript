@@ -36,7 +36,7 @@ export default function LinkDirectory() {
                 </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to='/docs/the-javascript-language/introduction/javascript-code-editors'>
+                <Link to='/docs/general-javascript-questions/javascript-basics/code-editors'>
                   Code Editors
                 </Link>
               </li>
