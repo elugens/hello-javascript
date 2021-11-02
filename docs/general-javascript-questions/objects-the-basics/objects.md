@@ -3,9 +3,14 @@ title: Objects
 sidebar_position: 1
 ---
 
-# JavaScript Objects - Q&A
+# JavaScript Objects
 
-**Objects the Basics: OBJECTS**
+**Objects the Basics: JavaScript Objects**
+
+<head>
+  <title>JavaScript Objects - Frontend Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What are the seven (7) primitive JavaScript data types?
 

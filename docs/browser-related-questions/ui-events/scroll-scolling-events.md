@@ -5,8 +5,12 @@ sidebar_position: 6
 
 # Scrolling Events
 
-**UI Events: Scrolling**
-`
+**UI Events: Scrolling Events**
+
+<head>
+  <title>Scrolling Events - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What does the scroll event allow in terms of page or element?
 

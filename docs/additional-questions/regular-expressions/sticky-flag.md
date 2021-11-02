@@ -3,9 +3,14 @@ title: Sticky Flag
 sidebar_position: 16
 ---
 
-# Sticky Flag
+# Regex Sticky Flag
 
-**Regular expressions: Sticky flag "y", searching at position**
+**Regular Expressions: Regex Sticky Flag**
+
+<head>
+  <title>Regex Sticky Flag - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What does the regex flag ‘Y’ do in regular expressions?
 

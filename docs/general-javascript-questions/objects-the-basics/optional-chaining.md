@@ -3,7 +3,14 @@ title: Optional Chaining
 sidebar_position: 6
 ---
 
-# Optional chaining '?.' - Q&A
+# Optional Chaining Operator
+
+**Objects the Basics: Optional Chaining**
+
+<head>
+  <title>Optional Chaining Operator - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### Explain, what the optional chaining operator (?.) does in JavaScript.
 

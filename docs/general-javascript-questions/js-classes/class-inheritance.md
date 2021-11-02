@@ -1,11 +1,16 @@
 ---
-title: Class inheritance
+title: Class Inheritance
 sidebar_position: 2
 ---
 
-# Class inheritance - Q&A
+# Class Inheritance
 
-**Classes: CLASS INHERITANCE**
+**Classes: Class Inheritance**
+
+<head>
+  <title>Class Inheritance - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is the extends keyword used for in JavaScript classes?
 

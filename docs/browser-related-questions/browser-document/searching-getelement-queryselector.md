@@ -1,11 +1,16 @@
 ---
-title: Searching DOM
+title: Searching the DOM
 sidebar_position: 3
 ---
 
-# Searching: getElement*, querySelector*
+# Searching the DOM
 
-**Document: Searching: getElement\*, querySelector\***
+**Browser Document: Searching the DOM**
+
+<head>
+  <title>Searching the DOM - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### How do we gain access to an element by its id attribute?
 

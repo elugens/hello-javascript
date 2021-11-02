@@ -3,7 +3,14 @@ title: WeakMap / WeakSet
 sidebar_position: 8
 ---
 
-# WeakMap & WeakSet in JavaScript - Q&A
+# WeakMap / WeakSet
+
+**Data Types: WeakMap / WeakSet**
+
+<head>
+  <title>WeakMap / WeakSet - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is the difference between Map and WeakMap in JavaScript?
 

@@ -3,7 +3,14 @@ title: JavaScript Code Editors
 sidebar_position: 3
 ---
 
-# JavaScript Code Editors - Q&A
+# Code Editors - Questions and Answers
+
+**JavaScript Basics: Code Editors**
+
+<head>
+  <title>Code Editors - Frontend Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What does IDE stand for?
 

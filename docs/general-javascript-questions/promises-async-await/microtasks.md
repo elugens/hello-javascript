@@ -3,9 +3,14 @@ title: Microtask Queue
 sidebar_position: 7
 ---
 
-# Microtask Queue - Q&A
+# Microtask Queue
 
-**Promises, async/await: Microtasks**
+**Promises/Async/Await: Microtask Queue**
+
+<head>
+  <title>Microtask Queue - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### Can you explain how the Job Queue (Microtasks Queue) works?
 

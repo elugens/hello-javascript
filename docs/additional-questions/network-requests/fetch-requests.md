@@ -5,11 +5,12 @@ sidebar_position: 1
 
 # Fetch Requests
 
-# JAVASCRIPT THEORY
+**Network Requests: Fetch Requests**
 
-**Questions and Answers: Network requests**
-
-**Network requests: Fetch**
+<head>
+  <title>Fetch Requests - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What are some of the use cases related to network requests?
 

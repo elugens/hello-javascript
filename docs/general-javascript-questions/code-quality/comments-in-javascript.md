@@ -3,9 +3,14 @@ title: Comments
 sidebar_position: 3
 ---
 
-# JavaScript Comments - Q&A
+# Code Comments
 
-**Code Quality: COMMENTS**
+**Code Quality: Comments**
+
+<head>
+  <title>Code Comments - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### How do you reduce the number of unnecessary comments in your code?
 

@@ -5,7 +5,12 @@ sidebar_position: 11
 
 # WebSocket
 
-**Network requests: WebSocket**
+**Network Requests: WebSocket**
+
+<head>
+  <title>WebSocket - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### Can you briefly describe the WebSocket protocol?
 

@@ -3,7 +3,14 @@ title: Basic Syntax
 sidebar_position: 1
 ---
 
-# Class basic syntax - Q&A
+# Modules
+
+**Classes: Basic Class Syntax**
+
+<head>
+  <title>Class Syntax - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is a JavaScript Class in Object Oriented Programming (OOP)?
 

@@ -5,7 +5,12 @@ sidebar_position: 4
 
 # Anchors
 
-**Regular expressions: Anchors: string start ^ and end $**
+**Regular Expressions: Anchors**
+
+<head>
+  <title>RegExp Anchors - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What do the caret ^ and dollar sign $ represent in regular expressions?
 

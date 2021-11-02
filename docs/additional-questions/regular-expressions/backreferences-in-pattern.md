@@ -3,7 +3,14 @@ title: Backreferences
 sidebar_position: 12
 ---
 
-# Backreferences in pattern
+# Backreferences in Pattern
+
+**Regular Expressions: Backreferences in Pattern**
+
+<head>
+  <title>RegExp Backreferences - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 **Regular expressions: Backreferences in pattern: \N and `\k<name>`**
 

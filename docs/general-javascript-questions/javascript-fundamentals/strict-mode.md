@@ -5,9 +5,14 @@ sidebar_position: 3
 
 # Strict Mode
 
-## Modern Markup Use Strict in JavaScript
+**JavaScript Fundamentals: Strict Mode**
 
-### When was ECMAScript 5 (ES5) released for use?\*\*
+<head>
+  <title>Strict Mode - JavaScript Frontend Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
+
+### When was ECMAScript 5 (ES5) released for use?
 
 **Interview Answer:** 2009
 

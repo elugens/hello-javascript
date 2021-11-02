@@ -5,9 +5,12 @@ sidebar_position: 1
 
 # Patterns and Flags
 
-**Regular expression**
+**Regular Expressions: Patterns and Flags**
 
-**Regular expressions: Patterns and flags**
+<head>
+  <title>Patterns and Flags - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is a regular expression?
 

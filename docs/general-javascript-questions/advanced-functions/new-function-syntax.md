@@ -3,7 +3,14 @@ title: The "new" Function Syntax
 sidebar_position: 7
 ---
 
-# The "new" Function Syntax - Q&A
+# The "new" Function Syntax
+
+**Advanced Functions: The "new" Function Syntax**
+
+<head>
+  <title>The "new" Function Syntax - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### Explain, the new Function constructor syntax in JavaScript?
 

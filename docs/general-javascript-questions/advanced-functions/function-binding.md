@@ -3,7 +3,14 @@ title: Function Binding
 sidebar_position: 10
 ---
 
-# Function binding - Q&A
+# Function Binding
+
+**Advanced Functions: Function Binding**
+
+<head>
+  <title>Function Binding - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### Explain, what are the three types of bind techniques in JavaScript?
 

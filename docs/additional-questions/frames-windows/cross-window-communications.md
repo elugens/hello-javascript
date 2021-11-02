@@ -4,9 +4,14 @@ title: Cross-Window Communication
 sidebar_position: 2
 ---
 
-# Cross-window communication
+# Cross-Window Communication
 
-**Frames and Windows: Cross-window communication**
+**Frames / Windows: Cross-Window Communication**
+
+<head>
+  <title>Cross-Window Communication - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### Can you explain, what is the same origin policy?
 

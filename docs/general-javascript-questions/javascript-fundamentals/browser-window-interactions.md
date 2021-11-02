@@ -3,9 +3,14 @@ title: Window Interaction
 sidebar_position: 6
 ---
 
-# Browser Window Interaction - Q&A
+# Browser Window Interaction
 
-## JavaScript Fundamentals: Interaction: alert, prompt, confirm
+**JavaScript Fundamentals: Interaction: alert, prompt, confirm**
+
+<head>
+  <title>Browser Interaction - Frontend Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is the JavaScript alert window commonly called in the JavaScript community?
 

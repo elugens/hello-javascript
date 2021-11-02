@@ -3,9 +3,14 @@ title: String Evaluation
 sidebar_position: 2
 ---
 
-# Eval: run a code string - Q&A
+# String Evaluation
 
-**Miscellaneous: Eval: run a code string**
+**Miscellaneous: String Evaluation**
+
+<head>
+  <title>String Evaluation - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is the eval functions’ purpose in JavaScript?
 

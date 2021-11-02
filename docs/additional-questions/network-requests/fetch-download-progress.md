@@ -5,7 +5,12 @@ sidebar_position: 3
 
 # Fetch - Download Progress
 
-**Network requests: Fetch: Download progress**
+**Network Requests: Fetch - Download Progress**
+
+<head>
+  <title>Fetch Download Progress - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### How can we track download progress in JavaScript?
 

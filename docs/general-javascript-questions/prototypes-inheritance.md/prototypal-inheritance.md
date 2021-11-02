@@ -1,9 +1,16 @@
 ---
-title: Prototypal inheritance
+title: Prototypal Inheritance
 sidebar_position: 1
 ---
 
-# Prototypal inheritance - Q&A
+# Prototypal Inheritance
+
+**Prototypes / Inheritance: Prototypal Inheritance**
+
+<head>
+  <title>Prototypal Inheritance - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What does a prototype refer to in JavaScript?
 
@@ -16,25 +23,19 @@ Example: Historical example using proto which is now deprecated (no longer suppo
 **Note:** You should be familiar with the `__proto__` because you may see it in older code.
 
 ```js
-let animal = {
-
-    eats: true
-
+let animal = {
+  eats: true,
 };
 
-let rabbit = {
-
-    jumps: true
-
+let rabbit = {
+  jumps: true,
 };
 
-rabbit.\_\_proto\_\_ = animal; // (\*) \_\_proto\_\_ deprecated
-
+rabbit.__proto__ = animal; // (*) __proto__ deprecated
 // we can find both properties in rabbit now:
 
-alert( rabbit.eats ); // true (\*\*)
-
-alert( rabbit.jumps ); // true
+alert(rabbit.eats); // true (**)
+alert(rabbit.jumps); // true
 ```
 
 Source: <https://javascript.info/prototype-inheritance#prototype>

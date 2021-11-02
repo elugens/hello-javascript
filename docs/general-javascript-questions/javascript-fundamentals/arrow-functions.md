@@ -3,9 +3,14 @@ title: Arrow Functions
 sidebar_position: 17
 ---
 
-# JavaScript Arrow Functions - Q&A
+# Arrow Functions
 
-**JavaScript Fundamentals: ARROW FUNCTIONS**
+**JavaScript Fundamentals: Arrow Functions**
+
+<head>
+  <title>Arrow Functions - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is the definition of an arrow function?
 

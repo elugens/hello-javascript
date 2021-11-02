@@ -5,7 +5,12 @@ sidebar_position: 10
 
 # Long Polling
 
-**Network requests: Long polling**
+**Network Requests: Long Polling**
+
+<head>
+  <title>Long Polling - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### Can you explain what long polling is in relation to network requests?
 

@@ -3,7 +3,14 @@ title: Var Declaration
 sidebar_position: 4
 ---
 
-# Var Declaration - Q&A
+# Var Declaration
+
+**Advanced Functions: Var Declaration**
+
+<head>
+  <title>Var Declaration - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is the difference between var and let declarations?
 

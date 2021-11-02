@@ -3,9 +3,14 @@ title: Modules
 sidebar_position: 1
 ---
 
-# JavaScript Modules - Q&A
+# Modules
 
-**Modules: Modules, introduction**
+**Modules: Modules the Basics**
+
+<head>
+  <title>Modules - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is a JavaScript module?
 

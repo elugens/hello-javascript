@@ -3,9 +3,14 @@ title: Conditional Branching
 sidebar_position: 10
 ---
 
-# Conditional Branching - Q&A
+# Conditional Branching
 
-**JavaScript Fundamentals: Conditional branching: if, '?'**
+**JavaScript Fundamentals: Conditional Branching**
+
+<head>
+  <title>Conditional Branching - Frontend Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### Can you execute more than one statement in an if statement?
 

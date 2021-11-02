@@ -3,9 +3,14 @@ title: Dynamic Imports
 sidebar_position: 3
 ---
 
-# Dynamic Imports Modules - Q&A
+# Dynamic Imports
 
-**Modules: Export and Import**
+**Modules: Dynamic Imports**
+
+<head>
+  <title>Modules: Dynamic Imports - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### How does the export keyword work with declarations in JavaScript?
 

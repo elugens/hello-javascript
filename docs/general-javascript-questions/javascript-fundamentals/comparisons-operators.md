@@ -3,9 +3,14 @@ title: Comparisons Operators
 sidebar_position: 9
 ---
 
-# Comparison Operators - Q&A
+# Comparison Operators
 
-**JavaScript Fundamentals: COMPARISONS**
+**JavaScript Fundamentals: Comparison Operators**
+
+<head>
+  <title>Comparison Operators - Frontend Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### Do all comparison operator return a Boolean value?
 

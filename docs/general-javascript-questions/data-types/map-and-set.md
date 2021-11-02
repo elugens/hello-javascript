@@ -3,7 +3,14 @@ title: Map and Set
 sidebar_position: 7
 ---
 
-# Map and Set in JavaScript - Q&A
+# Map and Set
+
+**Data Types: Map and Set**
+
+<head>
+  <title>Map and Set - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is the difference between Map and Object in JavaScript?
 

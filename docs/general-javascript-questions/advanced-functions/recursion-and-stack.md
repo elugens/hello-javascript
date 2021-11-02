@@ -1,9 +1,16 @@
 ---
-title: Recursion & stack
+title: Recursion & Stack
 sidebar_position: 1
 ---
 
-# Recursion and Stacks in JavaScript - Q&A
+# Recursion & Stack
+
+**Advanced Functions: Recursion & Stack**
+
+<head>
+  <title>Recursion & Stack - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is recursion in JavaScript programming?
 

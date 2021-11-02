@@ -3,9 +3,14 @@ title: Element Size / Scrolling
 sidebar_position: 9
 ---
 
-# Styles and classes
+# Element Size / Scrolling
 
-**Document: Element size and scrolling**
+**Browser Document: Element Size / Scrolling**
+
+<head>
+  <title>Element Size / Scrolling - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### Why should you take the scrollbar into account when assessing content width?
 

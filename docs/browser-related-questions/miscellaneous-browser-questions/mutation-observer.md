@@ -5,7 +5,12 @@ sidebar_position: 1
 
 # Mutation Observer
 
-**Miscellaneous: Mutation observer**
+**Miscellaneous: Mutation Observer**
+
+<head>
+  <title>Mutation Observer - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is a Mutation Observer? How does it interact with a DOM tree?
 

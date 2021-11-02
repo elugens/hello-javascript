@@ -3,7 +3,14 @@ title: Date and Time
 sidebar_position: 11
 ---
 
-# Date and Time in JavaScript - Q&A
+# Date and Time
+
+**Data Types: Date and Time**
+
+<head>
+  <title>Date and Time - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### Define what the Date object is in JavaScript?
 

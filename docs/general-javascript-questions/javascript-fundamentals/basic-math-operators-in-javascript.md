@@ -3,9 +3,14 @@ title: Basic Operators, Math
 sidebar_position: 8
 ---
 
-# Mathematical Operators in JavaScript - Q&A
+# Mathematical Operators in JavaScript
 
-## BASIC OPERATORS, MATH
+**JavaScript Fundamentals: Basic Operators, Math**
+
+<head>
+  <title>Math Operators - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is an operand in JavaScript?
 
@@ -71,12 +76,10 @@ Source: <https://javascript.info/operators#remainder>
 
 Example:
 
-```js
-alert( 2 \*\* 2 ); // 4  (2 multiplied by itself 2 times)
-
-alert( 2 \*\* 3 ); // 8  (2 \* 2 \* 2, 3 times)
-
-alert( 2 \*\* 4 ); // 16 (2 \* 2 \* 2 \* 2, 4 times)
+```jsx
+console.log(2 ** 2); // 4  (2 multiplied by itself 2 times)
+console.log(2 ** 3); // 8  (2 \* 2 \* 2, 3 times)
+console.log(2 ** 4); // 16 (2 \* 2 \* 2 \* 2, 4 times)
 ```
 
 Source: <https://javascript.info/operators#exponentiation>
@@ -88,9 +91,8 @@ Source: <https://javascript.info/operators#exponentiation>
 Example:
 
 ```js
-alert( 4 \*\* (1/2) ); // 2 (power of 1/2 is the same as a square root)
-
-alert( 8 \*\* (1/3) ); // 2 (power of 1/3 is the same as a cubic root)
+alert(4 ** (1 / 2)); // 2 (power of 1/2 is the same as a square root)
+alert(8 ** (1 / 3)); // 2 (power of 1/3 is the same as a cubic root)
 ```
 
 Source: <https://javascript.info/operators#exponentiation>

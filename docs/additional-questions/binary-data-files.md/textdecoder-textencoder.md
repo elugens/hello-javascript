@@ -3,11 +3,16 @@ title: TextDecoder / TextEncoder
 sidebar_position: 2
 ---
 
-# TextDecoder and TextEncoder
+# TextDecoder / TextEncoder
 
-**Binary data, files: TextDecoder and TextEncoder**
+**Binary Data / Files: TextDecoder / TextEncoder**
 
-### What if the binary data is a string? For instance, we received a file with textual data.
+<head>
+  <title>TextDecoder / TextEncoder - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
+
+### What if the binary data is a string? For instance, we received a file with textual data. How would we handle this using JavaScript?
 
 **Interview Answer:** If the binary data is a string, the built-in TextDecoder object allows to read the value into an actual JavaScript string, given the buffer and the encoding. We first need to create it by calling new `TextDecoder([label], [options])`.
 

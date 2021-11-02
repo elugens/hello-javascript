@@ -3,9 +3,14 @@ title: Type Conversion
 sidebar_position: 7
 ---
 
-# Type Conversion in JavaScript - Q&A
+# Type Conversion in JavaScript
 
-## JavaScript Fundamentals: TYPE CONVERSION
+**JavaScript Fundamentals: Type Conversion**
+
+<head>
+  <title>JavaScript Type Conversion - Frontend Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What are the two types of type conversion in JavaScript?
 

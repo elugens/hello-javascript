@@ -5,7 +5,12 @@ sidebar_position: 10
 
 # Greedy / Lazy Quantifiers
 
-**Regular expressions: Greedy and lazy quantifiers**
+**Regular Expressions: Greedy / Lazy Quantifiers**
+
+<head>
+  <title>Greedy / Lazy Quantifiers - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### Can you explain the difference between greedy and lazy quantifiers?
 

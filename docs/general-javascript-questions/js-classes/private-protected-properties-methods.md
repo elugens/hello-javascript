@@ -3,9 +3,14 @@ title: Private, Protected Props / Methods
 sidebar_position: 4
 ---
 
-# Private and protected properties and methods - Q&A
+# Private, Protected Props / Methods
 
-**Classes: PRIVATE AND PROTECTED PROPERTIES AND METHODS**
+**Classes: Private, Protected Props / Methods**
+
+<head>
+  <title>Private, Protected Props / Methods - JavaScript Interview Questions</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### Can you explain one of the most important principles of object-oriented programming (OOP)?
 

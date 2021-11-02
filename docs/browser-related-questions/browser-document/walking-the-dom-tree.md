@@ -5,7 +5,12 @@ sidebar_position: 2
 
 # Walking the DOM
 
-**Document: Walking the DOM**
+**Browser Document: Walking the DOM**
+
+<head>
+  <title>Walking the DOM - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What does it mean to walk the DOM in JavaScript?
 

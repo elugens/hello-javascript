@@ -3,9 +3,14 @@ title: Extending Natives
 sidebar_position: 5
 ---
 
-# Extending built-in classes - Q&A
+# Extending built-in classes
 
-**Classes: Extending built-in classes**
+**Classes: Extending Natives**
+
+<head>
+  <title>Extending built-in classes - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### When extending built-in classes, what is used in their internal implementation to extend the built-in class?
 

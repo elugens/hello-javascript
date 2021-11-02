@@ -3,9 +3,14 @@ title: The "Switch" Statement
 sidebar_position: 14
 ---
 
-# The "Switch" Statement - Q&A
+# The "Switch" Statement
 
-**JavaScript Fundamentals: The "switch" statement**
+**JavaScript Fundamentals: The "Switch" Statement**
+
+<head>
+  <title>The "Switch" Statement - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What are the benefits of using a Switch statement?
 

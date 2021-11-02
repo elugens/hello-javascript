@@ -3,9 +3,14 @@ title: Focusing - focus/blur
 sidebar_position: 2
 ---
 
-# Focusing: focus/blur
+# Focusing - focus/blur
 
-**Forms, controls: Focusing: focus/blur**
+**Forms / Controls: Focusing - focus/blur**
+
+<head>
+  <title>Focusing - focus/blur - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What does it mean to focus on an element?
 

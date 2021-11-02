@@ -3,9 +3,14 @@ title: The "new" Operator
 sidebar_position: 5
 ---
 
-# Constructor, operator "new" - Q&A
+# The "new" Operator
 
-**Objects the Basics: CONSTRUCTOR, OPERATOR “NEW”**
+**Objects the Basics: The "new" Operator**
+
+<head>
+  <title>Constructors - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is the difference between a regular function and a constructor function.
 

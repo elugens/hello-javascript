@@ -3,7 +3,14 @@ title: Call and Apply
 sidebar_position: 9
 ---
 
-# Decorators and forwarding, call/apply - Q&A
+# Decorators and forwarding, call/apply
+
+**Advanced-JS Functions: Call and Apply**
+
+<head>
+  <title>Call and Apply - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is the main difference between the call and apply JavaScript methods?
 

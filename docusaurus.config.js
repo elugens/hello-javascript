@@ -41,6 +41,15 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      // annoucementBar is set to close false by default
+      announcementBar: {
+        id: 'support_us',
+        content:
+          '<a target="_blank" rel="noopener noreferrer" href="https://buymeacoffee.com/hellojs"><strong>Buy Me a Coffee!</strong></a>',
+        backgroundColor: '#fbbf24',
+        textColor: '#000000',
+        isCloseable: false,
+      },
       // hideable sidebar true | false
       hideableSidebar: true,
       colorMode: {
@@ -49,7 +58,7 @@ const config = {
       },
       navbar: {
         // title: 'My Site',
-        hideOnScroll: false,
+        hideOnScroll: true,
         style: 'dark',
         logo: {
           alt: 'HelloJavaScript.info Logo',

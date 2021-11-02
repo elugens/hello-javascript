@@ -5,7 +5,12 @@ sidebar_position: 2
 
 # CSS-Animations
 
-**Animation: CSS-animations**
+**Animation: CSS-Animations**
+
+<head>
+  <title>CSS-Animations - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### Why do we use CSS animation in web development?
 

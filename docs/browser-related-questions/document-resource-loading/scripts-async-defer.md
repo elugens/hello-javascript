@@ -3,9 +3,14 @@ title: Scripts - Async/Defer
 sidebar_position: 2
 ---
 
-# Scripts: Async, Defer
+# Scripts - Async/Defer
 
-**Document and resource loading: Scripts: async, defer**
+**Document / Resource Loading: Scripts - Async/Defer**
+
+<head>
+  <title>Scripts - Async/Defer - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### How do scripts load in an HTML document?
 

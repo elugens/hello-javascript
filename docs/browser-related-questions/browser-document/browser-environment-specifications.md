@@ -5,7 +5,12 @@ sidebar_position: 1
 
 # Browser Environment Specification
 
-**Document: Browser environment, specs**
+**Browser Document: Browser Environment Specification**
+
+<head>
+  <title>Browser Environment Specification - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What was JavaScript initially created to work with?
 

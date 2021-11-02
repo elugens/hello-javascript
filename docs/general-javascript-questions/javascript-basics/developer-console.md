@@ -3,9 +3,16 @@ title: JS Developers Console
 sidebar_position: 4
 ---
 
-# JS Developers Console - Q&A
+# DEV Console - Questions and Answers
 
-**Question:** **What is the developer console used for in JavaScript development?**
+**JavaScript Basics: Developers Console**
+
+<head>
+  <title>Developers Console - Frontend Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
+
+### What is the developer console used for in JavaScript development?
 
 **Interview Answer:** It allows us to run, debug, inspect, analyze, and manipulate JavaScript in the browser.
 
@@ -15,7 +22,7 @@ sidebar_position: 4
 
 Source: <https://www.digitalocean.com/community/tutorials/how-to-use-the-javascript-developer-console#working-with-the-console-in-a-browser>
 
-**Question:** **How do you open the developer console in Google Chrome?**
+### How do you open the developer console in Google Chrome?
 
 **Interview Answer:** We can open the dev console using the f12 or Cmd+Opt+J for Mac users.
 

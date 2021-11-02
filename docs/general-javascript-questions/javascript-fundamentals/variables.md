@@ -5,6 +5,13 @@ sidebar_position: 4
 
 # JavaScript Variables
 
+**JavaScript Fundamentals: JavaScript Variables**
+
+<head>
+  <title>JavaScript Variables - JavaScript Frontend Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
+
 ### What is the definition of a variable in JavaScript?
 
 **Interview Answer:** A variable is a “named storage” for data. We can use variables to store values, visitor information, and other data.

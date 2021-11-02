@@ -5,9 +5,12 @@ sidebar_position: 1
 
 # Browser Events
 
-**Questions and Answers: Introduction to Events**
+**Browser Events: Browser Events**
 
-**Introduction to Events: Introduction to browser Events**
+<head>
+  <title>Browser Events - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is an event in relation to the DOM, Browser, and JavaScript?
 

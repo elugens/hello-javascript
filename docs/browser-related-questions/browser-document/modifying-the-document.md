@@ -3,9 +3,14 @@ title: Modifying the Document
 sidebar_position: 7
 ---
 
-# Modifying the document
+# Modifying the Document
 
-**Document: Modifying the document**
+**Browser Document: Modifying the Document**
+
+<head>
+  <title>Modifying the Document - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### How do you create new DOM nodes in JavaScript?
 

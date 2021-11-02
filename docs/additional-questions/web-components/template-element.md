@@ -3,9 +3,14 @@ title: Template Element
 sidebar_position: 4
 ---
 
-# Template element
+# Template Element
 
-**Web components: Template element**
+**Web Components: Template Element**
+
+<head>
+  <title>Template Element - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is a built-in HTML template element?
 

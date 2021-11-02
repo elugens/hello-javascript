@@ -3,9 +3,14 @@ title: Cross-Origin Requests
 sidebar_position: 5
 ---
 
-# Fetch - Cross-Origin Requests
+# Cross-Origin Requests
 
-**Network requests: Fetch: Cross-Origin Requests**
+**Network Requests: Fetch: Cross-Origin Requests**
+
+<head>
+  <title>Cross-Origin Requests - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What happens when we send a fetch request to another domain without special headers?
 

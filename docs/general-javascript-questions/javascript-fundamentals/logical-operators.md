@@ -3,9 +3,14 @@ title: Logical Operators
 sidebar_position: 11
 ---
 
-# Logical Operators - Q&A
+# Logical Operators
 
-**JavaScript Fundamentals: LOGICAL OPERATORS**
+**JavaScript Fundamentals: Logical Operators**
+
+<head>
+  <title>Logical Operators - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What makes the logical || (OR), && (AND), ! (NOT) operators unique?
 

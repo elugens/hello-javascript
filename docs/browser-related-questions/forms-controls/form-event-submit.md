@@ -3,9 +3,14 @@ title: Form Submit / Events
 sidebar_position: 4
 ---
 
-# Forms: event and method submit
+# Form Submit / Events
 
-**Forms, controls: Forms: event and method submit**
+**Forms / Controls: Form Submit / Events**
+
+<head>
+  <title>Form Submit / Events - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### When happens when a form is submitted in the browser?
 

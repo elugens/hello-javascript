@@ -3,7 +3,14 @@ title: JSON Methods
 sidebar_position: 12
 ---
 
-# JSON Methods & JavaScript - Q&A
+# JSON Methods & JavaScript
+
+**Data Types: JSON Methods**
+
+<head>
+  <title>JSON Methods - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### Explain, what is JSON in relation to the JavaScript development environment?
 

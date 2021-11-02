@@ -3,7 +3,14 @@ title: Garbage Collection
 sidebar_position: 3
 ---
 
-# Garbage Collection - Q&A
+# Garbage Collection
+
+**Objects the Basics: Garbage Collection**
+
+<head>
+  <title>Garbage Collection - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### How does JavaScript manage memory manually or automatically?
 

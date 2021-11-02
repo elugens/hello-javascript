@@ -5,7 +5,12 @@ sidebar_position: 1
 
 # Bezier Curve
 
-**Animation: Bezier curve**
+**Animation: Bezier Curve**
+
+<head>
+  <title>Bezier Curve - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is a Bezier curve?
 

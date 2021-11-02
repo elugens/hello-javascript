@@ -3,9 +3,14 @@ title: Coding Style
 sidebar_position: 2
 ---
 
-# JavaScript Coding Style - Q&A
+# Coding Style Interview Questions
 
-**Code Quality: CODING STYLE**
+**Code Quality: Coding Style**
+
+<head>
+  <title>Coding Style - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is the goal when it comes to coding style in relation to programming?
 

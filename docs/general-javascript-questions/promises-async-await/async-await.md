@@ -1,11 +1,16 @@
 ---
-title: Async/await
+title: Async/Await
 sidebar_position: 8
 ---
 
-# Async/await - Q&A
+# Async/Await
 
-**Promises, async/await: Async/await**
+**Promises/Async/Await: Async/Await**
+
+<head>
+  <title>Async/Await - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### Is there another option, other than explicit promises, to handle asynchronous code in JavaScript?
 

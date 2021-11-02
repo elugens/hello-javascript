@@ -3,9 +3,14 @@ title: Shadow DOM / Events
 sidebar_position: 7
 ---
 
-# Shadow DOM and events
+# Shadow DOM / Events
 
-**Web components: Shadow DOM and events**
+**Web Components: Shadow DOM / Events**
+
+<head>
+  <title>Shadow DOM / Events - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is event retargeting in relation to the Light DOM and Shadow DOM?
 

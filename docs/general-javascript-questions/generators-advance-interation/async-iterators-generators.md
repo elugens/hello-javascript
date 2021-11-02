@@ -3,9 +3,14 @@ title: Async Iteration
 sidebar_position: 2
 ---
 
-# Async iteration and generators
+# Async Iteration and Generators
 
-**Generators, Advanced Iteration: Async Iteration**
+**Generators, Advanced Iteration: Async Iteration and Generators**
+
+<head>
+  <title>Async Iteration / Generators - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is a common use case for asynchronous iteration in JavaScript?
 

@@ -3,9 +3,14 @@ title: Moving the Mouse
 sidebar_position: 2
 ---
 
-# Moving the mouse: mouseover/out, mouseenter/leave
+# Moving the Mouse
 
-**UI Events: Moving the mouse: mouseover/out, mouseenter/leave**
+**UI Events: Moving the Mouse: mouseover/out, mouseenter/leave**
+
+<head>
+  <title>Mouse Movements - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### Explain the read-only property relatedTarget during a mouseover and mouseout event.
 

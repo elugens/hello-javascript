@@ -3,9 +3,14 @@ title: Regex / String Methods
 sidebar_position: 17
 ---
 
-# Methods of RegExp and String
+# Regex / String Methods
 
-**Regular expressions: Methods of RegExp and String**
+**Regular Expressions: Regex / String Methods**
+
+<head>
+  <title>Regex / String Methods - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### Explain the function and syntax of the match() string method.\*\*
 

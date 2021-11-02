@@ -7,6 +7,11 @@ sidebar_position: 4
 
 **UI Events: Pointer Events**
 
+<head>
+  <title>Pointer Events - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
+
 ### What are pointer events?
 
 **Interview Answer:** Pointer events are a modern way to handle input from a variety of pointing devices, such as a mouse, a pen/stylus, a touchscreen, and so on. For every `mouse<event>`, there is a `pointer<event>` that plays a similar role.

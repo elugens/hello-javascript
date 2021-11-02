@@ -1,11 +1,16 @@
 ---
-title: Catastrophic backtracking
+title: Catastrophic Backtracking
 sidebar_position: 15
 ---
 
-# Catastrophic backtracking
+# Catastrophic Backtracking
 
-**Regular expressions: Catastrophic backtracking**
+**Regular Expressions: Catastrophic Backtracking**
+
+<head>
+  <title>Catastrophic Backtracking - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is catastrophic backtracking in relation to regular expressions?
 

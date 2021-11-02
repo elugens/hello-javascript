@@ -3,9 +3,14 @@ title: Form Events
 sidebar_position: 3
 ---
 
-# Events: change, input, cut, copy, paste
+# Form Events
 
-**Forms, controls: Events: change, input, cut, copy, paste**
+**Forms / Controls: Form Events**
+
+<head>
+  <title>Form Events - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### How does an event change function or work?
 

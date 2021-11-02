@@ -3,9 +3,14 @@ title: Error Handling
 sidebar_position: 1
 ---
 
-# Error Handling - Q&A
+# Error Handling
 
 **Error Handling: Error handling, "try..catch"**
+
+<head>
+  <title>Error Handling: Error handling - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### Briefly explain the behavior of the “try..catch” error handling process.\*\*
 

@@ -5,13 +5,12 @@ sidebar_position: 1
 
 # Page Lifecycle
 
-## DOMContentLoaded, load, beforeunload, unload
+**Document / Resource Loading: Page Lifecycle**
 
-# JAVASCRIPT THEORY
-
-**Questions and Answers: Document and resource loading**
-
-**Document and resource loading: DOMContentLoaded, load, beforeunload, unload**
+<head>
+  <title>Page Lifecycle - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What are the three important events in the lifecycle of an HTML page?
 

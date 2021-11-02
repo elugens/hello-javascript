@@ -5,7 +5,12 @@ sidebar_position: 3
 
 # JavaScript Animations
 
-**Animation: JavaScript animations**
+**Animation: JavaScript Animations**
+
+<head>
+  <title>JavaScript Animations - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### Why is requestAnimationFrame better than setInterval or setTimeout?
 

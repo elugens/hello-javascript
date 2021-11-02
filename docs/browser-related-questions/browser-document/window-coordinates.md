@@ -5,7 +5,12 @@ sidebar_position: 11
 
 # Coordinates
 
-**Document: Coordinates**
+**Browser Document: Coordinates**
+
+<head>
+  <title>Coordinates - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### To move elements around we should be familiar with coordinates. What are the two coordinate systems that you should be familiar with?
 

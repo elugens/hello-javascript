@@ -5,7 +5,12 @@ sidebar_position: 8
 
 # Regex Sets / Ranges
 
-**Regular expressions: Sets and ranges [...]**
+**Regular Expressions: Regex Sets / Ranges**
+
+<head>
+  <title>Regex Sets / Ranges - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### How does square brackets […] perform in regular expression sets?
 

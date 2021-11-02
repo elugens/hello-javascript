@@ -5,7 +5,12 @@ sidebar_position: 8
 
 # Styles and classes
 
-**Document: Styles and classes**
+**Browser Document: Styles / Classes**
+
+<head>
+  <title>Styles and Classes - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is the most important rule to follow when you are choosing a way to style your page?
 

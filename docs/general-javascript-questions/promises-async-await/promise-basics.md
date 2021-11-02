@@ -3,9 +3,14 @@ title: Promise Basics
 sidebar_position: 2
 ---
 
-# Promise Basics - Q&A
+# Promise Basics
 
-**Promises, async/await: Promises**
+**Promises/Async/Await: Promise Basics**
+
+<head>
+  <title>Promise Basics - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### Explain, the function and Syntax of the Promise object in JavaScript?
 

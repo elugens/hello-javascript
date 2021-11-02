@@ -3,7 +3,14 @@ title: Data Types
 sidebar_position: 5
 ---
 
-# JavaScript Data Types - Q&A
+# JavaScript Data Types
+
+**JavaScript Fundamentals: JavaScript Data Types**
+
+<head>
+  <title>Data Types - JavaScript Frontend Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### How many data types are there in JavaScript?
 

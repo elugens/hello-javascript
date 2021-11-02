@@ -3,9 +3,14 @@ title: Shadow DOM Slots
 sidebar_position: 5
 ---
 
-# Shadow DOM slots, composition
+# Shadow DOM Slots - Composition
 
-**Web components: Shadow DOM slots, composition**
+**Web Components: Shadow DOM Slots - Composition**
+
+<head>
+  <title>Shadow DOM Slots - Composition - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is the HTML named `<slot>` element used for in web development?
 

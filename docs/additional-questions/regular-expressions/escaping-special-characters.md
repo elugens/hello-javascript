@@ -3,9 +3,14 @@ title: Escaping Characters
 sidebar_position: 7
 ---
 
-# Escaping Special Characters
+# Escaping Characters
 
-**Regular expressions: Escaping, special characters.**
+**Regular Expressions: Escaping Characters**
+
+<head>
+  <title>Escaping Characters - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### How do you escape a special character in a regular expression?
 

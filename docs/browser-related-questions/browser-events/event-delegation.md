@@ -1,11 +1,16 @@
 ---
-title: Event delegation
+title: Event Delegation
 sidebar_position: 3
 ---
 
-# Event delegation
+# Event Delegation
 
-**Introduction to Events: Event delegation**
+**Browser Events: Event Delegation**
+
+<head>
+  <title>Event Delegation - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is the behavior pattern in relation to event delegation?
 

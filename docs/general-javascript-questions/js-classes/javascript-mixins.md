@@ -3,9 +3,14 @@ title: Mixins
 sidebar_position: 6
 ---
 
-# JavaScript Mixins - Q&A
+# Mixins
 
-**Classes: MIXINS**
+**Classes: Mixins**
+
+<head>
+  <title>Mixins - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is a Mixin in JavaScript and why do you use them instead of a class inheritance?
 

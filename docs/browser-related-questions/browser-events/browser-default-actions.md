@@ -5,7 +5,12 @@ sidebar_position: 4
 
 # Browser Default Actions
 
-**Introduction to Events: Browser default actions**
+**Browser Events: Browser Default Actions**
+
+<head>
+  <title>Browser Default Actions - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is a default action considered in the browser?
 

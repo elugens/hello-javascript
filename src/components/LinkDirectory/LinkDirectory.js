@@ -7,7 +7,7 @@ export default function LinkDirectory() {
     <div className='container'>
       <div className={styles.linkDirectory}>
         <section>
-          <h3 className='section_title'>
+          <h3 className={styles.sectionTitle}>
             <Link to='/docs/intro'>General JavaScript Questions</Link>
           </h3>
           <p className='section'>
@@ -49,7 +49,9 @@ export default function LinkDirectory() {
           </div>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to=''>JavaScript Fundamentals Q&A</Link>
+              <Link to='/docs/general-javascript-questions/javascript-fundamentals/the-script-tag'>
+                JavaScript Fundamentals Q&A
+              </Link>
             </h4>
           </div>
           <div className='categories'>
@@ -70,316 +72,499 @@ export default function LinkDirectory() {
                 </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Variables</Link>
+                <Link to='/docs/general-javascript-questions/javascript-fundamentals/variables'>
+                  Variables
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Data types</Link>
+                <Link to='/docs/general-javascript-questions/javascript-fundamentals/data-types'>
+                  Data types
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Interaction: alert, prompt, confirm</Link>
+                <Link to='/docs/general-javascript-questions/javascript-fundamentals/browser-window-interactions'>
+                  Interaction: alert, prompt, confirm
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Type Conversions</Link>
+                <Link to='/docs/general-javascript-questions/javascript-fundamentals/type-conversion'>
+                  Type Conversions
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Basic operators, maths</Link>
+                <Link to='/docs/general-javascript-questions/javascript-fundamentals/basic-math-operators-in-javascript'>
+                  Basic operators, maths
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Comparisons</Link>
+                <Link to='/docs/general-javascript-questions/javascript-fundamentals/comparisons-operators'>
+                  Comparisons
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Conditional Branching</Link>
+                <Link to='/docs/general-javascript-questions/javascript-fundamentals/conditional-branching'>
+                  Conditional Branching
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>The "switch" Statement</Link>
+                <Link to='/docs/general-javascript-questions/javascript-fundamentals/logical-operators'>
+                  Logical Operators
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Functions</Link>
+                <Link to='/docs/general-javascript-questions/javascript-fundamentals/nullish-coalescing-operator'>
+                  Nullish Coalescing Operator
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Function expressions</Link>
+                <Link to='/docs/general-javascript-questions/javascript-fundamentals/while-for-loop'>
+                  While & For Loops
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Arrow functions</Link>
+                <Link to='/docs/general-javascript-questions/javascript-fundamentals/the-switch-statement'>
+                  The "switch" Statement
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>JavaScript Specials</Link>
-              </li>
-            </ul>
-          </div>
-          <div className={styles.categoryTitle}>
-            <h4>
-              <Link to=''>Code Quality</Link>
-            </h4>
-          </div>
-          <div className='categories'>
-            <ul className={styles.categoryItems}>
-              <li className={styles.categorySubItem}>
-                <Link to=''>Debugging in the Browser</Link>
+                <Link to='/docs/general-javascript-questions/javascript-fundamentals/functions'>
+                  Functions
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Coding Style</Link>
+                <Link to='/docs/general-javascript-questions/javascript-fundamentals/function-expressions'>
+                  Function expressions
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Comments</Link>
+                <Link to='/docs/general-javascript-questions/javascript-fundamentals/arrow-functions'>
+                  Arrow functions
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Ninja code</Link>
-              </li>
-              <li className={styles.categorySubItem}>
-                <Link to=''>Automated testing with Mocha</Link>
-              </li>
-              <li className={styles.categorySubItem}>
-                <Link to=''>Polyfills and transpilers</Link>
-              </li>
-            </ul>
-          </div>
-          <div className={styles.categoryTitle}>
-            <h4>
-              <Link to=''>Objects the Basics</Link>
-            </h4>
-          </div>
-          <div className='categories'>
-            <ul className={styles.categoryItems}>
-              <li className={styles.categorySubItem}>
-                <Link to=''>Objects</Link>
-              </li>
-              <li className={styles.categorySubItem}>
-                <Link to=''>References/Copying</Link>
-              </li>
-              <li className={styles.categorySubItem}>
-                <Link to=''>Garbage collection</Link>
-              </li>
-              <li className={styles.categorySubItem}>
-                <Link to=''>Object Methods</Link>
-              </li>
-              <li className={styles.categorySubItem}>
-                <Link to=''>The "new" Operator</Link>
-              </li>
-              <li className={styles.categorySubItem}>
-                <Link to=''>Optional Chaining</Link>
-              </li>
-              <li className={styles.categorySubItem}>
-                <Link to=''>Symbol Type</Link>
-              </li>
-              <li className={styles.categorySubItem}>
-                <Link to=''>Object to Primitive Conversion</Link>
+                <Link to='/docs/general-javascript-questions/javascript-fundamentals/javascript-specials'>
+                  JavaScript Specials
+                </Link>
               </li>
             </ul>
           </div>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to=''>Data Types</Link>
+              <Link to='/docs/general-javascript-questions/code-quality/debugging-javascript-in-chrome-browser'>
+                Code Quality
+              </Link>
             </h4>
           </div>
           <div className='categories'>
             <ul className={styles.categoryItems}>
               <li className={styles.categorySubItem}>
-                <Link to=''>Methods of Primitives</Link>
+                <Link to='/docs/general-javascript-questions/code-quality/debugging-javascript-in-chrome-browser'>
+                  Debugging in the Browser
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Numbers</Link>
+                <Link to='/docs/general-javascript-questions/code-quality/coding-style'>
+                  Coding Style
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Strings</Link>
+                <Link to='/docs/general-javascript-questions/code-quality/comments-in-javascript'>
+                  Comments
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Arrays</Link>
+                <Link to='/docs/general-javascript-questions/code-quality/ninja-code'>
+                  Ninja code
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Array Methods</Link>
+                <Link to='/docs/general-javascript-questions/code-quality/automated-code-testing'>
+                  Automated testing with Mocha
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Iterables</Link>
-              </li>
-              <li className={styles.categorySubItem}>
-                <Link to=''>Map and Set</Link>
-              </li>
-              <li className={styles.categorySubItem}>
-                <Link to=''>WeakMap and WeakSet</Link>
-              </li>
-              <li className={styles.categorySubItem}>
-                <Link to=''>Keys / Values / Entries</Link>
-              </li>
-              <li className={styles.categorySubItem}>
-                <Link to=''>Destructuring Assignment</Link>
-              </li>
-              <li className={styles.categorySubItem}>
-                <Link to=''>Date and time</Link>
-              </li>
-              <li className={styles.categorySubItem}>
-                <Link to=''>JSON Methods</Link>
+                <Link to='/docs/general-javascript-questions/code-quality/polyfills-and-transpilers'>
+                  Polyfills and transpilers
+                </Link>
               </li>
             </ul>
           </div>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to=''>Advanced Working with Functions</Link>
+              <Link to='/docs/general-javascript-questions/objects-the-basics/objects'>
+                Objects the Basics
+              </Link>
             </h4>
           </div>
           <div className='categories'>
             <ul className={styles.categoryItems}>
               <li className={styles.categorySubItem}>
-                <Link to=''>Recursion & Stack</Link>
+                <Link to='/docs/general-javascript-questions/objects-the-basics/objects'>
+                  Objects
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Rest Parameters / Spread Syntax</Link>
+                <Link to='/docs/general-javascript-questions/objects-the-basics/object-references-and-copying'>
+                  References/Copying
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Variable Scope / Closures</Link>
+                <Link to='/docs/general-javascript-questions/objects-the-basics/garbage-collection'>
+                  Garbage collection
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Var Declaration</Link>
+                <Link to='/docs/general-javascript-questions/objects-the-basics/object-methods'>
+                  Object Methods
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Global Object</Link>
+                <Link to='/docs/general-javascript-questions/objects-the-basics/the-new-operator-constructors'>
+                  The "new" Operator
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Function object / NFE</Link>
+                <Link to='/docs/general-javascript-questions/objects-the-basics/optional-chaining'>
+                  Optional Chaining
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>The "new" Function Syntax</Link>
+                <Link to='/docs/general-javascript-questions/objects-the-basics/symbol-type'>
+                  Symbol Type
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Scheduling / Timing</Link>
-              </li>
-              <li className={styles.categorySubItem}>
-                <Link to=''>Call and Apply</Link>
-              </li>
-              <li className={styles.categorySubItem}>
-                <Link to=''>Function Binding</Link>
-              </li>
-              <li className={styles.categorySubItem}>
-                <Link to=''>Arrow Functions</Link>
+                <Link to='/docs/general-javascript-questions/objects-the-basics/object-to-primitive-conversion'>
+                  Object to Primitive Conversion
+                </Link>
               </li>
             </ul>
           </div>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to=''>Object Properties Configuration</Link>
+              <Link to='/docs/general-javascript-questions/data-types/methods-of-primitives'>
+                Data Types
+              </Link>
             </h4>
           </div>
           <div className='categories'>
             <ul className={styles.categoryItems}>
               <li className={styles.categorySubItem}>
-                <Link to=''>Property Flags / Descriptors</Link>
+                <Link to='/docs/general-javascript-questions/data-types/methods-of-primitives'>
+                  Methods of Primitives
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Property Getters & Setters</Link>
+                <Link to='/docs/general-javascript-questions/data-types/numbers'>
+                  Numbers
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/general-javascript-questions/data-types/strings'>
+                  Strings
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/general-javascript-questions/data-types/arrays'>
+                  Arrays
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/general-javascript-questions/data-types/array-methods'>
+                  Array Methods
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/general-javascript-questions/data-types/iterables'>
+                  Iterables
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/general-javascript-questions/data-types/map-and-set'>
+                  Map and Set
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/general-javascript-questions/data-types/weakmap-and-weakset'>
+                  WeakMap and WeakSet
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/general-javascript-questions/data-types/object-keys-values-entries'>
+                  Keys / Values / Entries
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/general-javascript-questions/data-types/destructuring-assignment'>
+                  Destructuring Assignment
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/general-javascript-questions/data-types/dates-and-time'>
+                  Date and time
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/general-javascript-questions/data-types/json-methods-tojson'>
+                  JSON Methods
+                </Link>
               </li>
             </ul>
           </div>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to=''>Prototypes / Inheritance</Link>
+              <Link to='/docs/general-javascript-questions/advanced-functions/recursion-and-stack'>
+                Advanced Working with Functions
+              </Link>
             </h4>
           </div>
           <div className='categories'>
             <ul className={styles.categoryItems}>
               <li className={styles.categorySubItem}>
-                <Link to=''>Prototypal Inheritance</Link>
+                <Link to='/docs/general-javascript-questions/advanced-functions/recursion-and-stack'>
+                  Recursion & Stack
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Function Prototypes</Link>
+                <Link to='/docs/general-javascript-questions/advanced-functions/rest-parameters-and-spread-syntax'>
+                  Rest Parameters / Spread Syntax
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Native Prototypes</Link>
+                <Link to='/docs/general-javascript-questions/advanced-functions/variable-scope-closures'>
+                  Variable Scope / Closures
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Prototype Methods</Link>
+                <Link to='/docs/general-javascript-questions/advanced-functions/the-var-declaration'>
+                  Var Declaration
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/general-javascript-questions/advanced-functions/global-objects'>
+                  Global Object
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/general-javascript-questions/advanced-functions/function-object'>
+                  Function object / NFE
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/general-javascript-questions/advanced-functions/new-function-syntax'>
+                  The "new" Function Syntax
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/general-javascript-questions/advanced-functions/scheduling'>
+                  Scheduling / Timing
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/general-javascript-questions/advanced-functions/call-apply-decorators-forwarding'>
+                  Call and Apply
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/general-javascript-questions/advanced-functions/function-binding'>
+                  Function Binding
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/general-javascript-questions/advanced-functions/advanced-arrow-functions'>
+                  Arrow Functions
+                </Link>
               </li>
             </ul>
           </div>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to=''>Classes</Link>
+              <Link to='/docs/general-javascript-questions/object-properties/property-flags-and-descriptors'>
+                Object Properties Configuration
+              </Link>
             </h4>
           </div>
           <div className='categories'>
             <ul className={styles.categoryItems}>
               <li className={styles.categorySubItem}>
-                <Link to=''>Basic Syntax</Link>
+                <Link to='/docs/general-javascript-questions/object-properties/property-flags-and-descriptors'>
+                  Property Flags / Descriptors
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Class Inheritance</Link>
-              </li>
-              <li className={styles.categorySubItem}>
-                <Link to=''>Static Props / Methods</Link>
-              </li>
-              <li className={styles.categorySubItem}>
-                <Link to=''>Private, Protected Props / Methods</Link>
-              </li>
-              <li className={styles.categorySubItem}>
-                <Link to=''>Extending Built-in Classes</Link>
-              </li>
-              <li className={styles.categorySubItem}>
-                <Link to=''>Class Checking: instanceof</Link>
-              </li>
-              <li className={styles.categorySubItem}>
-                <Link to=''>Mixins</Link>
+                <Link to='/docs/general-javascript-questions/object-properties/property-getters-and-setters'>
+                  Property Getters & Setters
+                </Link>
               </li>
             </ul>
           </div>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to=''>Error handling</Link>
+              <Link to='/docs/general-javascript-questions/prototypes-inheritance.md/prototypal-inheritance'>
+                Prototypes / Inheritance
+              </Link>
             </h4>
           </div>
           <div className='categories'>
             <ul className={styles.categoryItems}>
               <li className={styles.categorySubItem}>
-                <Link to=''>Error handling</Link>
+                <Link to='/docs/general-javascript-questions/prototypes-inheritance.md/prototypal-inheritance'>
+                  Prototypal Inheritance
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Custom Errors</Link>
+                <Link to='/docs/general-javascript-questions/prototypes-inheritance.md/function-prototype'>
+                  Function Prototypes
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/general-javascript-questions/prototypes-inheritance.md/native-prototypes'>
+                  Native Prototypes
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/general-javascript-questions/prototypes-inheritance.md/prototype-methods-objects-without-proto'>
+                  Prototype Methods
+                </Link>
               </li>
             </ul>
           </div>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to=''>Promises, Async/Await</Link>
+              <Link to='/docs/general-javascript-questions/js-classes/class-basic-syntax'>
+                Classes
+              </Link>
             </h4>
           </div>
           <div className='categories'>
             <ul className={styles.categoryItems}>
               <li className={styles.categorySubItem}>
-                <Link to=''>Callbacks</Link>
+                <Link to='/docs/general-javascript-questions/js-classes/class-basic-syntax'>
+                  Basic Syntax
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Promises Basic</Link>
+                <Link to='/docs/general-javascript-questions/js-classes/class-inheritance'>
+                  Class Inheritance
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Promises chaining</Link>
+                <Link to='/docs/general-javascript-questions/js-classes/static-properties-methods'>
+                  Static Props / Methods
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Error / Promises</Link>
+                <Link to='/docs/general-javascript-questions/js-classes/private-protected-properties-methods'>
+                  Private, Protected Props / Methods
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Promise API</Link>
+                <Link to='/docs/general-javascript-questions/js-classes/extend-native-built-in-classes'>
+                  Extending Built-in Classes
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Promisification</Link>
+                <Link to='/docs/general-javascript-questions/js-classes/instanceof-class-checking'>
+                  Class Checking: instanceof
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Microtask Queue</Link>
-              </li>
-              <li className={styles.categorySubItem}>
-                <Link to=''>Async/await</Link>
+                <Link to='/docs/general-javascript-questions/js-classes/javascript-mixins'>
+                  Mixins
+                </Link>
               </li>
             </ul>
           </div>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to=''>Generators, Advanced Iteration</Link>
+              <Link to='/docs/general-javascript-questions/error-handling/javascript-error-handling'>
+                Error handling
+              </Link>
             </h4>
           </div>
           <div className='categories'>
             <ul className={styles.categoryItems}>
               <li className={styles.categorySubItem}>
-                <Link to=''>Generators</Link>
+                <Link to='/docs/general-javascript-questions/error-handling/javascript-error-handling'>
+                  Error handling
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Async Iteration / Generators</Link>
+                <Link to='/docs/general-javascript-questions/error-handling/custom-errors'>
+                  Custom Errors
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div className={styles.categoryTitle}>
+            <h4>
+              <Link to='/docs/general-javascript-questions/promises-async-await/callbacks'>
+                Promises, Async/Await
+              </Link>
+            </h4>
+          </div>
+          <div className='categories'>
+            <ul className={styles.categoryItems}>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/general-javascript-questions/promises-async-await/callbacks'>
+                  Callbacks
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/general-javascript-questions/promises-async-await/promise-basics'>
+                  Promises Basic
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/general-javascript-questions/promises-async-await/promises-chaining'>
+                  Promises chaining
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/general-javascript-questions/promises-async-await/error-handling-with-promises'>
+                  Error / Promises
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/general-javascript-questions/promises-async-await/promise-api'>
+                  Promise API
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/general-javascript-questions/promises-async-await/promisify-promisification'>
+                  Promisification
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/general-javascript-questions/promises-async-await/microtasks'>
+                  Microtask Queue
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/general-javascript-questions/promises-async-await/async-await'>
+                  Async/await
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div className={styles.categoryTitle}>
+            <h4>
+              <Link to='/docs/general-javascript-questions/generators-advance-interation/generators'>
+                Generators, Advanced Iteration
+              </Link>
+            </h4>
+          </div>
+          <div className='categories'>
+            <ul className={styles.categoryItems}>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/general-javascript-questions/generators-advance-interation/generators'>
+                  Generators
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/general-javascript-questions/generators-advance-interation/async-iterators-generators'>
+                  Async Iteration / Generators
+                </Link>
               </li>
             </ul>
           </div>
@@ -391,43 +576,61 @@ export default function LinkDirectory() {
           <div className='categories'>
             <ul className={styles.categoryItems}>
               <li className={styles.categorySubItem}>
-                <Link to=''>Modules</Link>
+                <Link to='/docs/general-javascript-questions/javascript-modules/modules-the-basics'>
+                  Modules
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Export & Import</Link>
+                <Link to='/docs/general-javascript-questions/javascript-modules/export-import-modules'>
+                  Export & Import
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Dynamic imports</Link>
+                <Link to='/docs/general-javascript-questions/javascript-modules/dynamic-imports'>
+                  Dynamic imports
+                </Link>
               </li>
             </ul>
           </div>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to=''>Miscellaneous</Link>
+              <Link to='/docs/general-javascript-questions/miscellaneous-js-questions/proxy-and-reflect'>
+                Miscellaneous
+              </Link>
             </h4>
           </div>
           <div className='categories'>
             <ul className={styles.categoryItems}>
               <li className={styles.categorySubItem}>
-                <Link to=''>Proxy and Reflect</Link>
+                <Link to='/docs/general-javascript-questions/miscellaneous-js-questions/proxy-and-reflect'>
+                  Proxy and Reflect
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>String Evaluation</Link>
+                <Link to='/docs/general-javascript-questions/miscellaneous-js-questions/eval-running-a-code-string'>
+                  String Evaluation
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Currying</Link>
+                <Link to='/docs/general-javascript-questions/miscellaneous-js-questions/currying'>
+                  Currying
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Reference Type</Link>
+                <Link to='/docs/general-javascript-questions/miscellaneous-js-questions/reference-types'>
+                  Reference Type
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>BigInt</Link>
+                <Link to='/docs/general-javascript-questions/miscellaneous-js-questions/bigint'>
+                  BigInt
+                </Link>
               </li>
             </ul>
           </div>
         </section>
         <section>
-          <h3 className='section_title'>
+          <h3 className={styles.sectionTitle}>
             <Link to=''>Browser: Document, Events, Interfaces Questions</Link>
           </h3>
           <p className='section'>
@@ -438,67 +641,103 @@ export default function LinkDirectory() {
           </p>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to=''>Document</Link>
+              <Link to='/docs/browser-related-questions/browser-document/browser-environment-specifications'>
+                The Browser Document
+              </Link>
             </h4>
           </div>
           <div className='categories'>
             <ul className={styles.categoryItems}>
               <li className={styles.categorySubItem}>
-                <Link to=''>Browser Environment Specs</Link>
+                <Link to='/docs/browser-related-questions/browser-document/browser-environment-specifications'>
+                  Browser Environment Specs
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>DOM Tree</Link>
+                <Link to='/docs/browser-related-questions/browser-document/dom-tree'>
+                  DOM Tree
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Walking the DOM</Link>
+                <Link to='/docs/browser-related-questions/browser-document/walking-the-dom-tree'>
+                  Walking the DOM
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Searching the DOM</Link>
+                <Link to='/docs/browser-related-questions/browser-document/searching-getelement-queryselector'>
+                  Searching the DOM
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Node Properties</Link>
+                <Link to='/docs/browser-related-questions/browser-document/node-properties-type-tag-contents'>
+                  Node Properties
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Attributes / Properties</Link>
+                <Link to='/docs/browser-related-questions/browser-document/attributes-properties'>
+                  Attributes / Properties
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Modifying the Document</Link>
+                <Link to='/docs/browser-related-questions/browser-document/modifying-the-document'>
+                  Modifying the Document
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Styles / Classes</Link>
+                <Link to='/docs/browser-related-questions/browser-document/styles-classes'>
+                  Styles / Classes
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Element Size / Scrolling</Link>
+                <Link to='/docs/browser-related-questions/browser-document/element-size-scrolling'>
+                  Element Size / Scrolling
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Window Sizes / Scrolling</Link>
+                <Link to='/docs/browser-related-questions/browser-document/window-size-scrolling'>
+                  Window Sizes / Scrolling
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Coordinates</Link>
+                <Link to='/docs/browser-related-questions/browser-document/window-coordinates'>
+                  Coordinates
+                </Link>
               </li>
             </ul>
           </div>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to=''>Browser Events</Link>
+              <Link to='/docs/browser-related-questions/browser-events/browser-events'>
+                Browser Events
+              </Link>
             </h4>
           </div>
           <div className='categories'>
             <ul className={styles.categoryItems}>
               <li className={styles.categorySubItem}>
-                <Link to=''>Browser Events</Link>
+                <Link to='/docs/browser-related-questions/browser-events/browser-events'>
+                  Browser Events
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Bubbling / Capturing</Link>
+                <Link to='/docs/browser-related-questions/browser-events/bubbling-capturing'>
+                  Bubbling / Capturing
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Event Delegation</Link>
+                <Link to='/docs/browser-related-questions/browser-events/event-delegation'>
+                  Event Delegation
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Browser Default Actions</Link>
+                <Link to='/docs/browser-related-questions/browser-events/browser-default-actions'>
+                  Browser Default Actions
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Dispatching Custom Events</Link>
+                <Link to='/docs/browser-related-questions/browser-events/dispatching-custom-events'>
+                  Dispatching Custom Events
+                </Link>
               </li>
             </ul>
           </div>
@@ -510,43 +749,65 @@ export default function LinkDirectory() {
           <div className='categories'>
             <ul className={styles.categoryItems}>
               <li className={styles.categorySubItem}>
-                <Link to=''>Mouse Events</Link>
+                <Link to='/docs/browser-related-questions/ui-events/mouse-events'>
+                  Mouse Events
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Moving the Mouse</Link>
+                <Link to='/docs/browser-related-questions/ui-events/moving-the-mouse'>
+                  Moving the Mouse
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Drag'n'Drop Events</Link>
+                <Link to='/docs/browser-related-questions/ui-events/drag-n-drop-with-mouse-events'>
+                  Drag'n'Drop Events
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Pointer Events</Link>
+                <Link to='/docs/browser-related-questions/ui-events/pointer-events'>
+                  Pointer Events
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Keyboard Events</Link>
+                <Link to='/docs/browser-related-questions/ui-events/keyboard-keydown-keyup'>
+                  Keyboard Events
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Scrolling Events</Link>
+                <Link to='/docs/browser-related-questions/ui-events/scroll-scolling-events'>
+                  Scrolling Events
+                </Link>
               </li>
             </ul>
           </div>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to=''>Forms / Controls</Link>
+              <Link to='/docs/browser-related-questions/forms-controls/forms-properties-methods'>
+                Forms / Controls
+              </Link>
             </h4>
           </div>
           <div className='categories'>
             <ul className={styles.categoryItems}>
               <li className={styles.categorySubItem}>
-                <Link to=''>Form Properties / Methods</Link>
+                <Link to='/docs/browser-related-questions/forms-controls/forms-properties-methods'>
+                  Form Properties / Methods
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Focusing - focus/blur</Link>
+                <Link to='/docs/browser-related-questions/forms-controls/focusing-focus-blur'>
+                  Focusing - focus/blur
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Form Events</Link>
+                <Link to='/docs/browser-related-questions/forms-controls/forms-events'>
+                  Form Events
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Form Submit / Events</Link>
+                <Link to='/docs/browser-related-questions/forms-controls/form-event-submit'>
+                  Form Submit / Events
+                </Link>
               </li>
             </ul>
           </div>
@@ -558,38 +819,54 @@ export default function LinkDirectory() {
           <div className='categories'>
             <ul className={styles.categoryItems}>
               <li className={styles.categorySubItem}>
-                <Link to=''>Page LifeCycle</Link>
+                <Link to='/docs/browser-related-questions/document-resource-loading/page-documentcontentloaded-load-beforeunload-unload'>
+                  Page LifeCycle
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Scripts - Async/Defer</Link>
+                <Link to='/docs/browser-related-questions/document-resource-loading/scripts-async-defer'>
+                  Scripts - Async/Defer
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Resource loading</Link>
+                <Link to='/docs/browser-related-questions/document-resource-loading/resource-loading-onload-onerror'>
+                  Resource loading
+                </Link>
               </li>
             </ul>
           </div>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to=''>Miscellaneous</Link>
+              <Link to='/docs/browser-related-questions/miscellaneous-browser-questions/mutation-observer'>
+                Miscellaneous
+              </Link>
             </h4>
           </div>
           <div className='categories'>
             <ul className={styles.categoryItems}>
               <li className={styles.categorySubItem}>
-                <Link to=''>Mutation Observer</Link>
+                <Link to='/docs/browser-related-questions/miscellaneous-browser-questions/mutation-observer'>
+                  Mutation Observer
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Selection and Range</Link>
+                <Link to='/docs/browser-related-questions/miscellaneous-browser-questions/selection-and-range'>
+                  Selection and Range
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Event Loop</Link>
+                <Link to='/docs/browser-related-questions/miscellaneous-browser-questions/event-loop-microtasks-macrotasks'>
+                  Event Loop
+                </Link>
               </li>
             </ul>
           </div>
         </section>
         <section>
-          <h3 className='section_title'>
-            <Link to=''>Additional Questions</Link>
+          <h3 className={styles.sectionTitle}>
+            <Link to='/docs/additional-questions/frames-windows/popups-window-methods'>
+              Additional Questions
+            </Link>
           </h3>
           <p className='section'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae odit
@@ -599,211 +876,323 @@ export default function LinkDirectory() {
           </p>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to=''>Frames / Windows</Link>
+              <Link to='/docs/additional-questions/frames-windows/popups-window-methods'>
+                Frames / Windows
+              </Link>
             </h4>
           </div>
           <div className='categories'>
             <ul className={styles.categoryItems}>
               <li className={styles.categorySubItem}>
-                <Link to=''>Popups / Window Methods</Link>
+                <Link to='/docs/additional-questions/frames-windows/popups-window-methods'>
+                  Popups / Window Methods
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Cross-Window Communication</Link>
+                <Link to='/docs/additional-questions/frames-windows/cross-window-communications'>
+                  Cross-Window Communication
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Clickjacking Attacks</Link>
+                <Link to='/docs/additional-questions/frames-windows/clickjacking-attack'>
+                  Clickjacking Attacks
+                </Link>
               </li>
             </ul>
           </div>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to=''>Binary Data / Files</Link>
+              <Link to='/docs/additional-questions/binary-data-files.md/arraybuffer-binary-arrays'>
+                Binary Data / Files
+              </Link>
             </h4>
           </div>
           <div className='categories'>
             <ul className={styles.categoryItems}>
               <li className={styles.categorySubItem}>
-                <Link to=''>ArrayBuffer, Binary Arrays</Link>
+                <Link to='/docs/additional-questions/binary-data-files.md/arraybuffer-binary-arrays'>
+                  ArrayBuffer, Binary Arrays
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>TextDecoder / TextEncoder</Link>
+                <Link to='/docs/additional-questions/binary-data-files.md/textdecoder-textencoder'>
+                  TextDecoder / TextEncoder
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Blob Data</Link>
+                <Link to='/docs/additional-questions/binary-data-files.md/blobs'>
+                  Blob Data
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>File / FileReader</Link>
+                <Link to='/docs/additional-questions/binary-data-files.md/file-filereader'>
+                  File / FileReader
+                </Link>
               </li>
             </ul>
           </div>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to=''>Network Requests</Link>
+              <Link to='/docs/additional-questions/network-requests/fetch-requests'>
+                Network Requests
+              </Link>
             </h4>
           </div>
           <div className='categories'>
             <ul className={styles.categoryItems}>
               <li className={styles.categorySubItem}>
-                <Link to=''>Fetch Requests</Link>
+                <Link to='/docs/additional-questions/network-requests/fetch-requests'>
+                  Fetch Requests
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>FormData Object</Link>
+                <Link to='/docs/additional-questions/network-requests/formdata'>
+                  FormData Object
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Fetch: Download Progress</Link>
+                <Link to='/docs/additional-questions/network-requests/fetch-download-progress'>
+                  Fetch: Download Progress
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Fetch: Abort</Link>
+                <Link to='/docs/additional-questions/network-requests/fetch-abort'>
+                  Fetch: Abort
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Fetch: Cross-Origin Requests</Link>
+                <Link to='/docs/additional-questions/network-requests/fetch-cross-origin-request'>
+                  Fetch: Cross-Origin Requests
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Fetch API</Link>
+                <Link to='/docs/additional-questions/network-requests/fetch-api'>
+                  Fetch API
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>URL Objects</Link>
+                <Link to='/docs/additional-questions/network-requests/url-objects'>
+                  URL Objects
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>XMLHttpRequest</Link>
+                <Link to='/docs/additional-questions/network-requests/xmlhttprequest'>
+                  XMLHttpRequest
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Resumable File Upload</Link>
+                <Link to='/docs/additional-questions/network-requests/resumable-file-uploads'>
+                  Resumable File Upload
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Long Polling</Link>
+                <Link to='/docs/additional-questions/network-requests/long-polling'>
+                  Long Polling
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>WebSocket</Link>
+                <Link to='/docs/additional-questions/network-requests/websocket'>
+                  WebSocket
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Server Sent Events</Link>
+                <Link to='/docs/additional-questions/network-requests/server-sent-events'>
+                  Server Sent Events
+                </Link>
               </li>
             </ul>
           </div>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to=''>Storing data in the browser</Link>
+              <Link to='/docs/additional-questions/storing-data-in-the-browser/cookies-document-cookie'>
+                Storing data in the browser
+              </Link>
             </h4>
           </div>
           <div className='categories'>
             <ul className={styles.categoryItems}>
               <li className={styles.categorySubItem}>
-                <Link to=''>Cookies, document.cookie</Link>
+                <Link to='/docs/additional-questions/storing-data-in-the-browser/cookies-document-cookie'>
+                  Cookies, document.cookie
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>LocalStorage / sessionStorage</Link>
+                <Link to='/docs/additional-questions/storing-data-in-the-browser/localstorage-sessionstorage'>
+                  LocalStorage / sessionStorage
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>IndexedDB</Link>
+                <Link to='/docs/additional-questions/storing-data-in-the-browser/indexeddb'>
+                  IndexedDB
+                </Link>
               </li>
             </ul>
           </div>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to=''>Animation</Link>
+              <Link to='/docs/additional-questions/js-animation/bezier-curve'>
+                Animation
+              </Link>
             </h4>
           </div>
           <div className='categories'>
             <ul className={styles.categoryItems}>
               <li className={styles.categorySubItem}>
-                <Link to=''>Bezier Curve</Link>
+                <Link to='/docs/additional-questions/js-animation/bezier-curve'>
+                  Bezier Curve
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>CSS-Animations</Link>
+                <Link to='/docs/additional-questions/js-animation/css-animations'>
+                  CSS-Animations
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>JavaScript Animations</Link>
+                <Link to='/docs/additional-questions/js-animation/javascript-animations'>
+                  JavaScript Animations
+                </Link>
               </li>
             </ul>
           </div>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to=''>Web Components</Link>
+              <Link to='/docs/additional-questions/web-components/orbital-height'>
+                Web Components
+              </Link>
             </h4>
           </div>
           <div className='categories'>
             <ul className={styles.categoryItems}>
               <li className={styles.categorySubItem}>
-                <Link to=''>Orbital Height</Link>
+                <Link to='/docs/additional-questions/web-components/orbital-height'>
+                  Orbital Height
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Custom Elements</Link>
+                <Link to='/docs/additional-questions/web-components/custom-elements'>
+                  Custom Elements
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Shadow DOM</Link>
+                <Link to='/docs/additional-questions/web-components/shadow-dom'>
+                  Shadow DOM
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Template Element</Link>
+                <Link to='/docs/additional-questions/web-components/template-element'>
+                  Template Element
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Shadow DOM Slots</Link>
+                <Link to='/docs/additional-questions/web-components/shadow-dom-slots-composition'>
+                  Shadow DOM Slots
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Shadow DOM Styling</Link>
+                <Link to='/docs/additional-questions/web-components/shadow-dom-styling'>
+                  Shadow DOM Styling
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Shadow DOM / Events</Link>
+                <Link to='/docs/additional-questions/web-components/shadow-dom-and-events'>
+                  Shadow DOM / Events
+                </Link>
               </li>
             </ul>
           </div>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to=''>Regular expressions</Link>
+              <Link to='/docs/additional-questions/regular-expressions/patterns-flags'>
+                Regular expressions
+              </Link>
             </h4>
           </div>
           <div className='categories'>
             <ul className={styles.categoryItems}>
               <li className={styles.categorySubItem}>
-                <Link to=''>Patterns and Flags</Link>
+                <Link to='/docs/additional-questions/regular-expressions/patterns-flags'>
+                  Patterns and Flags
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Character Classes</Link>
+                <Link to='/docs/additional-questions/regular-expressions/character-classes'>
+                  Character Classes
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Unicode Regex</Link>
+                <Link to='/docs/additional-questions/regular-expressions/unicode-regex'>
+                  Unicode Regex
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Anchors</Link>
+                <Link to='/docs/additional-questions/regular-expressions/anchors'>
+                  Anchors
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Multiline Mode</Link>
+                <Link to='/docs/additional-questions/regular-expressions/multiline-mode'>
+                  Multiline Mode
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Word Boundary</Link>
+                <Link to='/docs/additional-questions/regular-expressions/word-boundaries'>
+                  Word Boundary
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Escaping Special Characters</Link>
+                <Link to='/docs/additional-questions/regular-expressions/escaping-special-characters'>
+                  Escaping Special Characters
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Sets / Ranges</Link>
+                <Link to='/docs/additional-questions/regular-expressions/sets-ranges'>
+                  Sets / Ranges
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Quantifiers</Link>
+                <Link to='/docs/additional-questions/regular-expressions/quantifiers-regex'>
+                  Quantifiers
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Greedy / Lazy Quants</Link>
+                <Link to='/docs/additional-questions/regular-expressions/greedy-lazy-quantifiers-regex'>
+                  Greedy / Lazy Quants
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Capturing Groups</Link>
+                <Link to='/docs/additional-questions/regular-expressions/capturing-groups-in-regex'>
+                  Capturing Groups
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Backreferences</Link>
+                <Link to='/docs/additional-questions/regular-expressions/backreferences-in-pattern'>
+                  Backreferences
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Alternation</Link>
+                <Link to='/docs/additional-questions/regular-expressions/alternation'>
+                  Alternation
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Lookahead / Lookbehind</Link>
+                <Link to='/docs/additional-questions/regular-expressions/lookahead-lookbehind'>
+                  Lookahead / Lookbehind
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Catastrophic Backtracking</Link>
+                <Link to='/docs/additional-questions/regular-expressions/catastrophic-backtracking'>
+                  Catastrophic Backtracking
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Sticky Flag</Link>
+                <Link to='/docs/additional-questions/regular-expressions/sticky-flag'>
+                  Sticky Flag
+                </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to=''>Regex / String Methods</Link>
+                <Link to='/docs/additional-questions/regular-expressions/regexp-string-methods'>
+                  Regex / String Methods
+                </Link>
               </li>
             </ul>
           </div>

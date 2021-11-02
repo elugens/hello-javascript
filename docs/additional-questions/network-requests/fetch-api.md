@@ -5,7 +5,12 @@ sidebar_position: 6
 
 # Fetch API
 
-**Network requests: Fetch API**
+**Network Requests: Fetch API**
+
+<head>
+  <title>Fetch API - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### Why is fetch the preferred way to send a network request via the browser?
 

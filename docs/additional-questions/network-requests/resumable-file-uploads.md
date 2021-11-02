@@ -1,11 +1,16 @@
 ---
-title: Resumable file uploads
+title: Resumable File Uploads
 sidebar_position: 9
 ---
 
-# Resumable file uploads
+# Resumable File Uploads
 
-**Network requests: Resumable file upload**
+**Network Requests: Resumable File Uploads**
+
+<head>
+  <title>Resumable File Uploads - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### Is there a way to resume an upload after lost upload connection?
 

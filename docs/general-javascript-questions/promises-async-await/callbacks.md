@@ -3,9 +3,14 @@ title: Callbacks
 sidebar_position: 1
 ---
 
-# Callbacks - Q&A
+# Callbacks
 
-**Promises, async/await: Introduction: callbacks.**
+**Promises/Async/Await: Callbacks**
+
+<head>
+  <title>Callbacks - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### Explain the function and syntax of the async function in JavaScript.
 

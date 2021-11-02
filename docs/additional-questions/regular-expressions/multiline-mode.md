@@ -5,7 +5,12 @@ sidebar_position: 5
 
 # Multiline Mode
 
-**Regular expressions: Multiline mode of anchors ^ $, flag "m"**
+**Regular Expressions: Multiline Mode**
+
+<head>
+  <title>Multiline Mode - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is the function of the regular expression m flag?
 

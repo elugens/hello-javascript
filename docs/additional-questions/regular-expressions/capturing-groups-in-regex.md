@@ -5,7 +5,12 @@ sidebar_position: 11
 
 # Capturing Groups
 
-**Regular expressions: Capturing Groups**
+**Regular Expressions: Capturing Groups**
+
+<head>
+  <title>Capturing Groups - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is a capturing group in relation to a match in regular expressions?
 

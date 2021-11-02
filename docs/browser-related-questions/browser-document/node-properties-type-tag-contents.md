@@ -3,9 +3,14 @@ title: Node Properties
 sidebar_position: 5
 ---
 
-# Node properties: type, tag and contents
+# Node Properties
 
-**Document: Node properties: type, tag and contents**
+**Browser Document: Node Properties**
+
+<head>
+  <title>Node Properties - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### Can you explain the hierarchy in classes of DOM nodes?
 

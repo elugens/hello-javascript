@@ -1,9 +1,16 @@
 ---
-title: Methods of primitives
+title: Methods of Primitives
 sidebar_position: 1
 ---
 
-# Methods of primitives in JavaScript - Q&A
+# Number Data Type
+
+**Data Types: Numbers**
+
+<head>
+  <title>Number Data Type - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What are the seven (7) primitive JavaScript data types?
 

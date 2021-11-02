@@ -3,9 +3,14 @@ title: BigInts
 sidebar_position: 5
 ---
 
-# BigInts - Q&A
+# BigInts
 
-**Miscellaneous: BigInt**
+**Miscellaneous: BigInts**
+
+<head>
+  <title>BigInts - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### Can you briefly explain what a BigInt is in JavaScript?
 

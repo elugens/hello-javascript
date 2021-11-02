@@ -3,7 +3,14 @@ title: Object to Primitive Conversion
 sidebar_position: 8
 ---
 
-# Object to Primitive Conversion - Q&A
+# Object to Primitive Conversion
+
+**Objects the Basics: Object to Primitive Conversion**
+
+<head>
+  <title>Object to Primitive Conversion - Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is the rule for objects in a Boolean context?
 

@@ -3,7 +3,14 @@ title: Custom Errors
 sidebar_position: 2
 ---
 
-# Custom Error Handling - Q&A
+# Custom Error Handling
+
+**Error Handling: Custom Errors**
+
+<head>
+  <title>Custom Errors Handling - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 **Error Handling: Custom errors, extending the Error Object.**
 

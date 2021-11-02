@@ -3,11 +3,16 @@ title: Popups / Window Methods
 sidebar_position: 1
 ---
 
-# Popups and window methods
+# Popups / Window Methods
 
-**Frames and Windows: Popups and window methods**
+**Frames / Windows: Popups and Window Methods**
 
-### Explain the function and syntax of the Window interface's open() method.\*\*
+<head>
+  <title>Popups / Window Methods - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
+
+### Explain the function and syntax of the Window interface's open() method.
 
 **Interview Answer:** A popup window is one of the oldest methods to show additional document to user. The Window interface's open() method loads the specified resource into the new or existing browsing context (window, `<iframe>` or tab) with the specified name. If the name does not exist, then a new browsing context is opened in a new tab or a new window, and the specified resource is loaded into it. The open method has three arguments including the url, windowName, and windowFeatures parameters. The url is a DOMString indicating the URL of the resource to be loaded. This can be a path or URL to an HTML page, image file, or any other resource that is supported by the browser. The windowName is a DOMString specifying the name of the browsing context (window, `<iframe>` or tab) into which to load the specified resource; if the name does not indicate an existing context, a new window is created and is given the name specified by windowName. The windowFeatures parameter is a DOMString containing a comma-separated list of window features given with their corresponding values in the form "name=value". These features include options such as the window's default size and position, whether to include toolbar or not, and so forth. There must be no whitespace in the string. Both the windowName and windowFeatures are optional parameters.
 

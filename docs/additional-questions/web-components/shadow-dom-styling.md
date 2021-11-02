@@ -3,9 +3,14 @@ title: Shadow DOM Styling
 sidebar_position: 6
 ---
 
-# Shadow DOM styling
+# Shadow DOM Styling
 
-**Web components: Shadow DOM styling**
+**Web Components: Shadow DOM Styling**
+
+<head>
+  <title>Shadow DOM Styling - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### Can you include CSS styles in a Shadow DOM template?
 

@@ -75,7 +75,7 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 
 /* footer light */
 html[data-theme='light'] footer.footer {
-  color: #25c2a0;
+  color: rgb(34, 193, 195);
   background-color: rgb(27, 27, 27);
 }
 

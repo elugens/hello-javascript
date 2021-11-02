@@ -1,11 +1,16 @@
 ---
-title: Promises chaining
+title: Promises Chaining
 sidebar_position: 3
 ---
 
-# Promises chaining - Q&A
+# Promises Chaining
 
-**Promises, async/await: Promise Chaining**
+**Promises/Async/Await: Promises Chaining**
+
+<head>
+  <title>Promises Chaining - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is the definition of promise chaining in JavaScript?
 

@@ -1,11 +1,16 @@
 ---
-title: Custom elements
+title: Custom Elements
 sidebar_position: 2
 ---
 
-# Custom elements
+# Custom Elements
 
-**Web components: Custom elements**
+**Web Components: Custom Elements**
+
+<head>
+  <title>Custom Elements - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What are the two types of custom elements in web development?
 

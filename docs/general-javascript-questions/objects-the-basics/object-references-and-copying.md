@@ -3,9 +3,14 @@ title: References/Copying
 sidebar_position: 2
 ---
 
-# Object References & Copying - Q&A
+# Object References & Copying
 
-**Objects the Basics: OBJECT REFERENCE AND COPYING**
+**Objects the Basics: References/Copying**
+
+<head>
+  <title>Object References/Copying - Frontend Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is the difference between an object and a primitive?
 

@@ -3,9 +3,14 @@ title: Object Methods
 sidebar_position: 4
 ---
 
-# Object Methods - "This"
+# JavaScript Object Methods
 
-**Objects the Basics: OBJECT METHOD, “THIS”**
+**Objects the Basics: Object Methods - "This"**
+
+<head>
+  <title>Object Methods - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is a function that is a property of an object called?
 

@@ -3,9 +3,14 @@ title: Error / Promises
 sidebar_position: 4
 ---
 
-# Error handling with promises - Q&A
+# Error / Promises
 
-**Promises, async/await: Error handling with promises**
+**Promises/Async/Await: Error / Promises**
+
+<head>
+  <title>Error / Promises - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### How is error handling achieved with promises in JavaScript?
 

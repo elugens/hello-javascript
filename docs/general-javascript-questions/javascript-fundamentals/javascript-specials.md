@@ -3,9 +3,14 @@ title: JavaScript Specials
 sidebar_position: 18
 ---
 
-# JavaScript Specials - Q&A
+# JavaScript Specials
 
-**JavaScript Fundamentals: JAVASCRIPT SPECIALS**
+**JavaScript Fundamentals: JavaScript Specials**
+
+<head>
+  <title>JavaScript Specials - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### How does JavaScript see, view, or treat line-breaks?
 

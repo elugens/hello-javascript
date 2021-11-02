@@ -3,7 +3,14 @@ title: Property Getters & Setters
 sidebar_position: 2
 ---
 
-# Property getters and setters - Q&A
+# Property Getters & Setters
+
+**Object Properties Configuration: Property Getters & Setters**
+
+<head>
+  <title>Property Getters & Setters - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### Explain, what getters and setters are, as it pertains to JavaScript.\*\*
 

@@ -3,7 +3,14 @@ title: Function object / NFE
 sidebar_position: 6
 ---
 
-# Function object / NFE - Q&A
+# Function object / NFE
+
+**Advanced Functions: Function object / NFE**
+
+<head>
+  <title>Function object / NFE - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### In JavaScript, what type is a function?
 

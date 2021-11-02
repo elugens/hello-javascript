@@ -3,9 +3,14 @@ title: Promise API
 sidebar_position: 5
 ---
 
-# Promise API - Q&A
+# Promise API
 
-**Promises, async/await: Promise API**
+**Promises/Async/Await: Promise API**
+
+<head>
+  <title>Promise API - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What are the names of the 6 static methods in the Promise class?
 

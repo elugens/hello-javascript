@@ -3,7 +3,14 @@ title: Rest Parameters / Spread Syntax
 sidebar_position: 2
 ---
 
-# Rest Parameters / Spread Syntax - Q&A
+# Rest Parameters / Spread Syntax
+
+**Advanced Functions: Rest Parameters / Spread Syntax**
+
+<head>
+  <title>Rest Parameters / Spread Syntax - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is the difference between the rest parameter and spread syntax?
 

@@ -5,11 +5,12 @@ sidebar_position: 1
 
 # Generators
 
-# JAVASCRIPT THEORY
-
-**Questions and Answers: Generators, Advanced Iteration**
-
 **Generators, Advanced Iteration: Generators**
+
+<head>
+  <title>Generators - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is the difference between Generator and a regular function?
 

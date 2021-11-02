@@ -5,7 +5,12 @@ sidebar_position: 4
 
 # Fetch - Abort
 
-**Network requests: Fetch: Abort**
+**Network Requests: Fetch - Abort**
+
+<head>
+  <title>Fetch Abort - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### Is there a way to cancel or abort an ongoing Fetch?
 

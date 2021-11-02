@@ -5,7 +5,12 @@ sidebar_position: 6
 
 # Word Boundary
 
-**Regular expressions: Word boundary: \b**
+**Regular Expressions: Word Boundary**
+
+<head>
+  <title>Word Boundaries - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is a word boundary \b in regular expressions (regexp)?
 

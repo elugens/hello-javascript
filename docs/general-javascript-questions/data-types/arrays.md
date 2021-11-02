@@ -3,9 +3,14 @@ title: Arrays
 sidebar_position: 4
 ---
 
-# Arrays Data Type in JavaScript - Q&A
+# JavaScript Arrays
 
-**Data Types: ARRAYS**
+**Data Types: Arrays**
+
+<head>
+  <title>JavaScript Arrays - Frontend Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### An object is a keyed collection of values, what is an array in JavaScript?
 

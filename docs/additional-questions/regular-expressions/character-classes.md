@@ -5,7 +5,12 @@ sidebar_position: 2
 
 # Character Classes
 
-**Regular expressions: Character classes**
+**Regular Expressions: Character Classes**
+
+<head>
+  <title>Character Classes - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is a character class used for in regular expressions?
 

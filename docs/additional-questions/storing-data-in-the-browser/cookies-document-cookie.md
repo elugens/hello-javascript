@@ -5,9 +5,12 @@ sidebar_position: 1
 
 # Cookies - document.cookie
 
-**Questions and Answers: Storing data in the browser**
+**Storing Browser Data: Cookies - document.cookie**
 
-**Storing data in the browser: Cookies, document.cookie**
+<head>
+  <title>Cookies - document.cookie - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is a HTTP cookie?
 

@@ -5,7 +5,12 @@ sidebar_position: 3
 
 # Shadow DOM
 
-**Web components: Shadow DOM**
+**Web Components: Shadow DOM**
+
+<head>
+  <title>Shadow DOM - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is the Shadow DOM in relation to the browser?
 

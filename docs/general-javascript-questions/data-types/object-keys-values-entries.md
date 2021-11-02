@@ -3,7 +3,14 @@ title: Keys / Values / Entries
 sidebar_position: 9
 ---
 
-# Object.keys, values, entries in JavaScript - Q&A
+# Object.keys, values, entries
+
+**Data Types: Object.keys, values, entries**
+
+<head>
+  <title>Object.keys, values, entries - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What three data structures use the obj.keys, obj.values, and obj.entries generic methods?
 

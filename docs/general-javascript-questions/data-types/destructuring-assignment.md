@@ -3,7 +3,14 @@ title: Destructuring Assignment
 sidebar_position: 10
 ---
 
-# Destructuring assignment in JavaScript - Q&A
+# Destructuring assignment in JavaScript
+
+**Data Types: Destructuring Assignment**
+
+<head>
+  <title>Destructuring Assignment - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is de-structuring assignment and what are two data structures that commonly use it in JavaScript?
 

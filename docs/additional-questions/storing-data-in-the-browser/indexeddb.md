@@ -5,7 +5,12 @@ sidebar_position: 3
 
 # IndexedDB
 
-**Storing data in the browser: IndexedDB**
+**Storing Browser Data: IndexedDB**
+
+<head>
+  <title>IndexedDB - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is IndexedDB?
 

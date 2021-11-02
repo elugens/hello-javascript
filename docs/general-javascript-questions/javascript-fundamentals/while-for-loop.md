@@ -3,9 +3,14 @@ title: While & For Loops
 sidebar_position: 13
 ---
 
-# While & For Loops - Q&A
+# LOOPS: WHILE and FOR
 
-**JavaScript Fundamentals: LOOPS: WHILE and FOR**
+**JavaScript Fundamentals: While & For Loops (??)**
+
+<head>
+  <title>While & For Loops - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### In Simple terms, what are loops used for in JavaScript?
 

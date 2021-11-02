@@ -3,7 +3,14 @@ title: Scheduling / Timing
 sidebar_position: 8
 ---
 
-# Scheduling: setTimeout / setInterval - Q&A
+# Scheduling: setTimeout / setInterval
+
+**Advanced Functions: Scheduling: setTimeout / setInterval**
+
+<head>
+  <title>Scheduling: setTimeout / setInterval - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What are the two most common JavaScript methods used for scheduling a call?
 

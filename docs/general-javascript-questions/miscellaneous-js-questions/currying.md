@@ -3,9 +3,14 @@ title: Currying
 sidebar_position: 3
 ---
 
-# Currying - Q&A
+# Currying
 
 **Miscellaneous: Currying**
+
+<head>
+  <title>Currying - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is currying in JavaScript?
 

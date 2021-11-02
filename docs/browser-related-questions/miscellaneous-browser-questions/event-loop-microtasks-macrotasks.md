@@ -5,7 +5,12 @@ sidebar_position: 3
 
 # Event loop: Microtasks / Macrotasks
 
-**Miscellaneous: Event loop: microtasks and macrotasks**
+**Miscellaneous: Event loop**
+
+<head>
+  <title>Microtasks / Macrotasks - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### How is the event loop defined in the JavaScript engine?
 

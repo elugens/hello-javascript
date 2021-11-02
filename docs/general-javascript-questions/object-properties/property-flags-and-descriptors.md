@@ -3,7 +3,14 @@ title: Property Flags / Descriptors
 sidebar_position: 1
 ---
 
-# Property flags and descriptors - Q&A
+# Property Flags / Descriptors
+
+**Object Properties Configuration: Property Flags / Descriptors**
+
+<head>
+  <title>Property Flags / Descriptors - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What are property attributes/flags in relation to Objects in JavaScript that allow special access to an object?
 

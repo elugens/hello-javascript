@@ -3,7 +3,14 @@ title: Arrow Functions
 sidebar_position: 11
 ---
 
-# Advanced - Arrow Functions - Q&A
+# Arrow Functions
+
+**Advanced-JS Functions: Arrow Functions**
+
+<head>
+  <title>Arrow Functions - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is an arrow function?
 

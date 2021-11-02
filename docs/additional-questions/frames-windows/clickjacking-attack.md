@@ -4,9 +4,14 @@ title: Clickjacking Attacks
 sidebar_position: 3
 ---
 
-# The clickjacking attack
+# Clickjacking Attacks
 
-**Frames and Windows: The clickjacking attack**
+**Frames / Windows: Clickjacking Attacks**
+
+<head>
+  <title>Clickjacking Attacks - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### Can you explain, what is clickjacking?
 

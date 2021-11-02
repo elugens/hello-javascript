@@ -3,9 +3,14 @@ title: Reference Type
 sidebar_position: 4
 ---
 
-# Reference Type - Q&A
+# Reference Types
 
-**Miscellaneous: Reference Type**
+**Miscellaneous: Reference Types**
+
+<head>
+  <title>Reference Types - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 Please Read more about reference types here: <https://javascript.info/reference-type>
 

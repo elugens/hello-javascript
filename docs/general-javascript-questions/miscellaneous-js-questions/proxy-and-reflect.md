@@ -3,9 +3,14 @@ title: Proxy and Reflect
 sidebar_position: 1
 ---
 
-# Proxy and Reflect - Q&A
+# Proxy and Reflect
 
 **Miscellaneous: Proxy and Reflect**
+
+<head>
+  <title>Proxy and Reflect - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is a proxy object in JavaScript?
 

@@ -3,7 +3,14 @@ title: Polyfills & Transpilers
 sidebar_position: 6
 ---
 
-# JavaScript Polyfills & Transpilers - Q&A
+# Polyfills & Transpilers
+
+**Code Quality: Polyfills & Transpilers**
+
+<head>
+  <title>Polyfills & Transpilers - Frontend Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### Describe what a JavaScript Trans-piler does?
 

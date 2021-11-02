@@ -3,9 +3,14 @@ title: ArrayBuffer, Binary Arrays
 sidebar_position: 1
 ---
 
-# ArrayBuffer, binary arrays
+# ArrayBuffer, Binary Arrays
 
-**Binary data, files: ArrayBuffer, binary arrays**
+**Binary Data / Files: ArrayBuffer, Binary Arrays**
+
+<head>
+  <title>ArrayBuffer, Binary Arrays - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What are some of the situations when we would encounter binary data?
 

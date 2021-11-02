@@ -3,9 +3,14 @@ title: Array Methods
 sidebar_position: 5
 ---
 
-# Arrays Methods in JavaScript - Q&A
+# JavaScript Array Methods
 
-**Data Types: ARRAY METHODS**
+**Data Types: Array Methods**
+
+<head>
+  <title>Array Methods - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### Explain, the function and syntax of the array splice() method?
 

@@ -3,9 +3,14 @@ title: File / FileReader
 sidebar_position: 4
 ---
 
-# File and FileReader
+# File / FileReader
 
-**Binary data, files: File and FileReader**
+**Binary Data / Files: File / FileReader**
+
+<head>
+  <title>File / FileReader - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### Explain the function and syntax of the File Object/Constructor.
 

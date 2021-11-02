@@ -3,7 +3,14 @@ title: Variable Scope / Closures
 sidebar_position: 3
 ---
 
-# Variable Scope / Closures - Q&A
+# Variable Scope / Closures
+
+**Advanced Functions: Variable Scope / Closures**
+
+<head>
+  <title>Variable Scope / Closures - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What are the three types of variable declarations in JavaScript?
 

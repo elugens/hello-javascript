@@ -1,9 +1,16 @@
 ---
-title: F.prototype
+title: Function Prototype
 sidebar_position: 2
 ---
 
-# Function Prototype - Q&A
+# Function Prototype
+
+**Prototypes / Inheritance: Function Prototype**
+
+<head>
+  <title>Function Prototype - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is the function.prototype property, in JavaScript?
 

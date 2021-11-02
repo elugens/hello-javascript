@@ -3,7 +3,14 @@ title: Iterable Types
 sidebar_position: 6
 ---
 
-# Iterables Types in JavaScript - Q&A
+# Iterable Types
+
+**Data Types: Iterable Types**
+
+<head>
+  <title>Iterables - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What are iterables in JavaScript?
 

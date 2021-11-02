@@ -5,7 +5,12 @@ sidebar_position: 2
 
 # LocalStorage / sessionStorage
 
-**Storing data in the browser: LocalStorage, sessionStorage**
+**Storing Browser Data: LocalStorage / sessionStorage**
+
+<head>
+  <title>LocalStorage / sessionStorage - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What does localStorage and sessionStorage do?
 

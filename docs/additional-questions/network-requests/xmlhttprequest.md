@@ -5,7 +5,12 @@ sidebar_position: 8
 
 # XMLHttpRequest
 
-**Network requests: XMLHttpRequest**
+**Network Requests: XMLHttpRequest**
+
+<head>
+  <title>XMLHttpRequest - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### Can you briefly explain the purpose of the XMLHttpRequest object?
 

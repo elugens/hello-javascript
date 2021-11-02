@@ -3,9 +3,14 @@ title: Blob Data
 sidebar_position: 3
 ---
 
-# Blob
+# Blob Data
 
-**Binary data, files: Blob**
+**Binary Data / Files: Blob Data**
+
+<head>
+  <title>Blob Data - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### Can you explain what a Blob constructor is in JavaScript?
 

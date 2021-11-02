@@ -3,9 +3,14 @@ title: Static Props / Methods
 sidebar_position: 3
 ---
 
-# Static properties and methods - Q&A
+# Static Props / Methods
 
-**Classes: STATIC PROPERTIES AND METHODS**
+**Classes: Static Props / Methods**
+
+<head>
+  <title>Static Props / Methods - JavaScript Interview Questions</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### Can you explain how a static properties and methods function in JavaScript?
 

@@ -3,9 +3,14 @@ title: Basic JS Questions
 sidebar_position: 1
 ---
 
-# Basic JavaScript Interview Q&A
+# Basic JavaScript Interview Questions
 
-## Introduction: WHAT IS JAVASCRIPT?
+**JavaScript Basics: Basic JS Questions**
+
+<head>
+  <title>JavaScript Frontend Interview Questions and Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is JavaScript?
 

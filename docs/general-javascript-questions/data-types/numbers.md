@@ -3,7 +3,14 @@ title: Numbers
 sidebar_position: 2
 ---
 
-# Number Data Types in JavaScript - Q&A
+# Number Data Type
+
+**Data Types: Numbers**
+
+<head>
+  <title>Number Data Type - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What are the two primitive number data types in JavaScript?
 

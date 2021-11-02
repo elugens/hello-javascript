@@ -3,7 +3,14 @@ title: Strings
 sidebar_position: 3
 ---
 
-# String Data Type in JavaScript - Q&A
+# String Data Type
+
+**Data Types: Strings**
+
+<head>
+  <title>String Data Type - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### In JavaScript, is there a data type for a single character?
 

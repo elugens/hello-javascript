@@ -7,6 +7,11 @@ sidebar_position: 2
 
 **Miscellaneous: Selection and Range**
 
+<head>
+  <title>Selection and Range - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
+
 ### Can you explain the basic concept of selection using JavaScript?
 
 **Interview Answer:** JavaScript can access an existing selection, select/deselect DOM nodes as a whole or partially, remove the selected content from the document, wrap it into a tag, and so on. The basic concept of selection is Range, that is essentially a pair of “boundary points”: range start and range end.

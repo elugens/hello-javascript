@@ -1,9 +1,16 @@
 ---
-title: Symbol type
+title: Symbol Type
 sidebar_position: 7
 ---
 
-# The JavaScript Symbol Type - Q&A
+# Symbol Type
+
+**Objects the Basics: Symbol Type**
+
+<head>
+  <title>Symbol Type - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What are the two types that object property keys in JavaScript?
 

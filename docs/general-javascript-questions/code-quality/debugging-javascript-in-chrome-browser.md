@@ -5,9 +5,14 @@ sidebar_position: 1
 
 TODO : ADD IMAGES TO THIS PAGE
 
-# Debugging JavaScript in Chrome - Q&A
+# Debugging JavaScript in Chrome
 
-**Code Quality: DEBUGGING IN CHROME**
+**Code Quality: Debugging in Chrome**
+
+<head>
+  <title>Debugging in Chrome - Frontend Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### Explain, what debugging is in JavaScript development?
 

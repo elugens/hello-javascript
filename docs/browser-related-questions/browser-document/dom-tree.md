@@ -1,11 +1,16 @@
 ---
-title: DOM tree
+title: DOM Tree
 sidebar_position: 2
 ---
 
-# DOM tree
+# DOM Tree
 
-**Document: DOM Tree**
+**Browser Document: DOM Tree**
+
+<head>
+  <title>DOM Tree - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is a HTML tag considered in the Document Object Model?
 

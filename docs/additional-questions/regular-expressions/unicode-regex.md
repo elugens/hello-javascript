@@ -3,9 +3,14 @@ title: Unicode Regex
 sidebar_position: 3
 ---
 
-# Unicode: flag "u" and class \p{...}
+# Unicode Regex
 
-**Regular expressions: Unicode: flag "u" and class \p{...}**
+**Regular Expressions: Unicode Regex**
+
+<head>
+  <title>Unicode Regex - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### How many bytes are Unicode characters?
 

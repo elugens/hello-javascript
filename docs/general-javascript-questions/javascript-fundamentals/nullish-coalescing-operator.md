@@ -3,9 +3,14 @@ title: Nullish Coalescing Operator
 sidebar_position: 12
 ---
 
-# Nullish coalescing operator '??' - Q&A
+# Nullish Coalescing Operator
 
-**JavaScript Fundamentals: NULLISH COALESCING OPERATOR (??)**
+**JavaScript Fundamentals: Nullish Coalescing Operator (??)**
+
+<head>
+  <title>Nullish Coalescing Operator - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### Explain how the nullish coalescing operator works.
 

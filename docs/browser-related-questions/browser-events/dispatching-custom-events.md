@@ -5,7 +5,12 @@ sidebar_position: 5
 
 # Dispatching Custom Events
 
-**Introduction to Events: Dispatching custom events**
+**Browser Events: Dispatching Custom Events**
+
+<head>
+  <title>Dispatching Custom Events - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### Explain the function and syntax of the Event constructor.\*\*
 

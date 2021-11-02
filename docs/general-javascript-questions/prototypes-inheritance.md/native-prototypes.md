@@ -1,9 +1,16 @@
 ---
-title: Native prototypes
+title: Native Prototypes
 sidebar_position: 3
 ---
 
-# Native prototypes - Q&A
+# Native Prototypes
+
+**Prototypes / Inheritance: Native Prototypes**
+
+<head>
+  <title>Native Prototypes - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### Can you give a general overview about native prototypes and objects in JavaScript?
 

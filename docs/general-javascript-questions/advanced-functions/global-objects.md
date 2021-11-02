@@ -3,7 +3,14 @@ title: Global Object
 sidebar_position: 5
 ---
 
-# Global Object - Q&A
+# Global Object
+
+**Advanced Functions: Global Object**
+
+<head>
+  <title>Global Object - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### Explain, what the global object is in JavaScript?
 

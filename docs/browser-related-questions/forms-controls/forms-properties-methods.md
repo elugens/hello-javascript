@@ -3,9 +3,14 @@ title: Form Properties / Methods
 sidebar_position: 1
 ---
 
-# Form Properties and Methods
+# Form Properties / Methods
 
-**Forms, controls: Form properties and methods**
+**Forms / Controls: Form Properties / Methods**
+
+<head>
+  <title>Form Properties / Methods - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What special collection are document forms apart of?
 

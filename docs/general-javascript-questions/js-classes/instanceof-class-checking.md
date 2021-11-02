@@ -3,9 +3,14 @@ title: Class Checking
 sidebar_position: 6
 ---
 
-# Class checking: "instanceof" - Q&A
+# Class Checking: "instanceof"
 
-**Classes: CLASS CHECKING: “instanceof”**
+**Classes: Class Checking**
+
+<head>
+  <title>Class Checking: "instanceof" - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What does the instanceof operator do in JavaScript?
 

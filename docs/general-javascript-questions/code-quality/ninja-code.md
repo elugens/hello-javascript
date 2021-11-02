@@ -3,9 +3,14 @@ title: Ninja Code
 sidebar_position: 4
 ---
 
-# JavaScript Coding Ninja - Q&A
+# JavaScript Coding Ninja
 
-**Code Quality: NINJA CODE**
+**Code Quality: Ninja Code**
+
+<head>
+  <title>Coding Ninja - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### Are one-letter variables a good idea to use in programming?
 

@@ -3,9 +3,14 @@ title: Mouse Events
 sidebar_position: 1
 ---
 
-# Mouse Events in the Browser
+# Mouse Events
 
-**UI Events: Mouse events**
+**UI Events: Mouse Events**
+
+<head>
+  <title>Mouse Events - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is the event order of a mouse left-click in the browser?
 

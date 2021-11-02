@@ -3,9 +3,14 @@ title: Functions
 sidebar_position: 15
 ---
 
-# JS Functions - Q&A
+# JavaScript Functions
 
-**JavaScript Fundamentals: FUNCTIONS**
+**JavaScript Fundamentals: JavaScript Functions**
+
+<head>
+  <title>JavaScript Functions - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What are the SEVEN types of functions in JavaScript?
 

@@ -5,7 +5,12 @@ sidebar_position: 7
 
 # URL Objects
 
-**Network requests: URL objects**
+**Network Requests: URL Objects**
+
+<head>
+  <title>URL Objects - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is the purpose of the built-in URL class?
 

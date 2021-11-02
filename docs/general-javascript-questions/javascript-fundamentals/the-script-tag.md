@@ -3,9 +3,14 @@ title: The "script" Tag
 sidebar_position: 1
 ---
 
-# The "script" Tag
+# The "script" Tag - Questions and Answers
 
-## JavaScript Fundamentals: The "script" Tag
+**JavaScript Fundamentals: The "script" Tag**
+
+<head>
+  <title>The "script" Tag - JavaScript Frontend Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is the “script” tag used for in JavaScript?
 

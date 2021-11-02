@@ -5,9 +5,12 @@ sidebar_position: 2
 
 # Code Structure
 
-## JavaScript Code Structure - Q&A
+**JavaScript Fundamentals: Code Structure**
 
-**JavaScript Fundamentals: CODE STRUCTURE**
+<head>
+  <title>Code Structure - JavaScript Frontend Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### Define what a statement is in JavaScript code structure?
 

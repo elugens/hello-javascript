@@ -3,9 +3,14 @@ title: Attributes / Properties
 sidebar_position: 6
 ---
 
-# Attributes and properties
+# Attributes / Properties
 
-**Document: Attributes and properties**
+**Browser Document: Attributes / Properties**
+
+<head>
+  <title>Attributes / Properties - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What happens to the HTML when the browser loads the page?
 

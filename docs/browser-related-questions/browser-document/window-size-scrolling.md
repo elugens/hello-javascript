@@ -3,9 +3,14 @@ title: Window Sizes / Scrolling
 sidebar_position: 10
 ---
 
-# Window sizes and scrolling
+# Window Sizes / Scrolling
 
-**Document: Window sizes and scrolling**
+**Browser Document: Window Sizes / Scrolling**
+
+<head>
+  <title>Window Sizes / Scrolling - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### How do we find the width and height of the browser window?
 

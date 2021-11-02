@@ -5,7 +5,12 @@ sidebar_position: 12
 
 # Server Sent Events
 
-**Network requests: Server Sent Events**
+**Network Requests: Server Sent Events**
+
+<head>
+  <title>Server Sent Events - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### How does the Server-Sent Events describe the EventSource?
 

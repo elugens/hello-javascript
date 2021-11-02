@@ -3,9 +3,14 @@ title: Keyboard Events
 sidebar_position: 5
 ---
 
-# Keyboard: keydown and keyup
+# Keyboard Events: Keydown and Keyup
 
-**UI Events: Keyboard: keydown and keyup**
+**UI Events: Keyboard Events**
+
+<head>
+  <title>Keyboard Events- JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### When should you use keyboard events during user interaction?
 

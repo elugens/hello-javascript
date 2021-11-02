@@ -1,11 +1,16 @@
 ---
-title: Resource loading
+title: Resource Loading
 sidebar_position: 3
 ---
 
-# Resource loading: onload and onerror
+# Resource Loading
 
-**Document and resource loading: Resource loading: onload and onerror**
+**Document / Resource Loading: Resource Loading**
+
+<head>
+  <title>Resource Loading - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What two events are used to track the loading of external resources?
 

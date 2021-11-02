@@ -5,7 +5,12 @@ sidebar_position: 2
 
 # Bubbling / Capturing
 
-**Introduction to Events: Bubbling and capturing**
+**Browser Events: Bubbling / Capturing**
+
+<head>
+  <title>Bubbling / Capturing - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is the bubble up principle in relation to events?
 

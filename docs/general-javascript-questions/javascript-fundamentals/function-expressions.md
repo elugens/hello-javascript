@@ -3,9 +3,14 @@ title: Function Expressions
 sidebar_position: 16
 ---
 
-# JS Function Expressions - Q&A
+# Function Expressions
 
-**JavaScript Fundamentals: FUNCTION EXPRESSIONS**
+**JavaScript Fundamentals: Function Expressions**
+
+<head>
+  <title>Function Expressions - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### Is a function a function, object, or both?
 

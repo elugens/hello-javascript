@@ -5,7 +5,12 @@ sidebar_position: 9
 
 # Quantifiers
 
-**Regular expressions: Quantifiers +, \*, ? and {n}**
+**Regular Expressions: Quantifiers**
+
+<head>
+  <title>Quantifiers - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### What is a quantifier used for in a regular expression?
 

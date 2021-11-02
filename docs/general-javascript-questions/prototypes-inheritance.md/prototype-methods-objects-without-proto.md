@@ -3,7 +3,14 @@ title: Prototype Methods
 sidebar_position: 4
 ---
 
-# Prototype Methods - Q&A
+# Prototype Methods
+
+**Prototypes / Inheritance: Prototype Methods**
+
+<head>
+  <title>Prototype Methods - JavaScript Interview Questions & Answers</title>
+  <meta charSet="utf-8" />
+</head>
 
 ### Is there a way to implement prototypal inheritance without calling proto accessor property (deprecated) in JavaScript?
 
