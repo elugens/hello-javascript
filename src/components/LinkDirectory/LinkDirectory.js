@@ -11,10 +11,10 @@ export default function LinkDirectory() {
             <Link to='/docs/intro'>General JavaScript Questions</Link>
           </h3>
           <p className='section'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae odit
-            tenetur vel velit commodi, alias placeat dolor cum ipsam? Error
-            ullam excepturi eligendi facere dolores porro numquam blanditiis
-            voluptatum inventore.
+            In this section, we cover everything from basic to advanced
+            JavaScript questions that you may be asked during your next phone or
+            technical interview. We will cover the basics of JavaScript in this
+            section, but also concentrate on the advanced topics.
           </p>
           <div className={styles.categoryTitle}>
             <h4>
@@ -634,10 +634,9 @@ export default function LinkDirectory() {
             <Link to=''>Browser: Document, Events, Interfaces Questions</Link>
           </h3>
           <p className='section'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae odit
-            tenetur vel velit commodi, alias placeat dolor cum ipsam? Error
-            ullam excepturi eligendi facere dolores porro numquam blanditiis
-            voluptatum inventore.
+            In this section, we will dive straight into the browser related
+            JavaScript questions and answers that you may be asked during your
+            next phone or technical engineering interview.
           </p>
           <div className={styles.categoryTitle}>
             <h4>
@@ -869,10 +868,10 @@ export default function LinkDirectory() {
             </Link>
           </h3>
           <p className='section'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae odit
-            tenetur vel velit commodi, alias placeat dolor cum ipsam? Error
-            ullam excepturi eligendi facere dolores porro numquam blanditiis
-            voluptatum inventore.
+            In this section, we have some additional JavaScript questions and
+            answers that may be asked during your next phone or technical
+            engineering interview. There is no clear road map in this section,
+            and you can choose in the order of your choosing.
           </p>
           <div className={styles.categoryTitle}>
             <h4>
@@ -1056,7 +1055,7 @@ export default function LinkDirectory() {
           </div>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to='/docs/additional-questions/web-components/orbital-height'>
+              <Link to='/docs/additional-questions/web-components/web-components'>
                 Web Components
               </Link>
             </h4>
@@ -1064,8 +1063,8 @@ export default function LinkDirectory() {
           <div className='categories'>
             <ul className={styles.categoryItems}>
               <li className={styles.categorySubItem}>
-                <Link to='/docs/additional-questions/web-components/orbital-height'>
-                  Orbital Height
+                <Link to='/docs/additional-questions/web-components/web-components'>
+                  Web Components
                 </Link>
               </li>
               <li className={styles.categorySubItem}>

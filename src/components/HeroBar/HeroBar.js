@@ -4,8 +4,11 @@ import styles from './herobar.module.css';
 const HeroBar = () => {
   return (
     <div className={styles.hero__bar}>
-      Get Access to Our Complete Offline Package of Questions & Answers -{' '}
-      <strong>PDF/ PowerPoint</strong>
+      <p>
+        {' '}
+        Get Access to Our Complete Offline Package of Questions & Answers -{' '}
+        <strong>COMING SOON!</strong>{' '}
+      </p>
     </div>
   );
 };

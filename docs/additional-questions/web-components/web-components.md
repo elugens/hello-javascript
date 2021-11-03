@@ -1,20 +1,20 @@
 ---
-title: Orbital Height
+title: Web Components
 sidebar_position: 1
 ---
 
-# Orbital Height
+# Web Components
 
-**Web Components: Orbital Height**
+**Web Components: Web Components**
 
 <head>
-  <title>Orbital Height - JavaScript Interview Questions & Answers</title>
+  <title>Web Components - JavaScript Interview Questions & Answers</title>
   <meta charSet="utf-8" />
 </head>
 
 ### What is a well-known rule for developing complex software?
 
-**Interview Answer:** The well-known rule for developing complex software is do not make complex software. If something becomes complex, then split it into simpler parts and connect it in the most obvious way. A good architect is the one who can make the complex simple.
+**Interview Answer:** The well-known rule for developing complex software is do not make complex software. If something becomes complex, then split it into simpler parts (Web Components) and connect it in the most obvious way. A good architect is the one who can make the complex simple.
 
 Source: <https://javascript.info/webcomponents-intro#component-architecture>
 

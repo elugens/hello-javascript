@@ -3,13 +3,15 @@ title: Basic JS Questions
 sidebar_position: 1
 ---
 
-# Basic JavaScript Interview Questions
+# Basic JavaScript: Interview Questions
 
 **JavaScript Basics: Basic JS Questions**
 
 <head>
   <title>JavaScript Frontend Interview Questions and Answers</title>
   <meta charSet="utf-8" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9546383196522386"
+     crossorigin="anonymous"></script>
 </head>
 
 ### What is JavaScript?

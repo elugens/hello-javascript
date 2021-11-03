@@ -61,6 +61,7 @@ html[data-theme='dark'] {
   --ifm-color-primary-light: #fcc740;
   --ifm-color-primary-lighter: #fccb4e;
   --ifm-color-primary-lightest: #fdd879;
+  --ifm-code-font-size: 95%;
 }
 
 html[data-theme='dark'] .docusaurus-highlight-code-line {
@@ -95,9 +96,9 @@ html[data-theme='dark'] footer.footer {
 
 .get__started:hover {
   font-size: 14px;
-  color: white;
+  color: rgb(27, 27, 27);
   border-radius: 23px;
-  background-color: #f03d32;
+  background-color: #fbbf24;
 }
 
 .get__started.navbar__link--active {
@@ -105,4 +106,44 @@ html[data-theme='dark'] footer.footer {
   color: white;
   border-radius: 23px;
   background-color: #f03d32;
+}
+
+/* get started button */
+
+.getstarted {
+  margin: 100px;
+  width: 300px;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  text-decoration: none;
+  border-radius: 23px;
+  background-color: #f03d32;
+}
+
+.getstarted:hover {
+  margin: 100px;
+  width: 300px;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  border: none;
+  text-decoration: none;
+  border-radius: 23px;
+  background-color: #fbbf24;
+}
+
+.getstarted a {
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+}
+
+.getstarted a:hover {
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
 }

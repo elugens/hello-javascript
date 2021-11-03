@@ -57,8 +57,18 @@ html[data-theme='dark'] .custom__hero {
   color: rgb(27, 27, 27);
   background-color: rgb(253, 187, 45);
 }
+.support_button a {
+  text-decoration: none;
+  color: rgb(27, 27, 27);
+}
+
+.support_button a:hover {
+  text-decoration: none;
+  color: rgb(27, 27, 27);
+}
 
 .hero__text__container {
+  color: rgb(27, 27, 27);
 }
 
 .img_container {

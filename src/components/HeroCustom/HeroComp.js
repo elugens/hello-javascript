@@ -12,7 +12,11 @@ function HeroComp() {
         <div className={styles.hero__container}>
           <div className='hero__content'>
             <div className={styles.hero__text__container}>
-              <button className={styles.support_button}>SUPPORT US!</button>
+              <button className={styles.support_button}>
+                <Link to='https://www.patreon.com/hellojavascript'>
+                  SUPPORT US!
+                </Link>
+              </button>
               <h1 className='hero__title'>{siteConfig.title}</h1>
               <p className='hero__subtitle'>{siteConfig.tagline}</p>
             </div>

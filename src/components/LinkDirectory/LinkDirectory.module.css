@@ -6,6 +6,11 @@
   max-width: 960px;
 }
 
+html[data-theme='light'] .categoryTitle {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgb(131, 131, 131);
+}
+
 html[data-theme='dark'] .categoryTitle {
   margin-bottom: 1rem;
   border-bottom: 1px solid #ccc;
@@ -35,7 +40,11 @@ html[data-theme='dark'] .categorySubItem a:hover {
   text-decoration: underline;
 }
 
-::marker {
+html[data-theme='light'] ::marker {
+  color: rgb(34, 193, 195);
+}
+
+html[data-theme='dark'] ::marker {
   color: rgb(255, 196, 0);
 }
 
@@ -54,4 +63,18 @@ html[data-theme='dark'] .categorySubItem a:hover {
 
 .categorySubItem {
   padding-bottom: 0.5rem;
+}
+
+@media (max-width: 840px) {
+  .categoryItems {
+    -webkit-columns: 2;
+    columns: 2;
+  }
+}
+
+@media (max-width: 568px) {
+  .categoryItems {
+    -webkit-columns: 1;
+    columns: 1;
+  }
 }

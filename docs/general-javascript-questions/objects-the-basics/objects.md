@@ -12,19 +12,19 @@ sidebar_position: 1
   <meta charSet="utf-8" />
 </head>
 
-### What are the seven (7) primitive JavaScript data types?
+### What are the seven (7) primitive data types in JavaScript?
 
 **Interview Answer:** String, symbol, bigint, Boolean, undefined, number, and null data types.
 
-**Technical Answer:** There are 7 primitive data types that include the string, number, bigint, Boolean, undefined, symbol, and null data types. Most of the time, a primitive value is represented directly at the lowest level of the language implementation.
+**Technical Answer:** There are 7 primitive data types, including string, number, bigint, Boolean, undefined, symbol, and null data types. A primitive value is usually represented directly at the lowest level of the language implementation.
 
 Source: <https://developer.mozilla.org/en-US/docs/Glossary/Primitive>
 
-### Are JavaScript primitive immutable or mutable?
+### Are JavaScript primitives mutable or immutable?
 
-**Interview Answer:** All primitives are immutable, meaning that they cannot be altered.
+**Interview Answer:** Primitives are immutable, which means they cannot be changed.
 
-**Technical Answer:** All primitives are immutable, i.e., they cannot be altered. It is important not to confuse a primitive itself with a variable assigned a primitive value. The variable may be reassigned a new value, but the existing value cannot be changed in the ways that objects, arrays, and functions can be altered. A primitive can be replaced, but it cannot be directly altered.
+**Technical Answer:** The technical answer is that all primitives are immutable, which means they cannot be altered. It is important to recognize that a primitive by itself is not the same thing as a variable assigned a primitive value. Variables may be reassigned a new value, but their existing values cannot be changed in the same manner that objects, arrays, and functions can be altered. Primitives can be replaced, but they cannot be altered directly.
 
 ```js
 // Using a string method does not mutate the string

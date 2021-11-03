@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/nightOwl');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'JavaScript Questions and Answers',
-  tagline: 'The biggest archive of Javascript questions and answers online.',
+  title: 'PASS YOUR NEXT FRONTEND INTERVIEW',
+  tagline: 'A Complete Archive of JavaScript Interview Questions and Answers',
   url: 'https://www.hellojavascript.info',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -58,7 +58,7 @@ const config = {
       },
       navbar: {
         // title: 'My Site',
-        hideOnScroll: true,
+        hideOnScroll: false,
         style: 'dark',
         logo: {
           alt: 'HelloJavaScript.info Logo',
@@ -90,16 +90,32 @@ const config = {
         style: 'light',
         links: [
           {
-            title: 'Docs',
+            title: 'Categories',
             items: [
               {
-                label: 'Tutorial',
+                label: 'Getting Started',
                 to: '/docs/intro',
+              },
+              {
+                label: 'JavaScript Basics',
+                to: '/docs/general-javascript-questions/javascript-basics/basic-javascript-questions-answers',
+              },
+              {
+                label: 'JavaScript Fundamentals',
+                to: '/docs/general-javascript-questions/javascript-fundamentals/code-structure',
+              },
+              {
+                label: 'The "Script" Tag',
+                to: '/docs/general-javascript-questions/javascript-fundamentals/the-script-tag',
+              },
+              {
+                label: 'Coding Style',
+                to: '/docs/general-javascript-questions/code-quality/coding-style',
               },
             ],
           },
           {
-            title: 'Community',
+            title: 'Dev Community',
             items: [
               {
                 label: 'Stack Overflow',
@@ -107,24 +123,41 @@ const config = {
               },
               {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/hellojavascript',
+                href: 'https://discord.gg/EKxqAtPprC',
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: 'GitHub',
+                href: 'https://github.com/elugens/hello-javascript',
               },
             ],
           },
           {
-            title: 'More',
+            title: 'Social',
+            items: [
+              {
+                label: 'Facebook',
+                href: 'https://fb.me/hellojavascriptinfo',
+              },
+              {
+                label: 'Facebook Discussion',
+                href: 'https://www.facebook.com/groups/hellojavascript',
+              },
+              {
+                label: 'Twitter',
+                href: 'https://twitter.com/hellojavascript',
+              },
+            ],
+          },
+          {
+            title: 'More Resources',
             items: [
               {
                 label: 'Blog',
                 to: '/blog',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/elugens/hello-javascript',
+                label: 'Tech Interview Handbook',
+                href: 'https://techinterviewhandbook.org/',
               },
             ],
           },
@@ -134,7 +167,7 @@ const config = {
           src: 'img/hello-javascript-logo-dark-plain.svg',
           href: '/',
         },
-        copyright: `Copyright © ${new Date().getFullYear()} HelloJavaScript.info . Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} HelloJavaScript.info . Built with Docusaurus. Developed by Elugens`,
       },
       prism: {
         theme: lightCodeTheme,

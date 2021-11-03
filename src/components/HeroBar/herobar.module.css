@@ -1,22 +1,36 @@
 html[data-theme='light'] .hero__bar {
-  text-align: center;
-  color: white;
-  height: 50px;
-  line-height: 50px;
-  font-weight: 500;
-  background-color: rgb(27, 27, 27);
+  background-color: #1c2128;
+  box-shadow: inset 0px 6px 10px 6px rgba(0, 0, 0, 0.35);
 }
 
 html[data-theme='dark'] .hero__bar {
-  text-align: center;
-  color: rgb(27, 27, 27);
-  height: 50px;
-  line-height: 50px;
-  font-weight: 500;
   background: rgb(34, 193, 195);
   background: linear-gradient(
     260deg,
     rgba(34, 193, 195, 1) 0%,
     rgba(253, 187, 45, 1) 100%
   );
+  box-shadow: inset 0px 6px 10px 6px rgba(0, 0, 0, 0.35);
+}
+
+html[data-theme='light'] .hero__bar p {
+  padding: 13px;
+  text-align: center;
+  color: white;
+  font-weight: 500;
+}
+
+html[data-theme='dark'] .hero__bar p {
+  padding: 13px;
+  text-align: center;
+  color: rgb(27, 27, 27);
+  font-weight: 500;
+}
+
+html[data-theme='light'] .hero__bar strong {
+  color: rgb(34, 193, 195);
+}
+
+html[data-theme='dark'] .hero__bar strong {
+  color: #f03d32;
 }

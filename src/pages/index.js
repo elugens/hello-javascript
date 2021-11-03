@@ -10,23 +10,7 @@ import LinkDirectory from '../components/LinkDirectory/LinkDirectory';
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
-  return (
-    <HeroComp />
-    // <header className={clsx('hero hero--primary', styles.heroBanner)}>
-    //   <div className='container'>
-    //     <h1 className='hero__title'>{siteConfig.title}</h1>
-    //     <p className='hero__subtitle'>{siteConfig.tagline}</p>
-    //     <div className={styles.buttons}>
-    //       <Link
-    //         className='button button--secondary button--lg'
-    //         to='/docs/intro'
-    //       >
-    //         Get Started
-    //       </Link>
-    //     </div>
-    //   </div>
-    // </header>
-  );
+  return <HeroComp />;
 }
 
 export default function Home() {
@@ -34,7 +18,7 @@ export default function Home() {
   return (
     <Layout
       title={`HelloJavaScript.info ${siteConfig.title}`}
-      description='Description will go into a meta tag in <head />'
+      description='A Complete Archive of JavaScript Interview Questions and Answers. We can help you pass the first and second phone interviews.'
     >
       <HomepageHeader />
       <main>
