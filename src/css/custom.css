@@ -151,3 +151,9 @@ html[data-theme='dark'] footer.footer {
 h3:before {
   content: url('/img/light-bulb-svgrepo-com.svg');
 }
+
+@media (max-width: 568px) {
+  h3:before {
+    display: none;
+  }
+}
