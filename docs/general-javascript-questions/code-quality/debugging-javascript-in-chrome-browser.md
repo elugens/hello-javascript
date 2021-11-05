@@ -3,15 +3,13 @@ title: Debugging in Chrome
 sidebar_position: 1
 ---
 
-TODO : ADD IMAGES TO THIS PAGE
-
 # Debugging JavaScript in Chrome
 
 **Code Quality: Debugging in Chrome**
 
 <head>
   <title>Debugging in Chrome - Frontend Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
+  <meta charSet='utf-8' />
 </head>
 
 ### Explain, what debugging is in JavaScript development?
@@ -32,11 +30,15 @@ Source: <https://javascript.info/debugging-chrome#the-sources-panel>
 
 **Interview Answer:** You can use the toggler button under the source tab to open the vertical tabs.
 
+![vertical tab](/img/vertical-tabs.svg)
+
 Source: <https://javascript.info/debugging-chrome#the-sources-panel>
 
 ### What are the three panes available under chrome dev tools source tab?
 
 **Interview Answer:** The file navigator, code editor, and the JavaScript debugging pane.
+
+<img src='/img/three-panes-dev-tools.svg' />
 
 Source: <https://javascript.info/debugging-chrome#the-sources-panel>
 
@@ -105,11 +107,15 @@ Source: <https://developers.google.com/web/tools/chrome-devtools/javascript/refe
 
 **Answer:** You can click on the format {} icon to make the minified files readable in DevTools.
 
+<img src='/img/minified-readable.png' />
+
 Source: <https://developers.google.com/web/tools/chrome-devtools/javascript/reference#watch>
 
 ### What does the Call Stack do in Chrome developer tools?
 
 **Interview Answer:** In Chrome and Safari the Call Stack shows the nested call chain.
+
+<img src='/img/callstack.svg' />
 
 Source: <https://javascript.info/debugging-chrome#pause-and-look-around>
 

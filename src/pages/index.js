@@ -17,7 +17,7 @@ export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`HelloJavaScript.info ${siteConfig.title}`}
+      title={`HelloJavaScript.info`}
       description='A Complete Archive of JavaScript Interview Questions and Answers. We can help you pass the first and second phone interviews.'
     >
       <HomepageHeader />

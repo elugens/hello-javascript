@@ -22,6 +22,8 @@ Source: <https://javascript.info/shadow-dom>
 
 **Interview Answer:** The browser uses DOM/CSS internally to draw or parse them. That DOM structure is normally hidden from us, but we can see it in developer tools. E.g., in Chrome, we need to enable in Dev Tools “Show user agent shadow DOM” option.
 
+<img src="/img/browser-controls.png"/>
+
 Source: <https://javascript.info/shadow-dom>
 
 ### Are Shadow DOM elements accessible via JavaScript calls or selectors?

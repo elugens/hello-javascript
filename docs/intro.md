@@ -10,7 +10,7 @@ sidebar_position: 1
   <meta charSet="utf-8" />
 </head>
 
-<img src="../static/img/js_framework_circle.png" />
+![img alt](/img/js_framework_circle.png)
 
 ## Let's get started with the Basic JavaScript Questions
 

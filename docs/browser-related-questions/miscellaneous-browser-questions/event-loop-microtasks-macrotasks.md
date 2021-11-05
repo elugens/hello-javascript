@@ -18,15 +18,17 @@ sidebar_position: 3
 
 Diagram:
 
+<img src="/img/event-loop.gif" />
+
 Source: <https://javascript.info/event-loop>
 
 ### How are the tasks from the queue processed or handled?
 
 **Interview Answer:** Tasks from the queue are processed on “first come – first served” basis. When the engine browser is done with the script, it handles mousemove event, then then setTimeout handler, and so on.
 
-TODO: Insert diagram image
-
 Diagram:
+
+<img src='/img/callback-queue-event-loop.gif' />
 
 Source: <https://javascript.info/event-loop#event-loop>
 

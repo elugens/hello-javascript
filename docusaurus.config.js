@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/nightOwl');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'PASS YOUR NEXT FRONTEND INTERVIEW',
+  title: 'Pass Your Next Front-end Engineering Phone Interview',
   tagline: 'A Complete Archive of JavaScript Interview Questions and Answers',
   url: 'https://www.hellojavascript.info',
   baseUrl: '/',
@@ -176,6 +176,69 @@ const config = {
     }),
   // LIVE CODE BLOCKS IMPLEMENTATION
   themes: ['@docusaurus/theme-live-codeblock'],
+
+  // plugins config
+  plugins: [
+    [
+      '@docusaurus/plugin-pwa',
+      {
+        debug: true,
+        offlineModeActivationStrategies: [
+          'appInstalled',
+          'standalone',
+          'queryString',
+        ],
+        pwaHead: [
+          {
+            tagName: 'link',
+            rel: 'icon',
+            href: '/img/icon.png',
+          },
+          {
+            tagName: 'link',
+            rel: 'manifest',
+            href: '/manifest.json',
+          },
+          {
+            tagName: 'meta',
+            name: 'theme-color',
+            content: 'rgb(27, 27, 27)',
+          },
+          {
+            tagName: 'meta',
+            name: 'apple-mobile-web-app-capable',
+            content: 'yes',
+          },
+          {
+            tagName: 'meta',
+            name: 'apple-mobile-web-app-status-bar-style',
+            content: '#000',
+          },
+          {
+            tagName: 'link',
+            rel: 'apple-touch-icon',
+            href: '/img/icon.png',
+          },
+          {
+            tagName: 'link',
+            rel: 'mask-icon',
+            href: '/img/icon.svg',
+            color: 'rgb(37, 194, 160)',
+          },
+          {
+            tagName: 'meta',
+            name: 'msapplication-TileImage',
+            content: '/img/icon.png',
+          },
+          {
+            tagName: 'meta',
+            name: 'msapplication-TileColor',
+            content: '#fbbf24',
+          },
+        ],
+      },
+    ],
+  ],
 };
 
 module.exports = config;

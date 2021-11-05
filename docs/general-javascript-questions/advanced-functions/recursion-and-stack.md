@@ -127,6 +127,8 @@ Source: <https://www.fullstack.cafe/blog/recursion-interview-questions>
 
 Graphic Example:
 
+<img src="/img/linked-list.svg" />
+
 Code Example: Linked List
 
 ```js

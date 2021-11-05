@@ -74,6 +74,8 @@ Source: <https://javascript.info/arraybuffer-binary-arrays>
 
 Diagram:
 
+<img src="/img/array-buffer.svg" />
+
 Code Example:
 
 ```js

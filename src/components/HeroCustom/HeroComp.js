@@ -3,6 +3,7 @@ import React from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './herocomp.module.css';
 import HeroBar from '../HeroBar/HeroBar';
+import heroImage from '/img/hero-vscode-editor-hellojavascriptdotinfo.png';
 
 function HeroComp() {
   const { siteConfig } = useDocusaurusContext();
@@ -22,11 +23,7 @@ function HeroComp() {
             </div>
 
             <div className={styles.img_container}>
-              <img
-                className={styles.hero__image}
-                src='../../../static/img/hero-vscode-editor-hellojavascriptdotinfo.png'
-                alt=''
-              />
+              <img className={styles.hero__image} src={heroImage} alt='' />
             </div>
           </div>
         </div>
