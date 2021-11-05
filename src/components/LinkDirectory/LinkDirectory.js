@@ -901,7 +901,7 @@ export default function LinkDirectory() {
           </div>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to='/docs/additional-questions/binary-data-files.md/arraybuffer-binary-arrays'>
+              <Link to='/docs/additional-questions/binary-data-files/arraybuffer-binary-arrays'>
                 Binary Data / Files
               </Link>
             </h4>
@@ -909,22 +909,22 @@ export default function LinkDirectory() {
           <div className='categories'>
             <ul className={styles.categoryItems}>
               <li className={styles.categorySubItem}>
-                <Link to='/docs/additional-questions/binary-data-files.md/arraybuffer-binary-arrays'>
+                <Link to='/docs/additional-questions/binary-data-files/arraybuffer-binary-arrays'>
                   ArrayBuffer, Binary Arrays
                 </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to='/docs/additional-questions/binary-data-files.md/textdecoder-textencoder'>
+                <Link to='/docs/additional-questions/binary-data-files/textdecoder-textencoder'>
                   TextDecoder / TextEncoder
                 </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to='/docs/additional-questions/binary-data-files.md/blobs'>
+                <Link to='/docs/additional-questions/binary-data-files/blobs'>
                   Blob Data
                 </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to='/docs/additional-questions/binary-data-files.md/file-filereader'>
+                <Link to='/docs/additional-questions/binary-data-files/file-filereader'>
                   File / FileReader
                 </Link>
               </li>
