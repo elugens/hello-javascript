@@ -15,8 +15,8 @@
   --ifm-color-primary-light: #2ebcc7;
   --ifm-color-primary-lighter: #31c4cf;
   --ifm-color-primary-lightest: #4cccd6;
+  --ifm-color-content-secondary: black;
   --ifm-code-font-size: 95%;
-  --search-local-highlight-color: #fbbf24;
 }
 /* 
 :root {
@@ -54,6 +54,56 @@ html[data-theme='light'] header.hero {
   );
 }
 
+html[data-theme='light'] {
+  /* site search styles */
+
+  --search-local-primary-color: #fbbf24;
+  --search-local-text-color: rgb(28, 30, 33);
+  --search-local-spacing: 12px;
+  --search-local-icon-stroke-width: 1.4;
+  --search-local-highlight-color: black;
+  --search-local-muted-color: rgb(150, 159, 175);
+  --search-local-container-background: rgba(101, 108, 133, 0.8);
+  --search-local-logo-color: #fbbf24;
+
+  /* modal */
+  --search-local-modal-width: 560px;
+  --search-local-modal-height: 600px;
+  --search-local-modal-background: rgb(245, 246, 247);
+  --search-local-modal-shadow: inset 1px 1px 0 0 rgba(255, 255, 255, 0.5),
+    0 3px 8px 0 rgba(85, 90, 100, 1);
+
+  /* searchbox */
+  --search-local-searchbox-height: 56px;
+  --search-local-searchbox-background: rgb(235, 237, 240);
+  --search-local-container-border: rgb(235, 237, 240, 0.25);
+  --search-local-searchbox-focus-background: rgb(235, 237, 240);
+  --search-local-searchbox-shadow: inset 0 0 0 2px
+    var(--search-local-primary-color);
+
+  /* hit */
+  --search-local-hit-height: 56px;
+  --search-local-hit-color: rgb(68, 73, 80);
+  --search-local-hit-active-color: #fff;
+  --search-local-hit-background: #fff;
+  --search-local-hit-shadow: 0 1px 3px 0 rgb(212, 217, 225);
+
+  /* key */
+  --search-local-key-gradient: linear-gradient(
+    -225deg,
+    rgb(213, 219, 228) 0%,
+    rgb(248, 248, 248) 100%
+  );
+  --search-local-key-shadow: inset 0 -2px 0 0 rgb(205, 205, 230),
+    inset 0 0 1px 1px #fff, 0 1px 2px 1px rgba(30, 35, 90, 0.4);
+
+  /* footer */
+  --search-local-footer-height: 44px;
+  --search-local-footer-background: #fff;
+  --search-local-footer-shadow: 0 -1px 0 0 rgb(224, 227, 232),
+    0 -3px 6px 0 rgba(69, 98, 155, 0.12);
+}
+
 html[data-theme='dark'] {
   --ifm-color-primary: #fbbf24;
   --ifm-color-primary-dark: #fab708;
@@ -63,7 +113,34 @@ html[data-theme='dark'] {
   --ifm-color-primary-lighter: #fccb4e;
   --ifm-color-primary-lightest: #fdd879;
   --ifm-code-font-size: 95%;
-  --search-local-highlight-color: #fbbf24;
+
+  /* search styles */
+  --search-local-primary-color: #fbbf24;
+  --search-local-logo-color: #fbbf24;
+  --search-local-highlight-color: #f0ae04;
+  --search-local-text-color: rgb(245, 246, 247);
+  --search-local-container-background: rgba(9, 10, 17, 0.8);
+  --search-local-container-border: rgba(9, 10, 17, 0.9);
+  --search-local-modal-background: rgb(36, 37, 38);
+  --search-local-modal-shadow: inset 1px 1px 0 0 rgb(44, 46, 64),
+    0 3px 8px 0 rgb(0, 3, 9);
+  --search-local-searchbox-background: rgb(9, 10, 17);
+  --search-local-searchbox-focus-background: rgb(9, 10, 17);
+  --search-local-hit-color: rgb(190, 195, 201);
+  --search-local-hit-shadow: none;
+  --search-local-hit-background: rgb(9, 10, 17);
+  --search-local-key-gradient: linear-gradient(
+    -26.5deg,
+    rgb(86, 88, 114) 0%,
+    rgb(49, 53, 91) 100%
+  );
+  --search-local-key-shadow: inset 0 -2px 0 0 rgb(40, 45, 85),
+    inset 0 0 1px 1px rgb(81, 87, 125), 0 2px 2px 0 rgba(3, 4, 9, 0.3);
+  --search-local-footer-background: rgb(30, 33, 54);
+  --search-local-footer-shadow: inset 0 1px 0 0 rgba(73, 76, 106, 0.5),
+    0 -4px 8px 0 rgba(0, 0, 0, 0.2);
+  --search-local-logo-color: rgb(255, 255, 255);
+  --search-local-muted-color: rgb(127, 132, 151);
 }
 
 html[data-theme='dark'] .docusaurus-highlight-code-line {
@@ -158,12 +235,4 @@ h3:before {
   h3:before {
     display: none;
   }
-}
-
-html[data-theme='light'] button.DocSearch {
-  --search-local-highlight-color: rgb(34, 193, 195);
-}
-
-html[data-theme='dark'] button.DocSearch {
-  --search-local-highlight-color: #fbbf24;
 }

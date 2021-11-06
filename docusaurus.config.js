@@ -62,8 +62,8 @@ const config = {
         style: 'dark',
         logo: {
           alt: 'HelloJavaScript.info Logo',
-          src: 'img/hello-javascript-logo-dark-plain.svg',
-          srcDark: 'img/hello-javascript-logo-dark-plain.svg',
+          src: 'img/hellojs-dark-logo.svg',
+          srcDark: 'img/hellojs-dark-logo.svg',
         },
         items: [
           {
@@ -246,6 +246,7 @@ const config = {
         indexBlog: true,
         indexPages: true,
         language: 'en',
+        searchResultLimits: 20,
 
         // `hashed` is recommended as long-term-cache of index file is possible.
         hashed: true,
