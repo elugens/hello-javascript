@@ -16,6 +16,7 @@
   --ifm-color-primary-lighter: #31c4cf;
   --ifm-color-primary-lightest: #4cccd6;
   --ifm-code-font-size: 95%;
+  --search-local-highlight-color: #fbbf24;
 }
 /* 
 :root {
@@ -62,6 +63,7 @@ html[data-theme='dark'] {
   --ifm-color-primary-lighter: #fccb4e;
   --ifm-color-primary-lightest: #fdd879;
   --ifm-code-font-size: 95%;
+  --search-local-highlight-color: #fbbf24;
 }
 
 html[data-theme='dark'] .docusaurus-highlight-code-line {
@@ -156,4 +158,12 @@ h3:before {
   h3:before {
     display: none;
   }
+}
+
+html[data-theme='light'] button.DocSearch {
+  --search-local-highlight-color: rgb(34, 193, 195);
+}
+
+html[data-theme='dark'] button.DocSearch {
+  --search-local-highlight-color: #fbbf24;
 }
