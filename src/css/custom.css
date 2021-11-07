@@ -190,7 +190,7 @@ html[data-theme='dark'] footer.footer {
 /* get started button */
 
 .getstarted {
-  margin: 100px;
+  margin: 20px auto;
   width: 300px;
   padding: 10px 20px;
   font-size: 20px;
@@ -203,7 +203,7 @@ html[data-theme='dark'] footer.footer {
 }
 
 .getstarted:hover {
-  margin: 100px;
+  margin: 20px auto;
   width: 300px;
   padding: 10px 20px;
   font-size: 20px;

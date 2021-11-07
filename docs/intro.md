@@ -30,6 +30,8 @@ In this part of the interview process, you will be asked more specific questions
 
 Our goal is to help you answer the most basic JavaScript questions by providing you with both the questions and the answers. We'll also provide you with a series of JavaScript questions that you can use to test your knowledge.
 
+<hr/>
+
 <p align="center">
   <button className="getstarted"><a href="/docs/general-javascript-questions/javascript-basics/basic-javascript-questions-answers">Let's Get Started</a></button>
 </p>
