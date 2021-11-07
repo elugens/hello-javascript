@@ -62,8 +62,8 @@ const config = {
         style: 'dark',
         logo: {
           alt: 'HelloJavaScript.info Logo',
-          src: 'img/hellojs-dark-logo.svg',
-          srcDark: 'img/hellojs-dark-logo.svg',
+          src: 'img/hellojs-dark-logo-pro.svg',
+          srcDark: 'img/hellojs-dark-logo-pro.svg',
         },
         items: [
           {

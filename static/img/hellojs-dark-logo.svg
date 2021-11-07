@@ -28,9 +28,9 @@
      inkscape:window-height="1017"
      id="namedview24"
      showgrid="false"
-     inkscape:zoom="1.2988662"
-     inkscape:cx="486.67299"
-     inkscape:cy="86.25"
+     inkscape:zoom="1.8368742"
+     inkscape:cx="352.86659"
+     inkscape:cy="89.68851"
      inkscape:window-x="1912"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -45,7 +45,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -56,53 +56,57 @@
        transform="translate(-3.8848303,83.928903)"
        id="g3925">
       <g
-         id="g44">
-        <text
-           transform="scale(1.03894,0.96251949)"
-           xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:35.32287979px;line-height:1.25;font-family:'Bebas Neue';-inkscape-font-specification:'Bebas Neue Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.18397333"
-           x="16.899845"
-           y="209.06195"
-           id="text165"><tspan
-             id="tspan163"
-             x="16.899845"
+         id="g49">
+        <g
+           id="g44">
+          <text
+             id="text165"
              y="209.06195"
-             style="font-size:35.24436951px;fill:#ffffff;stroke-width:0.18397333">JS</tspan></text>
-        <text
-           transform="scale(1.03894,0.96251949)"
-           xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:37.64071655px;line-height:1.25;font-family:'Bebas Neue';-inkscape-font-specification:'Bebas Neue Bold';letter-spacing:0px;word-spacing:0px;fill:#ffcc00;fill-opacity:1;stroke:none;stroke-width:0.1960454"
-           x="56.504028"
-           y="208.97508"
-           id="text169"><tspan
-             id="tspan167"
-             x="56.504028"
+             x="16.899845"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:35.32287979px;line-height:1.25;font-family:'Bebas Neue';-inkscape-font-specification:'Bebas Neue Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.18397333"
+             xml:space="preserve"
+             transform="scale(1.03894,0.96251949)"><tspan
+               style="font-size:35.24436951px;fill:#ffffff;stroke-width:0.18397333"
+               y="209.06195"
+               x="16.899845"
+               id="tspan163">JS</tspan></text>
+          <text
+             id="text169"
              y="208.97508"
-             style="font-size:37.55705643px;letter-spacing:0.34751001px;fill:#ffcc00;stroke-width:0.1960454">Hello<tspan
-   id="tspan187"
-   style="fill:#ffffff;stroke-width:0.1960454">JavaScript</tspan></tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.85937309px;line-height:1.25;font-family:'Bebas Neue';-inkscape-font-specification:'Bebas Neue Bold';letter-spacing:0.34751004px;word-spacing:0px;fill:#ffcc00;fill-opacity:1;stroke:none;stroke-width:0.05655923"
-           x="234.24042"
-           y="231.64972"
-           id="text173"
-           transform="scale(1.1523164,0.8678172)"><tspan
-             id="tspan171"
-             x="234.24042"
+             x="56.504028"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:37.64071655px;line-height:1.25;font-family:'Bebas Neue';-inkscape-font-specification:'Bebas Neue Bold';letter-spacing:0px;word-spacing:0px;fill:#ffcc00;fill-opacity:1;stroke:none;stroke-width:0.1960454"
+             xml:space="preserve"
+             transform="scale(1.03894,0.96251949)"><tspan
+               style="font-size:37.55705643px;letter-spacing:0.34751001px;fill:#ffcc00;stroke-width:0.1960454"
+               y="208.97508"
+               x="56.504028"
+               id="tspan167">Hello<tspan
+   style="fill:#ffffff;stroke-width:0.1960454"
+   id="tspan187">JavaScript</tspan></tspan></text>
+          <text
+             transform="scale(1.1523164,0.8678172)"
+             id="text173"
              y="231.64972"
-             style="letter-spacing:0.34751004px;fill:#ffcc00;stroke-width:0.05655923"
-             dx="0">.info?</tspan></text>
-        <path
-           id="path3910"
-           d="m 8.7721758,183.07251 a 21.323971,21.323971 0 0 1 20.0794492,-14.1457 21.323971,21.323971 0 0 1 21.323968,21.32397 v 0 A 21.323971,21.323971 0 0 1 28.851625,211.57475 21.323971,21.323971 0 0 1 8.2932321,195.91331"
-           style="opacity:1;fill:none;fill-opacity:1;stroke:#ffcc00;stroke-width:2.62684751" />
-        <circle
-           r="3.0276628"
-           cy="189.48335"
-           cx="6.9667082"
-           id="path3914"
-           style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.10253484;stroke-opacity:1" />
+             x="234.24042"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.85937309px;line-height:1.25;font-family:'Bebas Neue';-inkscape-font-specification:'Bebas Neue Bold';letter-spacing:0.34751004px;word-spacing:0px;fill:#ffcc00;fill-opacity:1;stroke:none;stroke-width:0.05655923"
+             xml:space="preserve"><tspan
+               dx="0"
+               style="letter-spacing:0.34751004px;fill:#ffcc00;stroke-width:0.05655923"
+               y="231.64972"
+               x="234.24042"
+               id="tspan171">.info?</tspan></text>
+          <path
+             inkscape:connector-curvature="0"
+             style="opacity:1;fill:none;fill-opacity:1;stroke:#ffcc00;stroke-width:2.62684751"
+             d="m 8.7721758,183.07251 a 21.323971,21.323971 0 0 1 20.0794492,-14.1457 21.323971,21.323971 0 0 1 21.323968,21.32397 v 0 A 21.323971,21.323971 0 0 1 28.851625,211.57475 21.323971,21.323971 0 0 1 8.2932321,195.91331"
+             id="path3910" />
+          <circle
+             style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.10253484;stroke-opacity:1"
+             id="path3914"
+             cx="6.9667082"
+             cy="189.48335"
+             r="3.0276628" />
+        </g>
       </g>
     </g>
   </g>
