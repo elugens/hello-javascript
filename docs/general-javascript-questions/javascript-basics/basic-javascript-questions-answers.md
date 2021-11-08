@@ -9,48 +9,129 @@ sidebar_position: 1
 
 <head>
   <title>JavaScript Frontend Interview Questions and Answers</title>
-  <meta charSet="utf-8" />
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9546383196522386"
-     crossorigin="anonymous"></script>
+  <meta charSet='utf-8' />
+  <script
+    async
+    src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9546383196522386'
+    crossorigin='anonymous'
+  ></script>
 </head>
 
 ### What is JavaScript?
 
-**Interview Answer:** JavaScript is a high-level, dynamically typed, and interpreted scripting language used to create interactive effects in the browser or server.
+<details>
+  <summary>
+    <strong>View Answer:</strong>
+  </summary>
+  <div>
+    <div>
+      <strong>Interview Response:</strong> JavaScript is a high-level,
+      dynamically typed and interpreted scripting language used to create
+      interactive effects in a browser or on a server.
+    </div>
+  </div>
+</details>
 
 Source: <https://javascript.info/intro#what-is-javascript>
 
 ### What is the difference between a high-level and low-level programming language?
 
-**Interview Answer:** When a language is high-level, it means it is built without requiring detailed knowledge of the underlying computer. For example, managing memory, knowing what processor is running, and keeping track of things like pointers are not necessary. High-level languages are easier to write and manage than low or mid-level programing languages, because they are platform independent.
+<details>
+  <summary>
+    <strong>View Answer:</strong>
+  </summary>
+  <div>
+    <div>
+      <strong>Interview Response:</strong> When a language is high-level, it
+      means it is built without requiring detailed knowledge of the underlying
+      computer. For example, managing memory, knowing what processor is running,
+      and keeping track of things like pointers are not necessary. High-level
+      languages are easier to write and manage than low or mid-level programing
+      languages, because they are platform independent.
+    </div>
+  </div>
+</details>
 
 Source: <https://www.geeksforgeeks.org/difference-between-high-level-and-low-level-languages/>
 
 ### Is JavaScript a compiled or interpreted programming language?
 
-**Interview Answer:** JavaScript is an interpreted language.
-
-**Technical Answer:** In a compiled language, the target machine directly translates the program. In an interpreted language, the source code is not directly translated by the target machine. Instead, a different program, interpreter, reads and executes the code. In simple terms: JavaScript is an interpreted language.
+<details>
+  <summary>
+    <strong>View Answer:</strong>
+  </summary>
+  <div>
+    <div>
+      <strong>Interview Response:</strong> JavaScript is an interpreted
+      language.
+    </div>
+    <br />
+    <div>
+      <strong>Technical Response:</strong> In a compiled language, the target
+      machine directly translates the program. In an interpreted language, the
+      source code is not directly translated by the target machine. Instead, a
+      different program, interpreter, reads and executes the code. In simple
+      terms: JavaScript is an interpreted language.
+    </div>
+  </div>
+</details>
 
 Source: <https://www.freecodecamp.org/news/compiled-versus-interpreted-languages/>
 
 ### What is the name of JavaScript scripting language specification called?
 
-**Interview Answer:** ECMAscript with a reference guide named ECMA-262.
+<details>
+  <summary>
+    <strong>View Answer:</strong>
+  </summary>
+  <div>
+    <div>
+      <strong>Interview Response:</strong>ECMAscript with a reference guide
+      named ECMA-262.
+    </div>
+  </div>
+</details>
 
 Source: https://www.freecodecamp.org/news/whats-the-difference-between-javascript-and-ecmascript-cba48c73a2b5/
 
 ### Why is it called JavaScript?
 
-**Interview Answer:** JavaScript was originally named “LiveScript”, but because of the popularity of Java. It was renamed too JavaScript as a play on the notoriety of the Java programming language, but they are considerably different. JavaScript is a high-level programming language and Java is a mid-level programming language.
+<details>
+  <summary>
+    <strong>View Answer:</strong>
+  </summary>
+  <div>
+    <div>
+      <strong>Interview Response:</strong> JavaScript was originally named
+      “LiveScript”, but because of the popularity of Java. It was renamed too
+      JavaScript as a play on the notoriety of the Java programming language,
+      but they are considerably different. JavaScript is a high-level
+      programming language and Java is a mid-level programming language.
+    </div>
+  </div>
+</details>
 
 Source: <https://javascript.info/intro#what-is-javascript>
 
 ### What environments can JavaScript be developed on?
 
-**Interview Answer:** JavaScript works in any environment that has a JS engine.
-
-**Technical Answer:** Today, JavaScript can execute not only in the browser, but also on the server, or on any device that has a special program called the JavaScript engine.
+<details>
+  <summary>
+    <strong>View Answer:</strong>
+  </summary>
+  <div>
+    <div>
+      <strong>Interview Response:</strong> JavaScript works in any environment
+      that has a JS engine.
+    </div>
+    <br />
+    <div>
+      <strong>Technical Response:</strong> Today, JavaScript can execute not
+      only in the browser, but also on the server, or on any device that has a
+      special program called the JavaScript engine.
+    </div>
+  </div>
+</details>
 
 Source: <https://javascript.info/intro#what-is-javascript>
 
@@ -68,21 +149,38 @@ Source: <https://javascript.info/intro#what-is-javascript>
 
 ### Why is it good to remember codenames for different JavaScript Engines?
 
-**Interview Answer:** It is good to remember the names of engines to ensure features work in all environments. If not, we must write a polyfill.
-
-**Technical Answer:** The codenames are good to remember because they are used in developer articles on the internet. For instance, if “a feature X is supported by V8”, then it probably works in Chrome and Opera.
+<details>
+  <summary>
+    <strong>View Answer:</strong>
+  </summary>
+  <div>
+    <div>
+      <strong>Interview Response:</strong> It is good to remember the names of
+      engines to ensure features work in all environments. If not, we must write
+      a polyfill.
+    </div>
+    <br />
+    <div>
+      <strong>Technical Response:</strong> The codenames are good to remember
+      because they are used in developer articles on the internet. For instance,
+      if “a feature X is supported by V8”, then it probably works in Chrome and
+      Opera.
+    </div>
+  </div>
+</details>
 
 Source: <https://javascript.info/intro#what-is-javascript>
 
 ### What can in-browser JavaScript do?
 
-**Interview Answer:** In-browser JavaScript can do everything related to webpage like manipulation, interaction with the user, and the webserver.
-
-**Technical Answer:** JavaScript’s capabilities greatly depend on the environment it is running in. For instance, Node.js supports functions that allow JavaScript to read/write arbitrary files, perform network requests, etc.
-
-In-browser JavaScript can do everything related to webpage manipulation, interaction with the user, and the webserver.
-
-**For instance, in-browser JavaScript can:**
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong>  In-browser JavaScript can do everything related to webpage like manipulation, interaction with the user, and the webserver.</div><br />
+  <div><strong>Technical Response:</strong> JavaScript’s capabilities greatly depend on the environment it is running in. For instance, Node.js supports functions that allow JavaScript to read/write arbitrary files, perform network requests, etc.</div>
+  </div><br/>
+ ::: 
+ <strong>For instance, in-browser JavaScript can:</strong>
 
 1. Change the existing content, add HTML, and add styles to the page.
 1. React to user actions, run on mouse clicks, pointer movements, key presses.
@@ -90,13 +188,21 @@ In-browser JavaScript can do everything related to webpage manipulation, interac
 1. Get and set cookies, ask questions to the visitor, show messages.
 1. Remember the data on the client-side (“local storage”).
 
+:::
+
+</details>
+
 Source: <https://javascript.info/intro#what-can-in-browser-javascript-do>
 
 ### What CAN’T in-browser JavaScript do and why?
 
-**Interview Answer:** In the browser, JavaScript's abilities are limited to ensure a user's safety. The aim is to prevent a malicious website from accessing user’s data or harming them.
-
-**Technical Answer:** JavaScript’s abilities in the browser are limited for the sake of the user’s safety. The aim is to prevent an evil webpage from accessing private information or harming the user’s data.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In the browser, JavaScript's abilities are limited to ensure a user's safety. The aim is to prevent a malicious website from accessing user’s data or harming them.</div><br />
+  <div><strong>Technical Response:</strong> JavaScript’s abilities in the browser are limited for the sake of the user’s safety. The aim is to prevent an evil webpage from accessing private information or harming the user’s data.</div>
+  </div>
+</details>
 
 **Examples of such restrictions include:**
 
@@ -114,36 +220,35 @@ Source: <https://javascript.info/intro#what-can-t-in-browser-javascript-do>
 
 ### What makes JavaScript unique?
 
-**Interview Answer:** JavaScript is unique because it has full integration with HTML, CSS and it is supported by all major browsers.\*\*
-
-**Technical Answer:** There are at least three great things about JavaScript:
-
-1. Full integration with HTML/CSS.
-1. Simple things are done simply.
-1. Support by all major browsers and enabled by default.
-
-JavaScript is the only browser technology that combines these three things. That is what makes JavaScript unique. That is why it is the most widespread tool for creating browser interfaces.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> JavaScript is unique because it has full integration with HTML, CSS and it is supported by all major browsers.</div><br />
+  <div><strong>Technical Response:</strong> There are at least three great things about JavaScript including full integration with HTML/CSS, simple things are done simply, and support by all major browsers and enabled by default. JavaScript is the only browser technology that combines these three things. That is what makes JavaScript unique. That is why it is the most widespread tool for creating browser interfaces.</div>
+  </div>
+</details>
 
 Source: <https://javascript.info/intro#what-makes-javascript-unique>
 
 ### Name some modern alternative languages that convert to JavaScript?
 
-**Interview Answer:** Some of the alternatives to JavaScript include Coffee Script, Type Script, Flow, Brython, Dart and Kotlin.
-
-**Technical Answer:** There are several popular languages, which are trans-piled (converted) to JavaScript before they run in the browser.
-
-**Examples of such languages:**
-
-1. **CoffeeScript** is a “syntactic sugar” for JavaScript. It introduces shorter syntax, allowing us to write clearer and more precise code. Usually, Ruby devs like it.
-
-1. **TypeScript** is concentrated on adding “strict data typing” to simplify the development and support of complex systems. It is developed by Microsoft.
-
-1. **Flow** also adds data typing, but in a different way. Developed by Facebook.
-
-1. **Dart** is a standalone language that has its engine that runs in non-browser environments (like mobile apps) but also can be converted to JavaScript. Developed by Google.
-
-1. **Brython** is a Python transpiler to JavaScript that enables the writing of applications in pure Python without JavaScript.
-
-1. **Kotlin** is a modern, concise and safe programming language that can target the browser or Node.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Some of the alternatives to JavaScript include Coffee Script, Type Script, Flow, Brython, Dart and Kotlin.</div><br />
+  <div><strong>Technical Response:</strong> There are several popular languages, which are trans-piled (converted) to JavaScript before they run in the browser.
+  </div><br />
+  <div><strong>Examples of such languages:</strong><br /><br />
+  <ol>
+  <li>CoffeeScript is a “syntactic sugar” for JavaScript. It introduces shorter syntax, allowing us to write clearer and more precise code. Usually, Ruby devs like it.</li>
+   <li>TypeScript is concentrated on adding “strict data typing” to simplify the development and support of complex systems. It is developed by Microsoft.</li>
+    <li>Flow also adds data typing, but in a different way. Developed by Facebook.</li>
+     <li>Dart is a standalone language that has its engine that runs in non-browser environments (like mobile apps) but also can be converted to JavaScript. Developed by Google.</li>
+      <li>Brython is a Python transpiler to JavaScript that enables the writing of applications in pure Python without JavaScript.</li>
+       <li>Kotlin is a modern, concise and safe programming language that can target the browser or Node.</li>
+  </ol>
+  </div>
+  </div>
+</details>
 
 Source: <https://javascript.info/intro#languages-over-javascript>

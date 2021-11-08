@@ -14,9 +14,15 @@ sidebar_position: 2
 
 ### Define what a statement is in JavaScript code structure?
 
-**Interview Answer:** Statements are syntax constructs and commands that perform actions. Usually, statements are written on separate lines to make the code more readable.
-
-**Technical Answer:** Statements are used in JavaScript to control its program flow. Unlike properties, methods, and events, which are fundamentally tied to the object that owns them, statements are designed to work independently of any JavaScript object.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Statements are syntax constructs and commands that perform actions. Usually, statements are written on separate lines to make the code more readable.
+  </div><br />
+  <div><strong>Technical Response:</strong> Statements are used in JavaScript to control its program flow. Unlike properties, methods, and events, which are fundamentally tied to the object that owns them, statements are designed to work independently of any JavaScript object.
+  </div>
+  </div>
+</details>
 
 Code Example:
 
@@ -41,9 +47,14 @@ Source: <https://javascript.info/structure#statements>
 
 ### How are statements separated in JavaScript?
 
-**Answer:** Statements are separated in JavaScript with the implementation of a semi-colon.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong>  Statements are separated in JavaScript with the implementation of a semi-colon.</div>
+  </div>
+</details>
 
-Example:
+Code Example:
 
 ```js
 alert('Hello');
@@ -54,9 +65,14 @@ Source: <https://javascript.info/structure#semicolon>
 
 ### Can semi-colons be omitted in JavaScript?
 
-**Interview Answer:** Yes, but it is not recommended.
-
-**Answer:** Yes, but it is not considered good code etiquette and should not be done. JavaScript interprets the line break as an “implicit” semicolon. This is called an automatic semicolon insertion.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, but it is not recommended.</div><br />
+  <div><strong>Technical Response:</strong> Yes, but it is not considered good code etiquette and should not be done. JavaScript interprets the line break as an “implicit” semicolon. This is called an automatic semicolon insertion.
+  </div>
+  </div>
+</details>
 
 Code Example:
 
@@ -69,9 +85,14 @@ Source: <https://javascript.info/structure#semicolon>
 
 ### Does JavaScript always interpret line breaks as the end of a statement?
 
-**Interview Answer:** There are cases when a newline does not mean a semicolon and may result in an error.
-
-**Technical Answer:** There are cases when a newline does not mean a semicolon and may result in an error. The recommendation is to put semicolons between statements even if they are separated by newlines. This rule is widely adopted by the JavaScript community.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> There are cases when a newline does not mean a semicolon and may result in an error.</div><br />
+  <div><strong>Technical Response:</strong> There are cases when a newline does not mean a semicolon and may result in an error. The recommendation is to put semicolons between statements even if they are separated by newlines. This rule is widely adopted by the JavaScript community.
+  </div>
+  </div>
+</details>
 
 Code Example:
 
@@ -94,9 +115,14 @@ Source: <https://javascript.info/structure#semicolon>
 
 ### How are single-line comments created in JavaScript?
 
-**Interview Answer:** Single-line comments start with two forward slash characters //.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Single-line comments start with two forward slash characters //.</div>
+  </div>
+</details>
 
-Example:
+Code Example:
 
 ```js
 // This comment occupies a line of its own.
@@ -110,9 +136,14 @@ Source: <https://javascript.info/structure#code-comments>
 
 ### How are multi-line comments created in JavaScript?
 
-**Interview Answer:** Multiline comments start with a forward slash and an asterisk /\* and end with an asterisk and a forward slash \*/.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Multiline comments start with a forward slash and an asterisk /* and end with an asterisk and a forward slash */.</div>
+  </div>
+</details>
 
-Example:
+Code Example:
 
 ```js
 /*
@@ -129,7 +160,12 @@ Source: <https://javascript.info/structure#code-comments>
 
 ### Are nested comments supported in JavaScript?
 
-**Interview Answer:** No, nested comments are not supported. It will result in a syntax error.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> No, nested comments are not supported. It will result in a syntax error.</div>
+  </div>
+</details>
 
 Example:
 

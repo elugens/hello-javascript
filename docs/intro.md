@@ -28,7 +28,7 @@ In this part of the interview process, you will be asked more specific questions
 
 ### Our Goal
 
-Our goal is to help you answer the most basic JavaScript questions by providing you with both the questions and the answers. We'll also provide you with a series of JavaScript questions that you can use to test your knowledge.
+Our goal is to help you answer the most basic JavaScript questions by providing you with both the questions and the answers. We'll also provide you with a series of JavaScript interview questions that you can use to test your knowledge.
 
 <hr/>
 

@@ -14,17 +14,23 @@ sidebar_position: 1
 
 ### What is the “script” tag used for in JavaScript?
 
-**Interview Answer:** We can use the script tag to insert JS into HTML or import scripts from external sources.
-
-**Technical Answer:** The script tag is used for inserting JavaScript almost anywhere into an HTML document. The script tag can also be used to import scripts from external file sources using the source attribute.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> We can use the script tag to insert JS into HTML or import scripts from external sources.</div><br />
+  <div><strong>Technical Response:</strong> The script tag is used for inserting JavaScript almost anywhere into an HTML document. The script tag can also be used to import scripts from external file sources using the source attribute.
+  </div><br />
+  <div><strong>Additional Information:</strong> Most browser developer tools can be open using F12 on Windows, but Chrome for Mac needs Cmd+Opt+J, Safari: Cmd+Opt+C (need to enable first).
+  </div>
+  </div>
+</details>
 
 **Code Example:**
 
 ```js
 <script src="/path/to/script.js"></script>
 
-External URL:
-
+// External URL example:
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js"></script>
 ```
 

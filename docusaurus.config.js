@@ -5,6 +5,7 @@ const lightCodeTheme = require('prism-react-renderer/themes/vsDark');
 const darkCodeTheme = require('prism-react-renderer/themes/nightOwl');
 
 /** @type {import('@docusaurus/types').Config} */
+
 const config = {
   title: 'Pass Your Next Front-end Phone Interview',
   tagline: 'A Complete Archive of JavaScript Interview Questions and Answers',
@@ -27,9 +28,18 @@ const config = {
           editUrl: 'https://github.com/elugens/hello-javascript/edit/main/',
         },
         blog: {
+          blogTitle: 'Hello, JavaScript!',
+          blogDescription: 'HelloJavaScript Blog Posts',
+          postsPerPage: 'ALL',
           showReadingTime: true,
           // Please change this to your repo.
           editUrl: 'https://github.com/elugens/hello-javascript/edit/main/',
+          feedOptions: {
+            type: 'all',
+            copyright: `Copyright © ${new Date().getFullYear()} Hello JavaScript.`,
+          },
+          blogSidebarTitle: 'All Posts',
+          blogSidebarCount: 'ALL',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -158,6 +168,10 @@ const config = {
               {
                 label: 'Tech Interview Handbook',
                 href: 'https://techinterviewhandbook.org/',
+              },
+              {
+                label: 'Site Map',
+                href: 'https://www.hellojavascript.info/sitemap.xml',
               },
             ],
           },

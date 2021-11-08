@@ -14,21 +14,36 @@ sidebar_position: 4
 
 ### What is the definition of a variable in JavaScript?
 
-**Interview Answer:** A variable is a “named storage” for data. We can use variables to store values, visitor information, and other data.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A variable is a “named storage” for data. We can use variables to store values, visitor information, and other data.</div>
+  </div>
+</details>
 
 Source: <https://javascript.info/variables#a-variable>
 
 ### What are the keywords used to declare a variable in JavaScript?
 
-**Interview Answer:** let, const and the “old” var.
-
-**Answer:** There are three variable declaration keywords used in JavaScript. They include let, const, and the “old var keyword”. In modern JavaScript, development let and const are recommended to optimize your application.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> let, const and the “old” var.</div><br />
+  <div><strong>Technical Response:</strong> There are three variable declaration keywords used in JavaScript. They include let, const, and the “old var keyword”. In modern JavaScript, development let and const are recommended to optimize your application.
+  </div>
+  </div>
+</details>
 
 Source: <https://javascript.info/variables#a-variable>
 
 ### Can you declare multiple variables on one line?
 
-**Interview Answer:** Yes, but it is not recommended, for the sake of readability and consistency.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, but it is not recommended, for the sake of readability and consistency.</div>
+  </div>
+</details>
 
 Code Example:
 
@@ -52,7 +67,12 @@ Source: <https://javascript.info/variables#a-variable>
 
 ### Is there a way to copy stored data from one variable to another?
 
-**Interview Answer:** Yes, declare two variables and copy data from one into the other. Better known as copy by reference.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, declare two variables and copy data from one into the other. Better known as copy by reference.</div>
+  </div>
+</details>
 
 Code Example:
 
@@ -75,7 +95,12 @@ Source: <https://javascript.info/variables#a-real-life-analogy>
 
 ### Does JavaScript allow you to change the value of a variable?
 
-**Interview Answer:** Yes, by declaring the variable equals the new value. A declaration of a const on a variable does not have this capability, because it’s a constant value.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, by declaring the variable equals the new value. A declaration of a const on a variable does not have this capability, because it’s a constant value.</div>
+  </div>
+</details>
 
 Code Example:
 
@@ -92,9 +117,14 @@ Source: <https://javascript.info/variables#a-real-life-analogy>
 
 ### Can you declare a variable twice in JavaScript?
 
-**Interview Answer:** No, it will result in a syntax error.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> No, it will result in a syntax error.</div>
+  </div>
+</details>
 
-Example:
+Code Example:
 
 ```js
 let message = 'This';
@@ -108,14 +138,14 @@ Source: <https://javascript.info/variables#a-real-life-analogy>
 
 ### What are the two limitations on variable names in JavaScript?
 
-**Interview Answer:** The variable must contain only letters, digits, dollar sign, or an underscore. The first character must not be a digit.
-
-**Technical Answer:**
-
-There are two limitations on variable names in JavaScript.
-
-1. The name must contain only letters, digits, or the symbols $ and \_.
-1. The first character must not be a digit.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The variable must contain only letters, digits, dollar sign, or an underscore. The first character must not be a digit.</div><br />
+  <div><strong>Technical Response:</strong> There are two limitations on variable names in JavaScript. The name must contain only letters, digits, or the symbols $ and _. The first character must not be a digit.
+  </div>
+  </div>
+</details>
 
 Examples of valid names:
 
@@ -139,7 +169,12 @@ Source: <https://javascript.info/variables#variable-naming>
 
 ### What stylization rule is used in naming multi-word variables?
 
-**Interview Answer:** When the name contains multiple words, camelCase is commonly used.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong>  When the name contains multiple words, camelCase is commonly used.</div>
+  </div>
+</details>
 
 Code Example:
 
@@ -151,7 +186,12 @@ Source: <https://javascript.info/variables#variable-naming>
 
 ### Does variable case matter in JavaScript?
 
-**Interview Answer:** Yes, variables named **myUser** and **myuser** are two different variables, because variables in JavaScript are case-sensitive.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong>  Yes, variables named myUser and myuser are two different variables, because variables in JavaScript are case-sensitive.</div>
+  </div>
+</details>
 
 Example:
 
@@ -163,11 +203,16 @@ Source: <https://javascript.info/variables#variable-naming>
 
 ### Are Non-Latin letters allowed in naming variables?
 
-**Interview Answer:** Yes, but it is not recommended.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, but it is not recommended.</div><br />
+  <div><strong>Technical Response:</strong> Yes, it is possible to use any language, including Cyrillic letters or even hieroglyphs, but it is not recommended.
+  </div>
+  </div>
+</details>
 
-**Technical Answer:** Yes, it is possible to use any language, including Cyrillic letters or even hieroglyphs, but it is not recommended.
-
-Example: Technically, this can be achieved, but it is not recommended.
+Code Example: Technically, this can be achieved, but it is not recommended.
 
 ```js
 let имя = '...';
@@ -179,9 +224,14 @@ Source: <https://javascript.info/variables#variable-naming>
 
 ### Is it possible to declare a variable without let, const, or the “Old var”?
 
-**Interview Answer:** Yes, it is possible outside of strict mode, but it is not recommended. It may be found in older applications.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, it is possible outside of strict mode, but it is not recommended. It may be found in older applications.</div>
+  </div>
+</details>
 
-Example: Technically, this can be achieved, but it is not recommended in modern JavaScript.
+Code Example: Technically, this can be achieved, but it is not recommended in modern JavaScript.
 
 ```js
 // note: no "use strict" in this example
@@ -194,15 +244,25 @@ Source: <https://javascript.info/variables#variable-naming>
 
 ### What is the difference between var and let in JavaScript?
 
-**Interview Answer:** The difference is that var is function scoped and let is block scoped. If it is used outside of a function, it is considered a global variable.
-
-**Technical Answer:** JavaScript var and let are both used for variable declaration, but the difference between them is that var is function scoped and let is block scoped. It can be said that a variable declared with var is defined throughout the program as compared to let.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The difference is that var is function scoped and let is block scoped. If it is used outside of a function, it is considered a global variable.</div><br />
+  <div><strong>Technical Response:</strong> JavaScript var and let are both used for variable declaration, but the difference between them is that var is function scoped and let is block scoped. It can be said that a variable declared with var is defined throughout the program as compared to let.
+  </div>
+  </div>
+</details>
 
 Source: <https://www.geeksforgeeks.org/difference-between-var-and-let-in-javascript/>
 
 ### Can you reassign a value in a variable declared with const?
 
-**Interview Answer:** No, it will result in a syntax error because constants cannot be reassigned.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> No, it will result in a syntax error because constants cannot be reassigned.</div>
+  </div>
+</details>
 
 Code Example:
 
@@ -216,7 +276,12 @@ Source: <https://javascript.info/variables#constants>
 
 ### When should you use a constant as an alias in JavaScript?
 
-**Interview Answer:** Aliases should be used for constant variable values that are hard to remember. They should use capital letters and underscores.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Aliases should be used for constant variable values that are hard to remember. They should use capital letters and underscores.</div>
+  </div>
+</details>
 
 Code Example: Hexadecimal Colors
 
@@ -240,36 +305,56 @@ Source: <https://javascript.info/variables#constants>
 
 ### What are the benefits of using a constant as an alias?
 
-**Interview Answer:** Aliases are easy to remember than numeric identifiers, like hexadecimal numbers.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Aliases are easy to remember than numeric identifiers, like hexadecimal numbers.</div>
+  </div>
+</details>
 
 Source: <https://javascript.info/variables#constants>
 
 ### When should we use capitals for a constant and when should we name it normally?
 
-**Interview Answer:** Capital-named constants are only used as aliases for “hard-coded” values.
-
-**Technical Answer:** When constants that are known before execution (like a hexadecimal value for red) and some constants are calculated in run-time, during the execution, but do not change after their initial assignment. In other words, capital-named constants are only used as aliases for “hard-coded” values.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Capital-named constants are only used as aliases for “hard-coded” values.</div><br />
+  <div><strong>Technical Response:</strong> When constants that are known before execution (like a hexadecimal value for red) and some constants are calculated in run-time, during the execution, but do not change after their initial assignment. In other words, capital-named constants are only used as aliases for “hard-coded” values.
+  </div>
+  </div>
+</details>
 
 Source: <https://javascript.info/variables#constants>
 
 ### What are some good rules when it comes to variable naming conventions?
 
-**Interview Answer:** A variable name should have a clean, obvious meaning, describing the data that it stores, like currentUser or newUser. A variable name should always be camelCase and begin with a noun, unlike functions.
-
-**Technical Answer:**
-
-Some good-to-follow rules are:
-
-1. Use human-readable names like userName or shoppingCart.
-1. Stay away from abbreviations or short names like a, b, c, unless you know what you’re doing (Ninja Coder – not a good way to write code).
-1. Make names maximally descriptive and concise. Examples of bad names are data and value. Such names say nothing. It is only okay to use them if the context of the code makes it exceptionally obvious which data or value the variable is referencing.
-1. Agree on terms within your team. If a site visitor is called a “user” then we should name related variables currentUser or newUser instead of currentVisitor or newManInTown.
-1. A variable name is always camelCase and should begin with a noun to differentiate variables from functions, which normally should begin with a verb.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Capital-named constants are only used as aliases for “hard-coded” values.</div><br />
+  <div><strong>Technical Response:</strong><br /><br />
+  Some good-to-follow rules are: <br /><br />
+    <ol>
+      <li>Use human-readable names like userName or shoppingCart.</li>
+      <li>Stay away from abbreviations or short names like a, b, c, unless you know what you’re doing (Ninja Coder – not a good way to write code).</li>
+      <li>Make names maximally descriptive and concise. Examples of bad names are data and value. Such names say nothing. It is only okay to use them if the context of the code makes it exceptionally obvious which data or value the variable is referencing.</li>
+      <li>Agree on terms within your team. If a site visitor is called a “user” then we should name related variables currentUser or newUser instead of currentVisitor or newManInTown.</li>
+      <li>A variable name is always camelCase and should begin with a noun to differentiate variables from functions, which normally should begin with a verb.</li>
+      </ol>
+  </div>
+  </div>
+</details>
 
 Source: <https://javascript.info/variables#name-things-right>
 
 ### What differentiates variable and function naming conventions?
 
-**Interview Answer:** A variable name is always camelCase and should begin with a noun to differentiate variables from functions, which normally should begin with a verb.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A variable name is always camelCase and should begin with a noun to differentiate variables from functions, which normally should begin with a verb.</div>
+  </div>
+</details>
 
 Source: <https://javascript.info/variables#constants>
