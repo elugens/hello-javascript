@@ -14,7 +14,13 @@ sidebar_position: 15
 
 ### What are the SEVEN types of functions in JavaScript?
 
-**Interview Answer:** The seven types of functions include the function declaration, function expression, arrow function, shorthand methods, generators, constructor functions, and JS built-in methods.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The seven types of functions include the function declaration, function expression, arrow function, shorthand methods, generators, constructor functions, and JS built-in methods.
+</div>
+  </div>
+</details>
 
 Code Examples:
 
@@ -79,11 +85,16 @@ Addition: <https://dev.to/jaamaal/different-type-of-function-in-javascript-364l>
 
 ### What is the definition of a JavaScript Function?
 
-**Interview Answer:** A JavaScript function is a callable block of code designed to perform a particular task.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A JavaScript function is a callable block of code designed to perform a particular task.</div><br />
+  <div><strong>Technical Response:</strong> Functions are one of the fundamental building blocks in JavaScript. A function is a JavaScript procedure — a set of statements that performs a task or calculates a value. To use a function, you must define it somewhere in the scope from which you wish to call it.<br /><br />
+  </div>
+  </div>
+</details>
 
-**Technical Answer:** Functions are one of the fundamental building blocks in JavaScript. A function is a JavaScript procedure — a set of statements that performs a task or calculates a value. To use a function, you must define it somewhere in the scope from which you wish to call it.
-
-Example:
+Code Example:
 
 ```js
 function square(x) {
@@ -95,11 +106,17 @@ square(10); // returns 100
 
 Source: <https://javascript.info/function-basics>
 
-### Describe the basic structure of a JavaScript function declaration?\*\*
+### Describe the basic structure of a JavaScript function declaration?
 
-**Interview Answer:** A function declaration starts first with declaring the function keyword, then the function name, followed by a list of parameters between paratheses (comma-separated, or no parameters are okay) and finally the function body (code) inside of the curly brackets.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A function declaration starts first with declaring the function keyword, then the function name, followed by a list of parameters between paratheses (comma-separated, or no parameters are okay) and finally the function body (code) inside of the curly brackets.
+</div>
+  </div>
+</details>
 
-Example:
+Code Example:
 
 ```js
 function name(parameters) {
@@ -111,9 +128,14 @@ Source: <https://javascript.info/function-basics#function-declaration>
 
 ### What is one of the main purposes of JavaScript functions?
 
-**Interview Answer:** The main purpose of JS functions is to avoid code duplication.
-
-**Technical Answer:** The main purpose of functions is to avoid code duplication. If we ever need to change the message or the way it is shown, it is enough to modify the code in one place based on the function which outputs it.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The main purpose of JS functions is to avoid code duplication.</div><br />
+  <div><strong>Technical Response:</strong> The main purpose of functions is to avoid code duplication. If we ever need to change the message or the way it is shown, it is enough to modify the code in one place based on the function which outputs it.<br /><br />
+  </div>
+  </div>
+</details>
 
 Example:
 
@@ -130,9 +152,15 @@ Source: <https://javascript.info/function-basics#function-declaration>
 
 ### Is there a limitation on variables declared inside a function?
 
-**Interview Answer:** Yes, they are only visible within the scope of the function and cannot be accessed from outside it.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, they are only visible within the scope of the function and cannot be accessed from outside it.
+</div>
+  </div>
+</details>
 
-Example:
+Code Example:
 
 ```js
 function showMessage() {
@@ -148,9 +176,14 @@ Source: <https://javascript.info/function-basics#local-variables>
 
 ### Can functions access variables outside the function body?
 
-**Interview Answer:** Functions can access top level variables, variables inside of the function, and variables inside of a function that they are being called.
-
-**Technical Answer:** Global or variables outside of are accessible by functions because it is within its lexical scope. The function can also modify it as well. Functions also can access variables inside a function or the scope they are called.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Functions can access top level variables, variables inside of the function, and variables inside of a function that they are being called.</div><br />
+  <div><strong>Technical Response:</strong> Global or variables outside of are accessible by functions because it is within its lexical scope. The function can also modify it as well. Functions also can access variables inside a function or the scope they are called.<br /><br />
+  </div>
+  </div>
+</details>
 
 Example:
 
@@ -173,21 +206,38 @@ Source: <https://javascript.info/function-basics#outer-variables>
 
 ### What is a Global variable?
 
-**Interview Answer:** Variables declared outside of any function or code block are called global. Global variables are visible from any function (unless shadowed by locals).
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Variables declared outside of any function or code block are called global. Global variables are visible from any function (unless shadowed by locals).
+</div>
+  </div>
+</details>
 
 Source: <https://javascript.info/function-basics#outer-variables>
 
 ### What is the Modern JavaScript rule for using Global Variables?
 
-**Interview Answer:** It is a good practice to minimize the use of global variables. Modern code has few or no global variables.
-
-**Technical Answer:** It is a good practice to minimize the use of global variables. Modern code has few or no global variables. Most variables reside in their functions. Sometimes though, they can be useful to store project-level data.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It is a good practice to minimize the use of global variables. Modern code has few or no global variables.</div><br />
+  <div><strong>Technical Response:</strong> It is a good practice to minimize the use of global variables. Modern code has few or no global variables. Most variables reside in their functions. Sometimes though, they can be useful to store project-level data.<br /><br />
+  </div>
+  </div>
+</details>
 
 Source: <https://javascript.info/function-basics#outer-variables>
 
 ### Explain, how a parameter is used in functions.
 
-**Interview Answer:** Parameters (function arguments) are used to pass arbitrary data to functions.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Parameters (function arguments) are used to pass arbitrary data to functions.
+</div>
+  </div>
+</details>
 
 Example:
 
@@ -206,7 +256,13 @@ Source: <https://javascript.info/function-basics#parameters>
 
 ### What happens when a function parameter is not provided?
 
-**Answer:** If a parameter (function argument) and it has no default. The value becomes undefined.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> If a parameter (function argument) and it has no default. The value becomes undefined.
+</div>
+  </div>
+</details>
 
 Example:
 

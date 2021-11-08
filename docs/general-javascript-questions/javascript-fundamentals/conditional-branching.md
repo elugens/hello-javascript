@@ -14,9 +14,14 @@ sidebar_position: 10
 
 ### Can you execute more than one statement in an if statement?
 
-**Interview Answer:** Yes, but they will have to be wrapped in curly braces {}. This improves readability and is recommended, even if there is only one statement to execute.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, but they will have to be wrapped in curly braces {}. This improves readability and is recommended, even if there is only one statement to execute.</div>
+  </div>
+</details>
 
-Example:
+Code Example:
 
 ```js
 if (year == 2015) {
@@ -29,15 +34,25 @@ Source: <https://javascript.info/ifelse#the-if-statement>
 
 ### What type of conversion does the JavaScript “if” statement used?
 
-**Answer:** The if (…) statement evaluates the expression in its parentheses and converts the result to a Boolean value of true or false.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The if (…) statement evaluates the expression in its parentheses and converts the result to a Boolean value of true or false.</div>
+  </div>
+</details>
 
 Source: <https://javascript.info/ifelse#boolean-conversion>
 
 ### Can you pre-evaluate a condition for use in an if statement?
 
-**Interview Answer:** Yes, we can pass a pre-evaluated condition in a value to an if statement.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, we can pass a pre-evaluated condition in a value to an if statement.</div>
+  </div>
+</details>
 
-Example:
+Code Example:
 
 ```js
 let cond = year == 2015; // equality evaluates to true or false
@@ -50,11 +65,16 @@ Source: <https://javascript.info/ifelse#boolean-conversion>
 
 ### Is there a way to handle falsie conditions in an if statement?
 
-**Interview Answer:** We can use an if else statement to handle false conditions.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> We can use an if else statement to handle false conditions.</div><br />
+  <div><strong>Technical Response:</strong> Yes, the “if” statement may contain an optional “else” block. It executes when the condition is falsie.
+  </div>
+  </div>
+</details>
 
-**Technical Answer:** Yes, the “if” statement may contain an optional “else” block. It executes when the condition is falsie.
-
-Example:
+Code Example:
 
 ```js
 let year = prompt('In which year was the ECMAScript-2015 published?', '');
@@ -70,9 +90,14 @@ Source: <https://javascript.info/ifelse#the-else-clause>
 
 ### If, you have several conditions you would like to test. What conditional statement do you have to use with an if statement?
 
-**Interview Answer:** To test several conditions in an if statement you will have to add an “else if” statement. There can be more than one else if block. The final else is optional.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> To test several conditions in an if statement you will have to add an “else if” statement. There can be more than one else if block. The final else is optional.</div>
+  </div>
+</details>
 
-Example:
+Code Example:
 
 ```js
 let year = prompt('In which year was the ECMAScript-2015  published?', '');
@@ -90,9 +115,14 @@ Source: <https://javascript.info/ifelse#several-conditions-else-if>
 
 ### Can you assign a variable depending on a condition in an if statement?
 
-**Answer:** Yes, you can assign a variable depending on a condition in an if statement.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, you can assign a variable depending on a condition in an if statement.</div>
+  </div>
+</details>
 
-Example:
+Code Example:
 
 ```js
 let accessAllowed;
@@ -112,11 +142,16 @@ Source: <https://javascript.info/ifelse#conditional-operator>
 
 ### Is there a shorthand version of the if statement that you can use in JavaScript?
 
-**Interview Answer:** We can use the ternary operator shorthand syntax.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> We can use the ternary operator shorthand syntax.</div><br />
+  <div><strong>Technical Response:</strong> Yes, the condition/ternary (?) operator can be used to shorten the implementation of a conditional statement.
+  </div>
+  </div>
+</details>
 
-**Technical Answer:** Yes, the condition/ternary (?) operator can be used to shorten the implementation of a conditional statement.
-
-Example:
+Code Example:
 
 ```js
 // the comparison operator "age > 18" executes first anyway

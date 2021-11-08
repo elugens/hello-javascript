@@ -14,17 +14,28 @@ sidebar_position: 14
 
 ### What are the benefits of using a Switch statement?
 
-**Interview Answer:** A switch statement can replace multiple if checks, it is more descriptive, and easier to read.
-
-**Technical Answer:** A switch statement can replace multiple if checks. It gives a more descriptive way to compare a value with multiple variants and it is easier to read.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A switch statement can replace multiple if checks, it is more descriptive, and easier to read.</div><br />
+  <div><strong>Technical Response:</strong> A switch statement can replace multiple if checks. It gives a more descriptive way to compare a value with multiple variants and it is easier to read.<br /><br />
+  </div>
+  </div>
+</details>
 
 Source: <https://javascript.info/switch>
 
 ### How does the Switch statement work?
 
-**Interview Answer:** The switch statement works by checking the initial value against the case values. If the initial value equals one of the case values, then it stops. A default value is used if the case is not found to equal the initial value.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The switch statement works by checking the initial value against the case values. If the initial value equals one of the case values, then it stops. A default value is used if the case is not found to equal the initial value.
+</div>
+  </div>
+</details>
 
-Syntax:
+Code Example: Syntax
 
 ```js
 switch(x) {
@@ -54,9 +65,15 @@ Source: <https://javascript.info/switch#the-syntax>
 
 ### Do you have to use the break directive in the Switch statement?
 
-**Interview Answer:** No, but caution should be used because the execution continues with the next case without any checks. It is recommended that we use a break statement.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> No, but caution should be used because the execution continues with the next case without any checks. It is recommended that we use a break statement.
+</div>
+  </div>
+</details>
 
-An example without break:
+Code Example: An example without break
 
 ```js
 let a = 2 + 2;
@@ -88,9 +105,15 @@ Source: <https://javascript.info/switch#an-example>
 
 ### Can you use expressions in switch/case arguments?
 
-**Interview Answer:** Yes, both switch and case allow arbitrary expressions.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, both switch and case allow arbitrary expressions.
+</div>
+  </div>
+</details>
 
-Example:
+Code Example:
 
 ```js
 let a = '1';
@@ -140,9 +163,15 @@ Source: <https://javascript.info/switch#an-example>
 
 ### Can you group switch cases as variant options?
 
-**Interview Answer:** Yes, several variants of the case which share the same return code can be grouped.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, several variants of the case which share the same return code can be grouped.
+</div>
+  </div>
+</details>
 
-For example, if we want the same code to run for case 3 and case 5:
+Code Example: if we want the same code to run for case 3 and case 5:
 
 ```js
 let a = 3;
@@ -170,9 +199,15 @@ Source: <https://javascript.info/switch#grouping-of-case>
 
 ### Does a switch statement have a strict equality check on value matching?
 
-**Interview Answer:** Yes, the values must be of the same data type to match. The case value that does not, will not execute.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, the values must be of the same data type to match. The case value that does not, will not execute.
+</div>
+  </div>
+</details>
 
-Example:
+Code Example:
 
 ```js
 let arg = prompt('Enter a value?');
