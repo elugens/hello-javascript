@@ -14,17 +14,29 @@ sidebar_position: 1
 
 ### What are the seven (7) primitive JavaScript data types?
 
-**Interview Answer:** String, Symbol, Boolean, BigInt, number, null, and undefined.
-
-**Answer:** There are 7 primitive data types that include the string, number, bigint, Boolean, undefined, symbol, and null data types. Most of the time, a primitive value is represented directly at the lowest level of the language implementation.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> String, Symbol, Boolean, BigInt, number, null, and undefined.</div><br />
+  <div><strong>Technical Response:</strong> There are 7 primitive data types that include the string, number, bigint, Boolean, undefined, symbol, and null data types. Most of the time, a primitive value is represented directly at the lowest level of the language implementation.<br /><br />
+  </div>
+  </div>
+</details>
 
 Source: <https://developer.mozilla.org/en-US/docs/Glossary/Primitive>
 
 ### What are the five (5) primitive wrapper objects in JavaScript?
 
-**Interview Answer:** String, Symbol, BigInt, Boolean, and Number.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> String, Symbol, BigInt, Boolean, and Number.</div><br />
+  <div><strong>Technical Response:</strong> There are 5 primitive wrapper objects that include the String, Number, BigInt, Boolean, and Symbol.<br /><br />
+  </div>
+  </div>
+</details>
 
-**Answer:** There are 5 primitive wrapper objects that include the String, Number, BigInt, Boolean, and Symbol.
+Code Example:
 
 ```js
 let language = 'JavaScript';
@@ -49,9 +61,15 @@ Source: <https://developer.mozilla.org/en-US/docs/Glossary/Primitive>
 
 ### Why isn’t an Object a primitive data type?
 
-**Answer:** A primitive data type has only a single value. Objects on the other hand can contain more than one value stored in collections and more complex structures.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A primitive data type has only a single value. Objects on the other hand can contain more than one value stored in collections and more complex structures.
+</div>
+  </div>
+</details>
 
-Example:
+Code Example:
 
 ```js
 // String primitive
@@ -69,9 +87,15 @@ Source: <https://javascript.info/types>
 
 ### Can an object store a function as a property?
 
-**Interview Answer:** Yes, a function can be used as a property of an object. It is more commonly called an object method.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, a function can be used as a property of an object. It is more commonly called an object method.
+</div>
+  </div>
+</details>
 
-Example:
+Code Example:
 
 ```js
 let john = {
@@ -89,11 +113,16 @@ Source: <https://javascript.info/primitives-methods>
 
 ### Does a primitive remain a primitive or return a primitive value when you use it in conjunction with one of its methods?
 
-**Interview Answer:** Yes, a primitive remains a primitive regardless of what method is called on it.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, a primitive remains a primitive regardless of what method is called on it.</div><br />
+  <div><strong>Technical Response:</strong> Yes, a primitive remains a primitive. For instance, there exists a string method `str.toUpperCase()` that returns a capitalized string. The type of the returned value remains a string.<br /><br />
+  </div>
+  </div>
+</details>
 
-**Technical Answer:** Yes, a primitive remains a primitive. For instance, there exists a string method `str.toUpperCase()` that returns a capitalized string. The type of the returned value remains a string.
-
-Example:
+Code Example:
 
 ```js
 let str = 'Hello';
@@ -105,11 +134,16 @@ Source: <https://javascript.info/primitives-methods#a-primitive-as-an-object>
 
 ### Some languages like Java allow us to explicitly create “wrapper objects” for primitives using a syntax like new Number(1) or new Boolean(false). Is this a best practice in JavaScript?
 
-**Interview Answer:** Technically, using the “new” syntax can be done, but it is not recommended because it will return an object and not the primitive value as intended.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Technically, using the “new” syntax can be done, but it is not recommended because it will return an object and not the primitive value as intended.</div><br />
+  <div><strong>Technical Response:</strong> Technically this can be done in JavaScript, but it is not recommended based on the specifications. There are several unintended consequences of using this practice and it should be avoided. A best practice is to use Number and Boolean object wrappers without the new operator.<br /><br />
+  </div>
+  </div>
+</details>
 
-**Technical Answer:** Technically this can be done in JavaScript, but it is not recommended based on the specifications. There are several unintended consequences of using this practice and it should be avoided. A best practice is to use Number and Boolean object wrappers without the new operator.
-
-Example:
+Code Example:
 
 ```js
 alert(typeof 0); // "number"
@@ -133,9 +167,15 @@ Source: <https://javascript.info/primitives-methods#a-primitive-as-an-object>
 
 ### Do the null and undefined primitive data types have methods?
 
-**Interview Answer:** No, they are considered the most primitive data types of all. They both have no wrapper objects and do not provide any methods.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> No, they are considered the most primitive data types of all. They both have no wrapper objects and do not provide any methods.
+</div>
+  </div>
+</details>
 
-Example:
+Code Example:
 
 ```js
 alert('Hello'.test); // return undefined, but shows no error

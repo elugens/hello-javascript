@@ -279,9 +279,15 @@ Source: <https://javascript.info/function-basics#default-values>
 
 ### How is a default function parameter evaluated in JavaScript?
 
-**Answer:** In JavaScript, a default parameter is evaluated every time the function is called without the respective parameter.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In JavaScript, a default parameter is evaluated every time the function is called without the respective parameter.
+</div>
+  </div>
+</details>
 
-Example:
+Code Example:
 
 ```js
 function showMessage(from, text = anotherFunction()) {
@@ -294,11 +300,16 @@ Source: <https://javascript.info/function-basics#default-values>
 
 ### Is there a way to check for an omitted function parameter and return a new value?
 
-**Interview Answer:** We can use a conditional statement using the strict equality or logical OR to check for the omitted parameter.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> We can use a conditional statement using the strict equality or logical OR to check for the omitted parameter.</div><br />
+  <div><strong>Technical Response:</strong> Yes, you can run a conditional statement or check in the function body. The most common way to do this is a conditional if statement or by simply using the logical || OR operator. Modern JavaScript engines support the nullish coalescing operator ??, it’s better when falsie values, such as 0, are considered regular.<br /><br />
+  </div>
+  </div>
+</details>
 
-**Technical Answer:** Yes, you can run a conditional statement or check in the function body. The most common way to do this is a conditional if statement or by simply using the logical || OR operator. Modern JavaScript engines support the nullish coalescing operator ??, it’s better when falsie values, such as 0, are considered regular.
-
-Example:
+Code Example:
 
 ```js
 function showMessage(text) {
@@ -329,11 +340,16 @@ Source: <https://javascript.info/function-basics#alternative-default-parameters>
 
 ### Can you implement multiple occurrences of the return statement in a single function?
 
-**Interview Answer:** We can use a conditional statement to handle multiple return statements, but this is not the recommended approach.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> We can use a conditional statement to handle multiple return statements, but this is not the recommended approach.</div><br />
+  <div><strong>Technical Response:</strong> Yes, you can implement multiple occurrences of the return statement in a single function. There are better ways to implement code without multiple return statements, because it can reduce application performance.<br /><br />
+  </div>
+  </div>
+</details>
 
-**Technical Answer:** Yes, you can implement multiple occurrences of the return statement in a single function. There are better ways to implement code without multiple return statements, because it can reduce application performance.
-
-Example:
+Code Example:
 
 ```js
 function checkAge(age) {
@@ -357,9 +373,15 @@ Source: <https://javascript.info/function-basics#returning-a-value>
 
 ### Is it possible to use a return statement without a value?
 
-**Interview Answer:** Yes, we can use a return statement without a value. It is called an empty return statement. An empty return statement will exit a program and return undefined in the place it is called.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, we can use a return statement without a value. It is called an empty return statement. An empty return statement will exit a program and return undefined in the place it is called.
+</div>
+  </div>
+</details>
 
-Example:
+Code Example:
 
 ```js
 function showMovie(age) {
@@ -377,9 +399,15 @@ Source: <https://javascript.info/function-basics#returning-a-value>
 
 ### What does a return statement with an empty value output?
 
-**Interview Answer:** A function with an empty return or without it returns undefined.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A function with an empty return or without it returns undefined.
+</div>
+  </div>
+</details>
 
-Example:
+Code Example:
 
 ```js
 function doNothing() {
@@ -400,13 +428,22 @@ Source: <https://javascript.info/function-basics#returning-a-value>
 
 ### Caution should be used when using the return statement. What is the most important thing to remember when using a return statement?
 
-**Interview Answer:** The most important thing to remember when using the return statement is add a semi-colon and never add a newline between return and the value.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The most important thing to remember when using the return statement is add a semi-colon and never add a newline between return and the value.</div><br />
+  <div><strong>Technical Response:</strong> The most important thing to remember when using the return statement is add a semi-colon and never add a newline between return and the value.<br /><br />
+  </div>
+  </div>
+</details>
 
-**Technical Answer:** The most important thing to remember when using the return statement is add a semi-colon and never add a newline between return and the value.
+:::tip Hint:
 
-Hint: If you want the returned expression to wrap across multiple lines, we should start it at the same line as return. Or at least put the opening parentheses.
+If you want the returned expression to wrap across multiple lines, we should start it at the same line as return. Or at least put the opening parentheses.
 
-Example:
+:::
+
+Code Example:
 
 ```js
 return some + long + expression + or + whatever * f(a) + f(b);
@@ -416,13 +453,18 @@ Source: <https://javascript.info/function-basics#returning-a-value>
 
 ### What are good naming practices for function names?
 
-**Interview Answer:** Functions should start with a verb as an action word as prefix. For example, a function that returns a user’s name should use “getUserName()” as the function name.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Functions should start with a verb as an action word as prefix. For example, a function that returns a user’s name should use “getUserName()” as the function name.</div><br />
+  <div><strong>Technical Response:</strong> It is a widespread practice to start a function with a verbal prefix which vaguely describes the action. There must be an agreement within the team on the meaning of the prefixes. For example, functions that get something usually start with get like “getUserName()”.
+  </div><br />
+  <div> It should be brief, as accurate as possible and describe what the function does, so that someone reading the code gets an indication of what the function does.
+  </div>
+  </div>
+</details>
 
-**Technical Answer:** It is a widespread practice to start a function with a verbal prefix which vaguely describes the action. There must be an agreement within the team on the meaning of the prefixes. For example, functions that get something usually start with get like “getUserName()”.
-
-It should be brief, as accurate as possible and describe what the function does, so that someone reading the code gets an indication of what the function does.
-
-Examples:
+Code Example:
 
 ```js
 showMessage(..)     // shows a message
@@ -440,15 +482,27 @@ Source: <https://javascript.info/function-basics#function-naming>
 
 ### What are best practices for the creation of a function?
 
-**Answer:** A function should do exactly what is suggested by its name, no more. Two independent actions usually deserve two functions, even if they are usually called together (in that case we can make a 3rd function that calls those two).
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A function should do exactly what is suggested by its name, no more. Two independent actions usually deserve two functions, even if they are usually called together (in that case we can make a 3rd function that calls those two).
+</div>
+  </div>
+</details>
 
 Source: <https://javascript.info/function-basics#function-naming>
 
 ### Should there be a separation of the concerns in functions?
 
-**Answer:** Yes, it is particularly important to make every effort to apply separate actions in each function. Sometimes following this rule may not be that easy, but it is a good thing.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, it is particularly important to make every effort to apply separate actions in each function. Sometimes following this rule may not be that easy, but it is a good thing.
+</div>
+  </div>
+</details>
 
-Example 1: Show Prime Numbers using a label (No Separation)
+Code Example: Show Prime Numbers using a label (No Separation)
 
 ```js
 function showPrimes(n) {
@@ -462,7 +516,7 @@ function showPrimes(n) {
 }
 ```
 
-Example 2: Show Prime Numbers (Separation of Concerns using separate functions)
+Code Example: Show Prime Numbers (Separation of Concerns using separate functions)
 
 ```js
 function showPrimes(n) {

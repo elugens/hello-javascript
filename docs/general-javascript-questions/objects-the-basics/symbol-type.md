@@ -14,15 +14,27 @@ sidebar_position: 7
 
 ### What are the two types that object property keys in JavaScript?
 
-**Answer:** By specification, object property keys may be either of string or symbol type. Not numbers, not Booleans, only strings or symbols, these two types.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> By specification, object property keys may be either of string or symbol type. Not numbers, not Booleans, only strings or symbols, these two types.
+</div>
+  </div>
+</details>
 
 Source: <https://javascript.info/symbol>
 
 ### Explain, what is a Symbol is in JavaScript?
 
-**Answer:** The data type symbol is a primitive data type. The Symbol() object returns a value of type symbol, it has static properties that expose several members of built-in objects, it also has static methods that expose the global symbol registry, and resembles a built-in object class. A “symbol” represents a unique identifier.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The data type symbol is a primitive data type. The Symbol() object returns a value of type symbol, it has static properties that expose several members of built-in objects, it also has static methods that expose the global symbol registry, and resembles a built-in object class. A “symbol” represents a unique identifier.
+</div>
+  </div>
+</details>
 
-Example:
+Code Example:
 
 ```js
 let sym1 = Symbol();
@@ -38,15 +50,27 @@ Source: <https://javascript.info/symbol#symbols>
 
 ### Does the Symbol function get registered in the global symbol registry?
 
-**Answer:** No, the Symbol object does not create a global symbol that is available in your whole codebase. To create symbols available across files and even across realms (each of which has its own global scope), use the methods Symbol.for() and Symbol.keyFor() to set and retrieve symbols from the global symbol registry.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> No, the Symbol object does not create a global symbol that is available in your whole codebase. To create symbols available across files and even across realms (each of which has its own global scope), use the methods Symbol.for() and Symbol.keyFor() to set and retrieve symbols from the global symbol registry.
+</div>
+  </div>
+</details>
 
 Source: <https://javascript.info/symbol#symbols>
 
 ### Can two Symbol descriptions be identical in JavaScript?
 
-**Answer:** The description can be identical, but the value is unique and will return false if both values are compared.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The description can be identical, but the value is unique and will return false if both values are compared.
+</div>
+  </div>
+</details>
 
-Example:
+Code Example:
 
 ```js
 let id1 = Symbol('id');
@@ -60,9 +84,15 @@ Source: <https://javascript.info/symbol#symbols>
 
 ### Do Symbols auto-convert to strings in JavaScript?
 
-**Answer:** Most values in JavaScript support implicit conversion to a string, but symbol is rare and unique. It does not auto-convert to a string. This is an intentional “language guard” against messing up, because strings and symbols are fundamentally different and should not accidentally convert one into another.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Most values in JavaScript support implicit conversion to a string, but symbol is rare and unique. It does not auto-convert to a string. This is an intentional “language guard” against messing up, because strings and symbols are fundamentally different and should not accidentally convert one into another.
+</div>
+  </div>
+</details>
 
-Example:
+Code Example:
 
 ```js
 let id = Symbol('id');
@@ -79,9 +109,15 @@ Source: <https://javascript.info/symbol#symbols>
 
 ### To explicitly convert a Symbol to a string, what built-in method should we use?
 
-**Answer:** We should call the `toString()` method explicitly in order to convert a Symbol to a string.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> We should call the toString() method explicitly in order to convert a Symbol to a string.
+</div>
+  </div>
+</details>
 
-Example:
+Code Example:
 
 ```js
 let id = Symbol('id');
@@ -93,9 +129,15 @@ Source: <https://javascript.info/symbol#symbols>
 
 ### If, you want to show the Symbol description, what property should you use?
 
-**Answer:** To get symbol description to show the description only. We should use the description property.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> To get symbol description to show the description only. We should use the description property.
+</div>
+  </div>
+</details>
 
-Example:
+Code Example:
 
 ```js
 let id = Symbol('id');
@@ -107,9 +149,15 @@ Source: <https://javascript.info/symbol#symbols>
 
 ### How can the Symbol object act as a property safeguard in objects?
 
-**Answer:** Symbols can create hidden object properties, that cannot be overwritten or accidentally accessed. Unique properties like ids can conflict with ids or act as a hidden property that cannot be accessed by external libraries that we may want to use in our code.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Symbols can create hidden object properties, that cannot be overwritten or accidentally accessed. Unique properties like ids can conflict with ids or act as a hidden property that cannot be accessed by external libraries that we may want to use in our code.
+</div>
+  </div>
+</details>
 
-Example:
+Code Example:
 
 ```js
 let user = {
@@ -131,9 +179,15 @@ Source: <https://javascript.info/symbol#hidden-properties>
 
 ### What is the benefit of using Symbol("id") over a string "id"?
 
-**Answer:** As user objects belongs to another code, and that code also works with them, we should not just add any fields to it. That is unsafe. But a symbol cannot be accessed accidentally, the third-party code probably will not even see it, so it is probably all right to do. You can really see it as property conflict resolution that ensures that both code bases do not conflict with one another.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> As user objects belongs to another code, and that code also works with them, we should not just add any fields to it. That is unsafe. But a symbol cannot be accessed accidentally, the third-party code probably will not even see it, so it is probably all right to do. You can really see it as property conflict resolution that ensures that both code bases do not conflict with one another.
+</div>
+  </div>
+</details>
 
-Example:
+Code Example:
 
 ```js
 // ...
@@ -143,7 +197,7 @@ let id = Symbol('id');
 user[id] = 'Their id value';
 ```
 
-Example: Conflict Properties
+Code Example: Conflict Properties
 
 ```js
 let user = { name: 'John' };
@@ -163,9 +217,15 @@ Source: <https://javascript.info/symbol#hidden-properties>
 
 ### Can you use a Symbol in an object literal?
 
-**Answer:** Yes, this can be achieved by wrapping the property in square brackets. This allows the property to be a key and not a string.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, this can be achieved by wrapping the property in square brackets. This allows the property to be a key and not a string.
+</div>
+  </div>
+</details>
 
-Example:
+Code Example:
 
 ```js
 let id = Symbol('id');
@@ -181,7 +241,13 @@ Source: <https://javascript.info/symbol#symbols-in-an-object-literal>
 
 ### Can you return a Symbol in a for…in loop?
 
-**Answer:** No, you can access it directly, but for…in loop does not return the property. That is a part of the safeguarding of symbolic properties in principle. If another script or a library loops over our object, it will not unexpectedly access a symbolic property.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> No, you can access it directly, but for…in loop does not return the property. That is a part of the safeguarding of symbolic properties in principle. If another script or a library loops over our object, it will not unexpectedly access a symbolic property.
+</div>
+  </div>
+</details>
 
 Example:
 
@@ -206,9 +272,15 @@ Source: <https://javascript.info/symbol#symbols-are-skipped-by-for-in>
 
 ### Symbol properties are hidden for a reason, but is there a way to copy all the properties including the symbolic ones?
 
-**Answer:** Yes, symbolic properties can be cloned in an object by using Object.assign to copy both the string and symbol properties. This ensures that all the properties, strings, and symbols, are copied into the newly cloned object.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, symbolic properties can be cloned in an object by using Object.assign to copy both the string and symbol properties. This ensures that all the properties, strings, and symbols, are copied into the newly cloned object.
+</div>
+  </div>
+</details>
 
-Example:
+Code Example:
 
 ```js
 let id = Symbol('id');
@@ -225,9 +297,15 @@ Source: <https://javascript.info/symbol#symbols-are-skipped-by-for-in>
 
 ### Sometimes you need to have same-named symbols to be the same entities. Is there a way to read or create a symbol from the registry?
 
-**Answer:** Yes, we can use the `Symbol.for(key)` that checks the global registry, and then returns it if it is available. Otherwise, it creates a new symbol Symbol(key) and stores in the global registry by the given key. Symbols inside the registry are called global symbols.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, we can use the Symbol.for(key) that checks the global registry, and then returns it if it is available. Otherwise, it creates a new symbol Symbol(key) and stores in the global registry by the given key. Symbols inside the registry are called global symbols.
+</div>
+  </div>
+</details>
 
-Example:
+Code Example:
 
 ```js
 // read from the global registry
@@ -246,9 +324,15 @@ Source: <https://javascript.info/symbol#global-symbols>
 
 ### What is the difference between Symbol.for(key) and Symbol.keyFor(sym) in JavaScript?
 
-**Answer:** Symbol.for(key) returns a symbol by name and Symbol.keyFor(sym) returns a name by a global symbol.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Symbol.for(key) returns a symbol by name and Symbol.keyFor(sym) returns a name by a global symbol.
+</div>
+  </div>
+</details>
 
-Example:
+Code Example:
 
 ```js
 // get symbol by name
@@ -267,11 +351,16 @@ Source: <https://javascript.info/symbol#symbol-keyfor>
 
 ### The Symbol.keyFor internally uses the global symbol registry to look up the key for the symbol. Does it work for non-global symbols?
 
-**Interview Answer:** No, because local or non-global symbols are not placed in the global symbol registry.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> No, because local or non-global symbols are not placed in the global symbol registry.</div><br />
+  <div><strong>Technical Response:</strong> Symbol.for(key) returns a symbol by name and Symbol.keyFor(sym) returns a name by a global symbol. If the symbol is not global, it will not be able to find it and returns undefined. Notably, we must remember that all symbols including non-global symbols can return a description.<br /><br />
+  </div>
+  </div>
+</details>
 
-**Technical Answer:** Symbol.for(key) returns a symbol by name and Symbol.keyFor(sym) returns a name by a global symbol. If the symbol is not global, it will not be able to find it and returns undefined. Notably, we must remember that all symbols including non-global symbols can return a description.
-
-Example:
+Code Example:
 
 ```js
 let globalSymbol = Symbol.for('name');

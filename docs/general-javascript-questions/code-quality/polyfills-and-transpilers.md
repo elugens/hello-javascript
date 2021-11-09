@@ -14,11 +14,21 @@ sidebar_position: 6
 
 ### Describe what a JavaScript Trans-piler does?
 
-**Interview Answer:** A transpiler is a special piece of software that can parse (“read and understand”) modern code, and rewrite it using older syntax constructs, so that the result would be the same.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A transpiler is a special piece of software that can parse (“read and understand”) modern code, and rewrite it using older syntax constructs, so that the result would be the same.
+</div>
+  </div>
+</details>
 
-Note: Before 2020, JavaScript did not have a nullish coalescing operator (??). In order to make it work we needed a piece of software to convert it into workable code for older browsers.
+:::note
 
-Example:
+Before 2020, JavaScript did not have a nullish coalescing operator (??). In order to make it work we needed a piece of software to convert it into workable code for older browsers.
+
+:::
+
+Code Example:
 
 ```js
 // before running the transpiler
@@ -34,9 +44,15 @@ Source: <https://javascript.info/polyfills#transpilers>
 
 ### What is a Polyfill in JavaScript?
 
-**Interview Answer:** A polyfill fills in the gaps where newer JavaScript features may not be compatible with older browsers.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A polyfill fills in the gaps where newer JavaScript features may not be compatible with older browsers.
+</div>
+  </div>
+</details>
 
-Example: Polyfill if Math.trunc function does not exist in an older engine
+Code Example: Polyfill if Math.trunc function does not exist in an older engine
 
 ```js
 if (!Math.trunc) {

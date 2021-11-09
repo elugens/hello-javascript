@@ -14,4 +14,10 @@ sidebar_position: 5
 
 ### What are three main components of Behavior Driven Development?
 
-**Answer:** The three main components of behavior driven development include testing, documentation, and clear examples.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The three main components of behavior driven development include testing, documentation, and clear examples.
+</div>
+  </div>
+</details>

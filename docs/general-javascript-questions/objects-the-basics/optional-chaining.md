@@ -14,11 +14,16 @@ sidebar_position: 6
 
 ### Explain, what the optional chaining operator (?.) does in JavaScript.
 
-**Interview Answer:** The optional chaining operator is a safe way to access nested object properties, even if an intermediate property does not exist.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The optional chaining operator is a safe way to access nested object properties, even if an intermediate property does not exist.</div><br />
+  <div><strong>Technical Response:</strong> The optional chaining operator (?.) permits reading the value of a property located deep within a chain of connected objects without having to expressly validate that each reference in the chain is valid. Optional chaining (?.) stops the evaluation if the value before (?.) is undefined or null and returns undefined.<br /><br />
+  </div>
+  </div>
+</details>
 
-**Technical Answer:** The optional chaining operator (?.) permits reading the value of a property located deep within a chain of connected objects without having to expressly validate that each reference in the chain is valid. Optional chaining (?.) stops the evaluation if the value before (?.) is undefined or null and returns undefined.
-
-Example:
+Code Example:
 
 ```js
 let user = {}; // user has no address
@@ -32,9 +37,15 @@ Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Opera
 
 ### If, an object does not exist, what will the optional chaining operator (?.) return?
 
-**Answer:** If, the object does not exist (equals null) the optional chaining operator returns undefined. This can be seen when an object is set to null. If, the object is not defined then it will result in a reference error.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> If, the object does not exist (equals null) the optional chaining operator returns undefined. This can be seen when an object is set to null. If, the object is not defined then it will result in a reference error.
+</div>
+  </div>
+</details>
 
-Example:
+Code Example:
 
 ```js
 let user = null;
@@ -48,11 +59,21 @@ Source: <https://javascript.info/optional-chaining#optional-chaining>
 
 ### When should the optional chaining (?.) operator be used?
 
-**Interview Answer:** It should be used with then intent to handle object properties that are already known to be optional.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It should be used with then intent to handle object properties that are already known to be optional.
+</div>
+  </div>
+</details>
 
-**Note:** If, it is not optional it can result in false scenario that goes unchecked. This could result in coding errors that become silenced and become more difficult to debug.
+:::note
 
-Example: Short Circuit result in false response
+If, it is not optional it can result in false scenario that goes unchecked. This could result in coding errors that become silenced and become more difficult to debug.
+
+:::
+
+Code Example: Short Circuit result in false response
 
 ```js
 let user = null;
@@ -67,11 +88,16 @@ Source: <https://javascript.info/optional-chaining#optional-chaining>
 
 ### Is optional chaining (?.) merely an operator or a syntax construct?
 
-**Interview Answer:** Technically, it is a syntax construct, but it is commonly referred to as an operator.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Technically, it is a syntax construct, but it is commonly referred to as an operator.</div><br />
+  <div><strong>Technical Response:</strong> Technically, it is a syntax construct, but it is commonly referred to as an operator. However, it is more than just an operator and can be used with functions ( ?.() ) and square brackets ( ?.[] ). For example, ?.() is used to call a function that may not exist. The ?.[] syntax also works, if we’d like to use brackets [] to access properties instead of dot (.).<br /><br />
+  </div>
+  </div>
+</details>
 
-**Technical Answer:** Technically, it is a syntax construct, but it is commonly referred to as an operator. However, it is more than just an operator and can be used with functions ( ?.() ) and square brackets ( ?.[] ). For example, ?.() is used to call a function that may not exist. The ?.[] syntax also works, if we’d like to use brackets [] to access properties instead of dot (.).
-
-Example: Function Call
+Code Example: Function Call
 
 ```js
 let userAdmin = {
@@ -86,7 +112,7 @@ userAdmin.admin?.(); // I am admin
 userGuest.admin?.(); // nothing (no such method)
 ```
 
-Example: Bracket Property Check
+Code Example: Bracket Property Check
 
 ```js
 let key = 'firstName';
@@ -105,9 +131,15 @@ Source: <https://javascript.info/optional-chaining#optional-chaining>
 
 ### Can the optional chaining (syntax construct) operator be used to store or write values?
 
-**Answer:** No, you can use the (?.) for safe reading and deleting, but not writing. The optional chaining (?.) has no use at the left side of an assignment.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> No, you can use the (?.) for safe reading and deleting, but not writing. The optional chaining (?.) has no use at the left side of an assignment.
+</div>
+  </div>
+</details>
 
-Example:
+Code Example:
 
 ```js
 let user = null;

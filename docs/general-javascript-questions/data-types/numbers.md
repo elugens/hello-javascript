@@ -14,27 +14,52 @@ sidebar_position: 2
 
 ### What are the two primitive number data types in JavaScript?
 
-**Interview Answer:** In JavaScript, the two number data types include numbers and bigints.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In JavaScript, the two number data types include numbers and bigints.
+</div>
+  </div>
+</details>
 
 Source: <https://javascript.info/number>
 
 ### In what format are regular numbers stored in JavaScript?
 
-**Interview Answer:** Regular numbers in JavaScript are stored in 64-bit format IEEE-754, also known as “double precision floating point numbers”.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Regular numbers in JavaScript are stored in 64-bit format IEEE-754, also known as “double precision floating point numbers”.
+</div>
+  </div>
+</details>
 
 Source: <https://javascript.info/number>
 
 ### Explain the limitations of BigInts in JavaScript?
 
-**Answer:** BigInt is a built-in object that provides a way to represent whole numbers larger than 253 (max safe number) or be less than -253 (min. safe number), which is the largest number JavaScript can reliably represent with the Number primitive and represented by the Number.MAX_SAFE_INTEGER constant. BigInt can be used for arbitrarily large integers.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> BigInt is a built-in object that provides a way to represent whole numbers larger than 253 (max safe number) or be less than -253 (min. safe number), which is the largest number JavaScript can reliably represent with the Number primitive and represented by the Number.MAX_SAFE_INTEGER constant. BigInt can be used for arbitrarily large integers.
+</div>
+  </div>
+</details>
 
 Source: <https://javascript.info/number>
 
 ### In JavaScript, there are several ways to write a number. Is there a safe way to separate large number groups like 1,000,000,000 and maintain a formal format?
 
-**Interview Answer:** Yes, we can use an underscore to ensure that the number maintains it primitive format.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, we can use an underscore to ensure that the number maintains it primitive format.</div><br />
+  <div><strong>Technical Response:</strong> The most common way to safely separate number groups without using a comma (which would cause an error) and keep its primitive format. Is to use an underscore (syntactic sugar) to ensure that the number maintains it primitive format. However, in most programming languages there is an easier way to propagate large numbers.<br /><br />
+  </div>
+  </div>
+</details>
 
-**Technical Answer:** The most common way to safely separate number groups without using a comma (which would cause an error) and keep its primitive format. Is to use an underscore (syntactic sugar) to ensure that the number maintains it primitive format. However, in most programming languages there is an easier way to propagate large numbers.
+Code Example:
 
 ```js
 let billion = 1_000_000_000;
@@ -50,9 +75,15 @@ Source: <https://javascript.info/number>
 
 ### As programmers, we are always trying to find a way to reduce our code. What is easiest way to avoid writing long sequences of numbers like 1,000,000,000?
 
-**Interview Answer:** We can shorten a number by appending the letter (e) to the number and specifying the zeroes count.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> We can shorten a number by appending the letter (e) to the number and specifying the zeroes count.
+</div>
+  </div>
+</details>
 
-Example:
+Code Example:
 
 ```js
 let billion = 1e9;  // 1 billion, literally: 1 and 9 zeroes
@@ -80,9 +111,15 @@ Source: <https://javascript.info/number#more-ways-to-write-a-number>
 
 ### Is there a difference in the position of subtraction operator when numbers are using (e) notation to shorten your numerical syntax?
 
-**Answer:** Yes, if the minus sign is preceding the number then it returns the number as a negative. A number like -1e9 equals negative 1 billion (-1000000000.0 – minus sign applies to itself) and 1e-9 will result in a floating-point number where the minus sign applies to the exponent (result: 0.000000001)
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, if the minus sign is preceding the number then it returns the number as a negative. A number like -1e9 equals negative 1 billion (-1000000000.0 – minus sign applies to itself) and 1e-9 will result in a floating-point number where the minus sign applies to the exponent (result: 0.000000001).
+</div>
+  </div>
+</details>
 
-Example:
+Code Example:
 
 ```js
 console.log(1e-9); // 1e-9 is 0.000000001; the minus sign applies to the exponent
@@ -93,13 +130,22 @@ Source: <https://javascript.info/number#more-ways-to-write-a-number>
 
 ### What numeral systems are used to represent colors, encode characters, and base representation in JavaScript?
 
-**Interview Answer:** Hexadecimal numbers are commonly used. We can also use binary and octal, but they are used less often.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Hexadecimal numbers are commonly used. We can also use binary and octal, but they are used less often.</div><br />
+  <div><strong>Technical Response:</strong> Hexadecimal numbers are the most used number to represent colors, encode characters, and many other things. In addition to hexadecimal numbers, binary and octal numeral systems are used and supported in JavaScript but seen less often than hexadecimal numbers. For other numeral systems, we should use the function parseInt which parses a string argument and returns an integer of the specified radix.<br /><br />
+  </div>
+  </div>
+</details>
 
-**Technical Answer:** Hexadecimal numbers are the most used number to represent colors, encode characters, and many other things. In addition to hexadecimal numbers, binary and octal numeral systems are used and supported in JavaScript but seen less often than hexadecimal numbers. For other numeral systems, we should use the function parseInt which parses a string argument and returns an integer of the specified radix.
+:::note
 
-Note: Hexadecimal is base 16. Decimal is base 10. Octal is base 8. Binary is base 2.
+Hexadecimal is base 16. Decimal is base 10. Octal is base 8. Binary is base 2.
 
-Example:
+:::
+
+Code Example:
 
 ```js
 alert(0xff); // 255
@@ -115,9 +161,15 @@ Source: <https://javascript.info/number#more-ways-to-write-a-number>
 
 ### Is there a method in JavaScript that returns a string representation of a number in within a given base?
 
-**Interview Answer:** The toString(base) method returns a string representation of a number value with a given base.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The toString(base) method returns a string representation of a number value with a given base.
+</div>
+  </div>
+</details>
 
-Example:
+Code Example:
 
 ```js
 let num = 255;
@@ -130,9 +182,15 @@ Source: <https://javascript.info/number#tostring-base>
 
 ### What is the default base in JavaScript?
 
-**Interview Answer:** JavaScript is base 10 by default, but the base can vary from 2 to 36 based on your use case.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> JavaScript is base 10 by default, but the base can vary from 2 to 36 based on your use case.
+</div>
+  </div>
+</details>
 
-Example:
+Code Example:
 
 ```js
 console.log(parseInt('-15', 10)); // returns -15

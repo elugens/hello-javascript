@@ -14,7 +14,15 @@ sidebar_position: 4
 
 ### What is a function that is a property of an object called?
 
-**Interview Answer:** A function that is a property of an object is called its method.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A function that is a property of an object is called its method.
+</div>
+  </div>
+</details>
+
+Code Example:
 
 ```js
 let user = {
@@ -36,29 +44,48 @@ Source: <https://javascript.info/object-methods#method-examples>
 
 ### What is the programming paradigm that uses objects to represent entities?
 
-**Interview Answer:** Object-oriented Programming or OOP, is the programming paradigm that uses objects to represent entities.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Object-oriented Programming or OOP, is the programming paradigm that uses objects to represent entities.
+</div>
+  </div>
+</details>
 
 Source: <https://javascript.info/object-methods>
 
 ### What does the “this” keyword refer to in JavaScript?
 
-**Answer:** The JavaScript this keyword refers to the object that it belongs to. It has different values depending on where it is used.
-
-- In a method, this refers to the owner object.
-- Alone, this refers to the global object.
-- In a function, this refers to the global object.
-- In a function, in strict mode, this is undefined.
-- In an event, this refers to the element that received the event.
-- Methods like call(), and apply() can refer this to any object.
-- Arrow functions have no this.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The JavaScript this keyword refers to the object that it belongs to. It has different values depending on where it is used.<br /><br />
+  <ol>
+    <li>In a method, this refers to the owner object.</li>
+    <li>Alone, this refers to the global object.</li>
+    <li>In a function, this refers to the global object.</li>
+    <li>In a function, in strict mode, this is undefined.</li>
+    <li>In an event, this refers to the element that received the event.</li>
+    <li>Methods like call(), and apply() can refer this to any object.</li>
+    <li>Arrow functions have no this.</li>
+  </ol>
+</div>
+  </div>
+</details>
 
 Source: <https://www.w3schools.com/js/js_this.asp>
 
 ### What is one of the advantages of using the “this” keyword in an object?
 
-**Answer:** The “this” keyword holds a reference to the object and in return removes any effort to nullify it later in the code.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The “this” keyword holds a reference to the object and in return removes any effort to nullify it later in the code.
+</div>
+  </div>
+</details>
 
-**Example:** “THIS” refers to the object
+Code Example: “THIS” refers to the object
 
 ```js
 let user = {
@@ -77,7 +104,7 @@ user = null; // attempt to override the object fails
 admin.sayHi(); // alerts John
 ```
 
-**Example:** Fails without the “THIS” keyword
+Code Example: Fails without the “THIS” keyword
 
 ```js
 let user = {
@@ -100,9 +127,15 @@ Source: <https://javascript.info/object-methods#this-in-methods>
 
 ### What is the difference between “THIS” in a function in (strict mode) and (non-strict mode)?
 
-**Answer:** In strict mode, “this” returns undefined and in non-strict mode it returns global window.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In strict mode, “this” returns undefined and in non-strict mode it returns global window.
+</div>
+  </div>
+</details>
 
-Example: Strict Mode
+Code Example: Strict Mode
 
 ```js
 'use strict';
@@ -131,80 +164,82 @@ Source: <https://javascript.info/object-methods#this-is-not-bound>
 
 ### What are the consequences of unbound “THIS”?
 
-**Answer:** In JavaScript this is “free”, its value is evaluated at call-time and does not depend on where the method was declared, but rather on what object is “before the dot”. The concept of run-time evaluated this has both pluses and minuses. On the one hand, a function can be reused for different objects. On the other hand, the greater flexibility creates more possibilities for mistakes.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In JavaScript this is “free”, its value is evaluated at call-time and does not depend on where the method was declared, but rather on what object is “before the dot”. The concept of run-time evaluated this has both pluses and minuses. On the one hand, a function can be reused for different objects. On the other hand, the greater flexibility creates more possibilities for mistakes.
+</div>
+  </div>
+</details>
 
 Source: <https://javascript.info/object-methods#this-is-not-bound>
 
 ### Since arrow functions have no “This”, What is the outcome when the “THIS” keyword is used in an arrow function?
 
-**Answer:** The outcome in an arrow function is a return of undefined. This is because there is no access to the global window.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The outcome in an arrow function is a return of undefined. This is because there is no access to the global window.
+</div>
+  </div>
+</details>
 
-Example: Regular Function
+Code Example: Regular Function
 
 ```js
-const brunch = {
+const brunch = {
+  food: 'Dim sum',
 
-   food: 'Dim sum',
+  beverage: 'Jasmine tea',
 
-   beverage: 'Jasmine tea',
-
-   order: function () {
-
-      return `I'll have the ${this.food} with ${this.beverage} please.`;
-
-      },
+  order: function () {
+    return `I'll have the ${this.food} with ${this.beverage} please.`;
+  },
 };
 
 // the console log returns "I'll have the Dim sum with Jasmine tea please."
 
 console.log(brunch.order());
+```
 
+Code Example: Arrow Function
 
-Example: Arrow Function
+```js
+const brunch = {
+  food: 'Dim sum',
 
-const brunch = {
+  beverage: 'Jasmine tea',
 
-  food: 'Dim sum',
-
-  beverage: 'Jasmine tea',
-
-  order: () => {
-
-      return `I'll have the ${this.food} with ${this.beverage} please.`;
-
+  order: () => {
+    return `I'll have the ${this.food} with ${this.beverage} please.`;
   },
-
 };
 
 // the console log returns "I'll have the undefined with undefined please."
 
 console.log(brunch.order());
-
+```
 
 Proof that “THIS” refers to the global window object:
 
-window.food = 'pizza'; // global object variables
+```js
+window.food = 'pizza'; // global object variables
 
-window.beverage = 'beer';
+window.beverage = 'beer';
 
-const brunch = {
+const brunch = {
+  food: 'Dim sum',
 
-  food: 'Dim sum',
+  beverage: 'Jasmine tea',
 
-  beverage: 'Jasmine tea',
-
-  order: () => {
-
-      return `I'll have the ${this.food} with ${this.beverage} please.`;
-
+  order: () => {
+    return `I'll have the ${this.food} with ${this.beverage} please.`;
   },
-
 };
 
 // the console log returns "I'll have the pizza with beer please."
 
 console.log(brunch.order());
-
 ```
 
 Source: <https://javascript.info/object-methods#arrow-functions-have-no-this>

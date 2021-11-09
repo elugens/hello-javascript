@@ -14,9 +14,15 @@ sidebar_position: 17
 
 ### What is the definition of an arrow function?
 
-**Interview Answer:** An arrow function expression is a compact alternative to a traditional function expression, but it is limited and cannot be used in all situations.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> An arrow function expression is a compact alternative to a traditional function expression, but it is limited and cannot be used in all situations.
+</div>
+  </div>
+</details>
 
-Example:
+Code Example:
 
 ```js
 // Arrow Function
@@ -38,17 +44,21 @@ Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Funct
 
 ### What are the difference and limitations between Arrow Functions and Function Expressions?
 
-**Interview Answer:** An arrow function does not have bindings to this or super and cannot be used as a method or constructor. Also, it is not suitable for call, apply, bind.
-
-**Technical Answer:**
-
-Differences & Limitations:
-
-- Does not have its own bindings to this or super and should not be used as methods.
-- Does not have arguments, or new.target keywords.
-- Not suitable for call, apply and bind methods, which generally rely on establishing a scope.
-- Cannot be used as constructors.
-- Cannot use yield, within its body.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong>  An arrow function does not have bindings to this or super and cannot be used as a method or constructor. Also, it is not suitable for call, apply, bind.</div><br />
+  <div><strong>Technical Response:</strong><br /><br /><strong>Differences & Limitations:</strong><br /><br />
+  <ol>
+    <li>Does not have its own bindings to this or super and should not be used as methods.</li>
+    <li>Does not have arguments, or new.target keywords.</li>
+    <li>Not suitable for call, apply and bind methods, which generally rely on establishing a scope.</li>
+    <li>Cannot be used as constructors.</li>
+    <li>Cannot use yield, within its body.</li>
+  </ol>
+  </div>
+  </div>
+</details>
 
 Code Example:
 
@@ -75,9 +85,15 @@ Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Funct
 
 ### If there are no arguments in an arrow function do you need to add the paratheses?
 
-**Interview Answer:** Yes, if there are no arguments, then the paratheses should be present in your arrow function. Otherwise, it will throw a syntax error.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, if there are no arguments, then the paratheses should be present in your arrow function. Otherwise, it will throw a syntax error.
+</div>
+  </div>
+</details>
 
-Example:
+Code Example:
 
 ```js
 // Arrow Function with no argument
@@ -91,9 +107,15 @@ Source: <https://javascript.info/arrow-functions-basics>
 
 ### Can you dynamically create a function with an arrow function?
 
-**Interview Answer:** Yes, it is possible to dynamically create an arrow function in JavaScript. An example of this is a ternary statement that returns two anonymous arrow functions.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, it is possible to dynamically create an arrow function in JavaScript. An example of this is a ternary statement that returns two anonymous arrow functions.
+</div>
+  </div>
+</details>
 
-Example:
+Code Example:
 
 ```js
 let age = prompt('What is your age?', 18);
@@ -107,9 +129,15 @@ Source: <https://javascript.info/arrow-functions-basics>
 
 ### What is the difference between single and multiline statement in an arrow function?
 
-**Interview Answer:** A multiline statement must be enclosed in curly brackets, but we can omit the curly brackets in a single line statement.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A multiline statement must be enclosed in curly brackets, but we can omit the curly brackets in a single line statement.
+</div>
+  </div>
+</details>
 
-Example:
+Code Example:
 
 ```js
 let sum = (a, b) => {
