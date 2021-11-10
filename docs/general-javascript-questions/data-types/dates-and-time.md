@@ -14,17 +14,27 @@ sidebar_position: 11
 
 ### Define what the Date object is in JavaScript?
 
-**Interview Answer:** JavaScript Date objects represent a single moment in time in a platform-independent format. Date objects contain a Number that represents milliseconds since 1 January 1970 UTC.
-
-**Technical Answer:** JavaScript Date objects represent a single moment in time in a platform-independent format. Date objects contain a Number that represents milliseconds since 1 January 1970 UTC. This date and time are not the same as the UNIX epoch (the number of seconds that have elapsed since midnight on January 1, 1970, UTC), which is the predominant base value for computer-recorded date and time values. It's important to keep in mind that while the time value at the heart of a Date object is UTC, the basic methods to fetch the date and time or its components all work in the local (i.e. host system) time zone and offset.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> JavaScript Date objects represent a single moment in time in a platform-independent format. Date objects contain a Number that represents milliseconds since 1 January 1970 UTC.</div><br />
+  <div><strong>Technical Response:</strong> JavaScript Date objects represent a single moment in time in a platform-independent format. Date objects contain a Number that represents milliseconds since 1 January 1970 UTC. This date and time are not the same as the UNIX epoch (the number of seconds that have elapsed since midnight on January 1, 1970, UTC), which is the predominant base value for computer-recorded date and time values. It's important to keep in mind that while the time value at the heart of a Date object is UTC, the basic methods to fetch the date and time or its components all work in the local (i.e. host system) time zone and offset.
+  </div>
+  </div>
+</details>
 
 Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_ecmascript_epoch_and_timestamps>
 
 ### How do you create a new Date object in JavaScript?
 
-**Interview Answer:** We can create a new Date object by call new Date() in our variable assignment.
-
-**Technical Answer:** JavaScript Date object creation is relatively straight forward. A call to the Date object can be done by calling (new Date()). That will return the unformatted Date object when invoked in your code.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> We can create a new Date object by call new Date() in our variable assignment.</div><br />
+  <div><strong>Technical Response:</strong> JavaScript Date object creation is relatively straight forward. A call to the Date object can be done by calling (new Date()). That will return the unformatted Date object when invoked in your code.
+  </div>
+  </div>
+</details>
 
 Example:
 
@@ -38,9 +48,14 @@ Source: <https://javascript.info/date#creation>
 
 ### What is an integer number representing the number of milliseconds that has passed since the beginning of 1970 called?
 
-**Interview Answer:** In JavaScript, a “timestamp” represents of the number of milliseconds that have passed since January 1, 1970. We get that number using
-
-**Technical Answer:** An integer number representing the number of milliseconds that has passed since the beginning of 1970 is called a timestamp. It is a lightweight numeric representation of a date. We can always create a date from a timestamp using new Date(timestamp) and convert the existing Date object to a timestamp using the date.getTime() method. You should be aware that dates before 01.01.1970 have a negative timestamp.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In JavaScript, a “timestamp” represents of the number of milliseconds that have passed since January 1, 1970.</div><br />
+  <div><strong>Technical Response:</strong> An integer number representing the number of milliseconds that has passed since the beginning of 1970 is called a timestamp. It is a lightweight numeric representation of a date. We can always create a date from a timestamp using new Date(timestamp) and convert the existing Date object to a timestamp using the date.getTime() method. You should be aware that dates before 01.01.1970 have a negative timestamp.
+  </div>
+  </div>
+</details>
 
 Example:
 
@@ -56,7 +71,13 @@ Source: <https://javascript.info/date#creation>
 
 ### Can you use a date string format to create dates in JavaScript?
 
-**Interview Answer:** Yes, if there is a single argument, and it is a string, then it is parsed automatically. The algorithm is the same as Date.parse (returns a timestamp) uses to parse date strings.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, if there is a single argument, and it is a string, then it is parsed automatically. The algorithm is the same as Date.parse (returns a timestamp) uses to parse date strings.
+</div>
+  </div>
+</details>
 
 **Syntax:** new Date(“datestring”)
 
@@ -84,7 +105,13 @@ Source: <https://javascript.info/date#creation>
 
 ### What is the difference between Date.parse() and Date(datestring)?
 
-**Interview Answer:** The main difference between Date.parse() and Date(datestring) is Date.parse() returns milliseconds and Date(datestring) does not, it returns the actual UTC date string requested.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The main difference between Date.parse() and Date(datestring) is Date.parse() returns milliseconds and Date(datestring) does not, it returns the actual UTC date string requested.
+</div>
+  </div>
+</details>
 
 Code Example:
 
@@ -100,9 +127,14 @@ Source: <https://javascript.info/date#creation>
 
 ### What is the difference between the getYear() and getFullYear() methods?
 
-**Interview Answer:** The getFullYear() method returns the year of the specified date according to local time and getYear() method is deprecated. We should not use it.
-
-**Technical Answer:** The getFullYear() method returns the year of the specified date according to local time. The getYear() method is deprecated and should not be used in accordance with the current MDN recommendations (It does not work well with date years after the year 2000).
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The getFullYear() method returns the year of the specified date according to local time and getYear() method is deprecated. We should not use it.</div><br />
+  <div><strong>Technical Response:</strong> The getFullYear() method returns the year of the specified date according to local time. The getYear() method is deprecated and should not be used in accordance with the current MDN recommendations (It does not work well with date years after the year 2000).
+  </div>
+  </div>
+</details>
 
 Code Example:
 
@@ -118,9 +150,14 @@ Source: <https://javascript.info/date#access-date-components>
 
 ### Explain, the function and syntax of the date object getMonth() method?
 
-**Interview Answer:** To get the month the specified date we want. We must first create a new date with a variable assignment and the new date object. The we can access the month with the variable.getMonth() method. The return value will be a number between the 0-11 index.
-
-**Technical Answer:** The getMonth() method returns the month in the specified date according to local time, as a zero-based value (where zero indicates the first month of the year). Basically, it returns an integer number, between 0 and 11, representing the month in the given date according to local time. 0 corresponds to January, 1 to February, and so on.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> To get the month the specified date we want. We must first create a new date with a variable assignment and the new date object. The we can access the month with the variable.getMonth() method. The return value will be a number between the 0-11 index.</div><br />
+  <div><strong>Technical Response:</strong> The getMonth() method returns the month in the specified date according to local time, as a zero-based value (where zero indicates the first month of the year). Basically, it returns an integer number, between 0 and 11, representing the month in the given date according to local time. 0 corresponds to January, 1 to February, and so on.
+  </div>
+  </div>
+</details>
 
 **Syntax:** dateObj.getMonth()
 
@@ -138,7 +175,13 @@ Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Globa
 
 ### Explain, the function and syntax of the date object getDate() method?
 
-**Interview Answer:** The getDate() method returns the day of the month for the specified date according to local time. An integer number, between 1 and 31, representing the day of the month for the given date.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The getDate() method returns the day of the month for the specified date according to local time. An integer number, between 1 and 31, representing the day of the month for the given date.
+</div>
+  </div>
+</details>
 
 **Syntax:** dateObj.getDate()
 
@@ -156,9 +199,14 @@ Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Globa
 
 ### Explain, the function and syntax of the date object getDay() method?
 
-**Interview Answer:** The getDay() method returns the day of the week for the specified date according to local time, where 0 represents Sunday.
-
-**Technical Answer:** The getDay() method returns the day of the week for the specified date according to local time, where 0 represents Sunday. For the day of the month, see Date.prototype.getDate(). An integer number, between 0 and 6, corresponding to the day of the week for the given date, according to local time: 0 for Sunday, 1 for Monday, 2 for Tuesday, and so on.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The getDay() method returns the day of the week for the specified date according to local time, where 0 represents Sunday.</div><br />
+  <div><strong>Technical Response:</strong> The getDay() method returns the day of the week for the specified date according to local time, where 0 represents Sunday. For the day of the month, see Date.prototype.getDate(). An integer number, between 0 and 6, corresponding to the day of the week for the given date, according to local time: 0 for Sunday, 1 for Monday, 2 for Tuesday, and so on.
+  </div>
+  </div>
+</details>
 
 **Syntax:** dateObj.getDay()
 
@@ -176,17 +224,27 @@ Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Globa
 
 ### What is UTC, regarding date time and are there any methods to process UTC in JavaScript?
 
-**Interview Answer:** The approach that we should use is straightforward. We simply add UTC for any of the UTC methods such as getUTCFullYear(), getUTCMonth(), and getUTCDay(). There are two special methods that do not have a UTC-variant which include getTime and getTimezoneOffset.
-
-**Technical Answer:** UTC is an acronym for Universal Time Coordinated which was established in 1972, this time was called Greenwich Mean Time (GMT) but is now referred to as Coordinated Universal Time or Universal Time Coordinated (UTC). In JavaScript, there are also their UTC-counterparts, that return day, month, year and so on for the time zone UTC+0: getUTCFullYear(), getUTCMonth(), getUTCDay(). Just insert the "UTC" right after "get". Besides the given methods, there are two special ones that do not have a UTC-variant that include getTime and getTimezoneOffset.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The approach that we should use is straightforward. We simply add UTC for any of the UTC methods such as getUTCFullYear(), getUTCMonth(), and getUTCDay(). There are two special methods that do not have a UTC-variant which include getTime and getTimezoneOffset.</div><br />
+  <div><strong>Technical Response:</strong> UTC is an acronym for Universal Time Coordinated which was established in 1972, this time was called Greenwich Mean Time (GMT) but is now referred to as Coordinated Universal Time or Universal Time Coordinated (UTC). In JavaScript, there are also their UTC-counterparts, that return day, month, year and so on for the time zone UTC+0: getUTCFullYear(), getUTCMonth(), getUTCDay(). Just insert the "UTC" right after "get". Besides the given methods, there are two special ones that do not have a UTC-variant that include getTime and getTimezoneOffset.
+  </div>
+  </div>
+</details>
 
 Source: <https://javascript.info/date>
 
 ### Is there a way to set dates and time in JavaScript?
 
-**Interview Answer:** Yes, there are several methods including setFullYear, setMonth, setDate, setHours, setMinutes, setSeconds, setMilliseconds, and setTime.
-
-**Interview Answer:** Yes, there are several methods including setFullYear, setMonth, setDate, setHours, setMinutes, setSeconds, setMilliseconds, and setTime. setTime sets the completed date in milliseconds based on the JavaScript initialized date of 01/01/1970 UTC. Every one of them except setTime() has a UTC-variant for use.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, there are several methods including setFullYear, setMonth, setDate, setHours, setMinutes, setSeconds, setMilliseconds, and setTime.</div><br />
+  <div><strong>Technical Response:</strong>  Yes, there are several methods including setFullYear, setMonth, setDate, setHours, setMinutes, setSeconds, setMilliseconds, and setTime. setTime sets the completed date in milliseconds based on the JavaScript initialized date of 01/01/1970 UTC. Every one of them except setTime() has a UTC-variant for use.
+  </div>
+  </div>
+</details>
 
 Code Example:
 
@@ -205,7 +263,13 @@ Source: <https://javascript.info/date#setting-date-components>
 
 ### Data commonly has out of range date information, how does JavaScript handle dates that are formatted incorrectly?
 
-**Interview Answer:** The Date object has a built-in auto-correction feature that handle dates that are ill formatted. We can set out-of-range values, and it will auto-adjust itself. The Date object also keeps track of the number of days within a specific date to produce proper future or past date results.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The Date object has a built-in auto-correction feature that handle dates that are ill formatted. We can set out-of-range values, and it will auto-adjust itself. The Date object also keeps track of the number of days within a specific date to produce proper future or past date results.
+</div>
+  </div>
+</details>
 
 Example:
 
@@ -225,9 +289,17 @@ Source: <https://javascript.info/date#autocorrection>
 
 ### What happens when a Date object is converted to a number?
 
-**Interview Answer:** When a Date object is converted to number, it becomes the timestamp same as date.getTime().
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> When a Date object is converted to number, it becomes the timestamp same as date.getTime().
+</div>
+  </div>
+</details>
 
-**Note:** The important side effect: dates can be subtracted; the result is their difference in milliseconds. That can be used for time measurements and equip an application with more substantial time related features.
+:::note
+The important side effect: dates can be subtracted; the result is their difference in milliseconds. That can be used for time measurements and equip an application with more substantial time related features.
+:::
 
 Code Example:
 
@@ -259,37 +331,43 @@ Source: <https://javascript.info/date#date-to-number-date-diff>
 
 ### Explain, the function and syntax of the Date.now() method in JavaScript?
 
-**Interview Answer:** The static Date.now() method returns the number of milliseconds elapsed since January 1, 1970 00:00:00 UTC.
-
-**Technical Answer:** If we only want to measure time, we do not need the Date object. There’s a special method Date.now() that returns the current timestamp. It is semantically equivalent to new Date().getTime(), but it doesn’t create an intermediate Date object. So, it is faster and does not put pressure on garbage collection. It is used mostly for convenience or when performance matters, like in games in JavaScript or other specialized applications.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The static Date.now() method returns the number of milliseconds elapsed since January 1, 1970 00:00:00 UTC.</div><br />
+  <div><strong>Technical Response:</strong>  If we only want to measure time, we do not need the Date object. There’s a special method Date.now() that returns the current timestamp. It is semantically equivalent to new Date().getTime(), but it doesn’t create an intermediate Date object. So, it is faster and does not put pressure on garbage collection. It is used mostly for convenience or when performance matters, like in games in JavaScript or other specialized applications.
+  </div>
+  </div>
+</details>
 
 **Syntax:** Date.now()
 
 Example:
 
 ```js
-let start = Date.now(); // milliseconds count from 1 Jan 1970
-
+let start = Date.now(); // milliseconds count from 1 Jan 1970
 // do the job
 
-for (let i = 0; i < 100000; i++) {
-
-   let doSomething = i \* i \* i;
-
+for (let i = 0; i < 100000; i++) {
+  let doSomething = i * i * i;
 }
 
-let end = Date.now(); // done
-
-alert( `The loop took ${end - start} ms` ); // subtract numbers, not dates
+let end = Date.now(); // done
+alert(`The loop took ${end - start} ms`); // subtract numbers, not dates
 ```
 
 Source: <https://javascript.info/date#date-now>
 
 ### Explain, the function and syntax of the Date.parse() method in JavaScript?
 
-**Interview Answer:** The parse() method parses a date string and returns the number of milliseconds between the date string and midnight of January 1, 1970.
-
-**Technical Answer:** The call to Date.parse(str) parses the string in the given format and returns the timestamp (number of milliseconds from 1 Jan 1970 UTC+0). If the format is invalid, returns NaN. The string format should be (YYYY-MM-DDTHH:mm:ss.sssZ). The breakdown of the format is YYYY-MM-DD is the date year-month-day. The character "T" is used as the delimiter. HH:mm:ss.sss is the time relative to hours, minutes, seconds and milliseconds. The optional 'Z' part denotes the time zone in the format +-hh:mm. A single letter Z would mean UTC+0.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The parse() method parses a date string and returns the number of milliseconds between the date string and midnight of January 1, 1970.</div><br />
+  <div><strong>Technical Response:</strong>  The call to Date.parse(str) parses the string in the given format and returns the timestamp (number of milliseconds from 1 Jan 1970 UTC+0). If the format is invalid, returns NaN. The string format should be (YYYY-MM-DDTHH:mm:ss.sssZ). The breakdown of the format is YYYY-MM-DD is the date year-month-day. The character "T" is used as the delimiter. HH:mm:ss.sss is the time relative to hours, minutes, seconds and milliseconds. The optional 'Z' part denotes the time zone in the format +-hh:mm. A single letter Z would mean UTC+0.
+  </div>
+  </div>
+</details>
 
 **Syntax:** Date.parse()
 

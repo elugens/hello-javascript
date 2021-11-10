@@ -14,7 +14,13 @@ sidebar_position: 11
 
 ### What is an arrow function?
 
-**Interview Answer:** An arrow function is a compact alternative to a traditional function expression but is limited and cannot be used in all situations. Arrow Functions do not have their own bindings to “this” or super and should not be used as methods. They also do not have access to the arguments or new.target keywords. It should also be noted that arrow functions are not agreeable with the call, apply, and bind methods that generally rely on establishing scope. They also cannot be used as constructors and cannot use yield, within its own body.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> An arrow function is a compact alternative to a traditional function expression but is limited and cannot be used in all situations. Arrow Functions do not have their own bindings to “this” or super and should not be used as methods. They also do not have access to the arguments or new.target keywords. It should also be noted that arrow functions are not agreeable with the call, apply, and bind methods that generally rely on establishing scope. They also cannot be used as constructors and cannot use yield, within its own body.
+</div>
+  </div>
+</details>
 
 Code Example:
 
@@ -52,9 +58,14 @@ Source: <https://javascript.info/arrow-functions>
 
 ### What is the meaning of Arrow functions having no “this”?
 
-**Interview Answer:** Arrow functions have no “this” means that whenever “this” is used in an arrow function, it starts looking up the scope to find the value of “this”. During lookup it will find that the object does not have a “this” of its own as it goes up to global scope and bound the value of this with the global scope, where it will not find anything and returns undefined.
-
-**Interview Answer:** Unlike regular functions, Arrow functions does not have a this of their own, only regular functions and global scope have this of their own. Which would mean that whenever this would be referred in arrow function, it will start looking up the scope to find the value of this, or in this case, during lookup it found, that the object is not having a this of its own, hence, it went up to global scope and bound the value of this with global scope, where it will not find anything.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Arrow functions have no “this” means that whenever “this” is used in an arrow function, it starts looking up the scope to find the value of “this”. During lookup it will find that the object does not have a “this” of its own as it goes up to global scope and bound the value of this with the global scope, where it will not find anything and returns undefined.</div><br />
+  <div><strong>Technical Response:</strong> Unlike regular functions, Arrow functions does not have a this of their own, only regular functions and global scope have this of their own. Which would mean that whenever this would be referred in arrow function, it will start looking up the scope to find the value of this, or in this case, during lookup it found, that the object is not having a this of its own, hence, it went up to global scope and bound the value of this with global scope, where it will not find anything.
+  </div>
+  </div>
+</details>
 
 Example:
 
@@ -88,11 +99,19 @@ let b = 'global!!!'; // global this
 
 Source: <https://stackoverflow.com/questions/38589227/why-this-is-undefined-inside-a-fat-arrow-function-definition>
 
-### Explain, why you cannot use the new.target keyword with Arrow Functions.\*\*
+### Explain, why you cannot use the new.target keyword with Arrow Functions.
 
-**Interview Answer:** The reason you cannot use the new.target keyword with Arrow Functions is that it has no constructor, [[construct]] method.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The reason you cannot use the new.target keyword with Arrow Functions is that it has no constructor, [[construct]] method. The new.target keyword is used to check if the function is called as a constructor or not.
+</div>
+  </div>
+</details>
 
-**Note:** This is very straightforward and can be easily verified by the engine response to any invocation of new on arrow functions. It will result in an uncaught type error as “blank is not a constructor”.
+:::note
+This is very straightforward and can be easily verified by the engine response to any invocation of new on arrow functions. It will result in an uncaught type error as “blank is not a constructor”.
+:::
 
 Example:
 
@@ -109,15 +128,27 @@ y = new Y(); // Y does not execute
 
 Source: <https://stackoverflow.com/questions/37587834/javascript-es6-why-i-can-not-use-new-with-arrow-function>
 
-### What is the difference between Arrow and Regular functions binding this.\*\*
+### What is the difference between Arrow and Regular functions binding this?
 
-**Interview Answer:** There is a subtle difference between an arrow function and a regular function called with bind(this). The bind(this) syntax creates a “bound version” of a regular function. The arrow does not create any binding. So, the function simply does not have “this”. The lookup of “this” is made the same way as a regular variable search in the outer lexical environment.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> There is a subtle difference between an arrow function and a regular function called with bind(this). The bind(this) syntax creates a “bound version” of a regular function. The arrow does not create any binding. So, the function simply does not have “this”. The lookup of “this” is made the same way as a regular variable search in the outer lexical environment.
+</div>
+  </div>
+</details>
 
 Source: <https://javascript.info/arrow-functions#arrow-functions-have-no-this>
 
 ### Can you explain one benefit of Arrow functions having no arguments variable?
 
-**Interview Answer:** Yes, arrow functions can be used in decorators to reduce code size. You can pass the arguments variable in a wrapper and because arrow functions do not bind to the arguments object. This gives you the ability to reduce code and write simple abstractions in JavaScript.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, arrow functions can be used in decorators to reduce code size. You can pass the arguments variable in a wrapper and because arrow functions do not bind to the arguments object. This gives you the ability to reduce code and write simple abstractions in JavaScript.
+</div>
+  </div>
+</details>
 
 Example:
 
@@ -141,7 +172,13 @@ Source: <https://javascript.info/arrow-functions#arrows-have-no-arguments>
 
 ### What is the definition of a Higher-Order function?
 
-**Interview Answer:** Functions that operate on other functions, either by taking them as arguments or by returning them, are called higher-order functions.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Functions that operate on other functions, either by taking them as arguments or by returning them, are called higher-order functions.
+</div>
+  </div>
+</details>
 
 Code Example:
 

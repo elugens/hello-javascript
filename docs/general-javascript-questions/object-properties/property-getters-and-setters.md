@@ -12,9 +12,15 @@ sidebar_position: 2
   <meta charSet="utf-8" />
 </head>
 
-### Explain, what getters and setters are, as it pertains to JavaScript.\*\*
+### Explain, what getters and setters are, as it pertains to JavaScript.
 
-**Interview Answer:** Accessor properties are represented by “getter” and “setter” methods. In an object literal they are denoted by get and set in JavaScript. Getters and setters allow you to define Object Accessors (Computed Properties). There are some advantages, Getters and Setters are easier to read because of their simplistic syntax. The also allow equal syntax for properties and methods, can secure better data quality, and are particularly useful for doing things behind the scenes.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Accessor properties are represented by “getter” and “setter” methods. In an object literal they are denoted by get and set in JavaScript. Getters and setters allow you to define Object Accessors (Computed Properties). There are some advantages, Getters and Setters are easier to read because of their simplistic syntax. The also allow equal syntax for properties and methods, can secure better data quality, and are particularly useful for doing things behind the scenes.
+</div>
+  </div>
+</details>
 
 Code Example:
 
@@ -34,9 +40,14 @@ Source: <https://javascript.info/property-accessors#getters-and-setters>
 
 ### What is the difference between accessor property and a property function?
 
-**Interview Answer:** The main difference between a property function and an accessor property is the simple syntax of the accessor and the way you invoke the accessor.
-
-**Technical Answer:** The main difference between a property function and an accessor property is the simple syntax of the accessor and the way you invoke the accessor. The accessor (getter setter) is invoked without the parentheses compared to the property function that does. There are some advantages, Getters and Setters are easier to read. The also allow equal syntax for properties and methods, can secure better data quality, and are extremely useful in doing things behind the scenes.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The main difference between a property function and an accessor property is the simple syntax of the accessor and the way you invoke the accessor.</div><br />
+  <div><strong>Technical Response:</strong> The main difference between a property function and an accessor property is the simple syntax of the accessor and the way you invoke the accessor. The accessor (getter setter) is invoked without the parentheses compared to the property function that does. There are some advantages, Getters and Setters are easier to read. The also allow equal syntax for properties and methods, can secure better data quality, and are extremely useful in doing things behind the scenes.
+  </div>
+  </div>
+</details>
 
 Example:
 
@@ -82,9 +93,17 @@ Source: <https://javascript.info/property-accessors#getters-and-setters>
 
 ### Is the difference between accessor property and a data property in JavaScript?
 
-**Interview Answer:** Yes, descriptors for accessor properties are different from those for data properties. For accessor properties, there is no value or writable, but instead there are get and set functions. A named data property associates a name with a value. Which means you use the property to get and retrieve data directly, like a public field on a class. A named accessor property associates a name with one or two accessor functions. The accessor functions are used to store or retrieve a value that is associated with the property. Which means that you restrict the access to a certain value behind a get or/and set accessor property.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, descriptors for accessor properties are different from those for data properties. For accessor properties, there is no value or writable, but instead there are get and set functions. A named data property associates a name with a value. Which means you use the property to get and retrieve data directly, like a public field on a class. A named accessor property associates a name with one or two accessor functions. The accessor functions are used to store or retrieve a value that is associated with the property. Which means that you restrict the access to a certain value behind a get or/and set accessor property.
+</div>
+  </div>
+</details>
 
-**Note:** Comparing both, the 1st option gives you no encapsulation or kind of control, on how your value is accessed. The 2nd lets you specify if your value can be read 'get accessor', written 'set accessor' or both.
+:::note
+Comparing both, the 1st option gives you no encapsulation or kind of control, on how your value is accessed. The 2nd lets you specify if your value can be read 'get accessor', written 'set accessor' or both.
+:::
 
 Example:
 
@@ -126,7 +145,13 @@ Source: <https://javascript.info/property-accessors#accessor-descriptors>
 
 ### Can you use getters and setters as wrappers over real properties?
 
-**Interview Answer:** Yes, Getters/setters can be used as wrappers over “real” property values to gain more control over operations with them. One example of this is a conditional statement used to check a values validity.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, Getters/setters can be used as wrappers over “real” property values to gain more control over operations with them. One example of this is a conditional statement used to check a values validity.
+</div>
+  </div>
+</details>
 
 Example:
 

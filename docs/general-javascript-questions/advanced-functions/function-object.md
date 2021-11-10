@@ -14,13 +14,25 @@ sidebar_position: 6
 
 ### In JavaScript, what type is a function?
 
-**Interview Answer:** In JavaScript, all functions are objects. A good way to imagine functions is as callable “action objects”. We can not only call them, but also treat them as objects. add/remove properties, pass by reference etc.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In JavaScript, all functions are objects. A good way to imagine functions is as callable “action objects”. We can not only call them, but also treat them as objects. add/remove properties, pass by reference etc.
+</div>
+  </div>
+</details>
 
 Source: <https://javascript.info/function-object>
 
 ### Explain, why are functions Objects in JavaScript?
 
-**Interview Answer:** In JavaScript, functions are first-class objects, because they can have properties and methods just like any other object. What distinguishes them from other objects is that functions can be called. In brief, they are Function objects.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In JavaScript, functions are first-class objects, because they can have properties and methods just like any other object. What distinguishes them from other objects is that functions can be called. In brief, they are Function objects.
+</div>
+  </div>
+</details>
 
 Example:
 
@@ -40,9 +52,17 @@ Source: <https://javascript.info/function-object>
 
 ### What kind of naming logic does JavaScript use for functions?
 
-**Interview Answer:** The function name-assigning logic in JavaScript is smart. It also assigns the correct name to a function even if it is created without one. It also works if the assignment is done via a default value. In the specification, this feature is called a “contextual name”. If the function does not provide one, then in an assignment it is figured out from the context.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The function name-assigning logic in JavaScript is smart. It also assigns the correct name to a function even if it is created without one. It also works if the assignment is done via a default value. In the specification, this feature is called a “contextual name”. If the function does not provide one, then in an assignment it is figured out from the context.
+</div>
+  </div>
+</details>
 
-**Note:** You should not confuse this question with a question about how to name a function.
+:::note
+You should not confuse this question with a question about how to name a function.
+:::
 
 Example:
 
@@ -90,7 +110,13 @@ Source: <https://javascript.info/function-object#the-name-property>
 
 ### What does the function length property do?
 
-**Interview Answer:** The function length property returns the number of function parameters (arguments). The function length property does not count rest parameters. The length property is sometimes used for introspection in functions that operate on other functions.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The function length property returns the number of function parameters (arguments). The function length property does not count rest parameters. The length property is sometimes used for introspection in functions that operate on other functions.
+</div>
+  </div>
+</details>
 
 Example:
 
@@ -110,13 +136,25 @@ Source: <https://javascript.info/function-object>
 
 ### Is a function property considered a variable in JavaScript?
 
-**Interview Answer:** No, A property assigned to a function does not define as a local variable inside it. We can treat a function as an object, store properties in it, but that has no effect on its execution. Variables are not function properties and vice versa.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> No, A property assigned to a function does not define as a local variable inside it. We can treat a function as an object, store properties in it, but that has no effect on its execution. Variables are not function properties and vice versa.
+</div>
+  </div>
+</details>
 
 Source: <https://javascript.info/function-object#custom-properties>
 
 ### Explain, what a named function expression is in JavaScript (NFE)?
 
-**Interview Answer:** Named Function Expression, or NFE, is a term for Function Expressions that have a name. The named function acts as a value of it is assigned variable. This isolates it to the variable it has been assigned to. You can call the named function inside of the expression, but any attempts to call it outside of the function itself will result in an error.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Named Function Expression, or NFE, is a term for Function Expressions that have a name. The named function acts as a value of it is assigned variable. This isolates it to the variable it has been assigned to. You can call the named function inside of the expression, but any attempts to call it outside of the function itself will result in an error.
+</div>
+  </div>
+</details>
 
 Example:
 
@@ -139,9 +177,17 @@ Source: <https://javascript.info/function-object#named-function-expression>
 
 ### What is the actual purpose of the named function expression (NFE)?
 
-**Interview Answer:** There are times when a regular function expression will not meet our needs. A named function expression gives us access to the components of a function even if the reference is nullified on the main variable.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> There are times when a regular function expression will not meet our needs. A named function expression gives us access to the components of a function even if the reference is nullified on the main variable.
+</div>
+  </div>
+</details>
 
-**Note:** It should be noted that a regular function declaration can also be used to achieve the same result.
+:::note
+It should be noted that a regular function declaration can also be used to achieve the same result.
+:::
 
 Example:
 

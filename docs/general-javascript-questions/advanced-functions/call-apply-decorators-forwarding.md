@@ -14,7 +14,13 @@ sidebar_position: 9
 
 ### What is the main difference between the call and apply JavaScript methods?
 
-**Interview Answer:** The only difference between call and apply is what they accept as parameters, call() expects all parameters to be passed in individually, whereas apply() expects an array of parameters.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The only difference between call and apply is what they accept as parameters, call() expects all parameters to be passed in individually, whereas apply() expects an array of parameters.
+</div>
+  </div>
+</details>
 
 Example:
 
@@ -51,7 +57,13 @@ Source: <https://javascript.info/call-apply-decorators>
 
 ### Explain, how does transparent caching works in JavaScript?
 
-**Answer:** When are CPU-heavy functions return same result consistently. You can use transparent caching to reduce the load on the user’s browser or server by implementing a decorator. The decorator handles the functions result in a manner to determine if the result has been cached or not. Transparent caching also reduces the amount of bandwidth necessary to perform tasks and can greatly improve application performance. One of the main benefits of creating decorators is the ability to re-use cached results.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> You can use transparent caching to reduce the load on the user’s browser or server by implementing a decorator. The decorator handles the functions result in a manner to determine if the result has been cached or not. Transparent caching also reduces the amount of bandwidth necessary to perform tasks and can greatly improve application performance. One of the main benefits of creating decorators is the ability to re-use cached results.
+</div>
+  </div>
+</details>
 
 Example:
 
@@ -92,7 +104,13 @@ Source: <https://javascript.info/call-apply-decorators#transparent-caching>
 
 ### Explain, what a decorator function/method is in JavaScript?
 
-**Interview Answer:** A decorator is a function that modifies the behavior of the function or method passed to it by returning a new function. You can implement decorators in any language that supports functions as first-class citizens, where you can bind a function to a variable or pass it as an argument to another function.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A decorator is a function that modifies the behavior of the function or method passed to it by returning a new function. You can implement decorators in any language that supports functions as first-class citizens, where you can bind a function to a variable or pass it as an argument to another function.
+</div>
+  </div>
+</details>
 
 Code Example:
 
@@ -136,9 +154,14 @@ Code: <https://www.sitepoint.com/javascript-decorators-what-they-are/>
 
 ### Explain, the function and syntax of the function call() method?
 
-**Interview Answer:** The call method allows a function belonging to one object to be assigned and called for a different object. The call method provides a new value of “this” to the function. With call, you can write a method once and then inherit it in another object, without having to rewrite the method for the new object. The call method expects a list of arguments verses an array of arguments in the apply method.
-
-**Technical Answer:** The call() method allows for a function/method belonging to one object to be assigned and called for a different object. The call() method provides a new value of this to the function/method. With call(), you can write a method once and then inherit it in another object, without having to rewrite the method for the new object. While the syntax of this function is almost identical to that of apply(), the fundamental difference is that call() accepts an argument list, while apply() accepts a single array of arguments.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The call method allows a function belonging to one object to be assigned and called for a different object. The call method provides a new value of “this” to the function. With call, you can write a method once and then inherit it in another object, without having to rewrite the method for the new object. The call method expects a list of arguments verses an array of arguments in the apply method.</div><br />
+  <div><strong>Technical Response:</strong> The call() method allows for a function/method belonging to one object to be assigned and called for a different object. The call() method provides a new value of this to the function/method. With call(), you can write a method once and then inherit it in another object, without having to rewrite the method for the new object. While the syntax of this function is almost identical to that of apply(), the fundamental difference is that call() accepts an argument list, while apply() accepts a single array of arguments.
+  </div>
+  </div>
+</details>
 
 **Syntax:** func.call([thisArg[, arg1, arg2, ...argN]])
 
@@ -172,7 +195,13 @@ Source: <https://javascript.info/call-apply-decorators#using-func-call-for-the-c
 
 ### Explain, the function and syntax of the function apply() method?
 
-**Interview Answer:** The apply method calls a function with a given “this” value, and arguments provided as an array or an array-like object. While the syntax of this function is almost identical to that of the call method. The fundamental difference is that call() accepts an argument list, while apply() accepts a single array of arguments.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The apply method calls a function with a given “this” value, and arguments provided as an array or an array-like object. While the syntax of this function is almost identical to that of the call method. The fundamental difference is that call() accepts an argument list, while apply() accepts a single array of arguments.
+</div>
+  </div>
+</details>
 
 **Syntax:** func.apply(thisArg, [ argsArray])
 
@@ -199,7 +228,13 @@ Source: <https://javascript.info/call-apply-decorators#func-apply>
 
 ### How does method borrowing work in JavaScript?
 
-**Interview Answer:** Method borrowing allows us to use the methods of one object on a different object without having to make a copy of that method and maintain it in two separate places. It is accomplished through the use of .call(), .apply(), or .bind(), all of which exist to explicitly set this on the method we are borrowing
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Method borrowing allows us to use the methods of one object on a different object without having to make a copy of that method and maintain it in two separate places. It is accomplished through the use of .call(), .apply(), or .bind(), all of which exist to explicitly set this on the method we are borrowing.
+</div>
+  </div>
+</details>
 
 Example:
 

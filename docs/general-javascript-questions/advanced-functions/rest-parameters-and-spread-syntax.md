@@ -14,9 +14,17 @@ sidebar_position: 2
 
 ### What is the difference between the rest parameter and spread syntax?
 
-**Interview Answer:** The spread syntax is the opposite of the rest parameter, where rest parameter collects items into an array, the spread operator unpacks the collected elements into single elements.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The spread syntax is the opposite of the rest parameter, where rest parameter collects items into an array, the spread operator unpacks the collected elements into single elements.
+</div>
+  </div>
+</details>
 
-**Note:** If you are going to call a function and send several arguments, you will receive them into rest parameter in the function implementation.
+:::note
+If you are going to call a function and send several arguments, you will receive them into rest parameter in the function implementation.
+:::
 
 Code Example: Rest vs. Spread
 
@@ -42,7 +50,13 @@ Source: <https://javascript.info/rest-parameters-spread>
 
 ### Explain, How the rest parameter works in functions?
 
-**Interview Answer:** The rest parameter expands the dynamic capabilities of functions. Functions themselves will not express an error when there are excessive arguments. The rest of the parameters can be included in the function definition by using three dots ... followed by the name of the array that will contain them. The dots literally mean “gather the remaining parameters into an array”. This allows the function to act on several sets of arguments instead of a predefined number or single argument.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The rest parameter expands the dynamic capabilities of functions. Functions themselves will not express an error when there are excessive arguments. The rest of the parameters can be included in the function definition by using three dots ... followed by the name of the array that will contain them. The dots literally mean “gather the remaining parameters into an array”. This allows the function to act on several sets of arguments instead of a predefined number or single argument.
+</div>
+  </div>
+</details>
 
 Code Example: get the sum of the arguments regardless of the number in the array
 
@@ -66,7 +80,13 @@ Source: <https://javascript.info/rest-parameters-spread#rest-parameters>
 
 ### Can you use the rest parameter in conjunction with predefined arguments in JavaScript functions?
 
-**Interview Answer:** Yes, you can mix predefined parameters with the rest parameter in JavaScript functions. There is a limit to its use in the form of the order of arguments. Predefined parameters must precede the rest parameter, or it will result in an error. The best way to remember this is to “Rest at the end”.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, you can mix predefined parameters with the rest parameter in JavaScript functions. There is a limit to its use in the form of the order of arguments. Predefined parameters must precede the rest parameter, or it will result in an error. The best way to remember this is to “Rest at the end”.
+</div>
+  </div>
+</details>
 
 Example:
 
@@ -102,7 +122,13 @@ Source: <https://javascript.info/rest-parameters-spread#rest-parameters>
 
 ### What is the difference between the rest parameter and the arguments array-like object?
 
-**Interview Answer:** The rest parameter and the arguments array-like object have similar behaviors. The rest parameter is relatively new compared to arguments. Although arguments are both array-like and iterable, it is not an array. It does not support array methods, so we cannot call arguments.map(...) for example. Also, it always contains all arguments. We cannot capture them partially, like we did with rest parameters. So, when we need these features, then rest parameters are preferred. Another issue is that arrow functions do not have access to arguments. If we access the arguments object from an arrow function, it takes them from the outer “normal” function. This reduces the potency of the arguments object and can lead to bugs in our code.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The rest parameter and the arguments array-like object have similar behaviors. The rest parameter is relatively new compared to arguments. Although arguments are both array-like and iterable, it is not an array. It does not support array methods, so we cannot call arguments.map(...) for example. Also, it always contains all arguments. We cannot capture them partially, like we did with rest parameters. So, when we need these features, then rest parameters are preferred. Another issue is that arrow functions do not have access to arguments. If we access the arguments object from an arrow function, it takes them from the outer “normal” function. This reduces the potency of the arguments object and can lead to bugs in our code.
+</div>
+  </div>
+</details>
 
 Example:
 
@@ -132,7 +158,13 @@ Source: <https://javascript.info/rest-parameters-spread#the-arguments-variable>
 
 ### What is the benefit of using the ES6 spread syntax?
 
-**Interview Answer:** As far as coding in a functional paradigm is concerned, using the spread syntax in ES6 can prove to be heavily beneficial. The spread syntax can be easily used to create copies of arrays or objects. Using spread syntax in a program reduces the need to use loops, Object.create, slice or any library function. This helps reduce code and complexity in your applications.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> As far as coding in a functional paradigm is concerned, using the spread syntax in ES6 can prove to be heavily beneficial. The spread syntax can be easily used to create copies of arrays or objects. Using spread syntax in a program reduces the need to use loops, Object.create, slice or any library function. This helps reduce code and complexity in your applications.
+</div>
+  </div>
+</details>
 
 Example:
 

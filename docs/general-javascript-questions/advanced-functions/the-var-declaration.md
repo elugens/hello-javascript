@@ -14,9 +14,14 @@ sidebar_position: 4
 
 ### What is the difference between var and let declarations?
 
-**Interview Answer:** The main difference between let and var is that scope of a variable defined with let is limited to the block in which it is declared, while variable declared with var has the global scope.
-
-**Technical Answer:** The main difference between let and var is that scope of a variable defined with let is limited to the block in which it is declared, while variable declared with var has the global scope. So, we can say that var is rather a keyword which defines a variable globally regardless of block scope. This gives var some odd behaviors when compared to let. In its global state it can be redeclared, where let will simply throw an error.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The main difference between let and var is that scope of a variable defined with let is limited to the block in which it is declared, while variable declared with var has the global scope.</div><br />
+  <div><strong>Technical Response:</strong> The main difference between let and var is that scope of a variable defined with let is limited to the block in which it is declared, while variable declared with var has the global scope. So, we can say that var is rather a keyword which defines a variable globally regardless of block scope. This gives var some odd behaviors when compared to let. In its global state it can be redeclared, where let will simply throw an error.
+  </div>
+  </div>
+</details>
 
 Example:
 
@@ -37,7 +42,13 @@ Source: <https://www.tutorialspoint.com/difference-between-var-and-let-in-javasc
 
 ### Is the var declaration block scoped or globally scoped?
 
-**Interview Answer:** Variables, declared with var, are either function-scoped or globally-scoped. They are visible through blocks. So, technically they have no originating scope (besides function blocks) in JavaScript.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Variables, declared with var, are either function-scoped or globally-scoped. They are visible through blocks. So, technically they have no originating scope (besides function blocks) in JavaScript.
+</div>
+  </div>
+</details>
 
 Example:
 
@@ -72,9 +83,17 @@ Source: <https://javascript.info/var#var-has-no-block-scope>
 
 ### How does var work inside of a function block?
 
-**Interview Answer:** If a code block is inside a function, then var becomes a function-level variable. Once, the var is used inside of a function, the function takes ownership of the var.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> If a code block is inside a function, then var becomes a function-level variable. Once, the var is used inside of a function, the function takes ownership of the var.
+</div>
+  </div>
+</details>
 
-**Note:** This is part of the old rules in JavaScript when there was no lexical environment.
+:::note
+This is part of the old rules in JavaScript when there was no lexical environment.
+:::
 
 Example:
 
@@ -112,9 +131,17 @@ Source: <https://javascript.info/var#var-has-no-block-scope>
 
 ### What happens when you redeclare a var in JavaScript?
 
-**Interview Answer:** If we redeclare var in the global space, then JavaScript ignores it as an error and allows the new value to overwrite the old one.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> If we redeclare var in the global space, then JavaScript ignores it as an error and allows the new value to overwrite the old one.
+</div>
+  </div>
+</details>
 
-**Note:** If, we try to do this with the let declaration it will result in an error, because JavaScript does not allow “let” to have multiple variables of the same name.
+:::note
+If, we try to do this with the let declaration it will result in an error, because JavaScript does not allow “let” to have multiple variables of the same name.
+:::
 
 Example:
 
@@ -136,9 +163,14 @@ Source: <https://javascript.info/var#var-tolerates-redeclarations>
 
 ### Explain, what is hoisting in JavaScript?
 
-**Interview Answer:** Hoisting is JavaScript's default behavior of moving declarations to the top. It should be noted that they are not initialized, but they are put into memory without their assignments.
-
-**Technical Answer:** Hoisting is JavaScript's default behavior of moving declarations to the top, but not initialized. The behavior of hoisting is common when var is declared after its assignment. JavaScript only hoists declarations, not initializations. In fact, a strict definition of hoisting suggests that variable and function declarations are physically moved to the top of your code, but this is not in fact what happens. Instead, the variable and function declarations are put into memory during the compile phase but stay exactly where you typed them in your code.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Hoisting is JavaScript's default behavior of moving declarations to the top. It should be noted that they are not initialized, but they are put into memory without their assignments.</div><br />
+  <div><strong>Technical Response:</strong> Hoisting is JavaScript's default behavior of moving declarations to the top, but not initialized. The behavior of hoisting is common when var is declared after its assignment. JavaScript only hoists declarations, not initializations. In fact, a strict definition of hoisting suggests that variable and function declarations are physically moved to the top of your code, but this is not in fact what happens. Instead, the variable and function declarations are put into memory during the compile phase but stay exactly where you typed them in your code.
+  </div>
+  </div>
+</details>
 
 Example: Hoisting (put into memory) - Declarations are hoisted, but assignments are not.
 
@@ -165,11 +197,18 @@ Source: <https://javascript.info/var#var-variables-can-be-declared-below-their-u
 
 ### What is a (IIFE) immediately invoked function expression and why is it used with the old var?
 
-**Interview Answer:** An IIFE or Immediately Invoked Function Expression is a JavaScript function that runs as soon as it is defined. There are at least five variations of their implementation that we should be familiar with.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> An IIFE or Immediately Invoked Function Expression is a JavaScript function that runs as soon as it is defined. There are at least five variations of their implementation that we should be familiar with.</div><br />
+  <div><strong>Technical Response:</strong> In the past, as there was only var, and it has no block-level visibility, programmers invented a way to emulate it. An IIFE (Immediately Invoked Function Expression) is a JavaScript function that runs as soon as it is defined. It is not something we should use in modern JavaScript code, but you can still find them in old scripts. So, you should know what they are when you see it in code.
+  </div>
+  </div>
+</details>
 
-**Note:** It is not something we should use in modern JavaScript code, but you can still find them in old scripts. So, you should know what they are when you see it in code.
-
-**Technical Answer:** In the past, as there was only var, and it has no block-level visibility, programmers invented a way to emulate it. An IIFE (Immediately Invoked Function Expression) is a JavaScript function that runs as soon as it is defined. It is not something we should use in modern JavaScript code, but you can still find them in old scripts. So, you should know what they are when you see it in code.
+:::note
+It is not something we should use in modern JavaScript code, but you can still find them in old scripts. So, you should know what they are when you see it in code.
+:::
 
 Example: IIFE
 
@@ -197,14 +236,22 @@ Source: <https://javascript.info/var#iife>
 
 ### Does JavaScript allow function declarations to be called immediately?
 
-**Interview Answer:** No, JavaScript does not allow Function Declarations to be called immediately. It will result in a syntax error.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> No, JavaScript does not allow Function Declarations to be called immediately. It will result in a syntax error.
+</div>
+  </div>
+</details>
 
 Example:
 
+```js
 // syntax error because of parentheses below
 
 function go() {
 
 }(); // <-- can't call Function Declaration immediately
+```
 
 Source: <https://javascript.info/var#iife>

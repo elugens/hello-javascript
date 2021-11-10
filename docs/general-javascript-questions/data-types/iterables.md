@@ -14,17 +14,28 @@ sidebar_position: 6
 
 ### What are iterables in JavaScript?
 
-**Interview Answer:** An iterable is a interface that specifies that an object can be accessible if it implements a method who is key is [symbol.iterator]. Some of the built-in data structures that use iterables are Strings, Arrays, Maps and custom objects.
-
-**Technical Answer:** Iterable objects are a generalization of arrays. That’s a concept that allows us to make any object useable in a for..of loop. Of course, Arrays are iterable. But there are many other built-in objects, that are iterable as well. For instance, strings are also iterable. In general, it is a data structure that allows its data to be consumed. It does so by implementing a method whose key is Symbol.iterator which returns an iterator. The iterator interface has another method called return(), which is being called when the iteration reaches the last value, or stopped manually by calling it explicitly or for example break; a for loop.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> An iterable is a interface that specifies that an object can be accessible if it implements a method who is key is [symbol.iterator]. Some of the built-in data structures that use iterables are Strings, Arrays, Maps and custom objects.</div><br />
+  <div><strong>Technical Response:</strong> Iterable objects are a generalization of arrays. That’s a concept that allows us to make any object useable in a for..of loop. Of course, Arrays are iterable. But there are many other built-in objects, that are iterable as well. For instance, strings are also iterable. In general, it is a data structure that allows its data to be consumed. It does so by implementing a method whose key is Symbol.iterator which returns an iterator. The iterator interface has another method called return(), which is being called when the iteration reaches the last value, or stopped manually by calling it explicitly or for example break; a for loop.
+  </div>
+  </div>
+</details>
 
 Source: <https://javascript.info/iterable>
 
 ### What can the Symbol.iterator be used for in JavaScript?
 
-**Interview Answer:** The most common use case for Symbol.iterator is creating a custom object iterator.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The most common use case for Symbol.iterator is creating a custom object iterator.
+</div>
+  </div>
+</details>
 
-Example:
+Code Example:
 
 ```js
 let range = {
@@ -70,9 +81,15 @@ Source: <https://javascript.info/iterable#symbol-iterator>
 
 ### Can you call an iterator explicitly and what are the benefits?
 
-**Interview Answer:** Yes, you can call an iterator explicitly in JavaScript. There are several benefits including more control over the process than for...of.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, you can call an iterator explicitly in JavaScript. There are several benefits including more control over the process than for...of.
+</div>
+  </div>
+</details>
 
-Example:
+Code Example:
 
 ```js
 let str = 'Hello';
@@ -96,9 +113,15 @@ Source: <https://javascript.info/iterable#calling-an-iterator-explicitly>
 
 ### What is the difference between an iterable and an array-like object?
 
-**Interview Answer:** Iterables are objects that implement the Symbol.iterator method such as arrays and strings. Array-likes are objects that have indexes and length, so they look like arrays. When we use JavaScript for practical tasks in a browser or any other environment, we may meet objects that are iterables or array-likes, or both like strings.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Iterables are objects that implement the Symbol.iterator method such as arrays and strings. Array-likes are objects that have indexes and length, so they look like arrays. When we use JavaScript for practical tasks in a browser or any other environment, we may meet objects that are iterables or array-likes, or both like strings.
+</div>
+  </div>
+</details>
 
-Example: Array-like but not Iterable
+Code Example: Array-like but not Iterable
 
 ```js
 let arrayLike = {
@@ -121,11 +144,17 @@ Source: <https://javascript.info/iterable#array-like>
 
 ### What universal method can be used to turn an iterable or array- like value into an array?
 
-**Interview Answer:** The Array.from method can turn an iterable or array-like value into an array. Then we can call array methods on it.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The Array.from method can turn an iterable or array-like value into an array. Then we can call array methods on it.
+</div>
+  </div>
+</details>
 
 **Syntax:** `Array.from(obj[, mapFn, thisArg])`
 
-Example:
+Code Example:
 
 ```js
 let arrayLike = {

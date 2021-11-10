@@ -14,9 +14,17 @@ sidebar_position: 5
 
 ### Explain, what the global object is in JavaScript?
 
-**Interview Answer:** A global object is an object that always exists in the global scope. In JavaScript, there is always a global object defined. In a web browser, when scripts create global variables defined with the var keyword, they are created as members of the global object.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A global object is an object that always exists in the global scope. In JavaScript, there is always a global object defined. In a web browser, when scripts create global variables defined with the var keyword, they are created as members of the global object.
+</div>
+  </div>
+</details>
 
-**Note:** (In Node.js this is not the case.) The global object's interface depends on the execution context in which the script is running.
+:::note
+(In Node.js this is not the case.) The global object's interface depends on the execution context in which the script is running.
+:::
 
 Example:
 
@@ -52,9 +60,15 @@ Source: <https://javascript.info/global-object>
 
 ### How should you use the global (window) object in JavaScript?
 
-**Interview Answer:** Using global variables is generally discouraged. There should be as few global variables as possible to avoid errors and bugs.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+   <div><strong>Interview Response:</strong> Using global variables is generally discouraged. There should be as few global variables as possible. The code design where a function gets “input” variables and produces certain “outcome” is clearer, less prone to errors and easier to test than if it uses outer or global variables. You can also use the global object to test for support of modern language features. This commonly done in Polyfills to ensure that user interaction results in an equitable response.
+  </div>
+  </div>
+</details>
 
-**Technical Answer:** Using global variables is generally discouraged. There should be as few global variables as possible. The code design where a function gets “input” variables and produces certain “outcome” is clearer, less prone to errors and easier to test than if it uses outer or global variables. You can also use the global object to test for support of modern language features. This commonly done in Polyfills to ensure that user interaction results in an equitable response.
+Code Example:
 
 ```js
 if (!window.Promise) {

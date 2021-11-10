@@ -14,9 +14,14 @@ sidebar_position: 10
 
 ### What is de-structuring assignment and what are two data structures that commonly use it in JavaScript?
 
-**Interview Answer:** De-structuring assignment allows us to “unpack” arrays or objects into variables, as sometimes that is more convenient. De-structuring also works great with complex functions that have a lot of parameters and default values.
-
-**Technical Answer:** De-structuring assignment is a special syntax that allows us to “unpack” arrays or objects into a bunch of variables, as sometimes that is more convenient. De-structuring also works great with complex functions that have a lot of parameters, default values, and so on. Soon we will see that. De-structuring is commonly used on both objects and arrays in JavaScript. It is called “de-structuring assignment,” because it “de-structurers” by copying items into variables. But the array itself is not modified.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> De-structuring assignment allows us to “unpack” arrays or objects into variables, as sometimes that is more convenient. De-structuring also works great with complex functions that have a lot of parameters and default values.</div><br />
+  <div><strong>Technical Response:</strong> De-structuring assignment is a special syntax that allows us to “unpack” arrays or objects into a bunch of variables, as sometimes that is more convenient. De-structuring also works great with complex functions that have a lot of parameters, default values, and so on. Soon we will see that. De-structuring is commonly used on both objects and arrays in JavaScript. It is called “de-structuring assignment,” because it “de-structurers” by copying items into variables. But the array itself is not modified.
+  </div>
+  </div>
+</details>
 
 Example:
 
@@ -47,7 +52,13 @@ Source: <https://javascript.info/destructuring-assignment#array-destructuring>
 
 ### If, you want to ignore or skip an array element to be de-structured (on the right-hand side of the assignment), what delimiter can you use when de-structuring an array?
 
-**Interview Answer:** We can skip unwanted elements of an array by adding an extra space and comma as a delimiting block.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> We can skip unwanted elements of an array by adding an extra space and comma as a delimiting block.
+</div>
+  </div>
+</details>
 
 Example:
 
@@ -71,7 +82,13 @@ Source: <https://javascript.info/destructuring-assignment#array-destructuring>
 
 ### What kind of structures work with de-structuring in JavaScript?
 
-**Interview Answer:** De-structuring works with any iterable structure including arrays, objects, sets, and strings on the right-hand side of the assignment.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> De-structuring works with any iterable structure including arrays, objects, sets, and strings on the right-hand side of the assignment.
+</div>
+  </div>
+</details>
 
 Code Example:
 
@@ -84,7 +101,13 @@ Source: <https://javascript.info/destructuring-assignment#array-destructuring>
 
 ### Is there a method you can use to destructure and loop over an object?
 
-**Interview Answer:** We can use the Object.entries(object) method to loop over an object and a combination of [key,value] destructuring.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> We can use the Object.entries(object) method to loop over an object and a combination of [key,value] destructuring.
+</div>
+  </div>
+</details>
 
 Example:
 
@@ -120,7 +143,13 @@ Source: <https://javascript.info/destructuring-assignment#array-destructuring>
 
 ### Explain, the swapping of variables using destructuring in JavaScript?
 
-**Interview Answer:** There is a trick for swapping, we will have to create a temporary array of the variables on the left side and then swap the variables in the right side in another array. We can swap more than two variables this way in JavaScript.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> There is a trick for swapping, we will have to create a temporary array of the variables on the left side and then swap the variables in the right side in another array. We can swap more than two variables this way in JavaScript.
+</div>
+  </div>
+</details>
 
 Code Example:
 
@@ -140,9 +169,14 @@ Source: <https://javascript.info/destructuring-assignment#array-destructuring>
 
 ### Is there a way to handle mismatched arrays that are being destructured in JavaScript?
 
-**Interview Answer:** To access the extra variables on the right side, we can use the (...rest) operator to access the remaining variables.
-
-**Technical Answer:** Yes, if the array is longer than the list at the left, the “extra” items are omitted. To access the extra variables on the right side, you can use the (...rest) operator to access the remaining variables. We can use any other variable name in place of rest, just make sure it has three dots before it and goes last in the destructuring assignment. If the array is shorter than the list of variables at the left, there will be no errors. Absent values are considered undefined.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> To access the extra variables on the right side, we can use the (...rest) operator to access the remaining variables.</div><br />
+  <div><strong>Technical Response:</strong> Yes, if the array is longer than the list at the left, the “extra” items are omitted. To access the extra variables on the right side, you can use the (...rest) operator to access the remaining variables. We can use any other variable name in place of rest, just make sure it has three dots before it and goes last in the destructuring assignment. If the array is shorter than the list of variables at the left, there will be no errors. Absent values are considered undefined.
+  </div>
+  </div>
+</details>
 
 Example:
 
@@ -175,7 +209,13 @@ Source: <https://javascript.info/destructuring-assignment#array-destructuring>
 
 ### What is the rule regarding the naming convention of a rest operator?
 
-**Interview Answer:** In general, there is no restrictions on what you name your rest operator. In fact, you should use a relative name for rest operator such as (…title) with three preceding dots.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In general, there is no restrictions on what you name your rest operator. In fact, you should use a relative name for rest operator such as (…title) with three preceding dots.
+</div>
+  </div>
+</details>
 
 Example:
 
@@ -194,7 +234,13 @@ Source: <https://javascript.info/destructuring-assignment#array-destructuring>
 
 ### If, you implement destructuring on empty values, what is returned?
 
-**Interview Answer:** If the array is shorter than the list of variables at the left, there will be no errors. Absent values are considered undefined on return.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> If the array is shorter than the list of variables at the left, there will be no errors. Absent values are considered undefined on return.
+</div>
+  </div>
+</details>
 
 Example:
 
@@ -209,9 +255,14 @@ Source: <https://javascript.info/destructuring-assignment#default-values>
 
 ### What is a good destructuring technique you can use to eliminate the return of undefined array values?
 
-**Interview Answer:** The best way to handle missing values during destructuring is to set default values to potentially missing values using the assignment operator.
-
-**Technical Answer:** The best way to handle missing values during destructuring is to set default values to potentially missing values. This can be achieved by using the equal (=) operator to assign a new default. Default values can be more complex expressions or even function calls. They are evaluated only if the value is not provided.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The best way to handle missing values during destructuring is to set default values to potentially missing values using the assignment operator.</div><br />
+  <div><strong>Technical Response:</strong> The best way to handle missing values during destructuring is to set default values to potentially missing values. This can be achieved by using the equal (=) operator to assign a new default. Default values can be more complex expressions or even function calls. They are evaluated only if the value is not provided.
+  </div>
+  </div>
+</details>
 
 Example:
 
@@ -234,9 +285,14 @@ Source: <https://javascript.info/destructuring-assignment#default-values>
 
 ### Can you use destructing on objects in JavaScript?
 
-**Interview Answer:** We can use destructing on any iterable including objects in JavaScript.
-
-**Technical Answer:** We can use destructing on any iterable including objects in JavaScript. There should be an existing object at the right side of the assignment operator. The left side contains an object-like “pattern” for corresponding properties. In the simplest case, that is a list of variable names in {...}.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> We can use destructing on any iterable including objects in JavaScript.</div><br />
+  <div><strong>Technical Response:</strong> We can use destructing on any iterable including objects in JavaScript. There should be an existing object at the right side of the assignment operator. The left side contains an object-like “pattern” for corresponding properties. In the simplest case, that is a list of variable names in &#123;...&#125;.
+  </div>
+  </div>
+</details>
 
 Example:
 
@@ -264,11 +320,20 @@ Source: <https://javascript.info/destructuring-assignment#object-destructuring>
 
 ### What is the difference between array and object destructuring?
 
-**Interview Answer:** Object destructuring is like array destructuring, with one exception, instead of values being pulled out of an array, object keys and values can be pulled out of an object.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Object destructuring is like array destructuring, with one exception, instead of values being pulled out of an array, object keys and values can be pulled out of an object.</div><br />
+  <div><strong>Technical Response:</strong> Object destructuring is like array destructuring, with one exception, instead of values being pulled out of an array, object keys and values can be pulled out of an object. In an array, the order of the elements is relevant. It depends on your intent to handle the elements such as swapping variables. However, the rule for arrays does not apply to objects and order is not significant.
+  </div>
+  </div>
+</details>
 
-**Note:** In an array, the order of the elements is relevant. It depends on your intent, the rule for arrays does not apply to objects and order is not significant in objects.
+:::note
 
-**Technical Answer:** Object destructuring is like array destructuring, with one exception, instead of values being pulled out of an array, object keys and values can be pulled out of an object. In an array, the order of the elements is relevant. It depends on your intent to handle the elements such as swapping variables. However, the rule for arrays does not apply to objects and order is not significant.
+In an array, the order of the elements is relevant. It depends on your intent, the rule for arrays does not apply to objects and order is not significant in objects.
+
+:::
 
 Example:
 
@@ -282,9 +347,13 @@ Source: <https://javascript.info/destructuring-assignment#object-destructuring>
 
 ### Is there a way to assign a different name to an object variable using the destructuring process?
 
-**Interview Answer:** If we want to assign a property to a variable with another name. We can set the new or shortened name by using a semi-colon in the destructing process.
-
-**Technical Answer:** If we want to assign a property to a variable with another name. We can set the new or shortened name by using a semi-colon in the destructing process. The colon shows what goes were and specifies the new or shortened name.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> If we want to assign a property to a variable with another name. We can set the new or shortened name by using a semi-colon in the destructing process. The colon shows what goes were and specifies the new or shortened name.
+</div>
+  </div>
+</details>
 
 Example:
 
@@ -316,9 +385,14 @@ Source: <https://javascript.info/destructuring-assignment#object-destructuring>
 
 ### How do you handle potentially missing object properties using destructuring in JavaScript?
 
-**Interview Answer:** We can set default values using the assignment (=) operator. Just like with arrays or function parameters, default values can be any expressions or even function calls.
-
-**Technical Answer:** If the object is missing object property then you can use destructuring to set a new property and value to reference the object. We can set default values using the assignment (=) operator. Just like with arrays or function parameters, default values can be any expressions or even function calls. They will be evaluated if the value is not provided.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> We can set default values using the assignment (=) operator. Just like with arrays or function parameters, default values can be any expressions or even function calls.</div><br />
+  <div><strong>Technical Response:</strong> If the object is missing object property then you can use destructuring to set a new property and value to reference the object. We can set default values using the assignment (=) operator. Just like with arrays or function parameters, default values can be any expressions or even function calls. They will be evaluated if the value is not provided.
+  </div>
+  </div>
+</details>
 
 Example:
 
@@ -348,7 +422,13 @@ Source: <https://javascript.info/destructuring-assignment#object-destructuring>
 
 ### If, you want to shorten an object property and supply a value to that property, what is the process used implement this in JavaScript?
 
-**Interview Answer:** If, you want to shorten a property and supply a value to a property. We can combine both with a colon and assign shortened property name. The semi-colon sets the new shortened property name, and the assignment operator assigns a new value.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> If, you want to shorten a property and supply a value to a property. We can combine both with a colon and assign shortened property name. The semi-colon sets the new shortened property name, and the assignment operator assigns a new value.
+</div>
+  </div>
+</details>
 
 Example:
 
@@ -368,7 +448,13 @@ Source: <https://javascript.info/destructuring-assignment#object-destructuring>
 
 ### When working with an object, is there a way to extract only the properties?
 
-**Interview Answer:** If we have a complex object with many properties, we can extract only what we need by using destructuring to extract specific properties.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> If we have a complex object with many properties, we can extract only what we need by using destructuring to extract specific properties.
+</div>
+  </div>
+</details>
 
 Example:
 
@@ -392,9 +478,17 @@ Source: <https://javascript.info/destructuring-assignment#object-destructuring>
 
 ### What if the object has more properties than we have variables? Can we take some and then assign the “rest” somewhere?
 
-**Interview Answer:** We can use the rest pattern, just like we do with array destructuring. Using the rest pattern, we can assign properties and collect the rest if necessary.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> We can use the rest pattern, just like we do with array destructuring. Using the rest pattern, we can assign properties and collect the rest if necessary.
+</div>
+  </div>
+</details>
 
-**Note:** It is not supported by some older browsers (IE, use Babel to polyfill it), but works in modern ones.
+:::note
+It is not supported by some older browsers (IE, use Babel to polyfill it), but works in modern ones.
+:::
 
 Example:
 
@@ -423,7 +517,13 @@ Source: <https://javascript.info/destructuring-assignment#object-destructuring>
 
 ### What are some of the issues that you can run into with destructuring objects?
 
-**Interview Answer:** The most significant issue is the curly brackets that encapsulate the properties. Since, objects use block scoping, an issue can arise when you separate the variable initialization from the destructuring properties themselves on a new line. The problem is that JavaScript treats {...} in the main code flow (not inside another expression) as a code block. To show JavaScript that it is not a code block, we can wrap the expression in parentheses (...).
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The most significant issue is the curly brackets that encapsulate the properties. Since, objects use block scoping, an issue can arise when you separate the variable initialization from the destructuring properties themselves on a new line. The problem is that JavaScript treats &#123;...&#125; in the main code flow (not inside another expression) as a code block. To show JavaScript that it is not a code block, we can wrap the expression in parentheses (...).
+</div>
+  </div>
+</details>
 
 Example:
 
@@ -449,9 +549,14 @@ Source: <https://javascript.info/destructuring-assignment#object-destructuring>
 
 ### If an object or an array contain other nested objects and arrays, can we use more complex left-side patterns to extract deeper portions?
 
-**Interview Answer:** Yes, we can build a generic object that references the original. Because JavaScript allows you to choose your properties. It is possible to build a generic object with properties that references the original object.
-
-**Technical Answer:** Yes, we can use more complex left-side patterns to extract deeper portions. You can build a generic object that references the original. Because JavaScript allows you to choose your properties. It is possible to build a generic object with properties that references the original object.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, we can build a generic object that references the original. Because JavaScript allows you to choose your properties. It is possible to build a generic object with properties that references the original object.</div><br />
+  <div><strong>Technical Response:</strong> Yes, we can use more complex left-side patterns to extract deeper portions. You can build a generic object that references the original. Because JavaScript allows you to choose your properties. It is possible to build a generic object with properties that references the original object.
+  </div>
+  </div>
+</details>
 
 Example:
 
