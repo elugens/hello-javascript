@@ -14,15 +14,19 @@ sidebar_position: 8
 
 ### Is there another option, other than explicit promises, to handle asynchronous code in JavaScript?
 
-**Interview Answer:** Yes, there is a special syntax to work with promises in a more comfortable fashion, called “async/await”. It is surprisingly easy to understand and use.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, there is a special syntax to work with promises in a more comfortable fashion, called “async/await”. It is surprisingly easy to understand and use.
+</div>
+  </div>
+</details>
 
 Example:
 
-```
-async function f() {
-
-    return 1;
-
+```js
+async function f() {
+  return 1;
 }
 ```
 
@@ -30,7 +34,13 @@ Source: <https://javascript.info/async-await>
 
 ### Can you explain the syntax and function of an async function?
 
-**Answer:** An async function is a function declared with the async keyword, and the await keyword is permitted within them. The async and await keywords enable asynchronous, promise-based behavior to be written in a cleaner style, avoiding the need to explicitly configure promise chains. Async functions can contain zero or more await expressions. Await expressions make promise-returning functions behave as though they are synchronous by suspending the code execution until the returned promise is fulfilled or rejected. The resolved value of the promise is treated as the return value of the await expression. Use of async and await enables the use of ordinary try / catch blocks around asynchronous code.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> An async function is a function declared with the async keyword, and the await keyword is permitted within them. The async and await keywords enable asynchronous, promise-based behavior to be written in a cleaner style, avoiding the need to explicitly configure promise chains. Async functions can contain zero or more await expressions. Await expressions make promise-returning functions behave as though they are synchronous by suspending the code execution until the returned promise is fulfilled or rejected. The resolved value of the promise is treated as the return value of the await expression. Use of async and await enables the use of ordinary try / catch blocks around asynchronous code.
+</div>
+  </div>
+</details>
 
 **Syntax:** `async function name([param[, param[, ...param]]]) { statements }`
 
@@ -55,7 +65,13 @@ Source: [https://javascript.info/async-await#async-functions\](https://javascrip
 
 ### What does the await keyword do in asynchronous JavaScript code?
 
-**Interview Answer:** The await keyword makes JavaScript wait until that promise settles and returns its result. It can only be used inside an async function within regular JavaScript code; however, it can be used on its own with JavaScript modules.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The await keyword makes JavaScript wait until that promise settles and returns its result. It can only be used inside an async function within regular JavaScript code; however, it can be used on its own with JavaScript modules.
+</div>
+  </div>
+</details>
 
 **Syntax:** let value = await promise
 
@@ -67,7 +83,7 @@ async function f() {
     setTimeout(() => resolve('done!'), 1000);
   });
 
-  let result = await promise; // wait until the promise resolves (\*)
+  let result = await promise; // wait until the promise resolves (*)
   alert(result); // "done!"
 }
 
@@ -78,9 +94,17 @@ Source: <https://javascript.info/async-await#await>
 
 ### Is it possible to use the await keyword with regular functions?
 
-**Interview Answer:** No, the await keyword cannot be used in conjunction with regular functions. If we try to use await in non-async function, there would be a syntax error.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> No, the await keyword cannot be used in conjunction with regular functions. If we try to use await in non-async function, there would be a syntax error.
+</div>
+  </div>
+</details>
 
-**Note:** We may get this error if we forget to put async before a function. As said, await only works inside an async function.
+:::note
+We may get this error if we forget to put async before a function. As said, await only works inside an async function.
+:::
 
 Example:
 
@@ -101,9 +125,17 @@ Source: <https://javascript.info/async-await#await>
 
 ### How does the await keyword work on top-level code?
 
-**Interview Answer:** The await keyword should not be used directly in top-level code, because it is syntactically incorrect and will result in an error. In order make it work properly, we can optionally wrap it in an anonymous async function.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The await keyword should not be used directly in top-level code, because it is syntactically incorrect and will result in an error. In order make it work properly, we can optionally wrap it in an anonymous async function.
+</div>
+  </div>
+</details>
 
-Note: It should be noted that a new feature of the V8 engine allows top-level await in JS modules, but this should not be mistaken for a fix.
+:::note
+It should be noted that a new feature of the V8 engine allows top-level await in JS modules, but this should not be mistaken for a fix.
+:::
 
 Example:
 
@@ -129,7 +161,13 @@ Source: <https://javascript.info/async-await#await>
 
 ### Does await accept JavaScript thenables?
 
-**Interview Answer:** Yes, like promise.then, await allows us to use thenable objects (those with a callable then method). The idea is that a third-party object may not be a promise, but promise-compatible: if it supports .then, that’s enough to use it with await.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, like promise.then, await allows us to use thenable objects (those with a callable then method). The idea is that a third-party object may not be a promise, but promise-compatible: if it supports .then, that’s enough to use it with await.
+</div>
+  </div>
+</details>
 
 Example:
 
@@ -171,7 +209,13 @@ Source: <https://javascript.info/async-await#await>
 
 ### Do classes allow asynchronous class methods?
 
-**Interview Answer:** Yes, to declare an async class method, just prepend it with async. The meaning is the same: it ensures that the returned value is a promise and enables await.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, to declare an async class method, just prepend it with async. The meaning is the same: it ensures that the returned value is a promise and enables await.
+</div>
+  </div>
+</details>
 
 Code Example:
 
@@ -209,7 +253,13 @@ Source: <https://javascript.info/async-await#await>
 
 ### If a promise resolves normally, then await promise returns the result. What happens in the case of a rejection?
 
-**Interview Answer:** In the case of a rejection, it throws the error, just as if there were a throw statement at that line. In real situations, the promise may take some time before it rejects. In that case there will be a delay before await throws an error.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In the case of a rejection, it throws the error, just as if there were a throw statement at that line. In real situations, the promise may take some time before it rejects. In that case there will be a delay before await throws an error.
+</div>
+  </div>
+</details>
 
 Example:
 
@@ -229,9 +279,13 @@ Source: <https://javascript.info/async-await#error-handling>
 
 ### Is there a way to catch errors dynamically in async functions beside explicitly throwing an error?
 
-**Interview Answer:** Yes, there are two approaches that can be used including try…catch method commonly used with promises. We can catch that error using try..catch, the same way as a regular throw. In the case of an error, the control jumps to the catch block.
-
-We can also wrap multiple lines to ensure handling of multiple error handling. If we don’t have try..catch, then the promise generated by the call of the async function f() becomes rejected. We can append .catch to handle it. We can also catch such errors using a global unhandledrejection event handler.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, there are two approaches that can be used including try…catch method commonly used with promises. We can catch that error using try..catch, the same way as a regular throw. In the case of an error, the control jumps to the catch block.<br /><br />We can also wrap multiple lines to ensure handling of multiple error handling. If we don’t have try..catch, then the promise generated by the call of the async function f() becomes rejected. We can append .catch to handle it. We can also catch such errors using a global unhandledrejection event handler.
+</div>
+  </div>
+</details>
 
 Example:
 
@@ -267,7 +321,13 @@ Source: <https://javascript.info/async-await#error-handling>
 
 ### When we need to wait for multiple (array) promises, what can we wrap them into to ensure proper handling (resolve/reject)?
 
-**Interview Answer:** When we need to wait for multiple (array) promises, we can wrap them in Promise.all and then await. In the case of an error, it propagates as usual, from the failed promise to Promise.all, and then becomes an exception that we can catch using try..catch around the call.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> When we need to wait for multiple (array) promises, we can wrap them in Promise.all and then await. In the case of an error, it propagates as usual, from the failed promise to Promise.all, and then becomes an exception that we can catch using try..catch around the call.
+</div>
+  </div>
+</details>
 
 Example:
 

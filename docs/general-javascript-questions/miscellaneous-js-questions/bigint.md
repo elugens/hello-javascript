@@ -14,9 +14,14 @@ sidebar_position: 5
 
 ### Can you briefly explain what a BigInt is in JavaScript?
 
-**Interview Answer:** BigInt is a special numeric type that provides support for integers of arbitrary length. A bigint is created by appending n to the end of an integer literal or by calling the function BigInt that creates bigints from strings, numbers etc.
-
-**Technical Answer:** BigInt is a special numeric type that provides support for integers of arbitrary length. A bigint is created by appending n to the end of an integer literal or by calling the function BigInt that creates bigints from strings, numbers etc. BigInt can mostly be used like a regular number. All operations on bigints return bigints. BigInts cannot be mixed with regular numbers. We should explicitly convert them if needed: using either BigInt() or Number(). The conversion operations are always silent, never give errors, but if the bigint is too huge and will not fit the number type, then extra bits will be cut off, so we should be careful doing such conversion.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> BigInt is a special numeric type that provides support for integers of arbitrary length. A bigint is created by appending n to the end of an integer literal or by calling the function BigInt that creates bigints from strings, numbers etc.</div><br />
+  <div><strong>Technical Response:</strong> BigInt is a special numeric type that provides support for integers of arbitrary length. A bigint is created by appending n to the end of an integer literal or by calling the function BigInt that creates bigints from strings, numbers etc. BigInt can mostly be used like a regular number. All operations on bigints return bigints. BigInts cannot be mixed with regular numbers. We should explicitly convert them if needed: using either BigInt() or Number(). The conversion operations are always silent, never give errors, but if the bigint is too huge and will not fit the number type, then extra bits will be cut off, so we should be careful doing such conversion.
+  </div>
+  </div>
+</details>
 
 Example:
 
@@ -45,7 +50,13 @@ Source: <https://javascript.info/bigint>
 
 ### How does the division operator interact with BigInts?
 
-**Interview Answer:** When BigInts are used with the division operator it will round the BigInt towards zero. All operations on bigints return bigints.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> When BigInts are used with the division operator it will round the BigInt towards zero. All operations on bigints return bigints.
+</div>
+  </div>
+</details>
 
 Example:
 
@@ -62,7 +73,13 @@ Source: <https://javascript.info/bigint#math-operators>
 
 ### What happens when you mix regular numbers with BigInts?
 
-**Interview Answer:** BigInts and regular numbers should never be mixed in mathematical operations, it will result in an error. We should explicitly convert them if needed: using either BigInt() or Number().
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> BigInts and regular numbers should never be mixed in mathematical operations, it will result in an error. We should explicitly convert them if needed: using either BigInt() or Number().
+</div>
+  </div>
+</details>
 
 Example:
 
@@ -86,7 +103,13 @@ Source: <https://javascript.info/bigint#math-operators>
 
 ### Is it possible to use the unary operator on BigInts?
 
-**Interview Answer:** No, we should use Number() to convert a bigint to a number.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> No, we should use Number() to convert a bigint to a number.
+</div>
+  </div>
+</details>
 
 Example:
 
@@ -101,7 +124,13 @@ Source: <https://javascript.info/bigint#math-operators>
 
 ### Although, comparisons work with BigInt, what should you always remember?
 
-**Interview Answer:** Comparisons, such as (< >) work with bigints and numbers without issue, but as numbers and bigints belong to different types, they can be equal ==, but not strictly equal === each other.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Comparisons, such as (&#8249; &#8250;) work with bigints and numbers without issue, but as numbers and bigints belong to different types, they can be equal ==, but not strictly equal === each other.
+</div>
+  </div>
+</details>
 
 Example:
 

@@ -14,7 +14,13 @@ sidebar_position: 3
 
 ### What is currying in JavaScript?
 
-**Interview Answer:** Currying is an advanced technique of working with functions. It is used not only in JavaScript, but in other languages as well. Currying is a transformation of functions that translates a function from callable as f(a, b, c) into callable as f(a)(b)(c). Currying does not call a function. It just transforms it. Currying allows us to easily get partials.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Currying is an advanced technique of working with functions. It is used not only in JavaScript, but in other languages as well. Currying is a transformation of functions that translates a function from callable as f(a, b, c) into callable as f(a)(b)(c). Currying does not call a function. It just transforms it. Currying allows us to easily get partials.
+</div>
+  </div>
+</details>
 
 Example:
 
@@ -44,7 +50,13 @@ Source: <https://javascript.info/currying-partials>
 
 ### What is the main rule of currying functions in JavaScript?
 
-**Interview Answer:** Currying requires the function to have a fixed number of arguments. A function that uses rest parameters, such as f(...args), can’t be curried this way.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Currying requires the function to have a fixed number of arguments. A function that uses rest parameters, such as f(...args), can’t be curried this way.
+</div>
+  </div>
+</details>
 
 Example: Advanced Currying
 

@@ -14,7 +14,13 @@ sidebar_position: 2
 
 ### What is the extends keyword used for in JavaScript classes?
 
-**Interview Answer:** The extends keyword is used in class declarations or class expressions to create a class that is a child of another class. The extends keyword can be used to subclass custom classes as well as built-in objects like the Date object or functions that are intended to return a class.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The extends keyword is used in class declarations or class expressions to create a class that is a child of another class. The extends keyword can be used to subclass custom classes as well as built-in objects like the Date object or functions that are intended to return a class.
+</div>
+  </div>
+</details>
 
 **Syntax:** class ChildClass extends ParentClass { ... }
 
@@ -50,7 +56,13 @@ Source: <https://javascript.info/class-inheritance#the-extends-keyword>
 
 ### Can you use any expression after extends in JavaScript?
 
-**Interview Answer:** Yes, we can use any expression after extends in JavaScript. The extends keyword can be used to subclass custom classes as well as built-in objects like the Date object or functions that are intended to return a class.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, we can use any expression after extends in JavaScript. The extends keyword can be used to subclass custom classes as well as built-in objects like the Date object or functions that are intended to return a class.
+</div>
+  </div>
+</details>
 
 Example:
 
@@ -72,7 +84,13 @@ Source: <https://javascript.info/class-inheritance#the-extends-keyword>
 
 ### Is there a way to override a method in a subclass in JavaScript?
 
-**Interview Answer:** Yes, we can override a method in a subclass by calling super on the method inside of the method we want to override. This gives use access to the parent method, but we are still able to apply additional methods in conjunction with super.method.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, we can override a method in a subclass by calling super on the method inside of the method we want to override. This gives use access to the parent method, but we are still able to apply additional methods in conjunction with super.method.
+</div>
+  </div>
+</details>
 
 Example:
 
@@ -118,7 +136,13 @@ Source: <https://javascript.info/class-inheritance#overriding-a-method>
 
 ### How does super behave inside of arrow functions JavaScript?
 
-**Interview Answer:** Arrow functions have no super, if it is accessed, it is taken from the outer function context.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Arrow functions have no super, if it is accessed, it is taken from the outer function context.
+</div>
+  </div>
+</details>
 
 Example:
 
@@ -154,7 +178,13 @@ Source: <https://javascript.info/class-inheritance#overriding-a-method>
 
 ### What happens if a class extends another class without an explicit constructor in the child class?
 
-**Interview Answer:** According to the specification, if a class extends another class and has no constructor, then the parent class constructor is generated in the child class passing it all the arguments. That happens if we do not write a constructor of our own.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> According to the specification, if a class extends another class and has no constructor, then the parent class constructor is generated in the child class passing it all the arguments. That happens if we do not write a constructor of our own.
+</div>
+  </div>
+</details>
 
 Example:
 
@@ -172,7 +202,13 @@ Source: <https://javascript.info/class-inheritance#overriding-constructor>
 
 ### How do you override a parent constructor in an inheriting class?
 
-**Interview Answer:** Inheriting classes must call super in their constructor before using this or it will result in an error. The super keyword is used to access and call functions on an object's parent. When used in a constructor, the super keyword appears alone and must be used before this keyword is used. The super keyword can also be used to call functions on a parent object.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Inheriting classes must call super in their constructor before using this or it will result in an error. The super keyword is used to access and call functions on an object's parent. When used in a constructor, the super keyword appears alone and must be used before this keyword is used. The super keyword can also be used to call functions on a parent object.
+</div>
+  </div>
+</details>
 
 Example:
 
@@ -209,7 +245,13 @@ Source: <https://javascript.info/class-inheritance#overriding-constructor>
 
 ### In JavaScript, is there a way to override class fields in parent classes?
 
-**Interview Answer:** We can override not only methods, but also class fields. The main thing to remember is that the parent constructor always uses its own field value, not the overridden one. To fix issues with overriding class fields, we can create a method to display the information that is needed in the inheriting class.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> We can override not only methods, but also class fields. The main thing to remember is that the parent constructor always uses its own field value, not the overridden one. To fix issues with overriding class fields, we can create a method to display the information that is needed in the inheriting class.
+</div>
+  </div>
+</details>
 
 Example:
 
@@ -240,11 +282,19 @@ Source: <https://javascript.info/class-inheritance#overriding-class-fields-a-tri
 
 ### Can you explain how super works under the hood as [[HomeObject]]?
 
-**Interview Answer:** While one might expect Obj.method() will reach up and call into Obj.prototype.method, this is not the case. In order to find super.method(), the called function uses its home object, a value created when it was originally defined and one that will not change when the method is reassigned. When a function is specified as a class or object method, its [[HomeObject]] property becomes that object. Then super uses it to resolve the parent prototype and its methods.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> While one might expect Obj.method() will reach up and call into Obj.prototype.method, this is not the case. In order to find super.method(), the called function uses its home object, a value created when it was originally defined and one that will not change when the method is reassigned. When a function is specified as a class or object method, its [[HomeObject]] property becomes that object. Then super uses it to resolve the parent prototype and its methods.
+</div>
+  </div>
+</details>
 
 Example:
 
-**Note:** You should never call proto in your code… In this case, just call super
+:::note
+You should never call proto in your code… In this case, just call super.
+:::
 
 ```js
 let animal = {

@@ -14,9 +14,17 @@ sidebar_position: 3
 
 ### Can you explain how a static properties and methods function in JavaScript?
 
-**Interview Answer:** The static keyword defines a static method or property for a class. Neither static methods nor static properties can be called on instances of the class. Instead, they are called on the class itself. Static methods are often utility functions, such as functions to create or clone objects, whereas static properties are useful for caches, fixed configuration, or any other data you do not need to be replicated across instances. To call a static method or property within another static method of the same class, you can use the “this” keyword.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The static keyword defines a static method or property for a class. Neither static methods nor static properties can be called on instances of the class. Instead, they are called on the class itself. Static methods are often utility functions, such as functions to create or clone objects, whereas static properties are useful for caches, fixed configuration, or any other data you do not need to be replicated across instances. To call a static method or property within another static method of the same class, you can use the “this” keyword.
+</div>
+  </div>
+</details>
 
-**Note:** The easiest way to remember how static methods work is to always call the method on the class name directly. Example: Rabbit.methodName - We are not required to declare a new Class Object for static methods or properties (class fields)9/.
+:::note
+The easiest way to remember how static methods work is to always call the method on the class name directly. Example: Rabbit.methodName - We are not required to declare a new Class Object for static methods or properties (class fields).
+:::
 
 Syntax:
 
@@ -61,7 +69,13 @@ Source: <https://javascript.info/static-properties-methods>
 
 ### Are static properties and methods inherited when inheriting from a base class?
 
-**Interview Answer:** Yes, by default both static properties and methods are inherited.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, by default both static properties and methods are inherited.
+</div>
+  </div>
+</details>
 
 Code Example: Static Property and Method Inheritance
 

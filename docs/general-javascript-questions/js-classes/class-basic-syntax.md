@@ -14,7 +14,13 @@ sidebar_position: 1
 
 ### What is a JavaScript Class in Object Oriented Programming (OOP)?
 
-**Interview Answer:** Classes are a template for creating objects. They encapsulate data with code to work on that data. Classes in JS are built on prototypes but also have some syntax and semantics that are not shared with ES5 class-like semantics. Classes are in fact "special functions", and just as you can define function expressions and function declarations, the class syntax has two components: class expressions and class declarations.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Classes are a template for creating objects. They encapsulate data with code to work on that data. Classes in JS are built on prototypes but also have some syntax and semantics that are not shared with ES5 class-like semantics. Classes are in fact "special functions", and just as you can define function expressions and function declarations, the class syntax has two components: class expressions and class declarations.
+</div>
+  </div>
+</details>
 
 Example:
 
@@ -40,9 +46,17 @@ Source: <https://javascript.info/class#the-class-syntax>
 
 ### What is difference between function declarations and class declarations?
 
-**Interview Answer:** An important difference between function declarations and class declarations is that function declarations are hoisted, and class declarations are not. Another difference is that function declarations can be declare at any point in your code.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> An important difference between function declarations and class declarations is that function declarations are hoisted, and class declarations are not. Another difference is that function declarations can be declare at any point in your code.
+</div>
+  </div>
+</details>
 
-Note: You first need to declare your class and then access it, otherwise code like the following will throw a Reference Error.
+:::note
+You first need to declare your class and then access it, otherwise code like the following will throw a Reference Error.
+:::
 
 Code Example:
 
@@ -73,7 +87,13 @@ Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Class
 
 ### What is a Class expression in JavaScript?
 
-**Interview Answer:** A class expression is another way to define a class. Class expressions can be named or unnamed. The name given to a named class expression is local to the class's body. (it can be retrieved through the class's (not an instance's) name property, though). In a named class expression, it is visible inside the class only.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A class expression is another way to define a class. Class expressions can be named or unnamed. The name given to a named class expression is local to the class's body. (it can be retrieved through the class's (not an instance's) name property, though). In a named class expression, it is visible inside the class only.
+</div>
+  </div>
+</details>
 
 Example:
 
@@ -115,7 +135,13 @@ Source: <https://javascript.info/class#class-expression>
 
 ### Is there a way to create a Class dynamically “on-demand” in JavaScript?
 
-**Interview Answer:** Yes, it can be achieved by returning class in a function and calling the function to access a new class with the new operator.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, it can be achieved by returning class in a function and calling the function to access a new class with the new operator.
+</div>
+  </div>
+</details>
 
 Example:
 
@@ -146,13 +172,25 @@ Source: <https://javascript.info/class#class-expression>
 
 ### In your opinion, is classical inheritance ever the right choice? If so, when? If not, why?
 
-**Interview Answer:** Classical inheritance is almost never the right solution. On exceedingly rare occasions, it might be used for a single level.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Classical inheritance is almost never the right solution. On exceedingly rare occasions, it might be used for a single level.
+</div>
+  </div>
+</details>
 
 Source: <https://www.indeed.com/hire/interview-questions/javascript>
 
 ### Can you implement computed names in JavaScript classes?
 
-**Interview Answer:** Yes, you can implement computed names in JavaScript classes in the same fashion as you would in Object literals.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, you can implement computed names in JavaScript classes in the same fashion as you would in Object literals.
+</div>
+  </div>
+</details>
 
 Example:
 
@@ -182,7 +220,13 @@ Source: <https://javascript.info/class#computed-names>
 
 ### Class fields are a new addition to JavaScript. Can you explain their implementation in JavaScript?
 
-**Interview Answer:** Yes, class fields are a syntax that allows us add properties to a class. It is implemented by adding a name property to a class and assigning a value to that property. The important difference of class fields is that they are set on individual objects, not Class.prototype.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, class fields are a syntax that allows us add properties to a class. It is implemented by adding a name property to a class and assigning a value to that property. The important difference of class fields is that they are set on individual objects, not Class.prototype.
+</div>
+  </div>
+</details>
 
 Example:
 
@@ -217,9 +261,17 @@ Source: <https://javascript.info/class#class-fields>
 
 ### JavaScript classes are known to allow complex expressions and function calls in named class fields. Is there a way to create bound methods to classes without losing “this”?
 
-**Interview Answer:** Yes, there are two approaches to binding a method to its class. They include passing a wrapper function such as setTimeout() or binding the method to the object constructor. We could use other options such as regular function declarations if necessary.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, there are two approaches to binding a method to its class. They include passing a wrapper function such as setTimeout() or binding the method to the object constructor. We could use other options such as regular function declarations if necessary.
+</div>
+  </div>
+</details>
 
-**Note:** It should be noted that you must use an arrow function as a method in the class or you will lose the value of this. Functions and class methods have their own “this”.
+:::note
+It should be noted that you must use an arrow function as a method in the class or you will lose the value of this. Functions and class methods have their own “this”.
+:::
 
 Code Example:
 
