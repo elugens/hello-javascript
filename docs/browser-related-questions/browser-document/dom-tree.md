@@ -14,7 +14,13 @@ sidebar_position: 2
 
 ### What is a HTML tag considered in the Document Object Model?
 
-**Interview Answer:** According to the Document Object Model (DOM), every HTML tag is an object. Nested tags are “children” of the enclosing one. The text inside a tag is an object as well. All these objects are accessible using JavaScript, and we can use them to modify the page. For example, document.body is the object representing the `<body>` tag.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> According to the Document Object Model (DOM), every HTML tag is an object. Nested tags are “children” of the enclosing one. The text inside a tag is an object as well. All these objects are accessible using JavaScript, and we can use them to modify the page. For example, document.body is the object representing the &#8249;body&#8250; tag.
+</div>
+  </div>
+</details>
 
 Example:
 
@@ -28,7 +34,13 @@ Sources: <https://javascript.info/dom-nodes>
 
 ### How does the Document Object Model represent HTML?
 
-**Interview Answer:** The DOM represents HTML as a tree structure of tags.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The DOM represents HTML as a tree structure of tags.
+</div>
+  </div>
+</details>
 
 Example:
 
@@ -60,9 +72,14 @@ Sources: <https://javascript.info/dom-nodes#an-example-of-the-dom>
 
 ### If the browser encounters malformed HTML, what happens?
 
-**Interview Answer:** If the browser encounters malformed HTML, it automatically corrects it when making the DOM.
-
-**Technical Answer:** If the browser encounters malformed HTML, it automatically corrects it when making the DOM. For instance, the top tag is always `<html>`. Even if it does not exist in the document, it will exist in the DOM, because the browser will create it. The same goes for `<body>`. While generating the DOM, browsers automatically process errors in the document, close tags and so on.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> If the browser encounters malformed HTML, it automatically corrects it when making the DOM.</div><br />
+  <div><strong>Technical Response:</strong> If the browser encounters malformed HTML, it automatically corrects it when making the DOM. For instance, the top tag is always &#8249;html&#8250;. Even if it does not exist in the document, it will exist in the DOM, because the browser will create it. The same goes for &#8249;body&#8250;. While generating the DOM, browsers automatically process errors in the document, close tags and so on.
+  </div>
+  </div>
+</details>
 
 Example:
 
@@ -98,7 +115,13 @@ Sources: <https://javascript.info/dom-nodes#autocorrection>
 
 ### Do HTML tables always have a `<tbody>` in the DOM?
 
-**Interview Answer:** Yes, it is an interesting “special case” with tables. By DOM specification they must have `<tbody>` tag, but HTML text may omit it. Then the browser creates `<tbody>` in the DOM automatically.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, it is an interesting “special case” with tables. By DOM specification they must have &#8249;tbody&#8250; tag, but HTML text may omit it. Then the browser creates &#8249;tbody&#8250; in the DOM automatically.
+</div>
+  </div>
+</details>
 
 Example:
 
@@ -126,8 +149,13 @@ Sources: <https://javascript.info/dom-nodes#autocorrection>
 
 ### What are the four main node types that are commonly used?
 
-**Interview Answer:** The four main node types include document, element, text, and comment nodes.
-
-**Technical Answer:** There are 12 node types. In practice we usually work with 4 of them. The four main node types include document, element, text, and comment nodes. The document node is the entry point into the DOM. The element nodes consist of the HTML-tags which are the tree building blocks. The comment node is used to place information, but it will not be shown, but JS can read it from the DOM.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The four main node types include document, element, text, and comment nodes.</div><br />
+  <div><strong>Technical Response:</strong> There are 12 node types. In practice we usually work with 4 of them. The four main node types include document, element, text, and comment nodes. The document node is the entry point into the DOM. The element nodes consist of the HTML-tags which are the tree building blocks. The comment node is used to place information, but it will not be shown, but JS can read it from the DOM.
+  </div>
+  </div>
+</details>
 
 Sources: <https://javascript.info/dom-nodes#other-node-types>
