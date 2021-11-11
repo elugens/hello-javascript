@@ -14,7 +14,13 @@ sidebar_position: 13
 
 ### What is Alternation in a regular expression?
 
-**Interview Answer:** Alternation is the term in regular expression that is a simple “OR”. In a regular expression it “OR” is denoted with a vertical line character |.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Alternation is the term in regular expression that is a simple “OR”. In a regular expression it “OR” is denoted with a vertical line character |.
+    </div>
+  </div>
+</details>
 
 Code Example:
 

@@ -14,7 +14,13 @@ sidebar_position: 15
 
 ### What is catastrophic backtracking in relation to regular expressions?
 
-**Interview Answer:** Catastrophic backtracking is a condition that can occur if you are checking a (usually long) string against a complex regular expression. The problem usually occurs if something towards the end of the string causes the string to not match. This is common in some browsers like Firefox and can happen on the server-side as well. It should be noted, catastrophic backtracking is also known as a runaway regular expression.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Catastrophic backtracking is a condition that can occur if you are checking a (usually long) string against a complex regular expression. The problem usually occurs if something towards the end of the string causes the string to not match. This is common in some browsers like Firefox and can happen on the server-side as well. It should be noted, catastrophic backtracking is also known as a runaway regular expression.
+    </div>
+  </div>
+</details>
 
 Code Example:
 
@@ -34,6 +40,12 @@ Source: <https://javascript.info/regexp-catastrophic-backtracking>
 
 ### How do you prevent catastrophic backtracking in the regex engine?
 
-**Interview Answer:** The solution is simple. When nesting repetition operators, make sure that there is only one way to match the same match and prevent backtracking in these cases. The performance can sometimes be improved by changing the greedy quantifiers into lazy ones, but that is not always the case. Another important step is to attempt to debug your pattern to ensure it is written correctly.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The solution is simple. When nesting repetition operators, make sure that there is only one way to match the same match and prevent backtracking in these cases. The performance can sometimes be improved by changing the greedy quantifiers into lazy ones, but that is not always the case. Another important step is to attempt to debug your pattern to ensure it is written correctly.
+    </div>
+  </div>
+</details>
 
 Source: <https://www.regular-expressions.info/catastrophic.html>

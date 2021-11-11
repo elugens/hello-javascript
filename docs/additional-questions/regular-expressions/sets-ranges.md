@@ -14,7 +14,13 @@ sidebar_position: 8
 
 ### How does square brackets […] perform in regular expression sets?
 
-**Interview Answer:** Several characters or character classes inside square brackets […] mean to “search for any character among given”. For example, [eao] means any of the 3 characters: 'a', 'e', or 'o'. That is called a set, in regex terminology. Sets can be used in a regexp along with regular characters. It should be noted, although there are multiple characters in the set, they correspond to exactly one character in the match.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Several characters or character classes inside square brackets […] mean to “search for any character among given”. For example, [eao] means any of the 3 characters: 'a', 'e', or 'o'. That is called a set, in regex terminology. Sets can be used in a regexp along with regular characters. It should be noted, although there are multiple characters in the set, they correspond to exactly one character in the match.
+    </div>
+  </div>
+</details>
 
 Code Example:
 
@@ -33,7 +39,13 @@ Source: <https://javascript.info/regexp-character-sets-and-ranges#sets>
 
 ### Explain, how is a range denoted in a regular expression?
 
-**Interview Answer:** In simple terms, a range in a regular is denoted or expression inside of square brackets. A range may from [a-z] or [1-100], this can be set based on your needs. We can also use character classes inside […]. For example, if we would like to look for a wordy character \w or a hyphen -, then the set is [\w-]. Combining multiple classes is also possible, e.g. [\s\d] means “a space character or a digit”.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In simple terms, a range in a regular is denoted or expression inside of square brackets. A range may from [a-z] or [1-100], this can be set based on your needs. We can also use character classes inside […]. For example, if we would like to look for a wordy character \w or a hyphen -, then the set is [\w-]. Combining multiple classes is also possible, e.g. [\s\d] means “a space character or a digit”.
+    </div>
+  </div>
+</details>
 
 Code Example:
 
@@ -45,7 +57,13 @@ Source: <https://javascript.info/regexp-character-sets-and-ranges#ranges>
 
 ### Is there a way to handle Han (Chinese) or Cyrillic in regexp ranges?
 
-**Interview Answer:** Yes, we can write a more universal pattern, that looks for wordly characters in any language. That is easy, we would use the Unicode properties available to us in regular expressions. It should be noted that Unicode properties are not supported in Internet Explorer. If we really need them, we can use library XRegExp for IE users.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, we can write a more universal pattern, that looks for wordly characters in any language. That is easy, we would use the Unicode properties available to us in regular expressions. It should be noted that Unicode properties are not supported in Internet Explorer. If we really need them, we can use library XRegExp for IE users.
+    </div>
+  </div>
+</details>
 
 Code Example:
 
@@ -63,7 +81,13 @@ Source: <https://javascript.info/regexp-character-sets-and-ranges#ranges>
 
 ### How do you exclude a range of characters in regular expressions?
 
-**Interview Answer:** If we want to exclude a range of characters in a regular expression. We can place the caret ^ character at the start and match any character except the ones we are trying to match.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> If we want to exclude a range of characters in a regular expression. We can place the caret ^ character at the start and match any character except the ones we are trying to match.
+    </div>
+  </div>
+</details>
 
 Code Example:
 
@@ -75,7 +99,13 @@ Source: <https://javascript.info/regexp-character-sets-and-ranges#excluding-rang
 
 ### Do we have to escape special characters in regex sets or ranges?
 
-**Interview Answer:** No, there is no need to escape special characters in regex ranges or sets. The only characters that are is escaped are the caret ^ and the closing bracket. They are not escaped in the technical sense, but rather implicitly. This does not mean we cannot escape characters, but that it is not necessary in most cases.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> No, there is no need to escape special characters in regex ranges or sets. The only characters that are is escaped are the caret ^ and the closing bracket. They are not escaped in the technical sense, but rather implicitly. This does not mean we cannot escape characters, but that it is not necessary in most cases.
+    </div>
+  </div>
+</details>
 
 Code Example:
 
@@ -96,7 +126,13 @@ Source: <https://javascript.info/regexp-character-sets-and-ranges#escaping-in->
 
 ### What is the recommended way to match against surrogate pairs in a set or range?
 
-**Interview Answer:** If there are surrogate pairs in the set, flag u is required for them to work correctly. This also applies to a range of surrogate pairs.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> If there are surrogate pairs in the set, flag u is required for them to work correctly. This also applies to a range of surrogate pairs.
+    </div>
+  </div>
+</details>
 
 Code Example:
 

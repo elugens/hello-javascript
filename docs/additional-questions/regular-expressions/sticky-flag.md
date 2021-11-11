@@ -14,7 +14,13 @@ sidebar_position: 16
 
 ### What does the regex flag ‘Y’ do in regular expressions?
 
-**Interview Answer:** The flag y allows us to perform the search at the given position in the source string. The flag y makes regexp.exec to search exactly at position lastIndex, not “starting from” it. There is an important performance gain when using flag y.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The flag y allows us to perform the search at the given position in the source string. The flag y makes regexp.exec to search exactly at position lastIndex, not “starting from” it. There is an important performance gain when using flag y.
+    </div>
+  </div>
+</details>
 
 Code Example:
 

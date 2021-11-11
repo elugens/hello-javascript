@@ -14,7 +14,13 @@ sidebar_position: 14
 
 ### Can you explain the Lookahead approach in a regular expression?
 
-**Interview Answer:** Sometimes we need to find only those matches for a pattern that are followed or preceded by another pattern. The lookahead approach involves in catching a match based on a proceeding character or digit. For example, the syntax is: X(?=Y), it means "look for X, but match only if followed by Y". There may be any pattern instead of X and Y. It should be noted, the lookahead is merely a test, the contents of the parentheses is not included in the result.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Sometimes we need to find only those matches for a pattern that are followed or preceded by another pattern. The lookahead approach involves in catching a match based on a proceeding character or digit. For example, the syntax is: X(?=Y), it means "look for X, but match only if followed by Y". There may be any pattern instead of X and Y. It should be noted, the lookahead is merely a test, the contents of the parentheses is not included in the result.
+    </div>
+  </div>
+</details>
 
 Code Example:
 
@@ -41,13 +47,25 @@ Source: <https://javascript.info/regexp-lookahead-lookbehind#negative-lookahead>
 
 ### What is the difference between regex Lookahead and Lookbehind?
 
-**Interview Answer:** Lookahead allows us to add a condition for “what follows”. Lookbehind is similar, but it looks behind to find the target.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Lookahead allows us to add a condition for “what follows”. Lookbehind is similar, but it looks behind to find the target.
+    </div>
+  </div>
+</details>
 
 Source: <https://javascript.info/regexp-lookahead-lookbehind#lookahead>
 
 ### Can you explain the Lookbehind approach in a regular expression?
 
-**Interview Answer:** Lookbehind is like the lookahead approach. The difference is that they are the opposite of each other. Where lookahead value matches a value that proceeds it. While the lookbehind value matches the value proceeds it. Basically, it allows us to match a pattern only if the target value is before it. We can also use the negative lookbehind approach. The negative lookbehind approach allows us to set a test, where the target should not behind the pattern value. It should be noted, the contents inside lookbehind parentheses does not become a part of the result.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Lookbehind is like the lookahead approach. The difference is that they are the opposite of each other. Where lookahead value matches a value that proceeds it. While the lookbehind value matches the value proceeds it. Basically, it allows us to match a pattern only if the target value is before it. We can also use the negative lookbehind approach. The negative lookbehind approach allows us to set a test, where the target should not behind the pattern value. It should be noted, the contents inside lookbehind parentheses does not become a part of the result.
+    </div>
+  </div>
+</details>
 
 Code Example:
 
@@ -66,9 +84,14 @@ Source: <https://javascript.info/regexp-lookahead-lookbehind#lookbehind>
 
 ### Can you apply a capturing group to a lookaround in a regular expression?
 
-**Interview Answer:** Yes, this is possible for both the lookahead and lookbehind (They are lookarounds) to apply the lookaround approach. The lookaround is zero-length making it Atomic. As soon as the lookaround condition is satisfied, the regex engine forgets about everything inside the lookaround. It will not backtrack inside the lookaround to try different permutations.
-
-The only situation in which this makes any difference is when you use capturing groups inside the lookaround. Since the regex engine does not backtrack into the lookaround, it will not try different permutations of the capturing groups.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, this is possible for both the lookahead and lookbehind (They are lookarounds) to apply the lookaround approach. The lookaround is zero-length making it Atomic. As soon as the lookaround condition is satisfied, the regex engine forgets about everything inside the lookaround. It will not backtrack inside the lookaround to try different permutations.<br /><br />
+  The only situation in which this makes any difference is when you use capturing groups inside the lookaround. Since the regex engine does not backtrack into the lookaround, it will not try different permutations of the capturing groups.
+    </div>
+  </div>
+</details>
 
 Code Example:
 
