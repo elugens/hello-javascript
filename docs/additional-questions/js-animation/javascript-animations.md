@@ -14,13 +14,25 @@ sidebar_position: 3
 
 ### Why is requestAnimationFrame better than setInterval or setTimeout?
 
-**Interview Answer:** The question is most simply answered with. requestAnimationFrame produces higher quality animation completely eliminating flicker and shear that can happen when using setTimeout or setInterval, and reduce or completely remove frame skips. The setInterval and setTimeout methods can cause CPU overloads and cause excessive or overlapping redraws.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The question is most simply answered with, the requestAnimationFrame produces higher quality animation completely eliminating flicker and shear that can happen when using setTimeout or setInterval, and reduce or completely remove frame skips. The setInterval and setTimeout methods can cause CPU overloads and cause excessive or overlapping redraws.
+    </div>
+  </div>
+</details>
 
 Source: <https://javascript.info/js-animation#using-requestanimationframe>
 
 ### Can you explain the function an syntax of the requestAnimationFrame method?
 
-**Interview Answer:** The window.requestAnimationFrame() method tells the browser that you wish to perform an animation and requests that the browser calls a specified function to update an animation before the next repaint. The method takes a callback as an argument to be invoked before the repaint. You should call this method whenever you are ready to update your animation onscreen. We can use the cancelAnimationFrame to cancel the animation by calling the request id in the cancellation.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The window.requestAnimationFrame() method tells the browser that you wish to perform an animation and requests that the browser calls a specified function to update an animation before the next repaint. The method takes a callback as an argument to be invoked before the repaint. You should call this method whenever you are ready to update your animation onscreen. We can use the cancelAnimationFrame to cancel the animation by calling the request id in the cancellation.
+    </div>
+  </div>
+</details>
 
 **Syntax:** let requestId = requestAnimationFrame(callback)
 
@@ -58,6 +70,12 @@ Source: <https://javascript.info/js-animation#using-requestanimationframe>
 
 ### When should we use JavaScript vs CSS for animations?
 
-**Interview Answer:** For animations that CSS cannot handle well, or those that need tight control, JavaScript is our best option. JavaScript animations should be implemented via requestAnimationFrame. That built-in method allows us to setup a callback function to run when the browser will be preparing a repaint. Usually that is very soon, but the exact time depends on the browser.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> For animations that CSS cannot handle well, or those that need tight control, JavaScript is our best option. JavaScript animations should be implemented via requestAnimationFrame. That built-in method allows us to setup a callback function to run when the browser will be preparing a repaint. Usually that is very soon, but the exact time depends on the browser.
+    </div>
+  </div>
+</details>
 
 Source: <https://javascript.info/js-animation>
