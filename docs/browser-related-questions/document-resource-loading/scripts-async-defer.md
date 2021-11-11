@@ -14,13 +14,25 @@ sidebar_position: 2
 
 ### How do scripts load in an HTML document?
 
-**Interview Answer:** When the browser loads HTML and comes across a `<script>`...`</script>` tag, it cannot continue building the DOM. It must execute the script right now. The same happens for external scripts `<script src="..."></script>`: the browser must wait for the script to download, execute the downloaded script, and only then can it process the rest of the page.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> When the browser loads HTML and comes across a &#8249;script&#8250;...&#8249;/script&#8250; tag, it cannot continue building the DOM. It must execute the script right now. The same happens for external scripts &#8249;script src="..."&#8250;&#8249;/script&#8250;: the browser must wait for the script to download, execute the downloaded script, and only then can it process the rest of the page.
+    </div>
+  </div>
+</details>
 
 Source: <https://javascript.info/script-async-defer>
 
 ### Since, HTML document have to wait for scripts to run once they are reached. Can you name two issues that can lead to negative outcomes?
 
-**Interview Answer:** Yes, there are two common issues related to script loading. Scripts cannot see DOM elements below them, so they cannot add handlers etc. If there is a bulky script at the top of the page, it “blocks the page”. Users cannot see the page content till it downloads and runs. There are some workarounds to that. For instance, we can put a script at the bottom of the page. Then it can see elements above it, and it doesn’t block the page content from showing.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, there are two common issues related to script loading. Scripts cannot see DOM elements below them, so they cannot add handlers etc. If there is a bulky script at the top of the page, it “blocks the page”. Users cannot see the page content till it downloads and runs. There are some workarounds to that. For instance, we can put a script at the bottom of the page. Then it can see elements above it, and it doesn’t block the page content from showing.
+    </div>
+  </div>
+</details>
 
 Code Example:
 
@@ -46,13 +58,25 @@ Source: <https://javascript.info/script-async-defer>
 
 ### What are the two script attributes used to manage script loading?
 
-**Interview Answer:** The are two script attributes used to manage script loading in HTML documents. They include the defer and async attributes.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The are two script attributes used to manage script loading in HTML documents. They include the defer and async attributes.
+    </div>
+  </div>
+</details>
 
 Source: <https://javascript.info/script-async-defer>
 
 ### How does the defer attribute affect the loading of a script?
 
-**Interview Answer:** The defer attribute tells the browser not to wait for the script. Instead, the browser will continue to process the HTML, build DOM. The script loads “in the background”, and then runs when the DOM is fully built.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The defer attribute tells the browser not to wait for the script. Instead, the browser will continue to process the HTML, build DOM. The script loads “in the background”, and then runs when the DOM is fully built.
+    </div>
+  </div>
+</details>
 
 Code Example:
 
@@ -73,7 +97,13 @@ Source: <https://javascript.info/script-async-defer#defer>
 
 ### What are the benefits of using the script defer attribute?
 
-**Interview Answer:** There are two major benefits of using the script defer attribute. The scripts with defer never block the page and always execute when the DOM is ready (but before DOMContentLoaded event).
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> There are two major benefits of using the script defer attribute. The scripts with defer never block the page and always execute when the DOM is ready (but before DOMContentLoaded event).
+    </div>
+  </div>
+</details>
 
 Code Example:
 
@@ -98,7 +128,13 @@ Source: <https://javascript.info/script-async-defer#defer>
 
 ### Do deferred scripts keep their relative order, like regular scripts?
 
-**Interview Answer:** Yes, deferred scripts keep their relative order, just like regular scripts. Browsers scan the page for scripts and download them in parallel, to improve performance. But the defer attribute, besides telling the browser “not to block”, ensures that the relative order is kept. That may be important for cases when we need to load a JavaScript library and then a script that depends on it.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, deferred scripts keep their relative order, just like regular scripts. Browsers scan the page for scripts and download them in parallel, to improve performance. But the defer attribute, besides telling the browser “not to block”, ensures that the relative order is kept. That may be important for cases when we need to load a JavaScript library and then a script that depends on it.
+    </div>
+  </div>
+</details>
 
 Code Example:
 
@@ -118,7 +154,13 @@ Source: <https://javascript.info/script-async-defer#defer>
 
 ### How does the async attribute affect the loading of a script?
 
-**Interview Answer:** The async attribute is somewhat like defer. It also makes the script non-blocking. But it has important differences in the behavior. The async attribute means that a script is completely independent. In other words, async scripts load in the background and run when ready. The DOM and other scripts do not wait for them, and they do not wait for anything. A fully independent script that runs when loaded.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The async attribute is somewhat like defer. It also makes the script non-blocking. But it has important differences in the behavior. The async attribute means that a script is completely independent. In other words, async scripts load in the background and run when ready. The DOM and other scripts do not wait for them, and they do not wait for anything. A fully independent script that runs when loaded.
+    </div>
+  </div>
+</details>
 
 Code Example:
 
@@ -146,7 +188,13 @@ Source: <https://javascript.info/script-async-defer#async>
 
 ### Is there a way to load a script dynamically using JavaScript?
 
-**Interview Answer:** Yes, we can create a script and append it to the document dynamically using JavaScript. The script starts loading as soon as it is appended to the document.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, we can create a script and append it to the document dynamically using JavaScript. The script starts loading as soon as it is appended to the document.
+    </div>
+  </div>
+</details>
 
 Code Example:
 
@@ -164,7 +212,13 @@ Source: <https://javascript.info/script-async-defer#dynamic-scripts>
 
 ### How do dynamic scripts behave, asynchronously, deffered, or like a regular script?
 
-**Interview Answer:** Dynamic scripts behave in an asynchronous fashion by default. They do not wait for anything; nothing waits for them. The script that loads first – runs first (“load-first” order). This can be changed if we explicitly set script.async = false. Then scripts will be executed in the document order, just like defer.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Dynamic scripts behave in an asynchronous fashion by default. They do not wait for anything; nothing waits for them. The script that loads first – runs first (“load-first” order). This can be changed if we explicitly set script.async = false. Then scripts will be executed in the document order, just like defer.
+    </div>
+  </div>
+</details>
 
 Code Example:
 

@@ -14,17 +14,30 @@ sidebar_position: 11
 
 ### To move elements around we should be familiar with coordinates. What are the two coordinate systems that you should be familiar with?
 
-**Interview Answer:** Most JavaScript methods deal with one of two coordinate systems including the relative to the window and document coordinate systems. Relative to the window – similar to position:fixed, calculated from the window top/left edge, we denote these coordinates as clientX/clientY. Relative to the document – similar to position:absolute in the document root, calculated from the document top/left edge, we denote them as pageX/pageY. When the page is scrolled to the very beginning, so that the top/left corner of the window is exactly the document top/left corner, these coordinates equal each other. But after the document shifts, window-relative coordinates of elements change, as elements move across the window, while document-relative coordinates remain the same.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Most JavaScript methods deal with one of two coordinate systems including the relative to the window and document coordinate systems. Relative to the window – similar to position:fixed, calculated from the window top/left edge, we denote these coordinates as clientX/clientY. Relative to the document – similar to position:absolute in the document root, calculated from the document top/left edge, we denote them as pageX/pageY. When the page is scrolled to the very beginning, so that the top/left corner of the window is exactly the document top/left corner, these coordinates equal each other. But after the document shifts, window-relative coordinates of elements change, as elements move across the window, while document-relative coordinates remain the same.
+    </div>
+  </div>
+</details>
 
 Sources: <https://javascript.info/coordinates>
 
 ### Explain the function and syntax of the element getBoundingClientRect method?
 
-**Interview Answer:** The Element.getBoundingClientRect() method returns a DOMRect object providing information about the size of an element and its position relative to the viewport. The returned value is a DOMRect object which is the smallest rectangle which contains the entire element, including its padding and border-width.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The Element.getBoundingClientRect() method returns a DOMRect object providing information about the size of an element and its position relative to the viewport. The returned value is a DOMRect object which is the smallest rectangle which contains the entire element, including its padding and border-width.</div><br />
+  <div><strong>Technical Response:</strong> The Element.getBoundingClientRect() method returns a DOMRect object providing information about the size of an element and its position relative to the viewport. The returned value is a DOMRect object which is the smallest rectangle which contains the entire element, including its padding and border-width. The left, top, right, bottom, x, y, width, and height properties describe the position and size of the overall rectangle in pixels. Properties other than width and height are relative to the top-left of the viewport. The width and height properties of the DOMRect object returned by the method include the padding and border-width, not only the content width/height. In the standard box model, this would be equal to the width or height property of the element + padding + border-width. But if box-sizing: border-box is set for the element this would be directly equal to its width or height. The returned value can be thought of as the union of the rectangles returned by getClientRects() for the element, i.e., the CSS border-boxes associated with the element.
+  </div>
+  </div>
+</details>
 
-**Note:** If box-sizing: border-box is set for the element this would be directly equal to its width or height. The returned value can be thought of as the union of the rectangles returned by getClientRects() for the element, i.e., the CSS border-boxes associated with the element.
-
-**Technical Answer:** The Element.getBoundingClientRect() method returns a DOMRect object providing information about the size of an element and its position relative to the viewport. The returned value is a DOMRect object which is the smallest rectangle which contains the entire element, including its padding and border-width. The left, top, right, bottom, x, y, width, and height properties describe the position and size of the overall rectangle in pixels. Properties other than width and height are relative to the top-left of the viewport. The width and height properties of the DOMRect object returned by the method include the padding and border-width, not only the content width/height. In the standard box model, this would be equal to the width or height property of the element + padding + border-width. But if box-sizing: border-box is set for the element this would be directly equal to its width or height. The returned value can be thought of as the union of the rectangles returned by getClientRects() for the element, i.e., the CSS border-boxes associated with the element.
+:::note
+If box-sizing: border-box is set for the element this would be directly equal to its width or height. The returned value can be thought of as the union of the rectangles returned by getClientRects() for the element, i.e., the CSS border-boxes associated with the element.
+:::
 
 **Syntax:** domRect = element.getBoundingClientRect();
 
@@ -74,25 +87,41 @@ Sources: <https://javascript.info/coordinates#element-coordinates-getboundingcli
 
 ### Why derived properties are needed? Why does top/left exist if there’s x/y?
 
-**Interview Answer:** Mathematically, a rectangle is uniquely defined with its starting point (x,y) and the direction vector (width,height). So, the additional derived properties top/left are for convenience.
-
-**Technical Answer:** Mathematically, a rectangle is uniquely defined with its starting point (x,y) and the direction vector (width,height). So, the additional derived properties are for convenience. Technically it is possible for width/height to be negative, that allows for “directed” rectangle, e.g., to represent mouse selection with properly marked start and end. Negative width/height values mean that the rectangle starts at its bottom-right corner and then “grows” left-upwards, left/top do not equal x/y in such case. In practice though, elem.getBoundingClientRect() always returns positive width/height, here we mention negative width/height only for you to understand why these seemingly duplicate properties are not actually duplicates.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Mathematically, a rectangle is uniquely defined with its starting point (x,y) and the direction vector (width,height). So, the additional derived properties top/left are for convenience.</div><br />
+  <div><strong>Technical Response:</strong> Mathematically, a rectangle is uniquely defined with its starting point (x,y) and the direction vector (width,height). So, the additional derived properties are for convenience. Technically it is possible for width/height to be negative, that allows for “directed” rectangle, e.g., to represent mouse selection with properly marked start and end. Negative width/height values mean that the rectangle starts at its bottom-right corner and then “grows” left-upwards, left/top do not equal x/y in such case. In practice though, elem.getBoundingClientRect() always returns positive width/height, here we mention negative width/height only for you to understand why these seemingly duplicate properties are not actually duplicates.
+  </div>
+  </div>
+</details>
 
 Sources: <https://javascript.info/coordinates#element-coordinates-getboundingclientrect>
 
 ### Does Internet Explorer provide support for x/y coordinates?
 
-**Interview Answer:** No, Internet Explorer does not support x/y properties for historical reasons. So we can either make a polyfill (add getters in DomRect.prototype) or just use top/left, as they are always the same as x/y for positive width/height, in particular in the result of elem.getBoundingClientRect().
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> No, Internet Explorer does not support x/y properties for historical reasons. So we can either make a polyfill (add getters in DomRect.prototype) or just use top/left, as they are always the same as x/y for positive width/height, in particular in the result of elem.getBoundingClientRect().
+    </div>
+  </div>
+</details>
 
 Sources: <https://javascript.info/coordinates#element-coordinates-getboundingclientrect>
 
 ### What does the method elementFromPoint(x,y) do in JavaScript?
 
-**Interview Answer:** The call to document.elementFromPoint(x, y) returns the most nested element at window coordinates (x, y).
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The call to document.elementFromPoint(x, y) returns the most nested element at window coordinates (x, y).</div><br />
+  <div><strong>Technical Response:</strong> The elementFromPoint() method, available on the Document object, returns the topmost Element at the specified coordinates (relative to the viewport). If the element at the specified point belongs to another document (for example, the document of an &#8249;iframe&#8250;), that document's parent element is returned (the &#8249;iframe&#8250; itself). If the element at the given point is anonymous or XBL generated content, such as a textbox's scroll bars, then the first non-anonymous ancestor element (for example, the textbox) is returned.
+  </div>
+  </div>
+</details>
 
-**Technical Answer:** The elementFromPoint() method, available on the Document object, returns the topmost Element at the specified coordinates (relative to the viewport). If the element at the specified point belongs to another document (for example, the document of an `<iframe>`), that document's parent element is returned (the `<iframe>` itself). If the element at the given point is anonymous or XBL generated content, such as a textbox's scroll bars, then the first non-anonymous ancestor element (for example, the textbox) is returned.
-
-Syntax: let elem = document.elementFromPoint(x, y);
+**Syntax:** `let elem = document.elementFromPoint(x, y);`
 
 Example:
 
@@ -112,7 +141,13 @@ Sources: <https://javascript.info/coordinates#elementFromPoint>
 
 ### For out-of-window coordinates, what does the elementFromPoint return?
 
-**Interview Answer:** The method document.elementFromPoint(x,y) only works if (x,y) are inside the visible area. If any of the coordinates is negative or exceeds the window width/height, then it returns null.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The method document.elementFromPoint(x,y) only works if (x,y) are inside the visible area. If any of the coordinates is negative or exceeds the window width/height, then it returns null.
+    </div>
+  </div>
+</details>
 
 Example:
 
@@ -128,6 +163,12 @@ Sources: <https://javascript.info/coordinates#elementFromPoint>
 
 ### Where do document relative coordinates start?
 
-**Interview Answer:** Document-relative coordinates start from the upper-left corner of the document, not the window. In CSS, window coordinates correspond to position:fixed, while document coordinates are similar to position: absolute on top.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Document-relative coordinates start from the upper-left corner of the document, not the window. In CSS, window coordinates correspond to position:fixed, while document coordinates are similar to position: absolute on top.
+    </div>
+  </div>
+</details>
 
 Sources: <https://javascript.info/coordinates#elementFromPoint>

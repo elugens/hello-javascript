@@ -52,6 +52,11 @@ h3 {
   --ifm-color-primary-lightest: #fdd879;
 } */
 
+/* controls size of the font in the details reponses */
+details div {
+  font-size: 1rem;
+}
+
 .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.1);
   display: block;

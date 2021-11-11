@@ -14,25 +14,49 @@ sidebar_position: 1
 
 ### What is the event order of a mouse left-click in the browser?
 
-**Interview Answer:** The event order of a mouse left-click is mousedown, mouseup, and then click for the completion of the left-click with the mouse. The left button is considered the primary button returns the event.button equaling zero.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The event order of a mouse left-click is mousedown, mouseup, and then click for the completion of the left-click with the mouse. The left button is considered the primary button returns the event.button equaling zero.
+    </div>
+  </div>
+</details>
 
 Source: <https://javascript.info/mouse-events-basics#events-order>
 
 ### If a user is on a MAC, what is the event property key for their OS?
 
-**Interview Answer:** The metaKey is the property corresponding to a key press of the CMD modifier key on Mac device.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The metaKey is the property corresponding to a key press of the CMD modifier key on Mac device.
+    </div>
+  </div>
+</details>
 
 Source: <https://javascript.info/mouse-events-basics#modifiers-shift-alt-ctrl-and-meta>
 
 ### What is the difference between window and document relative positions in terms of the mouse?
 
-**Interview Answer:** In short, document-relative coordinates pageX/Y are counted from the left-upper corner of the document, and do not change when the page is scrolled, while clientX/Y are counted from the current window left-upper corner. When the page is scrolled, they change.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In short, document-relative coordinates pageX/Y are counted from the left-upper corner of the document, and do not change when the page is scrolled, while clientX/Y are counted from the current window left-upper corner. When the page is scrolled, they change.
+    </div>
+  </div>
+</details>
 
 Source: <https://javascript.info/mouse-events-basics#modifiers-shift-alt-ctrl-and-meta>
 
 ### Double mouse click has a side-effect where it selects that text. Is there a way to turn this behavior off?
 
-**Interview Answer:** Yes, you can turn off this side-effect using JavaScript or in an element attribute by setting mousedown to false.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, you can turn off this side-effect using JavaScript or in an element attribute by setting mousedown to false.
+    </div>
+  </div>
+</details>
 
 Before...
 
@@ -46,7 +70,13 @@ Source: <https://javascript.info/mouse-events-basics#preventing-selection-on-mou
 
 ### Can you prevent copying of text or images in a browser document?
 
-**Interview Answer:** Yes, if we want to disable selection to protect our page content from copy-paste by the user, then we can use oncopy event and set it too false. This don’t restrict the use from accessing the HTML source of the page, but it does make it more difficult.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, if we want to disable selection to protect our page content from copy-paste by the user, then we can use oncopy event and set it too false. This don’t restrict the use from accessing the HTML source of the page, but it does make it more difficult.
+    </div>
+  </div>
+</details>
 
 ```html
 <div oncopy="alert('Copying forbidden!'); return false">

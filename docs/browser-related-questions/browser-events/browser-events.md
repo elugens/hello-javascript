@@ -14,27 +14,50 @@ sidebar_position: 1
 
 ### What is an event in relation to the DOM, Browser, and JavaScript?
 
-**Interview Answer:** An event is a signal that something has happened. All DOM nodes generate such signals (but events are not limited to DOM).
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> An event is a signal that something has happened. All DOM nodes generate such signals (but events are not limited to DOM).
+    </div>
+  </div>
+</details>
 
 Source: <https://javascript.info/introduction-browser-events>
 
 ### Can you name at least three DOM events?
 
-**Interview Answer:** There several DOM events including mouse, keyboard, form element, document, and css events. The most common is mouse and keyboard events, like mouse click and keyboard keydown events.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> There several DOM events including mouse, keyboard, form element, document, and css events. The most common is mouse and keyboard events, like mouse click and keyboard keydown events.
+    </div>
+  </div>
+</details>
 
 Source: <https://javascript.info/introduction-browser-events>
 
 ### What is a JavaScript event handler?
 
-**Interview Answer:** A JavaScript event handler is a function that runs in case of an event. Handlers are a way to run JavaScript code in case of user actions. There are several ways to assign a handler.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A JavaScript event handler is a function that runs in case of an event. Handlers are a way to run JavaScript code in case of user actions. There are several ways to assign a handler.
+    </div>
+  </div>
+</details>
 
 Source: <https://javascript.info/introduction-browser-events#event-handlers>
 
 ### Can you execute an event in a HTML attribute?
 
-**Interview Answer:** An event handler can be set in HTML with an attribute named `on<event>`. The onevent handlers are properties on certain DOM elements to manage how that element reacts to events. The onevent handler is usually named with the event it reacts to, like onclick, onkeypress, onfocus, etc.
-
-**Technical Answer:** An event handler can be set in HTML with an attribute named `on<event>`. The onevent handlers are properties on certain DOM elements to manage how that element reacts to events. Elements can be interactive (links, buttons, images, forms, and so forth) or non-interactive (such as the base `<body>` element). The onevent handler is usually named with the event it reacts to, like onclick, onkeypress, onfocus, etc. You can specify an on<…> event handler for a particular event (such as click) for a given object in different ways. An HTML-attribute is not a convenient place to write a lot of code. So, it is recommended to write an event handler. As we know, HTML attribute names are not case-sensitive, so ONCLICK works as well as onClick and onCLICK… But usually attributes are lowercased: onclick.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> An event handler can be set in HTML with an attribute named on&#8249;event&#8250;. The onevent handlers are properties on certain DOM elements to manage how that element reacts to events. The onevent handler is usually named with the event it reacts to, like onclick, onkeypress, onfocus, etc.</div><br />
+  <div><strong>Technical Response:</strong> An event handler can be set in HTML with an attribute named on&#8249;event&#8250;. The onevent handlers are properties on certain DOM elements to manage how that element reacts to events. Elements can be interactive (links, buttons, images, forms, and so forth) or non-interactive (such as the base &#8249;body&#8250; element). The onevent handler is usually named with the event it reacts to, like onclick, onkeypress, onfocus, etc. You can specify an on&#8249;…&#8250; event handler for a particular event (such as click) for a given object in different ways. An HTML-attribute is not a convenient place to write a lot of code. So, it is recommended to write an event handler. As we know, HTML attribute names are not case-sensitive, so ONCLICK works as well as onClick and onCLICK… But usually attributes are lowercased: onclick.
+  </div>
+  </div>
+</details>
 
 Example: HTML Event Attribute onclick
 
@@ -60,7 +83,13 @@ Source: <https://javascript.info/introduction-browser-events#html-attribute>
 
 ### Is there a way to assign a handler to an `on<event>` DOM property?
 
-**Interview Answer:** Yes, we can assign a handler using a DOM property `on<event>`. If the handler is assigned using an HTML-attribute then the browser reads it, creates a new function from the attribute content and writes it to the DOM property. This is actually similar to using a function as an event handler, but it’s just a little less direct.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, we can assign a handler using a DOM property on&#8249;event&#8250;. If the handler is assigned using an HTML-attribute then the browser reads it, creates a new function from the attribute content and writes it to the DOM property. This is actually similar to using a function as an event handler, but it’s just a little less direct.
+    </div>
+  </div>
+</details>
 
 Example:
 
@@ -78,7 +107,13 @@ Source: <https://javascript.info/introduction-browser-events#dom-property>
 
 ### Can use an event more the once on a DOM element?
 
-**Interview Answer:** No not directly, the second event will overwrite the existing event and return the second value. We should have to implement an event listener if we intend to add more than one handler.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> No not directly, the second event will overwrite the existing event and return the second value. We should have to implement an event listener if we intend to add more than one handler.
+    </div>
+  </div>
+</details>
 
 Example:
 
@@ -98,7 +133,13 @@ Source: <https://javascript.info/introduction-browser-events#dom-property>
 
 ### What the reason for not using setAttribute for handlers?
 
-**Interview Answer:** The reason behind not using setAttribute for handlers is that attributes are always string, so the function will become a string instead of a function.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The reason behind not using setAttribute for handlers is that attributes are always string, so the function will become a string instead of a function.
+    </div>
+  </div>
+</details>
 
 Example: This will not work!
 
@@ -116,13 +157,25 @@ Source: <https://javascript.info/introduction-browser-events#possible-mistakes>
 
 ### Are DOM properties names case-sensitive or case-insensitive?
 
-**Interview Answer:** DOM property names are case-sensitive. We should assign a handler to elem.onclick, not elem.ONCLICK.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> DOM property names are case-sensitive. We should assign a handler to elem.onclick, not elem.ONCLICK.
+    </div>
+  </div>
+</details>
 
 Source: <https://javascript.info/introduction-browser-events#possible-mistakes>
 
-### Explain the function and syntax of the EventTarget addEventListener method.\*\*
+### Explain the function and syntax of the EventTarget addEventListener method.
 
-**Interview Answer:** The EventTarget method addEventListener(event, target, options) sets up a function that will be called whenever the specified event is delivered to the target. Common targets are Element, Document, and Window, but the target may be any object that supports events (such as XMLHttpRequest).
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The EventTarget method addEventListener(event, target, options) sets up a function that will be called whenever the specified event is delivered to the target. Common targets are Element, Document, and Window, but the target may be any object that supports events (such as XMLHttpRequest).
+    </div>
+  </div>
+</details>
 
 **Syntax:**
 
@@ -163,7 +216,13 @@ Source: <https://javascript.info/introduction-browser-events#addeventlistener>
 
 ### How should you remove a previously added event listener?
 
-**Interview Answer:** In order to remove a previously added event we must use the removeEventListener(event, handler) method. To remove a handler, we should pass the same function as was assigned. It should be noted, if we do not store the function in a variable, then we cannot remove it. There is no way to “read back” handlers assigned by addEventListener.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In order to remove a previously added event we must use the removeEventListener(event, handler) method. To remove a handler, we should pass the same function as was assigned. It should be noted, if we do not store the function in a variable, then we cannot remove it. There is no way to “read back” handlers assigned by addEventListener.
+    </div>
+  </div>
+</details>
 
 Example:
 
@@ -185,7 +244,13 @@ Source: <https://javascript.info/introduction-browser-events#addeventlistener>
 
 ### Are there any events that cannot be assigned via a DOM property?
 
-**Interview Answer:** Yes, there exist events that cannot be assigned via a DOM-property. Only with addEventListener. For instance, the DOMContentLoaded event, that triggers when the document is loaded, and DOM is built. The addEventListener method is more flexible in this case.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, there exist events that cannot be assigned via a DOM-property. Only with addEventListener. For instance, the DOMContentLoaded event, that triggers when the document is loaded, and DOM is built. The addEventListener method is more flexible in this case.
+    </div>
+  </div>
+</details>
 
 Example:
 
@@ -209,7 +274,13 @@ Source: <https://javascript.info/introduction-browser-events#addeventlistener>
 
 ### What is the event object used for in JavaScript?
 
-**Interview Answer:** The event object can be used for a variety of different actions including get the event type, current target, and window relative coordinates of the current during point events. The event object can be called directly in HTML attributes or inside of our scripts.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The event object can be used for a variety of different actions including get the event type, current target, and window relative coordinates of the current during point events. The event object can be called directly in HTML attributes or inside of our scripts.
+    </div>
+  </div>
+</details>
 
 Example:
 
@@ -223,7 +294,13 @@ Source: <https://javascript.info/introduction-browser-events#event-object>
 
 ### Are we limited to just function handler in JavaScript?
 
-**Interview Answer:** We can assign not just a function, but also an object as an event handler using addEventListener. When an event occurs, the object handler method is invoked. We could also use a class as another approach.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> We can assign not just a function, but also an object as an event handler using addEventListener. When an event occurs, the object handler method is invoked. We could also use a class as another approach.
+    </div>
+  </div>
+</details>
 
 Example: Regular Object
 
