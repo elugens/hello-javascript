@@ -15,13 +15,25 @@ sidebar_position: 3
 
 ### Can you explain, what is clickjacking?
 
-**Interview Answer:** The “clickjacking” attack allows an evil page to click on a “victim site” on behalf of the visitor. Many sites were hacked this way, in the past, including Twitter, Facebook, Paypal and other sites. They have all been fixed, of course.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The “clickjacking” attack allows an evil page to click on a “victim site” on behalf of the visitor. Many sites were hacked this way, in the past, including Twitter, Facebook, Paypal and other sites. They have all been fixed, of course.
+    </div>
+  </div>
+</details>
 
 Source: <https://javascript.info/cross-window-communication#postmessage>
 
 ### Can you briefly explain, how a clickjacking attack is implemented?
 
-**Interview Answer:** The idea is quite simple. A visitor is lured to an evil page. It does not matter how. The page has a harmless-looking link on it (like “get rich now” or “click here, very funny”). Over that link the evil page positions a transparent `<iframe>` with src from facebook.com, in such a way that the “Like” button is right above that link. Usually that is done with z-index. In attempting to click the link, the visitor in fact clicks the button.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The idea is quite simple. A visitor is lured to an evil page. It does not matter how. The page has a harmless-looking link on it (like “get rich now” or “click here, very funny”). Over that link the evil page positions a transparent &#8249;iframe&#8250; with src from facebook.com, in such a way that the “Like” button is right above that link. Usually that is done with z-index. In attempting to click the link, the visitor in fact clicks the button.
+    </div>
+  </div>
+</details>
 
 Code Example:
 
@@ -62,7 +74,13 @@ Source: <https://javascript.info/clickjacking#the-idea>
 
 ### Can you briefly explain, two approaches to defending against a clickjacking attack?
 
-**Interview Answer:** The first or novice approach is the oldest defence usng a bit of JavaScript which forbids opening the page in a frame (so-called “framebusting”). Basically, if the window finds out that it’s not on top, then it automatically makes itself the top. This not a reliable defence, because there are many ways to hack around it. The second approach is using the sandbox attribute to block navigation. One of the things restricted by the sandbox attribute is navigation. A sandboxed iframe may not change top.location. So, we can add the iframe with sandbox="allow-scripts allow-forms". That would relax the restrictions, permitting scripts and forms. But we omit allow-top-navigation so that changing top.location is forbidden. The recommended approach is to use X-Frame-Options: SAMEORIGIN on pages (or whole websites) which are not intended to be viewed inside frames.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The first or novice approach is the oldest defence usng a bit of JavaScript which forbids opening the page in a frame (so-called “framebusting”). Basically, if the window finds out that it’s not on top, then it automatically makes itself the top. This not a reliable defence, because there are many ways to hack around it. The second approach is using the sandbox attribute to block navigation. One of the things restricted by the sandbox attribute is navigation. A sandboxed iframe may not change top.location. So, we can add the iframe with sandbox="allow-scripts allow-forms". That would relax the restrictions, permitting scripts and forms. But we omit allow-top-navigation so that changing top.location is forbidden. The recommended approach is to use X-Frame-Options: SAMEORIGIN on pages (or whole websites) which are not intended to be viewed inside frames.
+    </div>
+  </div>
+</details>
 
 Code Example: Frame Busting (Novice Approach: not recommended)
 

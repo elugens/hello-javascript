@@ -14,7 +14,13 @@ sidebar_position: 3
 
 ### How can we track download progress in JavaScript?
 
-**Interview Answer:** In JavaScript, we can use the fetch method to track download progress. It should be noted, there is currently no way for fetch to track upload progress. For that purpose, we should use the XMLHttpRequest. To track download progress, we can use response.body property. It is ReadableStream – a special object that provides body chunk-by-chunk, as it comes. Readable streams are described in the Streams API specification. Unlike response.text(), response.json() and other methods, response.body gives full control over the reading process, and we can count how much is consumed at any moment.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In JavaScript, we can use the fetch method to track download progress. It should be noted, there is currently no way for fetch to track upload progress. For that purpose, we should use the XMLHttpRequest. To track download progress, we can use response.body property. It is ReadableStream – a special object that provides body chunk-by-chunk, as it comes. Readable streams are described in the Streams API specification. Unlike response.text(), response.json() and other methods, response.body gives full control over the reading process, and we can count how much is consumed at any moment.
+    </div>
+  </div>
+</details>
 
 Code Example:
 
@@ -44,9 +50,14 @@ Source: <https://javascript.info/fetch-progress>
 
 ### What is the result of the await reader.read() JavaScript method?
 
-**Interview Answer:** The result of await reader.read() call is an object with two properties including done and value. The done property returns true when the reading is complete, otherwise false. The value is a typed array of bytes, Uint8Array.
-
-Additional info: Streams API also describes asynchronous iteration over ReadableStream with for await..of loop, but it’s not yet widely supported, so we can use while loop.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The result of await reader.read() call is an object with two properties including done and value. The done property returns true when the reading is complete, otherwise false. The value is a typed array of bytes, Uint8Array.</div><br />
+  <div><strong>Additional Info:</strong> Streams API also describes asynchronous iteration over ReadableStream with for await..of loop, but it’s not yet widely supported, so we can use while loop.
+  </div>
+  </div>
+</details>
 
 Code Example:
 
