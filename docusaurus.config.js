@@ -74,6 +74,8 @@ const config = {
           alt: 'HelloJavaScript.info Logo',
           src: 'img/hellojs-dark-logo-pro.svg',
           srcDark: 'img/hellojs-dark-logo-pro.svg',
+          width: 210,
+          height: 35,
         },
         items: [
           {
