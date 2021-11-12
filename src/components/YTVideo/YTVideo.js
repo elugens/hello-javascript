@@ -13,3 +13,21 @@ const YTVideo = ({ videoURL, videoTitle }) => (
   </div>
 );
 export default YTVideo;
+
+// embed your video Example:
+
+// inside of yourfile.md or yourfile.mdx
+
+{
+  /* 
+***video embed start***
+
+  <YTVideo
+  videoURL='https://www.youtube.com/embed/W6NZfCO5SIk'
+  videoTitle='JavaScript Tutorial for Beginners: Learn JavaScript in 1 Hour'
+  />;
+
+***video embed end***
+
+*/
+}
