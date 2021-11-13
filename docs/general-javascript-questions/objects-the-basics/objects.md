@@ -27,8 +27,6 @@ Source: <https://developer.mozilla.org/en-US/docs/Glossary/Primitive>
 
 ### Are JavaScript primitives mutable or immutable?
 
-**Interview Answer:** Primitives are immutable, which means they cannot be changed.
-
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>

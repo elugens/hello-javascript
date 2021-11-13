@@ -22,25 +22,6 @@ sidebar_position: 1
   </div>
 </details>
 
-**Syntax:** var window = window.open(url, windowName, [windowFeatures])
-
-Code Example: Basic
-
-```js
-var windowObjectReference;
-
-var windowFeatures =
-  'menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes';
-
-function openRequestedPopup() {
-  windowObjectReference = window.open(
-    'http://www.cnn.com/',
-    'CNN_WindowName',
-    windowFeatures
-  );
-}
-```
-
 Source: <https://javascript.info/arraybuffer-binary-arrays>
 
 ### Can you name a few of the binary classes used in JavaScript?

@@ -16,7 +16,7 @@ export default YTVideo;
 
 // embed your video Example:
 
-// inside of yourfile.md or yourfile.mdx
+// inside of yourfile.md or yourfile.mdx file
 
 {
   /* 
