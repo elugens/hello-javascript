@@ -51,6 +51,12 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      gtag: {
+        // You can also use your "G-" Measurement ID here.
+        trackingID: 'G-N6BRLF8Z2K',
+        // Optional fields.
+        anonymizeIP: true, // Should IPs be anonymized?
+      },
       // annoucementBar is set to close false by default
       announcementBar: {
         id: 'support_us',
