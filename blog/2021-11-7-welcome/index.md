@@ -37,10 +37,16 @@ Test: iframe embed from JSFiddle
 
 Test: iframe embed from Repl.it
 
-<iframe frameborder="0" style={{width: '100%'}} height="300px" src="https://replit.com/@ritza/demo-embed?embed=true"></iframe>
+<iframe frameborder="0" style={{width: '100%'}} height="500px" src="https://replit.com/@HelloJavaScript/basic-javascript-questions-answers?embed=true" allow-scripts></iframe>
+
+<iframe height="400px" width="100%" src="https://repl.it/@HelloJavaScript/basic-javascript-questions-answers?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 <br/>
 
 Test: iframe embed from JSitor
 
-<iframe style={{width: '100%'}} height="400" src="https://jsitor.com/embed/ZZoWsvJhs" frameborder="0" />
+<iframe style={{width: '100%'}} height="500" src="https://jsitor.com/embed/ZZoWsvJhs" frameborder="0" />
+
+jsbin cost money to embed
+
+<iframe style={{width: '100%'}} src="https://jsbin.com/datikon/edit?js,console" />
