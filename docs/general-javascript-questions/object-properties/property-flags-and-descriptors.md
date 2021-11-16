@@ -59,7 +59,7 @@ Source: <https://javascript.info/property-descriptors#property-flags>
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The Object.getOwnPropertyDescriptor() method returns an object describing the configuration of a specific properties on a given object. The returned object returns all object properties and attributes. By default, property attributes include writable, enumerable, and configurable with a Boolean return value set to true.</div><br />
-  <div><strong>Technical Response:</strong> The Object.getOwnPropertyDescriptor() method returns an object describing the configuration of a specific property on a given object (that is, one directly presents on an object and not in the object's prototype chain). The object returned is mutable but mutating it has no effect on the original property's configuration. The obj is the object that you are acting on and the propertName is the property you are attempting to get a description of.
+  <div><strong>Technical Response:</strong> The Object.getOwnPropertyDescriptor() method returns an object describing the configuration of a specific property on a given object (that is, one directly presents on an object and not in the object's prototype chain). The object returned is mutable but mutating it has no effect on the original property's configuration. The obj is the object that you are acting on and the property name is the property you are attempting to get a description of.
   </div>
   </div>
 </details>

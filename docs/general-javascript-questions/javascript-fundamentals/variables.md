@@ -28,8 +28,8 @@ Source: <https://javascript.info/variables#a-variable>
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> let, const and the “old” var.</div><br />
-  <div><strong>Technical Response:</strong> There are three variable declaration keywords used in JavaScript. They include let, const, and the “old var keyword”. In modern JavaScript, development let and const are recommended to optimize your application.
+  <div><strong>Interview Response:</strong> The keywords used to declare a variable include let, const, and var variables.</div><br />
+  <div><strong>Technical Response:</strong> There are three variable declaration keywords used in JavaScript. They include let, const, and var variables. In modern JavaScript, development let and const are recommended to optimize your application.
   </div>
   </div>
 </details>
@@ -98,7 +98,7 @@ Source: <https://javascript.info/variables#a-real-life-analogy>
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, by declaring the variable equals the new value. A declaration of a const on a variable does not have this capability, because it’s a constant value.</div>
+  <div><strong>Interview Response:</strong> Yes, by declaring the variable equals the new value. A declaration of a const on a variable does not have this capability, because it is a constant value.</div>
   </div>
 </details>
 
@@ -141,7 +141,7 @@ Source: <https://javascript.info/variables#a-real-life-analogy>
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The variable must contain only letters, digits, dollar sign, or an underscore. The first character must not be a digit.</div><br />
+  <div><strong>Interview Response:</strong> The variable must contain only letters, digits, dollar signs, or an underscore. The first character must not be a digit.</div><br />
   <div><strong>Technical Response:</strong> There are two limitations on variable names in JavaScript. The name must contain only letters, digits, or the symbols $ and _. The first character must not be a digit.
   </div>
   </div>
@@ -337,7 +337,7 @@ Source: <https://javascript.info/variables#constants>
   Some good-to-follow rules are: <br /><br />
     <ol>
       <li>Use human-readable names like userName or shoppingCart.</li>
-      <li>Stay away from abbreviations or short names like a, b, c, unless you know what you’re doing (Ninja Coder – not a good way to write code).</li>
+      <li>Stay away from abbreviations or short names like a, b, c, unless you know what you are doing (Ninja Coder – not a good way to write code).</li>
       <li>Make names maximally descriptive and concise. Examples of bad names are data and value. Such names say nothing. It is only okay to use them if the context of the code makes it exceptionally obvious which data or value the variable is referencing.</li>
       <li>Agree on terms within your team. If a site visitor is called a “user” then we should name related variables currentUser or newUser instead of currentVisitor or newManInTown.</li>
       <li>A variable name is always camelCase and should begin with a noun to differentiate variables from functions, which normally should begin with a verb.</li>

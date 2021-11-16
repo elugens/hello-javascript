@@ -18,7 +18,7 @@ sidebar_position: 4
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> It allows us to run, debug, inspect, analyze, and manipulate JavaScript in the browser.</div><br />
-  <div><strong>Technical Response:</strong> The developer console is like a shell interface, along with tools to inspect the DOM, debug, and analyze network activity. The console can be used to log information as part of the JavaScript development process, as well as allow you to interact with a web page by carrying out JavaScript expressions within the page’s context. Essentially, the Console provides you with the ability to write, manage, and monitor JavaScript on-demand.
+  <div><strong>Technical Response:</strong> The developer console is like a shell interface, along with tools to inspect the DOM, debug, and analyze network activity. The console can be used to log information as part of the JavaScript development process, as well as allow you to interact with a web page by invoking JavaScript expressions within the page’s context. The Console provides you with the ability to write, manage, and monitor JavaScript on-demand.
   </div><br />
   <div><strong>Additional Information:</strong> Developer tools allow us to see errors, run commands, examine variables, and much more.
   </div>

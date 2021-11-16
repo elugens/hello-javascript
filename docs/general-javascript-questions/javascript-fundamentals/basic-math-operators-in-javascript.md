@@ -141,9 +141,9 @@ Source: <https://javascript.info/operators#exponentiation>
 Code Example:
 
 ```js
-let s = 'my' + 'string';
+let s = 'my' + 'String';
 
-alert(s); // mystring
+alert(s); // myString
 // Using the Built-in concat() method
 
 let a = 'concat';

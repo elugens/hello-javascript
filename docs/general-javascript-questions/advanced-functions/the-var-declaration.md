@@ -18,14 +18,14 @@ sidebar_position: 4
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The main difference between let and var is that scope of a variable defined with let is limited to the block in which it is declared, while variable declared with var has the global scope.</div><br />
-  <div><strong>Technical Response:</strong> The main difference between let and var is that scope of a variable defined with let is limited to the block in which it is declared, while variable declared with var has the global scope. So, we can say that var is rather a keyword which defines a variable globally regardless of block scope. This gives var some odd behaviors when compared to let. In its global state it can be redeclared, where let will simply throw an error.
+  <div><strong>Technical Response:</strong> The main difference between let and var is that scope of a variable defined with let is limited to the block in which it is declared, while variable declared with var has the global scope. So, we can say that var is rather a keyword which defines a variable globally regardless of block scope. This gives var some odd behaviors when compared to let. In its global state it can be re-declared, where let will simply throw an error.
   </div>
   </div>
 </details>
 
 Example:
 
-````js
+```js
 let a = 'hello'; // globally scoped
 var b = 'world'; // globally scoped
 console.log(window.a); // undefined
@@ -35,8 +35,8 @@ var a = 'hello';
 var a = 'world'; // No problem, 'hello' is replaced.
 let b = 'hello';
 
-let b = 'world'; // SyntaxError: Iden```tifier 'b' has already been declared
-````
+let b = 'world'; // SyntaxError: Identifier 'b' has already been declared
+```
 
 Source: <https://www.tutorialspoint.com/difference-between-var-and-let-in-javascript>
 

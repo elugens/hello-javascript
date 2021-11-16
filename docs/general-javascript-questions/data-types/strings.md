@@ -41,7 +41,7 @@ Source: <https://javascript.info/string>
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Strings can be enclosed within either single quotes, double quotes or backticks.
+  <div><strong>Interview Response:</strong> Strings can be enclosed within either single quotes, double quotes or back-ticks.
 </div>
   </div>
 </details>
@@ -58,13 +58,13 @@ let backticks = `backticks`;
 
 Source: <https://javascript.info/string#quotes>
 
-### Can you explain the difference between single quotes, double quotes, and backticks?
+### Can you explain the difference between single quotes, double quotes, and back-ticks?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Single and double quotes are essentially the same.</div><br />
-  <div><strong>Technical Response:</strong> Single and double quotes are essentially the same. Backticks, however, allow us to embed any expression into the string, by wrapping it in $&#123;…&#125; . Another advantage of using backticks is that they allow a string to span multiple lines.<br /><br />
+  <div><strong>Technical Response:</strong> Single and double quotes are essentially the same. Back-ticks, however, allow us to embed any expression into the string, by wrapping it in $&#123;…&#125; . Another advantage of using back-ticks is that they allow a string to span multiple lines.<br /><br />
   </div>
   </div>
 </details>
@@ -126,7 +126,7 @@ alert(guestList); // a multiline list of guests
 // Example, these two lines are equal, just written differently:
 
 let str1 = 'Hello\nWorld'; // two lines using a "newline symbol"
-// two lines using a normal newline and backticks
+// two lines using a normal newline and back-ticks
 
 let str2 = `Hello
 

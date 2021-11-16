@@ -42,7 +42,7 @@ Source: <https://javascript.info/object-toprimitive#toprimitive>
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The three object methods include Symbol.toPrimtive (system symbol) if it exists. Otherwise, if the hint is a string, it will try Obj.toString() or Obj.valueOf(). Finally, if the hint is a number or default it will try Obj.valueOf() and Obj.toString().</div><br />
+  <div><strong>Interview Response:</strong> The three object methods include Symbol.toPrimitive (system symbol) if it exists. Otherwise, if the hint is a string, it will try Obj.toString() or Obj.valueOf(). Finally, if the hint is a number or default it will try Obj.valueOf() and Obj.toString().</div><br />
   <div><strong>Simplified:</strong> The three object methods include Symbol.toPrimitive, Obj.toString(), and/or Obj.valueOf().<br /><br />
   </div>
   </div>

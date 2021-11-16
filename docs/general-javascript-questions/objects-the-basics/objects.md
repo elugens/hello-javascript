@@ -25,13 +25,13 @@ sidebar_position: 1
 
 Source: <https://developer.mozilla.org/en-US/docs/Glossary/Primitive>
 
-### Are JavaScript primitives mutable or immutable?
+### Are JavaScript primitive types immutable or mutable?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Primitives are immutable, which means they cannot be changed.</div><br />
-  <div><strong>Technical Response:</strong> The technical answer is that all primitives are immutable, which means they cannot be altered. It is important to recognize that a primitive by itself is not the same thing as a variable assigned a primitive value. Variables may be reassigned a new value, but their existing values cannot be changed in the same manner that objects, arrays, and functions can be altered. Primitives can be replaced, but they cannot be altered directly.<br /><br />
+  <div><strong>Interview Response:</strong> All primitives are immutable, meaning that they cannot be altered.</div><br />
+  <div><strong>Technical Response:</strong> All primitives are immutable, i.e., they cannot be altered. It is important not to confuse a primitive itself with a variable assigned a primitive value. The variable may be reassigned to a new value, but the existing value cannot be changed in the ways that objects, arrays, and functions can be altered. A primitive can be replaced, but it cannot be directly altered.<br /><br />
   </div>
   </div>
 </details>
@@ -109,7 +109,7 @@ let user = {}; // "object literal" syntax
 
 Source: <https://javascript.info/object#literals-and-properties>
 
-### What is the delimitator that separates a key from the value in an Object?
+### What is the delimiter that separates a key from the value in an Object?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -282,7 +282,7 @@ Source: <https://javascript.info/object#property-names-limitations>
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The special property name proto cannot be set to non-object value such as a primitive value.
+  <div><strong>Interview Response:</strong> The special property name `__proto__` cannot be set to non-object value such as a primitive value.
 </div>
   </div>
 </details>

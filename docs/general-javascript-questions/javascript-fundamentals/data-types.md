@@ -81,13 +81,13 @@ Source: <https://javascript.info/types#bigint>
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Double, single, and backticks.</div><br />
+  <div><strong>Interview Response:</strong> Double, single, and back-ticks.</div><br />
   <div><strong>Technical Response:</strong> In JavaScript, there are three types of quotes used to represent a string including double, single, and backtick quotes.<br /><br />
   Example:<br /><br />
     <ol>
       <li>Double quotes: "Hello".</li>
       <li>Single quotes: 'Hello'.</li>
-      <li>Backticks: `Hello`.</li>
+      <li>Back-ticks: `Hello`.</li>
       </ol>
   </div>
   </div>

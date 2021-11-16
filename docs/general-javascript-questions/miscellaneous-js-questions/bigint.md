@@ -5,10 +5,10 @@ sidebar_position: 5
 
 # BigInts
 
-**Miscellaneous: BigInts**
+**Miscellaneous: BigInt**
 
 <head>
-  <title>BigInts - JavaScript Interview Questions & Answers</title>
+  <title>BigInt - JavaScript Interview Questions & Answers</title>
   <meta charSet="utf-8" />
 </head>
 

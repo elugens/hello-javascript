@@ -67,7 +67,7 @@ Source: <https://javascript.info/coding-style#automated-linters>
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Good comments are ones that describe the architecture and lean less toward explaining what the code is doing. Good comments provide the team with a high-level overview of the components and how they interact. Good comments give a bird’s eye view of the code. Good comments include documenting function parameters and there usage as well.
+  <div><strong>Interview Response:</strong> Good comments describe the architecture and lean less toward explaining what the code is doing. Good comments provide the team with a high-level overview of the components and how they interact. Good comments give a bird’ eye view of the code. Good comments include documenting function parameters and their usage as well.
 </div>
   </div>
 </details>

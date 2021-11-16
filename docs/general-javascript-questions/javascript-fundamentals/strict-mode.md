@@ -93,7 +93,7 @@ Source: <https://javascript.info/strict-mode#browser-console>
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> We must place it at the first console line for it to work, then add the rest of our code.</div><br />
-  <div><strong>Technical Response:</strong> First, you can try to press Shift+Enter to input multiple lines and put “use-strict” on top. In Older browsers you will have to put it a wrapper.
+  <div><strong>Technical Response:</strong> First, you can try to press Shift+Enter to input multiple lines and put “use-strict” on top. In Older browsers, you will have to put it in a wrapper.
   </div>
   </div>
 </details>
@@ -140,7 +140,7 @@ Source: <https://javascript.info/strict-mode#should-we-use-strict>
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, JavaScript <em>classes</em> and <em>modules</em> implement strict mode by default.</div>
+  <div><strong>Interview Response:</strong> Yes, JavaScript <em>classes</em> and <em>modules</em> implement strict mode by default. </div>
   </div>
 </details>
 

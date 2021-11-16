@@ -17,7 +17,7 @@ sidebar_position: 2
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, the two number data types include numbers and bigints.
+  <div><strong>Interview Response:</strong> In JavaScript, the two number data types include numbers and BigInts.
 </div>
   </div>
 </details>
@@ -68,7 +68,7 @@ console.log(typeof billion); // returns number and maintains its primiti
 
 let billions = 2,000,000,000;
 
-console.log(typeof billons) // Uncaught SyntaxError: Unexpected number
+console.log(typeof billions) // Uncaught SyntaxError: Unexpected number
 ```
 
 Source: <https://javascript.info/number>

@@ -69,7 +69,7 @@ Source: <https://javascript.info/structure#semicolon>
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, but it is not recommended.</div><br />
-  <div><strong>Technical Response:</strong> Yes, but it is not considered good code etiquette and should not be done. JavaScript interprets the line break as an “implicit” semicolon. This is called an automatic semicolon insertion.
+  <div><strong>Technical Response:</strong> Yes, but it is not considered good code etiquette and should not be done. JavaScript interprets the line break as an “implicit” semicolon. In the JavaScript community, we call this an automatic semicolon insertion.
   </div>
   </div>
 </details>
@@ -118,7 +118,7 @@ Source: <https://javascript.info/structure#semicolon>
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Single-line comments start with two forward slash characters //.</div>
+  <div><strong>Interview Response:</strong> Single-line comments start with two forward slash characters `//`.</div>
   </div>
 </details>
 
@@ -139,7 +139,7 @@ Source: <https://javascript.info/structure#code-comments>
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Multiline comments start with a forward slash and an asterisk /* and end with an asterisk and a forward slash */.</div>
+  <div><strong>Interview Response:</strong> Multiline comments start with a forward slash and an asterisk <strong>/*</strong> and end with an asterisk and a forward slash <strong>*/</strong>.</div>
   </div>
 </details>
 
@@ -163,7 +163,7 @@ Source: <https://javascript.info/structure#code-comments>
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, nested comments are not supported. It will result in a syntax error.</div>
+  <div><strong>Interview Response:</strong> No, nested comments are not supported in JavaScript comments. It will result in a syntax error.</div>
   </div>
 </details>
 

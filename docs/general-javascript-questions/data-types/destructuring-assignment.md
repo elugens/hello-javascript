@@ -18,7 +18,7 @@ sidebar_position: 10
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> De-structuring assignment allows us to “unpack” arrays or objects into variables, as sometimes that is more convenient. De-structuring also works great with complex functions that have a lot of parameters and default values.</div><br />
-  <div><strong>Technical Response:</strong> De-structuring assignment is a special syntax that allows us to “unpack” arrays or objects into a bunch of variables, as sometimes that is more convenient. De-structuring also works great with complex functions that have a lot of parameters, default values, and so on. Soon we will see that. De-structuring is commonly used on both objects and arrays in JavaScript. It is called “de-structuring assignment,” because it “de-structurers” by copying items into variables. But the array itself is not modified.
+  <div><strong>Technical Response:</strong> De-structuring assignment is a special syntax that allows us to “unpack” arrays or objects into a bunch of variables, as sometimes that is more convenient. De-structuring also works great with complex functions that have a lot of parameters, default values, and so on. Soon we will see that. De-structuring is commonly used on both objects and arrays in JavaScript. It is called “de-structuring assignment,” because it “de-structures” by copying items into variables. But the array itself is not modified.
   </div>
   </div>
 </details>

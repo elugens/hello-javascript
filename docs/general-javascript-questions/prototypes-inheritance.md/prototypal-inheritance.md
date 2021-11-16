@@ -23,7 +23,7 @@ sidebar_position: 1
   </div>
 </details>
 
-Example: Historical example using proto which is now deprecated (no longer supported)
+Example: Historical example using `__proto__` which is now deprecated (no longer supported)
 
 :::note
 You should be familiar with the `__proto__` because you may see it in older code.

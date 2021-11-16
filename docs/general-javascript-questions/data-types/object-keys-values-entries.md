@@ -95,7 +95,7 @@ console.log(Object.keys(myObj)); // console: ['foo']
 ```
 
 :::note
-If you want all properties—including non-enumerables—see Object.getOwnPropertyNames().
+If you want all properties including non-enumerables see Object.getOwnPropertyNames().
 :::
 
 Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys>
@@ -165,7 +165,7 @@ Example:
 
 ```js
 const object1 = {
-  a: 'somestring',
+  a: 'someString',
 
   b: 42,
 };
@@ -176,7 +176,7 @@ for (const [key, value] of Object.entries(object1)) {
 
 // expected output:
 
-// "a: somestring"
+// "a: someString"
 
 // "b: 42"
 

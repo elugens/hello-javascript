@@ -85,7 +85,7 @@ Source: <https://javascript.info/array-methods#splice>
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The method arr.slice returns a new array copying to it all items from index start to end (not including end).</div><br />
-  <div><strong>Technical Response:</strong> The method arr.slice is much simpler than similar-looking arr.splice. It returns a new array copying to it all items from index start to end (not including end). Both start and end can be negative, in that case position from array end is assumed. It’s similar to a string method str.slice, but instead of substrings it makes subarrays. We can also call it without arguments: arr.slice() creates a copy of arr. That is often used to obtain a copy for further transformations that should not affect the original array.<br /><br />
+  <div><strong>Technical Response:</strong> The method arr.slice is much simpler than similar-looking arr.splice. It returns a new array copying to it all items from index start to end (not including end). Both start and end can be negative, in that case position from array end is assumed. It’s similar to a string method str.slice, but instead of substrings it makes sub-arrays. We can also call it without arguments: arr.slice() creates a copy of arr. That is often used to obtain a copy for further transformations that should not affect the original array.<br /><br />
   </div>
   </div>
 </details>
@@ -116,14 +116,14 @@ Source: <https://javascript.info/array-methods#slice>
 Code Example:
 
 ```js
-// Array Slice Method \*
+// Array Slice Method *
 
 let arr = ['t', 'e', 's', 't'];
 
 console.log(arr.slice(1, 3)); // e,s (copy from 1 to 3)
 console.log(arr.slice(-2)); // s,t (copy from -2 till the end)
 console.log(arr); // ['t', 'e', 's', 't']; no change to the original array
-// Array Splice Method \*\*
+// Array Splice Method **
 
 let arr2 = [1, 2, 5];
 
@@ -162,6 +162,7 @@ alert(arr.concat([3, 4], [5, 6])); // 1,2,3,4,5,6
 // create an array from: arr and [3,4], then add values 5 and 6
 
 alert(arr.concat([3, 4], 5, 6)); // 1,2,3,4,5,6
+
 ///////////////////////////////
 
 let arr = [1, 2];
@@ -173,6 +174,7 @@ let arrayLike = {
 };
 
 alert(arr.concat(arrayLike)); // 1,2,[object Object]
+
 ///////////////////////////////
 
 let arr = [1, 2];
@@ -293,7 +295,7 @@ Source: <https://javascript.info/array-methods#indexof-lastindexof-and-includes>
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The lastIndexOf array method returns the last index at which a given element can be found in the array, or -1 if it is not present. It accepts two arguments include the searchElement and fromIndex.</div><br />
-  <div><strong>Technical Response:</strong> The lastIndexOf() method returns the last index at which a given element can be found in the array, or -1 if it is not present. The array is searched backwards, starting at fromIndex. The lastIndexOf method has two arguments. The searchElement is the element to be in the array. The second argument is the optional fromIndex which searchs from the specified index.<br /><br />
+  <div><strong>Technical Response:</strong> The lastIndexOf() method returns the last index at which a given element can be found in the array, or -1 if it is not present. The array is searched backwards, starting at fromIndex. The lastIndexOf method has two arguments. The searchElement is the element to be in the array. The second argument is the optional fromIndex which searches from the specified index.<br /><br />
   </div>
   </div>
 </details>
@@ -630,7 +632,7 @@ Source: <https://javascript.info/array-methods#reverse>
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> A split method divides a string into an ordered list of substrings, places them in an array, and returns that array of substrings. The split method accepts two arguments including delimiter and an optional number. The optional number sets the number of values returned in the array.</div><br />
-  <div><strong>Technical Response:</strong> The split() method divides a String into an ordered list of substrings, puts these substrings into an array, and returns the array of strings. The division is done by searching for a pattern, where the pattern is provided as the first parameter in the method's call. The split method has an optional second numeric argument – a limit on the array length. If it is provided, then the extra elements are ignored. In practice it is rarely used though. When the empty string ("") is used as a separator, the string is not split by user-perceived characters (grapheme clusters) or Unicode characters (codepoints), but by UTF-16 code units. This destroys surrogate pairs.<br /><br />
+  <div><strong>Technical Response:</strong> The split() method divides a String into an ordered list of substrings, puts these substrings into an array, and returns the array of strings. The division is done by searching for a pattern, where the pattern is provided as the first parameter in the method's call. The split method has an optional second numeric argument – a limit on the array length. If it is provided, then the extra elements are ignored. In practice it is rarely used though. When the empty string ("") is used as a separator, the string is not split by user-perceived characters (grapheme clusters) or Unicode characters (code points), but by UTF-16 code units. This destroys surrogate pairs.<br /><br />
   </div>
   </div>
 </details>
@@ -785,11 +787,11 @@ Array.isArray([]);
 
 Array.isArray([1]);
 
-Array.isArray(new Array());
+Array.isArray(new Array());
 
-Array.isArray(new Array('a', 'b', 'c', 'd'));
+Array.isArray(new Array('a', 'b', 'c', 'd'));
 
-Array.isArray(new Array(3));
+Array.isArray(new Array(3));
 
 // Little known fact: Array.prototype itself is an array:
 
@@ -813,9 +815,9 @@ Array.isArray(true);
 
 Array.isArray(false);
 
-Array.isArray(new Uint8Array(32));
+Array.isArray(new Uint8Array(32));
 
-Array.isArray({ \_\_proto\_\_: Array.prototype });
+Array.isArray({ __proto__: Array.prototype });
 ```
 
 Source: <https://javascript.info/array-methods#array-isarray>

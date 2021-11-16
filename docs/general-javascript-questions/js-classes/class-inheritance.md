@@ -293,7 +293,7 @@ Source: <https://javascript.info/class-inheritance#overriding-class-fields-a-tri
 Example:
 
 :::note
-You should never call proto in your code… In this case, just call super.
+You should never call **proto** in your code… In this case, just call super.
 :::
 
 ```js

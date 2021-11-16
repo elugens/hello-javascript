@@ -26,14 +26,14 @@ Example:
 
 ```js
 let pokemon = {
-  firstname: 'Pika',
+  firstName: 'Pika',
 
-  lastname: 'Chu ',
+  lastName: 'Chu ',
 
   getPokeName: function () {
-    let fullname = this.firstname + ' ' + this.lastname;
+    let fullName = this.firstName + ' ' + this.lastName;
 
-    return fullname;
+    return fullName;
   },
 };
 

@@ -83,12 +83,12 @@ obj.c(); // prints 10, Object {...}
 
 Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions>
 
-### If there are no arguments in an arrow function do you need to add the paratheses?
+### If there are no arguments in an arrow function do you need to add the parentheses?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, if there are no arguments, then the paratheses should be present in your arrow function. Otherwise, it will throw a syntax error.
+  <div><strong>Interview Response:</strong> Yes, if there are no arguments, then the parentheses should be present in your arrow function. Otherwise, it will throw a syntax error.
 </div>
   </div>
 </details>

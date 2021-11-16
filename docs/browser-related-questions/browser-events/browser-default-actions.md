@@ -71,7 +71,7 @@ Source: <https://javascript.info/default-browser-action#preventing-browser-actio
 Example:
 
 ```html
-<p>Rightclick for the document menu </p>
+<p>Right-click for the document menu </p>
 
 <button id="elem">Right-click for the button menu</button>
 

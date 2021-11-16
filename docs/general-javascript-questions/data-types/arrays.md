@@ -355,7 +355,7 @@ Source: <https://javascript.info/array#internals>
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong>  The performance difference with working the end of array versus the beginning is tangible. Anytime an element must be removed or pushed onto the front of an array all the other existing elements must be reindexed.</div><br />
-  <div><strong>Technical Response:</strong>The performance difference with working the end of array versus the beginning is tangible. Anytime an element must be removed or pushed onto the front of an array all the other existing elements must be reindexed. This means the engine (affecting performance and memory usage) must work harder to reindex all the elements. In contrast when you push or remove an element from the end of an element. There is no need to reindex the remaining elements because their index position will remain the same.<br /><br />
+  <div><strong>Technical Response:</strong>The performance difference with working the end of array versus the beginning is tangible. Anytime an element must be removed or pushed onto the front of an array all the other existing elements must be reindexed. This means the engine (affecting performance and memory usage) must work harder to re-index all the elements. In contrast when you push or remove an element from the end of an element. There is no need to re-index the remaining elements because their index position will remain the same.<br /><br />
   <strong>Examples: The shift operation must do 3 things…</strong><br /><br />
   <ol>
     <li>Remove the element with the index 0.</li>

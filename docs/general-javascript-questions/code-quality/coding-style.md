@@ -66,7 +66,7 @@ Source: <https://javascript.info/coding-style#curly-braces>
 
 :::note
 
-A great example would be long paragraphs that are longer than 120 characters. We can use backticks to handle lines longer than 120 characters.
+A great example would be long paragraphs that are longer than 120 characters. We can use back ticks to handle lines longer than 120 characters.
 
 :::
 

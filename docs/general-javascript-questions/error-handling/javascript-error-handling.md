@@ -17,7 +17,7 @@ sidebar_position: 1
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The try…catch construct has two main blocks, try and then catch blocks. First, the code in the try is executed on the try block. If there is no error, then it procedes to execute and exit the code, skipping the catch. If there is an error in the try block, then the catch is invoked and the error is returned.</div><br />
+  <div><strong>Interview Response:</strong> The try…catch construct has two main blocks, try and then catch blocks. First, the code in the try is executed on the try block. If there is no error, then it proceeds to execute and exit the code, skipping the catch. If there is an error in the try block, then the catch is invoked and the error is returned.</div><br />
   <div><strong>Technical Response:</strong>The try...catch construct has two main blocks: try, and then catch:<br /><br />
   <strong>Steps:</strong><br /><br />
   <ol>
@@ -225,9 +225,9 @@ Source: <https://javascript.info/try-catch#throw-operator>
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> When dealing with errors, handling them at the perimeter of your application is not always sufficient. By the time, the error bubbles up, we have often lost a lot of the context in which the error was thrown. As such, people will sometimes catch an error, record it locally in some way, and then rethrow it. Rethrowing is the basic concept of using a throw statement when there is no clear way to handle an error. This will maintain the original stack trace recorded by the error as you "pass it back up" the call-stack.</div><br />
+  <div><strong>Interview Response:</strong> When dealing with errors, handling them at the perimeter of your application is not always sufficient. By the time, the error bubbles up, we have often lost a lot of the context in which the error was thrown. As such, people will sometimes catch an error, record it locally in some way, and then rethrow it. Re-throwing is the basic concept of using a throw statement when there is no clear way to handle an error. This will maintain the original stack trace recorded by the error as you "pass it back up" the call-stack.</div><br />
   <div><strong>Technical Response:</strong>In JavaScript, there is no special "rethrow" keyword. You simply throw() the error that you caught. This will maintain the original stack trace recorded by the error as you "pass it back up" the call-stack.<br /><br />
-  <strong>The “rethrowing” technique can be explained in more detail as:</strong><br /><br />
+  <strong>The “re-throwing” technique can be explained in more detail as:</strong><br /><br />
   <ol>
     <li>Catch gets all errors.</li>
     <li>In the catch(err) &#123;...&#125; block we analyze the error object err.</li>

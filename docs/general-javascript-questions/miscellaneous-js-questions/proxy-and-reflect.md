@@ -89,7 +89,7 @@ Source: <https://javascript.info/proxy#proxy>
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, the proxy should totally replace the target object everywhere. No one should ever reference the target object after it got proxied. Otherwise, it is easy to mess up.
+  <div><strong>Interview Response:</strong> Yes, the proxy should totally replace the target object everywhere. No one should ever reference the target object after it gets proxied. Otherwise, it is easy to mess up.
 </div>
   </div>
 </details>

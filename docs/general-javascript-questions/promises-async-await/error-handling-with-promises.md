@@ -98,7 +98,7 @@ Source: <https://javascript.info/promise-error-handling#rethrowing>
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In practice, just like with regular unhandled errors in code, it means that something has gone terribly wrong. The script dies with a message in the console. A similar thing happens with unhandled promise rejections. The JavaScript engine tracks such rejections and generates a global error in that case. In the browser we can catch such errors using the event unhandledrejection.
+  <div><strong>Interview Response:</strong> In practice, just like with regular unhandled errors in code, it means that something has gone terribly wrong. The script dies with a message in the console. A similar thing happens with unhandled promise rejections. The JavaScript engine tracks such rejections and generates a global error in that case. In the browser we can catch such errors using the event ` unhandledrejection `.
 </div>
   </div>
 </details>

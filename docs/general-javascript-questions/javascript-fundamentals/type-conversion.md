@@ -192,7 +192,7 @@ Source: <https://javascript.info/type-conversions#numeric-conversion>
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Whitespaces from the start and end are removed. If the remaining string is empty, the result is 0. Otherwise, the number is “read” from the string. If there is an error it will return NaN.</div>
+  <div><strong>Interview Response:</strong> White-spaces from the start and end are removed. If the remaining string is empty, the result is 0. Otherwise, the number is “read” from the string. If there is an error it will return NaN.</div>
   </div>
 </details>
 

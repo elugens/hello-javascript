@@ -29,7 +29,7 @@ Source: <https://javascript.info/introduction-browser-events>
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> There several DOM events including mouse, keyboard, form element, document, and css events. The most common is mouse and keyboard events, like mouse click and keyboard keydown events.
+  <div><strong>Interview Response:</strong> There several DOM events including mouse, keyboard, form element, document, and css events. The most common is mouse and keyboard events, like mouse click and keyboard key-down events.
     </div>
   </div>
 </details>

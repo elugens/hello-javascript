@@ -103,12 +103,12 @@ alert(date);
 
 Source: <https://javascript.info/date#creation>
 
-### What is the difference between Date.parse() and Date(datestring)?
+### What is the difference between Date.parse() and Date(dateString)?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The main difference between Date.parse() and Date(datestring) is Date.parse() returns milliseconds and Date(datestring) does not, it returns the actual UTC date string requested.
+  <div><strong>Interview Response:</strong> The main difference between Date.parse() and Date(dateString) is Date.parse() returns milliseconds and Date(dateString) does not, it returns the actual UTC date string requested.
 </div>
   </div>
 </details>
@@ -306,25 +306,20 @@ Code Example:
 ```js
 // Date to number conversion using the unary operator
 
-let date = new Date();
+let date = new Date();
 
-alert(+date); // returns the number of milliseconds, same as date.getTime()
-
+alert(+date); // returns the number of milliseconds, same as date.getTime()
 // Time Measurement: Speed Test
 
-let start = new Date(); // start measuring time
-
+let start = new Date(); // start measuring time
 // do the job
 
-for (let i = 0; i < 100000; i++) {
-
-   let doSomething = i \* i \* i;
-
+for (let i = 0; i < 100000; i++) {
+  let doSomething = i * i * i;
 }
 
-let end = new Date(); // end measuring time
-
-alert( `The loop took ${end - start} ms` );
+let end = new Date(); // end measuring time
+alert(`The loop took ${end - start} ms`);
 ```
 
 Source: <https://javascript.info/date#date-to-number-date-diff>

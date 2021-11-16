@@ -239,7 +239,7 @@ Example:
 <head>
   <style>
      body { color: red; margin: 5px } 
-  </estyle.*
+  </style>
 </head>
 
 <body>
@@ -294,7 +294,7 @@ Sources: <https://javascript.info/styles-and-classes#computed-styles-getcomputed
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Visited links may be colored using :visited CSS pseudoclass. But getComputedStyle does not give access to that color, because otherwise an arbitrary page could find out whether the user visited a link by creating it on the page and checking the styles. JavaScript may not see the styles applied by :visited. And also, there’s a limitation in CSS that forbids applying geometry-changing styles in :visited. That is to guarantee that there is no side way for an evil page to test if a link was visited and hence to break the privacy.
+  <div><strong>Interview Response:</strong> Visited links may be colored using :visited CSS pseudo class. But getComputedStyle does not give access to that color, because otherwise an arbitrary page could find out whether the user visited a link by creating it on the page and checking the styles. JavaScript may not see the styles applied by :visited. And also, there’s a limitation in CSS that forbids applying geometry-changing styles in :visited. That is to guarantee that there is no side way for an evil page to test if a link was visited and hence to break the privacy.
     </div>
   </div>
 </details>
