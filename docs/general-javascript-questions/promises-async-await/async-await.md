@@ -30,7 +30,7 @@ async function f() {
 }
 ```
 
-Source: <https://javascript.info/async-await>
+---
 
 ### Can you explain the syntax and function of an async function?
 
@@ -61,7 +61,7 @@ async function f() {
 f().then(alert); // 1
 ```
 
-Source: [https://javascript.info/async-await#async-functions\](https://javascript.info/async-await#async-functions" )
+---
 
 ### What does the await keyword do in asynchronous JavaScript code?
 
@@ -90,7 +90,7 @@ async function f() {
 f();
 ```
 
-Source: <https://javascript.info/async-await#await>
+---
 
 ### Is it possible to use the await keyword with regular functions?
 
@@ -121,7 +121,7 @@ async function f() {
 f();
 ```
 
-Source: <https://javascript.info/async-await#await>
+---
 
 ### How does the await keyword work on top-level code?
 
@@ -157,7 +157,7 @@ let user = await response.json();
 })();
 ```
 
-Source: <https://javascript.info/async-await#await>
+---
 
 ### Does await accept JavaScript thenables?
 
@@ -205,7 +205,7 @@ async function f() {
 f();
 ```
 
-Source: <https://javascript.info/async-await#await>
+---
 
 ### Do classes allow asynchronous class methods?
 
@@ -249,7 +249,7 @@ let han = new Person('Han', 'Solo', 25, 'male', ['Smuggling']);
 han.greeting().then(console.log); // returns Hi! I'm Han
 ```
 
-Source: <https://javascript.info/async-await#await>
+---
 
 ### If a promise resolves normally, then await promise returns the result. What happens in the case of a rejection?
 
@@ -275,7 +275,7 @@ async function f() {
 }
 ```
 
-Source: <https://javascript.info/async-await#error-handling>
+---
 
 ### Is there a way to catch errors dynamically in async functions beside explicitly throwing an error?
 
@@ -317,7 +317,7 @@ async function f() {
 f().catch(alert); // TypeError: failed to fetch // (\*)
 ```
 
-Source: <https://javascript.info/async-await#error-handling>
+---
 
 ### When we need to wait for multiple (array) promises, what can we wrap them into to ensure proper handling (resolve/reject)?
 
@@ -345,4 +345,4 @@ let results = await Promise.all([
 ]);
 ```
 
-Source: <https://javascript.info/async-await>
+---

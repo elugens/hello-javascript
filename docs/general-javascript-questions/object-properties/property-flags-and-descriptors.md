@@ -51,7 +51,7 @@ console.log(JSON.stringify(descriptor, null, 2));
 }
 ```
 
-Source: <https://javascript.info/property-descriptors#property-flags>
+---
 
 ### Explain, the function and syntax of the Object.getOwnPropertyDescriptor method in JavaScript.
 
@@ -94,7 +94,7 @@ alert( JSON.stringify(descriptor, null, 2 ) );
 }
 ```
 
-Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor>
+---
 
 ### Is there a method to define property attributes writable, enumerable, and configurable in JavaScript?
 
@@ -144,7 +144,7 @@ alert(JSON.stringify(descriptor, null, 2));
 }
 ```
 
-Source: <https://javascript.info/property-descriptors#property-flags>
+---
 
 ### When you are creating a method for an object. Is there a way restrict enumeration of the newly created object method?
 
@@ -180,7 +180,7 @@ Object.defineProperty(user, 'toString', {
 for (let key in user) console.log(key); // returns name, but no toString
 ```
 
-Source: <https://javascript.info/property-descriptors#non-enumerable>
+---
 
 ### Is there a way to prevent changes of property flags and its deletion, while allowing changes to its value?
 
@@ -207,7 +207,7 @@ user.name = 'Pete'; // works fine
 delete user.name; // Error
 ```
 
-Source: <https://javascript.info/property-descriptors#non-configurable>
+---
 
 ### Besides the seal() built-in JavaScript method, is there a way to seal an object property?
 
@@ -243,7 +243,7 @@ delete user.name;
 Object.defineProperty(user, 'name', { value: 'Pete' });
 ```
 
-Source: <https://javascript.info/property-descriptors#non-configurable>
+---
 
 ### If you want to define many properties at once in an object. What built-in JavaScript method can you use?
 
@@ -279,7 +279,7 @@ Object.defineProperties(obj, {
 console.log(obj.name); // returns Jane
 ```
 
-Source: <https://javascript.info/property-descriptors#object-defineproperties>
+---
 
 ### Explain, the function and syntax of the Object.preventExtension(obj) method in JavaScript.
 
@@ -315,7 +315,7 @@ try {
 // expected output: TypeError: Cannot define property property1, object is not extensible
 ```
 
-Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions>
+---
 
 ### Explain, the function and syntax of the Object.seal(obj) method in JavaScript.
 
@@ -354,7 +354,7 @@ console.log(object1.property1);
 // expected output: 33
 ```
 
-Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/seal>
+---
 
 ### Explain, the function and syntax of the Object.freeze(obj) method in JavaScript.
 
@@ -386,7 +386,7 @@ console.log(obj.prop);
 // expected output: 42
 ```
 
-Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze>
+---
 
 ### What is the difference between freeze and seal in JavaScript?
 
@@ -418,7 +418,7 @@ console.log(obj.prop);
 // expected output: 42
 ```
 
-Source: <https://www.geeksforgeeks.org/what-is-the-difference-between-freeze-and-seal-in-javascript/>
+---
 
 ### Explain, the function and syntax of the Object.isExtensible() method in JavaScript.
 
@@ -448,7 +448,7 @@ console.log(Object.isExtensible(object1));
 // expected output: false
 ```
 
-Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isExtensible>
+---
 
 ### Explain, the function and syntax of the Object.isSealed() method in JavaScript.
 
@@ -480,7 +480,7 @@ console.log(Object.isSealed(object1));
 // expected output: true
 ```
 
-Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isSealed>
+---
 
 ### Explain, the function and syntax of the Object.isFrozen() method in JavaScript.
 
@@ -512,4 +512,4 @@ console.log(Object.isFrozen(object1));
 // expected output: true
 ```
 
-Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isFrozen>
+---

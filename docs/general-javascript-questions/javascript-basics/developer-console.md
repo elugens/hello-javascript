@@ -25,7 +25,7 @@ sidebar_position: 4
   </div>
 </details>
 
-Source: <https://www.digitalocean.com/community/tutorials/how-to-use-the-javascript-developer-console#working-with-the-console-in-a-browser>
+---
 
 ### How do you open the developer console in Google Chrome?
 
@@ -40,6 +40,4 @@ Source: <https://www.digitalocean.com/community/tutorials/how-to-use-the-javascr
   </div>
 </details>
 
-Source: <https://www.digitalocean.com/community/tutorials/how-to-use-the-javascript-developer-console#working-with-the-console-in-a-browser>
-
-Source: <https://javascript.info/devtools>
+---

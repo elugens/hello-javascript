@@ -49,4 +49,13 @@ Test: iframe embed from JSitor
 
 jsbin cost money to embed
 
-<iframe style={{width: '100%'}} src="https://jsbin.com/datikon/edit?js,console" />
+<iframe style={{width: '100%'}} src="https://jsbin.com/datikon/edit?js,console" /><br /><br />
+
+Embed from Plunkr
+
+   <iframe
+  src="https://embed.plnkr.co/plunk/65ORs0BGA4vmCbYt?show=script,preview&deferRun"
+  frameborder="0"
+  width="100%"
+  height="350px"
+></iframe>

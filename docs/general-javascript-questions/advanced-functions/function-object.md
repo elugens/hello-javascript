@@ -22,7 +22,7 @@ sidebar_position: 6
   </div>
 </details>
 
-Source: <https://javascript.info/function-object>
+---
 
 ### Explain, why are functions Objects in JavaScript?
 
@@ -48,7 +48,7 @@ console.log(sayHi.name); // returns sayHi, using built-in name method.
 console.log(sayHi.length); // length = 1, using build length method
 ```
 
-Source: <https://javascript.info/function-object>
+---
 
 ### What kind of naming logic does JavaScript use for functions?
 
@@ -106,7 +106,7 @@ alert(user.sayHi.name); // sayHi
 alert(user.sayBye.name); // sayBye
 ```
 
-Source: <https://javascript.info/function-object#the-name-property>
+---
 
 ### What does the function length property do?
 
@@ -132,7 +132,7 @@ alert(f2.length); // 2
 alert(many.length); // 2, rest parament not counted
 ```
 
-Source: <https://javascript.info/function-object>
+---
 
 ### Is a function property considered a variable in JavaScript?
 
@@ -144,7 +144,7 @@ Source: <https://javascript.info/function-object>
   </div>
 </details>
 
-Source: <https://javascript.info/function-object#custom-properties>
+---
 
 ### Explain, what a named function expression is in JavaScript (NFE)?
 
@@ -173,7 +173,7 @@ sayHi(); // Hello, Guest
 func(); // Error, func is not defined (not visible outside of the function)
 ```
 
-Source: <https://javascript.info/function-object#named-function-expression>
+---
 
 ### What is the actual purpose of the named function expression (NFE)?
 
@@ -219,4 +219,4 @@ sayHi = null;
 welcome('JavaScript'); // Hello, JavaScript
 ```
 
-Source: <https://javascript.info/function-object#named-function-expression>
+---

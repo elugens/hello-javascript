@@ -42,7 +42,7 @@ class MyClass {
 }
 ```
 
-Source: <https://javascript.info/class#the-class-syntax>
+---
 
 ### What is difference between function declarations and class declarations?
 
@@ -83,7 +83,7 @@ function rectSqFt(height, width) { ß function gets hoisted / initialized
 
 ```
 
-Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes>
+---
 
 ### What is a Class expression in JavaScript?
 
@@ -131,7 +131,7 @@ console.log(Rectangle2);
 // error, Rectangle2 name is not visible outside of the class
 ```
 
-Source: <https://javascript.info/class#class-expression>
+---
 
 ### Is there a way to create a Class dynamically “on-demand” in JavaScript?
 
@@ -168,7 +168,7 @@ new User().sayHi(); // Hello
 new User().sayHello(); // Hello, Jane
 ```
 
-Source: <https://javascript.info/class#class-expression>
+---
 
 ### In your opinion, is classical inheritance ever the right choice? If so, when? If not, why?
 
@@ -180,7 +180,7 @@ Source: <https://javascript.info/class#class-expression>
   </div>
 </details>
 
-Source: <https://www.indeed.com/hire/interview-questions/javascript>
+---
 
 ### Can you implement computed names in JavaScript classes?
 
@@ -216,7 +216,7 @@ let o = {
 };
 ```
 
-Source: <https://javascript.info/class#computed-names>
+---
 
 ### Class fields are a new addition to JavaScript. Can you explain their implementation in JavaScript?
 
@@ -257,7 +257,7 @@ let user = new User();
 alert(user.name); // John
 ```
 
-Source: <https://javascript.info/class#class-fields>
+---
 
 ### JavaScript classes are known to allow complex expressions and function calls in named class fields. Is there a way to create bound methods to classes without losing “this”?
 
@@ -293,4 +293,4 @@ let button = new Button('hello');
 setTimeout(button.click, 1000); /// hello, using setTimeout as a wrapper
 ```
 
-Source: <https://javascript.info/class#class-fields>
+---

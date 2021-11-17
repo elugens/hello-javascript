@@ -22,7 +22,7 @@ sidebar_position: 10
   </div>
 </details>
 
-Source: <https://javascript.info/bind>
+---
 
 ### Explain, what is explicit function binding is in JavaScript?
 
@@ -50,7 +50,7 @@ let funcUser = func.bind(user);
 funcUser(); // John
 ```
 
-Source: <https://javascript.info/bind>
+---
 
 ### Explain, the function and syntax of the function bind() method?
 
@@ -91,7 +91,7 @@ console.log(boundGetX());
 // expected output: 42
 ```
 
-Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind>
+---
 
 ### Can you explain, what is a partial function application is in JavaScript?
 
@@ -117,4 +117,4 @@ alert(triple(4)); // = mul(3, 4) = 12
 alert(triple(5)); // = mul(3, 5) = 15
 ```
 
-Source: <https://javascript.info/bind#partial-functions>
+---

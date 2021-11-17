@@ -52,7 +52,7 @@ let d = new Dog('Mitzie');
 d.speak(); // Mitzie barks.
 ```
 
-Source: <https://javascript.info/class-inheritance#the-extends-keyword>
+---
 
 ### Can you use any expression after extends in JavaScript?
 
@@ -80,7 +80,7 @@ class User extends f('Hello') {}
 new User().sayHi(); // Hello
 ```
 
-Source: <https://javascript.info/class-inheritance#the-extends-keyword>
+---
 
 ### Is there a way to override a method in a subclass in JavaScript?
 
@@ -132,7 +132,7 @@ rabbit.run(5); // White Rabbit runs with speed 5.
 rabbit.stop(); // White Rabbit stands still. White Rabbit hides!
 ```
 
-Source: <https://javascript.info/class-inheritance#overriding-a-method>
+---
 
 ### How does super behave inside of arrow functions JavaScript?
 
@@ -174,7 +174,7 @@ setTimeout(() => {
 // Syntax Error: 'super' outside of function or class
 ```
 
-Source: <https://javascript.info/class-inheritance#overriding-a-method>
+---
 
 ### What happens if a class extends another class without an explicit constructor in the child class?
 
@@ -198,7 +198,7 @@ class Rabbit extends Animal {
 }
 ```
 
-Source: <https://javascript.info/class-inheritance#overriding-constructor>
+---
 
 ### How do you override a parent constructor in an inheriting class?
 
@@ -241,7 +241,7 @@ alert(rabbit.name); // White Rabbit
 alert(rabbit.earLength); // 10
 ```
 
-Source: <https://javascript.info/class-inheritance#overriding-constructor>
+---
 
 ### In JavaScript, is there a way to override class fields in parent classes?
 
@@ -278,7 +278,7 @@ new Animal(); // animal
 new Rabbit(); // rabbit
 ```
 
-Source: <https://javascript.info/class-inheritance#overriding-class-fields-a-tricky-note>
+---
 
 ### Can you explain how super works under the hood as [[HomeObject]]?
 
@@ -336,4 +336,4 @@ let longEar = {
 longEar.eat(); // Long Ear eats.
 ```
 
-Source: <https://javascript.info/class-inheritance#homeobject>
+---

@@ -31,7 +31,7 @@ fetch('https://no-such-server.blabla') // rejects
   .catch((err) => alert(err)); // TypeError: failed to fetch (the text may vary)
 ```
 
-Source: <https://javascript.info/promise-error-handling>
+---
 
 ### What is an implicit try…catch in relation to promises in JavaScript?
 
@@ -65,7 +65,7 @@ new Promise((resolve, reject) => {
   .catch(alert); // Error: Whoops!
 ```
 
-Source: <https://javascript.info/promise-error-handling#implicit-try-catch>
+---
 
 ### In a regular try..catch we can analyze the error and maybe rethrow it if it can’t be handled. Is the same thing possible for promises?
 
@@ -91,7 +91,7 @@ new Promise((resolve, reject) => {
   .then(() => alert('Next successful handler runs'));
 ```
 
-Source: <https://javascript.info/promise-error-handling#rethrowing>
+---
 
 ### What happens when an error is not handled in a promise?
 
@@ -118,4 +118,4 @@ new Promise(function () {
 }); // no catch to handle the error
 ```
 
-Source: <https://javascript.info/promise-error-handling#unhandled-rejections>
+---

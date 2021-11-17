@@ -63,7 +63,7 @@ let range = {
 })();
 ```
 
-Source: <https://javascript.info/async-iterators-generators#async-iterables>
+---
 
 ### Is it possible to use a spread syntax with an asynchronous iterator?
 
@@ -144,4 +144,4 @@ let range = {
 console.log([...range]); // Error, no Symbol.iterator
 ```
 
-Source: <https://javascript.info/async-iterators-generators#async-iterables>
+---

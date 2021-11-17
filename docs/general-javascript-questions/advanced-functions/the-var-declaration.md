@@ -38,7 +38,7 @@ let b = 'hello';
 let b = 'world'; // SyntaxError: Identifier 'b' has already been declared
 ```
 
-Source: <https://www.tutorialspoint.com/difference-between-var-and-let-in-javascript>
+---
 
 ### Is the var declaration block scoped or globally scoped?
 
@@ -79,7 +79,7 @@ console.log(getScope()); // returns hello
 console.log(message); // out of scope - ReferenceError: message is not defined
 ```
 
-Source: <https://javascript.info/var#var-has-no-block-scope>
+---
 
 ### How does var work inside of a function block?
 
@@ -127,7 +127,7 @@ sayHi();
 alert(phrase); // ReferenceError: phrase is not defined
 ```
 
-Source: <https://javascript.info/var#var-has-no-block-scope>
+---
 
 ### What happens when you redeclare a var in JavaScript?
 
@@ -159,7 +159,7 @@ let user;
 let user; // SyntaxError: 'user' has already been declared
 ```
 
-Source: <https://javascript.info/var#var-tolerates-redeclarations>
+---
 
 ### Explain, what is hoisting in JavaScript?
 
@@ -193,7 +193,7 @@ let user; // <-- let must be declared before a value is assigned
 console.log(user); // ReferenceError: user is not defined
 ```
 
-Source: <https://javascript.info/var#var-variables-can-be-declared-below-their-use>
+---
 
 ### What is a (IIFE) immediately invoked function expression and why is it used with the old var?
 
@@ -232,7 +232,7 @@ Example: IIFE
 })();
 ```
 
-Source: <https://javascript.info/var#iife>
+---
 
 ### Does JavaScript allow function declarations to be called immediately?
 
@@ -254,4 +254,4 @@ function go() {
 }(); // <-- can't call Function Declaration immediately
 ```
 
-Source: <https://javascript.info/var#iife>
+---

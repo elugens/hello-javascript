@@ -21,7 +21,7 @@ sidebar_position: 11
   </div>
 </details>
 
-Source: <https://javascript.info/logical-operators>
+---
 
 ### If an operand is not a Boolean, what does the logical || OR do?
 
@@ -44,7 +44,7 @@ console.log(1 || 0); // returns 1
 console.log(0 || 0); // returns 0
 ```
 
-Source: <https://javascript.info/logical-operators#or>
+---
 
 ### How does logical OR “||” function?
 
@@ -75,7 +75,7 @@ alert(undefined || null || 0); // 0 (all falsy, returns the last value)
 Logical OR “||” finds the first truthy value or the last value if there are none.
 :::
 
-Source: <https://javascript.info/logical-operators#or-finds-the-first-truthy-value>
+---
 
 ### What is the definition of a short-circuit evaluation in JavaScript?
 
@@ -94,7 +94,7 @@ true || alert('not printed');
 false || alert('printed');
 ```
 
-Source: <https://javascript.info/logical-operators#or-finds-the-first-truthy-value>
+---
 
 ### What does the Logical && (AND) return?
 
@@ -125,7 +125,7 @@ Source: <https://javascript.info/logical-operators#and>
   </div>
 </details>
 
-Source: <https://javascript.info/logical-operators#and-finds-the-first-falsy-value>
+---
 
 ### What steps are performed in the use of the Logical && (AND) operator?
 
@@ -159,7 +159,7 @@ alert(null && 5); // null
 alert(0 && 'no matter what'); // 0
 ```
 
-Source: <https://javascript.info/logical-operators#and-finds-the-first-falsy-value>
+---
 
 ### What are the differences between Logical || (OR) and && (AND) operators?
 
@@ -170,7 +170,7 @@ Source: <https://javascript.info/logical-operators#and-finds-the-first-falsy-val
   </div>
 </details>
 
-Source: <https://javascript.info/logical-operators#and-finds-the-first-falsy-value>
+---
 
 ### Which of the two, Logical || `(OR)` and && `(AND)` operators have the higher operator precedence?
 
@@ -185,7 +185,7 @@ Source: <https://javascript.info/logical-operators#and-finds-the-first-falsy-val
   </div>
 </details>
 
-Source: <https://javascript.info/logical-operators#and-finds-the-first-falsy-value>
+---
 
 ### Can you replace conditional if with OR (||) or && (AND)?
 
@@ -212,7 +212,7 @@ let x = 1;
 if (x > 0) alert('Greater than zero!');
 ```
 
-Source: <https://javascript.info/logical-operators#and-finds-the-first-falsy-value>
+---
 
 ### What steps are performed in the use of the Logical ! (NOT) operator?
 
@@ -236,7 +236,7 @@ alert(!true); // false
 alert(!0); // true
 ```
 
-Source: <https://javascript.info/logical-operators#not>
+---
 
 ### What happens when we apply the !! (DOUBLE NOT) to a value?
 
@@ -256,7 +256,7 @@ alert(!!'non-empty string'); // true
 alert(!!null); // false
 ```
 
-Source: <https://javascript.info/logical-operators#not>
+---
 
 ### Is there a built-in object that performs in the same fashion as the !! (DOUBLE NOT) operator?
 
@@ -281,7 +281,7 @@ alert(Boolean('non-empty string')); // true
 alert(Boolean(null)); // false
 ```
 
-Source: <https://javascript.info/logical-operators#not>
+---
 
 ### What has the highest operator precedence over all the logical operators?
 
@@ -294,4 +294,4 @@ Source: <https://javascript.info/logical-operators#not>
   </div>
 </details>
 
-Source: <https://javascript.info/logical-operators#not>
+---

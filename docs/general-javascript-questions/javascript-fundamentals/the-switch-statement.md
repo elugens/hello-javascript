@@ -23,7 +23,7 @@ sidebar_position: 14
   </div>
 </details>
 
-Source: <https://javascript.info/switch>
+---
 
 ### How does the Switch statement work?
 
@@ -61,7 +61,7 @@ switch(x) {
 }
 ```
 
-Source: <https://javascript.info/switch#the-syntax>
+---
 
 ### Do you have to use the break directive in the Switch statement?
 
@@ -101,7 +101,7 @@ switch (a) {
 // I don't know such values
 ```
 
-Source: <https://javascript.info/switch#an-example>
+---
 
 ### Can you use expressions in switch/case arguments?
 
@@ -159,7 +159,7 @@ console.log("this doesn't run");
 // Output: this runs, because a * 10 = 100
 ```
 
-Source: <https://javascript.info/switch#an-example>
+---
 
 ### Can you group switch cases as variant options?
 
@@ -195,7 +195,7 @@ switch (a) {
 }
 ```
 
-Source: <https://javascript.info/switch#grouping-of-case>
+---
 
 ### Does a switch statement have a strict equality check on value matching?
 
@@ -235,4 +235,4 @@ switch (arg) {
 }
 ```
 
-Source: <https://javascript.info/switch#type-matters>
+---

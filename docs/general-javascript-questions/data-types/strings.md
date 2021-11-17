@@ -22,7 +22,7 @@ sidebar_position: 3
   </div>
 </details>
 
-Source: <https://javascript.info/string>
+---
 
 ### What type of internal character encoding does JavaScript always use?
 
@@ -34,7 +34,7 @@ Source: <https://javascript.info/string>
   </div>
 </details>
 
-Source: <https://javascript.info/string>
+---
 
 ### What are the three types of quotes used to enclose strings in JavaScript?
 
@@ -56,7 +56,7 @@ let double = 'double-quoted';
 let backticks = `backticks`;
 ```
 
-Source: <https://javascript.info/string#quotes>
+---
 
 ### Can you explain the difference between single quotes, double quotes, and back-ticks?
 
@@ -101,7 +101,7 @@ let guestList = "Guests: // Error: Unexpected token ILLEGAL
     * John";
 ```
 
-Source: <https://javascript.info/string#quotes>
+---
 
 ### Is it possible to create a multiline string with single or double quotes?
 
@@ -135,7 +135,7 @@ World`;
 alert(str1 == str2); // true
 ```
 
-Source: <https://javascript.info/string#special-characters>
+---
 
 ### What is the common characteristic of all special characters in JavaScript?
 
@@ -160,7 +160,7 @@ alert(`I'm the Walrus!`); // I'm the Walrus!
 alert(`The backslash: \\`); // The backslash: \
 ```
 
-Source: <https://javascript.info/string#special-characters>
+---
 
 ### Is length a property or a function in JavaScript?
 
@@ -179,7 +179,7 @@ Code Example:
 alert(`Hello`.length); // 5
 ```
 
-Source: <https://javascript.info/string#string-length>
+---
 
 ### When you are accessing string characters at a specific position. What is the difference between accessing it with square brackets and the charAt() method?
 
@@ -206,7 +206,7 @@ for (let char of 'Hello') {
 }
 ```
 
-Source: <https://javascript.info/string#accessing-characters>
+---
 
 ### Are strings mutable or immutable in JavaScript and why?
 
@@ -243,7 +243,7 @@ console.log(foo); // ["plugh"]
 bar = bar.toUpperCase(); // BAZ
 ```
 
-Source: <https://javascript.info/string#strings-are-immutable>
+---
 
 ### Name the five primitive wrapper objects in JavaScript?
 
@@ -256,7 +256,7 @@ Source: <https://javascript.info/string#strings-are-immutable>
   </div>
 </details>
 
-Source: <https://developer.mozilla.org/en-US/docs/Glossary/Primitive>
+---
 
 ### What two methods are used to change the case of string?
 
@@ -279,7 +279,7 @@ alert('Interface'.toLowerCase()); // interface
 alert('Interface'[0].toLowerCase()); // 'i'
 ```
 
-Source: <https://javascript.info/string#changing-the-case>
+---
 
 ### Explain, the function and syntax of the string indexOf() method?
 
@@ -329,7 +329,7 @@ The indexOf() method is case sensitive.
 
 :::
 
-Source: <https://javascript.info/string#str-indexof>
+---
 
 ### What is the difference between the string indexOf and lastIndexOf methods?
 
@@ -358,7 +358,7 @@ console.log(
 // expected output: "The index of the first "dog" from the end is 52"
 ```
 
-Source: <https://javascript.info/string#str-indexof>
+---
 
 ### What is the difference between the string indexOf and search methods?
 
@@ -371,7 +371,7 @@ Source: <https://javascript.info/string#str-indexof>
   </div>
 </details>
 
-Source: <https://javascript.info/string#str-indexof>
+---
 
 ### Can you explain the potential negative outcome when using the indexOf method in an if statement?
 
@@ -402,7 +402,7 @@ if (str.indexOf('Widget') != -1) {
 }
 ```
 
-Source: <https://javascript.info/string#str-indexof>
+---
 
 ### What is a common trick to convert a number to a 32-bit integer?
 
@@ -424,7 +424,7 @@ alert(~0); // -1, the same as -(0+1)
 alert(~-1); // 0, the same as -(-1+1)
 ```
 
-Source: <https://javascript.info/string#the-bitwise-not-trick>
+---
 
 ### Can you use the Bitwise (~) Not to ensure that a call on the indexOf method acts in the intend fashion in an if statement?
 
@@ -444,7 +444,7 @@ if (~str.indexOf('Widget')) {
 }
 ```
 
-Source: <https://javascript.info/string#the-bitwise-not-trick>
+---
 
 ### Explain, the function and syntax of the string “includes” method?
 
@@ -473,7 +473,7 @@ The includes() method is case sensitive.
 
 :::
 
-Source: <https://javascript.info/string#includes-startswith-endswith>
+---
 
 ### Explain, the function and syntax of the both string startsWith() and endsWith() methods?
 
@@ -513,7 +513,7 @@ Both the startsWith() and endsWith() methods are case sensitive.
 
 :::
 
-Source: <https://javascript.info/string#includes-startswith-endswith>
+---
 
 ### What are the three methods used to get a substring?
 
@@ -526,7 +526,7 @@ Source: <https://javascript.info/string#includes-startswith-endswith>
   </div>
 </details>
 
-Source: <https://javascript.info/string#getting-a-substring>
+---
 
 ### Explain, the function and syntax of string slice() method in JavaScript?
 
@@ -554,7 +554,7 @@ let str = 'Hello world!';
 alert(str.slice(-5)); // returns world!
 ```
 
-Source: <https://javascript.info/string#getting-a-substring>
+---
 
 ### Explain, the function and syntax of string substring() method in JavaScript?
 
@@ -583,7 +583,7 @@ alert(str.slice(2, 6)); // "ring" (the same)
 alert(str.slice(6, 2)); // "" (an empty string)
 ```
 
-Source: <https://javascript.info/string#getting-a-substring>
+---
 
 ### Explain, the function and syntax of string substr() method in JavaScript?
 
@@ -614,7 +614,7 @@ The substr() method does not change the original string.
 
 :::
 
-Source: <https://javascript.info/string#getting-a-substring>
+---
 
 ### What is the minor drawback to using the string substr() method in JavaScript?
 
@@ -645,7 +645,7 @@ The substr() method does not change the original string.
 
 :::
 
-Source: <https://javascript.info/string#getting-a-substring>
+---
 
 ### Of the three substring methods (slice / substring / substr) in JavaScript, which one is the most flexible choice?
 
@@ -657,7 +657,7 @@ Source: <https://javascript.info/string#getting-a-substring>
   </div>
 </details>
 
-Source: <https://javascript.info/string#getting-a-substring>
+---
 
 ### How are strings compared in JavaScript?
 
@@ -669,7 +669,7 @@ Source: <https://javascript.info/string#getting-a-substring>
   </div>
 </details>
 
-Source: <https://javascript.info/string#comparing-strings>
+---
 
 ### Are lowercase letters greater than uppercase letters in JavaScript?
 
@@ -685,7 +685,7 @@ Source: <https://javascript.info/string#comparing-strings>
 alert('a' > 'Z'); // true a = 97, Z = 90, so 97 is greater than 90
 ```
 
-Source: <https://javascript.info/string#comparing-strings>
+---
 
 ### Are there any special methods that can get the UTF-16 number code of a character in JavaScript?
 
@@ -707,9 +707,7 @@ alert('z'.codePointAt(0)); // numeric code: 122
 alert('Z'.charCodeAt(0)); // numeric code: 90
 ```
 
-Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/codePointAt>
-
-Source: <https://javascript.info/string#comparing-strings>
+---
 
 ### Is there a built-in method that is used to compare diacritical characters in JavaScript?
 
@@ -728,7 +726,7 @@ Code Example:
 alert('Österreich'.localeCompare('Zealand')); // -1
 ```
 
-Source: <https://javascript.info/string#comparing-strings>
+---
 
 ### What are rare symbols encoded with a pair of 2-byte characters called?
 
@@ -749,7 +747,7 @@ alert('😂'.length); // 2, FACE WITH TEARS OF JOY
 alert('𩷶'.length); // 2, a rare Chinese hieroglyph
 ```
 
-Source: <https://javascript.info/string#surrogate-pairs>
+---
 
 ### What is the modern method that can return the numeric code of surrogate pairs?
 
@@ -771,4 +769,4 @@ let surgPair = str.codePointAt(0);
 console.log(surgPair); // returns 119987
 ```
 
-Source: <https://javascript.info/string#surrogate-pairs>
+---

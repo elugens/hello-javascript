@@ -41,7 +41,7 @@ try {
 }
 ```
 
-Source: <https://javascript.info/try-catch#the-try-catch-syntax>
+---
 
 ### Can you explain the how the JavaScript engine works with the “try..catch” block?
 
@@ -68,7 +68,7 @@ try {
 }
 ```
 
-Source: <https://javascript.info/try-catch#the-try-catch-syntax>
+---
 
 ### Does the “try..catch” block work synchronously or asynchronously?
 
@@ -105,7 +105,7 @@ setTimeout(function () {
 }, 1000);
 ```
 
-Source: <https://javascript.info/try-catch#the-try-catch-syntax>
+---
 
 ### How does the JavaScript error object work inside the try..catch?
 
@@ -139,7 +139,7 @@ try {
 }
 ```
 
-Source: <https://javascript.info/try-catch#error-object>
+---
 
 ### Explain, what the stack error object property does?
 
@@ -161,7 +161,7 @@ try {
 }
 ```
 
-Source: <https://javascript.info/try-catch#error-object>
+---
 
 ### What does the throw operator do in JavaScript?
 
@@ -218,7 +218,7 @@ alert(error.name); // Error
 alert(error.message); // Things happen o_O
 ```
 
-Source: <https://javascript.info/try-catch#throw-operator>
+---
 
 ### What does it mean to rethrow an error in JavaScript?
 
@@ -259,7 +259,7 @@ try {
 }
 ```
 
-Source: <https://javascript.info/try-catch#rethrowing>
+---
 
 ### How does the try..catch..finally function in JavaScript error handling?
 
@@ -283,7 +283,7 @@ try {
 }
 ```
 
-Source: <https://javascript.info/try-catch#try-catch-finally>
+---
 
 ### Are variables localized inside of the “try..catch..finally” blocks?
 
@@ -314,7 +314,7 @@ try {
 
 console.log(hello); // ReferenceError: hello is not defined
 
-Source: <https://javascript.info/try-catch#try-catch-finally>
+---
 
 ### Errors can happen in any part the JavaScript environment including the global space. Is there a way to handle errors in the global window environment?
 
@@ -343,4 +343,4 @@ function readData() {
 readData();
 ```
 
-Source: <https://javascript.info/try-catch#global-catch>
+---

@@ -23,7 +23,7 @@ sidebar_position: 8
   </div>
 </details>
 
-Source: <https://javascript.info/settimeout-setinterval>
+---
 
 ### Explain, the function and syntax of the setTimeout() method?
 
@@ -63,7 +63,7 @@ setTimeout(sayHi, 1000, 'Hello', 'John'); // Hello, John
 setTimeout(() => alert('Hello'), 1000);
 ```
 
-Source: <https://javascript.info/settimeout-setinterval#settimeout>
+---
 
 ### Explain, the function and syntax of the clearTimeout() method?
 
@@ -92,7 +92,7 @@ clearTimeout(timerID);
 alert(timerID); // same identifier (does not become null after canceling)
 ```
 
-Source: <https://javascript.info/settimeout-setinterval#canceling-with-cleartimeout>
+---
 
 ### Explain, the function and syntax of the setInterval() method?
 
@@ -122,7 +122,7 @@ setTimeout(() => {
 }, 5000);
 ```
 
-Source: <https://javascript.info/settimeout-setinterval#setinterval>
+---
 
 ### How does garbage collection work with the setInterval and setTimeout callbacks?
 
@@ -147,7 +147,7 @@ Example:
 setTimeout(function() {...}, 100);
 ```
 
-Source: <https://javascript.info/settimeout-setinterval>
+---
 
 ### How does zero delay setTimeout execute in JavaScript?
 
@@ -170,4 +170,4 @@ setTimeout(() => alert('World')); // returns second
 alert('Hello'); // returns first
 ```
 
-Source: <https://javascript.info/settimeout-setinterval#zero-delay-settimeout>
+---

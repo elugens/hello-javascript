@@ -53,7 +53,7 @@ pokemonName.apply(pokemon, ['sushi', 'algorithms']);
 // returns Pika Chu loves sushi and algorithms
 ```
 
-Source: <https://javascript.info/call-apply-decorators>
+---
 
 ### Explain, how does transparent caching works in JavaScript?
 
@@ -100,7 +100,7 @@ alert(slow(2)); // slow(2) is cached and the result returned
 alert('Again: ' + slow(2)); // slow(2) result returned from cache
 ```
 
-Source: <https://javascript.info/call-apply-decorators#transparent-caching>
+---
 
 ### Explain, what a decorator function/method is in JavaScript?
 
@@ -148,9 +148,7 @@ wrapped('Graham');
 // Finished
 ```
 
-Source: <https://javascript.info/call-apply-decorators#using-func-call-for-the-context>
-
-Code: <https://www.sitepoint.com/javascript-decorators-what-they-are/>
+---
 
 ### Explain, the function and syntax of the function call() method?
 
@@ -191,7 +189,7 @@ console.log(eric.firstName + ' ' + eric.lastName); // returns Eric + Wilson
 console.log(eric.getFullName()); // method call returns Full Name: Eric Wilson
 ```
 
-Source: <https://javascript.info/call-apply-decorators#using-func-call-for-the-context>
+---
 
 ### Explain, the function and syntax of the function apply() method?
 
@@ -224,7 +222,7 @@ greeting.apply(customer2, ['Hello', 'How are you?']);
 // output Hello Nat How are you?
 ```
 
-Source: <https://javascript.info/call-apply-decorators#func-apply>
+---
 
 ### How does method borrowing work in JavaScript?
 
@@ -262,4 +260,4 @@ bird.do.call(butterFly, 'flutter'); // Borrowing the do method from bird
 // I am a Swallowtail, I flutter!
 ```
 
-Source: <https://javascript.info/call-apply-decorators#func-apply>
+---

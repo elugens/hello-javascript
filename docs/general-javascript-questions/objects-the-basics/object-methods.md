@@ -40,7 +40,7 @@ user.sayHi = function () {
 user.sayHi(); // Hello, JavaScript
 ```
 
-Source: <https://javascript.info/object-methods#method-examples>
+---
 
 ### What is the programming paradigm that uses objects to represent entities?
 
@@ -52,7 +52,7 @@ Source: <https://javascript.info/object-methods#method-examples>
   </div>
 </details>
 
-Source: <https://javascript.info/object-methods>
+---
 
 ### What does the “this” keyword refer to in JavaScript?
 
@@ -73,7 +73,7 @@ Source: <https://javascript.info/object-methods>
   </div>
 </details>
 
-Source: <https://www.w3schools.com/js/js_this.asp>
+---
 
 ### What is one of the advantages of using the “this” keyword in an object?
 
@@ -123,7 +123,7 @@ user = null; // overwrite to make things obvious
 admin.sayHi(); // TypeError: Cannot read property 'name' of null
 ```
 
-Source: <https://javascript.info/object-methods#this-in-methods>
+---
 
 ### What is the difference between “THIS” in a function in (strict mode) and (non-strict mode)?
 
@@ -160,7 +160,7 @@ function sayHi() {
 sayHi(); // returns global window
 ```
 
-Source: <https://javascript.info/object-methods#this-is-not-bound>
+---
 
 ### What are the consequences of unbound “THIS”?
 
@@ -172,7 +172,7 @@ Source: <https://javascript.info/object-methods#this-is-not-bound>
   </div>
 </details>
 
-Source: <https://javascript.info/object-methods#this-is-not-bound>
+---
 
 ### Since arrow functions have no “This”, What is the outcome when the “THIS” keyword is used in an arrow function?
 
@@ -242,4 +242,4 @@ const brunch = {
 console.log(brunch.order());
 ```
 
-Source: <https://javascript.info/object-methods#arrow-functions-have-no-this>
+---

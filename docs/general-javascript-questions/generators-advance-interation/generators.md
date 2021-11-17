@@ -43,7 +43,7 @@ let generator = generateSequence();
 console.log(generator); // creates: [object Generator]
 ```
 
-Source: <https://javascript.info/generators#generator-functions>
+---
 
 ### Explain, the function of the generator next method in JavaScript.
 
@@ -75,7 +75,7 @@ g.next(); // "Object { value: 3, done: false }"
 g.next(); // "Object { value: undefined, done: true }"
 ```
 
-Source: <https://javascript.info/generators#generator-functions>
+---
 
 ### What generator function creation syntax is acceptable in JavaScript?
 
@@ -111,7 +111,7 @@ function* gen() {
 }
 ```
 
-Source: <https://javascript.info/generators#generator-functions>
+---
 
 ### What is the difference between a generator and an iterator?
 
@@ -188,7 +188,7 @@ for (let num of generator) {
 }
 ```
 
-Source: <https://javascript.info/generators#generator-functions>
+---
 
 ### If you attempt to use the return keyword to return a value at the end of a generator. What happens when you iterate over the values with a for…of loop?
 
@@ -218,7 +218,7 @@ for (let value of generator) {
 }
 ```
 
-Source: <https://javascript.info/generators#generators-are-iterable>
+---
 
 ### Are function generators iterable in JavaScript?
 
@@ -265,7 +265,7 @@ it[Symbol.iterator] = function* () {
 };
 ```
 
-Source: <https://javascript.info/generators#generators-are-iterable>
+---
 
 ### Can you explain the power of the yield keyword in JavaScript generator functions?
 
@@ -293,4 +293,4 @@ let question = generator.next().value; // <-- yield returns the value
 generator.next(4); // --> pass the result into the generator
 ```
 
-Source: <https://javascript.info/generators#yield-is-a-two-way-street>
+---

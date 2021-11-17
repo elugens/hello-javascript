@@ -23,7 +23,7 @@ sidebar_position: 11
   </div>
 </details>
 
-Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_ecmascript_epoch_and_timestamps>
+---
 
 ### How do you create a new Date object in JavaScript?
 
@@ -44,7 +44,7 @@ let now = new Date();
 alert(now); // shows current date/time
 ```
 
-Source: <https://javascript.info/date#creation>
+---
 
 ### What is an integer number representing the number of milliseconds that has passed since the beginning of 1970 called?
 
@@ -67,7 +67,7 @@ let Dec31_1969 = new Date(-24 * 3600 * 1000);
 alert(Dec31_1969);
 ```
 
-Source: <https://javascript.info/date#creation>
+---
 
 ### Can you use a date string format to create dates in JavaScript?
 
@@ -101,7 +101,7 @@ alert(date);
 // Wed Jan 25 2017 16:00:00 GMT-0800 (Pacific Standard Time)
 ```
 
-Source: <https://javascript.info/date#creation>
+---
 
 ### What is the difference between Date.parse() and Date(dateString)?
 
@@ -123,7 +123,7 @@ console.log(date); // returns 1609574400000
 console.log(date2); // returns 2021-01-02T08:00:00.000Z
 ```
 
-Source: <https://javascript.info/date#creation>
+---
 
 ### What is the difference between the getYear() and getFullYear() methods?
 
@@ -146,7 +146,7 @@ let year = date.getFullYear();
 console.log(year); // returns 2021
 ```
 
-Source: <https://javascript.info/date#access-date-components>
+---
 
 ### Explain, the function and syntax of the date object getMonth() method?
 
@@ -171,7 +171,7 @@ let month = Xmas95.getMonth();
 console.log(month); // 11
 ```
 
-Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getMonth>
+---
 
 ### Explain, the function and syntax of the date object getDate() method?
 
@@ -195,7 +195,7 @@ let day = Xmas95.getDate();
 console.log(day); // 25
 ```
 
-Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getDate>
+---
 
 ### Explain, the function and syntax of the date object getDay() method?
 
@@ -220,7 +220,7 @@ let weekday = Xmas95.getDay();
 console.log(weekday); // 1
 ```
 
-Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getDate>
+---
 
 ### What is UTC, regarding date time and are there any methods to process UTC in JavaScript?
 
@@ -233,7 +233,7 @@ Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Globa
   </div>
 </details>
 
-Source: <https://javascript.info/date>
+---
 
 ### Is there a way to set dates and time in JavaScript?
 
@@ -259,7 +259,7 @@ today.setHours(0, 0, 0, 0);
 alert(today); // still today, now 00:00:00 sharp.
 ```
 
-Source: <https://javascript.info/date#setting-date-components>
+---
 
 ### Data commonly has out of range date information, how does JavaScript handle dates that are formatted incorrectly?
 
@@ -285,7 +285,7 @@ date.setDate(date.getDate() + 2);
 alert(date); // 1 Mar 2016
 ```
 
-Source: <https://javascript.info/date#autocorrection>
+---
 
 ### What happens when a Date object is converted to a number?
 
@@ -322,7 +322,7 @@ let end = new Date(); // end measuring time
 alert(`The loop took ${end - start} ms`);
 ```
 
-Source: <https://javascript.info/date#date-to-number-date-diff>
+---
 
 ### Explain, the function and syntax of the Date.now() method in JavaScript?
 
@@ -351,7 +351,7 @@ let end = Date.now(); // done
 alert(`The loop took ${end - start} ms`); // subtract numbers, not dates
 ```
 
-Source: <https://javascript.info/date#date-now>
+---
 
 ### Explain, the function and syntax of the Date.parse() method in JavaScript?
 
@@ -379,4 +379,4 @@ let date = new Date(Date.parse('2012-01-26T13:51:50.417-07:00'));
 alert(date);
 ```
 
-Source: <https://javascript.info/date#date-parse-from-a-string>
+---

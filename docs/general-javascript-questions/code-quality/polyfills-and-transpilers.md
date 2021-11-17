@@ -40,7 +40,7 @@ height = height ?? 100;
 height = height !== undefined && height !== null ? height : 100;
 ```
 
-Source: <https://javascript.info/polyfills#transpilers>
+---
 
 ### What is a Polyfill in JavaScript?
 
@@ -68,4 +68,4 @@ if (!Math.trunc) {
 }
 ```
 
-Source: <https://javascript.info/polyfills#transpilers>
+---

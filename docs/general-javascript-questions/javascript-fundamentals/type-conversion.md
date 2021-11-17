@@ -23,7 +23,7 @@ sidebar_position: 7
   </div>
 </details>
 
-Source: <https://javascript.info/type-conversions>
+---
 
 ### What is the difference between explicit and automatic (implicit) JavaScript type conversion?
 
@@ -36,7 +36,7 @@ Source: <https://javascript.info/type-conversions>
   </div>
 </details>
 
-Source: <https://javascript.info/type-conversions>
+---
 
 ### How is explicit type conversion implemented in JavaScript?
 
@@ -47,7 +47,7 @@ Source: <https://javascript.info/type-conversions>
   </div>
 </details>
 
-Source: <https://javascript.info/type-conversions>
+---
 
 ### Name one method that automatically converts a value to a string?
 
@@ -58,7 +58,7 @@ Source: <https://javascript.info/type-conversions>
   </div>
 </details>
 
-Source: <https://javascript.info/type-conversions#string-conversion>
+---
 
 ### What built-in object is used to explicitly convert values to a string?
 
@@ -81,7 +81,7 @@ value = String(value); // now value is a string "true"
 alert(typeof value); // string
 ```
 
-Source: <https://javascript.info/type-conversions#string-conversion>
+---
 
 ### When do numeric conversions happen in JavaScript?
 
@@ -92,7 +92,7 @@ Source: <https://javascript.info/type-conversions#string-conversion>
   </div>
 </details>
 
-Source: <https://javascript.info/type-conversions#numeric-conversion>
+---
 
 ### What Object is used to explicitly convert values to a Number?
 
@@ -113,7 +113,7 @@ let num = Number(str); // becomes a number 123
 alert(typeof num); // number
 ```
 
-Source: <https://javascript.info/type-conversions#numeric-conversion>
+---
 
 ### What is the result when there is an explicit attempt to convert a non-number to a number?
 
@@ -132,7 +132,7 @@ let age = Number('an arbitrary string instead of a number');
 alert(age); // NaN, conversion failed
 ```
 
-Source: <https://javascript.info/type-conversions#numeric-conversion>
+---
 
 ### If, there is an attempt to convert an undefined value. What is the return result?
 
@@ -153,7 +153,7 @@ let result = Number(thisNumber);
 alert(result); // returns NaN, conversion failed
 ```
 
-Source: <https://javascript.info/type-conversions#numeric-conversion>
+---
 
 ### If, there is an attempt to convert a NULL value to a number. What is the return result?
 
@@ -174,7 +174,7 @@ let result = Number(thisNumber);
 alert(result); // returns 0
 ```
 
-Source: <https://javascript.info/type-conversions#numeric-conversion>
+---
 
 ### What is returned on a numeric conversion of true and false in JavaScript?
 
@@ -185,7 +185,7 @@ Source: <https://javascript.info/type-conversions#numeric-conversion>
   </div>
 </details>
 
-Source: <https://javascript.info/type-conversions#numeric-conversion>
+---
 
 ### Give a brief description of the potential outcomes when converting a string to a number?
 
@@ -206,7 +206,7 @@ let outcome = Number(myString);
 alert(outcome); // returns 0
 ```
 
-Source: <https://javascript.info/type-conversions#numeric-conversion>
+---
 
 ### Do Boolean conversions happen implicitly, explicitly, or both?
 
@@ -217,7 +217,7 @@ Source: <https://javascript.info/type-conversions#numeric-conversion>
   </div>
 </details>
 
-Source: <https://javascript.info/type-conversions#boolean-conversion>
+---
 
 ### Is there an object that can be used for explicit Boolean conversions?
 
@@ -237,7 +237,7 @@ alert(Boolean('hello')); // true
 alert(Boolean('')); // false
 ```
 
-Source: <https://javascript.info/type-conversions#boolean-conversion>
+---
 
 ### What are the two basic Boolean conversion rules in JavaScript?
 
@@ -254,7 +254,7 @@ Source: <https://javascript.info/type-conversions#boolean-conversion>
   </div>
 </details>
 
-Source: <https://javascript.info/type-conversions#boolean-conversion>
+---
 
 ### In JavaScript, what is the Boolean return value for the string “0”?
 
@@ -276,7 +276,7 @@ console.log(numZero); // returns false
 console.log(stringZero); // returns true
 ```
 
-Source: <https://javascript.info/type-conversions#boolean-conversion>
+---
 
 ### What are the three widely used type conversions in JavaScript?
 
@@ -287,4 +287,4 @@ Source: <https://javascript.info/type-conversions#boolean-conversion>
   </div>
 </details>
 
-Source: <https://javascript.info/type-conversions#boolean-conversion>
+---

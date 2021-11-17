@@ -278,3 +278,21 @@ h3:before {
   width: 100%;
   height: 100%;
 }
+
+hr {
+  border: 0;
+  border-bottom: 1px dashed grey;
+  margin: 35px 0;
+}
+
+/* Remove citations css after removal of all citations */
+.citations {
+  font-size: 0.75rem;
+  text-align: right;
+  padding-right: 1rem;
+}
+
+.citations a {
+  font-size: 0.75rem;
+  color: grey;
+}

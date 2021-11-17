@@ -21,7 +21,7 @@ sidebar_position: 3
   </div>
 </details>
 
-Source: <https://javascript.info/code-editors#ide>
+---
 
 ### What is an IDE?
 
@@ -32,7 +32,7 @@ Source: <https://javascript.info/code-editors#ide>
   </div>
 </details>
 
-Source: <https://javascript.info/code-editors#ide>
+---
 
 ### What is the main difference between an IDE and a Light-Weight editor?
 
@@ -47,4 +47,4 @@ Source: <https://javascript.info/code-editors#ide>
   </div>
 </details>
 
-Source: <https://javascript.info/code-editors#lightweight-editors>
+---

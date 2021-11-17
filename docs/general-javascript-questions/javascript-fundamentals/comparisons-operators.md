@@ -33,7 +33,7 @@ alert(2 == 1); // false (wrong)
 alert(2 != 1); // true (correct)
 ```
 
-Source: <https://javascript.info/comparison#boolean-is-the-result>
+---
 
 ### How does JavaScript compare strings to see if their greater or less than another?
 
@@ -58,7 +58,7 @@ console.log(myLetter.charCodeAt(0)); // returns Unicode value 72
 console.log(myLetter.charCodeAt(1)); // returns Unicode value 101
 ```
 
-Source: <https://javascript.info/comparison#string-comparison>
+---
 
 ### When comparing values of different types, does JavaScript converts the values to numbers?
 
@@ -84,7 +84,7 @@ alert( true == 1 ); // true
 alert( false == 0 ); // true
 ```
 
-Source: <https://javascript.info/comparison#comparison-of-different-types>
+---
 
 ### Is it possible that at the same time, two values are equal, if one of them is true as a Boolean and the other one is false as a Boolean?
 
@@ -108,7 +108,7 @@ alert(a == b); // true!, equality operator
 alert(a === b); // false!, strict equality operator
 ```
 
-Source: <https://javascript.info/comparison#comparison-of-different-types>
+---
 
 ### What is the difference between a regular equality check and strict equality?
 
@@ -127,7 +127,7 @@ Code Example:
 alert(0 === false); // false, because the types are different
 ```
 
-Source: <https://javascript.info/comparison#strict-equality>
+---
 
 ### Is there a benefit of using the strict equality operator?
 
@@ -138,7 +138,7 @@ Source: <https://javascript.info/comparison#strict-equality>
   </div>
 </details>
 
-Source: <https://javascript.info/comparison#strict-equality>
+---
 
 ### What value is returned when null and undefined are compared using the strict equality operator?
 
@@ -162,7 +162,7 @@ alert(null === undefined); // false
 alert(null == undefined); // true
 ```
 
-Source: <https://javascript.info/comparison#comparison-with-null-and-undefined>
+---
 
 ### Is it a good or bad idea to compare undefined to other values?
 
@@ -181,7 +181,7 @@ alert(undefined < 0); // false (2)
 alert(undefined == 0); // false (3)
 ```
 
-Source: <https://javascript.info/comparison#comparison-with-null-and-undefined>
+---
 
 ### What are two ways to avoid problems with undefined/null values?
 
@@ -200,7 +200,7 @@ Source: <https://javascript.info/comparison#comparison-with-null-and-undefined>
   </div>
 </details>
 
-Source: <https://javascript.info/comparison#comparison-with-null-and-undefined>
+---
 
 ### How does the if statement work?
 
@@ -219,4 +219,4 @@ let year = prompt('In which year was ECMAScript-2015 published?', '');
 if (year == 2015) alert('You are right!'); // You are right!
 ```
 
-Source: <https://javascript.info/ifelse#the-if-statement>
+---

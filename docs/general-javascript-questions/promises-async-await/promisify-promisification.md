@@ -39,7 +39,7 @@ let loadScriptPromise = function (src) {
 // loadScriptPromise('path/script.js').then(...)
 ```
 
-Source: <https://javascript.info/promisify>
+---
 
 ### What is one important aspect to remember when deciding to use a promisification?
 
@@ -51,4 +51,4 @@ Source: <https://javascript.info/promisify>
   </div>
 </details>
 
-Source: <https://javascript.info/promisify>
+---

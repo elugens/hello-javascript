@@ -48,7 +48,7 @@ console.log(baz);
 // expected output: 0
 ```
 
-Source: <https://javascript.info/nullish-coalescing-operator>
+---
 
 ### Is there another way to achieve the same results as the nullish coalescing operator?
 
@@ -69,7 +69,7 @@ Code Example:
 result = a !== null && a !== undefined ? a : b;
 ```
 
-Source: <https://javascript.info/nullish-coalescing-operator>
+---
 
 ### What is a common use case for nullish coalescing operator?
 
@@ -96,7 +96,7 @@ let user = 'John';
 alert(user ?? 'Anonymous'); // John
 ```
 
-Source: <https://javascript.info/nullish-coalescing-operator>
+---
 
 ### Can you use a chain or sequence of nullish coalescing operators?
 
@@ -121,7 +121,7 @@ let nickName = 'Supercoder';
 alert(firstName ?? lastName ?? nickName ?? 'Anonymous'); // Supercoder
 ```
 
-Source: <https://javascript.info/nullish-coalescing-operator>
+---
 
 ### Is there another operator that can be used to perform the same task as the nullish coalescing operator?
 
@@ -146,7 +146,7 @@ let nickName = 'Supercoder';
 alert(firstName || lastName || nickName || 'Anonymous'); // Supercoder
 ```
 
-Source: <https://javascript.info/nullish-coalescing-operator#comparison-with>
+---
 
 ### What is the main difference between the Nullish Coalescing Operator and the Logical OR operator?
 
@@ -168,7 +168,7 @@ alert(height || 100); // 100
 alert(height ?? 100); // 0
 ```
 
-Source: <https://javascript.info/nullish-coalescing-operator#comparison-with>
+---
 
 ### Does the nullish coalescing operator have a high or low operator precedence?
 
@@ -195,7 +195,7 @@ let area = (height ?? 100) * (width ?? 50);
 alert(area); // 5000
 ```
 
-Source: <https://javascript.info/nullish-coalescing-operator#comparison-with>
+---
 
 ### What is the proper way to use the Nullish Coalescing Operator with the AND (&&) and OR (||) operator?
 
@@ -222,4 +222,4 @@ let x = (1 && 2) ?? 3; // Works
 alert(x); // 2
 ```
 
-Source: <https://javascript.info/nullish-coalescing-operator#using-with-or>
+---

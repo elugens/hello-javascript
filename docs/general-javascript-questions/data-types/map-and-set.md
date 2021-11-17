@@ -40,7 +40,7 @@ alert(map.get('1')); // 'str1'
 alert(map.size); // 3
 ```
 
-Source: <https://javascript.info/map-set#map>
+---
 
 ### What are some of the methods and properties that the Map Object implements?
 
@@ -84,7 +84,7 @@ contacts.delete('Jessie'); // true
 console.log(contacts.size); // 1
 ```
 
-Source: <https://javascript.info/map-set#map>
+---
 
 ### What is one of the most notable and important Map features in JavaScript?
 
@@ -112,7 +112,7 @@ alert(visitsCountObj['[object Object]']); // 123
 alert(visitsCountObj[ben]); // ben returns 123 because it was overwritten by john
 ```
 
-Source: <https://javascript.info/map-set#map>
+---
 
 ### How does the Map Object compare keys?
 
@@ -124,7 +124,7 @@ Source: <https://javascript.info/map-set#map>
   </div>
 </details>
 
-Source: <https://javascript.info/map-set#map>
+---
 
 ### Which map methods can be used to iterate over a Map Object?
 
@@ -173,7 +173,7 @@ let recipeMap = new Map([
 recipeMap.forEach((quantity, veg) => console.log(`${veg}, ${quantity}`));
 ```
 
-Source: <https://javascript.info/map-set#iteration-over-map>
+---
 
 ### Besides the key, values, and entries methods, is there another method that you can use to iterate over a Map Object?
 
@@ -202,7 +202,7 @@ let recipeMap = new Map([
 recipeMap.forEach((quantity, veg) => console.log(`${veg}, ${quantity}`));
 ```
 
-Source: <https://javascript.info/map-set#iteration-over-map>
+---
 
 ### Can you set properties for Map the same way you add properties for a regular object literal?
 
@@ -274,7 +274,7 @@ let map = new Map(Object.entries(obj));
 alert(map.get('name')); // John
 ```
 
-Source: <https://javascript.info/map-set#object-entries-map-from-object>
+---
 
 ### What is the main difference between Object.entries and Object.fromEntries methods in relation to the Map Object?
 
@@ -317,7 +317,7 @@ let map = new Map(Object.entries(obj));
 alert(map.get('name')); // John
 ```
 
-Source: <https://javascript.info/map-set#object-entries-map-from-object>
+---
 
 ### Explain, how does the Set Object function in javaScript?
 
@@ -361,7 +361,7 @@ for (let user of set) {
 }
 ```
 
-Source: <https://javascript.info/map-set#set>
+---
 
 ### What are the main differences between a Set and Array objects?
 
@@ -374,7 +374,7 @@ Source: <https://javascript.info/map-set#set>
   </div>
 </details>
 
-Source: <https://medium.com/front-end-weekly/es6-set-vs-array-what-and-when-efc055655e1a>
+---
 
 ### What is the best way to loop/iterate over a Set in JavaScript?
 
@@ -412,4 +412,4 @@ for (let i = set.values(), val = null; (val = i.next().value); ) {
 }
 ```
 
-Source: <https://javascript.info/map-set#iteration-over-set>
+---

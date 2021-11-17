@@ -22,7 +22,7 @@ sidebar_position: 1
   </div>
 </details>
 
-Source: <https://javascript.info/proxy>
+---
 
 ### Explain the function and syntax of the proxy object in JavaScript?
 
@@ -48,7 +48,7 @@ alert(proxy.test); // 5, we can read it from proxy too (2)
 for (let key in proxy) alert(key); // test, iteration works (3)
 ```
 
-Source: <https://javascript.info/proxy#proxy>
+---
 
 ### What can we intercept with a JavaScript proxy trap?
 
@@ -82,7 +82,7 @@ alert(numbers[1]); // 1
 alert(numbers[4]); // 0 (no such item)
 ```
 
-Source: <https://javascript.info/proxy#proxy>
+---
 
 ### When you implement a proxy, does the proxy overwrite the variable?
 
@@ -127,7 +127,7 @@ alert(dictionary['Hello']); // Hola
 alert(dictionary['Welcome to Proxy']); // Welcome to Proxy (no translation)
 ```
 
-Source: <https://javascript.info/proxy#default-value-with-get-trap>
+---
 
 ### Explain, the function and syntax of the proxy set method?
 
@@ -175,7 +175,7 @@ numbers.push('test'); // TypeError ('set' on proxy returned false)
 alert('This line is never reached (error in the line above)');
 ```
 
-Source: <https://javascript.info/proxy#validation-with-set-trap>
+---
 
 ### What is meant by invariants in JavaScript proxies?
 
@@ -190,7 +190,7 @@ Source: <https://javascript.info/proxy#validation-with-set-trap>
 
 Specification: <https://tc39.es/ecma262/#sec-proxy-object-internal-methods-and-internal-slots>
 
-Source: <https://javascript.info/proxy#proxy>
+---
 
 ### Is there a way to iterate over an object’s keys using a method that uses the [[OwnPropertyKeys]] internal method?
 
@@ -229,7 +229,7 @@ alert(Object.keys(user)); // name,age
 alert(Object.values(user)); // John,30
 ```
 
-Source: <https://javascript.info/proxy#iteration-with-ownkeys-and-getownpropertydescriptor>
+---
 
 ### Do private (#) properties and methods require proxies in a class?
 
@@ -241,7 +241,7 @@ Source: <https://javascript.info/proxy#iteration-with-ownkeys-and-getownproperty
   </div>
 </details>
 
-Source: <https://javascript.info/proxy#protected-properties-with-deleteproperty-and-other-traps>
+---
 
 ### What is the benefit of using a Proxy vs a wrapper function?
 
@@ -277,7 +277,7 @@ alert(sayHi.length);
 sayHi('John'); // Hello, John! (after 3 seconds)
 ```
 
-Source: <https://javascript.info/proxy#proxy-apply>
+---
 
 ### Explain the function of the Reflect built-in JavaScript object.
 
@@ -319,7 +319,7 @@ Reflect.set(user, 'name', 'John');
 alert(user.name); // John
 ```
 
-Source: <https://javascript.info/proxy#reflect>
+---
 
 ### Does the JavaScript proxy built-in object have any limitations?
 
@@ -344,7 +344,7 @@ let proxy = new Proxy(map, {});
 proxy.set('test', 1); // Error
 ```
 
-Source: <https://javascript.info/proxy#built-in-objects-internal-slots>
+---
 
 ### Is it possible to proxy an inherited class with private fields in JavaScript?
 
@@ -402,7 +402,7 @@ user = new Proxy(user, {
 alert(user.getName()); // Guest
 ```
 
-Source: <https://javascript.info/proxy#private-fields>
+---
 
 ### Can proxies intercept an object that used in a strict equality test?
 
@@ -414,7 +414,7 @@ Source: <https://javascript.info/proxy#private-fields>
   </div>
 </details>
 
-Source: <https://javascript.info/proxy#proxy-target>
+---
 
 ### What is a revocable JavaScript proxy?
 
@@ -449,7 +449,7 @@ revoke();
 alert(proxy.data); // Error
 ```
 
-Source: <https://javascript.info/proxy#revocable-proxies>
+---
 
 ### Why would you use a WeakMap when you are attempting to revoke a proxy?
 
@@ -483,4 +483,4 @@ revoke();
 alert(proxy.data); // Error (revoked)
 ```
 
-Source: <https://javascript.info/proxy#revocable-proxies>
+---

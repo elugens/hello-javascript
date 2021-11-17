@@ -39,7 +39,7 @@ Object.setPrototypeOf(rabbit, {}); // change the prototype of rabbit to {
 console.log(Object.getPrototypeOf(rabbit) === animal); // false
 ```
 
-Source: <https://javascript.info/prototype-methods>
+---
 
 ### Explain, what is the function and syntax of the Object.create(obj) method in JavaScript?
 
@@ -70,7 +70,7 @@ let rabbit = Object.create(animal, {
 alert(rabbit.jumps); // true
 ```
 
-Source: <https://javascript.info/prototype-methods>
+---
 
 ### What is the function and syntax of the Object.getPrototypeOf() method in JavaScript?
 
@@ -96,7 +96,7 @@ console.log(Object.getPrototypeOf(object1) === prototype1);
 // expected output: true
 ```
 
-Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf>
+---
 
 ### What is the function and syntax of the Object.setPrototypeOf(obj, proto) method in JavaScript?
 
@@ -114,7 +114,7 @@ According the MDN, it has been advised to use Object.create(obj) instead of this
 
 **Syntax:** Object.setPrototypeOf(obj, proto)
 
-Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf>
+---
 
 ### Can you change [[Prototype]] on existing objects, in JavaScript?
 
@@ -131,7 +131,7 @@ Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Globa
 According to the MDN changing the prototype after creation is a slow operation and can cause an effect on performance.
 :::
 
-Source: <https://javascript.info/prototype-methods#brief-history>
+---
 
 ### Why was `__proto__` replaced by the functions getPrototypeOf / setPrototypeOf?
 
@@ -147,7 +147,7 @@ Source: <https://javascript.info/prototype-methods#brief-history>
 If you care about performance, you should avoid setting the [[Prototype]] of an object. Instead, create a new object with the desired [[Prototype]] using Object.create().
 :::
 
-Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto>
+---
 
 ### Do you have a preference between class inheritance and prototypal inheritance in JavaScript? If so, why?
 
@@ -159,7 +159,7 @@ Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Globa
   </div>
 </details>
 
-Source: <https://www.indeed.com/hire/interview-questions/javascript>
+---
 
 ### When is classical inheritance an appropriate choice?
 
@@ -175,7 +175,7 @@ Source: <https://www.indeed.com/hire/interview-questions/javascript>
 I have been issuing this challenge for years, and the only answers I have ever heard fall into one of several common misconceptions. More frequently, the challenge is met with silence.
 :::
 
-Source: <https://www.indeed.com/hire/interview-questions/javascript>
+---
 
 ### What is the difference between class inheritance and prototypal inheritance?
 
@@ -188,4 +188,4 @@ Source: <https://www.indeed.com/hire/interview-questions/javascript>
   </div>
 </details>
 
-Source: <https://medium.com/javascript-scene/10-interview-questions-every-javascript-developer-should-know-6fa6bdf5ad95>
+---

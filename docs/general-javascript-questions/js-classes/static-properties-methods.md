@@ -65,7 +65,7 @@ User.staticMethod = function () {
 User.staticMethod(); // true
 ```
 
-Source: <https://javascript.info/static-properties-methods>
+---
 
 ### Are static properties and methods inherited when inheriting from a base class?
 
@@ -116,4 +116,4 @@ rabbits[0].run(); // Black Rabbit runs with speed 5.
 alert(Rabbit.planet); // Earth
 ```
 
-Source: <https://javascript.info/static-properties-methods>
+---

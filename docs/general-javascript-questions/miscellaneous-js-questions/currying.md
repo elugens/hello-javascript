@@ -46,7 +46,7 @@ let curriedSum = curry(sum);
 alert(curriedSum(1)(2)); // 3
 ```
 
-Source: <https://javascript.info/currying-partials>
+---
 
 ### What is the main rule of currying functions in JavaScript?
 
@@ -84,4 +84,4 @@ alert(curriedSum(1)(2, 3)); // 6, currying of 1st arg
 alert(curriedSum(1)(2)(3)); // 6, full currying
 ```
 
-Source: <https://javascript.info/currying-partials>
+---

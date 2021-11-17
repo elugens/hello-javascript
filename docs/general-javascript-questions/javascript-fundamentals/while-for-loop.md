@@ -21,7 +21,7 @@ sidebar_position: 13
   </div>
 </details>
 
-Source: <https://javascript.info/while-for>
+---
 
 ### Explain, how a while loop works?
 
@@ -46,7 +46,7 @@ while (i < 3) {
 }
 ```
 
-Source: <https://javascript.info/while-for#the-while-loop>
+---
 
 ### What is the definition of an iteration in a JavaScript loop?
 
@@ -69,7 +69,7 @@ while (i < 3) {
 }
 ```
 
-Source: <https://javascript.info/while-for#the-while-loop>
+---
 
 ### Does a while loop require an explicit incrementor?
 
@@ -96,7 +96,7 @@ while (i) {
 }
 ```
 
-Source: <https://javascript.info/while-for#the-while-loop>
+---
 
 ### Are curly brackets required in a single line loop body?
 
@@ -115,7 +115,7 @@ let i = 3;
 while (i) alert(i--);
 ```
 
-Source: <https://javascript.info/while-for#the-while-loop>
+---
 
 ### What is the difference between Do-While and While Loop?
 
@@ -134,7 +134,7 @@ do {
 } while (condition);
 ```
 
-Source: <https://javascript.info/while-for#the-do-while-loop>
+---
 
 ### Explain, How the Do-While loop works?
 
@@ -156,7 +156,7 @@ do {
 } while (i < 3);
 ```
 
-Source: <https://javascript.info/while-for#the-do-while-loop>
+---
 
 ### Explain, How the For-Loop works?
 
@@ -208,7 +208,7 @@ if (i < 3) {
 // ...finish, because now i == 3
 ```
 
-Source: <https://javascript.info/while-for#the-for-loop>
+---
 
 ### What is a For-Loop inline variable declaration?
 
@@ -244,7 +244,7 @@ for (i = 0; i < 3; i++) {
 alert(i); // 3, visible, because declared outside of the loop
 ```
 
-Source: <https://javascript.info/while-for#the-for-loop>
+---
 
 ### Is it possible to skip or omit parts of the for-loop settings?
 
@@ -267,7 +267,7 @@ for (; i < 3; i++) {
 }
 ```
 
-Source: <https://javascript.info/while-for#skipping-parts>
+---
 
 ### Can you stop a loop based on a specific condition?
 
@@ -295,7 +295,7 @@ while (true) {
 alert('Sum: ' + sum);
 ```
 
-Source: <https://javascript.info/while-for#breaking-the-loop>
+---
 
 ### How does the continue directive (statement) work?
 
@@ -318,7 +318,7 @@ for (let i = 0; i < 10; i++) {
 }
 ```
 
-Source: <https://javascript.info/while-for#continue>
+---
 
 ### What is the difference between the break statement and the continue directive?
 
@@ -331,7 +331,7 @@ Source: <https://javascript.info/while-for#continue>
   </div>
 </details>
 
-Source: <https://javascript.info/while-for#continue>
+---
 
 ### What is a potential benefit of using the continue directive?
 
@@ -343,7 +343,7 @@ Source: <https://javascript.info/while-for#continue>
   </div>
 </details>
 
-Source: <https://javascript.info/while-for#continue>
+---
 
 ### Can the continue or break directives be used with the shorthand ternary (?) expression?
 
@@ -370,7 +370,7 @@ if (i > 5) {
 (i > 5) ? alert(i) : continue;
 ```
 
-Source: <https://javascript.info/while-for#continue>
+---
 
 ### How do you break out of two nested for loops?
 
@@ -400,7 +400,7 @@ outer: for (let i = 0; i < 3; i++) {
 alert('Done!');
 ```
 
-Source: <https://javascript.info/while-for#labels-for-break-continue>
+---
 
 ### Can labels jump to an arbitrary place in the code?
 
@@ -421,4 +421,4 @@ break label; // doesn't jump to the label below
 label: for (...)
 ```
 
-Source: <https://javascript.info/while-for#labels-for-break-continue>
+---

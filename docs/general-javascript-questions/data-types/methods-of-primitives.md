@@ -23,7 +23,7 @@ sidebar_position: 1
   </div>
 </details>
 
-Source: <https://developer.mozilla.org/en-US/docs/Glossary/Primitive>
+---
 
 ### What are the five (5) primitive wrapper objects in JavaScript?
 
@@ -57,7 +57,7 @@ str = temp.substring(4);
 temp = null;
 ```
 
-Source: <https://developer.mozilla.org/en-US/docs/Glossary/Primitive>
+---
 
 ### Why isn’t an Object a primitive data type?
 
@@ -83,7 +83,7 @@ let user = {
 };
 ```
 
-Source: <https://javascript.info/types>
+---
 
 ### Can an object store a function as a property?
 
@@ -109,7 +109,7 @@ let john = {
 john.sayHi(); // Hi buddy!
 ```
 
-Source: <https://javascript.info/primitives-methods>
+---
 
 ### Does a primitive remain a primitive or return a primitive value when you use it in conjunction with one of its methods?
 
@@ -130,7 +130,7 @@ let str = 'Hello';
 alert(str.toUpperCase()); // HELLO
 ```
 
-Source: <https://javascript.info/primitives-methods#a-primitive-as-an-object>
+---
 
 ### Some languages like Java allow us to explicitly create “wrapper objects” for primitives using a syntax like new Number(1) or new Boolean(false). Is this a best practice in JavaScript?
 
@@ -163,7 +163,7 @@ if (zero) {
 let num = Number('123'); // convert a string to number
 ```
 
-Source: <https://javascript.info/primitives-methods#a-primitive-as-an-object>
+---
 
 ### Do the null and undefined primitive data types have methods?
 
@@ -183,4 +183,4 @@ alert(null.test); // returns type error
 alert(undefined.test); // returns type error
 ```
 
-Source: <https://javascript.info/primitives-methods#a-primitive-as-an-object>
+---

@@ -41,7 +41,7 @@ function pow(x, n) {
 }
 ```
 
-Source: <https://javascript.info/recursion>
+---
 
 ### What is the difference between recursion and iterative in JavaScript?
 
@@ -63,7 +63,7 @@ function pow(x, n) {
 alert(pow(2, 3)); // 8
 ```
 
-Source: <https://javascript.info/recursion#two-ways-of-thinking>
+---
 
 ### What is the maximum (acceptable) number of recursive calls by JavaScript engines?
 
@@ -76,7 +76,7 @@ Source: <https://javascript.info/recursion#two-ways-of-thinking>
   </div>
 </details>
 
-Source: <https://javascript.info/recursion#two-ways-of-thinking>
+---
 
 ### How does recursion work in the JavaScript?
 
@@ -95,7 +95,7 @@ Source: <https://javascript.info/recursion#two-ways-of-thinking>
   </div>
 </details>
 
-Source: <https://javascript.info/recursion#the-execution-context-and-stack>
+---
 
 ### What is common in the three different types of tree traversals (Inorder, Preorder and Postorder)?
 
@@ -107,7 +107,7 @@ Source: <https://javascript.info/recursion#the-execution-context-and-stack>
   </div>
 </details>
 
-Source: <https://edurev.in/question/1725268/What-is-common-in-three-different-types-of-travers>
+---
 
 ### What is the difference between Backtracking and Recursion?
 
@@ -120,7 +120,7 @@ Source: <https://edurev.in/question/1725268/What-is-common-in-three-different-ty
   </div>
 </details>
 
-Source: <https://www.fullstack.cafe/blog/recursion-interview-questions>
+---
 
 ### What is the definition of a recursive data structure?
 
@@ -156,7 +156,7 @@ let company = {
 };
 ```
 
-Source: <https://www.fullstack.cafe/blog/recursion-interview-questions>
+---
 
 ### What is a linked list in JavaScript?
 
@@ -206,7 +206,7 @@ list.next.next.next = { value: 4 };
 list.next.next.next.next = null;
 ```
 
-Source: <https://javascript.info/recursion#linked-list>
+---
 
 ### When traversing a linked list, which approach is better recursion or iterative?
 
@@ -265,4 +265,4 @@ function printRecursively(list) {
 printRecursively(list);
 ```
 
-Source: <https://javascript.info/recursion#linked-list>
+---

@@ -52,7 +52,7 @@ export class User {
 }
 ```
 
-Source: <https://javascript.info/import-export#export-before-declarations>
+---
 
 ### What is recommended when it comes to exports before functions and class declarations?
 
@@ -72,7 +72,7 @@ export function sayHi(user) {
 } // no ; at the end
 ```
 
-Source: <https://javascript.info/import-export#export-before-declarations>
+---
 
 ### Is there another way to export instead of an explicit export on declarations?
 
@@ -104,7 +104,7 @@ function sayBye(user) {
 export {sayHi, sayBye}; // a list of exported variables
 ```
 
-Source: <https://javascript.info/import-export#export-apart-from-declarations>
+---
 
 ### If you want to import all declarations from a module, what syntax should you use?
 
@@ -164,7 +164,7 @@ import { sayHi } from './say.js'; // explicit list
 sayHi('John');
 ```
 
-Source: <https://javascript.info/import-export#import>
+---
 
 ### Is there a way to change or shorten the name of our imports?
 
@@ -187,7 +187,7 @@ hi('John'); // Hello, John!
 bye('John'); // Bye, John!
 ```
 
-Source: <https://javascript.info/import-export#import-as>
+---
 
 ### Can you explain the two main kinds of modules in JavaScript?
 
@@ -199,7 +199,7 @@ Source: <https://javascript.info/import-export#import-as>
   </div>
 </details>
 
-Source: <https://javascript.info/import-export#export-default>
+---
 
 ### What is the difference between named and default module exports and imports?
 
@@ -253,7 +253,7 @@ export default function(user) { // no function name
 export default ['Jan', 'Feb', 'Mar','Apr', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 ```
 
-Source: <https://javascript.info/import-export#export-default>
+---
 
 ### Is there a way to set the default export without explicitly using it on the default entity directly (function, class, variable, etc.)?
 
@@ -281,7 +281,7 @@ function sayHi(user) {
 export {sayHi as default}; ß referencing sayHi
 ```
 
-Source: <https://javascript.info/import-export#the-default-name>
+---
 
 ### If there is one main default export and a few named ones in your module. How do you import both exported entities?
 
@@ -315,7 +315,7 @@ import { default as User, sayHi } from './user.js'; // enclosed in curly bracket
 new User('John');
 ```
 
-Source: <https://javascript.info/import-export#the-default-name>
+---
 
 ### Is there any issues with using default exports in JavaScript? Are named exports better?
 
@@ -351,7 +351,7 @@ import LoginForm from './loginForm.js';
 import func from '/path/to/func.js';
 ```
 
-Source: <https://javascript.info/import-export#a-word-against-default-exports>
+---
 
 ### What is the purpose of re-exporting a module in JavaScript?
 
@@ -383,4 +383,4 @@ export { User };
 // ...
 ```
 
-Source: <https://javascript.info/import-export#re-export>
+---

@@ -22,7 +22,7 @@ sidebar_position: 8
   </div>
 </details>
 
-Source: <https://javascript.info/object-toprimitive>
+---
 
 ### What are the three variants of type conversion in JavaScript?
 
@@ -35,7 +35,7 @@ Source: <https://javascript.info/object-toprimitive>
   </div>
 </details>
 
-Source: <https://javascript.info/object-toprimitive#toprimitive>
+---
 
 ### To implement conversions, what are the three object methods that JavaScript tries to find and call?
 
@@ -48,7 +48,7 @@ Source: <https://javascript.info/object-toprimitive#toprimitive>
   </div>
 </details>
 
-Source: <https://javascript.info/object-toprimitive#toprimitive>
+---
 
 ### Explain, what Symbol.toPrimitive() is and what it does?
 
@@ -82,7 +82,7 @@ alert(+user); // hint: number -> 1000
 alert(user + 500); // hint: default -> 1500
 ```
 
-Source: <https://javascript.info/object-toprimitive#symbol-toprimitive>
+---
 
 ### What is the outcome when you try to use a for…loop to expose the properties of an object using Symbol.toPrimitive()?
 
@@ -114,7 +114,7 @@ for (let prop in user) {
 }
 ```
 
-Source: <https://javascript.info/object-toprimitive#symbol-toprimitive>
+---
 
 ### Methods toString and valueOf come from ancient times. Are they considered Symbols?
 
@@ -127,7 +127,7 @@ Source: <https://javascript.info/object-toprimitive#symbol-toprimitive>
   </div>
 </details>
 
-Source: <https://javascript.info/object-toprimitive#tostring-valueof>
+---
 
 ### By default, a plain object has following toString and valueOf methods. What do each of these object methods return?
 
@@ -148,7 +148,7 @@ alert(user); // [object Object]
 alert(user.valueOf() === user); // true
 ```
 
-Source: <https://javascript.info/object-toprimitive#tostring-valueof>
+---
 
 ### What happens if toString or valueOf returns an object?
 
@@ -161,7 +161,7 @@ Source: <https://javascript.info/object-toprimitive#tostring-valueof>
   </div>
 </details>
 
-Source: <https://javascript.info/object-toprimitive#return-types>
+---
 
 ### As you pass an object as an argument, what are the stages that take place?
 
@@ -192,4 +192,4 @@ let obj = {
 alert(obj * 2); // 4, object converted to primitive "2", then multiplication made it a number
 ```
 
-Source: <https://javascript.info/object-toprimitive#further-conversions>
+---

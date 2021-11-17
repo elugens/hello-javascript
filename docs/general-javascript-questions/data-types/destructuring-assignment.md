@@ -48,7 +48,7 @@ alert(firstName); // John
 alert(surname); // Smith
 ```
 
-Source: <https://javascript.info/destructuring-assignment#array-destructuring>
+---
 
 ### If, you want to ignore or skip an array element to be de-structured (on the right-hand side of the assignment), what delimiter can you use when de-structuring an array?
 
@@ -78,7 +78,7 @@ let [firstName, , title] = [
 console.log(title); // Consul
 ```
 
-Source: <https://javascript.info/destructuring-assignment#array-destructuring>
+---
 
 ### What kind of structures work with de-structuring in JavaScript?
 
@@ -97,7 +97,7 @@ let [a, b, c] = 'abc'; // ["a", "b", "c"]
 let [one, two, three] = new Set([1, 2, 3]);
 ```
 
-Source: <https://javascript.info/destructuring-assignment#array-destructuring>
+---
 
 ### Is there a method you can use to destructure and loop over an object?
 
@@ -139,7 +139,7 @@ for (let [key, value] of user) {
 }
 ```
 
-Source: <https://javascript.info/destructuring-assignment#array-destructuring>
+---
 
 ### Explain, the swapping of variables using destructuring in JavaScript?
 
@@ -165,7 +165,7 @@ let admin = 'Pete';
 alert(`${guest} ${admin}`); // Pete Jane (successfully swapped!)
 ```
 
-Source: <https://javascript.info/destructuring-assignment#array-destructuring>
+---
 
 ### Is there a way to handle mismatched arrays that are being destructured in JavaScript?
 
@@ -205,7 +205,7 @@ alert(rest[1]); // of the Roman Republic
 alert(rest.length); // 2
 ```
 
-Source: <https://javascript.info/destructuring-assignment#array-destructuring>
+---
 
 ### What is the rule regarding the naming convention of a rest operator?
 
@@ -230,7 +230,7 @@ let [name1, name2, ...titles] = [
 // now titles = ["Consul", " Roman Republic"]
 ```
 
-Source: <https://javascript.info/destructuring-assignment#array-destructuring>
+---
 
 ### If, you implement destructuring on empty values, what is returned?
 
@@ -251,7 +251,7 @@ alert(firstName); // undefined
 alert(surname); // undefined
 ```
 
-Source: <https://javascript.info/destructuring-assignment#default-values>
+---
 
 ### What is a good destructuring technique you can use to eliminate the return of undefined array values?
 
@@ -281,7 +281,7 @@ alert(name); // Julius (from array)
 alert(surname); // whatever prompt gets
 ```
 
-Source: <https://javascript.info/destructuring-assignment#default-values>
+---
 
 ### Can you use destructing on objects in JavaScript?
 
@@ -316,7 +316,7 @@ console.log(width); // 100
 console.log(height); // 200
 ```
 
-Source: <https://javascript.info/destructuring-assignment#object-destructuring>
+---
 
 ### What is the difference between array and object destructuring?
 
@@ -343,7 +343,7 @@ Example:
 let { height, width, title } = { title: 'Menu', height: 200, width: 100 };
 ```
 
-Source: <https://javascript.info/destructuring-assignment#object-destructuring>
+---
 
 ### Is there a way to assign a different name to an object variable using the destructuring process?
 
@@ -381,7 +381,7 @@ console.log(w); // 100
 console.log(h); // 200
 ```
 
-Source: <https://javascript.info/destructuring-assignment#object-destructuring>
+---
 
 ### How do you handle potentially missing object properties using destructuring in JavaScript?
 
@@ -418,7 +418,7 @@ alert(title); // Menu
 alert(width); // (whatever the result of prompt is)
 ```
 
-Source: <https://javascript.info/destructuring-assignment#object-destructuring>
+---
 
 ### If, you want to shorten an object property and supply a value to that property, what is the process used implement this in JavaScript?
 
@@ -444,7 +444,7 @@ alert(w); // 100
 alert(h); // 200
 ```
 
-Source: <https://javascript.info/destructuring-assignment#object-destructuring>
+---
 
 ### When working with an object, is there a way to extract only the properties?
 
@@ -474,7 +474,7 @@ let { title } = options;
 alert(title); // Menu
 ```
 
-Source: <https://javascript.info/destructuring-assignment#object-destructuring>
+---
 
 ### What if the object has more properties than we have variables? Can we take some and then assign the “rest” somewhere?
 
@@ -513,7 +513,7 @@ alert(rest.height); // 200
 alert(rest.width); // 100
 ```
 
-Source: <https://javascript.info/destructuring-assignment#object-destructuring>
+---
 
 ### What are some of the issues that you can run into with destructuring objects?
 
@@ -545,7 +545,7 @@ let title, width, height;
 alert( title ); // Menu
 ```
 
-Source: <https://javascript.info/destructuring-assignment#object-destructuring>
+---
 
 ### If an object or an array contain other nested objects and arrays, can we use more complex left-side patterns to extract deeper portions?
 
@@ -595,4 +595,4 @@ alert(item1); // Cake
 alert(item2); // Donut
 ```
 
-Source: <https://javascript.info/destructuring-assignment#nested-destructuring>
+---

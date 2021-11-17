@@ -22,7 +22,7 @@ sidebar_position: 4
   </div>
 </details>
 
-Source: <https://javascript.info/private-protected-properties-methods>
+---
 
 ### What are the two groups that properties and methods are split into in OOP programming?
 
@@ -34,7 +34,7 @@ Source: <https://javascript.info/private-protected-properties-methods>
   </div>
 </details>
 
-Source: <https://javascript.info/private-protected-properties-methods#internal-and-external-interface>
+---
 
 ### What is the difference between private and protected fields in JavaScript?
 
@@ -86,9 +86,7 @@ class CoffeeMachine {
 }
 ```
 
-Source: <https://javascript.info/private-protected-properties-methods>
-
-Source: [JavaScript.info](https://javascript.info/private-protected-properties-methods#internal-and-external-interface)
+---
 
 ### Is there a way to make a class property read only in JavaScript?
 
@@ -123,7 +121,7 @@ alert(`Power is: ${coffeeMachine.power}W`); // Power is: 100W
 coffeeMachine.power = 25; // Error (no setter)
 ```
 
-Source: <https://javascript.info/private-protected-properties-methods#read-only-power>
+---
 
 ### Are protected fields inherited by sub-classes in JavaScript?
 
@@ -135,7 +133,7 @@ Source: <https://javascript.info/private-protected-properties-methods#read-only-
   </div>
 </details>
 
-Source: <https://javascript.info/private-protected-properties-methods#internal-and-external-interface>
+---
 
 ### Can you give a brief overview of private properties and methods?
 
@@ -172,4 +170,4 @@ coffeeMachine.#fixWaterAmount(123); // Error
 coffeeMachine.#waterLimit = 1000; // Error
 ```
 
-Source: <https://javascript.info/private-protected-properties-methods#internal-and-external-interface>
+---

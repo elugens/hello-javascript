@@ -23,7 +23,7 @@ sidebar_position: 12
   </div>
 </details>
 
-Source: <https://javascript.info/json>
+---
 
 ### Explain, what is the role of the JSON.stringfy() method in JavaScript?
 
@@ -82,7 +82,7 @@ alert(json);
 
 ```
 
-Source: <https://javascript.info/json#json-stringify>
+---
 
 ### What data types does JSON support in JavaScript?
 
@@ -107,7 +107,7 @@ alert(JSON.stringify(true)); // true
 alert(JSON.stringify([1, 2, 3])); // [1,2,3]
 ```
 
-Source: <https://javascript.info/json#json-stringify>
+---
 
 ### JSON is data-only language-independent specification, what are some JavaScript-specific object properties that are skipped by JSON.stringify?
 
@@ -136,7 +136,7 @@ let user = {
 alert(JSON.stringify(user)); // {} (empty object)
 ```
 
-Source: <https://javascript.info/json#json-stringify>
+---
 
 ### What is the difference between JSON and JSONP in JavaScript?
 
@@ -148,7 +148,7 @@ Source: <https://javascript.info/json#json-stringify>
   </div>
 </details>
 
-Source: <https://javascript.info/json#json-stringify>
+---
 
 ### What is the third argument space used for in the JSON.stringify() method?
 
@@ -222,7 +222,7 @@ alert(JSON.stringify(user, null, 2)); // value: user, replacer: null, space: 
 
 ```
 
-Source: <https://javascript.info/json#formatting-space>
+---
 
 ### Who is known as the father of JSON?
 
@@ -234,7 +234,7 @@ Source: <https://javascript.info/json#formatting-space>
   </div>
 </details>
 
-Source: <https://www.softwaretestinghelp.com/top-json-interview-questions/>
+---
 
 ### What is the extension of the JSON file?
 
@@ -246,7 +246,7 @@ Source: <https://www.softwaretestinghelp.com/top-json-interview-questions/>
   </div>
 </details>
 
-Source: <https://www.softwaretestinghelp.com/top-json-interview-questions/>
+---
 
 ### Can a comment be added inside a JSON file?
 
@@ -274,7 +274,7 @@ Example: Commenting in JSON (Technically it can be done, but is not supported in
 }
 ```
 
-Source: <https://www.softwaretestinghelp.com/top-json-interview-questions/>
+---
 
 ### Explain, the function and syntax of the JSON.parse() method in JavaScript?
 
@@ -325,4 +325,4 @@ JSON.parse('{"1": 1, "2": 2, "3": {"4": 4, "5": {"6": 6}}}', (key, valu
 // ""
 ```
 
-Source: <https://javascript.info/json#custom-tojson>
+---

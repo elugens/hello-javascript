@@ -23,7 +23,7 @@ sidebar_position: 1
   </div>
 </details>
 
-Source: <https://javascript.info/debugging-chrome>
+---
 
 ### How, do you turn on developer tools in Chrome?
 
@@ -35,7 +35,7 @@ Source: <https://javascript.info/debugging-chrome>
   </div>
 </details>
 
-Source: <https://javascript.info/debugging-chrome#the-sources-panel>
+---
 
 ### How, do you open the left side bar to access the vertical tabs?
 
@@ -61,7 +61,7 @@ Source: <https://javascript.info/debugging-chrome#the-sources-panel>
   </div>
 </details>
 
-Source: <https://javascript.info/debugging-chrome#the-sources-panel>
+---
 
 ### Where can you find the file navigator pane and open it in the chrome developer tools?
 
@@ -73,7 +73,7 @@ Source: <https://javascript.info/debugging-chrome#the-sources-panel>
   </div>
 </details>
 
-Source: <https://javascript.info/debugging-chrome#the-sources-panel>
+---
 
 ### Where is the JavaScript debugging pane located in the chrome developer tools?
 
@@ -85,7 +85,7 @@ Source: <https://javascript.info/debugging-chrome#the-sources-panel>
   </div>
 </details>
 
-Source: <https://javascript.info/debugging-chrome#the-sources-panel>
+---
 
 ### How can you toggle to enter and escape the console tab window?
 
@@ -97,7 +97,7 @@ Source: <https://javascript.info/debugging-chrome#the-sources-panel>
   </div>
 </details>
 
-Source: <https://javascript.info/debugging-chrome#console>
+---
 
 ### What are some of things that you can do with the developer console?
 
@@ -109,7 +109,7 @@ Source: <https://javascript.info/debugging-chrome#console>
   </div>
 </details>
 
-Source: <https://www.freecodecamp.org/news/10-tips-to-maximize-your-javascript-debugging-experience-b69a75859329/>
+---
 
 ### What is a breakpoint in JavaScript development?
 
@@ -121,7 +121,7 @@ Source: <https://www.freecodecamp.org/news/10-tips-to-maximize-your-javascript-d
   </div>
 </details>
 
-Source: <https://javascript.info/debugging-chrome#breakpoints>
+---
 
 ### How do you explicitly implement the debugger in most code editors?
 
@@ -146,7 +146,7 @@ function hello(name) {
 }
 ```
 
-Source: <https://javascript.info/debugging-chrome#debugger-command>
+---
 
 ### How do you reload the source page after you set your breakpoints in the Chrome developer console?
 
@@ -158,7 +158,7 @@ Source: <https://javascript.info/debugging-chrome#debugger-command>
   </div>
 </details>
 
-Source: <https://javascript.info/debugging-chrome#pause-and-look-around>
+---
 
 ### What does the watcher do in the chrome development tools?
 
@@ -170,20 +170,20 @@ Source: <https://javascript.info/debugging-chrome#pause-and-look-around>
   </div>
 </details>
 
-Source: <https://developers.google.com/web/tools/chrome-devtools/javascript/reference#watch>
+---
 
 ### How do you make a minified file readable in Chrome development tools?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> You can click on the format &#125;&#123; icon to make the minified files readable in DevTools.<br /><br />
+  <div><strong>Interview Response:</strong> You can click on the format &#123;&#125; icon to make the minified files readable in DevTools.<br /><br />
   <img src='/img/minified-readable.png' />
 </div>
   </div>
 </details>
 
-Source: <https://developers.google.com/web/tools/chrome-devtools/javascript/reference#watch>
+---
 
 ### What does the Call Stack do in Chrome developer tools?
 
@@ -196,7 +196,7 @@ Source: <https://developers.google.com/web/tools/chrome-devtools/javascript/refe
   </div>
 </details>
 
-Source: <https://javascript.info/debugging-chrome#pause-and-look-around>
+---
 
 ### Is the console part of the DOM or the BOM?
 
@@ -208,4 +208,4 @@ Source: <https://javascript.info/debugging-chrome#pause-and-look-around>
   </div>
 </details>
 
-Source: <https://javascript.info/debugging-chrome#logging>
+---

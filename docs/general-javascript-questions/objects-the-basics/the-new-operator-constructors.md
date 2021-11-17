@@ -37,7 +37,7 @@ alert(user.name); // Jack
 alert(user.isAdmin); // false
 ```
 
-Source: <https://javascript.info/constructor-new#constructor-function>
+---
 
 ### What steps are taken by a constructor function when it is invoked, in relation to the “this” keyword?
 
@@ -73,7 +73,7 @@ let user = {
 };
 ```
 
-Source: <https://javascript.info/constructor-new#constructor-function>
+---
 
 ### What is the main purpose of constructor functions?
 
@@ -85,7 +85,7 @@ Source: <https://javascript.info/constructor-new#constructor-function>
   </div>
 </details>
 
-Source: <https://javascript.info/constructor-new#constructor-function>
+---
 
 ### What is the result when you try to use an arrow function as a constructor?
 
@@ -107,7 +107,7 @@ const Car = (color) => {
 const redCar = new Car('red'); // TypeError: Car is not a constructor
 ```
 
-Source: <https://javascript.info/constructor-new#constructor-function>
+---
 
 ### Can you omit the parentheses when you invoke a constructor function?
 
@@ -128,7 +128,7 @@ let user = new User(); // <-- no parentheses
 let user = new User(); // <-- proper implementation
 ```
 
-Source: <https://javascript.info/constructor-new#return-from-constructors>
+---
 
 ### What are the explicit rules on return statements in constructor functions?
 
@@ -156,4 +156,4 @@ function BigUser() {
 alert(new BigUser().name); // Godzilla, got that object
 ```
 
-Source: <https://javascript.info/constructor-new#return-from-constructors>
+---

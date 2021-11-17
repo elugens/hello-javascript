@@ -21,7 +21,7 @@ sidebar_position: 4
   </div>
 </details>
 
-Source: <https://javascript.info/variables#a-variable>
+---
 
 ### What are the keywords used to declare a variable in JavaScript?
 
@@ -34,7 +34,7 @@ Source: <https://javascript.info/variables#a-variable>
   </div>
 </details>
 
-Source: <https://javascript.info/variables#a-variable>
+---
 
 ### Can you declare multiple variables on one line?
 
@@ -63,7 +63,7 @@ let age = 25;
 let message = 'Hello';
 ```
 
-Source: <https://javascript.info/variables#a-variable>
+---
 
 ### Is there a way to copy stored data from one variable to another?
 
@@ -91,7 +91,7 @@ alert(hello); // Hello world!
 alert(message); // Hello world!
 ```
 
-Source: <https://javascript.info/variables#a-real-life-analogy>
+---
 
 ### Does JavaScript allow you to change the value of a variable?
 
@@ -113,7 +113,7 @@ message = 'World!'; // value changed
 console.log(message); // returns 'World!'
 ```
 
-Source: <https://javascript.info/variables#a-real-life-analogy>
+---
 
 ### Can you declare a variable twice in JavaScript?
 
@@ -134,7 +134,7 @@ let message = 'This';
 let message = 'That'; // SyntaxError: 'message' has already been declared
 ```
 
-Source: <https://javascript.info/variables#a-real-life-analogy>
+---
 
 ### What are the two limitations on variable names in JavaScript?
 
@@ -165,7 +165,7 @@ let _ = 2; // and now a variable with the name "_"
 alert($ + \_); // 3
 ```
 
-Source: <https://javascript.info/variables#variable-naming>
+---
 
 ### What stylization rule is used in naming multi-word variables?
 
@@ -182,7 +182,7 @@ Code Example:
 let myUserName;
 ```
 
-Source: <https://javascript.info/variables#variable-naming>
+---
 
 ### Does variable case matter in JavaScript?
 
@@ -199,7 +199,7 @@ Example:
 let myUserName;
 ```
 
-Source: <https://javascript.info/variables#variable-naming>
+---
 
 ### Are Non-Latin letters allowed in naming variables?
 
@@ -220,7 +220,7 @@ let имя = '...';
 let 我 = '...';
 ```
 
-Source: <https://javascript.info/variables#variable-naming>
+---
 
 ### Is it possible to declare a variable without let, const, or the “Old var”?
 
@@ -240,7 +240,7 @@ num = 5; // the variable "num" is created if it didn't exist
 alert(num); // 5
 ```
 
-Source: <https://javascript.info/variables#variable-naming>
+---
 
 ### What is the difference between var and let in JavaScript?
 
@@ -253,7 +253,7 @@ Source: <https://javascript.info/variables#variable-naming>
   </div>
 </details>
 
-Source: <https://www.geeksforgeeks.org/difference-between-var-and-let-in-javascript/>
+---
 
 ### Can you reassign a value in a variable declared with const?
 
@@ -272,7 +272,7 @@ const myBirthday = '18.04.1982';
 myBirthday = '01.01.2001'; // error, can't reassign the constant!
 ```
 
-Source: <https://javascript.info/variables#constants>
+---
 
 ### When should you use a constant as an alias in JavaScript?
 
@@ -301,7 +301,7 @@ let color = COLOR_ORANGE;
 alert(color); // #FF7F00
 ```
 
-Source: <https://javascript.info/variables#constants>
+---
 
 ### What are the benefits of using a constant as an alias?
 
@@ -312,7 +312,7 @@ Source: <https://javascript.info/variables#constants>
   </div>
 </details>
 
-Source: <https://javascript.info/variables#constants>
+---
 
 ### When should we use capitals for a constant and when should we name it normally?
 
@@ -325,7 +325,7 @@ Source: <https://javascript.info/variables#constants>
   </div>
 </details>
 
-Source: <https://javascript.info/variables#constants>
+---
 
 ### What are some good rules when it comes to variable naming conventions?
 
@@ -346,7 +346,7 @@ Source: <https://javascript.info/variables#constants>
   </div>
 </details>
 
-Source: <https://javascript.info/variables#name-things-right>
+---
 
 ### What differentiates variable and function naming conventions?
 
@@ -357,4 +357,4 @@ Source: <https://javascript.info/variables#name-things-right>
   </div>
 </details>
 
-Source: <https://javascript.info/variables#constants>
+---

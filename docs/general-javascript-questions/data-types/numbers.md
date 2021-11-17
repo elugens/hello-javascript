@@ -22,7 +22,7 @@ sidebar_position: 2
   </div>
 </details>
 
-Source: <https://javascript.info/number>
+---
 
 ### In what format are regular numbers stored in JavaScript?
 
@@ -34,7 +34,7 @@ Source: <https://javascript.info/number>
   </div>
 </details>
 
-Source: <https://javascript.info/number>
+---
 
 ### Explain the limitations of BigInts in JavaScript?
 
@@ -46,7 +46,7 @@ Source: <https://javascript.info/number>
   </div>
 </details>
 
-Source: <https://javascript.info/number>
+---
 
 ### In JavaScript, there are several ways to write a number. Is there a safe way to separate large number groups like 1,000,000,000 and maintain a formal format?
 
@@ -71,7 +71,7 @@ let billions = 2,000,000,000;
 console.log(typeof billions) // Uncaught SyntaxError: Unexpected number
 ```
 
-Source: <https://javascript.info/number>
+---
 
 ### As programmers, we are always trying to find a way to reduce our code. What is easiest way to avoid writing long sequences of numbers like 1,000,000,000?
 
@@ -107,7 +107,7 @@ let ms = 0.000001;
 let ms = 1e-6; // six zeroes to the left from 1
 ```
 
-Source: <https://javascript.info/number#more-ways-to-write-a-number>
+---
 
 ### Is there a difference in the position of subtraction operator when numbers are using (e) notation to shorten your numerical syntax?
 
@@ -126,7 +126,7 @@ console.log(1e-9); // 1e-9 is 0.000000001; the minus sign applies to th
 console.log(-1e9); // -1e9 is - 1000000000.0; minus sign applies to the number itself.
 ```
 
-Source: <https://javascript.info/number#more-ways-to-write-a-number>
+---
 
 ### What numeral systems are used to represent colors, encode characters, and base representation in JavaScript?
 
@@ -157,7 +157,7 @@ let b = 0o377; // octal form of 255
 alert(a == b); // true, the same number 255 at both sides
 ```
 
-Source: <https://javascript.info/number#more-ways-to-write-a-number>
+---
 
 ### Is there a method in JavaScript that returns a string representation of a number in within a given base?
 
@@ -178,7 +178,7 @@ alert(num.toString(16)); // ff
 alert(num.toString(2)); // 11111111
 ```
 
-Source: <https://javascript.info/number#tostring-base>
+---
 
 ### What is the default base in JavaScript?
 
@@ -198,4 +198,4 @@ console.log(parseInt('-15', 10)); // returns -15
 // parseInt() syntax: parseInt(‘string’, [radix]);
 ```
 
-<https://javascript.info/number#tostring-base>
+---

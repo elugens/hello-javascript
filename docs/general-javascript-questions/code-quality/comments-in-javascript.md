@@ -60,7 +60,7 @@ function isPrime(n) {
 }
 ```
 
-Source: <https://javascript.info/coding-style#automated-linters>
+---
 
 ### What are Good comments in JavaScript?
 
@@ -88,4 +88,4 @@ function pow(x, n) {
 }
 ```
 
-Source: <https://javascript.info/comments#good-comments>
+---

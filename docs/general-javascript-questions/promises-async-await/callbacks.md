@@ -46,7 +46,7 @@ async function asyncCall() {
 asyncCall();
 ```
 
-Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function>
+---
 
 ### How do callbacks work in JavaScript?
 
@@ -62,7 +62,7 @@ Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/State
 Functions running in parallel with other functions are called asynchronous.
 :::
 
-Source: <https://javascript.info/callbacks>
+---
 
 ### How can we load two scripts sequentially: the first one, and then the second one after it?
 
@@ -86,7 +86,7 @@ loadScript('/my/script.js', function (script) {
 });
 ```
 
-Source: <https://javascript.info/callbacks>
+---
 
 ### There are times when internal/external scripts fail to load. Is there a way, in JavaScript, to handle resource (scripts) loading errors?
 
@@ -114,7 +114,7 @@ function loadScript(src, callback) {
 }
 ```
 
-Source: <https://javascript.info/callbacks#handling-errors>
+---
 
 ### Question: What is the best alternative to nested resource loading in asynchronous coding?
 
@@ -161,4 +161,4 @@ function step3(error, script) {
 }
 ```
 
-Source: <https://javascript.info/callbacks#pyramid-of-doom>
+---

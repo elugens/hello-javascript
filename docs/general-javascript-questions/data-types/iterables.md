@@ -23,7 +23,7 @@ sidebar_position: 6
   </div>
 </details>
 
-Source: <https://javascript.info/iterable>
+---
 
 ### What can the Symbol.iterator be used for in JavaScript?
 
@@ -77,7 +77,7 @@ for (let num of range) {
 }
 ```
 
-Source: <https://javascript.info/iterable#symbol-iterator>
+---
 
 ### Can you call an iterator explicitly and what are the benefits?
 
@@ -109,7 +109,7 @@ while (true) {
 }
 ```
 
-Source: <https://javascript.info/iterable#calling-an-iterator-explicitly>
+---
 
 ### What is the difference between an iterable and an array-like object?
 
@@ -140,7 +140,7 @@ for (let item of arrayLike) {
 }
 ```
 
-Source: <https://javascript.info/iterable#array-like>
+---
 
 ### What universal method can be used to turn an iterable or array- like value into an array?
 
@@ -180,4 +180,4 @@ alert(chars[1]); // 😂
 alert(chars.length); // 2
 ```
 
-Source: <https://javascript.info/iterable#array-from>
+---

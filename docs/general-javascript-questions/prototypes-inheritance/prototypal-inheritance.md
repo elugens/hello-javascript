@@ -45,7 +45,7 @@ alert(rabbit.eats); // true (**)
 alert(rabbit.jumps); // true
 ```
 
-Source: <https://javascript.info/prototype-inheritance#prototype>
+---
 
 ### What is prototype in relation to objects in JavaScript?
 
@@ -75,7 +75,7 @@ console.log(user.isAdmin); // false
 console.log(user instanceof User); // true
 ```
 
-Source: <https://javascript.info/prototype-inheritance#prototype>
+---
 
 ### In JavaScript prototypal inheritance, what is the value of the “this” keyword?
 
@@ -121,7 +121,7 @@ console.log(rabbit.isSleeping); // true
 console.log(animal.isSleeping); // undefined (no such property
 ```
 
-Source: <https://javascript.info/prototype-inheritance#the-value-of-this>
+---
 
 ### What behavior does the for-in loop use when it iterates over inherited properties?
 
@@ -175,4 +175,4 @@ for (let prop in rabbit) {
 }
 ```
 
-Source: <https://javascript.info/prototype-inheritance#for-in-loop>
+---

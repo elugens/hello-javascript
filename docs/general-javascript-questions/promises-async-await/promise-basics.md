@@ -31,7 +31,7 @@ let promise = new Promise(function (resolve, reject) {
 });
 ```
 
-Source: <https://javascript.info/promise-basics>
+---
 
 ### What is the function called that gets passed to the newly created Promise?
 
@@ -52,7 +52,7 @@ let promise = new Promise(function (resolve, reject) {
 });
 ```
 
-Source: <https://javascript.info/promise-basics>
+---
 
 ### Can you name the properties that the promise object returned by Promise constructor has internally?
 
@@ -86,7 +86,7 @@ let promise = new Promise(function (resolve, reject) {
 });
 ```
 
-Source: <https://javascript.info/promise-basics>
+---
 
 ### What is a promise that is either resolved or rejected called?
 
@@ -98,7 +98,7 @@ Source: <https://javascript.info/promise-basics>
   </div>
 </details>
 
-Source: <https://javascript.info/promise-basics>
+---
 
 ### What is the main limitation of a Promise in JavaScript?
 
@@ -121,7 +121,7 @@ let promise = new Promise(function (resolve, reject) {
 });
 ```
 
-Source: <https://javascript.info/promise-basics>
+---
 
 ### What are the three subscribing (consumers) methods/functions used in Promises?
 
@@ -133,7 +133,7 @@ Source: <https://javascript.info/promise-basics>
   </div>
 </details>
 
-Source: <https://javascript.info/promise-basics#consumers-then-catch-finally>
+---
 
 ### Explain, the function and syntax of the promise then() method/function in JS?
 
@@ -180,7 +180,7 @@ promise2.then(
 );
 ```
 
-Source: <https://javascript.info/promise-basics#then>
+---
 
 ### Explain, the function and syntax of the promise catch() method/function in JS?
 
@@ -207,7 +207,7 @@ let promise = new Promise((resolve, reject) => {
 promise.catch(alert); // shows "Error: Whoops!" after 1 second
 ```
 
-Source: <https://javascript.info/promise-basics#catch>
+---
 
 ### Explain, the function and syntax of the promise finally() method/function in JS?
 
@@ -238,7 +238,7 @@ new Promise((resolve, reject) => {
   .then((result) => alert(result)); // <-- .then handles the result
 ```
 
-Source: <https://javascript.info/promise-basics#finally>
+---
 
 ### What are the benefits promises over callbacks in JavaScript?
 
@@ -264,4 +264,4 @@ new Promise((resolve, reject) => {
   .then((result) => alert(result)); // <-- .then handles the result
 ```
 
-Source: <https://javascript.info/promise-basics#finally>
+---

@@ -55,7 +55,7 @@ alert(a == b); // true, both variables reference the same object
 alert(a === b); // true
 ```
 
-Source: <https://javascript.info/object-copy>
+---
 
 ### Are two objects always equal in JavaScript?
 
@@ -88,7 +88,7 @@ let b = {};
 alert(a == b); // false
 ```
 
-Source: <https://javascript.info/object-copy#comparison-by-reference>
+---
 
 ### What if we need to duplicate an object? Is there a way to clone an object and its properties at the primitive level?
 
@@ -134,7 +134,7 @@ let user = {
 let clone = Object.assign({}, user);
 ```
 
-Source: <https://javascript.info/object-copy#cloning-and-merging-object-assign>
+---
 
 ### Can properties reference another property in JavaScript?
 
@@ -170,7 +170,7 @@ let user = {
 alert(user.sizes.height); // 182
 ```
 
-Source: <https://javascript.info/object-copy#nested-cloning>
+---
 
 ### Can objects assigned to a constant (const) be modified?
 
@@ -193,4 +193,4 @@ user.name = 'Pete'; // (*)
 alert(user.name); // Pete
 ```
 
-Source: <https://javascript.info/object-copy#nested-cloning>
+---

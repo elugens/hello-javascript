@@ -66,7 +66,7 @@ try {
 }
 ```
 
-Source: <https://javascript.info/custom-errors#extending-error>
+---
 
 ### Is there any difference in inheritance when inheriting/extending from the Error class object and regular class inheritance?
 
@@ -78,7 +78,7 @@ Source: <https://javascript.info/custom-errors#extending-error>
   </div>
 </details>
 
-Source: <https://javascript.info/custom-errors#extending-error>
+---
 
 ### How would you extend beyond the initial inheritance of the Error object?
 
@@ -148,7 +148,7 @@ try {
 }
 ```
 
-Source: <https://javascript.info/custom-errors#further-inheritance>
+---
 
 ### Is there a way to handle unknown or potential errors in JavaScript?
 
@@ -190,4 +190,4 @@ try {
 }
 ```
 
-Source: <https://javascript.info/custom-errors#wrapping-exceptions>
+---

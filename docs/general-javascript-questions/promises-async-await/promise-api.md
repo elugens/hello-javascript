@@ -22,7 +22,7 @@ sidebar_position: 5
   </div>
 </details>
 
-Source: <https://javascript.info/promise-api>
+---
 
 ### Explain, the function and syntax of the Promise.all static method?
 
@@ -61,7 +61,7 @@ Promise.all([promise1, promise2, promise3]).then((values) => {
 // expected output: Array [3, 42, "foo"]
 ```
 
-Source: <https://javascript.info/promise-api#promise-all>
+---
 
 ### How does the map method work with Promise.all static method?
 
@@ -101,7 +101,7 @@ Promise.all(requests).then((responses) =>
 );
 ```
 
-Source: <https://javascript.info/promise-api#promise-all>
+---
 
 ### What happens when there is an error with the Promise.all method?
 
@@ -127,7 +127,7 @@ Promise.all([
 ]).catch(alert); // Error: Whoops!
 ```
 
-Source: <https://javascript.info/promise-api#promise-all>
+---
 
 ### Does Promise.all allow regular values in the iterable?
 
@@ -153,7 +153,7 @@ Promise.all([
 ]).then(alert); // 1, 2, 3
 ```
 
-Source: <https://javascript.info/promise-api#promise-all>
+---
 
 ### Explain, the function and syntax of the Promise.allSettled static method?
 
@@ -205,7 +205,7 @@ Promise.allSettled(urls.map((url) => fetch(url))).then((results) => {
 // ]
 ```
 
-Source: <https://javascript.info/promise-api#promise-allsettled>
+---
 
 ### Explain, the function and syntax of the Promise.race static method?
 
@@ -239,7 +239,7 @@ Promise.race([promise1, promise2]).then((value) => {
 // expected output: "two"
 ```
 
-Source: <https://javascript.info/promise-api#promise-race>
+---
 
 ### Explain, the function and syntax of the Promise.any static method?
 
@@ -287,7 +287,7 @@ Promise.any([
 });
 ```
 
-Source: <https://javascript.info/promise-api#promise-any>
+---
 
 ### Explain, the function and syntax of the Promise.resolve static method?
 
@@ -326,7 +326,7 @@ function loadCached(url) {
 }
 ```
 
-Source: <https://javascript.info/promise-api#promise-resolve>
+---
 
 ### Explain, the function and syntax of the Promise.reject static method?
 
@@ -360,4 +360,4 @@ Promise.reject(new Error('fail')).then(resolved, rejected);
 // expected output: Error: fail
 ```
 
-Source: <https://javascript.info/promise-api#promise-resolve>
+---

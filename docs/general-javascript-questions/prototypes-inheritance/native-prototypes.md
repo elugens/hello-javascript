@@ -22,7 +22,7 @@ sidebar_position: 3
   </div>
 </details>
 
-Source: <https://www.tutorialspoint.com/explain-native-prototypes-in-javascript>
+---
 
 ### What future issues can happen with native prototype extensions (custom property) in web applications?
 
@@ -39,7 +39,7 @@ Source: <https://www.tutorialspoint.com/explain-native-prototypes-in-javascript>
 Although, there is a way to mitigate the risk by checking for the existence of a native property. This could lead to different results in different browsers versions and across device platforms.
 :::
 
-Source: <https://javascriptweblog.wordpress.com/2011/12/05/extending-javascript-natives/>
+---
 
 ### What is a specific case for native prototype extensions in JavaScript?
 
@@ -75,7 +75,7 @@ if (!String.prototype.repeat) {
 alert('La'.repeat(3)); // LaLaLa
 ```
 
-Source: <https://javascript.info/native-prototypes#native-prototype-change>
+---
 
 ### Can you borrow functionality from native prototypes in JavaScript?
 
@@ -103,4 +103,4 @@ obj.join = Array.prototype.join;
 alert(obj.join(',')); // Hello,world!
 ```
 
-Source: <https://javascript.info/native-prototypes#borrowing-from-prototypes>
+---

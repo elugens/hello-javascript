@@ -42,7 +42,7 @@ let doublePrices = Object.fromEntries(
 alert(doublePrices.meat); // 8
 ```
 
-Source: <https://javascript.info/keys-values-entries>
+---
 
 ### Explain, the function and syntax of the Object.keys method?
 
@@ -98,7 +98,7 @@ console.log(Object.keys(myObj)); // console: ['foo']
 If you want all properties including non-enumerables see Object.getOwnPropertyNames().
 :::
 
-Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys>
+---
 
 ### Explain, the function and syntax of the Object.values method?
 
@@ -115,38 +115,43 @@ Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Globa
 Example:
 
 ```js
-const obj = { foo: 'bar', baz: 42 };
+const obj = { foo: 'bar', baz: 42 };
 
-console.log(Object.values(obj)); // ['bar', 42]
-
+console.log(Object.values(obj)); // ['bar', 42]
 // Array-like object
 
-const arrayLikeObj1 = { 0: 'a', 1: 'b', 2: 'c' };
+const arrayLikeObj1 = { 0: 'a', 1: 'b', 2: 'c' };
 
-console.log(Object.values(arrayLikeObj1 )); // ['a', 'b', 'c']
-
+console.log(Object.values(arrayLikeObj1)); // ['a', 'b', 'c']
 // Array-like object with random key ordering
 
 // When using numeric keys, the values are returned in the keys' numerical order
 
-const arrayLikeObj2 = { 100: 'a', 2: 'b', 7: 'c' };
+const arrayLikeObj2 = { 100: 'a', 2: 'b', 7: 'c' };
 
-console.log(Object.values(arrayLikeObj2 )); // ['b', 'c', 'a']
-
+console.log(Object.values(arrayLikeObj2)); // ['b', 'c', 'a']
 // getFoo is property which is not enumerable
 
-const my\_obj = Object.create({}, { getFoo: { value: function() { return this.foo; } } });
+const my_obj = Object.create(
+  {},
+  {
+    getFoo: {
+      value: function () {
+        return this.foo;
+      },
+    },
+  }
+);
 
-my\_obj.foo = 'bar';
+my_obj.foo = 'bar';
 
-console.log(Object.values(my\_obj)); // ['bar']
-
+console.log(Object.values(my_obj)); // ['bar']
 // non-object argument will be coerced to an object
 
-console.log(Object.values('foo')); // ['f', 'o', 'o']
+console.log(Object.values('foo')); // ['f', 'o', 'o']
 ```
 
-Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values>
+---
 
 ### Explain, the function and syntax of the Object.entries method?
 
@@ -183,7 +188,7 @@ for (const [key, value] of Object.entries(object1)) {
 // order is not guaranteed
 ```
 
-Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries>
+---
 
 ### Explain, the difference between map.keys() and Object.keys(obj) in JavaScript?
 
@@ -218,7 +223,7 @@ console.log(Object.entries(user));
 // returns [ [ 'name', 'John' ], [ 'age', 30 ] ]
 ```
 
-Source: <https://javascript.info/keys-values-entries#object-keys-values-entries>
+---
 
 ### Do Object.keys/values/entries methods access symbolic properties in JavaScript?
 
@@ -249,7 +254,7 @@ for (let i in obj) {
 }
 ```
 
-Source: <https://javascript.info/keys-values-entries#object-keys-values-entries>
+---
 
 ### Since, Objects lack the methods that exist for arrays, e.g. map, filter, and others. What Object methods can you use to access those methods (map or filter) on an Object?
 
@@ -280,4 +285,4 @@ let doublePrices = Object.fromEntries(
 alert(doublePrices.meat); // 8
 ```
 
-Source: <https://javascript.info/keys-values-entries#object-keys-values-entries>
+---

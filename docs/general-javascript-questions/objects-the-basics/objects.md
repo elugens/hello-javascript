@@ -23,7 +23,7 @@ sidebar_position: 1
   </div>
 </details>
 
-Source: <https://developer.mozilla.org/en-US/docs/Glossary/Primitive>
+---
 
 ### Are JavaScript primitive types immutable or mutable?
 
@@ -58,7 +58,7 @@ console.log(foo); // ["plugh"]
 bar = bar.toUpperCase(); // BAZ
 ```
 
-Source: <https://developer.mozilla.org/en-US/docs/Glossary/Primitive>
+---
 
 ### What is the purpose of an Object in JavaScript?
 
@@ -87,7 +87,7 @@ let user = {
 };
 ```
 
-Source: <https://javascript.info/object>
+---
 
 ### What are the two ways to implement an empty Object?
 
@@ -107,7 +107,7 @@ let user = new Object(); // "object constructor" syntax
 let user = {}; // "object literal" syntax
 ```
 
-Source: <https://javascript.info/object#literals-and-properties>
+---
 
 ### What is the delimiter that separates a key from the value in an Object?
 
@@ -130,7 +130,7 @@ let user = {
 };
 ```
 
-Source: <https://javascript.info/object#literals-and-properties>
+---
 
 ### Can a value be of any type in JavaScript?
 
@@ -142,7 +142,7 @@ Source: <https://javascript.info/object#literals-and-properties>
   </div>
 </details>
 
-Source: <https://javascript.info/object#literals-and-properties>
+---
 
 ### What are the two ways to access a value in an Object?
 
@@ -181,7 +181,7 @@ console.log(sound);
 // meow
 ```
 
-Source: <https://javascript.info/object#literals-and-properties>
+---
 
 ### Can you use multi-word property name in JavaScript?
 
@@ -212,7 +212,7 @@ console.log(user['likes birds']); // return true
 console.log(user.likes birds); // returns a SyntaxError
 ```
 
-Source: <https://javascript.info/object#square-brackets>
+---
 
 ### Is JavaScript capable of handling computed properties using object literal notation?
 
@@ -246,7 +246,7 @@ let bag = {
 };
 ```
 
-Source: <https://javascript.info/object#computed-properties>
+---
 
 ### Are there any restrictions on Object property names?
 
@@ -275,7 +275,7 @@ let obj = {
 alert(obj.for + obj.let + obj.return); // 6
 ```
 
-Source: <https://javascript.info/object#property-names-limitations>
+---
 
 ### What is the minor gotcha with the special property name `__proto__`?
 
@@ -296,7 +296,7 @@ obj.__proto__ = 5; // assign a number
 alert(obj.__proto__); // [object Object] - the value is an object, didn't work as intended
 ```
 
-Source: <https://javascript.info/object#property-names-limitations>
+---
 
 ### Why does the “in” operator exist? Isn’t it enough to compare against undefined?
 
@@ -323,7 +323,7 @@ console.log(obj.test === undefined); // true
 console.log('test' in obj); // true, the property does exist!
 ```
 
-Source: <https://javascript.info/object#property-existence-test-in-operator>
+---
 
 ### Are objects ordered? In other words, if we loop over an object, do we get all properties in the same order they were added? Can we rely on this?
 
@@ -370,7 +370,7 @@ for (let prop in user) {
 }
 ```
 
-Source: <https://javascript.info/object#ordered-like-an-object>
+---
 
 ### Explain, what is a JavaScript integer property?
 
@@ -392,4 +392,4 @@ alert(String(Math.trunc(Number('+49')))); // "49", not same "+49" ⇒ not�
 alert(String(Math.trunc(Number('1.2')))); // "1", not same "1.2" ⇒ not integer property
 ```
 
-Source: <https://javascript.info/object#ordered-like-an-object>
+---

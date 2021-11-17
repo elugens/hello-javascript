@@ -50,7 +50,7 @@ alert( arr instanceof Array ); // true
 alert( arr instanceof Object ); // true
 ```
 
-Source: <https://javascript.info/instanceof#ref-instanceof>
+---
 
 ### Is an Array an instance of an Object, in JavaScript?
 
@@ -69,7 +69,7 @@ console.log(Array instanceof Object); // true
 console.log(Function instanceof Object); // true
 ```
 
-Source: <https://javascript.info/instanceof#ref-instanceof>
+---
 
 ### Is there a way to create a custom obj instanceof Class algorithm?
 
@@ -95,7 +95,7 @@ let obj = { canEat: true };
 alert(obj instanceof Animal); // true: Animal[Symbol.hasInstance](obj) is called
 ```
 
-Source: <https://javascript.info/instanceof#ref-instanceof>
+---
 
 ### In plain words, explain what happens with an instanceof class check.
 
@@ -121,7 +121,7 @@ alert(rabbit instanceof Animal); // true
 // rabbit.__proto__.__proto__ === Animal.prototype (match! return true)
 ```
 
-Source: <https://javascript.info/instanceof#ref-instanceof>
+---
 
 ### We already know that plain objects are converted to string as [object Object]. Is there a way to create a custom toString result for our own custom objects?
 
@@ -149,4 +149,4 @@ alert({}.toString.call(window)); // [object Window]
 alert({}.toString.call(new XMLHttpRequest())); // [object XMLHttpRequest]
 ```
 
-Source: <https://javascript.info/instanceof#symbol-tostringtag>
+---

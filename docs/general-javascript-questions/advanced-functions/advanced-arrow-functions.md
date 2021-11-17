@@ -54,7 +54,7 @@ function (a){
 a => a + 100;
 ```
 
-Source: <https://javascript.info/arrow-functions>
+---
 
 ### What is the meaning of Arrow functions having no “this”?
 
@@ -97,7 +97,7 @@ let obj2 = {
 let b = 'global!!!'; // global this
 ```
 
-Source: <https://stackoverflow.com/questions/38589227/why-this-is-undefined-inside-a-fat-arrow-function-definition>
+---
 
 ### Explain, why you cannot use the new.target keyword with Arrow Functions.
 
@@ -126,7 +126,7 @@ x = new X(); // X is not a constructor
 y = new Y(); // Y does not execute
 ```
 
-Source: <https://stackoverflow.com/questions/37587834/javascript-es6-why-i-can-not-use-new-with-arrow-function>
+---
 
 ### What is the difference between Arrow and Regular functions binding this?
 
@@ -138,7 +138,7 @@ Source: <https://stackoverflow.com/questions/37587834/javascript-es6-why-i-can-n
   </div>
 </details>
 
-Source: <https://javascript.info/arrow-functions#arrow-functions-have-no-this>
+---
 
 ### Can you explain one benefit of Arrow functions having no arguments variable?
 
@@ -168,7 +168,7 @@ let sayHiDeferred = defer(sayHi, 2000);
 sayHiDeferred('John'); // Hello, John after 2 seconds
 ```
 
-Source: <https://javascript.info/arrow-functions#arrows-have-no-arguments>
+---
 
 ### What is the definition of a Higher-Order function?
 
@@ -232,4 +232,4 @@ repeat(3, (n) => {
 // → 2 is even
 ```
 
-Source: <https://eloquentjavascript.net/05_higher_order.html>
+---

@@ -48,7 +48,7 @@ console.log(months);
 // expected output: Array ["Jan", "Feb", "March", "April", "May"]
 ```
 
-Source: <https://javascript.info/array-methods#splice>
+---
 
 ### How do negative array indexes work?
 
@@ -77,7 +77,7 @@ arr.splice(-1, 0, 3, 4);
 alert(arr); // 1,2,3,4,5
 ```
 
-Source: <https://javascript.info/array-methods#splice>
+---
 
 ### Explain, the function and syntax of the array slice() method?
 
@@ -101,7 +101,7 @@ document.write(arr.slice(1, 3)); // e,s (copy from 1 to 3)
 document.write(arr.slice(-2)); // s,t (copy from -2 till the end)
 ```
 
-Source: <https://javascript.info/array-methods#slice>
+---
 
 ### Explain, the basic difference between the array splice and slice methods?
 
@@ -133,7 +133,7 @@ console.log(arr2.splice(-1, 0, 3, 4)); // returns []
 console.log(arr2); // 1,2,3,4,5 – modified the original array
 ```
 
-Source: <https://javascript.info/array-methods#slice>
+---
 
 ### Explain, the function and syntax of the array concat method?
 
@@ -192,7 +192,7 @@ let arrayLike = {
 alert(arr.concat(arrayLike)); // 1,2,something,else
 ```
 
-Source: <https://javascript.info/array-methods#concat>
+---
 
 ### Explain, the function and syntax of the array forEach() method?
 
@@ -231,7 +231,7 @@ function myFunction(item, index) {
 }
 ```
 
-Source: <https://javascript.info/array-methods#iterate-foreach>
+---
 
 ### Why can’t you use a return statement in a forEach loop?
 
@@ -249,7 +249,7 @@ Additionally, break and continue statements are not valid statements and will re
 
 :::
 
-Source: <https://javascript.info/array-methods#iterate-foreach>
+---
 
 ### What is the difference between the array indexOf, lastIndexOf, and includes methods and their string counterparts?
 
@@ -262,7 +262,7 @@ Source: <https://javascript.info/array-methods#iterate-foreach>
   </div>
 </details>
 
-Source: <https://javascript.info/array-methods#indexof-lastindexof-and-includes>
+---
 
 ### Explain, the function and syntax of the array indexOf() method?
 
@@ -287,7 +287,7 @@ alert(arr.indexOf(false)); // 2
 alert(arr.indexOf(null)); // -1
 ```
 
-Source: <https://javascript.info/array-methods#indexof-lastindexof-and-includes>
+---
 
 ### Explain, the function and syntax of the array lastIndexOf() method?
 
@@ -315,7 +315,7 @@ console.log(numbers.lastIndexOf(2, -2)); // 0
 console.log(numbers.lastIndexOf(2, -1)); // 3
 ```
 
-Source: <https://javascript.info/array-methods#indexof-lastindexof-and-includes>
+---
 
 ### Explain, the function and syntax of the array includes() method?
 
@@ -341,7 +341,7 @@ Code Example:
   [(1, 2, NaN)].includes(NaN); // true
 ```
 
-Source: <https://javascript.info/array-methods#indexof-lastindexof-and-includes>
+---
 
 ### What are some of the differences between includes and indexOf?
 
@@ -374,7 +374,7 @@ if (array2.indexOf(NaN) == -1) {
 }
 ```
 
-Source: <https://dev.to/adroitcoder/includes-vs-indexof-in-javascript>
+---
 
 ### Explain, the function and syntax of the array find() method?
 
@@ -423,7 +423,7 @@ let user = users.find((item) => item.id == 1);
 alert(user.name); // expected output: John
 ```
 
-Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find>
+---
 
 ### Explain, the function and syntax of the array findIndex() method?
 
@@ -465,7 +465,7 @@ let user = users.findIndex((item) => item.id == 1);
 console.log(user); // expected output: 0
 ```
 
-Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex>
+---
 
 ### Explain, the function and syntax of the array filter() method?
 
@@ -507,7 +507,7 @@ let filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
 // filtered is [12, 130, 44]
 ```
 
-Source: <https://javascript.info/array-methods#filter>
+---
 
 ### Explain, the function and syntax of the array sort(fn) method?
 
@@ -549,7 +549,7 @@ arr.sort(compareNumeric);
 alert(arr); // 1, 2, 15
 ```
 
-Source: <https://javascript.info/array-methods#map>
+---
 
 ### Explain, the function and syntax of the array map() method?
 
@@ -580,7 +580,7 @@ let lengths = arr.map((item) => item.length);
 alert(lengths); // 5,7,6
 ```
 
-Source: <https://javascript.info/array-methods#map>
+---
 
 ### Explain, the function and syntax of the array reverse() method?
 
@@ -624,7 +624,7 @@ wordArr.reverse(); // reverse ['H', 'e', 'l', 'l', 'o']
 console.log(wordArr); // wordArr = ["o", "l", "l", "e", "H"]
 ```
 
-Source: <https://javascript.info/array-methods#reverse>
+---
 
 ### Explain, the function and syntax of the array split method?
 
@@ -659,7 +659,7 @@ let arr = 'Bilbo, Gandalf, Nazgul, Saruman'.split(', ', 2);
 alert(arr); // return Bilbo, Gandalf
 ```
 
-Source: <https://javascript.info/array-methods#split-and-join>
+---
 
 ### Explain, the function and syntax of the array join() method?
 
@@ -685,7 +685,7 @@ arr.join(' + '); // 'Wind + Water + Fire'
 arr.join(''); // 'WindWaterFire'
 ```
 
-Source: <https://javascript.info/array-methods#split-and-join>
+---
 
 ### Explain, the function and syntax of the array reduce() method?
 
@@ -725,7 +725,7 @@ let result = arr.reduce((sum, current) => sum + current, 0);
 alert(result); // 15
 ```
 
-Source: <https://javascript.info/array-methods#reduce-reduceright>
+---
 
 ### Explain, the function and syntax of the array reduceRight() method?
 
@@ -764,7 +764,7 @@ let result = arr.reduceRight((sum, current) => sum + current, 0);
 alert(result); // 15
 ```
 
-Source: <https://javascript.info/array-methods#reduce-reduceright>
+---
 
 ### Explain, the function and syntax of the array isArray() method?
 
@@ -820,7 +820,7 @@ Array.isArray(new Uint8Array(32));
 Array.isArray({ __proto__: Array.prototype });
 ```
 
-Source: <https://javascript.info/array-methods#array-isarray>
+---
 
 ### Explain, what typed arrays are in JavaScript and their basic use?
 
@@ -840,4 +840,4 @@ To achieve maximum flexibility and efficiency, JavaScript typed arrays split the
   </div>
 </details>
 
-Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays>
+---

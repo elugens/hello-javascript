@@ -37,7 +37,7 @@ let sayHi = new Function('alert("Hello, JavaScript")');
 sayHi(); // Hello, JavaScript
 ```
 
-Source: <https://javascript.info/new-function#syntax>
+---
 
 ### Explain, what happens when a function is created using the new Function constructor?
 
@@ -49,4 +49,4 @@ Source: <https://javascript.info/new-function#syntax>
   </div>
 </details>
 
-Source: <https://javascript.info/new-function#closure>
+---

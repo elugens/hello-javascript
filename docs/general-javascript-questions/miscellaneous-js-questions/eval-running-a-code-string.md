@@ -30,7 +30,7 @@ let code = 'alert("Hello")';
 eval(code); // alerts Hello
 ```
 
-Source: <https://javascript.info/eval>
+---
 
 ### Should you use the eval built-in JavaScript function property JavaScript? Why or why not?
 
@@ -48,7 +48,7 @@ Source: <https://javascript.info/eval>
 Executing JavaScript from a string is an enormous security risk. It is far too easy for a bad actor to run arbitrary code when you use eval().
 :::
 
-Source: <https://javascript.info/eval#using-eval>
+---
 
 ### Is there a better option or built-in JavaScript object than eval that you can use?
 
@@ -80,4 +80,4 @@ function looseJsonParse(obj) {
 console.log(looseJsonParse('{a:(4-1), b:function(){}, c:new Date()}'));
 ```
 
-Source: <https://javascript.info/eval#using-eval>
+---

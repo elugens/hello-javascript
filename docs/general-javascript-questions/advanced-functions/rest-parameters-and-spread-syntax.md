@@ -46,7 +46,7 @@ let newArr = [...myArr, 'FrontEnd', 24];
 console.log(newArr); // ["Marina" , "Magdy" , "Shafiq" , "FrontEnd" , 24 ] ;
 ```
 
-Source: <https://javascript.info/rest-parameters-spread>
+---
 
 ### Explain, How the rest parameter works in functions?
 
@@ -76,7 +76,7 @@ alert(sumAll(1, 2)); // 3
 alert(sumAll(1, 2, 3)); // 6
 ```
 
-Source: <https://javascript.info/rest-parameters-spread#rest-parameters>
+---
 
 ### Can you use the rest parameter in conjunction with predefined arguments in JavaScript functions?
 
@@ -118,7 +118,7 @@ function f(arg1, ...rest, arg2) { // arg2 after ...rest ?!
 }
 ```
 
-Source: <https://javascript.info/rest-parameters-spread#rest-parameters>
+---
 
 ### What is the difference between the rest parameter and the arguments array-like object?
 
@@ -154,7 +154,7 @@ showName('Julius', 'Caesar');
 showName('Ilya');
 ```
 
-Source: <https://javascript.info/rest-parameters-spread#the-arguments-variable>
+---
 
 ### What is the benefit of using the ES6 spread syntax?
 
@@ -202,4 +202,4 @@ let str = 'Hello';
 alert([...str]); // H,e,l,l,o
 ```
 
-Source: <https://javascript.info/rest-parameters-spread#the-arguments-variable>
+---

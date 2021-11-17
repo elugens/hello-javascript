@@ -40,7 +40,7 @@ let sayHello = function (name) {
 console.log(sayHello('Stacey'));
 ```
 
-Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions>
+---
 
 ### What are the difference and limitations between Arrow Functions and Function Expressions?
 
@@ -81,7 +81,7 @@ obj.b(); // prints undefined, Window {...} (or the global object)
 obj.c(); // prints 10, Object {...}
 ```
 
-Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions>
+---
 
 ### If there are no arguments in an arrow function do you need to add the parentheses?
 
@@ -103,7 +103,7 @@ let sayHi = () => alert('Hello!');
 sayHi(); // returns Hello!
 ```
 
-Source: <https://javascript.info/arrow-functions-basics>
+---
 
 ### Can you dynamically create a function with an arrow function?
 
@@ -125,7 +125,7 @@ let welcome = age < 18 ? () => alert('Hello') : () => alert('Greetings!');
 welcome();
 ```
 
-Source: <https://javascript.info/arrow-functions-basics>
+---
 
 ### What is the difference between single and multiline statement in an arrow function?
 
@@ -156,4 +156,4 @@ let sum = (a, b) => a + b;
 console.log(sum(3, 6)); // returns 9
 ```
 
-Source: <https://javascript.info/arrow-functions-basics#multiline-arrow-functions>
+---

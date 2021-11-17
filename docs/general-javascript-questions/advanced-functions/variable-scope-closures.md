@@ -32,7 +32,7 @@ const str = 'Hello';
 var num = 1;
 ```
 
-Source: <https://javascript.info/closure>
+---
 
 ### What is a code block or block statement (compound statement) in JavaScript?
 
@@ -73,7 +73,7 @@ alert(message); // Error: message is not defined
 }
 ```
 
-Source: <https://javascript.info/closure#code-blocks>
+---
 
 ### What are the benefits of using a code block or block statement in JavaScript?
 
@@ -100,7 +100,7 @@ let message = 'Goodbye'; // Error: variable already declared
 alert(message);
 ```
 
-Source: <https://javascript.info/closure#code-blocks>
+---
 
 ### Does JavaScript support nested functions? How do they work?
 
@@ -132,7 +132,7 @@ function sayHiBye(firstName, lastName) {
 }
 ```
 
-Source: <https://javascript.info/closure#nested-functions>
+---
 
 ### Explain, what the Lexical Environment is in JavaScript?
 
@@ -149,7 +149,7 @@ Source: <https://javascript.info/closure#nested-functions>
 The Environment Record is an object that stores all local variables as its properties and some other information like the value of this.
 :::
 
-Source: <https://javascript.info/closure#lexical-environment>
+---
 
 ### Explain, How a variable works in the context of a JavaScript engine?
 
@@ -176,7 +176,7 @@ let word; // word: undefined
 word = 'Hello'; // word: "Hello"
 ```
 
-Source: <https://javascript.info/closure#lexical-environment>
+---
 
 ### What is the difference between function and variable declaration?
 
@@ -192,7 +192,7 @@ Source: <https://javascript.info/closure#lexical-environment>
 You should aware that this only applies to function declarations and not function expressions.
 :::
 
-Source: <https://javascript.info/closure#step-2-function-declarations>
+---
 
 ### What is a closure in JavaScript?
 
@@ -209,7 +209,7 @@ Source: <https://javascript.info/closure#step-2-function-declarations>
 This should not be confused with a code block.
 :::
 
-Source: <https://javascript.info/closure#step-2-function-declarations>
+---
 
 ### How does garbage collection work with the Lexical Environment and nested functions in JavaScript?
 
@@ -248,4 +248,4 @@ let g = f(); // while g function exists, the value stays in memory
 g = null; // ...and now the memory is cleaned up
 ```
 
-Source: <https://javascript.info/closure#garbage-collection>
+---

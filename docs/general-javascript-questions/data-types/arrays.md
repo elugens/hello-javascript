@@ -33,7 +33,7 @@ alert(fruits[1]); // Orange
 alert(fruits[2]); // Plum
 ```
 
-Source: <https://javascript.info/array>
+---
 
 ### What are the two syntaxes to create an empty array in JavaScript?
 
@@ -54,7 +54,7 @@ let arr = new Array();
 let arr = [];
 ```
 
-Source: <https://javascript.info/array#declaration>
+---
 
 ### How do you get the length of an array in JavaScript?
 
@@ -74,7 +74,7 @@ let fruits = ['Apple', 'Orange', 'Plum'];
 alert(fruits.length); // 3
 ```
 
-Source: <https://javascript.info/array#declaration>
+---
 
 ### What type of elements can you store in an array?
 
@@ -107,7 +107,7 @@ for (rand of rands) {
 }
 ```
 
-Source: <https://javascript.info/array>
+---
 
 ### What is the benefit of using a trailing comma in an array?
 
@@ -131,7 +131,7 @@ let fruits = [
 ];
 ```
 
-Source: <https://javascript.info/array>
+---
 
 ### What are the two common data structures arrays are used for in JavaScript?
 
@@ -155,7 +155,7 @@ let fruits = [
 ];
 ```
 
-Source: <https://javascript.info/array#methods-pop-push-shift-unshift>
+---
 
 ### Explain, the function and syntax of the array pop() method?
 
@@ -192,7 +192,7 @@ console.log(myFish); // {0:'angel', 1:'clown', 2:'mandarin', length: 3}
 console.log(popped); // 'sturgeon'
 ```
 
-Source: <https://javascript.info/array#methods-pop-push-shift-unshift>
+---
 
 ### Explain, the function and syntax of the array push() method?
 
@@ -227,7 +227,7 @@ console.log(sports); // ['soccer', 'baseball', 'football', 'swimming']
 console.log(total); // 4
 ```
 
-Source: <https://javascript.info/array#methods-pop-push-shift-unshift>
+---
 
 ### Explain, the function and syntax of the array shift() method?
 
@@ -251,7 +251,7 @@ alert(fruits.shift()); // remove Apple and alert it
 alert(fruits); // Orange, Pear
 ```
 
-Source: <https://javascript.info/array#methods-pop-push-shift-unshift>
+---
 
 ### Explain, the function and syntax of the array unshift() method?
 
@@ -289,7 +289,7 @@ console.log(arr);
 // [3, 2, 1, 4, 5, 6]
 ```
 
-Source: <https://javascript.info/array#methods-pop-push-shift-unshift>
+---
 
 ### Explain, why is an array a special kind of object?
 
@@ -328,7 +328,7 @@ console.log(arrFruits.pop()); // removes Banana
 console.log(arrFruits.length); // length returns 2
 ```
 
-Source: <https://javascript.info/array#internals>
+---
 
 ### What happens when you try to use an array like an object in JavaScript?
 
@@ -347,7 +347,7 @@ Source: <https://javascript.info/array#internals>
   </div>
 </details>
 
-Source: <https://javascript.info/array#internals>
+---
 
 ### Why is it faster to work with the end of an array than with its beginning?
 
@@ -366,7 +366,7 @@ Source: <https://javascript.info/array#internals>
   </div>
 </details>
 
-Source: <https://javascript.info/array#performance>
+---
 
 ### What are the two common ways to loop over an array?
 
@@ -401,7 +401,7 @@ for (let fruit of fruits) {
 }
 ```
 
-Source: <https://javascript.info/array#loops>
+---
 
 ### Can you explain some of the drawbacks of using a for…in loop on arrays?
 
@@ -419,7 +419,7 @@ Source: <https://javascript.info/array#loops>
   </div>
 </details>
 
-Source: <https://javascript.info/array#loops>
+---
 
 ### Explain, some of the limitations related to the length property?
 
@@ -470,7 +470,7 @@ delete colors[0];
 console.log(colors.length);
 ```
 
-Source: <https://javascript.info/array#loops>
+---
 
 ### What is the difference between an Array and an array literal?
 
@@ -491,7 +491,7 @@ alert(arr[0]); // returns undefined! no elements.
 alert(arr.length); // length 3
 ```
 
-Source: <https://javascript.info/array#new-array>
+---
 
 ### Are there any rules in governing the equality comparison of two arrays?
 
@@ -508,17 +508,13 @@ Code Example:
 ```js
 // Example: Equality Operator
 
-` `alert( [] == [] ); // false
-
-alert( [0] == [0] ); // false
-
+alert([] == []); // false
+alert([0] == [0]); // false
 // Comparison with primitives may give strange results as well:
 
-alert( 0 == [] ); // true, should be false
-
-alert( 0 === [] ); // false, no primitive conversion in strict equality
-
-alert('0' == [] ); // false
+alert(0 == []); // true, should be false
+alert(0 === []); // false, no primitive conversion in strict equality
+alert('0' == []); // false
 ```
 
-Source: <https://javascript.info/array#don-t-compare-arrays-with>
+---

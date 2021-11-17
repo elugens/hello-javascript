@@ -39,7 +39,7 @@ let rabbit = new Rabbit('White Rabbit'); //  rabbit.__proto__ == animal
 alert(rabbit.eats); // true
 ```
 
-Source: <https://javascript.info/function-prototype>
+---
 
 ### Can you explain how the function.prototype property works in JavaScript?
 
@@ -65,7 +65,7 @@ let rabbit = new Rabbit(); // inherits from {constructor: Rabbit}
 alert(rabbit.constructor == Rabbit); // true (from prototype)
 ```
 
-Source: <https://javascript.info/function-prototype>
+---
 
 ### What happens when you replace the default function prototype in JavaScript?
 
@@ -91,4 +91,4 @@ let rabbit = new Rabbit();
 alert(rabbit.constructor === Rabbit); // false
 ```
 
-Source: <https://javascript.info/function-prototype#default-f-prototype-constructor-property>
+---

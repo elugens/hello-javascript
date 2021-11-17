@@ -23,7 +23,7 @@ sidebar_position: 8
   </div>
 </details>
 
-Source: <https://javascript.info/operators#terms-unary-binary-operand>
+---
 
 ### Explain the difference between a Binary and a Unary operand?
 
@@ -55,7 +55,7 @@ let x = 1,
 alert(y - x); // 2, binary minus subtracts values
 ```
 
-Source: <https://javascript.info/operators#terms-unary-binary-operand>
+---
 
 ### What basic mathematical operations are allowed in JavaScript?
 
@@ -68,9 +68,9 @@ Source: <https://javascript.info/operators#terms-unary-binary-operand>
   </div>
 </details>
 
-Source: <https://javascript.info/operators#maths>
+---
 
-### What remainder/modulo operator used in JavaScript?
+### What is the remainder/modulo operator used for in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -86,7 +86,7 @@ alert(5 % 2); // 1, a remainder of 5 divided by 2
 alert(8 % 3); // 2, a remainder of 8 divided by 3
 ```
 
-Source: <https://javascript.info/operators#remainder>
+---
 
 ### How does the exponentiation operator function in JavaScript?
 
@@ -107,7 +107,7 @@ console.log(2 ** 3); // 8  (2 \* 2 \* 2, 3 times)
 console.log(2 ** 4); // 16 (2 \* 2 \* 2 \* 2, 4 times)
 ```
 
-Source: <https://javascript.info/operators#exponentiation>
+---
 
 ### Can exponentiation be defined for non-integer numbers?
 
@@ -125,7 +125,7 @@ alert(4 ** (1 / 2)); // 2 (power of 1/2 is the same as a square root)
 alert(8 ** (1 / 3)); // 2 (power of 1/3 is the same as a cubic root)
 ```
 
-Source: <https://javascript.info/operators#exponentiation>
+---
 
 ### Is it possible to concatenate strings in JavaScript?
 
@@ -160,7 +160,7 @@ alert(2 + 2 + '1'); // returns 2 + 2 = 4 and 4 + '1' = 41
 // returns "41" and not "221"
 ```
 
-Source: <https://javascript.info/operators#string-concatenation-with-binary>
+---
 
 ### How does unary plus work on single values?
 
@@ -191,7 +191,7 @@ alert(+''); // 0
 alert(+'7'); // converts string “7” to number 7
 ```
 
-Source: <https://javascript.info/operators#numeric-conversion-unary>
+---
 
 ### If, you have two strings and you want to sum up the two values. What process would you use to convert both strings to numbers to ensure that they are not concatenated as a string?
 
@@ -219,7 +219,7 @@ alert(+apples + +oranges); // 5
 alert(Number(apples) + Number(oranges)); // 5
 ```
 
-Source: <https://javascript.info/operators#numeric-conversion-unary>
+---
 
 ### What is the most obvious characteristic that all operators have in JavaScript?
 
@@ -230,7 +230,7 @@ Source: <https://javascript.info/operators#numeric-conversion-unary>
   </div>
 </details>
 
-Source: <https://javascript.info/operators#assignment-returns-a-value>
+---
 
 ### In what direction do chained assignments evaluate?
 
@@ -254,13 +254,13 @@ alert(b); // 4
 alert(c); // 4
 ```
 
-Source: <https://javascript.info/operators#chaining-assignments>
+---
 
 ### What is the major issue with chained assignments?
 
 **Interview Answer:** If chained assignments are not implemented correctly it can lead to memory leaks.
 
-Source: <https://javascript.info/operators#chaining-assignments>
+---
 
 ### What is the difference between the increment and decrement operators?
 
@@ -286,7 +286,7 @@ counter--; // works the same as counter = counter - 1, but is shorte
 alert(counter); // 1
 ```
 
-Source: <https://javascript.info/operators#increment-decrement>
+---
 
 ### Can increment/decrement operators be applied to numbers?
 
@@ -297,7 +297,7 @@ Source: <https://javascript.info/operators#increment-decrement>
   </div>
 </details>
 
-Source: <https://javascript.info/operators#increment-decrement>
+---
 
 ### Are operators ++ and -- placed before or after a variable?
 
@@ -327,7 +327,7 @@ let a = counter++; // (\*) changed ++counter to counter++
 alert(a); // 1
 ```
 
-Source: <https://javascript.info/operators#increment-decrement>
+---
 
 ### Is there any difference between the postfix and prefix increment/decrement positions?
 
@@ -357,7 +357,7 @@ let b = counterTwo++; // (\*) changed ++counter to counter++
 alert(b); // alerts 5
 ```
 
-Source: <https://javascript.info/operators#increment-decrement>
+---
 
 ### Can operators ++/-- be used inside of expressions?
 
@@ -381,7 +381,7 @@ alert(2 * counter); // 2
 counter++;
 ```
 
-Source: <https://javascript.info/operators#increment-decrement>
+---
 
 ### How do Bitwise operators treat arguments as numbers: 16-Bit, 24-Bit, or 32-Bit integer numbers?
 
@@ -392,7 +392,7 @@ Source: <https://javascript.info/operators#increment-decrement>
   </div>
 </details>
 
-Source: <https://javascript.info/operators#bitwise-operators>
+---
 
 ### What is the comma operator used for in JavaScript?
 
@@ -411,7 +411,7 @@ let a = (1 + 2, 3 + 4);
 alert(a); // 7 (the result of 3 + 4)
 ```
 
-Source: <https://javascript.info/operators#comma>
+---
 
 ### Why do we need the comma operator that throws away everything except the last expression?
 
@@ -431,7 +431,7 @@ for (a = 1, b = 3, c = a * b; a < 10; a++) {
 }
 ```
 
-Source: <https://javascript.info/operators#comma>
+---
 
 ### Does the comma operator have high or low precedence?
 
@@ -442,4 +442,4 @@ Source: <https://javascript.info/operators#comma>
   </div>
 </details>
 
-Source: <https://javascript.info/operators#comma>
+---

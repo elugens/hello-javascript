@@ -41,7 +41,7 @@ alert(sayHi); // function...
 sayHi('John'); // Hello, John!
 ```
 
-Source: <https://javascript.info/modules-intro#what-is-a-module>
+---
 
 ### Do JavaScript modules work with the normal local file:// protocol?
 
@@ -57,7 +57,7 @@ Source: <https://javascript.info/modules-intro#what-is-a-module>
 We can use a local web server, such as static-server or use the live server capability of your editor, such as VS Code Live Server Extension to test modules.
 :::
 
-Source: <https://javascript.info/modules-intro#what-is-a-module>
+---
 
 ### What is different in modules, compared to regular scripts?
 
@@ -75,7 +75,7 @@ Source: <https://javascript.info/modules-intro#what-is-a-module>
   </div>
 </details>
 
-Source: <https://javascript.info/modules-intro#what-is-a-module>
+---
 
 ### Can you use undeclared variables in JavaScript modules?
 
@@ -93,7 +93,7 @@ Example:
 <script type='module'>a = 5; // syntax error</script>
 ```
 
-Source: <https://javascript.info/modules-intro#what-is-a-module>
+---
 
 ### What does module level scope mean in JavaScript?
 
@@ -105,7 +105,7 @@ Source: <https://javascript.info/modules-intro#what-is-a-module>
   </div>
 </details>
 
-Source: <https://javascript.info/modules-intro#module-level-scope>
+---
 
 ### If a module is imported into multiple places, is it re-evaluated each time it is imported?
 
@@ -135,7 +135,7 @@ import `./alert.js`; // Module is evaluated!
 import `./alert.js`; // (shows nothing)
 ```
 
-Source: <https://javascript.info/modules-intro#a-module-code-is-evaluated-only-the-first-time-when-imported>
+---
 
 ### What does the JavaScript import.meta object do?
 
@@ -158,7 +158,7 @@ Example:
 </script>
 ```
 
-Source: <https://javascript.info/modules-intro#import-meta>
+---
 
 ### Is there anything specific that we should remember about the “this” keyword in JavaScript modules?
 
@@ -186,7 +186,7 @@ Example:
 </script>
 ```
 
-Source: <https://javascript.info/modules-intro#import-meta>
+---
 
 ### How are module scripts loaded in the browser?
 
@@ -222,7 +222,7 @@ Compare to regular script below:
 <button id="button">Button</button>
 ```
 
-Source: <https://javascript.info/modules-intro#module-scripts-are-deferred>
+---
 
 ### What is the difference between module and inline asynchronous scripts?
 
@@ -246,7 +246,7 @@ Example:
 </script>
 ```
 
-Source: <https://javascript.info/modules-intro#async-works-on-inline-scripts>
+---
 
 ### Explain how external scripts that have type="module" is different from scripts without it.
 
@@ -278,7 +278,7 @@ Example:
 <script type="module" src="http://another-site.com/their.js"></script>
 ```
 
-Source: <https://javascript.info/modules-intro#external-scripts>
+---
 
 ### In node.js bare modules are common, are bare modules allowed in browser imports?
 
@@ -302,7 +302,7 @@ import { sayHi } from 'sayHi'; // Error, "bare" module
 // the module must have a path, e.g. './sayHi.js' or wherever the module is
 ```
 
-Source: <https://javascript.info/modules-intro#no-bare-modules-allowed>
+---
 
 ### What is the fallback script type for older browsers when it comes to JavaScript modules?
 
@@ -332,4 +332,4 @@ Example:
 </script>
 ```
 
-Source: <https://javascript.info/modules-intro#compatibility-nomodule>
+---

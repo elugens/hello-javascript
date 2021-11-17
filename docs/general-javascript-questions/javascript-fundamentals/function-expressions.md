@@ -22,7 +22,7 @@ sidebar_position: 16
   </div>
 </details>
 
-Source: <https://javascript.info/function-basics>
+---
 
 ### What is the difference between function declaration and function expression?
 
@@ -57,7 +57,7 @@ let sayHi = function (name) {
 };
 ```
 
-Source: <https://javascript.info/function-expressions>
+---
 
 ### What is hoisting and how does it affect function declarations?
 
@@ -70,7 +70,7 @@ Source: <https://javascript.info/function-expressions>
   </div>
 </details>
 
-Source: <https://javascript.info/function-basics>
+---
 
 ### What is the difference in use of a function declaration verses function expression?
 
@@ -83,7 +83,7 @@ Source: <https://javascript.info/function-basics>
   </div>
 </details>
 
-Source: <https://javascript.info/function-expressions>
+---
 
 ### Describe a function expressions code structure and behavior?
 
@@ -105,7 +105,7 @@ const getRectArea = function (width, height) {
 console.log(getRectArea(3, 4)); // returns 12
 ```
 
-Source: <https://javascript.info/function-expressions>
+---
 
 ### Are functions values in JavaScript? If Yes, explain
 
@@ -132,7 +132,7 @@ sayHi(); // Hello  ...this still works too (why wouldn't it)
 // This will work for every function that is considered a value
 ```
 
-Source: <https://javascript.info/function-expressions>
+---
 
 ### Why is there a semicolon at the end of a function expression?
 
@@ -159,7 +159,7 @@ let sayHi = function () {
 }; // <-- semicolon here closes out the statement.
 ```
 
-Source: <https://javascript.info/function-expressions>
+---
 
 ### What is a callback function in JavaScript?
 
@@ -187,7 +187,7 @@ function processUserInput(callback) {
 processUserInput(greeting); // function is calling the greeting.
 ```
 
-Source: <https://javascript.info/function-expressions#callback-functions>
+---
 
 ### Can a function declaration be isolated or moved out of the global scope? Is a function expression a better way to handle the needed action or behavior?
 
@@ -256,7 +256,7 @@ welcome = function() {
 welcome(); // ok now
 ```
 
-Source: <https://javascript.info/function-expressions#function-expression-vs-function-declaration>
+---
 
 ### Can a function declaration be called earlier than it is defined?
 
@@ -289,7 +289,7 @@ let sayHi = function (name) {
 };
 ```
 
-Source: <https://javascript.info/function-expressions#function-expression-vs-function-declaration>
+---
 
 ### When is the best time to use Function Declaration vs a Function Expression?
 
@@ -307,4 +307,4 @@ That’s also better for readability, as it’s easier to look up function f(…
   </div>
 </details>
 
-Source: <https://javascript.info/function-expressions#function-expression-vs-function-declaration>
+---

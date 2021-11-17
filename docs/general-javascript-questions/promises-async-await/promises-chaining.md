@@ -47,7 +47,7 @@ new Promise(function (resolve, reject) {
   });
 ```
 
-Source: <https://javascript.info/promise-chaining>
+---
 
 ### What is a common mistake that new developers make when it comes to promises chaining JavaScript?
 
@@ -86,7 +86,7 @@ promise.then(function (result) {
 });
 ```
 
-Source: <https://javascript.info/promise-chaining>
+---
 
 ### Can you briefly explain the benefits of returning a new promise in JavaScript?
 
@@ -134,9 +134,9 @@ new Promise(function(resolve, reject) {
 });
 ```
 
-Source: <https://javascript.info/promise-chaining#returning-promises>
+---
 
-### Briefly explain what a thenable is in JavaScript.\*\*
+### Briefly explain what a thenable is in JavaScript.
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -180,4 +180,4 @@ new Promise((resolve) => resolve(1))
     .then(console.log); // shows 2 after 1000ms
 ```
 
-Source: [https://javascript.info/promise-chaining](https://javascript.info/promise-chaining#returning-promises)
+---

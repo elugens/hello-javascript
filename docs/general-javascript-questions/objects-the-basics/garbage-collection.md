@@ -28,7 +28,7 @@ This automaticity is a potential source of confusion: it can give developers the
 
 :::
 
-Source: <https://javascript.info/garbage-collection>
+---
 
 ### Explain, the three steps of the memory life cycle in JavaScript?
 
@@ -73,7 +73,7 @@ someElement.addEventListener(
 var n = null;
 ```
 
-Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management>
+---
 
 ### What is the main concept of memory management in JavaScript?
 
@@ -85,7 +85,7 @@ Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Manageme
   </div>
 </details>
 
-Source: <https://javascript.info/garbage-collection#reachability>
+---
 
 ### In relation to JavaScript memory management. What is a GC root?
 
@@ -97,9 +97,7 @@ Source: <https://javascript.info/garbage-collection#reachability>
   </div>
 </details>
 
-Source: <https://javascript.info/garbage-collection#reachability>
-
-Addition: <https://stackoverflow.com/questions/9748358/when-does-the-js-engine-create-a-garbage-collection-root>
+---
 
 ### There is a base set of inherently reachable values, that cannot be deleted for obvious reasons. Can you name at least one?
 
@@ -127,9 +125,7 @@ After:
 // global -> var a -> null
 ```
 
-Source: <https://javascript.info/garbage-collection#reachability>
-
-Addition: <https://stackoverflow.com/questions/16787246/does-javascript-garbage-collector-dispose-global-variables>
+---
 
 ### In JavaScript, can interlinked objects be garbage collected based on nullification on a specific object on the GC root?
 
@@ -163,7 +159,7 @@ delete family.father;
 delete family.mother.husband;
 ```
 
-Source: <https://javascript.info/garbage-collection#interlinked-objects>
+---
 
 ### Is it possible that all the interlinked objects in a GC root become unreachable and removed from memory?
 
@@ -195,7 +191,7 @@ let family = marry(
 family = null;
 ```
 
-Source: <https://javascript.info/garbage-collection#unreachable-island>
+---
 
 ### What is the basic collection algorithm called in JavaScript?
 
@@ -207,7 +203,7 @@ Source: <https://javascript.info/garbage-collection#unreachable-island>
   </div>
 </details>
 
-Source: <https://javascript.info/garbage-collection#internal-algorithms>
+---
 
 ### Explain, how the internal JavaScript garbage collector algorithm works?
 
@@ -227,7 +223,7 @@ Source: <https://javascript.info/garbage-collection#internal-algorithms>
   </div>
 </details>
 
-Source: <https://javascript.info/garbage-collection#internal-algorithms>
+---
 
 ### Name the three of the common garbage collection optimizations?
 
@@ -245,4 +241,4 @@ It should be noted that each engine implements different tweaks and techniques.
 
 :::
 
-Source: <https://javascript.info/garbage-collection#internal-algorithms>
+---

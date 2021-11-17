@@ -33,7 +33,7 @@ let user2 = {};
 alert(user2.address.street); // returns a type error
 ```
 
-Source: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining>
+---
 
 ### If, an object does not exist, what will the optional chaining operator (?.) return?
 
@@ -55,7 +55,7 @@ alert(user?.address.street); // undefined
 alert(myUser?.address.street); // returns a reference error
 ```
 
-Source: <https://javascript.info/optional-chaining#optional-chaining>
+---
 
 ### When should the optional chaining (?.) operator be used?
 
@@ -84,7 +84,7 @@ user?.sayHi(x++); // no "sayHi", so the execution doesn't reach x++
 alert(x); // 0, value not incremented.
 ```
 
-Source: <https://javascript.info/optional-chaining#optional-chaining>
+---
 
 ### Is optional chaining (?.) merely an operator or a syntax construct?
 
@@ -127,7 +127,7 @@ alert(user1?.[key]); // John
 alert(user2?.[key]); // undefined
 ```
 
-Source: <https://javascript.info/optional-chaining#optional-chaining>
+---
 
 ### Can the optional chaining (syntax construct) operator be used to store or write values?
 
@@ -149,4 +149,4 @@ user?.name = "John"; // Error, does not work
 // because it evaluates to undefined = "John"
 ```
 
-Source: <https://javascript.info/optional-chaining#optional-chaining>
+---

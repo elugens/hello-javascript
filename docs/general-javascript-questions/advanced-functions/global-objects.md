@@ -56,7 +56,7 @@ greeting: function greeting() {
 }
 ```
 
-Source: <https://javascript.info/global-object>
+---
 
 ### How should you use the global (window) object in JavaScript?
 
@@ -84,4 +84,4 @@ if (!window.Promise) {
 }
 ```
 
-Source: <https://javascript.info/global-object>
+---

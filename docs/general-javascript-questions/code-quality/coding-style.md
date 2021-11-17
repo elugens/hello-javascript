@@ -28,7 +28,7 @@ There are several styling guides that help programmers reach this goal.
 
 :::
 
-Source: <https://javascript.info/coding-style>
+---
 
 ### Should you always use curly braces with conditional if statements?
 
@@ -52,7 +52,7 @@ if (n < 0) {
 }
 ```
 
-Source: <https://javascript.info/coding-style#curly-braces>
+---
 
 ### Is it okay to use long horizontal lines of code or to split them into separate lines? Give a reason why you choose your answer.
 
@@ -92,7 +92,7 @@ if (id === 123 && moonPhase === 'Waning Gibbous' && zodiacSign === 'Libra') {
 }
 ```
 
-Source: <https://javascript.info/coding-style#line-length>
+---
 
 ### What is the maximum length typically agreed upon by development teams?
 
@@ -126,7 +126,7 @@ if (id === 123 && moonPhase === 'Waning Gibbous' && zodiacSign === 'Libra') {
 }
 ```
 
-Source: <https://javascript.info/coding-style#line-length>
+---
 
 ### What is a best practice for vertical space of code?
 
@@ -156,7 +156,7 @@ function pow(x, n) {
 }
 ```
 
-Source: <https://javascript.info/coding-style#indents>
+---
 
 ### What is one way to reduce nesting levels in your code?
 
@@ -212,7 +212,7 @@ function pow(x, n) {
 }
 ```
 
-Source: <https://testing.googleblog.com/2017/06/code-health-reduce-nesting-reduce.html>
+---
 
 ### What is a Linter and why should you use it?
 
@@ -224,4 +224,4 @@ Source: <https://testing.googleblog.com/2017/06/code-health-reduce-nesting-reduc
   </div>
 </details>
 
-Source: <https://javascript.info/coding-style#automated-linters>
+---

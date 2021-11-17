@@ -79,9 +79,7 @@ console.log(generator().next().value); // 1
 console.log(generator().next().value); // 1
 ```
 
-Source: <https://javascript.info/function-basics>
-
-Addition: <https://dev.to/jaamaal/different-type-of-function-in-javascript-364l>
+---
 
 ### What is the definition of a JavaScript Function?
 
@@ -104,7 +102,7 @@ function square(x) {
 square(10); // returns 100
 ```
 
-Source: <https://javascript.info/function-basics>
+---
 
 ### Describe the basic structure of a JavaScript function declaration?
 
@@ -124,7 +122,7 @@ function name(parameters) {
 }
 ```
 
-Source: <https://javascript.info/function-basics#function-declaration>
+---
 
 ### What is one of the main purposes of JavaScript functions?
 
@@ -148,7 +146,7 @@ showMessage('John'); // John
 showMessage('Jane'); // Jane
 ```
 
-Source: <https://javascript.info/function-basics#function-declaration>
+---
 
 ### Is there a limitation on variables declared inside a function?
 
@@ -172,7 +170,7 @@ showMessage(); // Hello, I'm JavaScript!
 alert(message); //<-- Error! The variable is local to the function.
 ```
 
-Source: <https://javascript.info/function-basics#local-variables>
+---
 
 ### Can functions access variables outside the function body?
 
@@ -202,7 +200,7 @@ showMessage(); // Hello, Bob modified through invocation
 alert(userName); // Bob, the value was modified by the function
 ```
 
-Source: <https://javascript.info/function-basics#outer-variables>
+---
 
 ### What is a Global variable?
 
@@ -214,7 +212,7 @@ Source: <https://javascript.info/function-basics#outer-variables>
   </div>
 </details>
 
-Source: <https://javascript.info/function-basics#outer-variables>
+---
 
 ### What is the Modern JavaScript rule for using Global Variables?
 
@@ -227,7 +225,7 @@ Source: <https://javascript.info/function-basics#outer-variables>
   </div>
 </details>
 
-Source: <https://javascript.info/function-basics#outer-variables>
+---
 
 ### Explain, how a parameter is used in functions.
 
@@ -252,7 +250,7 @@ showMessage('Ann', 'Hello!'); // Ann: Hello! (\*)
 showMessage('Ann', "What's up?"); // Ann: What's up? (\*\*)
 ```
 
-Source: <https://javascript.info/function-basics#parameters>
+---
 
 ### What happens when a function parameter is not provided?
 
@@ -275,7 +273,7 @@ function showMessage(from, text) {
 showMessage('Ann'); // "Ann: undefined"
 ```
 
-Source: <https://javascript.info/function-basics#default-values>
+---
 
 ### How is a default function parameter evaluated in JavaScript?
 
@@ -296,7 +294,7 @@ function showMessage(from, text = anotherFunction()) {
 }
 ```
 
-Source: <https://javascript.info/function-basics#default-values>
+---
 
 ### Is there a way to check for an omitted function parameter and return a new value?
 
@@ -336,7 +334,7 @@ text = text || 'empty';
 }
 ```
 
-Source: <https://javascript.info/function-basics#alternative-default-parameters>
+---
 
 ### Can you implement multiple occurrences of the return statement in a single function?
 
@@ -369,7 +367,7 @@ if (checkAge(age)) {
 }
 ```
 
-Source: <https://javascript.info/function-basics#returning-a-value>
+---
 
 ### Is it possible to use a return statement without a value?
 
@@ -395,7 +393,7 @@ function showMovie(age) {
 }
 ```
 
-Source: <https://javascript.info/function-basics#returning-a-value>
+---
 
 ### What does a return statement with an empty value output?
 
@@ -424,7 +422,7 @@ function doNothing() {
 alert(doNothing() === undefined); // true
 ```
 
-Source: <https://javascript.info/function-basics#returning-a-value>
+---
 
 ### Caution should be used when using the return statement. What is the most important thing to remember when using a return statement?
 
@@ -449,7 +447,7 @@ Code Example:
 return some + long + expression + or + whatever * f(a) + f(b);
 ```
 
-Source: <https://javascript.info/function-basics#returning-a-value>
+---
 
 ### What are good naming practices for function names?
 
@@ -478,7 +476,7 @@ createForm(..)      // creates a form (and usually returns it)
 checkPermission(..) // checks a permission, returns true/false
 ```
 
-Source: <https://javascript.info/function-basics#function-naming>
+---
 
 ### What are best practices for the creation of a function?
 
@@ -490,7 +488,7 @@ Source: <https://javascript.info/function-basics#function-naming>
   </div>
 </details>
 
-Source: <https://javascript.info/function-basics#function-naming>
+---
 
 ### Should there be a separation of the concerns in functions?
 
@@ -536,4 +534,4 @@ function isPrime(n) {
 }
 ```
 
-Source: <https://javascript.info/function-basics#functions-comments>
+---

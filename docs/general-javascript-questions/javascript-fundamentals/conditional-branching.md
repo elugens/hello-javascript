@@ -30,7 +30,7 @@ if (year == 2015) {
 }
 ```
 
-Source: <https://javascript.info/ifelse#the-if-statement>
+---
 
 ### What type of conversion does the JavaScript “if” statement used?
 
@@ -41,7 +41,7 @@ Source: <https://javascript.info/ifelse#the-if-statement>
   </div>
 </details>
 
-Source: <https://javascript.info/ifelse#boolean-conversion>
+---
 
 ### Can you pre-evaluate a condition for use in an if statement?
 
@@ -61,7 +61,7 @@ if (cond) {
 }
 ```
 
-Source: <https://javascript.info/ifelse#boolean-conversion>
+---
 
 ### Is there a way to handle falsie conditions in an if statement?
 
@@ -86,7 +86,7 @@ if (year == 2015) {
 }
 ```
 
-Source: <https://javascript.info/ifelse#the-else-clause>
+---
 
 ### If, you have several conditions you would like to test. What conditional statement do you have to use with an if statement?
 
@@ -111,7 +111,7 @@ if (year < 2015) {
 }
 ```
 
-Source: <https://javascript.info/ifelse#several-conditions-else-if>
+---
 
 ### Can you assign a variable depending on a condition in an if statement?
 
@@ -138,7 +138,7 @@ if (age > 18) {
 alert(accessAllowed);
 ```
 
-Source: <https://javascript.info/ifelse#conditional-operator>
+---
 
 ### Is there a shorthand version of the if statement that you can use in JavaScript?
 
@@ -167,4 +167,4 @@ In the example above, you can avoid using the question mark operator because the
 let accessAllowed = age > 18;
 ```
 
-Source: <https://javascript.info/ifelse#conditional-operator>
+---

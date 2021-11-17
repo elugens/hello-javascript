@@ -21,7 +21,7 @@ sidebar_position: 3
   </div>
 </details>
 
-Source: <https://javascript.info/strict-mode#use-strict>
+---
 
 ### How do you explicitly enable ES5 features and modifications?
 
@@ -40,7 +40,7 @@ Code Example:
 // this code works the modern way
 ```
 
-Source: <https://javascript.info/strict-mode#use-strict>
+---
 
 ### Explain how you should implement strict mode in JavaScript?
 
@@ -63,7 +63,7 @@ alert('some code');
 // strict mode is not activated
 ```
 
-Source: <https://javascript.info/strict-mode#use-strict>
+---
 
 ### Can you cancel strict mode at a later point in your code?
 
@@ -74,7 +74,7 @@ Source: <https://javascript.info/strict-mode#use-strict>
   </div>
 </details>
 
-Source: <https://javascript.info/strict-mode#use-strict>
+---
 
 ### Does the browser developer console implement strict mode by default?
 
@@ -85,7 +85,7 @@ Source: <https://javascript.info/strict-mode#use-strict>
   </div>
 </details>
 
-Source: <https://javascript.info/strict-mode#browser-console>
+---
 
 ### How do you implement strict mode in the browser console?
 
@@ -120,7 +120,7 @@ In Older browsers you will have to put it a wrapper:
 })();
 ```
 
-Source: <https://javascript.info/strict-mode#browser-console>
+---
 
 ### Should we implement ‘use strict’ in modern applications?
 
@@ -133,7 +133,7 @@ Source: <https://javascript.info/strict-mode#browser-console>
   </div>
 </details>
 
-Source: <https://javascript.info/strict-mode#should-we-use-strict>
+---
 
 ### Are there any language structures that implement strict mode by default?
 
@@ -144,7 +144,7 @@ Source: <https://javascript.info/strict-mode#should-we-use-strict>
   </div>
 </details>
 
-Source: <https://javascript.info/strict-mode#should-we-use-strict>
+---
 
 ### What is the script type attribute used in JS development?
 
@@ -157,7 +157,7 @@ Source: <https://javascript.info/strict-mode#should-we-use-strict>
   </div>
 </details>
 
-Source: <https://javascript.info/hello-world#modern-markup>
+---
 
 ### What was the script language attribute used for in web development?
 
@@ -170,7 +170,7 @@ Source: <https://javascript.info/hello-world#modern-markup>
   </div>
 </details>
 
-Source: <https://javascript.info/hello-world#modern-markup>
+---
 
 **JavaScript Fundamentals: EXTERNAL SCRIPTS**
 
@@ -195,7 +195,7 @@ Code Example:
 <script src="/js/script2.js"></script>
 ```
 
-Source: <https://javascript.info/hello-world#external-scripts>
+---
 
 ### How do you access external script URLs in JavaScript development?
 
@@ -212,7 +212,7 @@ Code Example:
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/ "></script>
 ```
 
-Source: <https://javascript.info/hello-world#external-scripts>
+---
 
 ### What is the rule for putting scripts into HTML?
 
@@ -223,7 +223,7 @@ Source: <https://javascript.info/hello-world#external-scripts>
   </div>
 </details>
 
-Source: <https://javascript.info/hello-world#external-scripts>
+---
 
 ### What is the benefit of using a separate script file in the browser?
 
@@ -234,7 +234,7 @@ Source: <https://javascript.info/hello-world#external-scripts>
   </div>
 </details>
 
-Source: <https://javascript.info/hello-world#external-scripts>
+---
 
 ### What limitations exist in script tags using a source file?
 
@@ -267,4 +267,4 @@ Code Example: Good Code
 </script>
 ```
 
-Source: <https://javascript.info/hello-world#external-scripts>
+---

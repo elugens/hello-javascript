@@ -36,7 +36,7 @@ let obj = {
 };
 ```
 
-Source: <https://javascript.info/property-accessors#getters-and-setters>
+---
 
 ### What is the difference between accessor property and a property function?
 
@@ -89,7 +89,7 @@ let person = {
 document.getElementById('demo').innerHTML = person.fullName;
 ```
 
-Source: <https://javascript.info/property-accessors#getters-and-setters>
+---
 
 ### Is the difference between accessor property and a data property in JavaScript?
 
@@ -141,7 +141,7 @@ let obj = {
 console.log(obj.prop); // 123
 ```
 
-Source: <https://javascript.info/property-accessors#accessor-descriptors>
+---
 
 ### Can you use getters and setters as wrappers over real properties?
 
@@ -174,7 +174,7 @@ let user = {
 
       }
 
-      this.\_name = value;
+      this._name = value;
 
     },
 
@@ -187,4 +187,4 @@ console.log(user.name); // Pete
 user.name = ''; // Name is too short...
 ```
 
-Source: <https://javascript.info/property-accessors#smarter-getters-setters>
+---

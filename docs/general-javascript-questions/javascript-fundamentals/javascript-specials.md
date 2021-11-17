@@ -30,7 +30,7 @@ alert('Hello'); // automatic semicolon inserted by the JavaScript engine
 alert('World');
 ```
 
-Source: <https://javascript.info/javascript-specials#code-structure>
+---
 
 ### Describe the proper way to enforce strict mode in JavaScript?
 
@@ -54,7 +54,7 @@ Code Example:
 </script>
 ```
 
-Source: <https://javascript.info/javascript-specials#strict-mode>
+---
 
 ### What can a variable name include in JavaScript?
 
@@ -66,7 +66,7 @@ Source: <https://javascript.info/javascript-specials#strict-mode>
   </div>
 </details>
 
-Source: <https://javascript.info/javascript-specials#variables>
+---
 
 ### Are JavaScript variables statically or dynamically typed?
 
@@ -86,7 +86,7 @@ let x = 5;
 x = 'John';
 ```
 
-Source: <https://javascript.info/javascript-specials#variables>
+---
 
 ### What is the only operator with three parameters (arguments)?
 
@@ -108,7 +108,7 @@ var beverage = age >= 21 ? 'Beer' : 'Juice'; // ( ? ) conditional operator
 console.log(beverage); // "Beer"
 ```
 
-Source: <https://javascript.info/javascript-specials#operators>
+---
 
 ### Name three types of JavaScript functions that are commonly used in application development?
 
@@ -162,4 +162,4 @@ let sayHi = () => alert('Hello');
 let double = (n) => n * 2;
 ```
 
-Source: <https://javascript.info/javascript-specials#functions>
+---

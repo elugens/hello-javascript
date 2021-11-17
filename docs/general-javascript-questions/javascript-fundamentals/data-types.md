@@ -21,7 +21,7 @@ sidebar_position: 5
   </div>
 </details>
 
-Source: <https://javascript.info/types>
+---
 
 ### What operator do you use to find the type of a specific value or argument?
 
@@ -39,7 +39,7 @@ Source: <https://javascript.info/types>
   </div>
 </details>
 
-Source: <https://javascript.info/types#type-typeof>
+---
 
 ### What type of numbers does the number type represent?
 
@@ -50,7 +50,7 @@ Source: <https://javascript.info/types#type-typeof>
   </div>
 </details>
 
-Source: <https://javascript.info/types#number>
+---
 
 ### What is the limitation of the number type?
 
@@ -63,7 +63,7 @@ Source: <https://javascript.info/types#number>
   </div>
 </details>
 
-Source: <https://javascript.info/types#bigint>
+---
 
 ### How should you create BigInt in JavaScript?
 
@@ -74,7 +74,7 @@ Source: <https://javascript.info/types#bigint>
   </div>
 </details>
 
-Source: <https://javascript.info/types#bigint>
+---
 
 ### What are the three types of quotes that can be used to create a string representation of a value?
 
@@ -93,7 +93,7 @@ Source: <https://javascript.info/types#bigint>
   </div>
 </details>
 
-Source: <https://javascript.info/types#string>
+---
 
 ### What is the difference between double, single, and backtick quotes?
 
@@ -125,7 +125,7 @@ Please note that this can only be done in backticks. Other quotes do not have th
 
 :::
 
-Source: <https://javascript.info/types#string>
+---
 
 ### What two values does the Boolean logical type have?
 
@@ -150,7 +150,7 @@ let isGreater = 4 > 1;
 alert(isGreater); // true (the comparison result is "yes")
 ```
 
-Source: <https://javascript.info/types#boolean-logical-type>
+---
 
 ### What does the NULL data type represent in JavaScript?
 
@@ -163,7 +163,7 @@ Source: <https://javascript.info/types#boolean-logical-type>
   </div>
 </details>
 
-Source: <https://javascript.info/types#the-null-value>
+---
 
 ### What does the undefined data type represent in JavaScript?
 
@@ -194,7 +194,7 @@ age = undefined;
 alert(age); // "undefined"
 ```
 
-Source: <https://javascript.info/types#the-undefined-value>
+---
 
 ### What is the difference between typeof x and typeof(x) with parentheses?
 
@@ -205,7 +205,7 @@ Source: <https://javascript.info/types#the-undefined-value>
   </div>
 </details>
 
-Source: <https://javascript.info/types#type-typeof>
+---
 
 ### What does the typeof operator return?
 
@@ -218,4 +218,4 @@ Source: <https://javascript.info/types#type-typeof>
   </div>
 </details>
 
-Source: <https://javascript.info/types#type-typeof>
+---

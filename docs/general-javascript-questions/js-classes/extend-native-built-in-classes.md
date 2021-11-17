@@ -38,7 +38,7 @@ let arr = new PowerArray(1, 2, 5, 10, 50);
 console.log(arr.constructor === PowerArray); // returns true
 ```
 
-Source: <https://javascript.info/extend-natives>
+---
 
 ### Explain the function and syntax of the Symbol.species accessor property?
 
@@ -85,7 +85,7 @@ console.log(mapped[1]); // returns value at index 1 times 2 - value = 
 console.log(a); // returns Array - [ 1, 2, 3 ]
 ```
 
-Source: <https://javascript.info/extend-natives>
+---
 
 ### How does static inheritance work between native built-in classes?
 
@@ -98,4 +98,4 @@ Source: <https://javascript.info/extend-natives>
   </div>
 </details>
 
-Source: <https://javascript.info/extend-natives#no-static-inheritance-in-built-ins>
+---

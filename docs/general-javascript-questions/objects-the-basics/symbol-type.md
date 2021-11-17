@@ -22,7 +22,7 @@ sidebar_position: 7
   </div>
 </details>
 
-Source: <https://javascript.info/symbol>
+---
 
 ### Explain, what is a Symbol is in JavaScript?
 
@@ -46,7 +46,7 @@ let sym3 = Symbol('foo');
 Symbol('foo') === Symbol('foo'); // false, Symbol returns a unique
 ```
 
-Source: <https://javascript.info/symbol#symbols>
+---
 
 ### Does the Symbol function get registered in the global symbol registry?
 
@@ -58,7 +58,7 @@ Source: <https://javascript.info/symbol#symbols>
   </div>
 </details>
 
-Source: <https://javascript.info/symbol#symbols>
+---
 
 ### Can two Symbol descriptions be identical in JavaScript?
 
@@ -80,7 +80,7 @@ let id2 = Symbol('id');
 alert(id1 == id2); // false
 ```
 
-Source: <https://javascript.info/symbol#symbols>
+---
 
 ### Do Symbols auto-convert to strings in JavaScript?
 
@@ -105,7 +105,7 @@ let id = Symbol('id');
 alert(id.toString()); // Symbol(id), now it works
 ```
 
-Source: <https://javascript.info/symbol#symbols>
+---
 
 ### To explicitly convert a Symbol to a string, what built-in method should we use?
 
@@ -125,7 +125,7 @@ let id = Symbol('id');
 alert(id.toString()); // Symbol(id), now it works
 ```
 
-Source: <https://javascript.info/symbol#symbols>
+---
 
 ### If, you want to show the Symbol description, what property should you use?
 
@@ -145,7 +145,7 @@ let id = Symbol('id');
 alert(id.description); // returns id
 ```
 
-Source: <https://javascript.info/symbol#symbols>
+---
 
 ### How can the Symbol object act as a property safeguard in objects?
 
@@ -175,7 +175,7 @@ alert(user[id]);
 // returns 1, in user[id], we can access the data using the symbol as the key
 ```
 
-Source: <https://javascript.info/symbol#hidden-properties>
+---
 
 ### What is the benefit of using Symbol("id") over a string "id"?
 
@@ -213,7 +213,7 @@ user.id = 'Their id value';
 // Boom! overwritten by another script!
 ```
 
-Source: <https://javascript.info/symbol#hidden-properties>
+---
 
 ### Can you use a Symbol in an object literal?
 
@@ -237,7 +237,7 @@ let user = {
 };
 ```
 
-Source: <https://javascript.info/symbol#symbols-in-an-object-literal>
+---
 
 ### Can you return a Symbol in a for…in loop?
 
@@ -268,7 +268,7 @@ for (let key in user) alert(key); // name, age (no symbols)
 alert('Direct: ' + user[id]);
 ```
 
-Source: <https://javascript.info/symbol#symbols-are-skipped-by-for-in>
+---
 
 ### Symbol properties are hidden for a reason, but is there a way to copy all the properties including the symbolic ones?
 
@@ -293,7 +293,7 @@ let clone = Object.assign({}, user);
 alert(clone[id]); // 123
 ```
 
-Source: <https://javascript.info/symbol#symbols-are-skipped-by-for-in>
+---
 
 ### Sometimes you need to have same-named symbols to be the same entities. Is there a way to read or create a symbol from the registry?
 
@@ -320,7 +320,7 @@ let idAgain = Symbol.for('id');
 alert(id === idAgain); // true
 ```
 
-Source: <https://javascript.info/symbol#global-symbols>
+---
 
 ### What is the difference between Symbol.for(key) and Symbol.keyFor(sym) in JavaScript?
 
@@ -347,7 +347,7 @@ alert(Symbol.keyFor(sym)); // name
 alert(Symbol.keyFor(sym2)); // id
 ```
 
-Source: <https://javascript.info/symbol#symbol-keyfor>
+---
 
 ### The Symbol.keyFor internally uses the global symbol registry to look up the key for the symbol. Does it work for non-global symbols?
 
@@ -372,4 +372,4 @@ alert(Symbol.keyFor(localSymbol)); // undefined, not global
 alert(localSymbol.description); // name
 ```
 
-Source: <https://javascript.info/symbol#symbol-keyfor>
+---

@@ -22,7 +22,7 @@ sidebar_position: 4
   </div>
 </details>
 
-Source: <https://javascript.info/ninja-code#one-letter-variables>
+---
 
 ### Is it a good idea to abbreviate variable and function names?
 
@@ -34,7 +34,7 @@ Source: <https://javascript.info/ninja-code#one-letter-variables>
   </div>
 </details>
 
-Source: <https://javascript.info/ninja-code#use-abbreviations>
+---
 
 ### Is it a good idea to overlap variables in JavaScript?
 
@@ -68,4 +68,4 @@ let user = authenticateUser(); // Global declaration of the user
 }
 ```
 
-Source: <https://javascript.info/ninja-code#overlap-outer-variables>
+---

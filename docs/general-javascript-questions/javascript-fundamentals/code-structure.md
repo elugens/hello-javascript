@@ -43,7 +43,7 @@ alert('Hello');
 alert('World');
 ```
 
-Source: <https://javascript.info/structure#statements>
+---
 
 ### How are statements separated in JavaScript?
 
@@ -61,7 +61,7 @@ alert('Hello');
 alert('World');
 ```
 
-Source: <https://javascript.info/structure#semicolon>
+---
 
 ### Can semi-colons be omitted in JavaScript?
 
@@ -81,7 +81,7 @@ alert('Hello');
 alert('World');
 ```
 
-Source: <https://javascript.info/structure#semicolon>
+---
 
 ### Does JavaScript always interpret line breaks as the end of a statement?
 
@@ -111,7 +111,7 @@ alert('All fine now'); // uses a semi-colon alerts All fine now
 [1, 2].forEach(alert); // alerts 1 and then 2
 ```
 
-Source: <https://javascript.info/structure#semicolon>
+---
 
 ### How are single-line comments created in JavaScript?
 
@@ -132,7 +132,7 @@ alert('Hello');
 alert('World'); // This comment follows the statement
 ```
 
-Source: <https://javascript.info/structure#code-comments>
+---
 
 ### How are multi-line comments created in JavaScript?
 
@@ -156,7 +156,7 @@ alert('Hello');
 alert('World');
 ```
 
-Source: <https://javascript.info/structure#code-comments>
+---
 
 ### Are nested comments supported in JavaScript?
 
@@ -177,4 +177,4 @@ Example:
 alert('World');
 ```
 
-Source: <https://javascript.info/structure#code-comments>
+---

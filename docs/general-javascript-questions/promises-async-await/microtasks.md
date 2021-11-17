@@ -59,7 +59,7 @@ console.log('Message no. 5: Sync');
 // Message no. 4: 2nd Promise
 ```
 
-Source: <https://medium.com/@Rahulx1/understanding-event-loop-call-stack-event-job-queue-in-javascript-63dcd2c71ecd>
+---
 
 ### What if the order matters for us? How can we make code run after promise done?
 
@@ -79,7 +79,7 @@ Promise.resolve()
   .then(() => alert('code finished'));
 ```
 
-Source: <https://javascript.info/microtask-queue#microtasks-queue>
+---
 
 ### When does an unhandled rejection occur in relation to a JavaScript promises?
 
@@ -126,4 +126,4 @@ setTimeout(() => promise.catch((err) => alert('caught')), 1000); // handling e
 window.addEventListener('unhandledrejection', (event) => alert(event.reason));
 ```
 
-Source: <https://javascript.info/microtask-queue#unhandled-rejection>
+---

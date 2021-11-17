@@ -52,7 +52,7 @@ john = null; // overwrite the reference
 // john is removed from memory!
 ```
 
-Source: <https://javascript.info/weakmap-weakset#weakmap>
+---
 
 ### What are some use cases in applications for a WeakMap?
 
@@ -64,7 +64,7 @@ Source: <https://javascript.info/weakmap-weakset#weakmap>
   </div>
 </details>
 
-Source: <https://javascript.info/weakmap-weakset#weakmap>
+---
 
 ### What is the difference between a Set and WeakSet in JavaScript?
 
@@ -106,7 +106,7 @@ john = null;
 // visitedSet will be cleaned automatically
 ```
 
-Source: <https://javascript.info/weakmap-weakset#weakset>
+---
 
 ### What is the most notable limitation of WeakMap and WeakSet in JS?
 
@@ -118,4 +118,4 @@ Source: <https://javascript.info/weakmap-weakset#weakset>
   </div>
 </details>
 
-Source: <https://javascript.info/weakmap-weakset>
+---

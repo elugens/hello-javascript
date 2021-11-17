@@ -29,45 +29,37 @@ In JavaScript we can only inherit from a single object. There can be only one [[
 
 Code Example:
 
+```js
 // mixin
 
-let sayHiMixin = {
+let sayHiMixin = {
+  sayHi() {
+    alert(`Hello ${this.name}`);
+  },
 
-    sayHi() {
-
-      alert(`Hello ${this.name}`);
-
-    },
-
-    sayBye() {
-
-      alert(`Bye ${this.name}`);
-
-    }
-
+  sayBye() {
+    alert(`Bye ${this.name}`);
+  },
 };
 
 // usage:
 
-class User {
-
-    constructor(name) {
-
-      this.name = name;
-
-    }
-
+class User {
+  constructor(name) {
+    this.name = name;
+  }
 }
 
 // copy the methods
 
-Object.assign(User.prototype, sayHiMixin);
+Object.assign(User.prototype, sayHiMixin);
 
 // now User can say hi
 
-new User("Dude").sayHi(); // Hello Dude!
+new User('Dude').sayHi(); // Hello Dude!
+```
 
-Source: <https://javascript.info/mixins#a-mixin-example>
+---
 
 ### What is the simplest way to create a mixin in JavaScript?
 
@@ -116,6 +108,6 @@ new User('Dude').sayHi(); // Hello, Dude!
 new User('Jane').sayBye(); // Bye, Jane!
 ```
 
-Source: <https://javascript.info/mixins#a-mixin-example>
+---
 
 If you are interested in learning event mixins go to: <https://javascript.info/mixins#eventmixin>

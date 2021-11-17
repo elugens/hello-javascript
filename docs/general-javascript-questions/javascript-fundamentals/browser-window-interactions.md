@@ -21,7 +21,7 @@ sidebar_position: 6
   </div>
 </details>
 
-Source: <https://javascript.info/alert-prompt-confirm#alert>
+---
 
 ### How does the alert function work?
 
@@ -32,7 +32,7 @@ Source: <https://javascript.info/alert-prompt-confirm#alert>
   </div>
 </details>
 
-Source: <https://javascript.info/alert-prompt-confirm#alert>
+---
 
 ### What data type does the alert window method return?
 
@@ -45,7 +45,7 @@ Source: <https://javascript.info/alert-prompt-confirm#alert>
   </div>
 </details>
 
-Source: <https://javascript.info/alert-prompt-confirm#alert>
+---
 
 ### How does the prompt function work, in simple terms?
 
@@ -58,7 +58,7 @@ Source: <https://javascript.info/alert-prompt-confirm#alert>
   </div>
 </details>
 
-Source: <https://javascript.info/alert-prompt-confirm#prompt>
+---
 
 ### How many arguments does the prompt function accept?
 
@@ -77,7 +77,7 @@ Code Example:
 result = prompt(title, [default]);
 ```
 
-Source: <https://javascript.info/alert-prompt-confirm#prompt>
+---
 
 ### What does the prompt return when the prompt is escaped or canceled?
 
@@ -88,7 +88,7 @@ Source: <https://javascript.info/alert-prompt-confirm#prompt>
   </div>
 </details>
 
-Source: <https://javascript.info/alert-prompt-confirm#prompt>
+---
 
 ### Why is important to provide a second argument (default) for the prompt function?
 
@@ -101,7 +101,7 @@ Source: <https://javascript.info/alert-prompt-confirm#prompt>
   </div>
 </details>
 
-Source: <https://javascript.info/alert-prompt-confirm#prompt>
+---
 
 ### How does the confirm function work?
 
@@ -122,7 +122,7 @@ let isBoss = confirm('Are you the boss?');
 alert(isBoss); // true if OK is pressed and false otherwise
 ```
 
-Source: <https://javascript.info/alert-prompt-confirm#confirm>
+---
 
 ### What object model do the alert, prompt, and confirm functions belong to?
 
@@ -135,7 +135,7 @@ Source: <https://javascript.info/alert-prompt-confirm#confirm>
   </div>
 </details>
 
-Source: <https://javascript.info/alert-prompt-confirm>
+---
 
 ### What are two limitations shared by the alert, prompt, and confirm methods?
 
@@ -152,4 +152,4 @@ Source: <https://javascript.info/alert-prompt-confirm>
   </div>
 </details>
 
-Source: <https://javascript.info/alert-prompt-confirm>
+---
