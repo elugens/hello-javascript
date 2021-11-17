@@ -36,7 +36,7 @@ let str = '012345678901234567890123456789z';
 alert(regexp.test(str));
 ```
 
-Source: <https://javascript.info/regexp-catastrophic-backtracking>
+---
 
 ### How do you prevent catastrophic backtracking in the regex engine?
 
@@ -48,4 +48,4 @@ Source: <https://javascript.info/regexp-catastrophic-backtracking>
   </div>
 </details>
 
-Source: <https://www.regular-expressions.info/catastrophic.html>
+---

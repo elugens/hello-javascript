@@ -39,7 +39,7 @@ alert('1 23 456 78'.match(/\b\d\d\b/g)); // returns 23,78
 alert('12,34,56'.match(/\b\d\d\b/g)); // returns 12,34,56
 ```
 
-Source: <https://javascript.info/regexp-boundary>
+---
 
 ### Does a word boundary work on Non-Latin alphabets?
 
@@ -51,4 +51,4 @@ Source: <https://javascript.info/regexp-boundary>
   </div>
 </details>
 
-Source: <https://javascript.info/regexp-boundary>
+---

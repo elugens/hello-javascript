@@ -22,7 +22,7 @@ sidebar_position: 8
   </div>
 </details>
 
-Source: <https://javascript.info/xmlhttprequest>
+---
 
 ### What are the two modes of operation that an XMLHttpRequest uses?
 
@@ -36,7 +36,7 @@ Source: <https://javascript.info/xmlhttprequest>
 
 **Syntax:** xhr.open(method, URL, [async, user, password])
 
-Source: <https://javascript.info/xmlhttprequest#the-basics>
+---
 
 ### How do you open a connection and send a XMLHttpRequest to the server?
 
@@ -50,7 +50,7 @@ Source: <https://javascript.info/xmlhttprequest#the-basics>
 
 **Syntax:** xhr.send([body])
 
-Source: <https://javascript.info/xmlhttprequest#the-basics>
+---
 
 ### What are the three events most widely used in XMLHttpRequests?
 
@@ -90,7 +90,7 @@ xhr.onprogress = function (event) {
 };
 ```
 
-Source: <https://javascript.info/xmlhttprequest#the-basics>
+---
 
 ### What properties can we use to access the results of a XMLHttpRequest?
 
@@ -130,7 +130,7 @@ xhr.onprogress = function (event) {
 };
 ```
 
-Source: <https://javascript.info/xmlhttprequest#the-basics>
+---
 
 ### What are the states of the XMLHttpRequest?
 
@@ -158,7 +158,7 @@ xhr.onreadystatechange = function () {
 };
 ```
 
-Source: <https://javascript.info/xmlhttprequest#ready-states>
+---
 
 ### What method is used to terminate a XMLHttpRequest?
 
@@ -170,7 +170,7 @@ Source: <https://javascript.info/xmlhttprequest#ready-states>
   </div>
 </details>
 
-Source: <https://javascript.info/xmlhttprequest#aborting-request>
+---
 
 ### What is the mode if the open() methods async parameter is set to false?
 
@@ -206,7 +206,7 @@ try {
 }
 ```
 
-Source: <https://javascript.info/xmlhttprequest#synchronous-requests>
+---
 
 ### Can you send custom headers via an XMLHttpRequest to a server?
 
@@ -218,7 +218,7 @@ Source: <https://javascript.info/xmlhttprequest#synchronous-requests>
   </div>
 </details>
 
-Source: <https://javascript.info/xmlhttprequest#http-headers>
+---
 
 ### What does the setRequestHeader method do?
 
@@ -238,7 +238,7 @@ Example:
 xhr.setRequestHeader('Content-Type', 'application/json');
 ```
 
-Source: <https://javascript.info/xmlhttprequest#http-headers>
+---
 
 ### Does a XMLHttpRequest have any limitations in relation the Headers?
 
@@ -262,7 +262,7 @@ xhr.setRequestHeader('X-Auth', '456');
 // X-Auth: 123, 456
 ```
 
-Source: <https://javascript.info/xmlhttprequest#http-headers>
+---
 
 ### Example the function and syntax of the getResponseHeader() method?
 
@@ -280,7 +280,7 @@ Code Example:
 xhr.getResponseHeader('Content-Type');
 ```
 
-Source: <https://javascript.info/xmlhttprequest#http-headers>
+---
 
 ### Can you explain the function and syntax of the getAllResponseHeader() method?
 
@@ -326,7 +326,7 @@ let headers = xhr
 // headers['Content-Type'] = 'image/png'
 ```
 
-Source: <https://javascript.info/xmlhttprequest#http-headers>
+---
 
 ### What built-in object can we used to make a POST request?
 
@@ -375,7 +375,7 @@ Code Example:
 </script>
 ```
 
-Source: <https://javascript.info/xmlhttprequest#post-formdata>
+---
 
 ### Is there a way to track upload progress in relation to a XMLHttpRequest?
 
@@ -419,7 +419,7 @@ Code Example:
 </script>
 ```
 
-Source: <https://javascript.info/xmlhttprequest#upload-progress>
+---
 
 ### How do cross-origin request function in relation to XMLHttpRequest?
 
@@ -441,4 +441,4 @@ xhr.withCredentials = true;
 xhr.open('POST', 'http://anywhere.com/request');
 ```
 
-Source: <https://javascript.info/xmlhttprequest#cross-origin-requests>
+---

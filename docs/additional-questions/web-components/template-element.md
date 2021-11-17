@@ -43,7 +43,7 @@ sidebar_position: 4
 </template>
 ```
 
-Source: <https://javascript.info/template-element>
+---
 
 ### What happens when we insert template content into the DOM?
 
@@ -79,4 +79,4 @@ Source: <https://javascript.info/template-element>
 </script>
 ```
 
-Source: <https://javascript.info/template-element#inserting-template>
+---

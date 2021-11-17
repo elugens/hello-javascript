@@ -42,7 +42,7 @@ alert('my@mail.com @ his@site.com.uk'.match(regexp));
 // my@mail.com, his@site.com.uk
 ```
 
-Source: <https://javascript.info/regexp-groups>
+---
 
 ### How does the regex engine memorize the matches in parentheses?
 
@@ -65,7 +65,7 @@ alert(tag[0]); // <h1>
 alert(tag[1]); // h1
 ```
 
-Source: <https://javascript.info/regexp-groups#parentheses-contents-in-the-match>
+---
 
 ### How nested group of parentheses work in regular expressions?
 
@@ -92,7 +92,7 @@ alert(result[2]); // span
 alert(result[3]); // class="my"
 ```
 
-Source: <https://javascript.info/regexp-groups#parentheses-contents-in-the-match>
+---
 
 ### What happens when an option group does not exist in a regex match?
 
@@ -123,7 +123,7 @@ alert(match[1]); // undefined, because there's nothing for (z)?
 alert(match[2]); // c
 ```
 
-Source: <https://javascript.info/regexp-groups#optional-groups>
+---
 
 ### What is the outcome on parentheses when we use regex.matchAll()?
 
@@ -177,7 +177,7 @@ alert(tag1.index); // 0
 alert(tag1.input); // <h1> <h2>
 ```
 
-Source: <https://javascript.info/regexp-groups#searching-for-all-matches-with-groups-matchall>
+---
 
 ### What are named groups in capturing used for in regex?
 
@@ -226,7 +226,7 @@ for (let result of results) {
 }
 ```
 
-Source: <https://javascript.info/regexp-groups#named-groups>
+---
 
 ### How do capturing groups work in a replacement string?
 
@@ -259,7 +259,7 @@ alert(str.replace(regexp, '$<day>.$<month>.$<year>'));
 // 30.10.2019, 01.01.2020
 ```
 
-Source: <https://javascript.info/regexp-groups#capturing-groups-in-replacement>
+---
 
 ### How do non-capturing groups work in regular expressions?
 
@@ -287,4 +287,4 @@ alert(result[1]); // John
 alert(result.length); // 2 (no more items in the array)
 ```
 
-Source: <https://javascript.info/regexp-groups#non-capturing-groups-with>
+---

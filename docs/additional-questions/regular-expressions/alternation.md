@@ -31,4 +31,4 @@ let str = 'First HTML appeared, then CSS, then JavaScript';
 alert(str.match(regexp)); // 'HTML', 'CSS', 'JavaScript'
 ```
 
-Source: <https://javascript.info/regexp-alternation>
+---

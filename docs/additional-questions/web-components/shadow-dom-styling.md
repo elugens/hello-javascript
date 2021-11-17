@@ -22,7 +22,7 @@ sidebar_position: 6
   </div>
 </details>
 
-Source: <https://javascript.info/shadow-dom-style>
+---
 
 ### Can you explain what the :host() selector class does?
 
@@ -77,7 +77,7 @@ Code Example:
 <custom-dialog> Hello! </custom-dialog>
 ```
 
-Source: <https://javascript.info/shadow-dom-style#host>
+---
 
 ### How does the :host(selector) class work?
 
@@ -134,7 +134,7 @@ Code Example:
 </script>
 ```
 
-Source: <https://javascript.info/shadow-dom-style#host-selector>
+---
 
 ### How does the CSS - :host-context(selector) work?
 
@@ -162,7 +162,7 @@ Code Example:
 </body>
 ```
 
-Source: <https://javascript.info/shadow-dom-style#host-context-selector>
+---
 
 ### What approach can you use to style slotted content?
 
@@ -236,7 +236,7 @@ Source: <https://javascript.info/shadow-dom-style#host-context-selector>
 </script>
 ```
 
-Source: <https://javascript.info/shadow-dom-style#styling-slotted-content>
+---
 
 ### How do we style internal elements of a component from the main document?
 
@@ -291,4 +291,4 @@ Source: <https://javascript.info/shadow-dom-style#styling-slotted-content>
 </user-card>
 ```
 
-Source: <https://javascript.info/shadow-dom-style#css-hooks-with-custom-properties>
+---

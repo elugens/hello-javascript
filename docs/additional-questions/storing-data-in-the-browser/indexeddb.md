@@ -38,7 +38,7 @@ window.onstorage = (event) => {
 localStorage.setItem('now', Date.now());
 ```
 
-Source: <https://javascript.info/indexeddb>
+---
 
 ### Can you briefly explain where the data is stored in the IndexedDB?
 
@@ -50,7 +50,7 @@ Source: <https://javascript.info/indexeddb>
   </div>
 </details>
 
-Source: <https://javascript.info/indexeddb>
+---
 
 ### How do you initially open an IndexedDB database?
 
@@ -85,7 +85,7 @@ openRequest.onsuccess = function () {
 };
 ```
 
-Source: <https://javascript.info/indexeddb#open-database>
+---
 
 ### What are the cross-domain rules that govern IndexedDB?
 
@@ -97,7 +97,7 @@ Source: <https://javascript.info/indexeddb#open-database>
   </div>
 </details>
 
-Source: <https://javascript.info/indexeddb#open-database>
+---
 
 ### How do we delete a IndexedDB database using JavaScript?
 
@@ -130,7 +130,7 @@ openRequest.onsuccess = function () {
 };
 ```
 
-Source: <https://javascript.info/indexeddb#open-database>
+---
 
 ### What is the reason a user cannot open an IndexedDB database based on versioning?
 
@@ -142,7 +142,7 @@ Source: <https://javascript.info/indexeddb#open-database>
   </div>
 </details>
 
-Source: <https://javascript.info/indexeddb#open-database>
+---
 
 ### Is there a way to handle potential versioning issues with IndexedDB?
 
@@ -190,7 +190,7 @@ openRequest.onblocked = function() {
 };
 ```
 
-Source: <https://javascript.info/indexeddb#parallel-update-problem>
+---
 
 ### What is the reason a user cannot open an IndexedDB database based on versioning?
 
@@ -202,7 +202,7 @@ Source: <https://javascript.info/indexeddb#parallel-update-problem>
   </div>
 </details>
 
-Source: <https://javascript.info/indexeddb#open-database>
+---
 
 ### What do we need to use to store data in a IndexedDB database?
 
@@ -214,7 +214,7 @@ Source: <https://javascript.info/indexeddb#open-database>
   </div>
 </details>
 
-Source: <https://javascript.info/indexeddb#object-store>
+---
 
 ### What kind of values can be store in an IndexedDB database?
 
@@ -226,7 +226,7 @@ Source: <https://javascript.info/indexeddb#object-store>
   </div>
 </details>
 
-Source: <https://javascript.info/indexeddb#object-store>
+---
 
 ### Can you give an example of an object that can’t be stored in IndexedDB?
 
@@ -238,7 +238,7 @@ Source: <https://javascript.info/indexeddb#object-store>
   </div>
 </details>
 
-Source: <https://javascript.info/indexeddb#object-store>
+---
 
 ### Is there a specific type of key that we must use in IndexedDB?
 
@@ -250,7 +250,7 @@ Source: <https://javascript.info/indexeddb#object-store>
   </div>
 </details>
 
-Source: <https://javascript.info/indexeddb#object-store>
+---
 
 ### How are keys implemented in a IndexedDB when we store objects?
 
@@ -264,7 +264,7 @@ Source: <https://javascript.info/indexeddb#object-store>
 
 **Syntax:** db.createObjectStore(name, options)
 
-Source: <https://javascript.info/indexeddb#object-store>
+---
 
 ### Explain the function and syntax of the createObjectStore JavaScript method?
 
@@ -286,7 +286,7 @@ Code Example:
 let objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
 ```
 
-Source: <https://javascript.info/indexeddb#object-store>
+---
 
 ### When can an object store be created or modified in IndexedDB?
 
@@ -298,7 +298,7 @@ Source: <https://javascript.info/indexeddb#object-store>
   </div>
 </details>
 
-Source: <https://javascript.info/indexeddb#object-store>
+---
 
 ### What are the two main approaches to performing a IndexedDB version upgrade?
 
@@ -328,7 +328,7 @@ openRequest.onupgradeneeded = function () {
 };
 ```
 
-Source: <https://javascript.info/indexeddb#object-store>
+---
 
 ### Can you define what a transaction is in relation to a database?
 
@@ -340,7 +340,7 @@ Source: <https://javascript.info/indexeddb#object-store>
   </div>
 </details>
 
-Source: <https://javascript.info/indexeddb#transactions>
+---
 
 ### Example the function and syntax of the transaction method?
 
@@ -381,7 +381,7 @@ request.onerror = function () {
 };
 ```
 
-Source: <https://javascript.info/indexeddb#transactions>
+---
 
 ### Why are there different types of IndexedDB transactions?
 
@@ -399,7 +399,7 @@ Code Example:
 let transaction = db.transaction('books', 'readwrite'); // (1)
 ```
 
-Source: <https://javascript.info/indexeddb#transactions>
+---
 
 ### What the two methods used to store a value in an Object Store?
 
@@ -413,7 +413,7 @@ Source: <https://javascript.info/indexeddb#transactions>
 
 **Syntax:** let request = books.add(book)
 
-Source: <https://javascript.info/indexeddb#transactions>
+---
 
 ### How do we mark a IndexedDB transaction as finished, with no more requests to come?
 
@@ -425,7 +425,7 @@ Source: <https://javascript.info/indexeddb#transactions>
   </div>
 </details>
 
-Source: <https://javascript.info/indexeddb#transactions-autocommit>
+---
 
 ### What is one of the side-effects of the transaction auto-commit principle?
 
@@ -452,7 +452,7 @@ request1.onsuccess = function () {
 };
 ```
 
-Source: <https://javascript.info/indexeddb#transactions-autocommit>
+---
 
 ### Do we need onerror/onsuccess for every request?
 
@@ -480,7 +480,7 @@ request.onerror = function (event) {
 };
 ```
 
-Source: <https://javascript.info/indexeddb#event-delegation>
+---
 
 ### What are the two main types of searches in an object store?
 
@@ -530,7 +530,7 @@ books.getAll();
 books.getAllKeys(IDBKeyRange.lowerBound('js', true));
 ```
 
-Source: <https://javascript.info/indexeddb#searching>
+---
 
 ### By default, how does Object store sort values?
 
@@ -542,7 +542,7 @@ Source: <https://javascript.info/indexeddb#searching>
   </div>
 </details>
 
-Source: <https://javascript.info/indexeddb#searching>
+---
 
 ### How do you delete values in a IndexedDB Object store?
 
@@ -570,7 +570,7 @@ request.onsuccess = function () {
 books.clear(); // clear the storage.
 ```
 
-Source: <https://javascript.info/indexeddb#searching>
+---
 
 ### Briefly explain what a cursor is in relation to the IndexedDB database.\*\*
 
@@ -602,8 +602,8 @@ request.onsuccess = () => {
 };
 ```
 
-Source: <https://itnext.io/searching-in-your-indexeddb-database-d7cbf202a17>
-
 **Author Note: Incomplete at Promise Wrapper**
 
 **Source:** <https://javascript.info/indexeddb#promise-wrapper>
+
+---

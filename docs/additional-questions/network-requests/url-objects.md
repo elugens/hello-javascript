@@ -53,7 +53,7 @@ alert(url.host); // javascript.info
 alert(url.pathname); // /url
 ```
 
-Source: <https://javascript.info/url#creating-a-url>
+---
 
 ### Can we pass URL objects to networking and other methods instead of a string?
 
@@ -65,7 +65,7 @@ Source: <https://javascript.info/url#creating-a-url>
   </div>
 </details>
 
-Source: <https://javascript.info/url#creating-a-url>
+---
 
 ### Is there a way to parse data inside of a URL string?
 
@@ -86,7 +86,7 @@ let name = params.get('name'); // is the string "Jonathan Smith".
 let age = parseInt(params.get('age')); // is the number 18
 ```
 
-Source: <https://javascript.info/url#searchparams>
+---
 
 ### Explain the function and syntax of the URLSearchParams.get() method?
 
@@ -109,7 +109,7 @@ let name = params.get('name'); // is the string "Jonathan Smith".
 let age = parseInt(params.get('age')); // is the number 18
 ```
 
-Source: <https://javascript.info/url#searchparams>
+---
 
 ### Which standard is used to define which characters are allowed in URLs?
 
@@ -134,7 +134,7 @@ url.searchParams.set('key', 'ъ');
 alert(url); //https://ru.wikipedia.org/wiki/%D0%A2%D0%B5%D1%81%D1%82?key=%D1%8A
 ```
 
-Source: <https://javascript.info/url#encoding>
+---
 
 ### What is the difference between encodeURIComponent and encodeURI?
 
@@ -165,7 +165,7 @@ let url = `https://google.com/search?q=${music}`;
 alert(url); // https://google.com/search?q=Rock&Roll
 ```
 
-Source: <https://javascript.info/url#encoding-strings>
+---
 
 ### Is there a difference between URL transformation and the encoding functions?
 
@@ -188,4 +188,4 @@ alert(encodeURI(url)); // http://%5B2607:f8b0:4005:802::1007%5D/
 alert(new URL(url)); // http://[2607:f8b0:4005:802::1007]/
 ```
 
-Source: <https://javascript.info/url#encoding-strings>
+---

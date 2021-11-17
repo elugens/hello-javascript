@@ -22,7 +22,7 @@ sidebar_position: 10
   </div>
 </details>
 
-Source: <https://javascript.info/long-polling>
+---
 
 ### What is the difference between long and regular polling?
 
@@ -34,7 +34,7 @@ Source: <https://javascript.info/long-polling>
   </div>
 </details>
 
-Source: <https://javascript.info/long-polling#long-polling>
+---
 
 ### Can you explain the steps in the long polling process?
 
@@ -88,4 +88,4 @@ async function subscribe() {
 subscribe();
 ```
 
-Source: <https://javascript.info/long-polling#long-polling>
+---

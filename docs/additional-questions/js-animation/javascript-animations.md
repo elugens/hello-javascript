@@ -22,7 +22,7 @@ sidebar_position: 3
   </div>
 </details>
 
-Source: <https://javascript.info/js-animation#using-requestanimationframe>
+---
 
 ### Can you explain the function an syntax of the requestAnimationFrame method?
 
@@ -66,7 +66,7 @@ function step(timestamp) {
 window.requestAnimationFrame(step);
 ```
 
-Source: <https://javascript.info/js-animation#using-requestanimationframe>
+---
 
 ### When should we use JavaScript vs CSS for animations?
 
@@ -78,4 +78,4 @@ Source: <https://javascript.info/js-animation#using-requestanimationframe>
   </div>
 </details>
 
-Source: <https://javascript.info/js-animation>
+---

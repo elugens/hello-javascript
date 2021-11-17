@@ -22,7 +22,7 @@ sidebar_position: 2
   </div>
 </details>
 
-Source: <https://javascript.info/selection-range#range>
+---
 
 ### Please explain the function and syntax of the Range Object/interface.
 
@@ -54,7 +54,7 @@ Example:
 </script>
 ```
 
-Source: <https://javascript.info/selection-range#range>
+---
 
 ### Explain the function and syntax of the Window.getSelection() method.
 
@@ -90,4 +90,4 @@ From <input id="from" disabled /> – To <input id="to" disabled />
 </script>
 ```
 
-Source: <https://javascript.info/selection-range#selection>
+---

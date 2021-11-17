@@ -22,7 +22,7 @@ sidebar_position: 3
   </div>
 </details>
 
-Source: <https://javascript.info/onload-onerror>
+---
 
 ### Is there a way to load a function that is declared inside of an external script?
 
@@ -52,7 +52,7 @@ script.onload = function () {
 };
 ```
 
-Source: <https://javascript.info/onload-onerror#script-onload>
+---
 
 ### How are errors that occur during the loading of a script tracked?
 
@@ -77,7 +77,7 @@ script.onerror = function () {
 };
 ```
 
-Source: <https://javascript.info/onload-onerror#script-onerror>
+---
 
 ### Are there any limitations to the onload/onerror event properties?
 
@@ -93,7 +93,7 @@ Source: <https://javascript.info/onload-onerror#script-onerror>
 If a script loaded successfully, then onload triggers, even if it has programming errors in it. To track script errors, one can use window.onerror global handler.
 :::
 
-Source: <https://javascript.info/onload-onerror#script-onerror>
+---
 
 ### Are the load and error events limited to external scripts or do they work with other external resources?
 
@@ -120,7 +120,7 @@ img.onerror = function () {
 };
 ```
 
-Source: <https://javascript.info/onload-onerror#other-resources>
+---
 
 ### Can you explain what a cross-origin policy is in front-end development?
 
@@ -132,7 +132,7 @@ Source: <https://javascript.info/onload-onerror#other-resources>
   </div>
 </details>
 
-Source: <https://javascript.info/onload-onerror#crossorigin-policy>
+---
 
 ### Are there any limitations in cross-origin error handling?
 
@@ -144,7 +144,7 @@ Source: <https://javascript.info/onload-onerror#crossorigin-policy>
   </div>
 </details>
 
-Source: <https://javascript.info/onload-onerror#crossorigin-policy>
+---
 
 ### Why do we need error details?
 
@@ -156,7 +156,7 @@ Source: <https://javascript.info/onload-onerror#crossorigin-policy>
   </div>
 </details>
 
-Source: <https://javascript.info/onload-onerror#crossorigin-policy>
+---
 
 ### What are the three levels of cross-origin access?
 
@@ -183,4 +183,4 @@ Code Example: crossorigin = "anonymous"
 ></script>
 ```
 
-Source: <https://javascript.info/onload-onerror#crossorigin-policy>
+---

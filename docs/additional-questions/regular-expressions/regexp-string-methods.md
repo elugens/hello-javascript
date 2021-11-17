@@ -90,7 +90,7 @@ alert(firstMatch.index); // 0
 alert(firstMatch.input); // <h1>Hello, world!</h1>
 ```
 
-Source: <https://javascript.info/regexp-methods#str-matchall-regexp>
+---
 
 ### What is the difference between match and matchAll String methods.\*\*
 
@@ -125,7 +125,7 @@ alert('12-34-56'.split('-')); // array of ['12', '34', '56']
 alert('12, 34, 56'.split(/,\s\*/)); // array of ['12', '34', '56']
 ```
 
-Source: <https://javascript.info/regexp-methods#str-matchall-regexp>
+---
 
 ### Explain the function and syntax of the search() string method.\*\*
 
@@ -145,7 +145,7 @@ let str = 'A drop of ink may make a million think';
 alert(str.search(/ink/i)); // 10 (first match position)
 ```
 
-Source: <https://javascript.info/regexp-methods#str-search-regexp>
+---
 
 ### Explain the function and syntax of the str.replace() string method.\*\*
 
@@ -180,7 +180,7 @@ alert(result); // HTML and CSS
 alert('Ho-Ho-ho'.replace(/ho/gi, (match, offset) => offset)); // 0-3-6
 ```
 
-Source: <https://javascript.info/regexp-methods#str-search-regexp>
+---
 
 ### What is the difference between replace() and replaceAll() methods?
 
@@ -200,7 +200,7 @@ Code Example:
 alert('12-34-56'.replaceAll('-', ':')); // 12:34:56
 ```
 
-Source: <https://javascript.info/regexp-methods#str-replaceall-str-regexp-str-func>
+---
 
 ### Explain the function and syntax of the regexp.exec() object method.\*\*
 
@@ -246,7 +246,7 @@ regexp.lastIndex = 5; // search exactly at position 5
 alert(regexp.exec(str)); // null
 ```
 
-Source: <https://javascript.info/regexp-methods#regexp-exec-str>
+---
 
 ### Explain the function and syntax of the regexp.test method.\*\*
 
@@ -288,7 +288,7 @@ regexp.lastIndex = 10;
 alert(regexp.test(str)); // false (no match)
 ```
 
-Source: <https://javascript.info/regexp-methods#regexp-test-str>
+---
 
 ### Are there any ramifications when we run global regexp.tests repeatedly on different sources?
 
@@ -308,4 +308,4 @@ alert(regexp.test('javascript')); // true (regexp.lastIndex=10 now)
 alert(regexp.test('javascript')); // false
 ```
 
-Source: <https://javascript.info/regexp-methods#regexp-test-str>
+---

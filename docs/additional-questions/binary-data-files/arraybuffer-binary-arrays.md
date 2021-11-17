@@ -22,7 +22,7 @@ sidebar_position: 1
   </div>
 </details>
 
-Source: <https://javascript.info/arraybuffer-binary-arrays>
+---
 
 ### Can you name a few of the binary classes used in JavaScript?
 
@@ -34,7 +34,7 @@ Source: <https://javascript.info/arraybuffer-binary-arrays>
   </div>
 </details>
 
-Source: <https://javascript.info/arraybuffer-binary-arrays>
+---
 
 ### What is contiguous memory?
 
@@ -46,7 +46,7 @@ Source: <https://javascript.info/arraybuffer-binary-arrays>
   </div>
 </details>
 
-Source: <https://javascript.info/arraybuffer-binary-arrays>
+---
 
 ### Explain the function of the ArrayBuffer object in JavaScript?
 
@@ -65,7 +65,7 @@ let buffer = new ArrayBuffer(16); // create a buffer of length 16
 alert(buffer.byteLength); // alerts 16
 ```
 
-Source: <https://javascript.info/arraybuffer-binary-arrays>
+---
 
 ### Does ArrayBuffer have anything in common with a regular Array?
 
@@ -77,7 +77,7 @@ Source: <https://javascript.info/arraybuffer-binary-arrays>
   </div>
 </details>
 
-Source: <https://javascript.info/arraybuffer-binary-arrays>
+---
 
 ### What steps are necessary to manipulate an ArrayBuffer?
 
@@ -119,7 +119,7 @@ for(let num of view) {
 }
 ```
 
-Source: <https://javascript.info/arraybuffer-binary-arrays>
+---
 
 ### What does Uint stand for in JavaScript?
 
@@ -131,7 +131,7 @@ Source: <https://javascript.info/arraybuffer-binary-arrays>
   </div>
 </details>
 
-Source: <https://javascript.info/arraybuffer-binary-arrays>
+---
 
 ### What is a common term used for Uint16Array or Int8Array views?
 
@@ -143,7 +143,7 @@ Source: <https://javascript.info/arraybuffer-binary-arrays>
   </div>
 </details>
 
-Source: <https://javascript.info/arraybuffer-binary-arrays#typedarray>
+---
 
 ### What is the definition of a TypedArray in JavaScript?
 
@@ -177,7 +177,7 @@ console.log(typedArray2);
 // expected output: Int8Array [32, 42, 0, 0, 0, 0, 0, 0]
 ```
 
-Source: <https://javascript.info/arraybuffer-binary-arrays#typedarray>
+---
 
 ### Does a TypedArray have anything in common with a regular Array?
 
@@ -189,7 +189,7 @@ Source: <https://javascript.info/arraybuffer-binary-arrays#typedarray>
   </div>
 </details>
 
-Source: <https://javascript.info/arraybuffer-binary-arrays#typedarray>
+---
 
 ### How do typed array constructors behave or function?
 
@@ -201,7 +201,7 @@ Source: <https://javascript.info/arraybuffer-binary-arrays#typedarray>
   </div>
 </details>
 
-Source: <https://javascript.info/arraybuffer-binary-arrays#typedarray>
+---
 
 ### Can we create a TypedArray directly, without mentioning ArrayBuffer?
 
@@ -223,7 +223,7 @@ let arr8 = new Uint8Array([0, 1, 2, 3]);
 let arr16 = new Uint16Array(arr8.buffer);
 ```
 
-Source: <https://javascript.info/arraybuffer-binary-arrays#typedarray>
+---
 
 ### What if we attempt to write an out-of-bounds value into a typed array?
 
@@ -251,7 +251,7 @@ alert(uint8array[0]); // 0
 alert(uint8array[1]); // 1
 ```
 
-Source: <https://javascript.info/arraybuffer-binary-arrays#out-of-bounds-behavior>
+---
 
 ### Do typed arrays have methods like regular Arrays?
 
@@ -263,7 +263,7 @@ Source: <https://javascript.info/arraybuffer-binary-arrays#out-of-bounds-behavio
   </div>
 </details>
 
-Source: <https://javascript.info/arraybuffer-binary-arrays#typedarray-methods>
+---
 
 ### How does the TypedArray subarray method function?
 
@@ -289,7 +289,7 @@ console.log(uint8.subarray(1));
 // expected output: Uint8Array [20, 30, 40, 50]
 ```
 
-Source: <https://javascript.info/arraybuffer-binary-arrays#typedarray-methods>
+---
 
 ### What is the definition of a DataView?
 
@@ -328,4 +328,4 @@ alert(dataView.getUint32(0)); // 4294967295 (biggest 32-bit unsigned int)
 dataView.setUint32(0, 0); // set 4-byte number to zero, thus setting all bytes to 0
 ```
 
-Source: <https://javascript.info/arraybuffer-binary-arrays#dataview>
+---

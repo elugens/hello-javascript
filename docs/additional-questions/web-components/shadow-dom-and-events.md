@@ -52,7 +52,7 @@ Code Example:
 </script>
 ```
 
-Source: <https://javascript.info/shadow-dom-events>
+---
 
 ### In the case of event bubbling, does it happen in the Shadow or Flattened DOM?
 
@@ -80,7 +80,7 @@ Code Example:
 </user-card>
 ```
 
-Source: <https://javascript.info/shadow-dom-events#bubbling-event-composedpath>
+---
 
 ### When the attachShadow method mode is set to closed, what happens to the shadow tree details?
 
@@ -92,7 +92,7 @@ Source: <https://javascript.info/shadow-dom-events#bubbling-event-composedpath>
   </div>
 </details>
 
-Source: <https://javascript.info/shadow-dom-events>
+---
 
 ### Why is the flattened DOM, relative to the shadow DOM, used for event bubbling?
 
@@ -104,7 +104,7 @@ Source: <https://javascript.info/shadow-dom-events>
   </div>
 </details>
 
-Source: <https://javascript.info/shadow-dom-events#bubbling-event-composedpath>
+---
 
 ### Explain the function and syntax of the Event.composedPath() method?
 
@@ -118,7 +118,7 @@ Source: <https://javascript.info/shadow-dom-events#bubbling-event-composedpath>
 
 **Syntax:** let composed = Event.composedPath()
 
-Source: <https://developer.mozilla.org/en-US/docs/Web/API/Event/composedPath>
+---
 
 ### Most events bubble through a shadow DOM boundary. What property is used to open composition in UI events?
 
@@ -130,7 +130,7 @@ Source: <https://developer.mozilla.org/en-US/docs/Web/API/Event/composedPath>
   </div>
 </details>
 
-Source: <https://javascript.info/shadow-dom-events#event-composed>
+---
 
 ### What steps are needed to dispatch custom events?
 
@@ -188,4 +188,4 @@ div(id=outer)
 </script>
 ```
 
-Source: <https://javascript.info/shadow-dom-events#custom-events>
+---

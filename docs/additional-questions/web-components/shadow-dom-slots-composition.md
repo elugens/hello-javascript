@@ -22,7 +22,7 @@ sidebar_position: 5
   </div>
 </details>
 
-Source: <https://javascript.info/slots-composition#named-slots>
+---
 
 ### What is the considered the flattened DOM?
 
@@ -34,7 +34,7 @@ Source: <https://javascript.info/slots-composition#named-slots>
   </div>
 </details>
 
-Source: <https://javascript.info/slots-composition#named-slots>
+---
 
 ### What is the main limitation of the slot attribute?
 
@@ -68,7 +68,7 @@ Source: <https://javascript.info/slots-composition#named-slots>
 </user-card>
 ```
 
-Source: <https://javascript.info/slots-composition#named-slots>
+---
 
 ### Can you explain, what slot fallback content is in browser rendering?
 
@@ -80,7 +80,7 @@ Source: <https://javascript.info/slots-composition#named-slots>
   </div>
 </details>
 
-Source: <https://javascript.info/slots-composition#slot-fallback-content>
+---
 
 ### What is considered the default slot in the Shadow DOM?
 
@@ -141,7 +141,7 @@ Code Example:
 </user-card>
 ```
 
-Source: <https://javascript.info/slots-composition#default-slot-first-unnamed>
+---
 
 ### What are the three methods that handle HTML slot element assignment?
 
@@ -209,4 +209,4 @@ Code Example:
 </script>
 ```
 
-Source: <https://javascript.info/slots-composition#slot-api>
+---

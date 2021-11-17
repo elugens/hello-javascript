@@ -22,7 +22,7 @@ sidebar_position: 3
   </div>
 </details>
 
-Source: <https://javascript.info/shadow-dom>
+---
 
 ### How are complex browser controls parsed into the browser?
 
@@ -35,7 +35,7 @@ Source: <https://javascript.info/shadow-dom>
   </div>
 </details>
 
-Source: <https://javascript.info/shadow-dom>
+---
 
 ### Are Shadow DOM elements accessible via JavaScript calls or selectors?
 
@@ -61,7 +61,7 @@ Code Example:
 <input type="range" />
 ```
 
-Source: <https://javascript.info/shadow-dom#shadow-tree>
+---
 
 ### What are the two types of subtrees in relation to the DOM?
 
@@ -73,7 +73,7 @@ Source: <https://javascript.info/shadow-dom#shadow-tree>
   </div>
 </details>
 
-Source: <https://javascript.info/shadow-dom#shadow-tree>
+---
 
 ### Is it possible to hide custom element component internals using the shadow DOM?
 
@@ -109,7 +109,7 @@ Code Example:
 <!-- shows Hello, John -->
 ```
 
-Source: <https://javascript.info/shadow-dom#shadow-tree>
+---
 
 ### What are the limitations to creating a shadow root on a custom element?
 
@@ -121,7 +121,7 @@ Source: <https://javascript.info/shadow-dom#shadow-tree>
   </div>
 </details>
 
-Source: <https://javascript.info/shadow-dom#shadow-tree>
+---
 
 ### Explain the function and syntax of the attachShadow() method.\*\*
 
@@ -139,7 +139,7 @@ You cannot attach a shadow root to every type of element. There are some that ca
 
 **Syntax:** const shadow = this.attachShadow({mode: 'open'})
 
-Source: <https://javascript.info/shadow-dom#shadow-tree>
+---
 
 ### Can you explain the delimitation of the shadow DOM from the main document?
 
@@ -183,4 +183,4 @@ Source: <https://javascript.info/shadow-dom#shadow-tree>
 </script>
 ```
 
-Source: <https://javascript.info/shadow-dom#encapsulation>
+---

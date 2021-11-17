@@ -43,4 +43,4 @@ let regexp = /(?<quote>['"])(.\*?)\k<quote>/g;
 alert(str.match(regexp)); // "She's the one!"
 ```
 
-Source: <https://javascript.info/regexp-backreferences>
+---

@@ -38,7 +38,7 @@ These ones do not:
 - https://site.com (another protocol: https)
 - http://site.com:8080 (another port: 8080)
 
-Source: <https://javascript.info/cross-window-communication>
+---
 
 ### What are the rules for origin policy for an iframe?
 
@@ -86,7 +86,7 @@ Source: <https://javascript.info/cross-window-communication>
 </script>
 ```
 
-Source: <https://javascript.info/cross-window-communication#in-action-iframe>
+---
 
 ### What is the difference between iframe.onload vs iframe.contentWindow.onload?
 
@@ -98,7 +98,7 @@ Source: <https://javascript.info/cross-window-communication#in-action-iframe>
   </div>
 </details>
 
-Source: <https://javascript.info/cross-window-communication#in-action-iframe>
+---
 
 ### How do subdomains operate in the context of the same origin policy?
 
@@ -118,7 +118,7 @@ Code Example:
 </script>
 ```
 
-Source: <https://javascript.info/cross-window-communication#windows-on-subdomains-document-domain>
+---
 
 ### Are there any pitfalls when an iframe attempts to access its document?
 
@@ -148,7 +148,7 @@ Code Example:
 </script>
 ```
 
-Source: <https://javascript.info/cross-window-communication#iframe-wrong-document-pitfall>
+---
 
 ### Is there a way to detect the moment when the document is loaded into an iframe?
 
@@ -182,7 +182,7 @@ Code Example:
 </script>
 ```
 
-Source: <https://javascript.info/cross-window-communication#iframe-wrong-document-pitfall>
+---
 
 ### What approach should you use to access window object for an iframe?
 
@@ -205,7 +205,7 @@ Code Example:
 </script>
 ```
 
-Source: <https://javascript.info/cross-window-communication#collection-window-frames>
+---
 
 ### What is the purpose of the “sandbox” iframe attribute?
 
@@ -226,7 +226,7 @@ Code Example:
 </script>
 ```
 
-Source: <https://javascript.info/cross-window-communication#the-sandbox-iframe-attribute>
+---
 
 ### Can you explain what the postMessage interface message does?
 
@@ -238,7 +238,7 @@ Source: <https://javascript.info/cross-window-communication#the-sandbox-iframe-a
   </div>
 </details>
 
-Source: <https://javascript.info/cross-window-communication#cross-window-messaging>
+---
 
 ### How does the postMessage method work in relation to an iframe?
 
@@ -262,7 +262,7 @@ Code Example:
 >
 ```
 
-Source: <https://javascript.info/cross-window-communication#postmessage>
+---
 
 ### How would you receive a message from a postMessage?
 
@@ -290,4 +290,4 @@ window.addEventListener('message', function (event) {
 });
 ```
 
-Source: <https://javascript.info/cross-window-communication#postmessage>
+---

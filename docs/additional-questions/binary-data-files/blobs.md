@@ -43,7 +43,7 @@ console.log(myBlob.type + ' is the type');
 // Output: text/html is the type
 ```
 
-Source: <https://javascript.info/blob>
+---
 
 ### Is there a way to change data directly in a JavaScript Blob?
 
@@ -72,7 +72,7 @@ console.log(blobSlice.size); // returns 22
 console.log(blob.type); // returns text/html
 ```
 
-Source: <https://javascript.info/blob>
+---
 
 ### Can you name a use case for a JavaScript Blob?
 
@@ -98,7 +98,7 @@ Code Example:
 </script>
 ```
 
-Source: <https://javascript.info/blob>
+---
 
 ### What method is used to create an Object URL for a Blob?
 
@@ -116,7 +116,7 @@ Code Example:
 const objectURL = URL.createObjectURL(object); // Can be file or Blob object
 ```
 
-Source: <https://javascript.info/blob#blob-as-url>
+---
 
 ### Is there a way to release an Object URL when it’s no longer needed?
 
@@ -144,7 +144,7 @@ link.click();
 URL.revokeObjectURL(link.href);
 ```
 
-Source: <https://javascript.info/blob#blob-as-url>
+---
 
 ### Is there an alternative approach to creating an Object URL, other than using URL.createObjectURL?
 
@@ -174,7 +174,7 @@ reader.onload = function () {
 };
 ```
 
-Source: <https://javascript.info/blob#blob-as-url>
+---
 
 ### What is the difference between creating an Object URL vs converting a Blob into a base64-encoded string?
 
@@ -186,7 +186,7 @@ Source: <https://javascript.info/blob#blob-as-url>
   </div>
 </details>
 
-Source: <https://javascript.info/blob#blob-as-url>
+---
 
 ### Does JavaScript provide a way to create a Blob of an image?
 
@@ -221,7 +221,7 @@ context.drawImage(img, 0, 0);
 
 // we can context.rotate(), and do many other things on canvas
 
-// toBlob is async opereation, callback is called when done
+// toBlob is async operation, callback is called when done
 
 canvas.toBlob(function (blob) {
   // blob ready, download it
@@ -240,4 +240,4 @@ canvas.toBlob(function (blob) {
 }, 'image/png');
 ```
 
-Source: <https://javascript.info/blob#image-to-blob>
+---

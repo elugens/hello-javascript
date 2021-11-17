@@ -41,7 +41,7 @@ function openRequestedPopup() {
 }
 ```
 
-Source: <https://javascript.info/popup-windows>
+---
 
 ### When do browsers block pop-up events?
 
@@ -67,7 +67,7 @@ button.onclick = () => {
 };
 ```
 
-Source: <https://javascript.info/popup-windows#popup-blocking>
+---
 
 ### What when a popup opens from onclick, but after setTimeout?
 
@@ -91,7 +91,7 @@ setTimeout(() => window.open('http://google.com'), 3000);
 setTimeout(() => window.open('http://google.com'), 1000);
 ```
 
-Source: <https://javascript.info/popup-windows#popup-blocking>
+---
 
 ### What is the most important rule when we are setting Window.open features parameters?
 
@@ -111,7 +111,7 @@ let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no`;
 open('/', 'test', params);
 ```
 
-Source: <https://javascript.info/popup-windows#window-open>
+---
 
 ### Can you name some of the rules for omitted settings in the Window.open() method?
 
@@ -137,7 +137,7 @@ let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no`;
 open('/', 'test', params);
 ```
 
-Source: <https://javascript.info/popup-windows#example-a-minimalistic-window>
+---
 
 ### What is the rule or origin policy when it comes to pop-up windows?
 
@@ -149,7 +149,7 @@ Source: <https://javascript.info/popup-windows#example-a-minimalistic-window>
   </div>
 </details>
 
-Source: <https://javascript.info/popup-windows#accessing-popup-from-window>
+---
 
 ### Can a popup access the “opener” window and make modifications?
 
@@ -171,7 +171,7 @@ newWin.document.write(
 );
 ```
 
-Source: <https://javascript.info/popup-windows#accessing-window-from-popup>
+---
 
 ### Is there a method that can be used to close a pop-up window?
 
@@ -194,4 +194,4 @@ newWindow.onload = function () {
 };
 ```
 
-Source: <https://javascript.info/popup-windows#closing-a-popup>
+---

@@ -46,7 +46,7 @@ while (true) {
 }
 ```
 
-Source: <https://javascript.info/fetch-progress>
+---
 
 ### What is the result of the await reader.read() JavaScript method?
 
@@ -113,4 +113,4 @@ let commits = JSON.parse(result);
 alert(commits[0].author.login);
 ```
 
-Source: <https://javascript.info/fetch-progress>
+---

@@ -46,7 +46,7 @@ Example:
 </form>
 ```
 
-Source: <https://javascript.info/bubbling-and-capturing#bubbling>
+---
 
 ### Explain what the event target is in JavaScript.
 
@@ -62,7 +62,7 @@ Source: <https://javascript.info/bubbling-and-capturing#bubbling>
 The current target is the specific target where the current action is taking place where “this = event.currentTarget”. It’s possible that event.target could equal this or the current target.
 :::
 
-Source: <https://javascript.info/bubbling-and-capturing#event-target>
+---
 
 ### Is there a way to stop an event from bubbling up?
 
@@ -74,7 +74,7 @@ Source: <https://javascript.info/bubbling-and-capturing#event-target>
   </div>
 </details>
 
-Source: <https://javascript.info/bubbling-and-capturing#stopping-bubbling>
+---
 
 ### What is the difference between the event stopPropagation and stopImmediatePropagation methods?
 
@@ -86,7 +86,7 @@ Source: <https://javascript.info/bubbling-and-capturing#stopping-bubbling>
   </div>
 </details>
 
-Source: <https://javascript.info/bubbling-and-capturing#stopping-bubbling>
+---
 
 ### What are the three phases of event propagation?
 
@@ -98,7 +98,7 @@ Source: <https://javascript.info/bubbling-and-capturing#stopping-bubbling>
   </div>
 </details>
 
-Source: <https://javascript.info/bubbling-and-capturing#capturing>
+---
 
 ### Is there an explicit way to invoke capturing an event in the capturing phase?
 
@@ -148,4 +148,4 @@ Example:
 </script>
 ```
 
-Source: <https://javascript.info/bubbling-and-capturing#capturing>
+---

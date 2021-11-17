@@ -132,6 +132,10 @@ html[data-theme='light'] {
     0 -3px 6px 0 rgba(69, 98, 155, 0.12);
 }
 
+html[data-theme='light'] {
+  background-color: #fffdf8;
+}
+
 html[data-theme='dark'] {
   --ifm-color-primary: #fbbf24;
   --ifm-color-primary-dark: #fab708;

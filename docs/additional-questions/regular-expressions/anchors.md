@@ -33,7 +33,7 @@ let str2 = "it's fleece was white as snow";
 alert(/snow$/.test(str2)); // true
 ```
 
-Source: <https://javascript.info/regexp-anchors>
+---
 
 ### What approach should we use to test for full match in RegExp?
 
@@ -58,7 +58,7 @@ alert(regexp.test(goodInput)); // true
 alert(regexp.test(badInput)); // false
 ```
 
-Source: <https://javascript.info/regexp-anchors>
+---
 
 ### What does it mean by Anchors (caret/dollar sign) have zero width?
 
@@ -70,4 +70,4 @@ Source: <https://javascript.info/regexp-anchors>
   </div>
 </details>
 
-Source: <https://javascript.info/regexp-anchors>
+---

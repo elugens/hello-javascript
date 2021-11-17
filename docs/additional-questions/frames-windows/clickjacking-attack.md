@@ -23,7 +23,7 @@ sidebar_position: 3
   </div>
 </details>
 
-Source: <https://javascript.info/cross-window-communication#postmessage>
+---
 
 ### Can you briefly explain, how a clickjacking attack is implemented?
 
@@ -70,7 +70,7 @@ Code Example:
 <div>...And you're cool (I'm a cool hacker actually)!</div>
 ```
 
-Source: <https://javascript.info/clickjacking#the-idea>
+---
 
 ### Can you briefly explain, two approaches to defending against a clickjacking attack?
 
@@ -96,4 +96,4 @@ Code Example: Sandbox Attribute (Testing Approach: should not be used in product
 <iframe sandbox="allow-scripts allow-forms" src="facebook.html"></iframe>
 ```
 
-Source: <https://javascript.info/clickjacking#sandbox-attribute>
+---

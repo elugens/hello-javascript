@@ -22,7 +22,7 @@ sidebar_position: 4
   </div>
 </details>
 
-Source: <https://javascript.info/fetch-abort>
+---
 
 ### Can you explain the function of the AbortController Object?
 
@@ -57,7 +57,7 @@ controller.abort(); // abort!
 alert(signal.aborted); // true
 ```
 
-Source: <https://javascript.info/fetch-abort#the-abortcontroller-object>
+---
 
 ### Is there a way to abort an event without the AbortController?
 
@@ -69,7 +69,7 @@ Source: <https://javascript.info/fetch-abort#the-abortcontroller-object>
   </div>
 </details>
 
-Source: <https://javascript.info/fetch-abort#the-abortcontroller-object>
+---
 
 ### Can you cancel an ongoing fetch with the AbortController?
 
@@ -113,7 +113,7 @@ try {
 }
 ```
 
-Source: <https://javascript.info/fetch-abort#the-abortcontroller-object>
+---
 
 ### Can the AbortController cancel or abort multiple fetches as once?
 
@@ -147,4 +147,4 @@ let results = await Promise.all(fetchJobs);
 // it aborts all fetches
 ```
 
-Source: <https://javascript.info/fetch-abort#abortcontroller-is-scalable>
+---

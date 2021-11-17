@@ -33,7 +33,7 @@ alert('😄'.length); // 2
 alert('𝒳'.length); // 2
 ```
 
-Source: <https://javascript.info/regexp-unicode>
+---
 
 ### How are Unicode properties expressed in regular expressions?
 
@@ -56,7 +56,7 @@ alert(str.match(/\p{L}/g));
 // null (no matches, \p does not work without the flag "u")
 ```
 
-Source: <https://javascript.info/regexp-unicode#unicode-properties-p>
+---
 
 ### Is there a way to denote Hexadecimal numbers in a regular expression?
 
@@ -76,7 +76,7 @@ let regexp = /x\p{Hex\_Digit}\p{Hex\_Digit}/u;
 alert('number: xAF'.match(regexp)); // xAF
 ```
 
-Source: <https://javascript.info/regexp-unicode#example-hexadecimal-numbers>
+---
 
 ### What approach should we use to handle script-based languages, like Chinese, in regular expressions?
 
@@ -97,7 +97,7 @@ let str = `Hello Привет 你好 123\_456`;
 alert(str.match(regexp)); // 你,好
 ```
 
-Source: <https://javascript.info/regexp-unicode#example-chinese-hieroglyphs>
+---
 
 ### What Unicode property should we use in regular expressions?
 
@@ -119,4 +119,4 @@ let str = `Prices: $2, €1, ¥9`;
 alert(str.match(regexp)); // $2,€1,¥9
 ```
 
-Source: <https://javascript.info/regexp-unicode#example-chinese-hieroglyphs>
+---

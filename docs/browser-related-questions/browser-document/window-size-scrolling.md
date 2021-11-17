@@ -34,7 +34,7 @@ alert(window.innerWidth);
 alert(document.documentElement.clientWidth);
 ```
 
-Sources: <https://javascript.info/size-and-scroll-window>
+---
 
 ### Why shouldn’t we use innerWidth/innerHeight to get the width and height of the window?
 
@@ -58,7 +58,7 @@ alert( window.innerWidth ); includes the scrollbar size in the return value
 alert( document.documentElement.clientWidth );
 ```
 
-Sources: <https://javascript.info/size-and-scroll-window#width-height-of-the-window>
+---
 
 ### Is there a reason that we should always use `<!DOCTYPE HTML>` in our HTML, when using geometry properties?
 
@@ -70,7 +70,7 @@ Sources: <https://javascript.info/size-and-scroll-window#width-height-of-the-win
   </div>
 </details>
 
-Sources: <https://javascript.info/size-and-scroll-window#width-height-of-the-window>
+---
 
 ### How do we get the full width and height of the document, including the scrolled-out part?
 
@@ -99,7 +99,7 @@ let scrollHeight = Math.max(
 alert('Full document height, with scrolled out part: ' + scrollHeight);
 ```
 
-Sources: <https://javascript.info/size-and-scroll-window#width-height-of-the-document>
+---
 
 ### How do we get the current scroll position top/left of the document?
 
@@ -120,7 +120,7 @@ alert('Current scroll from the top: ' + window.pageYOffset);
 alert('Current scroll from the left: ' + window.pageXOffset);
 ```
 
-Sources: <https://javascript.info/size-and-scroll-window#page-scroll>
+---
 
 ### What happens when we try to scroll the document when it is not fully built?
 
@@ -148,7 +148,7 @@ Example:
 <p>...content after script...</p>
 ```
 
-Sources: <https://javascript.info/size-and-scroll-window#window-scroll>
+---
 
 ### How do we scroll the page using JavaScript?
 
@@ -161,7 +161,7 @@ Sources: <https://javascript.info/size-and-scroll-window#window-scroll>
   </div>
 </details>
 
-Sources: <https://javascript.info/size-and-scroll-window#window-scroll>
+---
 
 ### Explain the function and syntax of the scrollBy method?
 
@@ -197,7 +197,7 @@ window.scrollBy({
 });
 ```
 
-Sources: <https://javascript.info/size-and-scroll-window#window-scroll>
+---
 
 ### Explain the function and syntax of the scrollTo method?
 
@@ -233,7 +233,7 @@ window.scrollTo({
 });
 ```
 
-Sources: <https://javascript.info/size-and-scroll-window#window-scroll>
+---
 
 ### Explain the function and syntax of the scrollIntoView method?
 
@@ -245,7 +245,7 @@ Sources: <https://javascript.info/size-and-scroll-window#window-scroll>
   </div>
 </details>
 
-Sources: <https://javascript.info/size-and-scroll-window#scrollintoview>
+---
 
 ### Is there a way to forbid or freeze document scrolling in JavaScript?
 
@@ -273,4 +273,4 @@ document.body.style.overflow = 'hidden';
 document.body.style.overflow = '';
 ```
 
-Sources: <https://javascript.info/size-and-scroll-window#forbid-the-scrolling>
+---

@@ -43,7 +43,7 @@ let numbers = str.match(/\d{1,}/g);
 alert(numbers); // 7,903,123,45,67
 ```
 
-Source: <https://javascript.info/regexp-quantifiers#quantity-n>
+---
 
 ### Are there any shorthand alias quantifiers in regular expressions?
 
@@ -70,4 +70,4 @@ alert('100 10 1'.match(/\d0+/g)); // 100, 10
 // 1 not matched, as 0+ requires at least one zero
 ```
 
-Source: <https://javascript.info/regexp-quantifiers#shorthands>
+---

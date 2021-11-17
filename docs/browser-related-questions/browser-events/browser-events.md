@@ -22,7 +22,7 @@ sidebar_position: 1
   </div>
 </details>
 
-Source: <https://javascript.info/introduction-browser-events>
+---
 
 ### Can you name at least three DOM events?
 
@@ -34,7 +34,7 @@ Source: <https://javascript.info/introduction-browser-events>
   </div>
 </details>
 
-Source: <https://javascript.info/introduction-browser-events>
+---
 
 ### What is a JavaScript event handler?
 
@@ -79,7 +79,7 @@ Example: Event Handler (recommended)
 <input type="button" onclick="countRabbits()" value="Count rabbits!" />
 ```
 
-Source: <https://javascript.info/introduction-browser-events#html-attribute>
+---
 
 ### Is there a way to assign a handler to an `on<event>` DOM property?
 
@@ -103,7 +103,7 @@ Example:
 </script>
 ```
 
-Source: <https://javascript.info/introduction-browser-events#dom-property>
+---
 
 ### Can use an event more the once on a DOM element?
 
@@ -129,7 +129,7 @@ Example:
 </script>
 ```
 
-Source: <https://javascript.info/introduction-browser-events#dom-property>
+---
 
 ### What the reason for not using setAttribute for handlers?
 
@@ -153,7 +153,7 @@ document.body.setAttribute('onclick', function () {
 });
 ```
 
-Source: <https://javascript.info/introduction-browser-events#possible-mistakes>
+---
 
 ### Are DOM properties names case-sensitive or case-insensitive?
 
@@ -165,7 +165,7 @@ Source: <https://javascript.info/introduction-browser-events#possible-mistakes>
   </div>
 </details>
 
-Source: <https://javascript.info/introduction-browser-events#possible-mistakes>
+---
 
 ### Explain the function and syntax of the EventTarget addEventListener method.
 
@@ -212,7 +212,7 @@ Example:
 </script>
 ```
 
-Source: <https://javascript.info/introduction-browser-events#addeventlistener>
+---
 
 ### How should you remove a previously added event listener?
 
@@ -240,7 +240,7 @@ Example:
 </script>
 ```
 
-Source: <https://javascript.info/introduction-browser-events#addeventlistener>
+---
 
 ### Are there any events that cannot be assigned via a DOM property?
 
@@ -270,7 +270,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 ```
 
-Source: <https://javascript.info/introduction-browser-events#addeventlistener>
+---
 
 ### What is the event object used for in JavaScript?
 
@@ -290,7 +290,7 @@ Example:
 <input type="button" onclick="alert(event.type)" value="Event type" />
 ```
 
-Source: <https://javascript.info/introduction-browser-events#event-object>
+---
 
 ### Are we limited to just function handler in JavaScript?
 
@@ -348,4 +348,4 @@ Example 2: Class
 </script>
 ```
 
-Source: <https://javascript.info/introduction-browser-events#object-handlers-handleevent>
+---

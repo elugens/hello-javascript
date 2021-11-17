@@ -28,7 +28,7 @@ Example:
 alert(document.documentElement); // alerts [object HTMLHtmlElement] <html> node
 ```
 
-Sources: <https://javascript.info/dom-navigation>
+---
 
 ### What are the topmost tree nodes available direct as document properties?
 
@@ -47,7 +47,7 @@ Example:
 alert(document.documentElement); // alerts [object HTMLHtmlElement] <html> node
 ```
 
-Sources: <https://javascript.info/dom-navigation#on-top-documentelement-and-body>
+---
 
 ### What does null mean or equate to in the DOM?
 
@@ -77,7 +77,7 @@ Example:
 </html>
 ```
 
-Sources: <https://javascript.info/dom-navigation#on-top-documentelement-and-body>
+---
 
 ### What is difference between Child nodes and Descendants in the DOM?
 
@@ -89,7 +89,7 @@ Sources: <https://javascript.info/dom-navigation#on-top-documentelement-and-body
   </div>
 </details>
 
-Sources: <https://javascript.info/dom-navigation#children-childnodes-firstchild-lastchild>
+---
 
 ### Explain, what does the firstChild and lastChild properties do on elements?
 
@@ -110,7 +110,7 @@ elem.childNodes[0] === elem.firstChild; // true
 elem.childNodes[elem.childNodes.length - 1] === elem.lastChild; // true
 ```
 
-Sources: <https://javascript.info/dom-navigation#children-childnodes-firstchild-lastchild>
+---
 
 ### What type of object structure are childNodes?
 
@@ -138,7 +138,7 @@ alert(document.body.childNodes.filter); // undefined (there's no filter met
 alert(Array.from(document.body.childNodes).filter); // function
 ```
 
-Sources: <https://javascript.info/dom-navigation#dom-collections>
+---
 
 ### Is it possible to loop over node collections with a for…in loop?
 
@@ -158,7 +158,7 @@ Example:
 for (let prop in document.body.childNodes) alert(prop);
 ```
 
-Sources: <https://javascript.info/dom-navigation#dom-collections>
+---
 
 ### Can you define what a sibling is in the DOM structure?
 
@@ -183,7 +183,7 @@ Example:
 </html>
 ```
 
-Sources: <https://javascript.info/dom-navigation#siblings-and-the-parent>
+---
 
 ### Are there properties that we can use to access any of the next and previous siblings of a node (Note: including text and comment nodes)? How do you access the parent node?
 
@@ -209,7 +209,7 @@ alert(document.head.nextSibling); // HTMLBodyElement
 alert(document.body.previousSibling); // HTMLHeadElement
 ```
 
-Sources: <https://javascript.info/dom-navigation#siblings-and-the-parent>
+---
 
 ### There are times when we do not want to access the text and comment nodes. Is there a property that we can use to access the next sibling element node?
 
@@ -221,7 +221,7 @@ Sources: <https://javascript.info/dom-navigation#siblings-and-the-parent>
   </div>
 </details>
 
-Sources: <https://javascript.info/dom-navigation#element-only-navigation>
+---
 
 ### Why parentElement? Can the parent be not an element?
 
@@ -241,7 +241,7 @@ alert(document.documentElement.parentNode); // document
 alert(document.documentElement.parentElement); // null
 ```
 
-Sources: <https://javascript.info/dom-navigation#element-only-navigation>
+---
 
 ### Besides the basic DOM elements, do elements provide additional properties based on their specific type?
 
@@ -278,4 +278,4 @@ Example:
 </script>
 ```
 
-Sources: <https://javascript.info/dom-navigation#element-only-navigation>
+---

@@ -22,7 +22,7 @@ sidebar_position: 5
   </div>
 </details>
 
-Source: <https://javascript.info/regexp-multiline-mode>
+---
 
 ### How do Anchors (caret ^/ dollar sign $) behave in multiline mode?
 
@@ -48,7 +48,7 @@ let str = `1st place: Winnie
 alert(str.match(/^\d/gm)); // 1, 2, 3
 ```
 
-Source: <https://javascript.info/regexp-multiline-mode>
+---
 
 ### What is the difference between the \n and ^$ in regular expressions?
 
@@ -72,4 +72,4 @@ Eeyore: 3`;
 alert(str.match(/\d\n/gm)); // alerts 1\n,2\n
 ```
 
-Source: <https://javascript.info/regexp-multiline-mode#searching-for-n-instead-of>
+---

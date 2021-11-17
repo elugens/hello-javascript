@@ -32,7 +32,7 @@ try {
 }
 ```
 
-Source: <https://javascript.info/fetch-crossorigin>
+---
 
 ### What is CORS and why is it needed?
 
@@ -44,7 +44,7 @@ Source: <https://javascript.info/fetch-crossorigin>
   </div>
 </details>
 
-Source: <https://javascript.info/fetch-crossorigin>
+---
 
 ### What are the two types of cross-origin requests?
 
@@ -56,7 +56,7 @@ Source: <https://javascript.info/fetch-crossorigin>
   </div>
 </details>
 
-Source: <https://javascript.info/fetch-crossorigin#safe-requests>
+---
 
 ### Does the browser guarantee the location of the Origin in the header?
 
@@ -79,7 +79,7 @@ Origin: https://javascript.help
 ...
 ```
 
-Source: <https://javascript.info/fetch-crossorigin#safe-requests>
+---
 
 ### Does the browser act as a mediator between the server and JavaScript?
 
@@ -91,7 +91,7 @@ Source: <https://javascript.info/fetch-crossorigin#safe-requests>
   </div>
 </details>
 
-Source: <https://javascript.info/fetch-crossorigin#safe-requests>
+---
 
 ### What entities can JavaScript access in the response header?
 
@@ -103,7 +103,7 @@ Source: <https://javascript.info/fetch-crossorigin#safe-requests>
   </div>
 </details>
 
-Source: <https://javascript.info/fetch-crossorigin#response-headers>
+---
 
 ### What server response is necessary to access unsafe header name?
 
@@ -131,7 +131,7 @@ Access-Control-Allow-Origin: https://javascript.info
 Access-Control-Expose-Headers: Content-Length, API-Key
 ```
 
-Source: <https://javascript.info/fetch-crossorigin#response-headers>
+---
 
 ### Can you explain what a preflight request is in relation to cross-origin requests?
 
@@ -143,7 +143,7 @@ Source: <https://javascript.info/fetch-crossorigin#response-headers>
   </div>
 </details>
 
-Source: <https://javascript.info/fetch-crossorigin#unsafe-requests>
+---
 
 ### Does a cross-origin request by JavaScript code bring any credentials by default?
 
@@ -155,4 +155,4 @@ Source: <https://javascript.info/fetch-crossorigin#unsafe-requests>
   </div>
 </details>
 
-Source: <https://javascript.info/fetch-crossorigin#credentials>
+---

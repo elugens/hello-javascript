@@ -22,7 +22,7 @@ sidebar_position: 5
   </div>
 </details>
 
-Source: <https://javascript.info/keyboard-events>
+---
 
 ### What does the event.code and event.key properties do?
 
@@ -39,7 +39,7 @@ Source: <https://javascript.info/keyboard-events>
 | Z       | z (lowercase) | KeyZ           |
 | Shift+Z | Z (uppercase) | KeyZ           |
 
-Source: <https://javascript.info/keyboard-events#event-code-and-event-key>
+---
 
 ### When dealing with event codes for key actions, does the case matter?
 
@@ -51,7 +51,7 @@ Source: <https://javascript.info/keyboard-events#event-code-and-event-key>
   </div>
 </details>
 
-Source: <https://javascript.info/keyboard-events#event-code-and-event-key>
+---
 
 ### What happens when a key does not have a letter-based character?
 
@@ -71,7 +71,7 @@ Example:
 | Backspace | Backspace     | Backspace               |
 | Shift     | Shift         | ShiftRight or ShiftLeft |
 
-Source: <https://javascript.info/keyboard-events#event-code-and-event-key>
+---
 
 ### What happens when a key is suppressed for more than a second?
 
@@ -83,7 +83,7 @@ Source: <https://javascript.info/keyboard-events#event-code-and-event-key>
   </div>
 </details>
 
-Source: <https://javascript.info/keyboard-events#auto-repeat>
+---
 
 ### Can you prevent the default actions on OS-based special keys using the preventDefault method?
 
@@ -95,4 +95,4 @@ Source: <https://javascript.info/keyboard-events#auto-repeat>
   </div>
 </details>
 
-Source: <https://javascript.info/keyboard-events#default-actions>
+---

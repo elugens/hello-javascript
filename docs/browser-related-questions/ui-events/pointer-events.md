@@ -22,7 +22,7 @@ sidebar_position: 4
   </div>
 </details>
 
-Source: <https://javascript.info/pointer-events>
+---
 
 ### Can you replacing `mouse<event>` with `pointer<event>` in modern applications?
 
@@ -34,7 +34,7 @@ Source: <https://javascript.info/pointer-events>
   </div>
 </details>
 
-Source: <https://javascript.info/pointer-events#pointer-event-types>
+---
 
 ### What are the three types of pointer device types?
 
@@ -46,7 +46,7 @@ Source: <https://javascript.info/pointer-events#pointer-event-types>
   </div>
 </details>
 
-Source: <https://javascript.info/pointer-events#pointer-event-properties>
+---
 
 ### What happens when a user touches a touchscreen in one place, then puts another finger somewhere else on it?
 
@@ -62,7 +62,7 @@ Source: <https://javascript.info/pointer-events#pointer-event-properties>
 The pointerId is assigned not to the whole device, but for each touching finger. If we use 5 fingers to simultaneously touch the screen, we have 5 pointerdown events, each with their respective coordinates and a different pointerId. The events associated with the first finger always have isPrimary=true.
 :::
 
-Source: <https://javascript.info/pointer-events#pointer-event-properties>
+---
 
 ### Can you explain why the pointercancel event fires?
 
@@ -74,7 +74,7 @@ Source: <https://javascript.info/pointer-events#pointer-event-properties>
   </div>
 </details>
 
-Source: <https://javascript.info/pointer-events#event-pointercancel>
+---
 
 ### Explain the function and syntax of the setPointerCapture() method.
 
@@ -114,4 +114,4 @@ slider.onpointerdown = beginSliding;
 slider.onpointerup = stopSliding;
 ```
 
-Source: <https://javascript.info/pointer-events#pointer-capturing>
+---

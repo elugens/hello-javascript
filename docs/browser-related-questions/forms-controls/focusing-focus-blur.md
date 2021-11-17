@@ -22,7 +22,7 @@ sidebar_position: 2
   </div>
 </details>
 
-Source: <https://javascript.info/focus-blur>
+---
 
 ### How does blur work in relation to focus on an element?
 
@@ -34,7 +34,7 @@ Source: <https://javascript.info/focus-blur>
   </div>
 </details>
 
-Source: <https://javascript.info/focus-blur>
+---
 
 ### Explain how focus and blur events work in JavaScript?
 
@@ -83,7 +83,7 @@ Your email please: <input type="email" id="input" />
 </script>
 ```
 
-Source: <https://javascript.info/focus-blur>
+---
 
 ### What is the cause of JavaScript-initiated focus loss?
 
@@ -95,7 +95,7 @@ Source: <https://javascript.info/focus-blur>
   </div>
 </details>
 
-Source: <https://javascript.info/focus-blur>
+---
 
 ### Is there a way to focus/blur on any element in the DOM?
 
@@ -131,7 +131,7 @@ Click the first item and press Tab.
 </style>
 ```
 
-Source: <https://javascript.info/focus-blur#allow-focusing-on-any-element-tabindex>
+---
 
 ### Is there a way to focus/blur and ensure bubbling happens?
 
@@ -163,4 +163,4 @@ Example:
 </script>
 ```
 
-Source: <https://javascript.info/focus-blur#delegation-focusin-focusout>
+---

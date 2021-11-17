@@ -22,7 +22,7 @@ sidebar_position: 2
   </div>
 </details>
 
-Source: <https://javascript.info/css-animations>
+---
 
 ### Briefly define the idea around CSS transitions?
 
@@ -54,7 +54,7 @@ Code Example:
 </script>
 ```
 
-Source: <https://javascript.info/css-animations>
+---
 
 ### What are the four properties used to describe CSS transitions?
 
@@ -66,7 +66,7 @@ Source: <https://javascript.info/css-animations>
   </div>
 </details>
 
-Source: <https://javascript.info/css-animations>
+---
 
 ### Is there way to use the transition property to animate multiple CSS properties at the same time?
 
@@ -98,7 +98,7 @@ Code Example:
 </script>
 ```
 
-Source: <https://javascript.info/css-animations>
+---
 
 ### Can you explain how to use the CSS transition-property?
 
@@ -130,7 +130,7 @@ div:hover  {
 }
 ```
 
-Source: <https://javascript.info/css-animations#transition-property>
+---
 
 ### What does the CSS transition-duration property set?
 
@@ -163,7 +163,7 @@ div:hover  {
 }
 ```
 
-Source: <https://javascript.info/css-animations#transition-duration>
+---
 
 ### What does the CSS transition-delay property do?
 
@@ -195,7 +195,7 @@ div:hover  {
 }
 ```
 
-Source: <https://javascript.info/css-animations#transition-delay>
+---
 
 ### What does the CSS transition-timing-function CSS property do?
 
@@ -249,7 +249,7 @@ div:hover  {
 }
 ```
 
-Source: <https://javascript.info/css-animations#transition-delay>
+---
 
 ### What does the cubic-bezier() CSS function do?
 
@@ -281,7 +281,7 @@ div:hover  {
 }
 ```
 
-Source: <https://javascript.info/css-animations#bezier-curve>
+---
 
 ### What is the difference between the built-in curves and the cubic-bezier() function?
 
@@ -313,7 +313,7 @@ CSS Example:
 }
 ```
 
-Source: <https://javascript.info/css-animations#bezier-curve>
+---
 
 ### Explain the function and syntax of the timing function CSS steps() function.\*\*
 
@@ -341,9 +341,9 @@ CSS Example:
 }
 ```
 
-Source: <https://javascript.info/css-animations#steps>
+---
 
-### Explain the function and syntax of the CSS transitionend event.\*\*
+### Explain the function and syntax of the CSS transitionend event.
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -363,7 +363,7 @@ transition.addEventListener('transitionend', () => {
 });
 ```
 
-Source: <https://javascript.info/css-animations#event-transitionend>
+---
 
 ### Can you explain what CSS keyframes are used for in web development?
 
@@ -418,4 +418,4 @@ CSS Example:
 </style>
 ```
 
-Source: <https://javascript.info/css-animations#keyframes>
+---

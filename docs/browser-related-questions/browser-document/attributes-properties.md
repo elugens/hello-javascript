@@ -23,7 +23,7 @@ sidebar_position: 6
   </div>
 </details>
 
-Sources: <https://javascript.info/dom-attributes-and-properties>
+---
 
 ### Can you modify or customize a DOM node?
 
@@ -69,7 +69,7 @@ document.documentElement.sayHi(); // Hello, I'm HTML
 document.body.sayHi(); // Hello, I'm BODY
 ```
 
-Sources: <https://javascript.info/dom-attributes-and-properties#dom-properties>
+---
 
 ### Do different elements have different standard HTML attributes?
 
@@ -100,7 +100,7 @@ Example:
 </body>
 ```
 
-Sources: <https://javascript.info/dom-attributes-and-properties#html-attributes>
+---
 
 ### What happens to non-standard attributes when the browser loads the page? Does it become a DOM property like standard element attributes?
 
@@ -126,7 +126,7 @@ Example:
 </body>
 ```
 
-Sources: <https://javascript.info/dom-attributes-and-properties#html-attributes>
+---
 
 ### Is there a way to access non-standard HTML attributes?
 
@@ -148,7 +148,7 @@ Example:
 </body>
 ```
 
-Sources: <https://javascript.info/dom-attributes-and-properties#html-attributes>
+---
 
 ### What are the two basic features of HTML attributes?
 
@@ -179,7 +179,7 @@ Example:
 </body>
 ```
 
-Sources: <https://javascript.info/dom-attributes-and-properties#html-attributes>
+---
 
 ### When a standard attribute changes, what happens to the corresponding property?
 
@@ -212,7 +212,7 @@ Example:
 </script>
 ```
 
-Sources: <https://javascript.info/dom-attributes-and-properties#property-attribute-synchronization>
+---
 
 ### Can you name one exception to the rule of property-attribute synchronization?
 
@@ -247,7 +247,7 @@ Example:
 </script>
 ```
 
-Sources: <https://javascript.info/dom-attributes-and-properties#property-attribute-synchronization>
+---
 
 ### Are DOM properties always strings like HTML attributes?
 
@@ -286,7 +286,7 @@ Example:
 </script>
 ```
 
-Sources: <https://javascript.info/dom-attributes-and-properties#dom-properties-are-typed>
+---
 
 ### Can you describe a case for use of non-standard attributes?
 
@@ -328,7 +328,7 @@ Example:
 </script>
 ```
 
-Sources: <https://javascript.info/dom-attributes-and-properties#non-standard-attributes-dataset>
+---
 
 ### Is there a way to style an element using non-standard HTML attributes?
 
@@ -370,7 +370,7 @@ Example:
 <div class="order" order-state="canceled">A canceled order.</div>
 ```
 
-Sources: <https://javascript.info/dom-attributes-and-properties#non-standard-attributes-dataset>
+---
 
 ### Is there a way to avoid conflicts when creating custom attributes?
 
@@ -392,7 +392,7 @@ Example:
 </body>
 ```
 
-Sources: <https://javascript.info/dom-attributes-and-properties#non-standard-attributes-dataset>
+---
 
 ### Are multi-word attributes case sensitive in dataset properties?
 
@@ -429,7 +429,7 @@ Example:
   alert(order.dataset.orderState); // new
   // modify
 
-  order.dataset.orderState = 'pending'; // (\*) camel case dataset property
+  order.dataset.orderState = 'pending'; // (*) camel case dataset property
 </script>
 ```
 

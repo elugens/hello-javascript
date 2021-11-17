@@ -13,3 +13,5 @@ sidebar_position: 3
 </head>
 
 Source: <https://javascript.info/mouse-drag-and-drop>
+
+---

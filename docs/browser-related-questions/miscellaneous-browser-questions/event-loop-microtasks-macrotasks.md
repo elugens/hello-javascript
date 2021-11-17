@@ -26,7 +26,7 @@ sidebar_position: 3
 
 <img src="/img/event-loop.gif" />
 
-Source: <https://javascript.info/event-loop>
+---
 
 ### How are the tasks from the queue processed or handled?
 
@@ -42,7 +42,7 @@ Source: <https://javascript.info/event-loop>
 
 <img src='/img/callback-queue-event-loop.gif' />
 
-Source: <https://javascript.info/event-loop#event-loop>
+---
 
 ### What is the best way to avoid problems related to CPU-Hungry tasks?
 
@@ -78,7 +78,7 @@ function count() {
 count();
 ```
 
-Source: <https://javascript.info/event-loop#use-case-1-splitting-cpu-hungry-tasks>
+---
 
 ### What is a Microtask in relation to JavaScript?
 
@@ -88,6 +88,7 @@ Source: <https://javascript.info/event-loop#use-case-1-splitting-cpu-hungry-task
   <div><strong>Interview Response:</strong> Microtasks come solely from our code. They are usually created by promises: an execution of .then/catch/finally handler becomes a microtask. Microtasks are used “under the cover” of await as well, as it is another form of promise handling. There is also a special function `queueMicrotask(func)` that queues func for execution in the microtask queue.
 
 Immediately after every macrotask, the engine executes all tasks from microtask queue, prior to running any other macrotasks or rendering or anything else. All microtasks are completed before any other event handling or rendering or any other macrotask takes place.
+
 </div>
 
   </div>
@@ -125,4 +126,4 @@ alert("code");
 1. If the macrotask queue is empty, wait till a macrotask appears.
 1. Go to step 1.
 
-Source: <https://javascript.info/event-loop#macrotasks-and-microtasks>
+---

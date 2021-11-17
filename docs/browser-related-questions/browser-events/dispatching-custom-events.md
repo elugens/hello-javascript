@@ -39,7 +39,7 @@ document.dispatchEvent(evt);
 myDiv.dispatchEvent(evt);
 ```
 
-Source: <https://javascript.info/dispatch-events#event-constructor>
+---
 
 ### Explain the function and syntax of the dispatchEvent() method.
 
@@ -65,7 +65,7 @@ Example:
 </script>
 ```
 
-Source: <https://javascript.info/dispatch-events#dispatchevent>
+---
 
 ### Is there a way to tell a “real” user event from a script-generated one?
 
@@ -89,7 +89,7 @@ if (e.isTrusted) {
 }
 ```
 
-Source: <https://javascript.info/dispatch-events#dispatchevent>
+---
 
 ### What is the difference between creating a new Event and a new CustomEvent?
 
@@ -125,7 +125,7 @@ Example:
 </script>
 ```
 
-Source: <https://javascript.info/dispatch-events#custom-events>
+---
 
 ### Is there a way to prevent the default behavior of a CustomEvent?
 
@@ -173,7 +173,7 @@ Example:
 </script>
 ```
 
-Source: <https://javascript.info/dispatch-events#event-preventdefault>
+---
 
 ### Are nested events handled synchronously or asynchronously?
 
@@ -209,4 +209,4 @@ Example:
 </script>
 ```
 
-Source: <https://javascript.info/dispatch-events#event-preventdefault>
+---

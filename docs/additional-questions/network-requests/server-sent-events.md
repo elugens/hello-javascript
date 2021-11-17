@@ -22,7 +22,7 @@ sidebar_position: 12
   </div>
 </details>
 
-Source: <https://javascript.info/server-sent-events>
+---
 
 ### What is the difference between WebSocket and EventSource?
 
@@ -34,7 +34,7 @@ Source: <https://javascript.info/server-sent-events>
   </div>
 </details>
 
-Source: <https://javascript.info/server-sent-events>
+---
 
 ### Why do we use the EventSoure class in our code?
 
@@ -46,7 +46,7 @@ Source: <https://javascript.info/server-sent-events>
   </div>
 </details>
 
-Source: <https://javascript.info/server-sent-events>
+---
 
 ### What do we need to use to open an EventSource server connection?
 
@@ -74,7 +74,7 @@ eventSource.onmessage = function (event) {
 // or eventSource.addEventListener('message', ...)
 ```
 
-Source: <https://javascript.info/server-sent-events#getting-messages>
+---
 
 ### Can we use EventSoure with cross-origin requests?
 
@@ -94,7 +94,7 @@ let source = new EventSource('https://another-site.com/events', {
 });
 ```
 
-Source: <https://javascript.info/server-sent-events#cross-origin-requests>
+---
 
 ### If we lose the connection with server, how does EventSource respond?
 
@@ -114,7 +114,7 @@ Standalone Message:
 // data: Hello, I set the reconnection delay to 15 seconds
 ```
 
-Source: <https://javascript.info/server-sent-events#reconnection>
+---
 
 ### How does the reconnection process work in the browser?
 
@@ -134,7 +134,7 @@ let eventSource = new EventSource(...);
 eventSource.close();
 ```
 
-Source: <https://javascript.info/server-sent-events#reconnection>
+---
 
 ### To correctly resume a network connection, what does the browser or server have to do?
 
@@ -164,7 +164,7 @@ data: of two lines
 id: 3
 ```
 
-Source: <https://javascript.info/server-sent-events#message-id>
+---
 
 ### How does the EventSource object’s readyState property work?
 
@@ -184,7 +184,7 @@ EventSource.OPEN = 1; // connected
 EventSource.CLOSED = 2; // connection closed
 ```
 
-Source: <https://javascript.info/server-sent-events#connection-status-readystate>
+---
 
 ### What are the three events that the EventSource object generates?
 
@@ -212,4 +212,4 @@ eventSource.addEventListener('leave', (event) => {
 });
 ```
 
-Source: <https://javascript.info/server-sent-events#event-types>
+---

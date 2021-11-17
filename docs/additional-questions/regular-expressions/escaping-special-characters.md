@@ -22,7 +22,7 @@ sidebar_position: 7
   </div>
 </details>
 
-Source: <https://javascript.info/regexp-escaping>
+---
 
 ### Is a forward slash “/” a special character in regular expressions?
 
@@ -43,7 +43,7 @@ alert('/'.match(/\//)); // '/'
 alert('/'.match(new RegExp('/'))); // finds /
 ```
 
-Source: <https://javascript.info/regexp-escaping#a-slash>
+---
 
 ### When are calling the new RegExp object, do we have to use the escape character in our regular expressions?
 
@@ -70,4 +70,4 @@ let regexp = new RegExp('\\d.\\d');
 alert('Chapter 5.1'.match(regexp)); // returns 5.1
 ```
 
-Source: <https://javascript.info/regexp-escaping#a-slash>
+---

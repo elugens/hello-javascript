@@ -24,7 +24,7 @@ sidebar_position: 1
 
 **Syntax:** let observer = new MutationObserver(callback)
 
-Source: <https://javascript.info/mutation-observer>
+---
 
 ### What is a Mutation Record and how does it interact with a Mutation Observer?
 
@@ -36,7 +36,7 @@ Source: <https://javascript.info/mutation-observer>
   </div>
 </details>
 
-Source: <https://javascript.info/mutation-observer>
+---
 
 ### Can you give a use case for a MutationObserver?
 
@@ -48,7 +48,7 @@ Source: <https://javascript.info/mutation-observer>
   </div>
 </details>
 
-Source: <https://javascript.info/mutation-observer#usage-for-integration>
+---
 
 ### Is there a way to stop observing or disconnecting the MutationObserver?
 
@@ -62,7 +62,7 @@ Source: <https://javascript.info/mutation-observer#usage-for-integration>
 
 **Syntax:** mutationObserver.disconnect()
 
-Source: <https://javascript.info/mutation-observer#additional-methods>
+---
 
 ### Is there a way to ensure processing of changes when there is a disconnect?
 
@@ -90,7 +90,7 @@ let mutationRecords = observer.takeRecords();
 observer.disconnect();
 ```
 
-Source: <https://javascript.info/mutation-observer#additional-methods>
+---
 
 ### How does garbage collection work with Observers?
 
@@ -102,4 +102,4 @@ Source: <https://javascript.info/mutation-observer#additional-methods>
   </div>
 </details>
 
-Source: <https://javascript.info/mutation-observer#additional-methods>
+---

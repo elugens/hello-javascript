@@ -22,7 +22,7 @@ sidebar_position: 1
   </div>
 </details>
 
-Source: <https://javascript.info/bezier-curve>
+---
 
 ### What is the minimum number of control-points a Bezier cure can have?
 
@@ -34,6 +34,6 @@ Source: <https://javascript.info/bezier-curve>
   </div>
 </details>
 
-Source: <https://javascript.info/bezier-curve>
+---
 
-**Author Notes:** You should revisit this…
+TODO **Author Notes:** You should revisit this…

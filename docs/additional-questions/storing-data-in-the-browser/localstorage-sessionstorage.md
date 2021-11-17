@@ -22,7 +22,7 @@ sidebar_position: 2
   </div>
 </details>
 
-Source: <https://javascript.info/localstorage>
+---
 
 ### What is the difference between localStorage and sessionStorage?
 
@@ -34,7 +34,7 @@ Source: <https://javascript.info/localstorage>
   </div>
 </details>
 
-Source: <https://javascript.info/localstorage>
+---
 
 ### We already have cookies. Why do we need additional storage objects?
 
@@ -46,7 +46,7 @@ Source: <https://javascript.info/localstorage>
   </div>
 </details>
 
-Source: <https://javascript.info/localstorage>
+---
 
 ### Can you name the six methods used in localStorage/sessionStorage?
 
@@ -58,7 +58,7 @@ Source: <https://javascript.info/localstorage>
   </div>
 </details>
 
-Source: <https://javascript.info/localstorage>
+---
 
 ### How does the JavaScript localStorage object function?
 
@@ -91,7 +91,7 @@ alert(localStorage.test); // 2
 delete localStorage.test;
 ```
 
-Source: <https://javascript.info/localstorage#localstorage-demo>
+---
 
 ### Is it a good idea to use Object-like access on localStorage?
 
@@ -111,7 +111,7 @@ let key = 'length';
 localStorage[key] = 5; // Error, cannot assign length
 ```
 
-Source: <https://javascript.info/localstorage#object-like-access>
+---
 
 ### How should we loop over the localStorage object?
 
@@ -159,7 +159,7 @@ for (let key of keys) {
 }
 ```
 
-Source: <https://javascript.info/localstorage#looping-over-keys>
+---
 
 ### What is the type of the key and value of storage objects?
 
@@ -193,7 +193,7 @@ alert(user.name); // John
 alert(JSON.stringify(localStorage, null, 2));
 ```
 
-Source: <https://javascript.info/localstorage#strings-only>
+---
 
 ### Briefly explain how the JavaScript sessionStorage object functions?
 
@@ -217,7 +217,7 @@ sessionStorage.setItem('test', 1);
 alert(sessionStorage.getItem('test')); // after refresh: 1
 ```
 
-Source: <https://javascript.info/localstorage#sessionstorage>
+---
 
 ### How do storage events behave when the data gets updated in localStorage and sessionsStorage?
 
@@ -245,4 +245,4 @@ window.onstorage = (event) => {
 localStorage.setItem('now', Date.now());
 ```
 
-Source: <https://javascript.info/localstorage#storage-event>
+---

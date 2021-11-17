@@ -22,7 +22,7 @@ sidebar_position: 2
   </div>
 </details>
 
-Source: <https://javascript.info/custom-elements>
+---
 
 ### What are the requirements needed to create a custom element?
 
@@ -50,7 +50,7 @@ class MyElement extends HTMLElement {
 customElements.define('my-element', MyElement);
 ```
 
-Source: <https://javascript.info/custom-elements>
+---
 
 ### What is the naming convention for custom elements?
 
@@ -62,7 +62,7 @@ Source: <https://javascript.info/custom-elements>
   </div>
 </details>
 
-Source: <https://javascript.info/custom-elements>
+---
 
 ### What are the five methods in the lifecycle callbacks?
 
@@ -74,7 +74,7 @@ Source: <https://javascript.info/custom-elements>
   </div>
 </details>
 
-Source: <https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements#using_the_lifecycle_callbacks>
+---
 
 ### Can you explain the function of the connectedCallBack method?
 
@@ -86,7 +86,7 @@ Source: <https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custo
   </div>
 </details>
 
-Source: <https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements#using_the_lifecycle_callbacks>
+---
 
 ### What happens when a base-element, the one we are customizing, loads before customized element?
 
@@ -100,7 +100,7 @@ Source: <https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custo
   </div>
 </details>
 
-Source: <https://javascript.info/custom-elements>
+---
 
 ### What is the reason for not using the constructor, but opt to use connectedCallBack?
 
@@ -113,7 +113,7 @@ Source: <https://javascript.info/custom-elements>
   </div>
 </details>
 
-Source: <https://javascript.info/custom-elements>
+---
 
 ### Can you explain how observedAttribute works in conjunction with attributeChangedCallback?
 
@@ -197,9 +197,7 @@ setInterval(() => elem.setAttribute('datetime', new Date()), 1000); // (5
 </script>
 ```
 
-Source: <https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements#using_the_lifecycle_callbacks%20>
-
-Source: <https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements#using_the_lifecycle_callbacks>
+---
 
 ### Can you explain the rendering order when HTML parser builds the DOM?
 
@@ -228,7 +226,7 @@ Code Example:
 <user-info>John</user-info>
 ```
 
-Source: <https://javascript.info/custom-elements#rendering-order>
+---
 
 ### Is there a way to ensure that custom element returns a value on a nested element?
 
@@ -260,7 +258,7 @@ customElements.define('user-info', class extends HTMLElement {
 <user-info>John</user-info>
 ```
 
-Source: <https://javascript.info/custom-elements#rendering-order>
+---
 
 ### Are there any issues with new or autonomous elements in relation to search engines?
 
@@ -296,4 +294,4 @@ Code Example:
 <user-info>John</user-info>
 ```
 
-Source: <https://javascript.info/custom-elements#customized-built-in-elements>
+---

@@ -22,7 +22,7 @@ sidebar_position: 5
   </div>
 </details>
 
-Sources: <https://javascript.info/basic-dom-node-properties#dom-node-classes>
+---
 
 ### Briefly explain the purpose of the EventTarget abstract class.
 
@@ -34,7 +34,7 @@ Sources: <https://javascript.info/basic-dom-node-properties#dom-node-classes>
   </div>
 </details>
 
-Sources: <https://javascript.info/basic-dom-node-properties#dom-node-classes>
+---
 
 ### Can you explain the function of the Node abstract class?
 
@@ -46,7 +46,7 @@ Sources: <https://javascript.info/basic-dom-node-properties#dom-node-classes>
   </div>
 </details>
 
-Sources: <https://javascript.info/basic-dom-node-properties#dom-node-classes>
+---
 
 ### Please explain the purpose of the Element base class.
 
@@ -58,7 +58,7 @@ Sources: <https://javascript.info/basic-dom-node-properties#dom-node-classes>
   </div>
 </details>
 
-Sources: <https://javascript.info/basic-dom-node-properties#dom-node-classes>
+---
 
 ### What is the purpose of the HTMLElement base class?
 
@@ -76,7 +76,7 @@ Sources: <https://javascript.info/basic-dom-node-properties#dom-node-classes>
   </div>
 </details>
 
-Sources: <https://javascript.info/basic-dom-node-properties#dom-node-classes>
+---
 
 ### How can you expose the DOM node class name?
 
@@ -106,7 +106,7 @@ alert(document.body instanceof Node); // true
 alert(document.body instanceof EventTarget); // true
 ```
 
-Sources: <https://javascript.info/basic-dom-node-properties#dom-node-classes>
+---
 
 ### What is the difference between console.dir and console.log when it comes to returning objects in the console?
 
@@ -119,7 +119,7 @@ Sources: <https://javascript.info/basic-dom-node-properties#dom-node-classes>
   </div>
 </details>
 
-Sources: <https://javascript.info/basic-dom-node-properties#dom-node-classes>
+---
 
 ### What is an interface description language or IDL in programming?
 
@@ -131,7 +131,7 @@ Sources: <https://javascript.info/basic-dom-node-properties#dom-node-classes>
   </div>
 </details>
 
-Sources: <https://en.wikipedia.org/wiki/Interface_description_language>
+---
 
 ### How are DOM classes described in the specification?
 
@@ -179,7 +179,7 @@ interface HTMLInputElement: HTMLElement {
 }
 ```
 
-Sources: <https://javascript.info/basic-dom-node-properties#dom-node-classes>
+---
 
 ### What does the nodeType property return JavaScript?
 
@@ -211,7 +211,7 @@ Example:
 </body>
 ```
 
-Sources: <https://javascript.info/basic-dom-node-properties#the-nodetype-property>
+---
 
 ### What is the difference between the nodeName and tagName properties?
 
@@ -245,7 +245,7 @@ Example:
 </body>
 ```
 
-Sources: <https://javascript.info/basic-dom-node-properties#tag-nodename-and-tagname>
+---
 
 ### Is there a difference on what is returned when using the tagName property on HTML vs XML?
 
@@ -260,7 +260,7 @@ Sources: <https://javascript.info/basic-dom-node-properties#tag-nodename-and-tag
   </div>
 </details>
 
-Sources: <https://javascript.info/basic-dom-node-properties#tag-nodename-and-tagname>
+---
 
 ### Explain, what the innerHTML property does in JavaScript.\*\*
 
@@ -289,7 +289,7 @@ Example:
 </body>
 ```
 
-Sources: <https://javascript.info/basic-dom-node-properties#innerhtml-the-contents>
+---
 
 ### What happens when you attempt to insert the script tag using the innerHTML property?
 
@@ -301,7 +301,7 @@ Sources: <https://javascript.info/basic-dom-node-properties#innerhtml-the-conten
   </div>
 </details>
 
-Sources: <https://javascript.info/basic-dom-node-properties#innerhtml-the-contents>
+---
 
 ### What is the main thing you should be aware of when using “innerHTML+=” syntax?
 
@@ -314,7 +314,7 @@ Sources: <https://javascript.info/basic-dom-node-properties#innerhtml-the-conten
   </div>
 </details>
 
-Sources: <https://javascript.info/basic-dom-node-properties#innerhtml-the-contents>
+---
 
 ### Explain, what the outerHTML property does in JavaScript.\*\*
 
@@ -343,7 +343,7 @@ Example:
 </script>
 ```
 
-Sources: <https://javascript.info/basic-dom-node-properties#outerhtml-full-html-of-the-element>
+---
 
 ### For element nodes we can use innerHTML, but what is the recommended for use with the other node types like text nodes?
 
@@ -375,7 +375,7 @@ Example:
 </body>
 ```
 
-Sources: <https://javascript.info/basic-dom-node-properties#nodevalue-data-text-node-content>
+---
 
 ### What is a good use case for reading data from comments?
 
@@ -397,7 +397,7 @@ Example:
 <!-- /if -->
 ```
 
-Sources: <https://javascript.info/basic-dom-node-properties#nodevalue-data-text-node-content>
+---
 
 ### Explain what the textContent property does in JavaScript.
 
@@ -424,7 +424,7 @@ Example:
 </script>
 ```
 
-Sources: <https://javascript.info/basic-dom-node-properties#nodevalue-data-text-node-content>
+---
 
 ### Explain what the hidden attribute and DOM property does in JavaScript.
 
@@ -442,13 +442,13 @@ Example:
 <div>Both divs below are hidden</div>
 
 <div hidden>With the attribute "hidden"</div>
-ß hidden attribute
+<!-- hidden attribute -->
 
 <div id="elem">JavaScript assigned the property "hidden"</div>
 
 <script>
-  elem.hidden = true; // ß hidden DOM property
+  elem.hidden = true; // hidden DOM property
 </script>
 ```
 
-Sources: <https://javascript.info/basic-dom-node-properties#the-hidden-property>
+---

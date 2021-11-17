@@ -22,7 +22,7 @@ sidebar_position: 1
   </div>
 </details>
 
-Source: <https://javascript.info/webcomponents-intro#component-architecture>
+---
 
 ### What is a component in web architecture?
 
@@ -34,6 +34,4 @@ Source: <https://javascript.info/webcomponents-intro#component-architecture>
   </div>
 </details>
 
-Source: <https://javascript.info/webcomponents-intro#component-architecture>
-
-Source: <https://developer.mozilla.org/en-US/docs/Web/Web_Components>
+---

@@ -37,4 +37,4 @@ regexp.lastIndex = 4;
 alert(regexp.exec(str)); // varName (word at position 4)
 ```
 
-Source: <https://www.regular-expressions.info/catastrophic.html>
+---

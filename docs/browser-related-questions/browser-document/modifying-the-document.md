@@ -38,7 +38,7 @@ div.className = 'alert';
 div.innerHTML = "<strong>Hi there!</strong> You've read an important message.";
 ```
 
-Sources: <https://javascript.info/modifying-document#creating-an-element>
+---
 
 ### How do you place a DOM node into a HTML document using JavaScript?
 
@@ -95,7 +95,7 @@ Example:
 // after
 ```
 
-Sources: <https://javascript.info/modifying-document#insertion-methods>
+---
 
 ### How do you insert HTML into a document using JavaScript?
 
@@ -133,7 +133,7 @@ Example:
 <p>Bye</p>
 ```
 
-Sources: <https://javascript.info/modifying-document#insertadjacenthtml-text-element>
+---
 
 ### Is there a way to remove a DOM node in JavaScript?
 
@@ -176,7 +176,7 @@ Example:
 </script>
 ```
 
-Sources: <https://javascript.info/modifying-document#node-removal>
+---
 
 ### Can you swap elements using JavaScript?
 
@@ -208,7 +208,7 @@ Second
 
 First
 
-Sources: <https://javascript.info/modifying-document#node-removal>
+---
 
 ### Can you clone an element node in JavaScript?
 
@@ -252,7 +252,7 @@ Example:
 </script>
 ```
 
-Sources: <https://javascript.info/modifying-document#cloning-nodes-clonenode>
+---
 
 ### Explain the function and syntax of the DocumentFragment Object.
 
@@ -305,7 +305,7 @@ Example:
 </ul>
 ```
 
-Sources: <https://javascript.info/modifying-document#document-fragment>
+---
 
 ### At some point in your career, you will run across older methods of inserting and removing elements. Can you explain what these methods are and why you should know them?
 
@@ -356,7 +356,7 @@ Output:
 -->
 ```
 
-Sources: <https://javascript.info/modifying-document#old-school-insert-remove-methods>
+---
 
 ### Explain the function and syntax of the document.write method.
 
@@ -388,4 +388,4 @@ Example:
 </script>
 ```
 
-Sources: <https://javascript.info/modifying-document#old-school-insert-remove-methods>
+---

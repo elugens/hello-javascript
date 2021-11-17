@@ -23,7 +23,7 @@ sidebar_position: 1
   </div>
 </details>
 
-Source: <https://javascript.info/fetch>
+---
 
 ### What are differences between an XMLHttpRequest and Fetch API?
 
@@ -44,9 +44,9 @@ fetch('https://jsonplaceholder.typicode.com/users').then((response) => {
 });
 ```
 
-Source: <https://javascript.info/fetch>
+---
 
-### Explain the function and syntax of the JavaScript Fetch method.\*\*
+### Explain the function and syntax of the JavaScript Fetch method.
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -59,7 +59,7 @@ Source: <https://javascript.info/fetch>
 
 **Syntax:** let promise = fetch(url, [options])
 
-Source: <https://javascript.info/fetch><https://randomuser.me/api/portraits/women/35.jpg>
+---
 
 ### Can you explain the first stage of the response process?
 
@@ -87,7 +87,7 @@ if (response.ok) {
 }
 ```
 
-Source: <https://javascript.info/fetch>
+---
 
 ### Can you explain the second stage of the response process?
 
@@ -113,7 +113,7 @@ let commits = await response.json(); // read response body and parse 
 alert(commits[0].author.login);
 ```
 
-Source: <https://javascript.info/fetch>
+---
 
 ### What is the limit on the number of responses we can read? For example, can we receive a text and json network response.\*\*
 
@@ -132,7 +132,7 @@ let text = await response.text(); // response body consumed
 let parsed = await response.json(); // fails (already consumed)
 ```
 
-Source: <https://javascript.info/fetch>
+---
 
 ### Can you briefly explain the response header Object in JavaScript?
 
@@ -164,7 +164,7 @@ for (let [key, value] of response.headers) {
 }
 ```
 
-Source: <https://javascript.info/fetch#response-headers>
+---
 
 ### What is the proper way to implement or set a request header in JS?
 
@@ -186,7 +186,7 @@ let response = fetch(protectedUrl, {
 });
 ```
 
-Source: <https://javascript.info/fetch#response-headers>
+---
 
 ### What is a forbidden header name in relation to the HTTP header?
 
@@ -198,7 +198,7 @@ Source: <https://javascript.info/fetch#response-headers>
   </div>
 </details>
 
-Source: <https://javascript.info/fetch#request-headers>
+---
 
 ### To make a post request, what modern JS method should we use?
 
@@ -234,4 +234,4 @@ let result = await response.json();
 alert(result.message);
 ```
 
-Source: <https://javascript.info/fetch#post-requests>
+---

@@ -51,7 +51,7 @@ Example:
 </script>
 ```
 
-Source: <https://javascript.info/form-elements#navigation-form-and-elements>
+---
 
 ### How do you handle multiple elements of a form collection with the same name?
 
@@ -81,7 +81,7 @@ Example:
 </script>
 ```
 
-Source: <https://javascript.info/form-elements#navigation-form-and-elements>
+---
 
 ### How do Fieldsets work as subforms inside of a form?
 
@@ -117,7 +117,7 @@ Example:
 </body>
 ```
 
-Source: <https://javascript.info/form-elements#navigation-form-and-elements>
+---
 
 ### Is there a shorter notation other than the form.elements property?
 
@@ -149,7 +149,7 @@ Example:
 </script>
 ```
 
-Source: <https://javascript.info/form-elements#navigation-form-and-elements>
+---
 
 ### Can you explain what form backreferencing is in JavaScript?
 
@@ -179,7 +179,7 @@ Example:
 </script>
 ```
 
-Source: <https://javascript.info/form-elements#backreference-element-form>
+---
 
 ### How do you access the value of a textarea inside of an input via JS?
 
@@ -191,7 +191,7 @@ Source: <https://javascript.info/form-elements#backreference-element-form>
   </div>
 </details>
 
-Source: <https://javascript.info/form-elements#input-and-textarea>
+---
 
 ### To select an option value, what are the three properties we can use to set the selected value(s)?
 
@@ -227,7 +227,7 @@ Example:
 </script>
 ```
 
-Source: <https://javascript.info/form-elements#select-and-option>
+---
 
 ### Explain the function and syntax of the new Option constructor?
 
@@ -326,4 +326,4 @@ Example:
 </script>
 ```
 
-Source: <https://javascript.info/form-elements#select-and-option>
+---

@@ -30,7 +30,7 @@ setTimeout(() => (document.body.style.background = ''), 3000); // return back
 alert(document.body); // alerts [object HTMLBodyElement]
 ```
 
-Sources: <https://javascript.info/dom-nodes>
+---
 
 ### How does the Document Object Model represent HTML?
 
@@ -68,7 +68,7 @@ Example:
 </html>
 ```
 
-Sources: <https://javascript.info/dom-nodes#an-example-of-the-dom>
+---
 
 ### If the browser encounters malformed HTML, what happens?
 
@@ -111,7 +111,7 @@ Example:
 </p>
 ```
 
-Sources: <https://javascript.info/dom-nodes#autocorrection>
+---
 
 ### Do HTML tables always have a `<tbody>` in the DOM?
 
@@ -145,7 +145,7 @@ Example:
 </table>
 ```
 
-Sources: <https://javascript.info/dom-nodes#autocorrection>
+---
 
 ### What are the four main node types that are commonly used?
 
@@ -158,4 +158,4 @@ Sources: <https://javascript.info/dom-nodes#autocorrection>
   </div>
 </details>
 
-Sources: <https://javascript.info/dom-nodes#other-node-types>
+---

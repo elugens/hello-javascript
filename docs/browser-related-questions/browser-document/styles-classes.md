@@ -35,7 +35,7 @@ elem.style.left = left; // e.g '123px', calculated at run-time
 elem.style.top = top; // e.g '456px'
 ```
 
-Sources: <https://javascript.info/styles-and-classes>
+---
 
 ### How to do you return the name of a class in JavaScript?
 
@@ -57,7 +57,7 @@ Example:
 </body>
 ```
 
-Sources: <https://javascript.info/styles-and-classes#classname-and-classlist>
+---
 
 ### Is there property or special object used to modify a class list in JavaScript?
 
@@ -83,7 +83,7 @@ Example:
 </body>
 ```
 
-Sources: <https://javascript.info/styles-and-classes#classname-and-classlist>
+---
 
 ### Explain the function and syntax of the elem.style object property.
 
@@ -105,7 +105,7 @@ Example:
 </script>
 ```
 
-Sources: <https://javascript.info/styles-and-classes#element-style>
+---
 
 ### What is the rule for prefixed browser properties in JavaScript?
 
@@ -127,7 +127,7 @@ Example:
 </script>
 ```
 
-Sources: <https://javascript.info/styles-and-classes#element-style>
+---
 
 ### What is the proper approach to resetting an element style property?
 
@@ -149,7 +149,7 @@ document.body.style.display = 'none'; // hide
 setTimeout(() => (document.body.style.display = ''), 1000); // back to normal
 ```
 
-Sources: <https://javascript.info/styles-and-classes#resetting-the-style-property>
+---
 
 ### Is there a way to do a full style rewrite on DOM element node?
 
@@ -184,7 +184,7 @@ Example:
 </script>
 ```
 
-Sources: <https://javascript.info/styles-and-classes#resetting-the-style-property>
+---
 
 ### Why is it important to mind your CSS units in JavaScript?
 
@@ -221,7 +221,7 @@ Example:
 </body>
 ```
 
-Sources: <https://javascript.info/styles-and-classes#mind-the-units>
+---
 
 ### Can you explain how to read computed values in JavaScript?
 
@@ -254,7 +254,7 @@ Example:
 </body>
 ```
 
-Sources: <https://javascript.info/styles-and-classes#computed-styles-getcomputedstyle>
+---
 
 ### What is the difference between a computed and resolved value?
 
@@ -271,7 +271,7 @@ Sources: <https://javascript.info/styles-and-classes#computed-styles-getcomputed
 It should be noted that getComputedStyles actually returns the resolved value of a property.
 :::
 
-Sources: <https://javascript.info/styles-and-classes#computed-styles-getcomputedstyle>
+---
 
 ### Explain how the getComputedStyle method interacts with property names.
 
@@ -287,7 +287,7 @@ Sources: <https://javascript.info/styles-and-classes#computed-styles-getcomputed
 If there are properties paddingLeft/paddingTop, then what should we get for getComputedStyle(elem).padding? Nothing, or maybe a “generated” value from known paddings? There is no standard rule here, but we should always ask for the full property name.
 :::
 
-Sources: <https://javascript.info/styles-and-classes#computed-styles-getcomputedstyle>
+---
 
 ### Why are styles applied to :visited links always hidden by getComputedStyles?
 
@@ -299,4 +299,4 @@ Sources: <https://javascript.info/styles-and-classes#computed-styles-getcomputed
   </div>
 </details>
 
-Sources: <https://javascript.info/styles-and-classes#computed-styles-getcomputedstyle>
+---

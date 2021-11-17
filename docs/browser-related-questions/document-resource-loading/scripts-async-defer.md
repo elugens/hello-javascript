@@ -22,7 +22,7 @@ sidebar_position: 2
   </div>
 </details>
 
-Source: <https://javascript.info/script-async-defer>
+---
 
 ### Since, HTML document have to wait for scripts to run once they are reached. Can you name two issues that can lead to negative outcomes?
 
@@ -54,7 +54,7 @@ Code Example: workaround
 </body>
 ```
 
-Source: <https://javascript.info/script-async-defer>
+---
 
 ### What are the two script attributes used to manage script loading?
 
@@ -66,7 +66,7 @@ Source: <https://javascript.info/script-async-defer>
   </div>
 </details>
 
-Source: <https://javascript.info/script-async-defer>
+---
 
 ### How does the defer attribute affect the loading of a script?
 
@@ -93,7 +93,7 @@ Code Example:
 <p>...content after script...</p>
 ```
 
-Source: <https://javascript.info/script-async-defer#defer>
+---
 
 ### What are the benefits of using the script defer attribute?
 
@@ -124,7 +124,7 @@ Code Example:
 <p>...content after scripts...</p>
 ```
 
-Source: <https://javascript.info/script-async-defer#defer>
+---
 
 ### Do deferred scripts keep their relative order, like regular scripts?
 
@@ -150,7 +150,7 @@ Code Example:
 ></script>
 ```
 
-Source: <https://javascript.info/script-async-defer#defer>
+---
 
 ### How does the async attribute affect the loading of a script?
 
@@ -184,7 +184,7 @@ Code Example:
 <p>...content after scripts...</p>
 ```
 
-Source: <https://javascript.info/script-async-defer#async>
+---
 
 ### Is there a way to load a script dynamically using JavaScript?
 
@@ -208,7 +208,7 @@ Code Example:
 </script>
 ```
 
-Source: <https://javascript.info/script-async-defer#dynamic-scripts>
+---
 
 ### How do dynamic scripts behave, asynchronously, deffered, or like a regular script?
 
@@ -240,4 +240,4 @@ loadScript('/article/script-async-defer/long.js');
 loadScript('/article/script-async-defer/small.js');
 ```
 
-Source: <https://javascript.info/script-async-defer#dynamic-scripts>
+---

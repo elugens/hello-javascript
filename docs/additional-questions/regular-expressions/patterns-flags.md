@@ -22,7 +22,7 @@ sidebar_position: 1
   </div>
 </details>
 
-Source: <https://javascript.info/regexp-introduction>
+---
 
 ### What are the two syntaxes used to create a regular expression?
 
@@ -47,7 +47,7 @@ regexp = /pattern/; // no flags
 regexp = /pattern/gim; // with flags g,m and i (to be covered soon)
 ```
 
-Source: <https://javascript.info/regexp-introduction#regular-expressions>
+---
 
 ### Can you name the six flags used in regular expressions?
 
@@ -68,7 +68,7 @@ Source: <https://javascript.info/regexp-introduction#regular-expressions>
   </div>
 </details>
 
-Source: <https://javascript.info/regexp-introduction#flags>
+---
 
 ### How does the match method work with Regular Expressions?
 
@@ -88,7 +88,7 @@ let myString = 'We will, we will rock you';
 alert(myString.match(/we/gi)); // We,we (an array of 2 substrings that match)
 ```
 
-Source: <https://javascript.info/regexp-introduction#searching-str-match>
+---
 
 ### Can you explain the three regex modes of the match method?
 
@@ -128,7 +128,7 @@ if (!matches.length) {
 }
 ```
 
-Source: <https://javascript.info/regexp-introduction#searching-str-match>
+---
 
 ### Is there a way to handle empty or null values in regular expressions?
 
@@ -161,7 +161,7 @@ if (!matches.length) {
 }
 ```
 
-Source: <https://javascript.info/regexp-introduction#searching-str-match>
+---
 
 ### How does the string replace method work with Regular Expressions?
 
@@ -192,7 +192,7 @@ alert( "I love HTML".replace(/HTML/, "$& and JavaScript") ); 
 // returns - I love HTML and JavaScript
 ```
 
-Source: <https://javascript.info/regexp-introduction#replacing-str-replace>
+---
 
 ### Is there a way to test for a string fragment using a regular expression?
 
@@ -214,4 +214,4 @@ let regexp = /LOVE/i;
 alert(regexp.test(str)); // true
 ```
 
-Source: <https://javascript.info/regexp-introduction#testing-regexp-test>
+---

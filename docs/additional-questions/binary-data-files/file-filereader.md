@@ -32,7 +32,7 @@ var file = new File(['foo'], 'foo.txt', {
 });
 ```
 
-Source: <https://javascript.info/file>
+---
 
 ### Can you explain how the FileReader Object functions?
 
@@ -70,4 +70,4 @@ Code Example:
 </script>
 ```
 
-Source: <https://javascript.info/file#filereader>
+---

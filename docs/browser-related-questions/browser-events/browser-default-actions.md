@@ -22,7 +22,7 @@ sidebar_position: 4
   </div>
 </details>
 
-Source: <https://javascript.info/default-browser-action>
+---
 
 ### Is there a built-in function or method used to prevent browser actions?
 
@@ -44,7 +44,7 @@ or
 <a href="/" onclick="event.preventDefault()">Click here</a>
 ```
 
-Source: <https://javascript.info/default-browser-action#preventing-browser-actions>
+---
 
 ### What happens when you return false from a handler?
 
@@ -56,7 +56,7 @@ Source: <https://javascript.info/default-browser-action#preventing-browser-actio
   </div>
 </details>
 
-Source: <https://javascript.info/default-browser-action#preventing-browser-actions>
+---
 
 ### What is the function of the defaultPrevented property?
 
@@ -92,4 +92,4 @@ Example:
 </script>
 ```
 
-Source: <https://javascript.info/default-browser-action#event-defaultprevented>
+---

@@ -46,7 +46,7 @@ Example:
 </select>
 ```
 
-Source: <https://javascript.info/events-change-input#event-change>
+---
 
 ### Can you explain how an input event functions when triggered?
 
@@ -74,9 +74,9 @@ Example:
 </script>
 ```
 
-Source: <https://javascript.info/events-change-input#event-input>
+---
 
-### What class doe the cut, copy, paste events belong too?
+### What class does the cut, copy, paste events belong too?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -86,7 +86,7 @@ Source: <https://javascript.info/events-change-input#event-input>
   </div>
 </details>
 
-Source: <https://javascript.info/events-change-input#events-cut-copy-paste>
+---
 
 ### Can you explain how the cut, copy, and paste events work?
 
@@ -119,7 +119,7 @@ Example:
 </script>
 ```
 
-Source: <https://javascript.info/events-change-input#events-cut-copy-paste>
+---
 
 ### Are there any user related safety restrictions in relation to the ClipboardAPI?
 
@@ -148,4 +148,4 @@ Example:
 </script>
 ```
 
-Source: <https://javascript.info/events-change-input#events-cut-copy-paste>
+---

@@ -39,11 +39,7 @@ alert(str.match(/\d+\b(?!€)/g));
 // 2 (the price is not matched)
 ```
 
-Source: <https://javascript.info/regexp-lookahead-lookbehind#lookahead>
-
-Additional Information: Negative Lookahead
-
-Source: <https://javascript.info/regexp-lookahead-lookbehind#negative-lookahead>
+---
 
 ### What is the difference between regex Lookahead and Lookbehind?
 
@@ -55,7 +51,7 @@ Source: <https://javascript.info/regexp-lookahead-lookbehind#negative-lookahead>
   </div>
 </details>
 
-Source: <https://javascript.info/regexp-lookahead-lookbehind#lookahead>
+---
 
 ### Can you explain the Lookbehind approach in a regular expression?
 
@@ -80,7 +76,7 @@ let str = '2 turkeys cost $60';
 alert(str.match(/(?<!\$)\b\d+/g)); // 2 (the price is not matched)
 ```
 
-Source: <https://javascript.info/regexp-lookahead-lookbehind#lookbehind>
+---
 
 ### Can you apply a capturing group to a lookaround in a regular expression?
 
@@ -102,4 +98,4 @@ let regexp = /\d+(?=(€|kr))/; // extra parentheses around €|kr
 alert(str.match(regexp)); // 30, €
 ```
 
-Source: <https://javascript.info/regexp-lookahead-lookbehind#capturing-groups>
+---

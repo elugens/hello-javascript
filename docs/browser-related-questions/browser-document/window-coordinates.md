@@ -22,7 +22,7 @@ sidebar_position: 11
   </div>
 </details>
 
-Sources: <https://javascript.info/coordinates>
+---
 
 ### Explain the function and syntax of the element getBoundingClientRect method?
 
@@ -83,7 +83,7 @@ style width of 400px and the padding 20px times two height : 240 top : 50 right
 : 586.5454559326172 bottom : 290 left : 146.5454559326172 */
 ```
 
-Sources: <https://javascript.info/coordinates#element-coordinates-getboundingclientrect>
+---
 
 ### Why derived properties are needed? Why does top/left exist if there’s x/y?
 
@@ -96,7 +96,7 @@ Sources: <https://javascript.info/coordinates#element-coordinates-getboundingcli
   </div>
 </details>
 
-Sources: <https://javascript.info/coordinates#element-coordinates-getboundingclientrect>
+---
 
 ### Does Internet Explorer provide support for x/y coordinates?
 
@@ -108,7 +108,7 @@ Sources: <https://javascript.info/coordinates#element-coordinates-getboundingcli
   </div>
 </details>
 
-Sources: <https://javascript.info/coordinates#element-coordinates-getboundingclientrect>
+---
 
 ### What does the method elementFromPoint(x,y) do in JavaScript?
 
@@ -137,7 +137,7 @@ elem.style.background = 'red';
 alert(elem.tagName);
 ```
 
-Sources: <https://javascript.info/coordinates#elementFromPoint>
+---
 
 ### For out-of-window coordinates, what does the elementFromPoint return?
 
@@ -159,7 +159,7 @@ let elem = document.elementFromPoint(x, y);
 elem.style.background = ''; // Error!
 ```
 
-Sources: <https://javascript.info/coordinates#elementFromPoint>
+---
 
 ### Where do document relative coordinates start?
 
@@ -171,4 +171,4 @@ Sources: <https://javascript.info/coordinates#elementFromPoint>
   </div>
 </details>
 
-Sources: <https://javascript.info/coordinates#elementFromPoint>
+---

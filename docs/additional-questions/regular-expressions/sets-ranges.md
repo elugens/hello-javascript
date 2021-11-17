@@ -35,7 +35,7 @@ alert('Mop top'.match(/[tm]op/gi)); // "Mop", "top"
 alert('Voila'.match(/V[oi]la/)); // null, no matches
 ```
 
-Source: <https://javascript.info/regexp-character-sets-and-ranges#sets>
+---
 
 ### Explain, how is a range denoted in a regular expression?
 
@@ -53,7 +53,7 @@ Code Example:
 alert('Exception 0xAF'.match(/x[0-9A-F][0-9A-F]/g)); // xAF
 ```
 
-Source: <https://javascript.info/regexp-character-sets-and-ranges#ranges>
+---
 
 ### Is there a way to handle Han (Chinese) or Cyrillic in regexp ranges?
 
@@ -77,7 +77,7 @@ let str = `Hi 你好 12`;
 alert(str.match(regexp)); // H,i,你,好,1,2
 ```
 
-Source: <https://javascript.info/regexp-character-sets-and-ranges#ranges>
+---
 
 ### How do you exclude a range of characters in regular expressions?
 
@@ -95,7 +95,7 @@ Code Example:
 alert('alice15@gmail.com'.match(/[^\d\sA-Z]/gi)); // returns @ and .
 ```
 
-Source: <https://javascript.info/regexp-character-sets-and-ranges#excluding-ranges>
+---
 
 ### Do we have to escape special characters in regex sets or ranges?
 
@@ -122,7 +122,7 @@ let regexp = /[\-\(\)\.\^\+]/g;
 alert('1 + 2 - 3'.match(regexp)); // also works: +, -
 ```
 
-Source: <https://javascript.info/regexp-character-sets-and-ranges#escaping-in->
+---
 
 ### What is the recommended way to match against surrogate pairs in a set or range?
 
@@ -145,4 +145,4 @@ alert('𝒳'.match(/[𝒳𝒴]/u)); // returns 𝒳
 alert('𝒴'.match(/[𝒳-𝒵]/u)); // returns 𝒴
 ```
 
-Source: <https://javascript.info/regexp-character-sets-and-ranges#ranges-and-flag-u>
+---

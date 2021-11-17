@@ -22,7 +22,7 @@ sidebar_position: 4
   </div>
 </details>
 
-Source: <https://javascript.info/forms-submit>
+---
 
 ### What are the two ways to allow a user to submit a form?
 
@@ -44,7 +44,7 @@ Code Example:
 </form>
 ```
 
-Source: <https://javascript.info/forms-submit#event-submit>
+---
 
 ### What is the relation between submit and click?
 
@@ -66,4 +66,4 @@ Code Example:
 </form>
 ```
 
-Source: <https://javascript.info/forms-submit#event-submit>
+---

@@ -42,4 +42,4 @@ let str = 'a "witch" and her "broom" is one';
 alert(str.match(regexp)); // "witch", "broom"
 ```
 
-Source: <https://javascript.info/regexp-greedy-and-lazy>
+---

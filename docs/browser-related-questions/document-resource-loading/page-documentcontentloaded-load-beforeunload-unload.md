@@ -22,7 +22,7 @@ sidebar_position: 1
   </div>
 </details>
 
-Source: <https://javascript.info/onload-ondomcontentloaded>
+---
 
 ### How are the DOMContentLoaded, load, beforeunload/unload events useful?
 
@@ -34,7 +34,7 @@ Source: <https://javascript.info/onload-ondomcontentloaded>
   </div>
 </details>
 
-Source: <https://javascript.info/onload-ondomcontentloaded>
+---
 
 ### On what object does the DOMContentLoaded event occur?
 
@@ -64,7 +64,7 @@ Example:
 <img id="img" src="https://en.js.cx/clipart/train.gif?speed=1&cache=0" />
 ```
 
-Source: <https://javascript.info/onload-ondomcontentloaded#domcontentloaded>
+---
 
 ### What happens when the browser processes a document and comes across a `<script>` tag?
 
@@ -76,7 +76,7 @@ Source: <https://javascript.info/onload-ondomcontentloaded#domcontentloaded>
   </div>
 </details>
 
-Source: <https://javascript.info/onload-ondomcontentloaded#domcontentloaded-and-scripts>
+---
 
 ### Are there any exceptions to script blocking of the DOMContentLoaded event?
 
@@ -88,7 +88,7 @@ Source: <https://javascript.info/onload-ondomcontentloaded#domcontentloaded-and-
   </div>
 </details>
 
-Source: <https://javascript.info/onload-ondomcontentloaded#domcontentloaded-and-scripts>
+---
 
 ### Do external style sheets influence or effect the DOM?
 
@@ -112,7 +112,7 @@ Example:
 </script>
 ```
 
-Source: <https://javascript.info/onload-ondomcontentloaded#domcontentloaded-and-styles>
+---
 
 ### How does the built-in browser autofill interact with the DOMContentLoaded event?
 
@@ -124,7 +124,7 @@ Source: <https://javascript.info/onload-ondomcontentloaded#domcontentloaded-and-
   </div>
 </details>
 
-Source: <https://javascript.info/onload-ondomcontentloaded#built-in-browser-autofill>
+---
 
 ### Explain the how the load event behaves via the onload property.
 
@@ -154,7 +154,7 @@ Code Example:
 <img id="img" src="https://en.js.cx/clipart/train.gif?speed=1&cache=0" />
 ```
 
-Source: <https://javascript.info/onload-ondomcontentloaded#window-onload>
+---
 
 ### What event is triggered when a user leaves the browser page?
 
@@ -166,7 +166,7 @@ Source: <https://javascript.info/onload-ondomcontentloaded#window-onload>
   </div>
 </details>
 
-Source: <https://javascript.info/onload-ondomcontentloaded#window-onunload>
+---
 
 ### Is there reason that we should avoid using unload and beforeunload in conjunction with Navigator.sendBeacon method?
 
@@ -178,7 +178,7 @@ Source: <https://javascript.info/onload-ondomcontentloaded#window-onunload>
   </div>
 </details>
 
-Source: <https://javascript.info/onload-ondomcontentloaded#window-onunload>
+---
 
 ### What happens if we set the DOMContentLoaded handler after the document is loaded?
 
@@ -190,7 +190,7 @@ Source: <https://javascript.info/onload-ondomcontentloaded#window-onunload>
   </div>
 </details>
 
-Source: <https://javascript.info/onload-ondomcontentloaded#readystate>
+---
 
 ### Is there a way to find the loading state of a document?
 
@@ -204,7 +204,7 @@ Source: <https://javascript.info/onload-ondomcontentloaded#readystate>
 
 **Syntax:** let string = document.readyState;
 
-Source: <https://javascript.info/onload-ondomcontentloaded#readystate>
+---
 
 ### What are the three possible values of the readyState?
 
@@ -236,4 +236,4 @@ if (document.readyState == 'loading') {
 }
 ```
 
-Source: <https://javascript.info/onload-ondomcontentloaded#readystate>
+---

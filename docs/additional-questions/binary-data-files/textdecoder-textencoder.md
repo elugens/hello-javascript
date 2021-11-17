@@ -24,7 +24,7 @@ sidebar_position: 2
 
 **Creation Syntax:** let decoder = new TextDecoder([label], [options])
 
-Source: <https://javascript.info/text-decoder>
+---
 
 ### Explain the function and syntax of the TextDecoder object.
 
@@ -55,7 +55,7 @@ let i16arr = new Int16Array([-24336, -18514]);
 let i32arr = new Int32Array([-1213292304]);
 ```
 
-Source: <https://javascript.info/text-decoder>
+---
 
 ### Explain the function and syntax of the TextDecoder decode method.
 
@@ -112,4 +112,4 @@ let uint8Array = encoder.encode('Hello');
 alert(uint8Array); // 72,101,108,108,111
 ```
 
-Source: <https://javascript.info/text-decoder#textencoder>
+---

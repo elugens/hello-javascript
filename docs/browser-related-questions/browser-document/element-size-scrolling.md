@@ -26,7 +26,7 @@ sidebar_position: 9
 The width may vary between devices and browsers.
 :::
 
-Sources: <https://javascript.info/size-and-scroll>
+---
 
 ### Explain what the offsetParent is in relation to an HTML element.
 
@@ -57,7 +57,7 @@ Example:
 </script>
 ```
 
-Sources: <https://javascript.info/size-and-scroll#offsetparent-offsetleft-top>
+---
 
 ### Explain what the offsetWidth is in relation to an HTML element.
 
@@ -72,7 +72,7 @@ Sources: <https://javascript.info/size-and-scroll#offsetparent-offsetleft-top>
 
 **Syntax:** let intElemOffsetWidth = element.offsetWidth
 
-Sources: <https://javascript.info/size-and-scroll#offsetwidth-height>
+---
 
 ### Explain what the offsetHeight is in relation to an HTML element.
 
@@ -87,7 +87,7 @@ Sources: <https://javascript.info/size-and-scroll#offsetwidth-height>
 
 **Syntax:** let intElemOffsetHeight = element.offsetHeight
 
-Sources: <https://javascript.info/size-and-scroll#offsetwidth-height>
+---
 
 ### How do geometry properties work on elements when they are zero or null?
 
@@ -108,7 +108,7 @@ function isHidden(elem) {
 }
 ```
 
-Sources: <https://javascript.info/size-and-scroll#offsetwidth-height>
+---
 
 ### Explain what the clientTop is in relation to an HTML element.
 
@@ -123,7 +123,7 @@ Sources: <https://javascript.info/size-and-scroll#offsetwidth-height>
 
 **Syntax:** let top = element.clientTop;
 
-Sources: <https://javascript.info/size-and-scroll#clienttop-left>
+---
 
 ### Explain what the clientLeft is in relation to an HTML element.
 
@@ -141,7 +141,7 @@ These properties are not border width/height, but rather relative coordinates of
 
 **Syntax:** let left = element.clientLeft;
 
-Sources: <https://javascript.info/size-and-scroll#clienttop-left>
+---
 
 ### Explain what the clientWidth is in relation to an HTML element.
 
@@ -155,7 +155,7 @@ Sources: <https://javascript.info/size-and-scroll#clienttop-left>
 
 **Syntax:** let intElemClientWidth = element.clientWidth;
 
-Sources: <https://javascript.info/size-and-scroll#clientwidth-height>
+---
 
 ### Explain what the clientHeight is in relation to an HTML element.
 
@@ -169,7 +169,7 @@ Sources: <https://javascript.info/size-and-scroll#clientwidth-height>
 
 **Syntax:** let intElemClientHeight = element.clientHeight;
 
-Sources: <https://javascript.info/size-and-scroll#clientwidth-height>
+---
 
 ### Explain what the scrollWidth is in relation to an HTML element.
 
@@ -187,7 +187,7 @@ The width is measured in the same way as clientWidth: it includes the element's 
 
 **Syntax:** let xScrollWidth = element.scrollWidth;
 
-Sources: <https://javascript.info/size-and-scroll#scrollwidth-height>
+---
 
 ### Explain what the scrollLeft is in relation to an HTML element.
 
@@ -201,7 +201,7 @@ Sources: <https://javascript.info/size-and-scroll#scrollwidth-height>
 
 **Syntax:** let sLeft = element.scrollLeft;
 
-Sources: <https://javascript.info/size-and-scroll#scrollleft-scrolltop>
+---
 
 ### Explain what the scrollTop is in relation to an HTML element.
 
@@ -215,7 +215,7 @@ Sources: <https://javascript.info/size-and-scroll#scrollleft-scrolltop>
 
 **Syntax:** let intElemScrollTop = someElement.scrollTop;
 
-Sources: <https://javascript.info/size-and-scroll#scrollleft-scrolltop>
+---
 
 ### Why should we use geometry properties vs taking the width/height from CSS using getComputedStyle?
 
@@ -231,4 +231,4 @@ Sources: <https://javascript.info/size-and-scroll#scrollleft-scrolltop>
 Please note that the described difference is only about reading getComputedStyle(...) width from JavaScript, visually everything is correct.
 :::
 
-Sources: <https://javascript.info/size-and-scroll#don-t-take-width-height-from-css>
+---

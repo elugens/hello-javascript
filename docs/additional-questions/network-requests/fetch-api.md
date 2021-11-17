@@ -66,7 +66,7 @@ let promise = fetch(url, {
 });
 ```
 
-Source: <https://javascript.info/fetch-api>
+---
 
 ### What do the referrer and referrerPolicy fetch options do?
 
@@ -98,7 +98,7 @@ fetch('/page', {
 });
 ```
 
-Source: <https://javascript.info/fetch-api#referrer-referrerpolicy>
+---
 
 ### Is the referrerPolicy fetch option limited to use with Fetch?
 
@@ -110,7 +110,7 @@ Source: <https://javascript.info/fetch-api#referrer-referrerpolicy>
   </div>
 </details>
 
-Source: <https://javascript.info/fetch-api#referrer-referrerpolicy>
+---
 
 ### Can you explain, what is the purpose of the fetch mode option?
 
@@ -122,7 +122,7 @@ Source: <https://javascript.info/fetch-api#referrer-referrerpolicy>
   </div>
 </details>
 
-Source: <https://javascript.info/fetch-api#mode>
+---
 
 ### What does the Fetch credential option do during a network request?
 
@@ -142,7 +142,7 @@ var myRequest = new Request('flowers.jpg');
 var myCred = myRequest.credentials; // returns "same-origin" by default
 ```
 
-Source: <https://javascript.info/fetch-api#credentials>
+---
 
 ### What does the fetch cache option do in relation to HTTP-caching?
 
@@ -154,7 +154,7 @@ Source: <https://javascript.info/fetch-api#credentials>
   </div>
 </details>
 
-Source: <https://javascript.info/fetch-api#cache>
+---
 
 ### How can we change the default behavior a HTTP-redirect using fetch?
 
@@ -166,7 +166,7 @@ Source: <https://javascript.info/fetch-api#cache>
   </div>
 </details>
 
-Source: <https://javascript.info/fetch-api#redirect>
+---
 
 ### How does the fetch integrity option work or behave?
 
@@ -186,4 +186,4 @@ fetch('http://site.com/file', {
 });
 ```
 
-Source: <https://javascript.info/fetch-api#integrity>
+---

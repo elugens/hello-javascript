@@ -22,7 +22,7 @@ sidebar_position: 1
   </div>
 </details>
 
-Source: <https://javascript.info/cookie>
+---
 
 ### What is a common use case of the HTTP cookie?
 
@@ -34,7 +34,7 @@ Source: <https://javascript.info/cookie>
   </div>
 </details>
 
-Source: <https://javascript.info/cookie>
+---
 
 ### Can you explain the process of HTTP cookie authentication?
 
@@ -46,7 +46,7 @@ Source: <https://javascript.info/cookie>
   </div>
 </details>
 
-Source: <https://javascript.info/cookie>
+---
 
 ### How are cookies set or stored using set-cookie?
 
@@ -65,7 +65,7 @@ document.cookie = 'user=John'; // update only cookie named 'user'
 alert(document.cookie); // show all cookies, not just user
 ```
 
-Source: <https://javascript.info/cookie#writing-to-document-cookie>
+---
 
 ### When the name or value of a cookie has a space or special character. Is there way to ensure the proper parsing of the name value pair?
 
@@ -93,7 +93,7 @@ document.cookie = encodeURIComponent(name) + '=' + encodeURIComponent(value);
 alert(document.cookie); // ...; my%20name=John%20Smith
 ```
 
-Source: <https://javascript.info/cookie#writing-to-document-cookie>
+---
 
 ### Are there any additional attributes we can use to set cookies?
 
@@ -118,7 +118,7 @@ document.cookie =
   'username=John Doe; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/';
 ```
 
-Source: <https://javascript.info/cookie#expires-max-age>
+---
 
 ### What is the difference between expires and max-age cookie attributes?
 
@@ -130,7 +130,7 @@ Source: <https://javascript.info/cookie#expires-max-age>
   </div>
 </details>
 
-Source: <https://javascript.info/cookie#expires-max-age>
+---
 
 ### Is there a way to ensure that a cookie remains after a browser is closed?
 
@@ -162,7 +162,7 @@ document.cookie = 'user=John; max-age=3600';
 document.cookie = 'user=John; max-age=0';
 ```
 
-Source: <https://javascript.info/cookie#expires-max-age>
+---
 
 ### How do we ensure that a cookie is transferred or set securely?
 
@@ -184,7 +184,7 @@ Code Example:
 document.cookie = 'user=John; secure';
 ```
 
-Source: <https://javascript.info/cookie#secure>
+---
 
 ### Can you explain how the samesite attribute works?
 
@@ -202,7 +202,7 @@ Code Example:
 res.cookie('3pcookie', 'value', { sameSite: 'none', secure: true });
 ```
 
-Source: <https://javascript.info/cookie#samesite>
+---
 
 ### Are there any drawbacks to using the samesite attribute?
 
@@ -214,7 +214,7 @@ Source: <https://javascript.info/cookie#samesite>
   </div>
 </details>
 
-Source: <https://javascript.info/cookie#samesite>
+---
 
 ### Can you briefly discuss the HttpOnly cookie?
 
@@ -233,7 +233,7 @@ public bool HttpOnly { get; set; }
 
 ```
 
-Source: <https://javascript.info/cookie#httponly>
+---
 
 ### What is a third-party cookie?
 
@@ -245,7 +245,7 @@ Source: <https://javascript.info/cookie#httponly>
   </div>
 </details>
 
-Source: <https://javascript.info/cookie#appendix-third-party-cookies>
+---
 
 ### Can you brief explain the European GDPR governs?
 
@@ -257,7 +257,7 @@ Source: <https://javascript.info/cookie#appendix-third-party-cookies>
   </div>
 </details>
 
-Source: <https://javascript.info/cookie#appendix-gdpr>
+---
 
 ### What does the acronym GDPR stand for?
 
@@ -269,7 +269,7 @@ Source: <https://javascript.info/cookie#appendix-gdpr>
   </div>
 </details>
 
-Source: <https://javascript.info/cookie#appendix-gdpr>
+---
 
 ### Can you name two common variants of websites following the GDPR?
 
@@ -281,4 +281,4 @@ Source: <https://javascript.info/cookie#appendix-gdpr>
   </div>
 </details>
 
-Source: <https://javascript.info/cookie#appendix-gdpr>
+---

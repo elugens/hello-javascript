@@ -22,7 +22,7 @@ sidebar_position: 1
   </div>
 </details>
 
-Source: <https://javascript.info/browser-environment>
+---
 
 ### What types of technology platforms can JavaScript run on?
 
@@ -34,7 +34,7 @@ Source: <https://javascript.info/browser-environment>
   </div>
 </details>
 
-Source: <https://javascript.info/browser-environment>
+---
 
 ### Briefly explain the general structure of the browser window environment.
 
@@ -46,7 +46,7 @@ Source: <https://javascript.info/browser-environment>
   </div>
 </details>
 
-Source: <https://javascript.info/browser-environment>
+---
 
 ### What is the Document Object Model in JavaScript?
 
@@ -70,7 +70,7 @@ document.body.style.background = 'red';
 setTimeout(() => (document.body.style.background = ''), 1000);
 ```
 
-Source: <https://javascript.info/browser-environment#dom-document-object-model>
+---
 
 ### Can you name a good reference document to find information about the document object model?
 
@@ -82,11 +82,7 @@ Source: <https://javascript.info/browser-environment#dom-document-object-model>
   </div>
 </details>
 
-**Sources:**
-
-MDN: <https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction>
-
-Living Standard: <https://dom.spec.whatwg.org/>
+---
 
 ### Is the DOM only used in Browsers or can it be found in other platforms?
 
@@ -98,7 +94,7 @@ Living Standard: <https://dom.spec.whatwg.org/>
   </div>
 </details>
 
-Sources: <https://javascript.info/browser-environment#dom-document-object-model>
+---
 
 ### What is the CSS Object Model (CSSOM) used for in a browser?
 
@@ -111,7 +107,7 @@ Sources: <https://javascript.info/browser-environment#dom-document-object-model>
   </div>
 </details>
 
-Sources: <https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model>
+---
 
 ### What is the Browser Object Model in JavaScript?
 
@@ -138,7 +134,7 @@ if (confirm('Go to Wikipedia?')) {
 }
 ```
 
-Source: <https://javascript.info/browser-environment#bom-browser-object-model>
+---
 
 ### Are the alert, confirm, and prompt functions part of the DOM or BOM?
 
@@ -150,7 +146,7 @@ Source: <https://javascript.info/browser-environment#bom-browser-object-model>
   </div>
 </details>
 
-Sources: <https://javascript.info/browser-environment#bom-browser-object-model>
+---
 
 ### What specification is the BOM part of?
 
@@ -163,4 +159,4 @@ Sources: <https://javascript.info/browser-environment#bom-browser-object-model>
   </div>
 </details>
 
-Sources: <https://javascript.info/browser-environment#bom-browser-object-model>
+---

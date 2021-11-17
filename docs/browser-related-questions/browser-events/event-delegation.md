@@ -40,4 +40,4 @@ One more counter: <input type="button" value="2" data-counter />
 </script>
 ```
 
-Source: <https://javascript.info/event-delegation#the-behavior-pattern>
+---

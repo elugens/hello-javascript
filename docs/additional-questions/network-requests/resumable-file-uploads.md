@@ -22,4 +22,4 @@ sidebar_position: 9
   </div>
 </details>
 
-Source: <https://javascript.info/resume-upload>
+---

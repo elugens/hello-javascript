@@ -42,7 +42,7 @@ Example:
 </script>
 ```
 
-Source: <https://javascript.info/keyboard-events#default-actions>
+---
 
 ### How do we make something unscrollable in the browser?
 
@@ -54,4 +54,4 @@ Source: <https://javascript.info/keyboard-events#default-actions>
   </div>
 </details>
 
-Source: <https://javascript.info/onscroll#prevent-scrolling>
+---

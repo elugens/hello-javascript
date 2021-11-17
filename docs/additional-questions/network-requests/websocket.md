@@ -22,7 +22,7 @@ sidebar_position: 11
   </div>
 </details>
 
-Source: <https://javascript.info/websocket>
+---
 
 ### What protocol does WebSocket use?
 
@@ -34,7 +34,7 @@ Source: <https://javascript.info/websocket>
   </div>
 </details>
 
-Source: <https://sookocheff.com/post/networking/how-do-websockets-work/>
+---
 
 ### What do we need to open a websocket connection?
 
@@ -48,7 +48,7 @@ Source: <https://sookocheff.com/post/networking/how-do-websockets-work/>
 
 **Syntax:** let socket = new WebSocket("ws://javascript.info")
 
-Source: <https://javascript.info/websocket>
+---
 
 ### What is the preferred mode for a websocket connection?
 
@@ -60,7 +60,7 @@ Source: <https://javascript.info/websocket>
   </div>
 </details>
 
-Source: <https://javascript.info/websocket#a-simple-example>
+---
 
 ### After we create a websocket connection, what events can we listen for?
 
@@ -110,7 +110,7 @@ socket.onerror = function (error) {
 };
 ```
 
-Source: <https://javascript.info/websocket#a-simple-example>
+---
 
 ### What happens during initial state of opening a websocket connection?
 
@@ -140,7 +140,7 @@ Sec-WebSocket-Key: Iv8io/9s+lYFgZWcXczP8Q==
 Sec-WebSocket-Version: 13
 ```
 
-Source: <https://javascript.info/websocket#opening-a-websocket>
+---
 
 ### In the browser header, what does the origin refer to in websocket connections?
 
@@ -152,7 +152,7 @@ Source: <https://javascript.info/websocket#opening-a-websocket>
   </div>
 </details>
 
-Source: <https://javascript.info/websocket#opening-a-websocket>
+---
 
 ### What does the connection upgrade signal?
 
@@ -164,7 +164,7 @@ Source: <https://javascript.info/websocket#opening-a-websocket>
   </div>
 </details>
 
-Source: <https://javascript.info/websocket#opening-a-websocket>
+---
 
 ### What happens after the connection upgrade request with a websocket?
 
@@ -176,7 +176,7 @@ Source: <https://javascript.info/websocket#opening-a-websocket>
   </div>
 </details>
 
-Source: <https://javascript.info/websocket#opening-a-websocket>
+---
 
 ### Can the WebSocket handshake be emulated with XMLHttpRequest or fetch?
 
@@ -188,7 +188,7 @@ Source: <https://javascript.info/websocket#opening-a-websocket>
   </div>
 </details>
 
-Source: <https://javascript.info/websocket#opening-a-websocket>
+---
 
 ### What is the server code response used during a switch WebSocket protocol?
 
@@ -210,7 +210,7 @@ Connection: Upgrade
 Sec-WebSocket-Accept: hsBlbuDTkk24srzEOTBUlZAlC2g=
 ```
 
-Source: <https://javascript.info/websocket#opening-a-websocket>
+---
 
 ### What does deflate-frame mean in relation to Sec-WebSocket-Extensions?
 
@@ -222,7 +222,7 @@ Source: <https://javascript.info/websocket#opening-a-websocket>
   </div>
 </details>
 
-Source: <https://javascript.info/websocket#opening-a-websocket>
+---
 
 ### What does the Sec-WebSocket-Protocol: soap, wamp mean?
 
@@ -250,7 +250,7 @@ Sec-WebSocket-Accept: hsBlbuDTkk24srzEOTBUlZAlC2g=
 Sec-WebSocket-Extensions: deflate-frame Sec-WebSocket-Protocol: soap
 ```
 
-Source: <https://javascript.info/websocket#extensions-and-subprotocols>
+---
 
 ### What are frames in relation to WebSocket communication?
 
@@ -262,7 +262,7 @@ Source: <https://javascript.info/websocket#extensions-and-subprotocols>
   </div>
 </details>
 
-Source: <https://javascript.info/websocket#data-transfer>
+---
 
 ### Explain the function and syntax of the WebSocket.send() method.
 
@@ -274,7 +274,7 @@ Source: <https://javascript.info/websocket#data-transfer>
   </div>
 </details>
 
-Source: <https://javascript.info/websocket#data-transfer>
+---
 
 ### When WebSocket returns text or binary data to us, what object type is it?
 
@@ -296,7 +296,7 @@ socket.onmessage = (event) => {
 };
 ```
 
-Source: <https://javascript.info/websocket#data-transfer>
+---
 
 ### How should we handle a slow network connection in relation to WebSocket communication?
 
@@ -322,7 +322,7 @@ setInterval(() => {
 }, 100);
 ```
 
-Source: <https://javascript.info/websocket#rate-limiting>
+---
 
 ### What happens when ether the browser or server closes a connection?
 
@@ -352,7 +352,7 @@ socket.onclose = (event) => {
 };
 ```
 
-Source: <https://javascript.info/websocket#rate-limiting>
+---
 
 ### What are the common closure codes for WebSocket?
 
@@ -376,7 +376,7 @@ socket.onclose = (event) => {
 };
 ```
 
-Source: <https://javascript.info/websocket#connection-close>
+---
 
 ### How can we get the connection state of a WebSocket connection?
 
@@ -388,4 +388,4 @@ Source: <https://javascript.info/websocket#connection-close>
   </div>
 </details>
 
-Source: <https://javascript.info/websocket#connection-close>
+---

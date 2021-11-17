@@ -22,7 +22,7 @@ sidebar_position: 1
   </div>
 </details>
 
-Source: <https://javascript.info/mouse-events-basics#events-order>
+---
 
 ### If a user is on a MAC, what is the event property key for their OS?
 
@@ -34,7 +34,7 @@ Source: <https://javascript.info/mouse-events-basics#events-order>
   </div>
 </details>
 
-Source: <https://javascript.info/mouse-events-basics#modifiers-shift-alt-ctrl-and-meta>
+---
 
 ### What is the difference between window and document relative positions in terms of the mouse?
 
@@ -46,7 +46,7 @@ Source: <https://javascript.info/mouse-events-basics#modifiers-shift-alt-ctrl-an
   </div>
 </details>
 
-Source: <https://javascript.info/mouse-events-basics#modifiers-shift-alt-ctrl-and-meta>
+---
 
 ### Double mouse click has a side-effect where it selects that text. Is there a way to turn this behavior off?
 
@@ -66,7 +66,7 @@ Before...
 
 ...After
 
-Source: <https://javascript.info/mouse-events-basics#preventing-selection-on-mousedown>
+---
 
 ### Can you prevent copying of text or images in a browser document?
 
@@ -85,4 +85,4 @@ Source: <https://javascript.info/mouse-events-basics#preventing-selection-on-mou
 </div>
 ```
 
-Source: <https://javascript.info/mouse-events-basics#preventing-selection-on-mousedown>
+---

@@ -22,7 +22,7 @@ sidebar_position: 2
   </div>
 </details>
 
-Source: <https://javascript.info/mousemove-mouseover-mouseout-mouseenter-mouseleave#events-mouseover-mouseout-relatedtarget>
+---
 
 ### Can the relatedTarget be null during a mouseover/mouseout event?
 
@@ -34,7 +34,7 @@ Source: <https://javascript.info/mousemove-mouseover-mouseout-mouseenter-mousele
   </div>
 </details>
 
-Source: <https://javascript.info/mousemove-mouseover-mouseout-mouseenter-mouseleave#events-mouseover-mouseout-relatedtarget>
+---
 
 ### Does the mouse trigger an event for every element it crosses?
 
@@ -46,7 +46,7 @@ Source: <https://javascript.info/mousemove-mouseover-mouseout-mouseenter-mousele
   </div>
 </details>
 
-Source: <https://javascript.info/mousemove-mouseover-mouseout-mouseenter-mouseleave#skipping-elements>
+---
 
 ### What is the difference between mouseenter/mouseleave and mouseover/mouseout?
 
@@ -68,4 +68,4 @@ Example:
 </div>
 ```
 
-Source: <https://javascript.info/mousemove-mouseover-mouseout-mouseenter-mouseleave#events-mouseenter-and-mouseleave>
+---

@@ -32,7 +32,7 @@ let regexp = /CSS\d/;
 alert(str.match(regexp)); // alerts CSS4
 ```
 
-Source: <https://javascript.info/regexp-character-classes>
+---
 
 ### Is it possible to use multiple character classes in regular expressions?
 
@@ -50,7 +50,7 @@ Code Example:
 alert('I love HTML5!'.match(/\s\w\w\w\w\d/)); // alerts ' HTML5'
 ```
 
-Source: <https://javascript.info/regexp-character-classes>
+---
 
 ### What is an inverse class in relation to regular expressions?
 
@@ -77,7 +77,7 @@ let str = '+7(903)-123-45-67';
 alert(str.replace(/\D/g, '')); // 79031234567
 ```
 
-Source: <https://javascript.info/regexp-character-classes#inverse-classes>
+---
 
 ### What does the dot represent in a regular expression?
 
@@ -103,7 +103,7 @@ alert('CS4'.match(/CS.4/)); // null
 // no match because there is no character for the dot
 ```
 
-Source: <https://javascript.info/regexp-character-classes#a-dot-is-any-character>
+---
 
 ### What character class should you use with dot to accept all characters, like the (\n) new line character?
 
@@ -126,7 +126,7 @@ alert('A\nB'.match(/A.B/)); // null (no match)
 alert('A\nB'.match(/A.B/s)); // A\nB (match!)
 ```
 
-Source: <https://javascript.info/regexp-character-classes#dot-as-literally-any-character-with-s-flag>
+---
 
 ### When we need to use the “s” flag, is there a way to ensure it works in all browsers?
 
@@ -144,7 +144,7 @@ Code Example:
 alert('A\nB'.match(/A[\s\S]B/)); // A\nB (match!)
 ```
 
-Source: <https://javascript.info/regexp-character-classes#dot-as-literally-any-character-with-s-flag>
+---
 
 ### Why is it important to pay attention to spaces for regular expressions?
 
@@ -170,4 +170,4 @@ alert('1 - 5'.match(/\d - \d/)); // 1 - 5, now it works
 alert('1 - 5'.match(/\d\s-\s\d/)); // 1 - 5, also works
 ```
 
-Source: <https://javascript.info/regexp-character-classes#dot-as-literally-any-character-with-s-flag>
+---

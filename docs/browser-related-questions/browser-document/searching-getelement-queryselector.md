@@ -65,7 +65,7 @@ Example:
 </script>
 ```
 
-Sources: <https://javascript.info/searching-elements-dom#document-getelementbyid-or-just-id>
+---
 
 ### What is the main rule when it comes to naming an element id attribute?
 
@@ -77,7 +77,7 @@ Sources: <https://javascript.info/searching-elements-dom#document-getelementbyid
   </div>
 </details>
 
-Sources: <https://javascript.info/searching-elements-dom#document-getelementbyid-or-just-id>
+---
 
 ### Can you call getElementById on any object/element we choose?
 
@@ -89,7 +89,7 @@ Sources: <https://javascript.info/searching-elements-dom#document-getelementbyid
   </div>
 </details>
 
-Sources: <https://javascript.info/searching-elements-dom#document-getelementbyid-or-just-id>
+---
 
 ### Explain the function and syntax of querySelectorAll method.
 
@@ -135,7 +135,7 @@ Example:
 </script>
 ```
 
-Sources: <https://javascript.info/searching-elements-dom#querySelectorAll>
+---
 
 ### Can you use pseudo-classes like hover and active in querySelectorAll?
 
@@ -147,7 +147,7 @@ Sources: <https://javascript.info/searching-elements-dom#querySelectorAll>
   </div>
 </details>
 
-Sources: <https://javascript.info/searching-elements-dom#querySelectorAll>
+---
 
 ### Explain the function and syntax of querySelector method.
 
@@ -161,7 +161,7 @@ Sources: <https://javascript.info/searching-elements-dom#querySelectorAll>
 
 **Syntax:** elementList = parentNode.querySelector(selectors);
 
-Sources: <https://javascript.info/searching-elements-dom#querySelector>
+---
 
 ### Explain the function and syntax of element.matches method.\*\*
 
@@ -197,7 +197,7 @@ Sources: <https://javascript.info/searching-elements-dom#querySelector>
 </script>
 ```
 
-Sources: <https://javascript.info/searching-elements-dom#matches>
+---
 
 ### Explain the function and syntax of element.closest method.\*\*
 
@@ -230,7 +230,7 @@ Sources: <https://javascript.info/searching-elements-dom#matches>
 </script>
 ```
 
-Sources: <https://javascript.info/searching-elements-dom#closest>
+---
 
 ### Explain the function and syntax of getElementsByTagName method.
 
@@ -274,7 +274,7 @@ Sources: <https://javascript.info/searching-elements-dom#closest>
 </script>
 ```
 
-Sources: <https://javascript.info/searching-elements-dom#getelementsby>
+---
 
 ### Does getElementsByTagName return an element or a collection?
 
@@ -302,7 +302,7 @@ document.getElementsByTagName('input').value = 5;
 document.getElementsByTagName('input')[0].value = 5;
 ```
 
-Sources: <https://javascript.info/searching-elements-dom#getelementsby>
+---
 
 ### What is the difference between a live and static collection?
 
@@ -350,4 +350,4 @@ Example:
 </script>
 ```
 
-Sources: <https://javascript.info/searching-elements-dom#live-collections>
+---
