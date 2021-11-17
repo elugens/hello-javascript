@@ -31,14 +31,19 @@ sidebar_position: 1
       JavaScript anywhere into an HTML document. The script tag can also be used
       to import scripts from external file sources using the source attribute.
     </div>
+    <br />
   </div>
+  ```js
+  <script src='/path/to/script.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js'></script>
+  ```
 </details>
 
 **Code Example:**
 
 ```js
 <script src="/path/to/script.js"></script>
-
-// External URL example:
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js"></script>
 ```
+
+---
