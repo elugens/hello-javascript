@@ -34,8 +34,16 @@ sidebar_position: 1
     <div>
     <br />
     <strong class="codeExample">Code Example:</strong><br /><br />
-    <img src='/img/javascript-fundamentals/what-is-the-script-tag-used-for-in-javascript.svg' alt="The Script Tag Code Snippet" />
-    </div>
+    <div></div>
+
+```javascript
+<script src="/path/to/script.js"></script>
+
+// External URL:
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js"></script>
+```
+
+  </div>
   </div>
 </details>
 

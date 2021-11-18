@@ -102,11 +102,10 @@ sidebar_position: 5
   <div>
   <div><strong>Interview Response:</strong> Backticks allow us to embed variables and expressions into a string by wrapping them in $&#x7B;…&#125; . There is no notable difference between single and double quotes.</div><br />
   <div><strong>Technical Response:</strong> Double and single quotes are “simple” quotes. There is practically no difference between them in JavaScript. Backticks are “extended functionality” quotes. They allow us to embed variables and expressions into a string by wrapping them in $&#x7B;…&#125;.
-  </div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let name = 'John';
@@ -125,6 +124,10 @@ Please note that this can only be done in backticks. Other quotes do not have th
 
 :::
 
+  </div>
+  </div>
+</details>
+
 ---
 
 ### What two values does the Boolean logical type have?
@@ -134,21 +137,24 @@ Please note that this can only be done in backticks. Other quotes do not have th
   <div>
   <div><strong>Interview Response:</strong> true or false</div><br />
   <div><strong>Technical Response:</strong> true or false - This type is commonly used to store yes/no values: true means “yes, correct”, and false means “no, incorrect”. It can also be used for comparisons or more specifically used for greater or less than values.
-  </div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Examples:
+  <div></div>
 
 ```js
 let nameFieldChecked = true; // yes, name field is checked
 let ageFieldChecked = false; // no, age field is not checked
-// Greater or Less Than:
 
+// Greater or Less Than:
 let isGreater = 4 > 1;
 
 alert(isGreater); // true (the comparison result is "yes")
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -172,27 +178,30 @@ alert(isGreater); // true (the comparison result is "yes")
   <div>
   <div><strong>Interview Response:</strong> Undefined means a value has not been defined or assigned to a variable.</div><br />
   <div><strong>Technical Response:</strong> In JavaScript, undefined means a value has not been defined or assigned. If a variable is declared, but not assigned, then its value is undefined.
-  </div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let age;
 
-alert(age); // shows "undefined"
+alert(age); // shows "undefined"
 
-// Technically, it is possible to explicitly assign undefined to a variable, but it is not recommended.
+// Technically, it is possible to explicitly assign undefined to a variable, but it is not recommended.
 
 let age = 100;
 
-// change the value to undefined
+// change the value to undefined
 
 age = undefined;
 
-alert(age); // "undefined"
+alert(age); // "undefined"
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 

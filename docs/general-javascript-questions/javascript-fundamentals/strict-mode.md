@@ -31,7 +31,16 @@ sidebar_position: 3
   <div><strong>Interview Response:</strong> You need to explicitly enable them with a special directive: "use strict".</div>
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
-  <img src='/img/strict-mode/how-do-you-explicitly-enable-es5-features-and-modifications.svg' alt="Strict Mode" />
+  
+  <div></div>
+
+```javascript
+"use strict";
+
+// this code works the modern way
+...
+```
+
   </div>
 </details>
 
@@ -44,7 +53,19 @@ sidebar_position: 3
   <div>
   <div><strong>Interview Response:</strong> Strict mode is enabled by placing “use strict” at the top of your script.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
-  <img src='/img/strict-mode/explain-how-you-should-implement-strict-mode-in-javascript.svg' alt="Strict Mode Proper Implementation" />
+  
+  <div></div>
+
+```javascript
+alert('this is not strict');
+// "use strict" below is ignored
+// -it must be at the top of the script
+
+('use strict');
+
+// strict mode is not activated
+```
+
   </div>
   </div>
 </details>
@@ -82,10 +103,31 @@ sidebar_position: 3
   <div><strong>Technical Response:</strong> First, you can try to press Shift+Enter to input multiple lines and put “use-strict” on top. In Older browsers, you will have to put it in a wrapper.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong> works in most browsers, namely Firefox and Chrome.<br /><br />
-  <img src='/img/strict-mode/how-do-you-implement-strict-mode-in-the-browser-console.svg' alt="Strict Mode in the Browser" />
+  
+  <div></div>
+
+```javascript
+'use strict';
+// <Shift+Enter for a newline>
+
+//  ...your code
+
+// <Enter to run>
+```
+
   </div><br />
   <div><strong className="codeExample">Code Example:</strong> In Older browsers you will have to put it a wrapper<br /><br />
-  <img src='/img/strict-mode/how-do-you-implement-strict-mode-in-the-browser-console2.svg' alt="Strict Mode in the Older Browsers" />
+
+  <div></div>
+
+```javascript
+(function () {
+  'use strict';
+
+  // ...your code here...
+})();
+```
+
   </div>
   </div>
 </details>
@@ -151,7 +193,17 @@ sidebar_position: 3
   <div>
   <div><strong>Interview Response:</strong> Script files are attached to HTML with the src attribute including the absolute path to the JS file.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
-  <img src='/img/strict-mode/how-do-you-access-external-script-files-in-javascript-development.svg' alt="External Script Files" />
+  
+  <div></div>
+
+```html
+<script src="/path/to/script.js"></script>
+
+// Example of Multiple script Paths…
+<script src="/js/script1.js"></script>
+<script src="/js/script2.js"></script>
+```
+
   </div>
   </div>
 </details>
@@ -163,15 +215,18 @@ sidebar_position: 3
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We can access external scripts by using the script src attribute. Both secure and non-secure domains are permissible.</div>
-  </div>
-</details>
+  <div><strong>Interview Response:</strong> We can access external scripts by using the script src attribute. Both secure and non-secure domains are permissible.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/ "></script>
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -202,30 +257,31 @@ Code Example:
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A single script tag cannot have both the source attribute and code inside.</div>
-  </div>
-</details>
+  <div><strong>Interview Response:</strong> A single script tag cannot have both the source attribute and code inside.</div><br />
+  <div><strong className="codeExample">Code Example:</strong>This is not allowed<br /><br />
 
-Code Example: This is not allowed
-
-<!-- Bad Code -->
+  <div></div>
 
 ```html
 <script src="file.js">
-  alert(1); // the content is ignored, because src is set
+  alert(1); // the content is ignored, because src is set
 </script>
 ```
 
-The example above can be split into two scripts to work:
+The example above can be split into two scripts to work:<br />
 
-Code Example: Good Code
+  <div></div>
 
 ```html
 <script src="file.js"></script>
 
 <script>
-  alert(1);
+  alert('Now it works!');
 </script>
 ```
+
+  </div>  
+  </div>
+</details>
 
 ---

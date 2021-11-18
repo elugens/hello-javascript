@@ -41,11 +41,10 @@ sidebar_position: 4
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, but it is not recommended, for the sake of readability and consistency.</div>
-  </div>
-</details>
+  <div><strong>Interview Response:</strong> Yes, but it is not recommended, for the sake of readability and consistency.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 // Example: one-line
@@ -63,6 +62,10 @@ let age = 25;
 let message = 'Hello';
 ```
 
+  </div>
+  </div>
+</details>
+
 ---
 
 ### Is there a way to copy stored data from one variable to another?
@@ -70,14 +73,13 @@ let message = 'Hello';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, declare two variables and copy data from one into the other. Better known as copy by reference.</div>
-  </div>
-</details>
+  <div><strong>Interview Response:</strong> Yes, declare two variables and copy data from one into the other. Better known as copy by reference.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-let hello = 'Hello world!';
+let hello = 'Hello JavaScript!';
 
 let message;
 
@@ -91,6 +93,10 @@ alert(hello); // Hello world!
 alert(message); // Hello world!
 ```
 
+  </div>
+  </div>
+</details>
+
 ---
 
 ### Does JavaScript allow you to change the value of a variable?
@@ -99,10 +105,10 @@ alert(message); // Hello world!
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, by declaring the variable equals the new value. A declaration of a const on a variable does not have this capability, because it is a constant value.</div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let message;
@@ -113,6 +119,9 @@ message = 'World!'; // value changed
 console.log(message); // returns 'World!'
 ```
 
+  </div>
+</details>
+
 ---
 
 ### Can you declare a variable twice in JavaScript?
@@ -121,10 +130,10 @@ console.log(message); // returns 'World!'
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> No, it will result in a syntax error.</div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let message = 'This';
@@ -133,6 +142,9 @@ let message = 'This';
 
 let message = 'That'; // SyntaxError: 'message' has already been declared
 ```
+
+  </div>
+</details>
 
 ---
 
@@ -143,11 +155,10 @@ let message = 'That'; // SyntaxError: 'message' has already been declared
   <div>
   <div><strong>Interview Response:</strong> The variable must contain only letters, digits, dollar signs, or an underscore. The first character must not be a digit.</div><br />
   <div><strong>Technical Response:</strong> There are two limitations on variable names in JavaScript. The name must contain only letters, digits, or the symbols $ and _. The first character must not be a digit.
-  </div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Examples of valid names:</strong><br /><br />
 
-Examples of valid names:
+  <div></div>
 
 ```js
 let userName;
@@ -155,15 +166,19 @@ let userName;
 let test123;
 ```
 
-These names are also valid, but not recommended in the format below:
+<strong className="codeExample">These names are also valid, but not recommended in the format below:</strong><br /><br />
+
+  <div></div>
 
 ```js
-let $ = 1; // declared a variable with the name "$"
-
-let _ = 2; // and now a variable with the name "_"
-
-alert($ + \_); // 3
+let $ = 1; // declared a variable with the name "$"
+let _ = 2; // and now a variable with the name "_"
+alert($ + _); // 3
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -172,15 +187,18 @@ alert($ + \_); // 3
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong>  When the name contains multiple words, camelCase is commonly used.</div>
-  </div>
-</details>
+  <div><strong>Interview Response:</strong>  When the name contains multiple words, camelCase is commonly used.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let myUserName;
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -189,15 +207,18 @@ let myUserName;
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong>  Yes, variables named myUser and myuser are two different variables, because variables in JavaScript are case-sensitive.</div>
-  </div>
-</details>
+  <div><strong>Interview Response:</strong>  Yes, variables named myUser and myuser are two different variables, because variables in JavaScript are case-sensitive.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```js
 let myUserName;
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -208,17 +229,20 @@ let myUserName;
   <div>
   <div><strong>Interview Response:</strong> Yes, but it is not recommended.</div><br />
   <div><strong>Technical Response:</strong> Yes, it is possible to use any language, including Cyrillic letters or even hieroglyphs, but it is not recommended.
-  </div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong> Technically, this can be achieved, but it is not recommended.<br /><br />
 
-Code Example: Technically, this can be achieved, but it is not recommended.
+  <div></div>
 
 ```js
 let имя = '...';
 
 let 我 = '...';
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -227,11 +251,10 @@ let 我 = '...';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, it is possible outside of strict mode, but it is not recommended. It may be found in older applications.</div>
-  </div>
-</details>
+  <div><strong>Interview Response:</strong> Yes, it is possible outside of strict mode, but it is not recommended. It may be found in older applications.</div><br />
+  <div><strong className="codeExample">Code Example:</strong> Technically, this can be achieved, but it is not recommended in modern JavaScript.<br /><br />
 
-Code Example: Technically, this can be achieved, but it is not recommended in modern JavaScript.
+  <div></div>
 
 ```js
 // note: no "use strict" in this example
@@ -239,6 +262,10 @@ Code Example: Technically, this can be achieved, but it is not recommended in mo
 num = 5; // the variable "num" is created if it didn't exist
 alert(num); // 5
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -260,17 +287,20 @@ alert(num); // 5
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, it will result in a syntax error because constants cannot be reassigned.</div>
-  </div>
-</details>
+  <div><strong>Interview Response:</strong> No, it will result in a syntax error because constants cannot be reassigned.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 const myBirthday = '18.04.1982';
 
 myBirthday = '01.01.2001'; // error, can't reassign the constant!
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -279,11 +309,10 @@ myBirthday = '01.01.2001'; // error, can't reassign the constant!
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Aliases should be used for constant variable values that are hard to remember. They should use capital letters and underscores.</div>
-  </div>
-</details>
+  <div><strong>Interview Response:</strong> Aliases should be used for constant variable values that are hard to remember. They should use capital letters and underscores.</div><br />
+  <div><strong className="codeExample">Code Example:</strong> Hexadecimal Colors<br /><br />
 
-Code Example: Hexadecimal Colors
+  <div></div>
 
 ```js
 const COLOR_RED = '#F00';
@@ -300,6 +329,10 @@ let color = COLOR_ORANGE;
 
 alert(color); // #FF7F00
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 

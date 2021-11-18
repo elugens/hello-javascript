@@ -94,3 +94,24 @@ Code Snippet SVG Example - Details Element
   </div>
   </div>
 </details>
+
+Code Snippet Markdown
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Script files are attached to HTML with the src attribute including the absolute path to the JS file.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+<script src="/path/to/script.js"></script>
+
+// External URL:
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js"></script>
+```
+
+  </div>
+  </div>
+</details>
