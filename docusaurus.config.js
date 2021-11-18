@@ -198,6 +198,22 @@ const config = {
     }),
   // LIVE CODE BLOCKS IMPLEMENTATION
   themes: ['@docusaurus/theme-live-codeblock'],
+  // scripts example
+  scripts: [
+    // Object format.
+    // {
+    //   src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css',
+    //   async: true,
+    // },
+    // {
+    //   src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js',
+    //   async: true,
+    // },
+    // {
+    //   src: 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js',
+    //   async: true,
+    // },
+  ],
 
   // plugins config
   plugins: [

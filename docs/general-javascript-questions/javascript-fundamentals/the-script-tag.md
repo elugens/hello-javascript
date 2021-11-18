@@ -8,10 +8,10 @@ sidebar_position: 1
 **JavaScript Fundamentals: The "script" Tag**
 
 <head>
+  <meta charSet='utf-8' />
   <title>
     The "script" Tag - JavaScript Frontend Interview Questions & Answers
-  </title>
-  <meta charSet='utf-8' />
+  </title>  
 </head>
 
 ### What is the “script” tag used for in JavaScript?
@@ -31,19 +31,12 @@ sidebar_position: 1
       JavaScript anywhere into an HTML document. The script tag can also be used
       to import scripts from external file sources using the source attribute.
     </div>
+    <div>
     <br />
+    <strong class="codeExample">Code Example:</strong><br /><br />
+    <img src='/img/javascript-fundamentals/what-is-the-script-tag-used-for-in-javascript.svg' alt="The Script Tag Code Snippet" />
+    </div>
   </div>
-  ```js
-  <script src='/path/to/script.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js'></script>
-  ```
 </details>
-
-**Code Example:**
-
-```js
-<script src="/path/to/script.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js"></script>
-```
 
 ---

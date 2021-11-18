@@ -29,16 +29,11 @@ sidebar_position: 3
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> You need to explicitly enable them with a special directive: "use strict".</div>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+  <img src='/img/strict-mode/how-do-you-explicitly-enable-es5-features-and-modifications.svg' alt="Strict Mode" />
   </div>
 </details>
-
-Code Example:
-
-```js
-'use strict';
-
-// this code works the modern way
-```
 
 ---
 
@@ -47,21 +42,12 @@ Code Example:
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Strict mode is enabled by placing “use strict” at the top of your script.</div>
+  <div><strong>Interview Response:</strong> Strict mode is enabled by placing “use strict” at the top of your script.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+  <img src='/img/strict-mode/explain-how-you-should-implement-strict-mode-in-javascript.svg' alt="Strict Mode Proper Implementation" />
+  </div>
   </div>
 </details>
-
-```js
-// Strict mode is not enabled here:
-
-alert('some code');
-
-// "use strict" below is ignored--it must be at the top
-
-('use strict');
-
-// strict mode is not activated
-```
 
 ---
 
@@ -94,31 +80,15 @@ alert('some code');
   <div>
   <div><strong>Interview Response:</strong> We must place it at the first console line for it to work, then add the rest of our code.</div><br />
   <div><strong>Technical Response:</strong> First, you can try to press Shift+Enter to input multiple lines and put “use-strict” on top. In Older browsers, you will have to put it in a wrapper.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong> works in most browsers, namely Firefox and Chrome.<br /><br />
+  <img src='/img/strict-mode/how-do-you-implement-strict-mode-in-the-browser-console.svg' alt="Strict Mode in the Browser" />
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong> In Older browsers you will have to put it a wrapper<br /><br />
+  <img src='/img/strict-mode/how-do-you-implement-strict-mode-in-the-browser-console2.svg' alt="Strict Mode in the Older Browsers" />
   </div>
   </div>
 </details>
-
-Code Example: works in most browsers, namely Firefox and Chrome.
-
-```js
-'use strict';
-
-// <Shift+Enter for a newline>
-
-//  ...your code
-
-// <Enter to run>
-```
-
-In Older browsers you will have to put it a wrapper:
-
-```js
-(function () {
-  'use strict';
-
-  // ...your code here...
-})();
-```
 
 ---
 
@@ -179,21 +149,12 @@ In Older browsers you will have to put it a wrapper:
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Script files are attached to HTML with the src attribute including the absolute path to the JS file.</div>
+  <div><strong>Interview Response:</strong> Script files are attached to HTML with the src attribute including the absolute path to the JS file.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+  <img src='/img/strict-mode/how-do-you-access-external-script-files-in-javascript-development.svg' alt="External Script Files" />
+  </div>
   </div>
 </details>
-
-Code Example:
-
-```html
-<script src="/path/to/script.js"></script>
-
-<!-- Example of Multiple script Paths… -->
-
-<script src="/js/script1.js"></script>
-
-<script src="/js/script2.js"></script>
-```
 
 ---
 

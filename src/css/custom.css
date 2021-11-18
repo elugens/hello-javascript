@@ -131,10 +131,10 @@ html[data-theme='light'] {
   --search-local-footer-shadow: 0 -1px 0 0 rgb(224, 227, 232),
     0 -3px 6px 0 rgba(69, 98, 155, 0.12);
 }
-
+/* 
 html[data-theme='light'] {
-  background-color: #fffdf8;
-}
+  background-color: #ffffff;
+} */
 
 html[data-theme='dark'] {
   --ifm-color-primary: #fbbf24;

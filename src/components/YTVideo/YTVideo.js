@@ -1,4 +1,5 @@
 import React from 'react';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 const YTVideo = ({ videoURL, videoTitle }) => (
   <div className='videoWrapper'>
     <iframe
