@@ -18,27 +18,27 @@ sidebar_position: 17
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> An arrow function expression is a compact alternative to a traditional function expression, but it is limited and cannot be used in all situations.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-// Arrow Function
+// Arrow Function
+let sayHello = (name) => 'Hello, ' + name;
+console.log(sayHello('JavaScript!'));
 
-let sayHello = (name) => 'Hello, ' + name;
-
-console.log(sayHello('Stacey'));
-
-// Function Expression
-
+// Function Expression
 let sayHello = function (name) {
-  return 'Hello, ' + name;
+  return 'Hello, ' + name;
 };
 
-console.log(sayHello('Stacey'));
+console.log(sayHello('JavaScript!'));
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -56,30 +56,30 @@ console.log(sayHello('Stacey'));
     <li>Cannot be used as constructors.</li>
     <li>Cannot use yield, within its body.</li>
   </ol>
-  </div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-'use strict';
+'use strict';
 
 var obj = {
-  // does not create a new scope
-
+  // does not create a new scope
   i: 10,
-
   b: () => console.log(this.i, this),
-
   c: function () {
     console.log(this.i, this);
   },
 };
 
-obj.b(); // prints undefined, Window {...} (or the global object)
-obj.c(); // prints 10, Object {...}
+obj.b(); // prints undefined, Window {...} (or the global object)
+obj.c(); // prints 10, Object {...}
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -89,19 +89,21 @@ obj.c(); // prints 10, Object {...}
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, if there are no arguments, then the parentheses should be present in your arrow function. Otherwise, it will throw a syntax error.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-// Arrow Function with no argument
-
+// Arrow Function with no argument
 let sayHi = () => alert('Hello!');
 
-sayHi(); // returns Hello!
+sayHi(); // returns Hello!
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -111,19 +113,22 @@ sayHi(); // returns Hello!
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, it is possible to dynamically create an arrow function in JavaScript. An example of this is a ternary statement that returns two anonymous arrow functions.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-let age = prompt('What is your age?', 18);
+let age = prompt('What is your age?', 18);
 
 let welcome = age < 18 ? () => alert('Hello') : () => alert('Greetings!');
 
 welcome();
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -133,27 +138,27 @@ welcome();
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> A multiline statement must be enclosed in curly brackets, but we can omit the curly brackets in a single line statement.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let sum = (a, b) => {
-  // the curly brace opens a multiline function
-
+  // the curly brace opens a multiline function
   let result = a + b;
-
-  return result; // if we use curly braces, then we need an explicit "return”.
+  return result; // if we use curly braces, then we need an explicit "return”.
 };
 
 alert(sum(1, 2)); //
+
 // Single Line
-
 let sum = (a, b) => a + b;
-
 console.log(sum(3, 6)); // returns 9
 ```
+
+  </div>
+  </div>
+</details>
 
 ---

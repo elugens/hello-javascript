@@ -28,25 +28,24 @@ sidebar_position: 12
       <li>Agree on terms within your team. If a site visitor is called a “user” then we should name related variables currentUser or newUser instead of currentVisitor or newManInTown.</li>
       <li>A variable name is always camelCase and should begin with a noun to differentiate variables from functions, which normally should begin with a verb.</li>
       </ol>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+const foo = null ?? 'default string';
+console.log(foo);
+// expected output: "default string"
+
+const baz = 0 ?? 42;
+console.log(baz);
+// expected output: 0
+```
+
   </div>
   </div>
 </details>
-
-Code Example:
-
-```js
-const foo = null ?? 'default string';
-
-console.log(foo);
-
-// expected output: "default string"
-
-const baz = 0 ?? 42;
-
-console.log(baz);
-
-// expected output: 0
-```
 
 ---
 
@@ -57,17 +56,20 @@ console.log(baz);
   <div>
   <div><strong>Interview Response:</strong> The not equals operator checks the first value to see if it is null or undefined if it is null or undefined it returns the second value.</div><br />
   <div><strong>Technical Response:</strong> Yes, you can use the NOT ! equal operator to check to see if the first value is not equal to null or undefined else return the second value.
-  </div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-// We can rewrite result = a ?? b using the NOT equal (!==) operator.
+// We can rewrite result = a ?? b using the NOT equal (!==) operator.
 
 result = a !== null && a !== undefined ? a : b;
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -76,25 +78,26 @@ result = a !== null && a !== undefined ? a : b;
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A common use case for the nullish coalescing operator is to provide a default value for a potentially undefined variable.</div>
-  </div>
-</details>
+  <div><strong>Interview Response:</strong> A common use case for the nullish coalescing operator is to provide a default value for a potentially undefined variable.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-// here we show Anonymous if user is not defined
-
+// here we show Anonymous if user is not defined
 let user;
 
-alert(user ?? 'Anonymous'); // Anonymous
+alert(user ?? 'Anonymous'); // Anonymous
 
-// if the user has any value except null or undefined
-
+// if the user has any value except null or undefined
 let user = 'John';
 
-alert(user ?? 'Anonymous'); // John
+alert(user ?? 'Anonymous'); // John
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -103,23 +106,23 @@ alert(user ?? 'Anonymous'); // John
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, we can use a sequence of nullish coalescing operator to select the first value from a list that is not null or undefined.</div>
-  </div>
-</details>
+  <div><strong>Interview Response:</strong> Yes, we can use a sequence of nullish coalescing operator to select the first value from a list that is not null or undefined.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let firstName = null;
-
 let lastName = null;
-
 let nickName = 'Supercoder';
 
-// shows the first defined value:
-
-alert(firstName ?? lastName ?? nickName ?? 'Anonymous'); // Supercoder
+// shows the first defined value:
+alert(firstName ?? lastName ?? nickName ?? 'Anonymous'); // Supercoder
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -128,23 +131,23 @@ alert(firstName ?? lastName ?? nickName ?? 'Anonymous'); // Supercoder
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The OR operator can be used in the same way as nullish coalescing operator.</div>
-  </div>
-</details>
+  <div><strong>Interview Response:</strong> The OR operator can be used in the same way as nullish coalescing operator.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let firstName = null;
-
 let lastName = null;
-
 let nickName = 'Supercoder';
 
-// shows the first truthy value:
-
-alert(firstName || lastName || nickName || 'Anonymous'); // Supercoder
+// shows the first truthy value:
+alert(firstName || lastName || nickName || 'Anonymous'); // Supercoder
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -155,18 +158,21 @@ alert(firstName || lastName || nickName || 'Anonymous'); // Supercoder
   <div>
   <div><strong>Interview Response:</strong> The difference is that OR operator returns the first truthy value and nullish operator returns the first defined value.</div><br />
   <div><strong>Technical Response:</strong> The important difference is that OR operator returns the first truthy value and nullish operator returns the first defined value.<br /><br /> In other words, || doesn’t distinguish between false, 0, an empty string "" and null/undefined. They are all the same – falsy values. If any of these is the first argument of ||, then we will get the second argument as the result.<br /><br /> In practice though, we may want to use default value only when the variable is null/undefined. That is, when the value is unknown/not set.
-  </div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let height = 0;
 
-alert(height || 100); // 100
-alert(height ?? 100); // 0
+alert(height || 100); // 100
+alert(height ?? 100); // 0
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -176,24 +182,25 @@ alert(height ?? 100); // 0
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The precedence of the nullish coalescing operators is low according to the MDN.</div><br />
-  <div><strong>Technical Response:</strong> The precedence of the ?? operator is rather low: 5 in the MDN table. So ?? is evaluated before = and ?, but after most other operations, such as +, \*. So if we’d like to choose a value with ?? in an expression with other operators, consider adding parentheses.<br /><br />
-  </div>
-  </div>
-</details>
+  <div><strong>Technical Response:</strong> The precedence of the ?? operator is rather low: 5 in the MDN table. So, ?? is evaluated before = and ?, but after most other operations, such as +, *. So, if we’d like to choose a value with ?? in an expression with other operators, consider adding parentheses.<br /><br />
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let height = null;
-
 let width = null;
 
-// important: use parentheses
-
+// important: use parentheses
 let area = (height ?? 100) * (width ?? 50);
 
-alert(area); // 5000
+alert(area); // 5000
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -203,23 +210,24 @@ alert(area); // 5000
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> It is not recommended to use the AND operator directly in line with the nullish coalescing operator. You should wrap the AND and OR operator in parentheses as a work around.</div><br />
-  <div><strong>Technical Response:</strong> Due to safety reasons, JavaScript forbids using ?? together with && and || operators, unless the precedence is explicitly specified with parentheses.<br /><br />
+  <div><strong>Technical Response:</strong> Due to safety reasons, JavaScript forbids using ?? together with && and || operators, unless the precedence is explicitly specified with parentheses.<br />
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// this will cause a syntax error
+let x = 1 && 2 ?? 3; // Error: Syntax error
+
+// Use explicit parentheses to work around it
+let x = (1 && 2) ?? 3; // Works
+
+alert(x); // 2
+```
+
   </div>
   </div>
 </details>
-
-Code Example:
-
-```js
-// this will cause a syntax error
-
-let x = 1 && 2 ?? 3; // Syntax error
-
-// Use explicit parentheses to work around it
-
-let x = (1 && 2) ?? 3; // Works
-
-alert(x); // 2
-```
 
 ---

@@ -65,17 +65,20 @@ sidebar_position: 6
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Prompt accepts two arguments the title and a default value. The default value is not required and acts as the initial value for the input field.</div>
-  </div>
-</details>
+  <div><strong>Interview Response:</strong> Prompt accepts two arguments the title and a default value. The default value is not required and acts as the initial value for the input field.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 // the brackets denote that the parameter is not required 
 
 result = prompt(title, [default]);
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -110,17 +113,20 @@ result = prompt(title, [default]);
   <div>
   <div><strong>Interview Response:</strong> Confirm produces a window with a Boolean question of OK and Cancel. Ok returns true and Cancel returns false.</div><br />
   <div><strong>Technical Response:</strong> The function confirm shows a modal window with a question and two buttons: OK and Cancel. The result is true if OK is pressed and false otherwise.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let isBoss = confirm('Are you the boss?');
+
+alert(isBoss); // true if OK is pressed and false otherwise
+```
+
   </div>
   </div>
 </details>
-
-Code Example:
-
-```js
-let isBoss = confirm('Are you the boss?');
-
-alert(isBoss); // true if OK is pressed and false otherwise
-```
 
 ---
 

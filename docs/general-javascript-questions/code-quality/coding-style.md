@@ -19,14 +19,15 @@ sidebar_position: 2
   <div>
   <div><strong>Interview Response:</strong> The goal is to take a complex task and code it in a way that is both correct and human-readable.
 </div>
-  </div>
-</details>
+
+<div></div><br />
 
 :::note
-
 There are several styling guides that help programmers reach this goal.
-
 :::
+
+  </div>
+</details>
 
 ---
 
@@ -35,22 +36,24 @@ There are several styling guides that help programmers reach this goal.
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, it is a best practice and makes code more readable.
-</div>
-  </div>
-</details>
+  <div><strong>Interview Response:</strong> Yes, it is a best practice and makes code more readable if there is more than actionable statement.
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
-```JS
-// conditional if statement
-
-if (n < 0) {
-
-   alert(`Power ${n} is not supported`);
-
+```js
+// conditional if statement
+if (n < 0) {
+  alert(`Power ${n} is not supported`);
+} else {
+  alert(`Power ${n} is supported`);
 }
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -60,9 +63,26 @@ if (n < 0) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Professional JavaScript developers prefer separate lines because they are more readable.
-</div>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// backtick quotes (`) allow splitting the string into multiple lines
+let str = `
+  ECMA International's TC39 is a group of JavaScript developers,
+  implementers, academics, and more collaborating with the community
+  to maintain and evolve the definition of JavaScript.
+`;
+
+// Conditional If statement variable conditions split in multiple lines
+if (id === 123 && moonPhase === 'Waning Gibbous' && zodiacSign === 'Libra') {
+  letTheSorceryBegin();
+}
+```
+
   </div>
-</details>
 
 :::note
 
@@ -70,27 +90,8 @@ A great example would be long paragraphs that are longer than 120 characters. We
 
 :::
 
-Code Example: Proper Implementation
-
-```js
-// backtick quotes ` allow to split the string into multiple lines
-
-let str = `
-
-   ECMA International's TC39 is a group of JavaScript developers,
-
-   implementers, academics, and more, collaborating with the community
-
-   to maintain and evolve the definition of JavaScript.
-
-`;
-
-// Conditional If statement variable conditions split in multiple lines
-
-if (id === 123 && moonPhase === 'Waning Gibbous' && zodiacSign === 'Libra') {
-  letTheSorceryBegin();
-}
-```
+  </div>
+</details>
 
 ---
 
@@ -100,31 +101,23 @@ if (id === 123 && moonPhase === 'Waning Gibbous' && zodiacSign === 'Libra') {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The maximum length typically agreed upon by dev teams is between 80 to 120 characters.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong> Proper Implementation<br /><br />
 
-Code Example: Proper Implementation
+  <div></div>
 
 ```js
-// backtick quotes ` allow to split the string into multiple lines
-
+// backtick quotes (`) allow splitting the string into multiple lines
 let str = `
-
-ECMA International's TC39 is a group of JavaScript developers,
-
-implementers, academics, and more, collaborating with the community
-
-to maintain and evolve the definition of JavaScript.
-
+  ECMA International's TC39 is a group of JavaScript developers,
+  implementers, academics, and more collaborating with the community
+  to maintain and evolve the definition of JavaScript.
 `;
-
-// Conditional If statement variable conditions split in multiple lines
-
-if (id === 123 && moonPhase === 'Waning Gibbous' && zodiacSign === 'Libra') {
-  letTheSorceryBegin();
-}
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -134,27 +127,26 @@ if (id === 123 && moonPhase === 'Waning Gibbous' && zodiacSign === 'Libra') {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> A best practice is to divide each code action by a line space to keep your code readable.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 function pow(x, n) {
   let result = 1;
-
-  //              <--
-
+  //              <--
   for (let i = 0; i < n; i++) {
     result *= x;
   }
-
-  //              <--
-
+  //              <--
   return result;
 }
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -170,16 +162,15 @@ function pow(x, n) {
     <li>Consider refactoring when your loops and branches that are more than 2 levels deep.</li>
     <li>Think about moving nested logic into separate functions. For example, if you need to loop through a list of objects that each contain a list (such as a protocol buffer with repeated fields), you can define a function to process each object instead of using a double nested loop.</li>
   </ol>
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">The two constructs have the same output:</strong><br /><br />
 
-**The two constructs below are identical:**
+  <div></div>
 
 ```js
 function pow(x, n) {
   if (n < 0) {
-    alert("Negative 'n' not supported");
+    alert("Negative 'n' not supported");
   } else {
     let result = 1;
 
@@ -192,13 +183,15 @@ function pow(x, n) {
 }
 ```
 
-**This is proper way to avoid nesting:**
+  </div><br />
+  <div><strong className="codeExample">This is proper way to avoid nesting:</strong><br /><br />
+
+  <div></div>
 
 ```js
 function pow(x, n) {
   if (n < 0) {
-    alert("Negative 'n' not supported");
-
+    alert("Negative 'n' not supported");
     return;
   }
 
@@ -211,6 +204,10 @@ function pow(x, n) {
   return result;
 }
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 

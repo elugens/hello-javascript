@@ -18,15 +18,16 @@ sidebar_position: 3
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> JavaScript automatically allocates memory when objects are created and frees it when they are not used anymore (garbage collection).
-</div>
-  </div>
-</details>
+</div><br />
 
 :::note
 
 This automaticity is a potential source of confusion: it can give developers the false impression that they do not need to worry about memory management.
 
 :::
+
+  </div>
+</details>
 
 ---
 
@@ -37,31 +38,28 @@ This automaticity is a potential source of confusion: it can give developers the
   <div>
   <div><strong>Interview Response:</strong> The memory life cycle includes allocating, using, and releasing the allocated memory when it is no longer needed.</div><br />
   <div><strong>Technical Response:</strong> The three steps in the memory life cycle include allocating memory, using the allocated memory, and releasing the allocated memory when it is no longer needed. The last part is more implicit in JavaScript than low-level languages.<br /><br />
-  </div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Examples:
+  <div></div>
 
 ```js
-var n = 123; // allocates memory for a number
-var s = 'azerty'; // allocates memory for a string
+var n = 123; // allocates memory for a number
+var s = 'azerty'; // allocates memory for a string
+
 var o = {
   a: 1,
-
   b: null,
-}; // allocates memory for an object and contained values
-// (like object) allocates memory for the array and
+}; // allocates memory for an object and contained values
 
-// contained values
-
+// allocates memory for the array and contained values
 var a = [1, null, 'abra'];
 
 function f(a) {
   return a + 2;
-} // allocates a function (which is a callable object)
-// function expressions also allocate an object
+} // allocates a function (which is a callable object)
 
+// function expressions also allocate an object
 someElement.addEventListener(
   'click',
   function () {
@@ -72,6 +70,10 @@ someElement.addEventListener(
 
 var n = null;
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -105,25 +107,28 @@ var n = null;
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Global variables cannot be deleted directly. The global variable must be set to null before the memory can be collected. However, the variable still exists and simply references null (nothingness).
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 Before:
 
-// global -> {nothingness}
+// global -> {nothingness}
 
 After:
 
-// global -> var a -> object { foo: "bar" }
+// global -> var a -> object { foo: "bar" }
 
-// Set a to null:
+null:
 
-// global -> var a -> null
+// global -> var a -> null
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -133,16 +138,14 @@ After:
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, the object that is deleted or nullified will be garbage collected even if it is part of a GC root or it one of its properties references another object.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 function marry(man, woman) {
   woman.husband = man;
-
   man.wife = woman;
 
   return {
@@ -153,11 +156,15 @@ function marry(man, woman) {
 
 let family = marry({ name: 'John' }, { name: 'Ann' });
 
-// if we delete both, then we can see that John has no incoming reference any more
+// if we delete both, then we can see that John has no incoming reference any more
 
 delete family.father;
 delete family.mother.husband;
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -167,11 +174,10 @@ delete family.mother.husband;
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, it is possible if the root is nullified in the program.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let family = marry(
@@ -183,13 +189,17 @@ let family = marry(
   }
 );
 
-/*
- * below the root has been nullified and all corresponding
- * interlinked objects will be garbage collected
+/**
+ * below the root has been nullified and all corresponding
+ * interlinked objects will be garbage collected
  */
 
 family = null;
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -231,14 +241,15 @@ family = null;
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The three common garbage collection optimizations include generalization, incremental, and idle-time collection.
-</div>
-  </div>
-</details>
+</div><br />
 
 :::note
 
 It should be noted that each engine implements different tweaks and techniques.
 
 :::
+
+  </div>
+</details>
 
 ---

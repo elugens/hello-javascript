@@ -18,17 +18,15 @@ sidebar_position: 3
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The key to reducing unnecessary comments in your code is to write self-descriptive code. The best way to achieve this is to replace a piece of code with a function.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong> Confusing Code<br /><br />
 
-Code Example: Confusing Code
+  <div></div>
 
 ```js
 function showPrimes(n) {
   nextPrime: for (let i = 2; i < n; i++) {
-    // check if i is a prime number   <-- this is an unnecessary comment
-
+    // check if i is a prime number   <-- this is an unnecessary comment
     for (let j = 2; j < i; j++) {
       if (i % j == 0) continue nextPrime;
     }
@@ -38,11 +36,13 @@ function showPrimes(n) {
 }
 ```
 
-Example: Good Code
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong> Good Code<br /><br />
+
+  <div></div>
 
 ```js
-// The better variant, with a factored-out function isPrime:
-
+// The better variant, with a factored-out function isPrime:
 function showPrimes(n) {
   for (let i = 2; i < n; i++) {
     if (!isPrime(i)) continue;
@@ -60,6 +60,10 @@ function isPrime(n) {
 }
 ```
 
+  </div>
+  </div>
+</details>
+
 ---
 
 ### What are Good comments in JavaScript?
@@ -68,24 +72,26 @@ function isPrime(n) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Good comments describe the architecture and lean less toward explaining what the code is doing. Good comments provide the team with a high-level overview of the components and how they interact. Good comments give a bird’ eye view of the code. Good comments include documenting function parameters and their usage as well.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-/*
-* Returns x raised to the n-th power.
-*
-* @param {number} x The number to raise.
-* @param {number} n The power, must be a natural number.
-* @return {number} x raised to the n-th power.
-*/
-
-function pow(x, n) {
-    ...
+/**
+ * Returns x raised to the n-th power.
+ *
+ * @param {number} x The number to raise.
+ * @param {number} n The power, must be a natural number.
+ * @return {number} x raised to the n-th power.
+ */
+function pow(x, n) {
+  ...
 }
 ```
+
+  </div>
+  </div>
+</details>
 
 ---

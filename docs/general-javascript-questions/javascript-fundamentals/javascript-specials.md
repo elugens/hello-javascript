@@ -18,17 +18,20 @@ sidebar_position: 18
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> JavaScript treats line-breaks as a delimiter and uses automatic semicolon insertion to close individual statements. Most code style guides agree that we should put a semicolon after each statement.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code example;
+  <div></div>
 
 ```js
-alert('Hello'); // automatic semicolon inserted by the JavaScript engine
-
-alert('World');
+// automatic semicolon inserted by the JavaScript (V8) engine
+// alert('Hello')
+// alert('World'); <-- semicolon inserted
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -42,17 +45,20 @@ alert('World');
 
 In JavaScript, is enforced by using the directive “use strict;”. The directive must be at the top of a script or at the beginning of a function body. Without "use strict", everything still works, but some features behave in the old fashion, “compatible” way. We would generally prefer the modern behavior.
 
-  </div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```html
 <script>
   'use strict;'; // Your first line of code starts here...
 </script>
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -74,17 +80,19 @@ Code Example:
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> JavaScript variables are dynamically typed and do not require type declaration unlike statically typed languages. This means that variable data types in JavaScript are unknown at run-time.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let x = 5;
-
 x = 'John';
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -94,19 +102,20 @@ x = 'John';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The only operator with three parameters is the ternary ( ? ) conditional operator.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 var age = 26;
-
-var beverage = age >= 21 ? 'Beer' : 'Juice'; // ( ? ) conditional operator
-
-console.log(beverage); // "Beer"
+var beverage = age >= 21 ? 'Beer' : 'Juice'; // ( ? ) conditional operator
+console.log(beverage); // "Beer"
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -116,50 +125,45 @@ console.log(beverage); // "Beer"
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The three main types of functions commonly used in JavaScript application development include the function declaration, expression, and arrow function.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-// function declaration
-
+// function declaration
 function sum(a, b) {
   let result = a + b;
 
   return result;
 }
 
-// Function expression
-
+// Function expression
 let sum = function (a, b) {
   let result = a + b;
 
   return result;
 };
 
-// Arrow function
-
-// expression at the right side
-
+// Arrow function
+// expression at the right side
 let sum = (a, b) => a + b;
 
-// or multi-line syntax with { ... }, need return here:
-
+// or multi-line syntax with { ... }, need return here:
 let sum = (a, b) => {
-  // ...
-
+  // ...
   return a + b;
 };
 
-// without arguments
-
+// without arguments
 let sayHi = () => alert('Hello');
 
-// with a single argument
-
+// with a single argument
 let double = (n) => n * 2;
 ```
+
+  </div>
+  </div>
+</details>
 
 ---

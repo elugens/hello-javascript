@@ -48,7 +48,7 @@ sidebar_position: 1
   </div>
 </details>
 
-Source: <https://javascript.info/debugging-chrome#the-sources-panel>
+---
 
 ### What are the three panes available under chrome dev tools source tab?
 
@@ -129,22 +129,25 @@ Source: <https://javascript.info/debugging-chrome#the-sources-panel>
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> We can pause the code by using the “debugger;” command.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-// explicit debugger implementation
-
+// explicit debugger implementation
 function hello(name) {
-  let phrase = `Hello, ${name}!`;
+  let phrase = `Hello, ${name}!`;
 
-  debugger; // <-- the debugger stops here
+  debugger; // <-- the debugger stops here
+
   say(phrase);
 }
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 

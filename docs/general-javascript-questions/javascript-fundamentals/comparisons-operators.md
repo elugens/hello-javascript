@@ -21,17 +21,20 @@ sidebar_position: 9
   <div><strong>Technical Response:</strong>  Yes, all comparisons return a Boolean value of either a true or false value.<br /> <br />
 - true – means “yes”, “correct” or “the truth”.<br />
 - false – means “no”, “wrong” or “not the truth”.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+alert(2 > 1); // true (correct)
+alert(2 == 1); // false (wrong)
+alert(2 != 1); // true (correct)
+```
+
   </div>
   </div>
 </details>
-
-Code Example:
-
-```js
-alert(2 > 1); // true (correct)
-alert(2 == 1); // false (wrong)
-alert(2 != 1); // true (correct)
-```
 
 ---
 
@@ -40,23 +43,26 @@ alert(2 != 1); // true (correct)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> JavaScript uses a “lexicographical” order. Strings are compared letter-by-letter based on their Unicode value.</div>
-  </div>
-</details>
+  <div><strong>Interview Response:</strong> JavaScript uses a “lexicographical” order. Strings are compared letter-by-letter based on their Unicode value.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-alert('Z' > 'A'); // true
-alert('Glow' > 'Glee'); // true
-alert('Bee' > 'Be'); // true
-// Unicode Values
+alert('Z' > 'A'); // true
+alert('Glow' > 'Glee'); // true
+alert('Bee' > 'Be'); // true
 
+// Unicode Values
 let myLetter = 'Hello';
 
-console.log(myLetter.charCodeAt(0)); // returns Unicode value 72
-console.log(myLetter.charCodeAt(1)); // returns Unicode value 101
+console.log(myLetter.charCodeAt(0)); // returns Unicode value 72
+console.log(myLetter.charCodeAt(1)); // returns Unicode value 101
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -65,24 +71,29 @@ console.log(myLetter.charCodeAt(1)); // returns Unicode value 101
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, when comparing values of different types, it converts the values to numbers.</div>
-  </div>
-</details>
+  <div><strong>Interview Response:</strong> Yes, when comparing values of different types, it converts the values to numbers.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-alert( '2' > 1 ); // true, string '2' becomes a number 2
-
-alert( '01' == 1 ); // true, the string '01' becomes a number 1
-
-
-For Boolean values, true becomes 1 and false becomes 0:
-
-alert( true == 1 ); // true
-
-alert( false == 0 ); // true
+alert('2' > 1); // true, string '2' becomes a number 2
+alert('01' == 1); // true, the string '01' becomes a number 1
 ```
+
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong> For Boolean values, true becomes 1 and false becomes 0:<br /><br />
+
+  <div></div>
+
+```js
+alert(true == 1); // true
+alert(false == 0); // true
+```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -91,22 +102,26 @@ alert( false == 0 ); // true
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> When there is an explicit conversion to a Boolean on values that are both a string and a number such as number 0 and string “0”. The return value for the string will be true and for the number it will be false. When we attempt to compare the two using the equality operator the return value will be true, but with the strict equality operator they will be false.</div>
-  </div>
-</details>
+  <div><strong>Interview Response:</strong> When there is an explicit conversion to a Boolean on values that are both a string and a number such as number 0 and string “0”. The return value for the string will be true and for the number it will be false. When we attempt to compare the two using the equality operator the return value will be true, but with the strict equality operator they will be false.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let a = 0;
+alert(Boolean(a)); // false
 
-alert(Boolean(a)); // false
 let b = '0';
+alert(Boolean(b)); // true
 
-alert(Boolean(b)); // true
-alert(a == b); // true!, equality operator
-alert(a === b); // false!, strict equality operator
+alert(a == b); // true!, equality operator
+
+alert(a === b); // false!, strict equality operator
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -117,15 +132,18 @@ alert(a === b); // false!, strict equality operator
   <div>
   <div><strong>Interview Response:</strong> The main difference is that strict equality does a value type check without any conversion.</div><br />
   <div><strong>Technical Response:</strong> The regular equality check loosely compares values with type conversion. Where the strict-equality check compares the value and the data type without type conversion.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+alert(0 === false); // false, because the types are different
+```
+
   </div>
   </div>
 </details>
-
-Code Example:
-
-```js
-alert(0 === false); // false, because the types are different
-```
 
 ---
 
@@ -147,20 +165,22 @@ alert(0 === false); // false, because the types are different
   <div>
   <div><strong>Interview Response:</strong> False because they are not the same type.</div><br />
   <div><strong>Technical Response:</strong> False because each of them is a different type, but the non-strict operator returns true. For math and other comparisons such as greater and less than null/undefined are converted to numbers.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Strict Equality Check
+alert(null === undefined); // false
+
+// Regular Equality Check
+alert(null == undefined); // true
+```
+
   </div>
   </div>
 </details>
-
-Code Example:
-
-```js
-// Strict Equality Check
-
-alert(null === undefined); // false
-// Non-Strict Equality Check
-
-alert(null == undefined); // true
-```
 
 ---
 
@@ -169,17 +189,20 @@ alert(null == undefined); // true
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> It is not recommended that you compare undefined to other values.</div>
-  </div>
-</details>
+  <div><strong>Interview Response:</strong> It is not recommended that you compare undefined to other values.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-alert(undefined > 0); // false (1)
-alert(undefined < 0); // false (2)
-alert(undefined == 0); // false (3)
+alert(undefined > 0); // false (1)
+alert(undefined < 0); // false (2)
+alert(undefined == 0); // false (3)
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -207,16 +230,18 @@ alert(undefined == 0); // false (3)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The “if” statement evaluates a condition and, if the result is true, executes a block of code.</div>
-  </div>
-</details>
+  <div><strong>Interview Response:</strong> The “if” statement evaluates a condition and, if the result is true, executes a block of code.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-let year = prompt('In which year was ECMAScript-2015 published?', '');
-
-if (year == 2015) alert('You are right!'); // You are right!
+let year = prompt('In which year was ECMAScript-2015 published?', '');
+if (year == 2015) alert('You are right!'); // You are right!
 ```
+
+  </div>
+  </div>
+</details>
 
 ---

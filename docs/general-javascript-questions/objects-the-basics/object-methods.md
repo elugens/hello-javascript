@@ -18,27 +18,28 @@ sidebar_position: 4
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> A function that is a property of an object is called its method.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let user = {
   name: 'John',
-
   age: 30,
 };
 
-// Here sayHi is a method of the object user
-
+// Here sayHi is a method of the object user
 user.sayHi = function () {
-  alert('Hello, JavaScript');
+  alert('Hello, JavaScript');
 };
 
-user.sayHi(); // Hello, JavaScript
+user.sayHi(); // Hello, JavaScript
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -81,47 +82,51 @@ user.sayHi(); // Hello, JavaScript
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The “this” keyword holds a reference to the object and in return removes any effort to nullify it later in the code.
-</div>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong> “THIS” refers to the object<br /><br />
+
+  <div></div>
+
+```js
+let user = {
+  name: 'John',
+  age: 30,
+
+  sayHi() {
+    alert(this.name); // this works as intended
+  },
+};
+
+let admin = user;
+user = null; // attempt to override the object fails
+
+admin.sayHi(); // alerts John
+```
+
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong> Fails without the “THIS” keyword<br /><br />
+
+  <div></div>
+
+```js
+let user = {
+  name: 'John',
+  age: 30,
+
+  sayHi() {
+    alert(user.name); // leads to an error
+  },
+};
+
+let admin = user;
+user = null; // overwrite to make things obvious
+
+admin.sayHi(); // TypeError: Cannot read property 'name' of null
+```
+
+  </div>
   </div>
 </details>
-
-Code Example: “THIS” refers to the object
-
-```js
-let user = {
-  name: 'John',
-
-  age: 30,
-
-  sayHi() {
-    alert(this.name); // this works as intended
-  },
-};
-
-let admin = user;
-
-user = null; // attempt to override the object fails
-admin.sayHi(); // alerts John
-```
-
-Code Example: Fails without the “THIS” keyword
-
-```js
-let user = {
-  name: 'John',
-
-  age: 30,
-
-  sayHi() {
-    alert(user.name); // leads to an error
-  },
-};
-
-let admin = user;
-
-user = null; // overwrite to make things obvious
-admin.sayHi(); // TypeError: Cannot read property 'name' of null
-```
 
 ---
 
@@ -131,34 +136,37 @@ admin.sayHi(); // TypeError: Cannot read property 'name' of null
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> In strict mode, “this” returns undefined and in non-strict mode it returns global window.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong> Strict Mode<br /><br />
 
-Code Example: Strict Mode
+  <div></div>
 
 ```js
-'use strict';
+'use strict';
 
-function sayHi() {
-
+function sayHi() {
   alert(this);
-
 }
 
-sayHi(); // returns undefined
-
-
-Example: Non-strict Mode
-
-function sayHi() {
-
-  alert(this);
-
-}
-
-sayHi(); // returns global window
+sayHi(); // returns undefined
 ```
+
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong> Non-strict Mode<br /><br />
+
+  <div></div>
+
+```js
+function sayHi() {
+  alert(this);
+}
+
+sayHi(); // returns global window object
+```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -180,66 +188,65 @@ sayHi(); // returns global window
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The outcome in an arrow function is a return of undefined. This is because there is no access to the global window.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong> Regular Function<br /><br />
 
-Code Example: Regular Function
+  <div></div>
 
 ```js
 const brunch = {
-  food: 'Dim sum',
-
-  beverage: 'Jasmine tea',
-
+  food: 'Dim sum',
+  beverage: 'Jasmine tea',
   order: function () {
-    return `I'll have the ${this.food} with ${this.beverage} please.`;
+    return `I'll have the ${this.food} with ${this.beverage} please.`;
   },
 };
 
-// the console log returns "I'll have the Dim sum with Jasmine tea please."
-
+// the console log returns "I'll have the Dim sum with Jasmine tea please."
 console.log(brunch.order());
 ```
 
-Code Example: Arrow Function
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong> Arrow Function<br /><br />
+
+  <div></div>
 
 ```js
 const brunch = {
-  food: 'Dim sum',
-
-  beverage: 'Jasmine tea',
-
+  food: 'Dim sum',
+  beverage: 'Jasmine tea',
   order: () => {
-    return `I'll have the ${this.food} with ${this.beverage} please.`;
+    return `I'll have the ${this.food} with ${this.beverage} please.`;
   },
 };
 
-// the console log returns "I'll have the undefined with undefined please."
-
+// the console log returns "I'll have the undefined with undefined please."
 console.log(brunch.order());
 ```
 
-Proof that “THIS” refers to the global window object:
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong> Proof that “THIS” refers to the global window object.<br /><br />
+
+  <div></div>
 
 ```js
 window.food = 'pizza'; // global object variables
-
 window.beverage = 'beer';
 
 const brunch = {
-  food: 'Dim sum',
-
-  beverage: 'Jasmine tea',
-
+  food: 'Dim sum',
+  beverage: 'Jasmine tea',
   order: () => {
-    return `I'll have the ${this.food} with ${this.beverage} please.`;
+    return `I'll have the ${this.food} with ${this.beverage} please.`;
   },
 };
 
-// the console log returns "I'll have the pizza with beer please."
-
+// the console log returns "I'll have the pizza with beer please."
 console.log(brunch.order());
 ```
+
+  </div>
+  </div>
+</details>
 
 ---

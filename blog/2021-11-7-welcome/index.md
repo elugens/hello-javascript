@@ -95,7 +95,7 @@ Code Snippet SVG Example - Details Element
   </div>
 </details>
 
-Code Snippet Markdown
+Code Snippet - Fenced Code Block Example
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -105,11 +105,16 @@ Code Snippet Markdown
 
   <div></div>
 
-```javascript
-<script src="/path/to/script.js"></script>
+```js
+function User(name) {
+  this.name = name;
+  this.isAdmin = false;
+}
 
-// External URL:
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js"></script>
+let user = new User('Jack');
+
+alert(user.name); // Jack
+alert(user.isAdmin); // false
 ```
 
   </div>

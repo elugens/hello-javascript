@@ -28,21 +28,26 @@ sidebar_position: 11
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> If an operand is not a Boolean, it is converted to a Boolean for the evaluation. For instance, the number 1 is treated as true, the number 0 is false.</div>
-  </div>
-</details>
+  <div><strong>Interview Response:</strong> If an operand is not a Boolean, it is converted to a Boolean for the evaluation. For instance, the number 1 is treated as true, the number 0 is false.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-//Logical OR returns the first truthy value,
+/* Logical OR returns the first truthy value,
+ *  or the last value if there are none
+ */
 
-// or the last value if there are none
+console.log('1' || '0'); // returns 1
 
-console.log('1' || '0'); // returns 1
-console.log(1 || 0); // returns 1
-console.log(0 || 0); // returns 0
+console.log(1 || 0); // returns 1
+
+console.log(0 || 0); // returns 0
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -58,22 +63,27 @@ console.log(0 || 0); // returns 0
     <li>If all operands have been evaluated (i.e., all were false), returns the last operand.</li>
   </ol>
 
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-alert(1 || 0); // 1 (1 is truthy)
-alert(null || 1); // 1 (1 is the first truthy value)
-alert(null || 0 || 1); // 1 (the first truthy value)
-alert(undefined || null || 0); // 0 (all falsy, returns the last value)
+alert(1 || 0); // 1 (1 is truthy)
+
+alert(null || 1); // 1 (1 is the first truthy value)
+alert(null || 0 || 1); // 1 (the first truthy value)
+
+alert(undefined || null || 0); // 0 (all falsy, returns the last value)
 ```
 
 :::note
 Logical OR “||” finds the first truthy value or the last value if there are none.
 :::
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -82,17 +92,19 @@ Logical OR “||” finds the first truthy value or the last value if there are 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong>  When JavaScript evaluates an OR expression, if the first operand is true, JavaScript will short-circuit by not proceeding to the second operand.</div>
-  </div>
-</details>
+  <div><strong>Interview Response:</strong>  When JavaScript evaluates an OR expression, if the first operand is true, JavaScript will short-circuit by not proceeding to the second operand.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-true || alert('not printed');
-
+true || alert('not printed');
 false || alert('printed');
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -101,20 +113,23 @@ false || alert('printed');
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong>  Logical && (AND) returns true if both operands are truthy and false otherwise.</div>
+  <div><strong>Interview Response:</strong>  Logical && (AND) returns true if both operands are truthy and false otherwise.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+alert(true && true); // true
+alert(false && true); // false
+alert(true && false); // false
+alert(false && false); // false
+```
+
+  </div>
   </div>
 </details>
 
-Code Example:
-
-```js
-alert(true && true); // true
-alert(false && true); // false
-alert(true && false); // false
-alert(false && false); // false
-```
-
-Source: <https://javascript.info/logical-operators#and>
+---
 
 ### What type of conversion does the Logical && (AND) perform?
 
@@ -138,26 +153,26 @@ Source: <https://javascript.info/logical-operators#and>
     <li>For each operand, converts it to a Boolean. If the result is false, stops and returns the original value of that operand.</li>
     <li>If all operands have been evaluated (i.e. all were truthy), returns the last operand.</li>
   </ol>
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-// if the first operand is truthy,
+// if the first operand is truthy,
+// AND returns the second operand:
+alert(1 && 0); // 0
+alert(1 && 5); // 5
 
-// AND returns the second operand:
-
-alert(1 && 0); // 0
-alert(1 && 5); // 5
-// if the first operand is falsie,
-
-// AND returns it. The second operand is ignored
-
-alert(null && 5); // null
-alert(0 && 'no matter what'); // 0
+// if the first operand is falsie,
+// AND returns it. The second operand is ignored
+alert(null && 5); // null
+alert(0 && 'no matter what'); // 0
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -194,23 +209,26 @@ alert(0 && 'no matter what'); // 0
   <div>
   <div><strong>Interview Response:</strong> Technically Yes, but it is not recommended because it reduces readability.</div><br />
   <div><strong>Technical Response:</strong> Technically it can be done, but it is not recommended. Although, the variant with && appears shorter, an if statement is more obvious and tends to be a little bit more readable.
-  </div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let x = 1;
 
-x > 0 && alert('Greater than zero!');
+x > 0 && alert('Greater than zero!');
 
 // the if example is cleaner and obvious
 
 let x = 1;
 
-if (x > 0) alert('Greater than zero!');
+if (x > 0) alert('Greater than zero!');
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -225,16 +243,19 @@ if (x > 0) alert('Greater than zero!');
     <li>Converts the operand to a Boolean type: true/false.</li>
     <li>Returns the inverse value.</li>
   </ol>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+alert(!true); // false
+alert(!0); // true
+```
+
   </div>
   </div>
 </details>
-
-Code Example:
-
-```js
-alert(!true); // false
-alert(!0); // true
-```
 
 ---
 
@@ -245,16 +266,19 @@ alert(!0); // true
   <div>
   <div><strong>Interview Response:</strong> The value is inverted twice returning it to its original boolean value.</div><br />
   <div><strong>Technical Response:</strong> The first NOT converts the value to Boolean and returns the inverse, and the second NOT inverses it again. In the end, we have a plain Value-to-Boolean conversion.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+alert(!!'non-empty string'); // true
+alert(!!null); // false
+```
+
   </div>
   </div>
 </details>
-
-Code Example:
-
-```js
-alert(!!'non-empty string'); // true
-alert(!!null); // false
-```
 
 ---
 
@@ -265,21 +289,23 @@ alert(!!null); // false
   <div>
   <div><strong>Interview Response:</strong> The Boolean object produces the same result as the double not.</div><br />
   <div><strong>Technical Response:</strong> The built-in Boolean object performs this in the same fashion as the !! (DOUBLE NOT) operator.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+alert(!!'non-empty string'); // true
+alert(!!null); // false
+
+// Example of the Boolean method
+alert(Boolean('non-empty string')); // true
+alert(Boolean(null)); // false
+```
+
   </div>
   </div>
 </details>
-
-Code Example:
-
-```js
-alert(!!'non-empty string'); // true
-alert(!!null); // false
-
-// Example of the Boolean method
-
-alert(Boolean('non-empty string')); // true
-alert(Boolean(null)); // false
-```
 
 ---
 

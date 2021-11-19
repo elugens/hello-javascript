@@ -42,30 +42,26 @@ sidebar_position: 4
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> No, they can cause confusion, in a team environment, and make it harder to debug your code. Overlapping is not a good idea because it can cause errors further into the layers of your code.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example: You should never do this.
+  <div></div>
 
 ```js
-let user = authenticateUser(); // Global declaration of the user
+let user = authenticateUser(); // Global declaration of the user
 
-    function render() {
-
-    let user = anotherValue(); // Overlapping declaration of the user
-
-    ...
-
-    ...many lines...
-
-    ...
-
-    ... // <-- a programmer wants to work with user here and...
-
-    ...
-
+function render() {
+  let user = anotherValue(); // Overlapping declaration of the user
+  ...
+  ...many lines...
+  ...
+  ... // <-- a programmer wants to work with a user here and...
+  ...
 }
 ```
+
+  </div>
+  </div>
+</details>
 
 ---

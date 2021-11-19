@@ -32,21 +32,23 @@ sidebar_position: 8
   <div>
   <div><strong>Interview Response:</strong> A binary operand has two arguments on the left and right sides of the operator. A Unary operand has a single operand.</div><br />
   <div><strong>Technical Response:</strong> There are two types of mathematical operators: unary and binary. Unary operators perform an action with a single operand. Binary operators perform actions with two operands. Unary operators are arithmetic operators that perform an action on a single operand.
-  </div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Example of Unary Operand:</strong><br /><br />
 
-Example of Unary Operand:
+  <div></div>
 
 ```js
 let x = 1;
 
 x = -x;
 
-alert(x); // -1, unary negation was applied
+alert(x); // -1, unary negation was applied
 ```
 
-Example of Binary Operands:
+  </div><br />
+  <div><strong className="codeExample">Example of Binary Operands:</strong><br /><br />
+
+  <div></div>
 
 ```js
 let x = 1,
@@ -54,6 +56,10 @@ let x = 1,
 
 alert(y - x); // 2, binary minus subtracts values
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -75,16 +81,19 @@ alert(y - x); // 2, binary minus subtracts values
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The remainder operator is used to find the remainder of two arguments (operands/values).</div>
-  </div>
-</details>
+  <div><strong>Interview Response:</strong> The remainder operator is used to find the remainder of two arguments (operands/values).</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```js
 alert(5 % 2); // 1, a remainder of 5 divided by 2
 alert(8 % 3); // 2, a remainder of 8 divided by 3
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -95,17 +104,20 @@ alert(8 % 3); // 2, a remainder of 8 divided by 3
   <div>
   <div><strong>Interview Response:</strong> The exponentiation operator multiplies a number by itself a specified number of times.</div><br />
   <div><strong>Technical Response:</strong> The exponentiation (**) operator multiplies a number by itself a specified number of times. It is like the caret (^) operator in python.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+console.log(2 ** 2); // 4  (2 multiplied by itself 2 times)
+console.log(2 ** 3); // 8  (2 * 2 * 2, 3 times)
+console.log(2 ** 4); // 16 (2 * 2 * 2 * 2, 4 times)
+```
+
   </div>
   </div>
 </details>
-
-Code Example:
-
-```jsx
-console.log(2 ** 2); // 4  (2 multiplied by itself 2 times)
-console.log(2 ** 3); // 8  (2 \* 2 \* 2, 3 times)
-console.log(2 ** 4); // 16 (2 \* 2 \* 2 \* 2, 4 times)
-```
 
 ---
 
@@ -114,16 +126,19 @@ console.log(2 ** 4); // 16 (2 \* 2 \* 2 \* 2, 4 times)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Mathematically, exponentiation can be defined for non-integer numbers.</div>
-  </div>
-</details>
+  <div><strong>Interview Response:</strong> Mathematically, exponentiation can be defined for non-integer numbers.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-alert(4 ** (1 / 2)); // 2 (power of 1/2 is the same as a square root)
-alert(8 ** (1 / 3)); // 2 (power of 1/3 is the same as a cubic root)
+alert(4 ** (1 / 2)); // 2 (power of 1/2 is the same as a square root)
+alert(8 ** (1 / 3)); // 2 (power of 1/3 is the same as a cubic root)
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -134,31 +149,34 @@ alert(8 ** (1 / 3)); // 2 (power of 1/3 is the same as a cubic root)
   <div>
   <div><strong>Interview Response:</strong> Strings can be concatenated using the binary plus operator or the concat method.</div><br />
   <div><strong>Technical Response:</strong> Yes, concatenation can be achieved using the binary (+) operator. We can also use the built-in “concat” method to achieve the same result.
-  </div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let s = 'my' + 'String';
 
-alert(s); // myString
-// Using the Built-in concat() method
+alert(s); // myString
+// Using the Built-in concat() method
 
 let a = 'concat';
 
-alert(a.concat('String')); // concatString
-// String Conversion
+alert(a.concat('String')); // concatString
+// String Conversion
 
-alert('1' + 2); // "12"
-alert(2 + '1'); // "21"
-// Order of Operations still applies
+alert('1' + 2); // "12"
+alert(2 + '1'); // "21"
+// Order of Operations still applies
 
-alert(2 + 2 + '1'); // returns 2 + 2 = 4 and 4 + '1' = 41
+alert(2 + 2 + '1'); // returns 2 + 2 = 4 and 4 + '1' = 41
 
-// returns "41" and not "221"
+// returns "41" and not "221"
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -169,27 +187,29 @@ alert(2 + 2 + '1'); // returns 2 + 2 = 4 and 4 + '1' = 41
   <div>
   <div><strong>Interview Response:</strong> Unary plus has no effect on numbers, but it does convert non-number strings into numbers.</div><br />
   <div><strong>Technical Response:</strong> Unary (+) plus will have no conversion effect on numbers, but it converts non-numbers like strings to numbers. JavaScript also has a built-in Number(value) method that can be used to achieve the same output.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// No effect on numbers
+let x = 1;
+
+alert(+x); // 1
+let y = -2;
+
+alert(+y); // -2
+
+// Converts non-numbers
+alert(+true); // 1
+alert(+''); // 0
+alert(+'7'); // converts string “7” to number 7
+```
+
   </div>
   </div>
 </details>
-
-Code Example:
-
-```js
-// No effect on numbers
-
-let x = 1;
-
-alert(+x); // 1
-let y = -2;
-
-alert(+y); // -2
-// Converts non-numbers
-
-alert(+true); // 1
-alert(+''); // 0
-alert(+'7'); // converts string “7” to number 7
-```
 
 ---
 
@@ -200,24 +220,26 @@ alert(+'7'); // converts string “7” to number 7
   <div>
   <div><strong>Interview Response:</strong> We can use unary plus or the number object to convert the strings to numbers and then attempt to sum the two values.</div><br />
   <div><strong>Technical Response:</strong> Since, both numbers are strings `(“4” + “4” = “44”)`. You can use an implicit or explicit approach to solve the problem. The implicit approach requires the use of unary plus applied to the left and right operand `(+“4” + +“4” = 8)`. The second approach is the explicit use of the built-in Number Object `(Number( “4”) + Number( “4”) = 8)`.
-  </div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let apples = '2';
 
 let oranges = '3';
 
-// both values converted to numbers before the binary plus
+// both values converted to numbers before the binary plus
+alert(+apples + +oranges); // 5
 
-alert(+apples + +oranges); // 5
-// the longer variant
-
-alert(Number(apples) + Number(oranges)); // 5
+// the longer variant
+alert(Number(apples) + Number(oranges)); // 5
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -238,27 +260,34 @@ alert(Number(apples) + Number(oranges)); // 5
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Chained assignments evaluate from right to left.</div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let a, b, c;
 
-a = b = c = 2 + 2;
-ß; // Chained Assignment right to left
+a = b = c = 2 + 2; // <- Chained Assignment right to left
 
-alert(a); // 4
-alert(b); // 4
-alert(c); // 4
+alert(a); // 4
+alert(b); // 4
+alert(c); // 4
 ```
+
+  </div>
+</details>
 
 ---
 
 ### What is the major issue with chained assignments?
 
-**Interview Answer:** If chained assignments are not implemented correctly it can lead to memory leaks.
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> If chained assignments are not implemented correctly it can lead to memory leaks.</div>
+  </div>
+</details>
 
 ---
 
@@ -267,17 +296,17 @@ alert(c); // 4
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Increment increases a variable by one and decrement decreases a variable by one.</div>
-  </div>
-</details>
+  <div><strong>Interview Response:</strong> Increment increases a variable by one and decrement decreases a variable by one.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let counter = 2;
 
 counter++; // works the same as counter = counter + 1, but is shorter
 alert(counter); // 3
+
 ////////////////////////////////
 
 let counter = 2;
@@ -285,6 +314,10 @@ let counter = 2;
 counter--; // works the same as counter = counter - 1, but is shorter
 alert(counter); // 1
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -306,26 +339,28 @@ alert(counter); // 1
   <div>
   <div><strong>Interview Response:</strong> The operators can be placed either before or after a variable. Before the variable is a prefix position and after is postfix position.</div><br />
   <div><strong>Technical Response:</strong> The operators ++ and -- can be placed either before or after a variable. When the operator goes after the variable, it is in “postfix position”: counter++. The “prefix position” is when the operator goes before the variable: ++counter.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Postfix Position Counter
+let counter = 1;
+let a = ++counter; // (*)
+
+alert(a); // 2
+
+// Prefix Position Counter
+let counter = 1;
+let a = counter++; // (*) changed ++counter to counter++
+
+alert(a); // 1
+```
+
   </div>
   </div>
 </details>
-
-Code Example:
-
-```js
-// Postfix Position Counter
-
-let counter = 1;
-
-let a = ++counter; // (\*)
-alert(a); // 2
-// Prefix Position Counter
-
-let counter = 1;
-
-let a = counter++; // (\*) changed ++counter to counter++
-alert(a); // 1
-```
 
 ---
 
@@ -336,26 +371,28 @@ alert(a); // 1
   <div>
   <div><strong>Interview Response:</strong> Prefix increments counter and returns the new value. Postfix increments counter but returns the old value before being incremented.</div><br />
   <div><strong>Technical Response:</strong>  Yes, the prefix form ++counter increments counter and returns the new value. The postfix form counter++ also increments counter but returns the old value before being incremented.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Prefix Position:
+let counterOne = 5;
+let a = ++counterOne; // (*)
+
+alert(a); // alerts 6
+
+// Postfix Position:
+let counterTwo = 5;
+let b = counterTwo++; // (*) changed ++counter to counter++
+
+alert(b); // alerts 5
+```
+
   </div>
   </div>
 </details>
-
-Code Example:
-
-```js
-// Prefix Position:
-
-let counterOne = 5;
-
-let a = ++counterOne; // (\*)
-alert(a); // alerts 6
-// Postfix Position:
-
-let counterTwo = 5;
-
-let b = counterTwo++; // (\*) changed ++counter to counter++
-alert(b); // alerts 5
-```
 
 ---
 
@@ -366,20 +403,21 @@ alert(b); // alerts 5
   <div>
   <div><strong>Interview Response:</strong> Technical yes, but it is not advisable, because it reduces the readability of our code.</div><br />
   <div><strong>Technical Response:</strong>  Though technically okay, such notation should be avoided and usually makes code less readable. We should use a common stye of one line one action in our code.
+  </div><br />
+  <div><strong className="codeExample">Proper Implementation:</strong><br /><br />
+
+  <div></div>
+
+```js
+// We advise a style of “one line – one action”:
+let counter = 1;
+alert(2 * counter); // 2
+counter++;
+```
+
   </div>
   </div>
 </details>
-
-Proper Implementation:
-
-```js
-// We advise a style of “one line – one action”:
-let counter = 1;
-
-alert(2 * counter); // 2
-
-counter++;
-```
 
 ---
 
@@ -399,17 +437,20 @@ counter++;
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The comma operator allows us to evaluate several expressions, dividing them with a comma. Each of them is evaluated but only the result of the last one is returned.</div>
-  </div>
-</details>
+  <div><strong>Interview Response:</strong> The comma operator allows us to evaluate several expressions, dividing them with a comma. Each of them is evaluated but only the result of the last one is returned.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let a = (1 + 2, 3 + 4);
 
-alert(a); // 7 (the result of 3 + 4)
+alert(a); // 7 (the result of 3 + 4)
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -418,18 +459,22 @@ alert(a); // 7 (the result of 3 + 4)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Sometimes, people use it in more complex constructs to put several actions in one line. It is not a normal or recommended approach.</div>
-  </div>
-</details>
+  <div><strong>Interview Response:</strong> Sometimes, people use it in more complex constructs to put several actions in one line. It is not a normal or recommended approach.</div><br />
+  <div><strong className="codeExample">Code Example:</strong> Three expressions in one line…<br /><br />
 
-Example: Three expressions in one line…
+  <div></div>
 
 ```js
-// three operations in one line: Commonly used in frameworks
-for (a = 1, b = 3, c = a * b; a < 10; a++) {
+// three operations in one line: Commonly used in frameworks
+for (a = 1, b = 3, c = a * b; a < 10; a++) {
  ...
 }
+
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 

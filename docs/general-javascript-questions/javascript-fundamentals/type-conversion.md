@@ -67,11 +67,10 @@ sidebar_position: 7
   <div>
   <div><strong>Interview Response:</strong> The string object is used to explicitly convert values to a string.</div><br />
   <div><strong>Technical Response:</strong> The String(value) object is used to explicitly convert values to a string. The conversion to string is usually obvious for primitive values.
-  </div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let value = true;
@@ -80,6 +79,10 @@ alert(typeof value); // boolean
 value = String(value); // now value is a string "true"
 alert(typeof value); // string
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -99,11 +102,10 @@ alert(typeof value); // string
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The number object is used to explicitly convert values to a number.</div>
-  </div>
-</details>
+  <div><strong>Interview Response:</strong> The number object is used to explicitly convert values to a number.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let str = '123';
@@ -113,6 +115,10 @@ let num = Number(str); // becomes a number 123
 alert(typeof num); // number
 ```
 
+  </div>
+  </div>
+</details>
+
 ---
 
 ### What is the result when there is an explicit attempt to convert a non-number to a number?
@@ -120,17 +126,20 @@ alert(typeof num); // number
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> If the string is not a valid number the return value is NaN.</div>
-  </div>
-</details>
+  <div><strong>Interview Response:</strong> If the string is not a valid number the return value is NaN.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let age = Number('an arbitrary string instead of a number');
 
 alert(age); // NaN, conversion failed
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -139,11 +148,10 @@ alert(age); // NaN, conversion failed
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Numeric conversions on undefined values returns NaN (Not-a-Number).</div>
-  </div>
-</details>
+  <div><strong>Interview Response:</strong> Numeric conversions on undefined values returns NaN (Not-a-Number).</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let thisNumber;
@@ -153,6 +161,10 @@ let result = Number(thisNumber);
 alert(result); // returns NaN, conversion failed
 ```
 
+  </div>
+  </div>
+</details>
+
 ---
 
 ### If, there is an attempt to convert a NULL value to a number. What is the return result?
@@ -160,11 +172,10 @@ alert(result); // returns NaN, conversion failed
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Numeric conversions on Null values returns zero (0).</div>
-  </div>
-</details>
+  <div><strong>Interview Response:</strong> Numeric conversions on Null values returns zero (0).</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```js
 let thisNumber = null;
@@ -173,6 +184,10 @@ let result = Number(thisNumber);
 
 alert(result); // returns 0
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -192,11 +207,10 @@ alert(result); // returns 0
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> White-spaces from the start and end are removed. If the remaining string is empty, the result is 0. Otherwise, the number is “read” from the string. If there is an error it will return NaN.</div>
-  </div>
-</details>
+  <div><strong>Interview Response:</strong> White-spaces from the start and end are removed. If the remaining string is empty, the result is 0. Otherwise, the number is “read” from the string. If there is an error it will return NaN.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let myString = '';
@@ -205,6 +219,10 @@ let outcome = Number(myString);
 
 alert(outcome); // returns 0
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -224,11 +242,10 @@ alert(outcome); // returns 0
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The Boolean object converts strings and numerical values to Boolean true or false.</div>
-  </div>
-</details>
+  <div><strong>Interview Response:</strong> The Boolean object converts strings and numerical values to Boolean true or false.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 alert(Boolean(1)); // true
@@ -236,6 +253,10 @@ alert(Boolean(0)); // false
 alert(Boolean('hello')); // true
 alert(Boolean('')); // false
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -261,20 +282,23 @@ alert(Boolean('')); // false
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, a non-empty string is always true. Zero is considered empty and returns false.</div>
-  </div>
-</details>
+  <div><strong>Interview Response:</strong> In JavaScript, a non-empty string is always true. Zero is considered empty and returns false.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example
+  <div></div>
 
 ```js
 let numZero = Boolean(0);
 
 let stringZero = Boolean('0');
 
-console.log(numZero); // returns false
-console.log(stringZero); // returns true
+console.log(numZero); // returns false
+console.log(stringZero); // returns true
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 

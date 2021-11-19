@@ -33,29 +33,36 @@ sidebar_position: 16
   <div><strong>Technical Response:</strong> Function declarations load before any code is executed while Function expressions load only when the interpreter passed the right side of the expression. A global Function Declaration is visible in the whole script, no matter where it is.<br /><br />
   Function Declarations are functions, declared as a separate statement, in the main code flow.<br /><br />
   Function Expressions are functions, created inside an expression or inside another syntax construct.
-  </div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong> Function Declaration<br /><br />
 
-Code Example: Function Declaration
+  <div></div>
 
 ```js
-sayHi('John'); // Hello, John
+sayHi('John'); // Hello, John
+
 function sayHi(name) {
-  alert(`Hello, ${name}`);
+  alert(`Hello, ${name}`);
 }
 ```
 
-Code Example: Function Expression
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong> Function Expression<br /><br />
+
+  <div></div>
 
 ```js
-sayHi('John'); // error!
-let sayHi = function (name) {
-  // (*) no magic any more
+sayHi('John'); // error!
 
-  alert(`Hello, ${name}`);
+let sayHi = function (name) {
+  // (*) no magic any more
+  alert(`Hello, ${name}`);
 };
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -91,19 +98,22 @@ let sayHi = function (name) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The function expression structure creates and assigns a variable to the function explicitly. A function name can be omitted making it an anonymous function. If a name is assigned, the name is localized to the function itself. The function expression can also assign parameters, if necessary. The expression body, like regular functions, encloses the actions that will be performed by the function.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong> Function Expression<br /><br />
 
-Code Example: Function Expression
+  <div></div>
 
 ```js
 const getRectArea = function (width, height) {
   return width * height;
 };
 
-console.log(getRectArea(3, 4)); // returns 12
+console.log(getRectArea(3, 4)); // returns 12
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -113,24 +123,28 @@ console.log(getRectArea(3, 4)); // returns 12
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, a function is a value, so we can deal with it as a value. You can copy a function by reference to create a new copy like you would with a regular variable and value.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example: Function Value
+  <div></div>
 
 ```js
 function sayHi() {
-  // (1) create
+  // (1) create
   alert('Hello');
 }
 
-let func = sayHi; // (2) copy
-func(); // Hello     // (3) run the copy (it works)!
-sayHi(); // Hello  ...this still works too (why wouldn't it)
+let func = sayHi; // (2) copy
+
+func(); // Hello     // (3) run the copy (it works)!
+sayHi(); // Hello    //  <- this still works too (why wouldn't it)
 
 // This will work for every function that is considered a value
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -141,23 +155,24 @@ sayHi(); // Hello  ...this still works too (why wouldn't it)
   <div>
   <div><strong>Interview Response:</strong> The reason a function expression uses a semi-colon is that it is declared by assignment. All assignments must use a semi-colon to terminate the statement.</div><br />
   <div><strong>Technical Response:</strong> A Function Expression is used inside a statement as a value. It is not a code block, but rather an assignment. The semicolon ( ; ) is recommended at the end of statements, no matter what the value is. So, the semicolon is not related to the Function Expression itself, it just terminates the statement.
-  </div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-:::note
-
-Note: There’s no need for a semicolon ( ; ) at the end of code blocks and syntax structures that use them like if { ... }, for { }, function f { } etc.
-
-:::
-
-Example:
+  <div></div>
 
 ```js
 let sayHi = function () {
-  // ...
-}; // <-- semicolon here closes out the statement.
+  // ...
+}; // <-- semicolon here closes out the statement.
 ```
+
+:::note
+Note: There’s no need for a semicolon ( ; ) at the end of code blocks and syntax structures that use them like if { ... }, for { }, function f { } etc.
+:::
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -167,25 +182,27 @@ let sayHi = function () {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete a routine or action.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong> Callback Function<br /><br />
 
-Code Example: Callback Function
+  <div></div>
 
 ```js
 function greeting(name) {
-  alert('Hello ' + name);
+  alert('Hello ' + name);
 }
 
 function processUserInput(callback) {
-  var name = prompt('Please enter your name.');
-
+  var name = prompt('Please enter your name.');
   callback(name);
 }
 
-processUserInput(greeting); // function is calling the greeting.
+processUserInput(greeting); // function is calling the greeting.
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -196,65 +213,55 @@ processUserInput(greeting); // function is calling the greeting.
   <div>
   <div><strong>Interview Response:</strong> Yes, in strict mode, when a Function Declaration is within a code block, it is visible everywhere inside that block. But not outside of it. CAUTION: This can lead to erroneous outcomes.<br /><br /> 
   A function expression is a better alternative to implement code in this fashion, because a function expression can be initialized and invoked in the global scope regardless of where the function statement is located. A function declaration does not have the benefit of that feature.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong> Erroneous Use<br /><br />
 
-Code Example: Erroneous Function Declaration
+  <div></div>
 
 ```js
-let age = prompt("What is your age?", 18);
+let age = prompt('What is your age?', 18);
 
-// conditionally declare a function
-
-if (age < 18) {
-
-function welcome() {
-
-  alert("Hello!");
-
+// conditionally declare a function
+if (age < 18) {
+  function welcome() {
+    alert('Hello!');
+  }
+} else {
+  function welcome() {
+    alert('Greetings!');
+  }
 }
 
-} else {
-
-function welcome() {
-
-  alert("Greetings!");
-
-}
-
-}
-
-// ...use it later
-
-welcome(); // Error: welcome is not defined
-
-Example: Proper Implementation
-
-let age = prompt("What is your age?", 18);
-
-let welcome;
-
-if (age < 18) {
-
-welcome = function() {
-
-  alert("Hello!");
-
-};
-
-} else {
-
-welcome = function() {
-
-  alert("Greetings!");
-
-};
-
-}
-
-welcome(); // ok now
+// ...use it later
+welcome(); // Error: welcome is not defined
 ```
+
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong> Proper Implementation<br /><br />
+
+  <div></div>
+
+```js
+let age = prompt('What is your age?', 18);
+
+let welcome;
+
+if (age < 18) {
+  welcome = function () {
+    alert('Hello!');
+  };
+} else {
+  welcome = function () {
+    alert('Greetings!');
+  };
+}
+
+welcome(); // ok now
+```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -265,29 +272,36 @@ welcome(); // ok now
   <div>
   <div><strong>Interview Response:</strong> Yes, a global Function Declaration is visible in the whole script, no matter where it is. As soon as it is initialized, it is available.</div><br />
   <div><strong>Technical Response:</strong>  Yes, a global Function Declaration is visible in the whole script, no matter where it is. When JavaScript prepares to run the script, it first looks for global Function Declarations in it and creates the functions. We can think of it as an “initialization stage”. And after all Function Declarations are processed, the code is executed. So, it has access to these functions. Function expressions do not have this capability and it is an important factor when choosing between the two.
-  </div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong> Function Declaration, it works…<br /><br />
 
-Code Example: Function Declaration, it works…
+  <div></div>
 
 ```js
-sayHi('John'); // Function invoked before it is defined: returns Hello, John.
+sayHi('John'); // Function invoked before it is defined: returns Hello, John.
+
 function sayHi(name) {
   alert(`Hello, ${name}`);
 }
 ```
 
-Code Example: Function Expression, ah man we broke it…
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong> Function Expression, ah man we broke it…<br /><br />
+
+  <div></div>
 
 ```js
-sayHi('John'); // error: we called it too early.
-let sayHi = function (name) {
-  // no magic any more
+sayHi('John'); // error: we called it too early.
 
+let sayHi = function (name) {
+  // no magic any more
   alert(`Hello, ${name}`);
 };
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
