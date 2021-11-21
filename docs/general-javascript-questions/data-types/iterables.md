@@ -31,36 +31,28 @@ sidebar_position: 6
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The most common use case for Symbol.iterator is creating a custom object iterator.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let range = {
   from: 1,
-
   to: 5,
 };
 
-// 1. call to for..of initially calls this
-
+// 1. call to for..of initially calls this
 range[Symbol.iterator] = function () {
-  // ...it returns the iterator object:
-
-  // 2. Onward, for..of works only with this iterator, asking it for next values
-
+  // ...it returns the iterator object:
+  // 2. Onward, for..of works only with this iterator, asking it for next values
   return {
     current: this.from,
-
     last: this.to,
 
-    // 3. next() is called on each iteration by the for..of loop
-
+    // 3. next() is called on each iteration by the for..of loop
     next() {
-      // 4. it should return the value as an object {done:.., value :...}
-
+      // 4. it should return the value as an object {done:.., value :...}
       if (this.current <= this.last) {
         return { done: false, value: this.current++ };
       } else {
@@ -70,12 +62,15 @@ range[Symbol.iterator] = function () {
   };
 };
 
-// now it works!
-
+// now it works!
 for (let num of range) {
-  alert(num); // 1, then 2, 3, 4, 5
+  alert(num); // 1, then 2, 3, 4, 5
 }
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -85,29 +80,29 @@ for (let num of range) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, you can call an iterator explicitly in JavaScript. There are several benefits including more control over the process than for...of.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let str = 'Hello';
 
-// does the same as
-
-// for (let char of str) alert(char);
+// does the same as
+// for (let char of str) alert(char);
 
 let iterator = str[Symbol.iterator]();
 
 while (true) {
   let result = iterator.next();
-
   if (result.done) break;
-
-  console.log(result.value); // outputs characters one by one
+  console.log(result.value); // outputs characters one by one
 }
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -117,28 +112,27 @@ while (true) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Iterables are objects that implement the Symbol.iterator method such as arrays and strings. Array-likes are objects that have indexes and length, so they look like arrays. When we use JavaScript for practical tasks in a browser or any other environment, we may meet objects that are iterables or array-likes, or both like strings.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong> Array-like but not Iterable<br /><br />
 
-Code Example: Array-like but not Iterable
+  <div></div>
 
 ```js
 let arrayLike = {
-  // has indexes and length => array-like
-
+  // has indexes and length => array-like
   0: 'Hello',
-
   1: 'World',
-
   length: 2,
 };
 
-// Error (no Symbol.iterator)
-
+// Error (no Symbol.iterator)
 for (let item of arrayLike) {
 }
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -148,36 +142,44 @@ for (let item of arrayLike) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The Array.from method can turn an iterable or array-like value into an array. Then we can call array methods on it.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Syntax Example:</strong><br /><br />
 
-**Syntax:** `Array.from(obj[, mapFn, thisArg])`
+  <div></div>
 
-Code Example:
+```js
+Array.from(obj[, mapFn, thisArg]);
+```
+
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
 
 ```js
 let arrayLike = {
   0: 'Hello',
-
   1: 'World',
-
   length: 2,
 };
 
-let arr = Array.from(arrayLike); // (\*)
-alert(arr.pop()); // World (method works)
-// Here we use Array.from to turn a string into an array of characters:
+let arr = Array.from(arrayLike); // (*)
+alert(arr.pop()); // World (method works)
+
+// Here we use Array.from to turn a string into an array of characters:
 
 let str = '𝒳😂';
 
-// splits str into array of characters
-
+// splits str into array of characters
 let chars = Array.from(str);
 
-alert(chars[0]); // 𝒳
-alert(chars[1]); // 😂
-alert(chars.length); // 2
+alert(chars[0]); // 𝒳
+alert(chars[1]); // 😂
+alert(chars.length); // 2
 ```
+
+  </div>
+  </div>
+</details>
 
 ---

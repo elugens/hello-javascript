@@ -19,26 +19,29 @@ sidebar_position: 7
   <div>
   <div><strong>Interview Response:</strong> The main difference is that Map allows keys of any type. Objects also convert keys to strings, which is another known difference. As you begin to look at Objects and Maps another apparent difference is that Objects cannot use another Object as a key.</div><br />
   <div><strong>Technical Response:</strong> The Map object holds key-value pairs (Just like Objects) and remembers the original insertion order of the keys. Any value (both objects and primitive values) may be used as either a key or a value. But the main difference is that Map allows keys of any type. Objects also convert keys to strings, which is another known difference. The keys of an Object must be either a String or a Symbol. As you begin to look at Objects and Maps another apparent difference is that Objects cannot use another Object as a key.
-  </div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong> Different types as keys<br /><br />
 
-Example: Different types as keys
+  <div></div>
 
 ```js
 let map = new Map();
 
-map.set('1', 'str1'); // a string key
-map.set(1, 'num1'); // a numeric key
-map.set(true, 'bool1'); // a boolean key
-// remember the regular Object? it would convert keys to string
+map.set('1', 'str1'); // a string key
+map.set(1, 'num1'); // a numeric key
+map.set(true, 'bool1'); // a boolean key
 
-// Map keeps the type, so these two are different:
+// remember the regular Object? it would convert keys to string
+// Map keeps the type, so these two are different:
+alert(map.get(1)); // 'num1'
+alert(map.get('1')); // 'str1'
 
-alert(map.get(1)); // 'num1'
-alert(map.get('1')); // 'str1'
-alert(map.size); // 3
+alert(map.size); // 3
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -58,31 +61,36 @@ alert(map.size); // 3
     <li>map.clear() – removes everything from the map.</li>
     <li>map.size – returns the current element count.</li>
   </ul>
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```js
-let contacts = new Map();
+let contacts = new Map();
 
-contacts.set('Raymond , {phone: "213-555-1234", address: "123 N 1st Ave"});
+// stores the value by the key
+contacts.set('Raymond', { phone: '213-555-1234', address: '123 N 1st Ave' });
 
-contacts.has('Jessie'); // true
+contacts.has('Jessie'); // false 'Jessie' does not exist
 
-contacts.get('Hilary'); // undefined
+contacts.get('Hilary'); // returns undefined
 
-contacts.set('Hilary', {phone: "617-555-4321", address: "321 S 2nd St"});
+// stores as the value by the key
+contacts.set('Hilary', { phone: '617-555-4321', address: '321 S 2nd St' });
 
-contacts.get('Jessie'); // {phone: "213-555-1234", address: "123 N 1st Ave"}
+console.log(contacts); // Map returns Hilary and Raymond
 
-contacts.delete('Raymond'); // false
+contacts.delete('Raymond'); // deletes Raymond returns true
 
-contacts.delete('Jessie'); // true
+contacts.get('Hilary'); // returns values
 
-console.log(contacts.size); // 1
+console.log(contacts.size); // returns 1
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -92,25 +100,28 @@ console.log(contacts.size); // 1
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Using objects as keys is one of the most notable and important Map features. The same does not count for objects. String as a key in object is fine, but we cannot use another Object as a key in Object.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```js
 let john = { name: 'John' };
-
 let ben = { name: 'Ben' };
 
-let visitsCountObj = {}; // try to use an object
-visitsCountObj[ben] = 234; // try to use ben object as the key
-visitsCountObj[john] = 123; // try to use john object as the key, ben object will get replaced
-// That's what got written!
+let visitsCountObj = {}; // try to use an object
 
-alert(visitsCountObj['[object Object]']); // 123
-alert(visitsCountObj[ben]); // ben returns 123 because it was overwritten by john
+visitsCountObj[ben] = 234; // try to use ben object as the key
+visitsCountObj[john] = 123; // try to use john object as the key, ben object will get replaced
+
+// That's what got written!
+alert(visitsCountObj['[object Object]']); // 123
+alert(visitsCountObj[ben]); // ben returns 123 because it was overwritten by john
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -133,45 +144,41 @@ alert(visitsCountObj[ben]); // ben returns 123 because it was overwritten
   <div>
   <div><strong>Interview Response:</strong> There are three Map methods that you can use to iterate over a map including the key, values, and entries methods.</div><br />
   <div><strong>Technical Response:</strong> There are three Map methods that you can use to iterate over a map including the key, values, and entries methods. The keys method simply returns the keys within the Map Object. Values method returns an iterable for values and the entries method returns an iterable for entries [key, value]. Notable, by default entries is used in the for…of loop. So, it is not necessary to invoke it explicitly. The iteration goes in the same order as the values were inserted. Map preserves this order, unlike a regular Objects.
-  </div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let recipeMap = new Map([
   ['cucumber', 500],
-
   ['tomatoes', 350],
-
   ['onion', 50],
 ]);
 
-// iterate over keys (vegetables)
-
+// iterate over keys (vegetables)
 for (let vegetable of recipeMap.keys()) {
-  console.log(vegetable); // cucumber, tomatoes, onion
+  console.log(vegetable); // cucumber, tomatoes, onion
 }
 
-// iterate over values (amounts)
-
+// iterate over values (amounts)
 for (let amount of recipeMap.values()) {
-  console.log(amount); // 500, 350, 50
+  console.log(amount); // 500, 350, 50
 }
 
 let recipeMap = new Map([
   ['cucumber', 500],
-
   ['tomatoes', 350],
-
   ['onion', 50],
 ]);
 
-// We can also iterate over entries using a forEach()
-
-recipeMap.forEach((quantity, veg) => console.log(`${veg}, ${quantity}`));
+// We can also iterate over entries using a forEach()
+recipeMap.forEach((quantity, veg) => console.log(`${veg}, ${quantity}`));
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -182,25 +189,25 @@ recipeMap.forEach((quantity, veg) => console.log(`${veg}, ${quantity}`));
   <div>
   <div><strong>Interview Response:</strong> Yes, the forEach method can be used to iterate over the Map Object.</div><br />
   <div><strong>Technical Response:</strong> The forEach method can be used to iterate over the Map Object. The forEach() method executes a provided function once for each Map entry. It should be noted that instead of producing a [key, value] as a result it produces the opposite [value, key]. You can choose the format of your choice to meet the proposed result.
-  </div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```js
 let recipeMap = new Map([
   ['cucumber', 500],
-
   ['tomatoes', 350],
-
   ['onion', 50],
 ]);
 
-// iterate over entries using a forEach()
-
-recipeMap.forEach((quantity, veg) => console.log(`${veg}, ${quantity}`));
+// iterate over entries using a forEach()
+recipeMap.forEach((quantity, veg) => console.log(`${veg}, ${quantity}`));
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -210,44 +217,43 @@ recipeMap.forEach((quantity, veg) => console.log(`${veg}, ${quantity}`));
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Technically Yes, but it is not recommended because it uses the feature of a generic object. In fact, there is a significant loss of built-in Map methods like set and delete when it is transformed into a generic object.
-</div>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Wrong Way
+let wrongMap = new Map();
+wrongMap['bla'] = 'blaa';
+wrongMap['bla2'] = 'blaaa2';
+
+console.log(wrongMap); // Map { bla: 'blaa', bla2: 'blaaa2' }
+
+// Any attempt to revert back to Maps built-in methods will fail
+
+wrongMap.has('bla'); // false
+wrongMap.delete('bla'); // false
+console.log(wrongMap); // Map { bla: 'blaa', bla2: 'blaaa2' }
+
+// Right way for storing data in the Map - set(key, value) method.
+
+let contacts = new Map();
+contacts.set('Jessie', { phone: '213-555-1234', address: '123 N 1st Ave' });
+contacts.has('Jessie'); // true
+contacts.get('Hilary'); // undefined
+contacts.set('Hilary', { phone: '617-555-4321', address: '321 S 2nd St' });
+contacts.get('Jessie'); // {phone: "213-555-1234", address: "123 N 1st Ave"}
+contacts.delete('Raymond'); // false
+contacts.delete('Jessie'); // true
+console.log(contacts.size); // 1
+```
+
+  </div>
   </div>
 </details>
 
-Example:
-
-```js
-// Bad Way
-
-let wrongMap = new Map();
-
-wrongMap['bla'] = 'blaa';
-
-wrongMap['bla2'] = 'blaaa2';
-
-console.log(wrongMap); // Map { bla: 'blaa', bla2: 'blaaa2' }
-// Any attempt to revert back to Maps built-in methods will fail
-
-wrongMap.has('bla'); // false
-wrongMap.delete('bla'); // false
-console.log(wrongMap); // Map { bla: 'blaa', bla2: 'blaaa2' }
-// Right way for storing data in the Map - set(key, value) method.
-
-let contacts = new Map();
-
-contacts.set('Jessie', { phone: '213-555-1234', address: '123 N 1st Ave' });
-
-contacts.has('Jessie'); // true
-contacts.get('Hilary'); // undefined
-contacts.set('Hilary', { phone: '617-555-4321', address: '321 S 2nd St' });
-
-contacts.get('Jessie'); // {phone: "213-555-1234", address: "123 N 1st Ave"}
-contacts.delete('Raymond'); // false
-contacts.delete('Jessie'); // true
-console.log(contacts.size); // 1
-```
-
-Source: <https://javascript.info/map-set#object-entries-map-from-object>
+---
 
 ### Can you convert a plain object into a Map in JavaScript?
 
@@ -256,23 +262,25 @@ Source: <https://javascript.info/map-set#object-entries-map-from-object>
   <div>
   <div><strong>Interview Response:</strong> Yes, we can create a new map object and get the object entries using the object.entries method.</div><br />
   <div><strong>Technical Response:</strong> Yes, if we have a plain object, and we would like to create a Map from it, then we can use built-in method Object.entries(obj) that returns an array of key/value pairs for an object exactly in that format.
-  </div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```js
 let obj = {
   name: 'John',
-
   age: 30,
 };
 
 let map = new Map(Object.entries(obj));
 
-alert(map.get('name')); // John
+alert(map.get('name')); // John
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -283,39 +291,44 @@ alert(map.get('name')); // John
   <div>
   <div><strong>Interview Response:</strong> The Object.fromEntries method transforms a list of key-value (Map Object) pairs into an object. Object.entries gets the entries that we can place in a Map.</div><br />
   <div><strong>Technical Response:</strong> If we have a plain object, and we would like to create a Map from it, then we can use built-in method Object.entries(obj) that returns an array of key/value pairs for an object exactly in that format. The Object.fromEntries() method transforms a list of key-value (Map Object) pairs into an object. So, both have conversion components that are the opposite of one another.
-  </div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong> Object.fromEntries();<br /><br />
 
-Example: Object.fromEntries()
+  <div></div>
 
 ```js
 let map = new Map();
-
 map.set('banana', 1);
-
 map.set('orange', 2);
-
 map.set('meat', 4);
 
-let obj = Object.fromEntries(map.entries()); // make a plain object (\*)
-// done!
+let obj = Object.fromEntries(map.entries()); // make a plain object (*)
 
-// obj = { banana: 1, orange: 2, meat: 4 }
+// done!
+// obj = { banana: 1, orange: 2, meat: 4 }
 
-alert(obj.orange); // 2
-Example: Object.entries();
+alert(obj.orange); // 2
+```
 
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong> Object.entries();<br /><br />
+
+  <div></div>
+
+```js
 let obj = {
   name: 'John',
-
   age: 30,
 };
 
 let map = new Map(Object.entries(obj));
 
-alert(map.get('name')); // John
+alert(map.get('name')); // John
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -326,40 +339,36 @@ alert(map.get('name')); // John
   <div>
   <div><strong>Interview Response:</strong> The Set object is a special type of object that lets you store “unique” values of any type, whether primitive values or object references.</div><br />
   <div><strong>Technical Response:</strong> The Set object is a special type of object that lets you store unique values of any type, whether primitive values or object references. The Set() constructor creates the base structure of the object. The main feature is that repeated calls of set.add(value) with the same value do not do anything. That is the reason why each value appears in a Set only once.
-  </div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```js
 let set = new Set();
 
 let john = { name: 'John' };
-
 let pete = { name: 'Pete' };
-
 let mary = { name: 'Mary' };
 
-// visits, some users come multiple times
-
+// visits, some users come multiple times
 set.add(john);
-
 set.add(pete);
-
 set.add(mary);
-
 set.add(john);
-
 set.add(mary);
 
-// set keeps only unique values
+// set keeps only unique values
+alert(set.size); // 3
 
-alert(set.size); // 3
 for (let user of set) {
-  alert(user.name); // John (then Pete and Mary)
+  alert(user.name); // John (then Pete and Mary)
 }
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -383,26 +392,26 @@ for (let user of set) {
   <div>
   <div><strong>Interview Response:</strong> We can use the for..of and forEach loops. We can also use a traditional iteration, but it is not recommended.</div><br />
   <div><strong>Technical Response:</strong> There are two ways to iterate over a Set() in JavaScript, according to the MDN. The for..of and forEach loops. You can also use a traditional iterative for loop, but it is much more complex and not recommended (Ninja Code).
-  </div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong> Iteration over Set using for..of and forEach<br /><br />
 
-Example: Iteration over Set using for..of and forEach
+  <div></div>
 
 ```js
 let set = new Set(['oranges', 'apples', 'bananas']);
 
 for (let value of set) alert(value);
 
-// the same with forEach:
-
+// the same with forEach:
 set.forEach((value, valueAgain, set) => {
   alert(value);
 });
 ```
 
-Example: Traditional iterative for loop over Set()
-object… (for..of or forEach is recommended)
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong> Traditional iterative for loop over Set() object… (for..of or forEach is recommended)<br /><br />
+
+  <div></div>
 
 ```js
 let set = new Set(['oranges', 'apples', 'bananas']);
@@ -411,5 +420,9 @@ for (let i = set.values(), val = null; (val = i.next().value); ) {
   console.log(val);
 }
 ```
+
+  </div>
+  </div>
+</details>
 
 ---

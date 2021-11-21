@@ -32,30 +32,29 @@ sidebar_position: 1
   <div>
   <div><strong>Interview Response:</strong> String, Symbol, BigInt, Boolean, and Number.</div><br />
   <div><strong>Technical Response:</strong> There are 5 primitive wrapper objects that include the String, Number, BigInt, Boolean, and Symbol.<br /><br />
-  </div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let language = 'JavaScript';
-
 let s = language.substring(4);
+console.log(s); // logs Script
 
-console.log(s); // Script
-// WHAT'S ACTUALLY HAPPENING BEHIND THE SCENES!
+// WHAT'S ACTUALLY HAPPENING BEHIND THE SCENES!
 
 let language = 'JavaScript';
 
-// behind the scenes of the language.substring(4);
-
+// behind the scenes of the language.substring(4);
 let tmp = new String(language);
-
 str = temp.substring(4);
-
 temp = null;
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -65,23 +64,25 @@ temp = null;
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> A primitive data type has only a single value. Objects on the other hand can contain more than one value stored in collections and more complex structures.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-// String primitive
+// String primitive
+let str = 'hello'; // holds one value
 
-let str = 'hello'; // holds one value
-// Object is Special
-
+// Object is Special
 let user = {
-  name: 'Jane', // holds multiple key/value pairs.
+  name: 'Jane', // holds multiple key/value pairs.
   age: 30,
 };
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -91,23 +92,25 @@ let user = {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, a function can be used as a property of an object. It is more commonly called an object method.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let john = {
   name: 'John',
-
   sayHi: function () {
-    alert('Hi buddy!');
+    alert('Hi buddy!');
   },
 };
 
-john.sayHi(); // Hi buddy!
+john.sayHi(); // Hi buddy!
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -117,18 +120,21 @@ john.sayHi(); // Hi buddy!
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, a primitive remains a primitive regardless of what method is called on it.</div><br />
-  <div><strong>Technical Response:</strong> Yes, a primitive remains a primitive. For instance, there exists a string method `str.toUpperCase()` that returns a capitalized string. The type of the returned value remains a string.<br /><br />
-  </div>
-  </div>
-</details>
+  <div><strong>Technical Response:</strong> Yes, a primitive remains a primitive. For instance, there exists a string method `str.toUpperCase()` that returns a capitalized string. The type of the returned value remains a string.<br />
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let str = 'Hello';
 
-alert(str.toUpperCase()); // HELLO
+alert(str.toUpperCase()); // HELLO
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -139,29 +145,33 @@ alert(str.toUpperCase()); // HELLO
   <div>
   <div><strong>Interview Response:</strong> Technically, using the “new” syntax can be done, but it is not recommended because it will return an object and not the primitive value as intended.</div><br />
   <div><strong>Technical Response:</strong> Technically this can be done in JavaScript, but it is not recommended based on the specifications. There are several unintended consequences of using this practice and it should be avoided. A best practice is to use Number and Boolean object wrappers without the new operator.<br /><br />
-  </div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-alert(typeof 0); // "number"
-alert(typeof new Number(0)); // "object"! – not a number Huh!
-// Objects are always truthy in if, so here the alert will show up:
+alert(typeof 0); // "number"
+
+alert(typeof new Number(0)); // "object"! – not a number Huh!
+
+// Objects are always truthy in if, so here the alert will show up:
 
 let zero = new Number(0);
 
 if (zero) {
-  // zero is true, because it's an object
-
-  alert('zero is truthy!?!');
+  // zero is true, because it's an object
+  alert('zero is truthy!?!');
 }
 
-// this is entirely valid:
+// this is entirely valid:
 
-let num = Number('123'); // convert a string to number
+let num = Number('123'); // convert a string to number
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -171,16 +181,21 @@ let num = Number('123'); // convert a string to number
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> No, they are considered the most primitive data types of all. They both have no wrapper objects and do not provide any methods.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-alert('Hello'.test); // return undefined, but shows no error
-alert(null.test); // returns type error
-alert(undefined.test); // returns type error
+alert('Hello'.test); // return undefined, but shows no error
+
+alert(null.test); // returns type error
+
+alert(undefined.test); // returns type error
 ```
+
+  </div>
+  </div>
+</details>
 
 ---

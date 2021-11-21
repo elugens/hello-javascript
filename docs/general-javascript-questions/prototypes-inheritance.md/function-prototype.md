@@ -18,11 +18,10 @@ sidebar_position: 2
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> In simple terms, the function.prototype mean a regular property on a function. Every Object in JavaScript contains the prototype meaning a regular property with the prototype name.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```js
 let animal = {
@@ -35,9 +34,14 @@ function Rabbit(name) {
 
 Rabbit.prototype = animal; // references animal
 
-let rabbit = new Rabbit('White Rabbit'); //  rabbit.__proto__ == animal
-alert(rabbit.eats); // true
+let rabbit = new Rabbit('White Rabbit'); //  rabbit.__proto__ == animal
+
+alert(rabbit.eats); // true
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -48,22 +52,24 @@ alert(rabbit.eats); // true
   <div>
   <div><strong>Interview Response:</strong> Every function has the "prototype” property even if we do not supply it. The prototype object is special type of enumerable object to which additional properties can be attached to and be shared across all the instances of its constructor function. A function prototype property is only used when new Function is called, it assigns the prototype of the new object.</div><br />
   <div><strong>Technical Response:</strong> Every function has the "prototype" property even if we do not supply it. A function prototype property is only used when new Function is called, it assigns [[Prototype]] of the new object. After creation, the function prototype property changes (func.prototype = &#123;another object&#125;), then new objects created by new Function will have another object as [[Prototype]], but already existing objects keep the old one. The default "prototype" is an object with the only property constructor that points back to the function itself.
-  </div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```js
 function Rabbit() {}
+// by default:
+// Rabbit.prototype = { constructor: Rabbit }
 
-// by default:
+let rabbit = new Rabbit(); // inherits from {constructor: Rabbit}
 
-// Rabbit.prototype = { constructor: Rabbit }
-
-let rabbit = new Rabbit(); // inherits from {constructor: Rabbit}
-alert(rabbit.constructor == Rabbit); // true (from prototype)
+alert(rabbit.constructor == Rabbit); // true (from prototype)
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -73,22 +79,23 @@ alert(rabbit.constructor == Rabbit); // true (from prototype)
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> When you override the default prototype in an object. We lose access to the function constructor property of the prototype.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```js
 function Rabbit() {}
-
 Rabbit.prototype = {
   jumps: true,
 };
 
 let rabbit = new Rabbit();
-
-alert(rabbit.constructor === Rabbit); // false
+alert(rabbit.constructor === Rabbit); // false
 ```
+
+  </div>
+  </div>
+</details>
 
 ---

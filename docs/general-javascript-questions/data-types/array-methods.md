@@ -18,35 +18,35 @@ sidebar_position: 5
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The splice method is a swiss army knife for arrays, it can do everything. The splice method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.</div><br />
-  <div><strong>Technical Response:</strong> The splice method is a swiss army knife for arrays, it can do everything. The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place. The basic syntax of the splice method includes modifying arrays starting from the index start: removes deleteCount elements and then inserts elem1, ..., elemN at their place. Then it returns the array of removed elements.<br /><br />
-  </div>
-  </div>
-</details>
+  <div><strong>Technical Response:</strong> The splice method is a swiss army knife for arrays, it can do everything. The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place. The basic syntax of the splice method includes modifying arrays starting from the index start: removes deleteCount elements and then inserts elem1, ..., elemN at their place. Then it returns the array of removed elements.<br />
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-**Syntax:** `arr.splice(start[, deleteCount, elem1, ..., elemN]);`
+<strong>Syntax: </strong> arr.splice(start[, deleteCount, elem1, ..., elemN]);<br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let arr = ['I', 'study', 'JavaScript'];
+arr.splice(1, 1); // from index 1 remove 1 element
 
-arr.splice(1, 1); // from index 1 remove 1 element
-console.log(arr); // ["I", "JavaScript"]
+console.log(arr); // ["I", "JavaScript"]
+
 const months = ['Jan', 'March', 'April', 'June'];
-
 months.splice(1, 0, 'Feb');
+// inserts at index 1
+console.log(months); // [ 'Jan', 'Feb', 'March', 'April', 'June' ]
 
-// inserts at index 1
-
-console.log(months); // [ 'Jan', 'Feb', 'March', 'April', 'June' ]
 months.splice(4, 1, 'May');
-
-// replaces 1 element at index 4
+// replaces 1 element at index 4
 
 console.log(months);
-
-// expected output: Array ["Jan", "Feb", "March", "April", "May"]
+// expected output: Array ["Jan", "Feb", "March", "April", "May"]
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -56,26 +56,26 @@ console.log(months);
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> A negative index begins at the end of an array and steps back towards the front of the array such as -1 being one index step from the end.</div><br />
-  <div><strong>Technical Response:</strong> Most array methods allow negative indexes. A negative index begins at the end of an array and steps back towards the front of the array such as -1 being one index step from the end. There is no zero-index position at the end of array.<br /><br />
+  <div><strong>Technical Response:</strong> Most array methods allow negative indexes. A negative index begins at the end of an array and steps back towards the front of the array such as -1 being one index step from the end. There is no zero-index position at the end of array.<br />
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let arr = [1, 2, 5];
+
+// from index -1 (one step from the end)
+// delete 0 elements,
+// then insert 3 and 4
+arr.splice(-1, 0, 3, 4);
+
+alert(arr); // 1,2,3,4,5
+```
+
   </div>
   </div>
 </details>
-
-Code Example:
-
-```js run autorun
-let arr = [1, 2, 5];
-
-// from index -1 (one step from the end)
-
-// delete 0 elements,
-
-// then insert 3 and 4
-
-arr.splice(-1, 0, 3, 4);
-
-alert(arr); // 1,2,3,4,5
-```
 
 ---
 
@@ -85,21 +85,25 @@ alert(arr); // 1,2,3,4,5
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The method arr.slice returns a new array copying to it all items from index start to end (not including end).</div><br />
-  <div><strong>Technical Response:</strong> The method arr.slice is much simpler than similar-looking arr.splice. It returns a new array copying to it all items from index start to end (not including end). Both start and end can be negative, in that case position from array end is assumed. It’s similar to a string method str.slice, but instead of substrings it makes sub-arrays. We can also call it without arguments: arr.slice() creates a copy of arr. That is often used to obtain a copy for further transformations that should not affect the original array.<br /><br />
-  </div>
-  </div>
-</details>
+  <div><strong>Technical Response:</strong> The method arr.slice is much simpler than similar-looking arr.splice. It returns a new array copying to it all items from index start to end (not including end). Both start and end can be negative, in that case position from array end is assumed. It’s similar to a string method str.slice, but instead of substrings it makes sub-arrays. We can also call it without arguments: arr.slice() creates a copy of arr. That is often used to obtain a copy for further transformations that should not affect the original array.<br />
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-**Syntax:** slice(start, end);
+<strong>Syntax: </strong> slice(start, end);<br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let arr = ['t', 'e', 's', 't'];
 
-document.write(arr.slice(1, 3)); // e,s (copy from 1 to 3)
-document.write(arr.slice(-2)); // s,t (copy from -2 till the end)
+console.log(arr.slice(1, 3)); // e,s (copy from 1 to 3)
+
+console.log(arr.slice(-2)); // s,t (copy from -2 till the end)
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -109,29 +113,34 @@ document.write(arr.slice(-2)); // s,t (copy from -2 till the end)
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The basic difference between slice and splice is splice() changes the original array on which it is called and returns it. The slice() method doesn't change the original array but it does return a new array.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-// Array Slice Method *
-
+// Array Slice Method *
 let arr = ['t', 'e', 's', 't'];
 
-console.log(arr.slice(1, 3)); // e,s (copy from 1 to 3)
-console.log(arr.slice(-2)); // s,t (copy from -2 till the end)
-console.log(arr); // ['t', 'e', 's', 't']; no change to the original array
-// Array Splice Method **
+console.log(arr.slice(1, 3)); // e,s (copy from 1 to 3)
 
+console.log(arr.slice(-2)); // s,t (copy from -2 till the end)
+
+console.log(arr); // ['t', 'e', 's', 't']; no change to the original array
+
+// Array Splice Method **
 let arr2 = [1, 2, 5];
 
-console.log(arr2.splice(-1, 0, 3, 4)); // returns []
-// returns an empty array because it was ran before it was created
+console.log(arr2.splice(-1, 0, 3, 4)); // returns []
 
-console.log(arr2); // 1,2,3,4,5 – modified the original array
+// returns an empty array because it was ran before it was created
+
+console.log(arr2); // 1,2,3,4,5 – modified the original array
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -141,27 +150,25 @@ console.log(arr2); // 1,2,3,4,5 – modified the original array
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The concat() method is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.</div><br />
-  <div><strong>Technical Response:</strong> The concat() method is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array. It accepts any number of arguments using either arrays or values. Normally, it only copies elements from arrays. Other objects, even if they look like arrays, are added. But if an array-like object has a special Symbol.isConcatSpreadable property, then it is treated as an array by concat its elements are added instead.<br /><br />
-  </div>
-  </div>
-</details>
+  <div><strong>Technical Response:</strong> The concat() method is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array. It accepts any number of arguments using either arrays or values. Normally, it only copies elements from arrays. Other objects, even if they look like arrays, are added. But if an array-like object has a special Symbol.isConcatSpreadable property, then it is treated as an array by concat its elements are added instead.<br />
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-**Syntax:** arr.concat(arg1, arg2...);
+<strong>Syntax: </strong> arr.concat(arg1, arg2...);<br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let arr = [1, 2];
 
-// create an array from: arr and [3,4]
+// create an array from: arr and [3,4]
+alert(arr.concat([3, 4])); // 1,2,3,4
 
-alert(arr.concat([3, 4])); // 1,2,3,4
-// create an array from: arr and [3,4] and [5,6]
+// create an array from: arr and [3,4] and [5,6]
+alert(arr.concat([3, 4], [5, 6])); // 1,2,3,4,5,6
 
-alert(arr.concat([3, 4], [5, 6])); // 1,2,3,4,5,6
-// create an array from: arr and [3,4], then add values 5 and 6
-
-alert(arr.concat([3, 4], 5, 6)); // 1,2,3,4,5,6
+// create an array from: arr and [3,4], then add values 5 and 6
+alert(arr.concat([3, 4], 5, 6)); // 1,2,3,4,5,6
 
 ///////////////////////////////
 
@@ -169,11 +176,10 @@ let arr = [1, 2];
 
 let arrayLike = {
   0: 'something',
-
   length: 1,
 };
 
-alert(arr.concat(arrayLike)); // 1,2,[object Object]
+alert(arr.concat(arrayLike)); // 1,2,[object Object]
 
 ///////////////////////////////
 
@@ -181,16 +187,17 @@ let arr = [1, 2];
 
 let arrayLike = {
   0: 'something',
-
   1: 'else',
-
   [Symbol.isConcatSpreadable]: true,
-
   length: 2,
 };
 
-alert(arr.concat(arrayLike)); // 1,2,something,else
+alert(arr.concat(arrayLike)); // 1,2,something,else
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -200,36 +207,35 @@ alert(arr.concat(arrayLike)); // 1,2,something,else
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The arr.forEach method allows us to run a function for every element in an array. The function is not executed for array elements without values.</div><br />
-  <div><strong>Technical Response:</strong> The arr.forEach method allows us to run a function for every element of an array and returns undefined. The function is not executed for array elements without values. The forEach method accepts the current value and a callback with an optional item, index, and array. A forEach() loop is a function that runs another function (callback) on each item in an array. We define what happens in that callback function. It should be noted that the forEach expects a synchronous function forEach and does not wait for promises. forEach should not be used like a for or for..of loop on large data sets. It is known to cause bottlenecks, because you cannot directly break out of the loop using a break statement other than by throwing an exception. If you need such behavior, the forEach() method is the wrong tool.<br /><br />
-  </div>
-  </div>
-</details>
+  <div><strong>Technical Response:</strong> The arr.forEach method allows us to run a function for every element of an array and returns undefined. The function is not executed for array elements without values. The forEach method accepts the current value and a callback with an optional item, index, and array. A forEach() loop is a function that runs another function (callback) on each item in an array. We define what happens in that callback function. It should be noted that the forEach expects a synchronous function forEach and does not wait for promises. forEach should not be used like a for or for..of loop on large data sets. It is known to cause bottlenecks, because you cannot directly break out of the loop using a break statement other than by throwing an exception. If you need such behavior, the forEach() method is the wrong tool.<br />
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-**Syntax:** `arr.forEach(callback function(item, index, array) {});`
+<strong>Syntax: </strong> arr.forEach(callback function(item, index, array) {});<br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-// Using an Arrow Function
-
+// Using an Arrow Function
 let myFunction = (item, index) => {
   console.log(index + ':' + item);
 };
 
 const fruits = ['apple', 'orange', 'cherry'];
-
 fruits.forEach(myFunction);
 
-// Using an Function Declaration
-
+// Using an Function Declaration
 const fruits2 = ['apple', 'orange', 'cherry'];
-
 fruits2.forEach(myFunction);
 
 function myFunction(item, index) {
   console.log(index + ':' + item);
 }
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -238,16 +244,17 @@ function myFunction(item, index) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The foreEach runs a callback function on every array item. Even if you attempt to write a return statement it only returns on that specific instance of the function.
-</div>
-  </div>
-</details>
+  <div><strong>Interview Response:</strong> The forEach runs a callback function on every array item. Even if you attempt to write a return statement it only returns on that specific instance of the function.
+</div><br />
 
 :::note
 
-Additionally, break and continue statements are not valid statements and will result in a Syntax error.
+Additionally, break and continue statements are not valid statements and will result in a syntax error.
 
 :::
+
+  </div>
+</details>
 
 ---
 
@@ -270,22 +277,25 @@ Additionally, break and continue statements are not valid statements and will re
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The indexOf array method returns the first index at which a given element can be found in the array, or -1 if it is not present. It accepts two arguments include the searchElement and fromIndex.</div><br />
-  <div><strong>Technical Response:</strong> The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present. It accepts two arguments include the searchElement and fromIndex. The searchElement is the element located in the array. The fromIndex is the starting index in the array that you want to start the element search from. indexOf() compares searchElement to elements of the Array using strict equality (the same method used by the === or triple-equals operator).<br /><br />
-  </div>
-  </div>
-</details>
+  <div><strong>Technical Response:</strong> The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present. It accepts two arguments include the searchElement and fromIndex. The searchElement is the element located in the array. The fromIndex is the starting index in the array that you want to start the element search from. indexOf() compares searchElement to elements of the Array using strict equality (the same method used by the === or triple-equals operator).<br />
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-**Syntax:** `arr.indexOf(searchElement[, fromIndex])`
+<strong>Syntax: </strong> arr.indexOf(searchElement[, fromIndex]);<br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let arr = [1, 0, false];
 
-alert(arr.indexOf(0)); // 1
-alert(arr.indexOf(false)); // 2
-alert(arr.indexOf(null)); // -1
+alert(arr.indexOf(0)); // 1
+alert(arr.indexOf(false)); // 2
+alert(arr.indexOf(null)); // -1
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -295,25 +305,28 @@ alert(arr.indexOf(null)); // -1
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The lastIndexOf array method returns the last index at which a given element can be found in the array, or -1 if it is not present. It accepts two arguments include the searchElement and fromIndex.</div><br />
-  <div><strong>Technical Response:</strong> The lastIndexOf() method returns the last index at which a given element can be found in the array, or -1 if it is not present. The array is searched backwards, starting at fromIndex. The lastIndexOf method has two arguments. The searchElement is the element to be in the array. The second argument is the optional fromIndex which searches from the specified index.<br /><br />
-  </div>
-  </div>
-</details>
+  <div><strong>Technical Response:</strong> The lastIndexOf() method returns the last index at which a given element can be found in the array, or -1 if it is not present. The array is searched backwards, starting at fromIndex. The lastIndexOf method has two arguments. The searchElement is the element to be in the array. The second argument is the optional fromIndex which searches from the specified index.<br />
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-**Syntax:** `arr.lastIndexOf(searchElement[, fromIndex]);`
+<strong>Syntax: </strong> arr.lastIndexOf(searchElement[, fromIndex]);<br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let numbers = [2, 5, 9, 2];
 
-console.log(numbers.lastIndexOf(2)); // 3
-console.log(numbers.lastIndexOf(7)); // -1
-console.log(numbers.lastIndexOf(2, 3)); // 3
-console.log(numbers.lastIndexOf(2, 2)); // 0
-console.log(numbers.lastIndexOf(2, -2)); // 0
-console.log(numbers.lastIndexOf(2, -1)); // 3
+console.log(numbers.lastIndexOf(2)); // 3
+console.log(numbers.lastIndexOf(7)); // -1
+console.log(numbers.lastIndexOf(2, 3)); // 3
+console.log(numbers.lastIndexOf(2, 2)); // 0
+console.log(numbers.lastIndexOf(2, -2)); // 0
+console.log(numbers.lastIndexOf(2, -1)); // 3
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -324,22 +337,29 @@ console.log(numbers.lastIndexOf(2, -1)); // 3
   <div>
   <div><strong>Interview Response:</strong> The includes array method determines whether an array includes a certain value among its entries, returning true or false as appropriate.</div><br />
   <div><strong>Technical Response:</strong> The includes() method determines whether an array includes a certain value among its entries, returning true or false as appropriate. Returns a A Boolean which is true if the value valueToFind is found within the array (or the part of the array indicated by the index fromIndex, if specified). Values of zero are all considered to be equal, regardless of sign. (That is, -0 is considered to be equal to both 0 and +0), but false is not considered to be the same as 0. The include method also has an optional fromIndex position as a starting point in the index forward.<br /><br />
-  </div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-**Syntax:** `arr.includes(valueToFind[, fromIndex]);`
+<strong>Syntax: </strong> arr.includes(valueToFind[, fromIndex]);<br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 [1, 2, 3]
-  .includes(2) // true
-  [(1, 2, 3)].includes(4) // false
-  [(1, 2, 3)].includes(3, 3) // false
-  [(1, 2, 3)].includes(3, -1) // true
-  [(1, 2, NaN)].includes(NaN); // true
+  .includes(2) // true
+
+  [(1, 2, 3)].includes(4) // false
+
+  [(1, 2, 3)].includes(3, 3) // false
+
+  [(1, 2, 3)].includes(3, -1) // true
+
+  [(1, 2, NaN)].includes(NaN); // true
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -349,30 +369,31 @@ Code Example:
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The only difference is that includes checks if you have passed it a regular expression instead of a string and throws an exception if you have. indexOf will accept a regular expression but always return -1.</div><br />
-  <div><strong>Technical Response:</strong> There are some notable differences between the includes() and indexOf() methods. The includes method returns a Boolean and the indexOf method returns a subscript. The includes method finds NaN and undefined whereas the indexOf method does not. The includes() method does not distinguish between -0 and +0 (This is not a bug, but clearly how JavaScript works. From a performance standpoint, the only difference is that includes checks if you have passed it a regular expression instead of a string and throws an exception if you have. indexOf will accept a regular expression but always return -1. So, while includes will be a tiny, tiny amount slower because it must check if you passed it a regex, this will make no difference to how fast your code runs. You should use indexOf if you care about where the substring is in the original string. If you do not care, just call includes because it makes the intent of your code clearer.<br /><br />
-  </div>
-  </div>
-</details>
+  <div><strong>Technical Response:</strong> There are some notable differences between the includes() and indexOf() methods. The includes method returns a Boolean and the indexOf method returns a subscript. The includes method finds NaN and undefined whereas the indexOf method does not. The includes() method does not distinguish between -0 and +0 (This is not a bug, but clearly how JavaScript works. From a performance standpoint, the only difference is that includes checks if you have passed it a regular expression instead of a string and throws an exception if you have. indexOf will accept a regular expression but always return -1. So, while includes will be a tiny, tiny amount slower because it must check if you passed it a regex, this will make no difference to how fast your code runs. You should use indexOf if you care about where the substring is in the original string. If you do not care, just call includes because it makes the intent of your code clearer.<br />
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-// Using includes() method to check for NaN
-
+// Using includes() method to check for NaN
 const array1 = [NaN];
 
 if (array1.includes(NaN)) {
-  console.log('true. NAN was found in the array'); // true. NAN was found in the array
+  console.log('true. NAN was found in the array'); // true. NAN was found in the array
 }
 
-// Using indexOf() method to check for NaN
-
+// Using indexOf() method to check for NaN
 const array2 = [NaN];
 
 if (array2.indexOf(NaN) == -1) {
-  console.log('NaN not found in the array'); // NaN not found in the array
+  console.log('NaN not found in the array'); // NaN not found in the array
 }
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -382,10 +403,34 @@ if (array2.indexOf(NaN) == -1) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The find method accepts a callback function on elements in an array where the item is the element, index is its index, and the array is the array itself. If it returns true, the search is stopped, the item is returned. If nothing found, undefined is returned.</div><br />
-  <div><strong>Technical Response:</strong> The find method accepts a callback function on elements in an array where the item is the element, index is its index, and the array is the array itself. If it returns true, the search is stopped, the item is returned. If nothing found, undefined is returned. You should remember that index 0 will be interpreted as a Falsy value in conditional statement checks on the find method.<br /><br />
-  </div>
-  </div>
-</details>
+  <div><strong>Technical Response:</strong> The find method accepts a callback function on elements in an array where the item is the element, index is its index, and the array is the array itself. If it returns true, the search is stopped, the item is returned. If nothing found, undefined is returned. You should remember that index 0 will be interpreted as a Falsy value in conditional statement checks on the find method.<br />
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+<strong>Syntax: </strong> arr.find(callback(element[, index[, array]])[, thisArg]);<br /><br />
+
+  <div></div>
+
+```js
+// Simple Implementation
+const array1 = [5, 12, 8, 130, 44];
+
+const found = array1.find((element) => element > 10);
+
+console.log(found);
+// expected output: 12
+
+// Implementation on Array Objects
+let users = [
+  { id: 1, name: 'John' },
+  { id: 2, name: 'Pete' },
+  { id: 3, name: 'Mary' },
+];
+
+let user = users.find((item) => item.id == 1);
+
+alert(user.name); // expected output: John
+```
 
 :::note
 
@@ -393,35 +438,9 @@ You should remember that index 0 will be interpreted as a falsie value in condit
 
 :::
 
-**Syntax:** `arr.find(callback(element[, index[, array]])[, thisArg]);`
-
-Code Example:
-
-```js
-// Simple Implementation
-
-const array1 = [5, 12, 8, 130, 44];
-
-const found = array1.find((element) => element > 10);
-
-console.log(found);
-
-// expected output: 12
-
-// Implementation on Array Objects
-
-let users = [
-  { id: 1, name: 'John' },
-
-  { id: 2, name: 'Pete' },
-
-  { id: 3, name: 'Mary' },
-];
-
-let user = users.find((item) => item.id == 1);
-
-alert(user.name); // expected output: John
-```
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -431,39 +450,37 @@ alert(user.name); // expected output: John
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The findIndex method returns the value of the first element in the array that satisfies the provided testing function. Otherwise, it returns -1, indicating that no element passed the test.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-**Syntax:** `arr.findIndex(callback( element[, index[, array]] )[, thisArg]);`
+<strong>Syntax: </strong> arr.findIndex(callback( element[, index[, array]] )[, thisArg]);<br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-// Simple Implementation
-
+// Simple Implementation
 const array1 = [5, 12, 8, 130, 44];
 
 const found = array1.findIndex((element) => element > 10);
 
 console.log(found);
+// expected output: 1
 
-// expected output: 1
-
-// Implementation on Array Objects
-
+// Implementation on Array Objects
 let users = [
   { id: 1, name: 'John' },
-
   { id: 2, name: 'Pete' },
-
   { id: 3, name: 'Mary' },
 ];
 
 let user = users.findIndex((item) => item.id == 1);
 
-console.log(user); // expected output: 0
+console.log(user); // expected output: 0
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -473,39 +490,38 @@ console.log(user); // expected output: 0
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The filter method calls a provided callback function once for each element in an array, and constructs a new array of all the values for which callback returns a value that coerces to true.</div><br />
-  <div><strong>Technical Response:</strong> The filter method creates a new array with all elements that pass the test implemented by the provided function. The filter method calls a provided callback function once for each element in an array and constructs a new array of all the values for which callback returns a value that coerces to true. callback is invoked only for indexes of the array which have assigned values; it is not invoked for indexes which have been deleted or which have never been assigned values. Array elements which do not pass the callback test are skipped, and are not included in the new array.<br /><br />
-  </div>
-  </div>
-</details>
+  <div><strong>Technical Response:</strong> The filter method creates a new array with all elements that pass the test implemented by the provided function. The filter method calls a provided callback function once for each element in an array and constructs a new array of all the values for which callback returns a value that coerces to true. callback is invoked only for indexes of the array which have assigned values; it is not invoked for indexes which have been deleted or which have never been assigned values. Array elements which do not pass the callback test are skipped, and are not included in the new array.<br />
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-**Syntax:** arr.filter(callback(item, index, array);
+<strong>Syntax: </strong> arr.filter(callback(item, index, array);<br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let users = [
   { id: 1, name: 'John' },
-
   { id: 2, name: 'Pete' },
-
   { id: 3, name: 'Mary' },
 ];
 
-// returns array of the first two users
-
+// returns array of the first two users
 let someUsers = users.filter((item) => item.id < 3);
 
-alert(someUsers.length); // 2
-// filter method with a callback function
+alert(someUsers.length); // 2
 
+// filter method with a callback function
 function isBigEnough(value) {
   return value >= 10;
 }
 
 let filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
-
-// filtered is [12, 130, 44]
+// filtered is [12, 130, 44]
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -515,30 +531,27 @@ let filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The sort() method sorts the elements of an array in place and returns the sorted array in ascending order.</div><br />
-  <div><strong>Technical Response:</strong> The sort() method sorts the elements of an array in place (not copied) and returns the sorted array. The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code units’ values. The sort method uses a comparative analyst of two elements where the first element is compared against the second element. Because of Unicode comparison, numbers are not compared properly by default.<br /><br />
-  </div>
-  </div>
-</details>
+  <div><strong>Technical Response:</strong> The sort() method sorts the elements of an array in place (not copied) and returns the sorted array. The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code units’ values. The sort method uses a comparative analyst of two elements where the first element is compared against the second element. Because of Unicode comparison, numbers are not compared properly by default.<br />
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-**Syntax:** arr.sort([compareFunction])
+<strong>Syntax: </strong> arr.sort([compareFunction]);<br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let arr = [1, 2, 15];
 
-// the method reorders the content of arr
-
+// the method reorders the content of arr
 arr.sort();
 
-alert(arr); // 1, 15, 2
-// The FIX for sorting numbers
+alert(arr); // 1, 15, 2
+
+// The FIX for sorting numbers
 
 function compareNumeric(a, b) {
   if (a > b) return 1;
-
   if (a == b) return 0;
-
   if (a < b) return -1;
 }
 
@@ -546,8 +559,12 @@ let arr = [1, 2, 15];
 
 arr.sort(compareNumeric);
 
-alert(arr); // 1, 2, 15
+alert(arr); // 1, 2, 15
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -557,28 +574,33 @@ alert(arr); // 1, 2, 15
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The array map method accepts a call back function that is called for every element of array. Each time callback executes, the returned value is added to newArray. The callback accepts three arguments including the item, index, and array.</div><br />
-  <div><strong>Technical Response:</strong> The arr.map method is one of the most useful and often used. It calls the function for each element of the array and returns the new array of results. It accepts a call back function that is called for every element of arr. Each time callback executes, the returned value is added to newArray. The callback accepts three arguments including the item, index, and array. The item is the current item being called. Index and array are optional where the index is the index of the current item being processed in the array. The array is the array that the map method is being called upon.<br /><br />
-  </div>
-  </div>
-</details>
+  <div><strong>Technical Response:</strong> The arr.map method is one of the most useful and often used. It calls the function for each element of the array and returns the new array of results. It accepts a call back function that is called for every element of arr. Each time callback executes, the returned value is added to newArray. The callback accepts three arguments including the item, index, and array. The item is the current item being called. Index and array are optional where the index is the index of the current item being processed in the array. The array is the array that the map method is being called upon.<br />
+  </div><br />
+  <div><strong className="codeExample">Syntax Example:</strong><br /><br />
 
-**Syntax:**
+  <div></div>
 
 ```js
 let result = arr.map(function (item, index, array) {
-  // returns the new value instead of item
+  // returns the new value instead of item
 });
 ```
 
-Code Example:
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
 
 ```js
 let arr = ['Bilbo', 'Gandalf', 'Nazgul'];
 
 let lengths = arr.map((item) => item.length);
-
-alert(lengths); // 5,7,6
+alert(lengths); // 5,7,6
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -588,10 +610,36 @@ alert(lengths); // 5,7,6
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The reverse method reverses the order of elements in an array. The first array element becomes the last, and the last array element becomes the first.</div><br />
-  <div><strong>Technical Response:</strong> The reverse method reverses the order of elements in an array. The first array element becomes the last, and the last array element becomes the first. It also returns the array after the reversal.<br /><br />
-  </div>
-  </div>
-</details>
+  <div><strong>Technical Response:</strong> The reverse method reverses the order of elements in an array. The first array element becomes the last, and the last array element becomes the first. It also returns the array after the reversal.<br />
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+<strong>Syntax: </strong> arr.reverse();<br /><br />
+
+  <div></div>
+
+```js
+const nums = [1, 2, 3];
+
+console.log(nums); // [1, 2, 3]
+
+// Now in reverse
+
+nums.reverse();
+
+console.log(nums); // [3, 2, 1]
+
+// This is how you reverse string using the reverse method
+
+let word = 'Hello';
+
+// turn word to an array ['H', 'e', 'l', 'l', 'o']
+let wordArr = Array.from(word);
+
+wordArr.reverse(); // reverse ['H', 'e', 'l', 'l', 'o']
+
+console.log(wordArr); // wordArr = ["o", "l", "l", "e", "H"]
+```
 
 :::note
 
@@ -599,30 +647,9 @@ It should be noted that you cannot use the reverse method to reverse a string. I
 
 :::
 
-**Syntax:** `arr.reverse()`
-
-Code Example:
-
-```js
-const nums = [1, 2, 3];
-
-console.log(nums); // [1, 2, 3]
-// Now in reverse
-
-nums.reverse();
-
-console.log(nums); // [3, 2, 1]
-// This is how you reverse string using the reverse method
-
-let word = 'Hello';
-
-// turn word to an array ['H', 'e', 'l', 'l', 'o']
-
-let wordArr = Array.from(word);
-
-wordArr.reverse(); // reverse ['H', 'e', 'l', 'l', 'o']
-console.log(wordArr); // wordArr = ["o", "l", "l", "e", "H"]
-```
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -632,32 +659,34 @@ console.log(wordArr); // wordArr = ["o", "l", "l", "e", "H"]
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> A split method divides a string into an ordered list of substrings, places them in an array, and returns that array of substrings. The split method accepts two arguments including delimiter and an optional number. The optional number sets the number of values returned in the array.</div><br />
-  <div><strong>Technical Response:</strong> The split() method divides a String into an ordered list of substrings, puts these substrings into an array, and returns the array of strings. The division is done by searching for a pattern, where the pattern is provided as the first parameter in the method's call. The split method has an optional second numeric argument – a limit on the array length. If it is provided, then the extra elements are ignored. In practice it is rarely used though. When the empty string ("") is used as a separator, the string is not split by user-perceived characters (grapheme clusters) or Unicode characters (code points), but by UTF-16 code units. This destroys surrogate pairs.<br /><br />
-  </div>
-  </div>
-</details>
+  <div><strong>Technical Response:</strong> The split() method divides a String into an ordered list of substrings, puts these substrings into an array, and returns the array of strings. The division is done by searching for a pattern, where the pattern is provided as the first parameter in the method's call. The split method has an optional second numeric argument – a limit on the array length. If it is provided, then the extra elements are ignored. In practice it is rarely used though. When the empty string ("") is used as a separator, the string is not split by user-perceived characters (grapheme clusters) or Unicode characters (code points), but by UTF-16 code units. This destroys surrogate pairs.<br />
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-**Syntax:** `string.split(delimiter[, optional: number])`
+<strong>Syntax: </strong> string.split(delimiter[, optional: number]);<br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-let names = 'Bilbo, Gandalf, Nazgul';
+let names = 'Bilbo, Gandalf, Nazgul';
 
-let arr = names.split(', ');
+let arr = names.split(', ');
 
 console.log(arr);
 
 for (let name of arr) {
-  alert(`A message to ${name}.`); // A message to Bilbo  (and other names)
+  alert(`A message to ${name}.`); // A message to Bilbo  (and other names)
 }
 
-// Using optional second parameter to return the first two strings to the array
+// Using optional second parameter to return the first two strings to the array
+let arr = 'Bilbo, Gandalf, Nazgul, Saruman'.split(', ', 2);
 
-let arr = 'Bilbo, Gandalf, Nazgul, Saruman'.split(', ', 2);
-
-alert(arr); // return Bilbo, Gandalf
+alert(arr); // return Bilbo, Gandalf
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -668,22 +697,24 @@ alert(arr); // return Bilbo, Gandalf
   <div>
   <div><strong>Interview Response:</strong> The join method creates and returns a new string by concatenating all the elements in an array or an array-like object, separated by commas or a specified separator string. If the array has only one item, then that item will be returned without using the separator in a string.</div><br />
   <div><strong>Technical Response:</strong> The join() method creates and returns a new string by concatenating all of the elements in an array (or an array-like object), separated by commas or a specified separator string. If the array has only one item, then that item will be returned without using the separator. The call arr.join(glue) does the reverse of split. If an element is undefined, null or an empty array [], it is converted to an empty string.<br /><br />
-  </div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-**Syntax:** `arr.join([separator])`
+<strong>Syntax: </strong> arr.join([separator]);<br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let arr = ['Wind', 'Water', 'Fire'];
-
-arr.join(); // 'Wind,Water,Fire'
-arr.join(', '); // 'Wind, Water, Fire'
-arr.join(' + '); // 'Wind + Water + Fire'
-arr.join(''); // 'WindWaterFire'
+arr.join(); // 'Wind,Water,Fire'
+arr.join(', '); // 'Wind, Water, Fire'
+arr.join(' + '); // 'Wind + Water + Fire'
+arr.join(''); // 'WindWaterFire'
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -693,10 +724,33 @@ arr.join(''); // 'WindWaterFire'
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The reduce method reduces the array to a single value. The method executes a provided function for each value of the array, from left-to-right. The return value of the function is stored in an accumulator total.</div><br />
-  <div><strong>Technical Response:</strong> The reduce() method executes a reducer function (that you provide) on each element of the array, resulting in single output value. The reducer function takes four arguments including an accumulator, current value, current index, and the source array. The reducer function's returned value is assigned to the accumulator, whose value is remembered across each iteration throughout the array, and ultimately becomes the final, single resulting value. The method arr.reduceRight does the same, but goes from right to left.<br /><br />
-  </div>
-  </div>
-</details>
+  <div><strong>Technical Response:</strong> The reduce() method executes a reducer function (that you provide) on each element of the array, resulting in single output value. The reducer function takes four arguments including an accumulator, current value, current index, and the source array. The reducer function's returned value is assigned to the accumulator, whose value is remembered across each iteration throughout the array, and ultimately becomes the final, single resulting value. The method arr.reduceRight does the same, but goes from right to left.<br />
+  </div><br />
+  <div><strong className="codeExample">Syntax Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let value = arr.reduce(
+  function (accumulator, item, index, array) {
+    // ...
+  },
+  [initial]
+);
+```
+
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let arr = [1, 2, 3, 4, 5];
+
+let result = arr.reduce((sum, current) => sum + current, 0);
+
+alert(result); // 15
+```
 
 :::note
 
@@ -704,26 +758,9 @@ The reduce method does not execute the function for array elements without value
 
 :::
 
-**Syntax:** `arr.reduce(callback( accumulator, currentValue, [, index[, array]] )[, initialValue])`
-
-```js
-let value = arr.reduce(
-  function (accumulator, item, index, array) {
-    // ...
-  },
-  [initial]
-);
-```
-
-Code Example:
-
-```js
-let arr = [1, 2, 3, 4, 5];
-
-let result = arr.reduce((sum, current) => sum + current, 0);
-
-alert(result); // 15
-```
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -733,9 +770,32 @@ alert(result); // 15
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The reduceRight method applies a function against an accumulator and each value of the array, from right-to-left, to reduce it to a single value. The reduce method does the same, but goes from left to right.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Syntax Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let value = arr.reduceRight(
+  function (accumulator, item, index, array) {
+    // ...
+  },
+  [initial]
+);
+```
+
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let arr = [1, 2, 3, 4, 5];
+
+let result = arr.reduceRight((sum, current) => sum + current, 0);
+
+alert(result); // 15
+```
 
 :::note
 
@@ -743,26 +803,9 @@ The reduceRight method does not execute the function for array elements without 
 
 :::
 
-**Syntax:** `arr.reduce(callback( accumulator, currentValue, [, index[, array]] )[, initialValue])`
-
-```js
-let value = arr.reduceRight(
-  function (accumulator, item, index, array) {
-    // ...
-  },
-  [initial]
-);
-```
-
-Code Example:
-
-```js
-let arr = [1, 2, 3, 4, 5];
-
-let result = arr.reduceRight((sum, current) => sum + current, 0);
-
-alert(result); // 15
-```
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -772,53 +815,46 @@ alert(result); // 15
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The Array.isArray() method determines whether the passed value is an Array. It returns true if it is an array, otherwise false. It is a much better option to using the typeof operator to determine the actual object type.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Syntax Example:</strong><br /><br />
 
-**Syntax:** `Array.isArray(value)`
-
-Example:
+  <div></div>
 
 ```js
-// all following calls return true
+Array.isArray(value);
+```
 
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// all following calls return true
 Array.isArray([]);
-
 Array.isArray([1]);
-
 Array.isArray(new Array());
-
 Array.isArray(new Array('a', 'b', 'c', 'd'));
-
 Array.isArray(new Array(3));
-
-// Little known fact: Array.prototype itself is an array:
-
+// Little known fact: Array.prototype itself is an array:
 Array.isArray(Array.prototype); // returns true
 
-// all following calls return false
-
+// all following calls return false
 Array.isArray();
-
 Array.isArray({});
-
 Array.isArray(null);
-
 Array.isArray(undefined);
-
 Array.isArray(17);
-
 Array.isArray('Array');
-
 Array.isArray(true);
-
 Array.isArray(false);
-
 Array.isArray(new Uint8Array(32));
-
 Array.isArray({ __proto__: Array.prototype });
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 

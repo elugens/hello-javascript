@@ -106,17 +106,22 @@ Code Snippet - Fenced Code Block Example
   <div></div>
 
 ```js
-function User(name) {
-  this.name = name;
-  this.isAdmin = false;
+const object1 = {};
+
+Object.preventExtensions(object1);
+
+try {
+  Object.defineProperty(object1, 'property1', {
+    value: 42,
+  });
+} catch (e) {
+  console.log(e.message);
 }
-
-let user = new User('Jack');
-
-alert(user.name); // Jack
-alert(user.isAdmin); // false
+// expected output: TypeError: Cannot define property property1, object is not extensible
 ```
 
   </div>
   </div>
 </details>
+
+<strong>Syntax: </strong> Object.defineProperty(obj, prop, descriptor);<br /><br />

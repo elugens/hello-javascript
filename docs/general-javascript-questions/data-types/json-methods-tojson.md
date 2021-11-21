@@ -37,50 +37,45 @@ sidebar_position: 12
     <li>The (optional) **replacer** is a function or array used to change the behavior of the stringification process.</li>
     <li>The (optional) **space** involves a String or Number object that's used to insert white space into the output JSON string for readability purposes. If this is a Number, it indicates the number of space characters to use as white space. The number is limited and defaults to 10 spaces.</li>
   </ul>
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Simple Example:</strong><br /><br />
 
-Simple Example:
+  <div></div>
 
 ```js
-let student = {
-
-    name: 'John',
-
-    age: 30,
-
-    isAdmin: false,
-
-    courses: ['html', 'css', 'js'],
-
-    wife: null
-
+let student = {
+  name: 'John',
+  age: 30,
+  isAdmin: false,
+  courses: ['html', 'css', 'js'],
+  wife: null,
 };
 
-let json = JSON.stringify(student);
+let json = JSON.stringify(student);
 
-alert(typeof json); // we've got a string!
+alert(typeof json); // we've got a string!
 
 alert(json);
-
-// Example: JSON-encoded object
-
-{
-
-     "name": "John",
-
-     "age": 30,
-
-     "isAdmin": false,
-
-     "courses": ["html", "css", "js"],
-
-     "wife": null
-
-}
-
 ```
+
+  </div><br />
+  <div><strong className="codeExample">JSON Output:</strong><br /><br />
+
+  <div></div>
+
+```json
+{
+  "name": "John",
+  "age": 30,
+  "isAdmin": false,
+  "courses": ["html", "css", "js"],
+  "wife": null
+}
+```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -90,22 +85,26 @@ alert(json);
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> JSON supports the following data types including Objects, Arrays, (primitive) strings, Boolean values, numbers, and null.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-// a number in JSON is just a number
+// a number in JSON is just a number
+alert(JSON.stringify(1)); // 1
 
-alert(JSON.stringify(1)); // 1
-// a string in JSON is still a string, but double-quoted
+// a string in JSON is still a string, but double-quoted
+alert(JSON.stringify('test')); // "test"
 
-alert(JSON.stringify('test')); // "test"
-alert(JSON.stringify(true)); // true
-alert(JSON.stringify([1, 2, 3])); // [1,2,3]
+alert(JSON.stringify(true)); // true
+
+alert(JSON.stringify([1, 2, 3])); // [1,2,3]
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -115,26 +114,27 @@ alert(JSON.stringify([1, 2, 3])); // [1,2,3]
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> There are several JavaScript-specific object properties that are ignored by JSON.stringify() including function properties, Symbolic keys and values, and properties that hold a value of undefined.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```js
 let user = {
   sayHi() {
-    // ignored
-
+    // ignored
     alert('Hello');
   },
-
-  [Symbol('id')]: 123, // ignored
-  something: undefined, // ignored
+  [Symbol('id')]: 123, // ignored
+  something: undefined, // ignored
 };
 
-alert(JSON.stringify(user)); // {} (empty object)
+alert(JSON.stringify(user)); // {} (empty object)
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -157,70 +157,60 @@ alert(JSON.stringify(user)); // {} (empty object)
   <div>
   <div><strong>Interview Response:</strong> The third argument of JSON.stringify(value, replacer, space) is the number of spaces to use for pretty object formatting.</div><br />
   <div><strong>Technical Response:</strong> The third argument of JSON.stringify(value, replacer, space) is the number of spaces to use for pretty formatting. Previously, all stringified objects had no indents and extra spaces. That is fine if we want to send an object over a network. The space argument is used exclusively for a nice formatting. You should remember if you do not use the replacer, it should be set to null.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let user = {
+  name: 'John',
+  age: 25,
+  roles: {
+    isAdmin: false,
+    isEditor: true,
+  },
+};
+
+alert(JSON.stringify(user, null, 2)); // value: user, replacer: null, space: 2
+```
+
+  </div><br />
+  <div><strong className="codeExample">JSON Indented 2 spaces:</strong><br /><br />
+
+  <div></div>
+
+```json
+{
+  "name": "John",
+  "age": 25,
+  "roles": {
+    "isAdmin": false,
+    "isEditor": true
+  }
+}
+```
+
+  </div><br />
+  <div><strong className="codeExample">JSON Indented 4 spaces:</strong><br /><br />
+
+  <div></div>
+
+```json
+// {
+//     "name": "John",
+//     "age": 25,
+//     "roles": {
+//         "isAdmin": false,
+//         "isEditor": true
+//     }
+// }
+
+```
+
   </div>
   </div>
 </details>
-
-Example:
-
-```js
-let user = {
-
-    name: "John",
-
-    age: 25,
-
-    roles: {
-
-    isAdmin: false,
-
-    isEditor: true
-
-    }
-
-};
-
-alert(JSON.stringify(user, null, 2)); // value: user, replacer: null, space: 2
-
-// two-space indents:
-
-{
-
-    "name": "John",
-
-    "age": 25,
-
-    "roles": {
-
-    "isAdmin": false,
-
-    "isEditor": true
-
-    }
-
-}
-
-// EXAMPLE
-
-// for JSON.stringify(user, null, 4) the result would be more indented:
-
-{
-
-    "name": "John",
-
-    "age": 25,
-
-    "roles": {
-
-    "isAdmin": false,
-
-    "isEditor": true
-
-    }
-
-}
-
-```
 
 ---
 
@@ -254,25 +244,24 @@ alert(JSON.stringify(user, null, 2)); // value: user, replacer: null, space: 
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> JSON does not support any comments. Although, a Key or data object can be used to hold your comments. We need to just make sure that during the processing of the JSON, our application ignores the given data element.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong> Commenting in JSON (Technically it can be done, but is not supported)<br /><br />
 
-Example: Commenting in JSON (Technically it can be done, but is not supported in the syntax.)
+  <div></div>
 
 ```json
 {
-  "_comment1": "this is my comment", // <- comment not supported
-
-  "sport": "basketball",
-
-  "coach": "Joe Smith",
-
-  "wins": 15,
-
-  "losses": 5
+   "_comment1": "this is my comment",  comment (not supported)
+   "sport": "basketball",
+   "coach": "Joe Smith",
+   "wins": 15,
+   "losses": 5
 }
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -283,46 +272,42 @@ Example: Commenting in JSON (Technically it can be done, but is not supported in
   <div>
   <div><strong>Interview Response:</strong> The JSON.parse() method parses a string and returns a JavaScript object. The string must be written in JSON format. The JSON.parse() method can optionally transform the result with a function.</div><br />
   <div><strong>Technical Response:</strong> The JSON.parse() method parses a JSON string, constructing the JavaScript value or object described by the string. An optional reviver function can be provided to perform a transformation on the resulting object before it is returned. JSON parse is the opposite of the stringify method. It returns an Object, Array, string, number, boolean, or null value corresponding to the given JSON object text. It should be noted that JSON.parse() does not allow trailing commas.
-  </div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+<strong>Syntax: </strong> JSON.parse(text[, reviver]);<br /><br />
+
+  <div></div>
+
+```js
+// Simple Example: stringified array
+let numbers = '[0, 1, 2, 3]';
+
+numbers = JSON.parse(numbers);
+
+alert(numbers[1]); // 1
+
+// Example: Using the option second argument reviver
+JSON.parse('{"1": 1, "2": 2, "3": {"4": 4, "5": {"6": 6}}}', (key, value) => {
+  console.log(key); // log the current property name, the last is "".
+  return value; // return the unchanged property value.
+});
+
+// 1
+// 2
+// 4
+// 6
+// 5
+// 3
+// ""
+```
 
 :::note
 It should be noted that JSON.parse() does not allow trailing commas.
 :::
 
-**Syntax:** JSON.parse(text[, reviver])
-
-Example:
-
-```js
-// Simple Example: stringified array
-
-let numbers = '[0, 1, 2, 3]';
-
-numbers = JSON.parse(numbers);
-
-alert(numbers[1]); // 1
-// Example: Using the option second argument reviver
-
-JSON.parse('{"1": 1, "2": 2, "3": {"4": 4, "5": {"6": 6}}}', (key, value) => {
-  console.log(key); // log the current property name, the last is "".
-  return value; // return the unchanged property value.
-});
-
-// 1
-
-// 2
-
-// 4
-
-// 6
-
-// 5
-
-// 3
-
-// ""
-```
+  </div>
+  </div>
+</details>
 
 ---

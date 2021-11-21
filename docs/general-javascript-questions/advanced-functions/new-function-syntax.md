@@ -18,24 +18,28 @@ sidebar_position: 7
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The Function constructor creates a new Function object. Calling the constructor directly can create functions dynamically but suffers from security and similar (but far less significant) performance issues to eval. However, unlike eval, the Function constructor creates functions which execute in the global scope only. One thing that should be noted, is that the new Function syntax does not require a function body to work. The major difference from other ways to build a function is that the function is created literally from a string, that is passed at run time. In fact, we can receive a string from an external source and use it in a function constructor. It is used in specific cases, like when we receive code from a server, or to dynamically compile a function from a template, in complex web-applications.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-**Syntax:** `new Function([arg1 [, arg2 [, ...argN]] ,] functionBody)`
+<strong>Syntax: </strong> new Function([arg1 [, arg2 [, ...argN]] ,] functionBody);<br /><br />
 
-Example:
+  <div></div>
 
 ```js
-let sum = new Function('a', 'b', 'return a + b');
+let sum = new Function('a', 'b', 'return a + b');
 
-console.log(sum(1, 2)); // 3
-// new Function without a function body
+console.log(sum(1, 2)); // 3
 
-let sayHi = new Function('alert("Hello, JavaScript")');
+// new Function without a function body
 
-sayHi(); // Hello, JavaScript
+let sayHi = new Function('alert("Hello, JavaScript")');
+
+sayHi(); // Hello, JavaScript
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
