@@ -18,17 +18,22 @@ sidebar_position: 2
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> According to the Document Object Model (DOM), every HTML tag is an object. Nested tags are “children” of the enclosing one. The text inside a tag is an object as well. All these objects are accessible using JavaScript, and we can use them to modify the page. For example, document.body is the object representing the &#8249;body&#8250; tag.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```js
-document.body.style.background = 'red'; // make the background red
-setTimeout(() => (document.body.style.background = ''), 3000); // return back
-alert(document.body); // alerts [object HTMLBodyElement]
+document.body.style.background = 'red'; // make the background red
+
+setTimeout(() => (document.body.style.background = ''), 3000); // return back
+
+alert(document.body); // alerts [object HTMLBodyElement]
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -38,35 +43,32 @@ alert(document.body); // alerts [object HTMLBodyElement]
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The DOM represents HTML as a tree structure of tags.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```html
 <!DOCTYPE html>
-
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-
   <body>
-    <!-- Parent DIV -->
-
+    <!-- Parent DIV -->
     <div id="parent">
-      <!-- Child DIV -->
-
+      <!-- Child DIV -->
       <div id="child"></div>
     </div>
   </body>
 </html>
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -77,39 +79,33 @@ Example:
   <div>
   <div><strong>Interview Response:</strong> If the browser encounters malformed HTML, it automatically corrects it when making the DOM.</div><br />
   <div><strong>Technical Response:</strong> If the browser encounters malformed HTML, it automatically corrects it when making the DOM. For instance, the top tag is always &#8249;html&#8250;. Even if it does not exist in the document, it will exist in the DOM, because the browser will create it. The same goes for &#8249;body&#8250;. While generating the DOM, browsers automatically process errors in the document, close tags and so on.
-  </div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```html
-<!-- Malformed HTML before DOM generation -->
-
+<!-- Malformed HTML before DOM generation -->
 <p>
   Hello
-
   <li>Mom</li>
-
   <li>and</li>
-
   <li>
     Dad
-
-    <!-- Fixed, After DOM generation -->
-
+    <!-- Fixed, After DOM generation -->
     <p>
       Hello
-
       <li>Mom</li>
-
       <li>and</li>
-
       <li>Dad</li>
     </p>
   </li>
 </p>
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -119,23 +115,20 @@ Example:
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, it is an interesting “special case” with tables. By DOM specification they must have &#8249;tbody&#8250; tag, but HTML text may omit it. Then the browser creates &#8249;tbody&#8250; in the DOM automatically.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```html
-<!-- Before DOM generation -->
-
+<!-- Before DOM generation -->
 <table id="table">
   <tr>
     <td>1</td>
   </tr>
 </table>
 
-<!-- Now, After DOM generation -->
-
+<!-- Now, After DOM generation -->
 <table id="table">
   <tbody>
     <tr>
@@ -144,6 +137,10 @@ Example:
   </tbody>
 </table>
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 

@@ -54,35 +54,45 @@ sidebar_position: 1
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, you can turn off this side-effect using JavaScript or in an element attribute by setting mousedown to false.
-    </div>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```html
+<!-- Before... -->
+
+<b ondblclick="alert('Click!')" onmousedown="return false"> Double-click me </b>
+
+<!-- ...After -->
+```
+
+  </div>
   </div>
 </details>
 
-Before...
-
-```html
-<b ondblclick="alert('Click!')" onmousedown="return false"> Double-click me </b>
-```
-
-...After
-
 ---
 
-### Can you prevent copying of text or images in a browser document?
+### Can you prevent copying of text or images in a HTML document?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, if we want to disable selection to protect our page content from copy-paste by the user, then we can use oncopy event and set it too false. This don’t restrict the use from accessing the HTML source of the page, but it does make it more difficult.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
 
 ```html
-<div oncopy="alert('Copying forbidden!'); return false">
-  Dear user, The copying is forbidden for you.
-  If you know JS or HTML, then you can get everything from the page source though.
+<div oncopy="alert('Copying forbidden!'); return false">
+  Dear user, The copying is forbidden for you. If you know JS or HTML, then you
+  can get everything from the page source though.
 </div>
 ```
+
+  </div>
+  </div>
+</details>
 
 ---

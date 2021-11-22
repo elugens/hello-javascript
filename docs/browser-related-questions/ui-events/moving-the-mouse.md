@@ -54,18 +54,20 @@ sidebar_position: 2
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Events mouseenter/mouseleave are like mouseover/mouseout. They trigger when the mouse pointer enters/leaves the element. But there are two important differences. Transitions inside the element, to/from descendants, are not counted. Events mouseenter/mouseleave do not bubble.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```html
 <div id="parent" onmouseenter="mouselog(event)" onmouseleave="mouselog(event)">
-  parent
-
+  <!-- parent -->
   <div id="child">child</div>
 </div>
 ```
+
+  </div>
+  </div>
+</details>
 
 ---

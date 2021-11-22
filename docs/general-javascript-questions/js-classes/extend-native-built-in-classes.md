@@ -18,11 +18,10 @@ sidebar_position: 5
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Built-in methods like array, filter, map, and others return new objects of exactly the inherited type. Their internal implementation uses the object’s constructor property for that. If you test the strict equality between the newly created object and child class on the constructor, it will return true.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```js
 class PowerArray extends Array {
@@ -33,10 +32,13 @@ class PowerArray extends Array {
 
 let arr = new PowerArray(1, 2, 5, 10, 50);
 
-// Strict Equality Test
-
-console.log(arr.constructor === PowerArray); // returns true
+// Strict Equality Test
+console.log(arr.constructor === PowerArray); // returns true
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -47,43 +49,38 @@ console.log(arr.constructor === PowerArray); // returns true
   <div>
   <div><strong>Interview Response:</strong> The species accessor property allows subclasses to override the default constructor for objects. Symbol.species is used when we may want to return Array objects in our derived array class. When using methods such as map() that return the default constructor, we may want these methods to return a parent Array object, instead of the extending object.</div><br />
   <div><strong>Technical Response:</strong> The symbol Symbol.species specifies a function-valued property that the constructor function uses to create derived objects. The species accessor property allows subclasses to override the default constructor for objects. Symbol.species is used when you may want to return Array objects in your derived array class. when using methods such as map() that return the default constructor, you want these methods to return a parent Array object, instead of the extending object. It is important to keep track of the specified object (Array) to ensure you are accessing the right array. If the method returns a new array like the filter() method it may unexpected result in your application, when used in conjunction with the species Symbol. There are benefits to this behavior that allow use customize specific an interaction within the inheriting class.
-  </div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+<strong>Syntax: </strong> [Symbol.species]() &#123; return Array; &#125;<br /><br />
+
+  <div></div>
+
+```js
+class MyArray extends Array {
+  // Overwrite species to the parent Array constructor
+  static get [Symbol.species]() {
+    return Array;
+  }
+}
+let a = new MyArray(1, 2, 3);
+let mapped = a.map((x) => x * x);  We are using map to return the object constructor
+
+console.log(mapped instanceof MyArray); // false
+console.log(mapped instanceof Array); // true
+
+console.log(mapped[1]); // returns value at index 1 times 2 - value = 4
+
+console.log(a); // returns Array - [ 1, 2, 3 ]
+```
 
 :::note
 It is important to keep track of the specified object (Array) to ensure you are accessing the right array. If the method returns a new array like the filter() method it may unexpected result in your application, when used in conjunction with the species Symbol. There are benefits to this behavior that allow us to customize specific an interaction within the inheriting class.
 :::
 
-**Syntax:** `[Symbol.species]() { return Array; }`
-
-Example:
-
-```js
-class MyArray extends Array {
-
-    // Overwrite species to the parent Array constructor
-
-    static get [Symbol.species]() {
-
-      return Array;
-
-    }
-
-}
-
-let a = new MyArray(1, 2, 3);
-
-let mapped = a.map((x) => x \* x); ß We are using map to return the object constructor
-
-console.log(mapped instanceof MyArray); // false
-
-console.log(mapped instanceof Array); // true
-
-console.log(mapped[1]); // returns value at index 1 times 2 - value = 4
-
-console.log(a); // returns Array - [ 1, 2, 3 ]
-```
+  </div>
+  </div>
+</details>
 
 ---
 

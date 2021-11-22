@@ -18,18 +18,20 @@ sidebar_position: 4
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> When a promise rejects, the control jumps to the closest rejection handler. In the effort to return a promise an error may occur. The easiest way to implement error handling is to use the catch method. The .catch doesn’t have to be immediate. It may appear after one or maybe several .then.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```js
-fetch('https://no-such-server.blabla') // rejects
+fetch('https://no-such-server.blabla') // rejects
   .then((response) => response.json())
-
-  .catch((err) => alert(err)); // TypeError: failed to fetch (the text may vary)
+  .catch((err) => alert(err)); // TypeError: failed to fetch (the text may vary)
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -39,31 +41,35 @@ fetch('https://no-such-server.blabla') // rejects
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The code of a promise executor and promise handlers has an "invisible try..catch" around it. If an exception happens, it gets caught and treated as a rejection. This happens not only in the executor function, but in its handlers as well. If we throw inside a .then handler, that means a rejected promise, so the control jumps to the nearest error handler. This happens for all errors, not just those caused by the throw statement including programming errors.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```js
 new Promise((resolve, reject) => {
   throw new Error('Whoops!');
-}).catch(alert); // Error: Whoops!
-// Works exactly the same as this:
+}).catch(alert); // Error: Whoops!
+
+// Works exactly the same as this:
 
 new Promise((resolve, reject) => {
   reject(new Error('Whoops!'));
-}).catch(alert); // Error: Whoops!
-// Example in dot then
+}).catch(alert); // Error: Whoops!
 
+// Example in dot then
 new Promise((resolve, reject) => {
   resolve('ok');
 })
   .then((result) => {
-    throw new Error('Whoops!'); // rejects the promise
+    throw new Error('Whoops!'); // rejects the promise
   })
-  .catch(alert); // Error: Whoops!
+  .catch(alert); // Error: Whoops!
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -73,23 +79,25 @@ new Promise((resolve, reject) => {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, the same thing is possible for promises. If we throw inside .catch, then the control goes to the next closest error handler. And if we handle the error and finish normally, then it continues to the next closest successful .then handler.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```js
-// the execution: catch -> then
-
+// the execution: catch -> then
 new Promise((resolve, reject) => {
   throw new Error('Whoops!');
 })
   .catch(function (error) {
-    alert('The error is handled, continue normally');
+    alert('The error is handled, continue normally');
   })
-  .then(() => alert('Next successful handler runs'));
+  .then(() => alert('Next successful handler runs'));
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -99,23 +107,25 @@ new Promise((resolve, reject) => {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> In practice, just like with regular unhandled errors in code, it means that something has gone terribly wrong. The script dies with a message in the console. A similar thing happens with unhandled promise rejections. The JavaScript engine tracks such rejections and generates a global error in that case. In the browser we can catch such errors using the event ` unhandledrejection `.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```js
 window.addEventListener('unhandledrejection', function (event) {
-  // the event object has two special properties:
-
-  alert(event.promise); // [object Promise] - the promise that generated the error
-  alert(event.reason); // Error: Whoops! - the unhandled error object
+  // the event object has two special properties:
+  alert(event.promise); // [object Promise] - the promise that generated the error
+  alert(event.reason); // Error: Whoops! - the unhandled error object
 });
 
 new Promise(function () {
   throw new Error('Whoops!');
-}); // no catch to handle the error
+}); // no catch to handle the error
 ```
+
+  </div>
+  </div>
+</details>
 
 ---

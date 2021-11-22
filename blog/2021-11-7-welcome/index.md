@@ -103,25 +103,21 @@ Code Snippet - Fenced Code Block Example
   <div><strong>Interview Response:</strong> Script files are attached to HTML with the src attribute including the absolute path to the JS file.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
+<strong>Syntax: </strong> elem.dispatchEvent(event);<br /><br />
+
   <div></div>
 
-```js
-const object1 = {};
+```html
+<button id="elem" onclick="alert('Click!');">Auto-click</button>
 
-Object.preventExtensions(object1);
-
-try {
-  Object.defineProperty(object1, 'property1', {
-    value: 42,
-  });
-} catch (e) {
-  console.log(e.message);
-}
-// expected output: TypeError: Cannot define property property1, object is not extensible
+<script>
+  let event = new Event('click');
+  elem.dispatchEvent(event);
+</script>
 ```
 
   </div>
   </div>
 </details>
 
-<strong>Syntax: </strong> Object.defineProperty(obj, prop, descriptor);<br /><br />
+<strong>Syntax: </strong> elem.dispatchEvent(event);<br /><br />

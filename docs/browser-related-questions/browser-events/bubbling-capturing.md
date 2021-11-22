@@ -18,33 +18,32 @@ sidebar_position: 2
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The bubbling up principle is self-explanatory based on its name. In principle, when an event happens on an element, it first runs the handlers on it, then on its parent, then all the way up on other ancestors.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```html
 <style>
-  body *  {
+  body * {
     margin: 10px;
-
-    border: 1px solid blue;
+    border: 1px solid blue;
   }
 </style>
 
-<!-- this will return the p, div and form alerts -->
-
+<!-- this will return the p, div and form alerts -->
 <form onclick="alert('form')">
   FORM
-
   <div onclick="alert('div')">
     DIV
-
     <p onclick="alert('p')">P</p>
   </div>
 </form>
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -54,13 +53,14 @@ Example:
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The most deeply nested element that caused the event is called a target element, accessible as event.target. The event target does not change through the bubbling process and can be viewed as the initial point of the event.
-    </div>
-  </div>
-</details>
+    </div><br />
 
 :::note
 The current target is the specific target where the current action is taking place where “this = event.currentTarget”. It’s possible that event.target could equal this or the current target.
 :::
+
+  </div>
+</details>
 
 ---
 
@@ -106,31 +106,23 @@ The current target is the specific target where the current action is taking pla
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, to catch an event on the capturing phase, we need to set the handler capture option to true. There are two possible values of the capture option true and false. If it is false (default), then the handler is set on the bubbling phase. If it is true, then the handler is set on the capturing phase.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-:::note
-While formally there are 3 phases, the 2nd phase (“target phase”: the event reached the element) is not handled separately: handlers on both capturing and bubbling phases trigger at that phase.
-:::
-
-Example:
+  <div></div>
 
 ```html
 <style>
-  body *  {
+  body * {
     margin: 10px;
-
-    border: 1px solid blue;
+    border: 1px solid blue;
   }
 </style>
 
 <form>
   FORM
-
   <div>
     DIV
-
     <p>P</p>
   </div>
 </form>
@@ -139,13 +131,20 @@ Example:
   for (let elem of document.querySelectorAll('*')) {
     elem.addEventListener(
       'click',
-      (e) => alert(`Capturing: ${elem.tagName}`),
+      (e) => alert(`Capturing: ${elem.tagName}`),
       true
     );
-
-    elem.addEventListener('click', (e) => alert(`Bubbling: ${elem.tagName}`));
+    elem.addEventListener('click', (e) => alert(`Bubbling: ${elem.tagName}`));
   }
 </script>
 ```
+
+:::note
+While formally there are 3 phases, the 2nd phase (“target phase”: the event reached the element) is not handled separately: handlers on both capturing and bubbling phases trigger at that phase.
+:::
+
+  </div>
+  </div>
+</details>
 
 ---

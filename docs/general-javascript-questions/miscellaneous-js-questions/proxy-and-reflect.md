@@ -30,23 +30,28 @@ sidebar_position: 1
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The Proxy object enables you to create a proxy for another object, which can intercept and redefine fundamental operations for that object. A Proxy is created with two parameters to function. It has a target and a handler parameter used to perform its tasks. The target is defined as the original object which you intend to proxy. The handler is an object that defines which operations will be intercepted and how to redefine intercepted operations. For operations on proxy, if there is a corresponding trap in handler, then it runs, and the proxy has a chance to handle it, otherwise the operation is performed on target.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-**Syntax:** let proxy = new Proxy(target, handler)
+<strong>Syntax: </strong> let proxy = new Proxy(target, handler);<br /><br />
 
-Example:
+  <div></div>
 
 ```js
 let target = {};
+let proxy = new Proxy(target, {}); // empty handler
 
-let proxy = new Proxy(target, {}); // empty handler
-proxy.test = 5; // writing to proxy (1)
-alert(target.test); // 5, the property appeared in target!
-alert(proxy.test); // 5, we can read it from proxy too (2)
-for (let key in proxy) alert(key); // test, iteration works (3)
+proxy.test = 5; // writing to proxy (1)
+alert(target.test); // 5, the property appeared in target!
+
+alert(proxy.test); // 5, we can read it from proxy too (2)
+
+for (let key in proxy) alert(key); // test, iteration works (3)
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -57,30 +62,32 @@ for (let key in proxy) alert(key); // test, iteration works (3)
   <div>
   <div><strong>Interview Response:</strong> In a proxy trap we can intercept invocation of internal methods like the get and set internal methods. For every internal method, there is a trap. For example, [[Get]] has a handler method of get() for reading a property[[Set]], the internal method to write a property, and so on. These methods are only used in the specification, we cannot call them directly by name.</div><br />
   <div><strong>Technical Response:</strong> For most operations on objects, there is a so-called “internal method” in the JavaScript specification that describes how it works at the lowest level. For instance [[Get]], the internal method to read a property, [[Set]], the internal method to write a property, and so on. These methods are only used in the specification, we cannot call them directly by name. Proxy traps intercept invocations of these methods. For every internal method, there is a trap. For example, [[Get]] has a handler method of get() for reading a property.
-  </div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong> Default value with “get” trap<br /><br />
 
-Example: Default value with “get” trap
+  <div></div>
 
 ```js
 let numbers = [0, 1, 2];
 
 numbers = new Proxy(numbers, {
   get(target, prop) {
-    // trapping [[Get]] internal method here
-
+    // trapping [[Get]] internal method here
     if (prop in target) {
       return target[prop];
     } else {
-      return 0; // default value
+      return 0; // default value
     }
   },
 });
 
-alert(numbers[1]); // 1
-alert(numbers[4]); // 0 (no such item)
+alert(numbers[1]); // 1
+alert(numbers[4]); // 0 (no such item)
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -90,42 +97,39 @@ alert(numbers[4]); // 0 (no such item)
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, the proxy should totally replace the target object everywhere. No one should ever reference the target object after it gets proxied. Otherwise, it is easy to mess up.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong> dictionary = new Proxy(dictionary, ...);<br /><br />
 
-Example: dictionary = new Proxy(dictionary, ...);
+  <div></div>
 
 ```js
 let dictionary = {
   Hello: 'Hola',
-
   Bye: 'Adiós',
 };
 
 dictionary = new Proxy(dictionary, {
   get(target, phrase) {
-    // intercept reading a property from dictionary
-
+    // intercept reading a property from dictionary
     if (phrase in target) {
-      // if we have it in the dictionary
-
-      return target[phrase]; // return the translation
+      // if we have it in the dictionary
+      return target[phrase]; // return the translation
     } else {
-      // otherwise, return the non-translated phrase
-
+      // otherwise, return the non-translated phrase
       return phrase;
     }
   },
 });
 
-// Look up arbitrary phrases in the dictionary!
-
-// At worst, they're not translated.
-
-alert(dictionary['Hello']); // Hola
-alert(dictionary['Welcome to Proxy']); // Welcome to Proxy (no translation)
+// Look up arbitrary phrases in the dictionary!
+// At worst, they're not translated.
+alert(dictionary['Hello']); // Hola
+alert(dictionary['Welcome to Proxy']); // Welcome to Proxy (no translation)
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -135,11 +139,10 @@ alert(dictionary['Welcome to Proxy']); // Welcome to Proxy (no translatio
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Proxies have a handler.set() method used as a trap for setting a property value. The set method has four parameters including the target, property, value, and receiver. The target is the object we are targeting. The property is the name or Symbol of the property set. The value is the new value of the property to set. The receiver is the object to which the assignment was originally directed. This is usually the proxy itself. But a set() handler can also be called indirectly, via the prototype chain or various other ways.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Syntax:</strong><br /><br />
 
-**Syntax:**
+  <div></div>
 
 ```js
 const p = new Proxy(target, {
@@ -147,20 +150,20 @@ const p = new Proxy(target, {
 });
 ```
 
-Example:
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
 
 ```js
 let numbers = [];
 
 numbers = new Proxy(numbers, {
-  // (\*)
-
+  // (*)
   set(target, prop, val) {
-    // to intercept property writing
-
+    // to intercept property writing
     if (typeof val == 'number') {
       target[prop] = val;
-
       return true;
     } else {
       return false;
@@ -168,12 +171,18 @@ numbers = new Proxy(numbers, {
   },
 });
 
-numbers.push(1); // added successfully
-numbers.push(2); // added successfully
-alert('Length is: ' + numbers.length); // 2
-numbers.push('test'); // TypeError ('set' on proxy returned false)
-alert('This line is never reached (error in the line above)');
+numbers.push(1); // added successfully
+numbers.push(2); // added successfully
+alert('Length is: ' + numbers.length); // 2
+
+numbers.push('test'); // TypeError ('set' on proxy returned false)
+
+alert('This line is never reached (error in the line above)');
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -184,11 +193,12 @@ alert('This line is never reached (error in the line above)');
   <div>
   <div><strong>Interview Response:</strong> Semantics that remain unchanged when implementing custom operations are called invariants. If you violate the invariants of a handler, a TypeError will be thrown.</div><br />
   <div><strong>Technical Response:</strong> In JavaScript proxy invariants refers to a condition that must be fulfilled by the internal methods and traps. In most cases, this is referring to return values. The internal [[Set]] method must return true if the value was written successfully, otherwise false. Most of the internal methods require a specific return value. Traps can intercept these operations, but they must follow these rules. Invariants ensure correct and consistent behavior of language features. The full invariants list is in the specification. You probably will not violate them if you are not doing something weird.
-  </div>
+  </div><br /><br />
+
+<strong>Specification:</strong> https://tc39.es/ecma262/#sec-proxy-object-internal-methods-and-internal-slots
+
   </div>
 </details>
-
-Specification: <https://tc39.es/ecma262/#sec-proxy-object-internal-methods-and-internal-slots>
 
 ---
 
@@ -199,18 +209,15 @@ Specification: <https://tc39.es/ecma262/#sec-proxy-object-internal-methods-and-i
   <div>
   <div><strong>Interview Response:</strong> Yes, Object.keys, for..in loop and most other methods that iterate over object properties use [[OwnPropertyKeys]] internal method to get a list of properties.</div><br />
   <div><strong>Technical Response:</strong> Yes, Object.keys, for..in loop and most other methods that iterate over object properties use [[OwnPropertyKeys]] internal method to get a list of properties. Object.keys/values() returns non-symbol keys/values with enumerable flag (property flags were explained in the article Property flags and descriptors). There are others that you can view in the specification such as getOwnPropertyNames and getOwnPropertySymbols that use the [[OwnPropertyKeys]] internal method.
-  </div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```js
 let user = {
   name: 'John',
-
   age: 30,
-
   _password: '***',
 };
 
@@ -220,14 +227,17 @@ user = new Proxy(user, {
   },
 });
 
-// "ownKeys" filters out _password
+// "ownKeys" filters out _password
+for (let key in user) alert(key); // name, then: age
 
-for (let key in user) alert(key); // name, then: age
-// same effect on these methods:
-
-alert(Object.keys(user)); // name,age
-alert(Object.values(user)); // John,30
+// same effect on these methods:
+alert(Object.keys(user)); // name,age
+alert(Object.values(user)); // John,30
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -249,33 +259,36 @@ alert(Object.values(user)); // John,30
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Proxy is much more powerful, as it forwards everything to the target object. A wrapper function does not forward property read/write operations or anything else. After the wrapping, the access is lost to properties of the original functions, such as name, length, and others.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```js
 function delay(f, ms) {
   return new Proxy(f, {
     apply(target, thisArg, args) {
       setTimeout(() => target.apply(thisArg, args), ms);
-    },
+    }
   });
 }
 
 function sayHi(user) {
-  alert(`Hello, ${user}!`);
+  alert(`Hello, ${user}!`);
 }
 
 sayHi = delay(sayHi, 3000);
 
-alert(sayHi.length);
-// this would be 0 if we used a wrapper function
-// return 1 (*) proxy forwards "get length" operation to the target
+alert(sayHi.length);  // this would be 0 if we used a wrapper function
 
-sayHi('John'); // Hello, John! (after 3 seconds)
+// return 1 (*) proxy forwards "get length" operation to the target
+
+sayHi("John"); // Hello, John! (after 3 seconds)
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -285,39 +298,37 @@ sayHi('John'); // Hello, John! (after 3 seconds)
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Reflect is a built-in object that simplifies creation of Proxy. Reflect is a built-in object that provides methods for interceptable JavaScript operations. The methods are the same as those of proxy handlers. Reflect is not a function object, so it is not constructible. You cannot use it with a new operator or invoke the Reflect object as a function. All properties and methods of Reflect are static (just like the Math object). For every internal method, trappable by Proxy, there is a corresponding method in Reflect, with the same name and arguments as the Proxy trap.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong> Reflect get and set methods<br /><br />
 
-Example: Reflect get and set methods
+  <div></div>
 
 ```js
-// Reflect get() method
-
+// Reflect get() method
 const object1 = {
   x: 1,
-
   y: 2,
 };
 
 console.log(Reflect.get(object1, 'x'));
-
-// expected output: 1
+// expected output: 1
 
 const array1 = ['zero', 'one'];
 
 console.log(Reflect.get(array1, 1));
+// expected output: "one"
 
-// expected output: "one"
-
-// Reflect set() method
-
+// Reflect set() method
 let user = {};
 
 Reflect.set(user, 'name', 'John');
 
-alert(user.name); // John
+alert(user.name); // John
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -327,22 +338,27 @@ alert(user.name); // John
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, Built-in objects like Map, Set, Date, and Promise get proxied, the proxy does not have access to their internal slots, so built-in methods will fail.</div><br />
-  <div><strong>A notable exception:</strong> Built-in Array does not use internal slots. That is for historical reasons, as it appeared so long ago. So, there is no such problem when proxying an array.
-  </div><br />
   <div><strong>Technical Answer:</strong> Yes, Proxies provide a unique way to alter or tweak the behavior of the existing objects at the lowest level. Still, it is not perfect. There are limitations. Many built-in objects, for example Map, Set, Date, Promise and others make use of so-called “internal slots”. These are like properties, but reserved for internal, specification-only purposes. For instance, Map stores items in the internal slot [[MapData]]. Built-in methods access them directly, not via [[Get]]/[[Set]] internal methods. So, Proxy cannot intercept that. After a built-in object like that gets proxied, the proxy does not have these internal slots, so built-in methods will fail.
-  </div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```js
 let map = new Map();
 
 let proxy = new Proxy(map, {});
 
-proxy.set('test', 1); // Error
+proxy.set('test', 1); // Error
 ```
+
+:::note Notable Exception:
+Built-in Array does not use internal slots. That is for historical reasons, as it appeared so long ago. So, there is no such problem when proxying an array.
+:::
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -352,19 +368,13 @@ proxy.set('test', 1); // Error
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, but typically if you attempt to proxy private fields the class proxy will break after proxying. The reason is that private fields are implemented using internal slots. JavaScript does not use [[Get]]/[[Set]] when accessing them. A common fix for this is to bind the value to the target.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong> Problem & Solution<br /><br />
 
-:::note
-The solution has drawbacks it exposes the original object to the method, potentially allowing it to be passed further and breaking other proxied functionality.
-:::
-
-**Problem & Solution Example:**
+  <div></div>
 
 ```js
-// Example: Problem
-
+// Example: Problem
 class User {
   #name = 'Guest';
 
@@ -377,10 +387,9 @@ let user = new User();
 
 user = new Proxy(user, {});
 
-alert(user.getName()); // Error
+alert(user.getName()); // Error
 
-// Example: Solution
-
+// Example: Solution
 class User {
   #name = 'Guest';
 
@@ -394,13 +403,20 @@ let user = new User();
 user = new Proxy(user, {
   get(target, prop, receiver) {
     let value = Reflect.get(...arguments);
-
     return typeof value == 'function' ? value.bind(target) : value;
   },
 });
 
-alert(user.getName()); // Guest
+alert(user.getName()); // Guest
 ```
+
+:::note
+The solution has drawbacks it exposes the original object to the method, potentially allowing it to be passed further and breaking other proxied functionality.
+:::
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -422,32 +438,33 @@ alert(user.getName()); // Guest
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> A revocable proxy is a proxy that can be disabled. Basically, if at any point we want to revoke access to it. What we can do is to wrap it into a revocable proxy, without any traps. Such a proxy will forward operations to object, and we can disable it at any moment. The call returns an object with the proxy and revoke function to disable it. A call to revoke() removes all internal references to the target object from the proxy, so they are no longer connected.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-**Syntax:** `let {proxy, revoke} = Proxy.revocable(target, handler)`
+<strong>Syntax: </strong> let &#123;proxy, revoke&#125; = Proxy.revocable(target, handler);<br /><br />
 
-Example:
+  <div></div>
 
 ```js
 let object = {
-  data: 'Valuable data',
+  data: 'Valuable data',
 };
 
 let { proxy, revoke } = Proxy.revocable(object, {});
 
-// pass the proxy somewhere instead of object...
+// pass the proxy somewhere instead of object...
+alert(proxy.data); // Valuable data
 
-alert(proxy.data); // Valuable data
-// later in our code
-
+// later in our code
 revoke();
 
-// the proxy isn't working any more (revoked)
-
-alert(proxy.data); // Error
+// the proxy isn't working any more (revoked)
+alert(proxy.data); // Error
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -457,30 +474,31 @@ alert(proxy.data); // Error
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> If, we create a WeakMap that has proxy as the key and the corresponding revoke as the value, that allows us to easily find revoke for a proxy. We use WeakMap instead of Map here because it will not block garbage collection. If a proxy object becomes “unreachable” (e.g. no variable references it any more), WeakMap allows it to be wiped from memory together with its revoke that we won’t need any more.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```js
 let revokes = new WeakMap();
 
 let object = {
-  data: 'Valuable data',
+  data: 'Valuable data',
 };
 
 let { proxy, revoke } = Proxy.revocable(object, {});
 
 revokes.set(proxy, revoke);
 
-// ..somewhere else in our code..
-
+// ..somewhere else in our code..
 revoke = revokes.get(proxy);
-
 revoke();
 
-alert(proxy.data); // Error (revoked)
+alert(proxy.data); // Error (revoked)
 ```
+
+  </div>
+  </div>
+</details>
 
 ---

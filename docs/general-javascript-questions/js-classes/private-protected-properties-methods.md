@@ -42,21 +42,18 @@ sidebar_position: 4
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The main difference between private and protected fields is that private fields are supported at the language level and protected fields are not. Protected properties are usually prefixed with an underscore "_". That is not enforced on the language level, but there is a well-known convention between programmers that such properties and methods should not be accessed from the outside. Privates should start with #. They are only accessible from inside the class and currently have language level support (almost a standard). On the language level, # is a special sign that the field is private. We cannot access it from outside or from inheriting classes. It should be noted that private fields may require a Polyfill to account for older browsers.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Examples:
+  <div></div>
 
 ```js
-// Example 1: Private Fields
-
+// Example 1: Private Fields _
 class CoffeeMachine {
   _waterAmount = 0;
 
   setWaterAmount(value) {
     if (value < 0) value = 0;
-
     this._waterAmount = value;
   }
 
@@ -69,7 +66,7 @@ new CoffeeMachine().setWaterAmount(100);
 
 //////////////////////////////////////////////////
 
-// Example 2: Protected Fields #
+// Example 2: Protected Fields #
 
 class CoffeeMachine {
   #waterAmount = 0;
@@ -80,11 +77,14 @@ class CoffeeMachine {
 
   set waterAmount(value) {
     if (value < 0) value = 0;
-
     this.#waterAmount = value;
   }
 }
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -94,15 +94,14 @@ class CoffeeMachine {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, this is possible by creating a getter and withdrawing the setter from the equation. This allows access to the value that was created at creation time, but it cannot be overridden after that point.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```js
 class CoffeeMachine {
-  // ...
+  // ...
 
   constructor(power) {
     this._power = power;
@@ -113,13 +112,17 @@ class CoffeeMachine {
   }
 }
 
-// create the coffee machine
-
+// create the coffee machine
 let coffeeMachine = new CoffeeMachine(100);
 
-alert(`Power is: ${coffeeMachine.power}W`); // Power is: 100W
-coffeeMachine.power = 25; // Error (no setter)
+alert(`Power is: ${coffeeMachine.power}W`); // Power is: 100W
+
+coffeeMachine.power = 25; // Error (no setter)
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -141,11 +144,10 @@ coffeeMachine.power = 25; // Error (no setter)
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Private methods and properties with the private # indicator is only accessible within a class. On the language level, # is a special sign that the field is private. We cannot access it from outside or from inheriting classes. Private fields do not conflict with public ones. We can have both private and public fields at the same time. Unlike protected ones, private fields are enforced by the language itself.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```js
 class CoffeeMachine {
@@ -153,7 +155,6 @@ class CoffeeMachine {
 
   #fixWaterAmount(value) {
     if (value < 0) return 0;
-
     if (value > this.#waterLimit) return this.#waterLimit;
   }
 
@@ -164,10 +165,13 @@ class CoffeeMachine {
 
 let coffeeMachine = new CoffeeMachine();
 
-// cannot access privates from outside of the class
-
-coffeeMachine.#fixWaterAmount(123); // Error
-coffeeMachine.#waterLimit = 1000; // Error
+// cannot access privates from outside of the class
+coffeeMachine.#fixWaterAmount(123); // Error
+coffeeMachine.#waterLimit = 1000; // Error
 ```
+
+  </div>
+  </div>
+</details>
 
 ---

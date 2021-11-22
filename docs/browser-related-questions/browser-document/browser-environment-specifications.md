@@ -54,21 +54,22 @@ sidebar_position: 1
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Document Object Model, or DOM for short, represents all page content as objects that can be modified. The document object is the main “entry point” to the page. We can change or create anything on the page using it.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```js
-// change the background color to red
-
+// change the background color to red
 document.body.style.background = 'red';
 
-// change it back after 1 second
-
+// change it back after 1 second
 setTimeout(() => (document.body.style.background = ''), 1000);
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -121,18 +122,23 @@ setTimeout(() => (document.body.style.background = ''), 1000);
     <li>The navigator object provides background information about the browser and the operating system. There are many properties, but the two most widely known are: navigator.userAgent – about the current browser, and navigator.platform – about the platform (can help to differ between Windows/Linux/Mac etc).</li>
     <li>The location object allows us to read the current URL and can redirect the browser to a new one.</li>
   </ol>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong> Here’s how we can use the location object<br /><br />
+
+  <div></div>
+
+```js
+// Here’s how we can use the location object:
+alert(location.href); // shows current URL
+
+if (confirm('Go to Wikipedia?')) {
+  location.href = 'https://wikipedia.org'; // redirect the browser to another URL
+}
+```
+
   </div>
   </div>
 </details>
-
-Here’s how we can use the location object:
-
-```js
-alert(location.href); // shows current URL
-if (confirm('Go to Wikipedia?')) {
-  location.href = 'https://wikipedia.org'; // redirect the browser to another URL
-}
-```
 
 ---
 

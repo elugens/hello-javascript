@@ -18,16 +18,14 @@ sidebar_position: 3
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Currying is an advanced technique of working with functions. It is used not only in JavaScript, but in other languages as well. Currying is a transformation of functions that translates a function from callable as f(a, b, c) into callable as f(a)(b)(c). Currying does not call a function. It just transforms it. Currying allows us to easily get partials.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```js
 function curry(f) {
-  // curry(f) does the currying transform
-
+  // curry(f) does the currying transform
   return function (a) {
     return function (b) {
       return f(a, b);
@@ -35,16 +33,19 @@ function curry(f) {
   };
 }
 
-// usage
-
+// usage
 function sum(a, b) {
   return a + b;
 }
 
 let curriedSum = curry(sum);
 
-alert(curriedSum(1)(2)); // 3
+alert(curriedSum(1)(2)); // 3
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -54,11 +55,10 @@ alert(curriedSum(1)(2)); // 3
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Currying requires the function to have a fixed number of arguments. A function that uses rest parameters, such as f(...args), can’t be curried this way.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong> Advanced Currying<br /><br />
 
-Example: Advanced Currying
+  <div></div>
 
 ```js
 function curry(func) {
@@ -79,9 +79,13 @@ function sum(a, b, c) {
 
 let curriedSum = curry(sum);
 
-alert(curriedSum(1, 2, 3)); // 6, still callable normally
-alert(curriedSum(1)(2, 3)); // 6, currying of 1st arg
-alert(curriedSum(1)(2)(3)); // 6, full currying
+alert(curriedSum(1, 2, 3)); // 6, still callable normally
+alert(curriedSum(1)(2, 3)); // 6, currying of 1st arg
+alert(curriedSum(1)(2)(3)); // 6, full currying
 ```
+
+  </div>
+  </div>
+</details>
 
 ---

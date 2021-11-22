@@ -31,57 +31,60 @@ sidebar_position: 11
   <div>
   <div><strong>Interview Response:</strong> The Element.getBoundingClientRect() method returns a DOMRect object providing information about the size of an element and its position relative to the viewport. The returned value is a DOMRect object which is the smallest rectangle which contains the entire element, including its padding and border-width.</div><br />
   <div><strong>Technical Response:</strong> The Element.getBoundingClientRect() method returns a DOMRect object providing information about the size of an element and its position relative to the viewport. The returned value is a DOMRect object which is the smallest rectangle which contains the entire element, including its padding and border-width. The left, top, right, bottom, x, y, width, and height properties describe the position and size of the overall rectangle in pixels. Properties other than width and height are relative to the top-left of the viewport. The width and height properties of the DOMRect object returned by the method include the padding and border-width, not only the content width/height. In the standard box model, this would be equal to the width or height property of the element + padding + border-width. But if box-sizing: border-box is set for the element this would be directly equal to its width or height. The returned value can be thought of as the union of the rectangles returned by getClientRects() for the element, i.e., the CSS border-boxes associated with the element.
-  </div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-:::note
-If box-sizing: border-box is set for the element this would be directly equal to its width or height. The returned value can be thought of as the union of the rectangles returned by getClientRects() for the element, i.e., the CSS border-boxes associated with the element.
-:::
+<strong>Syntax: </strong> domRect = element.getBoundingClientRect();<br /><br />
 
-**Syntax:** domRect = element.getBoundingClientRect();
+  <div></div>
 
 ```html
 <head>
   <style>
-    div  {
+    div {
       width: 400px;
-
       height: 200px;
-
       padding: 20px;
-
-      margin: 50px auto;
-
+      margin: 50px auto;
       background: purple;
     }
   </style>
 </head>
-
 <body>
   <div></div>
-
   <script>
     let elem = document.querySelector('div');
-
     let rect = elem.getBoundingClientRect();
-
     for (var key in rect) {
       if (typeof rect[key] !== 'function') {
         let para = document.createElement('p');
-
-        para.textContent = `${key} : ${rect[key]}`;
-
+        para.textContent = `${key} : ${rect[key]}`;
         document.body.appendChild(para);
       }
     }
   </script>
 </body>
 
-/* RETURNED VALUES: x : 146.5454559326172 y : 50 width : 440 // includes the
-style width of 400px and the padding 20px times two height : 240 top : 50 right
-: 586.5454559326172 bottom : 290 left : 146.5454559326172 */
+<!-- 
+  RETURNED VALUES:
+  x : 146.5454559326172
+  y : 50 
+  width : 440 includes the style width of 400px and the padding 20px times two
+  height : 240
+  top : 50
+  right : 586.5454559326172
+  bottom : 290
+  left : 146.5454559326172
+-->
 ```
+
+:::note
+If box-sizing: border-box is set for the element this would be directly equal to its width or height. The returned value can be thought of as the union of the rectangles returned by getClientRects() for the element, i.e., the CSS border-boxes associated with the element.
+:::
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -117,25 +120,26 @@ style width of 400px and the padding 20px times two height : 240 top : 50 right
   <div>
   <div><strong>Interview Response:</strong> The call to document.elementFromPoint(x, y) returns the most nested element at window coordinates (x, y).</div><br />
   <div><strong>Technical Response:</strong> The elementFromPoint() method, available on the Document object, returns the topmost Element at the specified coordinates (relative to the viewport). If the element at the specified point belongs to another document (for example, the document of an &#8249;iframe&#8250;), that document's parent element is returned (the &#8249;iframe&#8250; itself). If the element at the given point is anonymous or XBL generated content, such as a textbox's scroll bars, then the first non-anonymous ancestor element (for example, the textbox) is returned.
-  </div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-**Syntax:** `let elem = document.elementFromPoint(x, y);`
+<strong>Syntax: </strong> let elem = document.elementFromPoint(x, y); <br /><br />
 
-Example:
+  <div></div>
 
 ```js
 let centerX = document.documentElement.clientWidth / 2;
-
 let centerY = document.documentElement.clientHeight / 2;
 
 let elem = document.elementFromPoint(centerX, centerY);
 
 elem.style.background = 'red';
-
 alert(elem.tagName);
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -145,19 +149,20 @@ alert(elem.tagName);
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The method document.elementFromPoint(x,y) only works if (x,y) are inside the visible area. If any of the coordinates is negative or exceeds the window width/height, then it returns null.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```js
 let elem = document.elementFromPoint(x, y);
-
-// if the coordinates happen to be out of the window, then elem = null
-
-elem.style.background = ''; // Error!
+// if the coordinates happen to be out of the window, then elem = null
+elem.style.background = ''; // Error!
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 

@@ -18,37 +18,35 @@ sidebar_position: 6
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The instanceof operator allows us to check whether an object belongs to a certain class. It also takes inheritance into account. Such a check may be necessary in many cases, it can be used for building a polymorphic function, the one that treats arguments differently depending on their type.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
 
 ```js
-Code Example:
+class Rabbit {}
+let rabbit = new Rabbit();
 
-class Rabbit {}
+// is it an object of Rabbit class?
+alert(rabbit instanceof Rabbit); // true
 
-let rabbit = new Rabbit();
+// It also works with constructor functions:
 
-// is it an object of Rabbit class?
+// instead of class
+function Rabbit() {}
 
-alert( rabbit instanceof Rabbit ); // true
+alert(new Rabbit() instanceof Rabbit); // true
 
-// It also works with constructor functions:
+// And with built-in classes like Array:
 
-// instead of class
-
-function Rabbit() {}
-
-alert( new Rabbit() instanceof Rabbit ); // true
-
-// And with built-in classes like Array:
-
-let arr = [1, 2, 3];
-
-alert( arr instanceof Array ); // true
-
-alert( arr instanceof Object ); // true
+let arr = [1, 2, 3];
+alert(arr instanceof Array); // true
+alert(arr instanceof Object); // true
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -58,16 +56,19 @@ alert( arr instanceof Object ); // true
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, an Array belongs to the Object class, because Array prototypically inherits from Object. At the base of JavaScript, all native objects like Array and even Function inherit from the Object class. The instanceof operator examines the prototype chain to render a result as true or false.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```js
-console.log(Array instanceof Object); // true
-console.log(Function instanceof Object); // true
+console.log(Array instanceof Object); // true
+console.log(Function instanceof Object); // true
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -77,11 +78,10 @@ console.log(Function instanceof Object); // true
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, you can create a rough representation of the algorithm using a static method of Symbol.hasInstance, then just call it. It should return true or false as a result, by default it should be set to true. Most classes do not have Symbol.hasInstance. In that case, the standard logic is used: obj instanceOf Class checks whether Class.prototype is equal to one of the prototypes in the obj prototype chain.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```js
 class Animal {
@@ -92,8 +92,12 @@ class Animal {
 
 let obj = { canEat: true };
 
-alert(obj instanceof Animal); // true: Animal[Symbol.hasInstance](obj) is called
+alert(obj instanceof Animal); // true: Animal[Symbol.hasInstance](obj) is called
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -103,23 +107,24 @@ alert(obj instanceof Animal); // true: Animal[Symbol.hasInstance](obj) is ca
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The obj instanceOf Class checks whether Class.prototype is equal to one of the prototypes in the obj prototype chain. If any answer is true, return true. If it does not reach true as a result and reaches the end of the chain, return false. The Class constructor itself does not participate in the check! Only the chain of prototypes and Class.prototype matters.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```js
 class Rabbit extends Animal {}
 
 let rabbit = new Rabbit();
+alert(rabbit instanceof Animal); // true
 
-alert(rabbit instanceof Animal); // true
-
-// rabbit.__proto__ === Rabbit.prototype
-
-// rabbit.__proto__.__proto__ === Animal.prototype (match! return true)
+// rabbit.__proto__ === Rabbit.prototype
+// rabbit.__proto__.__proto__ === Animal.prototype (match! return true)
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -129,24 +134,28 @@ alert(rabbit instanceof Animal); // true
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, the behavior of Object toString can be customized using a special object property Symbol.toStringTag. The Symbol.toStringTag also works for environment-specific objects like the window and XMLHttpRequest objects.
-</div>
-  </div>
-</details>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```js
 let user = {
   [Symbol.toStringTag]: 'User',
 };
 
-alert({}.toString.call(user)); // [object User]
-// toStringTag for the environment-specific object and class:
+alert({}.toString.call(user)); // [object User]
 
-alert(window[Symbol.toStringTag]); // Window
-alert(XMLHttpRequest.prototype[Symbol.toStringTag]); // XMLHttpRequest
-alert({}.toString.call(window)); // [object Window]
-alert({}.toString.call(new XMLHttpRequest())); // [object XMLHttpRequest]
+// toStringTag for the environment-specific object and class:
+alert(window[Symbol.toStringTag]); // Window
+alert(XMLHttpRequest.prototype[Symbol.toStringTag]); // XMLHttpRequest
+
+alert({}.toString.call(window)); // [object Window]
+alert({}.toString.call(new XMLHttpRequest())); // [object XMLHttpRequest]
 ```
+
+  </div>
+  </div>
+</details>
 
 ---

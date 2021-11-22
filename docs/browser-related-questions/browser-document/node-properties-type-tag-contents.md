@@ -84,27 +84,29 @@ sidebar_position: 5
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> To see the DOM node class name, we can recall that an object usually has the constructor property. It references the class constructor, and constructor.name is its name or we can just toString it. We also can use instanceof to check the inheritance, which returns a Boolean value.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```js
-// Using the Object constructor
+// Using the Object constructor
+alert(document.body.constructor.name); // HTMLBodyElement
 
-alert(document.body.constructor.name); // HTMLBodyElement
-// Built-in toString return value
+// Built-in toString return value
+alert(document.body); // [object HTMLBodyElement]
 
-alert(document.body); // [object HTMLBodyElement]
-// Check to see if its a instanceof of an Element
-
-alert(document.body instanceof HTMLBodyElement); // true
-alert(document.body instanceof HTMLElement); // true
-alert(document.body instanceof Element); // true
-alert(document.body instanceof Node); // true
-alert(document.body instanceof EventTarget); // true
+// Check to see if its a instanceof of an Element
+alert(document.body instanceof HTMLBodyElement); // true
+alert(document.body instanceof HTMLElement); // true
+alert(document.body instanceof Element); // true
+alert(document.body instanceof Node); // true
+alert(document.body instanceof EventTarget); // true
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -139,45 +141,36 @@ alert(document.body instanceof EventTarget); // true
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> In the specification, DOM classes are not described by using JavaScript, but a special Interface description language (IDL), that is easy to understand. In IDL all properties are prepended with their types. For instance, DOMString, boolean and so on.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```js
-// Define HTMLInputElement
+// Define HTMLInputElement
+// The colon ":" means that HTMLInputElement inherits from HTMLElement
+interface HTMLInputElement: HTMLElement {
+  // here go properties and methods of <input> elements
 
-// The colon ":" means that HTMLInputElement inherits from HTMLElement
+  // "DOMString" means that the value of a property is a string
+  attribute DOMString accept;
+  attribute DOMString alt;
+  attribute DOMString autocomplete;
+  attribute DOMString value;
 
-interface HTMLInputElement: HTMLElement {
-
-    // here go properties and methods of <input> elements
-
-    // "DOMString" means that the value of a property is a string
-
-    attribute DOMString accept;
-
-    attribute DOMString alt;
-
-    attribute DOMString autocomplete;
-
-    attribute DOMString value;
-
-    // boolean value property (true/false)
-
-    attribute boolean autofocus;
-
-    //...
-
-    // now the method: "void" means that the method returns no value
-
-    void select();
-
-    //...
-
+  // boolean value property (true/false)
+  attribute boolean autofocus;
+  //...
+  // now the method: "void" means that the method returns no value
+  void select();
+  //...
 }
+
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -187,29 +180,31 @@ interface HTMLInputElement: HTMLElement {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> It has a numeric value that reflects the type of node you are returning for element nodes it is 1, text nodes it is 3, and for the document object 9. There are others listed in the specification: https://dom.spec.whatwg.org/#node
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```html
 <body>
   <script>
     let elem = document.body;
 
-    // let us examine what it is?
+    // let us examine what it is?
+    alert(elem.nodeType); // 1 => element
 
-    alert(elem.nodeType); // 1 => element
-    // and the first child is...
+    // and the first child is...
+    alert(elem.firstChild.nodeType); // 3 => text
 
-    alert(elem.firstChild.nodeType); // 3 => text
-    // for the document object, the type is 9
-
-    alert(document.nodeType); // 9
+    // for the document object, the type is 9
+    alert(document.nodeType); // 9
   </script>
 </body>
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -222,28 +217,30 @@ Example:
   <div><strong>Note:</strong> In other words, tagName is only supported by element nodes (as it originates from Element class), while nodeName can say something about other node types.
   </div><br />
   <div><strong>Technical Response:</strong> The difference is reflected in their names but is indeed a bit subtle. The tagName property exists only for Element nodes. The nodeName is defined for any Node, but for elements it means the same as tagName and for other node types (text, comment, etc.) it has a string with the node type. In other words, tagName is only supported by element nodes (as it originates from Element class), while nodeName can say something about other node types.
-  </div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```html
 <body>
-  <!-- comment -->
+  <!-- comment -->
 
   <script>
-    // for comment
+    // for comment
+    alert(document.body.firstChild.tagName); // undefined (not an element)
+    alert(document.body.firstChild.nodeName); // #comment
 
-    alert(document.body.firstChild.tagName); // undefined (not an element)
-    alert(document.body.firstChild.nodeName); // #comment
-    // for document
-
-    alert(document.tagName); // undefined (not an element)
-    alert(document.nodeName); // #document
+    // for document
+    alert(document.tagName); // undefined (not an element)
+    alert(document.nodeName); // #document
   </script>
 </body>
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -268,26 +265,27 @@ Example:
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The innerHTML property allows us to get the HTML inside the element as a string. We can also modify it. So, it is one of the most powerful ways to change the page dynamically.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```html
 <body>
-  <p>A paragraph</p>
-
-  <div>A div</div>
+  <p>A paragraph</p>
+  <div>A div</div>
 
   <script>
-    alert(document.body.innerHTML); // read the current contents
-    document.body.innerHTML = 'The new BODY!';
-
-    // replaces and returns The New Body in the HTML
+    alert(document.body.innerHTML); // read the current contents
+    document.body.innerHTML = 'The new BODY!';
+    // replaces and returns The New Body in the HTML
   </script>
 </body>
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -322,26 +320,28 @@ Example:
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The outerHTML property contains the full HTML of the element. That is like innerHTML plus the element itself. Beware: unlike innerHTML, writing to outerHTML does not change the element. Instead, it replaces it in the DOM. We can write to elem.outerHTML, but should keep in mind that it doesn’t change the element we’re writing to (‘elem’). It puts the new HTML in its place instead. We can get references to the new elements by querying the DOM.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```html
-<div>Hello, world!</div>
+<div>Hello, world!</div>
 
 <script>
   let div = document.querySelector('div');
 
-  // replace div.outerHTML with <p>...</p>
+  // replace div.outerHTML with <p>...</p>
+  div.outerHTML = '<p>A new element</p>'; // (*)
 
-  div.outerHTML = '<p>A new element</p>'; // (*)
-  // Wow! 'div' is still the same!
-
-  alert(div.outerHTML); // <div>Hello, world!</div> (**)
+  // Wow! 'div' is still the same!
+  alert(div.outerHTML); // <div>Hello, world!</div> (**)
 </script>
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -352,28 +352,28 @@ Example:
   <div>
   <div><strong>Interview Response:</strong> We should use the nodeValue and data properties instead of innerHTML. These two are almost the same for practical use, there are only minor specification differences. So, we should use the data property because it is shorter.</div><br />
   <div><strong>Technical Response:</strong> The innerHTML property is only valid for element nodes. Other node types, such as text nodes, have their counterpart: nodeValue and data properties. These two are almost the same for practical use, there are only minor specification differences. So, we should use the data property, because it is shorter.
-  </div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```html
 <body>
   Hello JavaScript
-
-  <!-- My Comment -->
-
+  <!-- My Comment -->
   <script>
     let text = document.body.firstChild;
+    alert(text.data); // returns Hello JavaScript
 
-    alert(text.data); // returns Hello JavaScript
     let comment = text.nextSibling;
-
-    alert(comment.data); // returns My Comment
+    alert(comment.data); // returns My Comment
   </script>
 </body>
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -383,19 +383,20 @@ Example:
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> We can use comments to embed information or template instructions into HTML. Then JavaScript can read it from data property and process embedded instructions.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```html
-<!-- if isAdmin -->
-
-<div>Welcome, Admin!</div>
-
-<!-- /if -->
+<!-- if isAdmin -->
+<div>Welcome, Admin!</div>
+<!-- /if -->
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -405,24 +406,26 @@ Example:
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The textContent provides access to the text inside the element: only text, minus all &#8249;tags&#8250;. In practice, reading such text is rarely needed. Writing to textContent is much more useful because it allows to write text the “safe way”.The textContent provides access to the text inside the element: only text, minus all &#8249;tags&#8250;. In practice, reading such text is rarely needed. Writing to textContent is much more useful because it allows to write text the “safe way”.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```html
 <div id="elem1"></div>
-
 <div id="elem2"></div>
 
 <script>
-  let name = prompt("What's your name?", '<b>Winnie-the-Pooh!</b>');
+  let name = prompt("What's your name?", '<b>Winnie-the-Pooh!</b>');
 
-  elem1.innerHTML = name; // Winnie-the-Pooh!
-  elem2.textContent = name; // <b>Winnie-the-Pooh!</b>
+  elem1.innerHTML = name; // Winnie-the-Pooh!
+  elem2.textContent = name; // <b>Winnie-the-Pooh!</b>
 </script>
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -432,23 +435,26 @@ Example:
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The “hidden” attribute and the DOM property specifies whether the element is visible or not. Technically, hidden works the same as style="display:none". But it’s shorter to write.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```html
-<div>Both divs below are hidden</div>
+<div>Both divs below are hidden</div>
 
-<div hidden>With the attribute "hidden"</div>
 <!-- hidden attribute -->
+<div hidden>With the attribute "hidden"</div>
 
-<div id="elem">JavaScript assigned the property "hidden"</div>
+<div id="elem">JavaScript assigned the property "hidden"</div>
 
 <script>
-  elem.hidden = true; // hidden DOM property
+  elem.hidden = true; // <- hidden DOM property
 </script>
 ```
+
+  </div>
+  </div>
+</details>
 
 ---

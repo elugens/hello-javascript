@@ -30,14 +30,15 @@ sidebar_position: 5
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The key property of the event object allows us to get the character, while the code property of the event object allows us to get the “physical key code”. For instance, the same key Z can be pressed with or without Shift. That gives us two different characters: lowercase z and uppercase Z. The event.key is exactly the character, and it will be different. But event.code is the exactly the same for both.
-    </div>
-  </div>
-</details>
+    </div><br />
 
 | **Key** | **event.key** | **event.code** |
 | :------ | :------------ | :------------- |
 | Z       | z (lowercase) | KeyZ           |
 | Shift+Z | Z (uppercase) | KeyZ           |
+
+  </div>
+</details>
 
 ---
 
@@ -59,9 +60,7 @@ sidebar_position: 5
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> For instance, special keys like Shift or F1 or others. For those keys, event.key is approximately the same as event.code. Please note that event.code specifies exactly which key is pressed. For instance, most keyboards have two Shift keys: on the left and on the right side. The event.code tells us exactly which one was pressed, and event.key is responsible for the “meaning” of the key: what it is (a “Shift”).
-    </div>
-  </div>
-</details>
+    </div><br />
 
 Example:
 
@@ -70,6 +69,9 @@ Example:
 | F1        | F1            | F1                      |
 | Backspace | Backspace     | Backspace               |
 | Shift     | Shift         | ShiftRight or ShiftLeft |
+
+  </div>
+</details>
 
 ---
 

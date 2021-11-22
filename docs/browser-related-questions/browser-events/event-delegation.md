@@ -18,26 +18,30 @@ sidebar_position: 3
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> In relation to events the behavior pattern has two parts. First, we add a custom attribute to an element that describes its behavior. Second, document-wide handler tracks events, and if an event happens on an attributed element – performs the action.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```html
-Counter: <input type="button" value="1" data-counter />
+<!-- Counter: -->
+<input type="button" value="1" data-counter />
 
-One more counter: <input type="button" value="2" data-counter />
+<!-- One more counter: -->
+<input type="button" value="2" data-counter />
 
 <script>
   document.addEventListener('click', function (event) {
     if (event.target.dataset.counter != undefined) {
-      // if the attribute exists...
-
+      // if the attribute exists...
       event.target.value++;
     }
   });
 </script>
 ```
+
+  </div>
+  </div>
+</details>
 
 ---

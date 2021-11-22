@@ -30,19 +30,20 @@ sidebar_position: 4
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, we can use the preventDefault method to prevent specific browser actions.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```html
-<a href="/" onclick="return false">Click here</a>
-
-or
-
-<a href="/" onclick="event.preventDefault()">Click here</a>
+<a href="/" onclick="return false">Click here</a>
+<!-- or -->
+<a href="/" onclick="event.preventDefault()">here</a>
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -64,32 +65,32 @@ or
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The defaultPrevented read-only property of the Event interface returns a Boolean indicating whether the call to Event.preventDefault() canceled the event. The property event.defaultPrevented is true if the default action was prevented, and false otherwise.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```html
-<p>Right-click for the document menu </p>
-
-<button id="elem">Right-click for the button menu</button>
+<p>Right-click for the document menu</p>
+<button id="elem">Right-click for the button menu</button>
 
 <script>
   elem.oncontextmenu = function (event) {
     event.preventDefault();
-
-    alert('Button context menu');
+    alert('Button context menu');
   };
 
   document.oncontextmenu = function (event) {
     if (event.defaultPrevented) return;
 
     event.preventDefault();
-
-    alert('Document context menu');
+    alert('Document context menu');
   };
 </script>
 ```
+
+  </div>
+  </div>
+</details>
 
 ---

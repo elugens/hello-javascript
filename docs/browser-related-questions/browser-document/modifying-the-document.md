@@ -18,25 +18,25 @@ sidebar_position: 7
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> To create DOM nodes, there are two methods including the createElement and createTextNode methods. The document.createElement(tag) creates a new element node. The document.createTextNode(‘text’) creates a new text node with the give ‘text’. Most of the time we need to create element nodes, such as a div.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```js
-// 1. Create <div> element
-
+// 1. Create <div> element
 let div = document.createElement('div');
 
-// 2. Set its class to "alert"
-
+// 2. Set its class to "alert"
 div.className = 'alert';
 
-// 3. Fill it with the content
-
-div.innerHTML = "<strong>Hi there!</strong> You've read an important message.";
+// 3. Fill it with the content
+div.innerHTML = "<strong>Hi there!</strong> You've read an important message.";
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -46,54 +46,47 @@ div.innerHTML = "<strong>Hi there!</strong> You've read an important messa
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> There is a special append method used to insert a new DOM node into an HTML document. Additional methods such as the prepend, before, after, and replaceWith that can be used to place the new DOM node into a specific place in the document.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```html
 <ol id="ol">
   <li>0</li>
-
   <li>1</li>
-
   <li>2</li>
 </ol>
 
 <script>
-  ol.before('before'); // insert string "before" before <ol>
-  ol.after('after'); // insert string "after" after <ol>
+  ol.before('before'); // insert string "before" before <ol>
+  ol.after('after'); // insert string "after" after <ol>
+
   let liFirst = document.createElement('li');
-
   liFirst.innerHTML = 'prepend';
+  ol.prepend(liFirst); // insert liFirst at the beginning of <ol>
 
-  ol.prepend(liFirst); // insert liFirst at the beginning of <ol>
   let liLast = document.createElement('li');
-
   liLast.innerHTML = 'append';
-
-  ol.append(liLast); // insert liLast at the end of <ol>
+  ol.append(liLast); // insert liLast at the end of <ol>
 </script>
 
-<!-- FINAL OUTPUT -->
+<!-- FINAL OUTPUT -->
 
-// before
-
+<!-- before -->
 <ol id="ol">
   <li>prepend</li>
-
   <li>0</li>
-
   <li>1</li>
-
   <li>2</li>
-
   <li>append</li>
 </ol>
-
-// after
+<!-- after -->
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -109,29 +102,27 @@ Example:
     <li>The insertAdjacentElement(where, element) has the same syntax, but inserts an element.</li>
     <li>They exist mainly to make the syntax “uniform”. In practice, only insertAdjacentHTML is used most of the time. Because for elements and text, we have methods append/prepend/before/after – they are shorter to write and can insert nodes/text pieces.</li>
   </ol>
-  </div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```html
 <div id="div"></div>
-
 <script>
   div.insertAdjacentHTML('beforebegin', '<p>Hello</p>');
-
   div.insertAdjacentHTML('afterend', '<p>Bye</p>');
 </script>
 
-<!-- OUTPUT RESULT -->
-
+<!-- OUTPUT RESULT -->
 <p>Hello</p>
-
 <div id="div"></div>
-
 <p>Bye</p>
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -141,40 +132,36 @@ Example:
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, to remove a node, there’s a method node.remove(). Please note: if we want to move an element to another place – there is no need to remove it from the old one.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```html
 <style>
-  .alert  {
+  .alert {
     padding: 15px;
-
-    border: 1px solid #d6e9c6;
-
+    border: 1px solid #d6e9c6;
     border-radius: 4px;
-
     color: #3c763d;
-
     background-color: #dff0d8;
   }
 </style>
 
 <script>
   let div = document.createElement('div');
-
   div.className = 'alert';
-
   div.innerHTML =
-    "<strong>Hi there!</strong> You've read an important message.";
+    "<strong>Hi there!</strong> You've read an important message.";
 
   document.body.append(div);
-
   setTimeout(() => div.remove(), 1000);
 </script>
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -184,29 +171,27 @@ Example:
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, there is a simple approach to doing this in JavaScript. For example, if we want to swap adjacent elements, we can use the after method by specifying what we want to go after a specific element node.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```html
 <div id="first">First</div>
-
 <div id="second">Second</div>
-
 <script>
-  // no need to call remove
-
-  second.after(first); // take #second and after it insert #first
+  // no need to call remove
+  second.after(first); // take #second and after it insert #first
 </script>
+
+<!-- Output: -->
+<!-- Second -->
+<!-- First -->
 ```
 
-Output:
-
-Second
-
-First
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -216,41 +201,41 @@ First
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, you can clone an element node using the cloneNode method in JavaScript. The cloneNode() method creates a copy of a node, and returns the clone.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-:::note
-Once, you have cloned the node you use the appendChild() or insertBefore() method to insert the cloned node to the document. If, you want a deep clone you simply set the deep parameter value to true if you want to clone all descendants (children), otherwise false.
-:::
-
-Example:
+  <div></div>
 
 ```html
 <style>
-  .alert  {
+  .alert {
     padding: 15px;
-
-    border: 1px solid #d6e9c6;
-
+    border: 1px solid #d6e9c6;
     border-radius: 4px;
-
     color: #3c763d;
-
     background-color: #dff0d8;
   }
 </style>
 
 <div class="alert" id="div">
-  <strong>Hi there!</strong> You've read an important message.
+  <strong>Hi there!</strong> You've read an important message.
 </div>
 
 <script>
-  let div2 = div.cloneNode(true); // clone the message
-  div2.querySelector('strong').innerHTML = 'Bye there!'; // change the clone
-  div.after(div2); // show the clone after the existing div
+  let div2 = div.cloneNode(true); // clone the message
+  div2.querySelector('strong').innerHTML = 'Bye there!'; // change the clone
+
+  div.after(div2); // show the clone after the existing div
 </script>
 ```
+
+:::note
+Once, you have cloned the node you use the appendChild() or insertBefore() method to insert the cloned node to the document. If, you want a deep clone you simply set the deep parameter value to true if you want to clone all descendants (children), otherwise false.
+:::
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -260,15 +245,10 @@ Example:
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> DocumentFragment is a special DOM node that serves as a wrapper to pass around lists of nodes. We can append other nodes to it, but when we insert it somewhere, then its content is inserted instead.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-:::note
-DocumentFragment is rarely used explicitly. Why append to a special kind of node, if we can return an array of nodes instead?
-:::
-
-Example:
+  <div></div>
 
 ```html
 <ul id="ul"></ul>
@@ -279,31 +259,32 @@ Example:
 
     for (let i = 1; i <= 3; i++) {
       let li = document.createElement('li');
-
       li.append(i);
-
       fragment.append(li);
     }
 
     return fragment;
   }
 
-  ul.append(getListContent()); // (*)
+  ul.append(getListContent()); // (*)
 </script>
 
-<!-- Output: -->
-
+<!-- Output:
 <ul>
-  ` `
   <li>1</li>
-
-  ` `
   <li>2</li>
-
-  ` `
   <li>3</li>
-</ul>
+</ul> -->
 ```
+
+:::note
+DocumentFragment is rarely used explicitly. Why append to a special kind
+of node, if we can return an array of nodes instead?
+:::
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -314,29 +295,21 @@ Example:
   <div>
   <div><strong>Interview Response:</strong> There are several methods that including appendChild, insertBefore, replaceChild, and removeChild. We should know them because we may run across them in older applications.</div><br />
   <div><strong>Technical Response:</strong> There are several methods that were used prior to the more modern methods for inserting and removing nodes. They include appendChild, insertBefore, replaceChild, and removeChild. Although, they aren’t used in modern code we should be aware of their function, use, and syntax, because we may run across them in older applications.
-  </div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-:::note
-These methods come from ancient times. Nowadays, there is no reason to use them, as modern methods, such as append, prepend, before, after, remove, replaceWith, are more flexible. This information helps to understand old scripts, but not needed for new development.
-:::
-
-Example:
+  <div></div>
 
 ```html
 <ol id="list">
   <li>0</li>
-
   <li>1</li>
-
   <li>2</li>
 </ol>
 
 <script>
   let newLi = document.createElement('li');
-
-  newLi.innerHTML = 'Hello, world!';
+  newLi.innerHTML = 'Hello, world!';
 
   list.appendChild(newLi);
 </script>
@@ -356,6 +329,14 @@ Output:
 -->
 ```
 
+:::note
+These methods come from ancient times. Nowadays, there is no reason to use them, as modern methods, such as append, prepend, before, after, remove, replaceWith, are more flexible. This information helps to understand old scripts, but not needed for new development.
+:::
+
+  </div>
+  </div>
+</details>
+
 ---
 
 ### Explain the function and syntax of the document.write method.
@@ -364,28 +345,28 @@ Output:
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The document.write() method writes a string of text to a document stream opened by document.open().
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+<strong>Syntax: </strong> document.write(markup);<br /><br />
+
+  <div></div>
+
+```html
+<p>After one second the contents of this page will be replaced...</p>
+<script>
+  // document.write after 1 second
+  // that's after the page loaded, so it erases the existing content
+  setTimeout(() => document.write('<b>...By this.</b>'), 1000);
+</script>
+```
 
 :::note
 Because document.write() writes to the document stream, calling document.write() on a closed (loaded) document automatically calls document.open(), which will clear (overwrite) the document. The method comes from times when there was no DOM, no standards… Old times. It still lives because there are scripts using it. In modern scripts we can rarely see it, because If we call it afterwards, the existing document content is erased. There are some use cases for this, but the are few and far between.
 :::
 
-**Syntax:** document.write(markup)
-
-Example:
-
-```html
-<p>After one second the contents of this page will be replaced...</p>
-
-<script>
-  // document.write after 1 second
-
-  // that's after the page loaded, so it erases the existing content
-
-  setTimeout(() => document.write('<b>...By this.</b>'), 1000);
-</script>
-```
+  </div>
+  </div>
+</details>
 
 ---
