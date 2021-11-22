@@ -30,41 +30,37 @@ sidebar_position: 3
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The window.requestAnimationFrame() method tells the browser that you wish to perform an animation and requests that the browser calls a specified function to update an animation before the next repaint. The method takes a callback as an argument to be invoked before the repaint. You should call this method whenever you are ready to update your animation onscreen. We can use the cancelAnimationFrame to cancel the animation by calling the request id in the cancellation.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-**Syntax:** let requestId = requestAnimationFrame(callback)
+<strong>Syntax: </strong> let requestId = requestAnimationFrame(callback);<br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-const element = document.getElementById('some-element-you-want-to-animate');
+const element = document.getElementById('some-element-you-want-to-animate');
+let start;
 
-let start;
+function step(timestamp) {
+  if (start === undefined) start = timestamp;
+  const elapsed = timestamp - start;
 
-function step(timestamp) {
+  // `Math.min()` is used here to make sure that the element stops at exactly 200px.
+  element.style.transform =
+    'translateX(' + Math.min(0.1 * elapsed, 200) + 'px)';
 
-    if (start === undefined)
-
-      start = timestamp;
-
-    const elapsed = timestamp - start;
-
-    // `Math.min()` is used here to make sure that the element stops at exactly 200px.
-
-    element.style.transform = 'translateX(' + Math.min(0.1 \* elapsed, 200) + 'px)';
-
-    if (elapsed < 2000) { // Stop the animation after 2 seconds
-
-      window.requestAnimationFrame(step);
-
-    }
-
+  if (elapsed < 2000) {
+    // Stop the animation after 2 seconds
+    window.requestAnimationFrame(step);
+  }
 }
 
 window.requestAnimationFrame(step);
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 

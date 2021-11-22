@@ -30,11 +30,10 @@ sidebar_position: 8
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> XMLHttpRequest use both synchronous and asynchronous modes of operation. This can be invoked, synchronously or asynchronously, using the XMLHttpRequest open method. The XMLHttpRequest method open() initializes a newly-created request, or re-initializes an existing one. If you want to run your request in async then the async parameter should be set to true, otherwise false for the default behavior. It should be noted that open call, contrary to its name, does not open the connection. It only configures the request, but the network activity only starts with the call of send.
-    </div>
+    </div><br />
+    <strong>Syntax: </strong> xhr.open(method, URL, [async, user, password]);<br /><br />
   </div>
 </details>
-
-**Syntax:** xhr.open(method, URL, [async, user, password])
 
 ---
 
@@ -44,11 +43,10 @@ sidebar_position: 8
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> If we want to open a connection and send a XMLHttpRequest to a server we must invoke the send method to send the message body. Some request methods like GET do not have a body. And some of them like POST use body to send the data to the server.
-    </div>
+    </div><br />
+    <strong>Syntax: </strong> xhr.send([body]);<br /><br />
   </div>
 </details>
-
-**Syntax:** xhr.send([body])
 
 ---
 
@@ -58,37 +56,35 @@ sidebar_position: 8
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The most widely events used in XMLHttpRequest are the load, error, and progress events. The load event happens when the request is complete (even if HTTP status is like 400 or 500), and the response is fully downloaded. The error event happens when the request could not be made, e.g., network down or invalid URL. The progress event triggers periodically while the response is being downloaded, reports how much has been downloaded.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-**Syntax:** xhr.send([body])
+<strong>Syntax: </strong> xhr.send([body]);<br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 xhr.onload = function () {
-  alert(`Loaded: ${xhr.status} ${xhr.response}`);
+  alert(`Loaded: ${xhr.status} ${xhr.response}`);
 };
 
 xhr.onerror = function () {
-  // only triggers if the request couldn't be made at all
-
-  alert(`Network Error`);
+  // only triggers if the request couldn't be made at all
+  alert(`Network Error`);
 };
 
 xhr.onprogress = function (event) {
-  // triggers periodically
-
-  // event.loaded - how many bytes downloaded
-
-  // event.lengthComputable = true if the server sent Content-Length header
-
-  // event.total - total number of bytes (if lengthComputable)
-
-  alert(`Received ${event.loaded} of ${event.total}`);
+  // triggers periodically
+  // event.loaded - how many bytes downloaded
+  // event.lengthComputable = true if the server sent Content-Length header
+  // event.total - total number of bytes (if lengthComputable)
+  alert(`Received ${event.loaded} of ${event.total}`);
 };
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -98,37 +94,10 @@ xhr.onprogress = function (event) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The properties we can use to access the results of a XMLHttpRequest include the status, statusText, and response properties. We can also specify a timeout using the timeout property. If the request fails or does not return within the given time, it gets canceled and timeout event triggers.
-    </div>
+    </div><br />
+    <strong>Syntax: </strong> xhr.timeout = 10000; // timeout in ms, 10 seconds<br /><br />
   </div>
 </details>
-
-**Syntax:** xhr.timeout = 10000; // timeout in ms, 10 seconds
-
-Code Example:
-
-```js
-xhr.onload = function () {
-  alert(`Loaded: ${xhr.status} ${xhr.response}`);
-};
-
-xhr.onerror = function () {
-  // only triggers if the request couldn't be made at all
-
-  alert(`Network Error`);
-};
-
-xhr.onprogress = function (event) {
-  // triggers periodically
-
-  // event.loaded - how many bytes downloaded
-
-  // event.lengthComputable = true if the server sent Content-Length header
-
-  // event.total - total number of bytes (if lengthComputable)
-
-  alert(`Received ${event.loaded} of ${event.total}`);
-};
-```
 
 ---
 
@@ -138,25 +107,27 @@ xhr.onprogress = function (event) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> XMLHttpRequest changes between states as it progresses include unsent (0), opened (1), headers_received (2), loading (3), and done (4). Each is marked by a numeric value. Unsent refers to the XMLHttpRequest client has been created, but the open() method hasn't been called yet. Opened is the when the open() method has been invoked. During this state, the request headers can be set using the setRequestHeader() method and the send() method can be called which will initiate the fetch. The headers_received state refers to the send() method being called and the response headers have being received. The loading state refers to the response body is being received. The final state is done defining that the data transfer has been completed or something went wrong during the transfer (e.g., infinite redirects). The current state is accessible as xhr.readyState. An XMLHttpRequest object travels them in the order 0 → 1 → 2 → 3 → … → 3 → 4. State 3 repeats every time a data packet is received over the network.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong> Tracking readystatechange event<br /><br />
 
-**Syntax:** xhr.readyState
+<strong>Syntax: </strong> xhr.readyState<br /><br />
 
-Example: Tracking readystatechange event
+  <div></div>
 
 ```js
 xhr.onreadystatechange = function () {
   if (xhr.readyState == 3) {
-    // loading
+    // loading
   }
-
   if (xhr.readyState == 4) {
-    // request finished
+    // request finished
   }
 };
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -178,33 +149,34 @@ xhr.onreadystatechange = function () {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> If in the open method the third parameter async is set to false, the request is made synchronously. In other words, JavaScript execution pauses at send() and resumes when the response is received. Somewhat like alert or prompt commands. It might look good, but synchronous calls are used rarely, because they block in-page JavaScript till the loading is complete. In some browsers it becomes impossible to scroll. If a synchronous call takes too much time, the browser may suggest to close the “hanging” webpage.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-**Sytnax:** xhr.open('GET', '/article/xmlhttprequest/hello.txt', false)
+<strong>Syntax: </strong> xhr.open('GET', '/article/xmlhttprequest/hello.txt', false)<br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let xhr = new XMLHttpRequest();
 
-xhr.open('GET', '/article/xmlhttprequest/hello.txt', false); // <--
+xhr.open('GET', '/article/xmlhttprequest/hello.txt', false); // <-
 
 try {
   xhr.send();
-
   if (xhr.status != 200) {
-    alert(`Error ${xhr.status}: ${xhr.statusText}`);
+    alert(`Error ${xhr.status}: ${xhr.statusText}`);
   } else {
     alert(xhr.response);
   }
 } catch (err) {
-  // instead of onerror
-
-  alert('Request failed');
+  // instead of onerror
+  alert('Request failed');
 }
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -226,17 +198,20 @@ try {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The setRequestHeader sets the request header with the given name and value.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-**Syntax:** xhr.setRequestHeader(name, value)
+<strong>Syntax: </strong> xhr.setRequestHeader(name, value)<br /><br />
 
-Example:
+  <div></div>
 
 ```js
 xhr.setRequestHeader('Content-Type', 'application/json');
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -246,21 +221,22 @@ xhr.setRequestHeader('Content-Type', 'application/json');
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Several headers are managed exclusively by the browser, e.g., Referer and Host. XMLHttpRequest is not allowed to change them, for the sake of user safety and correctness of the request. Another peculiarity of XMLHttpRequest is that one cannot undo setRequestHeader. Once the header is set, it is set. Additional calls add information to the header, but do not overwrite it.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 xhr.setRequestHeader('X-Auth', '123');
-
 xhr.setRequestHeader('X-Auth', '456');
 
-// the header will be:
-
-// X-Auth: 123, 456
+// the header will be:
+// X-Auth: 123, 456
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -270,15 +246,18 @@ xhr.setRequestHeader('X-Auth', '456');
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The XMLHttpRequest method getResponseHeader() returns the string containing the text of a particular or single header's value. If there are multiple response headers with the same name, then their values are returned as a single concatenated string, where each value is separated from the previous one by a pair of comma and space. The getResponseHeader() method returns the value as a UTF byte sequence. Basically, it gets the response header with the given name (except Set-Cookie and Set-Cookie2).
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 xhr.getResponseHeader('Content-Type');
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -289,12 +268,12 @@ xhr.getResponseHeader('Content-Type');
   <div>
   <div><strong>Interview Response:</strong> The XMLHttpRequest method getAllResponseHeaders() returns all the response headers, separated by CRLF, as a string, or returns null if no response has been received. If a network error happened, an empty string is returned. Basically, it returns all response headers, except Set-Cookie and Set-Cookie2.
     </div>
-  </div>
-</details>
+    <br />
+  <div><strong className="codeExample">Data Example:</strong><br /><br />
 
-**Data Example:**
+  <div></div>
 
-```json
+```js
 Cache-Control: max-age=31536000
 
 Content-Length: 4260
@@ -304,27 +283,29 @@ Content-Type: image/png
 Date: Sat, 08 Sep 2012 16:53:16 GMT
 ```
 
-The line break between headers is always "\r\n" (does not depend on OS), so we can easily split it into individual headers. The separator between the name and the value is always a colon followed by a space ": ". That is fixed in the specification. So, if we want to get an object with name/value pairs, we need to throw in a bit JS.
+<p>The line break between headers is always "\r\n" (does not depend on OS), so we can easily split it into individual headers. The separator between the name and the value is always a colon followed by a space ": ". That is fixed in the specification. So, if we want to get an object with name/value pairs, we need to throw in a bit JS.</p>
 
-Code Example:
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
 
 ```js
 let headers = xhr
-
   .getAllResponseHeaders()
-
   .split('\r\n')
-
   .reduce((result, current) => {
-    let [name, value] = current.split(': ');
-
+    let [name, value] = current.split(': ');
     result[name] = value;
-
     return result;
   }, {});
 
-// headers['Content-Type'] = 'image/png'
+// headers['Content-Type'] = 'image/png'
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -334,46 +315,43 @@ let headers = xhr
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> To make a POST request, we can use the built-in FormData object. We can create it, optionally fill from a form, append more fields if needed.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```html
 <script>
-  // creates an object
+  // creates an object
   let formData = new FormData([form]);
 
-  formData.append(name, value); // appends a field
+  formData.append(name, value); // appends a field
 </script>
 
 <form name="person">
   <input name="name" value="John" />
-
   <input name="surname" value="Smith" />
 </form>
 
 <script>
-  /*** FILL FROM <FORM> EXAMPLE */
-
+  /*** FILL FROM <FORM> EXAMPLE ***/
   let formData = new FormData(document.forms.person);
 
-  // add one more field
-
+  // add one more field
   formData.append('middle', 'Lee');
 
-  // send it out
-
+  // send it out
   let xhr = new XMLHttpRequest();
-
   xhr.open('POST', '/article/xmlhttprequest/post/user');
-
   xhr.send(formData);
 
   xhr.onload = () => alert(xhr.response);
 </script>
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -383,11 +361,10 @@ Code Example:
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> If we are uploading something big, then we are surely more interested in tracking the upload progress. But we should be aware that the xhr.onprogress doesn’t help here. The xhr.upload method is used to track upload progress. It generates events, similar to xhr, but xhr.upload triggers them solely on uploading.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```html
 <input type="file" onchange="upload(this.files[0])" />
@@ -396,28 +373,29 @@ Code Example:
   function upload(file) {
     let xhr = new XMLHttpRequest();
 
-    // track upload progress
-
+    // track upload progress
     xhr.upload.onprogress = function (event) {
-      console.log(`Uploaded ${event.loaded} of ${event.total}`);
+      console.log(`Uploaded ${event.loaded} of ${event.total}`);
     };
 
-    // track completion: both successful or not
-
+    // track completion: both successful or not
     xhr.onloadend = function () {
       if (xhr.status == 200) {
         console.log('success');
       } else {
-        console.log('error ' + this.status);
+        console.log('error ' + this.status);
       }
     };
 
     xhr.open('POST', '/article/xmlhttprequest/post/upload');
-
     xhr.send(file);
   }
 </script>
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -427,18 +405,20 @@ Code Example:
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> XMLHttpRequest can make cross-origin requests, using the same CORS policy as fetch. Just like fetch, it does not send cookies and HTTP-authorization to another origin by default. To enable them, set xhr.withCredentials to true.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let xhr = new XMLHttpRequest();
-
 xhr.withCredentials = true;
 
 xhr.open('POST', 'http://anywhere.com/request');
 ```
+
+  </div>
+  </div>
+</details>
 
 ---

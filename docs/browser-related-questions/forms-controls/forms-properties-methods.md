@@ -18,38 +18,43 @@ sidebar_position: 1
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Document forms are members of the special collection document.forms. That is a so-called “named collection”: it is both named and ordered. We can use both the name and the number in the document to get the form.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```js
-document.forms.my; // the form with name="my"
-document.forms[0]; // the first form in the document
+document.forms.my; // the form with name="my"
+document.forms[0]; // the first form in the document
 ```
 
-When we have a form, then any element is available in the named collection form.elements.
+<p>When we have a form, then any element is available in the named collection form.elements.</p>
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```html
 <form name="my">
   <input name="one" value="1" />
-
   <input name="two" value="2" />
 </form>
 
 <script>
-  // get the form
+  // get the form
+  let form = document.forms.my; // <form name="my"> element
 
-  let form = document.forms.my; // <form name="my"> element
-  // get the element
+  // get the element
+  let elem = form.elements.one; // <input name="one"> element
 
-  let elem = form.elements.one; // <input name="one"> element
-  alert(elem.value); // 1
+  alert(elem.value); // 1
 </script>
 ```
+
+  </div>
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -59,16 +64,14 @@ Example:
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> There may be multiple elements with the same name. This is typical with radio buttons and checkboxes. that case, form.elements[name] is a collection. These navigation properties do not depend on the tag structure. All control elements, no matter how deep they are in the form, are available in form.elements.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```html
 <form>
   <input type="radio" name="age" value="10" />
-
   <input type="radio" name="age" value="20" />
 </form>
 
@@ -77,9 +80,13 @@ Example:
 
   let ageElems = form.elements.age;
 
-  alert(ageElems[0]); // [object HTMLInputElement]
+  alert(ageElems[0]); // [object HTMLInputElement]
 </script>
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -89,33 +96,35 @@ Example:
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> A form may have one or many &#8249;fieldset&#8250; elements inside it. They also have elements property that lists form controls inside them. The HTML &#8249;fieldset&#8250; element is used to group several controls as well as labels &#8250;label&#8250; within a web form. Fieldset properties can be accessed via the form.elements property.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```html
 <body>
   <form id="form">
     <fieldset name="userFields">
       <legend>info</legend>
-
       <input name="login" type="text" />
     </fieldset>
   </form>
 
   <script>
-    alert(form.elements.login); // <input name="login">
+    alert(form.elements.login); // <input name="login">
+
     let fieldset = form.elements.userFields;
+    alert(fieldset); // HTMLFieldSetElement
 
-    alert(fieldset); // HTMLFieldSetElement
-    // we can get the input by name both from the form and from the fieldset
-
-    alert(fieldset.elements.login == form.elements.login); // true
+    // we can get the input by name both from the form and from the fieldset
+    alert(fieldset.elements.login == form.elements.login); // true
   </script>
 </body>
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -125,11 +134,10 @@ Example:
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, there is a shorter notation: we can access the element as form[index/name]. In other words, instead of form.elements.login we can write form.login. That also works, but there is a minor issue: if we access an element, and then change its name, then it is still available under the old name (as well as under the new one). That is usually not a problem, however, because we rarely change names of form elements.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```html
 <form id="form">
@@ -137,31 +145,35 @@ Example:
 </form>
 
 <script>
-  alert(form.elements.login == form.login); // true, the same <input>
-  form.login.name = 'username'; // change the name of the input
-  // form.elements updated the name:
+  alert(form.elements.login == form.login); // true, the same <input>
 
-  alert(form.elements.login); // undefined
-  alert(form.elements.username); // input
-  // form allows both names: the new one and the old one
+  form.login.name = 'username'; // change the name of the input
 
-  alert(form.username == form.login); // true
+  // form.elements updated the name:
+  alert(form.elements.login); // undefined
+  alert(form.elements.username); // input
+
+  // form allows both names: the new one and the old one
+  alert(form.username == form.login); // true
 </script>
 ```
 
+  </div>
+  </div>
+</details>
+
 ---
 
-### Can you explain what form backreferencing is in JavaScript?
+### Can you explain what form back-referencing is in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> For any element, the form is available as element.form. So, a form references all elements, and elements reference the form.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```html
 <form id="form">
@@ -169,15 +181,17 @@ Example:
 </form>
 
 <script>
-  // form -> element
-
+  // form -> element
   let login = form.login;
 
-  // element -> form
-
-  alert(login.form); // HTMLFormElement
+  // element -> form
+  alert(login.form); // HTMLFormElement
 </script>
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -199,33 +213,30 @@ Example:
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> A &#8249;select&#8250; element has 3 important properties including the select option, value, and selectedIndex properties. The select.options is a collection &#8249;option&#8250; sub-elements. The select.value property is the value of the current selected &#8249;option&#8250;. The select.selectedIndex is the number currently selected &#8249;option&#8250;. They provide three different ways of setting a value for a &#8249;select&#8250;. Find the corresponding &#8249;option&#8250; element (e.g. among select.options) and set its option.selected to true. If we know a new value: set, select.value to the new value. If we know the new option number: set select.selectedIndex to that number.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```html
 <select id="select">
   <option value="apple">Apple</option>
-
   <option value="pear">Pear</option>
-
   <option value="banana">Banana</option>
 </select>
 
 <script>
-  // all three lines do the same thing
-
+  // all three lines do the same thing
   select.options[2].selected = true;
-
   select.selectedIndex = 2;
-
   select.value = 'banana';
-
-  // please note: options start from zero, so index 2 means the 3rd option.
+  // please note: options start from zero, so index 2 means the 3rd option.
 </script>
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -235,88 +246,69 @@ Example:
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The little-known JavaScript Option() constructor allows you to avoid the verbose syntax of creating DOM elements. The Option() constructor creates a new HTMLOptionElement. Text is a DOMString representing the content of the element, i.e. the displayed text. If this is not specified, a default value of "" (empty string) is used. The optional value argue is DOMString representing the value of the HTMLOptionElement, i.e. the value attribute of the equivalent &#8249;option&#8250;. If this is not specified, the value of text is used as the value, e.g. for the associated &#8249;select&#8250; element's value when the form is submitted to the server. The defaultSelected parameter is a Boolean that sets the selected attribute value, i.e. so that this &#8249;option&#8250; will be the default value selected in the &#8249;select&#8250; element when the page is first loaded. If this is not specified, a default value of false is used. Note that a value of true does not set the option to selected if it is not already selected. The optional selected is a Boolean that sets the option's selected state; the default is false (not selected). If omitted, even if the defaultSelected argument is true, the option is not selected. Basically, the Option constructor allows you to create new selection options on the fly.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-**Syntax:** let newOption = new Option(text, value, defaultSelected, selected);
+<strong>Syntax: </strong> let newOption = new Option(text, value, defaultSelected, selected);<br /><br />
 
-Example:
+  <div></div>
 
 ```html
 <div id="container">
   <form>
     <label for="name">Framework:</label>
-
     <input
       type="text"
       id="name"
-      placeholder="Enter a framework"
+      placeholder="Enter a framework"
       autocomplete="off"
     />
 
     <button id="btnAdd">Add</button>
 
-    <label for="list">Framework List:</label>
-
+    <label for="list">Framework List:</label>
     <select id="list" name="list" multiple></select>
-
-    <button id="btnRemove">Remove Selected Framework</button>
+    <button id="btnRemove">Remove Selected Framework</button>
   </form>
 </div>
 
 <script>
   const btnAdd = document.querySelector('#btnAdd');
-
   const btnRemove = document.querySelector('#btnRemove');
-
   const sb = document.querySelector('#list');
-
   const name = document.querySelector('#name');
 
   btnAdd.onclick = (e) => {
     e.preventDefault();
 
-    // validate the option
-
+    // validate the option
     if (name.value == '') {
-      alert('Please enter the name.');
-
+      alert('Please enter the name.');
       return;
     }
-
-    // create a new option
-
-    const option = new Option(name.value, name.value);
-
-    // add it to the list
-
+    // create a new option
+    const option = new Option(name.value, name.value); // <--
+    // add it to the list
     sb.add(option, undefined);
 
-    // reset the value of the input
-
+    // reset the value of the input
     name.value = '';
-
     name.focus();
   };
 
-  // remove selected option
-
+  // remove selected option
   btnRemove.onclick = (e) => {
     e.preventDefault();
 
-    // save the selected option
-
+    // save the selected option
     let selected = [];
 
     for (let i = 0; i < sb.options.length; i++) {
       selected[i] = sb.options[i].selected;
     }
 
-    // remove all selected option
-
+    // remove all selected option
     let index = sb.options.length;
-
     while (index--) {
       if (selected[index]) {
         sb.remove(index);
@@ -325,5 +317,9 @@ Example:
   };
 </script>
 ```
+
+  </div>
+  </div>
+</details>
 
 ---

@@ -42,50 +42,41 @@ sidebar_position: 10
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The long polling process begins with a request being sent to the server. The server does not disconnect until it has a message to send. When the message appears, the server responds to the request and then the browser make a new request immediately. The situation when the browser sent a request and has a pending connection with the server, is standard for this method. Only when a message is delivered, the connection is reestablished. If the connection is lost, because of, say, a network error, the browser immediately sends a new request.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 async function subscribe() {
   let response = await fetch('/subscribe');
 
   if (response.status == 502) {
-    // Status 502 is a connection timeout error,
-
-    // may happen when the connection was pending for too long,
-
-    // and the remote server or a proxy closed it
-
-    // let's reconnect
-
+    // Status 502 is a connection timeout error,
+    // may happen when the connection was pending for too long,
+    // and the remote server or a proxy closed it
+    // let's reconnect
     await subscribe();
   } else if (response.status != 200) {
-    // An error - let's show it
-
+    // An error - let's show it
     showMessage(response.statusText);
-
-    // Reconnect in one second
-
+    // Reconnect in one second
     await new Promise((resolve) => setTimeout(resolve, 1000));
-
     await subscribe();
   } else {
-    // Get and show the message
-
+    // Get and show the message
     let message = await response.text();
-
     showMessage(message);
-
-    // Call subscribe() again to get the next message
-
+    // Call subscribe() again to get the next message
     await subscribe();
   }
 }
 
 subscribe();
 ```
+
+  </div>
+  </div>
+</details>
 
 ---

@@ -54,16 +54,19 @@ sidebar_position: 1
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The value of document.cookie consists of name=value pairs, delimited by ;. Each one is a separate cookie. To find a particular cookie, we can split document.cookie by ;, and then find the right name. We can use either a regular expression or array functions to do that. We can write to document.cookie. But it is not a data property, it is an accessor (getter/setter). An assignment to it is treated specially. A write operation to document.cookie updates only cookies mentioned in it, but doesn’t touch other cookies.. We can write a new cookie by using the setter directly on document.cookie = “name=value”. This tells the server sending headers to tell the client to store a pair of cookies.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-document.cookie = 'user=John'; // update only cookie named 'user'
-alert(document.cookie); // show all cookies, not just user
+document.cookie = 'user=John'; // update only cookie named 'user'
+alert(document.cookie); // show all cookies, not just user
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -73,25 +76,25 @@ alert(document.cookie); // show all cookies, not just user
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Technically, name and value can have any characters. To keep the valid formatting, they should be escaped using a built-in encodeURIComponent function. It should be noted, there are few limitations to using the encodeURIComponent function. The name=value pair, after encodeURIComponent, should not exceed 4KB. So, we cannot store anything huge in a cookie. The total number of cookies per domain is limited to around 20+, the exact limit depends on the browser.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-// special characters (spaces), need encoding
+// special characters (spaces), need encoding
+let name = 'my name';
+let value = 'John Smith';
 
-let name = 'my name';
-
-let value = 'John Smith';
-
-// encodes the cookie as my%20name=John%20Smith
-
+// encodes the cookie as my%20name=John%20Smith
 document.cookie = encodeURIComponent(name) + '=' + encodeURIComponent(value);
 
-alert(document.cookie); // ...; my%20name=John%20Smith
+alert(document.cookie); // ...; my%20name=John%20Smith
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -101,22 +104,23 @@ alert(document.cookie); // ...; my%20name=John%20Smith
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> In addition to the name value attributes, we have access to the expires, domain, path, and secure attributes. Expires represents the date the cookie will expire. If this is blank, the cookie will expire when the visitor quits the browser. The domain refers to the domain of your site. This also covers sub-domains if necessary. The path attribute is the path to the directory or web page that set the cookie. This may be blank if you want to retrieve the cookie from any directory or page. If secure attribute contains the word "secure", then the cookie may only be retrieved with a secure server. If this attribute is blank, no such restriction exists. Also, there is an additional attribute that replaces expires, which is max-age. The max-age attribute is the modern cookie expiration that uses milliseconds instead of a date.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-// Standard name/value implementation
+// Standard name/value implementation
+document.cookie = 'username=John Doe';
 
-document.cookie = 'username=John Doe';
-
-// Detailed cookie with expires and path
-
+// Detailed cookie with expires and path
 document.cookie =
-  'username=John Doe; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/';
+  'username=John Doe; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/';
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -138,29 +142,27 @@ document.cookie =
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> To let cookies survive a browser closure, we can set either the expires or max-age option. By default, if a cookie does not have one of these options, it disappears when the browser is closed. Such cookies are called “session cookies”. The cookie expiration date defines the time when the browser will automatically delete it. For expires, the date must be exactly in this format, in the GMT timezone. We can use date.toUTCString to get it. If we set expires to a date in the past, the cookie is deleted. Max-age is an alternative to expires and specifies the cookie’s expiration in seconds from the current moment. If set to zero or a negative value, the cookie is deleted.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-// ** Using Expires, +1 day from now
-
+// ** Using Expires, +1 day from now
 let date = new Date(Date.now() + 86400e3);
-
 date = date.toUTCString();
+document.cookie = 'user=John; expires=' + date;
 
-document.cookie = 'user=John; expires=' + date;
+// ** Using Max-age, cookie will die in +1 hour from now
+document.cookie = 'user=John; max-age=3600';
 
-// ** Using Max-age, cookie will die in +1 hour from now
-
-document.cookie = 'user=John; max-age=3600';
-
-// delete cookie (let it expire right now)
-
-document.cookie = 'user=John; max-age=0';
+// delete cookie (let it expire right now)
+document.cookie = 'user=John; max-age=0';
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -170,19 +172,20 @@ document.cookie = 'user=John; max-age=0';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> There are several things that we must do to ensure that a cookie is transferred and set securely. First, we must use the HTTPS protocol to secure our document. By default, if we set a cookie at http://site.com, then it also appears at https://site.com and vice versa. That is, cookies are domain-based, they do not distinguish between the protocols. We must take the additional step to implement the secure attribute when we set the cookie. With this option, if a cookie is set by https://site.com, then it does not appear when the same site is accessed by HTTP, as http://site.com. So, if a cookie has sensitive content that should never be sent over unencrypted HTTP, the secure flag is the right thing.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-// assuming we are on https:// now
-
-// set the cookie to be secure (only accessible over HTTPS)
-
-document.cookie = 'user=John; secure';
+// assuming we are on https:// now
+// set the cookie to be secure (only accessible over HTTPS)
+document.cookie = 'user=John; secure';
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -192,15 +195,18 @@ document.cookie = 'user=John; secure';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The SameSite attribute allows you to declare if your cookie should be restricted to a first-party or same-site context. The samesite attribute accepts three values including lax, strict, and none. In the samesite lax mode cookies are not sent on normal cross-site sub-requests but are sent when a user is navigating within the originating site. This is the default cookie value if SameSite has not been explicitly specified in recent browser versions (Lax replaced None as the default value). In strict mode cookies will only be sent in a first-party context and not be sent along with requests initiated by third party websites (no cross-site implementations allowed). The none attribute value allows cookies to be sent in all contexts. SameSite=None is set, the cookie Secure attribute must also be set (or the cookie will be blocked).
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 res.cookie('3pcookie', 'value', { sameSite: 'none', secure: true });
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -222,16 +228,20 @@ res.cookie('3pcookie', 'value', { sameSite: 'none', secure: true });
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> HttpOnly cookies were first implemented in 2002 by Microsoft Internet Explorer developers for Internet Explorer 6 SP1. According to the Microsoft Developer Network, HttpOnly is an additional flag included in a Set-Cookie HTTP response header. Using the HttpOnly flag when generating a cookie helps mitigate the risk of client side script accessing the protected cookie (if the browser supports it). The web-server uses the Set-Cookie header to set a cookie. Also, it may set the httpOnly option. JavaScript cannot access the values of cookies that the server response tagged with HttpOnly, and it cannot write new values to them either.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
 
 ```csharp
 C# Example: HttpCookie.HttpOnly Property
 
 public bool HttpOnly { get; set; }
-
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 

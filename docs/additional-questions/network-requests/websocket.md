@@ -42,11 +42,10 @@ sidebar_position: 11
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> To open a websocket connection, we need to create new WebSocket using the special protocol ws in the URL. There is also encrypted wss:// protocol. It is like HTTPS for websockets.
-    </div>
+    </div><br />
+    <strong>Syntax: </strong> let socket = new WebSocket("ws://javascript.info");<br /><br />
   </div>
 </details>
-
-**Syntax:** let socket = new WebSocket("ws://javascript.info")
 
 ---
 
@@ -68,11 +67,10 @@ sidebar_position: 11
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Once the socket is created, we can listen to events on it. There are totally 4 events including the open, message, error, and close events. The open event is the event listener to be called when the connection is opened. The message event is to be called when a message is received from the server. The error event is to be called when an error occurs, and the close event is called when the connection is closed. If we’d like to send something, then socket.send(data) will do that.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let socket = new WebSocket(
@@ -80,35 +78,35 @@ let socket = new WebSocket(
 );
 
 socket.onopen = function (e) {
-  alert('[open] Connection established');
-
-  alert('Sending to server');
-
-  socket.send('My name is John');
+  alert('[open] Connection established');
+  alert('Sending to server');
+  socket.send('My name is John');
 };
 
 socket.onmessage = function (event) {
-  alert(`[message] Data received from server: ${event.data}`);
+  alert(`[message] Data received from server: ${event.data}`);
 };
 
 socket.onclose = function (event) {
   if (event.wasClean) {
     alert(
-      `[close] Connection closed cleanly, code=${event.code} reason=${event.reason}`
+      `[close] Connection closed cleanly, code=${event.code} reason=${event.reason}`
     );
   } else {
-    // e.g. server process killed or network down
-
-    // event.code is usually 1006 in this case
-
-    alert('[close] Connection died');
+    // e.g. server process killed or network down
+    // event.code is usually 1006 in this case
+    alert('[close] Connection died');
   }
 };
 
 socket.onerror = function (error) {
-  alert(`[error] ${error.message}`);
+  alert(`[error] ${error.message}`);
 };
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -118,27 +116,24 @@ socket.onerror = function (error) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> When new WebSocket(url) is created, it starts connecting immediately. During the connection, the browser (using headers) asks the server: “Do you support Websocket?” And if the server replies “yes”, then the talk continues in WebSocket protocol. At this point we are using the websocket protocol to communicate with the server. The basic order it the request (a question), response (the answer), and the websocket interactive (active conversation).
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong> of browser headers for request made by new WebSocket<br /><br />
 
-**Example** of browser headers for request made by new WebSocket:
+  <div></div>
 
 ```js
-GET /chat
-
-Host: javascript.info
-
-Origin: https://javascript.info
-
-Connection: Upgrade
-
-Upgrade: websocket
-
-Sec-WebSocket-Key: Iv8io/9s+lYFgZWcXczP8Q==
-
-Sec-WebSocket-Version: 13
+GET /chat
+Host: javascript.info
+Origin: https://javascript.info
+Connection: Upgrade
+Upgrade: websocket
+Sec-WebSocket-Key: Iv8io/9s+lYFgZWcXczP8Q==
+Sec-WebSocket-Version: 13
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -196,19 +191,21 @@ Sec-WebSocket-Version: 13
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> If the server agrees to switch to WebSocket, it should send code 101 response. After the agreement is completed between the browser and server, the data is transferred using WebSocket protocol from that point on.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
 
 ```js
-101 Switching Protocols
-
-Upgrade: websocket
-
-Connection: Upgrade
-
-Sec-WebSocket-Accept: hsBlbuDTkk24srzEOTBUlZAlC2g=
+101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: hsBlbuDTkk24srzEOTBUlZAlC2g=
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -230,25 +227,51 @@ Sec-WebSocket-Accept: hsBlbuDTkk24srzEOTBUlZAlC2g=
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Sec-WebSocket-Protocol: soap, wamp means that we would like to transfer not just any data, but the data in SOAP or WAMP (“The WebSocket Application Messaging Protocol”) protocols. WebSocket subprotocols are registered in the IANA catalogue. So, this header describes data formats that we are going to use. This optional header is set using the second parameter of new WebSocket. That is the array of subprotocols, e.g., if we would like to use SOAP or WAMP. The server should respond with a list of protocols and extensions that it agrees to use.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Syntax Example:</strong><br /><br />
 
-Syntax Example:
+  <div></div>
 
 ```html
 <script>
   let socket = new WebSocket('wss://javascript.info/chat', ['soap', 'wamp']);
 </script>
-
-Request: GET /chat Host: javascript.info Upgrade: websocket Connection: Upgrade
-Origin: https://javascript.info Sec-WebSocket-Key: Iv8io/9s+lYFgZWcXczP8Q==
-Sec-WebSocket-Version: 13 Sec-WebSocket-Extensions: deflate-frame
-Sec-WebSocket-Protocol: soap, wamp Response: 101 Switching Protocols
-Upgrade: websocket Connection: Upgrade
-Sec-WebSocket-Accept: hsBlbuDTkk24srzEOTBUlZAlC2g=
-Sec-WebSocket-Extensions: deflate-frame Sec-WebSocket-Protocol: soap
 ```
+
+  </div><br />
+  <div><strong className="codeExample">Request:</strong><br /><br />
+
+  <div></div>
+
+```js
+GET /chat
+Host: javascript.info
+Upgrade: websocket
+Connection: Upgrade
+Origin: https://javascript.info
+Sec-WebSocket-Key: Iv8io/9s+lYFgZWcXczP8Q==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: deflate-frame
+Sec-WebSocket-Protocol: soap, wamp
+```
+
+  </div><br />
+  <div><strong className="codeExample">Response:</strong><br /><br />
+
+  <div></div>
+
+```js
+101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: hsBlbuDTkk24srzEOTBUlZAlC2g=
+Sec-WebSocket-Extensions: deflate-frame
+Sec-WebSocket-Protocol: soap
+```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -282,19 +305,21 @@ Sec-WebSocket-Extensions: deflate-frame Sec-WebSocket-Protocol: soap
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> When we receive the data, text always comes as string. And for binary data, we can choose between Blob and ArrayBuffer formats. That’s set by socket.binaryType property, it’s "blob" by default, so binary data comes as Blob objects. Blob is a high-level binary object, it directly integrates with &#8249;a&#8250;, &#8249;img&#8250; and other tags, so that is a sane default. But for binary processing, to access individual data bytes, we can change it to "arraybuffer".
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 socket.binaryType = 'arraybuffer';
-
 socket.onmessage = (event) => {
-  // event.data is either a string (if text) or arraybuffer (if binary)
+  // event.data is either a string (if text) or arraybuffer (if binary)
 };
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -304,23 +329,24 @@ socket.onmessage = (event) => {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> We can call socket.send(data) again and again. But the data will be buffered (stored) in memory and sent out only as fast as network speed allows. The socket.bufferedAmount property stores how many bytes remain buffered at this moment, waiting to be sent over the network. We can examine it to see whether the socket is available for transmission. We will have to set an interval and check the buffered amount and re-initiate a call for more data.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-// every 100ms examine the socket and send more data
-
-// only if all the existing data was sent out
-
+// every 100ms examine the socket and send more data
+// only if all the existing data was sent out
 setInterval(() => {
   if (socket.bufferedAmount == 0) {
     socket.send(moreData());
   }
 }, 100);
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -330,27 +356,28 @@ setInterval(() => {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Normally, when a party wants to close the connection (both browser and server have equal rights), they send a “connection close frame” with a numeric code and a textual reason. We can explicitly close it from the browser using socket.close(). The code is a special WebSocket closing code, this is optional. The reason is a string that describes the reason of closing, also optional. Then the other party in close event handler gets the code and the reason.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-**Syntax:** socket.close([code], [reason])
+<strong>Syntax: </strong> socket.close([code], [reason]);<br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-// closing party:
+// closing party:
+socket.close(1000, 'Work complete');
 
-socket.close(1000, 'Work complete');
-
-// the other party
-
+// the other party
 socket.onclose = (event) => {
-  // event.code === 1000
-  // event.reason === "Work complete"
-  // event.wasClean === true (clean close)
+  // event.code === 1000
+  // event.reason === "Work complete"
+  // event.wasClean === true (clean close)
 };
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -360,21 +387,23 @@ socket.onclose = (event) => {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The two most common WebSocket closure codes are 1000 and 1006. Code 1000 is the default, normal closure; the connection successfully completed whatever purpose for which it was created. Code 1006 is considered an abnormal closure, it used to indicate that a connection was closed abnormally (that is, with no close frame being sent) when a status code is expected. WebSocket codes are somewhat like HTTP codes, but different. In particular, any codes less than 1000 are reserved, there’ll be an error if we try to set such a code.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-// in case connection is broken
-
+// in case connection is broken
 socket.onclose = (event) => {
-  // event.code === 1006
-  // event.reason === ""
-  // event.wasClean === false (no closing frame)
+  // event.code === 1006
+  // event.reason === ""
+  // event.wasClean === false (no closing frame)
 };
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 

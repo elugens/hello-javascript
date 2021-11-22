@@ -30,32 +30,30 @@ sidebar_position: 4
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> To implement the AbortController object, we must create a new AbortController constructor. The controller is a remarkably simple object consisting of a single abort method and property signal that allows to set event listeners on it. When abort() is called the controller.signal emits the abort event and the controller.signal.aborted property becomes true. AbortController is just a mean to pass abort events when abort() is called on it.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let controller = new AbortController();
-
 let signal = controller.signal;
 
-// The party that performs a cancelable operation
-
-// gets the "signal" object
-
-// and sets the listener to trigger when controller.abort() is called
-
+// The party that performs a cancelable operation
+// gets the "signal" object
+// and sets the listener to trigger when controller.abort() is called
 signal.addEventListener('abort', () => alert('abort!'));
 
-// The other party, that cancels (at any point later):
+// The other party, that cancels (at any point later):
+controller.abort(); // abort!
 
-controller.abort(); // abort!
-// The event triggers and signal.aborted becomes true
-
-alert(signal.aborted); // true
+// The event triggers and signal.aborted becomes true
+alert(signal.aborted); // true
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -77,41 +75,32 @@ alert(signal.aborted); // true
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, to be able to cancel fetch, we must pass the signal property of an AbortController as a fetch option. The fetch method knows how to work with AbortController. It will listen to abort events on signal. Now, to abort, we call controller.abort(). At that point, fetch gets the event from signal and aborts the request.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-// abort in 1 second
+// abort in 1 second
+let controller = new AbortController();
+setTimeout(() => controller.abort(), 1000);
 
-let controller = new AbortController();
-
-setTimeout(() => controller.abort(), 1000);
-
-try {
-
-    let response = await fetch('/article/fetch-abort/demo/hang', {
-
-      signal: controller.signal ß
-
-    });
-
-} catch(err) {
-
-    if (err.name == 'AbortError') { // handle abort()
-
-      alert("Aborted!");
-
-    } else {
-
-      throw err;
-
-    }
-
+try {
+  let response = await fetch('/article/fetch-abort/demo/hang', {
+    signal: controller.signal 
+  });
+} catch(err) {
+  if (err.name == 'AbortError') { // handle abort()
+    alert("Aborted!");
+  } else {
+    throw err;
+  }
 }
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -121,30 +110,29 @@ try {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, AbortController is scalable by default. It allows us to cancel multiple fetches at once. This can be exceptionally helpful when we are deal with an array.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-let urls = [...]; // a list of urls to fetch in parallel
+let urls = [...]; // a list of urls to fetch in parallel
 
-let controller = new AbortController();
+let controller = new AbortController();
 
-// an array of fetch promises
-
-let fetchJobs = urls.map(url => fetch(url, {
-
-    signal: controller.signal
-
+// an array of fetch promises
+let fetchJobs = urls.map(url => fetch(url, {
+  signal: controller.signal
 }));
 
-let results = await Promise.all(fetchJobs);
+let results = await Promise.all(fetchJobs);
 
-// if controller.abort() is called from anywhere,
-
-// it aborts all fetches
+// if controller.abort() is called from anywhere,
+// it aborts all fetches
 ```
+
+  </div>
+  </div>
+</details>
 
 ---

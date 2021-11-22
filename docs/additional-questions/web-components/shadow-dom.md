@@ -43,23 +43,25 @@ sidebar_position: 3
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> No, we cannot get built-in shadow DOM elements by regular JavaScript calls or selectors. These are not regular children, but rather a powerful encapsulation technique. However, we can access their pseudo attributes via the CSS styles. This exists for historical reasons to ensure that the CSS styles have access to the sub-elements.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```html
 <style>
-  /* make the slider track red */
-
-  input::-webkit-slider-runnable-track  {
+  /* make the slider track red */
+  input::-webkit-slider-runnable-track {
     background: red;
   }
 </style>
 
 <input type="range" />
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -81,11 +83,10 @@ Code Example:
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, shadow tree can be used in Custom Elements to hide component internals and apply component-local styles.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```html
 <script>
@@ -94,20 +95,20 @@ Code Example:
     class extends HTMLElement {
       connectedCallback() {
         const shadow = this.attachShadow({ mode: 'open' });
-
         shadow.innerHTML = `<p>
-
-        Hello, ${this.getAttribute('name')}
-
-      </p>`;
+      Hello, ${this.getAttribute('name')}
+    </p>`;
       }
     }
   );
 </script>
 
-<show-hello name="John"></show-hello>
-<!-- shows Hello, John -->
+<show-hello name="John"></show-hello> // shows Hello, John
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -129,15 +130,15 @@ Code Example:
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The Element.attachShadow() method attaches a shadow DOM tree to the specified element and returns a reference to its ShadowRoot. To initiate the Shadow Root, we must use the mode argument with the open parameter. The open parameter makes element of the shadow root accessible outside of the root. The counter parameter is closed that denies access to the nodes of the closed shadow root from JavaScript outside. There is an additional argument that is rarely used, delegatesFocus is a Boolean, when set to true specifies behavior that mitigates custom element issues around focus-ability.
-    </div>
-  </div>
-</details>
+    </div><br />
+    <strong>Syntax: </strong> const shadow = this.attachShadow(&#123;mode: 'open'&#125;);<br /><br />
 
 :::note
 You cannot attach a shadow root to every type of element. There are some that cannot have a shadow DOM for security reasons (for example `<a>`), and more besides.
 :::
 
-**Syntax:** const shadow = this.attachShadow({mode: 'open'})
+  </div>
+</details>
 
 ---
 
@@ -147,40 +148,37 @@ You cannot attach a shadow root to every type of element. There are some that ca
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Shadow DOM is strongly delimited from the main document. Shadow DOM elements are not visible to querySelector from the light DOM. Shadow DOM elements may have ids that conflict with those in the light DOM. They must be unique only within the shadow tree. Shadow DOM has own stylesheets. Style rules from the outer DOM do not get applied.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-**Code Example:**
+  <div></div>
 
 ```html
 <style>
-
-  /* document style won't apply to the shadow tree inside #elem (1) */
-
-  p { color: red; }
+  /* document style won't apply to the shadow tree inside #elem (1) */
+  p {
+    color: red;
+  }
 </style>
 
 <div id="elem"></div>
 
 <script>
   elem.attachShadow({ mode: 'open' });
-
-  // shadow tree has its own style (2)
-
+  // shadow tree has its own style (2)
   elem.shadowRoot.innerHTML = `
+    <style> p { font-weight: bold; } </style>
+    <p>Hello, John!</p>
+  `;
 
-      <style> p { font-weight: bold; } </style>
-
-      <p>Hello, John!</p>
-
-    `;
-
-  // <p> is only visible from queries inside the shadow tree (3)
-
-  alert(document.querySelectorAll('p').length); // 0
-  alert(elem.shadowRoot.querySelectorAll('p').length); // 1
+  // <p> is only visible from queries inside the shadow tree (3)
+  alert(document.querySelectorAll('p').length); // 0
+  alert(elem.shadowRoot.querySelectorAll('p').length); // 1
 </script>
 ```
+
+  </div>
+  </div>
+</details>
 
 ---

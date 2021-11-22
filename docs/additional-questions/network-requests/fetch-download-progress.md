@@ -18,33 +18,32 @@ sidebar_position: 3
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> In JavaScript, we can use the fetch method to track download progress. It should be noted, there is currently no way for fetch to track upload progress. For that purpose, we should use the XMLHttpRequest. To track download progress, we can use response.body property. It is ReadableStream – a special object that provides body chunk-by-chunk, as it comes. Readable streams are described in the Streams API specification. Unlike response.text(), response.json() and other methods, response.body gives full control over the reading process, and we can count how much is consumed at any moment.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-// instead of response.json() and other methods
-
+// instead of response.json() and other methods
 const reader = response.body.getReader();
 
-// infinite loop while the body is downloading
-
+// infinite loop while the body is downloading
 while (true) {
-  // done is true for the last chunk
-
-  // value is Uint8Array of the chunk bytes
-
+  // done is true for the last chunk
+  // value is Uint8Array of the chunk bytes
   const { done, value } = await reader.read();
 
   if (done) {
     break;
   }
 
-  console.log(`Received ${value.length} bytes`);
+  console.log(`Received ${value.length} bytes`);
 }
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -55,29 +54,25 @@ while (true) {
   <div>
   <div><strong>Interview Response:</strong> The result of await reader.read() call is an object with two properties including done and value. The done property returns true when the reading is complete, otherwise false. The value is a typed array of bytes, Uint8Array.</div><br />
   <div><strong>Additional Info:</strong> Streams API also describes asynchronous iteration over ReadableStream with for await..of loop, but it’s not yet widely supported, so we can use while loop.
-  </div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-// Step 1: start the fetch and obtain a reader
-
+// Step 1: start the fetch and obtain a reader
 let response = await fetch(
   'https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits?per_page=100'
 );
 
 const reader = response.body.getReader();
 
-// Step 2: get total length
-
+// Step 2: get total length
 const contentLength = +response.headers.get('Content-Length');
 
-// Step 3: read the data
-
-let receivedLength = 0; // received that many bytes at the moment
-let chunks = []; // array of received binary chunks (comprises the body)
+// Step 3: read the data
+let receivedLength = 0; // received that many bytes at the moment
+let chunks = []; // array of received binary chunks (comprises the body)
 while (true) {
   const { done, value } = await reader.read();
 
@@ -86,31 +81,29 @@ while (true) {
   }
 
   chunks.push(value);
-
   receivedLength += value.length;
 
-  console.log(`Received ${receivedLength} of ${contentLength}`);
+  console.log(`Received ${receivedLength} of ${contentLength}`);
 }
 
-// Step 4: concatenate chunks into single Uint8Array
-
-let chunksAll = new Uint8Array(receivedLength); // (4.1)
+// Step 4: concatenate chunks into single Uint8Array
+let chunksAll = new Uint8Array(receivedLength); // (4.1)
 let position = 0;
-
 for (let chunk of chunks) {
-  chunksAll.set(chunk, position); // (4.2)
+  chunksAll.set(chunk, position); // (4.2)
   position += chunk.length;
 }
 
-// Step 5: decode into a string
-
+// Step 5: decode into a string
 let result = new TextDecoder('utf-8').decode(chunksAll);
 
-// We're done!
-
+// We're done!
 let commits = JSON.parse(result);
-
 alert(commits[0].author.login);
 ```
+
+  </div>
+  </div>
+</details>
 
 ---

@@ -42,31 +42,27 @@ sidebar_position: 5
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The slot="..." attribute is only valid for direct children of the shadow host. For nested elements it is ignored. If there are multiple elements in light DOM with the same slot name, they are appended into the slot, one after another.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-**Code Example:**
+  <div></div>
 
 ```html
-<!-- invalid slot, must be direct child of user-card -->
-
-      <span slot="birthday">01.01.2001</span>
-
-    </div>
-
+<!-- invalid slot, must be direct child of user-card -->
+    <span slot="birthday">01.01.2001</span>
+  </div>
 </user-card>
 
-<!-- The slots below are appended in order -->
-
+<!-- The slots below are appended in order -->
 <user-card>
-
-    <span slot="username">John</span>
-
-    <span slot="username">Smith</span>
-
+  <span slot="username">John</span>
+  <span slot="username">Smith</span>
 </user-card>
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -88,58 +84,46 @@ sidebar_position: 5
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The first &#8249;slot&#8250; in shadow DOM that does not have a name is a “default” slot. It gets all nodes from the light DOM that are not slotted elsewhere.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
-```js
+```html
 <script>
   customElements.define(
     'user-card',
     class extends HTMLElement {
       connectedCallback() {
         this.attachShadow({ mode: 'open' });
-
         this.shadowRoot.innerHTML = `
-
-      <div>Name:
-
-        <slot name="username"></slot>
-
-      </div>
-
-      <div>Birthday:
-
-        <slot name="birthday"></slot>
-
-      </div>
-
-      <fieldset>
-
-        <legend>Other information</legend>
-
-        <slot></slot> // first unnamed slot
-
-      </fieldset>
-
-      `;
+    <div>Name:
+      <slot name="username"></slot>
+    </div>
+    <div>Birthday:
+      <slot name="birthday"></slot>
+    </div>
+    <fieldset>
+      <legend>Other information</legend>
+      <slot></slot>  first unnamed slot
+    </fieldset>
+    `;
       }
     }
   );
 </script>
 
 <user-card>
-  <div>I like to swim.</div>
-
-  <span slot="username">John Smith</span>
-
+  <div>I like to swim.</div>
+  <span slot="username">John Smith</span>
   <span slot="birthday">01.01.2001</span>
-
-  <div>...And play volleyball too!</div>
+  <div>...And play volleyball too!</div>
 </user-card>
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -149,19 +133,16 @@ Code Example:
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The HTML slot element has three main methods including assignedSlot, assignedNodes, and assignedElements used to handle or assess element node assignment. The assignedSlot method returns the &#8249;slot&#8250; element that the node is assigned to. The assignedElements() method returns a sequence of the nodes assigned to this slot, and if the flatten option is set to true, the assigned nodes of any other slots that are descendants of this slot. If no assigned nodes are found, it returns the slot's fallback content. The assignedSlot method returns an HTMLSlotElement representing the &#8249;slot&#8250; element the node is inserted in. These methods are useful when we need not just show the slotted content, but also track it in JavaScript.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```html
 <custom-menu id="menu">
-  <span slot="title">Candy menu</span>
-
+  <span slot="title">Candy menu</span>
   <li slot="item">Lollipop</li>
-
-  <li slot="item">Fruit Toast</li>
+  <li slot="item">Fruit Toast</li>
 </custom-menu>
 
 <script>
@@ -172,28 +153,21 @@ Code Example:
 
       connectedCallback() {
         this.attachShadow({ mode: 'open' });
+        this.shadowRoot.innerHTML = `<div class="menu">
+      <slot name="title"></slot>
+      <ul><slot name="item"></slot></ul>
+    </div>`;
 
-        this.shadowRoot.innerHTML = `<div class="menu">
-
-        <slot name="title"></slot>
-
-        <ul><slot name="item"></slot></ul>
-
-      </div>`;
-
-        // triggers when slot content changes
-
+        // triggers when slot content changes
         this.shadowRoot.firstElementChild.addEventListener(
           'slotchange',
           (e) => {
             let slot = e.target;
-
             if (slot.name == 'item') {
               this.items = slot
                 .assignedElements()
                 .map((elem) => elem.textContent);
-
-              alert('Items: ' + this.items);
+              alert('Items: ' + this.items);
             }
           }
         );
@@ -201,12 +175,15 @@ Code Example:
     }
   );
 
-  // items update after 1 second
-
+  // items update after 1 second
   setTimeout(() => {
-    menu.insertAdjacentHTML('beforeEnd', '<li slot="item">Cup Cake</li>');
+    menu.insertAdjacentHTML('beforeEnd', '<li slot="item">Cup Cake</li>');
   }, 1000);
 </script>
 ```
+
+  </div>
+  </div>
+</details>
 
 ---

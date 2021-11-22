@@ -103,21 +103,17 @@ Code Snippet - Fenced Code Block Example
   <div><strong>Interview Response:</strong> Script files are attached to HTML with the src attribute including the absolute path to the JS file.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-<strong>Syntax: </strong> elem.dispatchEvent(event);<br /><br />
-
   <div></div>
 
-```html
-<button id="elem" onclick="alert('Click!');">Auto-click</button>
+```js
+let regexp = /javascript/g; // (regexp just created: regexp.lastIndex=0)
 
-<script>
-  let event = new Event('click');
-  elem.dispatchEvent(event);
-</script>
+alert(regexp.test('javascript')); // true (regexp.lastIndex=10 now)
+alert(regexp.test('javascript')); // false
 ```
 
   </div>
   </div>
 </details>
 
-<strong>Syntax: </strong> elem.dispatchEvent(event);<br /><br />
+<strong>Syntax: </strong> <br /><br />

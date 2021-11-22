@@ -18,19 +18,22 @@ sidebar_position: 5
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> If we send a fetch request to another website, the fetch request will more than likely fail. Cross-origin requests are defined as requests sent to another domain (even a subdomain) or protocol or port that require special headers from the remote side.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 try {
   await fetch('http://example.com');
 } catch (err) {
-  alert(err); // Failed to fetch
+  alert(err); // Failed to fetch
 }
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -64,20 +67,21 @@ try {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, if a request is cross-origin, the browser always adds the Origin header to it. There is no way to change this behavior because it is controlled by the browser. The server can inspect the Origin and, if it agrees to accept such a request, add a special header Access-Control-Allow-Origin to the response. That header should contain the allowed origin, or a star (*). Then the response is successful, otherwise it is an error, and it will fail.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```js
-GET / request
-
-Host: anywhere.com
-
-Origin: https://javascript.help
+GET / request
+Host: anywhere.com
+Origin: https://javascript.help
 ...
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -111,25 +115,23 @@ Origin: https://javascript.help
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> To grant JavaScript access to any other response header (unsafe header names), the server must send the Access-Control-Expose-Headers header. It contains a comma-separated list of unsafe header names that should be made accessible.
-    </div>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+200 OK
+Content-Type:text/html; charset=UTF-8
+Content-Length: 12345
+API-Key: 2c9de507f2c54aa1
+Access-Control-Allow-Origin: https://javascript.info
+Access-Control-Expose-Headers: Content-Length, API-Key // <--
+```
+
+  </div>
   </div>
 </details>
-
-Example:
-
-```json
-200 OK
-
-Content-Type:text/html; charset=UTF-8
-
-Content-Length: 12345
-
-API-Key: 2c9de507f2c54aa1
-
-Access-Control-Allow-Origin: https://javascript.info
-
-Access-Control-Expose-Headers: Content-Length, API-Key
-```
 
 ---
 

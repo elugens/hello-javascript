@@ -18,11 +18,10 @@ sidebar_position: 1
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> MutationObserver is a built-in object that observes a DOM element and fires a callback when it detects a change. It is designed as a replacement for the older Mutation Events feature, which was part of the DOM3 Events specification.
-    </div>
+    </div><br/>
+    <strong>Syntax: </strong> let observer = new MutationObserver(callback);<br /><br />
   </div>
 </details>
-
-**Syntax:** let observer = new MutationObserver(callback)
 
 ---
 
@@ -56,11 +55,10 @@ sidebar_position: 1
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, you can stop or disconnect the observer by calling the disconnect() method. It tells the observer to stop watching for mutations. The observer can be reused by calling its observe() method again.
-    </div>
+    </div><br />
+    <strong>Syntax: </strong> mutationObserver.disconnect();<br /><br />
   </div>
 </details>
-
-**Syntax:** mutationObserver.disconnect()
 
 ---
 
@@ -70,25 +68,24 @@ sidebar_position: 1
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> When we stop the observing, it might be possible that some changes were not yet processed by the observer. In such cases, we use observer.takeRecords() – gets a list of unprocessed mutation records – those that happened, but the callback has not handled them.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-// get a list of unprocessed mutations
-
-// should be called before disconnecting,
-
-// if you care about possibly unhandled recent mutations
-
+// get a list of unprocessed mutations
+// should be called before disconnecting,
+// if you care about possibly unhandled recent mutations
 let mutationRecords = observer.takeRecords();
 
-// stop tracking changes
-
+// stop tracking changes
 observer.disconnect();
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 

@@ -18,20 +18,22 @@ sidebar_position: 4
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The caret ^ and dollar $ characters have special meaning in a regexp. They are called “anchors”. The caret ^ matches at the beginning of the text, and the dollar $ represents the end. It should be noted, we could use the startsWith and endsWith methods to perform the same task, which is recommended. Regular expressions should be used for more complex tests.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-let str1 = 'Mary had a little lamb';
+let str1 = 'Mary had a little lamb';
+alert(/^Mary/.test(str1)); // true
 
-alert(/^Mary/.test(str1)); // true
-let str2 = "it's fleece was white as snow";
-
-alert(/snow$/.test(str2)); // true
+let str2 = "it's fleece was white as snow";
+alert(/snow$/.test(str2)); // true
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -41,22 +43,23 @@ alert(/snow$/.test(str2)); // true
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Both anchors, caret, and dollar sign, together ^...$ are often used to test whether a string fully matches the pattern. For instance, to check if the user input is in the right format.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let goodInput = '12:34';
-
 let badInput = '12:345';
 
 let regexp = /^\d\d:\d\d$/;
-
-alert(regexp.test(goodInput)); // true
-alert(regexp.test(badInput)); // false
+alert(regexp.test(goodInput)); // true
+alert(regexp.test(badInput)); // false
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 

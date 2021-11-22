@@ -18,29 +18,30 @@ sidebar_position: 11
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> A capturing group is a pattern enclosed in parentheses. It two affects consisting of getting part of match as a separate or isolated item in an array of items. If we add a quantifier after the parentheses, it is combined with the parentheses as a group on the string.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-// Example: repeating word pattern
+// Example: repeating word pattern
+alert('Gogogo now!'.match(/(go)+/gi)); // "Gogogo"
 
-alert('Gogogo now!'.match(/(go)+/gi)); // "Gogogo"
-// Example: group of domains
-
+// Example: group of domains
 let regexp = /(\w+\.)+\w+/g;
 
-alert('site.com my.site.com'.match(regexp)); // site.com,my.site.com
-// Example: email
+alert('site.com my.site.com'.match(regexp)); // site.com,my.site.com
 
+// Example: email
 let regexp = /[-.\w]+@([\w-]+\.)+[\w-]+/g;
 
-alert('my@mail.com @ his@site.com.uk'.match(regexp));
-
-// my@mail.com, his@site.com.uk
+alert('my@mail.com @ his@site.com.uk'.match(regexp));
+// my@mail.com, his@site.com.uk
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -50,20 +51,23 @@ alert('my@mail.com @ his@site.com.uk'.match(regexp));
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Parentheses are numbered from left to right. The search engine memorizes the content matched by each of them and allows to get it in the result. They are indexed in an array structure in the order the matched. The method str.match(regexp), if regexp has no flag g, looks for the first match and returns it as an array.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-let str = '<h1>Hello, world!</h1>';
+let str = '<h1>Hello, world!</h1>';
 
-let tag = str.match(/<(.\*?)>/);
+let tag = str.match(/<(.*?)>/);
 
-alert(tag[0]); // <h1>
-alert(tag[1]); // h1
+alert(tag[0]); // <h1>
+alert(tag[1]); // h1
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -73,24 +77,26 @@ alert(tag[1]); // h1
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> When parentheses are nested in regular expressions it uses an outward in and left to right behavior (algorithm). Basically, the outer bounds of the parentheses are collected and pushed into an array structure, then each parenthesis with the parent are collected and pushed to the array in order from left to right.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-let str = '<span class="my">';
+let str = '<span class="my">';
 
-let regexp = /<(([a-z]+)\s\*([^>]\*))>/;
+let regexp = /<(([a-z]+)\s*([^>]*))>/;
 
 let result = str.match(regexp);
-
-alert(result[0]); // <span class="my">
-alert(result[1]); // span class="my"
-alert(result[2]); // span
-alert(result[3]); // class="my"
+alert(result[0]); // <span class="my">
+alert(result[1]); // span class="my"
+alert(result[2]); // span
+alert(result[3]); // class="my"
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -100,28 +106,32 @@ alert(result[3]); // class="my"
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Even if a group is optional and does not exist in the match (e.g., has the quantifier (...)?), the corresponding result array item is present and equals undefined.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let match = 'a'.match(/a(z)?(c)?/);
 
-alert(match.length); // 3
-alert(match[0]); // a (whole match)
-alert(match[1]); // undefined
-alert(match[2]); // undefined
+alert(match.length); // 3
+alert(match[0]); // a (whole match)
+alert(match[1]); // undefined
+alert(match[2]); // undefined
+
 /////////////////
 
 let match = 'ac'.match(/a(z)?(c)?/);
 
-alert(match.length); // 3
-alert(match[0]); // ac (whole match)
-alert(match[1]); // undefined, because there's nothing for (z)?
-alert(match[2]); // c
+alert(match.length); // 3
+alert(match[0]); // ac (whole match)
+alert(match[1]); // undefined, because there's nothing for (z)?
+alert(match[2]); // c
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -131,51 +141,51 @@ alert(match[2]); // c
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The outcome is a deep search for all matches within the regex pattern. The return values will include the both the inner and outer values including the capturing group. It should be noted, that the matchAll method returns an iterable object and it may require a Polyfill, because it is relatively new.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-// Using Array.from to create an new array
+// Using Array.from to create an new array
+let results = '<h1> <h2>'.matchAll(/<(.*?)>/gi);
 
-let results = '<h1> <h2>'.matchAll(/<(.\*?)>/gi);
+// results - is not an array, but an iterable object
+alert(results); // [object RegExp String Iterator]
 
-// results - is not an array, but an iterable object
+alert(results[0]); // undefined (*)
 
-alert(results); // [object RegExp String Iterator]
-alert(results[0]); // undefined (\*)
-results = Array.from(results); // let's turn it into array <--
-alert(results[0]); // <h1>,h1 (1st tag)
-alert(results[1]); // <h2>,h2 (2nd tag)
-// Using a LOOP to get our results - recommended
+results = Array.from(results); // let's turn it into array <--
 
-let results = '<h1> <h2>'.matchAll(/<(.\*?)>/gi);
+alert(results[0]); // <h1>,h1 (1st tag)
+alert(results[1]); // <h2>,h2 (2nd tag)
+
+// Using a LOOP to get our results - recommended
+let results = '<h1> <h2>'.matchAll(/<(.*?)>/gi);
 
 for (let result of results) {
   alert(result);
-
-  // first alert: <h1>,h1
-
-  // second: <h2>,h2
+  // first alert: <h1>,h1
+  // second: <h2>,h2
 }
 
-// DESTRUCTURING:
+// DESTRUCTURING:
+let [tag1, tag2] = '<h1> <h2>'.matchAll(/<(.*?)>/gi);
 
-let [tag1, tag2] = '<h1> <h2>'.matchAll(/<(.\*?)>/gi);
-
-// Full destructuring example:
-
-let results = '<h1> <h2>'.matchAll(/<(.\*?)>/gi);
+// Full destructuring example:
+let results = '<h1> <h2>'.matchAll(/<(.*?)>/gi);
 
 let [tag1, tag2] = results;
 
-alert(tag1[0]); // <h1>
-alert(tag1[1]); // h1
-alert(tag1.index); // 0
-alert(tag1.input); // <h1> <h2>
+alert(tag1[0]); // <h1>
+alert(tag1[1]); // h1
+alert(tag1.index); // 0
+alert(tag1.input); // <h1> <h2>
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -185,46 +195,43 @@ alert(tag1.input); // <h1> <h2>
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Named groups is the process of capturing the text matched by “regex” into the group “name”. The name can contain letters and numbers but must start with a letter. These can be achieved by putting `?&#8249;name&#8250;` immediately after the opening parentheses. Named groups are perfect for extremely complex patterns that need to split hairs (filter) amongst a group of names.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-**Syntax:** `let dateRegexp = /(?<year>[0-9]{4})-(?<month>[0-9]{2})-(?<day>[0-9]{2})/`
+<strong>Syntax: </strong> let dateRegexp = /(?&#8249;year&#8250;[0-9]&#123;4&#125;)-(?&#8249;month&#8250;[0-9]&#123;2&#125;)-(?&#8249;day&#8250;[0-9]&#123;2&#125;)/<br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-// Basic Approach
-
-let dateRegexp = /(?<year>[0-9]{4})-(?<month>[0-9]{2})-(?<day>[0-9]{2})/;
-ß;
-
-let str = '2019-04-30';
+// Basic Approach
+let dateRegexp = /(?<year>[0-9]{4})-(?<month>[0-9]{2})-(?<day>[0-9]{2})/; 
+let str = "2019-04-30";
 
 let groups = str.match(dateRegexp).groups;
 
-alert(groups.year); // 2019
-alert(groups.month); // 04
-alert(groups.day); // 30
-// Complex Approach
+alert(groups.year); // 2019
+alert(groups.month); // 04
+alert(groups.day); // 30
 
-let dateRegexp = /(?<year>[0-9]{4})-(?<month>[0-9]{2})-(?<day>[0-9]{2})/g;
-ß;
+// Complex Approach
+let dateRegexp = /(?<year>[0-9]{4})-(?<month>[0-9]{2})-(?<day>[0-9]{2})/g; 
 
-let str = '2019-10-30 2020-01-01';
+let str = "2019-10-30 2020-01-01";
 
 let results = str.matchAll(dateRegexp);
 
-for (let result of results) {
-  let { year, month, day } = result.groups;
+for(let result of results) {
+  let {year, month, day} = result.groups;
 
   alert(`${day}.${month}.${year}`);
-
-  // first alert: 30.10.2019
-
-  // second: 01.01.2020
+  // first alert: 30.10.2019
+  // second: 01.01.2020
 }
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -234,30 +241,30 @@ for (let result of results) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Method str.replace(regexp, replacement) that replaces all matches with regexp in str allows to use parentheses contents in the replacement string. That has done using $n, where n is the group number (Example: $2 would be the second value we are targeting, kind of like index[1]).
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-// Basic Example:
+// Basic Example:
+let str = 'John Bull';
+let regexp = /(\w+) (\w+)/;
 
-let str = 'John Bull';
+alert(str.replace(regexp, '$2, $1')); // Bull, John
 
-let regexp = /(\w+) (\w+)/;
-
-alert(str.replace(regexp, '$2, $1')); // Bull, John
-// More Complex example using capturing groups
-
+// More Complex example using capturing groups
 let regexp = /(?<year>[0-9]{4})-(?<month>[0-9]{2})-(?<day>[0-9]{2})/g;
 
-let str = '2019-10-30, 2020-01-01';
+let str = '2019-10-30, 2020-01-01';
 
 alert(str.replace(regexp, '$<day>.$<month>.$<year>'));
-
-// 30.10.2019, 01.01.2020
+// 30.10.2019, 01.01.2020
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -267,24 +274,26 @@ alert(str.replace(regexp, '$<day>.$<month>.$<year>'));
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Sometimes we need parentheses to correctly apply a quantifier, but we do not want their contents in results. A group may be excluded by adding ?: in the beginning. For instance, if we want to find (go)+, but don’t want the parentheses contents (go) as a separate array item, we can write: (?:go)+.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-let str = 'Gogogo John!';
+let str = 'Gogogo John!';
 
-// ?: exludes 'go' from capturing
-
-let regexp = /(?:go)+ (\w+)/i;
+// ?: exludes 'go' from capturing
+let regexp = /(?:go)+ (\w+)/i;
 
 let result = str.match(regexp);
 
-alert(result[0]); // Gogogo John (full match)
-alert(result[1]); // John
-alert(result.length); // 2 (no more items in the array)
+alert(result[0]); // Gogogo John (full match)
+alert(result[1]); // John
+alert(result.length); // 2 (no more items in the array)
 ```
+
+  </div>
+  </div>
+</details>
 
 ---

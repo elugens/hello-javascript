@@ -18,11 +18,10 @@ sidebar_position: 4
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> A built-in &#8249;template&#8250; element serves as a storage for HTML markup templates. The browser ignores it contents, only checks for syntax validity, but we can access and use it in JavaScript, to create other elements. In theory, we could create any invisible element somewhere in HTML for HTML markup storage purposes. In theory, we could create any invisible element somewhere in HTML for HTML markup storage purposes. What makes the &#8249;template&#8250; element special is its content can be any valid HTML, even if it normally requires a proper enclosing tag. We can also use styles and scripts inside of our templates without affecting the load of the document. The browser considers &#8249;template&#8250; content “out of the document”: styles are not applied, scripts are not executed, &#8249;video autoplay&#8250; is not run, etc. The content becomes live (styles apply, scripts run etc) when we insert it into the document.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-**Code Example:**
+  <div></div>
 
 ```html
 <template>
@@ -33,15 +32,19 @@ sidebar_position: 4
 
 <template>
   <style>
-
-    p { font-weight: bold; }
+    p {
+      font-weight: bold;
+    }
   </style>
-
   <script>
     alert('Hello');
   </script>
 </template>
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -51,32 +54,32 @@ sidebar_position: 4
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> When we insert template content into the DOM the template content is available in its content property as a DocumentFragment as a special type of DOM node. We can treat it as any other DOM node, except one special property, when we insert it somewhere, its children are inserted instead. We can also insert the template content into the Shadow DOM in the same fashion.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-**Code Example:**
+  <div></div>
 
 ```html
 <template id="tmpl">
   <script>
     alert('Hello');
   </script>
-
-  <div class="message">Hello, world!</div>
+  <div class="message">Hello, world!</div>
 </template>
 
 <script>
   let elem = document.createElement('div');
 
-  // Clone the template content to reuse it multiple times
-
+  // Clone the template content to reuse it multiple times
   elem.append(tmpl.content.cloneNode(true));
 
   document.body.append(elem);
-
-  // Now the script from <template> runs
+  // Now the script from <template> runs
 </script>
 ```
+
+  </div>
+  </div>
+</details>
 
 ---

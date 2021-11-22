@@ -30,22 +30,23 @@ sidebar_position: 1
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> There are two syntaxes that can be used to create a regular expression object including the long and short syntaxes. The long syntax uses the RegExp object with optional flags and the short syntax uses forward slashes with optional flags. Slashes /.../ tell JavaScript that we are creating a regular expression. They play the same role as quotes for strings. In both cases regexp becomes an instance of the built-in RegExp class.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-**Syntax Examples:**
+  <div></div>
 
 ```js
-// Long Syntax
-
+// Long Syntax
 regexp = new RegExp('pattern', 'flags');
 
-// Short Syntax
-
-regexp = /pattern/; // no flags
-regexp = /pattern/gim; // with flags g,m and i (to be covered soon)
+// Short Syntax
+regexp = /pattern/; // no flags
+regexp = /pattern/gim; // with flags g,i and m (to be covered soon)
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -76,17 +77,20 @@ regexp = /pattern/gim; // with flags g,m and i (to be covered soon)
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The method myString.match(regexp) finds all matches of regexp in the string myString.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-let myString = 'We will, we will rock you';
+let myString = 'We will, we will rock you';
 
-alert(myString.match(/we/gi)); // We,we (an array of 2 substrings that match)
+alert(myString.match(/we/gi)); // We,we (an array of 2 substrings that match)
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -96,37 +100,40 @@ alert(myString.match(/we/gi)); // We,we (an array of 2 substrings that m
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The match method has three working regex modes. First, if a regular expression has flag g, it returns an array of all matches. Second, if there is no such flag it returns only the first match in the form of an array, with the full match at index 0 and some additional details in properties. The array may have other indexes, besides 0 if a part of the regular expression is enclosed in parentheses. And, finally, if there are no matches, null is returned (does not matter if there’s flag g or not). This an especially important nuance. If there are no matches, we do not receive an empty array, but instead receive null. Forgetting about that may lead to errors, e.g.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-// First Mode: Example
+// First Mode: Example
+let myString = 'We will, we will rock you';
 
-let myString = 'We will, we will rock you';
+alert(myString.match(/we/gi)); // We,we (an array of 2 substrings that match)
 
-alert(myString.match(/we/gi)); // We,we (an array of 2 substrings that match)
-// Second Mode: Example
+// Second Mode: Example
+let str = 'We will, we will rock you';
 
-let str = 'We will, we will rock you';
+let result = str.match(/we/i); // without flag g
 
-let result = str.match(/we/i); // without flag g
-alert(result[0]); // We (1st match)
-alert(result.length); // 1
-// Details:
+alert(result[0]); // We (1st match)
+alert(result.length); // 1
 
-alert(result.index); // 0 (position of the match)
-alert(result.input); // We will, we will rock you (source string)
-// Third Mode: Example
+// Details:
+alert(result.index); // 0 (position of the match)
+alert(result.input); // We will, we will rock you (source string)
 
+// Third Mode: Example
 let matches = 'JavaScript'.match(/HTML/) || [];
 
 if (!matches.length) {
-  alert('No matches'); // now it works
+  alert('No matches'); // now it works
 }
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -136,30 +143,31 @@ if (!matches.length) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, when a there is an empty or null value in the result. We should add an empty array to the match method that we are subscribing to. We should also run a condition check and return a value if the length is empty or null.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-// Wrong Approach
+// Wrong Approach
+let matches = 'JavaScript'.match(/HTML/); // = null
 
-let matches = 'JavaScript'.match(/HTML/); // = null
 if (!matches.length) {
-  // Error: Cannot read property 'length' of null
-
-  alert('Error in the line above');
+  // Error: Cannot read property 'length' of null
+  alert('Error in the line above');
 }
 
-// Correct Approach
-
+// Correct Approach
 let matches = 'JavaScript'.match(/HTML/) || [];
 
 if (!matches.length) {
-  alert('No matches'); // now it works
+  alert('No matches'); // now it works
 }
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -169,28 +177,32 @@ if (!matches.length) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The method str.replace(regexp, replacement) replaces matches found using regexp in string str with replacement (all matches if there’s flag g, otherwise, only the first one). The second argument is the replacement string. We can use special character combinations in it to insert fragments of the match.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-// no flag g
+// no flag g
+alert('We will, we will'.replace(/we/i, 'I')); // I will, we will
 
-alert( "We will, we will".replace(/we/i, "I") ); // I will, we will
-
-// with flag g
-
-alert( "We will, we will".replace(/we/ig, "I") ); // I will, I will
-
-
-An example with $& symbol:
-
-alert( "I love HTML".replace(/HTML/, "$& and JavaScript") ); 
-
-// returns - I love HTML and JavaScript
+// with flag g
+alert('We will, we will'.replace(/we/gi, 'I')); // I will, I will
 ```
+
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong> An example with $& symbol<br /><br />
+
+  <div></div>
+
+```js
+alert('I love HTML'.replace(/HTML/, '$& and JavaScript'));
+// returns - I love HTML and JavaScript
+```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -200,18 +212,20 @@ alert( "I love HTML".replace(/HTML/, "$& and JavaScript") ); 
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Basically, we should use the method regexp.test(str), which looks for at least one match, if found, returns true, otherwise false.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-let str = 'I love JavaScript';
-
+let str = 'I love JavaScript';
 let regexp = /LOVE/i;
 
-alert(regexp.test(str)); // true
+alert(regexp.test(str)); // true
 ```
+
+  </div>
+  </div>
+</details>
 
 ---

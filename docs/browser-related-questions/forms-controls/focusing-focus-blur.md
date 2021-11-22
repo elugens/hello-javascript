@@ -42,46 +42,47 @@ sidebar_position: 2
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The focus event is called on focusing, and blur when the element loses the focus. A common approach is a blur handler checking if a field has been entered correctly after the focus event. You can use the focus handler to hide validation error. Modern HTML allows us to do many validations using input attributes: required, pattern and so on. And sometimes they are just what we need. JavaScript can be used when we want more flexibility. Also we could automatically send the changed value to the server if it’s correct.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```html
 <style>
-
-  .invalid { border-color: red; }
-
-  #error { color: red }
+  .invalid {
+    border-color: red;
+  }
+  #error {
+    color: red;
+  }
 </style>
 
-Your email please: <input type="email" id="input" />
+Your email please: <input type="email" id="input" />
 
 <div id="error"></div>
 
 <script>
   input.onblur = function () {
     if (!input.value.includes('@')) {
-      // not email
-
+      // not email
       input.classList.add('invalid');
-
-      error.innerHTML = 'Please enter a correct email.';
+      error.innerHTML = 'Please enter a correct email.';
     }
   };
 
   input.onfocus = function () {
     if (this.classList.contains('invalid')) {
-      // remove the "error" indication, because the user wants to re-enter something
-
+      // remove the "error" indication, because the user wants to re-enter something
       this.classList.remove('invalid');
-
       error.innerHTML = '';
     }
   };
 </script>
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -104,32 +105,33 @@ Your email please: <input type="email" id="input" />
   <div>
   <div><strong>Interview Response:</strong> Any element becomes focusable if it has tabindex. The value of the attribute is the order number of the element when Tab (or something like that) is used to switch between them.</div><br />
   <div><strong>Technical Response:</strong> By default, many elements do not support focusing. The list varies a bit between browsers, but one thing is always correct: focus/blur support is guaranteed for elements that a visitor can interact with: &#8249;button&#8250;, &#8249;input&#8250;, &#8249;select&#8250;, &#8249;a&#8250; and so on. On the other hand, elements that exist to format something, such as &#8249;div&#8250;, &#8249;span&#8250;, &#8249;table&#8250; – are un-focusable by default. The method `elem.focus()` doesn’t work on them, and focus/blur events are never triggered. Any element becomes focusable if it has tabindex. The value of the attribute is the order number of the element when Tab (or something like that) is used to switch between them.
-  </div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
-
-Click the first item and press Tab.
+  <div></div>
 
 ```html
+<!-- Click the first item and press Tab. -->
 <ul>
   <li tabindex="1">One</li>
-
   <li tabindex="0">Zero</li>
-
   <li tabindex="2">Two</li>
-
-  <li tabindex="-1">Minus one</li>
+  <li tabindex="-1">Minus one</li>
 </ul>
 
 <style>
-
-  li { cursor: pointer; }
-
-  :focus { outline: 1px dashed green; }
+  li {
+    cursor: pointer;
+  }
+  :focus {
+    outline: 1px dashed green;
+  }
 </style>
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -139,28 +141,31 @@ Click the first item and press Tab.
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, there are two approaches we can use to ensure bubbling. First, there is a funny historical feature: focus/blur do not bubble up but propagate down on the capturing phase. Second, there are focusin and focusout events – the same as focus/blur, but they bubble. Note that they must be assigned using elem.addEventListener, not on&#8249;event&#8250;.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```html
 <form id="form">
   <input type="text" name="name" value="Name" />
-
   <input type="text" name="surname" value="Surname" />
 </form>
 
 <style>
-   .focused { outline: 1px solid red; } 
+  .focused {
+    outline: 1px solid red;
+  }
 </style>
 
 <script>
   form.addEventListener('focusin', () => form.classList.add('focused'));
-
   form.addEventListener('focusout', () => form.classList.remove('focused'));
 </script>
 ```
+
+  </div>
+  </div>
+</details>
 
 ---

@@ -18,15 +18,14 @@ sidebar_position: 7
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Basically, retargeting means that events that originate in the shadow DOM look like they come from the element itself. Event retargeting is a great thing to have because the outer document does not have to know about component internals. It should be noted, retargeting does not occur if the event occurs on a slotted element, that physically lives in the light DOM.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```html
 <user-card id="userCard">
-  <span slot="username">John Smith</span>
+  <span slot="username">John Smith</span>
 </user-card>
 
 <script>
@@ -35,22 +34,23 @@ Code Example:
     class extends HTMLElement {
       connectedCallback() {
         this.attachShadow({ mode: 'open' });
-
         this.shadowRoot.innerHTML = `<div>
-
-        <b>Name:</b> <slot name="username"></slot>
-
-      </div>`;
+      <b>Name:</b> <slot name="username"></slot>
+    </div>`;
 
         this.shadowRoot.firstElementChild.onclick = (e) =>
-          alert('Inner target: ' + e.target.tagName);
+          alert('Inner target: ' + e.target.tagName);
       }
     }
   );
 
-  userCard.onclick = (e) => alert(`Outer target: ${e.target.tagName}`);
+  userCard.onclick = (e) => alert(`Outer target: ${e.target.tagName}`);
 </script>
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -60,25 +60,26 @@ Code Example:
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> For purposes of event bubbling, flattened DOM is used. So, if we have a slotted element, and an event occurs somewhere inside it, then it bubbles up to the &#8249;slot&#8250; and upwards. The full path to the original event target, with all the shadow elements, can be obtained using event.composedPath(). As we can see from the name of the method, that path is taken after the composition.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```html
 <user-card id="userCard">
   #shadow-root
-
   <div>
     <b>Name:</b>
-
     <slot name="username">
-      <span slot="username">John Smith</span>
+      <span slot="username">John Smith</span>
     </slot>
   </div>
 </user-card>
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -112,11 +113,10 @@ Code Example:
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The composedPath() method returns the event’s path which is an array of the objects on which listeners will be invoked. This does not include nodes in shadow trees if the shadow root was created with its ShadowRoot.mode closed.
-    </div>
+    </div><br />
+    <strong>Syntax: </strong> let composed = Event.composedPath();<br /><br />
   </div>
 </details>
-
-**Syntax:** let composed = Event.composedPath()
 
 ---
 
@@ -138,11 +138,10 @@ Code Example:
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> When we dispatch custom events, we need to set both bubbles and composed properties to true for it to bubble up and out of the component.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```html
 <div id="outer"></div>
@@ -151,17 +150,12 @@ Code Example:
   outer.attachShadow({ mode: 'open' });
 
   let inner = document.createElement('div');
-
   outer.shadowRoot.append(inner);
 
   /*
-
 div(id=outer)
-
-    #shadow-dom
-
-      div(id=inner)
-
+  #shadow-dom
+    div(id=inner)
 */
 
   document.addEventListener('test', (event) => alert(event.detail));
@@ -169,9 +163,7 @@ div(id=outer)
   inner.dispatchEvent(
     new CustomEvent('test', {
       bubbles: true,
-
       composed: true,
-
       detail: 'composed',
     })
   );
@@ -179,13 +171,15 @@ div(id=outer)
   inner.dispatchEvent(
     new CustomEvent('test', {
       bubbles: true,
-
       composed: false,
-
-      detail: 'not composed',
+      detail: 'not composed',
     })
   );
 </script>
 ```
+
+  </div>
+  </div>
+</details>
 
 ---

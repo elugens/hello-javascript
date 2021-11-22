@@ -18,23 +18,24 @@ sidebar_position: 15
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Catastrophic backtracking is a condition that can occur if you are checking a (usually long) string against a complex regular expression. The problem usually occurs if something towards the end of the string causes the string to not match. This is common in some browsers like Firefox and can happen on the server-side as well. It should be noted, catastrophic backtracking is also known as a runaway regular expression.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-// Example: Catastrophic Backtracking
-
-let regexp = /^(\d+)\*$/;
+// Example: Catastrophic Backtracking
+let regexp = /^(\d+)*$/;
 
 let str = '012345678901234567890123456789z';
 
-// will take a very long time (careful!)
-
+// will take a very long time (careful!)
 alert(regexp.test(str));
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 

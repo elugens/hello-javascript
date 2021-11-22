@@ -30,18 +30,21 @@ sidebar_position: 7
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> A slash symbol `/` is not a special character, but in JavaScript it is used to open and close the regexp: /...pattern.../, so we should escape it too when we are attempting to match it. On the other hand, if we are not using /.../, but create a regexp using new RegExp, then we do not need to escape it.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-alert('/'.match(/\//)); // '/'
-// Using the RegExp Object
+alert('/'.match(/\//)); // '/'
 
-alert('/'.match(new RegExp('/'))); // finds /
+// Using the RegExp Object
+alert('/'.match(new RegExp('/'))); // finds /
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -51,23 +54,23 @@ alert('/'.match(new RegExp('/'))); // finds /
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> If we are creating a regular expression with new RegExp, then we do not have to escape `/`, but need to do some other escaping like the `\d` flag. The reason that this happens is that strings consume backslashes when we use the RegExp object constructor. The approach we should use is an additional backslash to escape special flags like \d. Instead of `\d`, we need to use `\\d`.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-// Wrong Approach
-
+// Wrong Approach
 let regexp = new RegExp('d.d');
+alert('Chapter 5.1'.match(regexp)); // null, when we ant 5.1
 
-alert('Chapter 5.1'.match(regexp)); // null, when we ant 5.1
-// Correct Approach
-
+// Correct Approach
 let regexp = new RegExp('\\d.\\d');
-
-alert('Chapter 5.1'.match(regexp)); // returns 5.1
+alert('Chapter 5.1'.match(regexp)); // returns 5.1
 ```
+
+  </div>
+  </div>
+</details>
 
 ---

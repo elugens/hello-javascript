@@ -18,53 +18,37 @@ sidebar_position: 6
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Beyond the Fetch being built on the Promise Object. Fetch is easy to implement compared other methods used to send a network request, like Ajax. It should be noted, if you also want to interact (bi-directional) with the server, the WebSocket object is also more appropriate than fetch. In other cases, fetch offers a great simplicity to load content in a page. Fetch also has a large of fetch set of options including referrer, referrerPolicy, mode, and so on.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example: fetch options
+  <div></div>
 
 ```js
-let promise = fetch(url, {
-
-    method: "GET", // POST, PUT, DELETE, etc.
-
-    headers: {
-
-    // the content type header value is usually auto-set
-
-    // depending on the request body
-
-    "Content-Type": "text/plain;charset=UTF-8"
-
-    },
-
-    body: undefined // string, FormData, Blob, BufferSource, or URLSearchParams
-
-    referrer: "about:client", // or "" to send no Referer header,
-
-    // or an url from the current origin
-
-    referrerPolicy: "no-referrer-when-downgrade", // no-referrer, origin, same-origin...
-
-    mode: "cors", // same-origin, no-cors
-
-    credentials: "same-origin", // omit, include
-
-    cache: "default", // no-store, reload, no-cache, force-cache, or only-if-cached
-
-    redirect: "follow", // manual, error
-
-    integrity: "", // a hash, like "sha256-abcdef1234567890"
-
-    keepalive: false, // true
-
-    signal: undefined, // AbortController to abort request
-
-    window: window // null
-
+let promise = fetch(url, {
+  method: "GET", // POST, PUT, DELETE, etc.
+  headers: {
+    // the content type header value is usually auto-set
+    // depending on the request body
+    "Content-Type": "text/plain;charset=UTF-8"
+  },
+  body: undefined // string, FormData, Blob, BufferSource, or URLSearchParams
+  referrer: "about:client", // or "" to send no Referer header,
+  // or an url from the current origin
+  referrerPolicy: "no-referrer-when-downgrade", // no-referrer, origin, same-origin...
+  mode: "cors", // same-origin, no-cors
+  credentials: "same-origin", // omit, include
+  cache: "default", // no-store, reload, no-cache, force-cache, or only-if-cached
+  redirect: "follow", // manual, error
+  integrity: "", // a hash, like "sha256-abcdef1234567890"
+  keepalive: false, // true
+  signal: undefined, // AbortController to abort request
+  window: window // null
 });
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -74,29 +58,28 @@ let promise = fetch(url, {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The referrer and referrerPolicy options govern how fetch sets the HTTP Referrer header. Usually that header is set automatically and contains the URL of the page that made the request. In most scenarios, it is not important at all, sometimes, for security purposes, it makes sense to remove or shorten it. Basically, the referrer option allows us to set any Referrer (within the current origin) or remove it and the referrerPolicy option sets general rules for Referrer.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-// To send no referer, set an empty string:
-
+// To send no referer, set an empty string:
 fetch('/page', {
-  referrer: '', // no Referer header
+  referrer: '', // no Referer header
 });
 
-// To set another url within the current origin:
-
+// To set another url within the current origin:
 fetch('/page', {
-  // assuming we're on https://javascript.info
-
-  // we can set any Referer header, but only within the current origin
-
+  // assuming we're on https://javascript.info
+  // we can set any Referer header, but only within the current origin
   referrer: 'https://javascript.info/anotherpage',
 });
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -130,17 +113,19 @@ fetch('/page', {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The credentials option specifies whether fetch should send cookies and HTTP-Authorization headers with the request. It has three parameters including same-origin, include, and omit. The same-origin parameter is the default setting used to only send user credentials if the URL is on the same origin as the calling script. The include parameter is used if we always want to send user credentials even for cross-origin calls. (It should be noted, that include requires Accept-Control-Allow-Credentials from cross-origin server for JavaScript to access the response.). The omit parameter is used when we do not want to send or receive cookies. This is like XHR’s withCredentials flag, but with three available values instead of two.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 var myRequest = new Request('flowers.jpg');
-
-var myCred = myRequest.credentials; // returns "same-origin" by default
+var myCred = myRequest.credentials; // returns "same-origin" by default
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -174,16 +159,19 @@ var myCred = myRequest.credentials; // returns "same-origin" by default
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The integrity option allows to check if the response matches the known-ahead checksum. As described in the specification, supported hash-functions are SHA-256, SHA-384, and SHA-512, there might be others depending on the browser. For example, we are downloading a file, and we know that it is SHA-256 checksum is “abcdef” (a real checksum is longer, of course). Fetch will calculate SHA-256 on its own and compare it with our string. In case of a mismatch, an error is triggered.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 fetch('http://site.com/file', {
   integrity: 'sha256-abcdef',
 });
 ```
+
+  </div>
+  </div>
+</details>
 
 ---

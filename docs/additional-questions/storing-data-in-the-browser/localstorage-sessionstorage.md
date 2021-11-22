@@ -66,30 +66,30 @@ sidebar_position: 2
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The main features of localStorage are that the data can be shared between tabs. The data does not expire, and it remains after the browser restarts or the OS reboots. If, we want to add new data to the localStorage we can use the setItem method and if we want to parse it into the browser, we use the getItem method. We must be on the same origin (domain/port/protocol), but the url path can be different. The localStorage is shared between all windows with the same origin, so if we set the data in one window, the change becomes visible in another one. We can also use a plain object way of getting/setting keys.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-// localStorage getter/setter
+// localStorage getter/setter
+localStorage.setItem('test', 1); // set name/value
+alert(localStorage.getItem('test')); // get value alert 1
 
-localStorage.setItem('test', 1); // set name/value
-alert(localStorage.getItem('test')); // get value alert 1
-// Object-like access
-
-// set key
-
+// Object-like access
+// set key
 localStorage.test = 2;
 
-// get key
+// get key
+alert(localStorage.test); // 2
 
-alert(localStorage.test); // 2
-// remove key
-
+// remove key
 delete localStorage.test;
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -99,17 +99,19 @@ delete localStorage.test;
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Technically, you can use object-like access on localStorage, but it is not recommended. If the key is user-generated, it can be anything, like length or toString, or another built-in method of localStorage. In that case getItem/setItem work fine, while object-like access fails. There is a storage event, it triggers when we modify the data. That event does not happen for object-like access.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let key = 'length';
-
-localStorage[key] = 5; // Error, cannot assign length
+localStorage[key] = 5; // Error, cannot assign length
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -119,45 +121,41 @@ localStorage[key] = 5; // Error, cannot assign length
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> There is one notable thing about localStorage objects. They are not iterable on their own. One way to look over them as an array. Local Storage objects have a length, so we can iterate over them using the key method. Another way is to use “for key in” (for in loop) localStorage loop, just as we do with regular objects. It iterates over keys, but also outputs few built-in fields that we do not need. So, we need to filter fields from the prototype with hasOwnProperty check. Or just get the “own” keys with Object.keys and then loop over them if needed. The latter works, because Object.keys only returns the keys that belong to the object, ignoring the prototype.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-// loop over the object as an array
-
+// loop over the object as an array
 for (let i = 0; i < localStorage.length; i++) {
   let key = localStorage.key(i);
-
-  alert(`${key}: ${localStorage.getItem(key)}`);
+  alert(`${key}: ${localStorage.getItem(key)}`);
 }
 
-// Loop over it using a "for in key" loop - bad try
-
+// Loop over it using a "for in key" loop - bad try
 for (let key in localStorage) {
-  alert(key); // shows getItem, setItem and other built-in stuff
+  alert(key); // shows getItem, setItem and other built-in stuff
 }
 
-// Loop using hasOwnProperty check
-
+// Loop using hasOwnProperty check
 for (let key in localStorage) {
   if (!localStorage.hasOwnProperty(key)) {
-    continue; // skip keys like "setItem", "getItem" etc
+    continue; // skip keys like "setItem", "getItem" etc
   }
-
-  alert(`${key}: ${localStorage.getItem(key)}`);
+  alert(`${key}: ${localStorage.getItem(key)}`);
 }
 
-// Loop using for of loop and Object.keys ( *** recommended ***)
-
+// Loop using for of loop and Object.keys ( ** recommended ** )
 let keys = Object.keys(localStorage);
-
 for (let key of keys) {
-  alert(`${key}: ${localStorage.getItem(key)}`);
+  alert(`${key}: ${localStorage.getItem(key)}`);
 }
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -167,31 +165,30 @@ for (let key of keys) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> For storage objects, both the key and value must be strings. If they were of any other type, like a number, or an object, it will get converted to string automatically. We can also use JSON to store objects. It is also it is possible to stringify the whole storage object, e.g., for debugging purposes.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-// Base implementation
-
+// Base implementation
 sessionStorage.user = { name: 'John' };
+alert(sessionStorage.user); // [object Object]
 
-alert(sessionStorage.user); // [object Object]
-// Stringfy Object
-
+// Stringfy Object
 sessionStorage.user = JSON.stringify({ name: 'John' });
 
-// sometime later
-
+// sometime later
 let user = JSON.parse(sessionStorage.user);
+alert(user.name); // John
 
-alert(user.name); // John
-// added formatting options to JSON.stringify to make the object look nicer
-
+// added formatting options to JSON.stringify to make the object look nicer
 alert(JSON.stringify(localStorage, null, 2));
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -201,21 +198,21 @@ alert(JSON.stringify(localStorage, null, 2));
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The sessionStorage object is used much less often than localStorage. The Properties and methods are the same, but it is much more limited. Some of sessionStorages limitations include the fact that it only exists if the tab remains open. Once, it is closed we have no more access to the session. One notable thing about session storage, is that is can be shared between iframes in the same tab. That object data will also server a page refresh, but not the closing or reopening of the URL in a new tab. That is because sessionStorage is bound not only to the origin, but also to the browser tab. For that reason, sessionStorage is used sparingly.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-// Set the storage item key value
-
+// Set the storage item key value
 sessionStorage.setItem('test', 1);
-
-// Refresh the page and the data still exists
-
-alert(sessionStorage.getItem('test')); // after refresh: 1
+// Refresh the page and the data still exists
+alert(sessionStorage.getItem('test')); // after refresh: 1
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -225,24 +222,24 @@ alert(sessionStorage.getItem('test')); // after refresh: 1
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> When the data gets updated in localStorage or sessionStorage the storage event triggers. The important thing is that the event triggers on all window objects where the storage is accessible, except the one that caused it. It like a waterfall effect. Imagine, you have two windows with the same site in each. So localStorage is shared between them. If both windows are listening for window.onstorage, then each one will react on updates that happened in the other one.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-// triggers on updates made to the same storage from other documents
-
+// triggers on updates made to the same storage from other documents
 window.onstorage = (event) => {
-  // same as window.addEventListener('storage', event => {
-
+  // same as window.addEventListener('storage', event => {
   if (event.key != 'now') return;
-
-  alert(event.key + ':' + event.newValue + ' at ' + event.url);
+  alert(event.key + ':' + event.newValue + ' at ' + event.url);
 };
 
 localStorage.setItem('now', Date.now());
 ```
+
+  </div>
+  </div>
+</details>
 
 ---

@@ -30,25 +30,26 @@ sidebar_position: 2
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> To create a custom element, we need a class extension, like HTMLElement, and a customElement defined to register the new element. These requirements cover both the customized and autonomous elements. In addition, there are several methods that we can use that are optional, like connectedCallBack, for custom elements.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 class MyElement extends HTMLElement {
   constructor() {
     super();
-
-    // element created
+    // element created
   }
 }
 
-// let the browser know that <my-element> is served by our new class
-
+// let the browser know that <my-element> is served by our new class
 customElements.define('my-element', MyElement);
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -121,81 +122,71 @@ customElements.define('my-element', MyElement);
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The attributeChangedCallback is invoked each time one of the custom element's attributes is added, removed, or changed. Which attributes to notice change for is specified in a static get observedAttributes method.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
-```js
+```html
 <script>
+  class TimeFormatted extends HTMLElement {
+    render() {
+      // (1)
+      let date = new Date(this.getAttribute('datetime') || Date.now());
 
-class TimeFormatted extends HTMLElement {
-
-    render() { // (1)
-
-      let date = new Date(this.getAttribute('datetime') || Date.now());
-
-      this.innerHTML = new Intl.DateTimeFormat("default", {
-
-        year: this.getAttribute('year') || undefined,
-
-        month: this.getAttribute('month') || undefined,
-
-        day: this.getAttribute('day') || undefined,
-
-        hour: this.getAttribute('hour') || undefined,
-
-        minute: this.getAttribute('minute') || undefined,
-
-        second: this.getAttribute('second') || undefined,
-
-        timeZoneName: this.getAttribute('time-zone-name') || undefined,
-
+      this.innerHTML = new Intl.DateTimeFormat('default', {
+        year: this.getAttribute('year') || undefined,
+        month: this.getAttribute('month') || undefined,
+        day: this.getAttribute('day') || undefined,
+        hour: this.getAttribute('hour') || undefined,
+        minute: this.getAttribute('minute') || undefined,
+        second: this.getAttribute('second') || undefined,
+        timeZoneName: this.getAttribute('time-zone-name') || undefined,
       }).format(date);
-
     }
 
-    connectedCallback() { // (2)
-
-      if (!this.rendered) {
-
+    connectedCallback() {
+      // (2)
+      if (!this.rendered) {
         this.render();
-
-        this.rendered = true;
-
+        this.rendered = true;
       }
-
     }
 
-    static get observedAttributes() { // (3)
-
-      return ['datetime', 'year', 'month', 'day', 'hour', 'minute', 'second', 'time-zone-name'];
-
+    static get observedAttributes() {
+      // (3)
+      return [
+        'datetime',
+        'year',
+        'month',
+        'day',
+        'hour',
+        'minute',
+        'second',
+        'time-zone-name',
+      ];
     }
 
-    attributeChangedCallback(name, oldValue, newValue) { // (4)
-
+    attributeChangedCallback(name, oldValue, newValue) {
+      // (4)
       this.render();
-
     }
+  }
 
-}
-
-customElements.define("time-formatted", TimeFormatted);
-
+  customElements.define('time-formatted', TimeFormatted);
 </script>
 
-<time-formatted id="elem" hour="numeric" minute="numeric" second="numeric">
-
+<time-formatted id="elem" hour="numeric" minute="numeric" second="numeric">
 </time-formatted>
 
 <script>
-
-setInterval(() => elem.setAttribute('datetime', new Date()), 1000); // (5)
-
+  setInterval(() => elem.setAttribute('datetime', new Date()), 1000); // (5)
 </script>
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -205,11 +196,10 @@ setInterval(() => elem.setAttribute('datetime', new Date()), 1000); // (5
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> When HTML parser builds the DOM, elements are processed one after another, parents before children. E.g., if we have &#8249;outer&#8250;&#8249;inner&#8250;&#8249;/inner&#8250;&#8249;/outer&#8250;, then &#8249;outer&#8250; element is created and connected to DOM first, and then &#8249;inner>`. That leads to important consequences for custom elements that we should prepare for in our code.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```html
 <script>
@@ -217,7 +207,7 @@ Code Example:
     'user-info',
     class extends HTMLElement {
       connectedCallback() {
-        alert(this.innerHTML); // alert is empty (\*)
+        alert(this.innerHTML); // alert is empty (*)
       }
     }
   );
@@ -225,6 +215,10 @@ Code Example:
 
 <user-info>John</user-info>
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -234,29 +228,29 @@ Code Example:
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> When HTML parser builds the DOM, elements are processed one after another, parents before children. E.g., if we have &#8249;outer&#8250;&#8249;inner&#8250;&#8249;/inner&#8250;&#8249;/outer&#8250;, then &#8249;outer&#8250; element is created and connected to DOM first, and then &#8249;inner&#8250;. That leads to important consequences for custom elements that we should prepare for in our code. To handle inner elements, we can delay actions using setTimeout to ensure that the DOM has completed loaded our document. If we would like to pass information to custom element, we can use attributes. They are available immediately or, if we really need the children, we can defer access to them with zero-delay setTimeout.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
-```js
+```html
 <script>
-
-customElements.define('user-info', class extends HTMLElement {
-
-    connectedCallback() {
-
-      setTimeout(() => alert(this.innerHTML)); // John (\*)
-
+  customElements.define(
+    'user-info',
+    class extends HTMLElement {
+      connectedCallback() {
+        setTimeout(() => alert(this.innerHTML)); // John (*)
+      }
     }
-
-});
-
+  );
 </script>
 
 <user-info>John</user-info>
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -266,20 +260,17 @@ customElements.define('user-info', class extends HTMLElement {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, a new or autonomous element like &#8249;my-element&#8250; do not give a search engine enough information, like associated semantics. They are not known to search engines and accessibility devices cannot translate them. To fix this, we can extend and customize built-in HTML elements by inheriting from their classes.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```html
 <script>
-  // The button that says "hello" on click
-
+  // The button that says "hello" on click
   class HelloButton extends HTMLButtonElement {
     constructor() {
       super();
-
       this.addEventListener('click', () => alert('Hello!'));
     }
   }
@@ -287,11 +278,15 @@ Code Example:
   customElements.define('hello-button', HelloButton, { extends: 'button' });
 </script>
 
-<button is="hello-button">Click me</button> ß
+<button is="hello-button">Click me</button>
 
 <button is="hello-button" disabled>Disabled</button>
 
 <user-info>John</user-info>
 ```
+
+  </div>
+  </div>
+</details>
 
 ---

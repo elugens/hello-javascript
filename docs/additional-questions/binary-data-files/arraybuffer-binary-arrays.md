@@ -54,16 +54,19 @@ sidebar_position: 1
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The basic binary object is ArrayBuffer which is a reference to a fixed-length contiguous memory area (blocks of memory). It is an array of bytes, often referred to in other languages as a "byte array". You cannot directly manipulate the contents of an ArrayBuffer; instead, you create one of the typed array objects or a DataView object which represents the buffer in a specific format, and use that to read and write the contents of the buffer. The ArrayBuffer() constructor creates a new ArrayBuffer of the given length in bytes. You can also get an array buffer from existing data.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-let buffer = new ArrayBuffer(16); // create a buffer of length 16
-alert(buffer.byteLength); // alerts 16
+let buffer = new ArrayBuffer(16); // create a buffer of length 16
+alert(buffer.byteLength); // alerts 16
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -85,39 +88,40 @@ alert(buffer.byteLength); // alerts 16
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> To manipulate an ArrayBuffer, we need to use a view object. A view object does not store anything on its own. It is the “eyeglasses” that give an interpretation of the bytes stored in the ArrayBuffer. For example. Uint8Array treats each byte in ArrayBuffer as a separate number, with possible values from 0 to 255 (a byte is 8-bit, so it can hold only that much). Such value is called a “8-bit unsigned integer”. So, the binary data in an ArrayBuffer of 16 bytes can be interpreted as 16 “tiny numbers”, or 8 bigger numbers (2 bytes each), or 4 even bigger (4 bytes each), or 2 floating-point values with high precision (8 bytes each). ArrayBuffer is the core object, the root of everything, the raw binary data.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Diagram Example:</strong><br /><br />
 
-**Diagram:**
+  <div></div>
 
 <img src="/img/array-buffer.svg" />
 
-Code Example:
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
 
 ```js
-let buffer = new ArrayBuffer(16); // create a buffer of length 16
+let buffer = new ArrayBuffer(16); // create a buffer of length 16
 
-let view = new Uint32Array(buffer); // treat buffer as a sequence of 32-bit integers
+let view = new Uint32Array(buffer); // treat buffer as a sequence of 32-bit integers
 
-alert(Uint32Array.BYTES\_PER\_ELEMENT); // 4 bytes per integer
+alert(Uint32Array.BYTES_PER_ELEMENT); // 4 bytes per integer
 
-alert(view.length); // 4, it stores that many integers
+alert(view.length); // 4, it stores that many integers
+alert(view.byteLength); // 16, the size in bytes
 
-alert(view.byteLength); // 16, the size in bytes
+// let's write a value
+view[0] = 123456;
 
-// let's write a value
-
-view[0] = 123456;
-
-// iterate over values
-
-for(let num of view) {
-
-    alert(num); // 123456, then 0, 0, 0 (4 values total)
-
+// iterate over values
+for (let num of view) {
+  alert(num); // 123456, then 0, 0, 0 (4 values total)
 }
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -151,31 +155,29 @@ for(let num of view) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> A TypedArray object describes an array-like view of an underlying binary data buffer. There is no global property named TypedArray, nor is there a directly visible TypedArray constructor. Instead, there are several different global properties, whose values are typed array constructors for specific element types.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
-// create a TypedArray with a size in bytes
-
+// create a TypedArray with a size in bytes
 const typedArray1 = new Int8Array(8);
-
 typedArray1[0] = 32;
 
 const typedArray2 = new Int8Array(typedArray1);
-
 typedArray2[1] = 42;
 
 console.log(typedArray1);
-
-// expected output: Int8Array [32, 0, 0, 0, 0, 0, 0, 0]
+// expected output: Int8Array [32, 0, 0, 0, 0, 0, 0, 0]
 
 console.log(typedArray2);
-
-// expected output: Int8Array [32, 42, 0, 0, 0, 0, 0, 0]
+// expected output: Int8Array [32, 42, 0, 0, 0, 0, 0, 0]
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -209,19 +211,21 @@ console.log(typedArray2);
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, we can create a TypedArray directly, without mentioning ArrayBuffer. But a view cannot exist without an underlying ArrayBuffer, so it gets created automatically regardless of the argument type. To access the ArrayBuffer, there are properties like buffer and byteLength. The array.buffer property references ArrayBuffer, and the array.length property is the length of the ArrayBuffer. So, we can always move from one view to another.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let arr8 = new Uint8Array([0, 1, 2, 3]);
 
-// another view on the same data
-
+// another view on the same data
 let arr16 = new Uint16Array(arr8.buffer);
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -231,25 +235,27 @@ let arr16 = new Uint16Array(arr8.buffer);
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> If we attempt to write an out-of-bounds value into a typed array. There will be no error. But extra bits are cut-off. For example, if we try to put 256 into Uint8Array. In binary form, 256 is 100000000 (9 bits), but Uint8Array only provides 8 bits per value, that makes the available range from 0 to 255. For bigger numbers, only the rightmost (less significant) 8 bits are stored, and the rest is cut off. So, the result will be zero. For 257, the binary form is 100000001 (9 bits), the rightmost 8 get stored, so we will have 1 in the array. Uint8ClampedArray is special in this aspect, its behavior is different. It saves 255 for any number that is greater than 255, and 0 for any negative number. That behavior is useful for image processing.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 let uint8array = new Uint8Array(16);
 
 let num = 256;
+alert(num.toString(2)); // 100000000 (binary representation)
 
-alert(num.toString(2)); // 100000000 (binary representation)
 uint8array[0] = 256;
-
 uint8array[1] = 257;
 
-alert(uint8array[0]); // 0
-alert(uint8array[1]); // 1
+alert(uint8array[0]); // 0
+alert(uint8array[1]); // 1
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -271,23 +277,24 @@ alert(uint8array[1]); // 1
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The subarray() method returns a new TypedArray on the same ArrayBuffer store and with the same element types as for this TypedArray object. The begin offset is inclusive and the end offset is exclusive. This methods allow us to copy typed arrays, mix them, create new arrays from existing ones, and so on.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
 
 console.log(uint8.subarray(1, 3));
-
-// expected output: Uint8Array [20, 30]
+// expected output: Uint8Array [20, 30]
 
 console.log(uint8.subarray(1));
-
-// expected output: Uint8Array [20, 30, 40, 50]
+// expected output: Uint8Array [20, 30, 40, 50]
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -297,35 +304,42 @@ console.log(uint8.subarray(1));
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> A DataView is a special super-flexible “untyped” view over ArrayBuffer. It allows to access the data on any offset in any format.<br /><br />For typed arrays, the constructor dictates what the format is. The whole array is supposed to be uniform. The i-th number is arr[i]. With DataView we access the data with methods like .getUint8(i) or .getUint16(i). We choose the format at method call time instead of the construction time. DataView is great when we store mixed-format data in the same buffer. For example, when we store a sequence of pairs (16-bit integer, 32-bit float), DataView allows to access them easily.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Syntax:</strong> new DataView(buffer, [byteOffset], [byteLength]);<br /><br />
 
-**Syntax:** new DataView(buffer, [byteOffset], [byteLength])
+  <ul>
+    <li>buffer – the underlying ArrayBuffer. Unlike typed arrays, DataView doesn’t create a buffer on its own. We need to have it ready.</li>
+    <li>byteOffset – the starting byte position of the view (by default 0).</li>
+    <li>byteLength – the byte length of the view (by default till the end of buffer).</li>
+  </ul>
 
-- buffer – the underlying ArrayBuffer. Unlike typed arrays, DataView doesn’t create a buffer on its own. We need to have it ready.
-- byteOffset – the starting byte position of the view (by default 0).
-- byteLength – the byte length of the view (by default till the end of buffer).
+  <div></div>
 
-Code Example:
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
 
 ```js
-// binary array of 4 bytes, all have the maximal value 255
-
+// binary array of 4 bytes, all have the maximal value 255
 let buffer = new Uint8Array([255, 255, 255, 255]).buffer;
 
 let dataView = new DataView(buffer);
 
-// get 8-bit number at offset 0
+// get 8-bit number at offset 0
+alert(dataView.getUint8(0)); // 255
 
-alert(dataView.getUint8(0)); // 255
-// now get 16-bit number at offset 0, it consists of 2 bytes, together interpreted as 65535
+// now get 16-bit number at offset 0, it consists of 2 bytes, together interpreted as 65535
+alert(dataView.getUint16(0)); // 65535 (biggest 16-bit unsigned int)
 
-alert(dataView.getUint16(0)); // 65535 (biggest 16-bit unsigned int)
-// get 32-bit number at offset 0
+// get 32-bit number at offset 0
+alert(dataView.getUint32(0)); // 4294967295 (biggest 32-bit unsigned int)
 
-alert(dataView.getUint32(0)); // 4294967295 (biggest 32-bit unsigned int)
-dataView.setUint32(0, 0); // set 4-byte number to zero, thus setting all bytes to 0
+dataView.setUint32(0, 0); // set 4-byte number to zero, thus setting all bytes to 0
 ```
+
+  </div>
+  </div>
+</details>
 
 ---

@@ -42,20 +42,18 @@ sidebar_position: 1
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The DOMContentLoaded event happens on the document object. We must use addEventListener to catch it. There are a few peculiarities that can be noted when we try to solicit information before the page is completely loaded, like image sizes. The DOM loads first and then images and styles.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```html
 <script>
   function ready() {
-    alert('DOM is ready');
+    alert('DOM is ready');
 
-    // image is not yet loaded (unless it was cached), so the size is 0x0
-
-    alert(`Image size: ${img.offsetWidth}x${img.offsetHeight}`);
+    // image is not yet loaded (unless it was cached), so the size is 0x0
+    alert(`Image size: ${img.offsetWidth}x${img.offsetHeight}`);
   }
 
   document.addEventListener('DOMContentLoaded', ready);
@@ -63,6 +61,10 @@ Example:
 
 <img id="img" src="https://en.js.cx/clipart/train.gif?speed=1&cache=0" />
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -96,21 +98,22 @@ Example:
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> External style sheets do not affect DOM, so DOMContentLoaded does not wait for them. But there is a pitfall. If we have a script after the style, then that script must wait until the stylesheet loads. The reason for this is that the script may want to get coordinates and other style-dependent properties of elements. Naturally, it must wait for styles to load. As DOMContentLoaded waits for scripts, it now waits for styles before them as well.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Example:
+  <div></div>
 
 ```html
 <link type="text/css" rel="stylesheet" href="style.css" />
-
 <script>
-  // the script doesn't not execute until the stylesheet is loaded
-
+  // the script doesn't not execute until the stylesheet is loaded
   alert(getComputedStyle(document.body).marginTop);
 </script>
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -132,27 +135,28 @@ Example:
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The load event on the window object triggers when the whole page is loaded including styles, images, and other resources. This event is available via the onload property.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-Code Example:
+  <div></div>
 
 ```html
 <script>
   window.onload = function () {
-    // same as window.addEventListener('load', (event) => {
+    // same as window.addEventListener('load', (event) => {
+    alert('Page loaded');
 
-    alert('Page loaded');
-
-    // image is loaded at this time
-
-    alert(`Image size: ${img.offsetWidth}x${img.offsetHeight}`);
+    // image is loaded at this time
+    alert(`Image size: ${img.offsetWidth}x${img.offsetHeight}`);
   };
 </script>
 
 <img id="img" src="https://en.js.cx/clipart/train.gif?speed=1&cache=0" />
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
 
@@ -198,11 +202,10 @@ Code Example:
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, we can check the loading state by invoking the document.readyState property. The Document.readyState property describes the loading state of the document. When the value of this property changes, a readystatechange event fires on the document object.
-    </div>
+    </div><br />
+    <strong>Syntax: </strong> let string = document.readyState;<br /><br />
   </div>
 </details>
-
-**Syntax:** let string = document.readyState;
 
 ---
 
@@ -212,28 +215,29 @@ Code Example:
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The readyState can be one of three possible values including the loading, interactive, and complete states. The “loading state” is relative to the page still loading. The “interactive state” is when the document has finished loading and the document has been parsed but sub-resources such as scripts, images, stylesheets, and frames are still loading. The “complete state” happens when the document and all sub-resources have finished loading. The state indicates that the load event is about to fire.
-    </div>
-  </div>
-</details>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-**Syntax:** let string = document.readyState;
+<strong>Syntax: </strong> let string = document.readyState;<br /><br />
 
-Code Example:
+  <div></div>
 
 ```js
 function work() {
-  /* ... */
+  /*...*/
 }
 
 if (document.readyState == 'loading') {
-  // still loading, wait for the event
-
+  // still loading, wait for the event
   document.addEventListener('DOMContentLoaded', work);
 } else {
-  // DOM is ready!
-
+  // DOM is ready!
   work();
 }
 ```
+
+  </div>
+  </div>
+</details>
 
 ---
