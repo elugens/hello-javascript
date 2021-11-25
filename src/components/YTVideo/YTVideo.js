@@ -12,6 +12,7 @@ const YTVideo = ({ videoURL, videoTitle }) => (
     />
   </div>
 );
+
 export default YTVideo;
 
 // embed your video Example:

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+        function openDetails() {
+            let details = document.querySelectorAll("details");
+            details.forEach((detail) => {
+                detail.open = true;
+            });
+        }
+        function closeDetails() {
+            let details = document.querySelectorAll("details");
+            details.forEach((detail) => {
+                detail.open = false;
+            });
+        }
+    </script>
+  </head>
+  <body>
+      <button onclick="openDetails()">Show Answers</button>
+      <button onclick="closeDetails()">Close Answers</button>
+      <button onclick="myFunction()">Say Hello</button>
+      <div id='allDetails'></div>
+    <div>
+      <details>
+        <summary><strong>View Answer:</strong></summary>
+        <div>
+          <div>
+            <strong>Interview Response:</strong> Bezier curves are used in
+            computer graphics to draw shapes, for CSS animation and in many
+            other places. They are an amazingly simple thing, worth studying
+            once, and then feel comfortable in the world of vector graphics and
+            advanced animations.
+          </div>
+        </div>
+      </details>
+    </div>
+    <div>
+      <details>
+        <summary><strong>View Answer:</strong></summary>
+        <div>
+          <div>
+            <strong>Interview Response:</strong> Bezier curves are used in
+            computer graphics to draw shapes, for CSS animation and in many
+            other places. They are an amazingly simple thing, worth studying
+            once, and then feel comfortable in the world of vector graphics and
+            advanced animations.
+          </div>
+        </div>
+      </details>
+    </div>
+  </body>
+  </body>
+</html>

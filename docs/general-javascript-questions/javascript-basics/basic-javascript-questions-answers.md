@@ -1,5 +1,6 @@
 ---
 title: Basic JS Questions
+description: Basic JS Questions in JavasScript  -  JavaScript Basics
 sidebar_position: 1
 ---
 
@@ -12,9 +13,13 @@ sidebar_position: 1
   <meta charSet='utf-8' />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
 ### What is JavaScript?
 
-<details>
+<details className='answer'>
   <summary>
     <strong>View Answer:</strong>
   </summary>
@@ -37,12 +42,7 @@ sidebar_position: 1
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> When a language is high-level, it
-      means it is built without requiring detailed knowledge of the underlying
-      computer. For example, managing memory, knowing what processor is running,
-      and keeping track of things like pointers are not necessary. High-level
-      programming languages are easier to write and manage because they are
-      platform-independent.
+      <strong>Interview Response:</strong> When a language is high level, it means that it is built without requiring detailed knowledge of the underlying computer. For example, memory management, knowing which processor is running, and keeping track of things like pointers are unnecessary. High-level programming languages ​​are easier to write and maintain because they are platform independent.
     </div>
   </div>
 </details>
@@ -62,11 +62,7 @@ sidebar_position: 1
     </div>
     <br />
     <div>
-      <strong>Technical Response:</strong> Programs written in a compiled
-      language are translated directly by the target machine. With an
-      interpreted language, the source code is not directly translated by the
-      target machine. Instead, a different program, interpreter, reads and
-      executes the code. In simple terms: JavaScript is an interpreted language.
+      <strong>Technical Response:</strong> Programs written in a compiled language are directly translated by the target machine. With  interpreted languages, the source code is not directly translated by the target machine. Instead, another program, the interpreter, reads and executes the code. Simply put: JavaScript is an interpreted language.
     </div>
   </div>
 </details>

@@ -10,6 +10,7 @@ sidebar_position: 1
 <head>
   <title>Bezier Curve - JavaScript Interview Questions & Answers</title>
   <meta charSet="utf-8" />
+  
 </head>
 
 ### What is a Bezier curve?

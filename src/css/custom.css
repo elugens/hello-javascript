@@ -300,3 +300,33 @@ hr {
   font-size: 0.75rem;
   color: grey;
 }
+
+/* Close All Answers */
+
+.closeAnswersContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 2rem;
+  margin-top: 1rem;
+  margin-bottom: -1rem;
+}
+
+.closeAnswers {
+  color: rgb(27, 27, 27);
+  font-size: 0.84rem;
+  background-color: #fbbf24;
+  padding: 10px;
+  border: 0;
+  border-radius: 25px;
+  font-weight: bold;
+}
+
+.closeAnswers:hover {
+  color: white;
+  font-size: 0.84rem;
+  background-color: #f03d32;
+  padding: 10px;
+  border: 0;
+  border-radius: 25px;
+  font-weight: bold;
+}
