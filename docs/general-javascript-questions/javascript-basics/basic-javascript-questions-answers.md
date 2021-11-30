@@ -93,12 +93,8 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> JavaScript was originally named “Live
-      Script”, but because of the popularity of Java. It was renamed too
-      JavaScript as a play on the notoriety of the Java programming language,
-      but they are different. JavaScript is a high-level programming language
-      and Java is a mid-level programming language.
-    </div>
+      <strong>Interview Response:</strong> Originally JavaScript was called "Live Script", but because of the popularity of Java. It was also renamed to JavaScript based on the popularity of the Java programming language, but they are different. JavaScript is a high level programming language and Java is a middle level programming language.
+      </div>
   </div>
 </details>
 
@@ -117,9 +113,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
     </div>
     <br />
     <div>
-      <strong>Technical Response:</strong> Today, JavaScript can execute not
-      only in the browser, but also on the server, or on any device that has a
-      special program called the JavaScript engine.
+      <strong>Technical Response:</strong> Today, JavaScript can run not only in a browser, but also on a server or on any device that has a special program called a JavaScript engine.
     </div>
   </div>
 </details>
@@ -158,16 +152,11 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> It is good to remember the names of
-      engines to ensure features work in all environments. If not, we must write
-      a polyfill.
+      <strong>Interview Response:</strong> You should remember the names of the engines to ensure that the features work in all environments. Otherwise you have to write a polyfill.
     </div>
     <br />
     <div>
-      <strong>Technical Response:</strong> The code names are good to remember
-      because they are used in developer articles on the internet. For instance,
-      if “a feature X is supported by V8”, then it probably works in Chrome and
-      Opera.
+      <strong>Technical Response:</strong> Code names are used in developer articles on the internet, so we should remember them. As an example, if "feature X is supported by V8", then it probably works in Chrome and Opera.
     </div>
   </div>
 </details>
@@ -179,8 +168,8 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong>  In-browser JavaScript can do everything related to a webpage like manipulation, interaction with the user, and the webserver.</div><br />
-  <div><strong>Technical Response:</strong> The capabilities of JavaScript depend greatly on the environment in which it is operating in. For example, Node.js, JavaScript can read or write arbitrary files and perform network requests. With in-browser JavaScript, you can manipulate web pages, communicate with users, and interact with the server.</div>
+  <div><strong>Interview Response:</strong>  JavaScript can do everything related to a webpage including manipulation, interaction with the user, and interaction with the server.</div><br />
+  <div><strong>Technical Response:</strong> JavaScript's capabilities are greatly affected by the environment it is operating in. Node.js and JavaScript, for instance, can read and write arbitrary files and perform network requests. JavaScript allows you to manipulate web pages, communicate with users, and interact with the server from within your browser.</div>
   </div><br/>
  <strong>For instance, in-browser JavaScript can:</strong>
 
@@ -330,3 +319,5 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
     </div>
   </div>
 </details>
+
+---

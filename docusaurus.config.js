@@ -189,7 +189,7 @@ const config = {
           src: 'img/hello-javascript-logo-dark-plain.svg',
           href: '/',
         },
-        copyright: `Copyright © ${new Date().getFullYear()} HelloJavaScript.info . Built with Docusaurus. Developed by Elugens`,
+        copyright: `Copyright © ${new Date().getFullYear()} HelloJavaScript.info ${`&trade;`} . Built with Docusaurus. Developed by Elugens`,
       },
       prism: {
         theme: lightCodeTheme,

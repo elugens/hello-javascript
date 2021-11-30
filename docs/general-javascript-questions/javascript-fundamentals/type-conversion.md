@@ -30,7 +30,7 @@ sidebar_position: 7
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Implicit type conversion is manual conversion of type and explicit is automatic.</div><br />
+  <div><strong>Interview Response:</strong> Implicit type conversion is an automated conversion of types and explicit is a manual approach through the implementation of an object constructor or an operator.</div><br />
   <div><strong>Technical Response:</strong> JavaScript automatically converts one data type to another (to the right type). This is known as implicit or automatic type conversion. The type of conversion that you do manually is known as explicit type conversion.
   </div>
   </div>
@@ -43,7 +43,7 @@ sidebar_position: 7
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Explicit type conversions are achieved using built-in methods and objects.</div>
+  <div><strong>Interview Response:</strong> Explicit type conversions are achieved using built-in methods and object constructors such as BigInt() and String().</div>
   </div>
 </details>
 
@@ -65,7 +65,7 @@ sidebar_position: 7
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The string object is used to explicitly convert values to a string.</div><br />
+  <div><strong>Interview Response:</strong> The string "String(value);" object is used to explicitly convert values to a string.</div><br />
   <div><strong>Technical Response:</strong> The String(value) object is used to explicitly convert values to a string. The conversion to string is usually obvious for primitive values.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -282,7 +282,7 @@ alert(Boolean('')); // false
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, a non-empty string is always true. Zero is considered empty and returns false.</div><br />
+  <div><strong>Interview Response:</strong> In JavaScript, a non-empty string is always true. Zero as a number is considered empty and returns false.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
