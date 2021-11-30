@@ -12,6 +12,12 @@ sidebar_position: 8
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
+---
+
 ### Is there another option, other than explicit promises, to handle asynchronous code in JavaScript?
 
 <details>

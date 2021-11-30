@@ -12,6 +12,10 @@ sidebar_position: 3
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
 ### What does IDE stand for?
 
 <details>

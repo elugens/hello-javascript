@@ -12,6 +12,12 @@ sidebar_position: 6
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
+---
+
 ### What happens to the HTML when the browser loads the page?
 
 <details>

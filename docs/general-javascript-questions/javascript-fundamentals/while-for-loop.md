@@ -12,6 +12,10 @@ sidebar_position: 13
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
 ### In Simple terms, what are loops used for in JavaScript?
 
 <details>

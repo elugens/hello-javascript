@@ -12,6 +12,10 @@ sidebar_position: 2
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
 ### Define what a statement is in JavaScript code structure?
 
 <details>

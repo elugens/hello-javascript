@@ -12,6 +12,12 @@ sidebar_position: 1
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
+---
+
 ### What is an event in relation to the DOM, Browser, and JavaScript?
 
 <details>

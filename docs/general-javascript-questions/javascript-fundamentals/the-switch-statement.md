@@ -12,6 +12,10 @@ sidebar_position: 14
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
 ### What are the benefits of using a Switch statement?
 
 <details>

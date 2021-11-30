@@ -12,6 +12,12 @@ sidebar_position: 13
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
+---
+
 ### What is Alternation in a regular expression?
 
 <details>

@@ -12,6 +12,12 @@ sidebar_position: 11
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
+---
+
 ### To move elements around we should be familiar with coordinates. What are the two coordinate systems that you should be familiar with?
 
 <details>

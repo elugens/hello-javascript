@@ -12,6 +12,12 @@ sidebar_position: 5
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
+---
+
 ### What is the HTML named &#8249;slot&#8250; element used for in web development?
 
 <details>

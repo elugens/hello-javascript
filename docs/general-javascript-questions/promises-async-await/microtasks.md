@@ -12,6 +12,12 @@ sidebar_position: 7
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
+---
+
 ### Can you explain how the Job Queue (Microtasks Queue) works?
 
 <details>

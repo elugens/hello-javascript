@@ -12,6 +12,12 @@ sidebar_position: 3
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
+---
+
 ### What two events are used to track the loading of external resources?
 
 <details>

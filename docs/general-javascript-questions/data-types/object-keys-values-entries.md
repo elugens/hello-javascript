@@ -12,6 +12,10 @@ sidebar_position: 9
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
 ### What three data structures use the obj.keys, obj.values, and obj.entries generic methods?
 
 <details>

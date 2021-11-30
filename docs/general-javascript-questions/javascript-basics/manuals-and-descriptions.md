@@ -12,6 +12,10 @@ sidebar_position: 2
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
 ### What are the common reference guides used by JavaScript developers?
 
 <details>

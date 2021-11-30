@@ -12,6 +12,12 @@ sidebar_position: 2
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
+---
+
 TODO Adding questions about FormData soon...
 
 <https://javascript.info/formdata>

@@ -12,6 +12,12 @@ sidebar_position: 4
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
+---
+
 ### Is there a way to implement prototypal inheritance without calling proto accessor property (deprecated) in JavaScript?
 
 <details>

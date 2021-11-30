@@ -12,6 +12,12 @@ sidebar_position: 4
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
+---
+
 ### When happens when a form is submitted in the browser?
 
 <details>

@@ -12,6 +12,12 @@ sidebar_position: 4
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
+---
+
 Please Read more about reference types here: <https://javascript.info/reference-type>
 
 <details>

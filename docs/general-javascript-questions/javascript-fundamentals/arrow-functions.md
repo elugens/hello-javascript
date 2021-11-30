@@ -12,6 +12,10 @@ sidebar_position: 17
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
 ### What is the definition of an arrow function?
 
 <details>

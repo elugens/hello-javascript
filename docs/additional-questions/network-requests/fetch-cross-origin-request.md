@@ -12,6 +12,12 @@ sidebar_position: 5
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
+---
+
 ### What happens when we send a fetch request to another domain without special headers?
 
 <details>

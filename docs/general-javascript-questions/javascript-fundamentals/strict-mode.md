@@ -12,6 +12,10 @@ sidebar_position: 3
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
 ### When was ECMAScript 5 (ES5) released for use?
 
 <details>

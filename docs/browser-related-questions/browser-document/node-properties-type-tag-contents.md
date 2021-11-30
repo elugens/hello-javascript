@@ -12,6 +12,12 @@ sidebar_position: 5
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
+---
+
 ### Can you explain the hierarchy in classes of DOM nodes?
 
 <details>

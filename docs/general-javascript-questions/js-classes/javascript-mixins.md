@@ -12,6 +12,12 @@ sidebar_position: 6
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
+---
+
 ### What is a Mixin in JavaScript and why do you use them instead of a class inheritance?
 
 <details>

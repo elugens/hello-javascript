@@ -12,6 +12,10 @@ sidebar_position: 18
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
 ### How does JavaScript see, view, or treat line-breaks?
 
 <details>

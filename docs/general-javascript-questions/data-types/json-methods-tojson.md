@@ -12,6 +12,10 @@ sidebar_position: 12
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
 ### Explain, what is JSON in relation to the JavaScript development environment?
 
 <details>

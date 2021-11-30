@@ -12,6 +12,12 @@ sidebar_position: 8
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
+---
+
 ### What is the most important rule to follow when you are choosing a way to style your page?
 
 <details>

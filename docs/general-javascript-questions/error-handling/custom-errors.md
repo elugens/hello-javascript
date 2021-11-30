@@ -12,6 +12,10 @@ sidebar_position: 2
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
 ### What are the benefits of inheriting from the Error object vs simply using the throw statement?
 
 <details>

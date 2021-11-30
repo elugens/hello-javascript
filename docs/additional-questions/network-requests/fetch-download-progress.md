@@ -12,6 +12,12 @@ sidebar_position: 3
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
+---
+
 ### How can we track download progress in JavaScript?
 
 <details>

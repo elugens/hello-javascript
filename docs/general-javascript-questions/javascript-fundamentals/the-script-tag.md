@@ -14,6 +14,10 @@ sidebar_position: 1
   </title>  
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
 ### What is the “script” tag used for in JavaScript?
 
 <details>

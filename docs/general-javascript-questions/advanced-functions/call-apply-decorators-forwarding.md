@@ -12,6 +12,10 @@ sidebar_position: 9
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
 ### What is the main difference between the call and apply JavaScript methods?
 
 <details>

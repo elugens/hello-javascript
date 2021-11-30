@@ -12,6 +12,10 @@ sidebar_position: 8
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
 ### What is an operand in JavaScript?
 
 <details>

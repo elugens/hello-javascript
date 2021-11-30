@@ -12,6 +12,12 @@ sidebar_position: 8
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
+---
+
 ### What is the rule for objects in a Boolean context?
 
 <details>

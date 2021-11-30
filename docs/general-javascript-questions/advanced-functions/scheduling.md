@@ -12,6 +12,10 @@ sidebar_position: 8
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
 ### What are the two most common JavaScript methods used for scheduling a call?
 
 <details>

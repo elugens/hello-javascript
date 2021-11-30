@@ -12,6 +12,12 @@ sidebar_position: 2
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
+---
+
 ### What if the binary data is a string? For instance, we received a file with textual data. How would we handle this using JavaScript?
 
 <details>

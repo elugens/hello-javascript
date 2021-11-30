@@ -12,6 +12,10 @@ sidebar_position: 15
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
 ### What are the SEVEN types of functions in JavaScript?
 
 <details>

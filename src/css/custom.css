@@ -308,7 +308,7 @@ hr {
   justify-content: flex-end;
   margin-right: 2rem;
   margin-top: 1rem;
-  margin-bottom: -1rem;
+  margin-bottom: 0.5rem;
 }
 
 .closeAnswers {

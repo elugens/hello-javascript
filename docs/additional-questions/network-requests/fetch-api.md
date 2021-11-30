@@ -12,6 +12,12 @@ sidebar_position: 6
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
+---
+
 ### Why is fetch the preferred way to send a network request via the browser?
 
 <details>

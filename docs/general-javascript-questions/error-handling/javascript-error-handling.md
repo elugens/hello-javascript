@@ -12,6 +12,10 @@ sidebar_position: 1
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
 ### Briefly explain the behavior of the “try..catch” error handling process.
 
 <details>

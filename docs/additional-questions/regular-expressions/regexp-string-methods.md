@@ -12,6 +12,12 @@ sidebar_position: 17
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
+---
+
 ### Explain the function and syntax of the match() string method.\*\*
 
 <details>

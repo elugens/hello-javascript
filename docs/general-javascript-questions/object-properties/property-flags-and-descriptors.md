@@ -12,6 +12,12 @@ sidebar_position: 1
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
+---
+
 ### What are property attributes/flags in relation to Objects in JavaScript that allow special access to an object?
 
 <details>

@@ -12,6 +12,10 @@ sidebar_position: 4
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
 ### An object is a keyed collection of values, what is an array in JavaScript?
 
 <details>

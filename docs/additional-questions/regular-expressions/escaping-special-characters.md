@@ -12,6 +12,12 @@ sidebar_position: 7
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
+---
+
 ### How do you escape a special character in a regular expression?
 
 <details>

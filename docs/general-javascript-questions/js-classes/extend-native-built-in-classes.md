@@ -12,6 +12,12 @@ sidebar_position: 5
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
+---
+
 ### When extending built-in classes, what is used in their internal implementation to extend the built-in class?
 
 <details>

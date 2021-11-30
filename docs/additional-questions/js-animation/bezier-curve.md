@@ -9,9 +9,14 @@ sidebar_position: 1
 
 <head>
   <title>Bezier Curve - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-  
+  <meta charSet="utf-8" />  
 </head>
+
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
+---
 
 ### What is a Bezier curve?
 

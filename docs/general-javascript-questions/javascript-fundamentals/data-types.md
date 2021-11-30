@@ -12,6 +12,10 @@ sidebar_position: 5
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
 ### How many data types are there in JavaScript?
 
 <details>

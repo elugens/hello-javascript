@@ -12,6 +12,12 @@ sidebar_position: 1
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
+---
+
 ### What are some of the use cases related to network requests?
 
 <details>

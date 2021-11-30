@@ -12,6 +12,10 @@ sidebar_position: 10
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
 ### What is de-structuring assignment and what are two data structures that commonly use it in JavaScript?
 
 <details>

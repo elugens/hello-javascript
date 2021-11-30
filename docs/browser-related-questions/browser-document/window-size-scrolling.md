@@ -12,6 +12,12 @@ sidebar_position: 10
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
+---
+
 ### How do we find the width and height of the browser window?
 
 <details>

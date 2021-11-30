@@ -12,6 +12,12 @@ sidebar_position: 12
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
+---
+
 **Regular expressions: Backreferences in pattern: \N and `\k<name>`**
 
 ### What is backreferencing in JavaScript regular expressions?

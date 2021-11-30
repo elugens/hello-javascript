@@ -12,6 +12,12 @@ sidebar_position: 9
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
+---
+
 ### Is there a way to resume an upload after lost upload connection?
 
 <details>

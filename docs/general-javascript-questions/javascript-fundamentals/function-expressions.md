@@ -12,6 +12,10 @@ sidebar_position: 16
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
 ### Is a function a function, object, or both?
 
 <details>

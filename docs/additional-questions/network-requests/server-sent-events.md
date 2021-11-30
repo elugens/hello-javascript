@@ -12,6 +12,12 @@ sidebar_position: 12
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
+---
+
 ### How does the Server-Sent Events describe the EventSource?
 
 <details>

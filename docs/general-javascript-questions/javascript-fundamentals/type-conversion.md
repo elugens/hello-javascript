@@ -12,6 +12,10 @@ sidebar_position: 7
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
 ### What are the two types of type conversion in JavaScript?
 
 <details>

@@ -12,6 +12,12 @@ sidebar_position: 11
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
+---
+
 ### Can you briefly describe the WebSocket protocol?
 
 <details>

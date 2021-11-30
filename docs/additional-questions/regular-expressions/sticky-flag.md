@@ -12,6 +12,12 @@ sidebar_position: 16
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
+---
+
 ### What does the regex flag ‘Y’ do in regular expressions?
 
 <details>

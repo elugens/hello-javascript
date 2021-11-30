@@ -12,6 +12,12 @@ sidebar_position: 15
   <meta charSet="utf-8" />
 </head>
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+
+<CloseAllAnswers />
+
+---
+
 ### What is catastrophic backtracking in relation to regular expressions?
 
 <details>
