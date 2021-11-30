@@ -14,7 +14,9 @@ sidebar_position: 12
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
-<CloseAllAnswer />
+<CloseAllAnswers />
+
+---
 
 ### Explain how the nullish coalescing operator works.
 

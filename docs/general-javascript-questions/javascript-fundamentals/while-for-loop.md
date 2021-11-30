@@ -27,7 +27,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Explain, how a while loop works?
+### Explain, how a while loop works in JavaScript.
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -149,7 +149,7 @@ do {
 
 ---
 
-### Explain, How the Do-While loop works?
+### Explain, How the Do-While loop works in JavaScript.
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -173,7 +173,7 @@ do {
 
 ---
 
-### Explain, How the For-Loop works?
+### Explain, How the For-Loop works in JavaScript.
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -297,7 +297,8 @@ for (; i < 3; i++) {
   <div><strong>Interview Response:</strong> We can call the break directive to stop the loop based on a specific condition.</div><br />
   <div><strong>Technical Response:</strong> Yes, this can be achieved by using the break directive or statement to stop the loop at any time. This is perfect for situations that require you to stop the loop in the middle or even in several places of its body. The break directive works with all traditional looping structures. (It does not work with forEach).<br /><br />
   </div><br />
-  <div><strong className="codeExample">Code Example:</strong> Stopping the Loop when a number is not entered<br /><br />
+  
+  <div><strong className="codeExample">Code Example:</strong> While Loop - Stopping the Loop when a number is not entered<br /><br />
 
   <div></div>
 
@@ -313,6 +314,30 @@ while (true) {
 }
 
 alert('Sum: ' + sum);
+```
+
+  </div>
+  <div><strong className="codeExample">Code Example:</strong> For Loop<br /><br />
+
+  <div></div>
+
+```js
+let text = '';
+for (let i = 0; i < 10; i++) {
+  if (i === 3) {
+    break;
+  }
+  text += 'The number is ' + i + '<br>';
+}
+
+document.getElementById('demo').innerHTML = text;
+
+// Output:
+// A loop with a break statement.
+
+// The number is 0
+// The number is 1
+// The number is 2
 ```
 
   </div>

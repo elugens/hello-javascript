@@ -18,6 +18,8 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 <CloseAllAnswers />
 
+---
+
 ### What is the “script” tag used for in JavaScript?
 
 <details>

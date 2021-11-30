@@ -16,6 +16,8 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 <CloseAllAnswers />
 
+---
+
 ### When was ECMAScript 5 (ES5) released for use?
 
 <details>

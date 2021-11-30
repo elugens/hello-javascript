@@ -16,6 +16,8 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 <CloseAllAnswers />
 
+---
+
 ### What makes the logical || (OR), && (AND), ! (NOT) operators unique?
 
 <details>
@@ -191,9 +193,7 @@ alert(0 && 'no matter what'); // 0
 
 ---
 
-### Which of the two, Logical || `(OR)` and && `(AND)` operators have the higher operator precedence?
-
-**Interview Answer:** The AND operator has a higher precedence than the OR operator.
+### Which of the two, Logical || (OR) and && (AND) operators have the higher operator precedence?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -211,7 +211,7 @@ alert(0 && 'no matter what'); // 0
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Technically Yes, but it is not recommended because it reduces readability.</div><br />
+  <div><strong>Interview Response:</strong> Technically Yes, but it is not recommended because it reduces readability because logical operators can be confusing when used in this fashion.</div><br />
   <div><strong>Technical Response:</strong> Technically it can be done, but it is not recommended. Although, the variant with && appears shorter, an if statement is more obvious and tends to be a little bit more readable.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
