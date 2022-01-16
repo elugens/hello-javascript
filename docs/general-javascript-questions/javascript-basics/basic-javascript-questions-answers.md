@@ -17,6 +17,8 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 <CloseAllAnswers />
 
+---
+
 ### What is JavaScript?
 
 <details className='answer'>
@@ -27,8 +29,16 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
     <div>
       <strong>Interview Response:</strong> JavaScript is a dynamically typed,
       interpreted scripting language that creates interactive effects for the
-      browser.
+      browser.<br/><br/>
     </div>
+
+:::note
+
+It should be noted, to maintain efficient speed in the browser, V8 translates JavaScript code into more efficient machine
+code instead of using an interpreter. During execution, it compiles JavaScript code into machine code using a JIT (Just-In-Time) compiler, much like SpiderMonkey or Rhino in the Mozilla browser.
+
+:::
+
   </div>
 </details>
 
@@ -42,7 +52,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> When a language is high level, it means that it is built without requiring detailed knowledge of the underlying computer. For example, memory management, knowing which processor is running, and keeping track of things like pointers are unnecessary. High-level programming languages ​​are easier to write and maintain because they are platform independent.
+      <strong>Interview Response:</strong> When a language is at a high level, it means that it is built without requiring detailed knowledge of the underlying computer. For example, memory management, knowing which processor is running, and keeping track of things like pointers are unnecessary. The platform independence of high-level languages makes them easier to write and maintain.
     </div>
   </div>
 </details>
@@ -62,7 +72,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
     </div>
     <br />
     <div>
-      <strong>Technical Response:</strong> Programs written in a compiled language are directly translated by the target machine. With  interpreted languages, the source code is not directly translated by the target machine. Instead, another program, the interpreter, reads and executes the code. Simply put: JavaScript is an interpreted language.
+      <strong>Technical Response:</strong> Programs written in a compiled language are directly translated by the target machine. With interpreted languages, the source code is not directly translated by the target machine. Instead, another program, the interpreter, reads and executes the code. Simply put: JavaScript is an interpreted language.
     </div>
   </div>
 </details>
@@ -93,7 +103,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> Originally JavaScript was called "Live Script", but because of the popularity of Java. It was also renamed to JavaScript based on the popularity of the Java programming language, but they are different. JavaScript is a high level programming language and Java is a middle level programming language.
+      <strong>Interview Response:</strong> JavaScript was originally called "Live Script," but because Java became so popular, it was renamed JavaScript. It was also renamed JavaScript based on the popularity of the Java programming language, but they are different. JavaScript is a high-level programming language and Java is a middle-level programming language.
       </div>
   </div>
 </details>
@@ -113,7 +123,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
     </div>
     <br />
     <div>
-      <strong>Technical Response:</strong> Today, JavaScript can run not only in a browser, but also on a server or on any device that has a special program called a JavaScript engine.
+      <strong>Technical Response:</strong> JavaScript can now be run not only on a browser but on a server or on any device that has a JavaScript engine or a special application like Node.js.
     </div>
   </div>
 </details>
@@ -152,11 +162,11 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> You should remember the names of the engines to ensure that the features work in all environments. Otherwise you have to write a polyfill.
+      <strong>Interview Response:</strong> You should remember the names of the engines to ensure that the features work in all environments. Otherwise, you have to write a polyfill.
     </div>
     <br />
     <div>
-      <strong>Technical Response:</strong> Code names are used in developer articles on the internet, so we should remember them. As an example, if "feature X is supported by V8", then it probably works in Chrome and Opera.
+      <strong>Technical Response:</strong> Code names are used in developer articles on the internet, so we should remember them. As an example, if a specific feature is supported by the V8 engine, then it probably works in Chrome and Opera.
     </div>
   </div>
 </details>
@@ -168,16 +178,16 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong>  JavaScript can do everything related to a webpage including manipulation, interaction with the user, and interaction with the server.</div><br />
-  <div><strong>Technical Response:</strong> JavaScript's capabilities are greatly affected by the environment it is operating in. Node.js and JavaScript, for instance, can read and write arbitrary files and perform network requests. JavaScript allows you to manipulate web pages, communicate with users, and interact with the server from within your browser.</div>
+  <div><strong>Interview Response:</strong> JavaScript can do everything related to a webpage including manipulation, interaction with the user, and interaction with the server.</div><br />
+  <div><strong>Technical Response:</strong> JavaScript's capabilities are greatly affected by the environment it is operating in. JavaScript in a Node.js environment can read and write arbitrary files and perform network requests. JavaScript allows you to manipulate web pages, communicate with users, and interact with the server from within your browser.</div>
   </div><br/>
  <strong>For instance, in-browser JavaScript can:</strong>
 
-1. Change the existing content, add HTML, and add styles to the page.
-1. React to user actions, run on mouse clicks, pointer movements, key presses.
-1. Send requests over the network to remote servers, download and upload files (so-called AJAX and COMET technologies).
-1. Get and set cookies, ask questions to the visitor, show messages.
-1. Remember the data on the client-side (“local storage”).
+1. Change the content, add HTML, and style the page.
+1. React to user actions, such as mouse clicks, pointer movements, and keystrokes.
+1. Sending requests to remote servers, downloading and uploading files (as with AJAX and COMET).
+1. Get and set cookies, ask visitors questions, and display messages.
+1. Keep track of data stored on the client-side ("local storage").
 
 </details>
 
@@ -191,15 +201,11 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> In the browser, JavaScript's
-      abilities are limited to ensure a user's safety. The aim is to prevent a
-      malicious website from accessing users’ data or harming them.
+      <strong>Interview Response:</strong> JavaScript's capabilities are restricted in the browser for security reasons. We want to prevent malicious websites from gaining access to or harming our users' data.
     </div>
     <br />
     <div>
-      <strong>Technical Response:</strong> JavaScript’s abilities in the browser
-      are limited for the sake of the user’s safety. The goal is to prevent evil
-      websites from accessing personal data or harming users.
+      <strong>Technical Response:</strong> Due to user safety concerns, JavaScript's abilities are limited in the browser. The idea is to prevent evil websites from accessing personal data or causing harm to users.
     </div>
     <div>
       <strong>Examples of such restrictions include:</strong>
@@ -207,9 +213,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
       <br />
       <ol>
         <li>
-          JavaScript on a webpage may not read/write arbitrary files on the hard
-          disk, copy them, or execute programs. It has no direct access to OS
-          functions.
+          An arbitrary JavaScript script on a webpage cannot read/write hard drive files, copy them, or run programs. It does not have direct access to the operating system.
         </li>
         <li>
           Currently, browsers can work with files, but they are limited to
@@ -217,20 +221,14 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
           selecting them via a &#8249;input&#8250; tag.
         </li>
         <li>
-          here are ways to interact with the camera/microphone and other
-          devices, but they require a user’s explicit permission. The
-          JavaScript-enabled page cannot secretly activate a webcam, monitor the
-          surroundings, and/or send user information.
+          It is possible to interact with the camera/microphone and other devices, but these actions require the explicit permission of the user. A JavaScript-enabled page cannot secretly activate a webcam, monitor the surroundings, or send user information.
         </li>
         <li>
           The JavaScript on one page may not access the code on the other if the
-          pages are on separate domains, protocols, or port.
+          pages are on separate domains, protocols, or ports.
         </li>
         <li>
-          JavaScript can easily communicate over the net to the server where the
-          current page came from. But its ability to receive data from other
-          sites/domains is crippled. Though possible, it requires explicit
-          agreement (expressed in HTTP headers) from the remote side.
+          JavaScript can easily communicate over the internet with the server generating the current page. Despite this, its ability to receive data from other sites/domains is severely limited. The remote side must, however, express its acceptance using HTTP headers, regardless of whether it is possible.
         </li>
       </ol>
     </div>
