@@ -34,8 +34,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 :::note
 
-It should be noted, to maintain efficient speed in the browser, V8 translates JavaScript code into more efficient machine
-code instead of using an interpreter. During execution, it compiles JavaScript code into machine code using a JIT (Just-In-Time) compiler, much like SpiderMonkey or Rhino in the Mozilla browser.
+It should be noted, to maintain efficient speed in the browser, V8 translates JavaScript code into more efficient machine code instead of using an interpreter. During execution, it compiles JavaScript code into machine code using a JIT (Just-In-Time) compiler, much like SpiderMonkey or Rhino in the Mozilla browser.
 
 :::
 
