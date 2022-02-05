@@ -706,7 +706,7 @@ export default function LinkDirectory() {
           </div>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to='/docs/browser-related-questions/browser-events/browser-events'>
+              <Link to='/docs/browser-related-questions/browser-events/browser-events-doc'>
                 Browser Events
               </Link>
             </h4>
@@ -714,7 +714,7 @@ export default function LinkDirectory() {
           <div className='categories'>
             <ul className={styles.categoryItems}>
               <li className={styles.categorySubItem}>
-                <Link to='/docs/browser-related-questions/browser-events/browser-events'>
+                <Link to='/docs/browser-related-questions/browser-events/browser-events-doc'>
                   Browser Events
                 </Link>
               </li>
@@ -1055,7 +1055,7 @@ export default function LinkDirectory() {
           </div>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to='/docs/additional-questions/web-components/web-components'>
+              <Link to='/docs/additional-questions/web-components/web-components-doc'>
                 Web Components
               </Link>
             </h4>
@@ -1063,7 +1063,7 @@ export default function LinkDirectory() {
           <div className='categories'>
             <ul className={styles.categoryItems}>
               <li className={styles.categorySubItem}>
-                <Link to='/docs/additional-questions/web-components/web-components'>
+                <Link to='/docs/additional-questions/web-components/web-components-doc'>
                   Web Components
                 </Link>
               </li>

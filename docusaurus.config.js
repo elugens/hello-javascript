@@ -11,7 +11,7 @@ const config = {
   tagline: 'A Complete Archive of JavaScript Interview Questions and Answers',
   url: 'https://www.hellojavascript.info',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'elugens', // Usually your GitHub org/user name.
