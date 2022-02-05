@@ -1,10 +1,10 @@
 import React from 'react';
 
-const YTVideo = ({ videoURL, videoTitle }) => (
+const YTVideo = ({ videourl, videotitle }) => (
   <div className='videoWrapper'>
     <iframe
-      src={videoURL}
-      title={videoTitle}
+      src={videourl}
+      title={videotitle}
       allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
       frameBorder='0'
       webkitallowfullscreen='true'
