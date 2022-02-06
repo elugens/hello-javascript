@@ -23,7 +23,7 @@
     "@svgr/webpack": "^5.5.0",
     "clsx": "^1.1.1",
     "disqus-react": "^1.1.2",
-    "docusaurus-plugin-search-local": "^0.1.4",
+    "docusaurus-plugin-search-local": "^0.2.1",
     "dotenv": "^10.0.0",
     "file-loader": "^6.2.0",
     "highlight.js": "^11.4.0",
