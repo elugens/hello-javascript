@@ -1,9 +1,9 @@
 ---
 title: While & For Loops
+description: Learn how to use while and for loops in JavaScript.
 sidebar_position: 13
+sidebar_label: While & For Loops
 ---
-
-# LOOPS: WHILE and FOR
 
 **JavaScript Fundamentals: While & For Loops (??)**
 

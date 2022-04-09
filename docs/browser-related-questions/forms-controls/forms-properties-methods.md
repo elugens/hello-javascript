@@ -1,16 +1,11 @@
 ---
 title: Form Properties / Methods
+description: Form Properties / Methods in JavaScript are properties and methods that are associated with a form element. - JavaScript Interview Questions & Answers
 sidebar_position: 1
+sidebar_label: Form Properties / Methods
 ---
 
-# Form Properties / Methods
-
 **Forms / Controls: Form Properties / Methods**
-
-<head>
-  <title>Form Properties / Methods - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

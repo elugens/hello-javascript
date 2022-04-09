@@ -1,16 +1,11 @@
 ---
-title: Mixins
-sidebar_position: 6
+title: JavaScript Mixins
+description: JavaScript Mixins is a syntax for creating a mixin in JavaScript. A mixin is a class that is designed to be used as a mixin.
+sidebar_position: 7
+sidebar_label: Mixins
 ---
 
-# Mixins
-
 **Classes: Mixins**
-
-<head>
-  <title>Mixins - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
@@ -23,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A mixin is a class containing methods that can be used by other classes without a need to inherit from it. In other words, a mixin provides methods that implement a certain behavior, but we do not use it alone, we use it to add the behavior to other classes.</div><br />
+  <div><strong>Interview Response:</strong> A mixin is a object containing methods that can be used by other classes without a need to inherit from it. In other words, a mixin provides methods that implement a certain behavior, but we do not use it alone, we use it to add the behavior to other classes.</div><br />
   <div><strong>Technical Response:</strong> In JavaScript we can only inherit from a single object. There can be only one [[Prototype]] for an object. And a class may extend only one other class. That is a limiting factor in class inheritance that may require the use of a mixin. A mixin is a class containing methods that can be used by other classes without a need to inherit from it. In other words, a mixin provides methods that implement a certain behavior, but we do not use it alone, we use it to add the behavior to other classes.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />

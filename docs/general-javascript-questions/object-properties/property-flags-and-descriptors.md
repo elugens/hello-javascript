@@ -1,16 +1,11 @@
 ---
 title: Property Flags / Descriptors
+description: Property Flags / Descriptors is a very common interview question.
 sidebar_position: 1
+sidebar_label: Property Flags / Descriptors
 ---
 
-# Property Flags / Descriptors
-
 **Object Properties Configuration: Property Flags / Descriptors**
-
-<head>
-  <title>Property Flags / Descriptors - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

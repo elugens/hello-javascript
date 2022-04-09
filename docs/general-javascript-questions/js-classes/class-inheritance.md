@@ -1,16 +1,11 @@
 ---
 title: Class Inheritance
+description: Class Inheritance in JavaScript is a syntax for creating a class in JavaScript.
 sidebar_position: 2
+sidebar_label: Class Inheritance
 ---
 
-# Class Inheritance
-
 **Classes: Class Inheritance**
-
-<head>
-  <title>Class Inheritance - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

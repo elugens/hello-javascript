@@ -1,16 +1,11 @@
 ---
-title: Custom Errors
+title: Custom Error Handling
+description: Custom Error Handling in JavaScript is a good way to handle errors in your code.
 sidebar_position: 2
+sidebar_label: Custom Errors
 ---
 
-# Custom Error Handling
-
 **Error Handling: Custom Errors**
-
-<head>
-  <title>Custom Errors Handling - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

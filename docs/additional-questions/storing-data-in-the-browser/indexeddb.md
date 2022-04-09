@@ -1,16 +1,11 @@
 ---
 title: IndexedDB
+description: IndexedDB is a database that is stored in the browser. It is used to store data in the browser.
 sidebar_position: 3
+sidebar_label: IndexedDB
 ---
 
-# IndexedDB
-
 **Storing Browser Data: IndexedDB**
-
-<head>
-  <title>IndexedDB - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

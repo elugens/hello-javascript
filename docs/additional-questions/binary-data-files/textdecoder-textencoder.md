@@ -1,16 +1,11 @@
 ---
 title: TextDecoder / TextEncoder
+description: TextDecoder / TextEncoder is a built-in object that allows you to convert between UTF-8 and UTF-16. It is used in the browser to convert the text of a web page to UTF-16.
 sidebar_position: 2
+sidebar_label: TextDecoder / TextEncoder
 ---
 
-# TextDecoder / TextEncoder
-
 **Binary Data / Files: TextDecoder / TextEncoder**
-
-<head>
-  <title>TextDecoder / TextEncoder - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

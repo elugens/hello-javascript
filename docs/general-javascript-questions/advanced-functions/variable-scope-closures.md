@@ -1,16 +1,11 @@
 ---
 title: Variable Scope / Closures
+description: Variable Scope / Closures is a very common interview question.
 sidebar_position: 3
+sidebar_label: Variable Scope / Closures
 ---
 
-# Variable Scope / Closures
-
 **Advanced Functions: Variable Scope / Closures**
-
-<head>
-  <title>Variable Scope / Closures - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

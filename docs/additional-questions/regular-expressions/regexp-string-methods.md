@@ -1,16 +1,11 @@
 ---
 title: Regex / String Methods
+description: Regex / String Methods - The following are the methods available in the regular expression and string objects. The methods are used to match text against regular expressions and to perform string operations.
 sidebar_position: 17
+sidebar_label: Regex / String Methods
 ---
 
-# Regex / String Methods
-
 **Regular Expressions: Regex / String Methods**
-
-<head>
-  <title>Regex / String Methods - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

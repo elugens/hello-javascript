@@ -1,16 +1,11 @@
 ---
 title: Web Components
+description: Web Components in JavaScript is used to create reusable components. It is used to create reusable components.
 sidebar_position: 1
+sidebar_label: Web Components
 ---
 
-# Web Components
-
 **Web Components: Web Components**
-
-<head>
-  <title>Web Components - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

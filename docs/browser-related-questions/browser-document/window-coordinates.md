@@ -1,16 +1,11 @@
 ---
-title: Coordinates
+title: Window Coordinates
+description: Window Coordinates are the coordinates of the browser window. They are relative to the top left corner of the browser window. - JavaScript Interview Questions & Answers
 sidebar_position: 11
+sidebar_label: Window Coordinates
 ---
 
-# Coordinates
-
 **Browser Document: Coordinates**
-
-<head>
-  <title>Coordinates - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

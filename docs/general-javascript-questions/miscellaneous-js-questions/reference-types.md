@@ -1,6 +1,8 @@
 ---
-title: Reference Type
+title: Reference Types
+description: Reference Type is an internal type of the language in JavaScript. They are used to store data. - JavaScript Interview Questions & Answers
 sidebar_position: 4
+sidebar_label: Reference Types
 ---
 
 # Reference Types

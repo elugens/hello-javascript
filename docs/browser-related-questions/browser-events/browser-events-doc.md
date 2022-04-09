@@ -1,16 +1,11 @@
 ---
 title: Browser Events
+description: Browser Events are the events that occur in the browser. They are used to interact with the browser. - JavaScript Interview Questions & Answers
 sidebar_position: 1
+sidebar_label: Browser Events
 ---
 
-# Browser Events
-
 **Browser Events: Browser Events**
-
-<head>
-  <title>Browser Events - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

@@ -1,16 +1,11 @@
 ---
-title: Keys / Values / Entries
+title: Object.keys, values, entries
+description: Object.keys, values, entries are used to get the keys, values, and entries from an object. They are used to iterate over the object.
 sidebar_position: 9
+sidebar_label: Keys / Values / Entries
 ---
 
-# Object.keys, values, entries
-
 **Data Types: Object.keys, values, entries**
-
-<head>
-  <title>Object.keys, values, entries - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

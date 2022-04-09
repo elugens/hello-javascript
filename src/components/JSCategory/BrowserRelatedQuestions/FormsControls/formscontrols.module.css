@@ -1,0 +1,81 @@
+/* Light Theme CSS */
+
+html[data-theme='light'] .mainContent {
+  margin: 1px;
+}
+html[data-theme='light'] .mainContent p {
+}
+
+html[data-theme='light'] .mainCategoryGroup {
+}
+
+html[data-theme='light'] .mainCategoryItem {
+  font-weight: 600;
+  border-radius: 0.3rem;
+  background-color: rgb(237, 237, 237);
+  padding: 10px 0 10px 10px;
+  margin-bottom: 10px;
+  margin-left: -40px;
+  list-style-type: none;
+}
+
+html[data-theme='light'] .mainCategoryItem:hover {
+  font-weight: 600;
+  border-radius: 0.3rem;
+  background-color: rgb(248, 248, 248);
+  padding: 10px 0 10px 10px;
+  margin-bottom: 10px;
+  margin-left: -40px;
+  list-style-type: none;
+}
+
+html[data-theme='light'] .mainCategoryItem a:hover {
+  color: #269aa3;
+  text-decoration: none;
+}
+
+html[data-theme='light'] .mainCategoryItem a {
+  color: dimgrey;
+  text-decoration: none;
+}
+
+/* Dark Theme CSS */
+
+html[data-theme='dark'] .mainContent {
+  margin: 1px;
+}
+html[data-theme='dark'] .mainContent p {
+}
+
+html[data-theme='dark'] .mainCategoryGroup {
+}
+
+html[data-theme='dark'] .mainCategoryItem {
+  font-weight: 600;
+  border-radius: 0.3rem;
+  background-color: rgba(253, 187, 45, 1);
+  padding: 10px 0 10px 10px;
+  margin-bottom: 10px;
+  margin-left: -40px;
+  list-style-type: none;
+}
+
+html[data-theme='dark'] .mainCategoryItem:hover {
+  font-weight: 600;
+  border-radius: 0.3rem;
+  background-color: rgb(248, 248, 248);
+  padding: 10px 0 10px 10px;
+  margin-bottom: 10px;
+  margin-left: -40px;
+  list-style-type: none;
+}
+
+html[data-theme='dark'] .mainCategoryItem a:hover {
+  color: #269aa3;
+  text-decoration: none;
+}
+
+html[data-theme='dark'] .mainCategoryItem a {
+  color: rgb(40, 32, 32);
+  text-decoration: none;
+}

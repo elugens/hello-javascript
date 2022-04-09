@@ -1,16 +1,11 @@
 ---
 title: Template Element
+description: A built-in ‹template› element serves as a storage for HTML markup templates. It is used to create custom elements.
 sidebar_position: 4
+sidebar_label: Template Element
 ---
 
-# Template Element
-
 **Web Components: Template Element**
-
-<head>
-  <title>Template Element - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

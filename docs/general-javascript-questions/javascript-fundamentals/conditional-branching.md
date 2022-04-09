@@ -1,9 +1,9 @@
 ---
-title: Conditional Branching
+title: Conditional Branching in JavaScript
+description: Learn how to use conditional branching in JavaScript.
 sidebar_position: 10
+sidebar_label: Conditional Branching
 ---
-
-# Conditional Branching
 
 **JavaScript Fundamentals: Conditional Branching**
 

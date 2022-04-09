@@ -1,16 +1,11 @@
 ---
 title: Async/Await
+description: Async/Await is a way to handle asynchronous operations in a synchronous manner.
 sidebar_position: 8
+sidebar_label: Async/Await
 ---
 
-# Async/Await
-
 **Promises/Async/Await: Async/Await**
-
-<head>
-  <title>Async/Await - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

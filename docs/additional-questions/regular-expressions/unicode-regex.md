@@ -1,16 +1,11 @@
 ---
 title: Unicode Regex
+description: Unicode Regex is used to match text against regular expressions. It is used to match text against regular expressions.
 sidebar_position: 3
+sidebar_label: Unicode Regex
 ---
 
-# Unicode Regex
-
 **Regular Expressions: Unicode Regex**
-
-<head>
-  <title>Unicode Regex - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

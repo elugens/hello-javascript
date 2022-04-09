@@ -1,16 +1,11 @@
 ---
-title: Async Iteration
+title: Async Iteration and Generators
+description: Async Iteration and Generators are a way to create iterators.
 sidebar_position: 2
+sidebar_label: Async Iteration
 ---
 
-# Async Iteration and Generators
-
 **Generators, Advanced Iteration: Async Iteration and Generators**
-
-<head>
-  <title>Async Iteration / Generators - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

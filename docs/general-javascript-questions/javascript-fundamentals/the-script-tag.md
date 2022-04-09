@@ -1,18 +1,11 @@
 ---
 title: The "script" Tag
+description: The "script" tag is used to load JavaScript files.
 sidebar_position: 1
+sidebar_label: The "script" Tag
 ---
 
-# The "script" Tag - Questions and Answers
-
 **JavaScript Fundamentals: The "script" Tag**
-
-<head>
-  <meta charSet='utf-8' />
-  <title>
-    The "script" Tag - JavaScript Frontend Interview Questions & Answers
-  </title>  
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

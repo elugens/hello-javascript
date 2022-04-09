@@ -1,16 +1,11 @@
 ---
-title: Arrays
+title: JavaScript Arrays
+description: Arrays are a collection of indexed values that can be accessed by a numerical index.
 sidebar_position: 4
+sidebar_label: Arrays
 ---
 
-# JavaScript Arrays
-
 **Data Types: Arrays**
-
-<head>
-  <title>JavaScript Arrays - Frontend Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
@@ -459,7 +454,7 @@ for (let fruit of fruits) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The range limitation for the length property must be lower than 2 to the 32nd power. Another limitation is the length property’s inability to return the correct number of elements.</div><br />
-  <div><strong>Technical Response:</strong> The range limitation for the length property must be lower than 2 to the 32nd power (232), according to the MDN. Another limitation is the length property’s inability to return the correct number of elements. For example, if there is no element in one of the indices, the length property will still count that position. Length returns the highest index and not the number of elements. A less common issue is array mutation, when an element is deleted (delete colors[0]) from an array. (Note: You should never use delete to clear an array or remove elements.) The length is not updated with the new number of elements and returns the highest index.<br />
+  <div><strong>Technical Response:</strong> The range limitation for the length property must be lower than 2 to the 32nd power (2<sup>32</sup>), according to the MDN. Another limitation is the length property’s inability to return the correct number of elements. For example, if there is no element in one of the indices, the length property will still count that position. Length returns the highest index and not the number of elements. A less common issue is array mutation, when an element is deleted (delete colors[0]) from an array. (Note: You should never use delete to clear an array or remove elements.) The length is not updated with the new number of elements and returns the highest index.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

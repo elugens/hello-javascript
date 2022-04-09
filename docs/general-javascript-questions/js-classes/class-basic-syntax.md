@@ -1,16 +1,11 @@
 ---
-title: Basic Syntax
+title: JavaScript Classes the Basics
+description: Basic Class Syntax in JavaScript is a syntax for creating a class in JavaScript.
 sidebar_position: 1
+sidebar_label: Basic Syntax
 ---
 
-# Modules
-
 **Classes: Basic Class Syntax**
-
-<head>
-  <title>Class Syntax - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

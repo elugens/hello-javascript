@@ -1,16 +1,11 @@
 ---
 title: Character Classes
+description: Character Classes are used to match text against regular expressions. They are used to match text against regular expressions.
 sidebar_position: 2
+sidebar_label: Character Classes
 ---
 
-# Character Classes
-
 **Regular Expressions: Character Classes**
-
-<head>
-  <title>Character Classes - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

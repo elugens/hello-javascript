@@ -1,16 +1,11 @@
 ---
 title: Function object / NFE
+description: Function object / NFE is a very common interview question.
 sidebar_position: 6
+sidebar_label: Function object / NFE
 ---
 
-# Function object / NFE
-
 **Advanced Functions: Function object / NFE**
-
-<head>
-  <title>Function object / NFE - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

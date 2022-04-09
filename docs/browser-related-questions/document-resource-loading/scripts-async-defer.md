@@ -1,16 +1,11 @@
 ---
 title: Scripts - Async/Defer
+description: Scripts - Async/Defer in JavaScript is a way to load JavaScript files asynchronously. - JavaScript Interview Questions & Answers
 sidebar_position: 2
+sidebar_label: Scripts - Async/Defer
 ---
 
-# Scripts - Async/Defer
-
 **Document / Resource Loading: Scripts - Async/Defer**
-
-<head>
-  <title>Scripts - Async/Defer - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

@@ -1,16 +1,10 @@
 ---
-title: References/Copying
+title: Object References & Copying
 sidebar_position: 2
+sidebar_label: References/Copying
 ---
 
-# Object References & Copying
-
 **Objects the Basics: References/Copying**
-
-<head>
-  <title>Object References/Copying - Frontend Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
@@ -18,7 +12,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### What is the difference between an object and a primitive?
+### What is the difference between an object and primitive copying?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

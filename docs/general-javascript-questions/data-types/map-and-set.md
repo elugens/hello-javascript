@@ -1,16 +1,11 @@
 ---
 title: Map and Set
+description: Map and Set are not primitive data types in JavaScript. They are objects.
 sidebar_position: 7
+sidebar_label: Map and Set
 ---
 
-# Map and Set
-
 **Data Types: Map and Set**
-
-<head>
-  <title>Map and Set - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

@@ -1,16 +1,11 @@
 ---
 title: The "new" Operator
+description: The "new" operator is used to create a new object instance.
 sidebar_position: 5
+sidebar_label: The "new" Operator
 ---
 
-# The "new" Operator
-
 **Objects the Basics: The "new" Operator**
-
-<head>
-  <title>Constructors - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

@@ -1,16 +1,11 @@
 ---
 title: Dynamic Imports
+description: Dynamic Imports in JavaScript ES6 Modules
 sidebar_position: 3
+sidebar_label: Dynamic Imports
 ---
 
-# Dynamic Imports
-
 **Modules: Dynamic Imports**
-
-<head>
-  <title>Modules: Dynamic Imports - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

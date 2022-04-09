@@ -1,16 +1,11 @@
 ---
 title: DOM Tree
+description: DOM Tree is a tree structure that represents the structure of the HTML DOM. - JavaScript Interview Questions & Answers
 sidebar_position: 2
+sidebar_label: DOM Tree
 ---
 
-# DOM Tree
-
 **Browser Document: DOM Tree**
-
-<head>
-  <title>DOM Tree - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

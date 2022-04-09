@@ -1,16 +1,11 @@
 ---
 title: Object to Primitive Conversion
+description: The object to primitive conversion is a JavaScript operator that converts an object to a primitive value.
 sidebar_position: 8
+sidebar_label: Object to Primitive Conversion
 ---
 
-# Object to Primitive Conversion
-
 **Objects the Basics: Object to Primitive Conversion**
-
-<head>
-  <title>Object to Primitive Conversion - Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

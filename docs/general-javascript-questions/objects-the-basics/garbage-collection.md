@@ -1,16 +1,11 @@
 ---
 title: Garbage Collection
+description: Garbage collection is a process that removes unused objects from memory.
 sidebar_position: 3
+sidebar_label: Garbage Collection
 ---
 
-# Garbage Collection
-
 **Objects the Basics: Garbage Collection**
-
-<head>
-  <title>Garbage Collection - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

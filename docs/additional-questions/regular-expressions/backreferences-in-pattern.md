@@ -1,16 +1,11 @@
 ---
-title: Backreferences
+title: Backreference Pattern
+description: A backreference in a regular expression identifies a previously matched group and looks for the same text again.
 sidebar_position: 12
+sidebar_label: Backreferences
 ---
 
-# Backreferences in Pattern
-
-**Regular Expressions: Backreferences in Pattern**
-
-<head>
-  <title>RegExp Backreferences - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
+**Regular Expressions: Backreference Pattern**
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

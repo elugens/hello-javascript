@@ -1,16 +1,11 @@
 ---
 title: Scheduling / Timing
+description: Scheduling / Timing - setTimeout / setInterval is a very common interview question.
 sidebar_position: 8
+sidebar_label: Scheduling / Timing
 ---
 
-# Scheduling: setTimeout / setInterval
-
 **Advanced Functions: Scheduling: setTimeout / setInterval**
-
-<head>
-  <title>Scheduling: setTimeout / setInterval - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

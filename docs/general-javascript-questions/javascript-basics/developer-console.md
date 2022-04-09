@@ -1,9 +1,9 @@
 ---
 title: JS Developers Console
+description: A developer console is a tool that allows you to interact with the JavaScript engine.
 sidebar_position: 4
+sidebar_label: Developer Console
 ---
-
-# DEV Console - Questions and Answers
 
 **JavaScript Basics: Developers Console**
 

@@ -1,17 +1,11 @@
 ---
 title: Clickjacking Attacks
-
+description: Clickjacking Attacks is the process of a malicious site trying to trick a user into clicking on a link that is on another site. This is done by embedding a link in the page of the user and then telling the user to click on that link.
 sidebar_position: 3
+sidebar_label: Clickjacking Attacks
 ---
 
-# Clickjacking Attacks
-
 **Frames / Windows: Clickjacking Attacks**
-
-<head>
-  <title>Clickjacking Attacks - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

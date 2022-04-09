@@ -1,16 +1,11 @@
 ---
-title: Var Declaration
+title: The Var Declaration
+description: The Var Declaration is a very common interview question.
 sidebar_position: 4
+sidebar_label: Var Declaration
 ---
 
-# Var Declaration
-
 **Advanced Functions: Var Declaration**
-
-<head>
-  <title>Var Declaration - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

@@ -1,16 +1,11 @@
 ---
-title: Alternation
+title: Alternation (OR) |
+description: Alternation is the term in regular expression that is a simple “OR”. In a regular expression it “OR” is denoted with a vertical line character |.
 sidebar_position: 13
+sidebar_label: Alternation
 ---
 
-# Alternation (OR) |
-
 **Regular Expressions: Alternation (OR) |**
-
-<head>
-  <title>Alternation - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

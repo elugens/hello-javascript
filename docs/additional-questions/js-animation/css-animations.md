@@ -1,16 +1,11 @@
 ---
 title: CSS-Animations
+description: CSS-Animations is used to animate elements. - JavaScript Interview Questions and Answers
 sidebar_position: 2
+sidebar_label: CSS-Animations
 ---
 
-# CSS-Animations
-
 **Animation: CSS-Animations**
-
-<head>
-  <title>CSS-Animations - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

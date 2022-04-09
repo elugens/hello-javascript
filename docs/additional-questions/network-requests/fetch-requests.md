@@ -1,16 +1,11 @@
 ---
 title: Fetch Requests
+description: Fetch Requests are used to make requests to the server. They are used to make GET, POST, PUT, DELETE, and PATCH requests.
 sidebar_position: 1
+sidebar_label: Fetch Requests
 ---
 
-# Fetch Requests
-
 **Network Requests: Fetch Requests**
-
-<head>
-  <title>Fetch Requests - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

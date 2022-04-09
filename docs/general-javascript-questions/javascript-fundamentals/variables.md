@@ -1,16 +1,11 @@
 ---
-title: Variables
+title: JavaScript Variables
+description: JavaScript variables are used to store data.
 sidebar_position: 4
+sidebar_label: Variables
 ---
 
-# JavaScript Variables
-
 **JavaScript Fundamentals: JavaScript Variables**
-
-<head>
-  <title>JavaScript Variables - JavaScript Frontend Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
@@ -83,7 +78,7 @@ let message = 'Hello';
   <div></div>
 
 ```js
-let hello = 'Hello JavaScript!';
+let hello = 'Hello JavaScript!';
 
 let message;
 
@@ -170,7 +165,7 @@ let userName;
 let test123;
 ```
 
-<strong className="codeExample">These names are also valid, but not recommended in the format below:</strong><br /><br />
+<strong className="codeExample">These names are also valid, but not recommended in the format below:</strong><br /><br />
 
   <div></div>
 
@@ -191,7 +186,7 @@ alert($ + _); // 3
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong>  When the name contains multiple words, camelCase is commonly used.</div><br />
+  <div><strong>Interview Response:</strong>  As a matter of convention, when the name contains multiple words, camelCase is commonly used.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -211,7 +206,7 @@ let myUserName;
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong>  Yes, variables named myUser and myuser are two different variables, because variables in JavaScript are case-sensitive.</div><br />
+  <div><strong>Interview Response:</strong> Yes, variables named myUser and myuser are two different variables, because variables in JavaScript are case-sensitive.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>

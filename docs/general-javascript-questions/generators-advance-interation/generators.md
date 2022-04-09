@@ -1,16 +1,11 @@
 ---
 title: Generators
+description: JavaScript generators are a way to create iterators.
 sidebar_position: 1
+sidebar_label: Generators
 ---
 
-# Generators
-
 **Generators, Advanced Iteration: Generators**
-
-<head>
-  <title>Generators - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
@@ -100,11 +95,11 @@ function* gen() {
 }
 
 // Post-generator function
-function* gen() {
-  yield 1;
-  yield 2;
-  yield 3;
-}
+// function *gen() {
+//   yield 1;
+//   yield 2;
+//   yield 3;
+// }
 ```
 
   </div>

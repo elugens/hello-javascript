@@ -1,16 +1,11 @@
 ---
 title: Proxy and Reflect
+description: JavaScript Proxy and Reflect is a way to create a proxy object that can be used to intercept and change the behavior of an object.
 sidebar_position: 1
+sidebar_label: Proxy and Reflect
 ---
 
-# Proxy and Reflect
-
 **Miscellaneous: Proxy and Reflect**
-
-<head>
-  <title>Proxy and Reflect - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

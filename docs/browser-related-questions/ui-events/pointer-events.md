@@ -1,16 +1,11 @@
 ---
 title: Pointer Events
+description: Pointer Events in JavaScript are events that occur when a user interacts with a pointer. They are triggered by the user's pointer. - JavaScript Interview Questions & Answers
 sidebar_position: 4
+sidebar_label: Pointer Events
 ---
 
-# Pointer Events
-
 **UI Events: Pointer Events**
-
-<head>
-  <title>Pointer Events - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

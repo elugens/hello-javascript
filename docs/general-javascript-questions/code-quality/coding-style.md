@@ -1,16 +1,11 @@
 ---
 title: Coding Style
+description: Coding style is a set of rules for writing code. This guide will help you to understand coding styles.
 sidebar_position: 2
+sidebar_label: Coding Style
 ---
 
-# Coding Style Interview Questions
-
 **Code Quality: Coding Style**
-
-<head>
-  <title>Coding Style - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

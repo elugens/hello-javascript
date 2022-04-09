@@ -1,16 +1,11 @@
 ---
 title: Blob Data
+description: Blob Data is a built-in object that allows you to create a Blob object. It is used in the browser to create a Blob object from an array of bytes.
 sidebar_position: 3
+sidebar_label: Blob Data
 ---
 
-# Blob Data
-
 **Binary Data / Files: Blob Data**
-
-<head>
-  <title>Blob Data - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

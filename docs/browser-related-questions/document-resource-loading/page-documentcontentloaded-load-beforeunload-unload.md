@@ -1,16 +1,11 @@
 ---
-title: Page LifeCycle
+title: Page Lifecycle
+description: Page Lifecycle in JavaScript is a set of events that occur when a page is loaded. They are triggered by the browser. - JavaScript Interview Questions & Answers
 sidebar_position: 1
+sidebar_label: Page Lifecycle
 ---
 
-# Page Lifecycle
-
 **Document / Resource Loading: Page Lifecycle**
-
-<head>
-  <title>Page Lifecycle - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

@@ -1,16 +1,11 @@
 ---
-title: Objects
+title: JavaScript Objects
+description: JavaScript Objects are a collection of key-value pairs. They are used to store data.
 sidebar_position: 1
+sidebar_label: Objects
 ---
 
-# JavaScript Objects
-
 **Objects the Basics: JavaScript Objects**
-
-<head>
-  <title>JavaScript Objects - Frontend Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
@@ -71,7 +66,7 @@ bar = bar.toUpperCase(); // BAZ
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Objects are used to store keyed collections of various data and more complex entities.
+  <div><strong>Interview Response:</strong> Objects are used to store keyed collections of various data and more complex entities than primitive values.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -125,7 +120,7 @@ let user = {}; // "object literal" syntax
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The key value pair is separated by a semicolon.
+  <div><strong>Interview Response:</strong> The key value pair is separated by a colon.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -248,6 +243,8 @@ let fruit = 'apple';
 let bag = {
   [fruit + 'Computers']: 5, // bag.appleComputers = 5
 };
+
+console.log(bag.appleComputers); // logs 5
 ```
 
   </div>

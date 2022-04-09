@@ -1,16 +1,11 @@
 ---
 title: URL Objects
+description: URL Objects are used to parse and create URLs in JavaScript. Proper implementation of URL Objects is important for security and performance reasons.
 sidebar_position: 7
+sidebar_label: URL Objects
 ---
 
-# URL Objects
-
 **Network Requests: URL Objects**
-
-<head>
-  <title>URL Objects - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

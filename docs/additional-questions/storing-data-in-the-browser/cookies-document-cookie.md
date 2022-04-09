@@ -1,16 +1,11 @@
 ---
 title: Cookies - document.cookie
+description: Cookies - document.cookie - JavaScript Interview Questions and Answers
 sidebar_position: 1
+sidebar_label: Cookies - document.cookie
 ---
 
-# Cookies - document.cookie
-
 **Storing Browser Data: Cookies - document.cookie**
-
-<head>
-  <title>Cookies - document.cookie - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

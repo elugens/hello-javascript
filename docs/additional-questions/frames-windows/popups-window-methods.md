@@ -1,16 +1,11 @@
 ---
 title: Popups / Window Methods
+description: Popups / Window Methods in JavaScript is a way to open a new window or a new tab. - JavaScript Interview Questions & Answers
 sidebar_position: 1
+sidebar_label: Popups / Window Methods
 ---
 
-# Popups / Window Methods
-
 **Frames / Windows: Popups and Window Methods**
-
-<head>
-  <title>Popups / Window Methods - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

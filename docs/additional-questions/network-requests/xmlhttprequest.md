@@ -1,16 +1,11 @@
 ---
 title: XMLHttpRequest
+description: XMLHttpRequest is an older API that allows us to send and receive data from a server.
 sidebar_position: 8
+sidebar_label: XMLHttpRequest
 ---
 
-# XMLHttpRequest
-
 **Network Requests: XMLHttpRequest**
-
-<head>
-  <title>XMLHttpRequest - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

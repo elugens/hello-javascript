@@ -1,16 +1,11 @@
 ---
 title: Scrolling Events
+description: Scrolling Events in JavaScript are events that occur when a user interacts with a scrollbar. They are triggered by the user's scrollbar. - JavaScript Interview Questions & Answers
 sidebar_position: 6
+sidebar_label: Scrolling Events
 ---
 
-# Scrolling Events
-
 **UI Events: Scrolling Events**
-
-<head>
-  <title>Scrolling Events - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

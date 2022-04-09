@@ -1,16 +1,11 @@
 ---
 title: Anchors
+description: Anchors in regex are used to match the start and end of a string. They are used to match the start and end of a string.
 sidebar_position: 4
+sidebar_label: Anchors
 ---
 
-# Anchors
-
 **Regular Expressions: Anchors**
-
-<head>
-  <title>RegExp Anchors - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

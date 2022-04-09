@@ -1,17 +1,11 @@
 ---
-title: Basic JS Questions
+title: Basic JavaScript Questions
 description: Basic JS Questions in JavasScript  -  JavaScript Basics
+sidebar_label: Basic JS Questions
 sidebar_position: 1
 ---
 
-# Basic JavaScript: Interview Questions
-
 **JavaScript Basics: Basic JS Questions**
-
-<head>
-  <title>JavaScript Frontend Interview Questions and Answers</title>
-  <meta charSet='utf-8' />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

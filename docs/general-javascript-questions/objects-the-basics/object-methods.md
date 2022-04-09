@@ -1,16 +1,11 @@
 ---
-title: Object Methods
+title: JavaScript Object Methods
+description: Object Methods are methods that are attached to objects. They can be called on objects.
 sidebar_position: 4
+sidebar_label: Object Methods
 ---
 
-# JavaScript Object Methods
-
 **Objects the Basics: Object Methods - "This"**
-
-<head>
-  <title>Object Methods - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
@@ -182,7 +177,27 @@ sayHi(); // returns global window object
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> In JavaScript this is “free”, its value is evaluated at call-time and does not depend on where the method was declared, but rather on what object is “before the dot”. The concept of run-time evaluated this has both pluses and minuses. On the one hand, a function can be reused for different objects. On the other hand, the greater flexibility creates more possibilities for mistakes.
-</div>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong> Unbound "this"<br /><br />
+
+  <div></div>
+
+```js
+// non-strict mode
+const author = {
+  name: 'JavaScript',
+  hello() {
+    console.log(this.name);
+  },
+};
+
+const hello = author.hello();
+// hello is unbound, this refers to nothing in the global scope
+// or window/global in non-strict mode
+hello();
+```
+
+  </div>
   </div>
 </details>
 

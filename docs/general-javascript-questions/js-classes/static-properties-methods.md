@@ -1,16 +1,11 @@
 ---
-title: Static Props / Methods
+title: Static Properties / Methods
+description: Static Properties / Methods are a way to create properties and methods that are shared by all instances of a class.
 sidebar_position: 3
+sidebar_label: Static Props / Methods
 ---
 
-# Static Props / Methods
-
 **Classes: Static Props / Methods**
-
-<head>
-  <title>Static Props / Methods - JavaScript Interview Questions</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

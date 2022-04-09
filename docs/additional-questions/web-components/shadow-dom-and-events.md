@@ -1,16 +1,11 @@
 ---
 title: Shadow DOM / Events
+description: Shadow DOM / Events are used to add event listeners to elements in Shadow DOM. They are used to add event listeners to elements in Shadow DOM.
 sidebar_position: 7
+sidebar_label: Shadow DOM / Events
 ---
 
-# Shadow DOM / Events
-
 **Web Components: Shadow DOM / Events**
-
-<head>
-  <title>Shadow DOM / Events - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

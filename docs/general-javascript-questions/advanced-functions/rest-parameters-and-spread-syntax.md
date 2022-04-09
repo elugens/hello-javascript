@@ -1,16 +1,11 @@
 ---
 title: Rest Parameters / Spread Syntax
+description: Rest Parameters / Spread Syntax
 sidebar_position: 2
+sidebar_label: Rest Parameters / Spread Syntax
 ---
 
-# Rest Parameters / Spread Syntax
-
 **Advanced Functions: Rest Parameters / Spread Syntax**
-
-<head>
-  <title>Rest Parameters / Spread Syntax - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

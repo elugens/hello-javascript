@@ -1,16 +1,11 @@
 ---
-title: Automated Testing
+title: Automated Testing in JavaScript
+description: Automated testing is a key part of the JavaScript ecosystem. It is a process that allows you to test your code without having to write a lot of code.
 sidebar_position: 5
+sidebar_label: Automated Testing
 ---
 
-# Automated Testing in JavaScript
-
 **Code Quality: Automated Testing**
-
-<head>
-  <title>Automated Testing - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

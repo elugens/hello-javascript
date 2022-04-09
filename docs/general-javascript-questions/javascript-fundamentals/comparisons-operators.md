@@ -1,9 +1,9 @@
 ---
 title: Comparisons Operators
+description: Learn how to compare values in JavaScript.
 sidebar_position: 9
+sidebar_label: Comparisons Operators
 ---
-
-# Comparison Operators
 
 **JavaScript Fundamentals: Comparison Operators**
 

@@ -1,16 +1,11 @@
 ---
-title: Export & Import
+title: Export and Import Modules
+description: JavaScript Export and Import Modules interview questions and answers.
 sidebar_position: 2
+sidebar_label: Export & Import
 ---
 
-# Export and Import Modules
-
 **Modules: Export & Import**
-
-<head>
-  <title>Modules: Export & Import - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

@@ -1,16 +1,11 @@
 ---
-title: Arrow Functions
+title: JavaScript Arrow Functions
+description: Arrow Functions are a very common interview question. Arrow functions are a concise way to write anonymous functions.
 sidebar_position: 11
+sidebar_label: Arrow Functions
 ---
 
-# Arrow Functions
-
 **Advanced-JS Functions: Arrow Functions**
-
-<head>
-  <title>Arrow Functions - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

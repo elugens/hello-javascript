@@ -1,16 +1,11 @@
 ---
 title: Walking the DOM
-sidebar_position: 2
+description: Walking the DOM is a process of traversing the DOM tree. - JavaScript interview questions & answers
+sidebar_position: 3
+sidebar_label: Walking the DOM
 ---
 
-# Walking the DOM
-
 **Browser Document: Walking the DOM**
-
-<head>
-  <title>Walking the DOM - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

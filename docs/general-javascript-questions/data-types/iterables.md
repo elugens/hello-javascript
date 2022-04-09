@@ -1,16 +1,11 @@
 ---
 title: Iterable Types
+description: Iterable Types are objects that can be iterated over.
 sidebar_position: 6
+sidebar_label: Iterable Types
 ---
 
-# Iterable Types
-
 **Data Types: Iterable Types**
-
-<head>
-  <title>Iterables - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

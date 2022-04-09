@@ -1,16 +1,11 @@
 ---
 title: Catastrophic Backtracking
+description: Catastrophic backtracking is a condition that can occur if you are checking a (usually long) string against a complex regular expression.
 sidebar_position: 15
+sidebar_label: Catastrophic Backtracking
 ---
 
-# Catastrophic Backtracking
-
 **Regular Expressions: Catastrophic Backtracking**
-
-<head>
-  <title>Catastrophic Backtracking - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

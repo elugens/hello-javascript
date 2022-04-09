@@ -1,16 +1,11 @@
 ---
 title: Function Expressions
+description: Function expressions are a way to create a function on the fly.
 sidebar_position: 16
+sidebar_label: Function Expressions
 ---
 
-# Function Expressions
-
 **JavaScript Fundamentals: Function Expressions**
-
-<head>
-  <title>Function Expressions - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

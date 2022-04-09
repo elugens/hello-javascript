@@ -1,16 +1,11 @@
 ---
 title: Resumable File Uploads
+description: Resumable File Uploads is used to upload large files in chunks.
 sidebar_position: 9
+sidebar_label: Resumable File Uploads
 ---
 
-# Resumable File Uploads
-
 **Network Requests: Resumable File Uploads**
-
-<head>
-  <title>Resumable File Uploads - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

@@ -1,16 +1,11 @@
 ---
-title: Manuals & Specifications
+title: JavaScript Manuals & Specifications
+description: Professional JavaScript developers typically refer to ECMA-262 specifications, MDN JavaScript references, and compatibility tables like CanIUse.com.
 sidebar_position: 2
+sidebar_label: Manuals & Specifications
 ---
 
-# Manuals & Specifications
-
 **JavaScript Basics: Manuals & Specifications**
-
-<head>
-  <title>Title</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

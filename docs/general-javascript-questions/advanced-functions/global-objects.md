@@ -1,16 +1,11 @@
 ---
-title: Global Object
+title: The Global Object
+description: The global object is the root of the JavaScript object hierarchy.
 sidebar_position: 5
+sidebar_label: Global Object
 ---
 
-# Global Object
-
 **Advanced Functions: Global Object**
-
-<head>
-  <title>Global Object - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
@@ -28,22 +23,22 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   <div></div>
 
 ```js
-alert("Hello");
+alert('Hello');
 // is the same as
-window.alert("Hello");
+window.alert('Hello');
 
-var foo = "foobar";
+var foo = 'foobar';
 foo === window.foo; // Returns: true
 
 function greeting() {
-   console.log("Hi!");
+  console.log('Hi!');
 }
 
 window.greeting(); // It is the same as the normal invoking: greeting();
 
 // The global function greeting was stored in the window object, like this:
 greeting: function greeting() {
-   console.log("Hi!");
+  console.log('Hi!');
 }
 ```
 

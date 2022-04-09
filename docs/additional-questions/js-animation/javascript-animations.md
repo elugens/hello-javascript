@@ -1,16 +1,11 @@
 ---
 title: JavaScript Animations
+description: JavaScript Animations are used to animate elements in JavaScript. - JavaScript Interview Questions and Answers
 sidebar_position: 3
+sidebar_label: JavaScript Animations
 ---
 
-# JavaScript Animations
-
 **Animation: JavaScript Animations**
-
-<head>
-  <title>JavaScript Animations - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

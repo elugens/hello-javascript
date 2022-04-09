@@ -1,9 +1,9 @@
 ---
 title: Word Boundary
+description: A word boundary \b is a test, just like ^ and $. When the regexp engine (program module that implements searching for regexps) comes across \b, it checks that the position in the string is a word boundary.
 sidebar_position: 6
+sidebar_label: Word Boundary
 ---
-
-# Word Boundary
 
 **Regular Expressions: Word Boundary**
 

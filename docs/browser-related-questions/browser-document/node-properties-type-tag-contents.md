@@ -1,16 +1,11 @@
 ---
 title: Node Properties
+description: Node Properties are properties of the Node object. They are used to access the Node object. - JavaScript Interview Questions & Answers
 sidebar_position: 5
+sidebar_label: Node Properties
 ---
 
-# Node Properties
-
 **Browser Document: Node Properties**
-
-<head>
-  <title>Node Properties - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

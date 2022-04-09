@@ -1,16 +1,11 @@
 ---
 title: Capturing Groups
+description: A capturing group is a pattern enclosed in parentheses. It two affects consisting of getting part of match as a separate or isolated item in an array of items.
 sidebar_position: 11
+sidebar_label: Capturing Groups
 ---
 
-# Capturing Groups
-
 **Regular Expressions: Capturing Groups**
-
-<head>
-  <title>Capturing Groups - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

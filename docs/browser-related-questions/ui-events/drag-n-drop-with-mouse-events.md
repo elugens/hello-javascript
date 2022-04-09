@@ -1,16 +1,11 @@
 ---
-title: Drag'n'Drop
+title: Drag'n'Drop with mouse events
+description: Moving the Mouse in JavaScript is a technique that allows you to move the mouse pointer. This is useful for interacting with the mouse. - JavaScript Interview Questions & Answers
 sidebar_position: 3
+sidebar_label: Drag'n'Drop
 ---
 
-# Drag'n'Drop with mouse events
-
 **UI Events: Drag'n'Drop with mouse events**
-
-<head>
-  <title>Drag'n'Drop with mouse events - JavaScript Interview Questions</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

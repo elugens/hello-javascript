@@ -1,16 +1,11 @@
 ---
 title: Fetch - Abort
+description: Fetch - Abort is used to abort a fetch request. In JavaScript, we can use the fetch method to abort a request.
 sidebar_position: 4
+sidebar_label: Fetch - Abort
 ---
 
-# Fetch - Abort
-
 **Network Requests: Fetch - Abort**
-
-<head>
-  <title>Fetch Abort - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

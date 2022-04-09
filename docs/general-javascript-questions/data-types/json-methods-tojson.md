@@ -1,16 +1,10 @@
 ---
-title: JSON Methods
+title: JSON Methods & JavaScript
 sidebar_position: 12
+sidebar_label: JSON Methods
 ---
 
-# JSON Methods & JavaScript
-
 **Data Types: JSON Methods**
-
-<head>
-  <title>JSON Methods - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

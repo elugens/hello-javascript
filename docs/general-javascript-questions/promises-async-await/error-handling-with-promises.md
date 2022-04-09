@@ -1,16 +1,11 @@
 ---
-title: Error / Promises
+title: Error Handling with Promises
+description: Promises Chaining is a way to chain promises together. It is a way to handle asynchronous operations in a synchronous manner.
 sidebar_position: 4
+sidebar_label: Error / Promises
 ---
 
-# Error / Promises
-
 **Promises/Async/Await: Error / Promises**
-
-<head>
-  <title>Error / Promises - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

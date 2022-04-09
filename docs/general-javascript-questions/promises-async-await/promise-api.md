@@ -1,16 +1,11 @@
 ---
 title: Promise API
+description: Promise API is the standard API for promises in JavaScript.
 sidebar_position: 5
+sidebar_label: Promise API
 ---
 
-# Promise API
-
 **Promises/Async/Await: Promise API**
-
-<head>
-  <title>Promise API - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

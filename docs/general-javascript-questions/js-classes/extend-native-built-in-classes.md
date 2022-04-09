@@ -1,16 +1,11 @@
 ---
-title: Extending Natives
+title: Extending built-in classes
+description: Extending built-in classes is a process of creating a new class that inherits from an existing class.
 sidebar_position: 5
+sidebar_label: Extending Natives
 ---
 
-# Extending built-in classes
-
 **Classes: Extending Natives**
-
-<head>
-  <title>Extending built-in classes - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

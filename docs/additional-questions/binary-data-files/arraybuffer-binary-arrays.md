@@ -1,16 +1,11 @@
 ---
 title: ArrayBuffer, Binary Arrays
+description: ArrayBuffer, Binary Arrays are used to store binary data. They are used in the browser to store images, videos, sounds, etc. They are also used in the browser to store binary data.
 sidebar_position: 1
+sidebar_label: ArrayBuffer, Binary Arrays
 ---
 
-# ArrayBuffer, Binary Arrays
-
 **Binary Data / Files: ArrayBuffer, Binary Arrays**
-
-<head>
-  <title>ArrayBuffer, Binary Arrays - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
@@ -143,12 +138,12 @@ for (let num of view) {
 
 ---
 
-### What is a common term used for Uint16Array or Int8Array views?
+### What is a common term used for Uint16Array or Uint32Array views?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The common term for all these views (Uint8Array, Uint32Array, etc) is TypedArray. They share the same set of methods and properities. It should be noted, there is no constructor called TypedArray, it’s just a common “umbrella” term to represent one of views over ArrayBuffer: Int8Array, Uint8Array and so on.
+  <div><strong>Interview Response:</strong> The common term for all these views (Uint8Array, Uint32Array, etc) is TypedArray. They share the same set of methods and properties. It should be noted, there is no constructor called TypedArray, it’s just a common “umbrella” term to represent one of views over ArrayBuffer: Int8Array, Uint8Array and so on.
     </div>
   </div>
 </details>

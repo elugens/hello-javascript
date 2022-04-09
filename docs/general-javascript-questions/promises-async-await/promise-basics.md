@@ -1,16 +1,11 @@
 ---
 title: Promise Basics
+description: JavaScript Promises are a way to handle asynchronous operations in JavaScript.
 sidebar_position: 2
+sidebar_label: Promise Basics
 ---
 
-# Promise Basics
-
 **Promises/Async/Await: Promise Basics**
-
-<head>
-  <title>Promise Basics - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
@@ -66,12 +61,12 @@ let promise = new Promise(function (resolve, reject) {
 
 ---
 
-### Can you name the properties that the promise object returned by Promise constructor has internally?
+### Can you name the properties that the promise object returns and the Promise constructor has internally?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The promise object contains four internal properties including state and result. The state is initially "pending", then changes to either "fulfilled" when resolve is called or "rejected" when reject is called. The result property is initially undefined, then changes to value when resolve(value) called or error when reject(error) is called. So, the executor eventually moves promise to one of these states.
+  <div><strong>Interview Response:</strong> The promise object contains four internal properties including state and result. The state is initially "pending", then changes to either "fulfilled" when resolve is called or "rejected" when reject is called. The result property is initially undefined, then changes to value when resolve(value) is called or error when reject(error) is called. So, the executor eventually moves promise to one of these states.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

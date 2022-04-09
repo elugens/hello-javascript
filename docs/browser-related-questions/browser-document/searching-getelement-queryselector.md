@@ -1,16 +1,11 @@
 ---
 title: Searching the DOM
-sidebar_position: 3
+description: Searching the DOM is the process of finding an element in the DOM tree. - JavaScript interview questions & answers
+sidebar_position: 4
+sidebar_label: Searching the DOM
 ---
 
-# Searching the DOM
-
 **Browser Document: Searching the DOM**
-
-<head>
-  <title>Searching the DOM - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

@@ -1,16 +1,11 @@
 ---
 title: File / FileReader
+description: JavaScript File and FileReader objects are used to read and write files. FileReader objects are used to read the contents of files.
 sidebar_position: 4
+sidebar_label: File / FileReader
 ---
 
-# File / FileReader
-
 **Binary Data / Files: File / FileReader**
-
-<head>
-  <title>File / FileReader - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

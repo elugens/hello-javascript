@@ -52,7 +52,7 @@ h3 {
   --ifm-color-primary-lightest: #fdd879;
 } */
 
-/* controls size of the font in the details reponses */
+/* controls size of the font in the details responses */
 details div {
   font-size: 1rem;
 }

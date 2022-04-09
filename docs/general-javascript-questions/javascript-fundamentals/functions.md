@@ -1,16 +1,11 @@
 ---
-title: Functions
+title: JavaScript Functions
+description: A function is a block of code designed to perform a particular task.
 sidebar_position: 15
+sidebar_label: Functions
 ---
 
-# JavaScript Functions
-
 **JavaScript Fundamentals: JavaScript Functions**
-
-<head>
-  <title>JavaScript Functions - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

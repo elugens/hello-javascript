@@ -1,16 +1,11 @@
 ---
 title: Promisification
+description: Promisification is a way to convert a callback-based function into a promise-based function.
 sidebar_position: 6
+sidebar_label: Promisification
 ---
 
-# Promisification
-
 **Promises/Async/Await: Promisification**
-
-<head>
-  <title>Promisification - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

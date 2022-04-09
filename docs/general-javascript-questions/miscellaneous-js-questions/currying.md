@@ -1,16 +1,11 @@
 ---
-title: Currying
+title: Currying in JavaScript
+description: Currying is a technique that allows us to create functions that take multiple arguments. JavaScript Interview Questions & Answers
 sidebar_position: 3
+sidebar_label: Currying
 ---
 
-# Currying
-
 **Miscellaneous: Currying**
-
-<head>
-  <title>Currying - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
@@ -62,7 +57,7 @@ alert(curriedSum(1)(2)); // 3
   <div>
   <div><strong>Interview Response:</strong> Currying requires the function to have a fixed number of arguments. A function that uses rest parameters, such as f(...args), can’t be curried this way.
 </div><br />
-  <div><strong className="codeExample">Code Example:</strong> Advanced Currying<br /><br />
+  <div><strong className="codeExample">Code Example:</strong> This is an example of Advanced Currying.<br /><br />
 
   <div></div>
 

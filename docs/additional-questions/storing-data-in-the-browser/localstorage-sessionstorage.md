@@ -1,16 +1,11 @@
 ---
 title: LocalStorage / sessionStorage
+description: LocalStorage / sessionStorage in JavaScript is used to store data in the browser. It is used to store data in the browser.
 sidebar_position: 2
+sidebar_label: LocalStorage / sessionStorage
 ---
 
-# LocalStorage / sessionStorage
-
 **Storing Browser Data: LocalStorage / sessionStorage**
-
-<head>
-  <title>LocalStorage / sessionStorage - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

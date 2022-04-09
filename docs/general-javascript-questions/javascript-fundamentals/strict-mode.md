@@ -1,9 +1,9 @@
 ---
-title: Strict Mode
+title: Understanding Strict Mode
+description: Learn how to use strict mode in JavaScript.
 sidebar_position: 3
+sidebar_label: Strict Mode
 ---
-
-# Strict Mode
 
 **JavaScript Fundamentals: Strict Mode**
 
@@ -172,7 +172,23 @@ alert('this is not strict');
   <div><strong>Interview Response:</strong> The script type attribute in Modern JavaScript is used for JavaScript Modules.</div><br />
   <div><strong>Technical Response:</strong> The script type attribute in Modern JavaScript development is used for JavaScript Modules. The old HTML standard, HTML4, required a script to have a type. Usually it was type="text/javascript".
   </div>
-  </div>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong> JavaScript type attribute<br /><br /></div>
+  
+  <div></div>
+
+```javascript
+<html>
+  <body>
+    <script type="text/javascript"> // <-- this is the script type attribute
+      <!--
+      document.write('Hello World!');
+      //-->
+    </script>
+  </body>
+</html>
+```
+
 </details>
 
 ---
@@ -185,7 +201,23 @@ alert('this is not strict');
   <div><strong>Interview Response:</strong> This attribute was meant to show the language of the script. We no longer use it because it is <em>deprecated</em> according the MDN.</div><br />
   <div><strong>Technical Response:</strong> The language attribute is used to mention the scripting language. Typically, its value will be JavaScript. Although recent versions of HTML (and XHTML, its successor) have phased out the use of this attribute. You may still find this in older applications on the web, we should use it in Modern web applications.
   </div>
-  </div>
+  </div><br />0
+  <div><strong className="codeExample">Code Example:</strong> JavaScript type attribute<br /><br /></div>
+  
+  <div></div>
+
+```javascript
+<html>
+  <body>
+    <script language="javascript"> // <-- this is the script language attribute
+         <!--
+            document.write("Hello World!")
+         //-->
+      </script>
+  </body>
+</html>
+```
+
 </details>
 
 ---

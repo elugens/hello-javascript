@@ -1,9 +1,9 @@
 ---
 title: Nullish Coalescing Operator
+description: Learn how to use the nullish coalescing operator in JavaScript.
 sidebar_position: 12
+sidebar_label: Nullish Coalescing Operator
 ---
-
-# Nullish Coalescing Operator
 
 **JavaScript Fundamentals: Nullish Coalescing Operator (??)**
 

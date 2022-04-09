@@ -1,16 +1,11 @@
 ---
 title: Server Sent Events
+description: Server Sent Events is used to send data to the client. - JavaScript Interview Questions and Answers
 sidebar_position: 12
+sidebar_label: Server Sent Events
 ---
 
-# Server Sent Events
-
 **Network Requests: Server Sent Events**
-
-<head>
-  <title>Server Sent Events - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
@@ -42,12 +37,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Why do we use the EventSoure class in our code?
+### Why do we use the EventSource class in our code?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The main reason: it is simpler. In many applications, the power of WebSocket is a little bit too much. When need to receive a stream of data from server: maybe chat messages or market prices, or whatever. That is what EventSource is good at. Also, it supports auto-reconnect, something we need to implement manually with WebSocket. Besides, it is a plain old HTTP, not a new protocol.
+  <div><strong>Interview Response:</strong> The main reason: it is simpler. In many applications, the power of WebSocket is a little bit too much. When we need to receive a stream of data from server: maybe chat messages or market prices, or whatever. That is what EventSource is good at. Also, it supports auto-reconnect, something we need to implement manually with WebSocket. Besides, it is a plain old HTTP, not a new protocol.
     </div>
   </div>
 </details>

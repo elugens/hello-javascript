@@ -1,16 +1,11 @@
 ---
 title: WeakMap / WeakSet
+description: WeakMap and WeakSet are a data structure that are used to store key-value pairs.
 sidebar_position: 8
+sidebar_label: WeakMap / WeakSet
 ---
 
-# WeakMap / WeakSet
-
 **Data Types: WeakMap / WeakSet**
-
-<head>
-  <title>WeakMap / WeakSet - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

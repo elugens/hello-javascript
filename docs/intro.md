@@ -1,6 +1,8 @@
 ---
-title: Getting Started
+title: Getting Started with JavaScript Questions
+description: JavaScript is used today by companies such as Google, Amazon, Netflix, Microsoft, LinkedIn, and Facebook to build complex, desktop-like web applications.
 sidebar_position: 1
+sidebar_label: Getting Started
 ---
 
 # Getting Started with JavaScript Questions
@@ -18,13 +20,19 @@ JavaScript is used today by companies such as Google, Amazon, Netflix, Microsoft
 
 Every front-end interview starts with a question about JavaScript. These are the interviews that lead to the technical interview. In order to get into the technical interview, you must have knowledge of JavaScript and be able to verbally/orally describe its concepts, syntax, and data types. In this guide, we will cover the basics of the JavaScript phone/zoom interview as it pertains to questions and answers. We'll also cover advanced concepts that you should know and show you how to answer them confidently.
 
+---
+
 ### Phone Interview #1
 
 A software engineer interview usually begins with a brief phone conversation with a recruiter. Your recruiter may ask about your interest in the role and discuss the basic requirements with you. The recruiter then helps you schedule the next interview with the company, which is usually another phone screen with the hiring manager and team frontend engineer.
 
+---
+
 ### Phone Interview #2
 
 In this part of the interview process, you will be asked more specific questions. The hiring manager may ask you some introductory questions, but the front-end engineer will be the one conducting the interview. The interviewer will ask you questions about frontend frameworks and technologies you are familiar with, and then you'll be asked a series of JavaScript questions. This is where most software engineers fail to answer some of the most basic JavaScript questions.
+
+---
 
 ### Our Goal
 

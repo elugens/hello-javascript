@@ -1,16 +1,11 @@
 ---
 title: FormData Object
+description: FormData Object is used to send data to a server. It is used to send the data in the form of key-value pairs.
 sidebar_position: 2
+sidebar_label: FormData Object
 ---
 
-# FormData Object
-
 **Network Requests: FormData Object**
-
-<head>
-  <title>FormData Object - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

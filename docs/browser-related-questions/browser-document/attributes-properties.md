@@ -1,16 +1,11 @@
 ---
 title: Attributes / Properties
+description: Attributes / Properties are properties of an HTML tag. They are used to add information to the tag and to control the behavior of the tag. They are used to add information to the tag and to control the behavior of the tag. - JavaScript Interview Questions and Answers
 sidebar_position: 6
+sidebar_label: Attributes / Properties
 ---
 
-# Attributes / Properties
-
 **Browser Document: Attributes / Properties**
-
-<head>
-  <title>Attributes / Properties - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

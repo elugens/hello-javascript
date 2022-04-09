@@ -1,16 +1,11 @@
 ---
 title: Mutation Observer
+description: Mutation Observer in JavaScript is a JavaScript API that allows you to observe changes in the DOM. - JavaScript Interview Questions & Answers
 sidebar_position: 1
+sidebar_label: Mutation Observer
 ---
 
-# Mutation Observer
-
 **Miscellaneous: Mutation Observer**
-
-<head>
-  <title>Mutation Observer - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

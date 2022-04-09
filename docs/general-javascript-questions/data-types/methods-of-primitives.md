@@ -1,16 +1,11 @@
 ---
 title: Methods of Primitives
+description: Methods of Primitives are functions that are attached to primitive values.
 sidebar_position: 1
+sidebar_label: Methods of Primitives
 ---
 
-# Number Data Type
-
-**Data Types: Numbers**
-
-<head>
-  <title>Number Data Type - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
+**Data Types: Methods of Primitives**
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

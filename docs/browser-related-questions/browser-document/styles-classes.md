@@ -1,16 +1,11 @@
 ---
-title: Styles / Classes
+title: Styles and Classes
+description: Modifying styles and classes in JavaScript is easy. - JavaScript Interview Questions & Answers
 sidebar_position: 8
+sidebar_label: Styles / Classes
 ---
 
-# Styles and classes
-
 **Browser Document: Styles / Classes**
-
-<head>
-  <title>Styles and Classes - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

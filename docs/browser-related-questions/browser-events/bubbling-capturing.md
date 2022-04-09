@@ -1,16 +1,11 @@
 ---
-title: Bubbling / Capturing
+title: Bubbling and Capturing - Events
+description: Bubbling and Capturing Events in JavaScript - JavaScript Interview Questions & Answers
 sidebar_position: 2
+sidebar_label: Bubbling / Capturing
 ---
 
-# Bubbling / Capturing
-
 **Browser Events: Bubbling / Capturing**
-
-<head>
-  <title>Bubbling / Capturing - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

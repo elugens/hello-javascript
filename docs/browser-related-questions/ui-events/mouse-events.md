@@ -1,16 +1,11 @@
 ---
 title: Mouse Events
+description: Mouse Events in JavaScript are events that occur when a user interacts with a mouse. They are triggered by the user's mouse. - JavaScript Interview Questions & Answers
 sidebar_position: 1
+sidebar_label: Mouse Events
 ---
 
-# Mouse Events
-
 **UI Events: Mouse Events**
-
-<head>
-  <title>Mouse Events - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

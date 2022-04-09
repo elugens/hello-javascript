@@ -1,16 +1,11 @@
 ---
 title: Promises Chaining
+description: Promises Chaining is a way to chain promises together. It is a way to handle asynchronous operations in a synchronous manner.
 sidebar_position: 3
+sidebar_label: Promises Chaining
 ---
 
-# Promises Chaining
-
 **Promises/Async/Await: Promises Chaining**
-
-<head>
-  <title>Promises Chaining - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

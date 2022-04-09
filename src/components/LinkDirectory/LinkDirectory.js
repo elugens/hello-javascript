@@ -8,7 +8,9 @@ export default function LinkDirectory() {
       <div className={styles.linkDirectory}>
         <section>
           <h3 className={styles.sectionTitle}>
-            <Link to='/docs/intro'>General JavaScript Questions</Link>
+            <Link to='/docs/general-javascript-questions/'>
+              General JavaScript Questions
+            </Link>
           </h3>
           <p className='section'>
             In this section, we cover everything from basic to advanced
@@ -49,7 +51,7 @@ export default function LinkDirectory() {
           </div>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to='/docs/general-javascript-questions/javascript-fundamentals/the-script-tag'>
+              <Link to='/docs/general-javascript-questions/javascript-fundamentals/'>
                 JavaScript Fundamentals Q&A
               </Link>
             </h4>
@@ -150,7 +152,7 @@ export default function LinkDirectory() {
           </div>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to='/docs/general-javascript-questions/code-quality/debugging-javascript-in-chrome-browser'>
+              <Link to='/docs/general-javascript-questions/code-quality/'>
                 Code Quality
               </Link>
             </h4>
@@ -191,7 +193,7 @@ export default function LinkDirectory() {
           </div>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to='/docs/general-javascript-questions/objects-the-basics/objects'>
+              <Link to='/docs/general-javascript-questions/objects-the-basics/'>
                 Objects the Basics
               </Link>
             </h4>
@@ -242,7 +244,7 @@ export default function LinkDirectory() {
           </div>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to='/docs/general-javascript-questions/data-types/methods-of-primitives'>
+              <Link to='/docs/general-javascript-questions/data-types/'>
                 Data Types
               </Link>
             </h4>
@@ -313,7 +315,7 @@ export default function LinkDirectory() {
           </div>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to='/docs/general-javascript-questions/advanced-functions/recursion-and-stack'>
+              <Link to='/docs/general-javascript-questions/advanced-functions'>
                 Advanced Working with Functions
               </Link>
             </h4>
@@ -371,7 +373,7 @@ export default function LinkDirectory() {
                 </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to='/docs/general-javascript-questions/advanced-functions/advanced-arrow-functions'>
+                <Link to='/docs/general-javascript-questions/advanced-functions/advanced-arrow-functions/'>
                   Arrow Functions
                 </Link>
               </li>
@@ -379,7 +381,7 @@ export default function LinkDirectory() {
           </div>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to='/docs/general-javascript-questions/object-properties/property-flags-and-descriptors'>
+              <Link to='/docs/general-javascript-questions/object-properties/'>
                 Object Properties Configuration
               </Link>
             </h4>
@@ -400,7 +402,7 @@ export default function LinkDirectory() {
           </div>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to='/docs/general-javascript-questions/prototypes-inheritance.md/prototypal-inheritance'>
+              <Link to='/docs/general-javascript-questions/prototypes-inheritance/'>
                 Prototypes / Inheritance
               </Link>
             </h4>
@@ -408,22 +410,22 @@ export default function LinkDirectory() {
           <div className='categories'>
             <ul className={styles.categoryItems}>
               <li className={styles.categorySubItem}>
-                <Link to='/docs/general-javascript-questions/prototypes-inheritance.md/prototypal-inheritance'>
+                <Link to='/docs/general-javascript-questions/prototypes-inheritance/prototypal-inheritance'>
                   Prototypal Inheritance
                 </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to='/docs/general-javascript-questions/prototypes-inheritance.md/function-prototype'>
+                <Link to='/docs/general-javascript-questions/prototypes-inheritance/function-prototype'>
                   Function Prototypes
                 </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to='/docs/general-javascript-questions/prototypes-inheritance.md/native-prototypes'>
+                <Link to='/docs/general-javascript-questions/prototypes-inheritance/native-prototypes'>
                   Native Prototypes
                 </Link>
               </li>
               <li className={styles.categorySubItem}>
-                <Link to='/docs/general-javascript-questions/prototypes-inheritance.md/prototype-methods-objects-without-proto'>
+                <Link to='/docs/general-javascript-questions/prototypes-inheritance/prototype-methods-objects-without-proto'>
                   Prototype Methods
                 </Link>
               </li>
@@ -431,7 +433,7 @@ export default function LinkDirectory() {
           </div>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to='/docs/general-javascript-questions/js-classes/class-basic-syntax'>
+              <Link to='/docs/general-javascript-questions/js-classes/'>
                 Classes
               </Link>
             </h4>
@@ -485,7 +487,7 @@ export default function LinkDirectory() {
           <div className='categories'>
             <ul className={styles.categoryItems}>
               <li className={styles.categorySubItem}>
-                <Link to='/docs/general-javascript-questions/error-handling/javascript-error-handling'>
+                <Link to='/docs/general-javascript-questions/error-handling/'>
                   Error handling
                 </Link>
               </li>
@@ -498,7 +500,7 @@ export default function LinkDirectory() {
           </div>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to='/docs/general-javascript-questions/promises-async-await/callbacks'>
+              <Link to='/docs/general-javascript-questions/promises-async-await/'>
                 Promises, Async/Await
               </Link>
             </h4>
@@ -549,7 +551,7 @@ export default function LinkDirectory() {
           </div>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to='/docs/general-javascript-questions/generators-advance-interation/generators'>
+              <Link to='/docs/general-javascript-questions/generators-advance-interation/'>
                 Generators, Advanced Iteration
               </Link>
             </h4>
@@ -570,7 +572,9 @@ export default function LinkDirectory() {
           </div>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to=''>Modules</Link>
+              <Link to='/docs/general-javascript-questions/javascript-modules/'>
+                Modules
+              </Link>
             </h4>
           </div>
           <div className='categories'>
@@ -594,7 +598,7 @@ export default function LinkDirectory() {
           </div>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to='/docs/general-javascript-questions/miscellaneous-js-questions/proxy-and-reflect'>
+              <Link to='/docs/general-javascript-questions/miscellaneous-js-questions/'>
                 Miscellaneous
               </Link>
             </h4>
@@ -631,7 +635,9 @@ export default function LinkDirectory() {
         </section>
         <section>
           <h3 className={styles.sectionTitle}>
-            <Link to=''>Browser: Document, Events, Interfaces Questions</Link>
+            <Link to='/docs/browser-related-questions/'>
+              Browser: Document, Events, Interfaces Questions
+            </Link>
           </h3>
           <p className='section'>
             In this section, we will dive straight into the browser related
@@ -640,7 +646,7 @@ export default function LinkDirectory() {
           </p>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to='/docs/browser-related-questions/browser-document/browser-environment-specifications'>
+              <Link to='http://localhost:3000/docs/browser-related-questions/browser-document/'>
                 The Browser Document
               </Link>
             </h4>
@@ -706,7 +712,7 @@ export default function LinkDirectory() {
           </div>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to='/docs/browser-related-questions/browser-events/browser-events-doc'>
+              <Link to='/docs/browser-related-questions/browser-events/'>
                 Browser Events
               </Link>
             </h4>
@@ -742,7 +748,9 @@ export default function LinkDirectory() {
           </div>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to=''>UI Events</Link>
+              <Link to='/docs/browser-related-questions/ui-events/'>
+                UI Events
+              </Link>
             </h4>
           </div>
           <div className='categories'>
@@ -781,7 +789,7 @@ export default function LinkDirectory() {
           </div>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to='/docs/browser-related-questions/forms-controls/forms-properties-methods'>
+              <Link to='/docs/browser-related-questions/forms-controls/'>
                 Forms / Controls
               </Link>
             </h4>
@@ -812,7 +820,9 @@ export default function LinkDirectory() {
           </div>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to=''>Document / Resource Loading</Link>
+              <Link to='/docs/browser-related-questions/document-resource-loading/'>
+                Document / Resource Loading
+              </Link>
             </h4>
           </div>
           <div className='categories'>
@@ -836,7 +846,7 @@ export default function LinkDirectory() {
           </div>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to='/docs/browser-related-questions/miscellaneous-browser-questions/mutation-observer'>
+              <Link to='/docs/browser-related-questions/miscellaneous-browser-questions/'>
                 Miscellaneous
               </Link>
             </h4>
@@ -863,9 +873,7 @@ export default function LinkDirectory() {
         </section>
         <section>
           <h3 className={styles.sectionTitle}>
-            <Link to='/docs/additional-questions/frames-windows/popups-window-methods'>
-              Additional Questions
-            </Link>
+            <Link to='/docs/additional-questions/'>Additional Questions</Link>
           </h3>
           <p className='section'>
             In this section, we have some additional JavaScript questions and
@@ -875,7 +883,7 @@ export default function LinkDirectory() {
           </p>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to='/docs/additional-questions/frames-windows/popups-window-methods'>
+              <Link to='/docs/additional-questions/frames-windows/'>
                 Frames / Windows
               </Link>
             </h4>
@@ -901,7 +909,7 @@ export default function LinkDirectory() {
           </div>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to='/docs/additional-questions/binary-data-files/arraybuffer-binary-arrays'>
+              <Link to='/docs/additional-questions/binary-data-files/'>
                 Binary Data / Files
               </Link>
             </h4>
@@ -932,7 +940,7 @@ export default function LinkDirectory() {
           </div>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to='/docs/additional-questions/network-requests/fetch-requests'>
+              <Link to='/docs/additional-questions/network-requests/'>
                 Network Requests
               </Link>
             </h4>
@@ -1003,7 +1011,7 @@ export default function LinkDirectory() {
           </div>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to='/docs/additional-questions/storing-data-in-the-browser/cookies-document-cookie'>
+              <Link to='/docs/additional-questions/storing-data-in-the-browser/'>
                 Storing data in the browser
               </Link>
             </h4>
@@ -1029,7 +1037,7 @@ export default function LinkDirectory() {
           </div>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to='/docs/additional-questions/js-animation/bezier-curve'>
+              <Link to='/docs/additional-questions/js-animation/'>
                 Animation
               </Link>
             </h4>
@@ -1055,7 +1063,7 @@ export default function LinkDirectory() {
           </div>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to='/docs/additional-questions/web-components/web-components-doc'>
+              <Link to='/docs/additional-questions/web-components/'>
                 Web Components
               </Link>
             </h4>
@@ -1101,7 +1109,7 @@ export default function LinkDirectory() {
           </div>
           <div className={styles.categoryTitle}>
             <h4>
-              <Link to='/docs/additional-questions/regular-expressions/patterns-flags'>
+              <Link to='/docs/additional-questions/regular-expressions/'>
                 Regular expressions
               </Link>
             </h4>
@@ -1194,6 +1202,205 @@ export default function LinkDirectory() {
                 </Link>
               </li>
             </ul>
+          </div>
+        </section>
+        <section>
+          <h3 className={styles.sectionTitle}>
+            <Link to='/docs/bonus-javascript-design-patterns/'>
+              Bonus: Design Patterns
+            </Link>
+          </h3>
+          <p className='section'>
+            In this section, we have some additional questions and answers
+            related to design patterns. Depending on the company and the
+            interviewer. You may be asked about design patterns relative to
+            JavaScript.
+          </p>
+          <div className={styles.categoryTitle}>
+            <h4>
+              <Link to='/docs/bonus-javascript-design-patterns/introduction-to-design-patterns/'>
+                Introduction to Patterns
+              </Link>
+            </h4>
+          </div>
+          <div className='categories'>
+            <ul className={styles.categoryItems}>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/bonus-javascript-design-patterns/introduction-to-design-patterns/what-is-design-pattern'>
+                  What is a Pattern?
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/bonus-javascript-design-patterns/introduction-to-design-patterns/defining-a-pattern'>
+                  Defining a Pattern
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div className={styles.categoryTitle}>
+            <h4>
+              <Link to='/docs/bonus-javascript-design-patterns/creational-design-pattern/'>
+                Creational Design Patterns
+              </Link>
+            </h4>
+          </div>
+          <div className='categories'>
+            <ul className={styles.categoryItems}>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/bonus-javascript-design-patterns/creational-design-pattern/factory-method-pattern'>
+                  Factory Method
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/bonus-javascript-design-patterns/creational-design-pattern/abstract-factory-pattern'>
+                  Abstract Factory
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/bonus-javascript-design-patterns/creational-design-pattern/builder-pattern'>
+                  Builder
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/bonus-javascript-design-patterns/creational-design-pattern/constructor-pattern'>
+                  Constructor
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/bonus-javascript-design-patterns/creational-design-pattern/prototype-pattern'>
+                  Prototype
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/bonus-javascript-design-patterns/creational-design-pattern/singleton-pattern'>
+                  Singleton
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div className={styles.categoryTitle}>
+            <h4>
+              <Link to='/docs/bonus-javascript-design-patterns/structural-design-patterns/'>
+                Structural Design Pattern
+              </Link>
+            </h4>
+          </div>
+          <div className='categories'>
+            <ul className={styles.categoryItems}>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/bonus-javascript-design-patterns/structural-design-patterns/adapter-pattern'>
+                  Adapter
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/bonus-javascript-design-patterns/structural-design-patterns/bridge-pattern'>
+                  Bridge
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/bonus-javascript-design-patterns/structural-design-patterns/composite-pattern'>
+                  Composite
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/bonus-javascript-design-patterns/structural-design-patterns/decorator-pattern'>
+                  Decorator
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/bonus-javascript-design-patterns/structural-design-patterns/facade-pattern'>
+                  Facade
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/bonus-javascript-design-patterns/structural-design-patterns/flyweight-pattern'>
+                  Flyweight
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/bonus-javascript-design-patterns/structural-design-patterns/proxy-pattern'>
+                  Proxy Pattern
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/bonus-javascript-design-patterns/structural-design-patterns/module-pattern'>
+                  Module
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div className={styles.categoryTitle}>
+            <h4>
+              <Link to='/docs/bonus-javascript-design-patterns/behavioral-design-patterns/'>
+                Behavioral Design Pattern
+              </Link>
+            </h4>
+          </div>
+          <div className='categories'>
+            <ul className={styles.categoryItems}>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/bonus-javascript-design-patterns/behavioral-design-patterns/interpreter-pattern'>
+                  Interpreter
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/bonus-javascript-design-patterns/behavioral-design-patterns/template-method-pattern'>
+                  Template Method
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/bonus-javascript-design-patterns/behavioral-design-patterns/chain-of-responsibility-pattern'>
+                  Chain of Responsibility
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/bonus-javascript-design-patterns/behavioral-design-patterns/command-pattern'>
+                  Command Pattern
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/bonus-javascript-design-patterns/behavioral-design-patterns/iterator-pattern'>
+                  Iterator
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/bonus-javascript-design-patterns/behavioral-design-patterns/mediator-pattern'>
+                  Mediator
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/bonus-javascript-design-patterns/behavioral-design-patterns/memento-pattern'>
+                  Memento
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/bonus-javascript-design-patterns/behavioral-design-patterns/observer-pattern'>
+                  Observer Pattern
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/bonus-javascript-design-patterns/behavioral-design-patterns/state-pattern'>
+                  State
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/bonus-javascript-design-patterns/behavioral-design-patterns/strategy-pattern'>
+                  Strategy
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
+                <Link to='/docs/bonus-javascript-design-patterns/behavioral-design-patterns/visitor-pattern'>
+                  Visitor
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div className={styles.categoryTitle}>
+            <h4>
+              <Link to='/docs/bonus-javascript-design-patterns/anti-patterns/'>
+                Anti-Patterns
+              </Link>
+            </h4>
           </div>
         </section>
       </div>

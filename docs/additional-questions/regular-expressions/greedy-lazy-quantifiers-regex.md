@@ -1,16 +1,11 @@
 ---
-title: Greedy / Lazy Quants
+title: Greedy / Lazy Quantifiers
+description: By default, quantifiers are Greedy. Greedy quantifiers try to match the longest text that matches given pattern. Lazy quantifiers try to match the shortest text that matches given pattern.
 sidebar_position: 10
+sidebar_label: Greedy / Lazy Quants
 ---
 
-# Greedy / Lazy Quantifiers
-
 **Regular Expressions: Greedy / Lazy Quantifiers**
-
-<head>
-  <title>Greedy / Lazy Quantifiers - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

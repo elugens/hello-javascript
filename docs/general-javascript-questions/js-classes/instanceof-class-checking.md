@@ -1,16 +1,11 @@
 ---
-title: Class Checking
+title: Class Checking "instanceof"
+description: Class Checking "instanceof" is the syntax for checking if an object is an instance of a class.
 sidebar_position: 6
+sidebar_label: Class Checking
 ---
 
-# Class Checking: "instanceof"
-
 **Classes: Class Checking**
-
-<head>
-  <title>Class Checking: "instanceof" - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

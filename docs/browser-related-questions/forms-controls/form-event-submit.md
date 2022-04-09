@@ -1,16 +1,11 @@
 ---
 title: Form Submit / Events
+description: Form Submit / Events in JavaScript are events that occur when a user interacts with a form. They are triggered by the user's form. - JavaScript Interview Questions & Answers
 sidebar_position: 4
+sidebar_label: Form Submit / Events
 ---
 
-# Form Submit / Events
-
 **Forms / Controls: Form Submit / Events**
-
-<head>
-  <title>Form Submit / Events - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

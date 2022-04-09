@@ -1,16 +1,11 @@
 ---
 title: Multiline Mode
+description: The m flag is used to specify that a multiline input string should be treated as multiple lines. If the m flag is used, ^ and $ match at the start or end of any line within the input string instead of the start or end of the entire string.
 sidebar_position: 5
+sidebar_label: Multiline Mode
 ---
 
-# Multiline Mode
-
 **Regular Expressions: Multiline Mode**
-
-<head>
-  <title>Multiline Mode - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

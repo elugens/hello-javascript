@@ -1,16 +1,11 @@
 ---
 title: WebSocket
+description: WebSockets are used to connect to a server and exchange data. It is a standard protocol for real-time communication.
 sidebar_position: 11
+sidebar_label: WebSocket
 ---
 
-# WebSocket
-
 **Network Requests: WebSocket**
-
-<head>
-  <title>WebSocket - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

@@ -1,16 +1,11 @@
 ---
 title: Arrow Functions
+description: Arrow functions are a concise way to write functions.
 sidebar_position: 17
+sidebar_label: Arrow Functions
 ---
 
-# Arrow Functions
-
 **JavaScript Fundamentals: Arrow Functions**
-
-<head>
-  <title>Arrow Functions - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

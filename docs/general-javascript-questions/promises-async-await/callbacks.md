@@ -1,16 +1,11 @@
 ---
 title: Callbacks
+description: Callbacks are a way to pass functions as arguments to other functions, and to return them as the result of the function.
 sidebar_position: 1
+sidebar_label: Callbacks
 ---
 
-# Callbacks
-
 **Promises/Async/Await: Callbacks**
-
-<head>
-  <title>Callbacks - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
@@ -132,7 +127,7 @@ function loadScript(src, callback) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Nested calls can become tedious and messy. The best alternative is to make very action a standalone function. This makes our code easier to manage and debug.</div><br />
+  <div><strong>Interview Response:</strong> Nested calls can become tedious and messy. The best alternative is to make every action a standalone function. This makes our code easier to manage and debug.</div><br />
   <div><strong>Technical Response:</strong> For one or maybe two nested calls it looks fine. As calls become more nested, the code becomes deeper and increasingly more difficult to manage, especially if we have real code that may include more loops, conditional statements and so on. The best alternative to alleviate the problem is making every action a standalone function. This makes the code easy to manage, debug, and there are some performance advantages to boot.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />

@@ -1,16 +1,11 @@
 ---
 title: Modifying the Document
+description: JavaScript allows us to modify the HTML document by using the Document Object Model (DOM). - JavaScript Interview Questions & Answers
 sidebar_position: 7
+sidebar_label: Modifying the Document
 ---
 
-# Modifying the Document
-
 **Browser Document: Modifying the Document**
-
-<head>
-  <title>Modifying the Document - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

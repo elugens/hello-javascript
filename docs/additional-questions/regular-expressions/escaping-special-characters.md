@@ -1,16 +1,11 @@
 ---
 title: Escaping Characters
+description: To match a character having special meaning in regex, you need to use a escape sequence prefix with a backslash (\).
 sidebar_position: 7
+sidebar_label: Escaping Characters
 ---
 
-# Escaping Characters
-
 **Regular Expressions: Escaping Characters**
-
-<head>
-  <title>Escaping Characters - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

@@ -1,16 +1,11 @@
 ---
 title: Property Getters & Setters
+description: Property Getters & Setters is a very common interview question. Property Getters & Setters is a process in which a property is defined as a getter and setter.
 sidebar_position: 2
+sidebar_label: Property Getters & Setters
 ---
 
-# Property Getters & Setters
-
 **Object Properties Configuration: Property Getters & Setters**
-
-<head>
-  <title>Property Getters & Setters - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

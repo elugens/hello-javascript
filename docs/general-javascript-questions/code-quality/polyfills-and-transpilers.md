@@ -1,16 +1,11 @@
 ---
 title: Polyfills & Transpilers
+description: Polyfills and transpilers are libraries that provide a way to add functionality to older browsers.
 sidebar_position: 6
+sidebar_label: Polyfills & Transpilers
 ---
 
-# Polyfills & Transpilers
-
 **Code Quality: Polyfills & Transpilers**
-
-<head>
-  <title>Polyfills & Transpilers - Frontend Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

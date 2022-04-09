@@ -1,16 +1,11 @@
 ---
-title: Element Size / Scrolling
+title: Element Size / Scrolling in the DOM
+description: Element Size / Scrolling in the DOM is a topic that is covered in this article. - JavaScript Interview Questions & Answers
 sidebar_position: 9
+sidebar_label: Element Size / Scrolling
 ---
 
-# Element Size / Scrolling
-
 **Browser Document: Element Size / Scrolling**
-
-<head>
-  <title>Element Size / Scrolling - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

@@ -1,16 +1,11 @@
 ---
-title: BigInts
+title: BigInts in JavaScript
+description: BigInts in JavaScript is a new type of number in JavaScript. They are used to represent integers that are bigger than Number.MAX_SAFE_INTEGER. - JavaScript Interview Questions & Answers
 sidebar_position: 5
+sidebar_label: BigInts
 ---
 
-# BigInts
-
 **Miscellaneous: BigInt**
-
-<head>
-  <title>BigInt - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

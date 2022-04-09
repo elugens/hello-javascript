@@ -1,16 +1,11 @@
 ---
-title: Sets / Ranges
+title: Regex Sets / Ranges
+description: In simple terms, a range in a regular is denoted or expression inside of square brackets. For instance, [a-z] denotes a range of lowercase letters.
 sidebar_position: 8
+sidebar_label: Sets / Ranges
 ---
 
-# Regex Sets / Ranges
-
 **Regular Expressions: Regex Sets / Ranges**
-
-<head>
-  <title>Regex Sets / Ranges - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

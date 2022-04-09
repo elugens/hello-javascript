@@ -1,16 +1,11 @@
 ---
 title: The "new" Function Syntax
+description: The "new" Function Syntax is a very common interview question.
 sidebar_position: 7
+sidebar_label: The "new" Function Syntax
 ---
 
-# The "new" Function Syntax
-
 **Advanced Functions: The "new" Function Syntax**
-
-<head>
-  <title>The "new" Function Syntax - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

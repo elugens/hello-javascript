@@ -1,16 +1,11 @@
 ---
 title: Dispatching Custom Events
+description: Dispatching Custom Events in JavaScript - JavaScript Interview Questions & Answers
 sidebar_position: 5
+sidebar_label: Dispatching Custom Events
 ---
 
-# Dispatching Custom Events
-
 **Browser Events: Dispatching Custom Events**
-
-<head>
-  <title>Dispatching Custom Events - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

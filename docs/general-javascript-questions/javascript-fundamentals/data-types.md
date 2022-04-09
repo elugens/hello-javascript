@@ -1,9 +1,9 @@
 ---
-title: Data Types
+title: JavaScript Data Types
+description: There are eight basic data types in JavaScript including Number, String, Boolean, BigInt, Null, Undefined, Object, and Symbol.
 sidebar_position: 5
+sidebar_label: Data Types
 ---
-
-# JavaScript Data Types
 
 **JavaScript Fundamentals: JavaScript Data Types**
 

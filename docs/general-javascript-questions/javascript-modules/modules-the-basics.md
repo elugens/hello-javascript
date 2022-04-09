@@ -1,16 +1,11 @@
 ---
 title: Modules
+description: JavaScript Modules are a way to organize code into logical units. Modules are used to break down large projects into smaller pieces.
 sidebar_position: 1
+sidebar_label: Modules
 ---
 
-# Modules
-
 **Modules: Modules the Basics**
-
-<head>
-  <title>Modules - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

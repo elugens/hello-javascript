@@ -1,16 +1,11 @@
 ---
 title: Recursion & Stack
+description: Recursion & Stack is a very common interview question.
 sidebar_position: 1
+sidebar_label: Recursion & Stack
 ---
 
-# Recursion & Stack
-
 **Advanced Functions: Recursion & Stack**
-
-<head>
-  <title>Recursion & Stack - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

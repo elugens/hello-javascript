@@ -1,16 +1,11 @@
 ---
-title: Event Loop
+title: Event loop - Microtasks/Macrotasks
+description: Event loop - Microtasks / Macrotasks in JavaScript is a way to run code asynchronously. - JavaScript Interview Questions & Answers
 sidebar_position: 3
+sidebar_label: Event loop
 ---
 
-# Event loop: Microtasks / Macrotasks
-
 **Miscellaneous: Event loop**
-
-<head>
-  <title>Microtasks / Macrotasks - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

@@ -1,16 +1,11 @@
 ---
 title: Patterns and Flags
+description: Patterns and Flags are used to match text against regular expressions. They are used to match text against regular expressions.
 sidebar_position: 1
+sidebar_label: Patterns and Flags
 ---
 
-# Patterns and Flags
-
 **Regular Expressions: Patterns and Flags**
-
-<head>
-  <title>Patterns and Flags - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

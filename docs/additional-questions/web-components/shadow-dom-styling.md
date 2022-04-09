@@ -1,16 +1,11 @@
 ---
 title: Shadow DOM Styling
+description: Shadow DOM Styling is used to style elements in Shadow DOM. It is used to style elements in Shadow DOM. It is used to style elements in Shadow DOM.
 sidebar_position: 6
+sidebar_label: Shadow DOM Styling
 ---
 
-# Shadow DOM Styling
-
 **Web Components: Shadow DOM Styling**
-
-<head>
-  <title>Shadow DOM Styling - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

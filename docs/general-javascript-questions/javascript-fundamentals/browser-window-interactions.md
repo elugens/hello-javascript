@@ -1,9 +1,9 @@
 ---
-title: Window Interaction
+title: Browser Window Interaction
+description: How to interact with the browser window.
 sidebar_position: 6
+sidebar_label: Window Interaction
 ---
-
-# Browser Window Interaction
 
 **JavaScript Fundamentals: Interaction: alert, prompt, confirm**
 

@@ -1,16 +1,11 @@
 ---
 title: Custom Elements
+description: Custom Elements in JavaScript web development are used to create reusable components. - JavaScript Interview Questions and Answers
 sidebar_position: 2
+sidebar_label: Custom Elements
 ---
 
-# Custom Elements
-
 **Web Components: Custom Elements**
-
-<head>
-  <title>Custom Elements - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

@@ -1,16 +1,11 @@
 ---
 title: Symbol Type
+description: The symbol type in JavaScript is a primitive type that is used to create unique identifiers for objects.
 sidebar_position: 7
+sidebar_label: Symbol Type
 ---
 
-# Symbol Type
-
 **Objects the Basics: Symbol Type**
-
-<head>
-  <title>Symbol Type - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
@@ -18,7 +13,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### What are the two types that object property keys in JavaScript?
+### What are the two types of object property keys in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

@@ -1,16 +1,11 @@
 ---
-title: Shadow DOM Slots
+title: Shadow DOM Slots - Composition
+description: Shadow DOM Slots is used to compose elements in Shadow DOM. It is used to compose elements in Shadow DOM.
 sidebar_position: 5
+sidebar_label: Shadow DOM Slots
 ---
 
-# Shadow DOM Slots - Composition
-
 **Web Components: Shadow DOM Slots - Composition**
-
-<head>
-  <title>Shadow DOM Slots - Composition - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

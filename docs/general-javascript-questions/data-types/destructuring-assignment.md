@@ -1,16 +1,11 @@
 ---
-title: Destructuring Assignment
+title: Destructuring assignment in JavaScript
+description: Destructuring assignment in JavaScript is a JavaScript expression that makes it possible to extract data from arrays, or properties from objects, and assign them to variables.
 sidebar_position: 10
+sidebar_label: Destructuring assignment
 ---
 
-# Destructuring assignment in JavaScript
-
 **Data Types: Destructuring Assignment**
-
-<head>
-  <title>Destructuring Assignment - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
@@ -45,6 +40,19 @@ alert(surname); // Smith
 let [firstName, surname] = 'John Smith'.split(' ');
 alert(firstName); // John
 alert(surname); // Smith
+
+/////////////////////////////////////////////
+
+// DESTRUCTURING OBJECTS
+
+const hero = {
+  name: 'Batman',
+  realName: 'Bruce Wayne',
+};
+
+const { name, realName } = hero;
+name; // => 'Batman',
+realName; // => 'Bruce Wayne'
 ```
 
   </div>

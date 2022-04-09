@@ -1,16 +1,11 @@
 ---
-title: Array Methods
+title: JavaScript Array Methods
+description: JavaScript array methods are used to manipulate arrays.
 sidebar_position: 5
+sidebar_label: Array Methods
 ---
 
-# JavaScript Array Methods
-
 **Data Types: Array Methods**
-
-<head>
-  <title>Array Methods - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
@@ -267,7 +262,7 @@ Additionally, break and continue statements are not valid statements and will re
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The operate on items instead characters, like their string counterparts.</div><br />
+  <div><strong>Interview Response:</strong> They operate on items instead characters, like their string counterparts.</div><br />
   <div><strong>Technical Response:</strong> The methods array indexOf, lastIndexOf and includes method have the same syntax and do essentially the same as their string counterparts but operate on items instead of characters.<br /><br />
   </div>
   </div>
@@ -662,7 +657,7 @@ It should be noted that you cannot use the reverse method to reverse a string. I
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A split method divides a string into an ordered list of substrings, places them in an array, and returns that array of substrings. The split method accepts two arguments including delimiter and an optional number. The optional number sets the number of values returned in the array.</div><br />
+  <div><strong>Interview Response:</strong> The split method divides a string into an ordered list of substrings, places them in an array, and returns that array of substrings. The split method accepts two arguments including delimiter and an optional number. The optional number sets the number of values returned in the array.</div><br />
   <div><strong>Technical Response:</strong> The split() method divides a String into an ordered list of substrings, puts these substrings into an array, and returns the array of strings. The division is done by searching for a pattern, where the pattern is provided as the first parameter in the method's call. The split method has an optional second numeric argument – a limit on the array length. If it is provided, then the extra elements are ignored. In practice it is rarely used though. When the empty string ("") is used as a separator, the string is not split by user-perceived characters (grapheme clusters) or Unicode characters (code points), but by UTF-16 code units. This destroys surrogate pairs.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />

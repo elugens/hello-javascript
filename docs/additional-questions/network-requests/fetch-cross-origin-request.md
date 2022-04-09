@@ -1,16 +1,11 @@
 ---
 title: Cross-Origin Requests
+description: Cross-Origin Requests uses the CORS (Cross-Origin Resource Sharing) protocol to allow web applications to access resources from other domains.
 sidebar_position: 5
+sidebar_label: Cross-Origin Requests
 ---
 
-# Cross-Origin Requests
-
 **Network Requests: Fetch: Cross-Origin Requests**
-
-<head>
-  <title>Cross-Origin Requests - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

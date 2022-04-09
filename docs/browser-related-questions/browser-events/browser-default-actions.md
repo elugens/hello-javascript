@@ -1,16 +1,11 @@
 ---
 title: Browser Default Actions
+description: Browser Default Actions in JavaScript - JavaScript Interview Questions & Answers
 sidebar_position: 4
+sidebar_label: Browser Default Actions
 ---
 
-# Browser Default Actions
-
 **Browser Events: Browser Default Actions**
-
-<head>
-  <title>Browser Default Actions - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

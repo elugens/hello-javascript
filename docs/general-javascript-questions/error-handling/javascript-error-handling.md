@@ -1,16 +1,11 @@
 ---
-title: Error Handling
+title: Error Handling in JavaScript
+description: Error Handling in JavaScript is a very important part of any web application.
 sidebar_position: 1
+sidebar_label: JS Error Handling
 ---
 
-# Error Handling
-
 **Error Handling: Error handling, "try..catch"**
-
-<head>
-  <title>Error Handling: Error handling - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
@@ -22,7 +17,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The try…catch construct has two main blocks, try and then catch blocks. First, the code in the try is executed on the try block. If there is no error, then it proceeds to execute and exit the code, skipping the catch. If there is an error in the try block, then the catch is invoked and the error is returned.</div><br />
-  <div><strong>Technical Response:</strong>The try...catch construct has two main blocks: try, and then catch:<br /><br />
+  <div><strong>Technical Response:</strong> The try...catch construct has two main blocks: try, and then catch:<br /><br />
   <strong>Steps:</strong><br /><br />
   <ol>
     <li>First, the code in try &#123;...&#125; is executed.</li>

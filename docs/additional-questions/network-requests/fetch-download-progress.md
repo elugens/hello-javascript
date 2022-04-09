@@ -1,16 +1,11 @@
 ---
 title: Fetch - Download Progress
+description: Fetch - Download Progress is used to track the progress of a download.
 sidebar_position: 3
+sidebar_label: Fetch - Download Progress
 ---
 
-# Fetch - Download Progress
-
 **Network Requests: Fetch - Download Progress**
-
-<head>
-  <title>Fetch Download Progress - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

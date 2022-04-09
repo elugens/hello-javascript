@@ -1,16 +1,11 @@
 ---
 title: Microtask Queue
+description: The Microtask Queue is a queue of tasks that are executed as soon as possible after the current task has finished.
 sidebar_position: 7
+sidebar_label: Microtask Queue
 ---
 
-# Microtask Queue
-
 **Promises/Async/Await: Microtask Queue**
-
-<head>
-  <title>Microtask Queue - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
@@ -87,7 +82,7 @@ Promise.resolve()
 
 ---
 
-### When does an unhandled rejection occur in relation to a JavaScript promises?
+### When does an unhandled rejection occur in relation to a JavaScript promise?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

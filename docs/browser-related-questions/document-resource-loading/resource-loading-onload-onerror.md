@@ -1,16 +1,11 @@
 ---
 title: Resource Loading
+description: Resource Loading in JavaScript is a way to load external resources asynchronously. - JavaScript Interview Questions & Answers
 sidebar_position: 3
+sidebar_label: Resource Loading
 ---
 
-# Resource Loading
-
 **Document / Resource Loading: Resource Loading**
-
-<head>
-  <title>Resource Loading - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

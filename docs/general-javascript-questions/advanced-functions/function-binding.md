@@ -1,16 +1,11 @@
 ---
 title: Function Binding
+description: Function Binding is a very common interview question. Binding is a process in which a function is bound to a value.
 sidebar_position: 10
+sidebar_label: Function Binding
 ---
 
-# Function Binding
-
 **Advanced Functions: Function Binding**
-
-<head>
-  <title>Function Binding - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

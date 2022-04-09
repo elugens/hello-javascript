@@ -1,16 +1,11 @@
 ---
 title: Event Delegation
+description: Event Delegation in JavaScript is a technique that allows you to listen for events on a parent element and then delegate the event to its children. This is useful for listening for events on a parent element and then triggering the event on the child elements. - JavaScript Interview Questions & Answers
 sidebar_position: 3
+sidebar_label: Event Delegation
 ---
 
-# Event Delegation
-
 **Browser Events: Event Delegation**
-
-<head>
-  <title>Event Delegation - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

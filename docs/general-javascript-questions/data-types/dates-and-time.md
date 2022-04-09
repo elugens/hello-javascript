@@ -1,16 +1,11 @@
 ---
 title: Date and Time
+description: JavaScript dates and times are represented by the Date object.
 sidebar_position: 11
+sidebar_label: Date and Time
 ---
 
-# Date and Time
-
 **Data Types: Date and Time**
-
-<head>
-  <title>Date and Time - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

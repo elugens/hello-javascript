@@ -1,16 +1,11 @@
 ---
 title: Shadow DOM
+description: Shadow DOM is used to create a virtual DOM tree that is not connected to the real DOM tree.
 sidebar_position: 3
+sidebar_label: Shadow DOM
 ---
 
-# Shadow DOM
-
 **Web Components: Shadow DOM**
-
-<head>
-  <title>Shadow DOM - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

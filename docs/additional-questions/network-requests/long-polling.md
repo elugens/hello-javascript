@@ -1,16 +1,11 @@
 ---
 title: Long Polling
+description: Long Polling in JavaScript is used to check for changes in the server.
 sidebar_position: 10
+sidebar_label: Long Polling
 ---
 
-# Long Polling
-
 **Network Requests: Long Polling**
-
-<head>
-  <title>Long Polling - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

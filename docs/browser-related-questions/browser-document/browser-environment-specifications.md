@@ -1,16 +1,11 @@
 ---
-title: Browser Environment Specs
+title: Browser Environment Specification
+description: Browser Environment Specification is a set of specifications that describe the environment in which a web browser runs. - JavaScript Interview Questions & Answers
 sidebar_position: 1
+sidebar_label: Browser Environment Specs
 ---
 
-# Browser Environment Specification
-
-**Browser Document: Browser Environment Specification**
-
-<head>
-  <title>Browser Environment Specification - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
+**Browser Document: Browser Environment Specs**
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

@@ -1,9 +1,9 @@
 ---
 title: JavaScript Code Editors
+description: An IDE is a development environment that allows developers to load, save, edit, manage, and delete projects or files written in different programming languages.
 sidebar_position: 3
+sidebar_label: Code Editors
 ---
-
-# Code Editors - Questions and Answers
 
 **JavaScript Basics: Code Editors**
 

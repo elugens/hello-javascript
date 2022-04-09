@@ -1,9 +1,9 @@
 ---
-title: Type Conversion
+title: Type Conversion in JavaScript
+description: Learn how to convert data types in JavaScript.
 sidebar_position: 7
+sidebar_label: Type Conversion
 ---
-
-# Type Conversion in JavaScript
 
 **JavaScript Fundamentals: Type Conversion**
 
@@ -147,7 +147,7 @@ alert(age); // NaN, conversion failed
 
 ---
 
-### If, there is an attempt to convert an undefined value. What is the return result?
+### If, there is an attempt to convert an undefined value to a number. What is the return result?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

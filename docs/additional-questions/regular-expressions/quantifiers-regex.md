@@ -1,16 +1,11 @@
 ---
 title: Quantifiers
+description: A quantifier is used to find the exact count in a sequence of digits. For example, if we are looking for a sequence of numbers like 123-456. We can used \d{3} which will return 123,456.
 sidebar_position: 9
+sidebar_label: Quantifiers
 ---
 
-# Quantifiers
-
 **Regular Expressions: Quantifiers**
-
-<head>
-  <title>Quantifiers - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

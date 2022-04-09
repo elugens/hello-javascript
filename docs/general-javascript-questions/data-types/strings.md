@@ -1,16 +1,11 @@
 ---
-title: Strings
+title: String Data Type
+description: The string data type is a primitive data type that is used to represent text.
 sidebar_position: 3
+sidebar_label: Strings
 ---
 
-# String Data Type
-
 **Data Types: Strings**
-
-<head>
-  <title>String Data Type - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
@@ -111,7 +106,7 @@ let guestList = "Guests: // Error: Unexpected token ILLEGAL
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We can create multi-line strings using the new line character for line breaks.</div><br />
+  <div><strong>Interview Response:</strong> We can create multi-line strings using the new line character for line breaks. The best approach is to use backticks for ease of use.</div><br />
   <div><strong>Technical Response:</strong> Yes, it is still possible to create multiline strings with single and double quotes by using a so-called “newline character”, written as \n, which denotes a line break.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -147,7 +142,7 @@ alert(str1 == str2); // true
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> All special characters start with a backslash character known as the escape character.</div><br />
+  <div><strong>Interview Response:</strong> All special characters should start with a backslash character known as the escape character.</div><br />
   <div><strong>Technical Response:</strong> All special characters start with a backslash character \. It is also called an “escape character”. We might also use it if we wanted to insert a quote into the string.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -177,7 +172,7 @@ alert(`The backslash: \\`); // The backslash: \
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> length is property that returns the length of string or an array.</div><br />
+  <div><strong>Interview Response:</strong> It is a property that returns the length of string or an array.</div><br />
   <div><strong>Technical Response:</strong> In JavaScript, length is a property and will result in an error if you try to invoke it as a function. People with a background in some other languages sometimes mistype by calling str.length() instead of just str.length. Length is a numeric property, and it is not necessary to add the parentheses.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />

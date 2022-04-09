@@ -1,16 +1,11 @@
 ---
-title: Comments
+title: Comments in JavaScript
+description: The key to reducing unnecessary comments in your code is to write self-descriptive code.
 sidebar_position: 3
+sidebar_label: Code Comments
 ---
 
-# Code Comments
-
 **Code Quality: Comments**
-
-<head>
-  <title>Code Comments - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

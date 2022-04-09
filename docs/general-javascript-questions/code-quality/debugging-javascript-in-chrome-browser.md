@@ -1,16 +1,11 @@
 ---
-title: Debugging in Chrome
+title: Debugging JavaScript in Chrome
+description: Debugging is the process of finding and fixing errors within a script.
 sidebar_position: 1
+sidebar_label: Debugging in Chrome
 ---
 
-# Debugging JavaScript in Chrome
-
 **Code Quality: Debugging in Chrome**
-
-<head>
-  <title>Debugging in Chrome - Frontend Interview Questions & Answers</title>
-  <meta charSet='utf-8' />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

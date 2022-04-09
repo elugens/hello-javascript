@@ -1,16 +1,11 @@
 ---
 title: The "Switch" Statement
+description: A switch statement can replace multiple if checks, it is more descriptive, and easier to read.
 sidebar_position: 14
+sidebar_label: The "Switch" Statement
 ---
 
-# The "Switch" Statement
-
 **JavaScript Fundamentals: The "Switch" Statement**
-
-<head>
-  <title>The "Switch" Statement - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
@@ -22,7 +17,26 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> A switch statement can replace multiple if checks, it is more descriptive, and easier to read.</div><br />
-  <div><strong>Technical Response:</strong> A switch statement can replace multiple if checks. It gives a more descriptive way to compare a value with multiple variants and it is easier to read.<br /><br />
+  <div><strong>Technical Response:</strong> A switch statement can replace multiple if checks. It gives a more descriptive way to compare a value with multiple variants and it is easier to read.<br />
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong> The SWITCH Statement<br /><br />
+
+  <div></div>
+
+```js
+let x = 0;
+switch (x) {
+  case 0:
+    text = 'Off';
+    break;
+  case 1:
+    text = 'On';
+    break;
+  default:
+    text = 'No value found';
+}
+```
+
   </div>
   </div>
 </details>
@@ -41,6 +55,8 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   <div></div>
 
 ```js
+let x = 'value2';
+
 switch(x) {
   case 'value1':  // if (x === 'value1')
     ...

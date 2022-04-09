@@ -91,17 +91,17 @@ const config = {
             label: 'Get Started',
             className: 'get__started',
           },
-          { to: '/blog', label: 'Blog', position: 'right' },
-          {
-            href: 'https://patreon.com/hellojavascript',
-            label: 'Patreon',
-            position: 'right',
-          },
-          {
-            href: 'https://github.com/elugens/hello-javascript',
-            label: 'GitHub',
-            position: 'right',
-          },
+          // { to: '/blog', label: 'Blog', position: 'right' },
+          // {
+          //   href: 'https://patreon.com/hellojavascript',
+          //   label: 'Patreon',
+          //   position: 'right',
+          // },
+          // {
+          //   href: 'https://github.com/elugens/hello-javascript',
+          //   label: 'GitHub',
+          //   position: 'right',
+          // },
         ],
       },
       footer: {

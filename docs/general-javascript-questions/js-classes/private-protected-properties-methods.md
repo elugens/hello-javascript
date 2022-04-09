@@ -1,16 +1,11 @@
 ---
 title: Private, Protected Props / Methods
+description: Private, Protected Props / Methods are a way to create properties and methods that are only accessible within the class.
 sidebar_position: 4
+sidebar_label: Private, Protected Props / Methods
 ---
 
-# Private, Protected Props / Methods
-
 **Classes: Private, Protected Props / Methods**
-
-<head>
-  <title>Private, Protected Props / Methods - JavaScript Interview Questions</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
@@ -54,7 +49,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   <div></div>
 
 ```js
-// Example 1: Private Fields _
+// Example 1: Protected Fields _
 class CoffeeMachine {
   _waterAmount = 0;
 
@@ -72,7 +67,7 @@ new CoffeeMachine().setWaterAmount(100);
 
 //////////////////////////////////////////////////
 
-// Example 2: Protected Fields #
+// Example 2: Private Fields #
 
 class CoffeeMachine {
   #waterAmount = 0;

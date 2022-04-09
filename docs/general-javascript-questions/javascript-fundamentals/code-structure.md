@@ -1,16 +1,11 @@
 ---
 title: Code Structure
+description: All programming languages must adhere to specific rules in order to function. This set of rules that determine the correct structure of programming languages is known as syntax.
 sidebar_position: 2
+sidebar_label: Code Structure
 ---
 
-# Code Structure
-
 **JavaScript Fundamentals: Code Structure**
-
-<head>
-  <title>Code Structure - JavaScript Frontend Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
@@ -39,6 +34,7 @@ alert('World');
 
 // Set of statements on separate lines (recommended)
 alert('Hello');
+
 alert('World');
 ```
 
@@ -83,7 +79,8 @@ alert('JavaScript');
 
 ```javascript
 // Missing semi-colon (;) (note the missing semi-colon)
-alert('Hello');
+
+// alert('Hello') <--
 
 // correct implementation
 alert('JavaScript');

@@ -1,16 +1,11 @@
 ---
 title: JavaScript Specials
+description: JavaScript Specials are outliers in our code that we must understand. It's the simpliest way to understand JavaScript.
 sidebar_position: 18
+sidebar_label: JavaScript Specials
 ---
 
-# JavaScript Specials
-
 **JavaScript Fundamentals: JavaScript Specials**
-
-<head>
-  <title>JavaScript Specials - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

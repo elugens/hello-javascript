@@ -1,16 +1,11 @@
 ---
 title: Fetch API
+description: Fetch API is used to make network requests. It is used to make GET, POST, PUT, DELETE, and PATCH network requests.
 sidebar_position: 6
+sidebar_label: Fetch API
 ---
 
-# Fetch API
-
 **Network Requests: Fetch API**
-
-<head>
-  <title>Fetch API - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

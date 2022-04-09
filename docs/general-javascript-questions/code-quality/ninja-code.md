@@ -1,16 +1,11 @@
 ---
-title: Ninja Code
+title: JavaScript Coding Ninja
+description: 'Ninja Code'
 sidebar_position: 4
+sidebar_label: Ninja Code
 ---
 
-# JavaScript Coding Ninja
-
 **Code Quality: Ninja Code**
-
-<head>
-  <title>Coding Ninja - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

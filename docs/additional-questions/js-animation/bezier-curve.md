@@ -1,16 +1,11 @@
 ---
 title: Bezier Curve
+description: Bezier Curve is used to draw curves in JavaScript. - JavaScript Interview Questions and Answers
 sidebar_position: 1
+sidebar_label: Bezier Curve
 ---
 
-# Bezier Curve
-
 **Animation: Bezier Curve**
-
-<head>
-  <title>Bezier Curve - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />  
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

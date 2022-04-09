@@ -1,16 +1,10 @@
 ---
-title: Call and Apply
+title: Decorators and forwarding, call/apply
 sidebar_position: 9
+sidebar_label: Call and Apply
 ---
 
-# Decorators and forwarding, call/apply
-
 **Advanced-JS Functions: Call and Apply**
-
-<head>
-  <title>Call and Apply - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

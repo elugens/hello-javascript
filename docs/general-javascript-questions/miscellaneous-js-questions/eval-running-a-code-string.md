@@ -1,16 +1,11 @@
 ---
 title: String Evaluation
+description: String Evaluation in JavaScript works in a similar way to how it works in Python.
 sidebar_position: 2
+sidebar_label: String Evaluation
 ---
 
-# String Evaluation
-
 **Miscellaneous: String Evaluation**
-
-<head>
-  <title>String Evaluation - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

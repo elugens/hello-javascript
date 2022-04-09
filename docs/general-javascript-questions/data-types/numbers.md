@@ -1,16 +1,11 @@
 ---
-title: Numbers
+title: Number Data Type
+description: The Number data type is a primitive data type.
 sidebar_position: 2
+sidebar_label: Numbers
 ---
 
-# Number Data Type
-
 **Data Types: Numbers**
-
-<head>
-  <title>Number Data Type - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
@@ -45,7 +40,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> BigInt is a built-in object that provides a way to represent whole numbers larger than 253 (max safe number) or be less than -253 (min. safe number), which is the largest number JavaScript can reliably represent with the Number primitive and represented by the Number.MAX_SAFE_INTEGER constant. BigInt can be used for arbitrarily large integers.
+  <div><strong>Interview Response:</strong> BigInt is a built-in object that provides a way to represent whole numbers larger than 2<sup>53-1</sup> (max safe number) or be less than -2<sup>53-1</sup> (min. safe number), which is the largest number JavaScript can reliably represent with the Number primitive and represented by the Number.MAX_SAFE_INTEGER constant. BigInt can be used for arbitrarily large integers.
 </div>
   </div>
 </details>

@@ -1,16 +1,11 @@
 ---
 title: Logical Operators
+description: Logical operators are used to combine conditional statements. Logical operators can be applied to values of any type; they are not limited to a Boolean type.
 sidebar_position: 11
+sidbar_label: Logical Operators
 ---
 
-# Logical Operators
-
 **JavaScript Fundamentals: Logical Operators**
-
-<head>
-  <title>Logical Operators - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

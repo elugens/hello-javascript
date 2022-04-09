@@ -1,16 +1,11 @@
 ---
-title: Window Sizes / Scrolling
+title: Window Sizes / Scrolling / Resizing
+description: Window Sizes / Scrolling / Resizing - JavaScript Interview Questions & Answers
 sidebar_position: 10
+sidebar_label: Window Sizes / Scrolling / Resizing
 ---
 
-# Window Sizes / Scrolling
-
 **Browser Document: Window Sizes / Scrolling**
-
-<head>
-  <title>Window Sizes / Scrolling - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

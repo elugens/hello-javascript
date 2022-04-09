@@ -1,9 +1,9 @@
 ---
-title: Basic Operators, Math
+title: Mathematical Operators in JavaScript
+description: How to use mathematical operators in JavaScript.
 sidebar_position: 8
+sidebar_label: Basic Operators, Math
 ---
-
-# Mathematical Operators in JavaScript
 
 **JavaScript Fundamentals: Basic Operators, Math**
 
@@ -430,7 +430,17 @@ counter++;
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Bitwise operators treat arguments as 32-bit integer numbers and work on the level of their binary representation.</div>
+  <div><strong>Interview Response:</strong> Bitwise operators treat arguments as 32-bit integer numbers and work on the level of their binary representation.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+console.log(1100 & 1011); // 1011
+console.log(1100 | 1011); // 1111
+```
+
+  </div>
   </div>
 </details>
 

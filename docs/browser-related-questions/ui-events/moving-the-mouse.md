@@ -1,16 +1,11 @@
 ---
 title: Moving the Mouse
+description: Moving the Mouse in JavaScript is a technique that allows you to move the mouse pointer. This is useful for interacting with the mouse. - JavaScript Interview Questions & Answers
 sidebar_position: 2
+sidebar_label: Moving the Mouse
 ---
 
-# Moving the Mouse
-
 **UI Events: Moving the Mouse: mouseover/out, mouseenter/leave**
-
-<head>
-  <title>Mouse Movements - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
