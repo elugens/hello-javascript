@@ -13,7 +13,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Can you explain the adapter design pattern?
+### Could you please explain the adapter design pattern?
 
 <details className='answer'>
   <summary>
@@ -21,7 +21,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> Adapters are JS design patterns that allow objects or classes with incompatible interfaces to work together. Interfaces of different classes or objects are matched, so they can work together despite incompatible interfaces. It is also referred to as the Wrapper pattern.<br/>
+      <strong>Interview Response:</strong> Adapters are JS design patterns that allow objects or classes with incompatible interfaces to work together. Despite incompatible interfaces, interfaces from different classes or objects are matched to work together. The Wrapper pattern is another name for it.<br/>
     </div><br />
   <div><strong className="codeExample">Diagram:</strong><br /><br />
 
@@ -45,7 +45,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 - has a different interface from what the client expects or knows
 
 </div><br />
-  <div><strong className="codeExample">Code Example #1:</strong> ES2015+ Modern Implementation<br /><br />
+  <div><strong className="codeExample">Code Example #1:</strong><br /><br />
 
   <div></div>
 
@@ -176,7 +176,7 @@ New cost: $39.50
 
 ---
 
-### In what pattern category does the Adapter pattern belong too?
+### The Adapter pattern belongs to which pattern category?
 
 <details>
   <summary>
@@ -184,14 +184,14 @@ New cost: $39.50
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Adapter pattern belongs to the Structural design pattern category.
+      <strong>Interview Response:</strong> The Adapter pattern is a type of structural design pattern.
     </div>
   </div>
 </details>
 
 ---
 
-### What is the main characteristic of the Adapter Pattern?
+### What is the most distinguishing feature of the Adapter Pattern?
 
 <details>
   <summary>
@@ -199,7 +199,7 @@ New cost: $39.50
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The main characteristic of the Adapter Pattern is the adapter interface which is required to intersect with interfaces that are not compatible.
+      <strong>Interview Response:</strong> The main characteristic of the Adapter Pattern is the adapter interface required to intersect with interfaces that are not compatible.
     </div>
 
   </div>
@@ -207,7 +207,7 @@ New cost: $39.50
 
 ---
 
-### What are the Pros and Cons of the Adapter Pattern?
+### What are the Benefits and Drawbacks of the Adapter Pattern?
 
 <details>
   <summary>
@@ -215,23 +215,23 @@ New cost: $39.50
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> Pros vs Cons
+      <strong>Interview Response:</strong> Benefits vs. Drawbacks
     </div>
     <br />
     <div></div>
 
-**Pros:**
+**Benefits**
 
-- It works with SOLID principles
-- We can add new adapters without breaking the existing code.
-- The code is reusable and flexible.
-- Clean code — because the client/context doesn’t use a different interface in each concrete class and can use polymorphism to swap between different adapters.
-- Single Responsibility Principle. You can separate the interface or data conversion code from the primary business logic of the program.
-- Open/Closed Principle. You can introduce new types of adapters into the program without breaking the existing client code, if they work with the adapters through the client interface.
+- It is based on SOLID principles.
+- New adapters can be added without breaking existing code.
+- The code is both reusable and adaptable.
+- Clean code — because the client/context does not use a different interface in each concrete class and can switch between additional adapters using polymorphism.
+- Single Responsibility Principle - The principle of single responsibility. You can separate the interface or data conversion code from the main business logic of the program.
+- Open/Closed Principle. If they interact with the adapters via the client interface, you can start introducing new kinds of adapters into the application without having to break the existing client code.
 
-**Cons:**
+**Drawbacks**
 
-- The overall complexity of the code increases because you need to introduce a set of new interfaces and classes. Sometimes it’s simpler just to change the service class so that it matches the rest of your code.
+- The overall complexity of the code rises as a result of the addition of new interfaces and classes. Changing the service class to match the rest of your code is sometimes easier.
 
 <br />
   </div>
@@ -239,7 +239,7 @@ New cost: $39.50
 
 ---
 
-### When should you use the Adapter Pattern?
+### When should the Adapter Pattern be used?
 
 <details>
   <summary>
@@ -258,9 +258,5 @@ New cost: $39.50
 <br />
   </div>
 </details>
-
----
-
-> Written with [StackEdit](https://stackedit.io/).
 
 ---

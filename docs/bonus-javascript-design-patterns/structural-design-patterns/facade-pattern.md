@@ -1,6 +1,6 @@
 ---
 title: Facade Design Pattern
-description: Decorator is a structural design pattern that lets you attach new behaviors to objects by placing these objects inside special wrapper objects that contain the behaviors.
+description: The Façade design pattern creates an interface that protects clients from complex functionality in one or more subsystems.
 sidebar_position: 5
 sidebar_label: Facade
 ---
@@ -13,7 +13,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Can you explain the decorator design pattern?
+### Could you please explain the facade design pattern?
 
 <details className='answer'>
   <summary>
@@ -21,11 +21,11 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Façade pattern provides an interface which shields clients from complex functionality in one or more subsystems. It is a simple pattern that may seem trivial but it is powerful and extremely useful. It is often present in systems that are built around a multi-layer architecture.<br/>
+      <strong>Interview Response:</strong> The Façade design pattern creates an interface that protects clients from complex functionality in one or more subsystems. It's a simple pattern that may appear insignificant, but it's powerful and advantageous. It is frequently found in systems based on a multi-layer architecture.<br/>
     </div>
     <div>
 </div><br />
-  <div><strong className="codeExample">Code Example #1:</strong> Modern ES2015+<br /><br />
+  <div><strong className="codeExample">Code Example #1:</strong><br /><br />
 
 ```js
 let orderNumber = 0;
@@ -124,21 +124,21 @@ Order number 2: Molten Lava Cake will be served in 34 minutes.
 ```
 
 </div><br />
-  <div><strong className="codeExample">Code Example #2:</strong> ES5 Implementation <br /><br />
+  <div><strong className="codeExample">Code Example #2:</strong><br /><br />
 
 <img src="/img/javascript-facade.jpg" /><br /><br />
 
 **The objects participating in this pattern are:**
 
-**Façade** -- In example code: _Mortgage_
+**Façade** -- Example code: _Mortgage_
 
-- knows which subsystems are responsible for a request
-- delegates client requests to appropriate subsystem objects
+- knows which sub-systems are responsible for a request
+- Client requests are routed to the appropriate subsystem objects.
 
-**Sub Systems** -- In example code: _Bank, Credit, Background_
+**Sub Systems** -- Example code: _Bank, Credit, Background_
 
-- implements and performs specialized subsystem functionality
-- have no knowledge of or reference to the façade
+- carries out and implements specialized sub-system functionality
+- have no knowledge of or connection to the façade
 
 <br/>
 
@@ -208,7 +208,7 @@ Joan Templeton has been approved for a $100,000 mortgage
 
 ---
 
-### In what pattern category does the Facade pattern belong too?
+### Which pattern category does the Facade pattern fall under?
 
 <details>
   <summary>
@@ -216,14 +216,14 @@ Joan Templeton has been approved for a $100,000 mortgage
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Facade pattern belongs to the Structural design pattern category.
+      <strong>Interview Response:</strong> The Facade pattern is a type of structural design pattern.
     </div>
   </div>
 </details>
 
 ---
 
-### Can you detail the object participants in the Facade Pattern?
+### When should you employ the Façade Pattern?
 
 <details>
   <summary>
@@ -231,13 +231,28 @@ Joan Templeton has been approved for a $100,000 mortgage
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Facade Pattern has two types of objects represented in this pattern. They include the Facade and the Sub Systems (There can be multiple sub system objects in this pattern).
+      <strong>Interview Response:</strong> The facade pattern makes it easier for a client to interact with a system. As a result, it can be used when an application's underlying code is large and complex and the client does not need to see it.<br/><br/>It can also be used to communicate with methods in a library while without understanding what is happening behind the scenes. JavaScript libraries, such as jQuery, are an example.
+    </div>
+  </div>
+</details>
+
+---
+
+### Can you elaborate on the Façade Pattern's object participants?
+
+<details>
+  <summary>
+    <strong>View Answer:</strong>
+  </summary>
+  <div>
+    <div>
+      <strong>Interview Response:</strong> There are two types of objects represented in the Façade Pattern. They consist of the Façade and the Sub Systems (There can be multiple sub-system objects in this pattern).
     </div>
     <br />
     <div></div>
 
-- **Facade** – The Facade knows which sub systems are responsible for a request and delegates client requires to the appropriate subsystem objects.
-- **Sub Systems** – A sub system implements and performs specialized sub system actions, but they have no coherent knowledge or reference to the Facade itself.
+- **Facade** – The Façade understands which sub-systems are in charge of a request and routes client requests to the appropriate sub-system objects.
+- **Sub Systems** – A sub-system implements and executes specialized sub-system activities, but it has no cohesive knowledge or connection to the Façade itself.
 
 <br />
   </div>
@@ -253,7 +268,7 @@ Joan Templeton has been approved for a $100,000 mortgage
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> You can isolate your code from the complexity of a subsystem.
+      <strong>Interview Response:</strong> You can isolate your code from the complexity of a sub-system.
     </div>
 
 <br />
@@ -262,7 +277,7 @@ Joan Templeton has been approved for a $100,000 mortgage
 
 ---
 
-### What are some of the drawbacks of using the Facade pattern?
+### What are some of the disadvantages of employing the Facade pattern?
 
 <details>
   <summary>
@@ -270,15 +285,11 @@ Joan Templeton has been approved for a $100,000 mortgage
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> A facade can become a god object coupled to all classes of an app.
+      <strong>Interview Response:</strong> A facade can be a god object that is tightly linked to all classes in an app.
     </div>
 
 <br />
   </div>
 </details>
-
----
-
-> Written with [StackEdit](https://stackedit.io/).
 
 ---

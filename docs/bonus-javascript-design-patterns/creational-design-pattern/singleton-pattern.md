@@ -13,7 +13,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Can you explain the singleton design pattern?
+### Could you please explain the singleton pattern?
 
 <details className='answer'>
   <summary>
@@ -21,7 +21,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Singleton pattern is a design pattern that restricts the instantiation of a class to one object. This is useful when exactly one object is needed to coordinate actions across the system. Classically, the Singleton pattern can be implemented by creating a class with a method that creates a new instance of the class if one doesn't exist. In the event of an instance already existing, it simply returns a reference to that object.<br/>
+      <strong>Interview Response:</strong> The Singleton pattern is a design principle that restricts a class's instantiation to one object. That's also useful when just one object is required to coordinate system-wide actions. The Singleton pattern is traditionally implemented by creating a class with a method that creates a new instance of the class even if one doesn't already exist. If an instance of the object already exists, it simply returns a pointer to it.<br/>
     </div><br />
   <div><strong className="codeExample">Diagram:</strong><br /><br />
 
@@ -33,11 +33,11 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 **Singleton** -- In example code: _MySingleton_
 
-- Uses a constructor to return an instance
-- responsible for creating and managing the instance object.
+- It returns an instance via a constructor.
+- In charge of creating and managing the instance object.
 
 </div><br />
-  <div><strong className="codeExample">Code Example:</strong> Modern ES2015+<br /><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
 
@@ -129,7 +129,7 @@ console.log(badSingleA.getRandomNumber() !== badSingleB.getRandomNumber()); // t
 
 ---
 
-### In what pattern category does the Singleton pattern belong too?
+### What pattern family does the Singleton belong to?
 
 <details>
   <summary>
@@ -137,14 +137,14 @@ console.log(badSingleA.getRandomNumber() !== badSingleB.getRandomNumber()); // t
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The singleton pattern belongs to the Creational design pattern category.
+      <strong>Interview Response:</strong> The singleton pattern is a type of Creational design pattern.
     </div>
   </div>
 </details>
 
 ---
 
-### How do Singletons differ from static classes or objects?
+### What distinguishes Singletons from static classes or objects?
 
 <details>
   <summary>
@@ -152,7 +152,7 @@ console.log(badSingleA.getRandomNumber() !== badSingleB.getRandomNumber()); // t
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> : Singletons differ from static classes (or objects) as we can delay their initialization, generally because they require some information that may not be available during initialization time. They don't provide a way for code that is unaware of a previous reference to them to easily retrieve them. This is because it is neither the object nor "class" that's returned by a Singleton, it's a structure. Think of how closured variables aren't actually closures - the function scope that provides the closure is the closure.
+      <strong>Interview Response:</strong> Singletons varies from static classes (or objects) in that their initialization can be delayed, typically because they require information that may not be available at the time of initialization. They don't make it easy for code that isn't aware of a previous reference to them to find them. This is because a Singleton returns a structure rather than an object or a "class." Consider how closure variables aren't closures - the closure is the function scope that provides the closure.
     </div>
 
   </div>
@@ -160,7 +160,7 @@ console.log(badSingleA.getRandomNumber() !== badSingleB.getRandomNumber()); // t
 
 ---
 
-### What are some of the benefits of the Singleton Pattern?
+### What are some of the advantages of using the Singleton Pattern?
 
 <details>
   <summary>
@@ -173,9 +173,9 @@ console.log(badSingleA.getRandomNumber() !== badSingleB.getRandomNumber()); // t
     <br />
     <div></div>
 
-- You can be sure that a class has only a single instance.
-- You gain a global access point to that instance
-- The singleton object is initialized only when it’s requested for the first time.
+- You can be certain that a class has only one instance.
+- You are granted global access to that instance.
+- The singleton object is only initialized the first time it is requested.
 
 <br />
   </div>
@@ -183,7 +183,7 @@ console.log(badSingleA.getRandomNumber() !== badSingleB.getRandomNumber()); // t
 
 ---
 
-### What are some of the drawbacks of the Singleton Pattern?
+### What are some of the Singleton Pattern's drawbacks?
 
 <details>
   <summary>
@@ -191,22 +191,18 @@ console.log(badSingleA.getRandomNumber() !== badSingleB.getRandomNumber()); // t
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> Restricting the instantiation to just one instance could potentially save a lot of memory space. Instead of having to set up memory for a new instance each time, we only have to set up memory for that one instance, which is referenced throughout the application. However, Singletons are considered an anti-pattern, and can (or... should) be avoided in JavaScript.
+      <strong>Interview Response:</strong> Restricting the instantiation to just one instance could save a lot of memory space. Instead of setting up memory for a new instance each time, we only have to set up memory for that one instance, which is referenced throughout the application. However, Singletons are considered an anti-pattern and can (or should) be avoided in JavaScript.
     </div>
     <br />
     <div></div>
 
-- Violates the Single Responsibility Principle. The pattern solves two problems at the time.
-- The Singleton pattern can mask bad design, for instance, when the components of the program know too much about each other.
-- The pattern requires special treatment in a multithreaded environment so that multiple threads won’t create a singleton object several times.
-- It may be difficult to unit test the client code of the Singleton because many test frameworks rely on inheritance when producing mock objects. Since the constructor of the singleton class is private and overriding static methods is impossible in most languages, you will need to think of a creative way to mock the singleton. Or just don’t write the tests. Or don’t use the Singleton pattern.
+- Infringes on the Single Responsibility Principle. At the same time, the pattern solves two problems.
+- The Singleton pattern can hide bad design, such as when application components know too much about each other.
+- In a multithreaded environment, the pattern must be treated differently so that multiple threads do not create a singleton object multiple times.
+- Unit testing the Singleton's client code may be difficult because many test frameworks rely on inheritance when producing mock objects. This is relative to the constructor of the singleton class being private and overriding static methods is impossible in most languages, you'll need to come up with a unique way to mock the Singleton. Or don't write the tests at all. Alternatively, avoid using the Singleton pattern.
 
 <br />
   </div>
 </details>
-
----
-
-> Written with [StackEdit](https://stackedit.io/).
 
 ---

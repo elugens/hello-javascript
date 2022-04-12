@@ -21,7 +21,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Iterator Pattern lets you access and traverses through elements of an aggregate object (collection) sequentially without exposing its underlying representation. This pattern allows JavaScript developers to design looping constructs that are far more flexible and sophisticated. In ES6, Iterator and Generators are introduced, which further aids in the Iteration pattern implementation.
+      <strong>Interview Response:</strong> The Iterator Pattern allows you to progressively access and explores elements of an aggregate object (collection) without exposing its underlying representation. This technique enables JavaScript writers to create significantly more versatile and sophisticated looping constructs. Iterators and Generators were introduced in ES6, which aids in implementing the Iteration pattern.
 <br/>
     </div>    
     <div>
@@ -159,7 +159,7 @@ false
 
 ---
 
-### In what pattern category does the Iterator pattern belong too?
+### What pattern category does the Iterator pattern fall under?
 
 <details>
   <summary>
@@ -167,14 +167,14 @@ false
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Iterator pattern belongs to the Behavioral design pattern category.
+      <strong>Interview Response:</strong> The Iterator pattern is a type of behavioral design pattern.
     </div>
   </div>
 </details>
 
 ---
 
-### When should you use the Iterator Pattern in JavaScript?
+### When should you utilize JavaScript's Iterator Pattern?
 
 <details>
   <summary>
@@ -182,7 +182,7 @@ false
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> This pattern can be used when dealing with problems explicitly related to iteration, for designing flexible looping constructs and accessing elements from a complex collection without knowing the underlying representation. You can use it to implement a generic iterator that traverses any collection independent of its type efficiently.
+      <strong>Interview Response:</strong> This pattern helps deal with iteration-related challenges, constructing flexible looping constructs, and retrieving items from a complex collection without knowing the underlying representation. It can be used to create a generic iterator that efficiently explores any collection regardless of its type.
     </div>
 
 <br />
@@ -204,10 +204,10 @@ false
     <br />
     <div></div>
 
-- Single Responsibility Principle. You can clean up the client code and the collections by extracting bulky traversal algorithms into separate classes.
-- Open/Closed Principle. You can implement new types of collections and iterators and pass them to existing code without breaking anything.
-- You can iterate over the same collection in parallel because each iterator object contains its own iteration state.
-- For the same reason, you can delay an iteration and continue it when needed.
+- Singular Responsibility Principle By separating cumbersome traversal algorithms into different classes, you may clean up the client code and collections.
+- The Open/Closed Principle -- You can add new types of collections and iterators to existing code without affecting anything.
+- Because each iterator object maintains its iteration state, you can concurrently iterate over the same collection.
+- For the same reason, you can postpone an iteration and resume it later.
 
 <br />
   </div>
@@ -215,7 +215,7 @@ false
 
 ---
 
-### What are some of the drawbacks of the Iterator pattern?
+### What are some of the Iterator pattern's drawbacks?
 
 <details>
   <summary>
@@ -228,15 +228,11 @@ false
     <br />
     <div></div>
 
-- Applying the pattern can be an overkill if your app only works with simple collections.
-- Using an iterator may be less efficient than going through elements of some specialized collections directly.
+- Using the pattern may be overkill if your software works with simple collections.
+- Using an iterator may be less productive than going over elements of specific specialized collections directly.
 
 <br />
   </div>
 </details>
-
----
-
-> Written with [StackEdit](https://stackedit.io/).
 
 ---

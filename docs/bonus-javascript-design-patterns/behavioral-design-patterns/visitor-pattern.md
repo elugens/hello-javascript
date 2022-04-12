@@ -1,6 +1,6 @@
 ---
 title: Visitor Design Pattern
-description: Visitor is a behavioral design pattern that lets you separate algorithms from the objects on which they operate.
+description: Visitor is a behavioral design pattern that allows you to decouple algorithms from the objects they act on. The Visitor pattern adds new methods to a group of objects without affecting them, and the new logic gets housed in a distinct entity known as the Visitor.
 sidebar_position: 11
 sidebar_label: Visitor
 ---
@@ -21,7 +21,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Visitor pattern defines a new operation to a collection of objects without changing the objects themselves. The new logic resides in a separate object called the Visitor.<br/>
+      <strong>Interview Response:</strong> Visitor is a behavioral design pattern that allows you to decouple algorithms from the objects they act on. The Visitor pattern adds new methods to a group of objects without affecting them, and the new logic gets housed in a distinct entity known as the Visitor.<br/>
     </div>    
     <div>
 </div><br />
@@ -31,18 +31,18 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 **The objects participating in this pattern are:**
 
-**ObjectStructure** -- In example code: _employees array_
+**ObjectStructure** -- example code: _employees array_
 
-- maintains a collection of Elements which can be iterated over
+- maintains a collection of elements that can be iterated over
 
-**Elements** -- In example code: _Employee objects_
+**Elements** -- example code: _Employee objects_
 
 - defines an accept method that accepts visitor objects
-- in the accept method the visitor's visit method is invoked with 'this' as a parameter
+- in the accept method, the Visitor's visit method is invoked with 'this' as a parameter
 
-**Visitor** -- In example code: _ExtraSalary, ExtraVacation_
+**Visitor** -- example code: _ExtraSalary, ExtraVacation_
 
-- implements a visit method. The argument is the Element being visited. This is where the Element's changes are made
+- implements a visitor method. The argument is the element being visited. This is where the Element's changes are made
 
 <br/>
 
@@ -141,14 +141,14 @@ Boss: $275000 and 53 vacation days
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Visitor pattern belongs to the Behavioral design pattern category.
+      <strong>Interview Response:</strong> The Visitor pattern is part of the Behavioral design pattern set.
     </div>
   </div>
 </details>
 
 ---
 
-### When should you use the Visitor Pattern in JavaScript?
+### When should you utilize the JavaScript Visitor Pattern?
 
 <details>
   <summary>
@@ -161,9 +161,9 @@ Boss: $275000 and 53 vacation days
     <br />
     <div></div>
 
-- Similar operations need to be performed on different objects of a data structure.
-- Specific operations need to be performed on different objects in the data structure.
-- You want to add extensibility to libraries or frameworks.
+- Similar procedures must be done on various data structure objects.
+- Specific operations must be carried out on multiple items in the data structure.
+- You wish to make libraries or frameworks more extensible.
 
 <br />
   </div>
@@ -184,9 +184,9 @@ Boss: $275000 and 53 vacation days
     <br />
     <div></div>
 
-- Open/Closed Principle. You can introduce a new behavior that can work with objects of different classes without changing these classes.
+- The principle of open/closed. You may add new behavior that works with objects of various classes without modifying the classes themselves.
 - Single Responsibility Principle. You can move multiple versions of the same behavior into the same class.
-- A visitor object can accumulate some useful information while working with various objects. This might be handy when you want to traverse some complex object structure, such as an object tree, and apply the visitor to each object of this structure.
+- While working with various objects, a visitor object might get helpful information. This information is useful if you wish to traverse a complicated object structure, such as an object tree, and apply the Visitor to each item in the structure.
 
 <br />
   </div>
@@ -194,7 +194,7 @@ Boss: $275000 and 53 vacation days
 
 ---
 
-### What are some of the drawbacks of the Visitor pattern?
+### What are some of the Visitor pattern's drawbacks?
 
 <details>
   <summary>
@@ -207,15 +207,11 @@ Boss: $275000 and 53 vacation days
     <br />
     <div></div>
 
-- You need to update all visitors each time a class gets added to or removed from the element hierarchy
-- Visitors might lack the necessary access to the private fields and methods of the elements that they’re supposed to work with.
+- Every time a class is added or withdrawn from the element hierarchy; you must notify all visitors.
+- Visitors may not have access to the private fields and methods of the components with which they are expected to operate.
 
 <br />
   </div>
 </details>
-
----
-
-> Written with [StackEdit](https://stackedit.io/).
 
 ---

@@ -21,29 +21,29 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Flyweight pattern conserves memory by sharing large numbers of fine-grained objects efficiently. Shared flyweight objects are immutable, that is, they cannot be changed as they represent the characteristics that are shared with other objects.<br/>
+      <strong>Interview Response:</strong> By efficiently sharing a large number of fine-grained objects, the Flyweight pattern helps to conserve memory. Shared flyweight objects are immutable; they cannot be altered because they reflect properties shared by other objects.<br/>
     </div>
     <div>
 </div><br />
-  <div><strong className="codeExample">Code Example #1:</strong> Modern ES2015+<br /><br />
+  <div><strong className="codeExample">Code Example #1:</strong><br /><br />
 
 <img src="/img/javascript-flyweight.jpg" /><br /><br />
 
 The objects participating in this pattern are:
 
-**Client** -- In example code: _Computer_
+**Client** -- Example code: _Computer_
 
 - calls into FlyweightFactory to obtain flyweight objects
 
 **FlyweightFactory** -- In example code: _FlyweightFactory_
 
 - creates and manages flyweight objects
-- if requested, and a flyweight does not exist, it will create one
+- If a flyweight is required and one does not exist, it will construct one.
 - stores newly created flyweights for future requests
 
 **Flyweight** -- In example code: _Flyweight_
 
-- maintains intrinsic data to be shared across the application
+- preserves intrinsic data for use throughout the application
 
 ```js
 function Flyweight(make, model, processor) {
@@ -143,14 +143,14 @@ Flyweights: 2
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Flyweight pattern belongs to the Structural design pattern category.
+      <strong>Interview Response:</strong> The Flyweight pattern is classified as a Structural design pattern.
     </div>
   </div>
 </details>
 
 ---
 
-### What objects that participate in the Flyweight Pattern?
+### What types of objects are involved in the Flyweight Pattern?
 
 <details>
   <summary>
@@ -158,14 +158,14 @@ Flyweights: 2
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Flyweight pattern includes the Client, FlyweightFactory, and Flyweight.
+      <strong>Interview Response:</strong> The Client, FlyweightFactory, and Flyweight are all part of the Flyweight pattern.
     </div>
     <br />
     <div></div>
 
-- **Client** – The Client calls into FlyweightFactory to obtain flyweight objects
-- **FlyweightFactory** – The FlyweightFactory creates and manages flyweight objects, if requested, and a flyweight does not exist, it will create one, and stores newly created flyweights for future requests.
-- **Flyweight** – The Flyweight maintains intrinsic data to be shared across the application.
+- **Client** – To obtain flyweight objects, the Client invokes FlyweightFactory.
+- **FlyweightFactory** – If a flyweight object is requested but does not exist, the FlyweightFactory generates and manages it. It will spawn one and save newly generated flyweights for future use.
+- **Flyweight** – stores intrinsic data that can be shared throughout the program.
 
 <br />
   </div>
@@ -173,7 +173,7 @@ Flyweights: 2
 
 ---
 
-### When should you use the Flyweight Pattern?
+### When should the Flyweight Pattern be used?
 
 <details>
   <summary>
@@ -181,8 +181,8 @@ Flyweights: 2
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> This pattern should be used when your application has plenty of objects using similar data or when memory storage cost is high. JavaScript uses this pattern to share a list of immutable strings across the application.<br/><br/>
-      This pattern is mostly used in applications such as network apps or word processors. It can also be used in web browsers to prevent loading the same images twice. The flyweight pattern allows caching of the images. Hence, when a web page loads, only the new images are loaded from the Internet, the already existing ones are fetched from the cache.
+      <strong>Interview Response:</strong> This pattern should be utilized when your application has a large number of objects that consume the same data or when memory storage costs are high. JavaScript uses this pattern to distribute a list of immutable strings throughout the program.<br/><br/>
+      This pattern is most commonly found in network programs or word processors, and it can be used in internet browsers to prevent the same images from loading. The flyweight pattern enables image caching. As a result, only new images are loaded from the Web when a web page loads, while existing ones are retrieved from the cache.
     </div>
 
 <br />
@@ -191,7 +191,7 @@ Flyweights: 2
 
 ---
 
-### What are some of the benefits of using the Flyweight pattern?
+### What are some of the advantages of employing the Flyweight pattern?
 
 <details>
   <summary>
@@ -199,7 +199,7 @@ Flyweights: 2
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> You can save lots of memory, assuming your program has tons of similar objects.
+      <strong>Interview Response:</strong> If your software has a lot of similar objects, you can save a lot of memory.
     </div>
 
 <br />
@@ -208,7 +208,7 @@ Flyweights: 2
 
 ---
 
-### What are some of the drawbacks of using the Flyweight pattern?
+### What are some of the disadvantages of employing the Flyweight pattern?
 
 <details>
   <summary>
@@ -219,15 +219,12 @@ Flyweights: 2
       <strong>Interview Response:</strong> Drawbacks of the Flyweight Pattern.
     </div><br/>
 
-- You might be trading RAM over CPU cycles when some of the context data needs to be recalculated each time somebody calls a flyweight method.
-- The code becomes much more complicated. New team members will always be wondering why the state of an entity was separated in such a way.
+- When certain context data needs to be regenerated each time a flyweight method is called, you may be sacrificing RAM for CPU cycles.
+- The code becomes noticeably more complex with the Flyweight Pattern.
+- New colleagues will be perplexed as to why an entity's state was partitioned.
 
 <br />
   </div>
 </details>
-
----
-
-> Written with [StackEdit](https://stackedit.io/).
 
 ---

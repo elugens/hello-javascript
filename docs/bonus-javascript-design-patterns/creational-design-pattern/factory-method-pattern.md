@@ -13,7 +13,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Can you explain the factory design pattern?
+### Can you explain the factory method/design pattern?
 
 <details className='answer'>
   <summary>
@@ -21,7 +21,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> A Factory Method creates new objects as instructed by the client. One way to create objects in JavaScript is by invoking a constructor function with the new operator. There are situations however, where the client does not, or should not, know which one of several candidate objects to instantiate. The Factory Method allows the client to delegate object creation while still retaining control over which type to instantiate.<br/><br/>
+      <strong>Interview Response:</strong> A Factory Method creates new objects as instructed by the client. One way to create new objects in JavaScript is by invoking a constructor function with the new operator. There are times when the client should not or does not know which of numerous candidates objects to instantiate. The Factory Method enables the client to delegate object creation while maintaining control over the type to be instantiated.<br/><br/>
     </div><br />
   <div><strong className="codeExample">Diagram:</strong><br /><br />
 
@@ -33,8 +33,8 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 **Creator** -- In example code: _Factory_
 
-- the 'factory' object that creates new products
-- implements 'factoryMethod' which returns newly created products
+- the Factory object that creates new products
+- implements factory method which returns newly created products
 
 **AbstractProduct** -- _not used in JavaScript_
 
@@ -42,14 +42,14 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 **ConcreteProduct** -- In example code: _Employees_
 
-- the product being created
-- all products support the same interface (properties and methods)
+- the finished product being manufactured
+- the same interface is supported by all products (properties and methods)
 
 <br />
 
 :::note
 
-Though the definition particularly mentions that an interface needs to be defined, we don’t have interfaces in JavaScript. Therefore, we must implement it in a way that JavaScript translates into an interface.
+Though the definition particularly mentions that an interface needs to be defined, we do not have interfaces in JavaScript. Therefore, we must implement it in a way that JavaScript translates into an interface.
 
 :::
 
@@ -205,7 +205,7 @@ circle.draw();
 
 ---
 
-### In what pattern category does the factory pattern belong too?
+### In what pattern category does the factory pattern belong?
 
 <details>
   <summary>
@@ -213,14 +213,14 @@ circle.draw();
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The factory pattern belongs to the Creational design pattern category.
+      <strong>Interview Response:</strong> The factory pattern belongs to the creational design pattern group.
     </div>
   </div>
 </details>
 
 ---
 
-### What is the main purpose of the factory method/function?
+### What is the main goal of the factory method?
 
 <details>
   <summary>
@@ -228,7 +228,7 @@ circle.draw();
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The key objective of the Factory Method is extensibility. Factory Methods are frequently used in applications that manage, maintain, or manipulate collections of objects that are different but at the same time have many characteristics (i.e. methods and properties) in common.
+      <strong>Interview Response:</strong> The Factory Method's main goal is extensibility. Factory Methods are commonly used in applications that manage, maintain, or manipulate groups of distinct but similar objects (i.e., methods and properties).
     </div>
   </div>
 </details>
@@ -243,10 +243,10 @@ circle.draw();
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> There are three participants the factory pattern including the Creator, AbstractProduct, and ConcreteProduct.
+      <strong>Interview Response:</strong> There are three participants in the factory pattern, including the Creator, AbstractProduct, and ConcreteProduct.
     </div><br />
     <div>
-      <strong>Technical Response:</strong> There are three participants the factory pattern including the Creator, AbstractProduct, and ConcreteProduct. The Creator is the factory object that creates new products and implements ‘factoryMethod’ which returns newly created products. The AbstractProduct declares an interface for the products, but this is not used in JavaScript. The ConcreteProduct is the product being created. All ConcreteProducts support the same interface.
+      <strong>Technical Response:</strong> There are three participants in the factory pattern, including the Creator, AbstractProduct, and ConcreteProduct. The Creator is the factory object that creates new products and implements “factoryMethod” which returns newly manufactured products. The AbstractProduct declares an interface for the products, except in JavaScript. The ConcreteProduct is the product being created. All ConcreteProducts support the same interface.
     </div><br />
 
 :::note
@@ -273,11 +273,11 @@ Though the definition particularly mentions that an interface needs to be define
 
 <div></div>
 
-- You should use the Factory Method when you don’t know beforehand the exact types and dependencies of the objects your code should work with.
+- You should use the Factory Method when you don’t know the exact types and dependencies of the objects your code should work within your application.
 
-- You can use the Factory Method when you want to provide users of your library or framework with a way to extend its internal components.
+- When you want to give users of your library or framework the ability to extend its internal components, you can use the Factory Method.
 
-- You can use the Factory Method when you want to save system resources by reusing existing objects instead of rebuilding them each time.
+- When you want to save system resources by reusing existing objects instead of rebuilding them each time, you can use the Factory Method.
 
 <br />
 
@@ -286,7 +286,7 @@ Though the definition particularly mentions that an interface needs to be define
 
 ---
 
-### What are some of the benefits of using the factory method?
+### What are some of the benefits of using the factory pattern?
 
 <details>
   <summary>
@@ -299,9 +299,9 @@ Though the definition particularly mentions that an interface needs to be define
     <br />
     <div></div>
 
-- You avoid tight coupling between the creator and the concrete products.
-- Single Responsibility Principle. You can move the product creation code into one place in the program, making the code easier to support.
-- Open/Closed Principle. You can introduce new types of products into the program without breaking existing client code.
+- You avoid a close relationship between the Creator and the concrete products.
+- **Single Responsibility Principle (S.R.P.):** The principle of single responsibility. You can consolidate the product creation code into a single location in the program, making it easier to support.
+- **Open/Closed Principle:** You can integrate new products to the system without busting the current client code.
 
 <br />
   </div>
@@ -309,7 +309,7 @@ Though the definition particularly mentions that an interface needs to be define
 
 ---
 
-### What are some of the drawbacks of the factory pattern?
+### What are some of the factory pattern's drawbacks?
 
 <details>
   <summary>
@@ -318,7 +318,7 @@ Though the definition particularly mentions that an interface needs to be define
   <div>
     <div>
       <strong>Interview Response:</strong> Drawbacks of the Factory Pattern<br /><br />
-      The code may become more complicated since you need to introduce a lot of new subclasses to implement the pattern. The best-case scenario is when you’re introducing the pattern into an existing hierarchy of creator classes.<br /><br />
+      The code may become more complicated as you introduce a large number of new subclasses to implement the pattern. The best-case scenario is to incorporate the design into an existing creator class hierarchy.<br /><br />
     </div>
   </div>
 </details>

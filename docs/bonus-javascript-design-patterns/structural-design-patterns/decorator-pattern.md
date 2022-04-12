@@ -1,6 +1,6 @@
 ---
 title: Decorator Design Pattern
-description: Decorator is a structural design pattern that lets you attach new behaviors to objects by placing these objects inside special wrapper objects that contain the behaviors.
+description: Decorators are a structural JS design pattern that aims to promote code reuse. Like Mixins, they can be considered another viable alternative to object sub-classing.
 sidebar_position: 4
 sidebar_label: Decorator
 ---
@@ -21,7 +21,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> Structurally the Composite Pattern lets you compose objects into a tree-like structure giving us the ability to work with them as individual objects. This is also known as partitioning. The Composite pattern allows the creation of objects with properties that are primitive items or a collection of objects. Each item in the collection can hold other collections themselves, creating deeply nested structures.<br/>
+      <strong>Interview Response:</strong> Decorators are a structural JS design pattern that aims to promote code reuse. Like Mixins, they can be considered another viable alternative to object sub-classing. This pattern enables behavior to be dynamically added to an individual object without affecting the behavior of other objects in the same class. Decorators can also be used to extend functionality in a more flexible way than subclassing.<br/>
     </div>
     <div>
 </div><br />
@@ -150,9 +150,9 @@ console.log(mb.getScreenSize());
 </div><br />
   <div><strong className="codeExample">Code Example #3:</strong><br /><br />
 
-**The objects participating in this pattern are:**
+**This pattern's objects are as follows:**
 
-**Client** -- In example code: _the run() function_
+**Client** -- Example code: _the run() function_
 
 - maintains a reference to the decorated Component
 
@@ -162,8 +162,8 @@ console.log(mb.getScreenSize());
 
 **Decorator** -- In example code: _DecoratedUser_
 
-- 'wraps around' Component by maintaining a reference to it
-- defines an interface that conforms to Component's interface
+- wraps around -- Component by maintaining a reference to it
+- defines an interface that is compatible with the interface of the Component
 - implements the additional functionality (addedMembers in diagram)
 
 ```js
@@ -223,14 +223,14 @@ Decorated User: Kelly, Broadway, New York
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Decorator pattern belongs to the Structural design pattern category.
+      <strong>Interview Response:</strong> The Decorator pattern is part of the Structural design pattern family.
     </div>
   </div>
 </details>
 
 ---
 
-### What are the object participants in the Decorator Pattern?
+### What are the Decorator Pattern's object participants?
 
 <details>
   <summary>
@@ -238,14 +238,14 @@ Decorated User: Kelly, Broadway, New York
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The object participants in the Decorator Pattern include the Client, Component, and Decorator.
+      <strong>Interview Response:</strong> The Client, Component, and Decorator are the object participants in the Decorator Pattern.
     </div>
     <br />
     <div></div>
 
-- **Client** – The Client object participant maintains a reference to the decorated Component.
-- **Component** – The Component is the object to which additional functionality is added.
-- **Decorator** – The Decorator acts a wrapper around the Component by maintaining a reference to it, defines an interface that conforms to the Component’s interface, and implements the additional functionality. There can be more than one decorator in an application.
+- **Client** – The decorated Component is referenced by the Client object participant.
+- **Component** – The object to which additional functionality is added is referred to as a Component.
+- **Decorator** – By keeping a reference to the Component, defining an interface that conforms to the Component's interface, and implementing the additional functionality, the Decorator acts as a wrapper around it. In an application, there can be more than one decorator.
 
 <br />
   </div>
@@ -253,7 +253,7 @@ Decorated User: Kelly, Broadway, New York
 
 ---
 
-### What are some of the benefits of using the Decorator pattern?
+### What are some of the advantages of employing the Decorator pattern?
 
 <details>
   <summary>
@@ -266,10 +266,11 @@ Decorated User: Kelly, Broadway, New York
     <br />
     <div></div>
 
-- You can extend an object’s behavior without making a new subclass.
-- You can add or remove responsibilities from an object at runtime.
-- You can combine several behaviors by wrapping an object into multiple decorators.
-- Single Responsibility Principle. You can divide a monolithic class that implements many possible variants of behavior into several smaller classes.
+- You can change the behavior of an object without creating a new subclass.
+- At runtime, you can add or remove responsibilities from an object.
+- Wrapping an object in multiple decorators allows you to combine several behaviors.
+- Single Responsibility Principle - The principle of single responsibility. A monolithic class that implements many possible variants of behavior can be divided into several smaller classes.
+  .
 
 <br />
   </div>
@@ -277,7 +278,7 @@ Decorated User: Kelly, Broadway, New York
 
 ---
 
-### What are some of the drawbacks of using the Decorator pattern?
+### What are some of the disadvantages of employing the Decorator pattern?
 
 <details>
   <summary>
@@ -290,16 +291,12 @@ Decorated User: Kelly, Broadway, New York
     <br />
     <div></div>
 
-- It’s hard to remove a specific wrapper from the wrappers stack.
-- It’s hard to implement a decorator in such a way that its behavior doesn’t depend on the order in the decorators stack.
+- It’s hard to remove a specific wrapper from the wrapper's stack.
+- It’s hard to implement a decorator in such a way that its behavior doesn’t depend on the order in the decorator's stack.
 - The initial configuration code of layers might look pretty ugly.
 
 <br />
   </div>
 </details>
-
----
-
-> Written with [StackEdit](https://stackedit.io/).
 
 ---

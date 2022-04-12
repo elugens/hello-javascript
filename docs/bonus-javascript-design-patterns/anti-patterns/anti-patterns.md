@@ -13,7 +13,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### What is the definition of an anti-pattern in application development?
+### What exactly is an anti-pattern in application development?
 
 <details>
   <summary>
@@ -21,7 +21,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> An anti-pattern is a flawed solution to a particular problem that produces unintended results. Anti-patterns are bad designs that should be documented.
+      <strong>Interview Response:</strong> An anti-pattern is an imperfect solution to a particular problem that results in an unintended result. To summarize, an anti-pattern is a lousy design worthy of documenting.
     </div>
   </div>
 </details>
@@ -39,23 +39,23 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
       <strong>Interview Response:</strong> Nine Anti-Patterns you should know.<br/>
     </div><br />
 
-1. Defining a large number of variables in a global context and causing global namespace pollution.
+1. Excessive variable definition in a global context pollutes the global namespace.
 
-2. Using or passing strings instead of functions for setTimeout or setInterval, as this triggers the use of eval() internally.
+2. Passing strings rather than functions to setTimeout or setInterval causes the internal usage of eval().
 
-3. Modifying the Object class prototype (this is an anti-pattern that should be avoided).
+3. Playing with native methods in the Object class prototype (this is a particularly bad anti-pattern).
 
-4. Using JavaScript in an inline form as this is inflexible.
+4. Using JavaScript inline because it is inflexible.
 
-5. The use of document.write instead of native DOM alternatives, such as document.createElement. Document.write has been grossly misused over the years and has a number of disadvantages, including that if it's executed after a page has loaded, it can actually overwrite the page we're on, whereas document.createElement doesn't. It's also not compatible with XHTML, so it's better to use DOM-friendly methods like document.createElement instead.
+5. The usage of document.write when native DOM alternatives, such as document.createElement, are preferable. Over the years, document.write gets misapplied. Drawbacks include that it can overwrite the page we're on after the page loads, whereas document.createElement does not. It also doesn't work with XHTML, so using more DOM-friendly techniques like document.createElement is preferable.
 
-6. Using truthy and false evaluations in an inappropriate way in JavaScript.
+6. Incorrect Use of True and False Evaluation
 
-7. Abstract naming conventions for variables, classes, and functions. (Ninja Code)
+7. Naming Customs (Ninja Code)
 
-8. Modifying the DOM in a loop
+8. Changing the DOM in a loop
 
-9. New Object in Array.prototype.reduce
+9. New Array.prototype.reduce Object
 
 <br/>
 

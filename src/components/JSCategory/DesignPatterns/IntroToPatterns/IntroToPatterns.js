@@ -13,6 +13,14 @@ const GetIntroPatternCats = () => {
         <ul className={styles.mainCategoryGroup}>
           <li className={styles.mainCategoryItem}>
             <Link
+              to='/docs/bonus-javascript-design-patterns/introduction-to-design-patterns/introduction'
+              className={styles.mainCategoryLink}
+            >
+              Introduction
+            </Link>
+          </li>
+          <li className={styles.mainCategoryItem}>
+            <Link
               to='/docs/bonus-javascript-design-patterns/introduction-to-design-patterns/what-is-design-pattern'
               className={styles.mainCategoryLink}
             >

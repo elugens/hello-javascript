@@ -21,7 +21,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> An Abstract Factory creates objects that are related by a common theme. It is also useful to be aware of the Abstract Factory pattern, which aims to encapsulate a group of individual factories with a common goal. It separates the details of the implementation of a set of objects from their general usage.<br/><br/>
+      <strong>Interview Response:</strong> It is also helpful to know the Abstract Factory pattern, which aims to encapsulate a group of individual factories with a common goal. It separates the details of the implementation of a set of objects from their general usage.<br/><br/>
     </div><br />
   <div><strong className="codeExample">Diagram:</strong><br /><br />
 
@@ -37,16 +37,16 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 **ConcreteFactory** -- In example code: _EmployeeFactory, VendorFactory_
 
-- a factory object that 'manufactures' new products
+- a factory object that manufactures new products
 - the create() method returns new products
 
 **Products** -- In example code: _Employee, Vendor_
 
-- the product instances being created by the factory
+- the factory-created product instances
 
 **AbstractProduct** -- _not used in JavaScript_
 
-- declares an interface for the products that are being created
+- declares an interface for the created products
 
 <br />
 
@@ -189,7 +189,7 @@ console.log(car);
 
 ---
 
-### Why would you want to leave the responsibility of the construction of objects to others rather than simply calling a constructor function with the new keyword directly?
+### Why would you want to delegate the responsibility of object construction to others rather than directly calling a constructor function with the new keyword?
 
 <details>
   <summary>
@@ -197,7 +197,7 @@ console.log(car);
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The reason is that that constructor functions are limited in their control over the overall creation process and sometimes you will need to hand over control to a factory that has broader knowledge. This includes scenarios in which the creation process involves object caching, sharing or re-using of objects, complex logic, or applications that maintain object and type counts, and objects that interact with different resources or devices. If your application needs more control over the object creation process, we should consider using a Factory.
+      <strong>Interview Response:</strong> The reason is that constructor functions are limited in their control over the overall creation process. Sometimes, you will need to hand over power to a factory with broader knowledge. This approach includes scenarios where the creation process involves object caching, sharing or re-using of objects, complex logic, or applications that maintain object and type counts and objects that interact with different resources or devices. If your application needs more control over the object creation process, we should consider using a Factory.
     </div>
   </div>
 </details>
@@ -215,7 +215,7 @@ console.log(car);
       <strong>Interview Response:</strong> The objects participants used in the Abstract Factory Pattern include the AbstractFactory, ConcreteFactory, Products, and AbstractProduct.
     </div><br />
     <div>
-      <strong>Technical Response:</strong> The objects participants used in the Abstract Factory Pattern include the AbstractFactory, ConcreteFactory, Products, and AbstractProduct. The AbstractFactory, not used in JavaScript, declares an interface for the creation of products. The ConcreteFactory is a factory object that manufactures new products. Products are simply instances created by the factory. The AbstractFactory participant, not used in JavaScript, declares an interface for the products that are being created.
+      <strong>Technical Response:</strong> The objects participants used in the Abstract Factory Pattern include the AbstractFactory, ConcreteFactory, Products, and AbstractProduct. The AbstractFactory, not used in JavaScript, declares an interface for creating products. The ConcreteFactory is a factory object that manufactures new products, and products are simply instances created by the factory. The AbstractFactory participant, not used in JavaScript, declares an interface for the produced products.
     </div><br />
 
 :::note
@@ -223,32 +223,6 @@ console.log(car);
 Though the definition particularly mentions that an interface needs to be defined, we don’t have interfaces in _Vanilla JavaScript_. Therefore, we must implement it in a way that JavaScript translates into an interface.
 
 :::
-
-  </div>
-</details>
-
----
-
-### Can you name a use case for the factory pattern?
-
-<details>
-  <summary>
-    <strong>View Answer:</strong>
-  </summary>
-  <div>
-    <div>
-      <strong>Interview Response:</strong> Use Cases and Applicability of the Factory Pattern
-      </div>
-
-<div></div>
-
-- You should use the Factory Method when you don’t know beforehand the exact types and dependencies of the objects your code should work with.
-
-- You can use the Factory Method when you want to provide users of your library or framework with a way to extend its internal components.
-
-- You can use the Factory Method when you want to save system resources by reusing existing objects instead of rebuilding them each time.
-
-<br />
 
   </div>
 </details>
@@ -263,7 +237,7 @@ Though the definition particularly mentions that an interface needs to be define
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The abstract factory pattern has a number of advantages that can be summarized in the following points.
+      <strong>Interview Response:</strong> The abstract factory pattern has several advantages that can be summarized in the following points:
     </div>
     <br />
     <div></div>
@@ -278,7 +252,7 @@ Though the definition particularly mentions that an interface needs to be define
 
 ---
 
-### What are some of the drawbacks of using the Abstract factory pattern?
+### What are some of the disadvantages of implementing the Abstract Factory pattern?
 
 <details>
   <summary>
@@ -286,7 +260,7 @@ Though the definition particularly mentions that an interface needs to be define
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The main drawback of the abstract factory pattern, like most design patterns, is that there is an increase in complexity in the code and an increase in the number of classes required for the code. However, this disadvantage is well known when applying design patterns for it is the price to pay for gaining abstraction in the code.<br />
+      <strong>Interview Response:</strong> The main drawback of the abstract factory pattern, like most design patterns, is an increase in complexity in the code and an increase in the number of classes required for the code. However, this disadvantage is well known when applying design patterns, for it is the price to pay for gaining abstraction in the code.<br />
     </div>
   </div>
 </details>

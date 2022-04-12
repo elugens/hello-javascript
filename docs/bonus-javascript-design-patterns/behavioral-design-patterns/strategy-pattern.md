@@ -21,7 +21,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Strategy pattern encapsulates alternative algorithms (or strategies) for a particular task. It allows a method to be swapped out at runtime by any other method (Strategy) without the client realizing it. Essentially, Strategy is a group of algorithms that are interchangeable.<br/>
+      <strong>Interview Response:</strong> The Strategy pattern encapsulates various algorithms (or strategies) for a specific task. It enables a method to be replaced at runtime with another method (Strategy) without the client knowing it. The Strategy pattern is essentially a collection of interchangeable algorithms.<br/>
     </div>    
     <div>
 </div><br />
@@ -29,15 +29,15 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 <img src="/img/javascript-Strategy.jpg" /><br /><br />
 
-**The objects participating in this pattern are:**
+**This pattern's objects are as follows:**
 
-**Context** -- In example code: Shipping
+**Context** -- example code: Shipping
 
-- maintains a reference to the current Strategy object
-- supports interface to allow clients to request Strategy calculations
-- allows clients to change Strategy
+- keeps track of the current Strategy object
+- provides an interface by which clients can request Strategy computations
+- enables clients to adjust their strategy
 
-**Strategy** -- In example code: UPS, USPS, Fedex
+**Strategy** -- example code: UPS, USPS, FedEx
 
 - implements the algorithm using the Strategy interface
 
@@ -118,7 +118,7 @@ Fedex Strategy: $43.20
 
 ---
 
-### In what pattern category does the Strategy pattern belong too?
+### The Strategy pattern belongs to which pattern group?
 
 <details>
   <summary>
@@ -126,14 +126,14 @@ Fedex Strategy: $43.20
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Strategy pattern belongs to the Behavioral design pattern category.
+      <strong>Interview Response:</strong> The Strategy pattern is part of the Behavioral design pattern group.
     </div>
   </div>
 </details>
 
 ---
 
-### When should you use the Strategy Pattern in JavaScript?
+### When should the JavaScript Strategy Pattern be used?
 
 <details>
   <summary>
@@ -141,14 +141,14 @@ Fedex Strategy: $43.20
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> When to Use the Strategy Pattern.
+      <strong>Interview Response:</strong> Strategy Pattern Use-Cases.
     </div>
     <br />
     <div></div>
 
-- When you need to use several algorithms with different variations. You need create a concrete class to implement your algorithm (which can consist of a or some functions).
-- When there are conditional statements around several related algorithms.
-- When most of your classes have related behaviors.
+- When you need to employ several algorithms with varying versions, you must construct a concrete class (this may include one or more functions) to implement your algorithm.
+- When there are conditional statements around by several connected algorithms
+- When the majority of your classes exhibit similar behaviors.
 
 <br />
   </div>
@@ -156,7 +156,7 @@ Fedex Strategy: $43.20
 
 ---
 
-### What are some of the benefits of using the Strategy pattern?
+### What are some of the advantages of employing the Strategy pattern?
 
 <details>
   <summary>
@@ -169,10 +169,10 @@ Fedex Strategy: $43.20
     <br />
     <div></div>
 
-- You can swap algorithms used inside an object at runtime.
-- You can isolate the implementation details of an algorithm from the code that uses it.
-- You can replace inheritance with composition.
-- Open/Closed Principle. You can introduce new strategies without having to change the context.
+- At runtime, you can alter the algorithms utilized within an object.
+- You can separate an algorithm's implementation specifics from the code that utilizes it.
+- Composition can be used in place of inheritance
+- The principle of open/closed. You may implement new tactics without changing the context.
 
 <br />
   </div>
@@ -180,7 +180,7 @@ Fedex Strategy: $43.20
 
 ---
 
-### What are some of the drawbacks of the Strategy pattern?
+### What are some of the Strategy pattern's drawbacks?
 
 <details>
   <summary>
@@ -193,16 +193,12 @@ Fedex Strategy: $43.20
     <br />
     <div></div>
 
-- If you only have a couple of algorithms and they rarely change, there’s no real reason to overcomplicate the program with new classes and interfaces that come along with the pattern.
-- Clients must be aware of the differences between strategies to be able to select a proper one.
-- A lot of modern programming languages have functional type support that lets you implement different versions of an algorithm inside a set of anonymous functions. Then you could use these functions exactly as you’d have used the Strategy objects, but without bloating your code with extra classes and interfaces.
+- If you only have a few algorithms that seldom change, there's no point to complicate the program with new classes and interfaces that come with the pattern.
+- Clients must understand the distinctions between tactics in order to choose the best one.
+- Many current programming languages feature functional types, which allow you to implement different variants of an algorithm within a collection of anonymous functions. You may then utilize these methods in the same way you would have used Strategy objects, but without cluttering your code with unnecessary classes and interfaces.
 
 <br />
   </div>
 </details>
-
----
-
-> Written with [StackEdit](https://stackedit.io/).
 
 ---

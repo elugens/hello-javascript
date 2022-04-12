@@ -21,7 +21,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Memento pattern provides temporary storage as well as restoration of an object. The mechanism in which you store the object’s state depends on the required duration of persistence, which may vary.
+      <strong>Interview Response:</strong> The Memento pattern is used to temporarily store and restore an object. The technology used to store the object's state is determined by the needed persistence period, which can vary.
 <br/>
     </div>    
     <div>
@@ -33,13 +33,13 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 **The objects participating in this pattern are:**
 
-**Originator** -- In example code: _Person_
+**Originator** -- example code: _Person_
 
 - implements interface to create and restore mementos of itself
 - in example code: _hydrate and dehydrate_
 - the object which state is temporary being saved and restored
 
-**Memento** -- In example code: _JSON representation of Person_
+**Memento** -- example code: _JSON representation of Person_
 
 - internal state of the Originator object in some storage format
 
@@ -127,7 +127,7 @@ John Wang
 
 ---
 
-### In what pattern category does the Memento pattern belong too?
+### Which pattern category does the Memento pattern fall under?
 
 <details>
   <summary>
@@ -135,14 +135,14 @@ John Wang
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Memento pattern belongs to the Behavioral design pattern category.
+      <strong>Interview Response:</strong> The Memento pattern is a type of behavioral design pattern.
     </div>
   </div>
 </details>
 
 ---
 
-### What is a good use case for the Memento Pattern in JavaScript?
+### What is a suitable JavaScript use case for the Memento Pattern?
 
 <details>
   <summary>
@@ -150,14 +150,14 @@ John Wang
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> We can use the Memento pattern when you want to produce snapshots of the object’s state to be able to restore a previous state of the object.<br/><br/>The Memento pattern lets you make full copies of an object’s state, including private fields, and store them separately from the object. While most people remember this pattern thanks to the “undo” use case, it’s also indispensable when dealing with transactions (i.e., if you need to roll back an operation on error).<br/><br/>We can also use this pattern when direct access to the object’s fields/getters/setters violates its encapsulation. The Memento makes the object itself responsible for creating a snapshot of its state. No other object can read the snapshot, making the original object’s state data safe and secure.
+      <strong>Interview Response:</strong> We can use the Memento pattern to create snapshots of an object's state in order to restore it to a previous state.<br/><br/>The Memento pattern allows you to create entire copies of an object's state, including private fields, and store them independently from the object. While most people remember this pattern because of the "undo" use case, it's also useful when dealing with transactions (i.e., if you need to roll back an operation on an error).<br/><br/>This pattern can also be used when direct access to an object's fields/getters/setters violates its encapsulation. The Memento makes the object responsible for capturing a snapshot of its current state. Because no other object can read the snapshot, the original object's state data remains safe and secure.
     </div><br/>
   </div>
 </details>
 
 ---
 
-### What are some of the benefits of using the Memento pattern?
+### What are some of the advantages of employing the Memento pattern?
 
 <details>
   <summary>
@@ -170,8 +170,8 @@ John Wang
     <br />
     <div></div>
 
-- You can produce snapshots of the object’s state without violating its encapsulation.
-- You can simplify the originator’s code by letting the caretaker maintain the history of the originator’s state.
+- Without breaking the object's encapsulation, you can take snapshots of its state.
+- You can simplify the originator's code by allowing the caretaker to keep track of the originator's state history.
 
 <br />
   </div>
@@ -179,7 +179,7 @@ John Wang
 
 ---
 
-### What are some of the drawbacks of the Memento pattern?
+### What are some of the Memento pattern's drawbacks?
 
 <details>
   <summary>
@@ -192,16 +192,12 @@ John Wang
     <br />
     <div></div>
 
-- The app might consume lots of RAM / memory if clients create mementos too often.
-- Caretakers should track the originator’s lifecycle to be able to destroy obsolete mementos.
-- Most dynamic programming languages, such as JavaScript, can’t guarantee that the state within the memento stays untouched.
+- If clients frequently create mementos, the program may consume a large amount of RAM/memory.
+- To be able to destroy outmoded keepsakes, caregivers should track the originator's lifecycle.
+- Most dynamic programming languages, such as JavaScript, cannot guarantee that the Memento's state remains unchanged.
 
 <br />
   </div>
 </details>
-
----
-
-> Written with [StackEdit](https://stackedit.io/).
 
 ---

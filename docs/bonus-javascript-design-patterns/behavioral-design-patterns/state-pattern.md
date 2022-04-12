@@ -21,7 +21,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The State pattern provides state-specific logic to a limited set of objects in which each object represents a particular state. The State pattern is commonly used in JavaScript to convert massive switch-base state machines into the objects.<br/>
+      <strong>Interview Response:</strong> The State pattern provides state-specific logic to a limited set of objects in which each object represents a particular state. The State pattern is commonly used in JavaScript to convert massive switch-base state machines into objects.<br/>
     </div>    
     <div>
 </div><br />
@@ -29,17 +29,17 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 <img src="/img/javascript-state.jpg" /><br /><br />
 
-**The objects participating in this pattern are:**
+**This pattern's objects are as follows:**
 
-**Context** -- In example code: _TrafficLight_
+**Context** -- example code: _TrafficLight_
 
 - exposes an interface that supports clients of the service
-- maintains a reference to a state object that defines the current state
-- allows State objects to change its current state to a different state
+- keeps a reference to a state object that defines the current state.
+- Allows State objects to change their current state to another state.
 
-**State** -- In example code: _Red, Yellow, Green_
+**State** -- example code: _Red, Yellow, Green_
 
-- encapsulates the state values and associated behavior of the state
+- captures the state's values and associated behavior
 
 <br/>
 
@@ -120,7 +120,7 @@ Green --> for 1 minute
 
 ---
 
-### In what pattern category does the State pattern belong too?
+### What pattern category does the State pattern fall under?
 
 <details>
   <summary>
@@ -128,14 +128,14 @@ Green --> for 1 minute
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The State pattern belongs to the Behavioral design pattern category.
+      <strong>Interview Response:</strong> The State pattern is a type of behavioral design pattern.
     </div>
   </div>
 </details>
 
 ---
 
-### When should you use the State Pattern in JavaScript
+### When should you utilize the JavaScript State Pattern?
 
 <details>
   <summary>
@@ -143,7 +143,7 @@ Green --> for 1 minute
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> In a real-world application, the State pattern would be useful for adding new states that we might not have conceptualized yet, potentially more easily than with a switch case. Each state is encapsulated and can have its own unique internal operations.
+      <strong>Interview Response:</strong> In a real-world application, the State pattern could be handy for introducing new states that we haven't yet considered, possibly more simply than a switch case. Each state is contained and has its own set of internal functions.
     </div>
     <br />
   </div>
@@ -151,7 +151,7 @@ Green --> for 1 minute
 
 ---
 
-### What are some of the benefits of using the State pattern?
+### What are some of the advantages of employing the State pattern?
 
 <details>
   <summary>
@@ -164,9 +164,9 @@ Green --> for 1 minute
     <br />
     <div></div>
 
-- Single Responsibility Principle. Organize the code related to a particular state into separate classes.
-- Open/Closed Principle. Introduce new states without changing existing state classes or the context.
-- Simplify the code of the context by eliminating bulky state machine conditionals.
+- Singular Responsibility Principle -- Separate the code related to each state into separate classes.
+- The Open/Closed Principle - Add new states without modifying existing state classes or the context
+- Simplify the contextual code by removing bulky state machine conditionals.
 
 <br />
   </div>
@@ -174,7 +174,7 @@ Green --> for 1 minute
 
 ---
 
-### What are some of the drawbacks of the State pattern?
+### What are some of the State pattern's drawbacks?
 
 <details>
   <summary>
@@ -182,14 +182,10 @@ Green --> for 1 minute
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> Applying the pattern can be overkill if a state machine has only a few states or rarely changes.
+      <strong>Interview Response:</strong> Applying the pattern may be excessive if a state machine has only a few states or infrequently changes.
     </div>
 <br />
   </div>
 </details>
-
----
-
-> Written with [StackEdit](https://stackedit.io/).
 
 ---

@@ -1,6 +1,6 @@
 ---
 title: Mediator Design Pattern
-description: Mediator is a behavioral design pattern that lets you reduce chaotic dependencies between objects. The pattern restricts direct communications between the objects and forces them to collaborate only via a mediator object.
+description: The Mediator Pattern is a design pattern that allows one item to notify another group of objects when an event or action occurs.
 sidebar_position: 6
 sidebar_label: Mediator
 ---
@@ -21,7 +21,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Mediator Pattern is a design pattern that allows one object to notify a set of other objects when an event/action occurs. The difference between the Mediator and Observer patterns are that the Mediator pattern allows one object to be notified of events that occur in other objects, while the Observer pattern allows one object to subscribe to multiple events that occur in other objects.
+      <strong>Interview Response:</strong> The Mediator Pattern is a design pattern that allows one item to notify another group of objects when an event or action occurs. The Mediator and Observer patterns vary in that the Mediator pattern allows one object to be alerted of events occurring in other objects. In contrast, the Observer pattern allows one object to subscribe to numerous events occurring in other objects.
 <br/>
     </div>    
     <div>
@@ -33,16 +33,16 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 **The objects participating in this pattern are:**
 
-**Mediator** -- In example code: _Chatroom_
+**Mediator** -- example code: _Chatroom_
 
-- defines an interface for communicating with Colleague objects
+- It specifies an interface for interacting with Colleague objects
 - maintains references to Colleague objects
-- manages central control over operations
+- manages central control over operations.
 
-**Colleagues** -- In example code: _Participants_
+**Colleagues** -- example code: _Participants_
 
-- objects that are being mediated by the Mediator
-- each instance maintains a reference to the Mediator
+- objects that the Mediator is mediating
+- each instance maintains a connection (reference) to the Mediator
 
 <br/>
 
@@ -133,7 +133,7 @@ Ringo to Paul: Paul, what do you think?
 
 ---
 
-### In what pattern category does the Mediator pattern belong too?
+### What pattern category does the Mediator belong to?
 
 <details>
   <summary>
@@ -141,7 +141,7 @@ Ringo to Paul: Paul, what do you think?
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Mediator pattern belongs to the Behavioral design pattern category.
+      <strong>Interview Response:</strong> The Mediator pattern is a type of behavioral design pattern.
     </div>
   </div>
 </details>
@@ -159,11 +159,11 @@ Ringo to Paul: Paul, what do you think?
       <strong>Interview Response:</strong> It can be used:
     </div><br/>
 
-- If your system has multiple parts that need to communicate.
-- To avoid tight coupling of objects in a system with a lot of objects.
-- To improve code readability.
-- To make code easier to maintain.
-- If communication between objects becomes complex and hinders the reusability of code.
+- If your system has several components that must communicate with one another.
+- To avoid object tight coupling in a system with many objects.
+- To enhance code readability.
+- To make it easier to maintain code.
+- If communication between objects gets complicated or impedes code reusability.
 
 <br />
   </div>
@@ -171,7 +171,7 @@ Ringo to Paul: Paul, what do you think?
 
 ---
 
-### What are some of the benefits of using the Mediator pattern?
+### What are some of the advantages of employing the Mediator pattern?
 
 <details>
   <summary>
@@ -184,10 +184,10 @@ Ringo to Paul: Paul, what do you think?
     <br />
     <div></div>
 
-- Single Responsibility Principle. You can extract the communications between various components into a single place, making it easier to comprehend and maintain.
-- Open/Closed Principle. You can introduce new mediators without having to change the actual components.
-- You can reduce coupling between various components of a program.
-- You can reuse individual components more easily.
+- Singular Responsibility Principle -- You may consolidate the communications between numerous components into a single location, making them easier to understand and maintain.
+- The Open/Closed Principle You can add new mediators without changing the key components.
+- You can reduce coupling between software components.
+- Individual components can be reused more quickly.
 
 <br />
   </div>
@@ -195,7 +195,7 @@ Ringo to Paul: Paul, what do you think?
 
 ---
 
-### What are some of the drawbacks of the Mediator pattern?
+### What are some of the Mediator pattern's drawbacks?
 
 <details>
   <summary>
@@ -208,14 +208,10 @@ Ringo to Paul: Paul, what do you think?
     <br />
     <div></div>
 
-- Over time a mediator can evolve into a God Object.
+- A mediator can evolve into a God Object over time.
 
 <br />
   </div>
 </details>
-
----
-
-> Written with [StackEdit](https://stackedit.io/).
 
 ---

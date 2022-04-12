@@ -21,7 +21,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Observer is a behavioral JS design pattern that lets you define a subscription mechanism to notify multiple objects (observers) about any events that happen to the object (subject) they’re observing. This pattern is also called Pub/Sub, short for Publication/Subscription. It defines a one-to-many dependency between objects, promotes loose coupling, and facilitates good object-oriented design.<br/><br/>The observer pattern is the foundation of event-driven programming. We write event handler functions that will be notified when a certain event fires.
+      <strong>Interview Response:</strong> The Observer is a behavioral JS design pattern that allows you to construct a subscription mechanism that will alert numerous objects (observers) about any events that occur to the object (subject) they're viewing. This pattern is also known as Pub/Sub, which stands for Publication/Subscription. It establishes a one-to-many relationship between items, encourages loose coupling, and aids in effective object-oriented design.<br/><br/>The observer pattern is at the heart of event-driven programming. We create event handler routines that are informed when a specific event occurs.
 
 <br/>
     </div>    
@@ -34,15 +34,15 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 **The objects participating in this pattern are:**
 
-**Subject** -- In example code: _Click_
+**Subject** -- example code: _Click_
 
-- maintains list of observers. Any number of Observer objects may observe a Subject
-- implements an interface that lets observer objects subscribe or unsubscribe
-- sends a notification to its observers when its state changes
+- keeps a list of observers. Any number of Observer objects may observe a single Observer object.
+- The subject implements an interface through which observer objects can subscribe and unsubscribe.
+- When its state changes, it sends a notification to its observers.
 
-**Observer** -- In example code: _clickHandler_
+**Observer** -- example code: _clickHandler_
 
-- has a function signature that can be invoked when Subject changes (i.e. event occurs)
+- includes a function signature that can be called when the Subject changes (i.e., an event occurs)
 
 <br/>
 
@@ -104,7 +104,7 @@ Fired:event #3
 
 ---
 
-### In what pattern category does the Observer pattern belong too?
+### What pattern category does the Observer pattern fall under?
 
 <details>
   <summary>
@@ -112,14 +112,14 @@ Fired:event #3
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Observer pattern belongs to the Behavioral design pattern category.
+      <strong>Interview Response:</strong> The Observer pattern is a type of behavioral design pattern.
     </div>
   </div>
 </details>
 
 ---
 
-### Can you explain the use case for the Observer Pattern?
+### Can you explain the Observer Pattern's use case?
 
 <details>
   <summary>
@@ -127,15 +127,18 @@ Fired:event #3
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The observer pattern can be used:
+      <strong>Interview Response:</strong> Use Cases:
     </div>
     <br />
     <div></div>
 
-- To improve code management by breaking down large applications into a system of loosely coupled objects.
-- To provide greater flexibility by enabling a dynamic relationship between observers and subscribers, otherwise, not possible due to tight coupling.
-- To improve communication between different parts of the application.
-- To create a one-to-many dependency between objects that are loosely coupled.
+- To improve code management: Large programs get broken down into a system of loosely connected objects.
+
+- To increase flexibility by allowing a dynamic relationship between observers and subscribers, which would otherwise be impossible due to tight coupling.
+
+- To increase communication between the application's many components.
+
+- To establish a one-to-many dependency between weakly related items.
 
 <br />
   </div>
@@ -143,7 +146,7 @@ Fired:event #3
 
 ---
 
-### What are some of the benefits of using the Observer pattern?
+### What are some of the advantages of employing the Observer pattern?
 
 <details>
   <summary>
@@ -156,8 +159,8 @@ Fired:event #3
     <br />
     <div></div>
 
-- Open/Closed Principle. You can introduce new subscriber classes without having to change the publisher’s code (and vice versa if there’s a publisher interface).
-- You can establish relations between objects at runtime.
+- The Open/Closed Principle -- You can add new subscriber classes without modifying the publisher's code (and vice versa if a publisher interface exists).
+- At runtime, you can create relationships between objects.
 
 <br />
   </div>
@@ -165,7 +168,7 @@ Fired:event #3
 
 ---
 
-### What are some of the drawbacks of the Observer pattern?
+### What are some of the Observer pattern's drawbacks?
 
 <details>
   <summary>
@@ -178,14 +181,10 @@ Fired:event #3
     <br />
     <div></div>
 
-- Subscribers are notified in random order.
+- Notifications get sent to subscribers in random order.
 
 <br />
   </div>
 </details>
-
----
-
-> Written with [StackEdit](https://stackedit.io/).
 
 ---

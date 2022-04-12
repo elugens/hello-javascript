@@ -1,6 +1,6 @@
 ---
 title: Command Design Pattern
-description: Template Method is a behavioral design pattern that defines the skeleton of an algorithm in the superclass but lets subclasses override specific steps of the algorithm without changing its structure.
+description: Command Pattern is a behavioral JS design pattern that aims to encapsulate actions or operations as objects.
 sidebar_position: 4
 sidebar_label: Command
 ---
@@ -21,7 +21,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> Command Pattern is a behavioral JS design pattern that aims to encapsulate actions or operations as objects. This pattern is useful in scenarios where we want to decouple or split the objects executing the commands from objects issuing the commands. Command objects allow you to centralize the processing of these actions/operations.
+      <strong>Interview Response:</strong> Command Pattern is a behavioral JS design pattern that aims to encapsulate actions or operations as objects. This pattern is helpful in scenarios where we want to decouple or split the objects executing the commands from the objects issuing the orders. You may centralize the processing of these actions/operations by using command objects.
 <br/>
     </div>    
     <div>
@@ -30,12 +30,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 <img src="/img/javascript-command.jpg" /><br /><br />
 
-**The four participants involved in the command pattern are command, receiver, invoker, and client.**
+**The command pattern involves four participants: command, receiver, invoker, and client.**
 
-- **Command** – A command object knows about the receiver and invokes a method of the receiver. Values for parameters of the receiver method are stored in the command.
-- **Client** – The client’s responsibility is to create the command object and pass it to the invoker.
-- **Invoker** – The invoker receives the command object from the client, and it’s only responsibility is to call (or invoke) a command.
-- **Receiver** – Then, the receiver receives the command and looks for a method to call based on the received command
+- **Command** – A command object is aware of the receiver and calls the receiver's method. The command contains values for the receiver method's arguments.
+- **Client** – The client is responsible for creating the command object and passing it to the invoker.
+- **Invoker** – The invoker receives the command object from the client and is exclusively responsible for calling (or invoking) a command.
+- **Receiver** – The receiver then receives the command and searches for a method to invoke based on the received command.
 
 <br/>
 
@@ -72,24 +72,24 @@ console.log(manager.execute('multiply', 2, 4)); // prints 8
 
 <img src="/img/javascript-command.jpg" /><br /><br />
 
-**The objects participating in this pattern are:**
+**This pattern's objects are as follows:**
 
-**Client** -- In example code: _the run() function_
+**Client** -- example code: _the run() function_
 
-- references the Receiver object
+- refers to the Receiver object.
 
-**Receiver** -- In example code: _Calculator_
+**Receiver** -- example code: _Calculator_
 
-- knows how to carry out the operation associated with the command
-- (optionally) maintains a history of executed commands
+- understands how to carry out the command's associated operation.
+- keeps a history of commands executed (optionally).
 
-**Command** -- In example code: _Command_
+**Command** -- example code: _Command_
 
-- maintains information about the action to be taken
+- keeps track of information concerning the activity to be taken.
 
-**Invoker** -- In our example code: _the user pushing the buttons_
+**Invoker** -- example code: _the user activating the buttons._
 
-- asks to carry out the request
+- requests that the request be carried out.
 
 <br/>
 
@@ -203,7 +203,7 @@ Value: 76
 
 ---
 
-### In what pattern category does the Command pattern belong too?
+### Which pattern category does the Command pattern fall under?
 
 <details>
   <summary>
@@ -211,14 +211,14 @@ Value: 76
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Command pattern belongs to the Behavioral design pattern category.
+      <strong>Interview Response:</strong> The Command pattern is a type of behavioral design pattern.
     </div>
   </div>
 </details>
 
 ---
 
-### When should you use the command pattern in JavaScript?
+### When should you utilize the JavaScript command pattern?
 
 <details>
   <summary>
@@ -230,8 +230,8 @@ Value: 76
     </div><br/>
 
 - If you want to queue and execute requests at different times.
-- If you want to perform operations such as reset or undo.
-- If you want to keep a history of requests made.
+- If you're going to perform operations such as reset or undo.
+- If you're going to keep a history of requests made.
 
 <br />
   </div>
@@ -252,11 +252,11 @@ Value: 76
     <br />
     <div></div>
 
-- Single Responsibility Principle. You can decouple classes that invoke operations from classes that perform these operations.
-- Open/Closed Principle. You can introduce new commands into the app without breaking existing client code.
-- You can implement undo/redo.
-- You can implement deferred execution of operations.
-- You can assemble a set of simple commands into a complex one.
+- Singular Responsibility Principle Classes that invoke operations can be separated from classes that perform these actions.
+- The Open/Closed Principle - You can add new commands to the app without affecting the client code that already exists.
+- You can use the undo/redo feature.
+- You can use deferred operation execution.
+- You can combine a series of simple commands to create a more sophisticated one.
 
 <br />
   </div>
@@ -264,7 +264,7 @@ Value: 76
 
 ---
 
-### What are some of the drawbacks of the Command pattern?
+### What are some of the Command pattern's drawbacks?
 
 <details>
   <summary>
@@ -278,9 +278,5 @@ Value: 76
     <div></div>
   </div>
 </details>
-
----
-
-> Written with [StackEdit](https://stackedit.io/).
 
 ---

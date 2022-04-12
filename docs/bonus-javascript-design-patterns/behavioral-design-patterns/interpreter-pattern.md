@@ -21,37 +21,37 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> Interpreters offer a scripting language that allows end users (developers) to customize their solutions.<br/>
+      <strong>Interview Response:</strong> The Interpreter pattern includes a scripting language that enables end users to modify their solution.<br/>
     </div>
     <div>
-      <strong>Technical Response:</strong> The interpreter pattern is an interesting pattern as it allows for the creation of your own language. This might sound like a crazy idea: we're already writing JavaScript, why would we want to create a new language? Since the publication of the GoF book, domain specific languages (DSLs) have had something of a renaissance. There are situations where it is quite useful to create a language that is specific to one requirement. For instance, Structured Query Language (SQL) is very good at describing the querying of relational databases. Equally, regular expressions have proven themselves to be highly effective for the parsing and manipulation of text.<br/>
+      <strong>Technical Response:</strong> The interpreter approach is appealing because it allows you to create your own language. This may sound like an absurd idea, yet we're already making JavaScript. Why should we create a new language? Domain-specific languages (DSLs) have had a rebirth since the publication of the GoF book. When developing a language tailored to a specific demand is really beneficial. For example, structured Query Language (SQL) is exceptionally good at defining the querying of relational databases. On the other hand, regular expressions have shown to be highly successful at parsing and altering the text.<br/>
     </div>
     <div>
 </div><br />
-  <div><strong className="codeExample">Code Example:</strong> ES5 Implementation<br /><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
 <img src="/img/javascript-interpreter.jpg" /><br /><br />
 
 **The objects participating in this pattern are:**
 
-**Client** -- In example code: _the run() program._
+**Client** -- Example code: _the run() program._
 
-- builds (or is given) a syntax tree representing the grammar
-- establishes the initial context
-- invokes the interpret operations
+- creates (or is provided) a syntax tree that represents the grammar
+- establishes the starting point context for the interpreter
+- makes use of the interpret operations
 
-**Context** -- In example code: _Context_
+**Context** -- Example code: _Context_
 
-- contains state information to the interpreter
+- It provides the interpreter with state information
 
-**TerminalExpression** -- In example code: _Expression_
+**TerminalExpression** -- Example code: _Expression_
 
-- implements an interpret operation associated with terminal symbols in the grammar
-- one instance for each terminal expression in the sentence
+- performs an interpret operation in conjunction with grammar terminal symbols
+- one instance for each phrase's terminal expression
 
 **NonTerminalExpression** -- In example code: _not used_
 
-- implements an interpret operation associated for non-terminal symbols in the grammar
+- implements an interpret operation in the grammar for non-terminal symbols
 
 <br/>
 
@@ -132,7 +132,7 @@ MCMXXVIII = 1928
 
 ---
 
-### In what pattern category does the Interpreter pattern belong too?
+### In what pattern category does the Interpreter pattern belong?
 
 <details>
   <summary>
@@ -140,14 +140,14 @@ MCMXXVIII = 1928
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Interpreter pattern belongs to the Behavioral design pattern category.
+      <strong>Interview Response:</strong> The Interpreter pattern is a type of behavioral design pattern.
     </div>
   </div>
 </details>
 
 ---
 
-### What are some of the benefits of using the Interpreter pattern?
+### What are some of the advantages of employing the Interpreter pattern?
 
 <details>
   <summary>
@@ -162,12 +162,12 @@ MCMXXVIII = 1928
 
 **Tested and used solution**
 
-- Tested, proven and reusable solution that is already used in many applications.
+- It's a tried-and-true, reusable solution that's already in use in a number of applications.
 
-**Extendable and easy to change**
+**Extendable and simple to modify**
 
-- It's easy to change and extend the grammar, because the pattern uses classes to represent grammar rules, you can use inheritance to change or extend the grammar.
-- Existing expressions can be modified incrementally, and new expressions can be defined as variations on old ones.
+- Because the pattern describes grammatical rules using classes, it is trivial to update and extend the grammar. Using inheritance, you can update or expand the grammar.
+- Existing expressions can be changed progressively, and new expressions can be defined as variants of existing ones.
 
 **Easy to implement**
 
@@ -180,7 +180,7 @@ MCMXXVIII = 1928
 
 ---
 
-### What are some of the drawbacks of using the Proxy pattern?
+### What are some of the disadvantages of employing the Proxy pattern?
 
 <details>
   <summary>
@@ -193,15 +193,11 @@ MCMXXVIII = 1928
     <br />
     <div></div>
 
-- The Interpreter pattern defines at least one class for every rule in the grammar, reason grammars containing many rules can be hard to manage and maintain.
-- Other design patterns can be applied to mitigate the problem, but when the grammar is very complex, other techniques such as parser or compiler generators are more appropriate.
+- Because grammars with many rules can be difficult to manage and maintain, the Interpreter pattern creates at least one class for each rule in the grammar.
+- Other design patterns can be applied to mitigate the problem, but other techniques such as parser or compiler generators are more appropriate when the grammar is very complex.
 
 <br />
   </div>
 </details>
-
----
-
-> Written with [StackEdit](https://stackedit.io/).
 
 ---

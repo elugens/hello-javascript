@@ -13,7 +13,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Can you explain the proxy design pattern?
+### Could you please explain the proxy design pattern?
 
 <details className='answer'>
   <summary>
@@ -21,7 +21,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> As the name suggests, the Proxy Pattern provides a surrogate or placeholder for another object to control access, reduce cost, and reduce complexity. The proxy could interface to anything – a network connection, a large object in memory, a file, or some other resource that is expensive or impossible to duplicate.<br/>
+      <strong>Interview Response:</strong> The Proxy Pattern, as the name implies, acts as a surrogate or placeholder for another object in order to control access, reduce cost, and reduce complexity. The proxy could connect to almost anything – a network connection, a large object in memory, a file, or other resource that would have been expensive or impossible to recreate.<br/>
     </div>
     <div>
 </div><br />
@@ -29,21 +29,21 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 <img src="/img/javascript-proxy.jpg" /><br /><br />
 
-**The objects participating in this pattern are:**
+**This pattern's objects are as follows:**
 
-**Client** -- In example code: _the run() function_
+**Client** -- Example code: _the run() function_
 
-- calls Proxy to request an operation
+- To request an operation, call proxy.
 
-**Proxy** -- In example code: _GeoProxy_
+**Proxy** -- Example code: _GeoProxy_
 
-- provides an interface similar to the real object
-- maintains a reference that lets the proxy access the real object
-- handles requests and forwards these to the real object
+- provides a application interface that is similar to the real object.
+- maintains a reference to the real object that allows the proxy to access it.
+- responds to requests and forwards them to the actual object.
 
-**RealSubject** -- In example code: _GeoCoder_
+**RealSubject** -- Example code: _GeoCoder_
 
-- defines the real object for which service is requested
+- specifies the actual object for which service is being requested
 
 <br/>
 
@@ -193,7 +193,7 @@ Generating flight List
 ```
 
 </div><br />
-  <div><strong className="codeExample">Code Example #3:</strong> Modern ES2015+<br /><br />
+  <div><strong className="codeExample">Code Example #3:</strong><br /><br />
 
 ```js
 class GetCapital {
@@ -264,7 +264,7 @@ Ottawa--Returning from Cache
 
 ---
 
-### In what pattern category does the Proxy pattern belong too?
+### What pattern category does the Proxy pattern fall under?
 
 <details>
   <summary>
@@ -272,14 +272,14 @@ Ottawa--Returning from Cache
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Proxy pattern belongs to the Structural design pattern category.
+      <strong>Interview Response:</strong> The Proxy pattern is a type of structural design pattern.
     </div>
   </div>
 </details>
 
 ---
 
-### What is a good use case for the Proxy Pattern?
+### What is a good use-case for the Proxy Pattern?
 
 <details>
   <summary>
@@ -287,8 +287,8 @@ Ottawa--Returning from Cache
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The proxy pattern tries to reduce the workload on the target object. You can use it when dealing with heavy applications that perform a lot of network requests. Since delays could occur when responding to such requests, using a proxy pattern will allow the target object to not get overburdened with requests.<br/><br/>
-      A real-life example is HTTP requests. These are expensive operations; hence, the proxy pattern helps in reducing the number of requests forwarded to the target.
+      <strong>Interview Response:</strong> The proxy pattern attempts to lighten the load on the target object. It is useful when dealing with large applications that make a lot of network requests. Because delays may occur when responding to such requests, using a proxy pattern prevents the target object from becoming overburdened with requests.<br/><br/>
+      HTTP requests are a real-world example. Because these are costly operations, the proxy pattern aids in reducing the number of requests forwarded to the target.
     </div>
 
 <br />
@@ -297,7 +297,7 @@ Ottawa--Returning from Cache
 
 ---
 
-### What are some of the benefits of using the Proxy pattern?
+### What are some of the advantages of employing the Proxy pattern?
 
 <details>
   <summary>
@@ -310,10 +310,10 @@ Ottawa--Returning from Cache
     <br />
     <div></div>
 
-- You can control the service object without clients knowing about it.
-- You can manage the lifecycle of the service object when clients don’t care about it.
-- The proxy works even if the service object isn’t ready or is not available.
-- Open/Closed Principle. You can introduce new proxies without changing the service or clients
+- You have control over the service object without the client being aware of it.
+- You can control the lifecycle of the service object even if your clients does not care.
+- Even if the service object is not ready or unavailable, the proxy will function.
+- Open/Closed Principle. Users can add new proxies without interrupting the service or clients.
 
 <br />
   </div>
@@ -321,7 +321,7 @@ Ottawa--Returning from Cache
 
 ---
 
-### What are some of the drawbacks of using the Proxy pattern?
+### What are some of the disadvantages of employing the Proxy pattern?
 
 <details>
   <summary>
@@ -334,15 +334,11 @@ Ottawa--Returning from Cache
     <br />
     <div></div>
 
-- The code may become more complicated since you need to introduce a lot of new classes.
-- The response from the service might get delayed or disrupted.
+- Because you'll be introducing a lot of new classes, the code may become more complicated.
+- The service's response time may be delayed or hindered.
 
 <br />
   </div>
 </details>
-
----
-
-> Written with [StackEdit](https://stackedit.io/).
 
 ---

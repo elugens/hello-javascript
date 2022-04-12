@@ -13,7 +13,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Can you explain the bridge design pattern?
+### Could you please explain the bridge design pattern?
 
 <details className='answer'>
   <summary>
@@ -21,13 +21,13 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Bridge pattern allows two components, a client, and a service, to work together with each component having its own interface. Bridge is a high-level architectural pattern, and its main goal is to write better code through two levels of abstraction. It facilitates very loose coupling of objects. It is sometimes referred to as a double Adapter pattern.<br/>
+      <strong>Interview Response:</strong> The Bridge pattern allows two components, a client, and a service, to work together, with each element having its interface. The bridge is a high-level architectural pattern, and its primary goal is to write better code through two levels of abstraction. It facilitates the very loose coupling of objects, and sometimes referred to as a double Adapter pattern.<br/>
     </div><br />
   <div><strong className="codeExample">Diagram:</strong><br /><br />
 
   <div></div>
 
-  <div><strong className="codeExample">Code Example #1:</strong> ES2015+ Modern Implementation<br /><br />
+  <div><strong className="codeExample">Code Example #1:</strong><br /><br />
 
 <img src="/img/bridge-pattern.png" /><br /><br />
 
@@ -110,28 +110,28 @@ ConcreteImplementorB OperationImp
   </div>
 
   <br />
-  <div><strong className="codeExample">Code Example #2:</strong> ES5 Classical Implementation<br /><br />
+  <div><strong className="codeExample">Code Example #2:</strong><br /><br />
 
 <img src="/img/javascript-bridge-pattern.jpg" /><br /><br />
 
-**The objects participating in this pattern are:**
+**This pattern's objects are as follows**
 
-**Client** -- In example code: _the run() function_
+**Client** -- Example code: _the run() function_
 
-- calls into Abstraction to request an operation
+- In order to request an operation, a call into abstraction is made.
 
 **Abstraction** -- _not used in JavaScript_
 
-- declares an interface for first level abstraction
-- maintains a reference to the Implementor
+- declares a first-level abstraction interface
+- manages a reference/pointer to the Implementor
 
-**RefinedAbstraction** -- In example code: _Gestures, Mouse_
+**RefinedAbstraction** -- Example code: _Gestures, Mouse_
 
-- implements and extends the interface defined by Abstraction
+- implements and expands on the abstraction-defined interface
 
 **Implementor** -- _not used in JavaScript_
 
-- declares an interface for second level or implementor abstraction
+- declares an interface for second-level or implementor abstraction
 
 **ConcreteImplementor** -- In example code: _Screen, Audio_
 
@@ -246,7 +246,7 @@ Sound volume up
 
 ---
 
-### In what pattern category does the Bridge pattern belong too?
+### What pattern category does the Bridge pattern fall under?
 
 <details>
   <summary>
@@ -254,14 +254,14 @@ Sound volume up
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Bridge pattern belongs to the Structural design pattern category. It is used to separate an abstraction from its implementation so that the two can vary independently.
+      <strong>Interview Response:</strong> The Bridge pattern is classified as a Structural design pattern.
     </div>
   </div>
 </details>
 
 ---
 
-### What is the use case for the Bridge Pattern in JavaScript?
+### What is the purpose of the JavaScript Bridge Pattern?
 
 <details>
   <summary>
@@ -269,7 +269,7 @@ Sound volume up
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Bridge pattern is a great pattern for driver development, but it is rarely seen in JavaScript.
+      <strong>Interview Response:</strong> The Bridge pattern is an excellent pattern for driver development but rarely seen in JavaScript.
     </div>
 
   </div>
@@ -294,11 +294,17 @@ Sound volume up
     <br />
     <div></div>
 
-- **Client** – The Client makes a call to the Abstraction to request an operation.
-- **Abstraction** – The Abstraction, not commonly used in JavaScript, declares an interface for the first level of abstraction and maintains a reference to the Implementor.
-- **RefinedAbstraction** – The RefinedAbstraction implements and extends the interface defined by Abstraction.
-- **Implementor** – The implementor, not used in JavaScript, declares an interface for second level or implementor abstraction.
-- **ConcreteImplementor** – The ConcreteImplementor implements the Implementor interface and defines its effects.
+- **Client** – To request an operation, the Client makes a call to the abstraction.
+- **Abstraction** – The Abstraction, which is uncommon in JavaScript, declares an interface for the first level of abstraction and keeps a reference to the Implementor.
+- **RefinedAbstraction** – The RefinedAbstraction implements and extends the abstraction-defined interface.
+- **Implementor** – The Implementor interface, which is not used in JavaScript, declares an interface for the second level or implementor abstraction.
+- **ConcreteImplementor** – The ConcreteImplementor is responsible for implementing the Implementor interface and defining its effects.
+
+:::note
+
+Abstract classes are not supported by JavaScript. As a result, Abstraction and Implementor are excluded.
+
+:::
 
 <br />
   </div>
@@ -306,7 +312,7 @@ Sound volume up
 
 ---
 
-### What are some of the benefits of using the Bridge pattern?
+### What are some of the advantages of employing the Bridge pattern?
 
 <details>
   <summary>
@@ -319,10 +325,10 @@ Sound volume up
     <br />
     <div></div>
 
-- Loosely coupled code - As bridge pattern decouple abstraction from its implementation reason the implementation can be changed without affecting the client code and the client code need not be compiled when the implementation changes.
-- Increases the code maintainability, reusability, and reduces code duplication.
-- Platform independent classes and applications can be developed.
-- Helps to promote the Open-Closed principle, new abstractions and implementations can be developed independently.
+- Loosely coupled code - Because the bridge pattern decouples an abstraction from its implementation, changes to the implementation do not affect the client code. When the implementation changes, the client code does not need to be compiled.
+- Reduces code duplication while increasing code maintainability and reusability.
+- Classes and applications that are platform agnostic can be created.
+- Helps to promote the Open-Closed principle, new abstractions and implementations can be developed independently
 - Decoupling abstraction from implementation - bridge pattern can be used to avoid the binding between abstraction and implementation and to select the implementation at run time.
 - Improved Extensibility – Abstraction and implementation can be extended independently.
 
@@ -332,7 +338,7 @@ Sound volume up
 
 ---
 
-### What are some of the drawbacks of using the Bridge pattern?
+### What are some of the disadvantages of employing the Bridge pattern?
 
 <details>
   <summary>
@@ -346,16 +352,12 @@ Sound volume up
     <div></div>
 
 - Bridge pattern implementation increases code complexity.
-- Interfaces with only single implementation
-- Multiple indirection - A level of indirection is introduced as the request is passed from the Abstraction to the actual implementor.
+- Interfaces with only a single implementation
+- Multiple indirections - A level of indirection is introduced as the request is passed from the abstraction to the actual Implementor.
 - You might make the code more complicated by applying the pattern to a highly cohesive class.
 
 <br />
   </div>
 </details>
-
----
-
-> Written with [StackEdit](https://stackedit.io/).
 
 ---
