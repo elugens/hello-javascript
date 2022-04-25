@@ -45,7 +45,7 @@ let b = 'world'; // SyntaxError: Identifier 'b' has already been declared
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Variables, declared with var, are either function-scoped or global-scoped. They are visible through blocks. So, technically they have no originating scope (besides function blocks) in JavaScript.
+  <div><strong>Interview Response:</strong> Variables, declared with var, are either function-scoped or globally-scoped. They are visible through blocks. So, technically they have no originating scope (besides function blocks) in JavaScript.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
