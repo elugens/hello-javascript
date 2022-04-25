@@ -202,7 +202,7 @@ It should be noted, to maintain efficient speed in the browser, V8 translates Ja
       <br />
       <ol>
         <li>
-          JavaScript permits us to read/write files directly on the hard disk, copy them, or run applications on a web page, and it does not have direct access to OS functionality.
+          JavaScript permits us to read/write files directly on the hard disk, copy them, or run applications on a web page, however, it does not have direct access to OS functionality.
         </li>
         <li>
         	Modern browsers allow it to interact with files. Still, access is limited and only provided if the user performs specific actions, such as "dropping" a file into a browser window or choosing it through a tag.
