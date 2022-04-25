@@ -101,7 +101,7 @@ let b = 'global!!!'; // global this
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> TThe reason you cannot use the new.target keyword with Arrow Functions is that it has no constructor, [[construct]] method.
+  <div><strong>Interview Response:</strong> The reason you cannot use the new.target keyword with Arrow Functions is that it has no constructor, [[Construct]] internal method.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -130,7 +130,7 @@ This is relatively simple, as seen by the engine's reaction to any call of "new"
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> There is a subtle difference between an arrow function and a regular function called with bind(this). The bind(this) syntax creates a "bound version" of a regular function, and the arrow does not create any binding. So, the function does not have "this". The lookup of "this" is made the same way as a regular variable search in the outer lexical environment.
+  <div><strong>Interview Response:</strong> There is a subtle difference between an arrow function and a regular function called with bind(this). The bind(this) syntax creates a "bound version" of a regular function, and the arrow does not create any binding. So, the arrow function does not have "this". The lookup of "this" is made the same way as a regular variable search in the outer lexical environment.
 </div>
   </div>
 </details>
