@@ -1,7 +1,7 @@
 ---
 title: Code Structure
 description: All programming languages must adhere to specific rules in order to function. This set of rules that determine the correct structure of programming languages is known as syntax.
-sidebar_position: 2
+sidebar_position: 4
 sidebar_label: Code Structure
 ---
 
@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   <div>
   <div><strong>Interview Response:</strong> Statements are syntax constructs and commands that perform actions. Usually, statements are written on separate lines to make the code more readable.
   </div><br />
-  <div><strong>Technical Response:</strong> Statements are used in JavaScript to control its program flow. Unlike properties, methods, and events, which are fundamentally tied to the object that owns them, statements are designed to work independently of any JavaScript object.
+  <div><strong>Technical Response:</strong> Statements are used in JavaScript to control the flow of the program. In contrast to properties, methods, and events fundamentally tied to the object that owns them, statements behave independently of any JavaScript object.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
   
@@ -49,7 +49,7 @@ alert('World');
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong>  Statements are separated in JavaScript with the implementation of a semi-colon.</div>
+  <div><strong>Interview Response:</strong> In JavaScript, statements get separated by using a semi-colon.</div>
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
   
@@ -71,7 +71,7 @@ alert('JavaScript');
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, but it is not recommended.</div><br />
-  <div><strong>Technical Response:</strong> Yes, but it is not considered good code etiquette and should not be done. JavaScript interprets the line break as an “implicit” semicolon. In the JavaScript community, we call this an automatic semicolon insertion.
+  <div><strong>Technical Response:</strong> Yes, but it is not considered good code etiquette and should not be done. JavaScript interprets the line break as an “implicit” semi-colon, and this behavior is called an automatic semi-colon insertion.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
   
@@ -97,8 +97,8 @@ alert('JavaScript');
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> There are cases when a newline does not mean a semicolon and may result in an error.</div><br />
-  <div><strong>Technical Response:</strong> There are cases when a newline does not mean a semicolon and may result in an error. The recommendation is to put semicolons between statements even if they are separated by newlines. This rule is widely adopted by the JavaScript community.
+  <div><strong>Interview Response:</strong> There are cases when a newline does not mean a semi-colon and may result in an error.</div><br />
+  <div><strong>Technical Response:</strong> : There are cases when a newline does not mean a semi-colon and may result in an error. The recommendation is to put semi-colons between statements even if newlines separate them. The JavaScript community widely adopts this rule.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
   
@@ -176,7 +176,7 @@ alert('JavaScript');
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, nested comments are not supported in JavaScript comments. It will result in a syntax error.</div>
+  <div><strong>Interview Response:</strong> No, nested comments are not supported. It results in a syntax error.</div>
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
   

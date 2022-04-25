@@ -21,7 +21,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Observer is a behavioral JS design pattern that allows you to construct a subscription mechanism that will alert numerous objects (observers) about any events that occur to the object (subject) they're viewing. This pattern is also known as Pub/Sub, which stands for Publication/Subscription. It establishes a one-to-many relationship between items, encourages loose coupling, and aids in effective object-oriented design.<br/><br/>The observer pattern is at the heart of event-driven programming. We create event handler routines that are informed when a specific event occurs.
+      <strong>Interview Response:</strong> The Observer is a behavioral JS design pattern that allows you to construct a subscription mechanism that alerts numerous objects (observers) about any events that occur to the object (subject) they're viewing. This pattern is also known as Pub/Sub, which stands for Publication/Subscription. It establishes a one-to-many relationship between items, encourages loose coupling, and aids in effective object-oriented design.<br/><br/>The observer pattern is at the heart of event-driven programming. We create event handler routines that are informed when a specific event occurs.
 
 <br/>
     </div>    
@@ -36,13 +36,13 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 **Subject** -- example code: _Click_
 
-- keeps a list of observers. Any number of Observer objects may observe a single Observer object.
+- maintains a list of observers. Any number of Observer objects can observe a single Observer object.
 - The subject implements an interface through which observer objects can subscribe and unsubscribe.
 - When its state changes, it sends a notification to its observers.
 
 **Observer** -- example code: _clickHandler_
 
-- includes a function signature that can be called when the Subject changes (i.e., an event occurs)
+- includes a function signature that gets called when the Subject changes (i.e., an event occurs)
 
 <br/>
 
@@ -104,7 +104,7 @@ Fired:event #3
 
 ---
 
-### What pattern category does the Observer pattern fall under?
+### The Observer pattern belongs to which pattern category?
 
 <details>
   <summary>
@@ -133,11 +133,8 @@ Fired:event #3
     <div></div>
 
 - To improve code management: Large programs get broken down into a system of loosely connected objects.
-
 - To increase flexibility by allowing a dynamic relationship between observers and subscribers, which would otherwise be impossible due to tight coupling.
-
 - To increase communication between the application's many components.
-
 - To establish a one-to-many dependency between weakly related items.
 
 <br />

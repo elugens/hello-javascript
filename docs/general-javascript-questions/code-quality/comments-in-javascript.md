@@ -16,7 +16,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The key to reducing unnecessary comments in your code is to write self-descriptive code. The best way to achieve this is to replace a piece of code with a function.
+  <div><strong>Interview Response:</strong> The key to reducing unnecessary comments in your code is to write self-descriptive code. The best way to achieve this is to replace a chunk of code with a function.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong> Confusing Code<br /><br />
 
@@ -70,7 +70,7 @@ function isPrime(n) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Good comments describe the architecture and lean less toward explaining what the code is doing. Good comments provide the team with a high-level overview of the components and how they interact. Good comments give a bird’ eye view of the code. Good comments include documenting function parameters and their usage as well.
+  <div><strong>Interview Response:</strong> Good comments describe the architecture and lean less toward explaining what the code is doing. Good comments provide the team with a high-level overview of the components and how they interact. Good comments give a bird's eye view of the code. Good comments include documenting function parameters and their usage as well.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

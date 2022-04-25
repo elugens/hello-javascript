@@ -16,15 +16,15 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> An iterable is a interface that specifies that an object can be accessible if it implements a method who is key is [symbol.iterator]. Some of the built-in data structures that use iterables are Strings, Arrays, Maps and custom objects.</div><br />
-  <div><strong>Technical Response:</strong> Iterable objects are a generalization of arrays. That’s a concept that allows us to make any object useable in a for..of loop. Of course, Arrays are iterable. But there are many other built-in objects, that are iterable as well. For instance, strings are also iterable. In general, it is a data structure that allows its data to be consumed. It does so by implementing a method whose key is Symbol.iterator which returns an iterator. The iterator interface has another method called return(), which is being called when the iteration reaches the last value, or stopped manually by calling it explicitly or for example break; a for loop.
+  <div><strong>Interview Response:</strong> An iterable interface specifies that an object is accessible if it implements a key method [symbol.iterator]. The built-in data structures that use iterables are Strings, Arrays, Maps, and custom objects.</div><br />
+  <div><strong>Technical Response:</strong> Iterable objects are a subset of arrays. This notion allows us to use any object in a for...of loop. Arrays, of course, are iterable. However, several additional built-in objects are iterable as well. Strings, for example, are also iterable. It is a data structure that allows its data to get consumed in general. It does this by implementing a method with the key Symbol.iterator, which returns an iterator. The iterator interface provides another method called return(), which gets performed when the iteration reaches the last value or is deliberately halted by calling it directly or using break; a for loop.
   </div>
   </div>
 </details>
 
 ---
 
-### What can the Symbol.iterator be used for in JavaScript?
+### What can the Symbol.iterator get used for in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -73,12 +73,12 @@ for (let num of range) {
 
 ---
 
-### Can you call an iterator explicitly and what are the benefits?
+### Can you call an iterator explicitly, and what are the benefits?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, you can call an iterator explicitly in JavaScript. There are several benefits including more control over the process than for...of.
+  <div><strong>Interview Response:</strong> Yes, you can call an iterator explicitly in JavaScript. There are several benefits, including more control over the process than for...of.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -110,7 +110,7 @@ while (true) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Iterables are objects that implement the Symbol.iterator method such as arrays and strings. Array-likes are objects that have indexes and length, so they look like arrays. When we use JavaScript for practical tasks in a browser or any other environment, we may meet objects that are iterables or array-likes, or both like strings.
+  <div><strong>Interview Response:</strong> Iterables are objects that implement the Symbol.iterator method, such as arrays and strings. Array-likes are objects that have indexes and a length property, so they look like arrays. When we use JavaScript for practical tasks in a browser or any other environment, we may meet objects that are iterables or array-likes or both, like strings.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong> Array-like but not Iterable<br /><br />
 
@@ -135,7 +135,7 @@ for (let item of arrayLike) {
 
 ---
 
-### What universal method can be used to turn an iterable or array- like value into an array?
+### What universal method can we use to turn an iterable or array-like value into an array?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

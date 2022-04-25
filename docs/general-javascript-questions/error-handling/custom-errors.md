@@ -11,12 +11,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 <CloseAllAnswers />
 
-### What are the benefits of inheriting from the Error object vs simply using the throw statement?
+### What are the benefits of inheriting from the Error object vs. simply using the throw statement?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> JavaScript allows to us use throw with any argument, so technically our custom error classes do not need to inherit from Error. But if we inherit, then it becomes possible to use obj instanceof Error to identify and track error objects. So, it is better to inherit from it. As the application grows, our own errors naturally form a hierarchy. For instance, ValidationError may inherit from the Error Object, and so on.
+  <div><strong>Interview Response:</strong> Because JavaScript allows us to use a throw with any parameter, our error classes do not need to derive from Error. However, we may use obj instanceof Error to identify and track error objects if we inherit. As a result, it is preferable to inherit from it. Our mistakes automatically build a hierarchy as the program evolves, and ValidationError, for example, may derive from the Error Object, and so forth.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong> Custom ValidationError that extends the built-in Error Object<br /><br />
 
@@ -71,7 +71,7 @@ try {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, the same rules apply, you are only allowed to inherit from one base class by using the extends keyword. The extends keyword is used in class declarations or class expressions to create a class that is a child of another class.
+  <div><strong>Interview Response:</strong> No, the same rules apply; you can only inherit from one base class using the extends keyword. In class declarations or expressions, the extends keyword gets used to build a class that is a child of another class.
 </div>
   </div>
 </details>
@@ -83,7 +83,7 @@ try {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> If, it is necessary to extend beyond a primary child class that has already extended the built-in Error Object. You must inherit/extend from the child class to have access to the base class.
+  <div><strong>Interview Response:</strong> If it is necessary to extend beyond a primary child class that has already extended the built-in Error Object. It would be best to inherit/extend from the child class to access the base class.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong> Extending beyond the initial base/child inheritance<br /><br />
 
@@ -149,7 +149,7 @@ try {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> When potential errors are relevant, we should handle them directly. However, it is not a good idea to handle every potential or unknown error. A much better approach is to rethrow the catch to at least log the error when wrapping exceptions.
+  <div><strong>Interview Response:</strong> When prospective errors are relevant, we should deal with them immediately. It is not a good idea to address every conceivable or unexpected error. When encapsulating exceptions, it would be preferable to rethrow the catch to at least record the problem.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

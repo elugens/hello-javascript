@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The WebSocket protocol, described in the specification RFC 6455 provides a way to exchange data between browser and server via a persistent connection. The data can be passed in both directions as “packets”, without breaking the connection and additional HTTP-requests. WebSocket is especially great for services that require continuous data exchange, e.g., online games, real-time trading systems and so on.
+  <div><strong>Interview Response:</strong> The WebSocket protocol, described in the RFC 6455, provides a way to exchange data between browser and server via a persistent connection. The data can be passed in both directions as “packets”, without breaking the connection and additional HTTP-requests. WebSocket is especially great for services that require continuous data exchange, e.g., online games and real-time trading systems.
     </div>
   </div>
 </details>
@@ -30,19 +30,19 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> WebSocket uses HTTP as the initial transport mechanism but keeps the TCP connection alive after the HTTP response is received so that it can be used for sending messages between client and server.
+  <div><strong>Interview Response:</strong> WebSocket employs HTTP as the initial transport mechanism but maintains the TCP connection open after the HTTP answer is received, allowing it to get used in the transfer of messages between client and server.
     </div>
   </div>
 </details>
 
 ---
 
-### What do we need to open a websocket connection?
+### What do we need to open a WebSocket connection?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To open a websocket connection, we need to create new WebSocket using the special protocol ws in the URL. There is also encrypted wss:// protocol. It is like HTTPS for websockets.
+  <div><strong>Interview Response:</strong> To open a WebSocket connection, we need to create a new WebSocket using the special protocol ws in the URL. There is also encrypted wss:// protocol, like HTTPS for WebSockets.
     </div><br />
     <strong>Syntax: </strong> let socket = new WebSocket("ws://javascript.info");<br /><br />
   </div>
@@ -50,24 +50,24 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### What is the preferred mode for a websocket connection?
+### What is the preferred mode for a WebSocket connection?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The wss:// protocol is not only encrypted, but also more reliable. That is because ws:// data is not encrypted, visible for any intermediary. Old proxy servers do not know about WebSocket, they may see “strange” headers and abort the connection. On the other hand, wss:// is WebSocket over TLS, (same as HTTPS is HTTP over TLS), the transport security layer encrypts the data at sender and decrypts at the receiver. So, data packets are passed encrypted through proxies. They cannot see what is inside and let them through.
+  <div><strong>Interview Response:</strong> The wss:// protocol is not only encrypted but also more reliable. That is because ws:// data is not encrypted, visible to any intermediary. Old proxy servers do not know about WebSocket, and they may see “strange” headers and abort the connection. On the other hand, wss:// is WebSocket over TLS (same as HTTPS is HTTP over TLS), the transport security layer encrypts the data at the sender and decrypts it at the receiver. So, data packets get passed through encrypted proxies, and they cannot see what is inside and let them through.
     </div>
   </div>
 </details>
 
 ---
 
-### After we create a websocket connection, what events can we listen for?
+### What events may we listen for after establishing a WebSocket connection?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Once the socket is created, we can listen to events on it. There are totally 4 events including the open, message, error, and close events. The open event is the event listener to be called when the connection is opened. The message event is to be called when a message is received from the server. The error event is to be called when an error occurs, and the close event is called when the connection is closed. If we’d like to send something, then socket.send(data) will do that.
+  <div><strong>Interview Response:</strong> After the socket is constructed, we may listen for events on it. The events are as follows: open, message, error, and closing. When the connection is established, the event listener is invoked during the open event. When a message is received from the server, the message event is triggered. When an error occurs, the error event is triggered, and when the connection is closed, the closure event is triggered. If we want to send something, we may use socket.send(data).
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -111,12 +111,12 @@ socket.onerror = function (error) {
 
 ---
 
-### What happens during initial state of opening a websocket connection?
+### What happens during the initial state of opening a WebSocket connection?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> When new WebSocket(url) is created, it starts connecting immediately. During the connection, the browser (using headers) asks the server: “Do you support Websocket?” And if the server replies “yes”, then the talk continues in WebSocket protocol. At this point we are using the websocket protocol to communicate with the server. The basic order it the request (a question), response (the answer), and the websocket interactive (active conversation).
+  <div><strong>Interview Response:</strong> When a new WebSocket(URL) gets created, it starts connecting immediately. During the connection, the browser (using headers) asks the server: “Do you support WebSocket?” And if the server replies “yes”, then the talk continues in WebSocket protocol. At this point, we are using the WebSocket protocol to communicate with the server. The preliminary order is the request (a question), response (the answer), and the WebSocket interactive (active conversation).
     </div><br />
   <div><strong className="codeExample">Code Example:</strong> of browser headers for request made by new WebSocket<br /><br />
 
@@ -138,12 +138,12 @@ Sec-WebSocket-Version: 13
 
 ---
 
-### In the browser header, what does the origin refer to in websocket connections?
+### What does the origin refer to in WebSocket connections in the browser header?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> WebSocket objects are cross-origin by nature. There are no special headers or other limitations. Old servers are unable to handle WebSocket anyway, so there are no compatibility issues. But Origin header is important, as it allows the server to decide whether to talk WebSocket with this website.
+  <div><strong>Interview Response:</strong> WebSocket objects are cross-origin by nature, and there are no special headers or other limitations. Old servers cannot handle WebSockets anyway, so there are no compatibility issues. But the Origin header is essential, as it allows the server to decide whether to talk WebSocket with this website.
     </div>
   </div>
 </details>
@@ -162,12 +162,12 @@ Sec-WebSocket-Version: 13
 
 ---
 
-### What happens after the connection upgrade request with a websocket?
+### What happens after the connection upgrade request with a WebSocket?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> After the connect upgrade request is initialized and approved, the requested protocol is “websocket”. At that point, a random browser-generated key for security and returned. Additionally, the current websocket version is presented, returned in the response.
+  <div><strong>Interview Response:</strong> After the connect upgrade request is initialized and approved, the requested protocol is “WebSocket”. At that point, a random browser-generated key for security and returned. Additionally, the current WebSocket version is presented and returned in the response.
     </div>
   </div>
 </details>
@@ -179,19 +179,19 @@ Sec-WebSocket-Version: 13
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, we cannot use XMLHttpRequest or fetch to make this kind of HTTP-request, because JavaScript is not allowed to set these headers.
+  <div><strong>Interview Response:</strong> No, we cannot use XMLHttpRequest or fetch to make this kind of HTTP request because JavaScript cannot set these headers.
     </div>
   </div>
 </details>
 
 ---
 
-### What is the server code response used during a switch WebSocket protocol?
+### What server code response gets used during a switch WebSocket protocol?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> If the server agrees to switch to WebSocket, it should send code 101 response. After the agreement is completed between the browser and server, the data is transferred using WebSocket protocol from that point on.
+  <div><strong>Interview Response:</strong> If the server agrees to switch to WebSocket, it should send a code 101 response. After the browser and server have reached an agreement, data gets sent using the WebSocket protocol from that point forward.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -210,12 +210,12 @@ Sec-WebSocket-Accept: hsBlbuDTkk24srzEOTBUlZAlC2g=
 
 ---
 
-### What does deflate-frame mean in relation to Sec-WebSocket-Extensions?
+### What does deflate-frame imply in terms of Sec-WebSocket-Extensions?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The "deflate-frame" token is used in the "Sec-WebSocket-Extensions" header, deflate-frame means that the browser supports data compression. This extension compresses the "Application data" part of WebSocket data frames using DEFLATE. The simplest "Sec-WebSocket-Extensions" header in the client's opening handshake to request per-frame DEFLATE extension is the following: “Sec-WebSocket-Extensions: deflate-frame”. The simplest header from the server to accept this extension is the same.
+  <div><strong>Interview Response:</strong> The "deflate-frame" token gets used in the "Sec-WebSocket-Extensions" header; deflate-frame means that the browser supports data compression. Using DEFLATE, this extension compresses the "Application data" part of WebSocket data frames. The simplest "Sec-WebSocket-Extensions" header in the client's opening handshake to request per-frame DEFLATE extension is the following: “Sec-WebSocket-Extensions: deflate-frame”. The most straightforward header from the server to accept this extension is the same.
     </div>
   </div>
 </details>
@@ -227,7 +227,7 @@ Sec-WebSocket-Accept: hsBlbuDTkk24srzEOTBUlZAlC2g=
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Sec-WebSocket-Protocol: soap, wamp means that we would like to transfer not just any data, but the data in SOAP or WAMP (“The WebSocket Application Messaging Protocol”) protocols. WebSocket subprotocols are registered in the IANA catalogue. So, this header describes data formats that we are going to use. This optional header is set using the second parameter of new WebSocket. That is the array of subprotocols, e.g., if we would like to use SOAP or WAMP. The server should respond with a list of protocols and extensions that it agrees to use.
+  <div><strong>Interview Response:</strong> Sec-WebSocket-Protocol: soap, wamp means that we would like to transfer not just any data, but the data in SOAP or WAMP (“The WebSocket Application Messaging Protocol”) protocols. WebSocket subprotocols register in the IANA catalog. So, this header describes the data formats that we are getting to use. This optional header gets set using the second parameter of the new WebSocket. That is the array of subprotocols, e.g., if we would like to use SOAP or WAMP. The server should respond with a list of protocols and extensions that it agrees to use.
     </div><br />
   <div><strong className="codeExample">Syntax Example:</strong><br /><br />
 
@@ -276,24 +276,24 @@ Sec-WebSocket-Protocol: soap
 
 ---
 
-### What are frames in relation to WebSocket communication?
+### What exactly are frames in the context of WebSocket communication?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> WebSocket communication consists of “frames” or data fragments, that can be sent from either side, and can be of several kinds including text, binary data, ping/pong, and connect close frames. The text frame contains text data that parties send to each other. Binary data frames contain binary data that parties send back and forth between each other. Ping Pong frames are used to check the connection, sent from the server, the browser responds to these automatically. At any point after the handshake, either the client or the server can choose to send a ping to the other party. When the ping is received, the recipient must send back a pong as soon as possible. You can use this to make sure that the client is still connected. The connect close frame is either a server or client initiating the closing handshake. There are several more included in this group, but these are the most common. In the browser, we directly work only with text or binary frames.
+  <div><strong>Interview Response:</strong> WebSocket communication consists of “frames” or data fragments that can be sent from either side and can be of several kinds, including text, binary data, ping/pong, and “connect” close frames. The text frame contains text data that parties send to each other. Binary data frames contain binary data that parties send back and forth. Ping Pong frames get used for checking the connection sent from the server. The browser responds to these automatically. After the handshake, either the client or the server can choose to send a ping to the other party. When the ping is received, the recipient must send back a pong as soon as possible. You can use this to make sure that the client is still connected. The connect close frame is either a server or client initiating the closing handshake. Several more get included in this group, but these are the most common. In the browser, we directly work only with text or binary frames.
     </div>
   </div>
 </details>
 
 ---
 
-### Explain the function and syntax of the WebSocket.send() method.
+### Explain the function and syntax of the WebSocket.send() method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The WebSocket .send() method can send either text or binary data. A call socket.send(body) allows body in string or a binary format, including Blob, ArrayBuffer, etc. No settings are required, we can just send it out in any format.
+  <div><strong>Interview Response:</strong> The WebSocket .send() method can send text or binary data. A call socket.send(body) allows the body in string or a binary format, including Blob and ArrayBuffer. No settings are required; we can send it out in any format.
     </div>
   </div>
 </details>
@@ -305,7 +305,7 @@ Sec-WebSocket-Protocol: soap
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> When we receive the data, text always comes as string. And for binary data, we can choose between Blob and ArrayBuffer formats. That’s set by socket.binaryType property, it’s "blob" by default, so binary data comes as Blob objects. Blob is a high-level binary object, it directly integrates with &#8249;a&#8250;, &#8249;img&#8250; and other tags, so that is a sane default. But for binary processing, to access individual data bytes, we can change it to "arraybuffer".
+  <div><strong>Interview Response:</strong> The text is always sent as a string when receiving data. We can use the Blob or ArrayBuffer formats for binary data, and the socket determines that. Because the binaryType attribute is set to "blob" by default, binary data represents as Blob objects. Blob is a high-level binary object that integrates seamlessly with &#8249;a&#8250;, &#8249;img&#8250;, and other tags; thus, it's a reasonable default. However, we may modify it to "arraybuffer" for binary processing to access individual data bytes.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -324,12 +324,12 @@ socket.onmessage = (event) => {
 
 ---
 
-### How should we handle a slow network connection in relation to WebSocket communication?
+### How should we deal with a sluggish network connection in the context of WebSocket communication?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We can call socket.send(data) again and again. But the data will be buffered (stored) in memory and sent out only as fast as network speed allows. The socket.bufferedAmount property stores how many bytes remain buffered at this moment, waiting to be sent over the network. We can examine it to see whether the socket is available for transmission. We will have to set an interval and check the buffered amount and re-initiate a call for more data.
+  <div><strong>Interview Response:</strong> We can call socket.send(data) again and again. But the data buffers (stored) in memory and gets sent out only as fast as network speed allows. The socket.bufferedAmount property stores how many bytes remain buffered, waiting to get sent over the network. We can examine it to see whether the socket is available for transmission. We have to set an interval, check the buffered amount, and re-initiate a call for more data.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -351,12 +351,12 @@ setInterval(() => {
 
 ---
 
-### What happens when ether the browser or server closes a connection?
+### What happens when either the browser or server closes a connection?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Normally, when a party wants to close the connection (both browser and server have equal rights), they send a “connection close frame” with a numeric code and a textual reason. We can explicitly close it from the browser using socket.close(). The code is a special WebSocket closing code, this is optional. The reason is a string that describes the reason of closing, also optional. Then the other party in close event handler gets the code and the reason.
+  <div><strong>Interview Response:</strong> Normally, when a party wants to close the connection (both browser and server have equal rights), they send a “connection close frame” with a numeric code and a textual reason. We can explicitly close it from the browser using socket.close(). The code is a unique WebSocket closing code, and this is optional. The reason is a string that describes the reason for closing; also, optional. Then the other party in the close event handler gets the code and the reason.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -382,12 +382,12 @@ socket.onclose = (event) => {
 
 ---
 
-### What are the common closure codes for WebSocket?
+### What are the standard closure codes for WebSocket?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The two most common WebSocket closure codes are 1000 and 1006. Code 1000 is the default, normal closure; the connection successfully completed whatever purpose for which it was created. Code 1006 is considered an abnormal closure, it used to indicate that a connection was closed abnormally (that is, with no close frame being sent) when a status code is expected. WebSocket codes are somewhat like HTTP codes, but different. In particular, any codes less than 1000 are reserved, there’ll be an error if we try to set such a code.
+  <div><strong>Interview Response:</strong> 1000 and 1006 are the most common WebSocket closing codes. Code 1000 is the standard default closure; the connection gets completed for whatever reason it got formed. Code 1006 is an abnormal closure; it signals that a connection was closed improperly (without sending a close frame) when a status code got anticipated. WebSocket codes are similar to HTTP codes, although not the same. Any codes less than 1000, in particular, are reserved; attempting to set such a value result in a error.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -413,7 +413,7 @@ socket.onclose = (event) => {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To get connection state, we must use socket.readyState property to get the unsigned short values. The unsigned short values include connecting (0), open (1), closing (2), and closed (3).
+  <div><strong>Interview Response:</strong> To get the connection state, we must use socket.readyState property to get the unsigned short values. The unsigned short values include connecting (0), open (1), closing (2), and closed (3). 
     </div>
   </div>
 </details>

@@ -21,14 +21,14 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The constructor pattern is a design pattern that uses a class or function to create unique types of objects. A constructor is a one-of-a-kind method for initializing a newly created object after allocated memory. The constructor pattern, one of the most basic, widely used, and recent JavaScript designs. As implied by the name, the purpose of this pattern is to aid constructor creation.
+      <strong>Interview Response:</strong> The constructor pattern is a design pattern that uses a class or function to create unique types of objects. A constructor is a one-of-a-kind method for initializing a newly created object after allocated memory.<br/><br/>Constructor patterns are among the most fundamental, extensively used, and modern JavaScript patterns. The objective of this pattern, as hinted by the name, is to facilitate constructor creation.
     </div><br />
   </div>
 </details>
 
 ---
 
-### What types of JavaScript objects are used to create a constructor?
+### In the constructor pattern, what kinds of objects get implemented?
 
 <details className='answer'>
   <summary>
@@ -104,7 +104,7 @@ personOne.getDetails();
 
 ---
 
-### What ES6 object is used in the constructor pattern?
+### What ES6 object gets used in the constructor pattern?
 
 <details>
   <summary>
@@ -134,7 +134,7 @@ personOne.getDetails();
 
 ---
 
-### What are some method-related constructor pattern issues?
+### What are some of the constructor pattern and methods issues?
 
 <details className='answer'>
   <summary>
@@ -213,9 +213,9 @@ console.log(yourPhone === myPhone); // false
       <strong>Interview Response:</strong> The primary difference between the constructor and prototype pattern is the reusability of components.
     </div><br />
     <strong>Constructor Pattern:</strong><br />
-    When you create a new constructor, it creates a new instance of everything, and any changes made to the instantiated object will have no effect on the others.<br /><br />
+    When you create a new constructor, it creates a new instance of everything, and any changes made to the instantiated object do not affect the others.<br /><br />
     <strong>Prototype Pattern:</strong><br />
-    Creating a new object using the prototype will reuse the logic, and any change to the prototype chain will affect everyone else.
+    Creating a new object using the prototype reuses the logic, and any change to the prototype chain affects everyone else.
     <div>
     </div>
   </div>

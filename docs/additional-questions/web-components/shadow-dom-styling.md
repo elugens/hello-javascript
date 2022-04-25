@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, the Shadow DOM may include both &#8249;style&#8250; and &#8249;link rel="stylesheet" href="…"&#8250; tags. In the latter case, stylesheets are HTTP-cached, so they are not redownloaded for multiple components that use same template. As a rule, local styles work only inside the shadow tree, and document styles work outside of it. But there are few exceptions.
+  <div><strong>Interview Response:</strong> Yes, the Shadow DOM may include both &#8249;style&#8250; and &#8249;link rel="stylesheet" href="…"&#8250; tags. In the latter case, stylesheets are HTTP-cached, so they are not redownloaded for multiple components that use the same template. As a rule, local styles work only inside the shadow tree, and document styles work outside the shadow tree. But there are few exceptions.
     </div>
   </div>
 </details>
@@ -30,7 +30,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The :host() CSS pseudo-class function selects the shadow host of the shadow DOM containing the CSS it is used inside (so you can select a custom element from inside its shadow DOM), but only if the selector given as the function's parameter matches the shadow host.
+  <div><strong>Interview Response:</strong> The ":host()" CSS pseudo-class function picks the shadow host of the shadow DOM containing the CSS. It gets used within (allowing you to select a custom element from inside its shadow DOM), but only if the selector sent to the function matches the shadow host.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -76,12 +76,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### How does the :host(selector) class work?
+### How does the :host(selector) class function?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> It works the same as :host, but applied only if the shadow host matches the selector.
+  <div><strong>Interview Response:</strong> It works the same as :host, but it is applied only if the shadow host matches the selector.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -134,7 +134,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> It works the same as :host, but applied only if the shadow host or any of its ancestors in the outer document matches the selector.
+  <div><strong>Interview Response:</strong> It works the same as :host, but it is applied only if the shadow host or ancestors in the outer document matches the selector.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -162,7 +162,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> If we would like to style slotted elements in our component, there are two choices. First, we can style the &#8249;slot&#8250; itself and rely on CSS inheritance. Another option is to use:: slotted(selector) pseudo-class. It matches elements based on two conditions. First, it is a slotted element, that comes from the light DOM. Slot name does not matter. Just any slotted element, but only the element itself, not its children. Second, the element matches the selector. It should be noted, ::slotted selector can’t descend any further into the slot.
+  <div><strong>Interview Response:</strong> There are two choices if we would like to style slotted elements in our component. First, we can style the &#8249;slot&#8250; itself and rely on CSS inheritance. Another option is to use:: slotted(selector) pseudo-class. It matches elements based on two conditions. First, it is a slotted element from the light DOM. Slot name does not matter. Any slotted element suffices, not its offspring, but just the element itself. Second, the element corresponds to the selection. We should notice that the "::slotted" selection cannot go farther inside the slot.
     </div><br />
   <div><strong className="codeExample">Code Example #1:</strong><br /><br />
 
@@ -232,7 +232,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> There is no selector that can directly affect shadow DOM styles from the document. But just as we expose methods to interact with our component, we can expose CSS variables (custom CSS properties) to style it. Custom CSS properties exist on all levels, both in light and shadow.
+  <div><strong>Interview Response:</strong> No selector can directly affect shadow DOM styles from the document. But just as we expose methods to interact with our component, we can expose CSS variables (custom CSS properties) to style it. Custom CSS properties exist on all levels, both in light and shadow.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

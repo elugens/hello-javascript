@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Pointer events are a modern way to handle input from a variety of pointing devices, such as a mouse, a pen/stylus, a touchscreen, and so on. For every mouse&#8249;event&#8250;, there is a pointer&#8249;event&#8250; that plays a similar role.
+  <div><strong>Interview Response:</strong> Pointer events are a modern way to handle input from various pointing devices, such as a mouse, a pen/stylus, and a touchscreen. For every mouse&#8249;event&#8250;, a pointer&#8249;event&#8250; plays a similar role.
     </div>
   </div>
 </details>
@@ -30,19 +30,19 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, we can replace mouse&#8249;event&#8250; events with pointer&#8249;event&#8250; in our code and expect things to continue working fine with mouse. The support for touch devices will also “magically” improve. Although, we may need to add touch-action: none in some places in CSS.
+  <div><strong>Interview Response:</strong> Yes, we can replace mouse&#8249;event&#8250; events in our code with pointer&#8249;event&#8250; events and expect everything to operate perfectly with the mouse. Touch device support will also "magically" increase. However, in some places in CSS, we may need to include 'touch-action:none'.
     </div>
   </div>
 </details>
 
 ---
 
-### What are the three types of pointer device types?
+### What are the three types of pointer-device types?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The three types of pointer device types include the string mouse, pen, and touch. They must be of a string type.
+  <div><strong>Interview Response:</strong> The three types of pointer-device types include the string mouse, pen, and touch. They must be of a string type.
     </div>
   </div>
 </details>
@@ -58,7 +58,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
     </div><br />
 
 :::note
-The pointerId is assigned not to the whole device, but for each touching finger. If we use 5 fingers to simultaneously touch the screen, we have 5 pointerdown events, each with their respective coordinates and a different pointerId. The events associated with the first finger always have isPrimary=true.
+The pointerId gets allocated to each contacting finger rather than the whole device. When we use five fingers to touch the screen simultaneously, we get five pointerdown events with unique coordinates and pointerId. The events linked with the first finger have isPrimary=true at all times.
 :::
 
   </div>
@@ -71,19 +71,19 @@ The pointerId is assigned not to the whole device, but for each touching finger.
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The pointercancel event fires when there is an ongoing pointer interaction, and then something happens that causes it to be aborted, so that no more pointer events are generated. There are several reasons this behavior may manifest itself including: The pointer device hardware was physically disabled. The device orientation changed (tablet rotated). The browser decided to handle the interaction on its own, considering it a mouse gesture or zoom-and-pan action or something else.
+  <div><strong>Interview Response:</strong> The pointercancel event fires when there is an ongoing pointer interaction. Something happens that causes it to get aborted so that no more pointer events get generated. There are several reasons this behavior may manifest itself, including the pointer device hardware was physically disabled, and the device orientation changed (tablet rotated). The browser decided to handle the interaction independently, considering it a mouse gesture, zoom-and-pan action, or something else.
     </div>
   </div>
 </details>
 
 ---
 
-### Explain the function and syntax of the setPointerCapture() method.
+### Explain the function and syntax of the setPointerCapture() method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The setPointerCapture() method of the Element interface is used to designate a specific element as the capture target of future pointer events. Subsequent events for the pointer will be targeted at the capture element until capture is released via Element.releasePointerCapture(). Pointer capture allows events for a particular pointer event (PointerEvent) to be re-targeted to a particular element instead of the normal (or hit test) target at a pointer's location. This can be used to ensure that an element continues to receive pointer events even if the pointer device's contact moves off the element (such as by scrolling or panning).
+  <div><strong>Interview Response:</strong> The setPointerCapture() method of the Element interface gets used to designate a specific element as the capture target of future pointer events. Subsequent events for the pointer get targeted at the capture element until capture gets released via Element.releasePointerCapture(). Pointer capture allows events for a particular pointer event (PointerEvent) to be re-targeted to a particular element instead of the normal (or hit test) target at a pointer's location. We may use this approach to ensure that an element continues to receive pointer events even if the pointer device's contact moves away from the element (such as by scrolling or panning).
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

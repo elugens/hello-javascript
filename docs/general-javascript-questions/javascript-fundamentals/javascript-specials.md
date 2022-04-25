@@ -1,7 +1,7 @@
 ---
 title: JavaScript Specials
 description: JavaScript Specials are outliers in our code that we must understand. It's the simpliest way to understand JavaScript.
-sidebar_position: 18
+sidebar_position: 20
 sidebar_label: JavaScript Specials
 ---
 
@@ -11,12 +11,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 <CloseAllAnswers />
 
-### How does JavaScript see, view, or treat line-breaks?
+### How does JavaScript see, view, or treat line breaks?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> JavaScript treats line-breaks as a delimiter and uses automatic semicolon insertion to close individual statements. Most code style guides agree that we should put a semicolon after each statement.
+  <div><strong>Interview Response:</strong> JavaScript treats line breaks as delimiters and uses automatic semicolon insertion to close individual statements. Most code style guides agree that we should put a semicolon after each statement.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -39,10 +39,8 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To enforce strict mode we must use the “use strict;” directive placed at the top of our code or function body.</div><br />
-  <div><strong>Technical Response:</strong>  As a rule of thumb, when we need to declare a function, the first to consider is Function Declaration syntax. It gives more freedom in how to organize our code, because we can call such functions before they are declared.<br /><br />
-
-In JavaScript, is enforced by using the directive “use strict;”. The directive must be at the top of a script or at the beginning of a function body. Without "use strict", everything still works, but some features behave in the old fashion, “compatible” way. We would generally prefer the modern behavior.
+  <div><strong>Interview Response:</strong> To enforce strict mode, we must use the “use strict;” directive placed at the top of our code or function body.</div><br />
+  <div><strong>Technical Response:</strong> In JavaScript, it gets enforced using the directive “use strict;”. The directive must appear at the beginning of a script or at the start of a function body. Everything still works without "use strict", but some features behave in the old fashion, “compatible” way. We would generally prefer modern behavior.<br /><br />
 
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -66,7 +64,7 @@ In JavaScript, is enforced by using the directive “use strict;”. The directi
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Variables can include letters and digits, but the first character cannot be a digit. Characters $ and _ are normal and acceptable to use in certain cases. Non-Latin alphabets and hieroglyphs are also allowed, but commonly not used.
+  <div><strong>Interview Response:</strong> Variables can contain letters and numbers, but the first character must be a letter. In some cases, the characters $ and _ are regular and acceptable. Non-Latin alphabets and hieroglyphs are also permitted but rarely utilized.
 </div>
   </div>
 </details>
@@ -78,7 +76,7 @@ In JavaScript, is enforced by using the directive “use strict;”. The directi
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> JavaScript variables are dynamically typed and do not require type declaration unlike statically typed languages. This means that variable data types in JavaScript are unknown at run-time.
+  <div><strong>Interview Response:</strong> Unlike statically typed languages, JavaScript variables are dynamically typed and do not require type declaration. This behavior in JavaScript means that variable data types in JavaScript are unknown at run-time.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -118,12 +116,12 @@ console.log(beverage); // "Beer"
 
 ---
 
-### Name three types of JavaScript functions that are commonly used in application development?
+### Name three types of JavaScript functions commonly used in application development?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The three main types of functions commonly used in JavaScript application development include the function declaration, expression, and arrow function.
+  <div><strong>Interview Response:</strong> The three primary functions commonly used in JavaScript application development include a declaration, expression, and arrow functions.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

@@ -16,7 +16,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A transpiler is a special piece of software that can parse (“read and understand”) modern code, and rewrite it using older syntax constructs, so that the result would be the same.
+  <div><strong>Interview Response:</strong> A transpiler is a unique piece of software that can parse ("read and understand") modern code and rewrite it using older syntax constructs so that the result would be the same.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -32,7 +32,7 @@ height = height !== undefined && height !== null ? height : 100;
 
 :::note
 
-Before 2020, JavaScript did not have a nullish coalescing operator (??). In order to make it work we needed a piece of software to convert it into workable code for older browsers.
+Before 2020, JavaScript did not have a nullish coalescing operator (??). We needed a piece of software to convert it into workable code for older browsers to do work.
 
 :::
 
@@ -47,7 +47,7 @@ Before 2020, JavaScript did not have a nullish coalescing operator (??). In orde
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A polyfill fills in the gaps where newer JavaScript features may not be compatible with older browsers.
+  <div><strong>Interview Response:</strong> A polyfill fills the gaps where newer JavaScript features may not be compatible with older browsers.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong> Polyfill if Math.trunc function does not exist in an older engine.<br /><br />
 

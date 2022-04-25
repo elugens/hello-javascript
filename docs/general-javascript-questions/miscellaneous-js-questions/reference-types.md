@@ -5,14 +5,7 @@ sidebar_position: 4
 sidebar_label: Reference Types
 ---
 
-# Reference Types
-
 **Miscellaneous: Reference Types**
-
-<head>
-  <title>Reference Types - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 

@@ -21,14 +21,11 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> We can use the script tag to insert
-      JS into HTML or import scripts from external sources.
+      <strong>Interview Response:</strong> We can use the script tag to insert JS into HTML or import scripts from external sources.
     </div>
     <br />
     <div>
-      <strong>Technical Response:</strong> The script tag is used for inserting
-      JavaScript anywhere into an HTML document. The script tag can also be used
-      to import scripts from external file sources using the source attribute.
+      <strong>Technical Response:</strong> JavaScript may be included practically anywhere in an HTML page using the script tag. The script tag gets used to import scripts from external file sources.
     </div>
     <div>
     <br />
@@ -37,7 +34,6 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ```javascript
 <script src="/path/to/script.js"></script>
-
 // External URL:
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js"></script>
 ```

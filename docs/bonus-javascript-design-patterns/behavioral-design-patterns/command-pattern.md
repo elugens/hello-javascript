@@ -32,10 +32,10 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 **The command pattern involves four participants: command, receiver, invoker, and client.**
 
-- **Command** – A command object is aware of the receiver and calls the receiver's method. The command contains values for the receiver method's arguments.
+- **Command** – A command object knows the receiver and calls the receiver's method. The command contains values for the receiver method's arguments.
 - **Client** – The client is responsible for creating the command object and passing it to the invoker.
 - **Invoker** – The invoker receives the command object from the client and is exclusively responsible for calling (or invoking) a command.
-- **Receiver** – The receiver then receives the command and searches for a method to invoke based on the received command.
+- **Receiver** – The receiver receives the command and searches for a method to invoke based on the received command.
 
 <br/>
 
@@ -80,16 +80,16 @@ console.log(manager.execute('multiply', 2, 4)); // prints 8
 
 **Receiver** -- example code: _Calculator_
 
-- understands how to carry out the command's associated operation.
-- keeps a history of commands executed (optionally).
+- understands how to carry out the command's associated operation
+- keeps a history of commands executed (optionally)
 
 **Command** -- example code: _Command_
 
-- keeps track of information concerning the activity to be taken.
+- keeps track of information concerning the activity that gets taken
 
 **Invoker** -- example code: _the user activating the buttons._
 
-- requests that the request be carried out.
+- requests that the request carries out
 
 <br/>
 
@@ -203,7 +203,7 @@ Value: 76
 
 ---
 
-### Which pattern category does the Command pattern fall under?
+### To which pattern family does the Command pattern belong?
 
 <details>
   <summary>
@@ -252,7 +252,7 @@ Value: 76
     <br />
     <div></div>
 
-- Singular Responsibility Principle Classes that invoke operations can be separated from classes that perform these actions.
+- Singular Responsibility Principle Classes that invoke operations get separated from classes that perform these actions.
 - The Open/Closed Principle - You can add new commands to the app without affecting the client code that already exists.
 - You can use the undo/redo feature.
 - You can use deferred operation execution.

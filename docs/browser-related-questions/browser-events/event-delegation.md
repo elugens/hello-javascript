@@ -13,12 +13,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### What is the behavior pattern in relation to event delegation?
+### What is the behavior pattern concerning event delegation?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In relation to events the behavior pattern has two parts. First, we add a custom attribute to an element that describes its behavior. Second, document-wide handler tracks events, and if an event happens on an attributed element – performs the action.
+  <div><strong>Interview Response:</strong> In events, the behavior pattern has two parts. First, we add a custom attribute to an element that describes its behavior. Second, a document-wide handler tracks events and acts if an event happens on an attributed element. 
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

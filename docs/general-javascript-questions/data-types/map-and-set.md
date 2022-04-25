@@ -16,8 +16,8 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The main difference is that Map allows keys of any type. Objects also convert keys to strings, which is another known difference. As you begin to look at Objects and Maps another apparent difference is that Objects cannot use another Object as a key.</div><br />
-  <div><strong>Technical Response:</strong> The Map object holds key-value pairs (Just like Objects) and remembers the original insertion order of the keys. Any value (both objects and primitive values) may be used as either a key or a value. But the main difference is that Map allows keys of any type. Objects also convert keys to strings, which is another known difference. The keys of an Object must be either a String or a Symbol. As you begin to look at Objects and Maps another apparent difference is that Objects cannot use another Object as a key.
+  <div><strong>Interview Response:</strong> The main difference is that Map allows keys of any type, and objects also convert keys to strings, which is another known difference. As you look at Objects and Maps, another apparent difference is that Objects cannot use another object as a key.</div><br />
+  <div><strong>Technical Response:</strong> The Map object holds key-value pairs (Just like Objects) and remembers the original insertion order of the keys. Any value (both objects and primitive values) may get used as either a key or a value. But the main difference is that Map allows keys of any type. Objects also convert keys to strings, which is another known difference. The keys of an Object must be either a String or a Symbol. As you look at Objects and Maps, another apparent difference is that Objects cannot use another object as a key.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong> Different types as keys<br /><br />
 
@@ -44,21 +44,21 @@ alert(map.size); // 3
 
 ---
 
-### What are some of the methods and properties that the Map Object implements?
+### What are some methods and properties that the Map Object implements?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> There are several built-in methods and properties of the Map Object including new Map(), set, get, has, delete, clear, and size.<br /><br />
-  <strong>Methods and properties are:</strong><br /><br />
+  <div><strong>Interview Response:</strong> There are several built-in methods and properties of the Map Object, including new Map(), set, get, has, delete, clear, and size.<br /><br />
+  <strong>Methods and properties are as follows:</strong><br /><br />
   <ul>
-    <li>new Map() – creates the map.</li>
-    <li>map.set(key, value) – stores the value by the key.</li>
-    <li>map.get(key) – returns the value by the key, undefined if key does not exist in map.</li>
-    <li>map.has(key) – returns true if the key exists, false otherwise.</li>
-    <li>map.delete(key) – removes the value by the key.</li>
-    <li>map.clear() – removes everything from the map.</li>
-    <li>map.size – returns the current element count.</li>
+    <li>new Map() – constructs the map.</li>
+    <li>map.set(key, value) — saves the value as a function of the key.</li>
+    <li>map.get(key) – returns the value specified by the key or undefined if the key does not exist in the map.</li>
+    <li>map.has(key) – If the key exists, it returns true; otherwise, it returns false.</li>
+    <li>map.delete(key) - deletes the value specified by the key.</li>
+    <li>map.clear() — clears the map completely.</li>
+    <li>map.size – The number of elements currently on the map gets returned.</li>
   </ul>
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -93,12 +93,12 @@ console.log(contacts.size); // returns 1
 
 ---
 
-### What is one of the most notable and important Map features in JavaScript?
+### What is one of the most notable and vital Map features in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Using objects as keys is one of the most notable and important Map features. The same does not count for objects. String as a key in object is fine, but we cannot use another Object as a key in Object.
+  <div><strong>Interview Response:</strong> Using objects as keys is one of the most notable and vital Map features. The same does not count for objects, and string as a key in an object is fine, but we cannot use another object as a key in an Object.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -136,13 +136,13 @@ alert(visitsCountObj[ben]); // ben returns 123 because it was overwritten by joh
 
 ---
 
-### Which map methods can be used to iterate over a Map Object?
+### Which map methods get used to iterate over a Map Object?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> There are three Map methods that you can use to iterate over a map including the key, values, and entries methods.</div><br />
-  <div><strong>Technical Response:</strong> There are three Map methods that you can use to iterate over a map including the key, values, and entries methods. The keys method simply returns the keys within the Map Object. Values method returns an iterable for values and the entries method returns an iterable for entries [key, value]. Notable, by default entries is used in the for…of loop. So, it is not necessary to invoke it explicitly. The iteration goes in the same order as the values were inserted. Map preserves this order, unlike a regular Objects.
+  <div><strong>Interview Response:</strong> There are three Map methods that you can use to iterate over a map, including the key, values, and entries methods.</div><br />
+  <div><strong>Technical Response:</strong> There are three Map methods that you can use to iterate over a map, including the key, values, and entries methods. The keys method returns the keys within the Map. The entries method returns an iterable for entries [key, value]. At the same time, the Object.values method returns an iterable for values. Notable, by default entries, is used in the for…of loop. So, it is not necessary to invoke it explicitly. The iteration goes in the same order as the values get inserted, and the map preserves this order, unlike regular Objects.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -181,13 +181,13 @@ recipeMap.forEach((quantity, veg) => console.log(`${veg}, ${quantity}`));
 
 ---
 
-### Besides the key, values, and entries methods, is there another method that you can use to iterate over a Map Object?
+### Besides the key, values, and entries methods, is there another method you can use to iterate over a Map Object?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, the forEach method can be used to iterate over the Map Object.</div><br />
-  <div><strong>Technical Response:</strong> The forEach method can be used to iterate over the Map Object. The forEach() method executes a provided function once for each Map entry. It should be noted that instead of producing a [key, value] as a result it produces the opposite [value, key]. You can choose the format of your choice to meet the proposed result.
+  <div><strong>Interview Response:</strong> Yes, the forEach method gets used to iterate over the Map Object.</div><br />
+  <div><strong>Technical Response:</strong> The forEach method gets used to iterate over the Map Object. The forEach() method executes a provided function once for each Map entry. You should note that instead of producing a [key, value]; as a result, it produces the opposite [value, key]. You can choose the format of your choice to meet the proposed result.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -210,12 +210,12 @@ recipeMap.forEach((quantity, veg) => console.log(`${veg}, ${quantity}`));
 
 ---
 
-### Can you set properties for Map the same way you add properties for a regular object literal?
+### Can you set properties for Map the same way you add properties for a regular object-literal?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Technically Yes, but it is not recommended because it uses the feature of a generic object. In fact, there is a significant loss of built-in Map methods like set and delete when it is transformed into a generic object.
+  <div><strong>Interview Response:</strong> Technically, yes, but it is not recommended because it uses the feature of a generic object. There is a significant loss of built-in Map methods like set and delete when it gets transformed into a generic object.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -260,7 +260,7 @@ console.log(contacts.size); // 1
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, we can create a new map object and get the object entries using the object.entries method.</div><br />
-  <div><strong>Technical Response:</strong> Yes, if we have a plain object, and we would like to create a Map from it, then we can use built-in method Object.entries(obj) that returns an array of key/value pairs for an object exactly in that format.
+  <div><strong>Technical Response:</strong> Yes, if we have a plain object and would like to create a Map from it, we can use the built-in method Object.entries(obj) that return an array of key/value pairs for an object precisely in that format.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -283,13 +283,13 @@ alert(map.get('name')); // John
 
 ---
 
-### What is the main difference between Object.entries and Object.fromEntries methods in relation to the Map Object?
+### What is the main difference between Object.entries and Object.fromEntries methods regarding the Map Object?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The Object.fromEntries method transforms a list of key-value (Map Object) pairs into an object. Object.entries gets the entries that we can place in a Map.</div><br />
-  <div><strong>Technical Response:</strong> If we have a plain object, and we would like to create a Map from it, then we can use built-in method Object.entries(obj) that returns an array of key/value pairs for an object exactly in that format. The Object.fromEntries() method transforms a list of key-value (Map Object) pairs into an object. So, both have conversion components that are the opposite of one another.
+  <div><strong>Interview Response:</strong> The Object.fromEntries method transforms a list of key-value (Map Object) pairs into an object. Object.entries get the entries that we can place on a Map.</div><br />
+  <div><strong>Technical Response:</strong> If we have a plain object, and we would like to create a Map from it, then we can use the built-in method Object.entries(obj) that returns an array of key/value pairs for an object exactly in that format. The Object.fromEntries() method transforms a list of key-value (Map Object) pairs into an object. So, both have conversion components that are the opposite of one another.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong> Object.fromEntries();<br /><br />
 
@@ -331,13 +331,13 @@ alert(map.get('name')); // John
 
 ---
 
-### Explain, how does the Set Object function in javaScript?
+### Explain how does the Set Object function in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The Set object is a special type of object that lets you store “unique” values of any type, whether primitive values or object references.</div><br />
-  <div><strong>Technical Response:</strong> The Set object is a special type of object that lets you store unique values of any type, whether primitive values or object references. The Set() constructor creates the base structure of the object. The main feature is that repeated calls of set.add(value) with the same value do not do anything. That is the reason why each value appears in a Set only once.
+  <div><strong>Interview Response:</strong> The Set object is a special object that lets you store “unique” values of any type, whether primitive values or object references.</div><br />
+  <div><strong>Technical Response:</strong> The Set object is a special object that lets you store unique values of any type, whether primitive values or object references. The Set() constructor creates the base structure of the object. The main feature is that repeated calls of set.add(value) with the same value do not do anything, and that is why each value appears in a Set only once.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -371,13 +371,13 @@ for (let user of set) {
 
 ---
 
-### What are the main differences between a Set and Array objects?
+### What are the obvious differences between a Set and Array objects?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The main difference is that Set only allows unique data values, while an Array allows duplicates.</div><br />
-  <div><strong>Technical Response:</strong> Well, in general, Array is type of structure representing block of data (numbers, objects, etc.) allocated in consecutive memory. Set, more familiar as a Math concept, is an abstract data type which contains only distinct elements/objects without the need of being allocated orderly by index. Array and Set are technically different concepts, in JavaScript. One of the biggest differences here, you may notice, is that elements in Array can be duplicate (unless you tell it not to be), and in Set, they just cannot (regardless of what you decide). In addition, Array is considered as “indexed collection” type of data structure, while Set is considered as “keyed collection”.
+  <div><strong>Technical Response:</strong> Well, in general, Array is a type of structure representing a block of data (numbers, objects) allocated in consecutive memory. Set, more familiar as a Math concept, is an abstract data type that contains only distinct elements/objects without the need of being allocated orderly by index. Array and Set are technically different concepts in JavaScript. One of the most significant differences here, you may notice, is that elements in Array can be duplicated (unless you tell it not to be), and in Set, they just cannot (regardless of what you decide). In addition, Array is an “indexed collection” type of data structure, while Set is considered a “keyed collection”.
   </div>
   </div>
 </details>
@@ -389,8 +389,8 @@ for (let user of set) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We can use the for..of and forEach loops. We can also use a traditional iteration, but it is not recommended.</div><br />
-  <div><strong>Technical Response:</strong> There are two ways to iterate over a Set() in JavaScript, according to the MDN. The for..of and forEach loops. You can also use a traditional iterative for loop, but it is much more complex and not recommended (Ninja Code).
+  <div><strong>Interview Response:</strong> We can use the for..of and forEach loops. We can also use a traditional iteration, but this does not meet standard recommendations.</div><br />
+  <div><strong>Technical Response:</strong> There are two ways to iterate over a Set() in JavaScript. The for..of and forEach loops. You can also use a traditional iterative for loop, but it is much more complex and not recommended (Ninja Code).
   </div><br />
   <div><strong className="codeExample">Code Example:</strong> Iteration over Set using for..of and forEach<br /><br />
 

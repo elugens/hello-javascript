@@ -1,7 +1,7 @@
 ---
 title: JavaScript Variables
 description: JavaScript variables are used to store data.
-sidebar_position: 4
+sidebar_position: 6
 sidebar_label: Variables
 ---
 
@@ -28,7 +28,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The keywords used to declare a variable include let, const, and var variables.</div><br />
-  <div><strong>Technical Response:</strong> There are three variable declaration keywords used in JavaScript. They include let, const, and var variables. In modern JavaScript, development let and const are recommended to optimize your application.
+  <div><strong>Technical Response:</strong> There are three variable declaration keywords used in JavaScript. They include let, const, and var variables. In modern JavaScript, development let and const remain recommended to optimize your application.
   </div>
   </div>
 </details>
@@ -40,7 +40,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, but it is not recommended, for the sake of readability and consistency.</div><br />
+  <div><strong>Interview Response:</strong> Yes, although the specification does not advise it for readability and consistency reasons.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -72,7 +72,7 @@ let message = 'Hello';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, declare two variables and copy data from one into the other. Better known as copy by reference.</div><br />
+  <div><strong>Interview Response:</strong> Yes, declare two variables and copy data into one—better known as copy by reference.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -103,7 +103,7 @@ alert(message); // Hello world!
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, by declaring the variable equals the new value. A declaration of a const on a variable does not have this capability, because it is a constant value.</div>
+  <div><strong>Interview Response:</strong> Yes, by declaring the variable equals the new value. A const declaration on a variable does not have this capability because it is a constant value.</div>
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -128,7 +128,7 @@ console.log(message); // returns 'World!'
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, it will result in a syntax error.</div>
+  <div><strong>Interview Response:</strong> No, it results in a syntax error.</div>
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -147,13 +147,13 @@ let message = 'That'; // SyntaxError: 'message' has already been declared
 
 ---
 
-### What are the two limitations on variable names in JavaScript?
+### What are the two limitations of variable names in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The variable must contain only letters, digits, dollar signs, or an underscore. The first character must not be a digit.</div><br />
-  <div><strong>Technical Response:</strong> There are two limitations on variable names in JavaScript. The name must contain only letters, digits, or the symbols $ and _. The first character must not be a digit.
+  <div><strong>Interview Response:</strong> The variable must contain only letters, digits, dollar signs, or an underscore. The first character cannot be a number.</div><br />
+  <div><strong>Technical Response:</strong> In JavaScript, variable names are subject to two limitations. Only letters, numbers, or the symbols $ and an underscore _ may appear in the name, and the first character cannot be a number.
   </div><br />
   <div><strong className="codeExample">Examples of valid names:</strong><br /><br />
 
@@ -181,12 +181,33 @@ alert($ + _); // 3
 
 ---
 
-### What stylization rule is used in naming multi-word variables?
+### Can you explain the CamelCase naming method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong>  As a matter of convention, when the name contains multiple words, camelCase is commonly used.</div><br />
+  <div><strong>Interview Response:</strong> CamelCase is a naming method in which a name gets made up of many words combined into a single term. Each word’s initial letter gets capitalized so that the name may be easily read. In JavaScript, we use the lowerCamelCase implementation.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let lowerCamelCase = 'lowerCamelCase';
+console.log(lowerCamelCase); // returns lowerCamelCase
+```
+
+  </div>
+  </div>
+</details>
+
+---
+
+### What stylization rule gets used in naming multi-word variables?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> When the name contains multiple words, lower camelCase is the standard.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -206,13 +227,18 @@ let myUserName;
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, variables named myUser and myuser are two different variables, because variables in JavaScript are case-sensitive.</div><br />
+  <div><strong>Interview Response:</strong> Yes, variables named <strong>myUser</strong> and <strong>myuser</strong> are two different variables because variables in JavaScript are case-sensitive.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
 
 ```js
-let myUserName;
+let myUser = 'Jack';
+let myuser = 'Jane';
+
+console.log(myUser === myuser); // returns false
+console.log(myUser); // Jack
+console.log(myuser); // Jane
 ```
 
   </div>
@@ -227,9 +253,9 @@ let myUserName;
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, but it is not recommended.</div><br />
-  <div><strong>Technical Response:</strong> Yes, it is possible to use any language, including Cyrillic letters or even hieroglyphs, but it is not recommended.
+  <div><strong>Technical Response:</strong> Yes, it is possible to use any language, including Cyrillic letters or even hieroglyphs, but it remains a lousy approach and not recommended, according to the MDN.
   </div><br />
-  <div><strong className="codeExample">Code Example:</strong> Technically, this can be achieved, but it is not recommended.<br /><br />
+  <div><strong className="codeExample">Code Example:</strong> For example, technically, this can be implemented, but it remains a lousy approach and goes against recommendations.<br /><br />
 
   <div></div>
 
@@ -245,13 +271,13 @@ let 我 = '...';
 
 ---
 
-### Is it possible to declare a variable without let, const, or the “Old var”?
+### Is it possible to declare a variable without let, const, or "Old var"?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, it is possible outside of strict mode, but it is not recommended. It may be found in older applications.</div><br />
-  <div><strong className="codeExample">Code Example:</strong> Technically, this can be achieved, but it is not recommended in modern JavaScript.<br /><br />
+  <div><strong>Interview Response:</strong> Outside of strict mode, it is possible but not encouraged. It is possible to find it in earlier programs.</div><br />
+  <div><strong className="codeExample">Code Example:</strong> Technically, it is achievable but not recommended in modern JavaScript.<br /><br />
 
   <div></div>
 
@@ -273,8 +299,8 @@ alert(num); // 5
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The difference is that var is function scoped and let is block scoped. If it is used outside of a function, it is considered a global variable.</div><br />
-  <div><strong>Technical Response:</strong> JavaScript var and let are both used for variable declaration, but the difference between them is that var is function scoped and let is block scoped. It can be said that a variable declared with var is defined throughout the program as compared to let.
+  <div><strong>Interview Response:</strong> The distinction is that var is function scoped, whereas let is block scoped. If used outside of a function, it is called a global variable.</div><br />
+  <div><strong>Technical Response:</strong> Both var and let get used for variable declaration in JavaScript. However, the distinction is that var is function scoped and let is block scoped. When compared to let, a variable declared using var is considered defined throughout the program.
   </div>
   </div>
 </details>
@@ -286,13 +312,13 @@ alert(num); // 5
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, it will result in a syntax error because constants cannot be reassigned.</div><br />
+  <div><strong>Interview Response:</strong> No, it results in a syntax error because constants do not allow reassignment.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
 
 ```js
-const myBirthday = '18.04.1982';
+const myBirthday = '01.09.1969';
 
 myBirthday = '01.01.2001'; // error, can't reassign the constant!
 ```
@@ -308,7 +334,7 @@ myBirthday = '01.01.2001'; // error, can't reassign the constant!
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Aliases should be used for constant variable values that are hard to remember. They should use capital letters and underscores.</div><br />
+  <div><strong>Interview Response:</strong> For constant variable values that are difficult to memorize, aliases should get utilized. Capital letters and underscores should get used in this case.</div><br />
   <div><strong className="codeExample">Code Example:</strong> Hexadecimal Colors<br /><br />
 
   <div></div>
@@ -335,7 +361,7 @@ alert(color); // #FF7F00
 
 ---
 
-### What are the benefits of using a constant as an alias?
+### What are the advantages of aliasing a constant in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -346,33 +372,33 @@ alert(color); // #FF7F00
 
 ---
 
-### When should we use capitals for a constant and when should we name it normally?
+### When should a constant be named in caps, and when should it be named in the usual way?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Capital-named constants are only used as aliases for “hard-coded” values.</div><br />
-  <div><strong>Technical Response:</strong> When constants that are known before execution (like a hexadecimal value for red) and some constants are calculated in run-time, during the execution, but do not change after their initial assignment. In other words, capital-named constants are only used as aliases for “hard-coded” values.
+  <div><strong>Interview Response:</strong> Capital-named constants only get used as aliases for “hard-coded” values.</div><br />
+  <div><strong>Technical Response:</strong> Constants get discovered before execution (like a hexadecimal value for red). Some constants are calculated at run-time during execution but do not alter after they are assigned. Capital-named constants only get used as aliases for "hard-coded" values.
   </div>
   </div>
 </details>
 
 ---
 
-### What are some good rules when it comes to variable naming conventions?
+### What are some excellent rules for variable naming conventions?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Capital-named constants are only used as aliases for “hard-coded” values.</div><br />
+  <div><strong>Interview Response:</strong> A variable name should have a clean, obvious meaning, describing the data it stores, like currentUser or newUser. Unlike functions, a variable name should always be camelCase and begin with a noun</div><br />
   <div><strong>Technical Response:</strong><br /><br />
   Some good-to-follow rules are: <br /><br />
     <ol>
-      <li>Use human-readable names like userName or shoppingCart.</li>
-      <li>Stay away from abbreviations or short names like a, b, c, unless you know what you are doing (Ninja Coder – not a good way to write code).</li>
-      <li>Make names maximally descriptive and concise. Examples of bad names are data and value. Such names say nothing. It is only okay to use them if the context of the code makes it exceptionally obvious which data or value the variable is referencing.</li>
-      <li>Agree on terms within your team. If a site visitor is called a “user” then we should name related variables currentUser or newUser instead of currentVisitor or newManInTown.</li>
-      <li>A variable name is always camelCase and should begin with a noun to differentiate variables from functions, which normally should begin with a verb.</li>
+      <li>Use names that are easy to remember, such as userName or shoppingCart.</li>
+      <li>If you do not know what you are doing, avoid abbreviations or short names like a, b, and c (Ninja Coder – is not a great approach to creating code).</li>
+      <li>Make your names as descriptive and straightforward as possible. Two instances of bad names are data and value, and such names are nonsensical, and they may only be used in a coding context to make it apparent what data or value the variable refers to in our code.</li>
+      <li>Make terms with your team. When a site visitor gets referred to as "user," related variables, currentUser or newUser are utilized rather than currentVisitor or newLadyInRed.</li>
+      <li>A variable name is always camelCase and should begin with a noun to differentiate variables from functions, which generally should begin with a verb.</li>
       </ol>
   </div>
   </div>
@@ -385,7 +411,7 @@ alert(color); // #FF7F00
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A variable name is always camelCase and should begin with a noun to differentiate variables from functions, which normally should begin with a verb.</div>
+  <div><strong>Interview Response:</strong> A variable name is always camelCase and should begin with a noun to differentiate variables from functions, which generally should begin with a verb.</div>
   </div>
 </details>
 

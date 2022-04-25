@@ -7,11 +7,6 @@ sidebar_label: Type Conversion
 
 **JavaScript Fundamentals: Type Conversion**
 
-<head>
-  <title>JavaScript Type Conversion - Frontend Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
-
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
@@ -22,20 +17,20 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Explicit and Implicit type conversion.</div><br />
-  <div><strong>Technical Response:</strong> There are two types of type conversion including automatic (implicit) and explicit type conversion.
+  <div><strong>Technical Response:</strong> There are two types of type conversion: implicit and explicit.
   </div>
   </div>
 </details>
 
 ---
 
-### What is the difference between explicit and automatic (implicit) JavaScript type conversion?
+### What is the distinction between explicit and implicit JavaScript type conversion?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Implicit type conversion is an automated conversion of types and explicit is a manual approach through the implementation of an object constructor or an operator.</div><br />
-  <div><strong>Technical Response:</strong> JavaScript automatically converts one data type to another (to the right type). This is known as implicit or automatic type conversion. The type of conversion that you do manually is known as explicit type conversion.
+  <div><strong>Interview Response:</strong> Implicit type conversion is a manual conversion of type, and explicit is automatic.</div><br />
+  <div><strong>Technical Response:</strong> JJavaScript translates one data type to another automatically (to the right type). This behavior is known as implicit type conversion or automated type conversion. An explicit type conversion is the sort of conversion that you perform manually.
   </div>
   </div>
 </details>
@@ -47,7 +42,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Explicit type conversions are achieved using built-in methods and object constructors such as BigInt() and String().</div>
+  <div><strong>Interview Response:</strong> Explicit type conversions get implemented using built-in methods and objects.</div>
   </div>
 </details>
 
@@ -64,13 +59,13 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### What built-in object is used to explicitly convert values to a string?
+### What built-in object do we use to explicitly convert values to a string?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The string "String(value);" object is used to explicitly convert values to a string.</div><br />
-  <div><strong>Technical Response:</strong> The String(value) object is used to explicitly convert values to a string. The conversion to string is usually obvious for primitive values.
+  <div><strong>Interview Response:</strong> The string object, we use it to convert values to a string explicitly.</div><br />
+  <div><strong>Technical Response:</strong> The String(value) object gets used to convert values to strings explicitly. For primitive values, the conversion to string is typically apparent.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -101,19 +96,18 @@ alert(typeof value); // string
 
 ---
 
-### What Object is used to explicitly convert values to a Number?
+### What Object do we use to convert values to a number explicitly?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The number object is used to explicitly convert values to a number.</div><br />
+  <div><strong>Interview Response:</strong> We use the Number() object to explicitly convert values to a number.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
 
 ```js
 let str = '123';
-
 alert(typeof str); // string
 let num = Number(str); // becomes a number 123
 alert(typeof num); // number
@@ -125,12 +119,12 @@ alert(typeof num); // number
 
 ---
 
-### What is the result when there is an explicit attempt to convert a non-number to a number?
+### What is the result of an explicit attempt to convert a non-number to a number?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> If the string is not a valid number the return value is NaN.</div><br />
+  <div><strong>Interview Response:</strong> If the string is not a valid number, the return value is NaN.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -147,7 +141,7 @@ alert(age); // NaN, conversion failed
 
 ---
 
-### If, there is an attempt to convert an undefined value to a number. What is the return result?
+### If there is an attempt to convert an undefined value. What is the return result?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -171,12 +165,12 @@ alert(result); // returns NaN, conversion failed
 
 ---
 
-### If, there is an attempt to convert a NULL value to a number. What is the return result?
+### If there is an attempt to convert a NULL value to a number. What is the return result?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Numeric conversions on Null values returns zero (0).</div><br />
+  <div><strong>Interview Response:</strong> : Numeric conversions on Null values returns zero (0).</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -195,12 +189,12 @@ alert(result); // returns 0
 
 ---
 
-### What is returned on a numeric conversion of true and false in JavaScript?
+### What value gets returned on a numeric conversion of true and false in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> True returns 1 and False returns 0.</div>
+  <div><strong>Interview Response:</strong> True returns 1, and False returns 0.</div>
   </div>
 </details>
 
@@ -211,7 +205,7 @@ alert(result); // returns 0
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> White-spaces from the start and end are removed. If the remaining string is empty, the result is 0. Otherwise, the number is “read” from the string. If there is an error it will return NaN.</div><br />
+  <div><strong>Interview Response:</strong> You get rid of whitespaces at the beginning and the end. You get 0 if the remaining string contains no characters. Otherwise, the string's number is "read". If an error occurs, it returns NaN.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -235,13 +229,13 @@ alert(outcome); // returns 0
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Both, it happens in logical operations automatically, but can also be performed explicitly.</div>
+  <div><strong>Interview Response:</strong> Both. Logic operations do this automatically, but you can also do it explicitly.</div>
   </div>
 </details>
 
 ---
 
-### Is there an object that can be used for explicit Boolean conversions?
+### Are there any objects we can use for explicit Boolean conversions?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -269,10 +263,10 @@ alert(Boolean('')); // false
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Values that are intuitively empty are false, all other values are true.</div><br />
+  <div><strong>Interview Response:</strong> Values that are intuitively empty are false. All other values are true.</div><br />
   <div><strong>Technical Response:</strong> Conversion Rules<br /><br />
     <ol>
-      <li>Values that are intuitively “empty”, like 0, an empty string, null, undefined, and NaN, become false.</li>
+      <li>Intuitively empty values, like 0, an empty string, null, undefined, and NaN, become false.</li>
       <li>Other values become true.</li>
       </ol>
   </div>
@@ -281,12 +275,12 @@ alert(Boolean('')); // false
 
 ---
 
-### In JavaScript, what is the Boolean return value for the string “0”?
+### What is the Boolean return value for the string “0” in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, a non-empty string is always true. Zero as a number is considered empty and returns false.</div><br />
+  <div><strong>Interview Response:</strong> In JavaScript, a non-empty string is always true. Zero is considered empty and returns false.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>

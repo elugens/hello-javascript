@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Built-in methods like array, filter, map, and others return new objects of exactly the inherited type. Their internal implementation uses the object’s constructor property for that. If you test the strict equality between the newly created object and child class on the constructor, it will return true.
+  <div><strong>Interview Response:</strong> Built-in methods like an array, filter, map, and others return new objects of precisely the inherited type. Their internal implementation uses the object’s constructor property for that. If you test the strict equality between the newly created object and child class on the constructor, it returns true.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -48,8 +48,8 @@ console.log(arr.constructor === PowerArray); // returns true
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The species accessor property allows subclasses to override the default constructor for objects. Symbol.species is used when we may want to return Array objects in our derived array class. When using methods such as map() that return the default constructor, we may want these methods to return a parent Array object, instead of the extending object.</div><br />
-  <div><strong>Technical Response:</strong> The symbol Symbol.species specifies a function-valued property that the constructor function uses to create derived objects. The species accessor property allows subclasses to override the default constructor for objects. Symbol.species is used when you may want to return Array objects in your derived array class. when using methods such as map() that return the default constructor, you want these methods to return a parent Array object, instead of the extending object. It is important to keep track of the specified object (Array) to ensure you are accessing the right array. If the method returns a new array like the filter() method it may unexpected result in your application, when used in conjunction with the species Symbol. There are benefits to this behavior that allow use customize specific an interaction within the inheriting class.
+  <div><strong>Interview Response:</strong> Subclasses can override the default constructor for objects using the species accessor attribute. When we wish to retrieve Array instances in our derived array class, we utilize Symbol.species. When utilizing methods that return the default constructor, such as map(), we may wish these methods to return a parent Array object rather than the extending object.</div><br />
+  <div><strong>Technical Response:</strong> The symbol Symbol.species specifies a function-valued property that the constructor function uses to create derived objects. Subclasses can override the default constructor for objects using the species accessor attribute. Symbol.species gets used when you may want to return Array objects in your derived array class. When utilizing methods that return the default constructor, such as map(), you want these methods to return a parent Array object rather than the extending object.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -76,7 +76,7 @@ console.log(a); // returns Array - [ 1, 2, 3 ]
 ```
 
 :::note
-It is important to keep track of the specified object (Array) to ensure you are accessing the right array. If the method returns a new array like the filter() method it may unexpected result in your application, when used in conjunction with the species Symbol. There are benefits to this behavior that allow us to customize specific an interaction within the inheriting class.
+To guarantee that you are accessing the correct array, maintain track of the supplied object (Array). If the method returns a new array like the filter() method, it may unexpectedly negatively affect your application when used in conjunction with the species Symbol. There are benefits to this behavior that allow us to customize specific interactions within the inheriting class.
 :::
 
   </div>
@@ -90,7 +90,7 @@ It is important to keep track of the specified object (Array) to ensure you are 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Normally, when one class extends another, both static and non-static methods are inherited. But built-in classes are an exception. They do not inherit statics from each other.</div><br />
+  <div><strong>Interview Response:</strong> Normally, static and non-static methods are inherited when one class extends another. But built-in classes are an exception, and they do not inherit statics from each other.</div><br />
   <div><strong>Example:</strong> Both Array and Date inherit from Object, so their instances have methods from Object.prototype. But Array.[[Prototype]] does not reference Object, so there’s no, for instance, Array.keys() (or Date.keys()) static method.
   </div>
   </div>

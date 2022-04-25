@@ -21,7 +21,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Façade design pattern creates an interface that protects clients from complex functionality in one or more subsystems. It's a simple pattern that may appear insignificant, but it's powerful and advantageous. It is frequently found in systems based on a multi-layer architecture.<br/>
+      <strong>Interview Response:</strong> The Façade design pattern creates an interface that protects clients from complex functionality in one or more sub-systems. It's a simple pattern that may appear insignificant, but it's powerful and advantageous. It frequently gets found in systems based on a multi-layer architecture.<br/>
     </div>
     <div>
 </div><br />
@@ -133,7 +133,7 @@ Order number 2: Molten Lava Cake will be served in 34 minutes.
 **Façade** -- Example code: _Mortgage_
 
 - knows which sub-systems are responsible for a request
-- Client requests are routed to the appropriate subsystem objects.
+- Client requests get routed to the appropriate sub-system objects.
 
 **Sub Systems** -- Example code: _Bank, Credit, Background_
 
@@ -208,7 +208,7 @@ Joan Templeton has been approved for a $100,000 mortgage
 
 ---
 
-### Which pattern category does the Facade pattern fall under?
+### The Facade pattern belongs to which pattern family?
 
 <details>
   <summary>
@@ -231,7 +231,7 @@ Joan Templeton has been approved for a $100,000 mortgage
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The facade pattern makes it easier for a client to interact with a system. As a result, it can be used when an application's underlying code is large and complex and the client does not need to see it.<br/><br/>It can also be used to communicate with methods in a library while without understanding what is happening behind the scenes. JavaScript libraries, such as jQuery, are an example.
+      <strong>Interview Response:</strong> The facade pattern makes it easier for a client to interact with a system. As a result, it gets used when an application's underlying code is large and complex, and the client does not need to see it.<br/><br/>It gets used in communicating with methods in a library without understanding what is happening behind the scenes. JavaScript libraries, such as jQuery, are an example.
     </div>
   </div>
 </details>
@@ -285,7 +285,7 @@ Joan Templeton has been approved for a $100,000 mortgage
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> A facade can be a god object that is tightly linked to all classes in an app.
+      <strong>Interview Response:</strong> A façade can be a god object tightly linked to all classes in an app.
     </div>
 
 <br />

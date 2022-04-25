@@ -13,12 +13,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Explain the function and syntax of the File Object/Constructor.
+### Can you explain the function and syntax of the File Object/Constructor?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A File object inherits from Blob and is extended with filesystem-related capabilities. A File object is a specific kind of a Blob and can be used in any context that a Blob can. In particular, FileReader, URL.createObjectURL(), createImageBitmap(), and XMLHttpRequest.send() which accepts both Blobs and Files. The File() constructor creates a new File object instance. The File constructor has three arguments including the fileParts (bits), filename, and options optional parameters. The fileParts can include an Array of ArrayBuffer, ArrayBufferView, Blob, USVString objects, or a mix of any of such objects, that will be put inside the File. USVString objects are encoded as UTF-8. The filename is a USVString filename, and the options optional parameter is lastModified which is the timestamp of the last modification.
+  <div><strong>Interview Response:</strong> A File object inherits from Blob and gets extended with filesystem-related capabilities. A File object is a specific kind of a Blob and can be used in any context that a Blob can. In particular, FileReader, URL.createObjectURL(), createImageBitmap(), and XMLHttpRequest.send() which accepts both Blobs and Files. The File() constructor creates a new File object instance. The File constructor has three arguments: fileParts(bits), filename, and optional parameters. The fileParts can include an Array of ArrayBuffer, ArrayBufferView, Blob, USVString objects, or a mix of any of such objects put inside the File. USVString objects get encoded as UTF-8. The filename is a USVString filename, and the optional options parameter is lastModified, which is the timestamp of the last modification.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -43,7 +43,7 @@ var file = new File(['foo'], 'foo.txt', {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The FileReader object lets web applications asynchronously read the contents of files (or raw data buffers) stored on the user's computer, using File or Blob objects to specify the file or data to read. File objects may be obtained from a FileList object returned as a result of a user selecting files using the &#8249;input&#8250; element, from a drag and drop operation's DataTransfer object, or from the mozGetAsFile() API on an HTMLCanvasElement. FileReader can only access the contents of files that the user has explicitly selected, either using an HTML &#8249;input type="file"&#8250; element or by drag and drop. It cannot be used to read a file by pathname from the user's file system.
+  <div><strong>Interview Response:</strong> The FileReader object allows web applications to asynchronously read the contents of files (or raw data buffers) saved on the user's machine by specifying the file or data to read with File or Blob objects. File objects can get retrieved via a FileList object returned by a user choosing files using the &#8249;input&#8250; element, from the DataTransfer object of a drag and drop operations, or through the mozGetAsFile() API on an HTMLCanvasElement. FileReader can only read the contents of files that the user has expressly selected, either through an HTML &#8249;input type="file"&#8250; element or by drag and drop. It cannot get used to reading a file by pathname from the user's file system.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

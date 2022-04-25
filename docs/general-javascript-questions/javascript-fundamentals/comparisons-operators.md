@@ -1,28 +1,23 @@
 ---
 title: Comparisons Operators
 description: Learn how to compare values in JavaScript.
-sidebar_position: 9
+sidebar_position: 11
 sidebar_label: Comparisons Operators
 ---
 
 **JavaScript Fundamentals: Comparison Operators**
 
-<head>
-  <title>Comparison Operators - Frontend Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
-
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
-### Do all comparison operator return a Boolean value?
+### Do all comparison operators return a Boolean value?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> All JavaScript comparisons return a Boolean value of true or false.</div><br />
-  <div><strong>Technical Response:</strong>  Yes, all comparisons return a Boolean value of either a true or false value.<br /> <br />
+  <div><strong>Interview Response:</strong> All JavaScript comparisons return a true or false Boolean value.</div><br />
+  <div><strong>Technical Response:</strong> Yes, every comparison yields a true or false Boolean value.<br /> <br />
 - true – means “yes”, “correct” or “the truth”.<br />
 - false – means “no”, “wrong” or “not the truth”.
   </div><br />
@@ -47,7 +42,7 @@ alert(2 != 1); // true (correct)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> JavaScript uses a “lexicographical” order. Strings are compared letter-by-letter based on their Unicode value.</div><br />
+  <div><strong>Interview Response:</strong> JavaScript uses “lexicographical” order. Strings get compared letter-by-letter based on their Unicode value.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -101,12 +96,12 @@ alert(false == 0); // true
 
 ---
 
-### Is it possible that at the same time, two values are equal, if one of them is true as a Boolean and the other one is false as a Boolean?
+### Is it possible that two values are equal at the same time if one is true as a Boolean and the other one is false as a Boolean?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> When there is an explicit conversion to a Boolean on values that are both a string and a number such as number 0 and string “0”. The return value for the string will be true and for the number it will be false. When we attempt to compare the two using the equality operator the return value will be true, but with the strict equality operator they will be false.</div><br />
+  <div><strong>Interview Response:</strong> When there is an explicit conversion to a Boolean on values. A string and a number, such as a number 0 and string “0”. The return value for the string returns true, and it returns false for the number. When we attempt to compare the two using the equality operator, the return value returns true, but it is false with the strict equality operator.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -129,13 +124,13 @@ alert(a === b); // false!, strict equality operator
 
 ---
 
-### What is the difference between a regular equality check and strict equality?
+### What is the difference between a regular and strict equality check?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The main difference is that strict equality does a value type check without any conversion.</div><br />
-  <div><strong>Technical Response:</strong> The regular equality check loosely compares values with type conversion. Where the strict-equality check compares the value and the data type without type conversion.
+  <div><strong>Interview Response:</strong> The primary difference is that strict equality does a value type check without any conversion.</div><br />
+  <div><strong>Technical Response:</strong> The regular equality check loosely compares values with type conversion. In contrast, the strict-equality check compares the value and the data type without converting the types.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -162,7 +157,7 @@ alert(0 === false); // false, because the types are different
 
 ---
 
-### What value is returned when null and undefined are compared using the strict equality operator?
+### What value returns when null and undefined get compared using the strict equality operator?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -188,12 +183,12 @@ alert(null == undefined); // true
 
 ---
 
-### Is it a good or bad idea to compare undefined to other values?
+### Is comparing undefined to other values a good or bad idea?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> It is not recommended that you compare undefined to other values.</div><br />
+  <div><strong>Interview Response:</strong> Bad Idea, You should never compare undefined to other values.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -216,11 +211,11 @@ alert(undefined == 0); // false (3)
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> We should avoid using undefined or null in anything less than strict comparisons and never use comparisons with an undefined or null value.</div><br />
-  <div><strong>Technical Response:</strong> There are two ways to avoid problems with undefined and null values.<br /><br />
+  <div><strong>Technical Response:</strong> There are two approaches to dealing with undefined and null values.<br /><br />
     <ol>
-      <li>Treat any comparison with undefined/null except the strict equality === with exceptional care.
+      <li>Except for strict equality ===, treat any comparison with undefined/null with extreme caution.
       </li>
-      <li>Do not use comparisons with a variable that may be null/undefined, unless you’re sure of what you’re doing. If a variable can have these values, check for them separately.
+      <li>If you're not sure what you're doing, don't use comparisons >= and >= with a variable that might be null/undefined. Check for these values separately if a variable may have them.
       </li>
       </ol>
   </div>
@@ -234,7 +229,7 @@ alert(undefined == 0); // false (3)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The “if” statement evaluates a condition and, if the result is true, executes a block of code.</div><br />
+  <div><strong>Interview Response:</strong> The “if” statement evaluates a condition and executes a code block if the result is true.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>

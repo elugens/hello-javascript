@@ -21,7 +21,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> Adapters are JS design patterns that allow objects or classes with incompatible interfaces to work together. Despite incompatible interfaces, interfaces from different classes or objects are matched to work together. The Wrapper pattern is another name for it.<br/>
+      <strong>Interview Response:</strong> Adapters are JS design patterns that allow objects or classes with incompatible interfaces to work together. Interfaces from different classes or objects get matched to work together despite incompatible interfaces. The Wrapper pattern is another name for it.<br/>
     </div><br />
   <div><strong className="codeExample">Diagram:</strong><br /><br />
 
@@ -191,7 +191,7 @@ New cost: $39.50
 
 ---
 
-### What is the most distinguishing feature of the Adapter Pattern?
+### What is the Adapter Pattern's most noticeable feature?
 
 <details>
   <summary>
@@ -207,7 +207,7 @@ New cost: $39.50
 
 ---
 
-### What are the Benefits and Drawbacks of the Adapter Pattern?
+### What Pros and Cons can you think of regarding the Adapter Pattern?
 
 <details>
   <summary>
@@ -222,8 +222,8 @@ New cost: $39.50
 
 **Benefits**
 
-- It is based on SOLID principles.
-- New adapters can be added without breaking existing code.
+- Based on SOLID principles.
+- New adapters can get added without breaking existing code.
 - The code is both reusable and adaptable.
 - Clean code — because the client/context does not use a different interface in each concrete class and can switch between additional adapters using polymorphism.
 - Single Responsibility Principle - The principle of single responsibility. You can separate the interface or data conversion code from the main business logic of the program.
@@ -253,7 +253,7 @@ New cost: $39.50
     <div></div>
 
 - There is a class whose interfaces do not match the one you need.
-- There are several subclasses but it’s impractical to adapt their interface by subclassing every single one.
+- There are several subclasses, but it’s impractical to adapt their interface by sub-classing every one.
 
 <br />
   </div>

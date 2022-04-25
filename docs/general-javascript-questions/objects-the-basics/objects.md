@@ -13,26 +13,26 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### What are the seven (7) primitive data types in JavaScript?
+### What are the seven (7) primitive JavaScript data types?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> String, symbol, bigint, Boolean, undefined, number, and null data types.</div><br />
-  <div><strong>Technical Response:</strong> There are 7 primitive data types, including string, number, bigint, Boolean, undefined, symbol, and null data types. A primitive value is usually represented directly at the lowest level of the language implementation.<br /><br />
+  <div><strong>Interview Response:</strong> String, Symbol, BigInt, Boolean, undefined, number, and null data types.</div><br />
+  <div><strong>Technical Response:</strong> There are seven primitive data types: text, integer, BigInt, Boolean, undefined, Symbol, and null. A primitive value gets directly represented at the language implementation's lowest level most of the time.<br /><br />
   </div>
   </div>
 </details>
 
 ---
 
-### Are JavaScript primitive types immutable or mutable?
+### Are JavaScript primitive immutable or mutable?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> All primitives are immutable, meaning that they cannot be altered.</div><br />
-  <div><strong>Technical Response:</strong> All primitives are immutable, i.e., they cannot be altered. It is important not to confuse a primitive itself with a variable assigned a primitive value. The variable may be reassigned to a new value, but the existing value cannot be changed in the ways that objects, arrays, and functions can be altered. A primitive can be replaced, but it cannot be directly altered.<br />
+  <div><strong>Interview Response:</strong> All primitives are immutable and cannot be changed.</div><br />
+  <div><strong>Technical Response:</strong> All primitives are unchanging and unchangeable. It is crucial to distinguish between a primitive and a variable with a primitive value. The variable can assign a new value, but it cannot get modified like objects, arrays, and functions can. A primitive can get swapped, but it cannot get directly altered.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -61,12 +61,12 @@ bar = bar.toUpperCase(); // BAZ
 
 ---
 
-### What is the purpose of an Object in JavaScript?
+### What is the purpose of an object in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Objects are used to store keyed collections of various data and more complex entities than primitive values.
+  <div><strong>Interview Response:</strong> Objects get used to store keyed collections of various data and more complex entities.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -98,7 +98,7 @@ In JavaScript, objects penetrate almost every aspect of the language.
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> You can use an object constructor or an object literal.</div><br />
-  <div><strong>Technical Response:</strong> An empty object (“empty cabinet”) can be created using one of two syntaxes. You can use an object constructor or an object literal. The Object constructor is called with the new keyword. We should not confuse this with native Objects that should be called without the new keyword.<br />
+  <div><strong>Technical Response:</strong> An empty object ("empty cabinet") can get created using one of two syntaxes. You can use an object constructor or an object literal. The Object constructor gets called with the new keyword, and we should not confuse this with native Objects that should get called without the new keyword.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -115,12 +115,12 @@ let user = {}; // "object literal" syntax
 
 ---
 
-### What is the delimiter that separates a key from the value in an Object?
+### What delimiter separates a key from the value in an Object?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The key value pair is separated by a colon.
+  <div><strong>Interview Response:</strong> The key-value pair get separated by a colon.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -145,7 +145,7 @@ let user = {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes since all values in JavaScript are dynamically typed and observed while the script executes.
+  <div><strong>Interview Response:</strong> Yes, since all values in JavaScript are dynamically typed and observed while the script executes.
 </div>
   </div>
 </details>
@@ -157,8 +157,8 @@ let user = {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The dot notation and bracket notation both are used to access the object property values in JavaScript.</div><br />
-  <div><strong>Technical Response:</strong> The dot notation and bracket notation both are used to access the object properties in JavaScript. The dot notation is used mostly as it is easier to read and comprehend and less verbose. The main difference between dot notation and bracket notation is that the bracket notation allows us to access object properties using variables.<br />
+  <div><strong>Interview Response:</strong> The dot notation and bracket notation get used to accessing the object property values in JavaScript.</div><br />
+  <div><strong>Technical Response:</strong> In JavaScript, the dot notation and bracket notation get used in accessing object attributes. The dot notation commonly gets used because it is easier to read and grasp and is less verbose. The primary distinction between dot notation and bracket notation is that bracket notation allows us to access object characteristics through variables.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -187,13 +187,13 @@ console.log(sound);
 
 ---
 
-### Can you use multi-word property name in JavaScript?
+### Can you use multi-word property names in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Technically, JavaScript allows multi-word properties in Objects, but it is not recommended because it can lead to errors. We should use camel case as recommended by most style guides.</div><br />
-  <div><strong>Technical Response:</strong> Technically, JavaScript allows multi-word properties in Objects, but it is not recommended because it can lead to errors when you try to access it later in your code. The issue becomes apparent when you try to access the property using dot notation. When naming functions, objects, properties, and variables. You should always use the camelCase name style in JavaScript.<br />
+  <div><strong>Interview Response:</strong> Technically, JavaScript allows multi-word properties in Objects, but this approach does not get recommended because it can lead to errors. We should use camel-case as recommended by most style guides.</div><br />
+  <div><strong>Technical Response:</strong> Technically, JavaScript enables multi-word properties in Objects, but it is not encouraged since it might create issues later in your code when you try to access it. The problem becomes evident when you try to access the property using dot notation. When naming functions, objects, attributes, and variables in JavaScript, you should always use the camelCase name style.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -216,12 +216,12 @@ console.log(user.likes birds); // returns a SyntaxError
 
 ---
 
-### Is JavaScript capable of handling computed properties using object literal notation?
+### Is JavaScript able to implement computed properties using object-literal notation?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, you can use object literal notation to assign the expression as a property on the object without having to create it first.
+  <div><strong>Interview Response:</strong> Yes, you may assign the expression as a property to an object without first creating it with object-literal notation.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -259,7 +259,7 @@ console.log(bag.appleComputers); // logs 5
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> No, there are no known restrictions on Object property names, but we should avoid reserved words even though we can technically use them.</div><br />
-  <div><strong>Technical Response:</strong> Technically, there are no known restrictions on Object property names. Although reserve keywords are not allowed in most components of JavaScript. It is possible to use reserved keywords as property names without error, but it is not recommended. They can be any strings or symbols (a special type for identifiers) that you choose.<br />
+  <div><strong>Technical Response:</strong> There are no known constraints on naming Object properties. However, reserve keywords do not get permitted in most JavaScript components. It is possible to utilize reserved keywords as property names without making a mistake, although it is not encouraged. They can be strings or symbols (a specific form of identifier).<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -282,12 +282,12 @@ alert(obj.for + obj.let + obj.return); // 6
 
 ---
 
-### What is the minor gotcha with the special property name `__proto__`?
+### What is the minor snag with the special property name `__proto__`?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The special property name `__proto__` cannot be set to non-object value such as a primitive value.
+  <div><strong>Interview Response:</strong> The unique property name `__proto__` cannot get set to a non-object value such as a primitive value. 
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -305,15 +305,15 @@ alert(obj.__proto__); // [object Object] - the value is an object, didn't work a
 
 ---
 
-### Why does the `in` operator exist? Isn’t it enough to compare against undefined?
+### Why does the "in" operator exist? Isn't it enough to compare against undefined?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The “in” operator is used to check if a property exists or loop over object properties. Using it to compare against undefined can have less than truthy results.</div><br />
-  <div><strong>Note:</strong> We should not use the “in” operator to loop over arrays, it not recommended.
+  <div><strong>Note:</strong> We should not use the "in" operator to loop over arrays; not a recommended approach.
   </div><br />
-  <div><strong>Technical Answer:</strong> Well, most of the time the comparison with undefined works fine. But there is a special case when it fails, but "in" works correctly. We can use the “in” operator to see if a property exists.
+  <div><strong>Technical Answer:</strong>The comparison with undefined, on the other hand, works most of the time. However, there is one exception where it fails yet "in" works ideally. We may use the "in" operator to check if a property exists.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -337,12 +337,12 @@ console.log('test' in obj); // true, the property does exist!
 
 ---
 
-### Are objects ordered? In other words, if we loop over an object, do we get all properties in the same order they were added? Can we rely on this?
+### Are object properties in order? In other words, do we get all attributes in the same order they get introduced if we loop over an object? Can we put our faith in this?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The short answer is that they are ordered in a special fashion, integer properties are sorted, and others appear in creation order. This is not a reliable approach we are seeking a specific numbered order.
+  <div><strong>Interview Response:</strong> The short answer is that they get ordered in a particular way, integer properties get sorted, and others appear in creation order. This behavior is not a reliable approach, and we are seeking a specific numbered order.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -380,12 +380,12 @@ for (let prop in user) {
 
 ---
 
-### Explain, what is a JavaScript integer property?
+### Explain what an integer property is in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The “integer property” term here means a string that can be converted to-and-from an integer without a change.
+  <div><strong>Interview Response:</strong> The "integer property" term here means a string that converts to and from an integer without a change.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

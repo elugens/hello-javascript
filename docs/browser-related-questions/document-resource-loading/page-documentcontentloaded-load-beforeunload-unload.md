@@ -13,12 +13,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### What are the three important events in the lifecycle of an HTML page?
+### What are the three crucial events in the lifecycle of an HTML page?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The lifecycle of an HTML page has three important events including the DOMContentLoaded, load, and beforeunload/unload. DOMContentLoaded occurs when the browser fully loaded HTML, and the DOM tree is built, but external resources like pictures &#8249;img&#8250; and stylesheets may not yet have loaded. The load is not only HTML is loaded, but also all the external resources: images, styles etc. The beforeunload/unload state happens when the user is leaving the page.
+  <div><strong>Interview Response:</strong> The lifecycle of an HTML page has three critical events, including the DOMContentLoaded, load, and beforeunload/unload. DOMContentLoaded occurs when the browser fully loaded HTML, and the DOM tree gets built, but external resources like pictures &#8249;img&#8250; and stylesheets may not yet have loaded. The load is not only HTML is loaded but also all the external resources: images, styles, and others. The beforeunload/unload state happens when the user is leaving the page.
     </div>
   </div>
 </details>
@@ -30,7 +30,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Each of the HTML lifecycle events are useful in their own way. The DOMContentLoaded event is when the DOM is ready, so the handler can lookup DOM nodes, and initialize the interface. The load event is when external resources are loaded, so styles are applied, image sizes are known etc. The beforeunload event occurs when the user is leaving, we can check if the user saved the changes and ask them whether they really want to leave. The unload event occurs when the user has almost left, but we still can initiate some operations, such as sending out statistics.
+  <div><strong>Interview Response:</strong> Each HTML lifecycle event is helpful in its way. The DOMContentLoaded event is when the DOM is ready, so the handler can lookup DOM nodes and initialize the interface. The load event is when external resources are loaded, so styles are applied and image sizes are known. The beforeunload event occurs when the user is leaving, we can check if the user saved the changes and ask them whether they want to leave. The unload event occurs when the user has almost left, but we still can initiate some operations, such as sending out statistics.
     </div>
   </div>
 </details>
@@ -42,7 +42,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The DOMContentLoaded event happens on the document object. We must use addEventListener to catch it. There are a few peculiarities that can be noted when we try to solicit information before the page is completely loaded, like image sizes. The DOM loads first and then images and styles.
+  <div><strong>Interview Response:</strong> The DOMContentLoaded event happens on the document object, and we must use addEventListener to catch it. A few peculiarities get noted when we try to solicit information before the page is completely loaded, like image sizes, and the DOM loads first and then images and styles.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -74,7 +74,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> When the browser processes an HTML-document and comes across a &#8249;script&#8250; tag, it needs to execute before continuing building the DOM. That’s a precaution, as scripts may want to modify DOM, and even document.write into it, so DOMContentLoaded has to wait. So DOMContentLoaded happens after such scripts.
+  <div><strong>Interview Response:</strong> When the browser is processing an HTML page and encounters a &#8249;script&#8250; tag, it must execute it before continuing to create the DOM. This measure is a precaution since scripts may seek to change the DOM and even document.write into it, forcing DOMContentLoaded to wait. As a result, DOMContentLoaded occurs after such scripts.
     </div>
   </div>
 </details>
@@ -86,19 +86,19 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, there are two exceptions to the rule. Scripts with the async attribute do not block DOMContentLoaded event. Scripts that are generated dynamically with document.createElement('script') and then added to the webpage also don’t block this event.
+  <div><strong>Interview Response:</strong> Yes, there are two exceptions to the rule. Scripts with the async attribute do not block DOMContentLoaded event. Scripts get generated dynamically with `document.createElement('script')` and then added to the webpage.
     </div>
   </div>
 </details>
 
 ---
 
-### Do external style sheets influence or effect the DOM?
+### Do external style sheets influence or affect the DOM?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> External style sheets do not affect DOM, so DOMContentLoaded does not wait for them. But there is a pitfall. If we have a script after the style, then that script must wait until the stylesheet loads. The reason for this is that the script may want to get coordinates and other style-dependent properties of elements. Naturally, it must wait for styles to load. As DOMContentLoaded waits for scripts, it now waits for styles before them as well.
+  <div><strong>Interview Response:</strong> External style sheets do not affect DOM, so DOMContentLoaded does not wait for them. But there is a pitfall. If we have a script after the style, that script must wait until the stylesheet loads. This behavior happens because the script may want to get coordinates and other style-dependent properties of elements. Naturally, it must wait for styles to load. As DOMContentLoaded waits for scripts, it now waits for styles before them.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -123,19 +123,19 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Firefox, Chrome, and Opera autofill forms on DOMContentLoaded. For instance, if the page has a form with login and password, and the browser remembered the values, then on DOMContentLoaded it may try to autofill them (if approved by the user). So if DOMContentLoaded is postponed by long-loading scripts, then autofill also awaits until the DOMContentLoaded event.
+  <div><strong>Interview Response:</strong> Firefox, Chrome, and Opera autofill forms on DOMContentLoaded. For instance, if the page has a form with login and password, and the browser remembered the values, then on DOMContentLoaded it may try to autofill them (if approved by the user). So if long-loading scripts postpone DOMContentLoaded, then autofill also awaits until the DOMContentLoaded event.
     </div>
   </div>
 </details>
 
 ---
 
-### Explain the how the load event behaves via the onload property.
+### Can you explain how the load event behaves via the onload property?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The load event on the window object triggers when the whole page is loaded including styles, images, and other resources. This event is available via the onload property.
+  <div><strong>Interview Response:</strong> The load event on the window object triggers when the whole page is loaded, including styles, images, and other resources. This event is available via the onload property.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -166,19 +166,19 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> When a visitor leaves the page, the unload event triggers on window.
+  <div><strong>Interview Response:</strong> When a visitor leaves the page, the unload event triggers on the window.
     </div>
   </div>
 </details>
 
 ---
 
-### Is there reason that we should avoid using unload and beforeunload in conjunction with Navigator.sendBeacon method?
+### Is there a reason we should avoid using unload and beforeunload in conjunction with Navigator.sendBeacon method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In many situations, especially on mobile devices, the browser will not fire the unload, beforeunload, or pagehide events. For example, these events will not fire in the following situations. The user loads the page and interacts with it. When they are finished, they switch to a different app, instead of closing the tab. Later, they close the browser app using the phone's app manager. Additionally, the unload event is incompatible with the back/forward cache (bfcache) implemented in modern browsers. It is not recommended to use the unload event in conjunction with the sendBeacon method.
+  <div><strong>Interview Response:</strong> In many situations, especially on mobile devices, the browser does not fire the unload, beforeunload, or pagehide events. For example, these events do not fire in the following situations. The user loads the page and interacts with it. When they get finished, they switch to a different app instead of closing the tab. Later, they close the browser app using the phone's app manager. Additionally, the unload event is incompatible with modern browsers' back/forward cache (bfcache). Using the unload event in conjunction with the sendBeacon method is not recommended.
     </div>
   </div>
 </details>
@@ -190,19 +190,19 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Naturally, it never runs, because the page has already loaded.
+  <div><strong>Interview Response:</strong> Naturally, it never runs because the page has already loaded.
     </div>
   </div>
 </details>
 
 ---
 
-### Is there a way to find the loading state of a document?
+### Is there a way to find the document loading state?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, we can check the loading state by invoking the document.readyState property. The Document.readyState property describes the loading state of the document. When the value of this property changes, a readystatechange event fires on the document object.
+  <div><strong>Interview Response:</strong> Yes, we can check the loading state by invoking the `document.readyState` property. The `document.readyState` property describes the loading state of the document. When the value of this property changes, a readystatechange event fires on the document object.
     </div><br />
     <strong>Syntax: </strong> let string = document.readyState;<br /><br />
   </div>
@@ -215,7 +215,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The readyState can be one of three possible values including the loading, interactive, and complete states. The “loading state” is relative to the page still loading. The “interactive state” is when the document has finished loading and the document has been parsed but sub-resources such as scripts, images, stylesheets, and frames are still loading. The “complete state” happens when the document and all sub-resources have finished loading. The state indicates that the load event is about to fire.
+  <div><strong>Interview Response:</strong> The readyState can be one of three possible values, including the loading, interactive, and complete states. The “loading state” is relative to the page still loading. The “interactive state” is when the document has finished loading and parses, but sub-resources such as scripts, images, stylesheets, and frames are still loading. The “complete state” happens when the document and sub-resources have finished loading, and the state indicates that the load event is about to fire.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

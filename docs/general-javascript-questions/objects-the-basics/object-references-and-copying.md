@@ -12,12 +12,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### What is the difference between an object and primitive copying?
+### Explain the difference between an object copy and a primitive value copying?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Objects are stored and copied by reference while primitive values are always copied as whole values.
+  <div><strong>Interview Response:</strong> Objects are stored and copied by reference, while primitive values always get copied as whole values.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -64,7 +64,7 @@ alert(a === b); // true
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Two objects are only equal if they are the same object. This can be achieved through object referencing.
+  <div><strong>Interview Response:</strong> Two objects are only equal if they are the same object, achieved through object reference.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -99,7 +99,7 @@ alert(a == b); // false
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> It’s a bit of a process, you need to create a new object and replicate the structure of the existing one by iterating over its properties and copying them at the primitive level. We also can use Object.assign to replace for..in loop for simple cloning.
+  <div><strong>Interview Response:</strong> It's a bit of a process; you need to create a new object and replicate the structure of the existing one by iterating over its properties and copying them at the primitive level. We also can use object.assign to replace for..in loop for simple cloning.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -146,7 +146,7 @@ let clone = Object.assign({}, user);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, this happens when a property has an object as a value and that object has individual properties. The nested properties are referenced by the parent property.
+  <div><strong>Interview Response:</strong> Yes, this happens when a property has an object as a value and has individual properties. The parent property references the nested properties.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -182,7 +182,7 @@ Notably, this means that values of properties are not necessarily primitive.
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The object itself can be modified, but the declared variable cannot. The reason behind this is the variable is constant, it must always reference the same object, but properties of that object are free to change.
+  <div><strong>Interview Response:</strong> The object can be modified, but the declared variable cannot. The reason behind this is that the variable is constant, it must always reference the same object, but the properties of that object are free to change.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Since, the proto property is deprecated based the JavaScript specification. There are three modern methods that can be used in prototypal inheritance including Object.create(obj), Object.getPrototypeOf(obj), and Object.setPrototypeOf(obj, proto).<br /><br /> The Object.create(obj) method which is used to create an empty object with given proto as prototype and optional property descriptors. The Object.getPrototypeOf(obj) that returns the prototype of an object, and Object. Object.setPrototypeOf(obj, proto) which sets the prototyple of obj to proto.
+  <div><strong>Interview Response:</strong> Since, the proto property is deprecated based the JavaScript specification. There are three modern methods that can be used in prototypal inheritance including Object.create(obj), Object.getPrototypeOf(obj), and Object.setPrototypeOf(obj, proto).<br /><br /> The Object.create(obj) method is used to create an empty object with given proto as prototype and optional property descriptors. The Object.getPrototypeOf(obj) that returns the prototype of an object, and Object. Object.setPrototypeOf(obj, proto) which sets the prototyple of obj to proto.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -47,13 +47,13 @@ console.log(Object.getPrototypeOf(rabbit) === animal); // false
 
 ---
 
-### Explain, what is the function and syntax of the Object.create(obj) method in JavaScript?
+### Explain the function and syntax of the Object.create(obj) method in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The Object.create() method creates a new object, using an existing object as the prototype of the newly created object. It has two parameters including the proto and the descriptors. The proto parameter is the object which should be the prototype of the newly created object. The descriptors are defined as an object whose enumerable properties specify property descriptors to be added to the newly created object.</div><br />
-  <div><strong>Technical Response:</strong> The Object.create() method creates a new object, using an existing object as the prototype of the newly created object. It has two parameters including the proto and the descriptors (propertiesObject in the specification). The proto parameter is the object which should be the prototype of the newly created object. The descriptors (propertiesObject) are defined as, if specified and not undefined, an object whose enumerable own properties (that is, those properties defined upon itself and not enumerable properties along its prototype chain) specify property descriptors to be added to the newly created object, with the corresponding property names. These properties correspond to the second argument of Object.defineProperties(). Basically, the descriptors are like property flags.
+  <div><strong>Interview Response:</strong> The Object.create() method creates a empty object, using an existing object as the prototype of the newly created object. It has two parameters, including the proto and the descriptors. The proto parameter is the object which should be the prototype of the newly created object. The descriptors get defined as an object whose enumerable properties specify property descriptors that get added to the newly created object.</div><br />
+  <div><strong>Technical Response:</strong> The "Object.create()" function generates a new object by utilizing an existing object as the prototype. It contains two parameters: the prototype and the descriptors (propertiesObject in the specification). The proto parameter specifies the object that will serve as the prototype for the newly formed object. The descriptors (propertiesObject) are defined as an object whose enumerable own properties (those defined upon itself and not enumerable properties along its prototype chain) specify property descriptors to be added to the newly created object, along with the corresponding property names, if specified and not undefined. These are the properties defined by the second parameter to Object.defineProperties(). Descriptors function similarly to property flags.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -86,7 +86,7 @@ alert(rabbit.jumps); // true
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The Object.getPrototypeOf(obj) method returns the prototype of the specified object. If there are no inherited properties, null is returned.
+  <div><strong>Interview Response:</strong> The Object.getPrototypeOf(obj) method returns the prototype of the specified object. If there are no inherited properties, null gets returned.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -119,7 +119,7 @@ console.log(Object.getPrototypeOf(object1) === prototype1);
 <strong>Syntax: </strong> Object.setPrototypeOf(obj, proto);<br /><br />
 
 :::warning
-According the MDN, it has been advised to use Object.create(obj) instead of this method.
+According to the MDN, its advised to use Object.create(obj) instead of this method.
 :::
 
   </div>
@@ -132,12 +132,12 @@ According the MDN, it has been advised to use Object.create(obj) instead of this
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, but it is considered a bad idea. We can get/set [[Prototype]] at any time. But usually, we only set it once at the object creation time and not modify it after that time.</div><br />
-  <div><strong>Technical Response:</strong> Technically Yes, but it is considered a bad idea. We can get/set [[Prototype]] at any time. But usually, we only set it once at the object creation time and not modify it after that time. Changing a prototype “on-the-fly” with Object.setPrototypeOf or obj.__proto__= is a slow operation as it breaks internal optimizations for object property access operations. So, we should avoid it unless you know what you are doing, or JavaScript speed totally does not matter for you.
+  <div><strong>Interview Response:</strong> Yes, however it is seen as a horrible idea. We have the ability to get/set [[Prototype]] at any moment. However, it is normally only set once at the time of object creation, and the object is not modified after that.</div><br />
+  <div><strong>Technical Response:</strong> Technically, yes, but it is thought to be a horrible idea. We have the ability to get/set [[Prototype]] at any moment. However, it is normally only set once at the moment of object creation and is not changed again. Using Object to make "on-the-fly" changes to a prototype.  setPrototypeOf or obj. __proto__  = is a sluggish operation because it violates internal object property access optimizations. So, unless you know what you're doing or performance isn't important to you, we should avoid it.
   </div><br />
 
 :::warning
-According to the MDN changing the prototype after creation is a slow operation and can cause an effect on performance.
+According to the MDN, changing the prototype after creation is a slow operation and can affect performance.
 :::
 
   </div>
@@ -150,7 +150,7 @@ According to the MDN changing the prototype after creation is a slow operation a
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> According to the MDN, it was replaced with getPrototypeOf and setPrototypeOf, because of the performance issues related to its use.
+  <div><strong>Interview Response:</strong> According to the MDN, it gets replaced with getPrototypeOf and setPrototypeOf, because of the performance issues related to its use.
 </div><br />
 
 :::note
@@ -162,12 +162,12 @@ If you care about performance, you should avoid setting the [[Prototype]] of an 
 
 ---
 
-### Do you have a preference between class inheritance and prototypal inheritance in JavaScript? If so, why?
+### What do you prefer, class inheritance and prototypal inheritance in JavaScript? If so, why?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> When using class inheritance, instances inherit from classes. This creates hierarchical class taxonomies. On the other hand, with prototypal inheritance, instances inherit from other objects, and they can be created from multiple objects. I prefer prototypal inheritance because it is easier and much more flexible.
+  <div><strong>Interview Response:</strong> Instances inherit from classes when class inheritance gets used. Hierarchical class taxonomies get created as a result of this. In contrast, instances inherit from other objects through prototypal inheritance, and they can get formed from numerous objects. Because it is more straightforward and more versatile, I favor prototypal inheritance.
 </div>
   </div>
 </details>
@@ -179,11 +179,11 @@ If you care about performance, you should avoid setting the [[Prototype]] of an 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The answer is never, or almost never. Certainly, never more than one level. Multi-level class hierarchies are an anti-pattern. It can lead to problems like method collision, which is not good.
+  <div><strong>Interview Response:</strong> The answer is never or rarely. Indeed, never more than one level. Multi-level class hierarchies are an anti-pattern, and it can lead to problems like method collision, which is not good.
 </div><br />
 
 :::note
-I have been issuing this challenge for years, and the only answers I have ever heard fall into one of several common misconceptions. More frequently, the challenge is met with silence.
+I've been posing this issue for years, and the only responses I've ever received fall into one of three prevalent assumptions. The challenge typically gets received with silence.
 :::
 
   </div>
@@ -196,8 +196,8 @@ I have been issuing this challenge for years, and the only answers I have ever h
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Classes inherit from classes created in sub-classes using a hierarchical class taxonomy. Prototypal inheritance is based on a prototype working as an object instance where objects inherit directly from other objects. The difference is that class taxonomy is not a derivative of prototypal inheritance.</div><br />
-  <div><strong>Technical Response:</strong><br /><br /> <strong>Class Inheritance:</strong> Instances inherit from classes (like a blueprint or a description of the class) and create sub-class relationships: hierarchical class taxonomies. Instances are typically instantiated via constructor functions with the `new` keyword. Class inheritance may or may not use the `class` keyword from ES6.<br /><br /> <strong>Prototypal Inheritance:</strong> Instances inherit directly from other objects. Instances are typically instantiated via factory functions or `Object.create()`. Instances may be composed from many different objects, allowing for easy selective inheritance.
+  <div><strong>Interview Response:</strong> Classes inherit from classes created in sub-classes using a hierarchical class taxonomy. Prototypal inheritance equates to a prototype functioning as an object instance, and objects inherit directly from each other. The difference is that class taxonomy is not a derivative of prototypal inheritance.</div><br />
+  <div><strong>Technical Response:</strong><br /><br /> <strong>Class Inheritance:</strong> Instances inherit from classes (similar to a blueprint or a class description) and form sub-class relationships: hierarchical class taxonomies. Instances usually get created utilizing constructor functions that use the 'new' keyword. The ES6 'class' keyword may or may not be used for class inheritance.<br /><br /> <strong>Prototypal Inheritance:</strong> Instances get directly inherited from other objects. Instances often get created using factory methods or the 'Object.create()' method. Instances may be built up from various objects, allowing for simple selective inheritance.
   </div>
   </div>
 </details>

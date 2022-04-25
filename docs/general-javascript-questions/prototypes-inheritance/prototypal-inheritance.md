@@ -18,12 +18,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Prototypes are the mechanism by which JavaScript objects inherit features from one another. JavaScript is often described as a prototype-based language that is used to provide inheritance, objects can have a prototype object, which acts as a template object that it inherits methods and properties from.</div><br />
-  <div><strong>Technical Response:</strong> In JavaScript, objects have a special hidden property [[Prototype]] (as named in the specification), that is either null or references another object. That object is called “a prototype”. Prototypes are the mechanism by which JavaScript objects inherit features from one another. JavaScript is often described as a prototype-based language — to provide inheritance, objects can have a prototype object, which acts as a template object that it inherits methods and properties from.
+  <div><strong>Interview Response:</strong> JavaScript objects inherit features from one another through prototypes. JavaScript sometimes gets defined as a prototype-based language that gets used to offer inheritance; objects can have a prototype object that serves as a template object from which it inherits methods and attributes.</div><br />
+  <div><strong>Technical Response:</strong> Objects in JavaScript feature a special hidden property called [[Prototype]] (as defined in the standard), which is either null or refers to another object. This item gets referred to as a prototype. JavaScript objects inherit features from one another through the use of prototypes. Objects can have a prototype object, which acts as a template object from which it inherits methods and properties to provide inheritance. JavaScript commonly gets described as a prototype-based language.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-<strong>Overview:</strong> Historical example using **proto** which is now deprecated (no longer supported)<br /><br />
+<strong>Overview:</strong> Historical example using <strong>proto</strong>, which is now deprecated (no longer supported)<br /><br />
 
   <div></div>
 
@@ -52,12 +52,12 @@ You should be familiar with the `__proto__` because you may see it in older code
 
 ---
 
-### What is a prototype in relation to objects in JavaScript?
+### What exactly is a prototype in JavaScript when it comes to objects?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A prototype is an object. When you declare a function, a prototype is created and linked to that function. In addition, the prototype object forms a link with its function creating a circular relationship. This is true for any function. In JavaScript, we can create objects several different ways. One of the ways is the new keyword. When we declare a function with the intent of using new (a constructor function), we capitalize the first letter of the function name.
+  <div><strong>Interview Response:</strong> A prototype is a fixed entity called an object. When you declare a function, it generates a prototype related to that function. Furthermore, the prototype object establishes a link to its function, resulting in a circular relationship. This behavior applies to any function. Objects get created in various ways in JavaScript, and the new keyword is one method. We uppercase the initial letter of the function name when we declare if we intend on utilizing the "new" keyword. (a constructor function).
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -88,7 +88,7 @@ console.log(user instanceof User); // true
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The answer is simple: "this" is not affected by prototypes at all. No matter where the method is found in an object or its prototype. In a method call, "this" is always the object before the dot.
+  <div><strong>Interview Response:</strong> The answer is simple: prototypes do not affect "this", regardless of the method the location in an object or prototype. This structure is always the object before the dot in a method call.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -128,12 +128,12 @@ console.log(animal.isSleeping); // undefined (no such property)
 
 ---
 
-### What behavior does the for-in loop use when it iterates over inherited properties?
+### How does the for-in loop behave when iterating through inherited properties?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> When you loop over properties of an object that inherits from another object, for...in statement goes up in the prototype chain and enumerates over the inherited properties as well.
+  <div><strong>Interview Response:</strong> When you loop through the properties of an object that inherits from another, the for...in statement moves up the prototype chain and enumerates the inherited properties.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

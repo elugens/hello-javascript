@@ -1,7 +1,7 @@
 ---
 title: JavaScript Functions
 description: A function is a block of code designed to perform a particular task.
-sidebar_position: 15
+sidebar_position: 17
 sidebar_label: Functions
 ---
 
@@ -109,7 +109,7 @@ square(10); // 100
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A function declaration starts first with declaring the function keyword, then the function name, followed by a list of parameters between paratheses (comma-separated, or no parameters are okay) and finally the function body (code) inside of the curly brackets.
+  <div><strong>Interview Response:</strong> A function declaration starts first with declaring the function keyword, then the function name, followed by a list of parameters between parentheses (comma-separated, or no parameters are okay), and finally the function body (code) inside of the curly brackets.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -127,13 +127,13 @@ function name(parameters) {
 
 ---
 
-### What is one of the main purposes of JavaScript functions?
+### What is one of the primary purposes of JavaScript functions?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The main purpose of JS functions is to avoid code duplication.</div><br />
-  <div><strong>Technical Response:</strong> The main purpose of functions is to avoid code duplication. If we ever need to change the message or the way it is shown, it is enough to modify the code in one place based on the function which outputs it.<br />
+  <div><strong>Interview Response:</strong> The primary purpose of JS functions is to avoid code duplication.</div><br />
+  <div><strong>Technical Response:</strong> The primary purpose of functions is to avoid code duplication. If we ever need to change the message or the way it gets shown, it is enough to modify the code in one place based on the function which outputs it.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -159,7 +159,7 @@ showMessage('Jane'); // Jane
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, they are only visible within the scope of the function and cannot be accessed from outside it.
+  <div><strong>Interview Response:</strong> Yes, they are only visible within the function's scope and cannot get accessed from outside it.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -188,8 +188,8 @@ alert(message); // <-- Error! The variable is local to the function.
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Functions can access top level variables, variables inside of the function, and variables inside of a function that they are being called.</div><br />
-  <div><strong>Technical Response:</strong> Global or variables outside of are accessible by functions because it is within its lexical scope. The function can also modify it as well. Functions also can access variables inside a function or the scope they are called.<br />
+  <div><strong>Interview Response:</strong> Functions can access top-level variables, variables inside of the function, and variables inside of a function that they are getting called.</div><br />
+  <div><strong>Technical Response:</strong> Global or variables outside of are accessible by functions because it is within their lexical scope, and the function can also modify it. Functions also can access variables inside a function or the scope they are getting called.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -236,19 +236,19 @@ alert(userName); // Bob, the value was modified by the function
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> It is a good practice to minimize the use of global variables. Modern code has few or no global variables.</div><br />
-  <div><strong>Technical Response:</strong> It is a good practice to minimize the use of global variables. Modern code has few or no global variables. Most variables reside in their functions. Sometimes though, they can be useful to store project-level data.<br /><br />
+  <div><strong>Technical Response:</strong> It is a good practice to minimize the use of global variables. Modern code has few or no global variables, and most variables reside in their functions. Sometimes though, they can be helpful to store project-level data.<br /><br />
   </div>
   </div>
 </details>
 
 ---
 
-### Explain, how a parameter is used in functions.
+### Explain how you use parameters in functions?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Parameters (function arguments) are used to pass arbitrary data to functions.
+  <div><strong>Interview Response:</strong> We use parameters (function arguments) to pass arbitrary data to functions.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -270,12 +270,12 @@ showMessage('Ann', "What's up?"); // Ann: What's up? (**)
 
 ---
 
-### What happens when a function parameter is not provided?
+### What happens when a function parameter does not get provided?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> If a parameter (function argument) and it has no default. The value becomes undefined.
+  <div><strong>Interview Response:</strong> If a parameter (function argument) has no default, the value becomes undefined.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -301,7 +301,7 @@ showMessage('Ann'); // "Ann: undefined"
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, a default parameter is evaluated every time the function is called without the respective parameter.
+  <div><strong>Interview Response:</strong> In JavaScript, a default parameter evaluates every time the function gets called without the respective parameter.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -325,8 +325,8 @@ function showMessage(from, text = anotherFunction()) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We can use a conditional statement using the strict equality or logical OR to check for the omitted parameter.</div><br />
-  <div><strong>Technical Response:</strong> Yes, you can run a conditional statement or check in the function body. The most common way to do this is a conditional if statement or by simply using the logical || OR operator. Modern JavaScript engines support the nullish coalescing operator ??, it’s better when falsie values, such as 0, are considered regular.<br /><br />
+  <div><strong>Interview Response:</strong> We can use a conditional statement with strict equality or logical OR to check for the omitted parameter.</div><br />
+  <div><strong>Technical Response:</strong> Yes, you can run a conditional statement or check the function body. The most common way is to use a conditional if statement or the logical || OR operator. Do modern JavaScript engines support the nullish coalescing operator ??. It’s better when falsie values, such as 0 are considered regular.<br /><br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -363,8 +363,8 @@ function showMessage(text) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We can use a conditional statement to handle multiple return statements, but this is not the recommended approach.</div><br />
-  <div><strong>Technical Response:</strong> Yes, you can implement multiple occurrences of the return statement in a single function. There are better ways to implement code without multiple return statements, because it can reduce application performance.<br />
+  <div><strong>Interview Response:</strong> We can use a conditional statement to handle multiple return statements (Not recommended in Modern Application development.).</div><br />
+  <div><strong>Technical Response:</strong> Yes, you can implement multiple occurrences of the return statement in a single function. There are better ways to implement code without multiple return statements because it can reduce application performance.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -399,7 +399,7 @@ if (checkAge(age)) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, we can use a return statement without a value. It is called an empty return statement. An empty return statement will exit a program and return undefined in the place it is called.
+  <div><strong>Interview Response:</strong> Yes, we can use a return statement without a value. It is called an empty return statement, and an empty return statement exits a program and returns undefined in the place it gets called.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -455,14 +455,13 @@ alert(doNothing() === undefined); // true
 
 ---
 
-### Caution should be used when using the return statement. What is the most important thing to remember when using a return statement?
+### You should use caution when using the return statement. What is the most important thing to remember when using a return statement?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The most important thing to remember when using the return statement is add a semi-colon and never add a newline between return and the value.</div><br />
-  <div><strong>Technical Response:</strong> The most important thing to remember when using the return statement is add a semi-colon and never add a newline between return and the value.<br /><br />
-  </div><br />
+  <div><strong>Interview Response:</strong> The most important thing to remember when using the return statement is to add a semi-colon and never add a new line between the return and the value.</div><br />
+  
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -486,10 +485,10 @@ If you want the returned expression to wrap across multiple lines, we should sta
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Functions should start with a verb as an action word as prefix. For example, a function that returns a user’s name should use “getUserName()” as the function name.</div><br />
-  <div><strong>Technical Response:</strong> It is a widespread practice to start a function with a verbal prefix which vaguely describes the action. There must be an agreement within the team on the meaning of the prefixes. For example, functions that get something usually start with get like “getUserName()”.
+  <div><strong>Interview Response:</strong> Functions should start with a verb as an action word as a prefix. For example, a function that returns a user’s name should use “getUserName()” as the function name.</div><br />
+  <div><strong>Technical Response:</strong> : It is a widespread practice to start a function with a verbal prefix that vaguely describes the action, and there must be an agreement on the meaning of the prefixes within the team. For example, functions that get something usually start with getting like “getUserName()”.
   </div><br />
-  <div> It should be brief, as accurate as possible and describe what the function does, so that someone reading the code gets an indication of what the function does.
+  <div> It should be brief, as accurate as possible, and describe what the function does so that someone reading the code indicates what the function does.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -514,7 +513,7 @@ checkPermission(..) // checks a permission, returns true/false
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A function should do exactly what is suggested by its name, no more. Two independent actions usually deserve two functions, even if they are usually called together (in that case we can make a 3rd function that calls those two).
+  <div><strong>Interview Response:</strong> A function should only do what its name implies. Even if they generally get referred to as one function, two separate actions usually warrant two functions (in that case, we can make a 3rd function that calls those two).
 </div>
   </div>
 </details>
@@ -526,7 +525,7 @@ checkPermission(..) // checks a permission, returns true/false
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, it is particularly important to make every effort to apply separate actions in each function. Sometimes following this rule may not be that easy, but it is a good thing.
+  <div><strong>Interview Response:</strong> Yes, it is imperative to make every effort to apply separate actions in each function. Sometimes, following this rule may not be that easy, but it is good.
 </div><br />
   <div><strong className="codeExample">Example 1:</strong> Show Prime Numbers using a label (No Separation)<br /><br />
 

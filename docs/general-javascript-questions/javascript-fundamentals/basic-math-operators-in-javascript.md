@@ -1,16 +1,11 @@
 ---
 title: Mathematical Operators in JavaScript
 description: How to use mathematical operators in JavaScript.
-sidebar_position: 8
+sidebar_position: 10
 sidebar_label: Basic Operators, Math
 ---
 
 **JavaScript Fundamentals: Basic Operators, Math**
-
-<head>
-  <title>Math Operators - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
@@ -21,8 +16,8 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> An operand is what operators are applied to in programming. They are left or right operands and, in some cases, can be a single argument or value.</div><br />
-  <div><strong>Technical Response:</strong> Operands are expressions or values on which an operator operates or works (often constants or variables but sub-expressions are also permitted).
+  <div><strong>Interview Response:</strong> In programming, operands get applied to operators. They can be left- or right-hand operands and a single argument or value depending on the case.</div><br />
+  <div><strong>Technical Response:</strong> Operands are expressions or values on which an operator operates or works (often constants or variables, but sub-expressions are also permitted).
   </div>
   </div>
 </details>
@@ -34,8 +29,8 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A binary operand has two arguments on the left and right sides of the operator. A Unary operand has a single operand.</div><br />
-  <div><strong>Technical Response:</strong> There are two types of mathematical operators: unary and binary. Unary operators perform an action with a single operand. Binary operators perform actions with two operands. Unary operators are arithmetic operators that perform an action on a single operand.
+  <div><strong>Interview Response:</strong> A binary operand has two arguments on the left and right sides of the operator, and a Unary operand has a single operand.</div><br />
+  <div><strong>Technical Response:</strong> There are two types of mathematical operators: unary and binary. Unary operators act with a single operand, and Binary operators perform actions with two operands. Unary operators are arithmetic operators that act on a single operand.
   </div><br />
   <div><strong className="codeExample">Example of Unary Operand:</strong><br /><br />
 
@@ -73,14 +68,14 @@ alert(y - x); // 2, binary minus subtracts values
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The basic mathematical operations include addition, subtraction, multiplication, division, remainder or modulo, and exponentiation.</div><br />
-  <div><strong>Technical Response:</strong> The basic mathematical operations allowed in JavaScript include Addition +, Subtraction -, Multiplication *, Division /, Remainder or Modulo %, and Exponentiation **.
+  <div><strong>Technical Response:</strong> : The basic mathematical operations allowed in JavaScript include Addition +, Subtraction -, Multiplication *, Division /, Remainder or Modulo %, and Exponentiation **.
   </div>
   </div>
 </details>
 
 ---
 
-### What is the remainder/modulo operator used for in JavaScript?
+### In JavaScript, what is the remainder/modulo operator?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -130,7 +125,7 @@ console.log(2 ** 4); // 16 (2 * 2 * 2 * 2, 4 times)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Mathematically, exponentiation can be defined for non-integer numbers.</div><br />
+  <div><strong>Interview Response:</strong> Mathematically, exponentiation gets defined for non-integer numbers.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -151,8 +146,8 @@ alert(8 ** (1 / 3)); // 2 (power of 1/3 is the same as a cubic root)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Strings can be concatenated using the binary plus operator or the concat method.</div><br />
-  <div><strong>Technical Response:</strong> Yes, concatenation can be achieved using the binary (+) operator. We can also use the built-in “concat” method to achieve the same result.
+  <div><strong>Interview Response:</strong> Strings get concatenated using the binary plus operator or the concat method.</div><br />
+  <div><strong>Technical Response:</strong> Yes, concatenation using the binary (+) operator. We can also use the built-in “concat” method to achieve the same result.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -190,7 +185,7 @@ alert(2 + 2 + '1'); // returns 2 + 2 = 4 and 4 + '1' = 41
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Unary plus has no effect on numbers, but it does convert non-number strings into numbers.</div><br />
-  <div><strong>Technical Response:</strong> Unary (+) plus will have no conversion effect on numbers, but it converts non-numbers like strings to numbers. JavaScript also has a built-in Number(value) method that can be used to achieve the same output.
+  <div><strong>Technical Response:</strong> Unary (+) plus has no conversion effect on numbers, but it converts non-numbers like strings to numbers. JavaScript also has a built-in Number(value) method that you can use to achieve the same output.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -217,13 +212,13 @@ alert(+'7'); // converts string “7” to number 7
 
 ---
 
-### If, you have two strings and you want to sum up the two values. What process would you use to convert both strings to numbers to ensure that they are not concatenated as a string?
+### If you have two strings and wish to add their values together. What technique would you use to convert both strings to integers to prevent concatenating the values into a single string?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We can use unary plus or the number object to convert the strings to numbers and then attempt to sum the two values.</div><br />
-  <div><strong>Technical Response:</strong> Since, both numbers are strings `(“4” + “4” = “44”)`. You can use an implicit or explicit approach to solve the problem. The implicit approach requires the use of unary plus applied to the left and right operand `(+“4” + +“4” = 8)`. The second approach is the explicit use of the built-in Number Object `(Number( “4”) + Number( “4”) = 8)`.
+  <div><strong>Interview Response:</strong> We can use a unary plus or the number object to convert the strings to numbers and then attempt to sum the two values.</div><br />
+  <div><strong>Technical Response:</strong> Since both numbers are strings (“4” + “4” = “44”). You can use an implicit or explicit approach to solve the problem. The implicit approach requires the use of unary plus applied to the left and right operand (+“4” + +“4” = 8). The second approach is the explicit use of the built-in Number Object ((Number( “4”) + Number( “4”)  = 8).
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -247,12 +242,12 @@ alert(Number(apples) + Number(oranges)); // 5
 
 ---
 
-### What is the most obvious characteristic that all operators have in JavaScript?
+### What is the most prominent characteristic of all operators in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> All JavaScript operators return a value including the assignment (=) operator.</div>
+  <div><strong>Interview Response:</strong> All JavaScript operators return a value, including the assignment (=) operator.</div>
   </div>
 </details>
 
@@ -289,18 +284,18 @@ alert(c); // 4
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> If chained assignments are not implemented correctly it can lead to memory leaks.</div>
+  <div><strong>Interview Response:</strong> If chained assignments get implemented incorrectly, it can lead to memory leaks.</div>
   </div>
 </details>
 
 ---
 
-### What is the difference between the increment and decrement operators?
+### What is the difference between increment and decrement?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Increment increases a variable by one and decrement decreases a variable by one.</div><br />
+  <div><strong>Interview Response:</strong> Increment increases a variable by one, and decrement decreases a variable by one.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -330,7 +325,7 @@ alert(counter); // 1
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, Increment/decrement can only be applied to <strong>variables</strong>. Trying to use it on a value like 5++ will give an error.</div>
+  <div><strong>Interview Response:</strong> No, Increment/decrement gets applied to <strong>variables</strong>. Trying to use it on a value like 5++ gives an error.</div>
   </div>
 </details>
 
@@ -341,8 +336,8 @@ alert(counter); // 1
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The operators can be placed either before or after a variable. Before the variable is a prefix position and after is postfix position.</div><br />
-  <div><strong>Technical Response:</strong> The operators ++ and -- can be placed either before or after a variable. When the operator goes after the variable, it is in “postfix position”: counter++. The “prefix position” is when the operator goes before the variable: ++counter.
+  <div><strong>Interview Response:</strong> The operators get placed before or after a variable. Before, the variable is a prefix position, and after the variable is the postfix position.</div><br />
+  <div><strong>Technical Response:</strong> The operators ++ and – get placed before or after a variable. When the operator goes after the variable, it is in “postfix position”: counter++. The “prefix position” is when the operator goes before the variable: ++counter.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -373,8 +368,8 @@ alert(a); // 1
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Prefix increments counter and returns the new value. Postfix increments counter but returns the old value before being incremented.</div><br />
-  <div><strong>Technical Response:</strong>  Yes, the prefix form ++counter increments counter and returns the new value. The postfix form counter++ also increments counter but returns the old value before being incremented.
+  <div><strong>Interview Response:</strong> Prefix increments the counter and returns the new value. Postfix increments counter but return the old value before being incremented.</div><br />
+  <div><strong>Technical Response:</strong> Yes, the prefix form ++counter increments counter and returns the new value. The postfix form counter++ also increments the counter but returns the old value before being incremented.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -400,13 +395,13 @@ alert(b); // alerts 5
 
 ---
 
-### Can operators ++/-- be used inside of expressions?
+### Can the ++/-- operators be used within expressions?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Technical yes, but it is not advisable, because it reduces the readability of our code.</div><br />
-  <div><strong>Technical Response:</strong>  Though technically okay, such notation should be avoided and usually makes code less readable. We should use a common stye of one line one action in our code.
+  <div><strong>Interview Response:</strong> Technically, yes, but it is not advisable because it reduces the readability of our code.</div><br />
+  <div><strong>Technical Response:</strong> Though technically okay, such notation should be avoided and usually makes code less readable. We should use a typical style of one-line action in our code.
   </div><br />
   <div><strong className="codeExample">Proper Implementation:</strong><br /><br />
 
@@ -425,7 +420,7 @@ counter++;
 
 ---
 
-### How do Bitwise operators treat arguments as numbers: 16-Bit, 24-Bit, or 32-Bit integer numbers?
+### How do Bitwise operators treat arguments as 16-Bit, 24-Bit, or 32-Bit integer numbers?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -451,7 +446,7 @@ console.log(1100 | 1011); // 1111
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The comma operator allows us to evaluate several expressions, dividing them with a comma. Each of them is evaluated but only the result of the last one is returned.</div><br />
+  <div><strong>Interview Response:</strong> The comma operator allows us to evaluate several expressions, dividing them with a comma. Each of them gets evaluated, but only the result of the last one gets returned.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -473,7 +468,7 @@ alert(a); // 7 (the result of 3 + 4)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Sometimes, people use it in more complex constructs to put several actions in one line. It is not a normal or recommended approach.</div><br />
+  <div><strong>Interview Response:</strong> Sometimes, people use it in more complex constructs to put several actions in one line, and it is not a standard or recommended approach.</div><br />
   <div><strong className="codeExample">Code Example:</strong> Three expressions in one line…<br /><br />
 
   <div></div>

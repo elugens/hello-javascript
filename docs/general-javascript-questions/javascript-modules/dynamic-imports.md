@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Dynamic imports can be achieved by using the import expression. The import(module) expression loads the module and returns a promise that resolves into a module object that contains all its exports. It can be called from any place in the code.
+  <div><strong>Interview Response:</strong> Dynamic imports get achieved by using the import expression. The import(module) expression loads the module and returns a promise that resolves into a module object that contains all its exports. It gets called from any place in the code.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -48,7 +48,7 @@ bye();
 
 ---
 
-### Is there a way to handle errors on dynamic JS module imports?
+### Is there a process for importing dynamic JS modules to manage issues?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -78,7 +78,7 @@ import(modulePath)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The main benefit of dynamic imports is it allows you to load JavaScript modules dynamically. This makes it useful for lazy-loading or computed module specifier strings. In addition, dynamic imports provide us with a promise, which allows access to the .then and .catch methods for handling (catch error). Dynamic imports work in regular scripts, they don’t require script type="module".
+  <div><strong>Interview Response:</strong> The main benefit of dynamic imports is that they allow you to load JavaScript modules dynamically. This implementation makes it useful for lazy-loading or computed module specifier strings. In addition, dynamic imports provide us with a promise, allowing access to the .then and .catch methods for handling (catch error). Dynamic imports work in regular scripts; they don’t require script type="module".
 </div>
   </div>
 </details>
@@ -90,7 +90,7 @@ import(modulePath)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, although import() looks like a function call, it’s a special syntax that just happens to use parentheses (similar to super()). So, we cannot copy import to a variable or use call/apply with it. It is not a function.
+  <div><strong>Interview Response:</strong> No, although import() looks like a function call, it’s a special syntax that happens to use parentheses (similar to super()). So, we cannot copy import to a variable or use call/apply with it. It is not a function.
 </div>
   </div>
 </details>

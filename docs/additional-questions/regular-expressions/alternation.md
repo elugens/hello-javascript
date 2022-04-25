@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Alternation is the term in regular expression that is a simple “OR”. In a regular expression it “OR” is denoted with a vertical line character |.
+  <div><strong>Interview Response:</strong> Alternation is the term in a simple “OR” in a regular expression. In a regular expression, "OR” is denoted with a vertical line character |.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

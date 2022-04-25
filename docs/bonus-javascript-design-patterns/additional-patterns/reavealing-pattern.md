@@ -13,7 +13,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Could you please describe the mixin design pattern?
+### Can you explain the revealing design pattern?
 
 <details className='answer'>
   <summary>
@@ -21,7 +21,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Revealing Module pattern's basic tenet is that all functionality and variables should be concealed unless explicitly disclosed. All of our functions and variables may be defined in the private scope. We can return an anonymous object containing references to the private functionality we want to make public.<br/>
+      <strong>Interview Response:</strong> The Revealing Module pattern's basic tenet is that all functions and variables should get concealed unless explicitly disclosed. All of our functions and variables may get defined in the private scope. We can return an anonymous object containing references to the private functionality we want to make public.<br/>
     </div>
     <div>
 </div><br />

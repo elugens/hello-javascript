@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The flag y allows us to perform the search at the given position in the source string. The flag y makes regexp.exec to search exactly at position lastIndex, not “starting from” it. There is an important performance gain when using flag y.
+  <div><strong>Interview Response:</strong> The flag y allows us to perform the search at the given position in the source string. The flag y makes regexp.exec(str) search strictly at position lastIndex, not “starting from” it. There is a critical performance gain when using flag y.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

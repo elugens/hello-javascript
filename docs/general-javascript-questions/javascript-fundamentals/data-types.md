@@ -1,27 +1,22 @@
 ---
 title: JavaScript Data Types
 description: There are eight basic data types in JavaScript including Number, String, Boolean, BigInt, Null, Undefined, Object, and Symbol.
-sidebar_position: 5
+sidebar_position: 7
 sidebar_label: Data Types
 ---
 
 **JavaScript Fundamentals: JavaScript Data Types**
 
-<head>
-  <title>Data Types - JavaScript Frontend Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
-
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
-### How many data types are there in JavaScript?
+### In JavaScript, how many data types are there?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> There are eight basic data types in JavaScript including Number, String, Boolean, BigInt, Null, Undefined, Object, and Symbol. All are primitive data types except for the Object data type. All other types are called “primitive” because their values can contain only a single thing (be it a string or a number or whatever). In contrast, objects are used to store collections of data and more complex entities.</div>
+  <div><strong>Interview Response:</strong> Number, String, Boolean, BigInt, Null, Undefined, Object, and Symbol are the eight fundamental data types in JavaScript. Except for the Object data type, all are basic data types. All other kinds get called "primitive" since their values can only contain one item (a string or a number). On the other hand, objects get used to store data sets and more sophisticated things.</div>
   </div>
 </details>
 
@@ -61,8 +56,8 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A number cannot represent integers larger than (253-1) or less than -(253-1) for negatives.</div><br />
-  <div><strong>Technical Response:</strong> The “number” type cannot represent integer values larger than (253-1) (that’s 9007199254740991), or less than -(253-1) for negatives. It is a technical limitation caused by their internal representation. Anything beyond these values is considered a BigInt.
+  <div><strong>Interview Response:</strong> A number cannot represent integers larger than (2<sup>53</sup>-1) or less than -(2<sup>53</sup>-1) for negatives.</div><br />
+  <div><strong>Technical Response:</strong> The “number” type cannot represent integer values greater than (2<sup>53</sup>-1) (that’s 9007199254740991) or less than -(2<sup>53</sup>-1) for negatives. It is a technical limitation caused by their internal representation, and anything beyond these values is considered a BigInt.
   </div>
   </div>
 </details>
@@ -80,13 +75,13 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### What are the three types of quotes that can be used to create a string representation of a value?
+### What are the three types of quotes available to create a string representation of a value?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Double, single, and back-ticks.</div><br />
-  <div><strong>Technical Response:</strong> In JavaScript, there are three types of quotes used to represent a string including double, single, and backtick quotes.<br /><br />
+  <div><strong>Interview Response:</strong> Double, single, and backticks.</div><br />
+  <div><strong>Technical Response:</strong> In JavaScript, there are three types of quotes used to represent a string double, single, and backtick quotes.<br /><br />
   Example:<br /><br />
     <ol>
       <li>Double quotes: "Hello".</li>
@@ -104,8 +99,8 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Backticks allow us to embed variables and expressions into a string by wrapping them in $&#x7B;…&#125; . There is no notable difference between single and double quotes.</div><br />
-  <div><strong>Technical Response:</strong> Double and single quotes are “simple” quotes. There is practically no difference between them in JavaScript. Backticks are “extended functionality” quotes. They allow us to embed variables and expressions into a string by wrapping them in $&#x7B;…&#125;.
+  <div><strong>Interview Response:</strong> Backticks allow us to embed variables and expressions into a string by wrapping them in $&#x7B;…&#125;. There is no notable difference between single and double quotes.</div><br />
+  <div><strong>Technical Response:</strong> Simple quotations are double and single quotes, and in JavaScript, there is almost no distinction between them. Backticks are quotations with "enhanced functionality." They allow us to embed variables and expressions inside a string, for example, by surrounding them with $&#x7B;…&#125;.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -124,7 +119,7 @@ alert(`the result is ${1 + 2}`); // the result is 3
 
 :::note
 
-Please note that this can only be done in backticks. Other quotes do not have this embedding functionality!
+Please note that this can only get implemented with backticks. Other quotes do not have this embedding functionality!
 
 :::
 
@@ -139,8 +134,8 @@ Please note that this can only be done in backticks. Other quotes do not have th
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> true or false</div><br />
-  <div><strong>Technical Response:</strong> true or false - This type is commonly used to store yes/no values: true means “yes, correct”, and false means “no, incorrect”. It can also be used for comparisons or more specifically used for greater or less than values.
+  <div><strong>Interview Response:</strong> true and false</div><br />
+  <div><strong>Technical Response:</strong> true or false – This logical type often gets used to store yes/no values: true means “yes, correct”, and false means “no, incorrect”. It can also get used for comparisons or, more specifically, for greater or less than values.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -168,7 +163,7 @@ alert(isGreater); // true (the comparison result is "yes")
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> nothingness or empty, but not equal undefined</div><br />
-  <div><strong>Technical Response:</strong> It is a special value that represents “nothing”, “empty” or “value unknown”. It is not a representation of a value that has not to be defined, non-existing, or a null pointer like other programming languages.
+  <div><strong>Technical Response:</strong> It is a unique value that represents “nothing”, “empty” or “value unknown”. It is not a representation of a value that has not to be defined, non-existing, or a null pointer like other programming languages.
   </div>
   </div>
 </details>
@@ -180,8 +175,8 @@ alert(isGreater); // true (the comparison result is "yes")
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Undefined means a value has not been defined or assigned to a variable.</div><br />
-  <div><strong>Technical Response:</strong> In JavaScript, undefined means a value has not been defined or assigned. If a variable is declared, but not assigned, then its value is undefined.
+  <div><strong>Interview Response:</strong> Undefined means a value is not defined or assigned to a variable.</div><br />
+  <div><strong>Technical Response:</strong> In JavaScript, undefined means a value is not defined or assigned. If a variable is declared but not assigned, its value is undefined.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -214,7 +209,7 @@ alert(age); // "undefined"
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> typeof x acts as an operator and typeof(x) is a function, but they work with parentheses or without them. The result is the same.</div>
+  <div><strong>Interview Response:</strong> typeof x acts as an operator, and typeof(x) is a function, but they work with parentheses or without them. The result is the same.</div>
   </div>
 </details>
 
@@ -225,9 +220,7 @@ alert(age); // "undefined"
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The typeof operator returns a string with the name of the type.</div><br />
-  <div><strong>Technical Response:</strong> The typeof operator returns a string with the name of the type, like "number" if it is a number or “function” if it’s a function.
-  </div>
+  <div><strong>Interview Response:</strong> The typeof operator returns a string with the name of the type, like "number" if it is a number or “function” if it’s a function.</div>
   </div>
 </details>
 

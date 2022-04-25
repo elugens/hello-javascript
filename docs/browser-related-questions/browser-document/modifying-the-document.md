@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To create DOM nodes, there are two methods including the createElement and createTextNode methods. The document.createElement(tag) creates a new element node. The document.createTextNode(‘text’) creates a new text node with the give ‘text’. Most of the time we need to create element nodes, such as a div.
+  <div><strong>Interview Response:</strong> Two methods, including the createElement and createTextNode methods, are used to create DOM nodes. The document.createElement(tag) creates a new element node. The document.createTextNode(‘text’) creates a new text node with the give ‘text’. We need to create element nodes, such as a div, most of the time.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -41,12 +41,12 @@ div.innerHTML = "<strong>Hi there!</strong> You've read an important message.";
 
 ---
 
-### How do you place a DOM node into a HTML document using JavaScript?
+### How do you place a DOM node into an HTML document using JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> There is a special append method used to insert a new DOM node into an HTML document. Additional methods such as the prepend, before, after, and replaceWith that can be used to place the new DOM node into a specific place in the document.
+  <div><strong>Interview Response:</strong> A special append method gets used to insert a new DOM node into an HTML document. Additional methods such as the prepend, before, after, and replaceWith can get used to place the new DOM node into a specific place in the document.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -96,12 +96,12 @@ div.innerHTML = "<strong>Hi there!</strong> You've read an important message.";
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> If you want to insert HTML into a document we use the insertAdjacentHTML(where, html). It has two parameters that we use to specify where and the second parameter of what or the HTML (it must be a string type, just add quotes) to be inserted. <br /><br />
-  <strong>Additional Information:</strong> We can also use insertAdjacentText and insertAdjacentElement in a similar fashion.<br /><br />
+  <div><strong>Interview Response:</strong> If you want to insert HTML into a document, we use the insertAdjacentHTML(where, HTML). We use two parameters to specify where and the second parameter of what or the HTML (it must be a string type, you need to add quotes) that we want to insert.<br /><br />
+  <strong>Additional Information:</strong> We can also use insertAdjacentText and insertAdjacentElement in a similar fashion. <br /><br />
   <ol>    
     <li>The insertAdjacentText(where, text) has the same syntax, but a string of text is inserted “as text” instead of HTML.</li>
-    <li>The insertAdjacentElement(where, element) has the same syntax, but inserts an element.</li>
-    <li>They exist mainly to make the syntax “uniform”. In practice, only insertAdjacentHTML is used most of the time. Because for elements and text, we have methods append/prepend/before/after – they are shorter to write and can insert nodes/text pieces.</li>
+    <li>The insertAdjacentElement(where, element) has the same syntax but inserts an element.</li>
+    <li>They exist primarily to make syntax "consistent." In practice, insertAdjacentHTML is the sole method utilized most of the time. Because we have methods append/prepend/before/after for elements and text - they are easy to create and may incorporate nodes/text fragments.</li>
   </ol>
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -127,7 +127,7 @@ div.innerHTML = "<strong>Hi there!</strong> You've read an important message.";
 
 ---
 
-### Is there a way to remove a DOM node in JavaScript?
+### Is it possible to remove a DOM node using JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -201,7 +201,7 @@ div.innerHTML = "<strong>Hi there!</strong> You've read an important message.";
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, you can clone an element node using the cloneNode method in JavaScript. The cloneNode() method creates a copy of a node, and returns the clone.
+  <div><strong>Interview Response:</strong> Yes, you can clone an element node using the cloneNode method in JavaScript. The cloneNode() method creates a node copy and returns the clone. 
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -231,7 +231,7 @@ div.innerHTML = "<strong>Hi there!</strong> You've read an important message.";
 ```
 
 :::note
-Once, you have cloned the node you use the appendChild() or insertBefore() method to insert the cloned node to the document. If, you want a deep clone you simply set the deep parameter value to true if you want to clone all descendants (children), otherwise false.
+Once you have cloned the node, you use the appendChild() or insertBefore() method to insert the cloned node into the document. If you want a deep clone, you set the deep parameter value to true if you want to clone all descendants (children); otherwise, false.
 :::
 
   </div>
@@ -240,12 +240,12 @@ Once, you have cloned the node you use the appendChild() or insertBefore() metho
 
 ---
 
-### Explain the function and syntax of the DocumentFragment Object.
+### Can you explain the function and syntax of the DocumentFragment Object?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> DocumentFragment is a special DOM node that serves as a wrapper to pass around lists of nodes. We can append other nodes to it, but when we insert it somewhere, then its content is inserted instead.
+  <div><strong>Interview Response:</strong> DocumentFragment is a special DOM node that serves as a wrapper to pass around lists of nodes. We can append other nodes to it, but its content gets inserted instead when we insert it somewhere.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -279,8 +279,7 @@ Once, you have cloned the node you use the appendChild() or insertBefore() metho
 ```
 
 :::note
-DocumentFragment is rarely used explicitly. Why append to a special kind
-of node, if we can return an array of nodes instead?
+DocumentFragment rarely gets used explicitly. Why append to a special kind of node if we can return an array of nodes instead?
 :::
 
   </div>
@@ -289,13 +288,13 @@ of node, if we can return an array of nodes instead?
 
 ---
 
-### At some point in your career, you will run across older methods of inserting and removing elements. Can you explain what these methods are and why you should know them?
+### At some point in your career, you run across older methods of inserting and removing elements. Can you explain what these methods are and why you should know them?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> There are several methods that including appendChild, insertBefore, replaceChild, and removeChild. We should know them because we may run across them in older applications.</div><br />
-  <div><strong>Technical Response:</strong> There are several methods that were used prior to the more modern methods for inserting and removing nodes. They include appendChild, insertBefore, replaceChild, and removeChild. Although, they aren’t used in modern code we should be aware of their function, use, and syntax, because we may run across them in older applications.
+  <div><strong>Interview Response:</strong> There are several methods, including appendChild, insertBefore, replaceChild, and removeChild.</div><br />
+  <div><strong>Technical Response:</strong> Several methods were used before the more modern methods for inserting and removing nodes. They include appendChild, insertBefore, replaceChild, and removeChild. Although they aren’t getting used in modern code, we should be aware of their function, use, and syntax, because we may run across them in older applications.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -331,7 +330,7 @@ Output:
 ```
 
 :::note
-These methods come from ancient times. Nowadays, there is no reason to use them, as modern methods, such as append, prepend, before, after, remove, replaceWith, are more flexible. This information helps to understand old scripts, but not needed for new development.
+These methods come from ancient times. Nowadays, there is no reason to use them, as modern methods, such as append, prepend, before, after, remove, replaceWith, are more flexible. This information helps to understand old scripts, but now we do not need it for new development.
 :::
 
   </div>
@@ -340,7 +339,7 @@ These methods come from ancient times. Nowadays, there is no reason to use them,
 
 ---
 
-### Explain the function and syntax of the document.write method.
+### Can you explain the function and syntax of the document.write method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -363,7 +362,7 @@ These methods come from ancient times. Nowadays, there is no reason to use them,
 ```
 
 :::note
-Because document.write() writes to the document stream, calling document.write() on a closed (loaded) document automatically calls document.open(), which will clear (overwrite) the document. The method comes from times when there was no DOM, no standards… Old times. It still lives because there are scripts using it. In modern scripts we can rarely see it, because If we call it afterwards, the existing document content is erased. There are some use cases for this, but the are few and far between.
+Because document.write() writes to the document stream, calling document.write() on a closed (loaded) document automatically calls document.open(), which will clear (overwrite) the document. The method comes from times when there was no DOM, no standards… Old times. It still lives because scripts are using it. In modern scripts, we can rarely see it because If we call it afterward, the existing document content gets erased. There are some use cases for this, but very few.
 :::
 
   </div>

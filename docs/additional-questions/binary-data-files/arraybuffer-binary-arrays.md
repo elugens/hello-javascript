@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In web-development we meet binary data mostly while dealing with files (create, upload, download). Another typical use case is image processing. That’s all possible in JavaScript, and binary operations are high-performant.
+  <div><strong>Interview Response:</strong> When working with files in web development, we frequently encounter binary data (create, upload, download). Image processing is another everyday use, and all of this is achievable with JavaScript, and binary operations are fast.
     </div>
   </div>
 </details>
@@ -30,7 +30,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, there are several binary classes including ArrayBuffer, Uint8Array, DataView, Blob, and File.
+  <div><strong>Interview Response:</strong> Yes, several binary classes exist, including ArrayBuffer, Uint8Array, DataView, Blob, and File.
     </div>
   </div>
 </details>
@@ -42,7 +42,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Consecutive blocks of memory allocated to user processes are called contiguous memory. For example, if a user process needs some x bytes of contiguous memory, then all the x bytes will reside in one place in the memory that is defined by a range of memory addresses: 0x0000 to 0x00FF.
+  <div><strong>Interview Response:</strong> Consecutive blocks of memory allocated to user processes are called contiguous memory. For example, if a user process needs some x bytes of contiguous memory, then all the x bytes reside in one place in the memory that gets defined by a range of memory addresses: 0x0000 to 0x00FF.
     </div>
   </div>
 </details>
@@ -54,7 +54,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The basic binary object is ArrayBuffer which is a reference to a fixed-length contiguous memory area (blocks of memory). It is an array of bytes, often referred to in other languages as a "byte array". You cannot directly manipulate the contents of an ArrayBuffer; instead, you create one of the typed array objects or a DataView object which represents the buffer in a specific format, and use that to read and write the contents of the buffer. The ArrayBuffer() constructor creates a new ArrayBuffer of the given length in bytes. You can also get an array buffer from existing data.
+  <div><strong>Interview Response:</strong> The primary binary object is ArrayBuffer which refers to a fixed-length contiguous memory area (blocks of memory). It is an array of bytes, often referred to as a "byte array" in other languages. You cannot directly manipulate the contents of an ArrayBuffer; instead, you create one of the typed array objects or a DataView object representing the buffer in a specific format and use that to read and write the contents of the buffer. The ArrayBuffer() constructor creates a new ArrayBuffer of the given length in bytes. You can also get an array buffer from existing data.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -76,7 +76,7 @@ alert(buffer.byteLength); // alerts 16
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> ArrayBuffer has nothing in common with a regular JavaScript Array. It has a fixed length; we cannot increase or decrease it. It takes exactly that much space in the memory. To access individual bytes, another “view” object is needed, not buffer[index]. ArrayBuffer is a memory area. What is stored in it? It has no clue. Just a raw sequence of bytes.
+  <div><strong>Interview Response:</strong> ArrayBuffer has nothing in common with a regular JavaScript Array. It has a fixed length; we cannot increase or decrease it. It takes precisely that much space in the memory. Another “view” object is needed, not buffer[index]. ArrayBuffer is a memory area to access individual bytes. What gets stored in it? It has no clue—just a raw sequence of bytes. 
     </div>
   </div>
 </details>
@@ -88,7 +88,7 @@ alert(buffer.byteLength); // alerts 16
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To manipulate an ArrayBuffer, we need to use a view object. A view object does not store anything on its own. It is the “eyeglasses” that give an interpretation of the bytes stored in the ArrayBuffer. For example. Uint8Array treats each byte in ArrayBuffer as a separate number, with possible values from 0 to 255 (a byte is 8-bit, so it can hold only that much). Such value is called a “8-bit unsigned integer”. So, the binary data in an ArrayBuffer of 16 bytes can be interpreted as 16 “tiny numbers”, or 8 bigger numbers (2 bytes each), or 4 even bigger (4 bytes each), or 2 floating-point values with high precision (8 bytes each). ArrayBuffer is the core object, the root of everything, the raw binary data.
+  <div><strong>Interview Response:</strong> To manipulate an ArrayBuffer, we need to use a view object. A view object does not store anything on its own. The " eyeglasses " interpret the bytes stored in the ArrayBuffer. For example. Uint8Array treats each byte in ArrayBuffer as a separate number, with possible values from 0 to 255 (a byte is 8-bit so it can hold only that much). Such value is called an “8-bit unsigned integer”. So, the binary data in an ArrayBuffer of 16 bytes can get interpreted as 16 “tiny numbers”, or 8 larger (2 bytes each), or 4 even bigger (4 bytes each), or 2 floating-point values with high precision (8 bytes each). ArrayBuffer is the core object, the root of everything, the raw binary data.
     </div><br />
   <div><strong className="codeExample">Diagram Example:</strong><br /><br />
 
@@ -138,12 +138,12 @@ for (let num of view) {
 
 ---
 
-### What is a common term used for Uint16Array or Uint32Array views?
+### What is a common term used for Uint16Array or Int8Array views?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The common term for all these views (Uint8Array, Uint32Array, etc) is TypedArray. They share the same set of methods and properties. It should be noted, there is no constructor called TypedArray, it’s just a common “umbrella” term to represent one of views over ArrayBuffer: Int8Array, Uint8Array and so on.
+  <div><strong>Interview Response:</strong> The common term for all these views (Uint8Array, Uint32Array) is TypedArray. They share the same set of methods and properties. We should note that there is no constructor called TypedArray, and it’s just a standard “umbrella” term to represent one of the views over ArrayBuffer: Int8Array, Uint8Array, and others.
     </div>
   </div>
 </details>
@@ -155,7 +155,7 @@ for (let num of view) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A TypedArray object describes an array-like view of an underlying binary data buffer. There is no global property named TypedArray, nor is there a directly visible TypedArray constructor. Instead, there are several different global properties, whose values are typed array constructors for specific element types.
+  <div><strong>Interview Response:</strong> A TypedArray object describes an array-like view of an underlying binary data buffer. There is no global property named TypedArray, nor is there a directly visible TypedArray constructor. Instead, there are several global properties whose values are typed array constructors for specific element types.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -187,7 +187,7 @@ console.log(typedArray2);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, typed arrays behave like regular arrays. They also have indexes and are iterable.
+  <div><strong>Interview Response:</strong> Yes, typed arrays behave like regular arrays. They also have indexes that are iterable.
     </div>
   </div>
 </details>
@@ -199,7 +199,7 @@ console.log(typedArray2);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A typed array constructor (be it Int8Array or Float64Array, does not matter) behaves differently depending on argument types. There are five argument variants that we can use to manipulate typed arrays. They include a buffer, object, typedArray, length or an empty argument. If there is no argument, then it creates a zero length typed array.
+  <div><strong>Interview Response:</strong> A typed array constructor (be it Int8Array or Float64Array, it does not matter) behaves differently depending on argument types. There are five argument variants that we can use to manipulate typed arrays, and they include a buffer, object, typedArray, length, or an empty argument. If there is no argument, then it creates a zero-length typed array.
     </div>
   </div>
 </details>
@@ -211,7 +211,7 @@ console.log(typedArray2);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, we can create a TypedArray directly, without mentioning ArrayBuffer. But a view cannot exist without an underlying ArrayBuffer, so it gets created automatically regardless of the argument type. To access the ArrayBuffer, there are properties like buffer and byteLength. The array.buffer property references ArrayBuffer, and the array.length property is the length of the ArrayBuffer. So, we can always move from one view to another.
+  <div><strong>Interview Response:</strong> Yes, we can create a TypedArray directly, without mentioning ArrayBuffer. But a view cannot exist without an underlying ArrayBuffer, so it gets created automatically regardless of the argument type. Properties like buffer and byteLength get used for accessing the ArrayBuffer. The array.buffer property references ArrayBuffer, and the array.length property is the length of the ArrayBuffer. So, we can always move from one view to another.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -235,7 +235,7 @@ let arr16 = new Uint16Array(arr8.buffer);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> If we attempt to write an out-of-bounds value into a typed array. There will be no error. But extra bits are cut-off. For example, if we try to put 256 into Uint8Array. In binary form, 256 is 100000000 (9 bits), but Uint8Array only provides 8 bits per value, that makes the available range from 0 to 255. For bigger numbers, only the rightmost (less significant) 8 bits are stored, and the rest is cut off. So, the result will be zero. For 257, the binary form is 100000001 (9 bits), the rightmost 8 get stored, so we will have 1 in the array. Uint8ClampedArray is special in this aspect, its behavior is different. It saves 255 for any number that is greater than 255, and 0 for any negative number. That behavior is useful for image processing.
+  <div><strong>Interview Response:</strong> If we attempt to write an out-of-bounds value into a typed array. The error does not exist. But extra bits are cut-off. For example, if we try to put 256 into Uint8Array. In binary form, 256 is 100000000 (9 bits), but Uint8Array only provides 8 bits per value, which makes the available range from 0 to 255. Only the rightmost (less significant) 8 bits get stored for bigger numbers, and the rest cut off. So, it results in zero. For 257, the binary form is 100000001 (9 bits), and the rightmost 8 get stored so that we get 1 in the array. Uint8ClampedArray is unique in this aspect, and its behavior is different. It saves 255 for any number greater than 255 and 0 for any negative number. That behavior is helpful for image processing.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -265,7 +265,7 @@ alert(uint8array[1]); // 1
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> TypedArray has regular Array methods, with notable exceptions. We can iterate, map, slice, find, reduce etc. There are few things we cannot do though like there is no splice and concat methods. We cannot “delete” a value because typed arrays are views on a buffer, and these are fixed, contiguous areas of memory. All we can do is to assign a zero.
+  <div><strong>Interview Response:</strong> With a few significant exceptions, TypedArray provides standard Array methods. We can iterate, map, slice, find, and reduce, among other things. There are certain restrictions, such as the lack of splice and concat procedures. We can't "delete" a value and merely assign a zero since typed arrays are views on a buffer that get fixed, contiguous blocks of memory.
     </div>
   </div>
 </details>
@@ -277,7 +277,7 @@ alert(uint8array[1]); // 1
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The subarray() method returns a new TypedArray on the same ArrayBuffer store and with the same element types as for this TypedArray object. The begin offset is inclusive and the end offset is exclusive. This methods allow us to copy typed arrays, mix them, create new arrays from existing ones, and so on.
+  <div><strong>Interview Response:</strong> The subarray() method returns a new TypedArray on the same ArrayBuffer store and with the same element types as for this TypedArray object. The “begin offset” is inclusive, and the end offset is exclusive. We may use these methods to duplicate typed arrays, mix them, construct new arrays from existing ones, and execute other actions on them.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -304,14 +304,14 @@ console.log(uint8.subarray(1));
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A DataView is a special super-flexible “untyped” view over ArrayBuffer. It allows to access the data on any offset in any format.<br /><br />For typed arrays, the constructor dictates what the format is. The whole array is supposed to be uniform. The i-th number is arr[i]. With DataView we access the data with methods like .getUint8(i) or .getUint16(i). We choose the format at method call time instead of the construction time. DataView is great when we store mixed-format data in the same buffer. For example, when we store a sequence of pairs (16-bit integer, 32-bit float), DataView allows to access them easily.
+  <div><strong>Interview Response:</strong> A DataView is a unique super-flexible “untyped” view over ArrayBuffer. It allows access to the data on any offset in any format.<br /><br />For typed arrays, the constructor dictates what the format is. The whole array is supposed to be uniform. The i-th number is arr[i]. With DataView we access the data with methods like .getUint8(i) or .getUint16(i). We choose the format at method call time instead of the construction time. DataView is great when we store mixed-format data in the same buffer. For example, when we store a sequence of pairs (16-bit integer, 32-bit float), DataView allows us to access them easily.
     </div><br />
   <div><strong className="codeExample">Syntax:</strong> new DataView(buffer, [byteOffset], [byteLength]);<br /><br />
 
   <ul>
-    <li>buffer – the underlying ArrayBuffer. Unlike typed arrays, DataView doesn’t create a buffer on its own. We need to have it ready.</li>
-    <li>byteOffset – the starting byte position of the view (by default 0).</li>
-    <li>byteLength – the byte length of the view (by default till the end of buffer).</li>
+    <li>buffer - the ArrayBuffer underlying. DataView, unlike typed arrays, does not generate a buffer on its own. We must have it ready.</li>
+    <li>byteOffset – the view's initial byte location (by default 0).</li>
+    <li>byteLength – the view's byte length (by default till the end of buffer).</li>
   </ul>
 
   <div></div>

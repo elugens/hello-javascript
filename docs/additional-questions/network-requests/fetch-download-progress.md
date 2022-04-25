@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, we can use the fetch method to track download progress. It should be noted, there is currently no way for fetch to track upload progress. For that purpose, we should use the XMLHttpRequest. To track download progress, we can use response.body property. It is ReadableStream – a special object that provides body chunk-by-chunk, as it comes. Readable streams are described in the Streams API specification. Unlike response.text(), response.json() and other methods, response.body gives full control over the reading process, and we can count how much is consumed at any moment.
+  <div><strong>Interview Response:</strong> In JavaScript, we can use the fetch method to track download progress. We should note that there is currently no way for fetch to track upload progress. For that purpose, we should use the XMLHttpRequest. To track download progress, we can use response.body property. It is ReadableStream – a special object that provides body chunk-by-chunk as it comes. Readable streams get described in the Streams API specification standard. Unlike response.text(), response.json() and other methods, response.body gives control over the reading process, and we can count how much gets consumed at any moment.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -53,8 +53,8 @@ while (true) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The result of await reader.read() call is an object with two properties including done and value. The done property returns true when the reading is complete, otherwise false. The value is a typed array of bytes, Uint8Array.</div><br />
-  <div><strong>Additional Info:</strong> Streams API also describes asynchronous iteration over ReadableStream with for await..of loop, but it’s not yet widely supported, so we can use while loop.
+  <div><strong>Interview Response:</strong> The result await reader.read() call is an object with two properties, including done and value. The done property returns true when the reading is complete. Otherwise false. The value is a typed array of bytes, Uint8Array.</div><br />
+  <div><strong>Additional Info:</strong> Streams API also describes asynchronous iteration over ReadableStream with for await..of loop, but it’s not yet widely supported so that we can use while loop.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -102,6 +102,10 @@ let result = new TextDecoder('utf-8').decode(chunksAll);
 let commits = JSON.parse(result);
 alert(commits[0].author.login);
 ```
+
+:::note
+for await...of doesn't work with async iterators that are not async iterables. We should implement a while loop in this configuration instead.
+:::
 
   </div>
   </div>

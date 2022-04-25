@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The two kinds of custom elements include autonomous custom elements and customized built-in elements. Autonomous custom elements – “all-new” elements, extending the abstract HTMLElement class. Customized built-in elements – extending built-in elements, like a customized button, based on HTMLButtonElement etc.
+  <div><strong>Interview Response:</strong> Custom elements get classified into two types: autonomous custom elements and modified built-in components. Autonomous custom elements — elements that are "all-new" that extend the abstract HTMLElement class. Customized built-in elements — extending built-in components, such as a customized button based on HTMLButtonElement.
     </div>
   </div>
 </details>
@@ -54,12 +54,12 @@ customElements.define('my-element', MyElement);
 
 ---
 
-### What is the naming convention for custom elements?
+### What naming standard should be used for custom elements in web development?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Custom element name must have a hyphen -, e.g., my-element and super-button are valid names, but myelement is not. That is to ensure that there are no name conflicts between built-in and custom HTML elements.
+  <div><strong>Interview Response:</strong> Custom element names must have a hyphen (-) e.g., my-element and super-button are valid names, but myelement is not. That is to ensure no name conflicts between built-in and custom HTML elements.
     </div>
   </div>
 </details>
@@ -78,39 +78,38 @@ customElements.define('my-element', MyElement);
 
 ---
 
-### Can you explain the function of the connectedCallBack method?
+### Can you describe the connectedCallBack method's purpose?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The connectedCallBack is invoked each time the custom element is appended into a document-connected element. This will happen each time the node is moved and may happen before the element's contents have been fully parsed.
+  <div><strong>Interview Response:</strong> The connectedCallBack gets invoked each time the custom element gets appended into a document-connected element. Each time the node gets moved, this may happen before the element's contents fully parse.
     </div>
   </div>
 </details>
 
 ---
 
-### What happens when a base-element, the one we are customizing, loads before customized element?
+### What happens when a base element, the one we are customizing, loads before the customized element?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> If the browser encounters any elements we are trying to customize before customElements.define, that is not an error. But the element is yet unknown, just like any non-standard tag.<br /><br />
   Such “undefined” elements can be styled with CSS selector :not(:defined).<br /><br />
-  When customElement.define is called, they are “upgraded”: a new instance of element we are trying to customize is created for each, and connectedCallback is called. They become :defined.
+  When customElement.define is called, they are “upgraded”: a new instance of the element we are trying to customize gets created for each, and connectedCallback gets called. They become :defined.
     </div>
   </div>
 </details>
 
 ---
 
-### What is the reason for not using the constructor, but opt to use connectedCallBack?
+### What is the reasoning for not utilizing the constructor and instead relying on connectedCallBack?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The reason is simple: when constructor is called, it is yet too early. The element is created, but the browser did not yet process/assign attributes at this stage: calls to getAttribute would return null. So, we cannot really render there. Besides, if you think about it, that is better performance-wise to delay the work until it is really needed.<br /><br />
-  The connectedCallback triggers when the element is added to the document. Not just appended to another element as a child but becomes a part of the page. So, we can build detached DOM, create elements, and prepare them for later use. They will only be rendered when they make it into the page.
+  <div><strong>Interview Response:</strong> The reason is simple: it is too early when the constructor gets called. The element gets created, but the browser did not yet process/assign attributes at this stage: calls to getAttribute would return null. So, we cannot render there. Besides, if you think about it, it is better to delay the work until needed.<br /><br />When the element gets added to the document, the connectedCallback is triggered. It is not just attached to another element as a child but instead becomes a part of the page. As a result, we may construct detached DOM, create elements, and prepare them for subsequent usage. They do not get rendered until they get included on the page.
     </div>
   </div>
 </details>
@@ -122,7 +121,7 @@ customElements.define('my-element', MyElement);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The attributeChangedCallback is invoked each time one of the custom element's attributes is added, removed, or changed. Which attributes to notice change for is specified in a static get observedAttributes method.
+  <div><strong>Interview Response:</strong> When one of the custom element's attributes gets added, deleted, or updated, the attributeChangedCallback gets called. We may observe attributes by passing a list of them to the observedAttributes() static getter. When such attributes are adjusted, attributeChangedCallback gets invoked.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -185,18 +184,22 @@ customElements.define('my-element', MyElement);
 </script>
 ```
 
+:::note
+It does not trigger unlisted properties (for performance reasons).
+:::
+
   </div>
   </div>
 </details>
 
 ---
 
-### Can you explain the rendering order when HTML parser builds the DOM?
+### Can you explain the rendering order when the HTML parser builds the DOM?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> When HTML parser builds the DOM, elements are processed one after another, parents before children. E.g., if we have &#8249;outer&#8250;&#8249;inner&#8250;&#8249;/inner&#8250;&#8249;/outer&#8250;, then &#8249;outer&#8250; element is created and connected to DOM first, and then &#8249;inner>`. That leads to important consequences for custom elements that we should prepare for in our code.
+  <div><strong>Interview Response:</strong> When the HTML parser builds the DOM, elements are processed and parents before children. E.g., if we have &#8249;outer&#8250;&#8249;inner&#8250;&#8249;/inner&#8250;&#8249;/outer&#8250;, then &#8249;outer&#8250; element is created and connected to DOM first, and then &#8249;inner&#8250;. That leads to important consequences for custom elements that we should prepare for in our code.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -223,12 +226,12 @@ customElements.define('my-element', MyElement);
 
 ---
 
-### Is there a way to ensure that custom element returns a value on a nested element?
+### Is there a way to ensure that custom-element returns a value on a nested element?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> When HTML parser builds the DOM, elements are processed one after another, parents before children. E.g., if we have &#8249;outer&#8250;&#8249;inner&#8250;&#8249;/inner&#8250;&#8249;/outer&#8250;, then &#8249;outer&#8250; element is created and connected to DOM first, and then &#8249;inner&#8250;. That leads to important consequences for custom elements that we should prepare for in our code. To handle inner elements, we can delay actions using setTimeout to ensure that the DOM has completed loaded our document. If we would like to pass information to custom element, we can use attributes. They are available immediately or, if we really need the children, we can defer access to them with zero-delay setTimeout.
+  <div><strong>Interview Response:</strong> When the HTML parser builds the DOM, elements are processed and parents before children. E.g., if we have &#8249;outer&#8250;&#8249;inner&#8250;&#8249;/inner&#8250;&#8249;/outer&#8250;, then &#8249;outer&#8250; element is created and connected to DOM first, and then &#8249;inner&#8250;. That leads to important consequences for custom elements that we should prepare for in our code. To handle inner elements, we can delay actions using setTimeout to ensure that the DOM has completed loading our document. If we want to pass information to custom-element, we can use attributes. They are available immediately, or if we need the children, we can defer access to them with zero-delay setTimeout.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -255,12 +258,12 @@ customElements.define('my-element', MyElement);
 
 ---
 
-### Are there any issues with new or autonomous elements in relation to search engines?
+### Are there any issues with new or autonomous elements relative to search engines?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, a new or autonomous element like &#8249;my-element&#8250; do not give a search engine enough information, like associated semantics. They are not known to search engines and accessibility devices cannot translate them. To fix this, we can extend and customize built-in HTML elements by inheriting from their classes.
+  <div><strong>Interview Response:</strong> Yes, a new or autonomous element like &#8249;my-element&#8250; does not give a search engine enough information, like associated semantics. The elements are unknown to search engines, and accessibility devices cannot translate them. We can extend and customize built-in HTML elements by inheriting them from their classes to fix this.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

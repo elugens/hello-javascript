@@ -31,19 +31,19 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> String, number, and default conversions.</div><br />
-  <div><strong>Technical Response:</strong> The three variants of type conversion include string, number, and default conversions. String conversion can happen in an explicit fashion when an object expects a string. Mathematical operations use explicit number conversion on primitives. Default occurs in rare cases when the operator is not sure what type to expect.<br /><br />
+  <div><strong>Technical Response:</strong> The three variants of type conversion include string, number, and default conversions. String conversion can happen explicitly when an object expects a string, and mathematical operations use explicit number conversion on primitives. In rare circumstances where the operator is unclear what type to anticipate, default gets used.<br /><br />
   </div>
   </div>
 </details>
 
 ---
 
-### To implement conversions, what are the three object methods that JavaScript tries to find and call?
+### To implement conversions, what are the three object methods JavaScript tries to find and call?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The three object methods include Symbol.toPrimitive (system symbol) if it exists. Otherwise, if the hint is a string, it will try Obj.toString() or Obj.valueOf(). Finally, if the hint is a number or default it will try Obj.valueOf() and Obj.toString().</div><br />
+  <div><strong>Interview Response:</strong> The three object methods include Symbol.toPrimtive (system symbol) if it exists. Otherwise, if the hint is a string, it will try Obj.toString() or Obj.valueOf(). Finally, if the hint is a number or default it will try Obj.valueOf() and Obj.toString().</div><br />
   <div><strong>Simplified:</strong> The three object methods include Symbol.toPrimitive, Obj.toString(), and/or Obj.valueOf().<br /><br />
   </div>
   </div>
@@ -51,12 +51,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Explain, what Symbol.toPrimitive() is and what it does?
+### Explain what Symbol.toPrimitive() is and what it does?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The Symbol.toPrimitive is a symbol that specifies a function valued property that is called to convert an object to a corresponding primitive value.
+  <div><strong>Interview Response:</strong> The Symbol.toPrimitive is a symbol that specifies a function valued property called to convert an object to a corresponding primitive value.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -90,7 +90,7 @@ alert(user + 500); // hint: default -> 1500
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The result will be a return of all properties except for the Symbol.toPrimitive because Symbol cannot be seen in the global symbol registry.
+  <div><strong>Interview Response:</strong> The result returns all properties except for the Symbol.toPrimitive because Symbol does not get seen in the global symbol registry.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -118,25 +118,25 @@ for (let prop in user) {
 
 ---
 
-### Methods toString and valueOf come from ancient times. Are they considered Symbols?
+### Methods toString and valueOf come from ancient times. Are these two methods considered Symbols?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No because they were created before Symbols were implemented into JavaScript. They are regular string-name methods.</div><br />
-  <div><strong>Technical Response:</strong> No because they were created before Symbols were implemented into JavaScript. They are regular string-name methods. If there is no Symbol.toPrimitive then JavaScript tries to find them.<br /><br />
+  <div><strong>Interview Response:</strong> No, because they got created before Symbols got implemented into JavaScript. They are regular string-name methods.</div><br />
+  <div><strong>Technical Response:</strong> No, because they got created before Symbols got implemented into JavaScript. They are regular string-name methods. If there is no Symbol.toPrimitive, JavaScript tries to find them.<br /><br />
   </div>
   </div>
 </details>
 
 ---
 
-### By default, a plain object has following toString and valueOf methods. What do each of these object methods return?
+### By default, a plain object has the following toString and valueOf methods. What does each of these object methods return?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The toString method returns a string "[object Object]" and the valueOf method returns the object itself.
+  <div><strong>Interview Response:</strong> The toString method returns a string "[object Object]", and the valueOf method returns the object itself.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -160,24 +160,24 @@ alert(user.valueOf() === user); // true
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> There is no error, but such value is ignored.</div><br />
-  <div><strong>Technical Response:</strong> For historical reasons, if toString or valueOf returns an object, there is no error, but such value is ignored (like if the method did not exist). That is because in ancient times there was no good “error” concept in JavaScript.<br /><br />
+  <div><strong>Interview Response:</strong> There is no error, but such value gets ignored.</div><br />
+  <div><strong>Technical Response:</strong> For historical reasons, if toString or valueOf returns an object, there is no error, but such value is ignored (like if the method did not exist). That is because, in ancient times, there was no good "error" concept in JavaScript.<br /><br />
   </div>
   </div>
 </details>
 
 ---
 
-### As you pass an object as an argument, what are the stages that take place?
+### As you pass an object as an argument, what are the stages?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The object is converted to a primitive. If the resulting primitive is not the right type, it is converted.</div><br />
-  <div><strong>Technical Response:</strong> If we pass an object as an argument, then there are two stages.<br /><br />
+  <div><strong>Interview Response:</strong> The object gets converted to a primitive. If the resulting primitive is not the right type, it gets converted.</div><br />
+  <div><strong>Technical Response:</strong> If we pass an object as an argument, there are two stages.<br /><br />
     <ol>
-        <li>The object is converted to a primitive.</li>
-        <li>If the resulting primitive is not the right type, it is converted.</li>
+        <li>The object gets converted into a primitive.</li>
+        <li>If the resulting primitive is not of the right type, it gets converted.</li>
     </ol>
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />

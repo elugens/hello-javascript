@@ -197,6 +197,21 @@ html[data-theme='dark'] footer.footer {
   background-color: rgb(27, 27, 27);
 }
 
+/* details styling preferences*/
+
+html[data-theme='light'] details {
+  color: black;
+  background-color: whitesmoke;
+  border: #e1e1e1;
+}
+
+html[data-theme='dark'] details {
+  color: black;
+  background-color: #e7e7e7;
+  opacity: 0.85;
+  border: #e1e1e1;
+}
+
 /* custom navbar link get started */
 
 .get__started {
@@ -302,7 +317,6 @@ hr {
 }
 
 /* Close All Answers */
-
 .closeAnswersContainer {
   display: flex;
   justify-content: flex-end;

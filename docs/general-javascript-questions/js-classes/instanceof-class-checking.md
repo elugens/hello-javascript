@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The instanceof operator allows us to check whether an object belongs to a certain class. It also takes inheritance into account. Such a check may be necessary in many cases, it can be used for building a polymorphic function, the one that treats arguments differently depending on their type.
+  <div><strong>Interview Response:</strong> The instanceof operator allows us to check whether an object belongs to a certain class. It also takes inheritance into account. Such a check may be necessary in many cases, and it can be used for building a polymorphic function, the one that treats arguments differently depending on their type.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -73,7 +73,7 @@ console.log(Function instanceof Object); // true
 
 ---
 
-### Is there a way to create a custom obj instanceof Class algorithm?
+### Is it possible to make a custom obj instanceof Class algorithm?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -102,7 +102,7 @@ alert(obj instanceof Animal); // true: Animal[Symbol.hasInstance](obj) is called
 
 ---
 
-### In plain words, explain what happens with an instanceof class check.
+### In plain words, explain what happens with an instanceof class check?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -129,7 +129,7 @@ alert(rabbit instanceof Animal); // true
 
 ---
 
-### We already know that plain objects are converted to string as [object Object]. Is there a way to create a custom toString result for our own custom objects?
+### We already know that plain objects are converted to string as [object Object]. Is there a way to create a custom toString result for our custom objects?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

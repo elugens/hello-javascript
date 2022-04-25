@@ -13,24 +13,24 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Can you explain the basic concept of selection using JavaScript?
+### Can you describe the fundamentals of selection in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> JavaScript can access an existing selection, select/deselect DOM nodes as a whole or partially, remove the selected content from the document, wrap it into a tag, and so on. The basic concept of selection is Range, that is essentially a pair of “boundary points”: range start and range end.
+  <div><strong>Interview Response:</strong> JavaScript may access a current selection, select and deselect DOM nodes whole or partially, delete the selected content from the document, and encapsulate it in a tag. Range is the primary selection idea, and it is just a pair of "border points": range start and range end.
     </div>
   </div>
 </details>
 
 ---
 
-### Please explain the function and syntax of the Range Object/interface.
+### Can you please explain the function and syntax of the Range Object/interface?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The Range interface represents a fragment of a document that can contain nodes and parts of text nodes. The Range() constructor returns a newly created Range object whose start and end is the global Document object. A Range object is created without parameters in its initial state. Then we can set the selection boundaries using range.setStart(node, offset) and range.setEnd(node, offset). The interesting thing is that the first argument node in both methods can be either a text node or an element node, and the meaning of the second argument depends on that.
+  <div><strong>Interview Response:</strong> The Range interface represents a document fragment that can contain nodes and parts of text nodes. The `Range()` constructor returns a newly created Range object whose start and the end are the global Document object. A Range object gets created without parameters in its initial state. Then we can set the selection boundaries using `range.setStart(node, offset)` and `range.setEnd(node, offset)`. Surprisingly, the first parameter node in both systems can be either a text node or an element node, and the meaning of the second argument is dependent on this.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -56,12 +56,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Explain the function and syntax of the Window.getSelection() method.
+### Explain the function and syntax of the Window.getSelection() method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The Window.getSelection() method returns a Selection object representing the range of text selected by the user or the current position of the caret. The document selection is represented by Selection object, that can be obtained as window.getSelection() or document.getSelection(). A selection may include zero or more ranges.
+  <div><strong>Interview Response:</strong> The `window.getSelection()` method returns a Selection object representing the range of text selected by the user or the caret's current position. The document selection is represented as a Selection object, which may be accessed by `window.getSelection()` or `document.getSelection()`. A selection may contain 0 or more ranges.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

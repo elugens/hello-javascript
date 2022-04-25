@@ -21,7 +21,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> Another popular JavaScript design pattern for keeping our code tidy, segregated, and organized is the Module Pattern. A module is a standalone code that may be modified without impacting other components. Because the concept of an access modifier is not supported in JavaScript, the aid of the module in mimicking the behavior of private/public access, thereby ensuring encapsulation.<br/>
+      <strong>Interview Response:</strong> Another popular JavaScript design pattern for keeping our code tidy, segregated, and organized is the Module Pattern. A module is a standalone code that may get modified without impacting other components. Because the concept of an access modifier does not get supported in JavaScript, the aid of the module in mimicking the behavior of private/public access, thereby ensuring encapsulation.<br/>
     </div>
     <div>
 </div><br />

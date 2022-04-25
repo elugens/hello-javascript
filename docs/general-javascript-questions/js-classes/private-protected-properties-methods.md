@@ -13,36 +13,36 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Can you explain one of the most important principles of object-oriented programming (OOP)?
+### Can you explain one of the essential principles of object-oriented programming (OOP)?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> One of the most important principles of object-oriented programming is delimiting (separating) internal interface from the external one.
+  <div><strong>Interview Response:</strong> One of the essential principles of object-oriented programming is delimiting (separating) the internal interface from the external one.
 </div>
   </div>
 </details>
 
 ---
 
-### What are the two groups that properties and methods are split into in OOP programming?
+### What are the two interfaces into which properties and methods get divided in object-oriented programming (OOP)?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In object-oriented programming properties and methods are split into the internal and external interfaces. The internal interface is methods and properties inside of a class that are accessible within the class, but not outside of it. The external interface are properties and methods that are outside of the class, but still accessible.
-</div>
+  <div><strong>Interview Response:</strong> In object-oriented programming, properties and methods get split into internal and external interfaces. The internal interface has methods and properties accessible within the class but not outside it, and the external interfaces are properties and methods outside the class but are still accessible.
+  </div>
   </div>
 </details>
 
 ---
 
-### What is the difference between private and protected fields in JavaScript?
+### What is the key distinction between private and protected JavaScript fields?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The main difference between private and protected fields is that private fields are supported at the language level and protected fields are not. Protected properties are usually prefixed with an underscore "_". That is not enforced on the language level, but there is a well-known convention between programmers that such properties and methods should not be accessed from the outside. Privates should start with #. They are only accessible from inside the class and currently have language level support (almost a standard). On the language level, # is a special sign that the field is private. We cannot access it from outside or from inheriting classes. It should be noted that private fields may require a Polyfill to account for older browsers.
+  <div><strong>Interview Response:</strong> The main difference between private and protected fields is that private fields get supported at the language level, and protected fields are not. Protected properties usually get prefixed with an underscore _. That does not get enforced at the language level, but it is a well-known convention among programmers that such properties and methods should not be accessible from the outside. Privates should start with hash symbol #. They are only accessible from inside the class and currently have language-level support (almost a standard). The hash sign (#) is a special sign that the field is private on the language level. We cannot access it from outside or from inheriting classes. We should note that private fields may require a Polyfill to account for older browsers.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -89,12 +89,12 @@ class CoffeeMachine {
 
 ---
 
-### Is there a way to make a class property read only in JavaScript?
+### Is there a way to make a class property read-only in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, this is possible by creating a getter and withdrawing the setter from the equation. This allows access to the value that was created at creation time, but it cannot be overridden after that point.
+  <div><strong>Interview Response:</strong> Yes, this is possible by creating a getter and withdrawing the setter from the equation. This implementation allows access to the value created at creation time, but it cannot get overridden after that point.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -132,19 +132,19 @@ coffeeMachine.power = 25; // Error (no setter)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, if we inherit from a parent classes then the inheriting class has access to protected fields. The same rules apply in the inheriting class as they do in the parent.
+  <div><strong>Interview Response:</strong> Yes, if we inherit from parent classes, the inheriting class has access to protected fields. The same rules apply in the inheriting class as they do in the parent.
 </div>
   </div>
 </details>
 
 ---
 
-### Can you give a brief overview of private properties and methods?
+### Could you perhaps briefly describe private properties and methods?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Private methods and properties with the private # indicator is only accessible within a class. On the language level, # is a special sign that the field is private. We cannot access it from outside or from inheriting classes. Private fields do not conflict with public ones. We can have both private and public fields at the same time. Unlike protected ones, private fields are enforced by the language itself.
+  <div><strong>Interview Response:</strong> Private methods and properties with the private hash # indicator are only accessible within a class. The hash sign # is a special sign that the field is private on the language level, and it is not accessible from the outside or inherited classes. Private and public fields are not incompatible, and it is possible to have both private and public fields simultaneously. Unlike protected ones, private fields get enforced by the JavaScript language.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

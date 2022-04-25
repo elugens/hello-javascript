@@ -13,12 +13,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### What is the difference between a regular function and a constructor function.
+### What is the difference between a regular function and a constructor function?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The conventional differences is the constructor function name is capitalized and it should be invoked with the “new” operator.
+  <div><strong>Interview Response:</strong> The conventional difference is that the constructor function name is capitalized and invoked with the "new" operator.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -42,12 +42,12 @@ alert(user.isAdmin); // false
 
 ---
 
-### What steps are taken by a constructor function when it is invoked, in relation to the “this” keyword?
+### What steps are taken by a constructor function when it gets invoked in relation to the "this" keyword?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> First, a new object is created and assigned to “this”, the function body executes. Usually it modifies “this”, adds new properties, and the value of this is returned.
+  <div><strong>Interview Response:</strong> First, a new object is created and assigned to "this", the function body executes. Usually, it modifies "this", adds new properties, and the value of this gets returned.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -78,24 +78,24 @@ let user = {
 
 ---
 
-### What is the main purpose of constructor functions?
+### What is the primary function of constructor functions?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The main purpose of constructors is to act as the framework of an object creation. It quickly allows the code to create new objects in its image. All functions accept the arrow function can be used as a constructor.
+  <div><strong>Interview Response:</strong> The primary purpose of constructors is to act as the framework of object creation. It quickly allows the code to create new objects in its image. All functions that accept the arrow function can get used as a constructor.
 </div>
   </div>
 </details>
 
 ---
 
-### What is the result when you try to use an arrow function as a constructor?
+### What is the result when using an arrow function as a constructor?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Any attempt to resolve this in an arrow function will result in a type error. This is especially notable when you try to use an arrow function as a constructor. It will result in a type error. A cardinal rule to remember in JavaScript development is that arrow functions have no “THIS”.
+  <div><strong>Interview Response:</strong> Any attempt to resolve "this" in an arrow function results in a type error. This behavior is especially notable when you try to use an arrow function as a constructor, resulting in a type error. A cardinal rule to remember in JavaScript development is that arrow functions have no "THIS".
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -120,7 +120,7 @@ const redCar = new Car('red'); // TypeError: Car is not a constructor
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong>Yes, it is technically possible when you have no arguments and permitted by the specification, but it is not considered a good style. You should always use the parentheses even when you have no arguments in your constructor.
+  <div><strong>Interview Response:</strong> Yes, technically, when you have no arguments and this approach is permitted by the specification but not considered a good style. It would be best always to use the parentheses even when you have no arguments in your constructor.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -144,10 +144,10 @@ const redCar = new Car('red'); // TypeError: Car is not a constructor
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Usually, constructors do not have a return statement. Their task is to write all necessary stuff into this, and it automatically becomes the result, but if there is a return statement, then the rule is simple.<br /><br />
+  <div><strong>Interview Response:</strong> Constructors often do not contain a return statement. Their role is to enter all relevant information into this, and it immediately becomes the outcome; nevertheless, if there is a return statement, the rule is straightforward.<br /><br />
   <ol>
-    <li>If return is called with an object, then the object is returned instead of this.</li>
-    <li>If return is called with a primitive, it is ignored.</li>
+    <li>If the return function gets used with an object, the object is returned instead of this.</li>
+    <li>If the return function gets invoked with a primitive, it gets ignored.</li>
   </ol>
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />

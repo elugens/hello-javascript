@@ -16,7 +16,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, JavaScript represents all text as a string. There is no separate type for a single character.
+  <div><strong>Interview Response:</strong> No, JavaScript represents all text as a string. There is no particular type for a single character.
 </div>
   </div>
 </details>
@@ -28,7 +28,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The internal format for strings is always UTF-16, it is not tied to the page encoding.
+  <div><strong>Interview Response:</strong> The internal format for strings is always UTF-16, but it does get tied to the page encoding.
 </div>
   </div>
 </details>
@@ -40,7 +40,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Strings can be enclosed within either single quotes, double quotes or back-ticks.
+  <div><strong>Interview Response:</strong> Strings get enclosed within either single quotes, double quotes, or backticks.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -59,13 +59,13 @@ let backticks = `backticks`;
 
 ---
 
-### Can you explain the difference between single quotes, double quotes, and back-ticks?
+### Can you explain the difference between single, double, and backticks?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Single and double quotes are essentially the same.</div><br />
-  <div><strong>Technical Response:</strong> Single and double quotes are essentially the same. Back-ticks, however, allow us to embed any expression into the string, by wrapping it in $&#123;…&#125; . Another advantage of using back-ticks is that they allow a string to span multiple lines.<br /><br />
+  <div><strong>Interview Response:</strong> Single and double quotes are essentially the same. Single and double quotes are essentially the same. Backticks allow us to implement string interpolation.</div><br />
+  <div><strong>Technical Response:</strong> The meaning of single and double quotations is roughly the same. Backticks, on the other hand, allow us to embed any phrase inside the string by enclosing it in $&#123;…&#125;. Backticks have the additional benefit of allowing a string to span several lines.<br /><br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -101,12 +101,12 @@ let guestList = "Guests: // Error: Unexpected token ILLEGAL
 
 ---
 
-### Is it possible to create a multiline string with single or double quotes?
+### Can single or double quotes be used to generate a multiline string?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We can create multi-line strings using the new line character for line breaks. The best approach is to use backticks for ease of use.</div><br />
+  <div><strong>Interview Response:</strong> We can create multi-line strings for line breaks using the new line character. The best approach is to use backticks for ease of use.</div><br />
   <div><strong>Technical Response:</strong> Yes, it is still possible to create multiline strings with single and double quotes by using a so-called “newline character”, written as \n, which denotes a line break.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -137,13 +137,13 @@ alert(str1 == str2); // true
 
 ---
 
-### What is the common characteristic of all special characters in JavaScript?
+### What is the one thing that all special characters in JavaScript have in common?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> All special characters should start with a backslash character known as the escape character.</div><br />
-  <div><strong>Technical Response:</strong> All special characters start with a backslash character \. It is also called an “escape character”. We might also use it if we wanted to insert a quote into the string.<br />
+  <div><strong>Interview Response:</strong> All special characters start with a backslash character known as the escape character.</div><br />
+  <div><strong>Technical Response:</strong> Every special character begins with a backslash (\) character. It is also known as an "escape character." We could also use it to insert a quotation inside the string.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -167,13 +167,13 @@ alert(`The backslash: \\`); // The backslash: \
 
 ---
 
-### Is length a property or a function in JavaScript?
+### Is the length property or a function in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> It is a property that returns the length of string or an array.</div><br />
-  <div><strong>Technical Response:</strong> In JavaScript, length is a property and will result in an error if you try to invoke it as a function. People with a background in some other languages sometimes mistype by calling str.length() instead of just str.length. Length is a numeric property, and it is not necessary to add the parentheses.<br />
+  <div><strong>Interview Response:</strong> length is a property that returns the length of a string or an array.</div><br />
+  <div><strong>Technical Response:</strong> In JavaScript, length is a property and results in an error if you try to invoke it as a function. People with a background in other languages sometimes mistype by calling str.length() instead of just str.length. Length is a numeric property, and it is not necessary to add the parentheses.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -194,8 +194,8 @@ alert(`Hello`.length); // 5
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Square brackets returns undefined and charAt will return a string.</div><br />
-  <div><strong>Technical Response:</strong> The square brackets are a modern way of getting a character, while charAt exists mostly for historical reasons. The only difference between them is that if no character is found, [] returns undefined, and charAt returns an empty string.<br /><br />
+  <div><strong>Interview Response:</strong> Square brackets return undefined, and charAt returns a string.</div><br />
+  <div><strong>Technical Response:</strong> The square brackets are a more contemporary method of obtaining a character, whereas charAt persists mainly for historical reasons. The only difference is that [] returns undefined if no character gets discovered, whereas charAt produces an empty string.<br /><br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -220,13 +220,13 @@ for (let char of 'Hello') {
 
 ---
 
-### Are strings mutable or immutable in JavaScript and why?
+### Are strings mutable or immutable in JavaScript, and why?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Strings are primitive values making the immutable.</div><br />
-  <div><strong>Technical Response:</strong> Strings are immutable in JavaScript and cannot be changed because they are primitive values. It is important not to confuse a primitive itself with a variable assigned a primitive value. The variable may be reassigned a new value, but the existing value cannot be changed in the ways that objects, arrays, and functions can be altered.<br />
+  <div><strong>Interview Response:</strong> Strings are primitive values making them immutable.</div><br />
+  <div><strong>Technical Response:</strong> Strings are immutable in JavaScript and cannot be changed because they are primitive values. It is important not to confuse a primitive with a variable assigned a primitive value. The variable may get reassigned to a new value, but the current value cannot be changed in the ways that objects, arrays, and functions can get altered.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -261,14 +261,14 @@ bar = bar.toUpperCase(); // BAZ
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> String, Symbol, BigInt, Boolean, and Number primitive wrapper objects.</div><br />
-  <div><strong>Technical Response:</strong> Except for null and undefined, all primitive values have object equivalents that wrap around the primitive values. The five wrapper objects include string, number, bigint, Boolean, and symbol primitive wrapper objects.<br /><br />
+  <div><strong>Technical Response:</strong> Except for null and undefined, all primitive values have object equivalents that wrap around the primitive values. The five wrapper objects include string, number, BigInt, Boolean, and symbol primitive wrapper objects.<br /><br />
   </div>
   </div>
 </details>
 
 ---
 
-### What two methods are used to change the case of string?
+### What two methods get used to change the case of a string?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -295,12 +295,12 @@ alert('Interface'[0].toLowerCase()); // 'i'
 
 ---
 
-### Explain, the function and syntax of the string indexOf() method?
+### Explain the function and syntax of the string indexOf() method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The string indexOf() method looks for the substring within a string, starting from the given position pos, and returns the position where the match was found or -1 if nothing can be found. The optional second parameter allows us to start searching from a given position. Otherwise, it defaults to the zero-index position.
+  <div><strong>Interview Response:</strong> The string indexOf() method looks for the substring within a string, starting from the given position pos, and returns the position where the match gets found or -1 if nothing gets found. The optional second parameter allows us to start searching from a given position; otherwise, it defaults to the zero-index position.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -332,7 +332,7 @@ while (true) {
 
 :::note
 
-The indexOf() method cannot take powerful search values (regular expressions) like the search method. It should be noted, the indexOf search is case-sensitive.
+The indexOf() method cannot take powerful search values (regular expressions) as the search method. We should note that the indexOf search is case-sensitive.
 
 :::
 
@@ -347,7 +347,7 @@ The indexOf() method cannot take powerful search values (regular expressions) li
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The most notable difference between indexOf and lastIndexOf methods is that lastIndexOf starts at the end of the value being evaluated to the front. It lists the occurrences in reverse order.
+  <div><strong>Interview Response:</strong> The most notable difference between indexOf and lastIndexOf methods is that lastIndexOf starts at the end of the value getting evaluated to the front. It lists the occurrences in reverse order.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong> lastIndexOf()<br /><br />
 
@@ -379,7 +379,7 @@ console.log(
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The search method cannot take a second start position argument, but it does accept regular expressions. The indexOf method does not accept regular expressions.</div><br />
-  <div><strong>Technical Response:</strong> Although, indexOf and search methods are similar. They are not equal and have some notable differences. The search() method cannot take a second start position argument, but it does accept regular expressions. The indexOf() method cannot take powerful search values (regular expressions).<br /><br />
+  <div><strong>Technical Response:</strong> Although indexOf and search methods are similar. They are not equal and have some notable differences. The search() method cannot take a second start position argument, but it does accept regular expressions. The indexOf() method cannot take powerful search values (regular expressions).<br /><br />
   </div>
   </div>
 </details>
@@ -391,8 +391,8 @@ console.log(
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Returning a zero-index value in an if statement can result in false zero value. The if statement will erroneously return false based in the index zero value.</div><br />
-  <div><strong>Technical Response:</strong> The potential negative outcome is relative to returning zero as the index occurrence. The if statement will not work properly and return a false zero value. This is a bit of inconvenience and can be fixed using an extended value check on the zero value!<br />
+  <div><strong>Interview Response:</strong> A zero-index value in an if statement can result in a false zero value. The if statement erroneously returns false based on the index zero value.</div><br />
+  <div><strong>Technical Response:</strong> The potential negative outcome is relative to returning zero as the index occurrence. The if statement does not work correctly and return a false zero value. This behavior is inconvenient and gets fixed using an extended value check on the zero value.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -425,8 +425,8 @@ if (str.indexOf('Widget') != -1) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The bitwise NOT ~ operator can be used to convert a number to a 32-bit integer, it removes the decimal part if they exist, and then reverses all bits in its binary representation.</div><br />
-  <div><strong>Technical Response:</strong> One of the old tricks used here is the bitwise NOT ~ operator. It converts the number to a 32-bit integer (removes the decimal part if exists) and then reverses all bits in its binary representation. In practice, that means a simple thing: for 32-bit integers ~n equals -(n+1).<br />
+  <div><strong>Interview Response:</strong> The bitwise NOT ~ operator can be used to convert a number to a 32-bit integer; it removes the decimal part if they exist and then reverses all bits in its binary representation.</div><br />
+  <div><strong>Technical Response:</strong> The bitwise NOT operator is a well-known trick. It converts the digit to a 32-bit integer (removing any decimal parts) then reverses all of the bits in its binary representation. In practice, that means simple: for 32-bit integers, ~n equals -(n+1).<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -445,12 +445,12 @@ alert(~-1); // 0, the same as -(-1+1)
 
 ---
 
-### Can you use the Bitwise (~) Not to ensure that a call on the indexOf method acts in the intend fashion in an if statement?
+### Can you use the Bitwise (~) Not to ensure that a call on the indexOf method acts in the intended fashion in an if statement?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, the bitwise not operator ensures that any occurrence at the zero-index returns true if that is the intended result, because a result of zero in an if statement returns false and the if statement will not work.
+  <div><strong>Interview Response:</strong> Yes, the bitwise not operator ensures that any occurrence at the zero-index returns true if that is the intended result because of a result of zero in an if statement returns false, and the if statement does not work.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -470,12 +470,12 @@ if (~str.indexOf('Widget')) {
 
 ---
 
-### Explain, the function and syntax of the string “includes” method?
+### Explain the function and syntax of the string “includes” method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The string “includes” method tests for a match of given value within a string. If a match is found it returns true, otherwise it returns false. The syntax provides an additional argument that specifies an index position where the search will start.
+  <div><strong>Interview Response:</strong> The string “includes” method tests for a match of a given value within a string. If a match gets found, it returns true. Otherwise, it returns false. The syntax provides an additional argument that specifies an index position where the search starts.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -504,14 +504,13 @@ The includes() method is case sensitive.
 
 ---
 
-### Explain, the function and syntax of the both string startsWith() and endsWith() methods?
+### Explain, the function and syntax of both string startsWith() and endsWith() methods?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The methods str.startsWith and str.endsWith do exactly what they say.<br /><br />
-  The startsWith() method determines whether a string begins with the characters of a specified string. This method returns true if the string begins with the characters, and false if not. The startsWith() method accepts two arguments search value and start position. By default the start position is set to zero (0).<br /><br />
-  The endsWith() method determines whether a string ends with the characters of a specified string. This method returns true if the string ends with the characters, and false if not. The endsWith() method accepts two arguments search value and length. If omitted, the default value is the length of the string.
+  <div><strong>Interview Response:</strong> The methods str.startsWith and str.endsWith do what they say.<br /><br />
+  The startsWith() method determines whether a string begins with the characters of a specified string. This method returns true if the string begins with the characters and false if not. The startsWith() method accepts two arguments search value and start position, and by default, the start position gets set to zero (0).<br /><br />The endsWith() method determines whether a string ends with the characters of a specified string. This method returns true if the string ends with the characters and false if not. The endsWith() method accepts two arguments search value and length. If omitted, the default value is the length of the string.
   <br />
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -547,20 +546,20 @@ Both the startsWith() and endsWith() methods are case sensitive.
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> - substring, substr and slice methods.</div><br />
-  <div><strong>Technical Response:</strong> There are 3 methods in JavaScript to get a substring including the substring, substr and slice methods.<br /><br />
+  <div><strong>Interview Response:</strong> - substring, substr, and slice methods.</div><br />
+  <div><strong>Technical Response:</strong> There are 3 methods in JavaScript to get a substring, including the substring, substr, and slice methods.<br /><br />
   </div>
   </div>
 </details>
 
 ---
 
-### Explain, the function and syntax of string slice() method in JavaScript?
+### Explain the function and syntax of the string slice() method in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The string slice() method returns part of string from the starting point to (but not including) the end. It accepts two arguments including the start (required) and end points. If there is no second argument, then slice goes till the end of the string. You can use a negative number to select from the end of the string.
+  <div><strong>Interview Response:</strong> The string slice() method returns part of the string from the starting point to (but not including) the end. It accepts two arguments, including the start (required) and end points. If there is no second argument, then the slice goes to the end of the string. You can use a negative number to select from the end of the string.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -586,12 +585,12 @@ alert(str.slice(-5)); // returns world!
 
 ---
 
-### Explain, the function and syntax of string substring() method in JavaScript?
+### Explain the function and syntax of the string substring() method in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The string substring() method returns the part of the string between start and end. It accepts two arguments including the start (required) and end points. This is almost the same as slice, but it allows start to be greater than end. If "start" is greater than "end", this method will swap the two arguments, meaning str.substring(1, 4) == str.substring(4, 1). Negative arguments are (unlike slice) not supported, they are treated as 0. The start position is required and the end point if omitted, it extracts the rest of the string.
+  <div><strong>Interview Response:</strong> The string substring() method returns the part of the string between start and end. It accepts two arguments, including the start (required) and end points. This process is almost the same as slice, but it allows the start to be greater than the end. If "start" is greater than "end", this method will swap the two arguments, meaning str.substring(1, 4) == str.substring(4, 1). Negative arguments are (unlike slice) not supported. They get treated as 0. The start position is required, and the end point, if omitted, it extracts the rest of the string.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -617,7 +616,7 @@ alert(str.slice(6, 2)); // "" (an empty string)
 
 ---
 
-### Explain, the function and syntax of string substr() method in JavaScript?
+### Explain the function and syntax of the string substr() method in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -655,7 +654,7 @@ The `substr()` method does not change the original string.
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The substr() method may not work in some non-browser environments. It is described not in the core JavaScript specification, but in Annex B, which covers browser-only features that exist mainly for historical reasons.
+  <div><strong>Interview Response:</strong> The substr() method may not work in some non-browser environments. It is described not in the core JavaScript specification but in Annex B, which covers browser-only features mainly for historical reasons.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -683,12 +682,12 @@ The substr() method does not change the original string.
 
 ---
 
-### Of the three substring methods (slice / substring / substr) in JavaScript, which one is the most flexible choice?
+### Which one is the most flexible choice of the three substring methods (slice / substring / substr) in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Of the three variants, slice is a little bit more flexible, it allows negative arguments and seems to be shorter to write. So, it is enough to remember solely slice of these three methods.
+  <div><strong>Interview Response:</strong> Of the three variants, the slice is slightly more flexible. It allows negative arguments and seems to be shorter to write. So, it is enough to remember a slice of these three methods solely.
 </div>
   </div>
 </details>
@@ -700,7 +699,7 @@ The substr() method does not change the original string.
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> JavaScript strings are compared character-by-character in alphabetical order. JavaScript also compares each character by their UTF-16 numeric code which can result in some odd outcomes.
+  <div><strong>Interview Response:</strong> JavaScript strings are compared character-by-character in alphabetical order. JavaScript also compares each character by their UTF-16 numeric code, resulting in some odd outcomes.
 </div>
   </div>
 </details>
@@ -712,7 +711,7 @@ The substr() method does not change the original string.
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Lowercase letters are greater than uppercase letters in JavaScript because they are compared by their UTF-16 numeric code.
+  <div><strong>Interview Response:</strong> Lowercase letters are greater than uppercase letters in JavaScript because their UTF-16 numeric code compares them.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -728,13 +727,13 @@ alert('a' > 'Z'); // true a = 97, Z = 90, so 97 is greater than 90
 
 ---
 
-### Are there any special methods that can get the UTF-16 number code of a character in JavaScript?
+### Are there any special methods to get the UTF-16 number code of a character in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> We can use the charCodeAt and codePointAt methods to retrieve the UTF-16 numeric codes.</div><br />
-  <div><strong>Technical Response:</strong> Yes, there are several special methods that can get the numeric code of a specific character. They include the charCodeAt and codePointAt methods. Notably, the codePointAt method may require a polyfill in older browsers.<br />
+  <div><strong>Technical Response:</strong> Yes, several special methods can get the numeric code of a specific character. They include the charCodeAt and codePointAt methods. Notably, the codePointAt method may require a polyfill in older browsers.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -752,13 +751,13 @@ alert('Z'.charCodeAt(0)); // numeric code: 90
 
 ---
 
-### Is there a built-in method that is used to compare diacritical characters in JavaScript?
+### Is there a built-in method to compare diacritical characters in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, the localeCompare method can be used to compare string values using diacritical characters.</div><br />
-  <div><strong>Technical Response:</strong> Yes, the localeCompare method can be used to compare string values using diacritical characters. The outcome is proper sorting and filtering of string values. The call localeCompare returns an integer indicating whether a string is less, equal, or greater than comparative string according to the language rules. localCompare returns a negative number if the string is less than comparative string, returns a positive number if string is greater than comparative string, or returns 0 if they are equivalent.<br />
+  <div><strong>Interview Response:</strong> Yes, the localeCompare method can get used to compare string values using diacritical characters.</div><br />
+  <div><strong>Technical Response:</strong> Yes, the localeCompare method gets used to compare string values using diacritical characters, and the outcome is proper sorting and filtering of string values. According to the language rules, the call localeCompare returns an integer indicating whether a string is less, equal, or greater than the comparative string. localCompare returns a negative number if the string is less than the comparative string. If the string is greater than the comparative string, it produces a positive number; otherwise, it returns 0.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -774,13 +773,13 @@ alert('Österreich'.localeCompare('Zealand')); // -1
 
 ---
 
-### What are rare symbols encoded with a pair of 2-byte characters called?
+### What are the rare symbols encoded with a pair of 2-byte characters?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Surrogate pairs because they have two 2-byte characters.</div><br />
-  <div><strong>Technical Response:</strong> They are called surrogate pairs because they have two 2-byte characters versus a normal or frequently used character that has a single 2-byte character. Since JavaScript was created prior to the creation of surrogate pairs it was necessary to extend/encode rare symbols in two 2-byte form. The length of such rare symbols is 2.<br />
+  <div><strong>Technical Response:</strong> They are surrogate pairs because they have two 2-byte characters versus a normal or frequently used character that has a single 2-byte character. Since JavaScript got created before the creation of surrogate pairs, it was necessary to extend/encode rare symbols in two 2-byte forms. The length of such rare symbols is 2.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -798,12 +797,12 @@ alert('𩷶'.length); // 2, a rare Chinese hieroglyph
 
 ---
 
-### What is the modern method that can return the numeric code of surrogate pairs?
+### What modern method can return the numeric code of surrogate pairs?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The fromCodePoint and codePointAt methods that can retrieve and display the numeric code of surrogate pairs.
+  <div><strong>Interview Response:</strong> The fromCodePoint and codePointAt methods can retrieve and display the numeric code of surrogate pairs.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

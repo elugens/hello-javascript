@@ -13,12 +13,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### How does square brackets […] perform in regular expression sets?
+### How do square brackets […] perform in regular expression sets?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Several characters or character classes inside square brackets […] mean to “search for any character among given”. For example, [eao] means any of the 3 characters: 'a', 'e', or 'o'. That is called a set, in regex terminology. Sets can be used in a regexp along with regular characters. It should be noted, although there are multiple characters in the set, they correspond to exactly one character in the match.
+  <div><strong>Interview Response:</strong> Several characters or character classes inside square brackets […] mean to “search for any character among given”. For example, [eao] means any of the 3 characters: 'a', 'e', or 'o'. That is called a set in regex terminology. Sets get used in a regexp along with recurring characters. We should note that although there are multiple characters in the set, they correspond to exactly one character in the match.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -39,12 +39,12 @@ alert('Voila'.match(/V[oi]la/)); // null, no matches
 
 ---
 
-### Explain, how is a range denoted in a regular expression?
+### Can you explain how range gets set in a regular expression?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In simple terms, a range in a regular is denoted or expression inside of square brackets. A range may from [a-z] or [1-100], this can be set based on your needs. We can also use character classes inside […]. For example, if we would like to look for a wordy character \w or a hyphen -, then the set is [\w-]. Combining multiple classes is also possible, e.g. [\s\d] means “a space character or a digit”.
+  <div><strong>Interview Response:</strong> In simple terms, a range in a regular expression is denoted or expressed inside of square brackets. A range may be from [a-z] or [1-100]. These settings can be set based on your needs. We can also use character classes inside […]. For example, if we would like to look for a wordy character \w or a hyphen -, then the set is [\w-]. Combining multiple classes is also possible, e.g. [\s\d] means “a space character or a digit”.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -65,7 +65,7 @@ alert('Exception 0xAF'.match(/x[0-9A-F][0-9A-F]/g)); // xAF
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, we can write a more universal pattern, that looks for wordly characters in any language. That is easy, we would use the Unicode properties available to us in regular expressions. It should be noted that Unicode properties are not supported in Internet Explorer. If we really need them, we can use library XRegExp for IE users.
+  <div><strong>Interview Response:</strong> Yes, we can write a universal pattern that looks for wordy characters in any language. That is easy; we would use the Unicode properties in regular expressions. Note that Unicode properties do not get supported in Internet Explorer, and if we need them, we can use library XRegExp for IE users.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -112,7 +112,7 @@ alert('alice15@gmail.com'.match(/[^\d\sA-Z]/gi)); // returns @ and .
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, there is no need to escape special characters in regex ranges or sets. The only characters that are is escaped are the caret ^ and the closing bracket. They are not escaped in the technical sense, but rather implicitly. This does not mean we cannot escape characters, but that it is not necessary in most cases.
+  <div><strong>Interview Response:</strong> No, there is no need to escape special characters in regex ranges or sets. The only characters that get escaped are the caret ^ and the closing bracket, and they are not escaped in the technical sense but rather implicitly. This technicality does not mean we cannot escape characters, but it is not necessary in most cases.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -141,7 +141,7 @@ alert('1 + 2 - 3'.match(regexp)); // also works: +, -
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> If there are surrogate pairs in the set, flag u is required for them to work correctly. This also applies to a range of surrogate pairs.
+  <div><strong>Interview Response:</strong> If there are surrogate pairs in the set, flag u is required for them to work correctly. This requirement also applies to a range of surrogate pairs.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

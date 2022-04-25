@@ -141,7 +141,7 @@ Get freelance developer's progress:
 
 ---
 
-### Which pattern category does the Composite pattern fall under?
+### The Composite pattern belongs to which design pattern family?
 
 <details>
   <summary>
@@ -164,10 +164,10 @@ Get freelance developer's progress:
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> Composite pattern is powerful as it allows us to treat an object as a composite. Since both single and composite objects share the same interface, it will enable reusing objects without worrying about their compatibility.
+      <strong>Interview Response:</strong> Composite pattern is powerful as it allows us to treat an object as a composite. Since both single and composite objects share the same interface, it enables reusing objects without worrying about their compatibility.
     </div><br/>
     <div>
-      <strong>Technical Response:</strong> The Composite Pattern describes a group of objects that can be treated in the same way a single instance of an object may be.<br/><br/>This allows us to treat individual objects and compositions uniformly, which means that the same behavior will be applied whether we're working with one or a thousand items.<br/><br/>This pattern can be used to create a scalable application with a large number of objects. It is useful when dealing with an object hierarchy that resembles a tree. Your operating system, for example, uses this pattern to create directories and sub-directories. This pattern is also used by libraries such as React and Vue to create reusable interfaces.
+      <strong>Technical Response:</strong> The Composite Pattern describes a collection of objects treated in the same way that a single instance of an object can.<br/><br/>This approach allows us to treat individual objects and compositions uniformly, which means the same behavior is applied when working with one or a thousand items.<br/><br/>This pattern gets used to create a scalable application with many objects, and it is useful when dealing with an object hierarchy that resembles a tree. Your operating system, for example, uses this pattern to create directories and sub-directories. This pattern also gets used by libraries such as React and Vue to create reusable interfaces.
     </div>
 
   </div>
@@ -189,7 +189,7 @@ Get freelance developer's progress:
     <div></div>
 
 - **Component** – The component declares the interface for the objects in the composition.
-- **Leaf** – The leaf represents leaf objects in the composition, and a leaf is defined as an object with no children in this pattern.
+- **Leaf** – The leaf represents leaf objects in the composition, and a leaf gets defined as an object with no children in this pattern.
 - **Composite** – The Composite object represents branches of subtrees in the composition and maintains a collection of child components.
 
 <br />
@@ -211,7 +211,7 @@ Get freelance developer's progress:
     <br />
     <div></div>
 
-- When you use polymorphism and recursion, you can work with complex tree structures more easily.
+- Using polymorphism and recursion, you can more efficiently work with complex tree structures.
 - The Open/Closed Principle You can add new element types to the app without breaking the existing code, which is now compatible with the object tree.
 
 <br />

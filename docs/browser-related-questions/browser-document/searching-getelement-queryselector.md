@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> If an element has the id attribute, we can get the element using the method document.getElementById(id), no matter where it is inside of our code. We can also act directly on the element id name (not a recommended approach). It should be noted if the id is an existing variable then its value reference takes precedence.
+  <div><strong>Interview Response:</strong> If an element has the id attribute, we can get the element using the method document.getElementById(id), no matter where it is inside of our code. We can also act directly on the element id name (not a recommended approach). If the id is an existing variable, its value reference takes precedence.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -58,12 +58,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### What is the main rule when it comes to naming an element id attribute?
+### What is the main rule for naming an element id attribute?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The id must be unique. There can be only one element in the document with the given id. If there are multiple elements with the same id, then the behavior of methods that use it is unpredictable, e.g. document.getElementById may return any of such elements at random. So please stick to the rule and keep id unique.
+  <div><strong>Interview Response:</strong> The id has to be unique. In the document, there can only be one element with the supplied id. When there are several elements with the same id, the behavior of methods that use it, such as documents, is unpredictable. getElementById may return an element at random from this list. Please abide by the rules and keep your id unique.
 </div>
   </div>
 </details>
@@ -75,19 +75,19 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, the method getElementById can be called only on document objects. It looks for the given id in the whole document. We should use document.getElementById and avoid using element.getElementById because it is not the proper use of the method.
+  <div><strong>Interview Response:</strong> No, the method getElementById can be called only on document objects. It looks for the given id in the whole document. We should use document.getElementById, and avoid using element.getElementById because it is not the proper use of the method.
 </div>
   </div>
 </details>
 
 ---
 
-### Explain the function and syntax of querySelectorAll method.
+### Explain the function and syntax of querySelectorAll method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> By far, the most versatile method, document.querySelectorAll(css) returns all elements inside of a element matching the given CSS selector. This method is indeed powerful because any CSS selector can be used as a target. We can target groups of CSS selectors easily with querySelectorAll method.
+  <div><strong>Interview Response:</strong> BBy far, the most versatile method document.querySelectorAll(css) returns all elements inside of a element matching the given CSS selector. This method is powerful because any CSS selector can get it as a target. We can target groups of CSS selectors easily with querySelectorAll method.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -124,19 +124,19 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, Pseudo-classes in the CSS selector like :hover and :active are also supported. For instance, document.querySelectorAll(':hover') will return the collection with elements that the pointer is over now (in nesting order: from the outermost &#8249;html&#8250; to the most nested one).
+  <div><strong>Interview Response:</strong> Yes, Pseudo-classes in the CSS selector like `:hover` and `:active` are also supported. For instance, document.querySelectorAll(':hover') will return the collection with elements that the pointer is over now (in nesting order: from the outermost &#8249;html&#8250; to the most nested one).
 </div>
   </div>
 </details>
 
 ---
 
-### Explain the function and syntax of querySelector method.
+### Explain the function and syntax of querySelector method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The Document method querySelector() returns the first Element within the document that matches the specified selector, or group of selectors. If no matches are found, null is returned. <br />
+  <div><strong>Interview Response:</strong> The Document method querySelector() returns the first element within the document that matches the specified selector or group of selectors. If no matches get found, we receive a null value.<br />
   <strong>Syntax: </strong> elementList = parentNode.querySelector(selectors);<br /><br />
 </div>
   </div>
@@ -144,12 +144,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Explain the function and syntax of element.matches method.\*\*
+### Explain the function and syntax of element.matches method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The elem.matches(css) does not look for anything, it merely checks if elem matches the given CSS-selector. It returns true or false. The method comes in handy when we are iterating over elements (like in an array or something) and trying to filter out those that interest us.
+  <div><strong>Interview Response:</strong> The elem.matches(css) function does not search for anything; it determines if the element matches the provided CSS-selector. It either returns true or false. This method comes in handy when iterating through items (such as in an array) and seeking to filter results.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -177,12 +177,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Explain the function and syntax of element.closest method.\*\*
+### Explain the function and syntax of element.closest method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Ancestors of an element are the parent, the parent of parent, its parent and so on. The ancestors together form the chain of parents from the element to the top. The method elem.closest(css) looks for the nearest ancestor that matches the CSS-selector. The elem itself is also included in the search. In other words, the method closest goes up from the element and checks each of parents. If it matches the selector, then the search stops, and the ancestor is returned.
+  <div><strong>Interview Response:</strong> An element's ancestors include its parent, the parent of the parent, the parent of the parent, and down the ancestral tree. From the element to the top, the ancestors create a chain of parents. The method elem.closest(css) searches for the closest ancestor to the CSS-selector. The search also includes the element itself. In other words, the nearest method ascends from the element and checks each of the parents. If it matches the selector, the search is terminated, returning the ancestor.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -216,12 +216,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Explain the function and syntax of getElementsByTagName method.
+### Explain the function and syntax of getElementsByTagName method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The elem.getElementsByTagName(tag) looks for elements with the given tag and returns the collection of them. The tag parameter can also be a star "*" for “any tags”. In modern code we use querySelector because it is more powerful and shorter to write, but you may find it in older applications. Similarly, getElementsByClassName and getElementsByName are a few more of the relics you may find. It’s good to be familiar with these methods.
+  <div><strong>Interview Response:</strong> The elem.getElementsByTagName(tag) looks for elements with the given tag and returns the collection of them. The tag parameter can also be a star "*" for “any tags”. In modern code, we use querySelector because it is more powerful and shorter to write, but you may find it in older applications. Similarly, getElementsByClassName and getElementsByName are a few more of the relics you may find. It’s good to be familiar with these methods.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -283,7 +283,7 @@ document.getElementsByTagName('input')[0].value = 5;
 ```
 
 :::note
-Novice developers have tendency to treat the getElementsByTagName return as an element, but this is a mistake. That will not work, because it takes a collection of inputs and assigns the value to it rather than to elements inside it. We should either iterate over the collection or get an element by its index, and then assign it.
+Novice coders mistake the getElementsByTagName return for an element, which is incorrect. That fails because it takes a collection of inputs and assigns the value rather than the elements inside it. We should either loop over the collection or retrieve an element by index and assign it.
 :::
 
   </div>
@@ -297,7 +297,7 @@ Novice developers have tendency to treat the getElementsByTagName return as an e
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> All methods getElementsBy* return a live collection. Such collections always reflect the current state of the document and “auto-update” when it changes. In contrast, querySelectorAll returns a static collection. It’s like a fixed array of elements.
+  <div><strong>Interview Response:</strong> All methods "getElementsBy*" return a live collection. Such collections always reflect the document's current state and “auto-update” when it changes. In contrast, querySelectorAll returns a static collection. It’s like a fixed array of elements.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

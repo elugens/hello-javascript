@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Apart from Callback Queue, browsers have introduced one more queue which is “Job Queue”, reserved only for new Promise() functionality. Asynchronous tasks need proper management. For that, the ECMA standard specifies an internal queue PromiseJobs, more often referred to as the “microtask queue” (V8 term). So when you use promises in your code, you add .then() method, which is a callback method. These `thenable` methods are added to Job Queue once the promise has returned/resolved, and then gets executed. Notably, any code in the ScriptsJob will return prior to the return of a promise in the microtasks queue.
+  <div><strong>Interview Response:</strong> Apart from Callback Queue, browsers have introduced one more queue, the “Job Queue”, reserved only for new Promise() functionality. Asynchronous tasks need proper management. The ECMA standard specifies an internal queue PromiseJobs, more often referred to as the “microtask queue” (V8 term). So when you use promises in your code, you add .then() method, which is a callback method. These `thenable` methods are added to Job Queue once the promise has returned/resolved and then gets executed. Notably, any code in the ScriptsJob returns before the return of a promise in the microtasks queue.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -59,12 +59,12 @@ console.log('Message no. 5: Sync');
 
 ---
 
-### What if the order matters for us? How can we make code run after promise done?
+### What if the order matters for us? How can we make code run after a promise gets done?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The simplest and recommended way to make code run after promise done is to put it into the queue with the .then method.
+  <div><strong>Interview Response:</strong> The most straightforward and recommended way to run code after a promise gets done is to put it into the queue with the .then method.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -82,12 +82,12 @@ Promise.resolve()
 
 ---
 
-### When does an unhandled rejection occur in relation to a JavaScript promise?
+### When does an unhandled rejection occur in JavaScript promises?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> An “unhandled rejection” occurs when a promise error is not handled at the end of the microtask queue. Normally, if we expect an error, we add .catch to the promise chain to handle it.
+  <div><strong>Interview Response:</strong> An “unhandled rejection” occurs when a promise error gets unhandled at the end of the microtask queue. Usually, if we expect an error, we add .catch to the promise chain to handle it.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

@@ -13,12 +13,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### What is the bubble up principle in relation to events?
+### What is the bubble-up principle concerning events?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The bubbling up principle is self-explanatory based on its name. In principle, when an event happens on an element, it first runs the handlers on it, then on its parent, then all the way up on other ancestors.
+  <div><strong>Interview Response:</strong> The bubbling-up principle is self-explanatory based on its name. In principle, when an event happens on an element, it first runs its handlers, then on its parent, and back up to the other ancestors.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -48,16 +48,16 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Explain what the event target is in JavaScript.
+### Can you explain what the event target is in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The most deeply nested element that caused the event is called a target element, accessible as event.target. The event target does not change through the bubbling process and can be viewed as the initial point of the event.
+  <div><strong>Interview Response:</strong> The most deeply nested element that caused the event is called a target element, accessible as event.target. The event target does not change through the bubbling process and gets viewed as the initial point of the event. 
     </div><br />
 
 :::note
-The current target is the specific target where the current action is taking place where “this = event.currentTarget”. It’s possible that event.target could equal this or the current target.
+The current target is the precise target at which the current action gets performed, where "this = event.currentTarget." It is conceivable that event.target equals either this or the current target.
 :::
 
   </div>
@@ -70,7 +70,7 @@ The current target is the specific target where the current action is taking pla
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> If necessary, there are two methods used to explicitly stop the bubbling up process including the stopPropagation and stopImmediatePropagation. Using these two approaches should be limited, because there are some drawbacks such click event failures.
+  <div><strong>Interview Response:</strong> If necessary, two methods get used to explicitly stop the bubbling up process, including the stopPropagation and stopImmediatePropagation. Using these two approaches should be limited because of some drawbacks, such as click event failures.
     </div>
   </div>
 </details>
@@ -82,7 +82,7 @@ The current target is the specific target where the current action is taking pla
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> If an element has multiple event handlers on a single event, then even if one of them stops the bubbling, the other ones still execute. In other words, event.stopPropagation() stops the move upwards, but on the current element all other handlers will run. To stop the bubbling and prevent handlers on the current element from running, we use event.stopImmediatePropagation(). After it, no other handlers execute.
+  <div><strong>Interview Response:</strong> If an element has multiple event handlers on a single event, then even if one of them stops the bubbling, the other ones still execute. In other words, event.stopPropagation() stops the move upwards, but all other handlers run on the current element. To stop the bubbling and prevent handlers on the current element from running, we use event.stopImmediatePropagation(). After it, no other handlers execute.
     </div>
   </div>
 </details>
@@ -94,19 +94,19 @@ The current target is the specific target where the current action is taking pla
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> There are three phases of event propagation including the capturing, targeting, and bubbling phases. The capturing phase is the process of the event traveling down to the target element ( &#123;capture: true&#125; ). The targeting phase is when we reach our target element, and the bubbling phase is the process of bubbling up from the target element.
+  <div><strong>Interview Response:</strong> There are three phases of event propagation, including the capturing, targeting, and bubbling phases. The capturing phase is the process of the event traveling down to the target element ( &#123;capture: true&#125; ). The targeting phase is when we reach our target element, and the bubbling phase is the process of bubbling up from the target element.
     </div>
   </div>
 </details>
 
 ---
 
-### Is there an explicit way to invoke capturing an event in the capturing phase?
+### Is there a straightforward way to invoke capturing an event in the capturing phase?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, to catch an event on the capturing phase, we need to set the handler capture option to true. There are two possible values of the capture option true and false. If it is false (default), then the handler is set on the bubbling phase. If it is true, then the handler is set on the capturing phase.
+  <div><strong>Interview Response:</strong> Yes, we need to set the handler capture option to true to catch an event on the capturing phase. There are two possible values of the capture option true and false. If it is false (default), the handler is set to the bubbling phase. If it is true, then the handler is set on the capturing phase.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -141,7 +141,7 @@ The current target is the specific target where the current action is taking pla
 ```
 
 :::note
-While formally there are 3 phases, the 2nd phase (“target phase”: the event reached the element) is not handled separately: handlers on both capturing and bubbling phases trigger at that phase.
+While there are three phases, the second ("target phase": the event reached the element) is not handled independently in theory: handlers from both the capturing and bubbling phases fire at that time.
 :::
 
   </div>

@@ -49,26 +49,26 @@ user.sayHi(); // Hello, JavaScript
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Object-oriented Programming or OOP, is the programming paradigm that uses objects to represent entities.
+  <div><strong>Interview Response:</strong> Object-oriented Programming, or OOP, is the programming paradigm that uses objects to represent entities.
 </div>
   </div>
 </details>
 
 ---
 
-### What does the “this” keyword refer to in JavaScript?
+### What does the "this" keyword refer to in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The JavaScript this keyword refers to the object that it belongs to. It has different values depending on where it is used.<br /><br />
+  <div><strong>Interview Response:</strong> The "this" keyword in JavaScript refers to the object to which it belongs, and it has varying values depending on where it is used.<br /><br />
   <ol>
     <li>In a method, this refers to the owner object.</li>
     <li>Alone, this refers to the global object.</li>
     <li>In a function, this refers to the global object.</li>
-    <li>In a function, in strict mode, this is undefined.</li>
+    <li>In strict mode, this is undefined.</li>
     <li>In an event, this refers to the element that received the event.</li>
-    <li>Methods like call(), and apply() can refer this to any object.</li>
+    <li>Methods like call() and apply() can refer "this" to any object.</li>
     <li>Arrow functions have no this.</li>
   </ol>
 </div>
@@ -77,12 +77,12 @@ user.sayHi(); // Hello, JavaScript
 
 ---
 
-### What is one of the advantages of using the “this” keyword in an object?
+### What is one of the advantages of using the "this" keyword in an object?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The “this” keyword holds a reference to the object and in return removes any effort to nullify it later in the code.
+  <div><strong>Interview Response:</strong> The "this" keyword holds a reference to the object and, in return, removes any effort to nullify it later in the code.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong> “THIS” refers to the object<br /><br />
 
@@ -131,12 +131,12 @@ admin.sayHi(); // TypeError: Cannot read property 'name' of null
 
 ---
 
-### What is the difference between “THIS” in a function in (strict mode) and (non-strict mode)?
+### What is the difference between "THIS" in a function in (strict mode) and (non-strict mode)?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In strict mode, “this” returns undefined and in non-strict mode it returns global window.
+  <div><strong>Interview Response:</strong> In strict mode, "this" returns undefined, and in the non-strict mode, it returns the global window.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong> Strict Mode<br /><br />
 
@@ -171,12 +171,12 @@ sayHi(); // returns global window object
 
 ---
 
-### What are the consequences of unbound “THIS”?
+### What are the consequences of unbound "THIS"?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript this is “free”, its value is evaluated at call-time and does not depend on where the method was declared, but rather on what object is “before the dot”. The concept of run-time evaluated this has both pluses and minuses. On the one hand, a function can be reused for different objects. On the other hand, the greater flexibility creates more possibilities for mistakes.
+  <div><strong>Interview Response:</strong> In JavaScript, the “this” keyword is free. Its value is evaluated at run-time and does not depend on where the method was defined. But instead, the object that precedes the dot. The concept of run-time evaluated "this" has both pluses and minuses. On the one hand, a function can get reused for different objects, and on the other hand, greater flexibility creates more possibilities for mistakes. 
 </div><br />
   <div><strong className="codeExample">Code Example:</strong> Unbound "this"<br /><br />
 
@@ -203,12 +203,12 @@ hello();
 
 ---
 
-### Since arrow functions have no “This”, What is the outcome when the “THIS” keyword is used in an arrow function?
+### Since arrow functions have no "This". What is the outcome when the "THIS" keyword gets used in an arrow function?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The outcome in an arrow function is a return of undefined. This is because there is no access to the global window.
+  <div><strong>Interview Response:</strong> The outcome in an arrow function is a return of undefined. This outcome is because there is no access to the global window.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong> Regular Function<br /><br />
 

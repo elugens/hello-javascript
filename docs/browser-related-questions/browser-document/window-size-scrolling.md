@@ -38,12 +38,12 @@ alert(document.documentElement.clientWidth);
 
 ---
 
-### Why shouldn’t we use innerWidth/innerHeight to get the width and height of the window?
+### Why shouldn't we use innerWidth/innerHeight to retrieve the window's width and height?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Browsers also support properties like window.innerWidth/innerHeight. They look like what we want, but they are not. If there exists a scrollbar, and it occupies some space, clientWidth/clientHeight provide the width/height without it (subtract it). In other words, they return the width/height of the visible part of the document, available for the content. The window.innerWidth/innerHeight properties includes the scrollbar in their computation. In most cases, we need the available window width in order to draw or position something within scrollbars (if there are any), so we should use documentElement.clientHeight/clientWidth.
+  <div><strong>Interview Response:</strong> Browsers also support properties like window.innerWidth/innerHeight. They look like what we want, but they are not. If a scrollbar exists and takes up some space, clientWidth/clientHeight delivers the width/height without it (subtracts it). In other words, they return the width and height of the visible portion of the page that is accessible for content. The window.innerWidth/innerHeight properties include the scrollbar in their computation. Most of the time, we require the available window width. We should utilize documentElement.clientHeight/clientWidth to draw or place things within scrollbars (if any).
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -68,19 +68,19 @@ alert(document.documentElement.clientWidth);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, top-level geometry properties may work a little bit differently when there is no &#8249;!DOCTYPE HTML&#8250; in HTML. Odd things are possible. In modern HTML we should always write DOCTYPE.
+  <div><strong>Interview Response:</strong> When there is no &#8249;!DOCTYPE HTML&#8250; in HTML, top-level geometric properties may behave outside their intended behavior. Strange things are possible. DOCTYPE should always get written in modern HTML.
     </div>
   </div>
 </details>
 
 ---
 
-### How do we get the full width and height of the document, including the scrolled-out part?
+### How do we get the entire width and height of the document, including the scrolled-out part?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Theoretically, as the root document element is document.documentElement, and it encloses all the content, we could measure the document’s full size as document.documentElement.scrollWidth/scrollHeight. But on that element, for the whole page, these properties do not work as intended. In Chrome/Safari/Opera, if there is no scroll, then documentElement.scrollHeight may be even less than documentElement.clientHeight! Weird, right? To reliably obtain the full document height, we should take the maximum of these properties.
+  <div><strong>Interview Response:</strong> Theoretically, because the root document element document.documentElement and it encloses all of the information, we could measure the total size of the document as document.documentElement.scrollWidth/scrollHeight. However, these attributes do not operate as intended on that element throughout the entire page. If there is no scroll in Chrome/Safari/Opera, documentElement.scrollHeight may be smaller than documentElement.clientHeight! Isn't it strange? To acquire the complete document height with confidence, we should take the greatest of these properties.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -110,8 +110,8 @@ alert('Full document height, with scrolled out part: ' + scrollHeight);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The current scroll is available in the special properties, window.pageXOffset/pageYOffset, which are read only. This ensures that we get the current scroll state in all browsers.</div><br />
-  <div><strong>Technical Response:</strong> DOM elements have their current scroll state in their scrollLeft/scrollTop properties. For document scroll, document.documentElement.scrollLeft/scrollTop works in most browsers, except older WebKit-based ones, like Safari (bug 5991), where we should use document.body instead of document.documentElement. Luckily, we don’t have to remember these peculiarities at all, because the scroll is available in the special properties, window.pageXOffset/pageYOffset, which are read only.
+  <div><strong>Interview Response:</strong> The current scroll is available in the special properties, window.pageXOffset/pageYOffset, which are read-only. This state ensures that we get the current scroll state in all browsers.</div><br />
+  <div><strong>Technical Response:</strong> DOM elements' scrollLeft/scrollTop attributes contain the current scroll state. document.documentElement is used for document scrolling. Most browsers support scrollLeft/scrollTop, except older WebKit-based browsers like Safari (bug 5991), where we need to use document.body instead of document.documentElement. Fortunately, we don't have to remember these quirks because the scroll gets provided in the read-only special properties window.pageXOffset/pageYOffset.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -128,13 +128,13 @@ alert('Current scroll from the left: ' + window.pageXOffset);
 
 ---
 
-### What happens when we try to scroll the document when it is not fully built?
+### What happens if we try to scroll the document when the DOM does not get fully constructed?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> If we try to scroll the page with a script in &#8249;head&#8250;, it will not work, because the DOM is not fully built. It is common to place these types of scripts at the bottom of the document or in a deferred script.</div><br />
-  <div><strong>Technical Response:</strong> To scroll the page with JavaScript, its DOM must be fully built. For instance, if we try to scroll the page with a script in &#8249;head&#8250;, it will not work, because the DOM is not fully built. It is common to place these types of scripts at the bottom of the document or in a deferred script. The defer attribute tells the browser not to wait for the script. Instead, the browser will continue to process the HTML, build the DOM. The script loads “in the background”, and then runs when the DOM is fully built.
+  <div><strong>Interview Response:</strong> If we try to scroll the page with a script in &#8249;head&#8250;, it fails because the DOM is not fully built. It is common to place these scripts at the bottom of the document or in a deferred script.</div><br />
+  <div><strong>Technical Response:</strong> To scroll the page with JavaScript, the DOM must be fully constructed. For example, attempting to scroll the page with a script in the &#8249;head&#8250; fails because the DOM is not fully built. It is common to place these scripts at the bottom of the document or in a deferred script. The defer property instructs the browser not to wait for the script to complete. Instead, the browser continues processing the HTML and building the DOM. The script loads "in the background" and starts when the DOM gets fully constructed.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -163,8 +163,8 @@ alert('Current scroll from the left: ' + window.pageXOffset);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The simplest solution is to use the special methods window.scrollBy(x,y) and window.scrollTo(pageX,pageY). These methods work for all browsers the same way.</div><br />
-  <div><strong>Technical Response:</strong> Regular elements can be scrolled by changing scrollTop/scrollLeft. We can do the same for the page using document.documentElement.scrollTop/scrollLeft (except Safari, where document.body.scrollTop/Left should be used instead). Alternatively, there’s a simpler, universal solution: special methods window.scrollBy(x,y) and window.scrollTo(pageX,pageY). These methods work for all browsers the same way.
+  <div><strong>Interview Response:</strong> The simplest solution is to use the special methods window.scrollBy(x,y) and window.scrollTo(pageX,pageY). These methods function in the same way for all browsers.</div><br />
+  <div><strong>Technical Response:</strong> Regular items can be scrolled by adjusting the scrollTop/scrollLeft values. We implement this for the page by using document.documentElement.scrollTop/scrollLeft (except in Safari, where we should use document.body.scrollTop/Left instead). Another option is to use the specific methods window.scrollBy(x,y) and window.scrollTo(x,y) (pageX,pageY). These approaches function in the same way for all browsers.
   </div>
   </div>
 </details>
@@ -176,7 +176,7 @@ alert('Current scroll from the left: ' + window.pageXOffset);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The method scrollBy(x,y) scrolls the page relative to its current position. For instance, scrollBy(0,10) scrolls the page 10px down. It uses two non-optional parameters including the x and y coordinates. There is an additional parameter option, ScrollToOptions, that act access additional left, top, and behavior properties in a dictionary object.
+  <div><strong>Interview Response:</strong> The scrollBy(x,y) method scrolls the page related to its current location. ScrollBy(0,10), for example, scrolls the page 10px down. It uses two non-optional parameters, including the x and y coordinates. An additional parameter option, ScrollToOptions, accesses left, top, and behavior properties in a dictionary object.
     </div><br />
   <div><strong className="codeExample">Syntax:</strong><br /><br />
 
@@ -215,7 +215,7 @@ window.scrollBy({
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The method scrollTo(pageX,pageY) scrolls the page to absolute coordinates, so that the top-left corner of the visible part has coordinates (pageX, pageY) relative to the document’s top-left corner.
+  <div><strong>Interview Response:</strong> The scrollTo(pageX,pageY) method scrolls the page to absolute coordinates, such that the top-left corner of the viewable area has coordinates (pageX, pageY) relative to the top-left corner of the document.
     </div><br />
   <div><strong className="codeExample">Syntax:</strong><br /><br />
 
@@ -241,7 +241,7 @@ window.scrollTo({
 ```
 
 :::note
-It is like setting scrollLeft/scrollTop. To scroll to the very beginning, we can use scrollTo(0,0). These methods work for all browsers the same way. Window.scrollTo() scrolls to a particular set of coordinates in the document. The scrollTo() method of the Element interface scrolls to a particular set of coordinates inside a given element.
+It is like setting scrollLeft/scrollTop. To scroll to the beginning, we can use scrollTo(0,0). These methods function in the same way for all browsers. Window.scrollTo() moves the cursor to a specific set of coordinates in the document. The scrollTo() method of the element interface scrolls to a particular set of coordinates inside a given element.
 :::
 
   </div>
@@ -255,7 +255,7 @@ It is like setting scrollLeft/scrollTop. To scroll to the very beginning, we can
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The call to elem.scrollIntoView(top) scrolls the page to make elem visible. It has one boolean argument. If top=true (that is the default), then the page will be scrolled to make elem appear on the top of the window. The upper edge of the element will be aligned with the window top. If top=false, then the page scrolls to make elem appear at the bottom. The bottom edge of the element will be aligned with the window bottom.
+  <div><strong>Interview Response:</strong> The call to elem. scrollIntoView(top) scrolls the page to reveal elem. There is just one boolean parameter. If top=true (that is the default), the page scrolls to make elem appear on the top of the window. The upper edge of the element aligns with the window top. If top=false, the page scrolls to make elem appear at the bottom. The bottom edge of the element aligns with the window bottom.
     </div>
   </div>
 </details>
@@ -267,7 +267,7 @@ It is like setting scrollLeft/scrollTop. To scroll to the very beginning, we can
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To make the document unscrollable, it’s enough to set document.body.style.overflow = "hidden". The page will “freeze” at its current scroll position. We can use the same technique to freeze the scroll for other elements, not just for document.body. The drawback of the method is that the scrollbar disappears affecting the document appearance.
+  <div><strong>Interview Response:</strong> It’s enough to set document.body.style.overflow = "hidden" to make the document un-scrollable. The page will "freeze" when it is currently scrolling. The same technique stops the scroll for additional components, not just for document.body. The disadvantage of this strategy is that the scrollbar vanishes, impacting the presentation of the document.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -282,7 +282,7 @@ document.body.style.overflow = '';
 ```
 
 :::note
-If it occupied some space, then that space is now free and the content “jumps” to fill it. That looks a bit odd, but can be worked around if we compare clientWidth before and after the freeze. If it increased (the scrollbar disappeared), then add padding to document.body in place of the scrollbar to keep the content width the same.
+If it occupied some space, that space is now free, and the content “jumps” to fill it. That looks odd, but if we compare clientWidth before and after the freeze, there is a workaround. If it increased (the scrollbar disappeared), add padding to document.body in place of the scrollbar to keep the content width the same.
 :::
 
   </div>

@@ -11,12 +11,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 <CloseAllAnswers />
 
-### Explain, the new Function constructor syntax in JavaScript?
+### Explain the new Function constructor syntax in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The Function constructor creates a new Function object. Calling the constructor directly can create functions dynamically but suffers from security and similar (but far less significant) performance issues to eval. However, unlike eval, the Function constructor creates functions which execute in the global scope only. One thing that should be noted, is that the new Function syntax does not require a function body to work. The major difference from other ways to build a function is that the function is created literally from a string, that is passed at run time. In fact, we can receive a string from an external source and use it in a function constructor. It is used in specific cases, like when we receive code from a server, or to dynamically compile a function from a template, in complex web-applications.
+  <div><strong>Interview Response:</strong> A new Function object gets created using the Function constructor. Calling the constructor can directly build functions dynamically, but it has similar security and performance drawbacks (though significantly less severe) than eval. In contrast to eval, the Function constructor builds functions that only execute in the global scope. We should note that the new Function syntax does not require a function body to function. The main distinction between this method and others is that the function gets physically built from a string given at run-time. We can get a string externally and utilize it in a function constructor. In complicated web applications, it gets employed in particular instances, such as when we receive code from a server or dynamically assemble a function from a template.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -42,12 +42,12 @@ sayHi(); // Hello, JavaScript
 
 ---
 
-### Explain, what happens when a function is created using the new Function constructor?
+### Explain what occurs when using the new Function constructor to create a function?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> When a function is created using new Function, its [[Environment]] is set to reference not the current Lexical Environment, but the global one. So, such function does not have access to outer variables, only to the global ones. This special feature of new Function looks strange but appears especially useful in practice. Hence, they cannot use outer variables. But that is good, because it insures us from errors. Passing parameters explicitly is a much better method architecturally and causes no problems with minifiers.
+  <div><strong>Interview Response:</strong> When a function gets created using the new Function constructor, its [[Environment]] gets set to global rather than the current one. As a result, such a function only has access to global variables and not outer variables. This unusual property of the "new" operator in a Function constructor appears to be very beneficial in practice. As a result, they cannot use external variables. But this is a positive thing since it protects us from mistakes. Passing parameters explicitly is a far superior architectural solution that produces no issues with minifiers.
 </div>
   </div>
 </details>

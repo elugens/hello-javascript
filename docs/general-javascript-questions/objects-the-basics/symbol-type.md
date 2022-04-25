@@ -18,19 +18,19 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> By specification, object property keys may be either of string or symbol type. Not numbers, not Booleans, only strings or symbols, these two types.
+  <div><strong>Interview Response:</strong> By specification, object property keys may be a string or symbol type. These two types are not numbers, not Booleans, only strings or symbols.
 </div>
   </div>
 </details>
 
 ---
 
-### Explain, what a Symbol is in JavaScript?
+### Explain what a Symbol is in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The data type symbol is a primitive data type. The Symbol() object returns a value of type symbol, it has static properties that expose several members of built-in objects, it also has static methods that expose the global symbol registry, and resembles a built-in object class. A “symbol” represents a unique identifier.
+  <div><strong>Interview Response:</strong> The data type symbol is a primitive data type. The Symbol() object returns a value of type symbol, and it has static properties that expose several members of built-in objects. It also has static methods that expose the global symbol registry and resembles a built-in object class. A "symbol" represents a unique identifier.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -55,7 +55,7 @@ Symbol('foo') === Symbol('foo'); // false, Symbol returns a unique
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, the Symbol object does not create a global symbol that is available in your whole codebase. To create symbols available across files and even across realms (each of which has its own global scope), use the methods Symbol.for() and Symbol.keyFor() to set and retrieve symbols from the global symbol registry.
+  <div><strong>Interview Response:</strong> No, the Symbol object does not create a global symbol available in your whole codebase. To create symbols available across files and even across realms (each of which has its global scope), use the methods Symbol.for() and Symbol.keyFor() to set and retrieve symbols from the global symbol registry.
 </div>
   </div>
 </details>
@@ -67,7 +67,7 @@ Symbol('foo') === Symbol('foo'); // false, Symbol returns a unique
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The description can be identical, but the value is unique and will return false if both values are compared.
+  <div><strong>Interview Response:</strong> The description can be identical, but the value is unique and returns false if both values get compared.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -91,7 +91,7 @@ alert(id1 == id2); // false
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Most values in JavaScript support implicit conversion to a string, but symbol is rare and unique. It does not auto-convert to a string. This is an intentional “language guard” against messing up, because strings and symbols are fundamentally different and should not accidentally convert one into another.
+  <div><strong>Interview Response:</strong> Most values in JavaScript support implicit conversion to a string, but a symbol is rare and unique, and it does not auto-convert to a string. This behavior is an intentional "language guard" against messing up because strings and symbols are fundamentally different and should not accidentally convert one into another.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -117,7 +117,7 @@ alert(id.toString()); // Symbol(id), now it works
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We should call the toString() method explicitly in order to convert a Symbol to a string.
+  <div><strong>Interview Response:</strong> We should explicitly call the toString() method to convert a Symbol to a string.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -134,12 +134,12 @@ alert(id.toString()); // Symbol(id), now it works
 
 ---
 
-### If, you want to show the Symbol description, what property should you use?
+### If you want to show the Symbol description, what property should you use?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To get symbol description to show the description only. We should use the description property.
+  <div><strong>Interview Response:</strong> To get a symbol description to show the description only, we should use the description property.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -161,7 +161,7 @@ alert(id.description); // returns id
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Symbols can create hidden object properties, that cannot be overwritten or accidentally accessed. Unique properties like ids can conflict with ids or act as a hidden property that cannot be accessed by external libraries that we may want to use in our code.
+  <div><strong>Interview Response:</strong> Symbols can create hidden object properties that cannot be overwritten or accidentally accessed. Unique properties like ids can conflict with ids or act as a hidden property that cannot get accessed by external libraries that we may want to use in our code.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -192,7 +192,7 @@ alert(user[id]);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> As user objects belongs to another code, and that code also works with them, we should not just add any fields to it. That is unsafe. But a symbol cannot be accessed accidentally, the third-party code probably will not even see it, so it is probably all right to do. You can really see it as property conflict resolution that ensures that both code bases do not conflict with one another.
+  <div><strong>Interview Response:</strong> As user objects belong to other codes, and that code also works with them, we should not just add any fields to it. That is unsafe. But a symbol cannot be accessed accidentally, the third-party code probably will not even see it, so it is probably all right. You can see it as a property conflict resolution that ensures that both code bases do not conflict.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -233,7 +233,7 @@ user.id = 'Their id value';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, this can be achieved by wrapping the property in square brackets. This allows the property to be a key and not a string.
+  <div><strong>Interview Response:</strong> Yes, this gets achieved by wrapping the property in square brackets. This approach allows the property to be a key and not a string.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -285,12 +285,12 @@ alert('Direct: ' + user[id]);
 
 ---
 
-### Symbol properties are hidden for a reason, but is there a way to copy all the properties including the symbolic ones?
+### Symbol properties get hidden for a reason, but is there a way to copy all the properties, including the symbolic ones?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, symbolic properties can be cloned in an object by using Object.assign to copy both the string and symbol properties. This ensures that all the properties, strings, and symbols, are copied into the newly cloned object.
+  <div><strong>Interview Response:</strong> Yes, symbolic properties can be cloned in an object by using object.assign to copy both the string and symbol properties. This behavior ensures that all the properties, strings, and symbols, are copied into the newly cloned object.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -313,12 +313,12 @@ alert(clone[id]); // 123
 
 ---
 
-### Sometimes you need to have same-named symbols to be the same entities. Is there a way to read or create a symbol from the registry?
+### Sometimes, you need to have the same-named symbols to be the same entities. Is there a way to read or create a symbol from the registry?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, we can use the Symbol.for(key) that checks the global registry, and then returns it if it is available. Otherwise, it creates a new symbol Symbol(key) and stores in the global registry by the given key. Symbols inside the registry are called global symbols.
+  <div><strong>Interview Response:</strong> Yes, we can use the Symbol.for(key) to check the global registry and return it if available. Otherwise, it creates a new symbol Symbol(key) and stores it in the global registry by the given key. Symbols inside the registry are called global symbols.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -346,7 +346,7 @@ alert(id === idAgain); // true
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Symbol.for(key) returns a symbol by name and Symbol.keyFor(sym) returns a name by a global symbol.
+  <div><strong>Interview Response:</strong> Symbol.for(key) returns a symbol by name, and Symbol.keyFor(sym) returns a name by a global symbol.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -373,8 +373,8 @@ alert(Symbol.keyFor(sym2)); // id
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, because local or non-global symbols are not placed in the global symbol registry.</div><br />
-  <div><strong>Technical Response:</strong> Symbol.for(key) returns a symbol by name and Symbol.keyFor(sym) returns a name by a global symbol. If the symbol is not global, it will not be able to find it and returns undefined. Notably, we must remember that all symbols including non-global symbols can return a description.<br /><br />
+  <div><strong>Interview Response:</strong> No, local or non-global symbols do not get placed in the global symbol registry.</div><br />
+  <div><strong>Technical Response:</strong> Symbol.for(key) returns a symbol by name, and Symbol.keyFor(sym) returns a name by a global symbol. If the symbol is not global, it does not find it and returns undefined. Notably, we must remember that all symbols, including non-global symbols, can return a description.<br /><br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

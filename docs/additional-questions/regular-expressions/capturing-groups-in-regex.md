@@ -13,12 +13,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### What is a capturing group in relation to a match in regular expressions?
+### What is a capturing group relative to a match method in regular expressions?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A capturing group is a pattern enclosed in parentheses. It two affects consisting of getting part of match as a separate or isolated item in an array of items. If we add a quantifier after the parentheses, it is combined with the parentheses as a group on the string.
+  <div><strong>Interview Response:</strong> A capturing group is a pattern enclosed in parentheses. It has two effects: getting part of the match as a separate or isolated item in an array of items. When we put a quantifier after the parenthesis, it merges as a group on the string.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -51,7 +51,7 @@ alert('my@mail.com @ his@site.com.uk'.match(regexp));
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Parentheses are numbered from left to right. The search engine memorizes the content matched by each of them and allows to get it in the result. They are indexed in an array structure in the order the matched. The method str.match(regexp), if regexp has no flag g, looks for the first match and returns it as an array.
+  <div><strong>Interview Response:</strong> Parentheses get numbered from left to right. The search engine memorizes the content matched by each of them and allows to get it in the result. They get indexed in an array structure in the order they matched. The method str.match(regexp), if regexp has no flag g, looks for the first match and returns it as an array.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -72,12 +72,12 @@ alert(tag[1]); // h1
 
 ---
 
-### How nested group of parentheses work in regular expressions?
+### How does a nested group of parentheses work in regular expressions?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> When parentheses are nested in regular expressions it uses an outward in and left to right behavior (algorithm). Basically, the outer bounds of the parentheses are collected and pushed into an array structure, then each parenthesis with the parent are collected and pushed to the array in order from left to right.
+  <div><strong>Interview Response:</strong> When parentheses are nested in regular expressions, it uses an outward in and left to right behavior (algorithm). The outer bounds of the parentheses are collected and pushed into an array structure. Then each parenthesis with the parent is collected and pushed to the array in order from left to right.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -141,7 +141,7 @@ alert(match[2]); // c
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The outcome is a deep search for all matches within the regex pattern. The return values will include the both the inner and outer values including the capturing group. It should be noted, that the matchAll method returns an iterable object and it may require a Polyfill, because it is relatively new.
+  <div><strong>Interview Response:</strong> The outcome is a deep search for all matches within the regex pattern. The return values include both the inner and outer values, including the capturing group. We should note that the matchAll method returns an iterable object, and it may require a Polyfill because it is relatively new.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -195,7 +195,7 @@ alert(tag1.input); // <h1> <h2>
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Named groups is the process of capturing the text matched by “regex” into the group “name”. The name can contain letters and numbers but must start with a letter. These can be achieved by putting `?&#8249;name&#8250;` immediately after the opening parentheses. Named groups are perfect for extremely complex patterns that need to split hairs (filter) amongst a group of names.
+  <div><strong>Interview Response:</strong> Named groups are the process of capturing the text matched by “regex” into the group “name”. The name can contain letters and numbers but must start with a letter, and these get achieved by putting `?&#8249;name&#8250;` immediately after the opening parentheses. Named groups are perfect for highly complex patterns that need to split hairs (filter) amongst a group of names.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -241,7 +241,7 @@ for(let result of results) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Method str.replace(regexp, replacement) that replaces all matches with regexp in str allows to use parentheses contents in the replacement string. That has done using $n, where n is the group number (Example: $2 would be the second value we are targeting, kind of like index[1]).
+  <div><strong>Interview Response:</strong> Method str.replace(regexp, replacement) that replaces all matches with regexp in str allows using parentheses contents in the replacement string. That gets done using $n, where n is the group number (Example: $2 would be the second value we are targeting, like index[1]).
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -274,7 +274,7 @@ alert(str.replace(regexp, '$<day>.$<month>.$<year>'));
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Sometimes we need parentheses to correctly apply a quantifier, but we do not want their contents in results. A group may be excluded by adding ?: in the beginning. For instance, if we want to find (go)+, but don’t want the parentheses contents (go) as a separate array item, we can write: (?:go)+.
+  <div><strong>Interview Response:</strong> We may require parentheses to apply a quantifier appropriately, but we don't want the contents of those parentheses to appear in the results. By commencing with ( ?: ), a group can get omitted. For example, if we want to locate (go)+ but don't want the contents of the parenthesis (go) as a specific array item, we may use: (?:go)+.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

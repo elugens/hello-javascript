@@ -13,12 +13,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Explain the function and syntax of the async function in JavaScript.
+### Explain the function and syntax of the async function in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> An async function is a function declared with the async keyword, and the await keyword is permitted within them. The async and await keywords enable asynchronous, promise-based behavior, avoiding the need to explicitly configure promise chains. Async functions may also be defined as expressions.
+  <div><strong>Interview Response:</strong> An async function is a function declared with the async keyword, and the await keyword gets permitted within them. The async and await keywords enable asynchronous, promise-based behavior, avoiding the need to configure promise chains explicitly. Async functions may also get defined as expressions.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -54,7 +54,7 @@ asyncCall();
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A callback is a function passed as an argument to another function. A callback function can run after another function has finished. JavaScript functions are executed in the sequence they are called. Not in the sequence they are defined.<br /><br />
+  <div><strong>Interview Response:</strong> A callback is a function passed as an argument to another function, and a callback function can run after another function has finished. JavaScript functions execute in the sequence they get called, not in the defined sequence.<br /><br />
 
 :::note
 Functions running in parallel with other functions are called asynchronous.
@@ -66,12 +66,12 @@ Functions running in parallel with other functions are called asynchronous.
 
 ---
 
-### How can we load two scripts sequentially: the first one, and then the second one after it?
+### How can we load two scripts sequentially: the first one and the second one after it?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The natural solution would be to put the second script call inside the callback. Nesting the callback helps control the flow of the script loads. After the outer script is complete, the callback initiates the inner one.
+  <div><strong>Interview Response:</strong> The natural solution would be to put the second script call inside the callback. Nesting the callback helps control the flow of the script loads. After the external script is complete, the callback initiates the inner one.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -98,7 +98,7 @@ loadScript('/my/script.js', function (script) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, script loading errors can be handled in a callback with the script.onerror event handler.
+  <div><strong>Interview Response:</strong> Yes, script loading errors get handled in a callback with the script.onerror event handler.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -122,13 +122,13 @@ function loadScript(src, callback) {
 
 ---
 
-### Question: What is the best alternative to nested resource loading in asynchronous coding?
+### What is the best alternative to nested resource loading in asynchronous coding?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Nested calls can become tedious and messy. The best alternative is to make every action a standalone function. This makes our code easier to manage and debug.</div><br />
-  <div><strong>Technical Response:</strong> For one or maybe two nested calls it looks fine. As calls become more nested, the code becomes deeper and increasingly more difficult to manage, especially if we have real code that may include more loops, conditional statements and so on. The best alternative to alleviate the problem is making every action a standalone function. This makes the code easy to manage, debug, and there are some performance advantages to boot.
+  <div><strong>Interview Response:</strong> Nested calls can become tedious and messy. The best alternative is to make every action a standalone function, making our code easier to manage and debug.</div><br />
+  <div><strong>Technical Response:</strong> It looks fine for one or maybe two nested calls. As calls become nested, the code becomes more profound and increasingly more challenging to manage, especially if we have real code that may include more loops, conditional statements, and other implementations. The best alternative to alleviate the problem is to make every action a standalone function. This approach makes the code easy to manage and debug, and there are some performance advantages to boot.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

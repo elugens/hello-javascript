@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> CSS animations make it possible to do simple animations without JavaScript at all. JavaScript can be used to control CSS animations and make them even better, with little code. The general idea is that when you can use CSS versus JavaScript you should because it reduces the load on the browser.
+  <div><strong>Interview Response:</strong> CSS animations make it possible to do simple animations without JavaScript. JavaScript can be used to control CSS animations and make them even better with little code. The general idea is that when you can use CSS versus JavaScript, you should because it reduces the load on the browser.
     </div>
   </div>
 </details>
@@ -30,7 +30,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The idea of CSS transitions is simple. We describe a property and how its changes should be animated. When the property changes, the browser paints the animation. That is, all we need is to change the property, and the fluid transition will be done by the browser.
+  <div><strong>Interview Response:</strong> CSS transitions are a basic concept. We explain a property's modifications and how they should be animated. The browser paints the animation whenever the property changes, and we have to alter the property, and the browser transitions smoothly.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -64,19 +64,19 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> There are 4 properties to describe CSS transitions including transition-property, transition-duration, transition-timing-function, and transition-delay.
+  <div><strong>Interview Response:</strong> There are 4 properties to describe CSS transitions, including transition-property, transition-duration, transition-timing-function, and transition-delay.
     </div>
   </div>
 </details>
 
 ---
 
-### Is there way to use the transition property to animate multiple CSS properties at the same time?
+### Is it possible to utilize the transition property to animate many CSS properties at the same time?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, we can transition multiple CSS properties, like font-size and color.
+  <div><strong>Interview Response:</strong> Yes, we can transition multiple CSS properties, like font size and color.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -105,12 +105,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Can you explain how to use the CSS transition-property?
+### Could you perhaps explain how to utilize the CSS transition property?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The transition-property CSS property sets the CSS properties to which a transition effect should be applied. In transition-property, we write a list of properties to animate, for instance left, margin-left, height, color, or we could write all, which means “animate all properties”. It should be noted, there are properties which cannot be animated. However, most of the generally used properties are MDN animatable.
+  <div><strong>Interview Response:</strong> The transition-property CSS property sets the CSS properties to which a transition effect should be applied. In transition-property, we write a list of properties to animate, for instance, left, margin-left, height, color, or we could write all, which means “animate all properties”. It should get noted as some properties cannot be animated. However, most of the generally used properties are MDN animatable.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -141,8 +141,7 @@ div:hover {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The transition-duration CSS property sets the length of time a transition animation should take to complete. By default, the value is 0s, meaning that no animation will occur.<br /><br />
-  You may specify multiple durations; each duration will be applied to the corresponding property as specified by the transition-property property, which acts as a master list. If there are fewer durations specified than in the master list, the user agent repeat the list of durations. If there are more durations, the list is truncated to the right size. In both case the CSS declaration stays valid.
+  <div><strong>Interview Response:</strong> The transition-duration CSS property sets the length of time a transition animation should take to complete. By default, the value is 0s, meaning no animation occurs.<br /><br />You may specify multiple durations; each duration gets applied to the related property specified by the transition-property property, which acts as a master list. If fewer durations get specified than in the master list, the user agent repeats the list of durations. If there are more durations in the list, the list gets truncated to the correct size. In both cases, the CSS declaration stays valid.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -205,7 +204,7 @@ div:hover {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The transition-timing-function CSS property sets how intermediate values are calculated for CSS properties being affected by a transition effect. The timing function describes how the animation process is distributed along its timeline. Will it start slowly and then go fast, or vice versa? It appears to be the most complicated property at first. But it becomes quite simple if we devote a bit time to it. The transition-timing-function property accepts two kinds of values: a Bezier curve or steps.
+  <div><strong>Interview Response:</strong> The transition-timing-function CSS property specifies how a transition effect impacts the computed intermediate values for CSS properties. The timing function specifies how the animation process progresses throughout its timeline. Will it begin slowly and then pick up speed, or vice versa? At first glance, it looks to be the most challenging property. However, it becomes relatively simple if we dedicate some effort to it. The transition-timing-function attribute takes one of two values: a Bezier curve or steps.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -253,7 +252,7 @@ div:hover {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The cubic-bezier() function defines a Cubic Bezier curve. A Cubic Bezier curve is defined by four points P0, P1, P2, and P3. P0 and P3 are the start and the end of the curve and, in CSS, these points are fixed as the coordinates are ratios. P0 is (0, 0) and represents the initial time and the initial state, P3 is (1, 1) and represents the final time and the final state. The cubic-bezier() function can be used with the animation-timing-function property and the transition-timing-function property.
+  <div><strong>Interview Response:</strong> The cubic-bezier() function defines a Cubic Bezier curve. A Cubic Bezier curve gets defined by P0, P1, P2, and P3 points. P0 and P3 are the curve's start and end, and, in CSS, these points get fixed as the coordinates are ratios. P0 is (0, 0) and represents the initial time and the initial state, and P3 is (1, 1) and represents the final time and the final state. The cubic-bezier() function gets used with the animation-timing-function and transition-timing-function properties.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -279,7 +278,7 @@ div:hover {
 
 ---
 
-### What is the difference between the built-in curves and the cubic-bezier() function?
+### What makes the built-in curves different from the cubic-bezier() function?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -307,12 +306,12 @@ div:hover {
 
 ---
 
-### Explain the function and syntax of the timing function CSS steps() function.\*\*
+### Can you explain the function and syntax of the timing function CSS steps() function?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The steps() function allows you to specify intervals for the timing function. It takes one or two parameters, separated by a comma: a positive integer and an optional value of either start or end. If no second parameter is included, it will default to end.
+  <div><strong>Interview Response:</strong> The steps() function allows you to specify intervals for the timing function. It takes one or two parameters, separated by a comma: a positive integer and an optional start or end value. If no second parameter gets included, it defaults to end.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -333,12 +332,12 @@ div:hover {
 
 ---
 
-### Explain the function and syntax of the CSS transitionend event.
+### Explain the function and syntax of the CSS transitionend event?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The transitionend event is fired when a CSS transition has completed. In the case where a transition is removed before completion, such as if the transition-property is removed or display is set to none, then the event will not be generated.
+  <div><strong>Interview Response:</strong> The transitionend event gets fired when a CSS transition reaches completion. If a transition gets removed before completion, the transition-property gets deleted, or the display gets changed to none, the event is not triggered.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -358,12 +357,12 @@ transition.addEventListener('transitionend', () => {
 
 ---
 
-### Can you explain what CSS keyframes are used for in web development?
+### Can you describe what CSS keyframes are and how they get utilized in web development?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The @keyframes CSS at-rule controls the intermediate steps in a CSS animation sequence by defining styles for keyframes (or waypoints) along the animation sequence. This gives more control over the intermediate steps of the animation sequence than transitions.
+  <div><strong>Interview Response:</strong> The @keyframes CSS at-rule controls the intermediate steps in a CSS animation sequence by defining styles for keyframes (or waypoints) along the animation sequence. This process gives more control over the intermediate steps of the animation sequence than transitions.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

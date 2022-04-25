@@ -1,6 +1,6 @@
 ---
 title: Basic JavaScript Questions
-description: Basic JS Questions in JavasScript  -  JavaScript Basics
+description: Basic JS Questions in JavasScript - JavaScript Basics
 sidebar_label: Basic JS Questions
 sidebar_position: 1
 ---
@@ -21,9 +21,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> JavaScript is a dynamically typed,
-      interpreted scripting language that creates interactive effects for the
-      browser.<br/><br/>
+      <strong>Interview Response:</strong> JavaScript is a high-level, dynamically typed, interpreted scripting language used to create interactive effects in the browser or server.<br/><br/>
     </div>
 
 :::note
@@ -37,7 +35,7 @@ It should be noted, to maintain efficient speed in the browser, V8 translates Ja
 
 ---
 
-### What is the difference between a high- and low-level language?
+### What is the difference between a high-level and low-level programming language?
 
 <details>
   <summary>
@@ -45,14 +43,14 @@ It should be noted, to maintain efficient speed in the browser, V8 translates Ja
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> When a language is at a high level, it means that it is built without requiring detailed knowledge of the underlying computer. For example, memory management, knowing which processor is running, and keeping track of things like pointers are unnecessary. The platform independence of high-level languages makes them easier to write and maintain.
+      <strong>Interview Response:</strong> When a high-level language gets built without requiring detailed knowledge of the underlying computer. For example, managing memory, knowing what processor is running, and keeping track of things like pointers are not necessary. High-level languages are more accessible to write and manage than low or mid-level programming languages because they are platform-independent.
     </div>
   </div>
 </details>
 
 ---
 
-### Is JavaScript a compiled or interpreted programming language?
+### Is JavaScript an interpreted or compiled programming language?
 
 <details>
   <summary>
@@ -60,19 +58,18 @@ It should be noted, to maintain efficient speed in the browser, V8 translates Ja
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> JavaScript is an interpreted
-      programming language.
+      <strong>Interview Response:</strong> JavaScript is an interpreted language.
     </div>
     <br />
     <div>
-      <strong>Technical Response:</strong> Programs written in a compiled language are directly translated by the target machine. With interpreted languages, the source code is not directly translated by the target machine. Instead, another program, the interpreter, reads and executes the code. Simply put: JavaScript is an interpreted language.
+      <strong>Technical Response:</strong> In a compiled language, the target machine directly translates the program. The target machine does not translate the source code directly into an interpreted language. Instead, a different program, an interpreter, reads and executes the code. In simple terms: JavaScript is an interpreted language.
     </div>
   </div>
 </details>
 
 ---
 
-### What is the name of the JS scripting language specification called?
+### What is the name of the JavaScript scripting language specification called?
 
 <details>
   <summary>
@@ -80,8 +77,7 @@ It should be noted, to maintain efficient speed in the browser, V8 translates Ja
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> ECMAScript with a reference guide
-      named ECMA-262.
+      <strong>Interview Response:</strong> ECMAScript with a reference guide named ECMA-262.
     </div>
   </div>
 </details>
@@ -96,14 +92,14 @@ It should be noted, to maintain efficient speed in the browser, V8 translates Ja
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> JavaScript was originally called "Live Script," but because Java became so popular, it was renamed JavaScript. It was also renamed JavaScript based on the popularity of the Java programming language, but they are different. JavaScript is a high-level programming language and Java is a middle-level programming language.
+      <strong>Interview Response:</strong> JavaScript was initially named "Live Script," but because of the popularity of Java. It was renamed too JavaScript as a play on the notoriety of the Java programming language, but they are considerably different. JavaScript is a high-level programming language, and Java is a mid-level programming language.
       </div>
   </div>
 </details>
 
 ---
 
-### What environments can JavaScript be developed on?
+### On which platforms can JavaScript be built?
 
 <details>
   <summary>
@@ -111,12 +107,11 @@ It should be noted, to maintain efficient speed in the browser, V8 translates Ja
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> JavaScript works in any environment
-      that has a JS engine.
+      <strong>Interview Response:</strong> JavaScript works in any environment that has a JS engine.
     </div>
     <br />
     <div>
-      <strong>Technical Response:</strong> JavaScript can now be run not only on a browser but on a server or on any device that has a JavaScript engine or a special application like Node.js.
+      <strong>Technical Response:</strong> Today, JavaScript can execute not only in the browser but also on the server or any device with a unique JavaScript engine like Node.js.
     </div>
   </div>
 </details>
@@ -147,7 +142,7 @@ It should be noted, to maintain efficient speed in the browser, V8 translates Ja
 
 ---
 
-### Why is it good to remember code names for different JS Engines?
+### Why is it good to remember code names for different JavaScript Engines?
 
 <details>
   <summary>
@@ -155,11 +150,11 @@ It should be noted, to maintain efficient speed in the browser, V8 translates Ja
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> You should remember the names of the engines to ensure that the features work in all environments. Otherwise, you have to write a polyfill.
+      <strong>Interview Response:</strong> It is good to remember the names of engines to ensure features work in all environments. If not, we must write a polyfill.
     </div>
     <br />
     <div>
-      <strong>Technical Response:</strong> Code names are used in developer articles on the internet, so we should remember them. As an example, if a specific feature is supported by the V8 engine, then it probably works in Chrome and Opera.
+      <strong>Technical Response:</strong> The code names are good to remember because they get used in developer articles on the internet. For instance, if "V8 supports a feature X, " it probably works in Chrome and Opera.
     </div>
   </div>
 </details>
@@ -171,22 +166,23 @@ It should be noted, to maintain efficient speed in the browser, V8 translates Ja
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> JavaScript can do everything related to a webpage including manipulation, interaction with the user, and interaction with the server.</div><br />
-  <div><strong>Technical Response:</strong> JavaScript's capabilities are greatly affected by the environment it is operating in. JavaScript in a Node.js environment can read and write arbitrary files and perform network requests. JavaScript allows you to manipulate web pages, communicate with users, and interact with the server from within your browser.</div>
+  <div><strong>Interview Response:</strong> In-browser JavaScript can do everything related to a webpage like manipulation, interaction with the user, and the webserver.</div><br />
+  <div><strong>Technical Response:</strong> JavaScript's capabilities get heavily influenced by the environment in which it runs. Node.js, for example, includes methods that allow JavaScript to read/write arbitrary files and make network requests.<br/><br/>In-browser JavaScript can accomplish everything related to webpage alteration, user interaction, and webserver interaction.
+  </div>
   </div><br/>
  <strong>For instance, in-browser JavaScript can:</strong>
 
-1. Change the content, add HTML, and style the page.
-1. React to user actions, such as mouse clicks, pointer movements, and keystrokes.
-1. Sending requests to remote servers, downloading and uploading files (as with AJAX and COMET).
-1. Get and set cookies, ask visitors questions, and display messages.
-1. Keep track of data stored on the client-side ("local storage").
+1. Modify the existing text, add HTML, and design the page.
+2. Respond to user activities, such as mouse clicks, pointer movements, and keystrokes.
+3. Send network requests to distant servers and download and upload files (so-called AJAX and COMET technologies).
+4. Get and set cookies, ask the visitor questions, and display messages
+5. Track client-side data ("local storage").
 
 </details>
 
 ---
 
-### What CAN’T in-browser JavaScript do and why?
+### What CAN'T in-browser JavaScript do and why?
 
 <details>
   <summary>
@@ -194,34 +190,31 @@ It should be noted, to maintain efficient speed in the browser, V8 translates Ja
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> JavaScript's capabilities are restricted in the browser for security reasons. We want to prevent malicious websites from gaining access to or harming our users' data.
+      <strong>Interview Response:</strong> JavaScript's abilities are limited to ensure a user's safety in the browser. The aim is to prevent a malicious website from accessing users' data or harming them.
     </div>
     <br />
     <div>
-      <strong>Technical Response:</strong> Due to user safety concerns, JavaScript's abilities are limited in the browser. The idea is to prevent evil websites from accessing personal data or causing harm to users.
+      <strong>Technical Response:</strong> JavaScript's capabilities in the browser are limited to safeguard the user's safety. The purpose is to prevent a malicious website from acquiring private information or inflicting data damage to users.
     </div>
     <div>
-      <strong>Examples of such restrictions include:</strong>
+      <strong>Examples of such constraints include:</strong>
       <br />
       <br />
       <ol>
         <li>
-          An arbitrary JavaScript script on a webpage cannot read/write hard drive files, copy them, or run programs. It does not have direct access to the operating system.
+          JavaScript permits us to read/write files directly on the hard disk, copy them, or run applications on a web page, and it does not have direct access to OS functionality.
         </li>
         <li>
-          Currently, browsers can work with files, but they are limited to
-          certain actions, such as dropping files into the browser window or
-          selecting them via a &#8249;input&#8250; tag.
+        	Modern browsers allow it to interact with files. Still, access is limited and only provided if the user performs specific actions, such as "dropping" a file into a browser window or choosing it through a tag.
         </li>
         <li>
-          It is possible to interact with the camera/microphone and other devices, but these actions require the explicit permission of the user. A JavaScript-enabled page cannot secretly activate a webcam, monitor the surroundings, or send user information.
+          Interacting with the camera/microphone and other devices is possible, but it requires the user's explicit consent. The JavaScript-enabled page may not secretly activate a web camera, examine its surroundings, and communicate the data.
         </li>
         <li>
-          The JavaScript on one page may not access the code on the other if the
-          pages are on separate domains, protocols, or ports.
+          JavaScript from one page may not be able to access JavaScript from another if they are from separate sites (from a different domain, protocol, or port).
         </li>
         <li>
-          JavaScript can easily communicate over the internet with the server generating the current page. Despite this, its ability to receive data from other sites/domains is severely limited. The remote side must, however, express its acceptance using HTTP headers, regardless of whether it is possible.
+          JavaScript can easily connect with the server that serves the current page through the internet. However, its capacity to receive data from other sites/domains is severely limited. Although feasible, it requires explicit agreement from the remote side (represented in HTTP headers).
         </li>
       </ol>
     </div>
@@ -238,20 +231,11 @@ It should be noted, to maintain efficient speed in the browser, V8 translates Ja
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> JavaScript is unique because it has
-      full integration with HTML, CSS and it is supported by all major browsers.
+      <strong>Interview Response:</strong> JavaScript is unique because it fully integrates HTML and CSS, and all major browsers support it. JavaScript is the only browser technology that combines all three of these features. That distinguishes JavaScript and explains why it is the most widely used technology for designing browser interfaces.
     </div>
     <br />
-    <div>
-      <strong>Technical Response:</strong> There are at least three great things
-      about JavaScript including full integration with HTML/CSS, simple things
-      are done simply, and support by all major browsers and enabled by default.
-      JavaScript is the only browser technology that combines these three
-      things. That is what makes JavaScript unique. That is why it is the most
-      widespread tool for creating browser interfaces.
-    </div>
   </div>
-</details>
+    </details>
 
 ---
 
@@ -263,15 +247,11 @@ It should be noted, to maintain efficient speed in the browser, V8 translates Ja
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> Some of the alternatives to
-      JavaScript include Coffee Script, Type Script, Flow, Brython, Dart and
-      Kotlin.
+      <strong>Interview Response:</strong> Some of the alternatives to JavaScript include Coffee Script, TypeScript, Flow, Brython, Dart, and Kotlin.
     </div>
     <br />
     <div>
-      <strong>Technical Response:</strong> There are several popular languages,
-      which are trans-piled (converted) to JavaScript before they run in the
-      browser.
+      <strong>Technical Response:</strong> Several popular languages are trans-piled (converted) to JavaScript before running in the browser.
     </div>
     <br />
     <div>
@@ -280,31 +260,22 @@ It should be noted, to maintain efficient speed in the browser, V8 translates Ja
       <br />
       <ol>
         <li>
-          CoffeeScript is a “syntactic sugar” for JavaScript. It introduces
-          shorter syntax, allowing us to write clearer and more precise code.
-          Usually, Ruby devs like it.
+          <strong>CoffeeScript</strong> is a "syntactic sugar" for JavaScript. It introduces shorter syntax, allowing us to write more transparent and more precise code—usually, Ruby devs like it.
         </li>
         <li>
-          A major focus of TypeScript is to add "strict data typing" so that
-          complex systems can be developed and supported more easily. It is
-          developed by Microsoft.
+          <strong>TypeScript</strong> concentrates on adding "strict data typing" to simplify the development and support of complex systems, and Microsoft develops it.
         </li>
         <li>
-          Flow adds data typing of its own, but in a unique way. Facebook
-          developed it.
+          <strong>Flow</strong> also adds data typing, but differently, and Facebook developed it.
         </li>
         <li>
-          Dart is a standalone language that runs in non-browser environments
-          (like mobile apps) but is also the ability to convert into JavaScript.
-          Google developed it.
+          <strong>Dart</strong> is a standalone language with an engine that runs in non-browser environments (like mobile apps) and converts to JavaScript—developed by Google.
         </li>
         <li>
-          Brython is a JavaScript transpiler that makes it possible to write
-          applications in pure Python without JavaScript.
+          <strong>Brython</strong> is a Python transpiler to JavaScript that enables the writing of applications in pure Python without JavaScript.
         </li>
         <li>
-          A modern, concise, and secure programming language, Kotlin supports
-          the browser and Node.js.
+          <strong>Kotlin</strong> is a modern, concise and safe programming language that can target the browser or Node.
         </li>
       </ol>
     </div>

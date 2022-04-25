@@ -18,19 +18,19 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> An element receives the focus when the user either clicks on it or uses the Tab key on the keyboard. There is also an autofocus HTML attribute that puts the focus onto an element by default when a page loads and other means of getting the focus. Focusing on an element generally means: “prepare to accept the data here”, so that is the moment when we can run the code to initialize the required functionality.
+  <div><strong>Interview Response:</strong> When a user clicks on an element or presses the Tab key on the keyboard, it gains focus. An autofocus HTML property focuses on an element by default when the page loads, as well as other methods of gaining focus. Generally, focusing on an element signifies "prepared to take data here," at which point we may run the code to setup the appropriate functionality.
     </div>
   </div>
 </details>
 
 ---
 
-### How does blur work in relation to focus on an element?
+### How does blur work concerning a focus event on an element?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The moment of losing the focus results in a blur. That is when a user clicks somewhere else or presses Tab to go to the next form field, or there are other means as well. Losing the focus generally means: “the data has been entered”, so we can run the code to check it or even to save it to the server and so on.
+  <div><strong>Interview Response:</strong> The moment of losing focus results in a blur. When a user clicks someplace else or presses Tab to go to the next form field, there are other means. Losing the focus generally means: “the data gets entered”, so we can run the code to check it or even save it to the server.
     </div>
   </div>
 </details>
@@ -42,7 +42,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The focus event is called on focusing, and blur when the element loses the focus. A common approach is a blur handler checking if a field has been entered correctly after the focus event. You can use the focus handler to hide validation error. Modern HTML allows us to do many validations using input attributes: required, pattern and so on. And sometimes they are just what we need. JavaScript can be used when we want more flexibility. Also we could automatically send the changed value to the server if it’s correct.
+  <div><strong>Interview Response:</strong> When the element loses focus, the blur event gets called. After the focus event, a popular solution uses a blur handler to verify if a field gets successfully typed. Validation failures get hidden using the attention handler. Many validations get implemented in modern HTML utilizing input properties such as needed, pattern, and others. And they are sometimes just what we require. When we need greater flexibility, we may utilize JavaScript. Also, if the updated value is correct, we could transmit it to the server automatically.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -92,7 +92,7 @@ Your email please: <input type="email" id="input" />
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A focus loss can occur for many reasons. One of them is when the visitor clicks somewhere else. But also, JavaScript itself may cause it. An alert moves focus to itself, so it causes the focus loss at the element (blur event), and when the alert is dismissed, the focus comes back (focus event). If an element is removed from DOM, then it also causes the focus loss. If it is reinserted later, then the focus does not return. These features sometimes cause focus/blur handlers to misbehave – to trigger when they are not needed. The best recipe is to be careful when using these events. If we want to track user-initiated focus-loss, then we should avoid causing it ourselves.
+  <div><strong>Interview Response:</strong> A loss of focus can arise for various reasons. One of them is when the visitor navigates away from the page. However, JavaScript itself may be at blame. When an alert attracts attention to itself, the element loses focus (blur event), and when the alert gets dismissed, the focus returns (focus event). When an element gets deleted from the DOM, attention is lost, and if it reinserts, the attention does not return. These features can cause focus/blur handlers to misbehave, triggering when they are not required. The recommended recipe is to use these occurrences with caution. We should avoid generating user-initiated focus loss if we wish to track it.
     </div>
   </div>
 </details>
@@ -105,7 +105,7 @@ Your email please: <input type="email" id="input" />
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Any element becomes focusable if it has tabindex. The value of the attribute is the order number of the element when Tab (or something like that) is used to switch between them.</div><br />
-  <div><strong>Technical Response:</strong> By default, many elements do not support focusing. The list varies a bit between browsers, but one thing is always correct: focus/blur support is guaranteed for elements that a visitor can interact with: &#8249;button&#8250;, &#8249;input&#8250;, &#8249;select&#8250;, &#8249;a&#8250; and so on. On the other hand, elements that exist to format something, such as &#8249;div&#8250;, &#8249;span&#8250;, &#8249;table&#8250; – are un-focusable by default. The method `elem.focus()` doesn’t work on them, and focus/blur events are never triggered. Any element becomes focusable if it has tabindex. The value of the attribute is the order number of the element when Tab (or something like that) is used to switch between them.
+  <div><strong>Technical Response:</strong> Many elements do not allow focusing by default. The list varies slightly between browsers, but one thing is always true: focus/blur support is assured for elements with which a visitor may interact: &#8249;button&#8250;, &#8249;input&#8250;, &#8249;select&#8250;, &#8249;a&#8250;, and others. Elements that exist to format something, such as &#8249;div&#8250;, &#8249;span&#8250;, and table>, on the other hand, are unfocusable by default. The method `elem.focus()` does not affect them, and focus/blur events are never triggered. If an element has a tabindex, it becomes focusable. The property's value is the element's order number when Tab (or anything similar) gets used to transition between them.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -141,7 +141,7 @@ Your email please: <input type="email" id="input" />
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, there are two approaches we can use to ensure bubbling. First, there is a funny historical feature: focus/blur do not bubble up but propagate down on the capturing phase. Second, there are focusin and focusout events – the same as focus/blur, but they bubble. Note that they must be assigned using elem.addEventListener, not on&#8249;event&#8250;.
+  <div><strong>Interview Response:</strong> Yes, we may take two techniques to ensure bubbling. To begin, there is an amusing historical feature: focus/blur does not bubble up but rather propagates downward during the capture period. Second, there are focusin and focusout events, similar to focus/blur but bubble. It is important to note that they get allocated using 'elem.addEventListener' rather than on&#8249;event&#8250;.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -164,6 +164,10 @@ Your email please: <input type="email" id="input" />
   form.addEventListener('focusout', () => form.classList.remove('focused'));
 </script>
 ```
+
+:::note
+They must get assigned with elem.addEventListener rather than on&#8249;event&#8250;.
+:::
 
   </div>
   </div>

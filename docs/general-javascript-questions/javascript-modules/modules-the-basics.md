@@ -16,7 +16,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A module is just a file where the script resides. Modules can load each other and use special directives export and import to interchange functionality, call functions of one module from another one. The export keyword labels variables and functions that should be accessible from outside the current module. import allows the import of functionality from other modules.
+  <div><strong>Interview Response:</strong> A module is just a file where the script resides. Modules can load each other and use special directives export and import to interchange functionality, call functions of one module from another one. The export keyword labels variables and functions that should be accessible from outside the current module, and import allows the import of functionality from other modules.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -42,16 +42,16 @@ sayHi('John'); // Hello, John!
 
 ---
 
-### Do JavaScript modules work with the normal local file:// protocol?
+### Do JavaScript modules work with the standard local file:// protocol?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, if you try to open a web page locally, via file:// protocol, you will find that import/export directives do not work.
+  <div><strong>Interview Response:</strong> No, if you try to open a web page locally, via file:// protocol, you find that import/export directives do not work.
 </div><br /><br />
 
 :::note
-We can use a local web server, such as static-server or use the live server capability of your editor, such as VS Code Live Server Extension to test modules.
+We can use a local web server, such as static-server, or use the live server capability of your editor, such as VS Code Live Server Extension, to test modules.
 :::
 
   </div>
@@ -59,16 +59,16 @@ We can use a local web server, such as static-server or use the live server capa
 
 ---
 
-### What is different in modules, compared to regular scripts?
+### What is different in modules compared to regular scripts?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> There are core features are valid both for browser and server-side JavaScript. Modules always use strict, by default. So, assigning to an undeclared variable will give an error.<br /><br />
-  Each module has its own top-level scope. In other words, top-level variables and functions from a module are not seen in other scripts.<br /><br />
-  The object import.meta contains the information about the current module. Its content depends on the environment. In the browser, it contains the URL of the script, or a current webpage URL if inside HTML.<br /><br />
-  In a module, top-level this is undefined.<br /><br />
-  Module scripts are always deferred, same effect as defer attribute for both external and inline scripts.<br /><br />
+  <div><strong>Interview Response:</strong> Core features are valid for both browser and server-side JavaScript. Modules always use strict by default. So, assigning to an undeclared variable gives an error. <br /><br />
+  Each module has a separate top-level scope. Top-level variables, methods, and functions from a module, in general, are not visible in other scripts.<br /><br />
+  The import.meta object contains information about the current module. The surroundings determine its content. The browser includes the URL of the script or if it is inside HTML, the URL of the current webpage.<br /><br />
+  In top-level modules, this is undefined.<br /><br />
+  Module scripts always get deferred, same as the defer property for external and inline scripts.<br /><br />
   For non-module scripts, the async attribute only works on external scripts. Async scripts run immediately when ready, independently of other scripts or the HTML document. For module scripts, it works on inline scripts as well.
 
 </div>
@@ -82,7 +82,7 @@ We can use a local web server, such as static-server or use the live server capa
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, because JavaScript modules always “use strict”, by default, e.g., assigning to an undeclared variable will give an error.
+  <div><strong>Interview Response:</strong> No, because JavaScript always “use strict”, by default, e.g., assigning to an undeclared variable gives an error.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -101,24 +101,24 @@ We can use a local web server, such as static-server or use the live server capa
 
 ---
 
-### What does module level scope mean in JavaScript?
+### What does module-level scope mean in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> It means that each module has its own top-level scope. In other words, top-level variables and functions from a module are not seen in other scripts. Modules are expected to export what they want to be accessible from outside and import what they need. In the browser, independent top-level scope also exists for each &#8249;script type="module"&#8250;.
+  <div><strong>Interview Response:</strong> It means that each module has its top-level scope. Top-level variables, methods, and functions from a module, in general, are not visible in other scripts. Modules expect to get exported. They want to be accessible from the outside and import what they need. In the browser, independent top-level scope also exists for each &#8249;script type="module"&#8250;.
 </div>
   </div>
 </details>
 
 ---
 
-### If a module is imported into multiple places, is it re-evaluated each time it is imported?
+### Is a module imported into multiple places re-evaluated each time it gets imported?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, if the same module is imported into multiple other places, its code is executed only the first time, then exports are given to all importers. If executing a module code brings side-effects, like showing a message, then importing it multiple times will trigger it only once – the first time.
+  <div><strong>Interview Response:</strong> No, if the same module gets imported into multiple other places, its code is executed only the first time, then exports are given to all importers. If executing a module code brings side effects, like showing a message, then importing it multiple times triggers it only once – the first time.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -149,7 +149,7 @@ import `./alert.js`; // (shows nothing)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The import.meta object exposes context-specific metadata to a JavaScript module. It contains information about the module, like the module's URL. The syntax consists of the keyword import, a dot, and the identifier meta. Normally the left-hand side of the dot is the object on which property access is performed, but here import is not really an object.
+  <div><strong>Interview Response:</strong> The import.meta object exposes context-specific metadata to a JavaScript module. It contains information about the module, like the module's URL. The syntax consists of the keyword import, a dot, and the identifier meta. Typically the left-hand side of the dot is the object on which property access gets performed, but here the import is not an object.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -175,7 +175,7 @@ import `./alert.js`; // (shows nothing)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, in a module, top-level “this” is undefined. In comparison to non-module scripts, where "this" is a global object.
+  <div><strong>Interview Response:</strong> Yes, in a module, top-level “this” is undefined. Compared to non-module scripts, where "this" is a global object.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -203,8 +203,8 @@ import `./alert.js`; // (shows nothing)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Module scripts are always deferred, same effect as defer attribute, for both external and inline scripts.</div><br />
-  <div><strong>Technical Response:</strong> Module scripts are always deferred, same effect as defer attribute, for both external and inline scripts. In other words, downloading external module scripts &#8249;script type="module" src="..."&#8250; does not block HTML processing, they load in parallel with other resources. The module scripts wait until the HTML document is fully ready (even if they are tiny and load faster than HTML), and then run. The relative order of scripts is maintained: scripts that go first in the document, execute first. As a side-effect, module scripts always “see” the fully loaded HTML-page, including HTML elements below them.
+  <div><strong>Interview Response:</strong> Module scripts always get deferred, the same effect as the defer attribute for external and inline scripts.</div><br />
+  <div><strong>Technical Response:</strong> Module scripts always get deferred, the same effect as the defer attribute for external and inline scripts. In other words, downloading external module scripts &#8249;script type="module" src="..."&#8250; does not block HTML processing, they load in parallel with other resources. The module scripts wait until the HTML document is fully ready (even if they are tiny and load faster than HTML), and then run. The relative order of scripts gets preserved: scripts that appear first in the document get executed first. Module scripts, as a consequence, always "view" the fully loaded HTML document, including HTML components beneath them.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -238,12 +238,12 @@ import `./alert.js`; // (shows nothing)
 
 ---
 
-### What is the difference between module and inline asynchronous scripts?
+### What is the difference between inline asynchronous scripts and a module?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> For non-module scripts, the async attribute only works on external scripts. Async scripts run immediately when ready, independently of other scripts or the HTML document. For module scripts, it works on inline scripts as well. That is good for functionality that does not depend on anything, like counters, ads, document-level event listeners.
+  <div><strong>Interview Response:</strong> For non-module scripts, the async attribute only works on external scripts. Async scripts run immediately, independently of other scripts or the HTML document. For module scripts, it works on inline scripts as well. That is good for functionality that does not depend on counters, ads, or document-level event listeners.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -265,12 +265,12 @@ import `./alert.js`; // (shows nothing)
 
 ---
 
-### Explain how external scripts that have type="module" is different from scripts without it.
+### Explain how external scripts with type="module" are different from scripts without it?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> External scripts that have type="module" is different in two aspects. First, External scripts with the same src run only once. Second, External scripts that are fetched from another origin (e.g., another site) require CORS headers, as described in the chapter Fetch: Cross-Origin Requests.
+  <div><strong>Interview Response:</strong> External scripts with the type="module" attribute differ in two ways. For starters, external scripts with the same src only run once. Second, Cross-Origin Requests, external scripts that get requested from a different origin (for example, another site) require CORS headers.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -288,7 +288,7 @@ import `./alert.js`; // (shows nothing)
 ```
 
 :::note
-If a module script is fetched from another origin, the remote server must supply a header Access-Control-Allow-Origin allowing the fetch. That ensures better security by default.
+If a module script gets fetched from another origin, the remote server must supply a header Access-Control-Allow-Origin allowing the fetch. That ensures better security by default.
 :::
 
   </div>
@@ -302,7 +302,7 @@ If a module script is fetched from another origin, the remote server must supply
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, In the browser, import must get either a relative or absolute URL. Modules without any path are called “bare” modules. Such modules are not allowed in import.
+  <div><strong>Interview Response:</strong> No, The import must be given a relative or absolute URL in the browser. Modules that do not have a url path getting defined as "bare" modules, and such modules get blocked for import.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -314,7 +314,7 @@ import { sayHi } from 'sayHi'; // Error, "bare" module
 ```
 
 :::note
-Certain environments, like Node.js or bundle tools allow bare modules, without any path, as they have their own ways for finding modules and hooks to fine-tune them. But browsers do not support bare modules yet.
+Certain environments, such as Node.js or bundle tools, allow bare modules with no path since they have methods of identifying modules and hooks to fine-tune them. However, browsers do not currently allow bare modules.
 :::
 
   </div>
@@ -323,12 +323,12 @@ Certain environments, like Node.js or bundle tools allow bare modules, without a
 
 ---
 
-### What is the fallback script type for older browsers when it comes to JavaScript modules?
+### What is the fallback script type for older browsers for JavaScript modules?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Old browsers do not understand type="module". Scripts of an unknown type are just ignored. For them, it is possible to provide a fallback using the nomodule attribute.
+  <div><strong>Interview Response:</strong> Old browsers do not understand type="module". Scripts of an unknown type just get ignored. For them, it is possible to provide a fallback using the nomodule attribute.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

@@ -16,19 +16,19 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, all functions are objects. A good way to imagine functions is as callable “action objects”. We can not only call them, but also treat them as objects. add/remove properties, pass by reference etc.
+  <div><strong>Interview Response:</strong> All functions in JavaScript are objects. The concept of functions as callable "action objects" is an excellent approach to thinking about them. We can not only invoke them but also treat them as objects. The add/remove properties, pass by reference, and other implementations.
 </div>
   </div>
 </details>
 
 ---
 
-### Explain, why are functions Objects in JavaScript?
+### Explain why are functions Objects in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, functions are first-class objects, because they can have properties and methods just like any other object. What distinguishes them from other objects is that functions can be called. In brief, they are Function objects.
+  <div><strong>Interview Response:</strong> In JavaScript, functions are first-class objects because they can have properties and methods just like any other object. What distinguishes them from other objects is that functions get called. In brief, they are Function objects.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -58,7 +58,7 @@ console.log(sayHi.length); // length = 1, using build length method
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The function name-assigning logic in JavaScript is smart. It also assigns the correct name to a function even if it is created without one. It also works if the assignment is done via a default value. In the specification, this feature is called a “contextual name”. If the function does not provide one, then in an assignment it is figured out from the context.
+  <div><strong>Interview Response:</strong> The function name-assigning logic in JavaScript is smart. It also assigns the correct name to a function even if it gets created without one. It also works if the assignment gets done via a default value. In the specification, this feature is called a "contextual name". If the function does not provide one, then it is figured out from the context of an assignment.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -118,7 +118,7 @@ You should not confuse this question with a question about how to name a functio
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The function length property returns the number of function parameters (arguments). The function length property does not count rest parameters. The length property is sometimes used for introspection in functions that operate on other functions.
+  <div><strong>Interview Response:</strong> The function length property returns the number of function parameters (arguments). The function length property does not count rest parameters. The length property sometimes gets used for introspection in functions that operate on other functions.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -145,19 +145,19 @@ alert(many.length); // 2, rest parameter not counted
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, A property assigned to a function does not define as a local variable inside it. We can treat a function as an object, store properties in it, but that has no effect on its execution. Variables are not function properties and vice versa.
+  <div><strong>Interview Response:</strong> No, A property assigned to a function does not define as a local variable inside it. We can treat a function as an object and store properties in it, but that does not affect its execution, and variables are not properties and vice versa.
 </div>
   </div>
 </details>
 
 ---
 
-### Explain, what a named function expression is in JavaScript (NFE)?
+### Explain what a named function expression is in JavaScript (NFE)?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Named Function Expression, or NFE, is a term for Function Expressions that have a name. The named function acts as a value of it is assigned variable. This isolates it to the variable it has been assigned to. You can call the named function inside of the expression, but any attempts to call it outside of the function itself will result in an error.
+  <div><strong>Interview Response:</strong> Named Function Expression, or NFE, is a term for function expressions with a name. The named function acts as a value of the allocated variable, isolating it from the assigned variable. You can call the named function inside the expression, but any attempts to call it outside the function result in an error.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -184,12 +184,12 @@ func(); // Error, func is not defined (not visible outside of the function)
 
 ---
 
-### What is the actual purpose of the named function expression (NFE)?
+### What exactly is the purpose of a named function expression (NFE)?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> There are times when a regular function expression will not meet our needs. A named function expression gives us access to the components of a function even if the reference is nullified on the main variable.
+  <div><strong>Interview Response:</strong> There are times when a regular function expression does not meet our needs. A named function expression gives us access to the components of a function even if the reference gets nullified on the primary variable. 
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -222,7 +222,7 @@ welcome('JavaScript'); // Hello, JavaScript
 ```
 
 :::note
-It should be noted that a regular function declaration can also be used to achieve the same result.
+You should note that a regular function declaration gets used to achieve the same result.
 :::
 
   </div>

@@ -11,12 +11,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 <CloseAllAnswers />
 
-### What three data structures use the obj.keys, obj.values, and obj.entries generic methods?
+### What three data structures use generic methods of obj.keys, obj.values, and obj.entries?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The three data structures that use the obj.keys, obj.values, and obj.entries generic methods include Map, Set, and Array structures. Plain objects also support similar methods, but the syntax is a bit different.
+  <div><strong>Interview Response:</strong> The three data structures that use the obj.keys, obj.values, and obj.entries generic methods include Map, Set, and Array structures. Plain objects also support similar methods, but the syntax is slightly different.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -43,12 +43,12 @@ alert(doublePrices.meat); // 8
 
 ---
 
-### Explain, the function and syntax of the Object.keys method?
+### Explain the function and syntax of the Object.keys method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The Object.keys() method returns an array of a given object's own enumerable property names, iterated in the same order that a normal loop would.
+  <div><strong>Interview Response:</strong> The Object.keys() function produces an array containing the names of a given object's enumerable properties, iterated in the same manner as a regular loop.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -86,7 +86,7 @@ console.log(Object.keys(myObj)); // console: ['foo']
 ```
 
 :::note
-If you want all properties including non-enumerables see Object.getOwnPropertyNames().
+If you want all properties—including non-enumerables—see Object.getOwnPropertyNames().
 :::
 
   </div>
@@ -95,12 +95,12 @@ If you want all properties including non-enumerables see Object.getOwnPropertyNa
 
 ---
 
-### Explain, the function and syntax of the Object.values method?
+### Explain the function and syntax of the Object.values method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Object.values() returns an array whose elements are the enumerable property values found on the object. The ordering of the properties is the same as that given by looping over the property values of the object manually.
+  <div><strong>Interview Response:</strong> Object.values() return an array whose elements are the enumerable property values found on the object. The ordering of the properties is the same as that given by looping over the object's property values manually.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -145,13 +145,13 @@ console.log(Object.values('foo')); // ['f', 'o', 'o']
 
 ---
 
-### Explain, the function and syntax of the Object.entries method?
+### Explain the function and syntax of the Object.entries method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The Object.entries method returns an array of a given object's own enumerable string-keyed key-value pairs, in the same order as that provided by a for...in loop. The order is not guaranteed to be chronological. We should sort it first if that is a concern.</div><br />
-  <div><strong>Technical Response:</strong> The Object.entries() method returns an array of a given object's own enumerable string-keyed property [key, value] pairs, in the same order as that provided by a for...in loop. (The only important difference is that a for...in loop enumerates properties in the prototype chain as well). The order of the array returned by Object.entries() does not depend on how an object is defined. If there is a need for certain ordering, then the array should be sorted first, like Object.entries(obj).sort((a, b) => b[0].localeCompare(a[0]));.
+  <div><strong>Interview Response:</strong> The Object.entries method returns an array of a given object's own enumerable string-keyed key-value pairs, in the same order as that provided by a for...in loop. The order is not guaranteed to be chronological, and we should sort it out first if that is a concern.</div><br />
+  <div><strong>Technical Response:</strong> The Object.entries() method returns an array of a given object's enumerable string-keyed property [key, value] pairs, in the same order as that provided by a for...in loop. (The only important difference is that a for...in loop enumerates properties in the prototype chain as well). The order of the array returned by Object.entries() does not depend on how an object is defined. If there is a need for certain ordering, then the array should be sorted first, like Object.entries(obj).sort((a, b) => b[0].localeCompare(a[0]));.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -186,8 +186,8 @@ for (const [key, value] of Object.entries(object1)) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The first difference is that we have to call Object.keys(obj), and not obj.keys(), the reason is flexibility, because objects are a base of all complex structures in JavaScript. The second difference is that Object.* methods return “real” array, not just an iterable.</div><br />
-  <div><strong>Technical Response:</strong> The main difference is that we have to call Object.keys(obj), and not obj.keys(). The main reason is flexibility. Remember, objects are a base of all complex structures in JavaScript. So we may have an object of our own like data that implements its own data.values() method. And we still can call Object.values(data) on it. The second difference is that Object.* methods return “real” array objects, not just an iterable. That is mainly for historical reasons.
+  <div><strong>Interview Response:</strong> The first difference is that we have to call Object.keys(obj) and not obj.keys(). The reason is flexibility because objects are the base of all complex structures in JavaScript. The second difference is that Object.* methods return a “real” array, not just an iterable.</div><br />
+  <div><strong>Technical Response:</strong> The biggest difference is that we must use Object.keys(obj) rather than obj.keys (). The primary factor is adaptability. Remember that in JavaScript, objects are the foundation of all complicated structures. As a result, we may have our object, such as data, that implements its data.values() function. We may still use Object.values(data) on it. The second distinction is that Object.* methods return "actual" array objects rather than merely iterables. This difference is primarily due to historical considerations.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -220,8 +220,8 @@ console.log(Object.entries(user));
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Just like a for..in loop, these methods ignore properties that use Symbol(...) as keys. If we want symbolic keys too, we can use Object.getOwnPropertySymbols.</div><br />
-  <div><strong>Technical Response:</strong> No, Just like a for..in loop, these methods ignore properties that use Symbol(...) as keys. Usually that is convenient. But if we want symbolic keys too, then there is a separate method Object.getOwnPropertySymbols that returns an array of only symbolic keys. Also, there exist a method Reflect.ownKeys(obj) that returns all keys.
+  <div><strong>Interview Response:</strong> Like a for..in loop, these methods ignore properties that use Symbol(...) as keys. If we want symbolic keys too, we can use Object.getOwnPropertySymbols.</div><br />
+  <div><strong>Technical Response:</strong> No, Just like a for..in loop, these methods ignore properties that use Symbol(...) as keys. Usually, that is convenient. But if we want symbolic keys too, there is a separate method Object.getOwnPropertySymbols that returns an array of only symbolic keys. Also, a method exists, Reflect.ownKeys(obj), that returns all keys.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -246,12 +246,12 @@ for (let i in obj) {
 
 ---
 
-### Since, Objects lack the methods that exist for arrays, e.g. map, filter, and others. What Object methods can you use to access those methods (map or filter) on an Object?
+### Since, Objects lack the methods for arrays, e.g., map, filter, and others. What Object methods can you use to access those methods (map or filter) on an Object?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> If we would like to apply them, then we can use Object.entries followed by Object.fromEntries. First, we will have to get an array of [key, value] pairs from the obj by invoking Object.entries(obj). Call map on the resulting array. Then, we will have to call Object.fromEntries(array) on the resulting array to turn it back into an object.</div><br />
+  <div><strong>Interview Response:</strong> If we would like to apply them, we can use Object.entries followed by Object.fromEntries. First, we get an array of [key, value] pairs from the obj by invoking Object.entries(obj). Call map on the resulting array. Then, we have to call Object.fromEntries(array) on the resulting array to turn it back into an object.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>

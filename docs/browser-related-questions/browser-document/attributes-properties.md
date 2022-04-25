@@ -18,8 +18,8 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> When the browser loads the page, it parses the HTML and generates DOM objects from it.</div><br />
-  <div><strong>Technical Response:</strong> When the browser loads the page, it “reads” (another word: “parses”) the HTML and generates DOM objects from it. For element nodes, most standard HTML attributes automatically become properties of DOM objects. For instance, if the tag is &#8249;body id="page"&#8250;, then the DOM object has body.id="page". But the attribute-property mapping is not one-to-one.
+  <div><strong>Interview Response:</strong> When the browser loads the page, it parses the HTML and generates DOM objects.</div><br />
+  <div><strong>Technical Response:</strong> When a page gets loaded, the browser "reads" (also known as "parses") the HTML and builds DOM objects from it. Most standard HTML characteristics for element nodes are automatically converted to DOM object properties. If the element is &#8249;body id="page"&#8250;, the DOM object contains body.id="page." The attribute-property mapping, however, is not one-to-one.
   </div>
   </div>
 </details>
@@ -31,7 +31,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Since DOM nodes are regular JavaScript objects. We can alter them as we would with any other object. This can be used to modify or add methods and create new properties. We can also modify built-in prototypes like Element.prototype and add new methods to all elements.</div><br />
+  <div><strong>Interview Response:</strong> Because DOM nodes are ordinary JavaScript objects, we can modify them just like any other object. This object may change or add methods and attributes, as well as edit built-in prototypes such as Element.prototype and add new methods to all elements.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -77,7 +77,7 @@ DOM properties and methods behave just like those of regular JavaScript objects.
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, it should be noted that a standard attribute for one element can be unknown for another. An example of this is the input element which has a standard type attribute used to specify the input type.
+  <div><strong>Interview Response:</strong> Yes, We should note that a standard attribute for one element can be unknown for another. An example is the input element with a standard type attribute used to specify the input type.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -109,8 +109,8 @@ The "type" attribute is standard for &#8249;input&#8250; (HTMLInputElement), but
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In HTML, tags may have attributes. When the browser parses the HTML to create DOM objects for tags, it recognizes standard attributes and creates DOM properties from them. In the case of non-standard attributes, DOM properties are not created, and any invocation of those attributes return undefined.<br /><br />
-  Basically, the attribute exists but it was not defined as DOM property, which inevitably returns undefined.
+  <div><strong>Interview Response:</strong> In HTML, tags may have attributes. When the browser parses the HTML to create DOM objects for tags, it recognizes standard attributes and creates DOM properties from them. In the case of non-standard attributes, DOM properties get created, and any invocation of those attributes returns undefined.<br /><br />
+ The attribute exists, but it does not get defined as DOM property, which inevitably returns undefined.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -137,7 +137,7 @@ The "type" attribute is standard for &#8249;input&#8250; (HTMLInputElement), but
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, there are several JavaScript methods that are used to access non-standard HTML attributes including hasAttribute, getAttribute, setAttribute, and removeAttribute. These methods operate exactly with what is written in HTML. Also one can read all attributes using elem.attributes: a collection of objects that belong to a built-in Attr class, with name and value properties.
+  <div><strong>Interview Response:</strong> Yes, various JavaScript methods, such as hasAttribute, getAttribute, setAttribute, and removeAttribute, are used to access non-standard HTML attributes. These approaches work with precisely what is written in HTML. Additionally, elem.attributes may be used to read all attributes: a collection of objects that belong to the built-in Attr class, containing name and value properties.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -157,12 +157,12 @@ The "type" attribute is standard for &#8249;input&#8250; (HTMLInputElement), but
 
 ---
 
-### What are the two basic features of HTML attributes?
+### What are the two primary features of HTML attributes?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> All HTML attributes have two basic features. Their name is case-insensitive (id is same as ID) and their values are always strings.
+  <div><strong>Interview Response:</strong> All HTML attributes have two essential features. Their name is case-insensitive (id is the same as ID), and their values are always strings.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -193,12 +193,12 @@ The "type" attribute is standard for &#8249;input&#8250; (HTMLInputElement), but
 
 ---
 
-### When a standard attribute changes, what happens to the corresponding property?
+### What happens to the related property when a standard attribute changes?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> When a standard attribute changes, the corresponding property is auto updated, and vice versa, but there are some exceptions to the rule. This behavior can be defined as property-attribute synchronization in JavaScript.
+  <div><strong>Interview Response:</strong> When a standard attribute changes, the corresponding property is auto-updated, and vice versa, but there are some exceptions to the rule. This behavior gets defined as property-attribute synchronization in JavaScript.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -252,7 +252,7 @@ The "type" attribute is standard for &#8249;input&#8250; (HTMLInputElement), but
 ```
 
 :::note
-That “feature” may actually come in handy, because the user actions may lead to value changes, and then after them, if we want to recover the “original” value from HTML, it is in the attribute.
+That “feature” may come in handy because the user actions may lead to value changes, and then after them, if we want to recover the “original” value from HTML, it is in the attribute.
 :::
 
   </div>
@@ -266,7 +266,7 @@ That “feature” may actually come in handy, because the user actions may lead
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, DOM properties are not always strings, because they have property types. For instance, the input.checked property (for checkboxes) is a Boolean (its either checked or not checked). There are other examples. The style attribute is a string, but the style property is an object. Most properties are strings though.
+  <div><strong>Interview Response:</strong> No, DOM properties are not always strings because they have property types. For instance, the input.checked property (for checkboxes) is a Boolean (either checked or not checked). There are other examples. The style attribute is a string, but the style property is an object. Most properties are strings, however.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -300,12 +300,12 @@ That “feature” may actually come in handy, because the user actions may lead
 
 ---
 
-### Can you describe a case for use of non-standard attributes?
+### Can you describe a case for the use of non-standard attributes?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We can use non-standard attributes to pass custom data from HTML to JavaScript, or to “mark” HTML-elements for JavaScript.
+  <div><strong>Interview Response:</strong> We can use non-standard attributes to pass custom data from HTML to JavaScript or “mark” HTML elements for JavaScript.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -338,12 +338,12 @@ That “feature” may actually come in handy, because the user actions may lead
 
 ---
 
-### Is there a way to style an element using non-standard HTML attributes?
+### Is it possible to style an element with non-standard HTML attributes?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, we can use non-standard HTML attributes to style our elements. This can be achieved by acting on the class or id of an element and changing the style via the styles. This works for both inline and external style sheets. This is a much better way to handle the style based on the state of our element.
+  <div><strong>Interview Response:</strong> Yes, we can use non-standard HTML attributes to style our elements. This change may be accomplished by acting on an element's class or id and modifying the styles. This approach works for both inline and external style sheets, and this is a much better way to handle the style based on the state of our elements. 
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -373,7 +373,7 @@ That “feature” may actually come in handy, because the user actions may lead
 ```
 
 :::warning
-It should be noted that this is not exactly the recommended approach for implementing custom attributes in HTML.
+We should note that this is not exactly the recommended approach for implementing custom attributes in HTML.
 :::
 
   </div>
@@ -387,7 +387,7 @@ It should be noted that this is not exactly the recommended approach for impleme
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, custom attributes should be prepended with the data-* attribute to avoid conflicts in your code. All attributes starting with “data-” are reserved for programmers’ use. They are available in the dataset property. The main reason to use the data prepended attribute is if the standard attribute specification is updated. You will avoid any conflicts in your code. Using data-* attributes is a valid, safe way to pass custom data.
+  <div><strong>Interview Response:</strong> Yes, custom attributes should get prepended with the “data-*” attribute to avoid conflicts in your code. All attributes starting with “data-” are reserved for programmers’ use and available in the dataset property. The main reason to use the data prepended attribute is if the standard attribute specification is updated. You can avoid any conflicts in your code. Using data-* attributes is a proper, safe way to pass custom data.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -412,7 +412,7 @@ It should be noted that this is not exactly the recommended approach for impleme
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, multi-word attributes case sensitive in dataset properties. We should use camel-cased styling when we are using dataset properties.
+  <div><strong>Interview Response:</strong> Yes, multi-word attributes are case-sensitive in dataset properties. We should use camel-cased styling when we are using dataset properties.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

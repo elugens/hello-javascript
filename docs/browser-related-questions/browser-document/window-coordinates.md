@@ -13,12 +13,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### To move elements around we should be familiar with coordinates. What are the two coordinate systems that you should be familiar with?
+### To be able to move components, we must first comprehend coordinates. What are the two coordinate systems you should be familiar?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Most JavaScript methods deal with one of two coordinate systems including the relative to the window and document coordinate systems. Relative to the window – similar to position:fixed, calculated from the window top/left edge, we denote these coordinates as clientX/clientY. Relative to the document – similar to position:absolute in the document root, calculated from the document top/left edge, we denote them as pageX/pageY. When the page is scrolled to the very beginning, so that the top/left corner of the window is exactly the document top/left corner, these coordinates equal each other. But after the document shifts, window-relative coordinates of elements change, as elements move across the window, while document-relative coordinates remain the same.
+  <div><strong>Interview Response:</strong> Most JavaScript methods work with one of two coordinate systems: relative to the window and document coordinate systems. We indicate these coordinates as clientX/clientY relative to the window — similar to position:fixed, derived from the window top/left edge. We identify them as pageX/pageY relative to the document — analogous to position:absolute in the document root, derived from the document top/left edge. When the page gets scrolled the bottom, these coordinates equal each other, thus the top/left corner of the window matches the top/left corner of the content.However, as the document moves, the window-relative coordinates of elements change as they travel across the window, but the document-relative coordinates remain constant.
     </div>
   </div>
 </details>
@@ -30,8 +30,8 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The Element.getBoundingClientRect() method returns a DOMRect object providing information about the size of an element and its position relative to the viewport. The returned value is a DOMRect object which is the smallest rectangle which contains the entire element, including its padding and border-width.</div><br />
-  <div><strong>Technical Response:</strong> The Element.getBoundingClientRect() method returns a DOMRect object providing information about the size of an element and its position relative to the viewport. The returned value is a DOMRect object which is the smallest rectangle which contains the entire element, including its padding and border-width. The left, top, right, bottom, x, y, width, and height properties describe the position and size of the overall rectangle in pixels. Properties other than width and height are relative to the top-left of the viewport. The width and height properties of the DOMRect object returned by the method include the padding and border-width, not only the content width/height. In the standard box model, this would be equal to the width or height property of the element + padding + border-width. But if box-sizing: border-box is set for the element this would be directly equal to its width or height. The returned value can be thought of as the union of the rectangles returned by getClientRects() for the element, i.e., the CSS border-boxes associated with the element.
+  <div><strong>Interview Response:</strong> The Element.getBoundingClientRect() function produces a DOMRect object with information about an element's size and location in relation to the viewport. The result returned is a DOMRect object, which is the smallest rectangle that contains the whole element, including padding and border-width.</div><br />
+  <div><strong>Technical Response:</strong> The Element.getBoundingClientRect() function produces a DOMRect object with information about an element's size and location in relation to the viewport. The result returned is a DOMRect object, which is the smallest rectangle that contains the whole element, including padding and border-width. The attributes left, top, right, bottom, x, y, width, and height indicate the total location and size of the rectangle in pixels. Other than width and height, all attributes are relative to the top-left corner of the viewport. The width and height attributes of the DOMRect object returned by the method include not only the content width/height but also the padding and border-width. The standard box-model would be the element's width or height + padding + border-width. However, if the element has box-sizing: border-box set, this will be directly equal to its width or height. The returned result is the union of the rectangles returned by getClientRects() for the element, i.e. the CSS border-boxes for the element.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -80,7 +80,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 ```
 
 :::note
-If box-sizing: border-box is set for the element this would be directly equal to its width or height. The returned value can be thought of as the union of the rectangles returned by getClientRects() for the element, i.e., the CSS border-boxes associated with the element.
+If box-sizing: border-box is set for the element this would be directly equal to its width or height. The returned result is the union of the rectangles returned by getClientRects() for the element, i.e. the CSS border-boxes connected with the element.
 :::
 
   </div>
@@ -89,13 +89,13 @@ If box-sizing: border-box is set for the element this would be directly equal to
 
 ---
 
-### Why derived properties are needed? Why does top/left exist if there’s x/y?
+### Why are derived attributes required? Why do top/left exist if x/y exists?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Mathematically, a rectangle is uniquely defined with its starting point (x,y) and the direction vector (width,height). So, the additional derived properties top/left are for convenience.</div><br />
-  <div><strong>Technical Response:</strong> Mathematically, a rectangle is uniquely defined with its starting point (x,y) and the direction vector (width,height). So, the additional derived properties are for convenience. Technically it is possible for width/height to be negative, that allows for “directed” rectangle, e.g., to represent mouse selection with properly marked start and end. Negative width/height values mean that the rectangle starts at its bottom-right corner and then “grows” left-upwards, left/top do not equal x/y in such case. In practice though, elem.getBoundingClientRect() always returns positive width/height, here we mention negative width/height only for you to understand why these seemingly duplicate properties are not actually duplicates.
+  <div><strong>Interview Response:</strong> A rectangle gets mathematically defined by its beginning point (x,y) and direction vector (width, height). As a result, the extra derived properties top/left gets provided for convenience.</div><br />
+  <div><strong>Technical Response:</strong> A rectangle gets mathematically defined by its beginning point (x,y) and direction vector (width, height). As a result, the extra derived properties get provided for convenience. Technically, width/height can be negative, allowing for a "directed" rectangle, such as a mouse selection with correctly indicated start and end points. Negative width/height values indicate that the rectangle begins at the bottom-right corner and subsequently "grows" leftwards; in this situation, left/top do not equal x/y. However, elem.getBoundingClientRect() always returns positive width/height; we mention negative width/height to explain why these seemingly redundant values do not get duplicated.
   </div>
   </div>
 </details>
@@ -107,7 +107,7 @@ If box-sizing: border-box is set for the element this would be directly equal to
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, Internet Explorer does not support x/y properties for historical reasons. So we can either make a polyfill (add getters in DomRect.prototype) or just use top/left, as they are always the same as x/y for positive width/height, in particular in the result of elem.getBoundingClientRect().
+  <div><strong>Interview Response:</strong> For historical reasons, Internet Explorer does not support x/y attributes. So we can either create a polyfill (add getters to DomRect.prototype) or just use top/left, which remain the same as x/y for positive width/height, especially in the result elem. getBoundingClientRect().
     </div>
   </div>
 </details>
@@ -119,8 +119,8 @@ If box-sizing: border-box is set for the element this would be directly equal to
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The call to document.elementFromPoint(x, y) returns the most nested element at window coordinates (x, y).</div><br />
-  <div><strong>Technical Response:</strong> The elementFromPoint() method, available on the Document object, returns the topmost Element at the specified coordinates (relative to the viewport). If the element at the specified point belongs to another document (for example, the document of an &#8249;iframe&#8250;), that document's parent element is returned (the &#8249;iframe&#8250; itself). If the element at the given point is anonymous or XBL generated content, such as a textbox's scroll bars, then the first non-anonymous ancestor element (for example, the textbox) is returned.
+  <div><strong>Interview Response:</strong> The document.elementFromPoint(x, y) method returns the most nested element at the window coordinates (x, y).</div><br />
+  <div><strong>Technical Response:</strong> The Document object's elementFromPoint() function returns the topmost Element at the supplied coordinates (relative to the viewport). If the element at the provided location belongs to another document (for example, the document of an &#8249;iframe&#8250;), the parent element of that document (the &#8249;iframe&#8250; itself) is returned. If the element at the provided location contains anonymous or XBL produced content, such as scroll bars in a textbox, the first non-anonymous ancestral element (the textbox) is returned.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -149,7 +149,7 @@ alert(elem.tagName);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The method document.elementFromPoint(x,y) only works if (x,y) are inside the visible area. If any of the coordinates is negative or exceeds the window width/height, then it returns null.
+  <div><strong>Interview Response:</strong> The method document. elementFromPoint(x,y) is only useful if (x,y) are within the viewable region. It returns null if any of the coordinates is negative or exceeds the window width/height.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -172,7 +172,7 @@ elem.style.background = ''; // Error!
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Document-relative coordinates start from the upper-left corner of the document, not the window. In CSS, window coordinates correspond to position:fixed, while document coordinates are similar to position: absolute on top.
+  <div><strong>Interview Response:</strong> Document-relative coordinates begin at the upper-left corner of the document rather than the window. Window coordinates are equivalent to position:fixed in CSS, but document coordinates are equivalent to position:absolute on top.
     </div>
   </div>
 </details>

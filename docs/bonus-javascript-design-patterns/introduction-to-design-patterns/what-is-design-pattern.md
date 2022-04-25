@@ -64,7 +64,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Why is maintainable code much more difficult to write than maintainable design patterns?
+### Why is managing written code so much more complicated than writing maintainable design patterns?
 
 <details>
   <summary>
@@ -120,13 +120,13 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
       <strong>Interview Response:</strong> Design patterns provide users with a solid approach to solving problems, act as an out-of-the-box solution, and can be expressive.
     </div><br/>
     <div>
-      <strong>Technical Response:</strong> Design patterns have three main benefits:
+      <strong>Technical Response:</strong> Design patterns have three main benefits.
     </div>
     <br />
     <div></div>
 
 1. **Design patterns are proven solutions:** They provide solid approaches to solving problems in software development by using proven techniques that reflect the insights of the developers who helped create the pattern.
-2. **You can reuse design patterns:** Most design patterns are based on out-of-the-box solutions that have been adapted to suit our own needs, so they are pretty robust.
+2. **You can reuse design patterns:** Most are out-of-the-box solutions adapted to suit our own needs, so they are pretty robust.
 3. **Patterns can be expressive:** The structure and vocabulary of the design pattern we are looking at can help us express rather large solutions quite elegantly.
 
 <br />
@@ -143,7 +143,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> No, design patterns are not an exact solution, but it is essential that we remember that the role of a pattern is merely to provide us with a solution scheme. Patterns do not solve all design problems, nor do they replace good software designers; however, they support them.
+      <strong>Interview Response:</strong> No, design patterns are not an exact solution, but it is essential to remember that the role of a pattern is merely to provide us with a solution scheme. Patterns do not solve all design problems, nor do they replace good software designers; however, they support them.
     </div>    
   </div>
 </details>
@@ -162,11 +162,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
     </div>
     <div></div>
 
-- **Design patterns assist in preventing minor issues that can cause significant problems in the application development process.** Code built on proven practices allows us to spend less time worrying about the structure of our code and more time focusing on quality solutions. By using patterns, we can code in a more structured and organized way, reducing the necessity of refactoring it later.
+- **Design patterns assist in preventing minor issues that can cause significant problems in the application development process.** Code built on proven practices allows us to spend less time worrying about the structure of our code and more time focusing on quality solutions. Using patterns, we can code in a more structured and organized way, reducing the necessity of refactoring it later.
 
-- **Patterns enable generalized solutions to be described without having to be explicit about their application to a specific problem.** Due to this generalized approach, we can use design patterns to improve the structure of our code regardless of the application (and, in many cases, the programming language) we are using.
+- **Patterns enable generalized solutions to describe without being explicit about their application to a specific problem.** Due to this generalized approach, we can use design patterns to improve the structure of our code regardless of the application (and, in many cases, the programming language) we are using.
 
 - **Specific patterns can decrease the overall file-size footprint of our code by avoiding repetition.** Encouraging developers to look at their solutions closely can help reduce duplication. To reduce the overall size of our codebase, we can reduce the number of functions performing similar tasks in favor of a single generalized higher-order function. We should use an approach known as DRY coding. DRY coding is an approach that aims to make our code more readable.
+
 - **Patterns expand a developer's vocabulary, which makes communication faster.**
 
 - **Frequently used design patterns are improved over time by harnessing the knowledge of the many.** Using design patterns gives back to the design pattern community and helps improve application development. In some cases, this leads to creating entirely new design patterns, while in others, it can lead to improved guidelines. This approach can ensure that pattern-based solutions continue to become more robust than ad-hoc solutions may be.

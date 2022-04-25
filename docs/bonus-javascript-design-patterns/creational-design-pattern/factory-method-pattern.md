@@ -42,14 +42,14 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 **ConcreteProduct** -- In example code: _Employees_
 
-- the finished product being manufactured
-- the same interface is supported by all products (properties and methods)
+- the manufactured product
+- All products support the same interface (properties and methods)
 
 <br />
 
 :::note
 
-Though the definition particularly mentions that an interface needs to be defined, we do not have interfaces in JavaScript. Therefore, we must implement it in a way that JavaScript translates into an interface.
+Though the definition particularly mentions that an interface needs to be defined, we do not have interfaces in JavaScript. Therefore, we must implement it so that JavaScript translates into an interface.
 
 :::
 
@@ -220,7 +220,7 @@ circle.draw();
 
 ---
 
-### What is the main goal of the factory method?
+### What is the primary goal of the factory method?
 
 <details>
   <summary>
@@ -228,7 +228,7 @@ circle.draw();
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Factory Method's main goal is extensibility. Factory Methods are commonly used in applications that manage, maintain, or manipulate groups of distinct but similar objects (i.e., methods and properties).
+      <strong>Interview Response:</strong> The Factory Method's primary goal is extensibility. Factory Methods commonly get used in applications that manage, maintain, or manipulate groups of distinct but similar objects (i.e., methods and properties).
     </div>
   </div>
 </details>
@@ -246,14 +246,8 @@ circle.draw();
       <strong>Interview Response:</strong> There are three participants in the factory pattern, including the Creator, AbstractProduct, and ConcreteProduct.
     </div><br />
     <div>
-      <strong>Technical Response:</strong> There are three participants in the factory pattern, including the Creator, AbstractProduct, and ConcreteProduct. The Creator is the factory object that creates new products and implements “factoryMethod” which returns newly manufactured products. The AbstractProduct declares an interface for the products, except in JavaScript. The ConcreteProduct is the product being created. All ConcreteProducts support the same interface.
+      <strong>Technical Response:</strong> There are three participants in the factory pattern, including the Creator, AbstractProduct, and ConcreteProduct. The Creator is the factory object that creates new products and implements “factoryMethod” which returns newly manufactured products. The AbstractProduct declares an interface for the products, except in JavaScript. The ConcreteProduct is the product getting created, and all ConcreteProducts support the same interface.
     </div><br />
-
-:::note
-
-Though the definition particularly mentions that an interface needs to be defined, we don’t have interfaces in JavaScript. Therefore, we must implement it in a way that JavaScript translates into an interface.
-
-:::
 
   </div>
 </details>
@@ -275,9 +269,9 @@ Though the definition particularly mentions that an interface needs to be define
 
 - You should use the Factory Method when you don’t know the exact types and dependencies of the objects your code should work within your application.
 
-- When you want to give users of your library or framework the ability to extend its internal components, you can use the Factory Method.
+- When you want to give users of your library or framework the ability to extend its internal components, we use the Factory Method to meet this specification.
 
-- When you want to save system resources by reusing existing objects instead of rebuilding them each time, you can use the Factory Method.
+- The Factory Method may be used to save system resources by reusing existing objects rather than constructing them each time.
 
 <br />
 
@@ -294,14 +288,14 @@ Though the definition particularly mentions that an interface needs to be define
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> Benefits of the Factory Pattern
+      <strong>Interview Response:</strong> Benefits of the Factory Pattern.
     </div>
     <br />
     <div></div>
 
 - You avoid a close relationship between the Creator and the concrete products.
 - **Single Responsibility Principle (S.R.P.):** The principle of single responsibility. You can consolidate the product creation code into a single location in the program, making it easier to support.
-- **Open/Closed Principle:** You can integrate new products to the system without busting the current client code.
+- **Open/Closed Principle:** You can integrate new products into the system without busting the current client code.
 
 <br />
   </div>
@@ -317,8 +311,8 @@ Though the definition particularly mentions that an interface needs to be define
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> Drawbacks of the Factory Pattern<br /><br />
-      The code may become more complicated as you introduce a large number of new subclasses to implement the pattern. The best-case scenario is to incorporate the design into an existing creator class hierarchy.<br /><br />
+      <strong>Interview Response:</strong> Drawbacks of the Factory Pattern.<br /><br />
+      The code may become more complicated as you introduce large numbers of new subclasses to implement the pattern. The best-case scenario is incorporating the design into an existing creator class hierarchy.<br /><br />
     </div>
   </div>
 </details>

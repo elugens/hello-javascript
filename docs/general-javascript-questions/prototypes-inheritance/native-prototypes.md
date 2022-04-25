@@ -13,12 +13,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Can you give a general overview about native prototypes and objects in JavaScript?
+### Can you give me a high-level overview of JavaScript's native prototypes and objects?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> All the custom and built-in native objects have the prototype property which can be used to extend their functionality by adding new properties and methods to them. The native prototypes can only be edited, or new ones can be added to them, but they cannot be deleted.
+  <div><strong>Interview Response:</strong> The prototype property is present in all custom and built-in native objects, and it might get used to improve their usefulness by adding additional attributes and methods. Native prototypes may only be changed or new ones added to them; they cannot get erased.
 </div>
   </div>
 </details>
@@ -30,12 +30,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> If future browser versions implement Array.prototype.myExtension, their implementation will be overridden by our custom one, which will not only be less efficient, but more importantly, they might have a different, nonstandard outcome. Another issue that arises is conflicts between libraries either internally or externally.</div><br />
-  <div><strong>Technical Response:</strong> If future browser versions implement Array.prototype.myExtension (either because of an upgrade to the EcmaScript standard, or through their own volition), their implementation will be overridden by our custom one, which will not only be less efficient (we can’t manipulate browser engine internals in the service of method optimization) but more importantly, they might have a different, nonstandard outcome. Although, there is a way to mitigate the risk by checking for the existence of a native property. This could lead to different results in different browsers versions and across device platforms. Another issue that arises is conflicts between libraries either internally or externally.
+  <div><strong>Interview Response:</strong> If future browser versions implement Array.prototype.myExtension, their implementation gets overwritten by our extended method, which will not only be less efficient but may also produce a different, nonstandard result. Whether internal or external, conflicts between libraries are another issue that emerges.</div><br />
+  <div><strong>Technical Response:</strong> If future browser versions implement Array.prototype.myExtension (either as part of an upgrade to the EcmaScript standard or on their initiative), their implementation gets overridden by the custom one, which will not only be less productive (we can't change browser engine internals in the service of method optimization), but may also produce a different, nonstandard result. However, there is a technique to reduce the danger by testing for the presence of the native property. This choice might result in varying results between browser versions and device platforms. Whether internal or external, conflicts between libraries are another issue that emerges.
   </div><br />
 
 :::note
-Although, there is a way to mitigate the risk by checking for the existence of a native property. This could lead to different results in different browsers versions and across device platforms.
+Although, there is a way to mitigate the risk by checking for the existence of native properties. This behavior could lead to different results in different browsers versions and across device platforms.
 :::
 
   </div>
@@ -48,7 +48,7 @@ Although, there is a way to mitigate the risk by checking for the existence of a
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The only time it is recommended to create a native prototype extension is when you need to create a Polyfill for a method that exists in the JavaScript specification, but is not yet supported by a particular JavaScript engine.
+  <div><strong>Interview Response:</strong> You should only use a native prototype extension when you need to create a Polyfill for a method that exists in the JavaScript standard but is not yet supported by a particular JavaScript engine.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -83,7 +83,7 @@ alert('La'.repeat(3)); // LaLaLa
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, when you need the same functionality of a native prototype method, you can borrow it. The basic gist of it is taking a method from one object and copying it into another. Some methods of native prototypes are often borrowed.
+  <div><strong>Interview Response:</strong> Yes, you may borrow a native prototype method if you require the same functionality. The basic concept is to copy and paste a method from one object into another, and some native prototype approaches often get copied.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong> Borrowing the Array Join method…<br /><br />
 

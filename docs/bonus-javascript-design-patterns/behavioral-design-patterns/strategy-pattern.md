@@ -13,7 +13,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Can you explain the Strategy design pattern?
+### Can you explain the strategy design pattern?
 
 <details className='answer'>
   <summary>
@@ -126,7 +126,7 @@ Fedex Strategy: $43.20
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Strategy pattern is part of the Behavioral design pattern group.
+      <strong>Interview Response:</strong> The Strategy pattern is part of the Behavioral design pattern set.
     </div>
   </div>
 </details>
@@ -148,7 +148,7 @@ Fedex Strategy: $43.20
 
 - When you need to employ several algorithms with varying versions, you must construct a concrete class (this may include one or more functions) to implement your algorithm.
 - When there are conditional statements around by several connected algorithms
-- When the majority of your classes exhibit similar behaviors.
+- When the majority of your classes exhibit similar behaviors
 
 <br />
   </div>
@@ -171,7 +171,7 @@ Fedex Strategy: $43.20
 
 - At runtime, you can alter the algorithms utilized within an object.
 - You can separate an algorithm's implementation specifics from the code that utilizes it.
-- Composition can be used in place of inheritance
+- The composition can get used in place of inheritance
 - The principle of open/closed. You may implement new tactics without changing the context.
 
 <br />
@@ -193,9 +193,9 @@ Fedex Strategy: $43.20
     <br />
     <div></div>
 
-- If you only have a few algorithms that seldom change, there's no point to complicate the program with new classes and interfaces that come with the pattern.
-- Clients must understand the distinctions between tactics in order to choose the best one.
-- Many current programming languages feature functional types, which allow you to implement different variants of an algorithm within a collection of anonymous functions. You may then utilize these methods in the same way you would have used Strategy objects, but without cluttering your code with unnecessary classes and interfaces.
+- If you only have a few algorithms that seldom change, there's no point in complicating the program with new classes and interfaces that come with the pattern.
+- Clients must understand the distinctions between tactics to choose the best one.
+- Many current programming languages feature functional types, which allow you to implement different variants of an algorithm within a collection of anonymous functions. You may then utilize these methods the same way you used Strategy objects, but without cluttering your code with unnecessary classes and interfaces.
 
 <br />
   </div>

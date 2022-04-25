@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> JavaScript uses Unicode encoding for strings. Most characters are encoded with 2 bytes, but that allows to represent at most 65536 characters. That range is not big enough to encode all possible characters, that is why some rare characters are encoded with 4 bytes, for instance like 𝒳 (mathematical X) or 😄 (a smile), some hieroglyphs and so on. So, the simple answer is 2 bytes for regular “old” characters and 4 bytes for special “surrogate pairs or new” characters. A long time ago, when JavaScript language was created, Unicode encoding was simpler, there were no 4-byte characters. So, some language features still handle them incorrectly. By default, regular expressions also treat 4-byte “long characters” as a pair of 2-byte ones. And, as it happens with strings, that may lead to odd results.
+  <div><strong>Interview Response:</strong> JavaScript uses Unicode encoding for strings. Most characters get encoded with 2 bytes, but that allows them to represent at most 65536 characters. That range is not big enough to encode all possible characters, so some rare characters are encoded with 4 bytes, for instance, like 𝒳 (mathematical X) or 😄 (a smile), some hieroglyphs. So, the simple answer is 2 bytes for regular “old” characters and 4 bytes for special “surrogate pairs or new” characters. When the JavaScript language got created a long time ago, Unicode encoding was more straightforward; there were no 4-byte characters. So, some language features still mishandle them. By default, regular expressions also treat 4-byte “long characters” as a pair of 2-byte ones. And, as it happens with strings, that may lead to odd results.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -42,7 +42,7 @@ alert('𝒳'.length); // 2
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In simple terms, Unicode properties are denoted or expressed as \p&#123;…&#125;. To use \p&#123;…&#125;, a regular expression must have flag u. For instance, \p&#123;Letter&#125; denotes a letter in any language. We can also use \p&#123;L&#125;, as L is an alias of Letter. There are shorter aliases for almost every property.
+  <div><strong>Interview Response:</strong> In simple terms, Unicode properties are denoted or expressed as \p&#123;…&#125;. When we need to use \p&#123;…&#125;, a regular expression must have flag u. For instance, \p&#123;Letter&#125; denotes a letter in any language. We can also use \p&#123;L&#125;, as L is an alias of Letter. There are shorter aliases for almost every property.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -67,7 +67,7 @@ alert(str.match(/\p{L}/g));
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, A hex digit can be denoted as \p&#123;Hex_Digit&#125; Unicode property.
+  <div><strong>Interview Response:</strong> Yes, A hex digit gets denoted as \p&#123;Hex_Digit&#125; Unicode property.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -90,7 +90,7 @@ alert('number: xAF'.match(regexp)); // xAF
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> When we are handling script-based languages like Cyrillic, Greek, Arabic, or Han (Chinese). We should use the Unicode property for the Script writing system. This can be achieved by using the Script=&#8249;value&#8250; syntax.
+  <div><strong>Interview Response:</strong> When we are handling script-based languages like Cyrillic, Greek, Arabic, or Han (Chinese). We should use the Unicode property for the Scriptwriting system, which can get achieved using the Script=&#8249;value&#8250; syntax.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

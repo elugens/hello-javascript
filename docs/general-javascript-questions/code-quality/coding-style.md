@@ -11,18 +11,18 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 <CloseAllAnswers />
 
-### What is the goal when it comes to coding style in relation to programming?
+### When it comes to coding style and application development, what is the goal?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The goal is to take a complex task and code it in a way that is both correct and human-readable.
+  <div><strong>Interview Response:</strong> The goal is to take a complex task and code it correctly and human-readable.
 </div>
 
 <div></div><br />
 
 :::note
-There are several styling guides that help programmers reach this goal.
+Several code styling guides help programmers reach this goal.
 :::
 
   </div>
@@ -35,7 +35,7 @@ There are several styling guides that help programmers reach this goal.
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, it is a best practice and makes code more readable if there is more than actionable statement.
+  <div><strong>Interview Response:</strong> Yes, it is a best practice and makes code more readable.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -56,14 +56,14 @@ if (n < 0) {
 
 ---
 
-### Is it okay to use long horizontal lines of code or to split them into separate lines? Give a reason why you choose your answer.
+### Is it okay to use long horizontal code lines or split them into separate lines? Give a reason why you choose your answer?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Professional JavaScript developers prefer separate lines because they are more readable.
+  <div><strong>Interview Response:</strong> Professional JavaScript developers prefer separate lines because they are more readable than not.
 </div><br />
-  <div><strong className="codeExample">Code Example:</strong><br /><br />
+  <div><strong className="codeExample">Code Example:</strong> Proper Implementation<br /><br />
 
   <div></div>
 
@@ -85,7 +85,7 @@ if (id === 123 && moonPhase === 'Waning Gibbous' && zodiacSign === 'Libra') {
 
 :::note
 
-A great example would be long paragraphs that are longer than 120 characters. We can use back ticks to handle lines longer than 120 characters.
+A great example would be long paragraphs longer than 120 characters. We can use backticks to handle lines longer than 120 characters.
 
 :::
 
@@ -154,15 +154,15 @@ function pow(x, n) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A great way to reduce nesting levels is handling minimum conditions early. The goal is to reduce nested code blocks that isolate variable access. The benefits of writing code in this fashion are increased readability and faster code because of early conditional error checks. If, the code fails early then it is handled without continuity.<br /><br />
+  <div><strong>Interview Response:</strong> A great way to reduce nesting levels is handling minimum conditions early. The goal is to reduce nested code blocks that isolate variable access. The benefits of writing code in this fashion are increased readability and faster code because of early conditional error checks. If the code fails early, then it is handled without continuity.<br /><br />
   <strong>Here are some rules of thumb for reducing nesting in your code:</strong><br /><br />
   <ol>
-    <li>Keep conditional blocks short. It increases readability by keeping things local.</li>
-    <li>Consider refactoring when your loops and branches that are more than 2 levels deep.</li>
-    <li>Think about moving nested logic into separate functions. For example, if you need to loop through a list of objects that each contain a list (such as a protocol buffer with repeated fields), you can define a function to process each object instead of using a double nested loop.</li>
+    <li>Keep your conditional blocks brief. Keeping things local improves readability.</li>
+    <li>Think about restructuring if your loops and branches are more than two layers deep.</li>
+    <li>Consider separating layered logic into distinct functions. For example, you may write a function to handle each item instead of using a double nested loop to cycle through a list of objects containing a list (such as a protocol buffer with repeated fields).</li>
   </ol>
 </div><br />
-  <div><strong className="codeExample">The two constructs have the same output:</strong><br /><br />
+  <div><strong className="codeExample">The two constructs below are identical:</strong><br /><br />
 
   <div></div>
 
@@ -210,12 +210,12 @@ function pow(x, n) {
 
 ---
 
-### What is a Linter and why should you use it?
+### What is a Linter, and why should you use it?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Linters are tools that can automatically check the style of your code and make improving suggestions. The great thing about them is that style-checking can also find some bugs, like typos in variable or function names. Because of this feature, using a linter is recommended even if you do not want to stick to one particular “code style”.
+  <div><strong>Interview Response:</strong> Linters are tools that can automatically check the style of your code and make improvement suggestions. The great thing about them is that style-checking can also find bugs, like typos in variable or function names. Because of this feature, using a linter is recommended even if you do not want to stick to one particular code style.
 </div>
   </div>
 </details>

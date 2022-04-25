@@ -21,7 +21,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Iterator Pattern allows you to progressively access and explores elements of an aggregate object (collection) without exposing its underlying representation. This technique enables JavaScript writers to create significantly more versatile and sophisticated looping constructs. Iterators and Generators were introduced in ES6, which aids in implementing the Iteration pattern.
+      <strong>Interview Response:</strong> The Iterator Pattern allows you to progressively access and explores elements of an aggregate object (collection) without exposing its underlying representation. This technique enables JavaScript writers to create significantly more versatile and sophisticated looping constructs. Iterators and Generators got introduced in ES6, which aids in implementing the Iteration pattern.
 <br/>
     </div>    
     <div>
@@ -35,16 +35,16 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 **Client** -- In example code: _the run() function_
 
-- references and invokes Iterator with collection of objects
+- references and invokes Iterator with a collection of objects
 
 **Iterator** -- In example code: _Iterator_
 
-- implements iterator interface with methods first(), next(), etc
-- keeps track of current position when traversing collection
+- implements Iterator interface with methods first(), next(), etc
+- keeps track of the current position when traversing the collection
 
 **Items** -- In example code: _Items_
 
-- individual objects of the collection being traversed
+- individual objects of the collection getting traversed
 
 <br/>
 
@@ -159,7 +159,7 @@ false
 
 ---
 
-### What pattern category does the Iterator pattern fall under?
+### The Iterator pattern belongs to which pattern category?
 
 <details>
   <summary>
@@ -182,7 +182,7 @@ false
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> This pattern helps deal with iteration-related challenges, constructing flexible looping constructs, and retrieving items from a complex collection without knowing the underlying representation. It can be used to create a generic iterator that efficiently explores any collection regardless of its type.
+      <strong>Interview Response:</strong> This pattern helps deal with iteration-related challenges, constructing flexible looping constructs, and retrieving items from a complex collection without knowing the underlying representation. It can get used in creating a generic iterator that efficiently explores any collection regardless of its type.
     </div>
 
 <br />

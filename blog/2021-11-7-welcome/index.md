@@ -9,11 +9,14 @@ import YTVideo from '../../src/components/YTVideo/YTVideo'
 
 # Welcome to our new website and we hope you find it useful.
 
-Youtube Video Component Test...
-
-<YTVideo
-  videoURL='https://www.youtube.com/embed/W6NZfCO5SIk'
-  videoTitle='JavaScript Tutorial for Beginners: Learn JavaScript in 1 Hour'
-/>
-
-<br/>
+<div class='videoWrapper'>
+<iframe
+    width="640"
+    height="480"
+    src="https://www.youtube.com/embed/W6NZfCO5SIk"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen
+>
+</iframe>
+</div>

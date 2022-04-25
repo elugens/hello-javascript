@@ -11,13 +11,13 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 <CloseAllAnswers />
 
-### What is the difference between Map and WeakMap?
+### What is the difference between Map and WeakMap in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The first difference between Map and WeakMap is that keys must be objects, not primitive values in a WeakMap. WeakMap does not support iteration and methods keys(), values(), entries(), so there’s no way to get all keys or values from it.</div><br />
-  <div><strong>Technical Response:</strong> The first difference between Map and WeakMap is that keys must be objects, not primitive values. WeakMap does not support iteration and methods keys(), values(), entries(), so there’s no way to get all keys or values from it. Also, WeakMap is limited to the following methods including get, set, delete, and has. Why such a limitation? That is for technical reasons. If an object has lost all other references, then it is to be garbage-collected automatically. But technically it is not exactly specified when the cleanup happens.
+  <div><strong>Interview Response:</strong> The first distinction between Map and WeakMap is that keys in a WeakMap must be objects rather than basic values. WeakMap does not allow iteration or the methods keys(), values(), and entries(); hence it cannot return all keys or values.</div><br />
+  <div><strong>Technical Response:</strong> The first difference between Map and WeakMap is that keys must be objects, not primitive values. WeakMap does not support iteration and methods keys(), values(), entries(), so there’s no way to get all keys or values from it. Also, WeakMap is limited to the following methods, including get, set, delete, and has methods. Why such a limitation? That is for technical reasons. If an object has lost all other references, it gets garbage-collected automatically. But technically, it is not precisely specified when the cleanup happens.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -59,7 +59,7 @@ john = null; // overwrite the reference
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The main area of application for WeakMap is an additional data storage such as third party data that you may not have an indefinite use. Another common example is caching. We can store (“cache”) results from a function, so that future calls on the same object can reuse it.
+  <div><strong>Interview Response:</strong> The main area of application for WeakMap is an additional data storage, such as third-party data that you may not have an indefinite use. Another typical example is caching. We can store (“cache”) results from a function so that future calls on the same object can reuse.
 </div>
   </div>
 </details>
@@ -71,8 +71,8 @@ john = null; // overwrite the reference
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The main difference is that WeakSet can only contain objects & not any other type. Another difference between the two is that references to objects in a WeakSet are held “weakly”. This means that if there is no other reference to an object in the WeakSet it will get garbage collected.</div><br />
-  <div><strong>Technical Response:</strong> Both Set & WeakSet are key-based collections but with some crucial differences. Just like Set, the WeakSet constructor takes in an iterable object as input. The main difference is that WeakSet can only contain objects & not any other type. The other main difference between the two is that references to objects in a WeakSet are held “weakly”. This means that if there is no other reference to an object in the WeakSet it will get garbage collected. The same is not true for Set. An object stored in a Set will not be garbage collected even if nothing is referencing it. This distinction is important because for this reason there is no way to access or iterate over objects stored inside a WeakSet. We also do not have access to the size of the weak set for this same reason.
+  <div><strong>Interview Response:</strong> The main difference is that WeakSet can only contain objects & not any other type. Another difference is that references to objects in a WeakSet get held “weakly”. This difference means that garbage gets collected if there is no other reference to an object in the WeakSet.</div><br />
+  <div><strong>Technical Response:</strong> Both Set & WeakSet are key-based collections but with some crucial differences. Like Set, the WeakSet constructor takes in an iterable object as input. The main difference is that WeakSet can only contain objects & not any other type. The other main difference is that references to objects in a WeakSet get held “weakly”. This difference means that garbage gets collected if there is no other reference to an object in the WeakSet. The same is not valid for Set. An object stored in a Set does not get garbaged collected even if nothing references it. This distinction is important because, for this reason, there is no way to access or iterate over objects stored inside a WeakSet. We also do not have access to the size of the weak set for this exact reason.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -114,7 +114,7 @@ john = null;
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The most notable limitation of WeakMap and WeakSet is the absence of iterations, and the inability to get all current content. That may appear inconvenient but does not prevent WeakMap/WeakSet from doing their main job in being “additional” storage of data for objects which are stored/managed at another place.
+  <div><strong>Interview Response:</strong> The most notable limitation of WeakMap and WeakSet is the absence of iterations and the inability to get all current content. That may appear inconvenient but does not prevent WeakMap/WeakSet from doing their primary job in “additional” data storage for objects stored/managed at another place.
 </div>
   </div>
 </details>

@@ -1,7 +1,7 @@
 ---
 title: Arrow Functions
 description: Arrow functions are a concise way to write functions.
-sidebar_position: 17
+sidebar_position: 19
 sidebar_label: Arrow Functions
 ---
 
@@ -16,7 +16,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> An arrow function expression is a compact alternative to a traditional function expression, but it is limited and cannot be used in all situations.
+  <div><strong>Interview Response:</strong> An arrow function expression is a compact alternative to a traditional function expression, but it is limited and should not get used in all situations.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -41,19 +41,19 @@ console.log(sayHello('JavaScript!'));
 
 ---
 
-### What are the difference and limitations between Arrow Functions and Function Expressions?
+### What are the differences and limitations between Arrow Functions and Function Expressions?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong>  An arrow function does not have bindings to this or super and cannot be used as a method or constructor. Also, it is not suitable for call, apply, bind.</div><br />
+  <div><strong>Interview Response:</strong> An arrow function does not have bindings to this or super and should not get used as a method or constructor. Also, it is not suitable for the call, apply, and bind methods.</div><br />
   <div><strong>Technical Response:</strong><br /><br /><strong>Differences & Limitations:</strong><br /><br />
   <ol>
-    <li>Does not have its own bindings to this or super and should not be used as methods.</li>
-    <li>Does not have arguments, or new.target keywords.</li>
-    <li>Not suitable for call, apply and bind methods, which generally rely on establishing a scope.</li>
-    <li>Cannot be used as constructors.</li>
-    <li>Cannot use yield, within its body.</li>
+    <li>It does not have its binding to this or super and should not get used as a method.</li>
+    <li>It does not have arguments or new.target keywords.</li>
+    <li>Not suitable for the call, apply and bind methods, which generally rely on establishing a scope.</li>
+    <li>It cannot get used as a constructor.</li>
+    <li>It cannot use yield within its body.</li>
   </ol>
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -82,12 +82,12 @@ obj.c(); // prints 10, Object {...}
 
 ---
 
-### If there are no arguments in an arrow function do you need to add the parentheses?
+### If there are no arguments in an arrow function, do you need to add the parentheses?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, if there are no arguments, then the parentheses should be present in your arrow function. Otherwise, it will throw a syntax error.
+  <div><strong>Interview Response:</strong> Yes, if there are no arguments, then the parentheses should be present in your arrow function. Otherwise, it throws a syntax error.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -111,7 +111,7 @@ sayHi(); // returns Hello!
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, it is possible to dynamically create an arrow function in JavaScript. An example of this is a ternary statement that returns two anonymous arrow functions.
+  <div><strong>Interview Response:</strong> Yes, it is possible to create an arrow function in JavaScript dynamically. An example is a ternary statement that returns two anonymous arrow functions.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -131,12 +131,12 @@ welcome();
 
 ---
 
-### What is the difference between single and multiline statement in an arrow function?
+### What is the difference between a single and multiline statement in an arrow function?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A multiline statement must be enclosed in curly brackets, but we can omit the curly brackets in a single line statement.
+  <div><strong>Interview Response:</strong> A multiline statement must get enclosed in curly brackets, but we can omit the curly brackets in a single-line statement.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

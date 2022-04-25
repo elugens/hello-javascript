@@ -11,12 +11,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 <CloseAllAnswers />
 
-### Explain, what the global object is in JavaScript?
+### Explain what the global object is in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A global object is an object that always exists in the global scope. In JavaScript, there is always a global object defined. In a web browser, when scripts create global variables defined with the var keyword, they are created as members of the global object.
+  <div><strong>Interview Response:</strong> A global object is an object that always exists in the global scope. In JavaScript, there is always a global object defined. When scripts create global variables defined with the var keyword in a web browser, they get created as members of the global object.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -43,7 +43,7 @@ greeting: function greeting() {
 ```
 
 :::note
-(In Node.js this is not the case.) The global object's interface depends on the execution context in which the script is running.
+(In Node.js, this is not the case.) The global object's interface depends on the execution context in which the script is running.
 :::
 
   </div>
@@ -52,12 +52,12 @@ greeting: function greeting() {
 
 ---
 
-### How should you use the global (window) object in JavaScript?
+### How should you use JavaScript's global (window) object?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-   <div><strong>Interview Response:</strong> Using global variables is generally discouraged. There should be as few global variables as possible. The code design where a function gets “input” variables and produces certain “outcome” is clearer, less prone to errors and easier to test than if it uses outer or global variables. You can also use the global object to test for support of modern language features. This commonly done in Polyfills to ensure that user interaction results in an equitable response.
+   <div><strong>Interview Response:</strong> It is typically discouraged to use global variables, which gets kept to a minimum. The code design in which a function receives "input" variables and generates a specific "result" is more straightforward, less prone to mistakes, and simpler to verify than the code design in which external or global variables get used. The global object gets used to test for support of contemporary language features. This approach is typical in Polyfills to guarantee that user interaction results in an equitable response.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

@@ -18,19 +18,19 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Keyboard events should be used when we want to handle keyboard actions (virtual keyboard also counts). For instance, to react on arrow keys Up and Down or hotkeys (including combinations of keys).
+  <div><strong>Interview Response:</strong> When we wish to manage keyboard operations, we should utilize keyboard events (virtual keyboard also counts). For example, when there is a response to arrow keys Up and Down or hotkeys (including combinations of keys).
     </div>
   </div>
 </details>
 
 ---
 
-### What does the event.code and event.key properties do?
+### What do the event.code and event.key properties do?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The key property of the event object allows us to get the character, while the code property of the event object allows us to get the “physical key code”. For instance, the same key Z can be pressed with or without Shift. That gives us two different characters: lowercase z and uppercase Z. The event.key is exactly the character, and it will be different. But event.code is the exactly the same for both.
+  <div><strong>Interview Response:</strong> The character gets obtained using the event object's key property, whereas the "physical key code" gets obtained using the event object's code property.<br/>For example, the same key Z can be pushed with and without Shift. This behavior results in two distinct characters: lowercase z and uppercase Z.
     </div><br />
 
 | **Key** | **event.key** | **event.code** |
@@ -43,12 +43,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### When dealing with event codes for key actions, does the case matter?
+### Is it essential to consider case when dealing with event codes for key actions?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, case matters and all event codes must use Pascal case to receive the appropriate return value, otherwise it will not work. Please evade mistypes: it is KeyZ, not keyZ. The check like event.code=="keyZ" won’t work: the first letter of "Key" must be uppercase.
+  <div><strong>Interview Response:</strong> Yes, the case is critical, and all event codes must utilize the Pascal case to obtain the correct return value; otherwise, they fail. Please avoid misspellings: it is KeyZ, not keyZ. The check-like event.code=="keyZ" won’t function since the initial letter of "Key" must get capitalized.
     </div>
   </div>
 </details>
@@ -60,7 +60,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> For instance, special keys like Shift or F1 or others. For those keys, event.key is approximately the same as event.code. Please note that event.code specifies exactly which key is pressed. For instance, most keyboards have two Shift keys: on the left and on the right side. The event.code tells us exactly which one was pressed, and event.key is responsible for the “meaning” of the key: what it is (a “Shift”).
+  <div><strong>Interview Response:</strong> Shift, F1, and other special keys. Event.key is roughly equivalent to event.code for such keys. Please keep in mind that event.code defines which key gets pushed. For example, most keyboards include two Shift keys: one on the left and one on the right. The event.code informs us which one was pushed, whereas the event.key determines the "meaning" of the key: what it is (a "Shift").
     </div><br />
 
 Example:
@@ -76,12 +76,12 @@ Example:
 
 ---
 
-### What happens when a key is suppressed for more than a second?
+### What happens when a key gets suppressed for more than a second?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> If a key is being pressed for a long enough time, it starts to “auto-repeat”: the keydown triggers again and again, and then when it’s released, we finally get keyup. So, it is kind of normal to have many keydown and a single keyup. For events triggered by auto-repeat, the event object has event.repeat property set to true.
+  <div><strong>Interview Response:</strong> If a key gets held down over an extended time, it begins to "auto-repeat": the keydown triggers repeatedly, and when the key is released, we eventually receive keyup. As a result, having numerous keydowns and a single keyup is rather usual. The event object's event.repeat attribute gets set to true for events triggered by auto-repeat.
     </div>
   </div>
 </details>
@@ -93,7 +93,7 @@ Example:
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, preventing the default action on keydown can cancel most of them except for OS-based special keys. For instance, on Windows Alt+F4 closes the current browser window. And there is no way to stop it by preventing the default action in JavaScript. Basically, any behavior outside of the scope of the browser like closing the browser window is not captured by the browser. It is considered an OS level event.
+  <div><strong>Interview Response:</strong> No, except for OS-based special keys, preventing the default action on keydown cancels most of them. On Windows, for example, Alt+F4 dismisses the current browser window. And there is no way to halt it by disabling JavaScript's default action. Any activity outside of the browser's scope, such as shutting the browser window, is not captured by the browser, and it gets classified as an OS-level event.
     </div>
   </div>
 </details>

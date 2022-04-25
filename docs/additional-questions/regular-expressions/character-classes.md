@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A character class is a special notation that matches any symbol from a certain set. The most common character classes is \d, \s, and \w used to add additional parameters for regular expressions to manipulate strings. A RegExp may contain both regular symbols and character classes.
+  <div><strong>Interview Response:</strong> A character class is a special notation that matches any symbol from a particular set. The most common character classes are \d, \s, and \w used to add additional parameters for regular expressions to manipulate strings. A RegExp may contain both regular symbols and character classes.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -58,12 +58,12 @@ alert('I love HTML5!'.match(/\s\w\w\w\w\d/)); // alerts ' HTML5'
 
 ---
 
-### What is an inverse class in relation to regular expressions?
+### In the context of regular expressions, what is an inverse class?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> For every character class there exists an “inverse class”, denoted with the same letter, but uppercased. An example of this is \D which finds a match for any character except \d, for instance a letter.
+  <div><strong>Interview Response:</strong> There is a "inverse class" for each character class, represented by the same letter but in uppercase. We may use \D as the inverse class for \d, which has certain advantages in reducing reliance on methods like str.match(/\d/g).join('').
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -92,7 +92,7 @@ alert(str.replace(/\D/g, '')); // 79031234567
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A dot (.) is a special character class that matches any character except a new line. It should be noted that a dot means “any character”, but not the “absence of a character”. There must be a character to match it. By default, a dot does not match the new line character \n.
+  <div><strong>Interview Response:</strong> A dot (.) is a unique character class that matches any character except a new line. We should note that a dot means “any character”, but not the “absence of a character”. There must be a character to match it. By default, a dot does not match the newline character \n.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -117,12 +117,12 @@ alert('CS4'.match(/CS.4/)); // null
 
 ---
 
-### What character class should you use with dot to accept all characters, like the (\n) new line character?
+### What character class should you use with dot to accept all characters, like the (\n) newline character?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> By default, a dot does not match the newline character \n. There are many situations when we would like a dot to mean literally “any character”, newline included. To include all characters, we must use the "s" flag. It should be noted, the “s” flag is not supported in Internet Explorer.
+  <div><strong>Interview Response:</strong> By default, a dot does not match the newline character \n. There are many situations when we would like a dot to mean literally “any character”, newline included. To include all characters, we must use the "s" flag. We should note that the “s” flag gets no support in Internet Explorer.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -147,7 +147,7 @@ alert('A\nB'.match(/A.B/s)); // A\nB (match!)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Since, the s flag is not supported in IE. There is an alternative, that works everywhere, We can use a regular expression [\s\S] to match any character. The pattern [\s\S] literally says: “a space character OR not a space character”. In other words, “anything”. We could use another pair of complementary classes, such as [\d\D], that doesn’t matter. Or even the [^] – as it means match any character except nothing. Also we can use this trick if we want both kind of “dots” in the same pattern: the actual dot . behaving the regular way (“not including a newline”), and also a way to match “any character” with [\s\S] or alike.
+  <div><strong>Interview Response:</strong> Because IE does not support the s flag. We can use a regular expression [\s\S] to match any character as an alternative that works everywhere. [\s\S]  means "a space character OR not a space character." In other words, "everything." It doesn't matter whether we use another pair of complimentary classes, such as [\d\D]. Or even [^] - which means "match any character except nothing." Also, we may use this approach if we want two types of "dots" in the same pattern: the usual dot acting normally ("without containing a newline") and a way to match "any character" with [\s\S] or something similar.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -168,7 +168,7 @@ alert('A\nB'.match(/A[\s\S]B/)); // A\nB (match!)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> If a regular expression does not take spaces into account, it may fail to work. We can fix it by adding spaces into the regular expression. A space is a character. Equal in importance with any other character. We cannot add or remove spaces from a regular expression and expect it to work the same. In other words, in a regular expression all character’s matter, spaces too.
+  <div><strong>Interview Response:</strong> If a regular expression does not take spaces into account, it may fail to work. We can fix it by adding spaces into the regular expression. Space is a character and equal in importance to any other character. We cannot add or remove spaces from a regular expression and expect it to work the same. In other words, all characters matter spaces in a regular expression.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

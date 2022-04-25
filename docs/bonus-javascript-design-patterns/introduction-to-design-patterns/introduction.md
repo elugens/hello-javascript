@@ -15,7 +15,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### What are the three main categories of design patterns?
+### Can you name the three principal categories of design patterns in web development?
 
 <details>
   <summary>
@@ -33,7 +33,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Explain what a creational design pattern is in JavaScript.
+### Can you explain what a creational design pattern is in JavaScript?
 
 <details>
   <summary>
@@ -48,7 +48,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Explain what a structural design pattern is in JavaScript.
+### Explain what a structural design pattern is in JavaScript?
 
 <details>
   <summary>
@@ -56,14 +56,14 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> Structural design patterns focus on object composition in JavaScript. It is a way to detail and builds objects and classes into larger structures. They act as a middle man and reduce unnecessary application mutation and maintain relationships between objects. Examples of structural design patterns include the module, decorator, facade, adapter, and proxy patterns.
+      <strong>Interview Response:</strong> Structural design patterns in software engineering are design patterns that simplify the design process by identifying a straightforward approach to realizing relationships between entities. Structural design patterns include the module, decorator, facade, adapter, and proxy patterns.
     </div>    
   </div>
 </details>
 
 ---
 
-### Explain what a behavioral design pattern is in JavaScript.
+### Can you explain what a behavioral design pattern is in JavaScript?
 
 <details>
   <summary>
@@ -71,7 +71,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> Behavioral design patterns identify communication between objects. This increases flexibility in the way our application carries out communication. Examples of structural design patterns include the chain of responsibility, command, observer, iterator, strategy, and template patterns.
+      <strong>Interview Response:</strong> Behavioral design patterns identify communication between objects, which increases flexibility in how our application carries out communication. Structural design patterns include the chain of responsibility, command, observer, iterator, strategy, and template patterns.
     </div>    
   </div>
 </details>

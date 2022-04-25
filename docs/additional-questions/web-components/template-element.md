@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A built-in &#8249;template&#8250; element serves as a storage for HTML markup templates. The browser ignores it contents, only checks for syntax validity, but we can access and use it in JavaScript, to create other elements. In theory, we could create any invisible element somewhere in HTML for HTML markup storage purposes. In theory, we could create any invisible element somewhere in HTML for HTML markup storage purposes. What makes the &#8249;template&#8250; element special is its content can be any valid HTML, even if it normally requires a proper enclosing tag. We can also use styles and scripts inside of our templates without affecting the load of the document. The browser considers &#8249;template&#8250; content “out of the document”: styles are not applied, scripts are not executed, &#8249;video autoplay&#8250; is not run, etc. The content becomes live (styles apply, scripts run etc) when we insert it into the document.
+  <div><strong>Interview Response:</strong> A built-in &#8249;template&#8250; element is used to store HTML markup templates. Although the browser ignores its contents and checks for syntactic validity, we may access and utilize it in JavaScript to build additional components. We could build an invisible element anywhere in HTML to store HTML markup. The &#8249;template&#8250; element's content may be any good HTML, even though it ordinarily requires an enclosing tag. We may also utilize styles and scripts within our templates without influencing the document's load time. The browser considers &#8249;template&#8250; content to be "out of the document": styles are not applied, scripts do not get executed, and &#8249;video autoplay&#8250; is not activated. When we enter the content into the document, it becomes live (styles get applied, scripts execute, and so on).
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -54,7 +54,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> When we insert template content into the DOM the template content is available in its content property as a DocumentFragment as a special type of DOM node. We can treat it as any other DOM node, except one special property, when we insert it somewhere, its children are inserted instead. We can also insert the template content into the Shadow DOM in the same fashion.
+  <div><strong>Interview Response:</strong> When we insert template content into the DOM, it is available in its content property as a DocumentFragment, a special DOM node. We can treat it as any other DOM node, except for one unique property; its children get inserted instead when we insert it somewhere. We can also insert the template content into the Shadow DOM in the same fashion.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

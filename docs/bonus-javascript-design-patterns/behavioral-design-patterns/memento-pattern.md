@@ -13,7 +13,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Can you explain the mediator design pattern?
+### Can you explain the memento design pattern?
 
 <details className='answer'>
   <summary>
@@ -21,7 +21,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Memento pattern is used to temporarily store and restore an object. The technology used to store the object's state is determined by the needed persistence period, which can vary.
+      <strong>Interview Response:</strong> The Memento pattern gets used to store and restore an object temporarily. The technology used to store the object's state gets determined by the needed persistence period, which can vary.
 <br/>
     </div>    
     <div>
@@ -36,17 +36,17 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 **Originator** -- example code: _Person_
 
 - implements interface to create and restore mementos of itself
-- in example code: _hydrate and dehydrate_
-- the object which state is temporary being saved and restored
+  -- in example code: _hydrate and dehydrate_
+- the object whose state is temporary being saved and restored
 
 **Memento** -- example code: _JSON representation of Person_
 
-- internal state of the Originator object in some storage format
+- the internal state of the Originator object in some storage format
 
 **CareTaker** -- In example code: _CareTaker_
 
 - responsible for storing mementos
-- just a repository; does not make changes to mementos
+- just a repository; it does not make changes to mementos
 
 <br/>
 
@@ -127,7 +127,7 @@ John Wang
 
 ---
 
-### Which pattern category does the Memento pattern fall under?
+### The Memento pattern belongs to which pattern category?
 
 <details>
   <summary>
@@ -150,7 +150,7 @@ John Wang
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> We can use the Memento pattern to create snapshots of an object's state in order to restore it to a previous state.<br/><br/>The Memento pattern allows you to create entire copies of an object's state, including private fields, and store them independently from the object. While most people remember this pattern because of the "undo" use case, it's also useful when dealing with transactions (i.e., if you need to roll back an operation on an error).<br/><br/>This pattern can also be used when direct access to an object's fields/getters/setters violates its encapsulation. The Memento makes the object responsible for capturing a snapshot of its current state. Because no other object can read the snapshot, the original object's state data remains safe and secure.
+      <strong>Interview Response:</strong> We can use the Memento pattern to create snapshots of an object's state to restore it to a previous state.<br/><br/>The Memento pattern allows you to create complete copies of an object's state, including private fields, and store them independently from the object. While most people remember this pattern because of the "undo" use case, it's also helpful when dealing with transactions (i.e., if you need to roll back an operation on an error).<br/><br/>This pattern can also get used when direct access to an object's fields/getters/setters violates its encapsulation. The Memento makes the object responsible for capturing a snapshot of its current state. Because no other object can read the snapshot, the original object's state data remains safe and secure.
     </div><br/>
   </div>
 </details>

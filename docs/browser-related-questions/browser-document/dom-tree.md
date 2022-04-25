@@ -13,12 +13,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### What is a HTML tag considered in the Document Object Model?
+### What is an HTML tag considered in the Document Object Model?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> According to the Document Object Model (DOM), every HTML tag is an object. Nested tags are “children” of the enclosing one. The text inside a tag is an object as well. All these objects are accessible using JavaScript, and we can use them to modify the page. For example, document.body is the object representing the &#8249;body&#8250; tag.
+  <div><strong>Interview Response:</strong> Every HTML tag is an object, according to the Document Object Model (DOM). Nested tags are "children" of the one that contains them, and the text included within a tag is also an object. These objects are available via JavaScript and may be used to alter the page. Document.body, for example, is the object that represents the &#8249;body&#8250; tag.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -79,7 +79,7 @@ alert(document.body); // alerts [object HTMLBodyElement]
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> If the browser encounters malformed HTML, it automatically corrects it when making the DOM.</div><br />
-  <div><strong>Technical Response:</strong> If the browser encounters malformed HTML, it automatically corrects it when making the DOM. For instance, the top tag is always &#8249;html&#8250;. Even if it does not exist in the document, it will exist in the DOM, because the browser will create it. The same goes for &#8249;body&#8250;. While generating the DOM, browsers automatically process errors in the document, close tags and so on.
+  <div><strong>Technical Response:</strong> When the browser creates the DOM, it immediately corrects any erroneous HTML. The top tag, for example, is always &#8249;html&#8250;. Even though it does not exist in the document, it exists in the DOM since it is created by the browser. The same is true for &#8249;body&#8250;. Browsers automatically process mistakes in the document and close tags when producing the DOM.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -115,7 +115,7 @@ alert(document.body); // alerts [object HTMLBodyElement]
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, it is an interesting “special case” with tables. By DOM specification they must have &#8249;tbody&#8250; tag, but HTML text may omit it. Then the browser creates &#8249;tbody&#8250; in the DOM automatically.
+  <div><strong>Interview Response:</strong> Yes, that is an intriguing "unique case" when we use tables. They must have the &#8249;tbody&#8250; element according to DOM specifications, however HTML content may omit it. The browser will then immediately generate &#8249;tbody&#8250; in the DOM.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -145,13 +145,13 @@ alert(document.body); // alerts [object HTMLBodyElement]
 
 ---
 
-### What are the four main node types that are commonly used?
+### What are the four most regularly utilized node types?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The four main node types include document, element, text, and comment nodes.</div><br />
-  <div><strong>Technical Response:</strong> There are 12 node types. In practice we usually work with 4 of them. The four main node types include document, element, text, and comment nodes. The document node is the entry point into the DOM. The element nodes consist of the HTML-tags which are the tree building blocks. The comment node is used to place information, but it will not be shown, but JS can read it from the DOM.
+  <div><strong>Technical Response:</strong> There are 12 different types of nodes. We usually work with four of them in practice. The four major node types are document, element, text, and comment nodes. The document node is the DOM's starting point. The element nodes get made up of HTML tags, which we use as the tree's building blocks. The comment node gets used to place information, but it does not show, but JS can read it from the DOM.
   </div>
   </div>
 </details>

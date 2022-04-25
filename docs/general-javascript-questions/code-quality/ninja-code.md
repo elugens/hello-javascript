@@ -11,12 +11,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 <CloseAllAnswers />
 
-### Are one-letter variables a good idea to use in programming?
+### Are one-letter variables a practical idea to use in programming?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, they can cause confusion, in a team environment, and make it harder to debug your code.
+  <div><strong>Interview Response:</strong> No, they can confuse a team environment and make it harder to debug your code.
 </div>
   </div>
 </details>
@@ -28,19 +28,19 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, they can cause confusion, in a team environment, and make it harder to debug your code.
+  <div><strong>Interview Response:</strong> No, they can confuse a team environment and make it harder to debug your code.
 </div>
   </div>
 </details>
 
 ---
 
-### Is it a good idea to overlap variables in JavaScript?
+### Is it a good idea in JavaScript to overlap variables?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, they can cause confusion, in a team environment, and make it harder to debug your code. Overlapping is not a good idea because it can cause errors further into the layers of your code.
+  <div><strong>Interview Response:</strong> No, they can generate confusion in a collaborative atmosphere and make debugging your code more complex. Overlapping is not a good idea since it might lead to mistakes farther down in your code's layers.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

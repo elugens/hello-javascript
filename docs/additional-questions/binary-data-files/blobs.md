@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The Blob() constructor returns a new Blob object. The content of the blob consists of an optional string type (a MIME-type usually), plus blobParts - a sequence of other Blob objects, strings and BufferSource. The blobParts is an array of Blob/BufferSource/String values. The options argument has two optional object parameters including the type and endings. The Blob type, usually a MIME-type, e.g., text/html. The endings parameter is specific to how to interpret newline characters (\n) within the contents if the data is text. The default value, transparent, copies newline characters into the blob without changing them. To convert newlines to the host system's native convention, specify the value native. The arguments are similar to array.slice, negative numbers are allowed too.
+  <div><strong>Interview Response:</strong> The Blob() constructor returns a new Blob object. The blob's content consists of an optional string type (a MIME-type usually), plus blobParts - a sequence of other Blob objects, strings, and BufferSource. The blobParts is an array of Blob/BufferSource/String values. The options argument has two optional object parameters, including the type and endings. The Blob type, usually a MIME-type, e.g., text/html. The endings parameter is specific to how to interpret newline characters (\n) within the contents of the data is text. The default value, transparent, copies newline characters into the blob without changing them. To convert newlines to the host system's native convention, specify the value native. The arguments are similar to array.slice, negative numbers are allowed too.
     </div><br />
   <div><strong className="codeExample">Syntax:</strong> new Blob(blobParts, options);<br />
 
@@ -55,7 +55,7 @@ console.log(myBlob.type + ' is the type');
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, Blob objects are immutable, we cannot change data directly in a Blob, but we can slice parts of a Blob, create new Blob objects from them, mix them into a new Blob and so on. This behavior is like JavaScript strings: we cannot change a character in a string, but we can make a new corrected string.
+  <div><strong>Interview Response:</strong> No Blob objects are immutable, we cannot change data directly in a Blob, but we can slice parts of a Blob, create new Blob objects from them, mix them into a new Blob, and so on. This behavior is like JavaScript strings: we cannot change a character in a string, but we can make a new corrected string.
     </div><br />
   <div><strong className="codeExample">Syntax:</strong> var newBlob = blob.slice(start, end, contentType);<br /><br />
 
@@ -89,7 +89,7 @@ console.log(blob.type); // returns text/html
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A Blob can be easily used as a URL for &#8249;a&#8250;, &#8249;img&#8250; or other tags, to show its contents. Thanks to type, we can also download/upload Blob objects, and the type naturally becomes Content-Type in network requests.
+  <div><strong>Interview Response:</strong> To display its contents, a Blob gets used as a URL for &#8249;a&#8250;, &#8249;img&#8250; or other tags. Thanks to type, we can also download/upload Blob objects, and the type naturally becomes Content-Type in network requests.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -112,12 +112,12 @@ console.log(blob.type); // returns text/html
 
 ---
 
-### What method is used to create an Object URL for a Blob?
+### What method gets used to create an Object URL for a Blob?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The URL.createObjectURL() static method creates a DOMString containing a URL representing the object given in the parameter. The URL lifetime is tied to the document in the window on which it was created. The new object URL represents the specified File object or Blob object. Each time you call createObjectURL(), a new object URL is created, even if you've already created one for the same object. This has the potential of taking up unnecessary resources and should be released.
+  <div><strong>Interview Response:</strong> The URL.createObjectURL() static method creates a DOMString containing a URL representing the object given in the parameter. The URL lifetime gets tied to the document in the window on which it gets created. The new object URL represents the specified File object or Blob object. Each time you call createObjectURL(), a new object URL gets created, even if you've already created one for the same object. This behavior has the potential of taking up unnecessary resources and should be released.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -133,12 +133,12 @@ const objectURL = URL.createObjectURL(object); // Can be file or Blob object
 
 ---
 
-### Is there a way to release an Object URL when it’s no longer needed?
+### Is it possible to release an Object URL when it is no longer required?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, we can use URL.revokeObjectURL(url) to remove the reference from the internal mapping, thus allowing the Blob to be deleted (if there are no other references), and the memory to be freed.
+  <div><strong>Interview Response:</strong> Yes, we can use URL.revokeObjectURL(URL) to remove the reference from the internal mapping, thus allowing the Blob to get deleted (if there are no other references), and the memory to get freed.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -163,12 +163,12 @@ URL.revokeObjectURL(link.href);
 
 ---
 
-### Is there an alternative approach to creating an Object URL, other than using URL.createObjectURL?
+### Is there an alternative to creating an Object URL other than URL.createObjectURL?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> An alternative to URL.createObjectURL is to convert a Blob into a base64-encoded string. That encoding represents binary data as a string of ultra-safe “readable” characters with ASCII-codes from 0 to 64. And what is more important – we can use this encoding in “data-urls”. A data url has the form data:[&#8249;mediatype&#8250;][;base64], &#8249;data&#8250;. We can use such urls everywhere, on par with “regular” urls. To transform a Blob into base64, we can use the built-in FileReader object. Both ways of making a URL of a Blob are usable. But usually URL.createObjectURL(blob) is simpler and faster.
+  <div><strong>Interview Response:</strong> An alternative to URL.createObjectURL is to convert a Blob into a base64-encoded string. That encoding represents binary data as a string of ultra-safe “readable” characters with ASCII-codes from 0 to 64. And what is more important – we can use this encoding in “data-urls”. A data URL has the form data:[&#8249;mediatype&#8250;][;base64], &#8249;data&#8250;. We can use such URLs everywhere, on par with “regular” URLs. To transform a Blob into base64, we can use the built-in FileReader object. Both ways of making a URL of a Blob are usable. But usually URL.createObjectURL(blob) is simpler and faster.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -195,12 +195,12 @@ reader.onload = function () {
 
 ---
 
-### What is the difference between creating an Object URL vs converting a Blob into a base64-encoded string?
+### What is the difference between creating an Object URL vs. converting a Blob into a base64-encoded string?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> When we are creating an Object URL, we need to be aware of the memory ramifications. Using URL.createObjectURL requires use to revoke it when it is no longer needed. However, a Blob conversion does not require revocation of the invoked conversion. If we are concerned about simplicity, speed, and stability the URL.createObjectURL is recommended.
+  <div><strong>Interview Response:</strong> When creating an Object URL, we need to know the memory ramifications. Using URL.createObjectURL requires use to revoke it when it is no longer needed. However, a Blob conversion does not require revocation of the invoked conversion. If we are concerned about simplicity, speed, and stability, the URL.createObjectURL gets recommended.
     </div>
   </div>
 </details>

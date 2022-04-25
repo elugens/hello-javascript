@@ -1,16 +1,11 @@
 ---
 title: Browser Window Interaction
 description: How to interact with the browser window.
-sidebar_position: 6
+sidebar_position: 8
 sidebar_label: Window Interaction
 ---
 
 **JavaScript Fundamentals: Interaction: alert, prompt, confirm**
-
-<head>
-  <title>Browser Interaction - Frontend Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
@@ -44,20 +39,20 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Alert returns a string.</div><br />
-  <div><strong>Technical Response:</strong> Alert returns a string or an object that is converted into a string and displayed.
+  <div><strong>Technical Response:</strong> Alert returns a string or object converted into a string and displayed.
   </div>
   </div>
 </details>
 
 ---
 
-### How does the prompt function work, in simple terms?
+### How does the prompt function work in simple terms?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> It shows a window with text and a request for input, then returns a string.</div><br />
-  <div><strong>Technical Response:</strong> It shows a modal window with a text message, an input field for the visitor, and the buttons OK/Cancel. The return value of the prompt function is a string value. This should be considered when it is used with numbers.
+  <div><strong>Technical Response:</strong> It shows a modal window with a text message, an input field for the visitor, and the buttons OK/Cancel. The return value of the prompt function is a string value, which should be taken into account when used with numbers.
   </div>
   </div>
 </details>
@@ -86,7 +81,7 @@ result = prompt(title, [default]);
 
 ---
 
-### What does the prompt return when the prompt is escaped or canceled?
+### What does the prompt return when the prompt its escaped or canceled?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -97,13 +92,13 @@ result = prompt(title, [default]);
 
 ---
 
-### Why is important to provide a second argument (default) for the prompt function?
+### Why is it essential to provide a second argument (default) for the prompt function?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To ensure that the browser (internet explorer) does not return undefined.</div><br />
-  <div><strong>Technical Response:</strong> There is a chance that the user is using a browser such as Internet Explorer that will return undefined if there is no default. This could have ramifications that could affect the application adversely.
+  <div><strong>Interview Response:</strong> This approach ensures that the browser (internet explorer) does not return undefined. </div><br />
+  <div><strong>Technical Response:</strong> There is a chance that the user is using a browser such as Internet Explorer, which returns undefined if there is no default. This action could have ramifications that could affect the application adversely.
   </div>
   </div>
 </details>
@@ -115,8 +110,8 @@ result = prompt(title, [default]);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Confirm produces a window with a Boolean question of OK and Cancel. Ok returns true and Cancel returns false.</div><br />
-  <div><strong>Technical Response:</strong> The function confirm shows a modal window with a question and two buttons: OK and Cancel. The result is true if OK is pressed and false otherwise.
+  <div><strong>Interview Response:</strong> Confirm produces a window with a Boolean question of OK and Cancel. Ok returns true, and Cancel returns false.</div><br />
+  <div><strong>Technical Response:</strong> : The function confirm shows a modal window with a question and two buttons: OK and Cancel. The result is true if OK is pressed and false otherwise.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -134,13 +129,13 @@ alert(isBoss); // true if OK is pressed and false otherwise
 
 ---
 
-### What object model do the alert, prompt, and confirm functions belong to?
+### The alert, prompt, and confirm methods are part of what object model?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The alert, prompt, and confirm methods belong to the BOM.</div><br />
-  <div><strong>Technical Response:</strong> The alert, prompt, and confirm methods belong to the Browser Object Model. It is commonly referred to as the BOM.
+  <div><strong>Technical Response:</strong> The alert, prompt, and confirm methods belong to the Browser Object Model. It is commonly called the BOM.
   </div>
   </div>
 </details>
@@ -152,11 +147,11 @@ alert(isBoss); // true if OK is pressed and false otherwise
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We have no control over position and look of the modal window.</div><br />
+  <div><strong>Interview Response:</strong> We have no control over the position and look of the modal window.</div><br />
   <div><strong>Technical Response:</strong><br /><br />
     <ol>
-      <li>The exact location of the modal window is determined by the browser. Usually, it is in the center.</li>
-      <li>The exact look of the window also depends on the browser. We cannot modify it…</li>
+      <li>The browser determines the exact location of the modal window. Usually, it is in the center.</li>
+      <li>The exact look of the window also depends on the browser, and we cannot modify it.</li>
       </ol>
   </div>
   </div>

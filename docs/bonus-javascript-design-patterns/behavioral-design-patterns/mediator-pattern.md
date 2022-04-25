@@ -36,8 +36,8 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 **Mediator** -- example code: _Chatroom_
 
 - It specifies an interface for interacting with Colleague objects
-- maintains references to Colleague objects
-- manages central control over operations.
+- Maintains references to Colleague objects
+- Manages central control over operations
 
 **Colleagues** -- example code: _Participants_
 
@@ -133,7 +133,7 @@ Ringo to Paul: Paul, what do you think?
 
 ---
 
-### What pattern category does the Mediator belong to?
+### The Mediator pattern belongs to which pattern category?
 
 <details>
   <summary>
@@ -148,7 +148,7 @@ Ringo to Paul: Paul, what do you think?
 
 ---
 
-### When should use the Mediator Pattern in JavaScript?
+### When should you utilize the JavaScript Mediator Pattern?
 
 <details>
   <summary>
@@ -156,14 +156,14 @@ Ringo to Paul: Paul, what do you think?
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> It can be used:
+      <strong>Interview Response:</strong> It can get used:
     </div><br/>
 
 - If your system has several components that must communicate with one another.
-- To avoid object tight coupling in a system with many objects.
+- To avoid tight object coupling in a system with many objects.
 - To enhance code readability.
 - To make it easier to maintain code.
-- If communication between objects gets complicated or impedes code reusability.
+- If communication between objects gets complicated or impedes code reusability
 
 <br />
   </div>
@@ -187,7 +187,7 @@ Ringo to Paul: Paul, what do you think?
 - Singular Responsibility Principle -- You may consolidate the communications between numerous components into a single location, making them easier to understand and maintain.
 - The Open/Closed Principle You can add new mediators without changing the key components.
 - You can reduce coupling between software components.
-- Individual components can be reused more quickly.
+- Individual components can get reused more quickly.
 
 <br />
   </div>

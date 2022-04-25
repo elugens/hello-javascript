@@ -11,24 +11,24 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 <CloseAllAnswers />
 
-### Explain, what are the three types of bind techniques in JavaScript?
+### Explain the three types of binding techniques in JavaScript.
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, there are three types of binding techniques including Window, Implicit, and Explicit function binding.
+  <div><strong>Interview Response:</strong> In JavaScript, there are three types of binding techniques Window, Implicit, and Explicit function binding.
 </div>
   </div>
 </details>
 
 ---
 
-### Explain, what is explicit function binding is in JavaScript?
+### Explain what explicit function binding is in JavaScript.
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, there are three types of binding techniques including Window, Implicit, and Explicit function binding. Explicit binding forces a function call to bind to a particular context object, by using either call, apply, or bind. These are predefined JavaScript methods inherited by all function through the function prototype. Functions provide a built-in method bind that allows us to fix “this”. Binding is perfect solution for sealing the context to the proper object and not losing “this”.
+  <div><strong>Interview Response:</strong> Window, Implicit, and Explicit function binding are JavaScript's three types of binding strategies. Explicit binding compels a function call to bind to a specific context object by utilizing call, apply, or bind. These predefined JavaScript methods get passed down to all functions via the function prototype. Functions have a method bind that allows us to fix "this." Binding is the ideal option for tying the context to the correct object and preventing "this" from being lost.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -53,12 +53,12 @@ funcUser(); // John
 
 ---
 
-### Explain, the function and syntax of the function bind() method?
+### Explain the function and syntax of the function bind() method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The bind method creates a new function that, when called, has its “this” keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called. Bind returns a new function that can be invoked later in the code, while maintaining the desired context binding.
+  <div><strong>Interview Response:</strong> The bind method generates a new function that, when called, sets the "this" keyword to the provided value, with a specified sequence of arguments preceding any arguments provided when the new function gets invoked. Bind creates a new function that may be called later in the code while keeping the desired context binding.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -84,7 +84,7 @@ console.log(boundGetX());
 ```
 
 :::note
-This is useful for passing functions into other functions, like setTimeout(), which will invoke it later and won’t necessarily bind the invoked function to the correct object without being coerced. The first parameter is the context object and all other parameters are individually listed, like with the call method.
+This is useful for passing functions into other functions, like setTimeout(), which later invokes and won't necessarily bind the invoked function to the correct object without being coerced. The first parameter is the context object, and all other parameters are individually listed, like the call method.
 :::
 
   </div>
@@ -93,12 +93,12 @@ This is useful for passing functions into other functions, like setTimeout(), wh
 
 ---
 
-### Can you explain, what is a partial function application is in JavaScript?
+### Can you explain what a partial function application is in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A partial function application in JavaScript, refers to the process of fixing several arguments to a function, and in the process producing another function of smaller arity.
+  <div><strong>Interview Response:</strong> A partial function application in JavaScript refers to the process of fixing several arguments to a function and, in the process producing another function of smaller arity.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

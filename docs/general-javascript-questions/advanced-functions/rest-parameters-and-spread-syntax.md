@@ -16,7 +16,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The spread syntax is the opposite of the rest parameter, where rest parameter collects items into an array, the spread operator unpacks the collected elements into single elements.
+  <div><strong>Interview Response:</strong> The spread syntax is the opposite of the rest parameter. The rest parameter collects items into an array, and the spread operator unpacks the collected elements into single elements.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -38,7 +38,7 @@ console.log(newArr); // ["Marina" , "Magdy" , "Shafiq" , "FrontEnd" , 24 ] ;
 ```
 
 :::note
-If you are going to call a function and send several arguments, you will receive them into rest parameter in the function implementation.
+If you call a function and send several arguments, you receive them into the rest parameter in the function implementation.
 :::
 
   </div>
@@ -52,7 +52,7 @@ If you are going to call a function and send several arguments, you will receive
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The rest parameter expands the dynamic capabilities of functions. Functions themselves will not express an error when there are excessive arguments. The rest of the parameters can be included in the function definition by using three dots ... followed by the name of the array that will contain them. The dots literally mean “gather the remaining parameters into an array”. This allows the function to act on several sets of arguments instead of a predefined number or single argument.
+  <div><strong>Interview Response:</strong> The rest parameter expands the dynamic capabilities of functions. Functions themselves express an error when there are excessive arguments. The function declaration includes the remaining parameters by using three dots followed by the array's name. The dots mean "gather the remaining parameters into an array". This behavior allows the function to act on several arguments instead of a predefined number or single argument.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong> Get the sum of the arguments regardless of the number in the array.<br /><br />
 
@@ -79,12 +79,12 @@ alert(sumAll(1, 2, 3)); // 6
 
 ---
 
-### Can you use the rest parameter in conjunction with predefined arguments in JavaScript functions?
+### Can you use the rest parameter with predefined arguments in JavaScript functions?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, you can mix predefined parameters with the rest parameter in JavaScript functions. There is a limit to its use in the form of the order of arguments. Predefined parameters must precede the rest parameter, or it will result in an error. The best way to remember this is to “Rest at the end”.
+  <div><strong>Interview Response:</strong> Yes, you can mix predefined parameters with the rest parameter in JavaScript functions. There is a limit to its use in the form of the order of arguments. Predefined parameters must precede the rest parameter, or it may result in an error. The best way to remember this is to "Rest at the end".
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -120,7 +120,7 @@ function f(arg1, ...rest, arg2) { // arg2 after ...rest ?!
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The rest parameter and the arguments array-like object have similar behaviors. The rest parameter is relatively new compared to arguments. Although arguments are both array-like and iterable, it is not an array. It does not support array methods, so we cannot call arguments.map(...) for example. Also, it always contains all arguments. We cannot capture them partially, like we did with rest parameters. So, when we need these features, then rest parameters are preferred. Another issue is that arrow functions do not have access to arguments. If we access the arguments object from an arrow function, it takes them from the outer “normal” function. This reduces the potency of the arguments object and can lead to bugs in our code.
+  <div><strong>Interview Response:</strong> The rest parameter and the arguments array-like object have similar behaviors. The rest parameter is relatively new compared to arguments. Although arguments are both array-like and iterable, it is not an array. It does not support array methods, so we cannot call arguments.map(...) for example. Also, it always contains all arguments. We cannot capture them partially as we did with the rest parameters. So, when we need these features, then the rest parameters are preferred. Another issue is that arrow functions do not have access to arguments. If we access the argument's object from an arrow function, it takes them from the outer "normal" function. This issue reduces the potency of the arguments object and can lead to bugs in our code.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -149,12 +149,12 @@ showName('Ilya');
 
 ---
 
-### What is the benefit of using the ES6 spread syntax?
+### What are the advantages of adopting the ES6 spread syntax?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> As far as coding in a functional paradigm is concerned, using the spread syntax in ES6 can prove to be heavily beneficial. The spread syntax can be easily used to create copies of arrays or objects. Using spread syntax in a program reduces the need to use loops, Object.create, slice or any library function. This helps reduce code and complexity in your applications.
+  <div><strong>Interview Response:</strong> As far as coding in a functional paradigm is concerned, using the spread syntax in ES6 can prove to be heavily beneficial. The spread syntax is easily used to create copies of arrays or objects. Using spread syntax in a program reduces the need to use loops, Object.create, slice, or any library function, which helps reduce code and complexity in your applications.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

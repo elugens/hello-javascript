@@ -1,7 +1,7 @@
 ---
 title: The "Switch" Statement
 description: A switch statement can replace multiple if checks, it is more descriptive, and easier to read.
-sidebar_position: 14
+sidebar_position: 16
 sidebar_label: The "Switch" Statement
 ---
 
@@ -11,13 +11,13 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 <CloseAllAnswers />
 
-### What are the benefits of using a Switch statement?
+### What are the advantages of employing a Switch statement?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A switch statement can replace multiple if checks, it is more descriptive, and easier to read.</div><br />
-  <div><strong>Technical Response:</strong> A switch statement can replace multiple if checks. It gives a more descriptive way to compare a value with multiple variants and it is easier to read.<br />
+  <div><strong>Interview Response:</strong> A switch statement can replace multiple checks, and it is more descriptive and easier to read.</div><br />
+  <div><strong>Technical Response:</strong> A switch statement can replace multiple checks, and it gives a more descriptive way to compare a value with multiple variants and is easier to read.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong> The SWITCH Statement<br /><br />
 
@@ -48,7 +48,7 @@ switch (x) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The switch statement works by checking the initial value against the case values. If the initial value equals one of the case values, then it stops. A default value is used if the case is not found to equal the initial value.
+  <div><strong>Interview Response:</strong> The switch statement works by checking the initial value against the case values. If the initial value equals one of the case values, it stops. A default value gets used if the case does not equal the initial value.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong> Syntax<br /><br />
 
@@ -83,7 +83,7 @@ switch(x) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, but caution should be used because the execution continues with the next case without any checks. It is recommended that we use a break statement.
+  <div><strong>Interview Response:</strong> No, but caution should be used because the execution continues with the following case without any checks. We should use the break state according to the specification.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong> An example without break<br /><br />
 
@@ -165,9 +165,9 @@ switch (a * 10) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, several variants of the case which share the same return code can be grouped.
+  <div><strong>Interview Response:</strong> Yes, many case variants with the same return code get aggregated (grouped).
 </div><br />
-  <div><strong className="codeExample">Code Example:</strong> If we want the same code to run for case 3 and case 5.<br /><br />
+  <div><strong className="codeExample">Code Example:</strong> For instance, suppose we want the identical code to run for cases 3 and 5.<br /><br />
 
   <div></div>
 
@@ -201,7 +201,7 @@ switch (a) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, the values must be of the same data type to match. The case value that does not, will not execute.
+  <div><strong>Interview Response:</strong> Yes, the values must be of the same data type to match. The case value that does not, does not execute.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

@@ -33,21 +33,21 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 **Director** -- In example code: _Shop_
 
-- uses the Builder's multistep interface to build products
+- uses the Builder's multi-step interface to build products
 
-**Builder** -- _not used in JavaScript_
+**Builder** -- _JavaScript does not use it._
 
-- asserts a multi - step interface for the creation of a complex product
+- asserts a multi-step interface for the creation of a complex product
 
 **ConcreteBuilder** -- In example code: _CarBuilder_ and _TruckBuilder_ are two examples of code.
 
-- implements the Builder interface with multiple steps
-- maintains the product's integrity during the assembly process
+- Implements the Builder interface with multiple steps
+- Maintains the product's integrity during the assembly process
 - offers the ability to retrieve the newly created product
 
 **Products** -- In example code: _Car, Truck_
 
-- represents the complicated objects that must be assembled
+- represents the complicated objects that must get assembled
 
 <br />
 
@@ -176,10 +176,10 @@ I am a 2-door truck
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Builder design pattern's goal is to decouple the construction of a complex object from its representation. It is a design pattern from the Gang of Four.
+      <strong>Interview Response:</strong> The Builder design pattern's goal is to decouple the construction of a complex object from its representation, and it is a design pattern from the Gang of Four.
     </div><br/>
     <div>
-      <strong>Technical Response:</strong> The most common reason for using Builder is to make client code that creates complex objects that are simpler to comprehend. The client can still direct the Builder's actions without knowing how the actual work is completed. Because the procedures involved are frequently repetitive and complex, builders frequently encapsulate the construction of Composite objects (another GoF design pattern).<br/><br/>It is usually the last step that returns the newly created object, making it simple for a Builder to participate in fluent interfaces where multiple method calls separated by dot operators are chained next to each other.<br/><br/>
+      <strong>Technical Response:</strong> The most common reason for using Builder is to make client code that creates complex objects that are simpler to comprehend. The client can still direct the Builder's actions without knowing how the actual work gets completed. Because the procedures involved are frequently repetitive and complex, builders frequently encapsulate the construction of Composite objects (another GoF design pattern).<br/><br/>It is usually the last step that returns the newly created object, making it simple for a Builder to participate in fluent interfaces where multiple method calls separated by dot operators get chained next to each other.<br/><br/>
     </div>
 
   </div>
@@ -198,7 +198,7 @@ I am a 2-door truck
       <strong>Interview Response:</strong> The objects participating in the Builder Pattern include the Director, Builder, ConcreteBuilder, and Products objects.
     </div><br />
     <div>
-      <strong>Technical Response:</strong> The objects participating in the Builder Pattern include the Director, Builder, ConcreteBuilder, and Products objects. The director object constructs products by using the Builder’s multi-step interface. The Builder object, not used in JavaScript, declares a multi-step interface for creating a complex product. The ConcreteBuilder implements the multi-component Builder interface, keeps the product in position during the assembly process, and enables you to retrieve the newly created product. The Products object represents the complex objects being assembled.
+      <strong>Technical Response:</strong> The objects participating in the Builder Pattern include the Director, Builder, ConcreteBuilder, and Products objects. The director object constructs products by using the Builder’s multi-step interface. The Builder object, not used in JavaScript, declares a multi-step interface for creating a complex product. The ConcreteBuilder implements the multi-component Builder interface, keeps the product in position during the assembly process, and enables you to retrieve the newly created product. The Products object represents the complex objects getting assembled.
     </div><br />
 
 :::note
@@ -220,7 +220,7 @@ Though the definition particularly mentions that an interface needs to be define
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The AbstractBuilder is not used because Vanilla JavaScript does not support abstract classes. However, the different Builders must implement the same multi-step interface for the Director to be able to step through the assembly process.
+      <strong>Interview Response:</strong> The AbstractBuilder does not get used because JavaScript does not support abstract classes. However, the different Builders must implement the same multi-step interface for the Director to be able to step through the assembly process.
       </div><br />
 
   </div>
@@ -236,14 +236,14 @@ Though the definition particularly mentions that an interface needs to be define
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The builder pattern has several advantages, which can be summarized as follows:
+      <strong>Interview Response:</strong> The builder pattern has several advantages, which can be summarized as follows.
       </div><br/>
 
 <div></div>
 
-- Objects can be built in stages.
-- The creation of an object can be delayed until all necessary information for its construction is available. The object will not be acquired until the Builder class's build function is invoked.
-- Clean code: The Single Responsibility Principle (SRP) is used because the object's intricate construction is separated from its core functionality.
+- You may build items step by step, defer building phases, or perform them recursively.
+- When creating different product representations, you can reuse the same construction code.
+- Single Responsibility Principle. You may separate sophisticated building of code from the product's business logic.
 
 <br />
 
@@ -260,13 +260,9 @@ Though the definition particularly mentions that an interface needs to be define
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The main disadvantage of the builder pattern is the increased code complexity and the number of classes required. This is a well-known drawback of using design patterns — the cost of gaining abstraction in the code.<br />
+      <strong>Interview Response:</strong> The main disadvantage of the builder pattern is the increased code complexity and the number of classes required. This complexity is a well-known drawback of using design patterns — the cost of gaining abstraction in the code.<br />
     </div>
   </div>
 </details>
-
----
-
-> Written with [StackEdit](https://stackedit.io/).
 
 ---

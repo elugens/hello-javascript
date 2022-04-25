@@ -11,20 +11,20 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 <CloseAllAnswers />
 
-### Explain, what debugging is in JavaScript development?
+### Explain what debugging is in JavaScript development?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Debugging is the process of finding and fixing errors within a script.</div><br />
-  <div><strong>Technical Response:</strong> Debugging is the process of finding and fixing errors within a script. All modern browsers and most other environments support debugging tools – a special UI in developer tools that makes debugging much easier. It also allows to trace the code step by step to see what exactly is going on.<br /><br />
+  <div><strong>Interview Response:</strong> Debugging is finding and fixing errors within a script.</div><br />
+  <div><strong>Technical Response:</strong> Debugging is finding and fixing errors within a script. Modern browsers and most other environments support debugging tools – a unique UI in developer tools makes debugging much more manageable. It also allows us to trace the code step by step to see what is going on.<br /><br />
   </div>
   </div>
 </details>
 
 ---
 
-### How, do you turn on developer tools in Chrome?
+### How do you turn on developer tools in Chrome?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -36,12 +36,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### How, do you open the left side bar to access the vertical tabs?
+### How do you open the left sidebar to access the vertical tabs?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> You can use the toggler button under the source tab to open the vertical tabs.<br /><br />
+  <div><strong>Interview Response:</strong> You can use the toggler button to open the vertical tabs under the source tab.<br /><br />
   <img src='/img/vertical-tabs.svg' />
 </div>
   </div>
@@ -49,7 +49,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### What are the three panes available under chrome dev tools source tab?
+### What are the three panes accessible via the Chrome Dev Tools source tab?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -67,7 +67,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The file navigator pane can be opened by clicking on the sources tab at the top of the developer tools. Once you click on the tab, you can click on the toggler button and view the file navigator pane.
+  <div><strong>Interview Response:</strong> The file navigator pane opens by clicking on the sources tab at the top of the developer tools. Once you click on the tab, you can click on the toggler button and view the file navigator pane.
 </div>
   </div>
 </details>
@@ -79,7 +79,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The JavaScript debugging pane is located under the sources tab on the right-hand side of the code editor.
+  <div><strong>Interview Response:</strong> You can find the JavaScript debugging pane on the right-hand side of the code editor, beneath the sources tab.
 </div>
   </div>
 </details>
@@ -91,31 +91,31 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> You can toggle the console tab pane by using the ESC button.
+  <div><strong>Interview Response:</strong> You can toggle the console tab-pane by using the ESC button.
 </div>
   </div>
 </details>
 
 ---
 
-### What are some of things that you can do with the developer console?
+### What are some examples of things you can do with the developer console?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The most notable things that you can do with the Chrome developer console included selecting DOM elements, convert your browser into an editor, find events associated with an element in the DOM, monitor events, find the time of execution of block of code, arrange the values of a variable into a table, inspect an element in the DOM, list the properties of an element, retrieve the value of your last result, and clear the console and the memory.
+  <div><strong>Interview Response:</strong> The most notable things that you can do with the Chrome developer console include selecting DOM elements, converting your Browser into an editor, finding events associated with an element in the DOM, monitoring events, finding the time of execution of a block of code, arrange the values of a variable into a table, inspect an element in the DOM, list the properties of an element, retrieve the value of your last result, and clear the console and the memory.
 </div>
   </div>
 </details>
 
 ---
 
-### What is a breakpoint in JavaScript development?
+### What is a breakpoint in JavaScript debugging?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A breakpoint is a point of code where the debugger will automatically pause the JavaScript execution. While the code is paused, we can examine current variables, execute commands in the console etc. In other words, we can debug it.
+  <div><strong>Interview Response:</strong> A breakpoint is a line of code that causes the debugger to interrupt JavaScript execution. We may investigate current variables and run commands on the terminal while the program gets halted. To put it another way, we can debug it.
 </div>
   </div>
 </details>
@@ -127,7 +127,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We can pause the code by using the “debugger;” command.
+  <div><strong>Interview Response:</strong> We can pause the code using the (debugger;) command.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -150,12 +150,12 @@ function hello(name) {
 
 ---
 
-### How do you reload the source page after you set your breakpoints in the Chrome developer console?
+### How do you reload the source page after setting your breakpoints in the Chrome developer console?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In Windows you can press F5 to reload the page, on a MAC you must use Cmd+R.
+  <div><strong>Interview Response:</strong> In Windows, you can press F5 to reload the page; you must use Cmd+R on a MAC.
 </div>
   </div>
 </details>
@@ -167,7 +167,7 @@ function hello(name) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The watcher will show you the current value of the variable as it is added in an expression. If the variable is not set or cannot be found it will show &#60;Not Available&#62; for the value.
+  <div><strong>Interview Response:</strong> The watcher displays the variable's current value as it gets added to an expression. If the variable does not get set or if you cannot find it, the value shows as &#60;Not Available&#62;.
 </div>
   </div>
 </details>
@@ -192,7 +192,7 @@ function hello(name) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong>  In Chrome and Safari the Call Stack shows the nested call chain.<br /><br />
+  <div><strong>Interview Response:</strong> The Call Stack shows the nested call chain in Chrome and Safari.<br /><br />
   <img src='/img/callstack.svg' />
 </div>
   </div>
@@ -205,7 +205,7 @@ function hello(name) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong>  The console is part of the window object which is supplied by the Browser.
+  <div><strong>Interview Response:</strong> The console is part of the window object supplied by the Browser.
 </div>
   </div>
 </details>

@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> JavaScript automatically allocates memory when objects are created and frees it when they are not used anymore (garbage collection).
+  <div><strong>Interview Response:</strong> JavaScript automatically allocates memory when objects get created and clear the memory when they no longer get referenced. (Garbage Collection)
 </div><br />
 
 :::note
@@ -32,13 +32,13 @@ This automaticity is a potential source of confusion: it can give developers the
 
 ---
 
-### Explain, the three steps of the memory life cycle in JavaScript?
+### Explain the three steps of the memory life cycle in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The memory life cycle includes allocating, using, and releasing the allocated memory when it is no longer needed.</div><br />
-  <div><strong>Technical Response:</strong> The three steps in the memory life cycle include allocating memory, using the allocated memory, and releasing the allocated memory when it is no longer needed. The last part is more implicit in JavaScript than low-level languages.<br /><br />
+  <div><strong>Technical Response:</strong> The three steps in the memory life cycle include allocating memory, using the allocated memory, and releasing the allocated memory when it is no longer needed. The last part is more implicit in JavaScript than in low-level languages.<br /><br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -78,36 +78,36 @@ var n = null;
 
 ---
 
-### What is the main concept of memory management in JavaScript?
+### What is the central concept of memory management in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The main concept of memory management in JavaScript is reachability. Simply put, “reachable” values are those that are accessible or usable somehow are guaranteed to be stored in memory.
+  <div><strong>Interview Response:</strong> The central concept of memory management in JavaScript is reachability. Simply put, "reachable" values are those that get are accessible or usable somehow and are guaranteed to get stored in memory.
 </div>
   </div>
 </details>
 
 ---
 
-### In relation to JavaScript memory management. What is a GC root?
+### Concerning JavaScript memory management. What is a GC root?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A “root” is simply an object that the garbage collector assumes is reachable by default, which then has its references traced to find all other current objects that are reachable. Any object that is not reachable through any reference chain of any of the root objects is considered unreachable and will eventually be destroyed by the garbage collector.
+  <div><strong>Interview Response:</strong> A "root" is simply an object that the garbage collector assumes is reachable by default, which then has its references traced to find all other current objects that are reachable. Any object that is not reachable through any reference chain of any root objects is considered unreachable and eventually gets destroyed by the garbage collector.
 </div>
   </div>
 </details>
 
 ---
 
-### There is a base set of inherently reachable values, that cannot be deleted for obvious reasons. Can you name at least one?
+### A base set of inherently reachable values cannot get deleted for obvious reasons. Can you name at least one?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Global variables cannot be deleted directly. The global variable must be set to null before the memory can be collected. However, the variable still exists and simply references null (nothingness).
+  <div><strong>Interview Response:</strong> Global variables cannot get deleted directly, and the global variable must be set to null before the memory can be collected. However, the variable still exists and references null (nothingness).
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -133,12 +133,12 @@ null:
 
 ---
 
-### In JavaScript, can interlinked objects be garbage collected based on nullification on a specific object on the GC root?
+### Can interlinked objects be garbage collected based on the nullification of a specific object on the GC root in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, the object that is deleted or nullified will be garbage collected even if it is part of a GC root or it one of its properties references another object.
+  <div><strong>Interview Response:</strong> Yes, the deleted or nullified object gets garbage collected even if it is part of a GC root or one of its properties references another object.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -174,8 +174,8 @@ delete family.mother.husband;
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, it is possible if the root is nullified in the program.
-</div><br />
+  <div><strong>Interview Response:</strong> Yes, it is possible if the root gets nullified in the program.
+  </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -204,7 +204,7 @@ family = null;
 
 ---
 
-### What is the basic collection algorithm called in JavaScript?
+### What is the basic garbage-collection algorithm called in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -216,19 +216,19 @@ family = null;
 
 ---
 
-### Explain, how the internal JavaScript garbage collector algorithm works?
+### Explain how the internal JavaScript garbage collector algorithm works?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong><br /><br />
-  <strong>The following “garbage collection” steps are regularly performed:</strong><br /><br />
+  <strong>The following "garbage collection" steps get regularly performed:</strong><br /><br />
   <ol>
-    <li>The garbage collector takes roots and “marks” (remembers) them.</li>
-    <li>Then it visits and “marks” all references from them.</li>
-    <li>Then it visits marked objects and marks their references. All visited objects are remembered, so as not to visit the same object twice in the future.</li>
-    <li>…And so on until every reachable (from the roots) reference are visited.</li>
-    <li>All objects except marked ones are removed.</li>
+    <li>The garbage collector takes roots and "marks" (remembers) them.</li>
+    <li>Then it visits and "marks" all references from them.</li>
+    <li>Then it visits marked objects and marks their references. All visited objects get remembered so as not to visit the same object twice in the future.</li>
+    <li>And so on until every reachable (from the roots) reference is visited.</li>
+    <li>All objects except marked ones get removed.</li>
   </ol>
 </div>
   </div>
@@ -236,17 +236,17 @@ family = null;
 
 ---
 
-### Name the three of the common garbage collection optimizations?
+### Can you name the three standard garbage collection optimizations?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The three common garbage collection optimizations include generalization, incremental, and idle-time collection.
+  <div><strong>Interview Response:</strong> The three standard garbage collection optimizations include generalization, incremental, and idle-time collection.
 </div><br />
 
 :::note
 
-It should be noted that each engine implements different tweaks and techniques.
+You should note that each engine implements different tweaks and techniques.
 
 :::
 

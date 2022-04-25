@@ -13,12 +13,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Can you explain how a static properties and methods function in JavaScript?
+### Can you explain how static properties and methods function in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The static keyword defines a static method or property for a class. Neither static methods nor static properties can be called on instances of the class. Instead, they are called on the class itself. Static methods are often utility functions, such as functions to create or clone objects, whereas static properties are useful for caches, fixed configuration, or any other data you do not need to be replicated across instances. To call a static method or property within another static method of the same class, you can use the “this” keyword.
+  <div><strong>Interview Response:</strong> The static keyword defines a static method or property for a class. Neither static methods nor static properties get called on class instances, and instead, they get called on the class itself. Static methods are often utility functions, such as functions to create or clone objects. In contrast, static properties are helpful for caches, fixed-configuration, or any other data you do not need to get replicated across instances. To call a static method or property within another static method of the same class, you can use the “this” keyword.
 </div><br />
   <div>
   
@@ -73,12 +73,12 @@ The easiest way to remember how static methods work is to always call the method
 
 ---
 
-### Are static properties and methods inherited when inheriting from a base class?
+### When inheriting a base class, are static properties and methods inherited?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, by default both static properties and methods are inherited.
+  <div><strong>Interview Response:</strong> Yes, both static properties and methods get inherited by default.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong> Static Property and Method Inheritance<br /><br />
 

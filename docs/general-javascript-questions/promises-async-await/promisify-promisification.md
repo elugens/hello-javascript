@@ -13,12 +13,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Can you explain what promisification is in JavaScript?
+### Can you explain what “promisification” is in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> “Promisification” is a long word for a simple transformation. It is the conversion of a function that accepts a callback into a function that returns a promise. Such transformations are often required in real-life, as many functions and libraries are callback-based. But promises are more convenient, so it makes sense to promisify them.
+  <div><strong>Interview Response:</strong> “Promisification” is a long word for a simple transformation, and it is the conversion of a function that accepts a callback into a function that returns a promise. Such transformations are often required in real-life, as many functions and libraries are callback-based. But promises are more convenient, so it makes sense to “promisify” them.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -44,12 +44,12 @@ let loadScriptPromise = function (src) {
 
 ---
 
-### What is one important aspect to remember when deciding to use a promisification?
+### What is one crucial aspect to remember when using promisifications?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Promisification is a great approach, especially when you use async/await, but not a total replacement for callbacks. Remember, a promise may have only one result, but a callback may technically be called many times. So promisification is only meant for functions that call the callback once. Further calls will be ignored.
+  <div><strong>Interview Response:</strong> Promisification is an excellent approach, especially when using async/await, but not a total replacement for callbacks. Remember, a promise may have only one result, but a callback may technically be called many times. So promisification is only meant for functions that call the callback once, and further calls get ignored.
 </div>
   </div>
 </details>

@@ -13,7 +13,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Can you explain the decorator design pattern?
+### Could you please explain the decorator design pattern?
 
 <details className='answer'>
   <summary>
@@ -21,7 +21,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> Decorators are a structural JS design pattern that aims to promote code reuse. Like Mixins, they can be considered another viable alternative to object sub-classing. This pattern enables behavior to be dynamically added to an individual object without affecting the behavior of other objects in the same class. Decorators can also be used to extend functionality in a more flexible way than subclassing.<br/>
+      <strong>Interview Response:</strong> Decorators are a structural JS design pattern that aims to promote code reuse. Like Mixins, they get considered as another viable alternative to object sub-classing. This pattern enables behavior that gets dynamically added to an individual object without affecting the behavior of other objects in the same class. Decorators can increase functionality in a more flexible way than sub-classing.<br/>
     </div>
     <div>
 </div><br />
@@ -150,7 +150,7 @@ console.log(mb.getScreenSize());
 </div><br />
   <div><strong className="codeExample">Code Example #3:</strong><br /><br />
 
-**This pattern's objects are as follows:**
+**The objects participating in this pattern are:**
 
 **Client** -- Example code: _the run() function_
 
@@ -158,13 +158,13 @@ console.log(mb.getScreenSize());
 
 **Component** -- In example code: _User_
 
-- object to which additional functionality is added
+- object to which additional functionality gets added
 
 **Decorator** -- In example code: _DecoratedUser_
 
 - wraps around -- Component by maintaining a reference to it
 - defines an interface that is compatible with the interface of the Component
-- implements the additional functionality (addedMembers in diagram)
+- implements the additional functionality (addedMembers in the diagram)
 
 ```js
 let User = function (name) {
@@ -215,7 +215,7 @@ Decorated User: Kelly, Broadway, New York
 
 ---
 
-### In what pattern category does the Decorator pattern belong too?
+### The Decorator pattern belongs to which pattern family?
 
 <details>
   <summary>
@@ -243,9 +243,9 @@ Decorated User: Kelly, Broadway, New York
     <br />
     <div></div>
 
-- **Client** – The decorated Component is referenced by the Client object participant.
-- **Component** – The object to which additional functionality is added is referred to as a Component.
-- **Decorator** – By keeping a reference to the Component, defining an interface that conforms to the Component's interface, and implementing the additional functionality, the Decorator acts as a wrapper around it. In an application, there can be more than one decorator.
+- **Client** – The Client object participant references the decorated Component.
+- **Component** – The object to which additional functionality gets added is a Component.
+- **Decorator** – By keeping a reference to the Component, defining an interface that conforms to the Component's interface, and implementing the additional functionality, the Decorator acts as a wrapper around it. In an application, there can be more than one Decorator.
 
 <br />
   </div>
@@ -269,7 +269,7 @@ Decorated User: Kelly, Broadway, New York
 - You can change the behavior of an object without creating a new subclass.
 - At runtime, you can add or remove responsibilities from an object.
 - Wrapping an object in multiple decorators allows you to combine several behaviors.
-- Single Responsibility Principle - The principle of single responsibility. A monolithic class that implements many possible variants of behavior can be divided into several smaller classes.
+- Single Responsibility Principle - The principle of single responsibility. A monolithic class that implements many possible behavior variants can get divided into several smaller classes.
   .
 
 <br />
@@ -292,7 +292,7 @@ Decorated User: Kelly, Broadway, New York
     <div></div>
 
 - It’s hard to remove a specific wrapper from the wrapper's stack.
-- It’s hard to implement a decorator in such a way that its behavior doesn’t depend on the order in the decorator's stack.
+- It’s hard to implement a decorator in such a way that its behavior doesn’t depend on the order in the Decorator's stack.
 - The initial configuration code of layers might look pretty ugly.
 
 <br />

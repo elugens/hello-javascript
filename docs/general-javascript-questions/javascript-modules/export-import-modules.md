@@ -16,7 +16,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We can label any declaration as exported by placing export before it, be it a variable, function, or a class.
+  <div><strong>Interview Response:</strong> We can label any declaration as exported by placing export before it, a variable, function, or class.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -53,12 +53,12 @@ export class User {
 
 ---
 
-### What is recommended when it comes to exports before functions and class declarations?
+### What is the recommendation for exports before functions and class declarations?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Export before a class or a function does not make it a function expression. It is still a function declaration, albeit exported. Most JavaScript style guides do not recommend semicolons after function and class declarations. That is why there is no need for a semicolon at the end of export class and export function.
+  <div><strong>Interview Response:</strong> Export before a class or a function does not make it a function expression, and it is still a function declaration, albeit exported. Most JavaScript style guides do not recommend semicolons after function and class declarations. A semicolon does not need to get implemented at the end of the export class and export function.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -76,7 +76,7 @@ export function sayHi(user) {
 
 ---
 
-### Is there another way to export instead of an explicit export on declarations?
+### Is there another way to export on declarations instead of an explicit export?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -111,7 +111,7 @@ export { sayHi, sayBye }; // a list of exported variables
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> If there is a lot to import, we can import everything as an object using "import * as &#8249;obj&#8250;". While this may seem to be a good way to collectively access everything. (It is not a recommended approach).
+  <div><strong>Interview Response:</strong> If there is a lot to import, we can import everything as an object using import * as &#8249;obj &#8250;. In contrast, this may seem an excellent way to access everything collectively. (It is not a recommended approach).
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -136,7 +136,7 @@ say.sayBye('John');
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Well, there are few reasons. Modern build tools (webpack and others) bundle modules together and optimize them to speedup loading and remove unused stuff. Explicitly listing what to import gives shorter names: sayHi() instead of say.sayHi(). Explicit list of imports gives better overview of the code structure: what is used and where. It makes code support and refactoring easier.
+  <div><strong>Interview Response:</strong> Well, there are a few reasons. Modern build tools (webpack and others) bundle modules together and optimize them to speed up loading and remove unused stuff. Explicitly listing what to import, gives shorter names: sayHi() instead of say.sayHi(). An explicit list of imports gives a better overview of the code structure: what gets used and where. It makes code support and refactoring easier.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -162,12 +162,12 @@ sayHi('John');
 
 ---
 
-### Is there a way to change or shorten the name of our imports?
+### Is it possible to edit or abbreviate the names of our module imports?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, we can change or shorten the names of our imports. We can achieve this by using the import “as” syntax to change the import name to a local variable name. You can also us this behavior for exports using the export as syntax.
+  <div><strong>Interview Response:</strong> Yes, we can change or shorten the names of our imports. We can use the import “as” syntax to change the import name to a local variable name. You can also use this behavior for exports using the export as syntax.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -192,19 +192,19 @@ bye('John'); // Bye, John!
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In practice, there are mainly two kinds of modules, modules that contain a library, pack of functions and modules that declare a single entity, e.g. a module user.js exports only class User.
+  <div><strong>Interview Response:</strong> In practice, there are mainly two kinds of modules, modules that contain a library, a pack of functions, and modules that declare a single entity, e.g., a module user.js exports only class User.
 </div>
   </div>
 </details>
 
 ---
 
-### What is the difference between named and default module exports and imports?
+### What differentiates default and named module exports and imports?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Named imports use the standard imports with bracket syntax, while default imports can be imported without brackets. Default exports must use the export default syntax to denote that the object is the default export. Technically, we may have both default and named exports in a single module, but in practice people usually do not mix them. A module has either named exports or the default one. Another important difference is that default exports do not require an entity name (function, class, variable, etc.). Not giving a name is fine, because there is only one export default per file, so import without curly braces knows what to import.
+  <div><strong>Interview Response:</strong> Named imports use the standard imports with bracket syntax, while default imports can get imported without brackets. Default exports must use the export default syntax to denote that the object is the default export. Technically, we may have both default and named exports in a single module, but people usually do not mix them in practice. A module has either named exports or the default one. Another critical difference is that default exports do not require an entity name (function, class, variable). Not giving a name is fine because there is only one export default per file, so import without curly braces knows what to import.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -246,12 +246,12 @@ export default ['Jan', 'Feb', 'Mar','Apr', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 ---
 
-### Is there a way to set the default export without explicitly using it on the default entity directly (function, class, variable, etc.)?
+### Is it possible to specify the default export without explicitly utilizing it on the default entity (function, class, variable)?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In some situations, the default keyword is used to reference the default export. For example, to export a function separately from its definition.
+  <div><strong>Interview Response:</strong> In some situations, the default keyword gets used to reference the default export. For example, to export a function separately from its definition.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -278,7 +278,7 @@ export { sayHi as default }; // <- referencing sayHi
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To import both the default and named exports, you must use the import default as &#8249;obj&#8250;, &#123;&#8249;otherObject&#8250;&#125; syntax. The imports must be enclosed in brackets and separated by a comma.
+  <div><strong>Interview Response:</strong> To import both the default and named exports, you must use the import &#123;default as &#8249;obj&#8250;, &#8249;otherObject&#8250;&#125; syntax. The imports must be enclosed in brackets and separated by a comma.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -313,7 +313,7 @@ new User('John');
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Named exports are explicit. They exactly name what they import, so we have that information from them; that is a good thing. Named exports force us to use exactly the right name to import. While for a default export, we always choose the name when importing. This not a good approach because some team members may use different names to import the same thing, and that is not good.
+  <div><strong>Interview Response:</strong> Named exports are explicit. Named exports name what gets exported, so we have that information from them; that is good. Named exports force us to use exactly the right name to import. While for a default export, we always choose the name when importing. This approach is not good because some team members may use different names to import the same thing, which is not good.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -346,7 +346,7 @@ import func from '/path/to/func.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Re-exporting a module allows access to specific functionality without giving access to the internal structure to outsiders. The idea is that outsiders, other programmers who use our package, should not meddle with its internal structure, search for files inside our package folder. We export only what is necessary and keep the rest hidden from prying eyes.
+  <div><strong>Interview Response:</strong> Re-exporting a module allows access to specific functionality without giving outsiders access to the internal structure. The idea is that outsiders, other programmers who use our package, should not meddle with its internal structure and search for files inside our package folder. We export what is necessary and keep the rest hidden from prying eyes.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The scroll event allows reacting to a page or element scrolling. There are quite a few good things we can do here. Like, show/hide additional controls or information depending on where in the document the user is. Load more data when the user scrolls down till the end of the page (lazy load).
+  <div><strong>Interview Response:</strong> The scroll event seeks to respond to the scrolling of a page or element. We have a lot of nice things we can do here. For example, based on where the user is in the document, reveal or conceal extra controls or information—load extra info when the user scrolls down to the bottom of the page (lazy load).
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -45,12 +45,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### How do we make something unscrollable in the browser?
+### How can we block scrolling on a web page in the browser?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We can’t prevent scrolling by using event.preventDefault() in onscroll listener, because it triggers after the scroll has already happened. But we can prevent scrolling by event.preventDefault() on an event that causes the scroll, for instance keydown event for pageUp and pageDown. If we add an event handler to these events and event.preventDefault() in it, then the scroll won’t start. There are many ways to initiate a scroll, so it’s more reliable to use CSS, overflow property.
+  <div><strong>Interview Response:</strong> We can't use event.preventDefault() in the onscroll listener to prevent scrolling because it fires after the scroll has already occurred. We may, however, disable event-based scrolling by using preventDefault() gets invoked on a scroll-triggering event, such as the keydown event for pageUp and pageDown. The scroll does not begin if we add an event handler to these events and use event.preventDefault().
     </div>
   </div>
 </details>

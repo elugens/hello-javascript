@@ -13,24 +13,24 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### What are the names of the 6 static methods in the Promise class?
+### What are the Promise class's six static methods?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The promise class has 6 static methods including the promise.all, allSettled, race, any, resolve, and reject methods. Of all these, Promise.all is probably the most common in practice.
+  <div><strong>Interview Response:</strong> The promise class has 6 static methods, including the promise.all, allSettled, race, any, resolve and reject methods. Of all these, Promise.all is probably the most common in practice.
 </div>
   </div>
 </details>
 
 ---
 
-### Explain, the function and syntax of the Promise.all static method?
+### Explain the function and syntax of the Promise.all static methods?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The Promise.all() method takes an iterable of promises as an input, and returns a single Promise that resolves to an array of the results (it technically can be any iterable, but is usually an array) of the input promises. This returned promise will resolve when all the input's promises have resolved, or if the input iterable contains no promises. It rejects immediately upon any of the input promises rejecting or non-promises throwing an error and will reject with this first rejection message / error. The new promise resolves when all listed promises are settled, and the array of their results becomes its result.
+  <div><strong>Interview Response:</strong> The Promise.all() method takes an iterable of promises as an input. Then returns a single Promise that resolves to array of results, technically can be any iterable but its usually an array. This returned promise resolves when all the input's promises get resolved or if the input iterable contains no promises. It rejects immediately upon any input promises rejecting or non-promises throwing an error and rejects with this first rejection message/error. The new promise resolves when all listed promises get settled, and the array of their results becomes its result.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -69,7 +69,7 @@ Promise.all([promise1, promise2, promise3]).then((values) => {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Since, the map method creates a new array populated with the results of the calling function. The map method is a great adhesive for the Promise.all method because it carries some of the responsibility of providing the calling function on every array element.
+  <div><strong>Interview Response:</strong> Since the map method creates a new array populated with the results of the calling function. The map method is an excellent adhesive for the Promise.all method because it carries some of the responsibility of providing the calling function on every array element.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -94,7 +94,7 @@ Promise.all(requests).then((responses) =>
 ```
 
 :::tip Use Case:
-A common trick is to map an array of job data into an array of promises, and then wrap that into Promise.all.
+A common trick is to map an array of job data into an array of promises and then wrap that into Promise.all.
 :::
 
   </div>
@@ -108,7 +108,7 @@ A common trick is to map an array of job data into an array of promises, and the
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> If one promise rejects, Promise.all immediately rejects, completely forgetting about the other ones in the list. Their results are ignored.
+  <div><strong>Interview Response:</strong> If one promise rejects, Promise.all immediately rejects, completely forgetting about the other ones on the list. Their results get ignored.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -135,7 +135,7 @@ Promise.all([
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, Promise.all(iterable) allows non-promise “regular” values in the iterable. Normally, Promise.all(...) accepts an iterable (in most cases an array) of promises. But if any of those objects is not a promise, it is passed to the resulting array “as is”.
+  <div><strong>Interview Response:</strong> Yes, Promise.all(iterable) allows non-promise “regular” values in the iterable. Typically, Promise.all(...) accepts an iterable (in most cases an array) of promises. But if any of those objects is not a promise, it is passed to the resulting array “as is”.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -159,12 +159,12 @@ Promise.all([
 
 ---
 
-### Explain, the function and syntax of the Promise.allSettled static method?
+### Explain the function and syntax of the static method, Promise.allSettled?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The Promise.allSettled() method returns a promise that resolves after all the given promises have either fulfilled or rejected, with an array of objects that each describes the outcome of each promise. It is typically used when you have multiple asynchronous tasks that are not dependent on one another to complete successfully, or you would always like to know the result of each promise. In comparison, the Promise returned by Promise.all() may be more appropriate if the tasks are dependent on each other / if you'd like to immediately reject upon any of them rejecting.
+  <div><strong>Interview Response:</strong> The Promise.allSettled() function produces a promise that resolves once all of the specified promises have been fulfilled or refused. This behavior happens together with an array of objects that specify the outcome of each promise. It typically gets used when you have multiple asynchronous tasks that are not dependent on one another to complete successfully, or you would always like to know the result of each promise. In comparison, the Promise returned by Promise.all() may be more appropriate if the tasks are dependent on each other / if you'd like to reject upon any of them getting rejected immediately.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -206,12 +206,12 @@ Promise.allSettled(urls.map((url) => fetch(url))).then((results) => {
 
 ---
 
-### Explain, the function and syntax of the Promise.race static method?
+### Explain the function and syntax of the Promise.race static method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Like Promise.all but waits only for the first settled promise and gets its result (or error). The Promise.race() method returns a promise that fulfills or rejects as soon as one of the promises in an iterable fulfills or rejects, with the value or reason from that promise.
+  <div><strong>Interview Response:</strong> Like Promise.all but waits only for the first settled promise and gets its result (or error). The Promise.race() method returns a promise that fulfills or rejects when one of the promises in an iterable is fulfilled or rejected, with the value or explanation derived from that promise.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -241,12 +241,12 @@ Promise.race([promise1, promise2]).then((value) => {
 
 ---
 
-### Explain, the function and syntax of the Promise.any static method?
+### Explain the function and syntax of the Promise.any static method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Similar to Promise.race, but waits only for the first fulfilled promise and gets its result. If all of the given promises are rejected, then the returned promise is rejected with Aggregate Error – a special error object that stores all promise errors in its errors property.
+  <div><strong>Interview Response:</strong> Similar to Promise.race, but waits only for the first fulfilled promise and gets its result. If all of the given promises gets rejected, the returned promise gets rejected with Aggregate Error – a special error object that keeps track of all promise errors in its errors property.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -287,12 +287,12 @@ Promise.any([
 
 ---
 
-### Explain, the function and syntax of the Promise.resolve static method?
+### Explain the Promise.resolve static method's function and syntax?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The Promise.resolve() method returns a Promise object that is resolved with a given value. If the value is a promise, that promise is returned; if the value is a thenable (i.e. has a "then" method), the returned promise will "follow" that thenable, adopting its eventual state; otherwise the returned promise will be fulfilled with the value.
+  <div><strong>Interview Response:</strong> The Promise.resolve() method returns a Promise object that gets resolved with a given value. If the value is a promise, that promise gets returned; if the value is a `thenable` (i.e. has a "then" method), the returned promise will "follow" that `thenable`, adopting its eventual state; otherwise, the returned promise gets fulfilled with the value.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -318,7 +318,7 @@ function loadCached(url) {
 ```
 
 :::note
-This function flattens nested layers of promise-like objects (e.g. a promise that resolves to a promise that resolves to something) into a single layer. Methods Promise.resolve and Promise.reject are rarely needed in modern code, because async/await syntax makes them somewhat obsolete.
+This function flattens nested layers of promise-like objects (e.g., a promise that resolves to a promise that resolves to something) into a single layer. Methods Promise.resolve and Promise.reject are rarely needed in modern code because async/await syntax makes them somewhat obsolete.
 :::
 
   </div>
@@ -327,12 +327,12 @@ This function flattens nested layers of promise-like objects (e.g. a promise tha
 
 ---
 
-### Explain, the function and syntax of the Promise.reject static method?
+### Explain the function and syntax of the Promise.reject static method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The Promise.reject() method returns a Promise object that is rejected with a given reason. The static Promise.reject function returns a Promise that is rejected. For debugging purposes and selective error catching, it is useful to make reason an instanceof Error.
+  <div><strong>Interview Response:</strong> The Promise.reject() method returns a Promise object that gets rejected for a given reason. The static Promise.reject function returns a Promise that gets rejected. Making reason an instance of Error is essential for debugging and selective error catching.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
   
@@ -354,7 +354,7 @@ Promise.reject(new Error('fail')).then(resolved, rejected);
 ```
 
 :::note
-Methods Promise.resolve and Promise.reject are rarely needed in modern code, because async/await syntax makes them somewhat obsolete.
+Methods Promise.resolve and Promise.reject are rarely needed in modern code because async/await syntax makes them somewhat obsolete.
 :::
 
   </div>

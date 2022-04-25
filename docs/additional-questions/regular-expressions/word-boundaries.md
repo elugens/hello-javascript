@@ -23,7 +23,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A word boundary \b is a test, just like ^ and $. When the regexp engine (program module that implements searching for regexps) comes across \b, it checks that the position in the string is a word boundary. There are three different positions that qualify as word boundaries. For instance, at string start, if the first string character is a word character \w. Also, between two characters in the string, where one is a word character \w and the other is notm and at string end, if the last string character is a word character \w. We can use \b not only with words, but with digits as well.
+  <div><strong>Interview Response:</strong> A word boundary \b is a test, just like ^ and $. When the regexp engine (program module that implements searching for RegExp) comes across \b, it checks that the position in the string is a word boundary. Three different positions qualify as word boundaries in regular expressions. For instance, if the first string character is a word character \w. Also, between two characters in the string, where one is a word character \w, and the other is not, and at the string end if the last string character is a word character \w. We can use \b not only with words but also with digits.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

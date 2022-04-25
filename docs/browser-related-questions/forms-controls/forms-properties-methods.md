@@ -13,12 +13,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### What special collection are document forms apart of?
+### Document forms are part of what unique collection?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Document forms are members of the special collection document.forms. That is a so-called “named collection”: it is both named and ordered. We can use both the name and the number in the document to get the form.
+  <div><strong>Interview Response:</strong> Document forms are part of the document.forms special collection. That's a "named collection": it's both named and ordered. To access the form, we may utilize both the name and the number from the document.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -29,7 +29,7 @@ document.forms.my; // the form with name="my"
 document.forms[0]; // the first form in the document
 ```
 
-<p>When we have a form, then any element is available in the named collection form.elements.</p>
+<p>Any element in the named collection "form.elements" are available when we have a form.</p>
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -64,7 +64,7 @@ document.forms[0]; // the first form in the document
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> There may be multiple elements with the same name. This is typical with radio buttons and checkboxes. that case, form.elements[name] is a collection. These navigation properties do not depend on the tag structure. All control elements, no matter how deep they are in the form, are available in form.elements.
+  <div><strong>Interview Response:</strong> There might be several components with the same name, which is common when using radio buttons and checkboxes. The form.elements[name] is a collection in such a scenario, and these navigation features are independent of tag structure. Form.elements contain all control elements, no matter how deep they are in the form.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -96,7 +96,7 @@ document.forms[0]; // the first form in the document
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A form may have one or many &#8249;fieldset&#8250; elements inside it. They also have elements property that lists form controls inside them. The HTML &#8249;fieldset&#8250; element is used to group several controls as well as labels &#8250;label&#8250; within a web form. Fieldset properties can be accessed via the form.elements property.
+  <div><strong>Interview Response:</strong> A form may have one or many &#8249;fieldset&#8250; elements inside it. They also have elements property that lists form controls inside them. The HTML &#8249;fieldset&#8250; element gets used to group several controls as well as labels (&#8250;label&#8250;) within a web form. Fieldset properties get accessed via the form.elements property.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -134,7 +134,7 @@ document.forms[0]; // the first form in the document
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, there is a shorter notation: we can access the element as form[index/name]. In other words, instead of form.elements.login we can write form.login. That also works, but there is a minor issue: if we access an element, and then change its name, then it is still available under the old name (as well as under the new one). That is usually not a problem, however, because we rarely change names of form elements.
+  <div><strong>Interview Response:</strong> Yes, there is a shorter notation: we can access the element as form[index/name]. In other words, instead of form.elements.login, we can write form.login. That also works, but there is a minor issue: if we access an element and then change its name, it is still available under the old name (as well as under the new one). However, because we seldom modify the names of form components, this is typically not an issue.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -165,12 +165,12 @@ document.forms[0]; // the first form in the document
 
 ---
 
-### Can you explain what form back-referencing is in JavaScript?
+### Can you explain what form backreferencing is in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> For any element, the form is available as element.form. So, a form references all elements, and elements reference the form.
+  <div><strong>Interview Response:</strong> The form is available as element.form for any element. So, the form references every element, and all elements reference the form.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -196,12 +196,12 @@ document.forms[0]; // the first form in the document
 
 ---
 
-### How do you access the value of a textarea inside of an input via JS?
+### How can you use JS to get the value of a textarea inside an input?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> You can access the value of a textarea using textarea.value. It is not recommended to access the value using innerHTML, because it stores only the HTML that was initially on the page, not the current value.
+  <div><strong>Interview Response:</strong> You can access the value of a textarea using textarea.value. The specification does not recommend we utilize innerHTML to obtain the value since it only saves the HTML initially on the page, not the current value.
     </div>
   </div>
 </details>
@@ -246,7 +246,7 @@ document.forms[0]; // the first form in the document
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The little-known JavaScript Option() constructor allows you to avoid the verbose syntax of creating DOM elements. The Option() constructor creates a new HTMLOptionElement. Text is a DOMString representing the content of the element, i.e. the displayed text. If this is not specified, a default value of "" (empty string) is used. The optional value argue is DOMString representing the value of the HTMLOptionElement, i.e. the value attribute of the equivalent &#8249;option&#8250;. If this is not specified, the value of text is used as the value, e.g. for the associated &#8249;select&#8250; element's value when the form is submitted to the server. The defaultSelected parameter is a Boolean that sets the selected attribute value, i.e. so that this &#8249;option&#8250; will be the default value selected in the &#8249;select&#8250; element when the page is first loaded. If this is not specified, a default value of false is used. Note that a value of true does not set the option to selected if it is not already selected. The optional selected is a Boolean that sets the option's selected state; the default is false (not selected). If omitted, even if the defaultSelected argument is true, the option is not selected. Basically, the Option constructor allows you to create new selection options on the fly.
+  <div><strong>Interview Response:</strong> Using the little-known JavaScript Option () constructor, you may avoid the cumbersome syntax of constructing DOM components by using the little-known JavaScript Option() constructor. The Option() constructor is used to generate a new HTMLOptionElement. Text is a DOMString representing the element's content, i.e. the displayed text. If this is not supplied, the value "" (empty string) gets used as the default. The optional value argument is a DOMString representing the HTMLOptionElement's value, i.e. the value attribute of the comparable &#8249;option&#8250;. When the form gets submitted to the server, the value of the text gets used as the value. For example, the value of the accompanying &#8249;select&#8250; element if this does not get provided. The defaultSelected argument is a Boolean that sets the chosen attribute value, i.e., this &#8249;option&#8250; results in the default value picked in the &#8249;select&#8250; element when the page initially loads. If this is not specified, the value false is assumed to be the default. We should note that a true value does not force the option to be selected if it is not already selected. The optional selected is a Boolean that determines whether or not the option gets picked; the default is false (not selected). Even if the defaultSelected argument is true, the option does not get picked if it is missing. You may use the Option constructor to generate new selection choices on the fly.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

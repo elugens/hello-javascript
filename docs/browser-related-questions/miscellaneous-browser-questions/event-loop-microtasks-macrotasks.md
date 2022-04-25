@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In computer science, the event loop is a programming construct or design pattern that waits for and dispatches events or messages in a program. The event loop concept is quite simple. There is an endless loop, where the JavaScript engine waits for tasks, executes them, and then sleeps, waiting for more tasks. The general algorithm of the engine includes to simple steps. Where there are tasks execute theme, starting with the oldest task first. Then, sleep until a new task appears, then go to one. That is a formalization for what we see when browsing a page. The JavaScript engine does nothing most of the time, it only runs if a script/handler/event activates.
+  <div><strong>Interview Response:</strong> In computer science, the event loop is a programming construct or design pattern that waits for and dispatches events or messages in a program. The event loop concept is quite simple. There is an endless loop where the JavaScript engine waits for tasks, executes them, and then sleeps, waiting for more tasks. The general algorithm of the engine includes simple steps. Where there are tasks execute theme, starting with the oldest task first. Then, sleep until a new task appears, then go to one. That is a formalization of what we see when browsing a page. The JavaScript engine does nothing most of the time, and it only runs if a script/handler/event activates.
     </div><br />
   <div><strong className="codeExample">Diagram:</strong><br /><br />
 
@@ -37,7 +37,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Tasks from the queue are processed on “first come – first served” basis. When the engine browser is done with the script, it handles mousemove event, then then setTimeout handler, and so on.
+  <div><strong>Interview Response:</strong> Tasks in the queue get handled in the order they are received. When the browser engine gets done processing the script, it handles the mousemove event, followed by the setTimeout handler, and so on.
     </div><br />
   <div><strong className="codeExample">Diagram:</strong><br /><br />
 
@@ -51,12 +51,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### What is the best way to avoid problems related to CPU-Hungry tasks?
+### What is the best method to avoid difficulties caused by CPU-intensive tasks?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We can avoid problems by splitting the big task into pieces or chunks. The goal is to split your tasks into smaller chunks to reduce the load on the engine. It should be noted that the engine is limited to the number of tasks it can process within a given time.
+  <div><strong>Interview Response:</strong> We can avoid problems by splitting the big task into pieces or chunks. The goal is to split your tasks into smaller chunks to reduce the load on the engine. It should get noted that the engine is limited to the number of tasks it can process within a given time.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -89,14 +89,12 @@ count();
 
 ---
 
-### What is a Microtask in relation to JavaScript?
+### What is a Microtask in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Microtasks come solely from our code. They are usually created by promises: an execution of .then/catch/finally handler becomes a microtask. Microtasks are used “under the cover” of await as well, as it is another form of promise handling. There is also a special function `queueMicrotask(func)` that queues func for execution in the microtask queue.
-
-Immediately after every macrotask, the engine executes all tasks from microtask queue, prior to running any other macrotasks or rendering or anything else. All microtasks are completed before any other event handling or rendering or any other macrotask takes place.
+  <div><strong>Interview Response:</strong> Microtasks come solely from our code. Promises usually create them: an execution of .then/catch/finally handler becomes a microtask. Microtasks are used “under the cover” of await, as it is another form of promise handling. There is also a special function `queueMicrotask(func)` that queues func for execution in the microtask queue.<br/> Immediately after every macro task, the engine executes all tasks from the microtask queue before running any other macro tasks or rendering or anything else. All microtasks get completed before any other event handling, rendering, or macrotask.
 
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -124,10 +122,10 @@ alert("code");
 
 <ol>
   <li>Dequeue and run the oldest task from the macrotask queue (e.g., “script”).</li>
-  <li>Execute all microtasks:</li>
-  <li>While the microtask queue is not empty:</li>
+  <li>Execute all microtasks</li>
+  <li>While the microtask queue is not empty</li>
   <li>Dequeue and run the oldest microtask.</li>
-  <li>Render changes if any.</li>
+  <li>Render changes, if any.</li>
   <li>If the macrotask queue is empty, wait till a macrotask appears.</li>
   <li>Go to step 1.</li>
 </ol><br />

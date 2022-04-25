@@ -1,6 +1,6 @@
 ---
 title: Browser Default Actions
-description: Browser Default Actions in JavaScript - JavaScript Interview Questions & Answers
+description: There are several different types of default actions in the browser. For instance, a click on a link initiates a navigation to the specified URL.
 sidebar_position: 4
 sidebar_label: Browser Default Actions
 ---
@@ -18,14 +18,14 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> There are several different types of default actions in the browser. For instance, a click on a link initiates a navigation to the specified URL. Another default action is the highlighting of text when pressing a mouse button as we glide over the text. As developers we have control over many of these actions.
+  <div><strong>Interview Response:</strong> TThere are several different default actions in the browser. For instance, a click on a link initiates the navigation to the specified URL. Another default action is highlighting text when pressing a mouse button as we glide over the text. As developers, we have control over many of these actions.
     </div>
   </div>
 </details>
 
 ---
 
-### Is there a built-in function or method used to prevent browser actions?
+### Is there a built-in function or method to prevent browser actions?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -48,12 +48,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### What happens when you return false from a handler?
+### What happens when you return a false value from a handler?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The value returned by an event handler is usually ignored. The only exception is returning false from a handler assigned using on&#8249;event&#8249;. In all other cases, return value is ignored. There is no sense in returning true.
+  <div><strong>Interview Response:</strong> The value returned by an event handler usually gets ignored. The only exception is returning false from a handler assigned on&#8249;event&#8249;. In all other circumstances, the return value gets disregarded, making no sense to return true.
     </div>
   </div>
 </details>
@@ -65,7 +65,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The defaultPrevented read-only property of the Event interface returns a Boolean indicating whether the call to Event.preventDefault() canceled the event. The property event.defaultPrevented is true if the default action was prevented, and false otherwise.
+  <div><strong>Interview Response:</strong> The defaultPrevented read-only property of the Event interface returns a Boolean indicating whether the call to Event.preventDefault() canceled the event. The property event.defaultPrevented is true if the default action was prevented and false otherwise.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

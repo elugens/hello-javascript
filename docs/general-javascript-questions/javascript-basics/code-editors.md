@@ -7,11 +7,6 @@ sidebar_label: Code Editors
 
 **JavaScript Basics: Code Editors**
 
-<head>
-  <title>Code Editors - Frontend Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
-
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
@@ -38,15 +33,15 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### What is the main difference between an IDE and a Light-Weight editor?
+### What is the primary difference between an IDE and a lightweight editor?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The primary difference between a lightweight editor and an IDE is that an IDE works on a project level. Using a lightweight editor is faster if all we need is one file.</div><br />
-  <div><strong>Technical Response:</strong> In contrast to a lightweight editor, an IDE works on the project level, so it loads more data when it starts, analyzes the project structure, if necessary, etc. We can use a lightweight editor if we only need to edit one file.
+  <div><strong>Interview Response:</strong> The main difference between a "lightweight editor" and an "IDE" is that an IDE works on a project level. A lightweight editor is considerably faster than an IDE if we require one file.</div><br />
+  <div><strong>Technical Response:</strong> In contrast to a lightweight editor, an IDE works on the project level, so it loads more data when it starts and analyzes the project structure, if necessary. We can use a lightweight editor if we only need to edit one file.
   </div><br />
-  <div><strong>Additional Information:</strong> There is no strict boundary between a lightweight editor and an integrated development environment since lightweight editors often have a wide range of plugins, such as directory-level syntax analyzers and auto-completers.
+  <div><strong>Additional Information:</strong> TThere is no strict boundary between a lightweight editor and an integrated development environment since lightweight editors often have a good selection of plugins, such as directory-level syntax analyzers and auto-completers.
   </div>
   </div>
 </details>

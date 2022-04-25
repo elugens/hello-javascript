@@ -10,20 +10,20 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 <CloseAllAnswers />
 
-### Explain, what is JSON in relation to the JavaScript development environment?
+### Explain what is JSON?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> JSON or JavaScript Object Notation is a simple and lightweight data exchange format used across multiple language platforms including JavaScript. JSON means JavaScript Object Notation and it is language and platform independent.</div><br />
-  <div><strong>Technical Response:</strong> JSON is a simple and lightweight data exchange format used across multiple language platforms. JSON means JavaScript Object Notation and it is language and platform independent. JSON is often used when data is sent from a server to a web page. It works both on the front and back end of development environments. There are several built-in JavaScript methods used to convert JSON objects from and back to its original format.
+  <div><strong>Interview Response:</strong> JSON or JavaScript Object Notation is a lightweight and straightforward data exchange format used across multiple language platforms, including JavaScript. JSON means JavaScript Object Notation, and it is language and platform-independent.</div><br />
+  <div><strong>Technical Response:</strong> JSON is a simple and lightweight data exchange format used across multiple language platforms. JSON means JavaScript Object Notation, and it is language and platform-independent. JSON often gets used when data gets sent from a server to a web page, and it works both on the front and back end of development environments. Several built-in JavaScript methods get used to convert JSON objects from and back to their original format.
   </div>
   </div>
 </details>
 
 ---
 
-### Explain, what is the role of the JSON.stringfy() method in JavaScript?
+### Explain the role of the JSON.stringfy() method in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -31,9 +31,9 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   <div><strong>Interview Response:</strong> The JSON.stringify() method converts a JavaScript object or value to a JSON string, optionally replacing values if a replacer function is specified or optionally including only the specified properties if a replacer array is specified.<br /><br />
   <strong>Syntax:</strong> JSON.stringify(value[, replacer[, space]])<br /><br />
   <ul>
-    <li>The **value** to convert to a JSON string.</li>
-    <li>The (optional) **replacer** is a function or array used to change the behavior of the stringification process.</li>
-    <li>The (optional) **space** involves a String or Number object that's used to insert white space into the output JSON string for readability purposes. If this is a Number, it indicates the number of space characters to use as white space. The number is limited and defaults to 10 spaces.</li>
+    <li>The <strong>value</strong> to convert to a JSON string.</li>
+    <li>•	The (optional) <strong>replacer</strong> is a function or array used to change the behavior of the stringification process.</li>
+    <li>•	The (optional) <strong>space</strong> consists of a String or Number object that gets used to introduce white space into the output JSON string to improve readability. If this is a number, it denotes the number of white space characters to use, and the number is limited and defaults to 10 spaces.</li>
   </ul>
 </div><br />
   <div><strong className="codeExample">Simple Example:</strong><br /><br />
@@ -82,7 +82,7 @@ alert(json);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> JSON supports the following data types including Objects, Arrays, (primitive) strings, Boolean values, numbers, and null.
+  <div><strong>Interview Response:</strong> JSON supports the following data types: Objects, Arrays, (primitive) strings, Boolean values, numbers, and null.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -106,12 +106,12 @@ alert(JSON.stringify([1, 2, 3])); // [1,2,3]
 
 ---
 
-### JSON is data-only language-independent specification, what are some JavaScript-specific object properties that are skipped by JSON.stringify?
+### JSON is a data-only, language-independent specification. What are some JavaScript-specific object properties that JSON.stringify skips?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> There are several JavaScript-specific object properties that are ignored by JSON.stringify() including function properties, Symbolic keys and values, and properties that hold a value of undefined.
+  <div><strong>Interview Response:</strong> Several JavaScript-specific object properties get ignored by JSON.stringify(), including function properties, Symbolic keys and values, and properties that hold a value of undefined.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -136,25 +136,25 @@ alert(JSON.stringify(user)); // {} (empty object)
 
 ---
 
-### What is the difference between JSON and JSONP in JavaScript?
+### What are the known differences between JSON and JSONP?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The difference between JSON and JSONP is that JSON is a simple data format for communication between different systems. JSONP is also known as JSON with Padding. JSONP is a methodology for using that format with cross domain ajax requests while not being affected by same origin policy issues. The important thing to remember with JSONP is that it is not actually a protocol or data type. It is just a way of loading a script on the fly and processing the script that is introduced to the page. In the spirit of JSONP, this means introducing a new JavaScript object from the server into the client application / script.
+  <div><strong>Interview Response:</strong> The difference between JSON and JSONP is that JSON is a simple data format for communication between different systems, and JSONP is also known as JSON with Padding. JSONP is a methodology for using that format with cross-domain ajax requests while not being affected by same-origin policy issues. The critical thing to remember with JSONP is that it is not a protocol or data type, and it is just a way of loading a script on the fly and processing the script that gets introduced to the page. In the spirit of JSONP, this means introducing a new JavaScript object from the server into the client application/ script.
 </div>
   </div>
 </details>
 
 ---
 
-### What is the third argument space used for in the JSON.stringify() method?
+### What is the third argument space used in the JSON.stringify() method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The third argument of JSON.stringify(value, replacer, space) is the number of spaces to use for pretty object formatting.</div><br />
-  <div><strong>Technical Response:</strong> The third argument of JSON.stringify(value, replacer, space) is the number of spaces to use for pretty formatting. Previously, all stringified objects had no indents and extra spaces. That is fine if we want to send an object over a network. The space argument is used exclusively for a nice formatting. You should remember if you do not use the replacer, it should be set to null.
+  <div><strong>Technical Response:</strong> The third argument of JSON.stringify(value, replacer, space) is the number of spaces to use for pretty formatting. Previously, all stringified objects had no indents and extra spaces. That is fine if we want to send an object over a network. The space argument is used exclusively for nice formatting. Remember that if you do not use the replacer, it should get set to null.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -212,12 +212,12 @@ alert(JSON.stringify(user, null, 2)); // value: user, replacer: null, space: 2
 
 ---
 
-### Who is known as the father of JSON?
+### Who is known as the father and creator of JSON?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Douglas Crockford is known as the father of JSON. Douglas Crockford was the person who originally defined the JSON format back in 2000.
+  <div><strong>Interview Response:</strong> Douglas Crockford is widely regarded as the "Father of JSON." Douglas Crockford designed the JSON format for the first time in 2000.
 </div>
   </div>
 </details>
@@ -229,7 +229,7 @@ alert(JSON.stringify(user, null, 2)); // value: user, replacer: null, space: 2
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A JSON file has an extension of “.json”. Being in a text-based format, a JSON file can be viewed or edited using any text editor like notepad or notepad++.
+  <div><strong>Interview Response:</strong> The extension of a JSON file is ".json." Because JSON files are text-based, they may get viewed or changed using any text editor, such as notepad or notepad++.
 </div>
   </div>
 </details>
@@ -241,9 +241,9 @@ alert(JSON.stringify(user, null, 2)); // value: user, replacer: null, space: 2
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> JSON does not support any comments. Although, a Key or data object can be used to hold your comments. We need to just make sure that during the processing of the JSON, our application ignores the given data element.
+  <div><strong>Interview Response:</strong> JSON does not support any comments. However, a Key or data object can get utilized to store your comments. We need to make sure that our application ignores the given data element during the processing of the JSON.
 </div><br />
-  <div><strong className="codeExample">Code Example:</strong> Commenting in JSON (Technically it can be done, but is not supported)<br /><br />
+  <div><strong className="codeExample">Code Example:</strong> Commenting in JSON (Technically, it can be done but is not supported)<br /><br />
 
   <div></div>
 
@@ -268,8 +268,8 @@ alert(JSON.stringify(user, null, 2)); // value: user, replacer: null, space: 2
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The JSON.parse() method parses a string and returns a JavaScript object. The string must be written in JSON format. The JSON.parse() method can optionally transform the result with a function.</div><br />
-  <div><strong>Technical Response:</strong> The JSON.parse() method parses a JSON string, constructing the JavaScript value or object described by the string. An optional reviver function can be provided to perform a transformation on the resulting object before it is returned. JSON parse is the opposite of the stringify method. It returns an Object, Array, string, number, boolean, or null value corresponding to the given JSON object text. It should be noted that JSON.parse() does not allow trailing commas.
+  <div><strong>Interview Response:</strong> The JSON.parse() method parses a string and returns a JavaScript object. The string must get written in JSON format. The JSON.parse() method can optionally transform the result with a function.</div><br />
+  <div><strong>Technical Response:</strong> The JSON.parse() method parses a JSON string, constructing the JavaScript value or object described by the string. An optional reviver function can get provided to perform a transformation on the resulting object before it gets returned. JSON parse is the opposite of the stringify method, and it returns an Object, Array, string, number, a boolean, or null value corresponding to the given JSON object text. You should note that JSON.parse() does not allow trailing commas.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -301,7 +301,9 @@ JSON.parse('{"1": 1, "2": 2, "3": {"4": 4, "5": {"6": 6}}}', (key, value) => {
 ```
 
 :::note
-It should be noted that JSON.parse() does not allow trailing commas.
+
+We should note that JSON.parse() does not allow trailing commas.
+
 :::
 
   </div>

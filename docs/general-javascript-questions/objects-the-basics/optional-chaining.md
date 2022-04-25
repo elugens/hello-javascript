@@ -13,13 +13,13 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Explain, what the optional chaining operator (?.) does in JavaScript.
+### Explain what JavaScript's optional chaining operator (?.) does?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The optional chaining operator is a safe way to access nested object properties, even if an intermediate property does not exist.</div><br />
-  <div><strong>Technical Response:</strong> The optional chaining operator (?.) permits reading the value of a property located deep within a chain of connected objects without having to expressly validate that each reference in the chain is valid. Optional chaining (?.) stops the evaluation if the value before (?.) is undefined or null and returns undefined.<br /><br />
+  <div><strong>Interview Response:</strong> The optional chaining operator is safe to access nested object properties, even if an intermediate property does not exist.</div><br />
+  <div><strong>Technical Response:</strong> The optional chaining operator (?.) allows you to read the value of property deep inside a chain of related objects without explicitly validating each reference in the chain. If the value preceding (?.) is undefined or null, optional chaining (?.) terminates the evaluation and returns undefined.<br /><br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -40,12 +40,12 @@ alert(user2.address.street); // returns a type error
 
 ---
 
-### If, an object does not exist, what will the optional chaining operator (?.) return?
+### What will the optional chaining operator (?.) return if an object does not exist?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> If, the object does not exist (equals null) the optional chaining operator returns undefined. This can be seen when an object is set to null. If, the object is not defined then it will result in a reference error.
+  <div><strong>Interview Response:</strong> The optional chaining operator returns undefined if the object does not exist (equals null). This outcome gets seen when an object gets set to null. If the object is not defined, it results in a reference error.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -71,9 +71,9 @@ alert(myUser?.address.street); // returns a reference error
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> It should be used with then intent to handle object properties that are already known to be optional.
+  <div><strong>Interview Response:</strong> It should get used with the intent to handle object properties that are already known to be optional.
 </div><br />
-  <div><strong className="codeExample">Code Example:</strong> Short Circuit result in a false response<br /><br />
+  <div><strong className="codeExample">Code Example:</strong> Short Circuit results in a false response.<br /><br />
 
   <div></div>
 
@@ -88,7 +88,7 @@ alert(x); // 0, value not incremented.
 
 :::note
 
-If, it is not optional it can result in false scenario that goes unchecked. This could result in coding errors that become silenced and become more difficult to debug.
+If it is not optional, it can result in a false scenario that goes unchecked. This behavior could result in silent coding errors and become more challenging to debug.
 
 :::
 
@@ -103,8 +103,8 @@ If, it is not optional it can result in false scenario that goes unchecked. This
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Technically, it is a syntax construct, but it is commonly referred to as an operator.</div><br />
-  <div><strong>Technical Response:</strong> Technically, it is a syntax construct, but it is commonly referred to as an operator. However, it is more than just an operator and can be used with functions ( ?.() ) and square brackets ( ?.[] ). For example, ?.() is used to call a function that may not exist. The ?.[] syntax also works, if we’d like to use brackets [] to access properties instead of dot (.).<br /><br />
+  <div><strong>Interview Response:</strong> Technically, it is a syntax construct, but it commonly gets referred to as an operator.</div><br />
+  <div><strong>Technical Response:</strong> It is technically a syntactic construct. However, it generally gets referred to as an operator. It is more than simply an operator, though, and may get used with functions (?.()) and square brackets (?.[]). For instance, ?.() is used to invoke a function that may or may not exist. If we want to utilize brackets [] instead of dot to access properties, we may use the?.[] syntax (.).<br /><br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong> Function Call<br /><br />
 
@@ -153,7 +153,7 @@ alert(user2?.[key]); // undefined
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, you can use the (?.) for safe reading and deleting, but not writing. The optional chaining (?.) has no use at the left side of an assignment.
+  <div><strong>Interview Response:</strong> No, you can use the (?.)  for safe reading and deleting, but not writing. The optional chaining (?.) has no use on the left side of an assignment.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

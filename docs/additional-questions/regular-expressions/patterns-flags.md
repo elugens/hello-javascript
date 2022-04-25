@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Regular expressions are patterns with optional flags that provide a powerful way to search and replace in text. In JavaScript, they are available via the RegExp object, as well as being integrated in methods of strings. Regular expressions are integrated with string methods.
+  <div><strong>Interview Response:</strong> Regular expressions are patterns with optional flags that allow powerful text search and replacement. They are available in JavaScript via the RegExp object, and they get embedded into string functions and string methods combined with regular expressions.
     </div>
   </div>
 </details>
@@ -30,7 +30,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> There are two syntaxes that can be used to create a regular expression object including the long and short syntaxes. The long syntax uses the RegExp object with optional flags and the short syntax uses forward slashes with optional flags. Slashes /.../ tell JavaScript that we are creating a regular expression. They play the same role as quotes for strings. In both cases regexp becomes an instance of the built-in RegExp class.
+  <div><strong>Interview Response:</strong> Two syntaxes get used in creating a regular expression object, including the long and short syntaxes. The extended syntax uses the RegExp object with optional flags, and the short syntax uses forward slashes with optional flags. Slashes /.../ tell JavaScript that we are creating a regular expression, and they play the same role as quotes for strings. In both cases, regexp becomes an instance of the built-in RegExp class.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -56,7 +56,7 @@ regexp = /pattern/gim; // with flags g,i and m (to be covered soon)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong>  Regular expressions may have flags that affect the search. There are only 6 of them in JavaScript including the i, g, m, s, u, and y regular expression flags:<br /><br />
+  <div><strong>Interview Response:</strong> Regular expressions may have flags that affect the search. There are only 6 of them in JavaScript, including the i, g, m, s, u, and y regular expression flags:<br /><br />
   <strong>Flag Descriptions:</strong><br />
   <ul>
     <li>With the <strong>i</strong> flag the search is set to case insensitive.</li>
@@ -100,7 +100,7 @@ alert(myString.match(/we/gi)); // We,we (an array of 2 substrings that match)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The match method has three working regex modes. First, if a regular expression has flag g, it returns an array of all matches. Second, if there is no such flag it returns only the first match in the form of an array, with the full match at index 0 and some additional details in properties. The array may have other indexes, besides 0 if a part of the regular expression is enclosed in parentheses. And, finally, if there are no matches, null is returned (does not matter if there’s flag g or not). This an especially important nuance. If there are no matches, we do not receive an empty array, but instead receive null. Forgetting about that may lead to errors, e.g.
+  <div><strong>Interview Response:</strong> The match method has three working regex modes. First, if a regular expression has flag g, it returns an array of all matches. Second, if there is no such flag, it returns only the first match in the form of an array, with the whole match at index 0 and some additional details in properties. The array may have other indexes besides 0 if a part of the regular expression gets enclosed in parentheses. And finally, if there are no matches, null is returned (it does not matter if there’s flag g or not). This behavior is an essential nuance. If there are no matches, we do not receive an empty array but instead receive null. Forgetting about that may lead to errors, e.g.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -143,7 +143,7 @@ if (!matches.length) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, when a there is an empty or null value in the result. We should add an empty array to the match method that we are subscribing to. We should also run a condition check and return a value if the length is empty or null.
+  <div><strong>Interview Response:</strong> Yes, when the result contains an empty or null value. We should subscribe to the match method by adding an empty array. If the length is empty or null, we should do a condition check and return a value.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -177,7 +177,7 @@ if (!matches.length) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The method str.replace(regexp, replacement) replaces matches found using regexp in string str with replacement (all matches if there’s flag g, otherwise, only the first one). The second argument is the replacement string. We can use special character combinations in it to insert fragments of the match.
+  <div><strong>Interview Response:</strong> The method str.replace(regexp, replacement) replaces regexp matches in string str with replacement (all matches if flag g is present; otherwise, only the first one). The replacement string is the second parameter. We can utilize specific character combinations in it to insert match pieces.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

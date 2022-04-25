@@ -1,7 +1,7 @@
 ---
 title: Logical Operators
 description: Logical operators are used to combine conditional statements. Logical operators can be applied to values of any type; they are not limited to a Boolean type.
-sidebar_position: 11
+sidebar_position: 13
 sidbar_label: Logical Operators
 ---
 
@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Logical operators can be applied to values of any type; they are not limited to a Boolean type.</div>
+  <div><strong>Interview Response:</strong> Logical operators get applied to values of any type; they are not limited to a Boolean type.</div>
   </div>
 </details>
 
@@ -29,7 +29,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> If an operand is not a Boolean, it is converted to a Boolean for the evaluation. For instance, the number 1 is treated as true, the number 0 is false.</div><br />
+  <div><strong>Interview Response:</strong> If an operand is not a Boolean, it converts to a Boolean for the evaluation. For instance, the number 1 gets treated as true, and the number 0 is false.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -57,11 +57,11 @@ console.log(0 || 0); // returns 0
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The OR || operator does the following: <br /><br />
+  <div><strong>Interview Response:</strong> The OR || operator does the following:<br /><br />
   <ol>
-    <li>Evaluates operands from left to right.</li>
-    <li>For each operand, converts it to Boolean. If the result is true, stops and returns the original value of that operand.</li>
-    <li>If all operands have been evaluated (i.e., all were false), returns the last operand.</li>
+    <li>Operands evaluate from left to right.</li>
+    <li>Converts each operand to a Boolean value, and if the result is true, the program terminates and returns the operand's original value.</li>
+    <li>Returns the final operand if all operands get evaluated (i.e., all were false).</li>
   </ol>
 
 </div><br />
@@ -93,7 +93,7 @@ Logical OR “||” finds the first truthy value or the last value if there are 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong>  When JavaScript evaluates an OR expression, if the first operand is true, JavaScript will short-circuit by not proceeding to the second operand.</div><br />
+  <div><strong>Interview Response:</strong> When JavaScript evaluates an OR expression, JavaScript short-circuits by not proceeding to the second operand if the first operand is true.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -114,7 +114,7 @@ false || alert('printed');
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong>  Logical && (AND) returns true if both operands are truthy and false otherwise.</div><br />
+  <div><strong>Interview Response:</strong> Logical && (AND) returns true if both operands are truthy and false otherwise.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -137,22 +137,22 @@ alert(false && false); // false
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong>  Logical && (AND) converts all operands to Boolean values, true or false.</div>
+  <div><strong>Interview Response:</strong> Logical && (AND) converts all operands to Boolean values, true or false.</div>
   </div>
 </details>
 
 ---
 
-### What steps are performed in the use of the Logical && (AND) operator?
+### What steps get performed using the Logical && (AND) operator?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The AND && operator does the following:<br /><br />
+  <div><strong>Interview Response:</strong> The AND && operator performs the following functions:<br /><br />
   <ol>
-    <li>Evaluates operands from left to right.</li>
-    <li>For each operand, converts it to a Boolean. If the result is false, stops and returns the original value of that operand.</li>
-    <li>If all operands have been evaluated (i.e. all were truthy), returns the last operand.</li>
+    <li>Operands evaluate from left to right.</li>
+    <li>Converts each operand to a Boolean value, and if the result is false, the program terminates and returns the operand's original value.</li>
+    <li>It returns the final operand if all operands get evaluated (i.e., all were true).</li>
   </ol>
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -193,8 +193,8 @@ alert(0 && 'no matter what'); // 0
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The AND operator has a higher precedence than the OR operator.</div><br />
-  <div><strong>Technical Response:</strong> The precedence of AND && operator is higher than OR ||. So, the code a && b || c && d is essentially the same as if the && expressions were in parentheses: `(a && b) || (c && d)`.
+  <div><strong>Interview Response:</strong> The AND operator has higher precedence than the OR operator.</div><br />
+  <div><strong>Technical Response:</strong> The precedence of the AND && operator is greater than that of the OR || operator. As a result, the code a && b || c && d is effectively the same as if the && expressions were enclosed in parentheses: (a && b) (c && d).
   </div>
   </div>
 </details>
@@ -206,8 +206,8 @@ alert(0 && 'no matter what'); // 0
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Technically Yes, but it is not recommended because it reduces readability because logical operators can be confusing when used in this fashion.</div><br />
-  <div><strong>Technical Response:</strong> Technically it can be done, but it is not recommended. Although, the variant with && appears shorter, an if statement is more obvious and tends to be a little bit more readable.
+  <div><strong>Interview Response:</strong> Technically, Yes, but it is not recommended because it reduces readability.</div><br />
+  <div><strong>Technical Response:</strong> Technically, we can do it, which goes against recommendations. Although the variant with && appears shorter, an if statement is more prominent and tends to be more readable.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -231,12 +231,12 @@ if (x > 0) alert('Greater than zero!');
 
 ---
 
-### What steps are performed in the use of the Logical ! (NOT) operator?
+### What steps get performed using the Logical! (NOT) operator?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The operator accepts a single argument, converts it to a boolean, and returns the inverse value.</div><br />
+  <div><strong>Interview Response:</strong> The operator accepts a single argument, converts it to a Boolean, and returns the inverse value.</div><br />
   <div><strong>Technical Response:</strong> The operator accepts a single argument and does the following:<br /><br />
   <ol>
     <li>Converts the operand to a Boolean type: true/false.</li>
@@ -263,8 +263,8 @@ alert(!0); // true
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The value is inverted twice returning it to its original boolean value.</div><br />
-  <div><strong>Technical Response:</strong> The first NOT converts the value to Boolean and returns the inverse, and the second NOT inverses it again. In the end, we have a plain Value-to-Boolean conversion.
+  <div><strong>Interview Response:</strong> The value is inverted twice, returning it to its original Boolean value.</div><br />
+  <div><strong>Technical Response:</strong> The first NOT changes the value to Boolean and returns the inverse, whereas the second NOT reverses the process. Finally, we have a simple Value-to-Boolean translation (Boolean conversion).
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -313,7 +313,7 @@ alert(Boolean(null)); // false
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Logical NOT is the highest of all logical operators, it always executes first.</div><br />
+  <div><strong>Interview Response:</strong> Logical NOT is the highest of all logical operators. It always executes first.</div><br />
   <div><strong>Technical Response:</strong> The precedence of NOT ! is the highest of all logical operators, so it always executes first, before && (AND) or || (OR).
   </div>
   </div>

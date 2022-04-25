@@ -21,7 +21,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Proxy Pattern, as the name implies, acts as a surrogate or placeholder for another object in order to control access, reduce cost, and reduce complexity. The proxy could connect to almost anything – a network connection, a large object in memory, a file, or other resource that would have been expensive or impossible to recreate.<br/>
+      <strong>Interview Response:</strong> The Proxy Pattern, as the name suggests, functions as a proxy or placeholder for another object to manage access, decrease cost, and simplify the code. The proxy could connect to almost anything – a network connection, a large object in memory, a file, or another resource that would have been expensive or impossible to recreate.<br/>
     </div>
     <div>
 </div><br />
@@ -37,13 +37,13 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 **Proxy** -- Example code: _GeoProxy_
 
-- provides a application interface that is similar to the real object.
-- maintains a reference to the real object that allows the proxy to access it.
-- responds to requests and forwards them to the actual object.
+- provides a user interface similar to the real object
+- and maintains a reference to the real object that allows the proxy to access it.
+- Responds to requests and forwards them to the actual object.
 
 **RealSubject** -- Example code: _GeoCoder_
 
-- specifies the actual object for which service is being requested
+- specifies the actual object for which service is getting requested
 
 <br/>
 
@@ -264,7 +264,7 @@ Ottawa--Returning from Cache
 
 ---
 
-### What pattern category does the Proxy pattern fall under?
+### The Proxy pattern belongs to which pattern family?
 
 <details>
   <summary>
@@ -279,7 +279,7 @@ Ottawa--Returning from Cache
 
 ---
 
-### What is a good use-case for the Proxy Pattern?
+### What is a good use case for the Proxy Pattern?
 
 <details>
   <summary>
@@ -287,8 +287,8 @@ Ottawa--Returning from Cache
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The proxy pattern attempts to lighten the load on the target object. It is useful when dealing with large applications that make a lot of network requests. Because delays may occur when responding to such requests, using a proxy pattern prevents the target object from becoming overburdened with requests.<br/><br/>
-      HTTP requests are a real-world example. Because these are costly operations, the proxy pattern aids in reducing the number of requests forwarded to the target.
+      <strong>Interview Response:</strong> The proxy pattern attempts to lighten the load on the target object. It is useful when dealing with large applications that make many network requests. Because delays may occur when responding to such requests, using a proxy pattern prevents the target object from becoming overburdened with requests.<br/><br/>
+      HTTP requests are a real-world example. Because these are costly operations, the proxy pattern aids in reducing the number of requests forwarded to the target.<br/>
     </div>
 
 <br />
@@ -311,8 +311,8 @@ Ottawa--Returning from Cache
     <div></div>
 
 - You have control over the service object without the client being aware of it.
-- You can control the lifecycle of the service object even if your clients does not care.
-- Even if the service object is not ready or unavailable, the proxy will function.
+- You can control the lifecycle of the service object even if your clients do not care.
+- The proxy functions even if the service object is not ready or unavailable.
 - Open/Closed Principle. Users can add new proxies without interrupting the service or clients.
 
 <br />
@@ -334,7 +334,7 @@ Ottawa--Returning from Cache
     <br />
     <div></div>
 
-- Because you'll be introducing a lot of new classes, the code may become more complicated.
+- Because you'll be introducing many new classes, the code may become more complicated.
 - The service's response time may be delayed or hindered.
 
 <br />

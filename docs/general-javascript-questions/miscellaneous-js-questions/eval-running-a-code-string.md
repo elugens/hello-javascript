@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The honest answer is that you should never use eval in your applications, according to the MDN. However, the purpose for eval is to evaluate JavaScript code represented as a string value. There is one string parameter used in the eval built-in function. It returns the completion value of evaluated code. If the completion value is empty, undefined is returned.
+  <div><strong>Interview Response:</strong> According to the MDN, the honest answer is that you should never use eval in your applications. However, the purpose of eval is to evaluate JavaScript code represented as a string value. One string parameter gets used in the built-in eval function, and it returns the completion value of the evaluated code. If the completion value is empty, undefined is returned.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -40,13 +40,12 @@ eval(code); // alerts Hello
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We should never use eval in modern applications. There are many problems including security, optimization, speed, and minification compatibility issues. The MDN does not recommend its use in modern programming.</div><br />
-  <div><strong>Technical Response:</strong> In modern programming eval is used very sparingly. It is often said that “eval is evil”. The reason is simple: long, long time ago JavaScript was a much weaker language, many things could only be done with eval. But that time passed a decade ago. There is pretty much no reason to use eval because it is not optimized by the JavaScript engine. If someone is using it, there is a good chance they can replace it with a modern language construct or a JavaScript Module. Evil, I mean eval has several issues including speed and code minification compatibility issues. The main issue is that it creates a security issue for the user, and it use is not recommended.<br /><br />
-  Using outer local variables inside eval is also considered a bad programming practice, as it makes maintaining the code more difficult. If your code needs some data from the outer scope, use new Function and pass it as arguments.
+  <div><strong>Interview Response:</strong> We should never use eval in modern applications. Many problems include security, optimization, speed, and minification compatibility issues. The MDN does not recommend its use in modern programming.</div><br />
+  <div><strong>Technical Response:</strong> In modern programming, eval gets used very sparingly. It gets often said that “eval is evil”. The reason is simple: a long, long time ago, JavaScript was a weaker language; many things could only get done with eval. But that time passed a decade ago. There is no reason to use eval because the JavaScript engine does not optimize it. If someone is using it, there is a good chance they can replace it with a modern language construct or a JavaScript Module. Evil, I mean eval has several issues, including speed and code minification compatibility issues. The fundamental problem is that it poses a security risk to the user, and the MDN does not recommend its use in modern programming.<br /><br /> Using external local variables inside eval is also considered a bad programming practice, as it makes maintaining the code more complex. If your code needs some data from the outer scope, use “new” Function and pass it as arguments.
   </div><br /><br />
 
 :::warning
-Executing JavaScript from a string is an enormous security risk. It is far too easy for a bad actor to run arbitrary code when you use eval().
+Executing JavaScript from a string is an enormous security risk. It is far too easy for a bad actor to run arbitrary code when using eval().
 :::
 
   </div>

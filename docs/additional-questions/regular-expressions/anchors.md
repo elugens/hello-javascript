@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The caret ^ and dollar $ characters have special meaning in a regexp. They are called “anchors”. The caret ^ matches at the beginning of the text, and the dollar $ represents the end. It should be noted, we could use the startsWith and endsWith methods to perform the same task, which is recommended. Regular expressions should be used for more complex tests.
+  <div><strong>Interview Response:</strong> The caret ^ and dollar $ characters have special meaning in a regexp. They are called “anchors”. The caret ^ matches at the beginning of the text, and the dollar $ represents the end. You should note that we could use the startsWith and endsWith methods to perform the same task, which is the recommendation. Regular expressions get used for more complex tests.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -38,12 +38,12 @@ alert(/snow$/.test(str2)); // true
 
 ---
 
-### What approach should we use to test for full match in RegExp?
+### What approach should we use to test for a full match in RegExp?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Both anchors, caret, and dollar sign, together ^...$ are often used to test whether a string fully matches the pattern. For instance, to check if the user input is in the right format.
+  <div><strong>Interview Response:</strong> Both anchors, caret, and dollar sign, together ^...$ often get used in testing whether a string fully matches the pattern. For instance, check if the user input is in the proper format.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -64,12 +64,12 @@ alert(regexp.test(badInput)); // false
 
 ---
 
-### What does it mean by Anchors (caret/dollar sign) have zero width?
+### What does it mean that Anchors (caret/dollar sign) have zero width?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> It means they do not match a character, but rather force the regexp engine to check the condition (text start/end).
+  <div><strong>Interview Response:</strong> They do not match a character but instead force the regexp engine to check the condition (text start/end).
     </div>
   </div>
 </details>

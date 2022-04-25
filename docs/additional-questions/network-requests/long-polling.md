@@ -13,12 +13,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Can you explain what long polling is in relation to network requests?
+### Could you describe what long polling means in network requests?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, Long polling is the simplest way of having persistent connection with server, that does not use any specific protocol like WebSocket or Server-Side Events. Being quite easy to implement, it is also good enough in a lot of cases.
+  <div><strong>Interview Response:</strong> Yes, Long polling is the simplest way of having a persistent connection with the server that does not use any specific protocol like WebSocket or Server-Side Events. It is relatively easy to implement and good enough in many cases.
     </div>
   </div>
 </details>
@@ -30,7 +30,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The main difference is that long polling is a much better way to poll server, because it is also quite easy to implement and delivers messages without delays. Regular polling can suffer from delays between requests of up to 10 seconds. In fact, the server is bombed with a request every 10 seconds, leaving regular polling as a less than performant way of polling.
+  <div><strong>Interview Response:</strong> The main difference is that long polling is a much better way to poll the server because it is relatively easy to implement and delivers messages without delays. Regular polling can suffer from delays between requests of up to 10 seconds, and the server is bombed with a request every 10 seconds, leaving regular polling as a less than equitable way of polling.
     </div>
   </div>
 </details>
@@ -42,7 +42,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The long polling process begins with a request being sent to the server. The server does not disconnect until it has a message to send. When the message appears, the server responds to the request and then the browser make a new request immediately. The situation when the browser sent a request and has a pending connection with the server, is standard for this method. Only when a message is delivered, the connection is reestablished. If the connection is lost, because of, say, a network error, the browser immediately sends a new request.
+  <div><strong>Interview Response:</strong> The lengthy polling procedure begins with a request to the server. The server does not disconnect until a message is ready to be sent. The server answers the request when the notice shows, and the browser instantly initiates a new request. The circumstance in which the browser issued a request and has a pending connection with the server is standard. The connection only gets restored when a message is delivered. If the connection disintegrates due to a network fault, the browser instantly makes a new request.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

@@ -13,13 +13,13 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### What is the most important rule to follow when you are choosing a way to style your page?
+### What is the essential rule to remember when deciding how to layout your page?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We should always prefer CSS classes verses the style property methods. The latter should only be used if classes “can’t handle it”. For example, style is acceptable if we calculate coordinates of an element dynamically and want to set them from JavaScript.</div><br />
-  <div><strong>Technical Response:</strong> We should always prefer CSS classes verses the style property methods. The latter should only be used if classes “can’t handle it”. For example, style is acceptable if we calculate coordinates of an element dynamically and want to set them from JavaScript. For other cases, like making the text red, adding a background icon – describe that in CSS and then add the class (JavaScript can do that). That is more flexible and easier to support.
+  <div><strong>Interview Response:</strong> CSS classes should always get preferred over style property methods. The latter should get used only when classes "can't handle it." For example, if we compute an element's coordinates dynamically and wish to set them from JavaScript, style is permitted.</div><br />
+  <div><strong>Technical Response:</strong> We should always prefer CSS classes versus the style property methods. The latter should only get used if classes "can't handle it." For example, if we calculate the coordinates of an element dynamically and wish to set them from JavaScript, style is permitted. In other circumstances, such as turning the text red or adding a background icon – specifying it in CSS and then applying the class - (JavaScript can do that). That is more adaptable and simpler to support.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -39,12 +39,12 @@ elem.style.top = top; // e.g '456px'
 
 ---
 
-### How to do you return the name of a class in JavaScript?
+### How do you return the name of a class in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The process of exposing or returning the name of a class can be achieved by using the className property.
+  <div><strong>Interview Response:</strong> The process of exposing or returning the name of a class can get achieved by using the className property.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -64,12 +64,12 @@ elem.style.top = top; // e.g '456px'
 
 ---
 
-### Is there property or special object used to modify a class list in JavaScript?
+### Is there a property or special object used to modify a class list in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, the elem.classList is a special object with methods to add/remove/toggle a single class. So, we can operate both on the full class string using className or on individual classes using classList.
+  <div><strong>Interview Response:</strong> Yes, the elem.classList is a special object with methods to add/remove/toggle a single class. So, we can operate both on the whole class string using className or on individual classes using classList.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -92,12 +92,12 @@ elem.style.top = top; // e.g '456px'
 
 ---
 
-### Explain the function and syntax of the elem.style object property.
+### Explain the function and syntax of the elem.style object property?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The property elem.style is an object that corresponds to what’s written in the "style" attribute. Setting elem.style.width="100px" works the same as if we had in the attribute style a string width:100px.
+  <div><strong>Interview Response:</strong> The object elem.style corresponds to what is expressed in the "style" attribute. Setting elem.style.width="100px" works the same as if we had a string width:100px in the attribute style.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -121,7 +121,7 @@ elem.style.top = top; // e.g '456px'
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Browser-prefixed properties like -moz-border-radius, -webkit-border-radius also follow the same rule, a dash means upper case. For instance, the Mozilla border radius property it would look like this: MozBorderRadius.
+  <div><strong>Interview Response:</strong> Browser-prefixed properties like -moz-border-radius, -webkit-border-radius also follow the same rule; a dash means uppercase. For instance, the Mozilla border-radius property would look like this: MozBorderRadius.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -146,7 +146,7 @@ elem.style.top = top; // e.g '456px'
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> We should use elem.style.display and set the value to an empty string.</div><br />
-  <div><strong>Technical Response:</strong> There are two approaches to resetting a style property. The novice approach involves the use of the “delete elem.style.display”, but this approach is not recommended. We should use elem.style.display and set the value to an empty string. If we set style.display to an empty string, then the browser applies CSS classes and its built-in styles normally, as if there were no such style.display property at all.
+  <div><strong>Technical Response:</strong> There are two approaches to resetting a style property. The novice approach involves using the “delete elem.style.display”, but the specification does not recommend this approach. We should use elem.style.display and set the value to an empty string. If we set style.display to an empty string, then the browser generally applies CSS classes and its built-in styles as if there were no such style.display property at all.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -165,13 +165,13 @@ setTimeout(() => (document.body.style.display = ''), 1000); // back to normal
 
 ---
 
-### Is there a way to do a full style rewrite on DOM element node?
+### Is there a way to do a full-style rewrite on the DOM element node?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To set the full style as a string, there’s a special property style.cssText to do a full rewrite. This property is rarely used, because such assignment removes all existing styles: it does not add but replaces them. The same can be accomplished by setting an attribute: div.setAttribute('style', 'color: red...').</div><br />
-  <div><strong>Technical Response:</strong> Normally, we use <em>style.</em> to assign individual style properties. We can’t set the full style like div.style="color: red; width: 100px", because div.style is an object, and it’s read-only. To set the full style as a string, there’s a special property style.cssText to do a full rewrite. This property is rarely used, because such assignment removes all existing styles: it does not add but replaces them. May occasionally delete something needed. But we can safely use it for new elements when we know we will not delete an existing style. The same can be accomplished by setting an attribute: div.setAttribute('style', 'color: red...').
+  <div><strong>Interview Response:</strong> There’s a special property style.cssText to do a full rewrite and set the full style as a string. This property rarely gets used because such assignment removes all existing styles: it does not add but replaces them. The same can be accomplished by setting an attribute: div.setAttribute('style', 'color: red...').</div><br />
+  <div><strong>Technical Response:</strong> We often use style to apply particular properties.*. We can't use div.style="color: red; width: 100px" because div.style is an object that is read-only. There is a special property <em>style.cssText</em>, that does a full rewrite to set the full style as a string. This property rarely gets used since assigning it eliminates all current styles: it does not create new styles but rather replaces them. Something necessary may get deleted on occasion. However, we may use it securely for new elements if we know it won’t destroy an existing style. Setting an attribute does the same thing: div.setAttribute('style', 'color: red...').
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -203,7 +203,7 @@ setTimeout(() => (document.body.style.display = ''), 1000); // back to normal
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> It is important to set our CSS style sizes including units to ensure proper parsing or outcomes that we present to the end-user.
+  <div><strong>Interview Response:</strong> It is essential to set our CSS style sizes, including units, to ensure proper parsing or outcomes that we present to the end-user.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -241,7 +241,7 @@ For instance, we should not set elem.style.top to 10, but rather to 10px. Otherw
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Since, the style property operates only on the value of the "style" attribute, without any CSS cascade. We can’t read anything that comes from CSS classes using elem.style. We would have to find a built-in method to handle that procedure. The getComputedStyle() method gets all the actual (computed) CSS property and values of the specified element. The returned style is a live CSSStyleDeclaration object, which updates automatically when the element's styles are changed. Style sources can include: internal style sheets, external style sheets, inherited styles and browser default styles. The getComputedStyle method has two parameters including the element and the pseudo element. The pseudo element is a string specifying the pseudo-element to match. Omitted (or null) for real elements.
+  <div><strong>Interview Response:</strong> Since the style property operates only on the value of the "style" attribute, without any CSS cascade. We can’t read anything that comes from CSS classes using elem.style. We would have to find a built-in method to handle that procedure. The getComputedStyle() method gets all the actual (computed) CSS properties and values of the specified element. The returned style is a live CSSStyleDeclaration object, which updates automatically when the element's styles are changed. Style sources can include: internal style sheets, external style sheets, inherited styles, and browser default styles. The element and the pseudo-element are the two arguments of the getComputedStyle method. The pseudo-element is a string that specifies which pseudo-element gets matched— omitted (or null) for real elements.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -279,12 +279,12 @@ For instance, we should not set elem.style.top to 10, but rather to 10px. Otherw
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A computed style value is the value after all CSS rules and CSS inheritance is applied, as the result of the CSS cascade. A resolved style value is the one finally applied to the element.</div><br />
-  <div><strong>Technical Response:</strong> A computed style value is the value after all CSS rules and CSS inheritance is applied, as the result of the CSS cascade. It can look like height:1em or font-size:125%. A resolved style value is the one finally applied to the element. Values like 1em or 125% are relative. The browser takes the computed value and makes all units fixed and absolute, for instance: height:20px or font-size:16px. For geometry properties resolved values may have a floating point, like width:50.5px. A long time ago getComputedStyle was created to get computed values, but it turned out that resolved values are much more convenient, and the standard changed. So, it should be noted that getComputedStyles actually returns the resolved value of a property.
+  <div><strong>Interview Response:</strong> A computed style value is the value after all CSS rules, and CSS inheritance gets applied due to the CSS cascade. A resolved style value is the one finally applied to the element. </div><br />
+  <div><strong>Technical Response:</strong> A computed style value gets obtained after applying all CSS rules and CSS inheritance due to the CSS cascade. It may appear as height:1em or font-size:125 percent. The style value that eventually gets applied to the element is a resolved style value. Values like 1em and 125 percent are relative. The browser uses the calculated value and makes all units constant and absolute, such as height:20px or font-size:16px. Resolved values for geometry attributes may have a floating-point value, such as width:50.5px. Originally, getComputedStyle was intended to yield calculated values, but a discovery revealed that resolved values are significantly more helpful. As a result, the standard got revised. As a result, getComputedStyles returns a property's resolved value.
   </div><br /><br />
 
 :::note
-It should be noted that getComputedStyles actually returns the resolved value of a property.
+We should note that getComputedStyles returns the resolved value of a property.
 :::
 
   </div>
@@ -292,12 +292,12 @@ It should be noted that getComputedStyles actually returns the resolved value of
 
 ---
 
-### Explain how the getComputedStyle method interacts with property names.
+### Explain how the getComputedStyle method interacts with property names?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We should always ask for the exact (full property name) property that we want, like paddingLeft or marginTop or borderTopWidth. Otherwise the correct result is not guaranteed.
+  <div><strong>Interview Response:</strong> We should always ask for the exact (full property name) property that we want, like paddingLeft or marginTop or borderTopWidth. Otherwise, the correct result is not guaranteed.
     </div><br /><br />
 
 :::note
@@ -314,7 +314,7 @@ If there are properties paddingLeft/paddingTop, then what should we get for getC
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Visited links may be colored using :visited CSS pseudo class. But getComputedStyle does not give access to that color, because otherwise an arbitrary page could find out whether the user visited a link by creating it on the page and checking the styles. JavaScript may not see the styles applied by :visited. And also, there’s a limitation in CSS that forbids applying geometry-changing styles in :visited. That is to guarantee that there is no side way for an evil page to test if a link was visited and hence to break the privacy.
+  <div><strong>Interview Response:</strong> The :visited CSS pseudo-class gets used to color visited links. However, getComputedStyle does not provide access to that color; otherwise, an arbitrary page may determine if a user clicked a link by creating it on the page and inspecting the styles. JavaScript may not recognize the styles used by :visited. Furthermore, a CSS constraint prevents the use of geometry-changing styles in :visited. That is to ensure that there is no way for a malicious page to verify if a link was visited and violated a user's privacy.
     </div>
   </div>
 </details>

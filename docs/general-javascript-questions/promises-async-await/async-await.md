@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, there is a special syntax to work with promises in a more comfortable fashion, called “async/await”. It is surprisingly easy to understand and use.
+  <div><strong>Interview Response:</strong> Yes, a special syntax to work with promises more comfortably, called “async/await”. It is surprisingly easy to understand and use.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -41,7 +41,7 @@ async function f() {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> An async function is a function declared with the async keyword, and the await keyword is permitted within them. The async and await keywords enable asynchronous, promise-based behavior to be written in a cleaner style, avoiding the need to explicitly configure promise chains. Async functions can contain zero or more await expressions. Await expressions make promise-returning functions behave as though they are synchronous by suspending the code execution until the returned promise is fulfilled or rejected. The resolved value of the promise is treated as the return value of the await expression. Use of async and await enables the use of ordinary try / catch blocks around asynchronous code.
+  <div><strong>Interview Response:</strong> An async function is a function declared with the async keyword, and the await keyword gets permitted within them. The async and await keywords enable asynchronous, promise-based behavior to be written in a cleaner style, avoiding the need to configure promise chains explicitly. Async functions can contain zero or more await expressions. Await expressions make promise-returning functions seem synchronous by suspending the code execution until the returned promise is fulfilled or rejected. The resolved value of the promise gets treated as the return value of the await expression. Async and await allow you to wrap asynchronous code in regular try/catch statements.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -70,12 +70,12 @@ f().then(alert); // 1
 
 ---
 
-### What does the await keyword do in asynchronous JavaScript?
+### What does the await keyword do in asynchronous JavaScript code?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The await keyword makes JavaScript wait until the promise settles and returns its result. It can only be used inside an async function within regular JavaScript code; however, it can be used on its own within JavaScript modules.
+  <div><strong>Interview Response:</strong> The await keyword makes JavaScript wait until that promise settles and returns its result. It's only used within an async function within regular JavaScript code, although it only gets used on its own using JavaScript modules.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -108,7 +108,7 @@ f();
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, the await keyword cannot be used in conjunction with regular functions. If we try to use await in non-async function, there would be a syntax error.
+  <div><strong>Interview Response:</strong> No, the await keyword cannot get used in conjunction with regular functions. You get a syntax error if we try to use "await" in the non-async function.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -143,7 +143,7 @@ We may get this error if we forget to put async before a function. As said, awai
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The await keyword should not be used directly in top-level code, because it is syntactically incorrect and will result in an error. In order make it work properly, we can optionally wrap it in an anonymous async function.
+  <div><strong>Interview Response:</strong> The await keyword should not be used directly in top-level code because it is syntactically incorrect and results in an error. We can optionally wrap it in an anonymous async function to make it work properly.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -163,7 +163,7 @@ let user = await response.json();
 ```
 
 :::note
-It should be noted that a new feature of the V8 engine allows top-level await in JS modules, but this should not be mistaken for a fix.
+You should note that a new feature of the V8 engine allows top-level await in JS modules, but this should not be mistaken for a fix.
 :::
 
   </div>
@@ -177,7 +177,7 @@ It should be noted that a new feature of the V8 engine allows top-level await in
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, like promise.then, await allows us to use thenable objects (those with a callable then method). The idea is that a third-party object may not be a promise, but promise-compatible: if it supports .then, that’s enough to use it with await.
+  <div><strong>Interview Response:</strong> Yes, similar to a promise.then, await enables us to use thenable objects (those with a callable then method). The concept is that a third-party object may or may not be a promise, but it must be promise-compatible: if it supports dot then, it may be used with await.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -215,7 +215,7 @@ f();
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, to declare an async class method, just prepend it with async. The meaning is the same: it ensures that the returned value is a promise and enables await.
+  <div><strong>Interview Response:</strong>Yes, prepend it with async to declare an async class method. The meaning is the same: it ensures that the returned value is a promise and enables “await”.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -253,12 +253,12 @@ han.greeting().then(console.log); // returns Hi! I'm Han
 
 ---
 
-### If a promise resolves normally, then await promise returns the result. What happens in the case of a rejection?
+### If a promise resolves with normality, then await promise returns the result. What happens in the case of rejection?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In the case of a rejection, it throws the error, just as if there were a throw statement at that line. In real situations, the promise may take some time before it rejects. In that case there will be a delay before await throws an error.
+  <div><strong>Interview Response:</strong> In the case of a rejection, it throws an error. Just as if there were a throw statement at that line. In real situations, the promise may take some time before it rejects, and in that case, there is a delay before await throws an error.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -282,12 +282,12 @@ async function f() {
 
 ---
 
-### Is there a way to catch errors dynamically in async functions beside explicitly throwing an error?
+### Is there a method, other than explicitly throwing an error, to catch problems in async functions dynamically?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, there are two approaches that can be used including try…catch method commonly used with promises. We can catch that error using try..catch, the same way as a regular throw. In the case of an error, the control jumps to the catch block.<br /><br />We can also wrap multiple lines to ensure handling of multiple error handling. If we don’t have try..catch, then the promise generated by the call of the async function f() becomes rejected. We can append .catch to handle it. We can also catch such errors using a global ` unhandledrejection ` event handler.
+  <div><strong>Interview Response:</strong>Yes, two approaches can be used, including the try…catch method commonly used with promises. We can catch that error using try..catch, the same way as a regular throw. In the case of an error, the control jumps to the catch block. <br /><br />We can also wrap multiple lines to ensure handling of multiple error handling. If we don’t have a try..catch, then the promise generated by the call of the async function f() becomes rejected. We can append .catch to handle it. We can also catch such errors using a global unhandledrejection event handler.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -322,12 +322,12 @@ f().catch(alert); // TypeError: failed to fetch // (*)
 
 ---
 
-### When we need to wait for multiple (array) promises, what can we wrap them into to ensure proper handling (resolve/reject)?
+### When we wait for multiple (array) promises, what can we wrap them into to ensure proper handling (resolve/reject)?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> When we need to wait for multiple (array) promises, we can wrap them in Promise.all and then await. In the case of an error, it propagates as usual, from the failed promise to Promise.all, and then becomes an exception that we can catch using try..catch around the call.
+  <div><strong>Interview Response:</strong> When we need to wait for multiple (array) promises, we can wrap them in Promise.all and then await. In the case of an error, it propagates as usual, from the failed promise to Promise.all. It becomes an exception that we can catch using try..catch around the call.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

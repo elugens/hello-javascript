@@ -21,7 +21,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> A mixin is a JavaScript object that has methods that other classes can utilize without having to inherit from it. In other words, a mixin provides methods for implementing a certain behavior, but we don't use it on its own; rather use it to add the behavior to other classes.<br/>
+      <strong>Interview Response:</strong> A mixin is a JavaScript object with methods that other classes can use without inheriting it. In other words, a mixin provides methods for implementing a specific behavior, but we don't use it on its own; instead, we use it to add the behavior to other classes.<br/>
     </div>
     <div>
 </div><br />
@@ -71,7 +71,7 @@ Superhero {
 
 <strong className="codeExample">Code Example:</strong>Mixins<br /><br />
 
-<div>In JavaScript, we can look at inheriting from Mixins to collect functionality through extension. Each new class we define can have a superclass from which it can inherit methods and properties. Classes can also determine their own properties and methods, and we can leverage this fact to promote function re-use.<br /><br /></div>
+<div>In JavaScript, we can look at inheriting from Mixins to collect functionality through extension. Each new class we define can have a superclass from which it can inherit methods and properties. Classes can also determine their properties and methods, and we can leverage this fact to promote function re-use.<br /><br /></div>
 
 ```js
 // ES2015+ keywords/syntax used: class, constructor, extends, const, arrow functions

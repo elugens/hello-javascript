@@ -13,24 +13,26 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Can you explain, what is clickjacking?
+### Can you explain what is clickjacking?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The “clickjacking” attack allows an evil page to click on a “victim site” on behalf of the visitor. Many sites were hacked this way, in the past, including Twitter, Facebook, Paypal and other sites. They have all been fixed, of course.
+  <div><strong>Interview Response:</strong> The “clickjacking” attack allows an evil page to click on a “victim site” on behalf of the visitor. Many sites were hacked this way, in the past, including Twitter, Facebook, Paypal, and other sites. They have all been fixed, of course.
     </div>
   </div>
 </details>
 
 ---
 
-### Can you briefly explain, how a clickjacking attack is implemented?
+a
+
+### Could you perhaps describe how a clickjacking attack gets carried out in detail?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The idea is quite simple. A visitor is lured to an evil page. It does not matter how. The page has a harmless-looking link on it (like “get rich now” or “click here, very funny”). Over that link the evil page positions a transparent &#8249;iframe&#8250; with src from facebook.com, in such a way that the “Like” button is right above that link. Usually that is done with z-index. In attempting to click the link, the visitor in fact clicks the button.
+  <div><strong>Interview Response:</strong> The idea is quite simple. A visitor gets lured to an evil page. It does not matter how. The page has a harmless-looking link on it (like “get rich now” or “click here, very funny”). The malicious website places a transparent &#8249;iframe&#8250; with src from facebook.com above the link, so that the "Like" button is directly above it. Typically, this implementation gets accomplished using a z-index, and the visitor clicks the button instead of the link.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -66,12 +68,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Can you briefly explain, two approaches to defending against a clickjacking attack?
+### Can you briefly explain two approaches to defending against a clickjacking attack?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The first or novice approach is the oldest defence usng a bit of JavaScript which forbids opening the page in a frame (so-called “framebusting”). Basically, if the window finds out that it’s not on top, then it automatically makes itself the top. This not a reliable defence, because there are many ways to hack around it. The second approach is using the sandbox attribute to block navigation. One of the things restricted by the sandbox attribute is navigation. A sandboxed iframe may not change top.location. So, we can add the iframe with sandbox="allow-scripts allow-forms". That would relax the restrictions, permitting scripts and forms. But we omit allow-top-navigation so that changing top.location is forbidden. The recommended approach is to use X-Frame-Options: SAMEORIGIN on pages (or whole websites) which are not intended to be viewed inside frames.
+  <div><strong>Interview Response:</strong> The first, or naive, the option is a defensive measure, employing a piece of JavaScript code that prevents the website from being opened in a frame (so-called "framebusting"). If the window discovers it is not at the top, it immediately rises to the top. This approach is not a solid defense because there are several methods to circumvent it. The second approach is using the sandbox attribute to block navigation. One of the things restricted by the sandbox attribute is navigation. A sandboxed iframe may not change top.location. So, we can add the iframe with sandbox="allow-scripts allow-forms". That would relax the restrictions, permitting scripts and forms. But we omit allow-top-navigation so that changing top.location is forbidden. The recommended approach uses X-Frame-Options: SAMEORIGIN on pages (or whole websites) that does not intentionally get viewed inside frames.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong> Frame Busting (Novice Approach: not recommended)<br /><br />
 

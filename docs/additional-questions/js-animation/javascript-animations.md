@@ -18,19 +18,19 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The question is most simply answered with, the requestAnimationFrame produces higher quality animation completely eliminating flicker and shear that can happen when using setTimeout or setInterval, and reduce or completely remove frame skips. The setInterval and setTimeout methods can cause CPU overloads and cause excessive or overlapping redraws.
+  <div><strong>Interview Response:</strong> The requestAnimationFrame delivers higher-quality animation by avoiding flicker and shear that might occur when using setTimeout or setInterval and reducing or eliminating frame skips. The setInterval and setTimeout methods might result in CPU overloads and excessive or overlapping redraws.
     </div>
   </div>
 </details>
 
 ---
 
-### Can you explain the function an syntax of the requestAnimationFrame method?
+### Can you explain the function and syntax of the requestAnimationFrame method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The window.requestAnimationFrame() method tells the browser that you wish to perform an animation and requests that the browser calls a specified function to update an animation before the next repaint. The method takes a callback as an argument to be invoked before the repaint. You should call this method whenever you are ready to update your animation onscreen. We can use the cancelAnimationFrame to cancel the animation by calling the request id in the cancellation.
+  <div><strong>Interview Response:</strong> The window.requestAnimationFrame() method informs the browser that you want to run animations and asks the browser to invoke a given function to update an animation before the next repaint. The method accepts a callback as an input, executed before the repaint. When you're ready to refresh your animation onscreen, call this function. We may cancel the animation by contacting the request-id in the cancellation using the cancelAnimationFrame.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -65,12 +65,12 @@ window.requestAnimationFrame(step);
 
 ---
 
-### When should we use JavaScript vs CSS for animations?
+### When should we use JavaScript vs. CSS for animations?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> For animations that CSS cannot handle well, or those that need tight control, JavaScript is our best option. JavaScript animations should be implemented via requestAnimationFrame. That built-in method allows us to setup a callback function to run when the browser will be preparing a repaint. Usually that is very soon, but the exact time depends on the browser.
+  <div><strong>Interview Response:</strong> For animations that CSS cannot handle well, or those that need tight control, JavaScript is our best option. JavaScript animations should get implemented via requestAnimationFrame. That built-in method allows us to set up a callback function to run when the browser is preparing a repaint. Usually, that is very soon, but the exact time depends on the browser.
     </div>
   </div>
 </details>

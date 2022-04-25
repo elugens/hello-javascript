@@ -7,11 +7,6 @@ sidebar_label: Developer Console
 
 **JavaScript Basics: Developers Console**
 
-<head>
-  <title>Developers Console - Frontend Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
-
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
@@ -22,9 +17,9 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> It allows us to run, debug, inspect, analyze, and manipulate JavaScript in the browser.</div><br />
-  <div><strong>Technical Response:</strong> The developer console is like a shell interface, along with tools to inspect the DOM, debug, and analyze network activity. The console can be used to log information as part of the JavaScript development process, as well as allow you to interact with a web page by invoking JavaScript expressions within the page’s context. The Console provides you with the ability to write, manage, and monitor JavaScript on-demand.
+  <div><strong>Technical Response:</strong> The developer console resembles a shell interface and has tools for viewing the DOM, debugging, and analyzing network traffic. The console collects data as part of the JavaScript development process and interacts with a web page through JavaScript expressions within the page's context. The console essentially allows you to generate, administer, and monitor JavaScript.
   </div><br />
-  <div><strong>Additional Information:</strong> Developer tools allow us to see errors, run commands, examine variables, and much more.
+  <div><strong>Additional Information:</strong> We can use developer tools to see problems, perform commands, and analyze variables.
   </div>
   </div>
 </details>
@@ -37,9 +32,9 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> We can open the dev console using the f12 or Cmd+Opt+J for Mac users.</div><br />
-  <div><strong>Technical Response:</strong> Press F12 or, if you are on Mac, then Cmd+Opt+J. You can also right-click inside the browser window and click inspect. The browser window will open chrome developer tools and then you should click on the console tab.
+  <div><strong>Technical Response:</strong> F12 or, if you're using a Mac, Cmd+Opt+J. You may also inspect the browser window by right-clicking it. The browser window launches Chrome Developer Tools, and you should then select the Console option.
   </div><br />
-  <div><strong>Additional Information:</strong> Most browser developer tools can be open using F12 on Windows, but Chrome for Mac needs Cmd+Opt+J, Safari: Cmd+Opt+C (need to enable first).
+  <div><strong>Additional Information:</strong> On Windows, most browser developer tools may get accessed by pressing F12; however, Chrome for Mac requires Cmd+Opt+J, and Safari requires Cmd+Opt+C. (need to enable first).
   </div>
   </div>
 </details>

@@ -21,10 +21,10 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Interpreter pattern includes a scripting language that enables end users to modify their solution.<br/>
+      <strong>Interview Response:</strong> The Interpreter pattern includes a scripting language that enables end-users to modify their solution.<br/>
     </div>
     <div>
-      <strong>Technical Response:</strong> The interpreter approach is appealing because it allows you to create your own language. This may sound like an absurd idea, yet we're already making JavaScript. Why should we create a new language? Domain-specific languages (DSLs) have had a rebirth since the publication of the GoF book. When developing a language tailored to a specific demand is really beneficial. For example, structured Query Language (SQL) is exceptionally good at defining the querying of relational databases. On the other hand, regular expressions have shown to be highly successful at parsing and altering the text.<br/>
+      <strong>Technical Response:</strong> The interpreter approach is appealing because it allows you to create a custom language. This implementation may sound like an absurd idea, yet we're already making custom languages in JavaScript. Why should we create a new language? Domain-specific languages (DSLs) have had a rebirth since the publication of the GoF book. When developing a language tailored to a specific demand is beneficial. For example, structured Query Language (SQL) is exceptionally good at defining the querying of relational databases. On the other hand, regular expressions have shown to be highly successful at parsing and altering the text.<br/>
     </div>
     <div>
 </div><br />
@@ -162,17 +162,18 @@ MCMXXVIII = 1928
 
 **Tested and used solution**
 
-- It's a tried-and-true, reusable solution that's already in use in a number of applications.
+- It's a tried-and-true, reusable solution used in several different applications.
+- Because the pattern uses classes to describe grammatical rules, updating and extending the grammar is simple.
 
-**Extendable and simple to modify**
+**Extendable and straightforward to modify**
 
-- Because the pattern describes grammatical rules using classes, it is trivial to update and extend the grammar. Using inheritance, you can update or expand the grammar.
-- Existing expressions can be changed progressively, and new expressions can be defined as variants of existing ones.
+- Because the pattern describes grammatical rules using classes, updating and extending the grammar is trivial. Using inheritance, you can edit or expand the grammar.
+- Existing expressions can be changed progressively, and new expressions get defined as variants of existing ones.
 
-**Easy to implement**
+**Simple to implement**
 
-- Implementing the grammar is easy, too. Classes defining nodes in the abstract syntax tree have similar implementations.
-- These classes are easy to write, and often their generation can be automated with a compiler or parser generator.
+- Putting the grammar into practice is similarly straightforward. Classes that define nodes in the abstract syntax tree have comparable implementations.
+- These classes are simple to write, and they are typically generated automatically by a compiler or parser generator.
 
 <br />
   </div>
@@ -180,7 +181,7 @@ MCMXXVIII = 1928
 
 ---
 
-### What are some of the disadvantages of employing the Proxy pattern?
+### What are some of the disadvantages of employing the Interpreter pattern?
 
 <details>
   <summary>
@@ -193,8 +194,8 @@ MCMXXVIII = 1928
     <br />
     <div></div>
 
-- Because grammars with many rules can be difficult to manage and maintain, the Interpreter pattern creates at least one class for each rule in the grammar.
-- Other design patterns can be applied to mitigate the problem, but other techniques such as parser or compiler generators are more appropriate when the grammar is very complex.
+- Because grammar with many rules can be challenging to manage and maintain, the Interpreter pattern creates at least one class for each rule in the grammar.
+- Other design patterns can be used to mitigate the problem, however when the language is complex, other approaches such as parser or compiler generators are more suited.
 
 <br />
   </div>

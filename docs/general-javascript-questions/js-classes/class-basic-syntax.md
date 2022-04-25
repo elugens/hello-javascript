@@ -11,12 +11,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 <CloseAllAnswers />
 
-### What is a JavaScript Class in Object Oriented Programming (OOP)?
+### What is a JavaScript Class in Object-Oriented Programming (OOP)?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Classes are a template for creating objects. They encapsulate data with code to work on that data. Classes in JS are built on prototypes but also have some syntax and semantics that are not shared with ES5 class-like semantics. Classes are in fact "special functions", and just as you can define function expressions and function declarations, the class syntax has two components: class expressions and class declarations.
+  <div><strong>Interview Response:</strong> Classes are a template for creating objects. They encapsulate data with code to work on that data. Classes in JS are built on prototypes and have the same syntax and semantics that do not get shared with ES5 class-like semantics. Classes are, in fact, "special functions", and just as you can define function expressions and function declarations, the class syntax has two components: class expressions and class declarations.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -39,12 +39,12 @@ class MyClass {
 
 ---
 
-### What is difference between function declarations and class declarations?
+### What is the difference between function declarations and class declarations?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> An important difference between function declarations and class declarations is that function declarations are hoisted, and class declarations are not. Another difference is that function declarations can be declare at any point in your code.
+  <div><strong>Interview Response:</strong> A significant difference between a function declaration and a class declaration is that a function declaration gets hoisted, and class declarations are not. Another difference is that those function declarations get declared at any point in your code.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -68,7 +68,7 @@ function rectSqFt(height, width) {  function gets hoisted / initialized
 ```
 
 :::note
-You first need to declare your class and then access it, otherwise code like the following will throw a Reference Error.
+You first need to declare your class and then access it. Otherwise, code like the following throw a Reference Error.
 :::
 
   </div>
@@ -82,7 +82,7 @@ You first need to declare your class and then access it, otherwise code like the
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A class expression is another way to define a class. Class expressions can be named or unnamed. The name given to a named class expression is local to the class's body. (it can be retrieved through the class's (not an instance's) name property, though). In a named class expression, it is visible inside the class only.
+  <div><strong>Interview Response:</strong> A class expression is another way to define a class. Class expressions can be named or unnamed. The name given to a named class expression is local to the class's body. (it can be retrieved through the class's (not an instance) name property, though). In a named class expression, it is visible inside the class only.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -121,12 +121,12 @@ console.log(Rectangle2);
 
 ---
 
-### Is there a way to create a Class dynamically “on-demand” in JavaScript?
+### Is it possible to construct a Class in JavaScript on the fly?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, it can be achieved by returning class in a function and calling the function to access a new class with the new operator.
+  <div><strong>Interview Response:</strong> Yes, it is accomplished by returning a class from a function and using the new operator to obtain a new class.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -164,7 +164,7 @@ new User().sayHello(); // Hello, Jane
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Classical inheritance is almost never the right solution. On exceedingly rare occasions, it might be used for a single level.
+  <div><strong>Interview Response:</strong> Classical inheritance is rarely the best solution, and it may get utilized for a single level in rare situations.
 </div>
   </div>
 </details>
@@ -176,7 +176,7 @@ new User().sayHello(); // Hello, Jane
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, you can implement computed names in JavaScript classes in the same fashion as you would in Object literals.
+  <div><strong>Interview Response:</strong> Yes, you can implement computed names in JavaScript classes in the same fashion as in Object literals.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -211,7 +211,7 @@ let o = {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, class fields are a syntax that allows us add properties to a class. It is implemented by adding a name property to a class and assigning a value to that property. The important difference of class fields is that they are set on individual objects, not Class.prototype.
+  <div><strong>Interview Response:</strong> Yes, class fields are a syntax that allows us to add properties to a class. It is implemented by adding a name property to a class and assigning a value to that property. The critical difference between class fields is that they get set on individual objects, not Class.prototype.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -253,7 +253,7 @@ alert(user.name); // John
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, there are two approaches to binding a method to its class. They include passing a wrapper function such as setTimeout() or binding the method to the object constructor. We could use other options such as regular function declarations if necessary.
+  <div><strong>Interview Response:</strong> Yes, there are two approaches to “binding a method” to its class. They include passing a wrapper function such as setTimeout() or binding the method to the object constructor. We could use other options such as regular function declarations if necessary.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -276,7 +276,7 @@ setTimeout(button.click, 1000); /// hello, using setTimeout as a wrapper
 ```
 
 :::note
-It should be noted that you must use an arrow function as a method in the class or you will lose the value of this. Functions and class methods have their own “this”.
+You must use an arrow function as a method in the class, or you lose the value of “this”. Functions and class methods have their own “this”.
 :::
 
   </div>

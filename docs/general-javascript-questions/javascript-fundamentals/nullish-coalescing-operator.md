@@ -1,16 +1,11 @@
 ---
 title: Nullish Coalescing Operator
 description: Learn how to use the nullish coalescing operator in JavaScript.
-sidebar_position: 12
+sidebar_position: 14
 sidebar_label: Nullish Coalescing Operator
 ---
 
 **JavaScript Fundamentals: Nullish Coalescing Operator (??)**
-
-<head>
-  <title>Nullish Coalescing Operator - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
@@ -23,16 +18,13 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The nullish coalescing operator returns the first argument if it is not null or undefined. Otherwise, the second one.</div><br />
-  <div><strong>Technical Response:</strong> In simple terms, the ?? returns the first argument if it is not null/undefined. Otherwise, the second one.<br /><br />
-  <strong>Example:</strong> The nullish coalescing operator is written as two question marks (??).<br /><br />
+  <div><strong>Interview Response:</strong> The nullish coalescing operator returns the first argument if it is not null or undefined—otherwise, the second one.</div><br />
+  <div><strong>Technical Response:</strong> In simple terms, the ?? returns the first argument if it is not null/undefined—otherwise, the second one.<br /><br />
+  <strong>Example:</strong> The nullish coalescing operator, for example, is denoted by two question marks (??).<br /><br />
   <strong>The result of a ?? b is:</strong><br /><br />
     <ol>
       <li>if a is defined, then a,</li>
       <li>if a is not defined, then b.</li>
-      <li>The exact look of the window also depends on the browser. We cannot modify it…</li>
-      <li>Agree on terms within your team. If a site visitor is called a “user” then we should name related variables currentUser or newUser instead of currentVisitor or newManInTown.</li>
-      <li>A variable name is always camelCase and should begin with a noun to differentiate variables from functions, which normally should begin with a verb.</li>
       </ol>
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -55,13 +47,13 @@ console.log(baz);
 
 ---
 
-### Is there another way to achieve the same results as the nullish coalescing operator?
+### Is there a different method to get the same outcomes as the nullish coalescing operator?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The not equals operator checks the first value to see if it is null or undefined if it is null or undefined it returns the second value.</div><br />
-  <div><strong>Technical Response:</strong> Yes, you can use the NOT ! equal operator to check to see if the first value is not equal to null or undefined else return the second value.
+  <div><strong>Interview Response:</strong> The not equals operator checks the first value to see if it is null or undefined; it returns the second value if it is null or undefined.</div><br />
+  <div><strong>Technical Response:</strong> Yes, you can use the NOT! Equal operator to check to see if the first value is not equal to null or undefined; return the second value.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -79,12 +71,12 @@ result = a !== null && a !== undefined ? a : b;
 
 ---
 
-### What is a common use case for nullish coalescing operator?
+### What is an everyday use case for a nullish coalescing operator?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A common use case for the nullish coalescing operator is to provide a default value for a potentially undefined variable.</div><br />
+  <div><strong>Interview Response:</strong> An everyday use case for the nullish coalescing operator is to provide a default value for a potentially undefined variable.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -112,7 +104,7 @@ alert(user ?? 'Anonymous'); // John
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, we can use a sequence of nullish coalescing operator to select the first value from a list that is not null or undefined.</div><br />
+  <div><strong>Interview Response:</strong> Yes, we can use a sequence of nullish coalescing operators to select the first value from a list that is not null or undefined.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -132,12 +124,12 @@ alert(firstName ?? lastName ?? nickName ?? 'Anonymous'); // Supercoder
 
 ---
 
-### Is there another operator that can be used to perform the same task as the nullish coalescing operator?
+### Is there another operator we use to perform the same task as the nullish coalescing operator?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The OR operator can be used in the same way as nullish coalescing operator.</div><br />
+  <div><strong>Interview Response:</strong> The OR operator can be used the same way as the nullish coalescing operator.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -157,13 +149,13 @@ alert(firstName || lastName || nickName || 'Anonymous'); // Supercoder
 
 ---
 
-### What is the main difference between the Nullish Coalescing Operator and the Logical OR operator?
+### What is the primary distinction between the Nullish Coalescing Operator and the Logical OR Operator?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The difference is that OR operator returns the first truthy value and nullish operator returns the first defined value.</div><br />
-  <div><strong>Technical Response:</strong> The important difference is that OR operator returns the first truthy value and nullish operator returns the first defined value.<br /><br /> In other words, || doesn’t distinguish between false, 0, an empty string "" and null/undefined. They are all the same – falsy values. If any of these is the first argument of ||, then we will get the second argument as the result.<br /><br /> In practice though, we may want to use default value only when the variable is null/undefined. That is, when the value is unknown/not set.
+  <div><strong>Interview Response:</strong> The OR operator returns the first truthy value, and the nullish operator returns the first defined value.</div><br />
+  <div><strong>Technical Response:</strong> The key distinction is that the OR operator returns the first true value, whereas the null operator returns the first specified value.<br /><br /> In other words, || does not differentiate between false, zero, an empty string "" and null/undefined. They're all the same — false values, and we obtain the second if any of them are the first arguments of ||.<br /><br /> However, we may wish to utilize the default value only when the variable is null/undefined in practice. When the value is unknown or not set, this is the case.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -182,13 +174,13 @@ alert(height ?? 100); // 0
 
 ---
 
-### Does the nullish coalescing operator have a high or low operator precedence?
+### Does the nullish coalescing operator have high or low operator precedence?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The precedence of the nullish coalescing operators is low according to the MDN.</div><br />
-  <div><strong>Technical Response:</strong> The precedence of the ?? operator is rather low: 5 in the MDN table. So, ?? is evaluated before = and ?, but after most other operations, such as +, *. So, if we’d like to choose a value with ?? in an expression with other operators, consider adding parentheses.<br /><br />
+  <div><strong>Interview Response:</strong> According to the MDN, the precedence of the nullish coalescing operators is low.</div><br />
+  <div><strong>Technical Response:</strong> The precedence of the ?? operator is relatively low: 5 in the MDN table. So ?? is evaluated before = and ?. But after most other operations, such as +, *. So if we’d like to choose a value with ?? in an expression with other operators, consider adding parentheses.<br /><br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -210,13 +202,13 @@ alert(area); // 5000
 
 ---
 
-### What is the proper way to use the Nullish Coalescing Operator with the AND (&&) and OR (||) operator?
+### How should the Nullish Coalescing Operator be used with the AND (&&) and OR (||) operators?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> It is not recommended to use the AND operator directly in line with the nullish coalescing operator. You should wrap the AND and OR operator in parentheses as a work around.</div><br />
-  <div><strong>Technical Response:</strong> Due to safety reasons, JavaScript forbids using ?? together with && and || operators, unless the precedence is explicitly specified with parentheses.<br />
+  <div><strong>Interview Response:</strong> Using the AND operator directly in line with the nullish coalescing operator is not recommended. It would help by wrapping the AND and OR operators in parentheses as a workaround.</div><br />
+  <div><strong>Technical Response:</strong> For safety reasons, JavaScript forbids using ?? together with && and || operators unless parentheses explicitly specify the precedence.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

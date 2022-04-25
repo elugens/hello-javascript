@@ -120,7 +120,7 @@ Green --> for 1 minute
 
 ---
 
-### What pattern category does the State pattern fall under?
+### The State pattern belongs to which pattern category?
 
 <details>
   <summary>
@@ -165,7 +165,7 @@ Green --> for 1 minute
     <div></div>
 
 - Singular Responsibility Principle -- Separate the code related to each state into separate classes.
-- The Open/Closed Principle - Add new states without modifying existing state classes or the context
+- The Open/Closed Principle - Add new states without modifying existing state classes or the context.
 - Simplify the contextual code by removing bulky state machine conditionals.
 
 <br />

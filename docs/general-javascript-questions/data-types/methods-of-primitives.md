@@ -17,20 +17,20 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> String, Symbol, Boolean, BigInt, number, null, and undefined.</div><br />
-  <div><strong>Technical Response:</strong> There are 7 primitive data types that include the string, number, bigint, Boolean, undefined, symbol, and null data types. Most of the time, a primitive value is represented directly at the lowest level of the language implementation.<br /><br />
+  <div><strong>Technical Response:</strong> The seven primitive data types include the string, number, BigInt, Boolean, undefined, symbol, and null data types. Most of the time, a primitive value is represented directly at the lowest level of the language implementation.<br /><br />
   </div>
   </div>
 </details>
 
 ---
 
-### What are the five (5) primitive wrapper objects in JavaScript?
+### What are JavaScript's five (5) primitive wrapper objects?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> String, Symbol, BigInt, Boolean, and Number.</div><br />
-  <div><strong>Technical Response:</strong> There are 5 primitive wrapper objects that include the String, Number, BigInt, Boolean, and Symbol.<br /><br />
+  <div><strong>Technical Response:</strong> The five primitive wrapper objects include the String, Number, BigInt, Boolean, and Symbol.<br /><br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -62,7 +62,7 @@ temp = null;
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A primitive data type has only a single value. Objects on the other hand can contain more than one value stored in collections and more complex structures.
+  <div><strong>Interview Response:</strong> A primitive data type has only a single value. On the other hand, objects can contain more than one value stored in collections and more complex structures.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -90,7 +90,7 @@ let user = {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, a function can be used as a property of an object. It is more commonly called an object method.
+  <div><strong>Interview Response:</strong> Yes, a function gets used as a property of an object, and it is more commonly called an object method.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -118,8 +118,8 @@ john.sayHi(); // Hi buddy!
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, a primitive remains a primitive regardless of what method is called on it.</div><br />
-  <div><strong>Technical Response:</strong> Yes, a primitive remains a primitive. For instance, there exists a string method `str.toUpperCase()` that returns a capitalized string. The type of the returned value remains a string.<br />
+  <div><strong>Interview Response:</strong> Yes, a primitive remains a primitive regardless of what method gets called on it.</div><br />
+  <div><strong>Technical Response:</strong> Yes, a primitive remains a primitive. For instance, a string method str.toUpperCase() exists that returns a capitalized string. The type of the returned value remains a string.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -142,8 +142,8 @@ alert(str.toUpperCase()); // HELLO
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Technically, using the “new” syntax can be done, but it is not recommended because it will return an object and not the primitive value as intended.</div><br />
-  <div><strong>Technical Response:</strong> Technically this can be done in JavaScript, but it is not recommended based on the specifications. There are several unintended consequences of using this practice and it should be avoided. A best practice is to use Number and Boolean object wrappers without the new operator.<br /><br />
+  <div><strong>Interview Response:</strong> Technically, using the “new” syntax can be done but is not recommended because it returns an object and not the primitive value as intended.</div><br />
+  <div><strong>Technical Response:</strong> Technically, this gets done in JavaScript, but it is not recommended based on the specifications. There are several unintended consequences of using this practice, which should get avoided. A best practice is to use Number and Boolean object wrappers without the new operator.<br /><br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -179,7 +179,7 @@ let num = Number('123'); // convert a string to number
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, they are considered the most primitive data types of all. They both have no wrapper objects and do not provide any methods.
+  <div><strong>Interview Response:</strong> No, they are considered the most primitive data types. They both have no wrapper objects and do not provide any methods.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

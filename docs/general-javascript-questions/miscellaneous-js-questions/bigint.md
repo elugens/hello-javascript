@@ -18,8 +18,8 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> BigInt is a special numeric type that provides support for integers of arbitrary length. A bigint is created by appending n to the end of an integer literal or by calling the function BigInt that creates bigints from strings, numbers etc.</div><br />
-  <div><strong>Technical Response:</strong> BigInt is a special numeric type that provides support for integers of arbitrary length. A bigint is created by appending n to the end of an integer literal or by calling the function BigInt that creates bigints from strings, numbers etc. BigInt can mostly be used like a regular number. All operations on bigints return bigints. BigInts cannot be mixed with regular numbers. We should explicitly convert them if needed: using either BigInt() or Number(). The conversion operations are always silent, never give errors, but if the bigint is too huge and will not fit the number type, then extra bits will be cut off, so we should be careful doing such conversion.
+  <div><strong>Interview Response:</strong> BigInt is a unique numeric type that allows integers of any length. A BigInt gets formed by attaching n to the end of an integer literal or by using the BigInt function, which generates BigInts from strings and numbers.</div><br />
+  <div><strong>Technical Response:</strong> BigInt is a unique numeric type that allows integers of any length. A BigInt gets formed by attaching n to the end of an integer literal or by using the BigInt function, which generates BigInts from strings, numbers. BigInt gets used chiefly as a regular integer. All operations on BigInts return BigInts. BigInts and regular numbers cannot be blended. If necessary, we should explicitly convert them using BigInt() or Number(). The conversion procedures are always quiet and never produce errors, but if the BigInt is too huge, it won’t fit the number type, and excess bits get chopped off; thus, we should exercise caution while doing such conversions.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -59,7 +59,7 @@ alert(Number(bigint) + number); // 3
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> When BigInts are used with the division operator it will round the BigInt towards zero. All operations on bigints return bigints.
+  <div><strong>Interview Response:</strong> When BigInts get used with the division operator, it rounds the BigInt towards zero. All operations on BigInts return BigInts.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -84,7 +84,7 @@ alert(5n / 2n); // 2, rounds towards zero
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> BigInts and regular numbers should never be mixed in mathematical operations, it will result in an error. We should explicitly convert them if needed: using either BigInt() or Number().
+  <div><strong>Interview Response:</strong> BigInts and regular numbers should never get mixed in mathematical operations because they result in an error. If needed, we should explicitly convert them using BigInt() or Number().
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -115,7 +115,7 @@ alert(Number(bigint) + number); // 3
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, we should use Number() to convert a bigint to a number.
+  <div><strong>Interview Response:</strong> No, we should use Number() to convert a BigInt to a number.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -134,12 +134,12 @@ console.log(+bigint); // TypeError
 
 ---
 
-### Although, comparisons work with BigInt, what should you always remember?
+### Although comparisons work with BigInt, what should you always remember?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Comparisons, such as (&#8249; &#8250;) work with bigints and numbers without issue, but as numbers and bigints belong to different types, they can be equal ==, but not strictly equal === each other.
+  <div><strong>Interview Response:</strong> Comparisons, such as (&#8249; &#8250;) work with BigInts and numbers without issue, but as numbers and BigInts belong to different types, they can be equal ==, but not strictly equal === each other.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

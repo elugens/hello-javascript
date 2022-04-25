@@ -21,8 +21,8 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> This behavioral JavaScript design pattern generates a series of receiver objects in response to a request. This approach encourages loose coupling, allowing us to avoid coupling the sender of a request to a receiver, and allowing other receivers to handle the request.<br/><br/>
-      The receiving objects will be coupled together, and they'll be able to act on the request before passing it over to the next receiver object. It's also simple to add additional recipient objects to the chain.
+      <strong>Interview Response:</strong> This behavioral JavaScript design pattern generates a series of receiver objects responding to a request. This approach encourages loose coupling, allowing us to avoid coupling the sender of a request to a receiver and allowing other receivers to handle the request.<br/><br/>
+      The receiving objects get coupled together, and they'll be able to act on the request before passing it over to the following receiver object. It's also simple to add additional recipient objects to the chain.
 <br/>
     </div>    
     <div>
@@ -36,13 +36,13 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 **The objects participating in this pattern are:**
 
-**Client** -- In example code: _Request_
+**Client** -- example code: _Request_
 
-- initiates the request to a chain of handler objects.
+- initiates the request to a chain of handler objects
 
-**Handler** -- In example code: _Request.get() method_
+**Handler** -- example code: _Request.get() method_
 
-- defines an interface for handling the requests.
+- defines an interface for handling the requests
 - implements the successor link (returning 'this')
 
 <br/>
@@ -130,7 +130,7 @@ Dispense 3 $1 bills
 
 ---
 
-### In what pattern category does the Chain of Responsibility pattern belong too?
+### In what pattern category does the Chain of Responsibility pattern belong?
 
 <details>
   <summary>
@@ -138,14 +138,14 @@ Dispense 3 $1 bills
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Chain of Responsibility pattern is a type of behavioral design pattern.
+      <strong>Interview Response:</strong> The Chain of Responsibility pattern is a behavioral design pattern.
     </div>
   </div>
 </details>
 
 ---
 
-### Can you provide an example of a Chain of Responsibility Pattern use case?
+### Could you kindly provide an example of a Chain of Responsibility Pattern use case?
 
 <details>
   <summary>
@@ -153,7 +153,7 @@ Dispense 3 $1 bills
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> You can use it if your program handles various requests in different ways without knowing the sequence and type of requests beforehand. It allows you to chain several handlers, thus, allowing all of them a chance to process the request.<br/><br/>An illustration of the chain of responsibility pattern is in event bubbling in the DOM, where the event propagates through the nested elements, one of which may choose to handle the event.
+      <strong>Interview Response:</strong> You can use it if your program handles various requests differently without knowing beforehand the sequence and type of requests. It allows you to chain several handlers, thus, allowing all of them a chance to process the request.<br/><br/>An illustration of the chain of responsibility pattern is in event bubbling in the DOM. The event propagates through the nested elements, one of which may choose to handle the event.
     </div>
 
 <br />
@@ -162,7 +162,7 @@ Dispense 3 $1 bills
 
 ---
 
-### What are some of the advantages of employing the Chain of Responsibility design pattern?
+### What are some advantages of employing the Chain of Responsibility design pattern?
 
 <details>
   <summary>
@@ -175,9 +175,9 @@ Dispense 3 $1 bills
     <br />
     <div></div>
 
-- You have control over the sequence in which requests are handled.
-- The principle of single responsibility. Classes that invoke operations can be separated from classes that perform tasks.
-- The principle of open/closed. New handlers can be added to the app without disrupting the old client code.
+- You have control over the sequence in which requests get handled.
+- The principle of single responsibility. Classes that invoke operations get separated from classes that perform tasks.
+- The principle of open/closed. New handlers can get added to the app without disrupting the old client code.
 
 <br />
   </div>

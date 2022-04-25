@@ -13,12 +13,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### When happens when a form is submitted in the browser?
+### When happens when a form gets submitted in the browser?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The submit event triggers when the form is submitted, it is usually used to validate the form before sending it to the server or to abort the submission and process it in JavaScript. The method form.submit() allows us to initiate form sending from JavaScript. We can use it to dynamically create and send our own forms to the server.
+  <div><strong>Interview Response:</strong> When a form is submitted, the submit event is triggered. It often gets used to verify the form before sending it to the server or cancel the submission and process it in JavaScript. The function form.submit() enables us to transmit forms from JavaScript, and we may use it to construct and send forms to the server dynamically.
     </div>
   </div>
 </details>
@@ -30,7 +30,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> There are two main ways to submit a form. The first is to click &#8249;input type="submit"&#8250; or &#8249;input type="image"&#8250;. The second is to press Enter on an input field. Both actions lead to submit event on the form. The handler can check the data, and if there are errors, show them and call `event.preventDefault()`, then the form won’t be sent to the server.
+  <div><strong>Interview Response:</strong> There are two primary methods for submitting a form. The first step is to select either &#8249;input type="submit"&#8250; or &#8249;input type="image"&#8250;. The second method is to enter data into an input field by pressing Enter. Both activities result in the form's submit-event. The handler can inspect the data, display them, and call events if any issues get found. If you use `preventDefault()`, the form does not transmit to the server.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -54,7 +54,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> When a form is sent using Enter on an input field, a click event triggers on the &#8249;input type="submit"&#8250;. That is rather funny, because there was no click at all.
+  <div><strong>Interview Response:</strong> When a form gets sent using Enter on an input field, a click event triggers on the &#8249;input type="submit"&#8250;. That is rather funny because there was no click at all.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

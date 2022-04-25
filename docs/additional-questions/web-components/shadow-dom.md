@@ -13,12 +13,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### What is the Shadow DOM in relation to the browser?
+### What is the Shadow DOM, and how does it relate to the browser?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The Shadow DOM serves for encapsulation. It allows a component to have its very own “shadow” DOM tree, that cannot be accidentally accessed from the main document, may have local style rules, and more.
+  <div><strong>Interview Response:</strong> Encapsulation gets provided via the Shadow DOM. It enables a component to have its own "shadow" DOM tree that cannot get unintentionally accessed from the main page and local style rules and other features.
     </div>
   </div>
 </details>
@@ -30,7 +30,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The browser uses DOM/CSS internally to draw or parse them. That DOM structure is normally hidden from us, but we can see it in developer tools. E.g., in Chrome, we need to enable in Dev Tools “Show user agent shadow DOM” option.<br /><br />
+  <div><strong>Interview Response:</strong> Internally, the browser draws or parses them using DOM/CSS. Usually, that DOM structure gets hidden from us, but we may view it in developer tools. In Chrome, for example, we must enable the "Show user agent shadow DOM" option in Dev Tools.<br /><br />
   <img src="/img/browser-controls.png"/>
     </div>
   </div>
@@ -43,7 +43,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, we cannot get built-in shadow DOM elements by regular JavaScript calls or selectors. These are not regular children, but rather a powerful encapsulation technique. However, we can access their pseudo attributes via the CSS styles. This exists for historical reasons to ensure that the CSS styles have access to the sub-elements.
+  <div><strong>Interview Response:</strong> No, we cannot get built-in shadow DOM elements by regular JavaScript calls or selectors. These are not regular children but rather a powerful encapsulation technique. However, we can access their pseudo attributes via the CSS styles. This behavior exists for historical reasons to ensure that the CSS styles access the sub-elements.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -66,12 +66,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### What are the two types of subtrees in relation to the DOM?
+### Regarding the DOM, what are the two types of subtrees?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> There are two types of subtrees in relation to the DOM including the light tree and shadow tree. The light tree is a regular DOM subtree, made of regular HTML children. The Shadow tree is a hidden DOM subtree, not reflected in HTML, hidden from prying eyes. If an element has both, then the browser renders only the shadow tree. But we can setup a kind of composition between shadow and light trees as well.
+  <div><strong>Interview Response:</strong> Regarding the DOM, there are two subtrees: light trees and shadow trees. The light tree is a standard DOM subtree made-up of standard HTML children, and the Shadow tree is a hidden DOM subtree that is not mirrored in HTML and is hence invisible to inquisitive eyes. If an element has both, the browser only draws the shadow tree. But we may also create a scene with shadow and light trees.
     </div>
   </div>
 </details>
@@ -83,7 +83,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, shadow tree can be used in Custom Elements to hide component internals and apply component-local styles.
+  <div><strong>Interview Response:</strong> Yes, a shadow tree can be used in Custom Elements to hide component internals and apply component-local styles.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -118,24 +118,24 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> There are two limitations to creating a root on a custom element. We can create only one shadow root per element. The elem must be either a custom element, or one of one of the following: “article”, “aside”, “blockquote”, “body”, “div”, “footer”, “h1…h6”, “header”, “main” “nav”, “p”, “section”, or “span”. Other elements, like &#8249;img&#8250;, cannot host shadow tree.
+  <div><strong>Interview Response:</strong> There are two restrictions for creating a root on a custom element. We can only have one shadow root per element. The element must be either a custom element or one of the following: "article," "aside," "blockquote," "body," "div," "footer," "h1 to h6," "header," "main," "nav," "p," "section," or "span." Other elements, such as &#8249;img&#8250;, cannot host shadow-tree.
     </div>
   </div>
 </details>
 
 ---
 
-### Explain the function and syntax of the attachShadow() method.\*\*
+### Can you explain the function and syntax of the attachShadow() method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The Element.attachShadow() method attaches a shadow DOM tree to the specified element and returns a reference to its ShadowRoot. To initiate the Shadow Root, we must use the mode argument with the open parameter. The open parameter makes element of the shadow root accessible outside of the root. The counter parameter is closed that denies access to the nodes of the closed shadow root from JavaScript outside. There is an additional argument that is rarely used, delegatesFocus is a Boolean, when set to true specifies behavior that mitigates custom element issues around focus-ability.
+  <div><strong>Interview Response:</strong> The Element.attachShadow() method attaches a shadow DOM tree to the specified element and returns a reference to its ShadowRoot. To initiate the Shadow Root, we must use the mode argument with the open parameter. The open parameter makes the element of the shadow root accessible outside of the root. The counter parameter is closed, which denies access to the nodes of the closed shadow root from JavaScript outside. An additional argument rarely gets used, delegatesFocus is a Boolean, when set to true, specifies behavior that mitigates custom element issues around focus-ability.
     </div><br />
     <strong>Syntax: </strong> const shadow = this.attachShadow(&#123;mode: 'open'&#125;);<br /><br />
 
 :::note
-You cannot attach a shadow root to every type of element. There are some that cannot have a shadow DOM for security reasons (for example `<a>`), and more besides.
+You cannot attach a shadow root to every type of element, and some cannot have a shadow DOM for security reasons (for example, `<a>`) and more besides.
 :::
 
   </div>
@@ -148,7 +148,7 @@ You cannot attach a shadow root to every type of element. There are some that ca
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Shadow DOM is strongly delimited from the main document. Shadow DOM elements are not visible to querySelector from the light DOM. Shadow DOM elements may have ids that conflict with those in the light DOM. They must be unique only within the shadow tree. Shadow DOM has own stylesheets. Style rules from the outer DOM do not get applied.
+  <div><strong>Interview Response:</strong> The shadow DOM gets separated from the original content. From the light DOM, querySelector does not see shadow DOM items. Ids in the shadow DOM may clash with those in the light DOM, and they must be one-of-a-kind exclusively within the shadow tree. Shadow DOM comes with its private stylesheet; style rules from the outside DOM get ignored.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

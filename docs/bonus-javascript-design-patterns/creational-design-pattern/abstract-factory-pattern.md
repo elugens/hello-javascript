@@ -21,7 +21,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> It is also helpful to know the Abstract Factory pattern, which aims to encapsulate a group of individual factories with a common goal. It separates the details of the implementation of a set of objects from their general usage.<br/><br/>
+      <strong>Interview Response:</strong> It's also a good idea to be familiar with the Abstract Factory design. Which seeks to encapsulate a set of independent factories with a similar purpose, and it separates the details of implementing a set of objects from their general usage.<br/><br/>
     </div><br />
   <div><strong className="codeExample">Diagram:</strong><br /><br />
 
@@ -174,7 +174,7 @@ console.log(car);
 
 ---
 
-### In what pattern category does the Abstract factory pattern belong too?
+### The Abstract Factory pattern belongs to which pattern family?
 
 <details>
   <summary>
@@ -182,7 +182,7 @@ console.log(car);
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The abstract factory pattern belongs to the Creational design pattern category.
+      <strong>Interview Response:</strong> The abstract factory pattern belongs to the creational design pattern category.
     </div>
   </div>
 </details>
@@ -197,7 +197,7 @@ console.log(car);
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The reason is that constructor functions are limited in their control over the overall creation process. Sometimes, you will need to hand over power to a factory with broader knowledge. This approach includes scenarios where the creation process involves object caching, sharing or re-using of objects, complex logic, or applications that maintain object and type counts and objects that interact with different resources or devices. If your application needs more control over the object creation process, we should consider using a Factory.
+      <strong>Interview Response:</strong> This is because constructor functions have little control over the complete construction process. You may need to delegate authority to a factory with broader knowledge. This method encompasses cases where the creation process incorporates object caching, object sharing or re-use, complicated logic, applications that keep object and type counts, and objects that interact with various resources or devices. If your application requires additional control over the object creation process, we recommend the Factory Pattern.
     </div>
   </div>
 </details>
@@ -237,14 +237,14 @@ Though the definition particularly mentions that an interface needs to be define
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The abstract factory pattern has several advantages that can be summarized in the following points:
+      <strong>Interview Response:</strong> The abstract factory pattern offers various advantages, which can get stated as follows.
     </div>
     <br />
     <div></div>
 
-- Compatibility between products created by the same factory class is guaranteed.
-- Clean code because the open-closed principle is guaranteed since new product families can be introduced without breaking the existing code.
-- Cleaner code because the single responsibility principle (SRP) is respected since the responsibility of creating the concrete product is transferred to the concrete creator class instead of the client class having this responsibility.
+- The compatibility of items produced by the same factory class gets ensured.
+- Open-closed Concept: Clean code, since new product families get introduced without affecting the present code, ensuring the open-closed concept.
+- Cleaner code since the single responsibility principle (SRP) gets followed because the obligation for generating the concrete product gets passed to the concrete creator class rather than the client class.
 
 <br />
   </div>
@@ -264,9 +264,5 @@ Though the definition particularly mentions that an interface needs to be define
     </div>
   </div>
 </details>
-
----
-
-> Written with [StackEdit](https://stackedit.io/).
 
 ---

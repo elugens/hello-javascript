@@ -13,7 +13,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Can you explain the Visitor design pattern?
+### Can you explain the visitor design pattern?
 
 <details className='answer'>
   <summary>
@@ -21,7 +21,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> Visitor is a behavioral design pattern that allows you to decouple algorithms from the objects they act on. The Visitor pattern adds new methods to a group of objects without affecting them, and the new logic gets housed in a distinct entity known as the Visitor.<br/>
+      <strong>Interview Response:</strong> Visitor is a behavioral design pattern that lets you detach algorithms from the objects on which they act. The Visitor pattern adds new methods to a group of objects without affecting them, and the new logic gets housed in a distinct entity known as the Visitor.<br/>
     </div>    
     <div>
 </div><br />
@@ -33,16 +33,16 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 **ObjectStructure** -- example code: _employees array_
 
-- maintains a collection of elements that can be iterated over
+- maintains a collection of elements that can get iterated over
 
 **Elements** -- example code: _Employee objects_
 
 - defines an accept method that accepts visitor objects
-- in the accept method, the Visitor's visit method is invoked with 'this' as a parameter
+- in the accept method, the Visitor's visit method gets invoked with 'this' as a parameter
 
 **Visitor** -- example code: _ExtraSalary, ExtraVacation_
 
-- implements a visitor method. The argument is the element being visited. This is where the Element's changes are made
+- implements a visit method. The element getting visited is the argument when the element's changes get made.
 
 <br/>
 
@@ -133,7 +133,7 @@ Boss: $275000 and 53 vacation days
 
 ---
 
-### In what pattern category does the Visitor pattern belong too?
+### To which pattern family does the Visitor pattern belong?
 
 <details>
   <summary>
@@ -156,13 +156,13 @@ Boss: $275000 and 53 vacation days
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> Visitor pattern can be used when…
+      <strong>Interview Response:</strong> The visitor pattern can get used when:
     </div>
     <br />
     <div></div>
 
-- Similar procedures must be done on various data structure objects.
-- Specific operations must be carried out on multiple items in the data structure.
+- Similar procedures must get done on various data structure objects.
+- Specific operations must get carried out on multiple items in the data structure.
 - You wish to make libraries or frameworks more extensible.
 
 <br />
@@ -186,7 +186,7 @@ Boss: $275000 and 53 vacation days
 
 - The principle of open/closed. You may add new behavior that works with objects of various classes without modifying the classes themselves.
 - Single Responsibility Principle. You can move multiple versions of the same behavior into the same class.
-- While working with various objects, a visitor object might get helpful information. This information is useful if you wish to traverse a complicated object structure, such as an object tree, and apply the Visitor to each item in the structure.
+- While working with various objects, a visitor object might get helpful information. This information is helpful if you wish to traverse a complicated object structure, such as an object tree, and apply the Visitor to each item in the structure.
 
 <br />
   </div>
@@ -207,8 +207,8 @@ Boss: $275000 and 53 vacation days
     <br />
     <div></div>
 
-- Every time a class is added or withdrawn from the element hierarchy; you must notify all visitors.
-- Visitors may not have access to the private fields and methods of the components with which they are expected to operate.
+- Every time a class is added or withdrawn from the element hierarchy, you must notify all visitors.
+- Visitors may not have access to the private fields and methods of the components they get expected to operate.
 
 <br />
   </div>

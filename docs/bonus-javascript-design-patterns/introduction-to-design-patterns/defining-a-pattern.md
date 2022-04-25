@@ -30,7 +30,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### What is a description or snippet of a proto-pattern known to be?
+### What do you name a description or fragment of a proto-pattern?
 
 <details>
   <summary>
@@ -45,7 +45,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### How do we determine if a design pattern is worth using?
+### How can we know if a design pattern is worth utilizing?
 
 <details>
   <summary>
@@ -53,17 +53,17 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> Estimating a good design pattern:
+      <strong>Interview Response:</strong> Estimating a good design pattern.
     </div>
     <div></div>
 
-- **Solves a particular problem:** Patterns are not created to capture principles or strategies; they need to capture solutions. This approach is one of the essential components of a good design pattern.
+- **Solves a particular problem:** Patterns are not designed to capture concepts or methods; instead, they are designed to capture solutions. This method is a necessary component of a successful design pattern.
 
-- **The solution to this problem cannot be obvious:** We can find that problem-solving often attempts to derive from well-known principles. The best design patterns usually provide solutions to issues indirectly - this is considered a necessary approach for the most challenging problems related to design.
+- **There is no clear answer to this problem:** Problem-solving frequently seeks to deduce from well-known concepts. The best design patterns frequently give indirect answers to challenges – this approach is an essential strategy for the most challenging design problems.
 
 - **The concepts must be proven solutions to a problem:** Design patterns require proof that they function as described, and without this, we should not entertain its use.
 
-- **It must describe a relationship:** In some cases, a pattern may represent a module type. Although an implementation may appear this way, the official description of the design must describe much deeper system structures and mechanisms that explain its relationship to code.
+- **It must describe or express a relationship:** A pattern may represent a module type in some circumstances. While an implementation may appear this way, the formal design description must specify far deeper system structures and processes that explain how it gets connected to code.
 
 <br />
   </div>
@@ -106,7 +106,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
       <strong>Interview Response:</strong> The process used to create a new design pattern include documentation of your intent, motivation, structural representation, and code examples.<br/><br/>
     </div>
     <div>
-      <strong>Technical Response:</strong> The process used to create a new design pattern includes documentation of your intent, motivation, structural representation, and code examples. Intent covers the problems and solutions and describes what the design does. The motivation explains the problem in detail and how the pattern will solve the problem. The structure covers a diagram of classes and objects that maps each part of the pattern and how they are related. A code example must be provided to give a clear representation of the design.
+      <strong>Technical Response:</strong> The process used to create a new design pattern includes documentation of your intent, motivation, structural representation, and code examples. Intent covers the problems and solutions and describes what the design does. The motivation explains the problem in detail and how the pattern solves the problem. The structure includes a class and object diagram that depicts each aspect of the pattern and how they are connected. A code example gets provided to represent the design.
     </div>     
   </div>
 </details>
