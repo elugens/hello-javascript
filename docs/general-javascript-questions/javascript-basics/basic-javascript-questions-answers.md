@@ -43,7 +43,7 @@ It should be noted, to maintain efficient speed in the browser, V8 translates Ja
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> When a high-level language gets built without requiring detailed knowledge of the underlying computer. For example, managing memory, knowing what processor is running, and keeping track of things like pointers are not necessary. High-level languages are more accessible to write and manage than low or mid-level programming languages because they are platform-independent.
+      <strong>Interview Response:</strong> A high-level language gets compiled without detailed knowledge of the underlying computer. For example, managing memory, knowing what processor is running, and keeping track of things like pointers are not necessary. High-level languages are more accessible to write and manage than low or mid-level programming languages because they are platform-independent. The major distinction between high-level and low-level languages is that programmers can readily grasp, interpret, and compile high-level languages when compared to machines. Machines, on the other hand, can interpret low-level language more readily than humans.
     </div>
   </div>
 </details>
