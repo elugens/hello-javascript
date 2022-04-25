@@ -1,8 +1,15 @@
 ---
-title: Understanding Anti-Patterns
-description: An anti-pattern is a bad solution to a particular problem that resulted in a bad result.
+title: Understanding Anti-Patterns in JavaScript
+description:
+  An anti-pattern is an imperfect solution to a particular problem that results
+  in an unintended result. An anti-pattern is a lousy design worthy of
+  documenting.
 sidebar_position: 5
 sidebar_label: Anti-Patterns
+keywords:
+  - anti-patterns
+  - anti-pattern
+draft: false
 ---
 
 **Anti-Patterns: Understanding Anti-Patterns**
