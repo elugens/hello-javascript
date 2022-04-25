@@ -17,7 +17,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Recursion is the process by which a function calls itself as a subroutine.</div><br />
-  <div><strong>Technical Response:</strong> Recursion is a programming pattern that is effective when a work needs to be naturally split into numerous simpler tasks of the same type. Or when a task gets simplified into an easy action plus a simpler variant of the same task. When a function solves a task, it can call many other functions in the process. A partial example of this is when a function calls itself, which is known as recursion.
+  <div><strong>Technical Response:</strong> Recursion is a programming pattern when work needs to get naturally split into numerous more straightforward tasks of the same type. Or when a task gets simplified into an easy action plus a simpler variant of the same task. When a function solves a task, it can call many other functions. A partial example of this is when a function calls itself, known as recursion.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong> Recursion<br /><br />
 
