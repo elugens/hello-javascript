@@ -25,7 +25,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
     </div>
     <br />
     <div>
-      <strong>Technical Response:</strong> JavaScript may be included practically anywhere in an HTML page using the script tag. The script tag gets used to import scripts from external file sources.
+      <strong>Technical Response:</strong> JavaScript may be included practically anywhere in an HTML page using the script tag—the script tag we use to import scripts from external file sources.
     </div>
     <div>
     <br />
