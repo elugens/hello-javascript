@@ -72,7 +72,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The benefit of a separate file is that the browser downloads it and stores it in its cache. Instead of downloading it, other pages referencing the same script take it from the cache. That reduces traffic and makes pages faster.</div>
+  <div><strong>Interview Response:</strong> The benefit of a separate file is that the browser downloads and stores it in its cache. Instead of downloading it on every load, other pages referencing the same script take it from the cache. That reduces traffic and makes pages faster.</div>
   </div>
 </details>
 
