@@ -19,11 +19,6 @@ keywords:
 
 # Getting Started with JavaScript Questions
 
-<head>
-  <title>Getting Started with JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
-
 ![img alt](/img/js_framework_circle.png)
 
 ## Let's get started with the Basic JavaScript Questions
