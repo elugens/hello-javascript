@@ -34,7 +34,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   <div><strong>Interview Response:</strong> We can open the dev console using the f12 or Cmd+Opt+J for Mac users.</div><br />
   <div><strong>Technical Response:</strong> F12 or, if you're using a Mac, Cmd+Opt+J. You may also inspect the browser window by right-clicking it. The browser window launches Chrome Developer Tools, and you should then select the Console option.
   </div><br />
-  <div><strong>Additional Information:</strong> On Windows, most browser developer tools may get accessed by pressing F12; however, Chrome for Mac requires Cmd+Opt+J, and Safari requires Cmd+Opt+C. (need to enable first).
+  <div><strong>Additional Information:</strong> On Windows, most browser developer tools get accessed by pressing F12; however, Chrome for Mac requires Cmd+Opt+J, and Safari requires Cmd+Opt+C. (need to enable first).
   </div>
   </div>
 </details>
