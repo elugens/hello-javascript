@@ -1,6 +1,6 @@
 ---
 title: Coding Style
-description: Coding style is a set of rules for writing code. This guide will help you to understand coding styles.
+description: Coding style is a set of rules for writing code. This guide helps you to understand coding styles.
 sidebar_position: 2
 sidebar_label: Coding Style
 ---
@@ -16,7 +16,8 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The goal is to take a complex task and code it correctly and human-readable.
+  <div>
+  <strong>Interview Response:</strong> The goal is to take a complex task and code it correctly and in a human-readable manner.
 </div>
 
 <div></div><br />
@@ -94,7 +95,7 @@ A great example would be long paragraphs longer than 120 characters. We can use 
 
 ---
 
-### What is the maximum length typically agreed upon by development teams?
+### What do development teams typically agree to for the maximum character length?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -215,7 +216,7 @@ function pow(x, n) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Linters are tools that can automatically check the style of your code and make improvement suggestions. The great thing about them is that style-checking can also find bugs, like typos in variable or function names. Because of this feature, using a linter is recommended even if you do not want to stick to one particular code style.
+  <div><strong>Interview Response:</strong> Linters are tools that can automatically check the style of your code and make improvement suggestions. The great thing about linters is that style-checking can also find bugs, like typos in variable or function names. Because of this feature, using a linter is recommended even if you do not want to stick to one particular code style.
 </div>
   </div>
 </details>
