@@ -29,7 +29,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> YYou need to enable them with a special directive explicitly: "use strict".</div>
+  <div><strong>Interview Response:</strong> You need to enable them with a special directive explicitly: "use strict".</div>
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
   
