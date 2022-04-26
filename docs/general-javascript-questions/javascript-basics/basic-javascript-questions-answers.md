@@ -99,7 +99,7 @@ It should be noted, to maintain efficient speed in the browser, V8 translates Ja
 
 ---
 
-### On which platforms can JavaScript get built?
+### On which platforms can we implement JavaScript?
 
 <details>
   <summary>
