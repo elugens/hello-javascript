@@ -300,7 +300,7 @@ alert(num); // 5
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The distinction is that var is function scoped, whereas let is block scoped. If used outside of a function, it is called a global variable.</div><br />
-  <div><strong>Technical Response:</strong> Both var and let get used for variable declaration in JavaScript. However, the distinction is that var is function scoped and let is block scoped. When compared to let, a variable declared using var is considered defined throughout the program.
+  <div><strong>Technical Response:</strong> We use both var and let for variable declaration in JavaScript. However, the distinction is that var is function scoped and let is block scoped. When compared to let, a variable declared using var is considered defined throughout the program.
   </div>
   </div>
 </details>
@@ -334,7 +334,7 @@ myBirthday = '01.01.2001'; // error, can't reassign the constant!
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> For constant variable values that are difficult to memorize, aliases should get utilized. Capital letters and underscores should get used in this case.</div><br />
+  <div><strong>Interview Response:</strong> For constant variable values that are difficult to memorize, we use aliases. Capital letters and underscores should get used in this case.</div><br />
   <div><strong className="codeExample">Code Example:</strong> Hexadecimal Colors<br /><br />
 
   <div></div>
@@ -378,7 +378,7 @@ alert(color); // #FF7F00
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Capital-named constants only get used as aliases for “hard-coded” values.</div><br />
-  <div><strong>Technical Response:</strong> Constants get discovered before execution (like a hexadecimal value for red). Some constants are calculated at run-time during execution but do not alter after they are assigned. Capital-named constants only get used as aliases for "hard-coded" values.
+  <div><strong>Technical Response:</strong> Constant discovery happens before code execution (like a hexadecimal value for red). Some constants are calculated at run-time during execution but do not alter after they are assigned. Capital-named constants only get used as aliases for "hard-coded" values.
   </div>
   </div>
 </details>
