@@ -280,7 +280,7 @@ alert(Boolean('')); // false
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, a non-empty string is always true. Zero is considered empty and returns false.</div><br />
+  <div><strong>Interview Response:</strong> In JavaScript, a non-empty string always returns true. Zero is considered empty and returns false.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
