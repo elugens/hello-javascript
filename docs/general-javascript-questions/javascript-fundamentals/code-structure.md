@@ -49,7 +49,7 @@ alert('World');
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, statements get separated by using a semi-colon.</div>
+  <div><strong>Interview Response:</strong> In JavaScript, we separate statements with a semi-colon. Although semi-colons are implicit in JavaScript, we should always explicitly add them to reduce the possibility of bugs in our code.</div>
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
   
