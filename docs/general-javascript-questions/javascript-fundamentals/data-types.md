@@ -16,7 +16,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Number, String, Boolean, BigInt, Null, Undefined, Object, and Symbol are the eight fundamental data types in JavaScript. Except for the Object data type, all are basic data types. All other kinds get called "primitive" since their values can only contain one item (a string or a number). On the other hand, objects get used to store data sets and more sophisticated things.</div>
+  <div><strong>Interview Response:</strong> Number, String, Boolean, BigInt, Null, Undefined, Object, and Symbol are JavaScript's eight fundamental data types. Except for the Object data type, all are basic data types. We call all other classes "primitive" since their values can only contain one item (a string or a number). On the other hand, we use objects to store data sets and more sophisticated things.</div>
   </div>
 </details>
 
@@ -119,7 +119,7 @@ alert(`the result is ${1 + 2}`); // the result is 3
 
 :::note
 
-Please note that this can only get implemented with backticks. Other quotes do not have this embedding functionality!
+Please note that we can only implement this with backticks in JavaScript. Other quotes (single and double) do not have this embedding functionality! We should make every effort to understand backticks and template literals.
 
 :::
 
@@ -135,7 +135,7 @@ Please note that this can only get implemented with backticks. Other quotes do n
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> true and false</div><br />
-  <div><strong>Technical Response:</strong> true or false – This logical type often gets used to store yes/no values: true means “yes, correct”, and false means “no, incorrect”. It can also get used for comparisons or, more specifically, for greater or less than values.
+  <div><strong>Technical Response:</strong> We often use this type of logical data type to store yes/no values: true means “yes, correct”, and false means “no, incorrect”. Boolean Logical data types often get used for comparisons or, more specifically, for greater or less than values in JavaScript.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
