@@ -268,13 +268,13 @@ const config = {
         ],
       },
     ],
-    // [
-    //   '@docusaurus/plugin-google-analytics',
-    //   {
-    //     trackingID: 'G-N6BRLF8Z2K',
-    //     anonymizeIP: true,
-    //   },
-    // ],
+    [
+      '@docusaurus/plugin-google-analytics',
+      {
+        trackingID: 'G-N6BRLF8Z2K',
+        anonymizeIP: true,
+      },
+    ],
     [
       require.resolve('docusaurus-plugin-search-local'),
       {
