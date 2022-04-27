@@ -26,12 +26,6 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl: 'https://github.com/elugens/hello-javascript/edit/main/',
-          // gtag: {
-          //   // You can also use your "G-" Measurement ID here.
-          //   trackingID: 'G-N6BRLF8Z2K',
-          //   // Optional fields.
-          //   anonymizeIP: true, // Should IPs be anonymized?
-          // },
         },
         blog: {
           blogTitle: 'Hello, JavaScript!',
@@ -49,6 +43,10 @@ const config = {
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
+        },
+        gtag: {
+          trackingID: 'G-N6BRLF8Z2K',
+          anonymizeIP: true,
         },
       }),
     ],
@@ -270,6 +268,13 @@ const config = {
         ],
       },
     ],
+    // [
+    //   '@docusaurus/plugin-google-analytics',
+    //   {
+    //     trackingID: 'G-N6BRLF8Z2K',
+    //     anonymizeIP: true,
+    //   },
+    // ],
     [
       require.resolve('docusaurus-plugin-search-local'),
       {
