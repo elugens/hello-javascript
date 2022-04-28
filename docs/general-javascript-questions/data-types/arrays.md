@@ -144,12 +144,12 @@ let fruits = [
 
 ---
 
-### In JavaScript, what are the two most common data structures created by arrays?
+### In JavaScript, what are the two data structures that arrays can mimic?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> JavaScript uses arrays to create queues and stack like data structures. An array can also act as a deque data structure.
+  <div><strong>Interview Response:</strong> JavaScript uses arrays can mimic both queues and stack data structures. An array can also act as a deque data structure.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
