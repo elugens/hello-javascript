@@ -174,11 +174,11 @@ do {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The for loop sets a starting point, condition, and steps. The starting point executes once upon entering the loop. The condition gets checked before every loop iteration. The loop body runs again and again while the condition is truthy. If false, the loop terminates.<br /><br />
-  <strong>The general loop algorithm works like this:</strong><br /><br />Run begin<br /><br />
+  <strong>The general loop algorithm works like this:</strong><br /><br />Run begin<br /><br />
   <ul>
-    <li>(if condition → run body and run step)</li>
-    <li>(if condition → run body and run step)</li>
-    <li>(if condition → run body and run step)</li>
+    <li>(if condition → run body and run step)</li>
+    <li>(if condition → run body and run step)</li>
+    <li>(if condition → run body and run step)</li>
     <li> ... </li>
   </ul>
 </div><br />
@@ -262,7 +262,7 @@ alert(i); // 3, visible, because declared outside of the loop
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We can omit any or all of the parts of the for-loop. If all parts get removed, it results in an endless loop. The semi-colons must remain, or it results in a syntax error.</div><br />
+  <div><strong>Interview Response:</strong> We can omit any or all of the parts of the for-loop. If we omit all parts, it results in an endless loop. The semi-colons must remain, or it results in a syntax error.</div><br />
   <div><strong>Technical Response:</strong> Yes, it is possible to omit parts or all the for-loop settings. If you remove all the parts, it results in an endless loop. Please note that the two semicolons (;) must be present, and otherwise, there would be a syntax error.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -341,12 +341,12 @@ document.getElementById('demo').innerHTML = text;
 
 ---
 
-### How does the continue directive (statement) work?
+### How does the continue directive (statement) work in a loop? Does it stop the whole loop?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> It does not stop the whole loop; instead, it stops the current iteration and forces the loop to start a new one if a specific condition exists.</div><br />
+  <div><strong>Interview Response:</strong> The continue directive does not stop the whole loop; instead, it stops the current iteration and forces the loop to start a new one if a specific condition exists.</div><br />
   <div><strong>Technical Response:</strong> The continue directive is a "lighter version" of the break statement. It does not stop the whole loop; instead, it stops the current iteration and forces the loop to start a new one (if the condition allows).<br /><br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong> The Loop uses the continue statement to output odd values.<br /><br />

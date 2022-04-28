@@ -42,7 +42,7 @@ alert(2 != 1); // true (correct)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> JavaScript uses “lexicographical” order. Strings get compared letter-by-letter based on their Unicode value.</div><br />
+  <div><strong>Interview Response:</strong> JavaScript uses “lexicographical” order. JavaScript compares letter-by-letter based on their Unicode value.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -65,7 +65,7 @@ console.log(myLetter.charCodeAt(1)); // returns Unicode value 101
 
 ---
 
-### When comparing values of different types, does JavaScript converts the values to numbers?
+### When comparing values of different types, does JavaScript convert the values to numbers?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -101,7 +101,7 @@ alert(false == 0); // true
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> When there is an explicit conversion to a Boolean on values. A string and a number, such as a number 0 and string “0”. The return value for the string returns true, and it returns false for the number. When we attempt to compare the two using the equality operator, the return value returns true, but it is false with the strict equality operator.</div><br />
+  <div><strong>Interview Response:</strong> When there is an explicit conversion to a Boolean on values. A string and a number, such as a number 0 and string “0”. The return value for the string returns true, and it returns false for the number. When we attempt to compare the two using the equality operator, the return value returns true, but it returns false with the strict equality operator.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -129,7 +129,7 @@ alert(a === b); // false!, strict equality operator
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The primary difference is that strict equality does a value type check without any conversion.</div><br />
+  <div><strong>Interview Response:</strong> The primary difference is strict equality does a value type check without any conversion.</div><br />
   <div><strong>Technical Response:</strong> The regular equality check loosely compares values with type conversion. In contrast, the strict-equality check compares the value and the data type without converting the types.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />

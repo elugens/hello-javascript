@@ -139,7 +139,7 @@ alert(id.toString()); // Symbol(id), now it works
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To get a symbol description to show the description only, we should use the description property.
+  <div><strong>Interview Response:</strong> To get and show a symbol description, we should use the description property and dot notation to access the value.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -161,7 +161,7 @@ alert(id.description); // returns id
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Symbols can create hidden object properties that cannot be overwritten or accidentally accessed. Unique properties like ids can conflict with ids or act as a hidden property that cannot get accessed by external libraries that we may want to use in our code.
+  <div><strong>Interview Response:</strong> Symbols can create hidden object properties that cannot be overwritten or accidentally accessed. Unique properties like ids can conflict with ids from external libraries. A Symbol can act as a hidden property and reduce the likelihood of property conflicts and bugs in our application.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -192,7 +192,7 @@ alert(user[id]);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> As user objects belong to other codes, and that code also works with them, we should not just add any fields to it. That is unsafe. But a symbol cannot be accessed accidentally, the third-party code probably will not even see it, so it is probably all right. You can see it as a property conflict resolution that ensures that both code bases do not conflict.
+  <div><strong>Interview Response:</strong> Symbols allow us to create secured properties of an object so that no other part of code is accidentally accessed or overwritten. If a user object, for example, belongs to another codebase, and that code also works with the same user properties, we shouldn’t just add any fields to it, and that’s unsafe. If we use a Symbol(), the external library cannot accidentally access its property. In fact, the third-party library probably won’t even see it, so it’s probably all right to do. The benefit is a cloak created by Symbol to reduce object property conflicts.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -233,7 +233,7 @@ user.id = 'Their id value';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, this gets achieved by wrapping the property in square brackets. This approach allows the property to be a key and not a string.
+  <div><strong>Interview Response:</strong> Yes, we can achieve this by wrapping the property in square brackets. This approach allows the property to be a key and not a string.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -285,7 +285,7 @@ alert('Direct: ' + user[id]);
 
 ---
 
-### Symbol properties get hidden for a reason, but is there a way to copy all the properties, including the symbolic ones?
+### JavaScript hides Symbol properties for a reason. Is there a way to copy all the properties, including the symbolic ones?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

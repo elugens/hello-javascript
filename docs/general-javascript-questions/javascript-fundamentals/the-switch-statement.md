@@ -48,7 +48,7 @@ switch (x) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The switch statement works by checking the initial value against the case values. If the initial value equals one of the case values, it stops. A default value gets used if the case does not equal the initial value.
+  <div><strong>Interview Response:</strong> The switch statement works by checking the initial value against the case values. If the initial value equals one of the case values, it stops. A default value gets used if the case does not equal one of the case values.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong> Syntax<br /><br />
 
@@ -83,7 +83,7 @@ switch(x) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, but caution should be used because the execution continues with the following case without any checks. We should use the break state according to the specification.
+  <div><strong>Interview Response:</strong> No, but we should proceed with caution because the execution continues to the proceeding cases without any checks. We should use the break statement according to the specification.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong> An example without break<br /><br />
 
@@ -165,7 +165,7 @@ switch (a * 10) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, many case variants with the same return code get aggregated (grouped).
+  <div><strong>Interview Response:</strong> We can group case variants into aggregated groups supplying them with a  return value. A break statement should follow all case groups to ensure proper behavior and favorable outcomes.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong> For instance, suppose we want the identical code to run for cases 3 and 5.<br /><br />
 

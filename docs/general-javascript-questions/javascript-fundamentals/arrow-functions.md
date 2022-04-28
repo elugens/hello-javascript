@@ -16,7 +16,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> An arrow function expression is a compact alternative to a traditional function expression, but it is limited and should not get used in all situations.
+  <div><strong>Interview Response:</strong> An arrow function expression is a compact alternative to a traditional function expression, but it is limited, and we should not use it in all situations.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -46,7 +46,7 @@ console.log(sayHello('JavaScript!'));
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> An arrow function does not have bindings to this or super and should not get used as a method or constructor. Also, it is not suitable for the call, apply, and bind methods.</div><br />
+  <div><strong>Interview Response:</strong> An arrow function does not have bindings to this or super, and we should not use it as a method or constructor. Also, it is not suitable for the call, apply, and bind methods.</div><br />
   <div><strong>Technical Response:</strong><br /><br /><strong>Differences & Limitations:</strong><br /><br />
   <ol>
     <li>It does not have its binding to this or super and should not get used as a method.</li>

@@ -16,7 +16,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, functions are first-class objects because they can have properties and methods just like any other object. What distinguishes them from other objects is that functions get called. In simple terms, they are Function objects. 
+  <div><strong>Interview Response:</strong> In JavaScript, functions are first-class objects because they can have properties and methods just like any other object. What distinguishes them from other objects is that functions get called. In simple terms, they are Function objects.
 </div>
   </div>
 </details>
@@ -91,7 +91,7 @@ let sayHi = function (name) {
 
 ---
 
-### Describe a function expressions code structure and behavior?
+### Describe a function expression’s code structure and behavior?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -152,7 +152,7 @@ sayHi(); // Hello    //  <- this still works too (why wouldn't it)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A function expression uses a semi-colon because it gets declared by assignment, and all assignments must use a semi-colon to terminate the statement.</div><br />
+  <div><strong>Interview Response:</strong> A function expression uses a semi-colon because we declare it by assignment, and all assignments must use a semi-colon to terminate the statement.</div><br />
   <div><strong>Technical Response:</strong> A Function Expression gets used inside a statement as a value, and it is not a code block but rather an assignment. The semicolon ( ; ) is recommended at the end of statements, no matter what the value is. So, the semicolon is not related to the Function Expression itself, and it just terminates the statement.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -180,7 +180,7 @@ There’s no need for a semicolon ( ; ) at the end of code blocks and syntax str
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A callback function gets passed into another as an argument, which is then invoked inside the outer function to complete a routine or action.
+  <div><strong>Interview Response:</strong> A callback function gets passed into another function as an argument; it gets invoked inside the outer function to complete a routine or action.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong> Callback Function<br /><br />
 
@@ -210,8 +210,8 @@ processUserInput(greeting); // function is calling the greeting.
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, in strict mode, when a Function Declaration is within a code block, it is visible everywhere inside that block. But not outside of it. CAUTION: This can lead to erroneous outcomes.<br /><br /> 
-  A function expression is a better alternative to implementing code in this fashion because a function expression can be initialized and invoked in the global scope regardless of where the function statement gets located. A function declaration does not have the benefit of that feature.
+  <div><strong>Interview Response:</strong> Yes, in strict mode, when a Function Declaration is within a code block, it is visible everywhere inside that block. But not outside of it. CAUTION: This can lead to erroneous outcomes.<br /><br />
+  A function expression is a better alternative to implementing code in this fashion because a function expression can be initialized and invoked in the global scope regardless of where the function statement resides. A function declaration does not have the benefit of that feature.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong> Erroneous Use<br /><br />
 
@@ -270,7 +270,7 @@ welcome(); // ok now
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, a global Function Declaration is visible in the whole script, no matter where it is. As soon as it initializes, it is available.</div><br />
-  <div><strong>Technical Response:</strong>  Yes, a global Function Declaration is visible in the whole script, no matter where it is. When JavaScript prepares to run the script, it first looks for global Function Declarations and creates the functions. We can think of it as an “initialization stage”. And after all Function Declarations are processed, the code is executed. So, it has access to these functions. Function expressions do not have this capability, which is an important factor when choosing between the two. 
+  <div><strong>Technical Response:</strong> Yes, a global Function Declaration is visible in the whole script, no matter where it is. When JavaScript prepares to run the script, it first looks for global Function Declarations and creates the functions. We can think of it as an “initialization stage”. And after all Function Declarations are processed, the code is executed. So, it has access to these functions. Function expressions do not have this capability, which is an important factor when choosing between the two.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong> Function Declaration, it works…<br /><br />
 
@@ -309,8 +309,8 @@ let sayHi = function (name) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We should consider a Function Declaration syntax first, and it gives us more freedom in organizing our code, and we can call it when it initializes. A function expression gets used when a function declaration does not suit our needs or needs a conditional declaration.</div><br />
-  <div><strong>Technical Response:</strong>  When we need to declare a function, the first thing to examine is the Function Declaration syntax. It allows us to structure our code more freely because we may call such functions before they are declared.<br /><br />
+  <div><strong>Interview Response:</strong> We should consider a Function Declaration syntax first because it gives us more freedom in organizing our code, and we can call it when it initializes. We use function expression when a function declaration does not suit our needs or needs a conditional declaration.</div><br />
+  <div><strong>Technical Response:</strong> When we need to declare a function, the first thing to examine is the Function Declaration syntax. It allows us to structure our code more freely because we may call such functions before they are declared.<br /><br />
 That's also better for readability because function f(...); is more straightforward to find in the code than let f = function(...);. Function declarations are more visually appealing.<br /><br />
 ...However, if a Function Declaration is not appropriate for whatever reason, or if a conditional declaration is required, a Function Expression should be utilized.
 

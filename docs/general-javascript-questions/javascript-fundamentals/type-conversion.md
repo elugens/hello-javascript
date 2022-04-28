@@ -30,7 +30,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Implicit type conversion is a manual conversion of type, and explicit is automatic.</div><br />
-  <div><strong>Technical Response:</strong> JJavaScript translates one data type to another automatically (to the right type). This behavior is known as implicit type conversion or automated type conversion. An explicit type conversion is the sort of conversion that you perform manually.
+  <div><strong>Technical Response:</strong> JavaScript translates one data type to another automatically (to the right type). This behavior is known as implicit type conversion or automated type conversion. An explicit type conversion is the sort of conversion that you perform manually.
   </div>
   </div>
 </details>
@@ -42,7 +42,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Explicit type conversions get implemented using built-in methods and objects.</div>
+  <div><strong>Interview Response:</strong> Explicit type conversions built-in methods and objects.</div>
   </div>
 </details>
 
@@ -53,7 +53,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The alert method returns a string value; this is automatic type conversion.</div>
+  <div><strong>Interview Response:</strong> The alert method returns a string value; this is an automatic type conversion.</div>
   </div>
 </details>
 
@@ -65,7 +65,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The string object, we use it to convert values to a string explicitly.</div><br />
-  <div><strong>Technical Response:</strong> The String(value) object gets used to convert values to strings explicitly. For primitive values, the conversion to string is typically apparent.
+  <div><strong>Technical Response:</strong> We use the String(value) object to convert values to strings explicitly. For primitive values, the conversion to string is typically apparent.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -74,9 +74,9 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 ```js
 let value = true;
 
-alert(typeof value); // boolean
-value = String(value); // now value is a string "true"
-alert(typeof value); // string
+alert(typeof value); // boolean
+value = String(value); // now value is a string "true"
+alert(typeof value); // string
 ```
 
   </div>
@@ -108,9 +108,9 @@ alert(typeof value); // string
 
 ```js
 let str = '123';
-alert(typeof str); // string
-let num = Number(str); // becomes a number 123
-alert(typeof num); // number
+alert(typeof str); // string
+let num = Number(str); // becomes a number 123
+alert(typeof num); // number
 ```
 
   </div>
@@ -130,9 +130,9 @@ alert(typeof num); // number
   <div></div>
 
 ```js
-let age = Number('an arbitrary string instead of a number');
+let age = Number('an arbitrary string instead of a number');
 
-alert(age); // NaN, conversion failed
+alert(age); // NaN, conversion failed
 ```
 
   </div>
@@ -156,7 +156,7 @@ let thisNumber;
 
 let result = Number(thisNumber);
 
-alert(result); // returns NaN, conversion failed
+alert(result); // returns NaN, conversion failed
 ```
 
   </div>
@@ -170,7 +170,7 @@ alert(result); // returns NaN, conversion failed
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> : Numeric conversions on Null values returns zero (0).</div><br />
+  <div><strong>Interview Response:</strong> Numeric conversions on Null values returns zero (0).</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -180,7 +180,7 @@ let thisNumber = null;
 
 let result = Number(thisNumber);
 
-alert(result); // returns 0
+alert(result); // returns 0
 ```
 
   </div>
@@ -189,7 +189,7 @@ alert(result); // returns 0
 
 ---
 
-### What value gets returned on a numeric conversion of true and false in JavaScript?
+### What value returns when you attempt a numeric conversion of true and false?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -205,7 +205,7 @@ alert(result); // returns 0
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> You get rid of whitespaces at the beginning and the end. You get 0 if the remaining string contains no characters. Otherwise, the string's number is "read". If an error occurs, it returns NaN.</div><br />
+  <div><strong>Interview Response:</strong> We trim whitespace at the beginning and the end of the string. Zero returns if the remaining string contains no characters. Otherwise, the string's number is "read". If an error occurs, it returns NaN.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -215,7 +215,7 @@ let myString = '';
 
 let outcome = Number(myString);
 
-alert(outcome); // returns 0
+alert(outcome); // returns 0
 ```
 
   </div>
@@ -246,10 +246,10 @@ alert(outcome); // returns 0
   <div></div>
 
 ```js
-alert(Boolean(1)); // true
-alert(Boolean(0)); // false
-alert(Boolean('hello')); // true
-alert(Boolean('')); // false
+alert(Boolean(1)); // true
+alert(Boolean(0)); // false
+alert(Boolean('hello')); // true
+alert(Boolean('')); // false
 ```
 
   </div>

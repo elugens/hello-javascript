@@ -62,7 +62,7 @@ if (n < 0) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Professional JavaScript developers prefer separate lines because they are more readable than not.
+  <div><strong>Interview Response:</strong> Professional JavaScript developers prefer separate lines because they are more readable than not. It is also a best practice.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong> Proper Implementation<br /><br />
 

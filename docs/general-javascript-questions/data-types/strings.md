@@ -28,7 +28,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The internal format for strings is always UTF-16, but it does get tied to the page encoding.
+  <div><strong>Interview Response:</strong> The internal format for strings is always UTF-16, but it does not get tied to the page encoding.
 </div>
   </div>
 </details>
@@ -64,7 +64,7 @@ let backticks = `backticks`;
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Single and double quotes are essentially the same. Single and double quotes are essentially the same. Backticks allow us to implement string interpolation.</div><br />
+  <div><strong>Interview Response:</strong> Single and double quotes are essentially the same. Backticks allow us to implement string interpolation.</div><br />
   <div><strong>Technical Response:</strong> The meaning of single and double quotations is roughly the same. Backticks, on the other hand, allow us to embed any phrase inside the string by enclosing it in $&#123;…&#125;. Backticks have the additional benefit of allowing a string to span several lines.<br /><br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -106,7 +106,7 @@ let guestList = "Guests: // Error: Unexpected token ILLEGAL
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We can create multi-line strings for line breaks using the new line character. The best approach is to use backticks for ease of use.</div><br />
+  <div><strong>Interview Response:</strong> We can create multi-line strings with line breaks using the new line character. The best approach is to use backticks for ease of use.</div><br />
   <div><strong>Technical Response:</strong> Yes, it is still possible to create multiline strings with single and double quotes by using a so-called “newline character”, written as \n, which denotes a line break.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -194,7 +194,7 @@ alert(`Hello`.length); // 5
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Square brackets return undefined, and charAt returns a string.</div><br />
+  <div><strong>Interview Response:</strong> Square brackets return undefined if the value does not exist, and charAt returns a string if the index value does not exist.</div><br />
   <div><strong>Technical Response:</strong> The square brackets are a more contemporary method of obtaining a character, whereas charAt persists mainly for historical reasons. The only difference is that [] returns undefined if no character gets discovered, whereas charAt produces an empty string.<br /><br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -268,7 +268,7 @@ bar = bar.toUpperCase(); // BAZ
 
 ---
 
-### What two methods get used to change the case of a string?
+### What two methods should we use to change the case of a string?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -300,7 +300,7 @@ alert('Interface'[0].toLowerCase()); // 'i'
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The string indexOf() method looks for the substring within a string, starting from the given position pos, and returns the position where the match gets found or -1 if nothing gets found. The optional second parameter allows us to start searching from a given position; otherwise, it defaults to the zero-index position.
+  <div><strong>Interview Response:</strong> The string indexOf() method looks for the substring within a string, starting from the given position pos, and returns the position where the match resides or returns -1 otherwise. The optional second parameter allows us to start searching from a given position; otherwise, it defaults to the zero-index position.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -347,7 +347,7 @@ The indexOf() method cannot take powerful search values (regular expressions) as
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The most notable difference between indexOf and lastIndexOf methods is that lastIndexOf starts at the end of the value getting evaluated to the front. It lists the occurrences in reverse order.
+  <div><strong>Interview Response:</strong> The most notable difference between indexOf and lastIndexOf methods is lastIndexOf starts at the end of the value getting evaluated to the front. It lists the occurrences in reverse order.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong> lastIndexOf()<br /><br />
 
@@ -590,7 +590,7 @@ alert(str.slice(-5)); // returns world!
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The string substring() method returns the part of the string between start and end. It accepts two arguments, including the start (required) and end points. This process is almost the same as slice, but it allows the start to be greater than the end. If "start" is greater than "end", this method will swap the two arguments, meaning str.substring(1, 4) == str.substring(4, 1). Negative arguments are (unlike slice) not supported. They get treated as 0. The start position is required, and the end point, if omitted, it extracts the rest of the string.
+  <div><strong>Interview Response:</strong> The string substring() method returns the part of the string between start and end. It accepts two arguments, including the start (required) and end points. This process is almost the same as slice, but it allows the start to be greater than the end. If "start" is greater than "end", this method will swap the two arguments, meaning str.substring(1, 4) == str.substring(4, 1). The substring() method (unlike slice) does not support negative arguments. They get treated as 0. The start position is required, and the end point, if omitted, it extracts the rest of the string.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -727,7 +727,7 @@ alert('a' > 'Z'); // true a = 97, Z = 90, so 97 is greater than 90
 
 ---
 
-### Are there any special methods to get the UTF-16 number code of a character in JavaScript?
+### Are there any special methods we can use to get the UTF-16 number code of a character?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -779,7 +779,7 @@ alert('Österreich'.localeCompare('Zealand')); // -1
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Surrogate pairs because they have two 2-byte characters.</div><br />
-  <div><strong>Technical Response:</strong> They are surrogate pairs because they have two 2-byte characters versus a normal or frequently used character that has a single 2-byte character. Since JavaScript got created before the creation of surrogate pairs, it was necessary to extend/encode rare symbols in two 2-byte forms. The length of such rare symbols is 2.<br />
+  <div><strong>Technical Response:</strong> They are surrogate pairs because they have two 2-byte characters versus a normal or frequently used character that has a single 2-byte character. Since JavaScript's initial development pre-dates surrogate pairs, it was necessary to extend/encode rare symbols in two 2-byte forms. The length of such rare symbols is 2.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

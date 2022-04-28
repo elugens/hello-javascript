@@ -13,7 +13,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Explain how the nullish coalescing operator works.
+### Explain how the nullish coalescing operator works
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -53,7 +53,7 @@ console.log(baz);
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The not equals operator checks the first value to see if it is null or undefined; it returns the second value if it is null or undefined.</div><br />
-  <div><strong>Technical Response:</strong> Yes, you can use the NOT! Equal operator to check to see if the first value is not equal to null or undefined; return the second value.
+  <div><strong>Technical Response:</strong> Yes, you can use the NOT (!==) Equal operator to check to see if the first value is not equal to null or undefined; return the second value.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -155,7 +155,7 @@ alert(firstName || lastName || nickName || 'Anonymous'); // Supercoder
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The OR operator returns the first truthy value, and the nullish operator returns the first defined value.</div><br />
-  <div><strong>Technical Response:</strong> The key distinction is that the OR operator returns the first true value, whereas the null operator returns the first specified value.<br /><br /> In other words, || does not differentiate between false, zero, an empty string "" and null/undefined. They're all the same — false values, and we obtain the second if any of them are the first arguments of ||.<br /><br /> However, we may wish to utilize the default value only when the variable is null/undefined in practice. When the value is unknown or not set, this is the case.
+  <div><strong>Technical Response:</strong> The key distinction is that the OR operator returns the first true value, whereas the null operator returns the first specified value.<br /><br /> In other words, logical OR (||) does not differentiate between false, zero, an empty string "" and null/undefined. They're all the same — false values, and we obtain the second if any of them are the first arguments of ||.<br /><br /> However, we may wish to utilize the default value only when the variable is null/undefined in practice. When the value is unknown or not set, this is the case.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

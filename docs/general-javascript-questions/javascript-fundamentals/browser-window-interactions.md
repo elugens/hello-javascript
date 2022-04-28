@@ -70,9 +70,9 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   <div></div>
 
 ```js
-// the brackets denote that the parameter is not required 
+// the brackets denote that the parameter is not required 
 
-result = prompt(title, [default]);
+result = prompt(title, [default]);
 ```
 
   </div>
@@ -111,7 +111,7 @@ result = prompt(title, [default]);
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Confirm produces a window with a Boolean question of OK and Cancel. Ok returns true, and Cancel returns false.</div><br />
-  <div><strong>Technical Response:</strong> : The function confirm shows a modal window with a question and two buttons: OK and Cancel. The result is true if OK is pressed and false otherwise.
+  <div><strong>Technical Response:</strong> The function confirm shows a modal window with a question and two buttons: OK and Cancel. The result is true if OK is pressed and false otherwise.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

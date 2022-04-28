@@ -5,6 +5,8 @@ sidebar_position: 4
 sidebar_label: Arrays
 ---
 
+<!-- Developer Line Notes: If you try to access this note your brain will explode. Boom!!! -->
+
 **Data Types: Arrays**
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
@@ -16,8 +18,8 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We use an Array to store an ordered collection of values.</div><br />
-  <div><strong>Technical Response:</strong> An array is a special data structure that gets used to store an ordered collection of values. Arrays are ordered with numbered indexes starting at zero and encapsulated in square brackets. To access the values, you must use the variable and an assigned index number to extract the value.<br />
+  <div><strong>Interview Response:</strong> We use an array to store an ordered collection of values.</div><br />
+  <div><strong>Technical Response:</strong> An array is a special data structure that we use to store an ordered collection of values. Arrays are ordered with numbered indexes starting at zero and encapsulated in square brackets. To access the values, you must use the variable and an assigned index number to extract the value.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -37,12 +39,12 @@ alert(fruits[2]); // Plum
 
 ---
 
-### What are the two syntaxes to create an empty array in JavaScript?
+### What are the two syntaxes used to create an empty array in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The array global object and an array literal using square brackets are used to create an empty array.</div><br />
+  <div><strong>Interview Response:</strong> The array global object and an array literal with square brackets are used to create an empty array.</div><br />
   <div><strong>Technical Response:</strong> You can use two syntaxes to create an array, including the Array() global object and an array literal using square brackets. The common practice is to use the square bracket representation.<br /><br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -89,7 +91,7 @@ alert(fruits.length); // 3
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Technically, in JavaScript, arrays can have elements of different types without producing an error.</div><br />
-  <div><strong>Technical Response:</strong> Arrays are classified as Homogeneous Data Structures because they store elements of the same type in programming languages like Java. However, JavaScript Arrays are considered objects and do not have the same technical specifications. Technically in JavaScript, arrays can have elements of different types without producing an error. Arrays are list-like objects whose prototype has methods to perform traversal and mutation operations—neither the length of a JavaScript array nor the types of its elements getting fixed.<br />
+  <div><strong>Technical Response:</strong> Arrays are classified as Homogeneous Data Structures because they store elements of the same type in programming languages like Java. However, JavaScript Arrays are considered objects and do not have the same technical specifications. Technically in JavaScript, arrays can have elements of different types without producing an error. Arrays are list-like objects whose prototype has methods to perform traversal and mutation operations—neither the length of a JavaScript array nor the types of its elements are fixed.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -142,12 +144,12 @@ let fruits = [
 
 ---
 
-### In JavaScript, what are the two most typical data structures used in that arrays?
+### In JavaScript, what are the two most common data structures created by arrays?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> JavaScript arrays get used as a queue or stack data structure. An array can also act as a deque data structure.
+  <div><strong>Interview Response:</strong> JavaScript uses arrays to create queues and stack like data structures. An array can also act as a deque data structure.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -252,8 +254,8 @@ console.log(total); // 4
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The array shift() method removes the first element at the beginning array and returns the removed element.</div><br />
-  <div><strong>Technical Response:</strong> The array shift() method removes the first element at the beginning array and returns the removed element. The shift method always changes the length of the array. If the array is empty, then the shift method returns undefined. The shift method is intentionally generic; this method can be called or applied to objects resembling arrays. Objects which do not contain a length property reflecting the last in a series of consecutive, zero-based numerical properties may not behave in any meaningful manner. The shift method has no additional parameters because of its generic design.<br />
+  <div><strong>Interview Response:</strong> The array shift() method removes the first element at the beginning of a array and returns the removed element.</div><br />
+  <div><strong>Technical Response:</strong> The array shift() method removes the first element at the beginning of an array and returns the removed element. The shift method always changes the length of the array. If the array is empty, then the shift method returns undefined. The shift method is intentionally generic; this method can be called or applied to objects resembling arrays. Objects which do not contain a length property reflecting the last in a series of consecutive, zero-based numerical properties may not behave in any meaningful manner. The shift method has no additional parameters because of its generic design.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -281,7 +283,7 @@ alert(fruits); // Orange, Pear
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The unshift method adds one or more elements to the beginning of an array and returns the new length of the array.</div><br />
-  <div><strong>Technical Response:</strong> The unshift() function appends one or more elements to the beginning of an array and returns the array's new length, please keep in mind, if several items get supplied as parameters, they are put in a chunk at the beginning of the object in the order they were passed as arguments. This method can be invoked or applied to array-like objects. Objects that lack a length property—representing the final in a series of successive, zero-based numerical properties—may not act meaningfully.<br />
+  <div><strong>Technical Response:</strong> The array shift() method removes the first element at the beginning array and returns the removed element. The shift method constantly changes the length of the collection. If the array is empty, then the shift method returns undefined. The shift method is generic; this method gets applied to objects that look like arrays. Objects that do not contain a length property mirroring the last in a series of consecutive, zero-based numerical properties may not behave properly. The shift method has no additional parameters because of its generic design.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -317,7 +319,7 @@ console.log(arr);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> : An array is a special object because the square brackets used to access a property arr[0] come from the object syntax.</div><br />
+  <div><strong>Interview Response:</strong> An array is a special object because the square brackets used to access a property arr[0] come from the object syntax.</div><br />
   <div><strong>Technical Response:</strong> An array is a special object because the square brackets used to access a property arr[0] come from the object syntax. That is essentially the same as obj[key], where arr is the object, while numbers get used as keys. An array-like object typically has the length property within its structure, like regular arrays. They extend objects by providing special methods to work with ordered collections of data and the length property. But at the core, it is still an object. Unlike array-like objects, arrays get optimized for fast performance and handling of internal components.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -381,8 +383,8 @@ console.log(arrFruits.length); // length returns 2
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The performance difference between working the end of the array and beginning is tangible. Anytime an element must be removed or pushed onto the front of an array, the other elements must get reindexed.</div><br />
-  <div><strong>Technical Response:</strong> The performance difference between working at the end of the array versus the beginning is tangible. Anytime an element must be removed or pushed onto the front of an array, the other elements should get reindexed. This performance difference means the engine (affecting performance and memory usage) must work harder to reindex all the elements. In contrast, when you push or remove an element from the end of an element, there is no need to reindex the remaining elements because their index position remains the same.<br /><br />
+  <div><strong>Interview Response:</strong> The performance difference between working the end of the array and beginning is tangible. Anytime an element must be removed or pushed onto the front of an array, the other elements need re-indexing.</div><br />
+  <div><strong>Technical Response:</strong> The performance difference between working at the end of the array versus the beginning is tangible. Anytime an element must be removed or pushed onto the front of an array, the other elements should get reindexed. This performance difference means the engine (affecting performance and memory usage) must work harder to re-index all the elements. In contrast, when you push or remove an element from the end of an element, there is no need to re-index the remaining elements because their index position remains the same.<br /><br />
   <strong>Examples: The shift operation must do 3 things.</strong><br /><br />
   <ol>
     <li>Remove the element with the index 0.</li>

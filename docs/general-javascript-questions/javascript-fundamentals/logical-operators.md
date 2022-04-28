@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Logical operators get applied to values of any type; they are not limited to a Boolean type.</div>
+  <div><strong>Interview Response:</strong> You can apply logical operators to values of any type; logical operators are not limited to a Boolean type.</div>
   </div>
 </details>
 
@@ -143,7 +143,7 @@ alert(false && false); // false
 
 ---
 
-### What steps get performed using the Logical && (AND) operator?
+### What steps does JavaScript perform when using the Logical && (AND) operator?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -177,7 +177,7 @@ alert(0 && 'no matter what'); // 0
 
 ---
 
-### What are the differences between Logical || (OR) and && (AND) operators?
+### What are the differences between Logical || (OR) and Logical && (AND) operators?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -194,7 +194,7 @@ alert(0 && 'no matter what'); // 0
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The AND operator has higher precedence than the OR operator.</div><br />
-  <div><strong>Technical Response:</strong> The precedence of the AND && operator is greater than that of the OR || operator. As a result, the code a && b || c && d is effectively the same as if the && expressions were enclosed in parentheses: (a && b) (c && d).
+  <div><strong>Technical Response:</strong> The precedence of the AND && operator is greater than that of the OR || operator. As a result, the code a && b || c && d is effectively the same as if the && expressions were enclosed in parentheses: (a && b) || (c && d).
   </div>
   </div>
 </details>
@@ -231,7 +231,7 @@ if (x > 0) alert('Greater than zero!');
 
 ---
 
-### What steps get performed using the Logical! (NOT) operator?
+### What steps does JavaScript perform when implementing the Logical! (NOT) operator?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

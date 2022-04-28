@@ -192,7 +192,7 @@ function hello(name) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The Call Stack shows the nested call chain in Chrome and Safari.<br /><br />
+  <div><strong>Interview Response:</strong> The Call Stack shows the nested call chain in Chrome, Edge, and Safari.<br /><br />
   <img src='/img/callstack.svg' />
 </div>
   </div>

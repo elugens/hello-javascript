@@ -31,7 +31,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> String, number, and default conversions.</div><br />
-  <div><strong>Technical Response:</strong> The three variants of type conversion include string, number, and default conversions. String conversion can happen explicitly when an object expects a string, and mathematical operations use explicit number conversion on primitives. In rare circumstances where the operator is unclear what type to anticipate, default gets used.<br /><br />
+  <div><strong>Technical Response:</strong> The three variants of type conversion include string, number, and default conversions. String conversion can happen explicitly when an object expects a string, and mathematical operations use explicit number conversion on primitives. In rare circumstances where the operator is unclear what type to anticipate, the default gets used.<br /><br />
   </div>
   </div>
 </details>
@@ -90,7 +90,7 @@ alert(user + 500); // hint: default -> 1500
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The result returns all properties except for the Symbol.toPrimitive because Symbol does not get seen in the global symbol registry.
+  <div><strong>Interview Response:</strong> The result returns all properties except for the Symbol.toPrimitive because JavaScript does not expose Symbols in the global symbol registry in this fashion.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -123,8 +123,8 @@ for (let prop in user) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, because they got created before Symbols got implemented into JavaScript. They are regular string-name methods.</div><br />
-  <div><strong>Technical Response:</strong> No, because they got created before Symbols got implemented into JavaScript. They are regular string-name methods. If there is no Symbol.toPrimitive, JavaScript tries to find them.<br /><br />
+  <div><strong>Interview Response:</strong> No, because toString and valueOf came before Symbols debuted in the JavaScript codebase. They are regular string-name methods.</div><br />
+  <div><strong>Technical Response:</strong>No, because toString and valueOf came before Symbols debuted in the JavaScript codebase. They are regular string-name methods. If there is no Symbol.toPrimitive, JavaScript tries to find them.<br /><br />
   </div>
   </div>
 </details>

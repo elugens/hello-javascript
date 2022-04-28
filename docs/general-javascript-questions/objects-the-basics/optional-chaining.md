@@ -45,7 +45,7 @@ alert(user2.address.street); // returns a type error
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The optional chaining operator returns undefined if the object does not exist (equals null). This outcome gets seen when an object gets set to null. If the object is not defined, it results in a reference error.
+  <div><strong>Interview Response:</strong> The optional chaining operator returns undefined if the object does not exist (equals null). We will see this outcome when an object gets set to null. If the object is not defined, it results in a reference error.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -71,7 +71,7 @@ alert(myUser?.address.street); // returns a reference error
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> It should get used with the intent to handle object properties that are already known to be optional.
+  <div><strong>Interview Response:</strong> We should use the option chaining operator with the intent to handle object properties that are already known to be optional.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong> Short Circuit results in a false response.<br /><br />
 
@@ -103,7 +103,7 @@ If it is not optional, it can result in a false scenario that goes unchecked. Th
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Technically, it is a syntax construct, but it commonly gets referred to as an operator.</div><br />
+  <div><strong>Interview Response:</strong> Technically, it is a syntax construct, but most developers refer to it as an operator.</div><br />
   <div><strong>Technical Response:</strong> It is technically a syntactic construct. However, it generally gets referred to as an operator. It is more than simply an operator, though, and may get used with functions (?.()) and square brackets (?.[]). For instance, ?.() is used to invoke a function that may or may not exist. If we want to utilize brackets [] instead of dot to access properties, we may use the?.[] syntax (.).<br /><br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong> Function Call<br /><br />
@@ -153,7 +153,7 @@ alert(user2?.[key]); // undefined
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, you can use the (?.)  for safe reading and deleting, but not writing. The optional chaining (?.) has no use on the left side of an assignment.
+  <div><strong>Interview Response:</strong> You can use the optional chaining operator (?.) for safe reading and deleting, but not writing. The optional chaining operator (?.) has no use on the left side of an assignment.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

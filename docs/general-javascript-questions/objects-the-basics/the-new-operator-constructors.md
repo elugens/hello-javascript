@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The conventional difference is that the constructor function name is capitalized and invoked with the "new" operator.
+  <div><strong>Interview Response:</strong> The conventional difference is the constructor function name is capitalized and invoked with the "new" operator.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -130,7 +130,7 @@ const redCar = new Car('red'); // TypeError: Car is not a constructor
 // let user = new User; <-- no parentheses
 
 // same as
-// let user = new User(); <-- proper implementation
+let user = new User(); <-- proper implementation
 ```
 
   </div>

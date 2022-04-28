@@ -16,7 +16,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In programming, operands get applied to operators. They can be left- or right-hand operands and a single argument or value depending on the case.</div><br />
+  <div><strong>Interview Response:</strong> In programming, we apply operands to operators. They can be left- or right-hand operands and a single argument or value depending on the case.</div><br />
   <div><strong>Technical Response:</strong> Operands are expressions or values on which an operator operates or works (often constants or variables, but sub-expressions are also permitted).
   </div>
   </div>
@@ -53,7 +53,7 @@ alert(x); // -1, unary negation was applied
 let x = 1,
   y = 3;
 
-alert(y - x); // 2, binary minus subtracts values
+alert(y - x); // 2, binary minus subtracts values
 ```
 
   </div>
@@ -86,8 +86,8 @@ alert(y - x); // 2, binary minus subtracts values
   <div></div>
 
 ```js
-alert(5 % 2); // 1, a remainder of 5 divided by 2
-alert(8 % 3); // 2, a remainder of 8 divided by 3
+alert(5 % 2); // 1, a remainder of 5 divided by 2
+alert(8 % 3); // 2, a remainder of 8 divided by 3
 ```
 
   </div>
@@ -109,9 +109,9 @@ alert(8 % 3); // 2, a remainder of 8 divided by 3
   <div></div>
 
 ```js
-console.log(2 ** 2); // 4  (2 multiplied by itself 2 times)
-console.log(2 ** 3); // 8  (2 * 2 * 2, 3 times)
-console.log(2 ** 4); // 16 (2 * 2 * 2 * 2, 4 times)
+console.log(2 ** 2); // 4  (2 multiplied by itself 2 times)
+console.log(2 ** 3); // 8  (2 * 2 * 2, 3 times)
+console.log(2 ** 4); // 16 (2 * 2 * 2 * 2, 4 times)
 ```
 
   </div>
@@ -125,7 +125,7 @@ console.log(2 ** 4); // 16 (2 * 2 * 2 * 2, 4 times)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Mathematically, exponentiation gets defined for non-integer numbers.</div><br />
+  <div><strong>Interview Response:</strong> Mathematically, the exponentiation operator gets defined for non-integer numbers. We should note that the exponent used on fractions requires parentheses to ensure proper programmatic conversion.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -146,7 +146,7 @@ alert(8 ** (1 / 3)); // 2 (power of 1/3 is the same as a cubic root)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Strings get concatenated using the binary plus operator or the concat method.</div><br />
+  <div><strong>Interview Response:</strong> Yes, We can implement string concatenation using the binary plus operator or the concat method.</div><br />
   <div><strong>Technical Response:</strong> Yes, concatenation using the binary (+) operator. We can also use the built-in “concat” method to achieve the same result.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -303,15 +303,15 @@ alert(c); // 4
 ```js
 let counter = 2;
 
-counter++; // works the same as counter = counter + 1, but is shorter
-alert(counter); // 3
+counter++; // works the same as counter = counter + 1, but is shorter
+alert(counter); // 3
 
 ////////////////////////////////
 
 let counter = 2;
 
-counter--; // works the same as counter = counter - 1, but is shorter
-alert(counter); // 1
+counter--; // works the same as counter = counter - 1, but is shorter
+alert(counter); // 1
 ```
 
   </div>
@@ -325,7 +325,7 @@ alert(counter); // 1
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, Increment/decrement gets applied to <strong>variables</strong>. Trying to use it on a value like 5++ gives an error.</div>
+  <div><strong>Interview Response:</strong> No, We should only use increment/decrement with <strong>variables</strong>. Trying to use it on a value like 5++ gives an error.</div>
   </div>
 </details>
 
@@ -337,7 +337,7 @@ alert(counter); // 1
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The operators get placed before or after a variable. Before, the variable is a prefix position, and after the variable is the postfix position.</div><br />
-  <div><strong>Technical Response:</strong> The operators ++ and – get placed before or after a variable. When the operator goes after the variable, it is in “postfix position”: counter++. The “prefix position” is when the operator goes before the variable: ++counter.
+  <div><strong>Technical Response:</strong> The operators ++ and -- get placed before or after a variable. When the operator goes after the variable, it is in “postfix position”: counter++. The “prefix position” is when the operator goes before the variable: ++counter.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

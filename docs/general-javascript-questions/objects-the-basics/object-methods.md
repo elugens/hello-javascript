@@ -176,7 +176,7 @@ sayHi(); // returns global window object
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, the “this” keyword is free. Its value is evaluated at run-time and does not depend on where the method was defined. But instead, the object that precedes the dot. The concept of run-time evaluated "this" has both pluses and minuses. On the one hand, a function can get reused for different objects, and on the other hand, greater flexibility creates more possibilities for mistakes. 
+  <div><strong>Interview Response:</strong> In JavaScript, the “this” keyword is free. Its value is evaluated at run-time and does not depend on where the method was defined. But instead, the object that precedes the dot. The concept of run-time evaluated "this" has both pluses and minuses. On the one hand, a function can get reused for different objects, and on the other hand, greater flexibility creates more possibilities for mistakes.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong> Unbound "this"<br /><br />
 

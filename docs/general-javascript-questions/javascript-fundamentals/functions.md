@@ -133,7 +133,7 @@ function name(parameters) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The primary purpose of JS functions is to avoid code duplication.</div><br />
-  <div><strong>Technical Response:</strong> The primary purpose of functions is to avoid code duplication. If we ever need to change the message or the way it gets shown, it is enough to modify the code in one place based on the function which outputs it.<br />
+  <div><strong>Technical Response:</strong> The primary purpose of functions is to avoid code duplication. If we ever need to change the message or the way it displays, it is enough to modify the code in one place based on the function which outputs it.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -159,7 +159,7 @@ showMessage('Jane'); // Jane
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, they are only visible within the function's scope and cannot get accessed from outside it.
+  <div><strong>Interview Response:</strong> Yes, they are only visible within the function's scope; we cannot access the variable outside of the function.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -189,7 +189,7 @@ alert(message); // <-- Error! The variable is local to the function.
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Functions can access top-level variables, variables inside of the function, and variables inside of a function that they are getting called.</div><br />
-  <div><strong>Technical Response:</strong> Global or variables outside of are accessible by functions because it is within their lexical scope, and the function can also modify it. Functions also can access variables inside a function or the scope they are getting called.<br />
+  <div><strong>Technical Response:</strong> Globals or variables are accessible by functions because it is within their lexical scope, and they can also modify it. Functions also can access variables inside a function or the scope they are getting called.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -236,7 +236,7 @@ alert(userName); // Bob, the value was modified by the function
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> It is a good practice to minimize the use of global variables. Modern code has few or no global variables.</div><br />
-  <div><strong>Technical Response:</strong> It is a good practice to minimize the use of global variables. Modern code has few or no global variables, and most variables reside in their functions. Sometimes though, they can be helpful to store project-level data.<br /><br />
+  <div><strong>Technical Response:</strong> It is a good practice to minimize the use of global variables. Modern code has few or no global variables, and most variables reside in their functions. Sometimes though, global variables can be helpful to store project-level data.<br /><br />
   </div>
   </div>
 </details>
@@ -326,7 +326,7 @@ function showMessage(from, text = anotherFunction()) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> We can use a conditional statement with strict equality or logical OR to check for the omitted parameter.</div><br />
-  <div><strong>Technical Response:</strong> Yes, you can run a conditional statement or check the function body. The most common way is to use a conditional if statement or the logical || OR operator. Do modern JavaScript engines support the nullish coalescing operator ??. It’s better when falsie values, such as 0 are considered regular.<br /><br />
+  <div><strong>Technical Response:</strong> Yes, you can run a conditional statement or check in the function body. The most common way is a conditional if statement or the logical || OR operator.<br /><br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -399,7 +399,7 @@ if (checkAge(age)) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, we can use a return statement without a value. It is called an empty return statement, and an empty return statement exits a program and returns undefined in the place it gets called.
+  <div><strong>Interview Response:</strong> Yes, we can use a return statement without a value. We call it an empty return statement; an empty return statement exits a program and returns undefined where it gets called.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -486,7 +486,7 @@ If you want the returned expression to wrap across multiple lines, we should sta
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Functions should start with a verb as an action word as a prefix. For example, a function that returns a user’s name should use “getUserName()” as the function name.</div><br />
-  <div><strong>Technical Response:</strong> : It is a widespread practice to start a function with a verbal prefix that vaguely describes the action, and there must be an agreement on the meaning of the prefixes within the team. For example, functions that get something usually start with getting like “getUserName()”.
+  <div><strong>Technical Response:</strong> It is a widespread practice to start a function with a verbal prefix that vaguely describes the action, and there must be an agreement on the meaning of the prefixes within the team. For example, functions that get something usually start with getting like “getUserName()”.
   </div><br />
   <div> It should be brief, as accurate as possible, and describe what the function does so that someone reading the code indicates what the function does.
   </div><br />
@@ -525,7 +525,7 @@ checkPermission(..) // checks a permission, returns true/false
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, it is imperative to make every effort to apply separate actions in each function. Sometimes, following this rule may not be that easy, but it is good.
+  <div><strong>Interview Response:</strong> Yes, it is imperative to make every effort to apply separate actions in each function. Sometimes, following this rule may not be that easy, but it is the best approach.
 </div><br />
   <div><strong className="codeExample">Example 1:</strong> Show Prime Numbers using a label (No Separation)<br /><br />
 

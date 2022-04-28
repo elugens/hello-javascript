@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> JavaScript automatically allocates memory when objects get created and clear the memory when they no longer get referenced. (Garbage Collection)
+  <div><strong>Interview Response:</strong> JavaScript automatically allocates memory when objects get created and clears the memory when the object no longer references it. (Garbage Collection)
 </div><br />
 
 :::note
@@ -83,7 +83,7 @@ var n = null;
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The central concept of memory management in JavaScript is reachability. Simply put, "reachable" values are those that get are accessible or usable somehow and are guaranteed to get stored in memory.
+  <div><strong>Interview Response:</strong> The central concept of memory management in JavaScript is reachability. Simply put, "reachable" means values that are accessible or usable somehow and are guaranteed to get stored in memory.
 </div>
   </div>
 </details>
@@ -107,7 +107,7 @@ var n = null;
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Global variables cannot get deleted directly, and the global variable must be set to null before the memory can be collected. However, the variable still exists and references null (nothingness).
+  <div><strong>Interview Response:</strong> JavaScript cannot delete Global variables directly, and the global variable must be set to null before the memory can be collected. However, the variable still exists and references null (nothingness).
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -222,11 +222,11 @@ family = null;
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong><br /><br />
-  <strong>The following "garbage collection" steps get regularly performed:</strong><br /><br />
+  <strong>The following "garbage collection" steps regularly get performed:</strong><br /><br />
   <ol>
     <li>The garbage collector takes roots and "marks" (remembers) them.</li>
     <li>Then it visits and "marks" all references from them.</li>
-    <li>Then it visits marked objects and marks their references. All visited objects get remembered so as not to visit the same object twice in the future.</li>
+    <li>Then it visits marked objects and marks their references. The garbage collector remembers all visited objects so as not to visit the same object twice in the future.</li>
     <li>And so on until every reachable (from the roots) reference is visited.</li>
     <li>All objects except marked ones get removed.</li>
   </ol>

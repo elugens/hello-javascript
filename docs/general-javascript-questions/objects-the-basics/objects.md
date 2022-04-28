@@ -32,7 +32,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> All primitives are immutable and cannot be changed.</div><br />
-  <div><strong>Technical Response:</strong> All primitives are unchanging and unchangeable. It is crucial to distinguish between a primitive and a variable with a primitive value. The variable can assign a new value, but it cannot get modified like objects, arrays, and functions can. A primitive can get swapped, but it cannot get directly altered.<br />
+  <div><strong>Technical Response:</strong> All primitives are unchanging and unchangeable. It is crucial to distinguish between a primitive and a variable with a primitive value. The variable can assign a new value, but it cannot get modified like objects, arrays, and functions can. A primitive can get swapped, but we cannot directly alter them.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -66,7 +66,7 @@ bar = bar.toUpperCase(); // BAZ
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Objects get used to store keyed collections of various data and more complex entities.
+  <div><strong>Interview Response:</strong> We use Objects to store keyed collections of various data and more complex entities.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -120,7 +120,7 @@ let user = {}; // "object literal" syntax
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The key-value pair get separated by a colon.
+  <div><strong>Interview Response:</strong> You can separate Object key-value pairs with a colon.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -157,7 +157,7 @@ let user = {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The dot notation and bracket notation get used to accessing the object property values in JavaScript.</div><br />
+  <div><strong>Interview Response:</strong> In JavaScript, You can use dot (obj.property) and bracket (obj[property]) notation to access the object property values.</div><br />
   <div><strong>Technical Response:</strong> In JavaScript, the dot notation and bracket notation get used in accessing object attributes. The dot notation commonly gets used because it is easier to read and grasp and is less verbose. The primary distinction between dot notation and bracket notation is that bracket notation allows us to access object characteristics through variables.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -192,8 +192,8 @@ console.log(sound);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Technically, JavaScript allows multi-word properties in Objects, but this approach does not get recommended because it can lead to errors. We should use camel-case as recommended by most style guides.</div><br />
-  <div><strong>Technical Response:</strong> Technically, JavaScript enables multi-word properties in Objects, but it is not encouraged since it might create issues later in your code when you try to access it. The problem becomes evident when you try to access the property using dot notation. When naming functions, objects, attributes, and variables in JavaScript, you should always use the camelCase name style.<br />
+  <div><strong>Interview Response:</strong> Technically, JavaScript allows multi-word properties in objects, but this approach does not meet specifications because it can lead to errors. We should use camel-case as recommended by most style guides.</div><br />
+  <div><strong>Technical Response:</strong> Technically, JavaScript enables multi-word properties in Objects, but it is not encouraged since it might create issues later in your code when you try to access it. The problem becomes evident when you try to access the property using dot notation. When naming functions, objects, attributes, and variables in JavaScript, you should always use the camelCase naming style.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -259,7 +259,7 @@ console.log(bag.appleComputers); // logs 5
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> No, there are no known restrictions on Object property names, but we should avoid reserved words even though we can technically use them.</div><br />
-  <div><strong>Technical Response:</strong> There are no known constraints on naming Object properties. However, reserve keywords do not get permitted in most JavaScript components. It is possible to utilize reserved keywords as property names without making a mistake, although it is not encouraged. They can be strings or symbols (a specific form of identifier).<br />
+  <div><strong>Technical Response:</strong> There are no known constraints on naming Object properties. However, we should not use reserved keywords in most JavaScript components. It is possible to utilize reserved keywords as property names without making a mistake, although it is not encouraged. They can be strings or symbols (a specific form of identifier).<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -287,7 +287,7 @@ alert(obj.for + obj.let + obj.return); // 6
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The unique property name `__proto__` cannot get set to a non-object value such as a primitive value. 
+  <div><strong>Interview Response:</strong> You should not set the special property name `__proto__` to a non-object value such as a primitive value. It can have unexpected results.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
