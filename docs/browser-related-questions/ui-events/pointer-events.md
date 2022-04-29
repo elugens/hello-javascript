@@ -58,7 +58,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
     </div><br />
 
 :::note
-The pointerId gets allocated to each contacting finger rather than the whole device. When we use five fingers to touch the screen simultaneously, we get five pointerdown events with unique coordinates and pointerId. The events linked with the first finger have isPrimary=true at all times.
+The pointerId gets allocated to each contacting finger rather than the whole device. When we use five fingers to touch the screen simultaneously, we can extract five pointerdown events with unique coordinates and pointerId. The events linked with the first finger have isPrimary=true at all times.
 :::
 
   </div>
@@ -71,7 +71,7 @@ The pointerId gets allocated to each contacting finger rather than the whole dev
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The pointercancel event fires when there is an ongoing pointer interaction. Something happens that causes it to get aborted so that no more pointer events get generated. There are several reasons this behavior may manifest itself, including the pointer device hardware was physically disabled, and the device orientation changed (tablet rotated). The browser decided to handle the interaction independently, considering it a mouse gesture, zoom-and-pan action, or something else.
+  <div><strong>Interview Response:</strong> The pointercancel event fires when there is an ongoing pointer interaction, then something happens that causes it to abort so that no more pointer-events generate. There are several reasons this behavior may manifest itself, including the pointer device hardware was physically disabled, and the device orientation changed (tablet rotated). The browser decided to handle the interaction independently, considering it a mouse gesture, zoom-and-pan action,  or anything related to user interaction.
     </div>
   </div>
 </details>
@@ -83,7 +83,7 @@ The pointerId gets allocated to each contacting finger rather than the whole dev
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The setPointerCapture() method of the Element interface gets used to designate a specific element as the capture target of future pointer events. Subsequent events for the pointer get targeted at the capture element until capture gets released via Element.releasePointerCapture(). Pointer capture allows events for a particular pointer event (PointerEvent) to be re-targeted to a particular element instead of the normal (or hit test) target at a pointer's location. We may use this approach to ensure that an element continues to receive pointer events even if the pointer device's contact moves away from the element (such as by scrolling or panning).
+  <div><strong>Interview Response:</strong> Developers can use the setPointerCapture() method of the Element interface to designate a specific element as the capture target of future pointer events. Subsequent events for the pointer get targeted at the capture element until capture releases via Element.releasePointerCapture(). Pointer capture allows events for a particular pointer event (PointerEvent) to be re-targeted to a particular element instead of the normal (or hit test) target at a pointer's location. We may use this approach to ensure that an element continues to receive pointer events even if the pointer device's contact moves away from the element (such as by scrolling or panning).
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

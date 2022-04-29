@@ -61,7 +61,7 @@ alert(document.documentElement); // alerts [object HTMLHtmlElement] <html> node
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The null value in the DOM implies "doesn't exist" or "no such node". A script can't access an element that doesn't exist when it runs. If a script gets included within &#8249;head&#8250;, document.body is inaccessible since the browser has not yet read it.
+  <div><strong>Interview Response:</strong> The null value in the DOM implies "doesn't exist" or "no such node". A script can't access an element that doesn't exist when it runs. If we include a script within &#8249;head&#8250;, document.body is inaccessible since the browser has not yet read it.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -107,7 +107,7 @@ alert(document.documentElement); // alerts [object HTMLHtmlElement] <html> node
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The firstChild and lastChild element properties give fast access to a parent element's first and last children.</div><br />
-  <div><strong>Technical Response:</strong> The first and last child element characteristics provide quick access to a parent element's first and last children. The firstChild and lastChild attributes are considered shorthand. The childNodes property may also get utilized to communicate with nodes using brackets. There is also a specific function elem.hasChildNodes() that we can determine whether or not there are any child nodes.
+  <div><strong>Technical Response:</strong> The first and last child element characteristics provide quick access to a parent element's first and last children. The firstChild and lastChild attributes are considered shorthand. We utilize the childNodes property to communicate with nodes using brackets. There is also a specific function elem.hasChildNodes() that we can determine whether or not there are any child nodes.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -181,7 +181,7 @@ for (let prop in document.body.childNodes) alert(prop);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> 
+  <div><strong>Interview Response:</strong>
   Siblings are nodes that are the same parent's children. The head and body nodes, siblings, and both offspring of the HTML node are an example. The &#8249;body&#8250; is the "next" or "right" sibling of the &#8249;head&#8250;, while the &#8249;head&#8250; is the "previous" or "left" sibling of the &#8249;body&#8250;.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -210,7 +210,7 @@ for (let prop in document.body.childNodes) alert(prop);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, the next sibling gets accessed via the nextSibling property, and the previous sibling node gets accessed via the previousSibling property. The parent node gets accessed via the parentNode property. We should note that using these properties allows direct access to all nodes, including the text and comment nodes.
+  <div><strong>Interview Response:</strong> Yes, we can access the next sibling via the nextSibling property, and the previous sibling node gets accessed via the previousSibling property. We can access the parent node via the parentNode property. We should note that using these properties allows direct access to all nodes, including the text and comment nodes.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -238,7 +238,7 @@ alert(document.body.previousSibling); // HTMLHeadElement
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, when we are interested in only accessing element nodes. Some properties serve that purpose for the previous and the next sibling element nodes. For the next sibling element node, we can use nextElementSibling, and for the previous element node, we use previousElementSibling. This feature commonly gets referred to as element-only navigation.
+  <div><strong>Interview Response:</strong> Yes, when we are interested in only accessing element nodes. Some properties serve that purpose for the previous and the next sibling element nodes. For the next sibling element node, we can use nextElementSibling property, and for the previous element node, we use previousElementSibling property. Web developers commonly referred to this feature as element-only navigation.
 </div>
   </div>
 </details>

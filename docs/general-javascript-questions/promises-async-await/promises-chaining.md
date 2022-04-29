@@ -100,7 +100,7 @@ An example of breaking the chain of Promises is using the promise.then, in an in
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A handler, used in .then(handler), may create and return a new promise. In that case, further handlers wait until it settles and then get its result. Returning promises allows us to build chains of asynchronous actions.
+  <div><strong>Interview Response:</strong> A handler, used in .then(handler), may create and return a new promise. In that case, further handlers wait until it settles and then return its result. Returning promises allows us to build chains of asynchronous actions.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

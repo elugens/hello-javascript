@@ -74,7 +74,7 @@ new Promise((resolve, reject) => {
 
 ---
 
-### In a regular try..catch, we can analyze the error and maybe rethrow it if it can’t get handled. Is the same thing possible for promises?
+### In a regular try..catch, we can analyze the error and maybe rethrow it if we can't handle it. Is the same thing possible for promises?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

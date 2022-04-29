@@ -1,5 +1,8 @@
-prism-themes-names.txt
-Prism Themes names
+prism-themes-names.md
+[x]: # Language: markdown
+[x]: # Path: prism-themes-names.md
+
+# Prism Themes names in Docusaurus
 
 Prism allows you to change the color of embedded code in your themes.
 
@@ -25,4 +28,3 @@ synthwave84
 ultramin
 vsLight
 vsDark
-

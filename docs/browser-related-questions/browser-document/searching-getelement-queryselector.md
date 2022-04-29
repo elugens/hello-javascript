@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> If an element has the id attribute, we can get the element using the method document.getElementById(id), no matter where it is inside of our code. We can also act directly on the element id name (not a recommended approach). If the id is an existing variable, its value reference takes precedence.
+  <div><strong>Interview Response:</strong> If an element has the id attribute, we can access the element using the method document.getElementById(id), no matter where it is inside of our code. We can also act directly on the element id name (not a recommended approach). If the id is an existing variable, its value reference takes precedence.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -87,7 +87,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> BBy far, the most versatile method document.querySelectorAll(css) returns all elements inside of a element matching the given CSS selector. This method is powerful because any CSS selector can get it as a target. We can target groups of CSS selectors easily with querySelectorAll method.
+  <div><strong>Interview Response:</strong> By far, the most versatile method document.querySelectorAll(css) returns all elements inside of a element matching the given CSS selector. This method is powerful because we can target any CSS selector. We can target groups of CSS selectors easily with querySelectorAll method.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -136,7 +136,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The Document method querySelector() returns the first element within the document that matches the specified selector or group of selectors. If no matches get found, we receive a null value.<br />
+  <div><strong>Interview Response:</strong> The Document method querySelector() returns the first element within the document that matches the specified selector or group of selectors. If no matches appear, we receive a null value.<br />
   <strong>Syntax: </strong> elementList = parentNode.querySelector(selectors);<br /><br />
 </div>
   </div>

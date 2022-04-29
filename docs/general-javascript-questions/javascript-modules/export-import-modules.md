@@ -58,7 +58,7 @@ export class User {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Export before a class or a function does not make it a function expression, and it is still a function declaration, albeit exported. Most JavaScript style guides do not recommend semicolons after function and class declarations. A semicolon does not need to get implemented at the end of the export class and export function.
+  <div><strong>Interview Response:</strong> Export before a class or a function does not make it a function expression, and it is still a function declaration, albeit exported. Most JavaScript style guides do not recommend semicolons after function and class declarations. A semicolon does not need implementation at the end of the export class and export function.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -204,7 +204,7 @@ bye('John'); // Bye, John!
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Named imports use the standard imports with bracket syntax, while default imports can get imported without brackets. Default exports must use the export default syntax to denote that the object is the default export. Technically, we may have both default and named exports in a single module, but people usually do not mix them in practice. A module has either named exports or the default one. Another critical difference is that default exports do not require an entity name (function, class, variable). Not giving a name is fine because there is only one export default per file, so import without curly braces knows what to import.
+  <div><strong>Interview Response:</strong> Named imports use the standard imports with bracket syntax, while default imports can be imported without brackets. Default exports must use the export default syntax to denote that the object is the default export. Technically, we may have both default and named exports in a single module, but people usually do not mix them in practice. A module has either named exports or the default one. Another critical difference is that default exports do not require an entity name (function, class, variable). Not giving a name is fine because there is only one export default per file, so import without curly braces knows what to import.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -251,7 +251,7 @@ export default ['Jan', 'Feb', 'Mar','Apr', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In some situations, the default keyword gets used to reference the default export. For example, to export a function separately from its definition.
+  <div><strong>Interview Response:</strong> In some situations, we can use the default keyword to reference the default export. For example, to export a function separately from its definition.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -313,7 +313,7 @@ new User('John');
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Named exports are explicit. Named exports name what gets exported, so we have that information from them; that is good. Named exports force us to use exactly the right name to import. While for a default export, we always choose the name when importing. This approach is not good because some team members may use different names to import the same thing, which is not good.
+  <div><strong>Interview Response:</strong> Named exports are explicit. Named exports name what exports, so we have that information from them; that is good. Named exports force us to use exactly the right name to import. While for a default export, we always choose the name when importing. This approach is not good because some team members may use different names to import the same thing, which is not good.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

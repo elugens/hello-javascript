@@ -59,7 +59,7 @@ alert(Number(bigint) + number); // 3
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> When BigInts get used with the division operator, it rounds the BigInt towards zero. All operations on BigInts return BigInts.
+  <div><strong>Interview Response:</strong> When we use BigInts with the division operator, it rounds the BigInt towards zero. All operations on BigInts return BigInts.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -84,7 +84,7 @@ alert(5n / 2n); // 2, rounds towards zero
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> BigInts and regular numbers should never get mixed in mathematical operations because they result in an error. If needed, we should explicitly convert them using BigInt() or Number().
+  <div><strong>Interview Response:</strong> We should never mix BigInts and regular numbers in mathematical operations because they result in errors. If needed, we should explicitly convert them using BigInt() or Number().
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

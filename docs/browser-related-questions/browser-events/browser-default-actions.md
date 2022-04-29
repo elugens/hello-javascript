@@ -1,6 +1,6 @@
 ---
 title: Browser Default Actions
-description: There are several different types of default actions in the browser. For instance, a click on a link initiates a navigation to the specified URL.
+description: Several events automatically cause the browser to do particular actions by default. These are called default browser actions. Interview Questions
 sidebar_position: 4
 sidebar_label: Browser Default Actions
 ---

@@ -46,7 +46,7 @@ div.innerHTML = "<strong>Hi there!</strong> You've read an important message.";
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A special append method gets used to insert a new DOM node into an HTML document. Additional methods such as the prepend, before, after, and replaceWith can get used to place the new DOM node into a specific place in the document.
+  <div><strong>Interview Response:</strong> We can use the special append method to insert a new DOM node into an HTML document. We can use additional methods such as the prepend, before, after, and replaceWith to place the new DOM node into a specific place in the document.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -98,7 +98,7 @@ div.innerHTML = "<strong>Hi there!</strong> You've read an important message.";
   <div>
   <div><strong>Interview Response:</strong> If you want to insert HTML into a document, we use the insertAdjacentHTML(where, HTML). We use two parameters to specify where and the second parameter of what or the HTML (it must be a string type, you need to add quotes) that we want to insert.<br /><br />
   <strong>Additional Information:</strong> We can also use insertAdjacentText and insertAdjacentElement in a similar fashion. <br /><br />
-  <ol>    
+  <ol>
     <li>The insertAdjacentText(where, text) has the same syntax, but a string of text is inserted “as text” instead of HTML.</li>
     <li>The insertAdjacentElement(where, element) has the same syntax but inserts an element.</li>
     <li>They exist primarily to make syntax "consistent." In practice, insertAdjacentHTML is the sole method utilized most of the time. Because we have methods append/prepend/before/after for elements and text - they are easy to create and may incorporate nodes/text fragments.</li>
@@ -201,7 +201,7 @@ div.innerHTML = "<strong>Hi there!</strong> You've read an important message.";
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, you can clone an element node using the cloneNode method in JavaScript. The cloneNode() method creates a node copy and returns the clone. 
+  <div><strong>Interview Response:</strong> Yes, you can clone an element node using the cloneNode method in JavaScript. The cloneNode() method creates a node copy and returns the clone.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -279,7 +279,7 @@ Once you have cloned the node, you use the appendChild() or insertBefore() metho
 ```
 
 :::note
-DocumentFragment rarely gets used explicitly. Why append to a special kind of node if we can return an array of nodes instead?
+We rarely use DocumentFragment explicitly. Why append to a special kind of node if we can return an array of nodes instead?
 :::
 
   </div>

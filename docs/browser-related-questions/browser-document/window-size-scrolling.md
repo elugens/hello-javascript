@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To get window width and height, we can use the clientWidth/clientHeight of document.documentElement. Using this approach is the correct way to get the width and height of the window, not window.innerWidth/innerHeight.
+  <div><strong>Interview Response:</strong> To extact the window width and height, we can use the clientWidth/clientHeight of document.documentElement. Using this approach is the correct way to extract the width and height of the window, not window.innerWidth/innerHeight.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -43,7 +43,7 @@ alert(document.documentElement.clientWidth);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Browsers also support properties like window.innerWidth/innerHeight. They look like what we want, but they are not. If a scrollbar exists and takes up some space, clientWidth/clientHeight delivers the width/height without it (subtracts it). In other words, they return the width and height of the visible portion of the page that is accessible for content. The window.innerWidth/innerHeight properties include the scrollbar in their computation. Most of the time, we require the available window width. We should utilize documentElement.clientHeight/clientWidth to draw or place things within scrollbars (if any).
+  <div><strong>Interview Response:</strong> Browsers also support properties like window.innerWidth/innerHeight. They look like what we want, but they are not. If a scrollbar exists and takes up some space, clientWidth/clientHeight delivers the width/height without it (subtracts it). In other words, they return the width and height of the visible portion of the page that is accessible for content. The window.innerWidth/innerHeight properties include the scrollbar in their computation. Most of the time, we require the available window width. We should utilize documentElement.clientHeight/clientWidth to draw or place things within the scrollbar (if any).
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -68,14 +68,14 @@ alert(document.documentElement.clientWidth);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> When there is no &#8249;!DOCTYPE HTML&#8250; in HTML, top-level geometric properties may behave outside their intended behavior. Strange things are possible. DOCTYPE should always get written in modern HTML.
+  <div><strong>Interview Response:</strong> When there is no &#8249;!DOCTYPE HTML&#8250; in HTML, top-level geometric properties may behave outside their intended behavior. Strange things are possible. We should alwaYs use !DOCTYPE HTML in modern web application development.
     </div>
   </div>
 </details>
 
 ---
 
-### How do we get the entire width and height of the document, including the scrolled-out part?
+### How do we extract the entire width and height of the document, including the scrolled-out part?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -105,12 +105,12 @@ alert('Full document height, with scrolled out part: ' + scrollHeight);
 
 ---
 
-### How do we get the current scroll position top/left of the document?
+### How do we access the current scroll position top/left of the document?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The current scroll is available in the special properties, window.pageXOffset/pageYOffset, which are read-only. This state ensures that we get the current scroll state in all browsers.</div><br />
+  <div><strong>Interview Response:</strong> The current scroll is available in the special properties, window.pageXOffset/pageYOffset, which are read-only. This state ensures that we extract the current scroll state in all browsers.</div><br />
   <div><strong>Technical Response:</strong> DOM elements' scrollLeft/scrollTop attributes contain the current scroll state. document.documentElement is used for document scrolling. Most browsers support scrollLeft/scrollTop, except older WebKit-based browsers like Safari (bug 5991), where we need to use document.body instead of document.documentElement. Fortunately, we don't have to remember these quirks because the scroll gets provided in the read-only special properties window.pageXOffset/pageYOffset.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -128,13 +128,13 @@ alert('Current scroll from the left: ' + window.pageXOffset);
 
 ---
 
-### What happens if we try to scroll the document when the DOM does not get fully constructed?
+### What happens if we try to scroll the document when the DOM does is not fully constructed?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> If we try to scroll the page with a script in &#8249;head&#8250;, it fails because the DOM is not fully built. It is common to place these scripts at the bottom of the document or in a deferred script.</div><br />
-  <div><strong>Technical Response:</strong> To scroll the page with JavaScript, the DOM must be fully constructed. For example, attempting to scroll the page with a script in the &#8249;head&#8250; fails because the DOM is not fully built. It is common to place these scripts at the bottom of the document or in a deferred script. The defer property instructs the browser not to wait for the script to complete. Instead, the browser continues processing the HTML and building the DOM. The script loads "in the background" and starts when the DOM gets fully constructed.
+  <div><strong>Technical Response:</strong> To scroll the page with JavaScript, the DOM must be fully constructed. For example, attempting to scroll the page with a script in the &#8249;head&#8250; fails because the DOM is not fully built. It is common to place these scripts at the bottom of the document or in a deferred script. The defer property instructs the browser not to wait for the script to complete. Instead, the browser continues processing the HTML and building the DOM. The script loads "in the background" and starts when the DOM fully builds.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

@@ -53,11 +53,11 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The most deeply nested element that caused the event is called a target element, accessible as event.target. The event target does not change through the bubbling process and gets viewed as the initial point of the event. 
+  <div><strong>Interview Response:</strong> The most deeply nesting element that created the event is known as a target element, and it may be accessed using event.target. The event target does not change through the bubbling process; JavaScript views it as the initial point of the event.
     </div><br />
 
 :::note
-The current target is the precise target at which the current action gets performed, where "this = event.currentTarget." It is conceivable that event.target equals either this or the current target.
+The current target is the precise target at which the current action takes place, where "this = event.currentTarget." It is conceivable that event.target equals either this or the current target.
 :::
 
   </div>
@@ -70,7 +70,7 @@ The current target is the precise target at which the current action gets perfor
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> If necessary, two methods get used to explicitly stop the bubbling up process, including the stopPropagation and stopImmediatePropagation. Using these two approaches should be limited because of some drawbacks, such as click event failures.
+  <div><strong>Interview Response:</strong> If necessary, we can use two methods to explicitly stop the bubbling up process, including the stopPropagation and stopImmediatePropagation. Using these two approaches should be limited because of some drawbacks, such as click event failures.
     </div>
   </div>
 </details>

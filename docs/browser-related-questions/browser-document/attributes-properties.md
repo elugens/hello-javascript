@@ -1,6 +1,6 @@
 ---
 title: Attributes / Properties
-description: Attributes / Properties are properties of an HTML tag. They are used to add information to the tag and to control the behavior of the tag. They are used to add information to the tag and to control the behavior of the tag. - JavaScript Interview Questions and Answers
+description: Attributes / Properties are properties of an HTML tag. They are used to add information to the tag and to control the behavior of the tag. Interview Questions
 sidebar_position: 6
 sidebar_label: Attributes / Properties
 ---
@@ -343,7 +343,7 @@ That “feature” may come in handy because the user actions may lead to value 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, we can use non-standard HTML attributes to style our elements. This change may be accomplished by acting on an element's class or id and modifying the styles. This approach works for both inline and external style sheets, and this is a much better way to handle the style based on the state of our elements. 
+  <div><strong>Interview Response:</strong> Yes, we can use non-standard HTML attributes to style our elements. This change may be accomplished by acting on an element's class or id and modifying the styles. This approach works for both inline and external style sheets, and this is a much better way to handle the style based on the state of our elements.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -387,7 +387,7 @@ We should note that this is not exactly the recommended approach for implementin
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, custom attributes should get prepended with the “data-*” attribute to avoid conflicts in your code. All attributes starting with “data-” are reserved for programmers’ use and available in the dataset property. The main reason to use the data prepended attribute is if the standard attribute specification is updated. You can avoid any conflicts in your code. Using data-* attributes is a proper, safe way to pass custom data.
+  <div><strong>Interview Response:</strong> Yes, we should prepend custom attributes with the “data-*” attribute to avoid conflicts in your code. All attributes starting with “data-” are reserved for programmers’ use and available in the dataset property. The main reason to use the data attribute is if the standard attribute specification is updated. You can avoid any conflicts in your code. Using data-* attributes is a proper, safe way to pass custom data.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

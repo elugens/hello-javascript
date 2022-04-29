@@ -54,8 +54,8 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> An event handler can get set in HTML with an attribute named on&#8249;event&#8250;. The onevent handlers are properties on specific DOM elements to manage how that element reacts to events. The onevent handler usually gets named with the event it reacts to, like onclick, onkeypress, and onfocus.</div><br />
-  <div><strong>Technical Response:</strong> An event handler can get set in HTML with an attribute named on&#8249;event&#8250;. The onevent handlers are properties on particular DOM elements to manage how that element reacts to events. Elements can be interactive (links, buttons, images, forms, and more.) or non-interactive (such as the base &#8249;body&#8250; element). The onevent handler usually gets named with the event it reacts to, like onclick, onkeypress, and onfocus. You can specify an on&#8249;…&#8250; event handler for a particular event (such as click) for a given object differently. An HTML attribute is not a convenient place to write tons of code. So, it gets recommended to us that we write an event handler. As we know, HTML attribute names are not case-sensitive, so ONCLICK works as well as onClick and onCLICK… But usually, attributes are lowercased: onclick.
+  <div><strong>Interview Response:</strong> We can set an event handler in HTML with an attribute named on&#8249;event&#8250;. The onevent handlers are properties on specific DOM elements to manage how that element reacts to events. The onevent handler usually gets named with the event it reacts to, like onclick, onkeypress, and onfocus.</div><br />
+  <div><strong>Technical Response:</strong> You can set an event handler in HTML with an attribute named on&#8249;event&#8250;. The onevent handlers are properties on particular DOM elements to manage how that element reacts to events. Elements can be interactive (links, buttons, images, forms, and more.) or non-interactive (such as the base &#8249;body&#8250; element). The onevent handler usually gets named with the event it reacts to, like onclick, onkeypress, and onfocus. You can specify an on&#8249;…&#8250; event handler for a particular event (such as click) for a given object differently. An HTML attribute is not a convenient place to write tons of code. So, it gets recommended to us that we write an event handler. As we know, HTML attribute names are not case-sensitive, so ONCLICK works as well as onClick and onCLICK… But usually, attributes are lowercased: onclick.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong> HTML Event Attribute onclick<br /><br />
 
@@ -232,7 +232,7 @@ target.addEventListener(event, handler [, useCapture, wantsUntrusted
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To remove an event that gets added, use the removeEventListener(event, handler) function. We should pass the same function that gets allocated to delete a handler. We cannot remove the function if it does not get stored in a variable. There are no techniques available for "reading back" handlers given by addEventListener.
+  <div><strong>Interview Response:</strong> To remove an event that gets added, use the removeEventListener(event, handler) function. We should pass the same function that we previously allocated to delete a handler. We cannot remove the function if it does not get stored in a variable. There are no techniques available for "reading back" handlers given by addEventListener.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -256,7 +256,7 @@ target.addEventListener(event, handler [, useCapture, wantsUntrusted
 
 ---
 
-### Is there any event that cannot get assigned through a DOM property?
+### Is there any event that you cannot assign using a DOM property?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -271,6 +271,7 @@ target.addEventListener(event, handler [, useCapture, wantsUntrusted
 // will never run
 document.onDOMContentLoaded = function() {
   alert("DOM built");
+};
 
 // this way it works
 document.addEventListener("DOMContentLoaded", function() {
@@ -289,7 +290,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The event object gets used for various actions, including getting the event type, current target, and window relative coordinates of the current during point events. The event object can be called directly in HTML attributes or inside our scripts.
+  <div><strong>Interview Response:</strong> Web developers use the event object for various actions, including getting the event type, current target, and window relative coordinates of the current during point events. The event object can be called directly in HTML attributes or inside our scripts.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -298,6 +299,7 @@ document.addEventListener("DOMContentLoaded", function() {
 ```html
 <!-- event.type returns the type of event (onclick: click) -->
 <input type="button" onclick="alert(event.type)" value="Event type" />
+
 ```
 
   </div>

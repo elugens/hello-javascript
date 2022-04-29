@@ -1,6 +1,6 @@
 ---
 title: Form Events
-description: Form Events in JavaScript are events that occur when a user interacts with a form. They are triggered by the user's form. - JavaScript Interview Questions & Answers
+description: Form Events in JavaScript are events that occur when a user interacts with a form. - JavaScript Interview Questions & Answers
 sidebar_position: 3
 sidebar_label: Form Events
 ---
@@ -70,7 +70,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 ```
 
 :::note
-After the value gets updated, the input event happens. As a result, we are unable to use event. It's too late to use preventDefault() there — the consequence would be null.
+After we update the value, the input event happens. As a result, we are unable to use event. It's too late to use preventDefault() there — the consequence would be null.
 :::
 
   </div>
@@ -116,7 +116,7 @@ After the value gets updated, the input event happens. As a result, we are unabl
 ```
 
 :::note
-It is possible to copy/paste everything, not just text. For example, we can copy and paste a file from the OS file manager. This behavior is because clipboardData implements the DataTransfer interface, which often gets used for drag'n'drop and copy/paste.
+It is possible to copy/paste everything, not just text. For example, we can copy and paste a file from the OS file manager. This behavior is because clipboardData implements the DataTransfer interface, which we often use for drag'n'drop and copy/paste.
 :::
 
   </div>

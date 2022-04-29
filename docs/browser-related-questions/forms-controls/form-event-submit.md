@@ -1,6 +1,6 @@
 ---
 title: Form Submit / Events
-description: Form Submit / Events in JavaScript are events that occur when a user interacts with a form. They are triggered by the user's form. - JavaScript Interview Questions & Answers
+description: Form Submit / Events in JavaScript are events that occur when a user interacts with a form. - JavaScript Interview Questions & Answers
 sidebar_position: 4
 sidebar_label: Form Submit / Events
 ---
@@ -13,12 +13,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### When happens when a form gets submitted in the browser?
+### When happens when we submit a form in the browser?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> When a form is submitted, the submit event is triggered. It often gets used to verify the form before sending it to the server or cancel the submission and process it in JavaScript. The function form.submit() enables us to transmit forms from JavaScript, and we may use it to construct and send forms to the server dynamically.
+  <div><strong>Interview Response:</strong> When a form is submitted, the submit event is triggered. It often gets used to verify the form (form validation) before sending it to the server or cancel the submission and process it in JavaScript. The function form.submit() enables us to transmit forms from JavaScript, and we may use it to construct and send forms to the server dynamically.
     </div>
   </div>
 </details>
@@ -30,7 +30,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> There are two primary methods for submitting a form. The first step is to select either &#8249;input type="submit"&#8250; or &#8249;input type="image"&#8250;. The second method is to enter data into an input field by pressing Enter. Both activities result in the form's submit-event. The handler can inspect the data, display them, and call events if any issues get found. If you use `preventDefault()`, the form does not transmit to the server.
+  <div><strong>Interview Response:</strong> There are two primary methods for submitting a form. The first step is to select either &#8249;input type="submit"&#8250; or &#8249;input type="image"&#8250;. The second method is to enter data into an input field by pressing Enter. Both activities result in the form's submit-event. The handler can inspect the data, display them, and call events if any issues appear. If you use `preventDefault()`, the form does not transmit to the server.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

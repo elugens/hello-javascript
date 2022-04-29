@@ -41,7 +41,7 @@ async function f() {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> An async function is a function declared with the async keyword, and the await keyword gets permitted within them. The async and await keywords enable asynchronous, promise-based behavior to be written in a cleaner style, avoiding the need to configure promise chains explicitly. Async functions can contain zero or more await expressions. Await expressions make promise-returning functions seem synchronous by suspending the code execution until the returned promise is fulfilled or rejected. The resolved value of the promise gets treated as the return value of the await expression. Async and await allow you to wrap asynchronous code in regular try/catch statements.
+  <div><strong>Interview Response:</strong> An async function is a function declared with the async keyword, and the await keyword gets permitted within them. The async and await keywords enable asynchronous, promise-based behavior to be written in a cleaner style, avoiding the need to configure promise chains explicitly. Async functions can contain zero or more await expressions. Await expressions make promise-returning functions seem synchronous by suspending the code execution until the returned promise is fulfilled or rejected. The resolved value of the promise gets treated as a return value of the await expression. Async and await allow you to wrap asynchronous code in regular try/catch statements.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -108,7 +108,7 @@ f();
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, the await keyword cannot get used in conjunction with regular functions. You get a syntax error if we try to use "await" in the non-async function.
+  <div><strong>Interview Response:</strong> No, we cannot use the await keyword in conjunction with a regular functions. JavaScript returns a syntax error if we try to use "await" in the non-async function.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

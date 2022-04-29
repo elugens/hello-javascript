@@ -151,7 +151,7 @@ alert(document.body); // alerts [object HTMLBodyElement]
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The four main node types include document, element, text, and comment nodes.</div><br />
-  <div><strong>Technical Response:</strong> There are 12 different types of nodes. We usually work with four of them in practice. The four major node types are document, element, text, and comment nodes. The document node is the DOM's starting point. The element nodes get made up of HTML tags, which we use as the tree's building blocks. The comment node gets used to place information, but it does not show, but JS can read it from the DOM.
+  <div><strong>Technical Response:</strong> There are 12 different types of nodes. We usually work with four of them in practice. The four major node types are document, element, text, and comment nodes. The document node is the DOM's starting point. The makeup of element nodes include all HTML tags, which we use as the tree's building blocks. We use the comment node to display information in our code, but it does not show in the browser, but JS can read it from the DOM.
   </div>
   </div>
 </details>

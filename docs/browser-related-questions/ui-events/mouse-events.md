@@ -1,6 +1,6 @@
 ---
 title: Mouse Events
-description: Mouse Events in JavaScript are events that occur when a user interacts with a mouse. They are triggered by the user's mouse. - JavaScript Interview Questions & Answers
+description: Mouse Events in JavaScript are events that occur when a user interacts with a mouse. They are triggered by the user. - JavaScript Interview Questions & Answers
 sidebar_position: 1
 sidebar_label: Mouse Events
 ---
@@ -88,7 +88,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 ```html
 <div oncopy="alert('Copying forbidden!'); return false">
   Dear user, The copying is forbidden for you. If you know JS or HTML, then you
-  can get everything from the page source though.
+  can extract everything from the page source.
 </div>
 ```
 

@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> CSS classes should always get preferred over style property methods. The latter should get used only when classes "can't handle it." For example, if we compute an element's coordinates dynamically and wish to set them from JavaScript, style is permitted.</div><br />
+  <div><strong>Interview Response:</strong> It would be best if you always prefer to use CSS classes over the style property method. The latter should get used only when classes "can't handle it." For example, if we compute an element's coordinates dynamically and wish to set them from JavaScript, style is permitted.</div><br />
   <div><strong>Technical Response:</strong> We should always prefer CSS classes versus the style property methods. The latter should only get used if classes "can't handle it." For example, if we calculate the coordinates of an element dynamically and wish to set them from JavaScript, style is permitted. In other circumstances, such as turning the text red or adding a background icon – specifying it in CSS and then applying the class - (JavaScript can do that). That is more adaptable and simpler to support.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -170,8 +170,8 @@ setTimeout(() => (document.body.style.display = ''), 1000); // back to normal
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> There’s a special property style.cssText to do a full rewrite and set the full style as a string. This property rarely gets used because such assignment removes all existing styles: it does not add but replaces them. The same can be accomplished by setting an attribute: div.setAttribute('style', 'color: red...').</div><br />
-  <div><strong>Technical Response:</strong> We often use style to apply particular properties.*. We can't use div.style="color: red; width: 100px" because div.style is an object that is read-only. There is a special property <em>style.cssText</em>, that does a full rewrite to set the full style as a string. This property rarely gets used since assigning it eliminates all current styles: it does not create new styles but rather replaces them. Something necessary may get deleted on occasion. However, we may use it securely for new elements if we know it won’t destroy an existing style. Setting an attribute does the same thing: div.setAttribute('style', 'color: red...').
+  <div><strong>Interview Response:</strong> There’s a special property style.cssText to do a full rewrite and set the full style as a string. We rarely use this property because such assignment removes all existing styles: it does not add but replaces them. The same can be accomplished by setting an attribute: div.setAttribute('style', 'color: red...').</div><br />
+  <div><strong>Technical Response:</strong> We often use style to apply particular properties.*. We can't use div.style="color: red; width: 100px" because div.style is an object that is read-only. There is a special property <em>style.cssText</em>, that does a full rewrite to set the full style as a string. Developers rarely use this property since assigning it eliminates all current styles: it does not create new styles but rather replaces them. Something necessary may get deleted on occasion. However, we may use it securely for new elements if we know it won’t destroy an existing style. Setting an attribute does the same thing: div.setAttribute('style', 'color: red...').
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -241,7 +241,7 @@ For instance, we should not set elem.style.top to 10, but rather to 10px. Otherw
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Since the style property operates only on the value of the "style" attribute, without any CSS cascade. We can’t read anything that comes from CSS classes using elem.style. We would have to find a built-in method to handle that procedure. The getComputedStyle() method gets all the actual (computed) CSS properties and values of the specified element. The returned style is a live CSSStyleDeclaration object, which updates automatically when the element's styles are changed. Style sources can include: internal style sheets, external style sheets, inherited styles, and browser default styles. The element and the pseudo-element are the two arguments of the getComputedStyle method. The pseudo-element is a string that specifies which pseudo-element gets matched— omitted (or null) for real elements.
+  <div><strong>Interview Response:</strong> Since the style property operates only on the value of the "style" attribute, without any CSS cascade. We can’t read anything that comes from CSS classes using elem.style. We would have to find a built-in method to handle that procedure. The getComputedStyle() method extracts all the actual (computed) CSS properties and values of the specified element. The returned style is a live CSSStyleDeclaration object, which updates automatically when the element's styles are changed. Style sources can include: internal style sheets, external style sheets, inherited styles, and browser default styles. The element and the pseudo-element are the two arguments of the getComputedStyle method. The pseudo-element is a string that specifies which pseudo-element gets matched— omitted (or null) for real elements.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -280,7 +280,7 @@ For instance, we should not set elem.style.top to 10, but rather to 10px. Otherw
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> A computed style value is the value after all CSS rules, and CSS inheritance gets applied due to the CSS cascade. A resolved style value is the one finally applied to the element. </div><br />
-  <div><strong>Technical Response:</strong> A computed style value gets obtained after applying all CSS rules and CSS inheritance due to the CSS cascade. It may appear as height:1em or font-size:125 percent. The style value that eventually gets applied to the element is a resolved style value. Values like 1em and 125 percent are relative. The browser uses the calculated value and makes all units constant and absolute, such as height:20px or font-size:16px. Resolved values for geometry attributes may have a floating-point value, such as width:50.5px. Originally, getComputedStyle was intended to yield calculated values, but a discovery revealed that resolved values are significantly more helpful. As a result, the standard got revised. As a result, getComputedStyles returns a property's resolved value.
+  <div><strong>Technical Response:</strong> We can obtain a computed style value after all CSS rules and CSS inheritance due to the CSS cascade. It may appear as height:1em or font-size:125 percent. The style value that eventually gets applied to the element is a resolved style value. Values like 1em and 125 percent are relative. The browser uses the calculated value and makes all units constant and absolute, such as height:20px or font-size:16px. Resolved values for geometry attributes may have a floating-point value, such as width:50.5px. Originally, getComputedStyle was intended to yield calculated values, but a discovery revealed that resolved values are significantly more helpful. As a result, the standard got revised. As a result, getComputedStyles returns a property's resolved value.
   </div><br /><br />
 
 :::note
@@ -314,7 +314,7 @@ If there are properties paddingLeft/paddingTop, then what should we get for getC
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The :visited CSS pseudo-class gets used to color visited links. However, getComputedStyle does not provide access to that color; otherwise, an arbitrary page may determine if a user clicked a link by creating it on the page and inspecting the styles. JavaScript may not recognize the styles used by :visited. Furthermore, a CSS constraint prevents the use of geometry-changing styles in :visited. That is to ensure that there is no way for a malicious page to verify if a link was visited and violated a user's privacy.
+  <div><strong>Interview Response:</strong> Developers use the :visited CSS pseudo-class to color visited links. However, getComputedStyle does not provide access to that color; otherwise, an arbitrary page may determine if a user clicked a link by creating it on the page and inspecting the styles. JavaScript may not recognize the styles used by :visited. Furthermore, a CSS constraint prevents the use of geometry-changing styles in :visited. That is to ensure that there is no way for a malicious page to verify if a link was visited and violated a user's privacy.
     </div>
   </div>
 </details>

@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Currying is an advanced technique for working with functions. It is used not only in JavaScript but in other languages as well. Currying is a transformation of functions that translates a function from callable as f(a, b, c) into callable as f(a)(b)(c). Currying does not call a function, and it just transforms it. Currying allows us to get partials quickly.
+  <div><strong>Interview Response:</strong> Currying is an advanced procedure for working with functions. It is used not only in JavaScript but in other languages as well. Currying is a transformation of functions that translates a function from callable as f(a, b, c) into callable as f(a)(b)(c). Currying does not call a function; it just transforms it. Currying allows us to extract partials quickly.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -55,7 +55,7 @@ alert(curriedSum(1)(2)); // 3
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Currying necessitates that the function takes a fixed number of arguments. A function with rest parameters, such as f(...args), cannot be curried in this manner.
+  <div><strong>Interview Response:</strong> Currying necessitates that a function takes a fixed number of arguments. A function with rest parameters, such as f(...args), cannot be curried in this manner.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong> This is an example of Advanced Currying.<br /><br />
 

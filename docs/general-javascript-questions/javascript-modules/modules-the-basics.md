@@ -68,7 +68,7 @@ We can use a local web server, such as static-server, or use the live server cap
   Each module has a separate top-level scope. Top-level variables, methods, and functions from a module, in general, are not visible in other scripts.<br /><br />
   The import.meta object contains information about the current module. The surroundings determine its content. The browser includes the URL of the script or if it is inside HTML, the URL of the current webpage.<br /><br />
   In top-level modules, this is undefined.<br /><br />
-  Module scripts always get deferred, same as the defer property for external and inline scripts.<br /><br />
+  Module scripts always defer, same as the defer property for external and inline scripts.<br /><br />
   For non-module scripts, the async attribute only works on external scripts. Async scripts run immediately when ready, independently of other scripts or the HTML document. For module scripts, it works on inline scripts as well.
 
 </div>
@@ -106,7 +106,7 @@ We can use a local web server, such as static-server, or use the live server cap
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> It means that each module has its top-level scope. Top-level variables, methods, and functions from a module, in general, are not visible in other scripts. Modules expect to get exported. They want to be accessible from the outside and import what they need. In the browser, independent top-level scope also exists for each &#8249;script type="module"&#8250;.
+  <div><strong>Interview Response:</strong> It means that each module has its top-level scope. Top-level variables, methods, and functions from a module, in general, are not visible in other scripts. Modules expect to exportation. They want to be accessible from the outside and import what they need. In the browser, independent top-level scope also exists for each &#8249;script type="module"&#8250;.
 </div>
   </div>
 </details>
@@ -203,8 +203,8 @@ import `./alert.js`; // (shows nothing)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Module scripts always get deferred, the same effect as the defer attribute for external and inline scripts.</div><br />
-  <div><strong>Technical Response:</strong> Module scripts always get deferred, the same effect as the defer attribute for external and inline scripts. In other words, downloading external module scripts &#8249;script type="module" src="..."&#8250; does not block HTML processing, they load in parallel with other resources. The module scripts wait until the HTML document is fully ready (even if they are tiny and load faster than HTML), and then run. The relative order of scripts gets preserved: scripts that appear first in the document get executed first. Module scripts, as a consequence, always "view" the fully loaded HTML document, including HTML components beneath them.
+  <div><strong>Interview Response:</strong> Module scripts always defer, the same effect as the defer attribute for external and inline scripts.</div><br />
+  <div><strong>Technical Response:</strong> Module scripts always defer, the same effect as the defer attribute for external and inline scripts. In other words, downloading external module scripts &#8249;script type="module" src="..."&#8250; does not block HTML processing, they load in parallel with other resources. The module scripts wait until the HTML document is fully ready (even if they are tiny and load faster than HTML), and then run. The relative order of scripts gets preserved: scripts that appear first in the document executes first. Module scripts, as a consequence, always "view" the fully loaded HTML document, including HTML components beneath them.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

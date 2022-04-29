@@ -30,7 +30,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The character gets obtained using the event object's key property, whereas the "physical key code" gets obtained using the event object's code property.<br/>For example, the same key Z can be pushed with and without Shift. This behavior results in two distinct characters: lowercase z and uppercase Z.
+  <div><strong>Interview Response:</strong> The key property (event.key) of the event object allows us to extract the character, while the code property (event.code) of the event object allows us to extract the “physical key code”.<br/>For example, the same key Z can be suppressed with or without Shift. This behavior results in two distinct characters: lowercase z and uppercase Z.
     </div><br />
 
 | **Key** | **event.key** | **event.code** |
@@ -48,7 +48,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, the case is critical, and all event codes must utilize the Pascal case to obtain the correct return value; otherwise, they fail. Please avoid misspellings: it is KeyZ, not keyZ. The check-like event.code=="keyZ" won’t function since the initial letter of "Key" must get capitalized.
+  <div><strong>Interview Response:</strong> Yes, the case is critical, and all event codes must utilize the Pascal case to obtain the correct return value; otherwise, they fail. Please avoid misspellings: it is KeyZ, not keyZ. The check-like event.code=="keyZ" won't function since the initial letter of "Key" needs capitalization.
     </div>
   </div>
 </details>
@@ -76,12 +76,12 @@ Example:
 
 ---
 
-### What happens when a key gets suppressed for more than a second?
+### What happens when we suppress a key for more than a second?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> If a key gets held down over an extended time, it begins to "auto-repeat": the keydown triggers repeatedly, and when the key is released, we eventually receive keyup. As a result, having numerous keydowns and a single keyup is rather usual. The event object's event.repeat attribute gets set to true for events triggered by auto-repeat.
+  <div><strong>Interview Response:</strong> If we suppress a key over an extended period of time, it begins to "auto-repeat": the keydown triggers repeatedly, and when the key is released, we eventually receive keyup. As a result, having numerous keydowns and a single keyup is rather usual. The event object's event.repeat attribute equates to true for events triggered by auto-repeat.
     </div>
   </div>
 </details>
@@ -93,7 +93,7 @@ Example:
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, except for OS-based special keys, preventing the default action on keydown cancels most of them. On Windows, for example, Alt+F4 dismisses the current browser window. And there is no way to halt it by disabling JavaScript's default action. Any activity outside of the browser's scope, such as shutting the browser window, is not captured by the browser, and it gets classified as an OS-level event.
+  <div><strong>Interview Response:</strong> No, except for OS-based special keys, preventing the default action on keydown cancels most of them. On Windows, for example, Alt+F4 dismisses the current browser window. And there is no way to halt it by disabling JavaScript's default action. Any activity outside of the browser's scope, such as shutting the browser window, is not captured by the browser, classifying it as an OS-level event.
     </div>
   </div>
 </details>

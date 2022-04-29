@@ -16,7 +16,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> When there is an asynchronous need to get data, asynchronous iteration typically gets utilized. The most common use case is that the object needs to make a network request to deliver the next value. This approach is also a great way to handle controlled chunks of data to reduce the impact on resources.
+  <div><strong>Interview Response:</strong> When there is an asynchronous need to retrieve data, we typically use asynchronous iteration. The most common use case is an object needs to make a network request to deliver the next value. This approach is also a great way to handle controlled chunks of data to reduce the impact on resources.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

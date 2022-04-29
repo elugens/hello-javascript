@@ -1,6 +1,6 @@
 ---
 title: Focusing - focus/blur
-description: Focusing - focus/blur in JavaScript is an event that occurs when a user focuses on an element. It is triggered by the user's keyboard. - JavaScript Interview Questions & Answers
+description: Focusing - focus/blur in JavaScript is an event that occurs when a user focuses on an element. - JavaScript Interview Questions & Answers
 sidebar_position: 2
 sidebar_label: Focusing - focus/blur
 ---
@@ -42,7 +42,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> When the element loses focus, the blur event gets called. After the focus event, a popular solution uses a blur handler to verify if a field gets successfully typed. Validation failures get hidden using the attention handler. Many validations get implemented in modern HTML utilizing input properties such as needed, pattern, and others. And they are sometimes just what we require. When we need greater flexibility, we may utilize JavaScript. Also, if the updated value is correct, we could transmit it to the server automatically.
+  <div><strong>Interview Response:</strong> When the element loses focus, the blur event gets called. After the focus event, a popular solution uses a blur handler to verify if a field gets successfully typed. We can hide validation failures by using the handler. Many validations get implemented in modern HTML utilizing input element attributes such as required, pattern, and others. And they are sometimes just what we require. When we need greater flexibility, we may utilize JavaScript. Also, if the updated value is correct, we could transmit it to the server automatically.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -166,7 +166,7 @@ Your email please: <input type="email" id="input" />
 ```
 
 :::note
-They must get assigned with elem.addEventListener rather than on&#8249;event&#8250;.
+We must assign them with elem.addEventListener rather than on&#8249;event&#8250;.
 :::
 
   </div>

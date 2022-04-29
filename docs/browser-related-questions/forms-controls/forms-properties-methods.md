@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Document forms are part of the document.forms special collection. That's a "named collection": it's both named and ordered. To access the form, we may utilize both the name and the number from the document.
+  <div><strong>Interview Response:</strong> Document forms are part of the document.forms special collection. That's a "named collection": it's both named and ordered. To access the form, we may utilize both the name or index number from the document.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -96,7 +96,7 @@ document.forms[0]; // the first form in the document
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A form may have one or many &#8249;fieldset&#8250; elements inside it. They also have elements property that lists form controls inside them. The HTML &#8249;fieldset&#8250; element gets used to group several controls as well as labels (&#8250;label&#8250;) within a web form. Fieldset properties get accessed via the form.elements property.
+  <div><strong>Interview Response:</strong> A form may have one or many &#8249;fieldset&#8250; elements inside it. They also have elements property that lists form controls inside them. The HTML &#8249;fieldset&#8250; element gets used to group several controls as well as labels (&#8250;label&#8250;) within a web form. We can access the Fieldset properties via the form.elements property.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -117,7 +117,7 @@ document.forms[0]; // the first form in the document
     let fieldset = form.elements.userFields;
     alert(fieldset); // HTMLFieldSetElement
 
-    // we can get the input by name both from the form and from the fieldset
+    // we can access the input by name both from the form and from the fieldset
     alert(fieldset.elements.login == form.elements.login); // true
   </script>
 </body>
@@ -196,7 +196,7 @@ document.forms[0]; // the first form in the document
 
 ---
 
-### How can you use JS to get the value of a textarea inside an input?
+### How can you use JavaScript to access or extract the value of a textarea inside an input?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -246,11 +246,44 @@ document.forms[0]; // the first form in the document
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Using the little-known JavaScript Option () constructor, you may avoid the cumbersome syntax of constructing DOM components by using the little-known JavaScript Option() constructor. The Option() constructor is used to generate a new HTMLOptionElement. Text is a DOMString representing the element's content, i.e. the displayed text. If this is not supplied, the value "" (empty string) gets used as the default. The optional value argument is a DOMString representing the HTMLOptionElement's value, i.e. the value attribute of the comparable &#8249;option&#8250;. When the form gets submitted to the server, the value of the text gets used as the value. For example, the value of the accompanying &#8249;select&#8250; element if this does not get provided. The defaultSelected argument is a Boolean that sets the chosen attribute value, i.e., this &#8249;option&#8250; results in the default value picked in the &#8249;select&#8250; element when the page initially loads. If this is not specified, the value false is assumed to be the default. We should note that a true value does not force the option to be selected if it is not already selected. The optional selected is a Boolean that determines whether or not the option gets picked; the default is false (not selected). Even if the defaultSelected argument is true, the option does not get picked if it is missing. You may use the Option constructor to generate new selection choices on the fly.
+  <div><strong>Interview Response:</strong> A little-known feature of JavaScript allows you to build option elements with minimum effort. The Option() constructor is responsible for this functionality. The syntax is straightforward:<br/><br/>
+  <ul>
+  <li>Get a reference to a form element</li>
+  <li>Invoke the constructor and connect the resulting object to the form element.</li>
+  <li>Pass in the following parameters during instantiation: Step 1: the text displayed on the page [string], Step 2: the value of the control [string], Step 3: if it is the default option [true/false] and whether it is chosen [true/false].</li>
+  </ul>  
     </div><br />
-  <div><strong className="codeExample">Code Example:</strong><br /><br />
+  <div><strong>Technical Response:</strong> Using the little-known JavaScript Option () constructor, you may avoid the cumbersome syntax of constructing DOM components. The Option() constructor is used to generate a new HTMLOptionElement. Text is a DOMString representing the element's content, i.e. the displayed text. If we do not supply the text, the value "" (empty string) gets used as the default. The optional value argument is a DOMString representing the HTMLOptionElement's value, i.e. the value attribute of the comparable &#8249;option&#8250;. When we submit the form to the host server, the value of the text gets used as the value. For example, the value of the accompanying &#8249;select&#8250; element if this does not get provided. The defaultSelected argument is a Boolean that sets the chosen attribute value, i.e., this &#8249;option&#8250; results in the default value selected in the &#8249;select&#8250; element when the page initially loads. If this is not specified, the value false is assumed to be the default. We should note that a true value does not force the option to be selected if it is not already selected. The optional selected is a Boolean that determines whether or not the option gets picked; the default is false (not selected). Even if the defaultSelected argument is true, the option does not get selected if it is missing. You may use the Option constructor to generate new selection choices on the fly.
+    </div><br />
+    <strong>Syntax: </strong> let newOption = new Option(text, value, defaultSelected, selected);<br /><br />
+  <div><strong className="codeExample">Code Example 1:</strong><br /><br />
 
-<strong>Syntax: </strong> let newOption = new Option(text, value, defaultSelected, selected);<br /><br />
+```html
+<form>
+  <select name="week">
+    <option>Monday</option>
+    <option>Tuesday</option>
+    <option>Wednesday</option>
+  </select>
+</form>
+
+<script>
+  var w = document.forms[0].week;
+  w.length = 0;
+  var d = [
+    { text: 'Thurs', val: 'thurs' },
+    { text: 'Friday', val: 'fri' },
+    { text: 'Saturday', val: 'sat' },
+    { text: 'Sunday', val: 'sun' },
+  ];
+
+  for (var i = 0; i <= d.length - 1; i++) {
+    w[i] = new Option(d[i].text, d[i].val, false, false);
+  }
+</script>
+```
+
+  <strong className="codeExample">Code Example 2:</strong><br /><br />
 
   <div></div>
 

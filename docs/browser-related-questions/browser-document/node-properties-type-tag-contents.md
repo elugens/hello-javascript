@@ -30,7 +30,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> EventTarget is the root “abstract” class. Objects of that class never get created, and it serves as a base so that all DOM nodes support so-called “events”.
+  <div><strong>Interview Response:</strong> EventTarget is the root “abstract” class. Objects of that class do not adhere to an abstract creation process; it serves as a base so that all DOM nodes support so-called “events”.
 </div>
   </div>
 </details>
@@ -117,7 +117,7 @@ alert(document.body instanceof EventTarget); // true
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> In brief, console.log(elem) shows the element DOM tree and console.dir(elem) shows the element as a DOM object, and it is excellent to explore its properties.</div><br />
-  <div><strong>Technical Response:</strong> Most browsers allow two commands in their development tools: console.log and console.dir. Their arguments get printed on the console. These instructions typically have the same effect on JavaScript objects. However, console.log(elem) displays the element's DOM tree for DOM elements. The element gets shown as a DOM object using console.dir(elem), allowing you to examine its properties.
+  <div><strong>Technical Response:</strong> Most browsers allow two commonly used commands in their development tools: console.log and console.dir. Their arguments get printed on the console. These instructions typically have the same effect on JavaScript objects. However, console.log(elem) displays the element's DOM tree for DOM elements. The element gets shown as a DOM object using console.dir(elem), allowing you to examine its properties.
   </div>
   </div>
 </details>
@@ -265,7 +265,7 @@ interface HTMLInputElement: HTMLElement {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The innerHTML property allows us to get the HTML inside the element as a string. We can also modify it. So, it is one of the most powerful ways to change the page dynamically.
+  <div><strong>Interview Response:</strong> The innerHTML property allows us to insert data/HTML inside an element as a string. We can also modify it. So, it is one of the most powerful ways to change the page dynamically.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

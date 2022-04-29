@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Dynamic imports get achieved by using the import expression. The import(module) expression loads the module and returns a promise that resolves into a module object that contains all its exports. It gets called from any place in the code.
+  <div><strong>Interview Response:</strong> We can implement dynamic imports by using the import expression. The import(module) expression loads the module and returns a promise that resolves into a module object that contains all its exports. It gets called from any place in our code.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
