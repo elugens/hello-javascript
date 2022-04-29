@@ -16,11 +16,11 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The try…catch construct has two main blocks, try and then catch blocks. First, the code in the try gets executed on the try block. If there is no error, it proceeds to execute and exit the code, skipping the catch. If there is an error in the try block, the catch gets invoked, and the error gets returned.</div><br />
+  <div><strong>Interview Response:</strong> The try…catch construct has two main blocks, try and then catch blocks. First, the code in the try executes on the try block. If there is no error, it proceeds to execute and exit the code, skipping the catch. If there is an error in the try block, the catch gets invoked, and the error gets returned.</div><br />
   <div><strong>Technical Response:</strong> The try...catch construct has two main blocks: try, and then catch<br /><br />
   <strong>Steps:</strong><br /><br />
   <ol>
-    <li>First, the code in try &#123;...&#125; gets executed.</li>
+    <li>First, the code in try &#123;...&#125; executes.</li>
     <li>If there were no errors, then catch(err) is ignored: the execution reaches the end of try and goes on, skipping catch.</li>
     <li>If an error occurs, the try execution stops, and control flows to the beginning of catch(err). The err variable (we can use any name for it) contains an error object with details about what happened.</li>
   </ol>
@@ -53,7 +53,7 @@ try {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The most significant part of the interaction with the JavaScript engine is that the try..catch only works for runtime errors. The code must be runnable for `try..catch` to work. In other words, it should be valid JavaScript.</div><br />
-  <div><strong>Technical Response:</strong> The most striking aspect of the interface with the JavaScript engine is that the try..catch statement only works for runtime failures. The code must be runnable for 'try..catch' to work. In other words, it should be legitimate JavaScript. It does not work if the code in the "try..catch" block incorrectly gets written. The JavaScript engine examines the code before running it. The errors that occur during the reading phase are called "parse-time" errors, and they are unrecoverable (from inside that code). This behavior is due to the engine's inability to comprehend the code. As a result, try...catch can only handle failures in "valid" code. Such mistakes get referred to as "runtime errors" or "exceptions" in some instances.
+  <div><strong>Technical Response:</strong> The most striking aspect of the interface with the JavaScript engine is that the try..catch statement only works for runtime failures. The code must be runnable for 'try..catch' to work. In other words, it should be legitimate JavaScript. It does not work if the code in the "try..catch" block incorrectly gets written. The JavaScript engine examines the code before running it. The errors that occur during the reading phase are called "parse-time" errors, and they are unrecoverable (from inside that code). This behavior is due to the engine's inability to comprehend the code. As a result, try...catch can only handle failures in "valid" code. Such mistakes commonly get referred to as "runtime errors" or "exceptions" in some instances.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -179,7 +179,7 @@ try {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The throw operator/statement throws a user-defined exception in simple terms. The current function gets terminated, and control gets handed to the first catch block on the call stack.
+  <div><strong>Interview Response:</strong> The throw operator/statement throws a user-defined exception in simple terms. The current function terminates, and control hands off to the first catch block on the call stack.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -338,7 +338,7 @@ console.log(hello); // ReferenceError: hello is not defined
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, we can use the global handler (global catch) window.onerror that is part of the Web API.</div><br />
-  <div><strong>Technical Response:</strong> Yes, we can use the global handler (global catch) window.onerror that is part of the Web API. The onerror property of the GlobalEventHandlers mixin is an EventHandler that processes error events. Error events get fired at various targets for different kinds of errors, such as runtime errors or when a resource (such as an img or script tags) fails to load. Installing a global error event handler is useful for the automated collection of error reports.
+  <div><strong>Technical Response:</strong> Yes, we can use the global handler (global catch) window.onerror that is part of the Web API. The onerror property of the GlobalEventHandlers mixin is an EventHandler that processes error events. Error events fire at various targets for different kinds of errors, such as runtime errors or when a resource (such as an img or script tags) fails to load. Installing a global error event handler is useful for the automated collection of error reports.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

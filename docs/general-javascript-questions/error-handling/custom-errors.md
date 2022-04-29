@@ -16,7 +16,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Because JavaScript allows us to use a throw with any parameter, our error classes do not need to derive from Error. However, we may use obj instanceof Error to identify and track error objects if we inherit. As a result, it is preferable to inherit from it. Our mistakes automatically build a hierarchy as the program evolves, and ValidationError, for example, may derive from the Error Object, and so forth.
+  <div><strong>Interview Response:</strong> Because JavaScript allows us to use a throw with any parameter, our error classes do not need to derive from Error. However, we may use obj instanceof Error to identify and track error objects if we inherit. As a result, it is preferable to inherit from it. Our errors automatically build a hierarchy as the program evolves, and ValidationError, for example, may derive from the Error Object, and so forth.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong> Custom ValidationError that extends the built-in Error Object<br /><br />
 
@@ -71,7 +71,7 @@ try {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, the same rules apply; you can only inherit from one base class using the extends keyword. In class declarations or expressions, the extends keyword gets used to build a class that is a child of another class.
+  <div><strong>Interview Response:</strong> No, the same rules apply; you can only inherit from one base class using the extends keyword. In class declarations or expressions, we can use the extends keyword to build a class that is a child of another class.
 </div>
   </div>
 </details>
