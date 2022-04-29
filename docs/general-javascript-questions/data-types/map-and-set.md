@@ -17,7 +17,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The main difference is that Map allows keys of any type, and objects also convert keys to strings, which is another known difference. As you look at Objects and Maps, another apparent difference is that Objects cannot use another object as a key.</div><br />
-  <div><strong>Technical Response:</strong> The Map object holds key-value pairs (Just like Objects) and remembers the original insertion order of the keys. Any value (both objects and primitive values) may get used as either a key or a value. But the main difference is that Map allows keys of any type. Objects also convert keys to strings, which is another known difference. The keys of an Object must be either a String or a Symbol. As you look at Objects and Maps, another apparent difference is that Objects cannot use another object as a key.
+  <div><strong>Technical Response:</strong> The Map object holds key-value pairs (Just like Objects) and remembers the original insertion order of the keys. We may use any value (both objects and primitive values) as a key or a value. But the main difference is that Map allows keys of any type. Objects also convert keys to strings, which is another known difference. The keys of an Object must be either a String or a Symbol. As you look at Objects and Maps, another apparent difference is that Objects cannot use another object as a key.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong> Different types as keys<br /><br />
 
@@ -98,7 +98,7 @@ console.log(contacts.size); // returns 1
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Using objects as keys is one of the most notable and vital Map features. The same does not count for objects, and string as a key in an object is fine, but we cannot use another object as a key in an Object.
+  <div><strong>Interview Response:</strong> Using objects as keys is one of the most notable and vital Map features. The same does not count for objects, We should note that using a string as a key in an object is fine, but we cannot use another object as a key.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -136,13 +136,13 @@ alert(visitsCountObj[ben]); // ben returns 123 because it was overwritten by joh
 
 ---
 
-### Which map methods get used to iterate over a Map Object?
+### Which map methods can you use to iterate over a Map Object?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> There are three Map methods that you can use to iterate over a map, including the key, values, and entries methods.</div><br />
-  <div><strong>Technical Response:</strong> There are three Map methods that you can use to iterate over a map, including the key, values, and entries methods. The keys method returns the keys within the Map. The entries method returns an iterable for entries [key, value]. At the same time, the Object.values method returns an iterable for values. Notable, by default entries, is used in the for…of loop. So, it is not necessary to invoke it explicitly. The iteration goes in the same order as the values get inserted, and the map preserves this order, unlike regular Objects.
+  <div><strong>Interview Response:</strong> There are three Map methods that you can use to iterate over a map object, including the key, values, and entries methods.</div><br />
+  <div><strong>Technical Response:</strong> There are three Map methods that you can use to iterate over a map, including the key, values, and entries methods. The keys method returns the keys within the Map. The entries method returns an iterable for entries [key, value]. At the same time, the Object.values method returns an iterable for values. Notable, by default entries, is used in the for…of loop. So, it is not necessary to invoke it explicitly. The iteration goes in the same order as the value insertion, and the map preserves this order, unlike regular Objects.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -186,8 +186,8 @@ recipeMap.forEach((quantity, veg) => console.log(`${veg}, ${quantity}`));
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, the forEach method gets used to iterate over the Map Object.</div><br />
-  <div><strong>Technical Response:</strong> The forEach method gets used to iterate over the Map Object. The forEach() method executes a provided function once for each Map entry. You should note that instead of producing a [key, value]; as a result, it produces the opposite [value, key]. You can choose the format of your choice to meet the proposed result.
+  <div><strong>Interview Response:</strong> Yes, we can use the forEach method to iterate over the Map Object.</div><br />
+  <div><strong>Technical Response:</strong> You can use forEach method to iterate over the Map Object. The forEach() method executes a provided function once for each Map entry. You should note that instead of producing a [key, value], as a result, it creates the opposite [value, key]. You can choose the format of your choice to meet the proposed outcome.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -215,7 +215,7 @@ recipeMap.forEach((quantity, veg) => console.log(`${veg}, ${quantity}`));
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Technically, yes, but it is not recommended because it uses the feature of a generic object. There is a significant loss of built-in Map methods like set and delete when it gets transformed into a generic object.
+  <div><strong>Interview Response:</strong> Technically, yes, but it is not recommended because it uses the feature of a generic object. There is a significant loss of built-in Map methods like set and delete when it we transform it into a generic object.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -259,8 +259,8 @@ console.log(contacts.size); // 1
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, we can create a new map object and get the object entries using the object.entries method.</div><br />
-  <div><strong>Technical Response:</strong> Yes, if we have a plain object and would like to create a Map from it, we can use the built-in method Object.entries(obj) that return an array of key/value pairs for an object precisely in that format.
+  <div><strong>Interview Response:</strong> Yes, we can create a new map object and extract the object entries using the object.entries method.</div><br />
+  <div><strong>Technical Response:</strong> Yes, if we have a plain object and would like to create a Map from it, we can use the built-in method Object.entries(obj) that returns an array of key/value pairs for an object precisely in that format.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -288,7 +288,7 @@ alert(map.get('name')); // John
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The Object.fromEntries method transforms a list of key-value (Map Object) pairs into an object. Object.entries get the entries that we can place on a Map.</div><br />
+  <div><strong>Interview Response:</strong> The Object.fromEntries method transforms a list of key-value (Map Object) pairs into an object. Object.entries extracts the entries that we can place on a Map.</div><br />
   <div><strong>Technical Response:</strong> If we have a plain object, and we would like to create a Map from it, then we can use the built-in method Object.entries(obj) that returns an array of key/value pairs for an object exactly in that format. The Object.fromEntries() method transforms a list of key-value (Map Object) pairs into an object. So, both have conversion components that are the opposite of one another.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong> Object.fromEntries();<br /><br />

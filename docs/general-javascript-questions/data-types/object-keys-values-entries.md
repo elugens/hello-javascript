@@ -86,7 +86,7 @@ console.log(Object.keys(myObj)); // console: ['foo']
 ```
 
 :::note
-If you want all properties—including non-enumerables—see Object.getOwnPropertyNames().
+If you want all properties including non-enumerables ones; see Object.getOwnPropertyNames().
 :::
 
   </div>
@@ -186,7 +186,7 @@ for (const [key, value] of Object.entries(object1)) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The first difference is that we have to call Object.keys(obj) and not obj.keys(). The reason is flexibility because objects are the base of all complex structures in JavaScript. The second difference is that Object.* methods return a “real” array, not just an iterable.</div><br />
+  <div><strong>Interview Response:</strong> The first difference is that we have to call Object.keys(obj) and not obj.keys(). The reason is flexibility because objects are the base of all complex structures in JavaScript. The second difference is that (Object.*) methods return a “real” array, not just an iterable.</div><br />
   <div><strong>Technical Response:</strong> The biggest difference is that we must use Object.keys(obj) rather than obj.keys (). The primary factor is adaptability. Remember that in JavaScript, objects are the foundation of all complicated structures. As a result, we may have our object, such as data, that implements its data.values() function. We may still use Object.values(data) on it. The second distinction is that Object.* methods return "actual" array objects rather than merely iterables. This difference is primarily due to historical considerations.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -220,8 +220,8 @@ console.log(Object.entries(user));
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Like a for..in loop, these methods ignore properties that use Symbol(...) as keys. If we want symbolic keys too, we can use Object.getOwnPropertySymbols.</div><br />
-  <div><strong>Technical Response:</strong> No, Just like a for..in loop, these methods ignore properties that use Symbol(...) as keys. Usually, that is convenient. But if we want symbolic keys too, there is a separate method Object.getOwnPropertySymbols that returns an array of only symbolic keys. Also, a method exists, Reflect.ownKeys(obj), that returns all keys.
+  <div><strong>Interview Response:</strong> Like a for..in loop, these methods ignore properties that use Symbol(...) as keys. If we want symbolic keys too, we can use Object.getOwnPropertySymbols().</div><br />
+  <div><strong>Technical Response:</strong> No, Just like a for..in loop, these methods ignore properties that use Symbol(...) as keys. Usually, that is convenient. But if we want symbolic keys too, there is a separate method Object.getOwnPropertySymbols() that returns an array of only symbolic keys. Also, a method exists, Reflect.ownKeys(obj), that returns all keys.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -251,7 +251,7 @@ for (let i in obj) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> If we would like to apply them, we can use Object.entries followed by Object.fromEntries. First, we get an array of [key, value] pairs from the obj by invoking Object.entries(obj). Call map on the resulting array. Then, we have to call Object.fromEntries(array) on the resulting array to turn it back into an object.</div><br />
+  <div><strong>Interview Response:</strong> If we would like to apply them, we can use Object.entries followed by Object.fromEntries. First, we extract an array of [key, value] pairs from the obj by invoking Object.entries(obj). Call map on the resulting array. Then, we have to call Object.fromEntries(array) on the resulting array to turn it back into an object.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>

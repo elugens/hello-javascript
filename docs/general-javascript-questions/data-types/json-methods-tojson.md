@@ -16,7 +16,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> JSON or JavaScript Object Notation is a lightweight and straightforward data exchange format used across multiple language platforms, including JavaScript. JSON means JavaScript Object Notation, and it is language and platform-independent.</div><br />
-  <div><strong>Technical Response:</strong> JSON is a simple and lightweight data exchange format used across multiple language platforms. JSON means JavaScript Object Notation, and it is language and platform-independent. JSON often gets used when data gets sent from a server to a web page, and it works both on the front and back end of development environments. Several built-in JavaScript methods get used to convert JSON objects from and back to their original format.
+  <div><strong>Technical Response:</strong> JSON is a simple and lightweight data exchange format used across multiple language platforms. JSON means JavaScript Object Notation, and it is language and platform-independent. JSON often gets used when data gets sent from a server to a web page, and it works both on the front and back end of development environments. Several built-in JavaScript methods convert JSON objects from and back to their original format.
   </div>
   </div>
 </details>
@@ -32,8 +32,8 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   <strong>Syntax:</strong> JSON.stringify(value[, replacer[, space]])<br /><br />
   <ul>
     <li>The <strong>value</strong> to convert to a JSON string.</li>
-    <li>•	The (optional) <strong>replacer</strong> is a function or array used to change the behavior of the stringification process.</li>
-    <li>•	The (optional) <strong>space</strong> consists of a String or Number object that gets used to introduce white space into the output JSON string to improve readability. If this is a number, it denotes the number of white space characters to use, and the number is limited and defaults to 10 spaces.</li>
+    <li>• The (optional) <strong>replacer</strong> is a function or array used to change the behavior of the stringification process.</li>
+    <li>• The (optional) <strong>space</strong> consists of a String or Number object that gets used to introduce white space into the output JSON string to improve readability. If this is a number, it denotes the number of white space characters to use, and the number is limited and defaults to 10 spaces.</li>
   </ul>
 </div><br />
   <div><strong className="codeExample">Simple Example:</strong><br /><br />
@@ -111,7 +111,7 @@ alert(JSON.stringify([1, 2, 3])); // [1,2,3]
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Several JavaScript-specific object properties get ignored by JSON.stringify(), including function properties, Symbolic keys and values, and properties that hold a value of undefined.
+  <div><strong>Interview Response:</strong> JSON.stringify() ignores several JavaScript-specific object properties, including function properties, Symbolic keys and values, and properties that hold a value of undefined.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -154,7 +154,7 @@ alert(JSON.stringify(user)); // {} (empty object)
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The third argument of JSON.stringify(value, replacer, space) is the number of spaces to use for pretty object formatting.</div><br />
-  <div><strong>Technical Response:</strong> The third argument of JSON.stringify(value, replacer, space) is the number of spaces to use for pretty formatting. Previously, all stringified objects had no indents and extra spaces. That is fine if we want to send an object over a network. The space argument is used exclusively for nice formatting. Remember that if you do not use the replacer, it should get set to null.
+  <div><strong>Technical Response:</strong> The third argument of JSON.stringify(value, replacer, space) is the number of spaces to use for pretty formatting. Previously, all stringified objects had no indents and extra spaces. That is fine if we want to send an object over a network. The space argument is used exclusively for nice formatting. Remember that if you do not use the replacer, we should set it to null.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -229,7 +229,7 @@ alert(JSON.stringify(user, null, 2)); // value: user, replacer: null, space: 2
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The extension of a JSON file is ".json." Because JSON files are text-based, they may get viewed or changed using any text editor, such as notepad or notepad++.
+  <div><strong>Interview Response:</strong> The extension of a JSON file is ".json." Because JSON files are text-based, we can change or view the file content using any text editor, such as notepad or notepad++.
 </div>
   </div>
 </details>
@@ -241,7 +241,7 @@ alert(JSON.stringify(user, null, 2)); // value: user, replacer: null, space: 2
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> JSON does not support any comments. However, a Key or data object can get utilized to store your comments. We need to make sure that our application ignores the given data element during the processing of the JSON.
+  <div><strong>Interview Response:</strong> JSON does not support any comments. However, we can store comments in a Key or data object. We need to make sure that our application ignores the given data element during the processing of the JSON.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong> Commenting in JSON (Technically, it can be done but is not supported)<br /><br />
 
@@ -249,7 +249,7 @@ alert(JSON.stringify(user, null, 2)); // value: user, replacer: null, space: 2
 
 ```json
 {
-   "_comment1": "this is my comment",  comment (not supported)
+   "_comment1": "this is my comment", // <-- comment (not supported)
    "sport": "basketball",
    "coach": "Joe Smith",
    "wins": 15,
@@ -269,7 +269,7 @@ alert(JSON.stringify(user, null, 2)); // value: user, replacer: null, space: 2
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The JSON.parse() method parses a string and returns a JavaScript object. The string must get written in JSON format. The JSON.parse() method can optionally transform the result with a function.</div><br />
-  <div><strong>Technical Response:</strong> The JSON.parse() method parses a JSON string, constructing the JavaScript value or object described by the string. An optional reviver function can get provided to perform a transformation on the resulting object before it gets returned. JSON parse is the opposite of the stringify method, and it returns an Object, Array, string, number, a boolean, or null value corresponding to the given JSON object text. You should note that JSON.parse() does not allow trailing commas.
+  <div><strong>Technical Response:</strong> The JSON.parse() method parses a JSON string, constructing the JavaScript value or object described by the string. We can use an optional reviver function to perform a transformation on the resulting object before our code returns it. JSON parse is the opposite of the stringify method, and it returns an Object, Array, string, number, a boolean, or null value corresponding to the given JSON object text. You should note that JSON.parse() does not allow trailing commas.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

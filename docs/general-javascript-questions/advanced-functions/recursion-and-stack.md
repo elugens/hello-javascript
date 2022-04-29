@@ -17,7 +17,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Recursion is the process by which a function calls itself as a subroutine.</div><br />
-  <div><strong>Technical Response:</strong> Recursion is a programming pattern when work needs to get naturally split into numerous more straightforward tasks of the same type. Or when a task gets simplified into an easy action plus a simpler variant of the same task. When a function solves a task, it can call many other functions. A partial example of this is when a function calls itself, known as recursion.
+  <div><strong>Technical Response:</strong> Recursion is a programming pattern when work needs to naturally split into several more straightforward tasks of the same type. Or when a task gets simplified into an easy action plus a simpler variant of the same task. When a function solves a task, it can call many other functions. A partial example is when a function calls itself, known as recursion.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong> Recursion<br /><br />
 
@@ -82,7 +82,7 @@ alert(pow(2, 3)); // 8
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To adequately explain how recursion works in JavaScript. First, it is preferable to establish the execution context and its relationship to the stack. The execution context of a running function stores information about its execution process. The execution context is an internal data structure that contains information about a function's execution, such as where the control flow is currently, the current variables, the value of “this”, and a few other internal details. Each function call connects with a single execution context.<br /><br />
+  <div><strong>Interview Response:</strong> To adequately explain how recursion works in JavaScript. First, we need to explain the execution context and its relationship to the stack. The execution context of a running function stores information about its execution process. The execution context is an internal data structure that contains information about a function's execution, such as where the control flow is currently, the current variables, the value of “this”, and a few other internal details. Each function call connects with a single execution context.<br /><br />
   <strong>The following occurs when a function makes a nested call:</strong><br /><br />
   <ul>
     <li>The current function gets paused.</li>
@@ -207,7 +207,7 @@ list.next.next.next.next = null;
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> It varies; there are advantages to both ways that JavaScript must consider. Recursion commonly gets utilized because it is easier to build and more 'elegant' than iterative methods. Remember that anything done in recursion may also get done iteratively, although there is usually a performance penalty with recursion. However, depending on the situation at hand, that performance disadvantage may be negligible — in which case, recursion makes sense. With recursion, you also have the extra benefit of making your code more understandable to other programmers, which is always a plus.
+  <div><strong>Interview Response:</strong> It varies; there are advantages to both ways that we must consider. We commonly use recursion because it is easier to build and more 'elegant' than iterative methods. Remember that anything done in recursion has an alternative iterative approach, but we should use caution with our approach because there is usually a performance penalty with recursion. However, depending on the situation at hand, that performance disadvantage may be negligible — in which case, recursion makes sense. With recursion, you also have the extra benefit of making your code more understandable to other programmers, which is always a plus.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong> Iterative vs. Recursive<br /><br />
 

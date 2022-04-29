@@ -16,7 +16,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A global object is an object that always exists in the global scope. In JavaScript, there is always a global object defined. When scripts create global variables defined with the var keyword in a web browser, they get created as members of the global object.
+  <div><strong>Interview Response:</strong> A global object is an object that always exists in the global scope. There is always a global object defined in JavaScript; when scripts create global variables defined with the var keyword in a web browser, JavaScript creates them as members of the global object.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

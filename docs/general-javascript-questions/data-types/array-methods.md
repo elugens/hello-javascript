@@ -84,7 +84,7 @@ alert(arr); // 1,2,3,4,5
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The method arr.slice returns a new array, copying all items from index start to end (not including end).</div><br />
-  <div><strong>Technical Response:</strong> The technique arr.slice is significantly more straightforward than the similarly named arr.splice. It returns a new array with all entries from index start to finish copied to it (not including end). When both start and end are negative, the position from the array end is assumed. It works similarly to the string function str.slice, except instead of substrings, it creates subarrays. We can also use it without arguments: arr.slice() which duplicates arr. This process frequently obtains a duplicate for subsequent changes that should not affect the original array.<br />
+  <div><strong>Technical Response:</strong> The method arr.slice is significantly more straightforward than the similarly named arr.splice. It returns a new array with all entries from index start to finish copied to it (not including end). When both start and end are negative, the position from the array end is assumed. It works similarly to the string function str.slice, except instead of substrings, it creates subarrays. We can also use it without arguments: arr.slice() which duplicates arr. This process frequently obtains a duplicate for subsequent changes that should not affect the original array.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -148,8 +148,8 @@ console.log(arr2); // 1,2,3,4,5 – modified the original array
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The concat() method gets used to merge two or more arrays. This method does not change the existing arrays but instead returns a new array.</div><br />
-  <div><strong>Technical Response:</strong> The concat() method gets used to merge two or more arrays. This method does not change the existing arrays but returns a new array. It accepts any number of arguments using either arrays or values. Typically, it only copies elements from arrays. Other objects, even if they look like arrays, are added. But if an array-like object has a special Symbol.isConcatSpreadable property, it is treated as an array by concat its elements get added instead.<br />
+  <div><strong>Interview Response:</strong> We use the concat() method to merge two or more arrays. This method does not change the existing arrays but instead returns a new array.</div><br />
+  <div><strong>Technical Response:</strong> You can use the concat() method to merge two or more arrays. This method does not change the existing arrays but returns a new array. It accepts any number of arguments using either arrays or values. Typically, it only copies elements from arrays. Other objects, even if they look like arrays, are added. But if an array-like object has a special Symbol.isConcatSpreadable property, it is treated as an array by concat its elements get added instead.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -263,20 +263,20 @@ Additionally, break and continue statements are not valid statements, resulting 
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> They operate on items instead of characters, as their string counterparts.</div><br />
-  <div><strong>Technical Response:</strong> The methods array indexOf, lastIndexOf, and includes the method have the same syntax and do essentially the same as their string counterparts but operate on items instead of characters.<br /><br />
+  <div><strong>Technical Response:</strong> The methods array indexOf, lastIndexOf, and includes method have the same syntax and do essentially the same as their string counterparts but operate on items instead of characters.<br /><br />
   </div>
   </div>
 </details>
 
 ---
 
-### Explain the function and syntax of the array indexOf() method.
+### Explain the function and syntax of the array indexOf() method
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The indexOf array method returns the first index at which a given element gets found in the array, or -1 if it is not present. It accepts two arguments, including the searchElement and fromIndex. </div><br />
-  <div><strong>Technical Response:</strong> The indexOf() method returns the first index at which a given element gets found in the array, or -1 if it is not present. It accepts two arguments, including the searchElement and fromIndex. The searchElement is the element located in the array. The fromIndex is the starting index in the array you want to start the element search from. indexOf() compares searchElement to elements of the Array using strict equality (the same method used by the === or triple-equals operator).<br />
+  <div><strong>Interview Response:</strong> The indexOf array method returns the first index at which a given element is found in the array, or -1 if it is not present. It accepts two arguments, including the searchElement and fromIndex.</div><br />
+  <div><strong>Technical Response:</strong> The indexOf() method returns the first index at which a given element is found in the array, or -1 if it is not present. It accepts two arguments, including the searchElement and fromIndex. The searchElement is the element located in the array. The fromIndex is the starting index in the array you want to start the element search from. indexOf() compares searchElement to elements of the Array using strict equality (the same method used by the === or triple-equals operator).<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -335,7 +335,7 @@ console.log(numbers.lastIndexOf(2, -1)); // 3
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The includes array method determines whether an array includes a specific value among its entries, returning true or false as appropriate.</div><br />
-  <div><strong>Technical Response:</strong> The includes() method determines whether an array includes a specific value among its entries, returning true or false as appropriate. Returns a Boolean, which is true if the value valueToFind gets found within the array (or the part of the array indicated by the index fromIndex, if specified). Values of zero are all considered to be equal, regardless of sign. (That is, -0 does not get considered to be equal to both 0 and +0), but false is not considered to be the same as 0. The include method also has an optional fromIndex position as a starting point in the index forward.<br /><br />
+  <div><strong>Technical Response:</strong> The includes() method determines whether an array includes a specific value among its entries, returning true or false as appropriate. Returns a Boolean, which is true if the value valueToFind gets found within the array (or the part of the array indicated by the index fromIndex, if specified). Values of zero are all considered to be equal, regardless of sign. (You should not consider -0 to be equal to both 0 and +0), but false is not considered to be the same as 0. The include method also has an optional fromIndex position as a starting point in the index forward.<br /><br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -401,12 +401,12 @@ if (array2.indexOf(NaN) == -1) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The find method accepts a callback function on elements in an array where the item is the element index, and the array is the array itself. If it returns true, the search gets stopped, and the item gets returned. If nothing gets found, undefined gets returned.</div><br />
-  <div><strong>Technical Response:</strong> The find method accepts a callback function on elements in an array where the item is the element index, and the array is the array itself. If it returns true, the search gets stopped, and the item gets returned. If nothing gets found, undefined gets returned. It's good to keep in mind that index 0 is interpreted as a Falsy value in conditional statement checks on the find method.<br />
+  <div><strong>Interview Response:</strong> The find method accepts a callback function on elements in an array where the item is the element index, and the array is the array itself. If it returns true, the search stops, and the item returns. If nothing gets found, undefined returns.</div><br />
+  <div><strong>Technical Response:</strong> The find method accepts a callback function on elements in an array where the item is the element index, and the array is the array itself. If it returns true, the search stops, and the item returns. If nothing gets found, undefined returns. It's good to keep in mind that index 0 is interpreted as a Falsy value in conditional statement checks on the find method.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-<strong>Syntax: </strong> arr.find(callback(element[, index[, array]])[, thisArg]);<br /><br />
+<strong>Syntax: </strong> arr.find[callback(element[, index[, array]]](, thisArg));<br /><br />
 
   <div></div>
 
@@ -452,7 +452,7 @@ You should remember that index 0 gets interpreted as a falsie value in condition
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-<strong>Syntax: </strong> arr.findIndex(callback( element[, index[, array]] )[, thisArg]);<br /><br />
+<strong>Syntax: </strong> arr.findIndex[callback( element[, index[, array]] ](, thisArg));<br /><br />
 
   <div></div>
 
@@ -489,7 +489,7 @@ console.log(user); // expected output: 0
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The filter method calls a provided callback function once for each element in an array and constructs a new array of all the values for which the callback returns a value that coerces to true.</div><br />
-  <div><strong>Technical Response:</strong> The filter method creates a new array with all elements that pass the test implemented by the provided function. The filter method calls a provided callback function once for each element in an array and constructs a new array of values for which the callback returns a value that coerces to true. The callback gets invoked only for indexes of the array that have assigned values; it does not get invoked for indexes that have been deleted or assigned values. Array elements that do not pass the callback test are skipped and do not get included in the new array.<br />
+  <div><strong>Technical Response:</strong> The filter method creates a new array with all elements that pass the test implemented by the provided function. The filter method calls a provided callback function once for each element in an array and constructs a new array of values for which the callback returns a value that coerces to true. The callback invokes only for indexes of the array that have assigned values; it does not invoke for indexes that have been deleted or assigned values. Array elements that do not pass the callback test are skipped and not included in the new array.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -524,7 +524,7 @@ let filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
 
 ---
 
-### Explain the function and syntax of the array sort(fn) method.
+### Explain the function and syntax of the array sort(fn) method
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -658,7 +658,7 @@ We should note that you cannot use the reverse method to reverse a string. It st
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> A split method divides a string into an ordered list of substrings, places them in an array, and returns that array of substrings. The split method accepts two arguments, including a delimiter and an optional number. The optional number sets the number of values returned in the array.</div><br />
-  <div><strong>Technical Response:</strong> The split() method divides a String into an ordered list of substrings, puts these substrings into an array, and returns the array of strings. The division gets done by searching for a specific pattern, where the pattern gets provided as the first parameter in the method's call. The split method has an optional second numeric argument, limiting the array length. If it gets provided, then the extra elements are ignored. In practice, it rarely gets used, in any case. When the empty string ("") gets used as a separator, the string is not split by user-perceived characters (grapheme clusters) or Unicode characters (codepoints) but by UTF-16 code units. This process destroys surrogate pairs.<br />
+  <div><strong>Technical Response:</strong> The split() method divides a String into an ordered list of substrings, puts these substrings into an array, and returns the array of strings. The division completes by searching for a specific pattern, where the pattern gets provided as the first parameter in the method's call. The split method has an optional second numeric argument, limiting the array length. If it gets provided, then the extra elements are ignored. In practice, it rarely gets used, in any case. When the empty string ("") gets used as a separator, the string is not split by user-perceived characters (grapheme clusters) or Unicode characters (codepoints) but by UTF-16 code units. This process destroys surrogate pairs.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -694,7 +694,7 @@ alert(arr); // return Bilbo, Gandalf
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The join method creates and returns a new string by concatenating all the elements in an array or an array-like object, separated by commas or a specified separator string. If the array has only one item, that item gets returned without using the separator in a string.</div><br />
+  <div><strong>Interview Response:</strong> The join method creates and returns a new string by concatenating all the elements in an array or an array-like object, separated by commas or a specified separator string. If the array has only one item, that item returns without using the separator in a string.</div><br />
   <div><strong>Technical Response:</strong> The join() method creates and returns a new string by concatenating all elements in an array (or an array-like object), separated by commas or a specified separator string. If the array has only one item, that item returns without using the separator. The call arr.join(glue) does the reverse of a split. If an element is undefined, null, or an empty array [], it is converted to an empty string.<br /><br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />

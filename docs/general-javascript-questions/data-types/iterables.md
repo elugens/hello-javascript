@@ -17,7 +17,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> An iterable interface specifies that an object is accessible if it implements a key method [symbol.iterator]. The built-in data structures that use iterables are Strings, Arrays, Maps, and custom objects.</div><br />
-  <div><strong>Technical Response:</strong> Iterable objects are a subset of arrays. This notion allows us to use any object in a for...of loop. Arrays, of course, are iterable. However, several additional built-in objects are iterable as well. Strings, for example, are also iterable. It is a data structure that allows its data to get consumed in general. It does this by implementing a method with the key Symbol.iterator, which returns an iterator. The iterator interface provides another method called return(), which gets performed when the iteration reaches the last value or is deliberately halted by calling it directly or using break; a for loop.
+  <div><strong>Technical Response:</strong> Iterable objects are a subset of arrays. This notion allows us to use any object in a for...of loop. Arrays, of course, are iterable. However, several additional built-in objects are iterable as well. Strings, for example, are also iterable. It is a data structure that allows consumption of its data in general. It does this by implementing a method with the key Symbol.iterator, which returns an iterator. The iterator interface provides another method called return(), which gets performed when the iteration reaches the last value or is deliberately halted by calling it directly or using break; a for loop.
   </div>
   </div>
 </details>
@@ -140,9 +140,9 @@ for (let item of arrayLike) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The Array.from method can turn an iterable or array-like value into an array. Then we can call array methods on it.
+  <div><strong>Interview Response:</strong> The Array.from() method can turn an iterable or array-like value into an array. Then we can call array methods on it.
 </div><br />
-  <div><strong className="codeExample">Syntax Example:</strong><br /><br />
+  <div><strong className="codeExample">Syntax Example:</strong> Array.from(arrayLike, (element, index) => { /*...*/ } )<br /><br />
 
   <div></div>
 

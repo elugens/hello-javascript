@@ -1,6 +1,6 @@
 ---
 title: Date and Time
-description: JavaScript dates and times are represented by the Date object.
+description: JavaScript dates and times are represented by the Date object. Date objects represent a single moment in time in a platform-independent format.
 sidebar_position: 11
 sidebar_label: Date and Time
 ---
@@ -17,7 +17,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> JavaScript Date objects represent a single moment in time in a platform-independent format. Date objects contain a Number that represents milliseconds since 1 January 1970 UTC.</div><br />
-  <div><strong>Technical Response:</strong> JavaScript Date objects represent a single moment in time in a platform-independent format. Date objects contain a Number that represents milliseconds since 1 January 1970 UTC. This date and time are not the same as the UNIX epoch (the number of seconds elapsed since midnight on January 1, 1970, UTC), the principal base value for computer-recorded date and time values. It's essential to keep in mind that while the time value at the heart of a Date object is UTC, the primary methods to fetch the date and time or its components all work in the local (i.e., host system) time zone and offset.
+  <div><strong>Technical Response:</strong> JavaScript Date objects represent a single moment in time in a platform-independent format. Date objects contain a Number that represents milliseconds since 1 January 1970 UTC. These date and time objects are not the same as the UNIX epoch (the number of seconds elapsed since midnight on January 1, 1970, UTC), the principal base value for computer-recorded date and time values. It's essential to keep in mind that while the time value at the heart of a Date object is UTC, the primary methods to fetch the date and time or its components all work in the local (i.e., host system) time zone and offset.
   </div>
   </div>
 </details>
@@ -132,7 +132,7 @@ console.log(date2); // returns 2021-01-02T08:00:00.000Z
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The getFullYear() method returns the year of the specified date according to local time, and getYear() method is deprecated. We should not use it.</div><br />
-  <div><strong>Technical Response:</strong> The getFullYear() method returns the year of the specified date according to local time. The getYear() method is deprecated and should not get used following the current MDN recommendations (It does not work well with date years after 2000).
+  <div><strong>Technical Response:</strong> The getFullYear() method returns the year of the specified date according to local time. The getYear() method is deprecated, and you should not use it but instead follow the current MDN recommendations (It does not work well with date years after 2000).
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -155,7 +155,7 @@ console.log(year); // returns 2021
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To get the month the specified date we want. We must first create a new date with a variable assignment and the new date object. The we can access the month with the variable.getMonth() method. The return value will be a number between the 0-11 index.</div><br />
+  <div><strong>Interview Response:</strong> To get the month and specify the date we want. First, we must create a new date with a variable assignment and the "new" date object. You can access the month with the variable.getMonth() method. The return value will be a number between the 0-11 index.</div><br />
   <div><strong>Technical Response:</strong> The getMonth() method returns the month on the specified date according to local time as a zero-based value (zero indicates the year's first month). It returns an integer number, between 0 and 11, representing the month on the given date according to local time. 0 corresponds to January, 1 to February, and more.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -235,7 +235,7 @@ console.log(weekday); // 1
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> TThe approach that we should use is straightforward. We simply add UTC for any of the UTC methods such as getUTCFullYear(), getUTCMonth(), and getUTCDay(). Two special methods do not have a UTC-variant: getTime and getTimezoneOffset.</div><br />
+  <div><strong>Interview Response:</strong> UTC is an acronym for Universal Time Coordinated. The approach to extract the desired information is straightforward. We simply add UTC for any of the UTC methods such as getUTCFullYear(), getUTCMonth(), and getUTCDay(). Two special methods do not have a UTC-variant: getTime and getTimezoneOffset.</div><br />
   <div><strong>Technical Response:</strong> UTC is an acronym for Universal Time Coordinated, established in 1972. This time was called Greenwich Mean Time (GMT) but now referred to as Coordinated Universal Time or Universal Time Coordinated (UTC). In JavaScript, there are also their UTC-counterparts, that return day, month, year and so on for the time zone UTC+0: getUTCFullYear(), getUTCMonth(), getUTCDay(). Just insert the "UTC" right after "get". Besides the given methods, two special ones do not have a UTC-variant, including getTime and getTimezoneOffset.
   </div>
   </div>
@@ -299,12 +299,12 @@ alert(date); // 1 Mar 2016
 
 ---
 
-### What happens when a Date object gets converted to a number?
+### What happens when a Date object converts to a number?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> When a Date object gets converted to a number, it becomes the timestamp same as date.getTime().
+  <div><strong>Interview Response:</strong> When a Date object converts to a number, it becomes the timestamp same as date.getTime().
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -330,7 +330,7 @@ alert(`The loop took ${end - start} ms`);
 
 :::note
 
-The critical side effect: dates can get subtracted; the result is their difference in milliseconds. That can be used for time measurements and equip an application with more powerful time-related features.
+The critical side effect: JavaScript can subtract date numbers; the result is their difference in milliseconds. That can be used for time measurements and equip an application with more powerful time-related features.
 
 :::
 
@@ -346,7 +346,7 @@ The critical side effect: dates can get subtracted; the result is their differen
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The static Date.now() method returns the number of milliseconds elapsed since January 1, 1970, 00:00:00 UTC.</div><br />
-  <div><strong>Technical Response:</strong> We don't need the Date object if we just want to measure time. Date.now() is a special method that returns the current timestamp, and it has the same semantic value as new Date(). getTime() returns a Time object without creating an intermediary Date object. As a result, it is speedier and puts less strain on waste collection. It primarily gets used for convenience or when we need the necessary performance, such as in JavaScript games or other specialized applications.
+  <div><strong>Technical Response:</strong> We don't need the Date object if we just want to measure time. Date.now() is a special method that returns the current timestamp, and it has the same semantic value as new Date(). getTime() returns a Time object without creating an intermediary Date object. As a result, it is speedier and puts less strain on waste collection. It's primarily done for convenience or when we need the necessary performance, such as in JavaScript games or other specialized applications.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

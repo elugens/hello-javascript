@@ -16,7 +16,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> An arrow function is a compact alternative to a traditional function expression but is limited and cannot get used in all situations. Arrow Functions lack bindings to "this" or "super" and should not get utilized as methods. They also have no access to the arguments or the new.target keywords. You should note that arrow functions are not agreeable with the call, apply, and bind methods that generally rely on establishing scope. They cannot be used as constructors and cannot use yield within their bodies.
+  <div><strong>Interview Response:</strong> An arrow function is a compact alternative to a traditional function expression but is limited, and we cannot use it in all situations. Arrow Functions lack bindings to "this" or "super", and you should not utilize them as methods. They also have no access to the arguments or the new.target keywords. You should note that arrow functions are not agreeable with the call, apply, and bind methods that generally rely on establishing scope. They cannot be used as constructors and cannot use yield within their bodies.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -57,7 +57,7 @@ console.log(arrowFunc(200)); // logs 300
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Arrow functions have no "this," which means that whenever "this" gets used in an arrow function, it starts looking up the scope to find the value of "this". During lookup, it finds that the object does not have a "this" of its own as it goes up the global scope and bound the value of this with the global scope, where it does not find anything and returns undefined.</div><br />
+  <div><strong>Interview Response:</strong> Arrow functions have no "this," which means that whenever we use "this" in an arrow function, it starts looking up the scope to find the value of "this". During lookup, it finds that the object does not have a "this" of its own as it goes up the global scope and bound the value of this with the global scope, where it does not find anything and returns undefined.</div><br />
   <div><strong>Technical Response:</strong> Unlike regular functions, Arrow functions do not have a this of their own; only regular functions and global scope have this of their own. Whenever "this" gets referenced in an arrow function, it begins by going up the scope to locate " this " value. Suppose the object does not have a "this" during the lookup. It goes up the global scope and binds the value of "this" to the global scope where nothing gets found.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />

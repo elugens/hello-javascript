@@ -11,7 +11,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 <CloseAllAnswers />
 
-### Explain the three types of binding techniques in JavaScript.
+### Can you explain the three types of binding techniques in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -23,7 +23,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Explain what explicit function binding is in JavaScript.
+### Can you explain what explicit function binding is in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

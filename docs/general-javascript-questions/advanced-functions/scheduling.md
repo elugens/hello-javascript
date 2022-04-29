@@ -1,6 +1,6 @@
 ---
 title: Scheduling / Timing
-description: Scheduling / Timing - setTimeout / setInterval is a very common interview question.
+description: Scheduling / Timing - setTimeout / setInterval is a very common interview question. There are two commonly used methods for scheduling calls in JavaScript, including the setTimeout and setInterval methods.
 sidebar_position: 8
 sidebar_label: Scheduling / Timing
 ---
@@ -16,7 +16,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> There are two commonly used methods for scheduling calls in JavaScript, including the setTimeout and setInterval methods. setTimeout allows us to run a function once after the interval of time. setInterval allows us to run a function repeatedly, starting after the interval of time, then repeating it continuously. Both methods are helpful when you need to schedule specific events or actions in JavaScript.</div><br />
+  <div><strong>Interview Response:</strong> There are two commonly used methods for scheduling calls in JavaScript, including the setTimeout and setInterval methods. setTimeout allows us to run a function once after the interval of time. setInterval allows us to run a function repeatedly, starting after the interval of time, then repeating it continuously. Both methods are helpful when you need to schedule specific events or actions in JavaScript.</div><br/>
   <div><strong>Technical Response:</strong> There are two commonly used methods for scheduling calls in JavaScript, including the setTimeout and setInterval methods. setTimeout allows us to run a function once after the interval of time. setInterval allows us to run a function repeatedly, starting after the interval of time, then repeating continuously at that interval. Both methods are helpful when you need to schedule specific events or actions in JavaScript. These methods don’t get included in the JavaScript specification. However, most settings have an internal scheduler, and these methods are available. All browsers, as well as Node.js, support them. Both methods are part of the WindowOrGlobalScope interface as a specification.
   </div>
   </div>
@@ -103,7 +103,7 @@ It's worth noting that the pool of IDs used by setTimeout() and setInterval() ar
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The setInterval method sets an interval that executes a function or piece of code repeatedly until the interval clears using the clearInterval method. It takes several arguments and parameters, including the callback function, interval time, and optional parameters. The interval delay time is optional and can be set in milliseconds to control the interval delay, but it must be a positive integer. The optional parameters gets used to set values in the callback function.</div><br />
-  <div><strong>Technical Response:</strong> The setInterval method has the same syntax as setTimeout. Parameters include the func/code, delay (optional), and some optional arguments. The func / code is required, but delay and optional arguments are not. The time, in milliseconds (thousandths of a second), the timer should delay in between executions of the specified function or code. See Delay restrictions below for details on the acceptable range of delay values. All arguments have the same meaning. But unlike setTimeout it runs the function not only once but regularly after the given interval of time. To stop further calls, we should call clearInterval(timerId). 
+  <div><strong>Technical Response:</strong> The setInterval method has the same syntax as setTimeout. Parameters include the func/code, delay (optional), and some optional arguments. The func / code is required, but delay and optional arguments are not. The time, in milliseconds (thousandths of a second), the timer should delay in between executions of the specified function or code. See Delay restrictions below for details on the acceptable range of delay values. All arguments have the same meaning. But unlike setTimeout it runs the function not only once but regularly after the given interval of time. To stop further calls, we should call clearInterval(timerId).
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

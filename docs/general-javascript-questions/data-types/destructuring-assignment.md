@@ -1,6 +1,6 @@
 ---
 title: Destructuring assignment in JavaScript
-description: Destructuring assignment in JavaScript is a JavaScript expression that makes it possible to extract data from arrays, or properties from objects, and assign them to variables.
+description: Destructuring assignment is a JavaScript expression that allows us to extract data from arrays, or object properties, and assign them to variables.
 sidebar_position: 10
 sidebar_label: Destructuring assignment
 ---
@@ -17,7 +17,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Destructuring assignment allows us to “unpack” arrays or objects into variables, which is sometimes more convenient. Destructuring also works great with complex functions with many parameters and default values.</div><br />
-  <div><strong>Technical Response:</strong> De-structuring assignment is a special syntax that allows us to “unpack” arrays or objects into many variables, which is sometimes more convenient. De-structuring also works great with complex functions with many parameters, default values, and more. Soon we see that. De-structuring commonly gets used on both objects and arrays in JavaScript. It is a “destructuring assignment” because it “destructures” by copying items into variables. But the array itself is not modified.
+  <div><strong>Technical Response:</strong> De-structuring assignment is a special syntax that allows us to “unpack” arrays or objects into many variables, which is sometimes more convenient. De-structuring also works great with complex functions with many parameters, default values, and more. We can use destructuring on both objects and arrays in JavaScript. It is a “destructuring assignment” because it “destructures” by copying items into variables. But the array itself is not modified.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -95,7 +95,7 @@ console.log(title); // Consul
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> De-structuring works with any iterable structure, including arrays, objects, sets, and strings on the right-hand side of the assignment.
+  <div><strong>Interview Response:</strong> Destructuring works with any iterable structure, including arrays, objects, Sets, and strings on the right-hand side of the assignment.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

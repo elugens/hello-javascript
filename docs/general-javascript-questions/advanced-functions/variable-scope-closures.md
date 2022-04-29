@@ -41,7 +41,7 @@ var num = 1;
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A block statement or compound statement gets used to group zero or more statements encapsulated in curly brackets.
+  <div><strong>Interview Response:</strong> We can use a block statement or compound statement to group zero or more statements encapsulated in curly brackets.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong> Code Block<br /><br />
 
@@ -145,7 +145,7 @@ Nested functions are pretty standard in JavaScript because of their dynamic abil
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The Lexical Environment is a theoretical specification object, and it gets used to describe how things work. The Lexical Environment object consists of two parts, including the environment record and a reference to the outer lexical environment.</div><br />
-  <div><strong>Technical Response:</strong> "Lexical Environment" is a specification object: it only exists "theoretically" in the language specification to describe how things work. We cannot get this object in our code and manipulate it directly. JavaScript engines may also optimize it, discard unused variables to save memory, and perform other internal tricks if the visible behavior remains as described. The Lexical Environment object consists of two parts, including the environment record and a reference to the outer lexical environment. The Environment Record is an object that stores local variables as its properties (and some other information like the value of this).
+  <div><strong>Technical Response:</strong> "Lexical Environment" is a specification object: it only exists "theoretically" in the language specification to describe how things work. We cannot access this object in our code and manipulate it directly. JavaScript engines may also optimize it, discard unused variables to save memory, and perform other internal tricks if the visible behavior remains as described. The Lexical Environment object consists of two parts, including the environment record and a reference to the outer lexical environment. The Environment Record is an object that stores local variables as its properties (and some other information like the value of this).
   </div><br/><br/>
 
 :::note
@@ -164,7 +164,7 @@ The Environment Record is an object that stores all local variables as its prope
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A variable is just a property of the special internal object called the Environment Record. To get or change a variable means to get or change a property of that object.
+  <div><strong>Interview Response:</strong> A variable is just a property of the special internal object called the Environment Record. To access or change a variable means to get or manipulate a property of that object.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -209,8 +209,8 @@ You should be aware that this only applies to function declarations, not functio
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A closure is a function that remembers its outer variables and can access them. In JavaScript, all functions are naturally Closures (there is only one exception, The "new Function" syntax). Functions automatically remember where they get created using a hidden [[Environment]] property, and then their code can access outer variables.</div><br />
-  <div><strong>Technical Response:</strong> A closure is a function that remembers its outer variables and can access them. In some languages, that is impossible, or a function should get written in a special way to make it happen. In JavaScript, all functions are naturally Closures (there is only one exception, The "new Function" syntax). Functions automatically remember where they get created using a hidden [[Environment]] property, and then their code can access outer variables.
+  <div><strong>Interview Response:</strong> A closure is a function that remembers its outer variables and can access them. In JavaScript, all functions are naturally Closures (there is only one exception, The "new Function" syntax). Functions automatically remember where their point of creation is using a hidden [[Environment]] property, and then their code can access outer variables.</div><br />
+  <div><strong>Technical Response:</strong> A closure is a function that remembers its outer variables and can access them. In some languages, that is impossible, or a function is written in a special way to make it happen. In JavaScript, all functions are naturally Closures (there is only one exception, The "new Function" syntax). Functions automatically remember where their point of creation is using a hidden [[Environment]] property, and then their code can access outer variables.
   </div><br />
 
 :::note
@@ -228,7 +228,7 @@ This should not be confused with a code block.
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Usually, a Lexical Environment is removed from memory with all the variables after the function call finishes. That is because there are no references to it. As with any JavaScript object, it is only kept in memory while it is reachable. A Lexical Environment object dies when it becomes unreachable (like any other object). In other words, it exists while there is at least one nested function referencing it.</div><br />
-  <div><strong>Technical Response:</strong> After the function call completes, a Lexical Environment typically gets erased from memory and all variables. This behavior is because there are no references to it, and it is only retained in memory while it is accessible, just like any other JavaScript object. If a nested function gets reached after the end of a function, it contains the [[Environment]] attribute, which refers to the lexical environment. In such a situation, the Lexical Environment is still available even after the function gets completed, therefore, it remains alive. When a Lexical Environment object becomes inaccessible, it dies (like any other object). In other words, it persists as long as there is at least one nested function that refers to it.
+  <div><strong>Technical Response:</strong> After the function call completes, a Lexical Environment typically disappears from memory and all variables. This behavior occurs because there are no references to it, and it is only retained in memory while it is accessible, just like any other JavaScript object. If a nested function is reached after the end of a function, it contains the [[Environment]] attribute, which refers to the lexical environment. In such a situation, the Lexical Environment is still available even after the function completes, therefore, it remains alive. When a Lexical Environment object becomes inaccessible, it dies (like any other object). In other words, it persists as long as there is at least one nested function that refers to it.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

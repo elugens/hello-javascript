@@ -163,8 +163,8 @@ If we try to do this with the let declaration, it results in an error because Ja
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Hoisting refers to JavaScript's default practice of pushing declarations to the top. We should note that they do not get initialized but get held in memory without their assignments.</div><br />
-  <div><strong>Technical Response:</strong> Hoisting is the default behavior of JavaScript, which moves declarations to the top but does not initialize them. The hoisting behavior gets predicted when var gets declared after its assignment since JavaScript only hoists declarations, not initializations. A precise definition of hoisting implies that variable and function declarations get physically relocated to the top of your code; however, this is not the case. Instead, variable and function declarations are stored in memory during the compilation step but remain where you typed them in your code.
+  <div><strong>Interview Response:</strong> Hoisting refers to JavaScript's default practice of pushing declarations to the top. We should note that they do not initialize but get held in memory without their assignments.</div><br />
+  <div><strong>Technical Response:</strong> Hoisting is the default behavior of JavaScript, which moves declarations to the top but does not initialize them. The hoisting behavior gets predicted when var gets declared after its assignment since JavaScript only hoists declarations, not initializations. A precise definition of hoisting implies that variable and function declarations physically relocate to the top of your code; however, this is not the case. Instead, variable and function declarations are stored in memory during the compilation step but remain where you typed them in your code.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong> Hoisting (put into memory) - Declarations get hoisted, but assignments do not.<br /><br />
 
@@ -242,7 +242,7 @@ It is not something we should use in modern JavaScript code, but you can still f
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, JavaScript does not permit the immediate execution of Function Declarations, and it causes a syntax error.
+  <div><strong>Interview Response:</strong> No, JavaScript does not permit the immediate execution of Function Declarations. It causes a syntax error.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

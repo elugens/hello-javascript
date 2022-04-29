@@ -1,6 +1,6 @@
 ---
 title: Function object / NFE
-description: Function object / NFE is a very common interview question.
+description: All functions in JavaScript are objects. The concept of functions as callable "action objects" is an excellent approach to thinking about them.
 sidebar_position: 6
 sidebar_label: Function object / NFE
 ---
@@ -28,7 +28,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, functions are first-class objects because they can have properties and methods just like any other object. What distinguishes them from other objects is that functions get called. In brief, they are Function objects.
+  <div><strong>Interview Response:</strong> In JavaScript, functions are first-class objects because they can have properties and methods just like any other object. What distinguishes them from other objects is that functions we call them. In brief, they are Function objects.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -189,7 +189,7 @@ func(); // Error, func is not defined (not visible outside of the function)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> There are times when a regular function expression does not meet our needs. A named function expression gives us access to the components of a function even if the reference gets nullified on the primary variable. 
+  <div><strong>Interview Response:</strong> There are times when a regular function expression does not meet our needs. A named function expression gives us access to the components of a function even if the reference gets nullified on the primary variable.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

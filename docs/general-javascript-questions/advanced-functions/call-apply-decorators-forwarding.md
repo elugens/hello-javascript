@@ -1,5 +1,6 @@
 ---
 title: Decorators and forwarding, call/apply
+description: The difference of call and apply is what they accept as args; call expects all parameters to passed individually, whereas apply expects an array of parameters.
 sidebar_position: 9
 sidebar_label: Call and Apply
 ---
@@ -15,7 +16,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The only difference between call and apply is what they accept as parameters; call() expects all parameters to get passed individually, whereas apply() expects an array of parameters.
+  <div><strong>Interview Response:</strong> The only difference between call and apply is what they accept as parameters; call() expects all parameters passed individually, whereas apply() expects an array of parameters.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
