@@ -19,7 +19,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> A mixin is a class containing methods that other classes can use without a need to inherit from it. In other words, a mixin provides methods for implementing a specific behavior, but we don't use it on its own; instead, we use it to add the behavior to other classes.</div><br />
-  <div><strong>Technical Response:</strong> We can only inherit from a single object in JavaScript. An item can only have one [[Prototype]]. A class may only extend to one additional class. This behavior is a constraint in 'class' inheritance that may necessitate the employment of a mixin. A mixin is a class with methods that other classes can utilize without inheriting from it. In other words, a mixin provides methods for implementing a specific behavior, but it does not get used by itself. We use it to add the behavior to other classes.
+  <div><strong>Technical Response:</strong> We can only inherit from a single object in JavaScript. An item can only have one [[Prototype]]. A class may only extend to one additional class. This behavior is a constraint in 'class' inheritance that may necessitate the employment of a mixin. A mixin is a class with methods that other classes can utilize without inheriting from it. In other words, a mixin provides methods for implementing a specific behavior, but we do not use it by itself. We use it to add the behavior to other classes.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

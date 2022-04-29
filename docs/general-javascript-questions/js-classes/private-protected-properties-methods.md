@@ -94,7 +94,7 @@ class CoffeeMachine {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, this is possible by creating a getter and withdrawing the setter from the equation. This implementation allows access to the value created at creation time, but it cannot get overridden after that point.
+  <div><strong>Interview Response:</strong> This implementation is possible by creating a getter and withdrawing the setter from the equation. This approach allows access to the value created at creation time, but we cannot override it after that point.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

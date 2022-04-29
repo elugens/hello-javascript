@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The extends keyword is used in class declarations or class expressions to create a class that is a child of another class. The "extends" keyword may get used to subclass bespoke classes and built-in objects such as the Date object and methods that return a class.
+  <div><strong>Interview Response:</strong> The extends keyword is used in class declarations or class expressions to create a class of a child of another class. We can use the "extends" keyword for subclassing bespoke classes and built-in objects such as the Date object and methods that return a class.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -63,7 +63,7 @@ d.speak(); // Mitzie barks.
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, we can use an expression after the extends keyword. The extends keyword gets used to subclass custom classes and built-in objects such as the Date object and procedures meant to yield a class.
+  <div><strong>Interview Response:</strong> Yes, we can use an expression after the extends keyword. We can use the extends keyword to subclass custom classes and built-in objects such as the Date object and procedures meant to yield a class.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -214,7 +214,7 @@ class Rabbit extends Animal {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Inheriting classes must call super in their constructor before using this, or it results in an error. The super keyword gets used to access and call functions on an object's parent. When used in a constructor, the super keyword appears alone and must get used before this keyword gets used. The super keyword gets used to call functions on a parent object.
+  <div><strong>Interview Response:</strong> Inheriting classes must call super in their constructor before using this, or it results in an error. We use the super keyword to access and call functions on an object's parent. When used in a constructor, the super keyword appears alone, and we must use it before this keyword. The super keyword gets used to call functions on a parent object.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

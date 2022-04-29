@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Built-in methods like an array, filter, map, and others return new objects of precisely the inherited type. Their internal implementation uses the object’s constructor property for that. If you test the strict equality between the newly created object and child class on the constructor, it returns true.
+  <div><strong>Interview Response:</strong> Built-in methods like an array, filter, map, and others return new objects of the inherited type. Their internal implementation uses the object’s constructor property for that. If you test the strict equality between the newly created object and child class on the constructor, it returns true.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

@@ -164,7 +164,7 @@ new User().sayHello(); // Hello, Jane
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Classical inheritance is rarely the best solution, and it may get utilized for a single level in rare situations.
+  <div><strong>Interview Response:</strong> Classical inheritance is rarely the best solution, and we can utilize it for a single levels in rare situations.
 </div>
   </div>
 </details>
@@ -211,7 +211,7 @@ let o = {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, class fields are a syntax that allows us to add properties to a class. It is implemented by adding a name property to a class and assigning a value to that property. The critical difference between class fields is that they get set on individual objects, not Class.prototype.
+  <div><strong>Interview Response:</strong> Yes, class fields are a syntax that allows us to add properties to a class. It is implemented by adding a name property to a class and assigning a value to that property. The critical difference between class fields is that we set them on individual objects, not Class.prototype.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
