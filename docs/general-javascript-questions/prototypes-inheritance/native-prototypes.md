@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The prototype property is present in all custom and built-in native objects, and it might get used to improve their usefulness by adding additional attributes and methods. Native prototypes may only be changed or new ones added to them; they cannot get erased.
+  <div><strong>Interview Response:</strong> The prototype property is present in all custom and built-in native objects, and we can improve their usefulness by adding additional attributes and methods. Native prototypes may only be changed or new ones added, but we cannot remove them.
 </div>
   </div>
 </details>
@@ -83,7 +83,7 @@ alert('La'.repeat(3)); // LaLaLa
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, you may borrow a native prototype method if you require the same functionality. The basic concept is to copy and paste a method from one object into another, and some native prototype approaches often get copied.
+  <div><strong>Interview Response:</strong> Yes, you may borrow a native prototype method if you require the same functionality. The basic concept is to copy and paste a method from one object into another. We should note that some native prototype approaches often get copied.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong> Borrowing the Array Join method…<br /><br />
 

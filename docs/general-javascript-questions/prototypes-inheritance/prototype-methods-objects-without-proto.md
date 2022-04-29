@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Since, the proto property is deprecated based the JavaScript specification. There are three modern methods that can be used in prototypal inheritance including Object.create(obj), Object.getPrototypeOf(obj), and Object.setPrototypeOf(obj, proto).<br /><br /> The Object.create(obj) method is used to create an empty object with given proto as prototype and optional property descriptors. The Object.getPrototypeOf(obj) that returns the prototype of an object, and Object. Object.setPrototypeOf(obj, proto) which sets the prototyple of obj to proto.
+  <div><strong>Interview Response:</strong> Since, the proto property is deprecated based the JavaScript specification. There are three modern methods that can be used in prototypal inheritance including Object.create(obj), Object.getPrototypeOf(obj), and Object.setPrototypeOf(obj, proto).<br /><br /> The Object.create(obj) method is used to create an empty object with given proto as prototype and optional property descriptors. The Object.getPrototypeOf(obj) that returns the prototype of an object, and Object. Object.setPrototypeOf(obj, proto) which sets the prototype of obj to proto.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -150,7 +150,7 @@ According to the MDN, changing the prototype after creation is a slow operation 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> According to the MDN, it gets replaced with getPrototypeOf and setPrototypeOf, because of the performance issues related to its use.
+  <div><strong>Interview Response:</strong> According to the MDN, the creators replaced it with getPrototypeOf and setPrototypeOf, because of the performance issues related to its use.
 </div><br />
 
 :::note
@@ -167,7 +167,7 @@ If you care about performance, you should avoid setting the [[Prototype]] of an 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Instances inherit from classes when class inheritance gets used. Hierarchical class taxonomies get created as a result of this. In contrast, instances inherit from other objects through prototypal inheritance, and they can get formed from numerous objects. Because it is more straightforward and more versatile, I favor prototypal inheritance.
+  <div><strong>Interview Response:</strong> Instances inherit from classes when we use class inheritance, and Hierarchical class taxonomies get created due to this. In contrast, instances inherit from other objects through prototypal inheritance, and they get formed from several objects. Because it is more straightforward and more versatile, I favor prototypal inheritance.
 </div>
   </div>
 </details>
@@ -197,7 +197,7 @@ I've been posing this issue for years, and the only responses I've ever received
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Classes inherit from classes created in sub-classes using a hierarchical class taxonomy. Prototypal inheritance equates to a prototype functioning as an object instance, and objects inherit directly from each other. The difference is that class taxonomy is not a derivative of prototypal inheritance.</div><br />
-  <div><strong>Technical Response:</strong><br /><br /> <strong>Class Inheritance:</strong> Instances inherit from classes (similar to a blueprint or a class description) and form sub-class relationships: hierarchical class taxonomies. Instances usually get created utilizing constructor functions that use the 'new' keyword. The ES6 'class' keyword may or may not be used for class inheritance.<br /><br /> <strong>Prototypal Inheritance:</strong> Instances get directly inherited from other objects. Instances often get created using factory methods or the 'Object.create()' method. Instances may be built up from various objects, allowing for simple selective inheritance.
+  <div><strong>Technical Response:</strong><br /><br /> <strong>Class Inheritance:</strong> Instances inherit from classes (similar to a blueprint or a class description) and form sub-class relationships: hierarchical class taxonomies. We can use JavaScript to create instances using constructor functions that use the 'new' keyword. The ES6 'class' keyword may or may not be used for class inheritance.<br /><br /> <strong>Prototypal Inheritance:</strong> In JavaScript, Instances directly inherit from other objects. Instances often get created using factory methods or the 'Object.create()' method. Instances may be built up from various entities, allowing for simple selective inheritance.
   </div>
   </div>
 </details>

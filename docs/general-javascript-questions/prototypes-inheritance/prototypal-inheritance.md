@@ -18,8 +18,8 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> JavaScript objects inherit features from one another through prototypes. JavaScript sometimes gets defined as a prototype-based language that gets used to offer inheritance; objects can have a prototype object that serves as a template object from which it inherits methods and attributes.</div><br />
-  <div><strong>Technical Response:</strong> Objects in JavaScript feature a special hidden property called [[Prototype]] (as defined in the standard), which is either null or refers to another object. This item gets referred to as a prototype. JavaScript objects inherit features from one another through the use of prototypes. Objects can have a prototype object, which acts as a template object from which it inherits methods and properties to provide inheritance. JavaScript commonly gets described as a prototype-based language.
+  <div><strong>Interview Response:</strong> JavaScript objects inherit features from one another through prototypes. JavaScript sometimes gets defined as a prototype-based language that we use to implement inheritance; objects can have a prototype object that serves as a template object from which it inherits methods and attributes.</div><br />
+  <div><strong>Technical Response:</strong> Objects in JavaScript feature a special hidden property called [[Prototype]] (as defined in the standard), which is either null or refers to another object. We refer to this object as a prototype. JavaScript objects inherit features from one another through the use of prototypes. Objects can have a prototype object, which acts as a template object from which it inherits methods and properties to provide inheritance. JavaScript commonly gets described as a prototype-based language.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -57,7 +57,7 @@ You should be familiar with the `__proto__` because you may see it in older code
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A prototype is a fixed entity called an object. When you declare a function, it generates a prototype related to that function. Furthermore, the prototype object establishes a link to its function, resulting in a circular relationship. This behavior applies to any function. Objects get created in various ways in JavaScript, and the new keyword is one method. We uppercase the initial letter of the function name when we declare if we intend on utilizing the "new" keyword. (a constructor function).
+  <div><strong>Interview Response:</strong> A prototype is a fixed entity called an object. When you declare a function, it generates a prototype related to it. Furthermore, the prototype object establishes a link to its function, resulting in a circular relationship. This behavior applies to any function. Objects get created in various ways in JavaScript, and the new keyword is one method. We apply an uppercase initial letter to the function name when we declare it if we intend on utilizing the "new" keyword. (a constructor function).
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

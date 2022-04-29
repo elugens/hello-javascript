@@ -1,6 +1,6 @@
 ---
 title: Property Flags / Descriptors
-description: Property Flags / Descriptors is a very common interview question.
+description: Property Flags / Descriptors interview questions. Object property attributes/flags include writeable, enumerable, and configurable flags.
 sidebar_position: 1
 sidebar_label: Property Flags / Descriptors
 ---
@@ -19,7 +19,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> In JavaScript, Objects have three unique properties called attributes or flags. The object property attributes/flags include writeable, enumerable, and configurable flags. All three unique attributes are Boolean types requiring a setting to be true or false.</div><br />
-  <div><strong>Technical Response:</strong> In JavaScript, Objects have three unique properties called attributes or flags. The object property attributes/flags include writeable, enumerable, and configurable flags. All three unique attributes are Boolean types requiring a setting to be true or false. The writable property attribute, if true, the value can be changed, and otherwise, it is read-only. If this property appears during the enumeration of the properties on the related object. The enumerable object attribute is true. The configurable property flag, if true, the property can be deleted, and these attributes can be modified; otherwise, not. All three of these special object attributes are set to false by default (According to the MDN), but when you invoke getOwnPropertyDescriptor it returns true (utterly confusing).
+  <div><strong>Technical Response:</strong> In JavaScript, Objects have three special properties called attributes or flags. The object property attributes/flags include writeable, enumerable, and configurable flags. All three special attributes are Boolean types requiring a setting to be true or false. The writable property attribute, if true, the value can be changed, and otherwise, it is read-only. If this property appears during the enumeration of the properties on the related object. The enumerable object attribute is true. The configurable property flag, if true, the property can be deleted, and these attributes can be modified; otherwise, not. All three of these special object attributes are set to false by default (According to the MDN), but when you invoke getOwnPropertyDescriptor it returns true (utterly confusing).
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -61,7 +61,7 @@ console.log(JSON.stringify(descriptor, null, 2));
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The Object.getOwnPropertyDescriptor() method returns an object describing the configuration of specific properties on a given object. The returned object returns all object properties and attributes. By default, property attributes include writable, enumerable, and configurable with a Boolean return value set to true.</div><br />
-  <div><strong>Technical Response:</strong> The Object.getOwnPropertyDescriptor() method returns an object describing the configuration of a specific property on a given object (that is, one directly presents on an object and not in the object's prototype chain). The object returned is mutable but mutating the object does not affect the original property's configuration. The obj is the object you are acting on, and the property name is the property you are attempting to get a description of.
+  <div><strong>Technical Response:</strong> The Object.getOwnPropertyDescriptor() method returns an object describing the configuration of a specific property on a given object (that is, one directly presents on an object and not in the object's prototype chain). The object returned is mutable but mutating the object does not affect the original property's configuration. The obj is the object you are acting on, and the property name is the property you are attempting to extract the description of programmatically.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -244,7 +244,7 @@ Object.defineProperty(user, 'name', { value: 'Pete' });
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The correct built-in JavaScript object method that gets used to define multiple properties is the Object.defineProperties() method.
+  <div><strong>Interview Response:</strong> The correct built-in JavaScript object method that we use to define multiple properties is the Object.defineProperties() method.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -388,7 +388,7 @@ console.log(obj.prop);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Both freeze and seal get used in creating non-extensible objects, but there are many differences between them. Object.seal() allows changes to the existing properties of an object while Object.freeze() does not. Object.freeze() makes an object immune to everything; even little changes cannot get made. Object.seal() prevents from deletion of existing properties but cannot prevent them from external changes.
+  <div><strong>Interview Response:</strong> We use both freeze and seal to create non-extensible objects, but there are many differences between them. Object.seal() allows changes to the existing properties of an object while Object.freeze() does not. Object.freeze() makes an object immune to everything; even little changes cannot get made. Object.seal() prevents from deletion of existing properties but cannot prevent them from external changes.
 </div>
   </div>
 </details>
@@ -431,7 +431,7 @@ console.log(Object.isExtensible(object1));
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The Object.isSealed() method determines if an object gets sealed or not. The Object.isSealed(obj) method returns a Boolean indicating whether the given object gets sealed.
+  <div><strong>Interview Response:</strong> The Object.isSealed() method determines if an object gets sealed or not. The Object.isSealed(obj) method returns a Boolean true or false, indicating whether the given object remains sealed.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

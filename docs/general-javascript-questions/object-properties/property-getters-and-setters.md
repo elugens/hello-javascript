@@ -93,7 +93,7 @@ document.getElementById('demo').innerHTML = person.fullName;
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, descriptors for accessor properties are different from those for data properties. There are no value or writable properties for accessor properties; instead, there are get and set functions. A named data property links a name to a value. This means you use the property to get and retrieve data directly as a public field on a class. A named accessor property associates a name with one or two accessor functions. The accessor functions get used to store or retrieve a value associated with the property. This behavior means that you restrict the access to a specific value behind a get or/and set accessor property.
+  <div><strong>Interview Response:</strong> Yes, descriptors for accessor properties are different from those for data properties. There are no value or writable properties for accessor properties; instead, there are get and set functions. A named data property links a name to a value. This means you use the property to get and retrieve data directly as a public field on a class. A named accessor property associates a name with one or two accessor functions. We use accessor functions to store or retrieve a value associated with the property. This behavior means that you restrict the access to a specific value behind a get or/and set accessor property.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
