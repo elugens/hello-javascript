@@ -55,7 +55,7 @@ fetch('https://jsonplaceholder.typicode.com/users').then((response) => {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The fetch() method starts fetching a resource from the network, returning a promise that gets fulfilled once the response is available. Fetch has two arguments, including the URL and optional options object. The URL is the URL to get accessed on the server, and the options object holds an array of parameters, including method, headers, and other options.</div><br />
+  <div><strong>Interview Response:</strong> The fetch() method starts fetching a resource from the network, returning a promise that gets fulfilled once the response is available. Fetch has two arguments, including the URL and optional options object. The URL is the URL being accessed on the server, and the options object holds an array of parameters, including method, headers, and other options.</div><br />
   <div><strong>Technical Response:</strong> The Fetch API provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline, such as requests and responses. It also provides a global fetch() method that provides an easy, logical way to fetch resources asynchronously across the network. The fetch() method starts fetching a resource from the network, returning a promise that gets fulfilled once the response is available. Fetch has two arguments, including the URL and optional options object. The URL is the URL getting accessed on the server, and the options object holds an array of parameters, including method, headers, and other options.
   </div><br />
 
@@ -71,7 +71,7 @@ fetch('https://jsonplaceholder.typicode.com/users').then((response) => {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> First, the promise, returned by fetch, resolves with an object of the built-in Response class as soon as the server responds with headers. At this stage, we can check HTTP status to see whether it is successful and check headers, but we do not have the body yet. The promise rejects if the fetch could not make HTTP-request, e.g., network problems, or there’s no such site. It should get noted that abnormal HTTP statuses, such as 404 or 500, do not cause an error. We can check the response and status by using the response properties response.ok and response.status.
+  <div><strong>Interview Response:</strong> First, the promise, returned by fetch, resolves with an object of the built-in Response class as soon as the server responds with headers. At this stage, we can check HTTP status to see whether it is successful and check headers, but we do not have the body yet. The promise rejects if the fetch could not make HTTP-request, e.g., network problems, or there’s no such site. We should note that abnormal HTTP statuses, such as 404 or 500, do not cause an error. We can check the response and status by using the response properties response.ok and response.status.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -100,7 +100,7 @@ if (response.ok) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Second, starts the process of getting the response body. We need to use an additional method call to get the response. The response provides multiple promise-based methods to access the body in various formats, including text, JSON, formData, blob, and ArrayBuffer.
+  <div><strong>Interview Response:</strong> Second, starts the process of getting the response body. We need to use an additional method call to retrieve the response. The response provides multiple promise-based methods to access the body in various formats, including text, JSON, formData, blob, and ArrayBuffer.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -122,7 +122,7 @@ alert(commits[0].author.login);
 
 ---
 
-### What is the max number of fetch responses we can read simultaneously? Can we get a text and JSON network response, for example?
+### What is the max number of fetch responses we can read simultaneously? Can we extract a text and JSON network response, for example?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -149,7 +149,7 @@ let parsed = await response.json(); // fails (already consumed)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The response headers are available in an iterable Map-like header object in response.headers. It is not precisely a Map, but it has similar methods to get individual headers by name or iterate over them.
+  <div><strong>Interview Response:</strong> The response headers are available in an iterable Map-like header object in response.headers. It is not precisely a Map, but it has similar methods to retrieve individual headers by name or iterate over them.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -179,7 +179,7 @@ for (let [key, value] of response.headers) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The headers option in fetch can get used to set a request header, and it has an object with incoming and outgoing headers. There are several restrictions on what we may access in the HTTP header.
+  <div><strong>Interview Response:</strong> We can use the headers option in fetch to set a request header, and it has an object with incoming and outgoing headers. There are several restrictions on what we may access in the HTTP header.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

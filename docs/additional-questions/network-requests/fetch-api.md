@@ -101,7 +101,7 @@ fetch('/page', {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The mode option is a safeguard that prevents occasional cross-origin requests. It has three parameters, including cors, same-origin, and no-cors. The cors parameter is the default state which allows cross-origin requests. The same-origin parameter only allows requests from the origin. When the same-origin gets set, all cross-origin requests are forbidden. The no-cors parameter only allows safe cross-origin requests. The mode option may be helpful when the URL for fetch comes from a 3rd-party, and we want a “power off switch” to limit cross-origin capabilities.
+  <div><strong>Interview Response:</strong> The mode option is a safeguard that prevents occasional cross-origin requests. It has three parameters, including cors, same-origin, and no-cors. The cors parameter is the default state which allows cross-origin requests. The same-origin parameter only allows requests from the origin. When the same-origin sets, all cross-origin requests are forbidden. The no-cors parameter only allows safe cross-origin requests. The mode option may be helpful when the URL for fetch comes from a 3rd-party, and we want a “power off switch” to limit cross-origin capabilities.
     </div>
   </div>
 </details>
@@ -113,7 +113,7 @@ fetch('/page', {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The credentials option specifies whether fetch should send cookies and HTTP-Authorization headers with the request. It has three parameters, including same-origin, include, and omit. The same-origin parameter is the default setting used only to send user credentials if the URL is on the same origin as the calling script. The include parameter gets used if we always want to send user credentials, even for cross-origin calls. (It should get noted that include requires Accept-Control-Allow-Credentials from the cross-origin server for JavaScript to access the response.). The omit parameter gets used when we do not want to send or receive cookies. This behavior is like XHR’s withCredentials flag, but with three available values instead of two.
+  <div><strong>Interview Response:</strong> The credentials option specifies whether fetch should send cookies and HTTP-Authorization headers with the request. It has three parameters, including same-origin, include, and omit. The same-origin parameter is the default setting used only to send user credentials if the URL is on the same origin as the calling script. The include parameter gets used if we always want to send user credentials, even for cross-origin calls. (We should note that include requires Accept-Control-Allow-Credentials from the cross-origin server for JavaScript to access the response.). The omit parameter gets used when we do not want to send or receive cookies. This behavior is like XHR’s withCredentials flag, but with three available values instead of two.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -159,7 +159,7 @@ var myCred = myRequest.credentials; // returns "same-origin" by default
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The integrity option allows to check if the response matches the known-ahead checksum. The specification's supported hash functions are SHA-256, SHA-384, and SHA-512. There might be others, depending on the browser. For example, we are downloading a file, and we know that is SHA-256 checksum is “abcdef” (an actual checksum is more extended, of course). Fetch calculates SHA-256 on its own and compares it with our string. In case of a mismatch, an error gets triggered.
+  <div><strong>Interview Response:</strong> The integrity option allows to check if the response matches the known-ahead checksum. The specification's supported hash functions are SHA-256, SHA-384, and SHA-512. There might be others, depending on the browser. For example, we are downloading a file, and we know that is SHA-256 checksum is “abcdef” (an actual checksum is more extended, of course). Fetch calculates SHA-256 on its own and compares it with our string. In case of a mismatch, an error triggers.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

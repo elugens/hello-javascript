@@ -55,7 +55,7 @@ try {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> There are two types of cross-origin requests, including safe and unsafe requests. A request is safe if it satisfies two conditions: safe methods (GET, POST, OR HEAD) and safe headers (ACCEPT, ACCEPT-LANGUAGE). Any other request is considered “unsafe”—for example, a PUT request or an API-Key HTTP-header that does not adhere to the restrictions. The essential difference is that a safe request can get made with a &#8249;form&#8250; or a &#8249;script&#8250; without any unique methods.
+  <div><strong>Interview Response:</strong> There are two types of cross-origin requests, including safe and unsafe requests. A request is safe if it satisfies two conditions: safe methods (GET, POST, OR HEAD) and safe headers (ACCEPT, ACCEPT-LANGUAGE). Any other request is considered “unsafe”—for example, a PUT request or an API-Key HTTP-header that does not adhere to the restrictions. The essential difference is that you can make a safe request with a &#8249;form&#8250; or a &#8249;script&#8250; without any unique methods.
     </div>
   </div>
 </details>
@@ -91,7 +91,7 @@ Origin: https://javascript.help
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, the browser plays the role of a trusted mediator. It ensures that the correct origin gets sent with a cross-origin request. It checks for permitting Access-Control-Allow-Origin in the response, and if it exists, then JavaScript can access the response. Otherwise, it fails with an error.
+  <div><strong>Interview Response:</strong> Yes, the browser plays the role of a trusted mediator. It ensures that the correct origin transmits with a cross-origin request. It checks for permitting Access-Control-Allow-Origin in the response, and if it exists, then JavaScript can access the response. Otherwise, it fails with an error.
     </div>
   </div>
 </details>
@@ -103,7 +103,7 @@ Origin: https://javascript.help
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> JavaScript may only access so-called “safe” response header entities like the Cache-Control and Content-Type for cross-origin requests. Accessing any other response header entity causes an error and results in failure. It should get noted that there is no Content-Length header entity in the list! This header contains the complete response length. So, if we are downloading something and would like to track the progress percentage, then additional permission is required to access that header entity.
+  <div><strong>Interview Response:</strong> JavaScript may only access so-called “safe” response header entities like the Cache-Control and Content-Type for cross-origin requests. Accessing any other response header entity causes an error and results in failure. We should note that there is no Content-Length header entity in the list! This header contains the complete response length. So, if we are downloading something and would like to track the progress percentage, then additional permission is required to access that header entity.
     </div>
   </div>
 </details>
@@ -141,7 +141,7 @@ Access-Control-Expose-Headers: Content-Length, API-Key // <--
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A preflight request is a small request sent by the browser before the actual request. It contains information like which HTTP method gets used and if any custom HTTP headers are present. The preflight gives the server a chance to examine what the actual request looks like before it gets made. If the server agrees to serve the requests, it should respond with an empty body, status 200, and headers. The preflight request occurs “behind the scenes” and is invisible to JavaScript.
+  <div><strong>Interview Response:</strong> A preflight request is a small request sent by the browser before the actual submission. It contains information like which HTTP method we used and if any custom HTTP headers are present. The preflight gives the server a chance to examine what the actual request looks like before it transmits. If the server agrees to serve the requests, it should respond with an empty body, status 200, and headers. The preflight request occurs “behind the scenes” and is invisible to JavaScript.
     </div>
   </div>
 </details>

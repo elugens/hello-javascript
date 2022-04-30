@@ -138,7 +138,7 @@ const objectURL = URL.createObjectURL(object); // Can be file or Blob object
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, we can use URL.revokeObjectURL(URL) to remove the reference from the internal mapping, thus allowing the Blob to get deleted (if there are no other references), and the memory to get freed.
+  <div><strong>Interview Response:</strong> Yes, we can use URL.revokeObjectURL(URL) to remove the reference from the internal mapping, thus allowing the Blob to get deleted (if there are no other references), and the memory freed.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

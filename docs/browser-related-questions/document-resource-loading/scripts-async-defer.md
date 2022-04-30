@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> When the browser loads HTML and comes across a &#8249;script&#8250;...&#8249;/script&#8250; tag, it cannot continue building the DOM. It must execute the script right now. The same happens for external scripts &#8249;script src="..."&#8250;&#8249;/script&#8250;: the browser must wait for the script to download, execute the downloaded script, and only then can it process the rest of the page.
+  <div><strong>Interview Response:</strong> When the browser loads HTML and comes across a &#8249;script&#8250;...&#8249;/script&#8250; tag, it cannot continue building the DOM. It must execute the script straight away. The same happens for external scripts &#8249;script src="..."&#8250;&#8249;/script&#8250;: the browser must wait for the script to download, execute the downloaded script, and only then can it process the rest of the page.
     </div>
   </div>
 </details>
@@ -69,7 +69,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Two script attributes get used to manage script loading in HTML documents. They include the defer and async attributes.
+  <div><strong>Interview Response:</strong> We can use two script attributes to manage script loading in HTML documents. They include the defer and async attributes.
     </div>
   </div>
 </details>
@@ -81,7 +81,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The defer attribute tells the browser not to wait for the script. Instead, the browser does not continue to process the HTML and build DOM. The script loads “in the background”, and then runs when the DOM gets fully built.
+  <div><strong>Interview Response:</strong> The defer attribute tells the browser not to wait for the script. Instead, the browser does not continue to process the HTML and build DOM. The script loads “in the background”, and then runs when the DOM fully builds.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -144,7 +144,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, deferred scripts keep their relative order, just like regular scripts. Browsers scan the page for scripts and download them in parallel, to improve performance. But the defer attribute, besides telling the browser “not to block”, ensures that the relative order gets kept. That may be important for cases when we need to load a JavaScript library and then a script that depends on it.
+  <div><strong>Interview Response:</strong> Yes, deferred scripts keep their relative order, just like regular scripts. Browsers scan the page for scripts and download them in parallel, to improve performance. But the defer attribute, besides telling the browser “not to block” the document, it ensures that the relative order of the deferred script is maintained. That may be important for cases when we need to load a JavaScript library and then a script that depends on it.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -233,7 +233,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> By default, dynamic scripts operate asynchronously. They don't have to wait for anything; nothing has to wait for them. The script that loads first (in "load-first" sequence) executes first. This behavior gets altered by precisely specifying “script.async=false”.  The Scripts would then get run in the document's sequence, much like defer.
+  <div><strong>Interview Response:</strong> By default, dynamic scripts operate asynchronously. They don't have to wait for anything; nothing has to wait for them. The script that loads first (in "load-first" sequence) executes first. Developers can alter this behavior by specifying “script.async=false”.  The Scripts would then run in the document's sequence, much like defer.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

@@ -37,7 +37,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Tasks in the queue get handled in the order they are received. When the browser engine gets done processing the script, it handles the mousemove event, followed by the setTimeout handler, and so on.
+  <div><strong>Interview Response:</strong> The event loop handles tasks in the queue in the order they are received. When the browser engine completely processes the script, it handles the mousemove event, followed by the setTimeout handler, and so on.
     </div><br />
   <div><strong className="codeExample">Diagram:</strong><br /><br />
 
@@ -56,7 +56,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We can avoid problems by splitting the big task into pieces or chunks. The goal is to split your tasks into smaller chunks to reduce the load on the engine. It should get noted that the engine is limited to the number of tasks it can process within a given time.
+  <div><strong>Interview Response:</strong> We can avoid problems by splitting the big task into pieces or chunks. The goal is to split your tasks into smaller chunks to reduce the load on the engine. We should note that the engine is limited to the number of tasks it can process within a given time.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -94,7 +94,7 @@ count();
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Microtasks come solely from our code. Promises usually create them: an execution of .then/catch/finally handler becomes a microtask. Microtasks are used “under the cover” of await, as it is another form of promise handling. There is also a special function `queueMicrotask(func)` that queues func for execution in the microtask queue.<br/> Immediately after every macro task, the engine executes all tasks from the microtask queue before running any other macro tasks or rendering or anything else. All microtasks get completed before any other event handling, rendering, or macrotask.
+  <div><strong>Interview Response:</strong> Microtasks come solely from our code. Promises usually create them: an execution of .then/catch/finally handler becomes a microtask. Microtasks are used “under the cover” of await, as it is another form of promise handling. There is also a special function `queueMicrotask(func)` that queues func for execution in the microtask queue.<br/> Immediately after every macro task, the engine executes all tasks from the microtask queue before running any other macro tasks or rendering or anything else. All microtasks complete before any other event handling, rendering, or macrotask.
 
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />

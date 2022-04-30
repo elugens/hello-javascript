@@ -13,7 +13,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### What if the binary data is a string? For instance, we received a file with textual data.
+### What if the binary data is a string? For instance, we received a file with textual data
 
 <details>
   <summary><strong>View Answer:</strong></summary>

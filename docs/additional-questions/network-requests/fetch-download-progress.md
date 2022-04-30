@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, we can use the fetch method to track download progress. We should note that there is currently no way for fetch to track upload progress. For that purpose, we should use the XMLHttpRequest. To track download progress, we can use response.body property. It is ReadableStream – a special object that provides body chunk-by-chunk as it comes. Readable streams get described in the Streams API specification standard. Unlike response.text(), response.json() and other methods, response.body gives control over the reading process, and we can count how much gets consumed at any moment.
+  <div><strong>Interview Response:</strong> In JavaScript, we can use the fetch method to track download progress. We should note that there is currently no way for fetch to track upload progress. For that purpose, we should use the XMLHttpRequest. To track download progress, we can use response.body property. It is ReadableStream – a special object that provides body chunk-by-chunk as it comes. We can find the Readable streams description in the Streams API specification standard. Unlike response.text(), response.json() and other methods, response.body gives control over the reading process, and we can count the consumption level at any moment.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

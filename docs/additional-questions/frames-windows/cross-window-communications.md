@@ -230,7 +230,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The sandbox property enables the exclusion of particular operations within an &#8249;iframe&#8250; to prevent it from running untrusted code. It "sandboxes" the iframe by treating it as though it came from somewhere else and applying extra constraints. For &#8249;iframe sandbox src="..."&#8250;, a "default set" of limitations is imposed. However, it may get eased if we specify a space-separated list of limitations that should not get enforced as an attribute value, such as this: &#8249;iframe sandbox="allow-forms allow-popups"&#8250;. In other words, an empty "sandbox" property imposes the most robust restrictions imaginable, but we may specify a space-delimited list of those we want to remove.
+  <div><strong>Interview Response:</strong> The sandbox property enables the exclusion of particular operations within an &#8249;iframe&#8250; to prevent it from running untrusted code. It "sandboxes" the iframe by treating it as though it came from somewhere else and applying extra constraints. For &#8249;iframe sandbox src="..."&#8250;, a "default set" of limitations is imposed. However, We can loosen restrictions, though, if we specify a space-separated list of limitations that we should not enforce as an attribute value, such as this: &#8249;iframe sandbox="allow-forms allow-popups"&#8250;. In other words, an empty "sandbox" property imposes the most robust restrictions imaginable, but we may specify a space-delimited list of those we want to remove.
     </div>br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

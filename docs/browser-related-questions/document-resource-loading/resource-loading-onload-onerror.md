@@ -13,12 +13,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### What two events get used to track the loading of external resources?
+### What two events can we use to track the loading of external resources?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The browser allows us to track the loading of external resources – scripts, iframes, pictures, and much more. Two events get used to track external resources' loading, onload and onerror. The onload event occurs when an object loads and the onerror event is triggered if an error occurs while loading an external file (e.g., a document or an image).
+  <div><strong>Interview Response:</strong> The browser allows us to track the loading of external resources – scripts, iframes, pictures, and much more. We can use two events to track external resources' loading, onload and onerror. The onload event occurs when an object loads and the onerror event is triggered if an error occurs while loading an external file (e.g., a document or an image).
     </div>
   </div>
 </details>
@@ -91,7 +91,7 @@ script.onerror = function () {
     </div><br />
 
 :::note
-The onload event gets triggered if a script is successfully loaded, even with programming mistakes. The window.onerror global handler gets used in tracking script problems.
+The onload event triggers if a script is successfully loaded, even with programming mistakes. We can use the window.onerror global handler to track script errors.
 :::
 
   </div>
@@ -104,7 +104,7 @@ The onload event gets triggered if a script is successfully loaded, even with pr
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The load and error events also work for other resources, basically for any resource that has an external src. There are some limitations in functionality based on the type of source getting loaded. Most resources start loading when they get added to the document. But &#8249;img&#8250; is an exception. It starts loading when it gets an src (*). For &#8249;iframe&#8250;, the iframe.onload event triggers when the iframe loading finishes, both for successful load and in case of an error. That is for historical purposes.
+  <div><strong>Interview Response:</strong> The load and error events also work for other resources, basically for any resource that has an external src. There are some limitations in functionality based on the type of source getting loaded. Most resources start loading when they load in the document. But &#8249;img&#8250; is an exception. It starts loading when it retrieves a src (*). For &#8249;iframe&#8250;, the iframe.onload event triggers when the iframe loading finishes, both for successful load and in case of an error. That is for historical purposes.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

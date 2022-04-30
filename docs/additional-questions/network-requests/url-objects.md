@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The built-in URL class offers a simple interface for constructing and interpreting URLs. There are no networking functions that need a specific URL object; strings suffice. So, theoretically, we don't need to utilize URLs. However, it might be helpful when constructing URLs dynamically. The URL() constructor provides a freshly generated URL object that represents the URL specified by the arguments, of which there are two: URL and base. A USVString or any other object with a stringifier indicating a relative URL, like an &#8249;a&#8250; element, represents the URL. If the URL is relative, the base must be specified and used as the base URL. If the URL is absolute, the base gets disregarded. The base is a string that represents the base URL to utilize when the URL is relative, and it defaults to undefined if not given.
+  <div><strong>Interview Response:</strong> The built-in URL class offers a simple interface for constructing and interpreting URLs. There are no networking functions that need a specific URL object; strings suffice. So, theoretically, we don't need to utilize URLs. However, it might be helpful when constructing URLs dynamically. The URL() constructor provides a freshly generated URL object that represents the URL specified by the arguments, of which there are two: URL and base. A USVString or any other object with a stringifier indicating a relative URL, like an &#8249;a&#8250; element, represents the URL. If the URL is relative, the base must be specified and used as the base URL. If the URL is absolute, the base does not matter. The base is a string that represents the base URL to utilize when the URL is relative, and it defaults to undefined if not given.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -145,7 +145,7 @@ alert(url); //https://ru.wikipedia.org/wiki/%D0%A2%D0%B5%D1%81%D1%82?key=%D1%8A
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The main difference between encodeURIComponent and encodeURI is that encodeURI encodes only characters that get restricted in a URL. The encodeURIComponent encodes same characters, and, in addition to them, characters #, $, &, +, ,, /, :, ;, =, ? and @. It should get noted that encoding can be a bit touchy, and you should pay attention to any characters that encodeURI can misinterpret.
+  <div><strong>Interview Response:</strong> The main difference between encodeURIComponent and encodeURI is that encodeURI encodes only characters that encoder restricts in a URL. The encodeURIComponent encodes same characters, and, in addition to them, characters #, $, &, +, ,, /, :, ;, =, ? and @. We should note that encoding can be a bit touchy, and you should pay attention to any characters that encodeURI can misinterpret.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -176,7 +176,7 @@ alert(url); // https://google.com/search?q=Rock&Roll
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, Classes URL and URLSearchParams get defined based on the latest URI specification: RFC3986, while (encode*) functions are defined based on the obsolete version RFC2396. There are a few differences concerning IPv6 addresses, which are encoded differently. This difference is because IPv6 URLs did not exist in RFC2396 (August 1998). Such cases are rare, (encode*) functions work well most of the time, but we should be aware of it.
+  <div><strong>Interview Response:</strong> Yes, The URI specification controls the definition of Classes URL and URLSearchParams: RFC3986, while (encode*) functions are defined based on the obsolete version RFC2396. There are a few differences concerning IPv6 addresses, which are encoded differently, and this difference is because IPv6 URLs did not exist in RFC2396 (August 1998). Such cases are rare, (encode*) functions work well most of the time, but we should be aware of it.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

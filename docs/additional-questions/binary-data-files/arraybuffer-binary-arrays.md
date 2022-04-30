@@ -54,7 +54,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The primary binary object is ArrayBuffer which refers to a fixed-length contiguous memory area (blocks of memory). It is an array of bytes, often referred to as a "byte array" in other languages. You cannot directly manipulate the contents of an ArrayBuffer; instead, you create one of the typed array objects or a DataView object representing the buffer in a specific format and use that to read and write the contents of the buffer. The ArrayBuffer() constructor creates a new ArrayBuffer of the given length in bytes. You can also get an array buffer from existing data.
+  <div><strong>Interview Response:</strong> The primary binary object is ArrayBuffer, a fixed-length contiguous memory area (blocks of memory). It is an array of bytes, often referred to as a "byte array" in other languages. You cannot directly manipulate the contents of an ArrayBuffer; instead, you create one of the typed array objects or a DataView object representing the buffer in a specific format and use that to read and write the contents of the buffer. The ArrayBuffer() constructor creates a new ArrayBuffer of the given length in bytes. You can also process array buffer with pre-filled data. ArrayBuffer is the main object, the root of everything.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -76,7 +76,7 @@ alert(buffer.byteLength); // alerts 16
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> ArrayBuffer has nothing in common with a regular JavaScript Array. It has a fixed length; we cannot increase or decrease it. It takes precisely that much space in the memory. Another “view” object is needed, not buffer[index]. ArrayBuffer is a memory area to access individual bytes. What gets stored in it? It has no clue—just a raw sequence of bytes. 
+  <div><strong>Interview Response:</strong> ArrayBuffer has nothing in common with a regular JavaScript Array. It has a fixed length; we cannot increase or decrease it. It takes precisely that much space in the memory. Another “view” object is needed, not buffer[index]. ArrayBuffer is a memory area to access individual bytes. What gets stored in it? It has no clue—just a raw sequence of bytes.
     </div>
   </div>
 </details>
@@ -88,7 +88,7 @@ alert(buffer.byteLength); // alerts 16
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To manipulate an ArrayBuffer, we need to use a view object. A view object does not store anything on its own. The " eyeglasses " interpret the bytes stored in the ArrayBuffer. For example. Uint8Array treats each byte in ArrayBuffer as a separate number, with possible values from 0 to 255 (a byte is 8-bit so it can hold only that much). Such value is called an “8-bit unsigned integer”. So, the binary data in an ArrayBuffer of 16 bytes can get interpreted as 16 “tiny numbers”, or 8 larger (2 bytes each), or 4 even bigger (4 bytes each), or 2 floating-point values with high precision (8 bytes each). ArrayBuffer is the core object, the root of everything, the raw binary data.
+  <div><strong>Interview Response:</strong> To manipulate an ArrayBuffer, we need to use a view object. A view object does not store anything on its own. The "view object" interprets the bytes stored in the ArrayBuffer. For example. Uint8Array treats each byte in ArrayBuffer as a separate number, with possible values from 0 to 255 (a byte is 8-bit so it can hold only that much). Such value is called an “8-bit unsigned integer”. So, the binary data in an ArrayBuffer of 16 bytes can interpret as 16 “tiny numbers”, or 8 larger (2 bytes each), or 4 even bigger (4 bytes each), or 2 floating-point values with high precision (8 bytes each). ArrayBuffer is the primary object, the root of everything, the raw binary data.
     </div><br />
   <div><strong className="codeExample">Diagram Example:</strong><br /><br />
 
@@ -211,7 +211,7 @@ console.log(typedArray2);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, we can create a TypedArray directly, without mentioning ArrayBuffer. But a view cannot exist without an underlying ArrayBuffer, so it gets created automatically regardless of the argument type. Properties like buffer and byteLength get used for accessing the ArrayBuffer. The array.buffer property references ArrayBuffer, and the array.length property is the length of the ArrayBuffer. So, we can always move from one view to another.
+  <div><strong>Interview Response:</strong> Yes, we can create a TypedArray directly, without mentioning ArrayBuffer. But a view cannot exist without an underlying ArrayBuffer, so JavaScript creates it automatically regardless of the argument type. Properties like buffer and byteLength get used for accessing the ArrayBuffer. The array.buffer property references ArrayBuffer, and the array.length property is the length of the ArrayBuffer. So, we can always move from one view to another.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

@@ -1,6 +1,6 @@
 ---
 title: Clickjacking Attacks
-description: Clickjacking Attacks is the process of a malicious site trying to trick a user into clicking on a link that is on another site. This is done by embedding a link in the page of the user and then telling the user to click on that link.
+description: Clickjacking Attacks is the process of a malicious site trying to trick a user into clicking on a link that is on another site.
 sidebar_position: 3
 sidebar_label: Clickjacking Attacks
 ---
@@ -73,7 +73,7 @@ a
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The first, or naive, the option is a defensive measure, employing a piece of JavaScript code that prevents the website from being opened in a frame (so-called "framebusting"). If the window discovers it is not at the top, it immediately rises to the top. This approach is not a solid defense because there are several methods to circumvent it. The second approach is using the sandbox attribute to block navigation. One of the things restricted by the sandbox attribute is navigation. A sandboxed iframe may not change top.location. So, we can add the iframe with sandbox="allow-scripts allow-forms". That would relax the restrictions, permitting scripts and forms. But we omit allow-top-navigation so that changing top.location is forbidden. The recommended approach uses X-Frame-Options: SAMEORIGIN on pages (or whole websites) that does not intentionally get viewed inside frames.
+  <div><strong>Interview Response:</strong> The first or naive approach is a defensive measure employing a piece of JavaScript code that prevents the website from being opened in a frame (so-called "frame busting"). If the window discovers it is not at the top, it immediately rises to the top. This approach is not a solid defense because there are several methods to circumvent it. The second approach is using the sandbox attribute to block navigation. One of the things restricted by the sandbox attribute is navigation. A sandboxed iframe may not change top.location. So, we can add the iframe with sandbox="allow-scripts allow-forms". That would relax the restrictions, permitting scripts and forms. But we omit allow-top-navigation so that changing top.location is forbidden. The recommended approach uses X-Frame-Options: SAMEORIGIN on pages (or whole websites) that does not intentionally get viewed inside frames.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong> Frame Busting (Novice Approach: not recommended)<br /><br />
 

@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, there is a special built-in object for such purposes: AbortController. It can get used to abort, fetch, and other asynchronous tasks. The usage is very straightforward. The AbortController interface represents a controller object that allows you to abort one or more Web requests as and when desired. You can create a new AbortController object using the AbortController.AbortController() constructor. Communicating with a DOM request is done using an AbortSignal object (calling abort()).
+  <div><strong>Interview Response:</strong> Yes, there is a special built-in object for such purposes: AbortController. We can use it to abort, fetch, and do other asynchronous tasks. The usage is very straightforward. The AbortController interface represents a controller object that allows you to abort one or more Web requests as and when desired. You can create a new AbortController object using the AbortController.AbortController() constructor. Communicating with a DOM request is done using an AbortSignal object (calling abort()).
     </div>
   </div>
 </details>
@@ -30,7 +30,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We must develop a new AbortController constructor to implement the AbortController object. The controller is object with a single abort method and a property signal that allows event listeners to get put on it. When abort() gets called, the controller gets invoked. The abort event transmits by signal, and the attribute "controller. signal. aborted" is set to true. When abort() gets invoked on it, AbortController passes abort events.
+  <div><strong>Interview Response:</strong> We must create a new AbortController constructor to implement the AbortController object. The controller is an object with a single abort method and a property signal that allows us to put event listeners on it. When abort() gets called, the controller invokes. The abort event transmits by controller.signal, and the attribute "controller. signal. aborted" becomes true. When abort() invokes on it, AbortController passes abort events.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -75,7 +75,7 @@ alert(signal.aborted); // true
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, to be able to cancel fetch, we must pass the signal property of an AbortController as a fetch option. The fetch method knows how to work with AbortController. It listens to abort events on a signal. Now, to abort, we call controller.abort(). At that point, fetch gets the event from the signal and aborts the request.
+  <div><strong>Interview Response:</strong> Yes, to be able to cancel fetch, we must pass the signal property of an AbortController as a fetch option. The fetch method knows how to work with AbortController. It listens to abort events on a signal. Now, to abort, we call controller.abort(). At that point, fetch extracts the event from the signal and aborts the request.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

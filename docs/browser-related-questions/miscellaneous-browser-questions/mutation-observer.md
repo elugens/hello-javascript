@@ -55,7 +55,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, you can stop or disconnect the observer by calling the `disconnect()` method. It tells the observer to stop watching for mutations. The observer can get reused by calling its `observe()` method again.
+  <div><strong>Interview Response:</strong> Yes, you can stop or disconnect the observer by calling the `disconnect()` method. It tells the observer to stop watching for mutations. We can reuse the observer by calling its `observe()` method again.
     </div><br />
     <strong>Syntax: </strong> mutationObserver.disconnect();<br /><br />
   </div>

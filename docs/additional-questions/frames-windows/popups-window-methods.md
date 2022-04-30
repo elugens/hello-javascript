@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A pop-up window is one of the oldest methods to show an additional document to a user. The Window interface's open() method loads the specified resource into the new or existing browsing context (window, &#8249;iframe&#8250; or tab) with the specified name. If the name does not exist, a new browsing context gets opened in a new tab or a new window, and the specified resource is loaded. The open method takes three parameters: URL, windowName, and windowFeatures. The URL is a DOMString that specifies the location of the resource to be loaded. This element can be a path or URL to an HTML page, an image file, or any other resource that the browser supports. The windowName is a DOMString specifying the browsing context's name (window, &#8249;iframe&#8250; or tab) to load the specified resource; if the name does not indicate an existing context, a new window is created and gives the name specified by windowName. The windowFeatures parameter is a DOMString that contains a comma-separated list of window characteristics and their values in the form "name=value". These features include settings such as the window's default size and location, as well as whether or not the toolbar is shown. The string must not include any spaces. Both the windowName and windowFeatures options are optional.
+  <div><strong>Interview Response:</strong> A pop-up window is one of the oldest methods to show an additional document to a user. The Window interface's open() method loads the specified resource into the new or existing browsing context (window, &#8249;iframe&#8250; or tab) with the specified name. If the name does not exist, a new browsing context opens in a new tab or a new window, and the specified resource is loaded. The open method takes three parameters: URL, windowName, and windowFeatures. The URL is a DOMString that specifies the location of the resource to be loaded. This element can be a path or URL to an HTML page, an image file, or any other resource that the browser supports. The windowName is a DOMString specifying the browsing context's name (window, &#8249;iframe&#8250; or tab) to load the specified resource; if the name does not indicate an existing context, a new window is created and gives the name specified by windowName. The windowFeatures parameter is a DOMString that contains a comma-separated list of window characteristics and their values in the form "name=value". These features include settings such as the window's default size and location, as well as whether or not the toolbar is shown. The string must not include any spaces. Both the windowName and windowFeatures options are optional.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong> Basic Implementation<br /><br />
 
@@ -78,7 +78,7 @@ button.onclick = () => {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The simple answer is that it depends on the browser. For instance, if an onclick event has a nested timeout and returns a window open after 3 seconds. The popup opens in Chrome but gets blocked in Firefox. If we decrease the delay, the pop-up works in Firefox (down to 2 seconds or less). The difference is that Firefox accepts timeouts of 2000ms or less, but beyond that, It eliminates the "trust," presuming that it is now "outside of the user action." As a result, the first gets prohibited while the second is not.
+  <div><strong>Interview Response:</strong> The simple answer is that it depends on the browser. For instance, if an onclick event has a nested timeout and returns a window open after 3 seconds. The popup opens in Chrome but gets blocked in Firefox. If we decrease the delay, the pop-up works in Firefox (down to 2 seconds or less). The difference is that Firefox accepts timeouts of 2000ms or less, but beyond that, It eliminates the "trust," presuming that it is now "outside of the user action." As a result, the first one gets denied while the second is not.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -128,8 +128,8 @@ open('/', 'test', params);
   <div>
   <div><strong>Interview Response:</strong> There are several rules for omitted settings of the Window.open() method.<br /><br />
   <ul>
-    <li>If there is no third argument or empty in the open call, the default window parameters get utilized.</li>
-    <li>If a string of params is present but specific yes/no features are missing, the missed features are believed to be null. So, if you supply params, make sure that all needed features get explicitly set to yes.</li>
+    <li>If there is no third argument or nothing in the open call, the default window parameters return.</li>
+    <li>If a string of params is present but specific yes/no features are missing, the missed features are believed to be null. So, if you supply params, make sure that all needed features explicitly set to yes.</li>
     <li>If no left/top parameters are specified, the browser attempts to start a new window near the previous one that launched.</li>
     <li>If no width/height is specified, the new window turns out to be the same size as the previous one.</li>
   </ul>
