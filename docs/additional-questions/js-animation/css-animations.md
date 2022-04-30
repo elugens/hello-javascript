@@ -110,7 +110,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The transition-property CSS property sets the CSS properties to which a transition effect should be applied. In transition-property, we write a list of properties to animate, for instance, left, margin-left, height, color, or we could write all, which means “animate all properties”. It should get noted as some properties cannot be animated. However, most of the generally used properties are MDN animatable.
+  <div><strong>Interview Response:</strong> The transition-property CSS property sets the CSS properties to which a transition effect should be applied. In transition-property, we write a list of properties to animate, for instance, left, margin-left, height, color, or we could write all, which means “animate all properties”. We should note that some properties cannot be animated. However, most of the generally used properties are MDN animatable.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -141,7 +141,7 @@ div:hover {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The transition-duration CSS property sets the length of time a transition animation should take to complete. By default, the value is 0s, meaning no animation occurs.<br /><br />You may specify multiple durations; each duration gets applied to the related property specified by the transition-property property, which acts as a master list. If fewer durations get specified than in the master list, the user agent repeats the list of durations. If there are more durations in the list, the list gets truncated to the correct size. In both cases, the CSS declaration stays valid.
+  <div><strong>Interview Response:</strong> The transition-duration CSS property sets the length of time a transition animation should take to complete. By default, the value is 0s, meaning no animation occurs.<br /><br />You may specify multiple durations; each duration gets applied to the related property specified by the transition-property property, which acts as a master list. If fewer durations get specified than in the master list, the user agent repeats the list of durations. If there are more durations in the list, the list truncates to the correct size. In both cases, the CSS declaration stays valid.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -252,7 +252,7 @@ div:hover {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The cubic-bezier() function defines a Cubic Bezier curve. A Cubic Bezier curve gets defined by P0, P1, P2, and P3 points. P0 and P3 are the curve's start and end, and, in CSS, these points get fixed as the coordinates are ratios. P0 is (0, 0) and represents the initial time and the initial state, and P3 is (1, 1) and represents the final time and the final state. The cubic-bezier() function gets used with the animation-timing-function and transition-timing-function properties.
+  <div><strong>Interview Response:</strong> The cubic-bezier() function defines a Cubic Bezier curve. A Cubic Bezier curve gets defined by P0, P1, P2, and P3 points. P0 and P3 are the curve's start and end, and, in CSS, these points are fixed as the coordinates are ratios. P0 is (0, 0) and represents the initial time and the initial state, and P3 is (1, 1) and represents the final time and the final state. We use the cubic-bezier() function with the animation-timing-function and transition-timing-function properties.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -311,7 +311,7 @@ div:hover {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The steps() function allows you to specify intervals for the timing function. It takes one or two parameters, separated by a comma: a positive integer and an optional start or end value. If no second parameter gets included, it defaults to end.
+  <div><strong>Interview Response:</strong> The steps() function allows you to specify intervals for the timing function. It takes one or two parameters, separated by a comma: a positive integer and an optional start or end value. If we do not include a second parameter, it defaults to end.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -322,7 +322,7 @@ div:hover {
   transform: translate(-90%);
   transition-property: transform;
   transition-duration: 9s;
-  transition-timing-function: steps(9, start); 
+  transition-timing-function: steps(9, start); /* <-- */
 }
 ```
 
@@ -337,7 +337,7 @@ div:hover {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The transitionend event gets fired when a CSS transition reaches completion. If a transition gets removed before completion, the transition-property gets deleted, or the display gets changed to none, the event is not triggered.
+  <div><strong>Interview Response:</strong> The transitionend event fires when a CSS transition reaches completion. If a transition gets removed before completion, the transition-property deletes, or the display attribute changes to none, the event is not triggered.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -357,7 +357,7 @@ transition.addEventListener('transitionend', () => {
 
 ---
 
-### Can you describe what CSS keyframes are and how they get utilized in web development?
+### Can you describe what CSS keyframes are and how we utilize them in web development?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

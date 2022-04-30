@@ -30,7 +30,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> There is no difference between them except for the intended "non-persistence" of sessionStorage. The data stored in localStorage persists until explicitly deleted. Changes made are saved and available for all current and future visits to the site. For sessionStorage, changes are only available per tab. Changes made are saved and available for the current page in that tab until it is closed. Once it is closed, the stored data gets deleted.
+  <div><strong>Interview Response:</strong> There is no difference between them except for the intended "non-persistence" of sessionStorage. The data stored in localStorage persists until explicitly deleted. Changes made are saved and available for all current and future visits to the site. For sessionStorage, changes are only available per tab. Changes made are saved and available for the current page in that tab until it is closed. Once it is closed, the stored data deletes.
     </div>
   </div>
 </details>
@@ -42,7 +42,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Unlike cookies, web storage objects do not get sent to the server with each request. Because of that, we can store much more. Most browsers allow at least 2 megabytes of data (or more) and have settings to configure that. Also, unlike cookies, the server cannot manipulate storage objects via HTTP headers. Everything gets done in JavaScript. The storage is bound to the origin (domain/protocol/port triplet). Different protocols or subdomains infer different storage objects; they cannot access data from each other.
+  <div><strong>Interview Response:</strong> Unlike cookies, web storage objects do not transfer to the host with each connection. Because of that, we can archive much more data. Most browsers allow at least two megabytes of data (or more) and have settings to configure that. Also, unlike cookies, the server cannot manipulate storage objects via HTTP headers. We can do everything in JavaScript. The data storage is bound to the origin (domain/protocol/port triplet). Different protocols or subdomains infer different storage objects; they cannot access data from each other.
     </div>
   </div>
 </details>
@@ -66,7 +66,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The main feature of localStorage is that the data can get shared between tabs. The data does not expire, and it remains after the browser restarts or the OS reboots. If we want to add new data to the localStorage we can use the setItem method, and if we want to parse it into the browser, we use the getItem method. We must be on the same origin (domain/port/protocol), but the URL path can be different. The localStorage gets shared between all windows with the same origin, so if we set the data in one window, the change becomes visible in another one. We can also use a plain object way of getting/setting keys.
+  <div><strong>Interview Response:</strong> The main feature of localStorage is sharing data between tabs. The data does not expire, and it remains after the browser restarts or the OS reboots. If we want to add new data to the localStorage we can use the setItem method, and if we want to parse it into the browser, we use the getItem method. We must be on the same origin (domain/port/protocol), but the URL path can be different. The localStorage archive gets shared between all windows with the same origin, so if we set the data in one window, the change becomes visible in another one. We can also use a plain object way of getting/setting keys.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -121,7 +121,7 @@ localStorage[key] = 5; // Error, cannot assign length
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> There is one notable thing about localStorage objects. They are not iterable on their own—one way to look at them is as an array. Local Storage objects have a length, so we can iterate over them using the key method. Another way is to use “for key in” (for in loop) localStorage loop, just as we do with regular objects. It iterates over keys and outputs a few built-in fields that we do not need. So, we need to filter fields from the prototype with hasOwnProperty check. Or get the “own” keys with Object.keys and then loop over them if needed. The latter works, because Object.keys only return the keys that belong to the object, ignoring the prototype.
+  <div><strong>Interview Response:</strong> There is one notable thing about localStorage objects. They are not iterable on their own—one way to look at them is as an array. Local Storage objects have a length, so we can iterate over them using the key method. Another way is to use “for key in” (for in loop) localStorage loop, just as we do with regular objects. It iterates over keys and outputs a few built-in fields that we do not need. So, we need to filter fields from the prototype with hasOwnProperty check. Or get their “own” keys with Object.keys and then loop over them if needed. The latter works, because Object.keys only return the keys that belong to the object, ignoring the prototype.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -165,7 +165,7 @@ for (let key of keys) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The key and value must be strings for storage objects. If they were of any other type, like a number or an object, it automatically gets converted to a string. We can also use JSON to store objects, and it is also possible to stringify the whole storage object, e.g., for debugging purposes.
+  <div><strong>Interview Response:</strong> The key and value must be strings for storage objects. If they were of any other type, like a number or an object, it automatically converts to a string. We can also use JSON to store objects, and it is also possible to stringify the whole storage object, e.g., for debugging purposes.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -198,7 +198,7 @@ alert(JSON.stringify(localStorage, null, 2));
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The sessionStorage object gets used much less often than localStorage. The Properties and methods are the same, but it is much more limited. Some of sessionStorages limitations include that it only exists if the tab remains open, and once it is closed, we have no more access to the session. One notable thing about session storage is that it gets shared between iframes in the same tab. That object data also serves a page refresh, but not the closing or reopening of the URL in a new tab. That is because sessionStorage is bound not only to the origin but also to the browser tab. For that reason, sessionStorage gets used sparingly.
+  <div><strong>Interview Response:</strong> We use the sessionStorage object much less and less often than localStorage. The properties and methods are the same, but it is much more limited. Some of sessionStorages limitations include that it only exists if the tab remains open, and once it is closed, we have no more access to the session. One notable thing about session storage is it gets shared between iframes in the same tab. That object data also serves a page refresh, but not the closing or reopening of the URL in a new tab. That is because sessionStorage is bound not only to the origin but also to the browser tab. For that reason, Developers use sessionStorage sparingly.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -217,12 +217,12 @@ alert(sessionStorage.getItem('test')); // after refresh: 1
 
 ---
 
-### How do storage events behave when the data gets updated in localStorage and sessionStorage?
+### How do storage events behave when we update the data in localStorage and sessionStorage?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The storage event triggers when the data gets updated in localStorage or sessionStorage. The important thing is that the event triggers on all window objects where the storage is accessible, except the one that caused it. It is like a waterfall effect. Imagine, you have two windows with the same site in each. So localStorage is shared between them. If both windows are listening for window.onstorage, each one will react to updates in the other one.
+  <div><strong>Interview Response:</strong> The storage event triggers when the data updates in localStorage or sessionStorage. The important thing is that the event triggers on all window objects where the storage is accessible, except the one that caused it. It is like a waterfall effect. Imagine you have two windows with the same site in each. localStorage gets shared between them. If both windows are listening for window.onstorage, each one will react to updates in the other one.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

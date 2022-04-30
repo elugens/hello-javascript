@@ -42,7 +42,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The lengthy polling procedure begins with a request to the server. The server does not disconnect until a message is ready to be sent. The server answers the request when the notice shows, and the browser instantly initiates a new request. The circumstance in which the browser issued a request and has a pending connection with the server is standard. The connection only gets restored when a message is delivered. If the connection disintegrates due to a network fault, the browser instantly makes a new request.
+  <div><strong>Interview Response:</strong> The lengthy polling procedure begins with a request to the server. The server does not disconnect until a message is ready to be sent. The server answers the request when the notice shows, and the browser instantly initiates a new request. The circumstance in which the browser issued a request and has a pending connection with the server is standard. The connection only restores itself (reconnects) when a message is delivered. If the connection disintegrates due to a network fault, the browser instantly makes a new request.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

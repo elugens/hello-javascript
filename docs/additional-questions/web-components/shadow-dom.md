@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Encapsulation gets provided via the Shadow DOM. It enables a component to have its own "shadow" DOM tree that cannot get unintentionally accessed from the main page and local style rules and other features.
+  <div><strong>Interview Response:</strong> Encapsulation gets provided via the Shadow DOM. It enables a component to have its own "shadow" DOM tree that cannot unintentionally get accessed from the main page and local style rules and other features.
     </div>
   </div>
 </details>
@@ -43,7 +43,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, we cannot get built-in shadow DOM elements by regular JavaScript calls or selectors. These are not regular children but rather a powerful encapsulation technique. However, we can access their pseudo attributes via the CSS styles. This behavior exists for historical reasons to ensure that the CSS styles access the sub-elements.
+  <div><strong>Interview Response:</strong> No, we cannot retrieve built-in shadow DOM elements by regular JavaScript calls or selectors. These are not regular children but rather a powerful encapsulation technique. However, we can access their pseudo attributes via the CSS styles. This behavior exists for historical reasons to ensure that the CSS styles access the sub-elements.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -130,7 +130,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The Element.attachShadow() method attaches a shadow DOM tree to the specified element and returns a reference to its ShadowRoot. To initiate the Shadow Root, we must use the mode argument with the open parameter. The open parameter makes the element of the shadow root accessible outside of the root. The counter parameter is closed, which denies access to the nodes of the closed shadow root from JavaScript outside. An additional argument rarely gets used, delegatesFocus is a Boolean, when set to true, specifies behavior that mitigates custom element issues around focus-ability.
+  <div><strong>Interview Response:</strong> The attachShadow() function connects the shadow DOM tree to a specific element and returns a reference to its ShadowRoot. To initiate the Shadow Root, we must use the mode argument with the open parameter. The open parameter makes the element of the shadow root accessible outside of the root. The second parameter, closed, denies access to the nodes of the closed shadow root from JavaScript outside it. An additional argument delegatesFocus rarely gets used, delegatesFocus is a Boolean; when set to true, it specifies behavior that mitigates custom element issues around focus-ability.
     </div><br />
     <strong>Syntax: </strong> const shadow = this.attachShadow(&#123;mode: 'open'&#125;);<br /><br />
 

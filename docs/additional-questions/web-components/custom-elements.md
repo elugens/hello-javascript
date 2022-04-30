@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Custom elements get classified into two types: autonomous custom elements and modified built-in components. Autonomous custom elements — elements that are "all-new" that extend the abstract HTMLElement class. Customized built-in elements — extending built-in components, such as a customized button based on HTMLButtonElement.
+  <div><strong>Interview Response:</strong> We classify custom elements into two groups: autonomous custom elements and modified built-in components. Autonomous custom elements — elements that are "all-new" and extend the abstract HTMLElement class. Customized built-in elements — extending built-in components, such as a customized button based on HTMLButtonElement.
     </div>
   </div>
 </details>
@@ -83,7 +83,7 @@ customElements.define('my-element', MyElement);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The connectedCallBack gets invoked each time the custom element gets appended into a document-connected element. Each time the node gets moved, this may happen before the element's contents fully parse.
+  <div><strong>Interview Response:</strong> The connectedCallBack invokes each time the custom element appends into a document-connected element. This action happens each time the node moves and before the element's contents completely propagates.
     </div>
   </div>
 </details>
@@ -109,7 +109,7 @@ customElements.define('my-element', MyElement);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The reason is simple: it is too early when the constructor gets called. The element gets created, but the browser did not yet process/assign attributes at this stage: calls to getAttribute would return null. So, we cannot render there. Besides, if you think about it, it is better to delay the work until needed.<br /><br />When the element gets added to the document, the connectedCallback is triggered. It is not just attached to another element as a child but instead becomes a part of the page. As a result, we may construct detached DOM, create elements, and prepare them for subsequent usage. They do not get rendered until they get included on the page.
+  <div><strong>Interview Response:</strong> The reason is simple: it is too early when the constructor gets called. The element gets created, but the browser did not yet process/assign attributes at this stage: calls to getAttribute would return null. So, we cannot render there. Besides, if you think about it, it is better to delay the work until needed.<br /><br />When the element gets added to the document, the connectedCallback is triggered. It is not just attached to another element as a child but instead becomes a part of the page. As a result, we may construct detached DOM, create elements, and prepare them for subsequent usage. They do not render until they get included on the page.
     </div>
   </div>
 </details>
@@ -121,7 +121,7 @@ customElements.define('my-element', MyElement);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> When one of the custom element's attributes gets added, deleted, or updated, the attributeChangedCallback gets called. We may observe attributes by passing a list of them to the observedAttributes() static getter. When such attributes are adjusted, attributeChangedCallback gets invoked.
+  <div><strong>Interview Response:</strong> When one of the custom element's attributes gets added, deleted, or updated, the attributeChangedCallback gets called. We may observe attributes by passing a list of them to the observedAttributes() static getter. When such attributes are adjusted, attributeChangedCallback invokes.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

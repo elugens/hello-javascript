@@ -42,7 +42,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The slot="..." attribute is only valid for direct children of the shadow host. For nested elements, it gets ignored. If there are multiple elements in light DOM with the same slot name, they get appended into the slot.
+  <div><strong>Interview Response:</strong> The slot="..." attribute is only valid for direct children of the shadow host. For nested elements, it gets ignored. If there are multiple elements in light DOM with the same slot name, they append into the slot.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -72,7 +72,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> If we put something inside a &#8249;slot&#8250;, it becomes the fallback, “default” content. The browser shows it if there is no corresponding filler in light DOM. If the slot is in the shadow DOM gets rendered if there is no slot available in the light DOM.
+  <div><strong>Interview Response:</strong> If we put something inside a &#8249;slot&#8250;, it becomes the fallback, “default” content. The browser shows it if there is no corresponding filler in light DOM. If the slot is in the shadow DOM it renders if there is no slot available in the light DOM.
     </div>
   </div>
 </details>
@@ -84,7 +84,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The first &#8249;slot&#8250; in shadow DOM that does not have a name is a “default” slot. It gets all nodes from the light DOM that are not slotted elsewhere.
+  <div><strong>Interview Response:</strong> The first &#8249;slot&#8250; in shadow DOM that does not have a name is a “default” slot. The default slot gets all nodes from the light DOM that are not slotted elsewhere.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -133,7 +133,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The HTML slot element has three main methods, including assignedSlot, assignedNodes, and assignedElements used to handle or assess element node assignment. The assignedSlot method returns the &#8249;slot&#8250; element that the node gets assigned. The assignedElements() method returns a sequence of the nodes assigned to this slot, and if the flatten option gets set to true, the assigned nodes of any other slots are descendants of this slot. If no assigned nodes get found, the slot's fallback content returns. The assignedSlot method returns an HTMLSlotElement representing the &#8249;slot&#8250; element the node is inserted in. These methods are useful when we need to show the slotted content and track it in JavaScript.
+  <div><strong>Interview Response:</strong> The HTML slot element has three main methods, including assignedSlot, assignedNodes, and assignedElements used to handle or assess element node assignment. The assignedSlot method returns the &#8249;slot&#8250; element that the node gets assigned. The assignedElements() method returns a sequence of the nodes assigned to this slot, and if the flatten option sets to true, the assigned nodes of any other slots are descendants of this slot. If no assigned nodes return, the slot's fallback content returns. The assignedSlot method returns an HTMLSlotElement representing the &#8249;slot&#8250; element the node is inserted in. These methods are useful when we need to show the slotted content and track it in JavaScript.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

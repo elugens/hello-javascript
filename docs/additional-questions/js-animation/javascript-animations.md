@@ -70,7 +70,7 @@ window.requestAnimationFrame(step);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> For animations that CSS cannot handle well, or those that need tight control, JavaScript is our best option. JavaScript animations should get implemented via requestAnimationFrame. That built-in method allows us to set up a callback function to run when the browser is preparing a repaint. Usually, that is very soon, but the exact time depends on the browser.
+  <div><strong>Interview Response:</strong> For animations that CSS cannot handle well, or those that need tight control, JavaScript is our best option. We should implement JavaScript animations via requestAnimationFrame. The requestAnimationFrame built-in method allows us to set up a callback function to run when the browser is preparing a repaint. Usually, that is very soon, but the exact time depends on the browser.
     </div>
   </div>
 </details>

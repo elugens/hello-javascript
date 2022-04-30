@@ -54,7 +54,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To start receiving messages, we need to create a new EventSource(URL). The browser connects to the URL and keeps the connection open, waiting for events. The server should respond with status 200 and the header Content-Type: text/event-stream, then keep the connection and write messages into it in the unique format. In practice, complex messages usually get sent JSON-encoded. Line-breaks get encoded as \n within them, so multiline data: messages are not necessary.
+  <div><strong>Interview Response:</strong> To start receiving messages, we need to create a new EventSource(URL). The browser connects to the URL and keeps the connection open, waiting for events. The server should respond with status 200 and the header Content-Type: text/event-stream, then keep the connection and write messages into it in the unique format. In practice, complex messages usually transmit JSON-encoded data. Line-breaks typically encode as \n, so multiline data: messages are not necessary.
     </div><br />
   <div><strong className="codeExample">Message Output:</strong><br /><br />
 
@@ -114,7 +114,7 @@ let source = new EventSource('https://another-site.com/events', {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Upon creation, a new EventSource connects to the server, and if the connection gets broken, it simply reconnects. That is very convenient, as we do not have to care about it. There is a slight delay between reconnections, usually a few seconds, and the server can provide the appropriate delay (milliseconds). The retry message may get sent with other data or stand-alone messages.
+  <div><strong>Interview Response:</strong> Upon creation, a new EventSource connects to the server, and if the connection gets broken, it simply reconnects. That is very convenient, as we do not have to care about it. There is a slight delay between reconnections, usually a few seconds, and the server can provide the appropriate delay (milliseconds). The retry message may transmit with other data or stand-alone messages.
     </div><br />
   <div><strong className="codeExample">Standalone Message:</strong><br /><br />
 
@@ -136,7 +136,7 @@ let source = new EventSource('https://another-site.com/events', {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The browser should wait that many milliseconds before reconnecting. Or longer, e.g., if the browser knows (from OS) that there is no network connection existing at the time, it may wait until the connection appears and then retry. If the server wants the browser to stop reconnecting, it should respond with HTTP status 204. If the browser wants to close the connection, it should call eventSource.close(). Also, there is no reconnection if the response has an incorrect Content-Type or its HTTP status differs from 301, 307, 200, and 204. The "error" event gets emitted in such cases, and the browser does not reconnect.<br /><br />It should get noted that when a connection is finally closed, there is no way to “reopen” it. If we would like to connect again, create a new EventSource.
+  <div><strong>Interview Response:</strong> The browser should wait that many milliseconds before reconnecting. Or longer, e.g., if the browser knows (from OS) that there is no network connection existing at the time, it may wait until the connection appears and then retry. If the server wants the browser to stop reconnecting, it should respond with HTTP status 204. If the browser wants to close the connection, it should call eventSource.close(). Also, there is no reconnection if the response has an incorrect Content-Type or its HTTP status differs from 301, 307, 200, and 204. The "error" event gets emitted in such cases, and the browser does not reconnect.<br /><br />We should note that when a connection is finally closed, there is no way to “reopen” it. If we would like to connect again, create a new EventSource.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -159,7 +159,7 @@ eventSource.close();
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> When a connection breaks due to network problems, either side cannot be sure which messages were received and which were not. To correctly resume the connection, each message should have an id field. When a message with id is received, the browser sets the property eventSource.lastEventId to its value. Upon reconnection, it sends the header Last-Event-ID with that id so that the server may re-send the messages. It should get noted that the id is appended below message data by the server to ensure that lastEventId is updated after the message is received.
+  <div><strong>Interview Response:</strong> When a connection breaks due to network problems, either side cannot be sure which messages were received and which were not. To correctly resume the connection, each message should have an id field. When a message with id is received, the browser sets the property eventSource.lastEventId to its value. Upon reconnection, it sends the header Last-Event-ID with that id so that the server may re-send the messages. We should note that the id is appended below message data by the server to ensure that lastEventId is updated after the message is received.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -211,7 +211,7 @@ EventSource.CLOSED = 2; // connection closed
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> By default, the EventSource object generates three events, including the message, open, and error events. The message event denotes the receipt of a message, as event.data. The evident opening of the link is the open event, and the error event is a connection failure with the server issuing an HTTP 500 status. The server may specify another type of event with event: &#8249;event&#8250; at the event start. It should get noted that to handle custom events. We must use addEventListener, not the onmessage property.
+  <div><strong>Interview Response:</strong> By default, the EventSource object generates three events, including the message, open, and error events. The message event denotes the receipt of a message, as event.data. The evident opening of the link is the open event, and the error event is a connection failure with the server issuing an HTTP 500 status. The server may specify another type of event with event: &#8249;event&#8250; at the event start. We should note that to handle custom events. We must use addEventListener, not the onmessage property.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

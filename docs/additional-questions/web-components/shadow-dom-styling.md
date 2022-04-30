@@ -25,12 +25,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Can you explain what the :host() selector class does?
+### Can you explain what the CSS :host psuedo-class does?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The ":host()" CSS pseudo-class function picks the shadow host of the shadow DOM containing the CSS. It gets used within (allowing you to select a custom element from inside its shadow DOM), but only if the selector sent to the function matches the shadow host.
+  <div><strong>Interview Response:</strong> The ":host" CSS pseudo-class selector picks the shadow host of the shadow DOM containing the CSS.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -81,7 +81,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> It works the same as :host, but it is applied only if the shadow host matches the selector.
+  <div><strong>Interview Response:</strong> The ":host(selector)" CSS pseudo-class selector picks the shadow host of the shadow DOM containing the CSS. It is identical to the regular :host pseudo-class (allowing you to select a custom element from inside its shadow DOM) but only gets put in an application (applied) if the selector sent to the function matches the shadow host.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

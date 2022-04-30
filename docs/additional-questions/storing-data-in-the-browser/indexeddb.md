@@ -45,9 +45,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> TTechnically, the data often get
-      saved in the visitor's home directory, with browser preferences, addons,
-      and others. Different browsers and OS-level users have their storage.
+      <strong>Interview Response:</strong> Technically, the data often saves in the visitor's home directory, with browser preferences, addons, and others. Different browsers and OS-level users have their storage.
     </div>
   </div>
 </details>
@@ -118,7 +116,7 @@ openRequest.onsuccess = function () {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> There are two ways to delete an IndexedDB database. The manual approach is to delete the database in the application manifest pane. The programmatic approach using JavaScript requires us to use the deleteDatabase method. The deleteDatabase() method of the IDBFactory interface requests the deletion of a database. The method returns an IDBOpenDBRequest object immediately and performs the deletion operation asynchronously. If the database successfully gets deleted, a success event gets fired on the request object returned from this method, resulting in undefined. If an error occurs while the database gets deleted, an error event gets fired on the request object returned from this method.
+  <div><strong>Interview Response:</strong> There are two ways to delete an IndexedDB database. The manual approach is to delete the database in the application manifest pane. The programmatic approach using JavaScript requires us to use the deleteDatabase method. The deleteDatabase() method of the IDBFactory interface requests the deletion of a database. The method returns an IDBOpenDBRequest object immediately and performs the deletion operation asynchronously. If the database successfully deletes, a success event fires on the request object returned from this method, resulting in undefined. If an error occurs while the database deletes, an error event fires on the request object returned from this method.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -156,12 +154,7 @@ openRequest.onsuccess = function () {
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> If the current user database has a
-      higher version than the one specified in the open call, for example, if
-      the present DB version is 3 and we try to open(...2), an error gets
-      generated, and openRequest.onerror is called. That's unusual, but it can
-      happen if a visitor loads outdated JavaScript code through a proxy cache.
-      So, while the code is ancient, his database is brand new.
+      <strong>Interview Response:</strong> If the current user database has a higher version than the one specified in the open call, for example, if the present DB version is 3 and we try to open(...2), an error generates, and openRequest.onerror is called. That's unusual, but it can happen if a visitor loads outdated JavaScript code through a proxy cache. So, while the code is ancient, his database is brand new.
     </div>
   </div>
 </details>
@@ -173,7 +166,7 @@ openRequest.onsuccess = function () {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, we should do a version check programmatically to ensure that the user has the most updated version. We have to implement a parallel upgrade to ensure the correct version loads in the client. This process gets achieved by calling onversionchange to ensure that the client is updated correctly. These update collisions happen rarely, but we should at least have some handling for them, at least onblocked handler, to prevent our script from dying silently.
+  <div><strong>Interview Response:</strong> Yes, we should do a version check programmatically to ensure that the user has the most updated version. We have to implement a parallel upgrade to ensure the correct version loads in the client. We achieve this by calling onversionchange to ensure that the client is updated correctly. These update collisions happen rarely, but we should at least have some handling for them, at least onblocked handler, to prevent our script from dying silently.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -218,12 +211,7 @@ openRequest.onblocked = function() {
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> To store something in IndexedDB, we
-      need an object-store. An object store is a core concept of IndexedDB.
-      Counterparts in other databases are called “tables” or “collections”. It
-      is where the data is stored. A database may have multiple stores: one for
-      users, another for goods, and more. Despite being named an “object-store”,
-      primitives get stored too.
+      <strong>Interview Response:</strong> To store something in IndexedDB, we need an object store. An object store is a core concept in IndexedDB. Counterparts in other databases are called “tables” or “collections”, where the data is stored. A database may have multiple stores: one for users, another for goods, and more. Despite being named an “object-store” IndexedDB, primitives get stored too.
     </div>
   </div>
 </details>
@@ -335,11 +323,7 @@ let objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> An object store can only get
-      created/modified while updating the upgraded handler's DB version in the
-      upgradeneeded handler. That is a technical limitation. Outside of the
-      handler, we need to be able to add/remove/update the data, but object
-      stores can only get created/removed/altered during a version update.
+      <strong>Interview Response:</strong> We can only create/modify an object store while updating the upgraded handler's DB version in the upgradeneeded handler. That is a technical limitation. Outside of the handler, we need to be able to add/remove/update the data, but we can only create/remove/alter object stores during a version update.
     </div>
   </div>
 </details>
@@ -351,7 +335,7 @@ let objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> There are two main approaches to perform a database version upgrade.<br /><br />We can implement per-version upgrade functions: from 1 to 2, from 2 to 3, from 3 to 4, and onwards. Then, in upgradeneeded we can compare versions (e.g., old 2, now 4) and run per-version upgrades step by step, for every intermediate version (2 to 3, then 3 to 4).<br /><br />Or we can examine the database: get a list of existing object stores as db.objectStoreNames. That object is a DOMStringList that provides contains(name) method to check for the existence of the objects. And then, we can do updates depending on what exists and what does not.<br /><br />For small databases, the second variant may be simpler.
+  <div><strong>Interview Response:</strong> There are two main approaches to perform a database version upgrade.<br /><br />We can implement per-version upgrade functions: from 1 to 2, from 2 to 3, from 3 to 4, and onwards. Then, in upgradeneeded we can compare versions (e.g., old 2, now 4) and run per-version upgrades step by step, for every intermediate version (2 to 3, then 3 to 4).<br /><br />Or we can examine the database: retrieve a list of existing object stores as db.objectStoreNames. The object is a DOMStringList that provides contains(name) method to check for the existence of the objects, and then we execute updates depending on what exists and what does not.<br /><br />For small databases, the second variant may be simpler.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong> Second Approach<br /><br />
 
@@ -400,7 +384,7 @@ openRequest.onupgradeneeded = function () {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The transaction method of the IDBDatabase interface immediately returns a transaction object (IDBTransaction) containing the IDBTransaction.objectStore method, which you can use to access your object store. All data operations must get made within a transaction in IndexedDB. The transaction method has three available arguments: store, mode/type, and options. The store/storeNames refer to the names of the object stores in the scope of the new transaction, declared as an array of strings. Specify only the object stores that you need to access. If you need to access only one object store, you can specify its name as a string. The mode or type relates to the types of access performed in the transaction. Transactions get opened in one of three modes: readonly, readwrite and readwriteflush (non-standard, Firefox-only.) The versionchange mode cannot be specified here. If you do not provide the parameter, the default access mode is readonly. Please do not open a readwrite transaction unless you need to write it into the database to avoid slowing things down. The options argument is a dictionary of option durability parameters including "default", "strict", or "relaxed". The default is "default". Using "relaxed" provides better performance, but with fewer guarantees. Web applications are encouraged to use "relaxed" for ephemeral data such as caches or quickly changing records and "strict" in cases where reducing the risk of data loss outweighs the impact on performance and power. The mode/type and options should get noted as optional arguments.
+  <div><strong>Interview Response:</strong>The transaction method of the IDBDatabase interface immediately returns a transaction object (IDBTransaction) containing the IDBTransaction.objectStore method, which you can use to access your object-store. We must make all data operations within a transaction in IndexedDB. The transaction method has three available arguments: store, mode/type, and options. The store/storeNames refer to the names of the object stores in the scope of the new transaction, declared as an array of strings. Specify only the object stores that you need to access. If you need to access only one object store, you can specify its name as a string. The mode or type relates to the types of access performed in the transaction. IndexedDB transactions open in one of three modes: readonly, readwrite and readwriteflush (non-standard, Firefox-only.) We should specify the object-store versionchange mode here. If you do not provide the parameter, the default access mode is readonly. Please do not open a readwrite transaction unless you need to write it into the database to avoid slowing things down. The options argument is a dictionary of option durability parameters including "default", "strict", or "relaxed". The default is "default". Using "relaxed" provides better performance but with fewer guarantees. Web applications are encouraged to use "relaxed" for transient data such as caches or quickly changing records and "strict" in cases where reducing the risk of data loss outweighs the impact on performance and power. We should note that the mode/type and options are optional arguments.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -469,7 +453,7 @@ let transaction = db.transaction('books', 'readwrite'); // (1)
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> Object stores support two methods: the put() and add() methods to store values. The put(value, [key]) adds values to the store. The key gets supplied only if the object store did not have keyPath or autoIncrement option. If there is already a value with the same key, it gets replaced. The add(value, [key]) function is the same as the put method, except if a value with the same key already exists, the request fails and an error with the name "ConstraintError" gets created.
+      <strong>Interview Response:</strong> Object stores support two methods: the put() and add() methods that store values. The put(value, [key]) adds values to the store. The object store supplies the key only if the object store does not have keyPath or autoIncrement option. If there is already a value with the same key, it gets replaced. The add(value, [key]) function is the same as the put method, except if a value with the same key already exists, the request fails, and an error with the name "ConstraintError" gets created.
     </div>
     <br />
     <strong>Syntax: </strong> let request = books.add(book);
@@ -488,7 +472,7 @@ let transaction = db.transaction('books', 'readwrite'); // (1)
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> There is no way to mark an IndexedDB transaction as finished (this is not the same as oncomplete) in version 2.0. When all transaction requests finish, and the microtasks queue is empty, it gets committed automatically. Usually, we can assume that a transaction commits when all its requests are complete and the current code finishes.
+      <strong>Interview Response:</strong> There is no way to mark an IndexedDB transaction as finished (this is not the same as oncomplete) in version 2.0. When all transaction requests end and the microtasks queue is empty, it commits automatically. Usually, we can assume that a transaction commits when all its requests are complete and the current code finishes.
     </div>
   </div>
 </details>
@@ -530,7 +514,7 @@ request1.onsuccess = function () {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Not every time. We can use event delegation instead. All events are DOM events, with capturing and bubbling, but usually, only the bubbling stage gets used for event delegation. We can catch all errors using db.onerror handler for reporting or other purposes. If an error gets entirely handled, we do not want to report it. We can stop the bubbling and use db.onerror by using event.stopPropagation() in request.onerror.
+  <div><strong>Interview Response:</strong> Not every time. We can use event delegation instead. All events are DOM events, with capturing and bubbling, but we usually, only use the bubbling stage for event delegation. We can catch all errors using db.onerror handler for reporting or other purposes. If an error get handled, we do not want to report it. We can stop the bubbling and use db.onerror by using event.stopPropagation() in request.onerror.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

@@ -60,7 +60,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> For purposes of event bubbling, flattened DOM gets used. So, if we have a slotted element, and an event occurs somewhere inside it, then it bubbles up to the &#8249;slot&#8250; and upwards. With all the shadow elements, the full path to the original event target gets obtained using event.composedPath(). As we can see from the method's name, that path gets taken after the composition.
+  <div><strong>Interview Response:</strong> We use the flattened DOM for purposes of event bubbling. So, if we have a slotted element, and an event occurs somewhere inside it, it bubbles up to the &#8249;slot&#8250; and upwards. With all the shadow elements, the full path to the original event target gets extracted using event.composedPath(). As we can see from the method's name, the path gets taken after the composition.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -89,7 +89,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> If the shadow tree gets created with &#123;mode: 'closed'&#125;, then the composed path starts from the host and upwards. That is similar to other methods that work with shadow DOM, and the Internals of the closed tree gets hidden.
+  <div><strong>Interview Response:</strong> If the shadow tree gets created with &#123;mode: 'closed'&#125;, then the composed path starts from the host and upwards. That is similar to other methods that work with shadow DOM, and the Internals of the closed tree are hidden.
     </div>
   </div>
 </details>
@@ -101,7 +101,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The flattened DOM gets used, giving us access to the full path necessary for event targeting. With all the shadow elements, the full path to the original event target gets obtained using event.composedPath(). As we can see from the method's name, that path gets taken after the composition.
+  <div><strong>Interview Response:</strong> We use the flattened DOM, giving us access to the full path necessary for event targeting. With all the shadow elements, the full path to the original event target gets extracted using event.composedPath(). As we can see from the method's name, the path gets taken after the composition.
     </div>
   </div>
 </details>
@@ -113,7 +113,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The composedPath() method returns the event’s path, an array of the objects on which listeners get invoked. This process does not include nodes in shadow trees if the shadow root gets created with its ShadowRoot.mode closed.
+  <div><strong>Interview Response:</strong> The composedPath() method returns the event’s path, an array of the objects on which listeners invoke. This process does not include nodes in shadow trees if the shadow root gets created with its ShadowRoot.mode closed.
     </div><br />
     <strong>Syntax: </strong> let composed = Event.composedPath();<br /><br />
   </div>
@@ -121,12 +121,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### The majority of events pass across a shadow DOM boundary. In UI events, what attribute gets utilized to open the composition?
+### The majority of events pass across a shadow DOM boundary. In UI events, what attribute do we utilize to open the composition?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> This process is governed by the composed event object property. If it is true, then the event does cross the boundary. Otherwise, it only can be caught from inside the shadow DOM. The read-only composed property returns a Boolean, which indicates whether the event propagates across the shadow DOM boundary into the standard DOM. Most UI Events have the composed property set to true.
+  <div><strong>Interview Response:</strong> The composed event object property governs this process. If it is true, then the event crosses the boundary. Otherwise, it only can be caught from inside the shadow DOM. The read-only composed property returns a Boolean, which indicates whether the event propagates across the shadow DOM boundary into the standard DOM. Most UI Events have the composed property set to true in most cases.
     </div>
   </div>
 </details>
