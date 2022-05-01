@@ -1,6 +1,6 @@
 ---
 title: Getting Started with JavaScript Questions
-description: JavaScript is used today by companies such as Google, Amazon, Netflix, Microsoft, LinkedIn, and Facebook to build complex, desktop-like web applications.
+description: Every frontend developer interview starts with a question about JavaScript. This is the first question in this series.
 image: /img/twitter-card.png
 tags:
   - javascript
