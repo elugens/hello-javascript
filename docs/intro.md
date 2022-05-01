@@ -1,7 +1,7 @@
 ---
 title: Getting Started with JavaScript Questions
 description: JavaScript is used today by companies such as Google, Amazon, Netflix, Microsoft, LinkedIn, and Facebook to build complex, desktop-like web applications.
-image: /static/images/twitter-card.png
+image: /img/twitter-card.png
 tags:
   - javascript
   - interview
