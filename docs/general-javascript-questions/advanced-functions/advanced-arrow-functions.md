@@ -1,9 +1,25 @@
 ---
 title: JavaScript Arrow Functions
-description: Arrow Functions are a very common interview question. Arrow functions are a concise way to write anonymous functions.
+description: Arrow Functions are a very common interview question. Arrow functions are a
+  concise way to write anonymous functions.
 sidebar_position: 11
 sidebar_label: Arrow Functions
+keywords:
+  - javascript
+  - arrow functions
+  - interview questions
+  - interview answers
+tags:
+  - arrow function
+  - interview answers
+  - interview questions
+date: 2022-05-01T16:37:39.768Z
+lastmod: 2022-05-01T16:38:41.155Z
 ---
+
+<head>
+  <title>Arrow Functions Frontend Interview Questions & Answers - JS</title>
+</head>
 
 **Advanced-JS Functions: Arrow Functions**
 

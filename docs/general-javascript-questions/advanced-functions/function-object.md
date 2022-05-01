@@ -1,9 +1,36 @@
 ---
 title: Function object / NFE
-description: All functions in JavaScript are objects. The concept of functions as callable "action objects" is an excellent approach to thinking about them.
+description: All functions in JavaScript are objects. The concept of functions as callable
+  "action objects" is an excellent approach to thinking about them.
 sidebar_position: 6
 sidebar_label: Function object / NFE
+keywords:
+  - function object
+  - nfe
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - function object
+  - functions
+  - interview answers
+  - interview questions
+date: 2022-05-01T16:51:46.299Z
+lastmod: 2022-05-01T17:10:51.266Z
 ---
+
+<head>
+  <title>Function Object | Frontend Phone Interview - JavaScript</title>
+</head>
 
 **Advanced Functions: Function object / NFE**
 

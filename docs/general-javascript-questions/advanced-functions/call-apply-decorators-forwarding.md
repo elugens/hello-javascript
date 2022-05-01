@@ -1,9 +1,33 @@
 ---
 title: Decorators and forwarding, call/apply
-description: The difference of call and apply is what they accept as args; call expects all parameters to passed individually, whereas apply expects an array of parameters.
+description: The difference of call and apply is what they accept as args; call expects all
+  parameters to passed individually, whereas apply expects an array of
+  parameters.
 sidebar_position: 9
 sidebar_label: Call and Apply
+keywords:
+  - decorators
+  - javascript
+  - interview
+  - questions
+  - answers
+  - forwarding
+  - call
+  - apply
+  - interview questions
+  - interview answers
+  - call and apply
+tags:
+  - arrow function
+  - interview answers
+  - interview questions
+date: 2022-05-01T16:37:39.768Z
+lastmod: 2022-05-01T16:48:24.708Z
 ---
+
+<head>
+  <title>Decorators and forwarding Frontend Interview Answers - JS</title>
+</head>
 
 **Advanced-JS Functions: Call and Apply**
 
