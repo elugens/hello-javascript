@@ -1,6 +1,6 @@
 ---
 title: Mixin Design Pattern
-description: A mixin is a JavaScript object that has methods that other classes can utilize without having to inherit from it. In other words, a mixin provides methods for implementing a certain behavior, but we don't use it on its own; rather use it to add the behavior to other classes.
+description: A mixin is a JavaScript object that contains methods that other classes can use without inheriting from it.
 sidebar_position: 2
 sidebar_label: Mixin Pattern
 ---

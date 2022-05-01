@@ -1,6 +1,6 @@
 ---
 title: Template Method Pattern
-description: Template Method is a behavioral design pattern that defines the skeleton of an algorithm in the superclass but lets subclasses override specific steps of the algorithm without changing its structure.
+description: The Template Method pattern recommends breaking down an algorithm into a series of steps and then turning these steps into methods.
 sidebar_position: 2
 sidebar_label: Template Method
 ---
@@ -22,7 +22,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   <div>
     <div>
       <strong>Interview Response:</strong> The Template Method pattern defines a set of stages in an algorithm. Objects that implement these steps keep the algorithm's original structure but have the option to redefine or alter specific steps. This pattern intends to provide the client developer with extensibility.<br/>
-    </div>    
+    </div>
     <div>
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -127,7 +127,7 @@ MySQL: disconnect step
     <br />
     <div></div>
 
-- The template method pattern solves the problem by employing an algorithm with various versions. You need to divide your method into additional steps implemented in the abstract class when the different implementations share them. On the other hand, the various steps get implemented in the concrete classes.
+- The template method pattern solves the problem by employing an algorithm with various versions. You need to divide your method into additional steps implemented in the abstract class when the different implementations share them. On the other hand, we implement the various steps in the concrete classes.
 - Another compelling use case for this approach is when you have copied and pasted code (private functions) between various classes.
 - Finally, you can employ this strategy if most of your classes exhibit similar tendencies.
 

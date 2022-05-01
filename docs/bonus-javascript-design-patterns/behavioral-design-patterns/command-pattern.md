@@ -23,7 +23,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
     <div>
       <strong>Interview Response:</strong> Command Pattern is a behavioral JS design pattern that aims to encapsulate actions or operations as objects. This pattern is helpful in scenarios where we want to decouple or split the objects executing the commands from the objects issuing the orders. You may centralize the processing of these actions/operations by using command objects.
 <br/>
-    </div>    
+    </div>
     <div>
 </div><br />
   <div><strong className="codeExample">Code Example #1:</strong><br /><br />

@@ -1,6 +1,6 @@
 ---
 title: Visitor Design Pattern
-description: Visitor is a behavioral design pattern that allows you to decouple algorithms from the objects they act on. The Visitor pattern adds new methods to a group of objects without affecting them, and the new logic gets housed in a distinct entity known as the Visitor.
+description: A visitor pattern is a behavioral pattern that enables you to decouple algorithms from the objects on which they operate.
 sidebar_position: 11
 sidebar_label: Visitor
 ---
@@ -22,7 +22,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   <div>
     <div>
       <strong>Interview Response:</strong> Visitor is a behavioral design pattern that lets you detach algorithms from the objects on which they act. The Visitor pattern adds new methods to a group of objects without affecting them, and the new logic gets housed in a distinct entity known as the Visitor.<br/>
-    </div>    
+    </div>
     <div>
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />

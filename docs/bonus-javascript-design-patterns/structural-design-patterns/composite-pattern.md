@@ -1,6 +1,6 @@
 ---
 title: Composite Design Pattern
-description: Composite is a structural design pattern that lets you compose objects into tree structures and then work with these structures as if they were individual objects.
+description: The composite is a structural pattern that composes objects into trees and then works with these structures as if they were individual objects.
 sidebar_position: 3
 sidebar_label: Composite
 ---
@@ -167,7 +167,7 @@ Get freelance developer's progress:
       <strong>Interview Response:</strong> Composite pattern is powerful as it allows us to treat an object as a composite. Since both single and composite objects share the same interface, it enables reusing objects without worrying about their compatibility.
     </div><br/>
     <div>
-      <strong>Technical Response:</strong> The Composite Pattern describes a collection of objects treated in the same way that a single instance of an object can.<br/><br/>This approach allows us to treat individual objects and compositions uniformly, which means the same behavior is applied when working with one or a thousand items.<br/><br/>This pattern gets used to create a scalable application with many objects, and it is useful when dealing with an object hierarchy that resembles a tree. Your operating system, for example, uses this pattern to create directories and sub-directories. This pattern also gets used by libraries such as React and Vue to create reusable interfaces.
+      <strong>Technical Response:</strong> The Composite Pattern describes a collection of objects treated in the same way that a single instance of an object can.<br/><br/>This approach allows us to treat individual objects and compositions uniformly, which means the same behavior is applied when working with one or a thousand items.<br/><br/>We use this pattern to create a scalable application with many objects, and it is useful when dealing with an object hierarchy that resembles a tree. Your operating system, for example, uses this pattern to create directories and sub-directories. Some libraries also use composite patterns such as React and Vue to create reusable interfaces.
     </div>
 
   </div>

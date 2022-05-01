@@ -39,7 +39,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   <div>
     <div>
       <strong>Interview Response:</strong> A brief description or snippet of a pattern is known as patlet.
-    </div>    
+    </div>
   </div>
 </details>
 
@@ -63,7 +63,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 - **The concepts must be proven solutions to a problem:** Design patterns require proof that they function as described, and without this, we should not entertain its use.
 
-- **It must describe or express a relationship:** A pattern may represent a module type in some circumstances. While an implementation may appear this way, the formal design description must specify far deeper system structures and processes that explain how it gets connected to code.
+- **It must describe or express a relationship:** A pattern may represent a module type in some circumstances. While an implementation may appear this way, the formal design description must specify far deeper system structures and processes that explain how it connects to our code.
 
 <br />
   </div>
@@ -106,8 +106,8 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
       <strong>Interview Response:</strong> The process used to create a new design pattern include documentation of your intent, motivation, structural representation, and code examples.<br/><br/>
     </div>
     <div>
-      <strong>Technical Response:</strong> The process used to create a new design pattern includes documentation of your intent, motivation, structural representation, and code examples. Intent covers the problems and solutions and describes what the design does. The motivation explains the problem in detail and how the pattern solves the problem. The structure includes a class and object diagram that depicts each aspect of the pattern and how they are connected. A code example gets provided to represent the design.
-    </div>     
+      <strong>Technical Response:</strong> The process used to create a new design pattern includes documentation of your intent, motivation, structural representation, and code examples. Intent covers the problems and solutions and describes what the design does. The motivation explains the problem in detail and how the pattern solves the problem. The structure includes a class and object diagram that depicts each aspect of the pattern and how they are connected. The author provides a code example to represent the design.
+    </div>
   </div>
 </details>
 

@@ -1,6 +1,6 @@
 ---
 title: Regex Sticky Flag
-description: Regex Sticky Flag - The flag y allows us to perform the search at the given position in the source string. The flag y makes regexp.exec to search exactly at position lastIndex, not “starting from” it. There is an important performance gain when using flag y.
+description: Regex Sticky Flag - The flag y allows us to perform the search at the given position in the source string. There is a performance gain when using flag y.
 sidebar_position: 16
 sidebar_label: Sticky Flag
 ---

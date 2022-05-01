@@ -1,6 +1,6 @@
 ---
 title: Lookahead / Lookbehind
-description: The lookahead approach involves in catching a match based on a proceeding character or digit. The lookbehind approach involves in catching a match based on a preceding character or digit.
+description: The lookahead approach involves in catching a match based on a proceeding character or digit.
 sidebar_position: 14
 sidebar_label: Lookahead / Lookbehind
 ---

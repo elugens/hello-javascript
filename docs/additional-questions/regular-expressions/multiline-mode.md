@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The m flag specifies that a multiline input string should get treated as multiple lines. If the m flag gets used, ^ and $ match at the start or end of any line within the input string instead of the start or end of the entire string.
+  <div><strong>Interview Response:</strong> We should use the "m" flag to specify that a multi-line input string should get treated as multiple lines. If we use the regex flag, the ^ and $ should match at the start or end of any line within the input string. Instead of the beginning or end of the whole string input, we are trying to search.
     </div>
   </div>
 </details>
@@ -55,7 +55,7 @@ alert(str.match(/^\d/gm)); // 1, 2, 3
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To find a new line, we can use not only anchors ^ and $, but we can also use the newline character \n. The most notable behavior between the \n and ^$ is that the new line only returns values in new lines. This characteristic can lead to odd behaviors where a value does not get returned when it exists at the end of a line. So, a \n in the pattern gets used, we need newline characters in the result, while anchors are used to find something at the beginning/end of a line. Yes, this can be confusing, but we should be aware of it.
+  <div><strong>Interview Response:</strong> To find a new line, we can use not only anchors ^ and $, but we can also use the newline character \n. The most notable behavior between the \n and ^$ is that the new line only returns values in new lines. This characteristic can lead to odd behaviors where a value does not return when it exists at the end of a line. So, a \n in the pattern gets used, we need newline characters in the result, while anchors are used to find something at the beginning/end of a line. Yes, this can be confusing, but we should be aware of it.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

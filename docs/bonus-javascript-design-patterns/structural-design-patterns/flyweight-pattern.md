@@ -1,6 +1,6 @@
 ---
 title: Flyweight Design Pattern
-description: Flyweight is a structural design pattern that lets you fit more objects into the available amount of RAM by sharing common parts of state between multiple objects instead of keeping all of the data in each object.
+description: It allows you to fit more objects into the available RAM by sharing parts of state between multiple objects rather than keeping all of the data in each object.
 sidebar_position: 6
 sidebar_label: Flyweight
 ---
@@ -21,7 +21,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> By efficiently sharing many fine-grained objects, the Flyweight pattern helps conserve memory. Shared flyweight objects are immutable; they cannot get altered because they reflect properties shared by other objects.<br/>
+      <strong>Interview Response:</strong> It allows you to fit more objects into the available RAM by sharing parts of state between multiple objects rather than keeping all of the data in each object.<br/>
     </div>
     <div>
 </div><br />
@@ -181,8 +181,8 @@ Flyweights: 2
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> This pattern should get utilized when your application has many objects that consume the same data or when memory storage costs are high. JavaScript uses this pattern to distribute a list of immutable strings throughout the program.<br/><br/>
-      This pattern most commonly gets found in network programs or word processors, and it can be used in internet browsers to prevent the same images from loading. The flyweight pattern enables image caching. As a result, only new images are loaded from the Web when a web page loads, while existing ones get retrieved from the cache.
+      <strong>Interview Response:</strong> We should use this pattern when our application has many objects that consume the same data or when memory storage costs are high. JavaScript uses this pattern to distribute a list of immutable strings throughout the program.<br/><br/>
+      This pattern most commonly gets found in network programs or word processors, and it can be used in internet browsers to prevent the same images from loading. The flyweight pattern enables image caching. As a result, only new images are loaded from the Web when a web page loads, while existing ones get extracted from the cache.
     </div>
 
 <br />

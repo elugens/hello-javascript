@@ -1,6 +1,6 @@
 ---
 title: Abstract Factory - Design Pattern
-description: Abstract Factory is a Creational design pattern that lets you produce families of related objects without specifying their concrete classes.
+description: The abstract factory pattern is a creational design pattern that produces families of related objects without specifying their concrete classes.
 sidebar_position: 2
 sidebar_label: Abstract Factory
 ---
@@ -237,13 +237,13 @@ Though the definition particularly mentions that an interface needs to be define
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The abstract factory pattern offers various advantages, which can get stated as follows.
+      <strong>Interview Response:</strong> The abstract factory pattern offers various advantages, which we can describe in the following fashion.
     </div>
     <br />
     <div></div>
 
-- The compatibility of items produced by the same factory class gets ensured.
-- Open-closed Concept: Clean code, since new product families get introduced without affecting the present code, ensuring the open-closed concept.
+- We ensure the compatibility of items produced by the same factory class.
+- Open-closed Concept: Clean code, since we introduce new product families without affecting the current code structure, ensuring the open-closed concept.
 - Cleaner code since the single responsibility principle (SRP) gets followed because the obligation for generating the concrete product gets passed to the concrete creator class rather than the client class.
 
 <br />

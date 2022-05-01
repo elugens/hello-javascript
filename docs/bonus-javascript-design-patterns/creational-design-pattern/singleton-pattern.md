@@ -152,7 +152,7 @@ console.log(badSingleA.getRandomNumber() !== badSingleB.getRandomNumber()); // t
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> Singletons vary from static classes (or objects). Their initialization can get delayed, typically because they require information that may not be available at the time of initialization. They don't make it easy for code that isn't aware of a previous reference to them to find them. A Singleton returns a structure rather than an object or a "class." Consider how closure variables aren't closures - the closure is the function scope that provides the closure.
+      <strong>Interview Response:</strong> Singletons vary from static classes (or objects). Their initialization delays, typically because they require information that may not be available at the time of initialization. They don't make it easy for code that isn't aware of a previous reference to them to find them. A Singleton returns a structure rather than an object or a "class." Consider how closure variables aren't closures - the closure is the function scope that provides the closure.
     </div>
 
   </div>
@@ -174,7 +174,7 @@ console.log(badSingleA.getRandomNumber() !== badSingleB.getRandomNumber()); // t
     <div></div>
 
 - You can be certain that a class only has one instance.
-- You get granted global access to that instance.
+- You are granted global access to that instance.
 - The singleton object only gets initialized the first time it is requested.
 
 <br />
@@ -191,7 +191,7 @@ console.log(badSingleA.getRandomNumber() !== badSingleB.getRandomNumber()); // t
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> Restricting the instantiation to just one instance could save a lot of memory space. Instead of setting up memory for a new instance each time, we only have to set up memory for that one instance referenced throughout the application. However, Singletons are considered an anti-pattern and can (or should) get avoided in JavaScript.
+      <strong>Interview Response:</strong> Restricting the instantiation to just one instance could save a lot of memory space. Instead of setting up memory for a new instance each time, we only have to set up memory for that one instance referenced throughout the application. However, Singletons are considered an anti-pattern, and we should try to avoid using them in JavaScript.
     </div>
     <br />
     <div></div>

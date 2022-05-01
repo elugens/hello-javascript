@@ -1,6 +1,6 @@
 ---
 title: Backreference Pattern
-description: A backreference in a regular expression identifies a previously matched group and looks for the same text again.
+description: A back reference in a regular expression identifies a previously matched group and looks for the same text again.
 sidebar_position: 12
 sidebar_label: Backreferences
 ---

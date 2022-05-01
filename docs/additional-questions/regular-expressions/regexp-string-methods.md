@@ -1,6 +1,6 @@
 ---
 title: Regex / String Methods
-description: Regex / String Methods - The following are the methods available in the regular expression and string objects. The methods are used to match text against regular expressions and to perform string operations.
+description: Regex / String Methods - The following are the methods available in the regular expression and string objects.
 sidebar_position: 17
 sidebar_label: Regex / String Methods
 ---
@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The match() method retrieves the result of matching a string against a regular expression. It has three standing modes: (1) If the regexp does not have flag g, then it returns the first match as an array with capturing groups and properties index (position of the match), input (input string, equals str). (2) If the regexp has flag g, it returns an array of all matches as strings without capturing groups and other details. (3) If there are no matches, no matter if there’s flag g or not, null gets returned.
+  <div><strong>Interview Response:</strong> The match() method retrieves the result of matching a string against a regular expression. It has three standing modes: (1) If the regexp does not have flag g, then it returns the first match as an array with capturing groups and properties index (position of the match), input (input string, equals str). (2) If the regexp has flag g, it returns an array of all matches as strings without capturing groups and other details. (3) If there are no matches, no matter if there’s flag g or not, null returns.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

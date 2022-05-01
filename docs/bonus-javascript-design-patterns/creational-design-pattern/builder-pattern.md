@@ -1,6 +1,6 @@
 ---
-title: Builder - Design Pattern
-description: Builder is a creational design pattern that lets you construct complex objects step by step. The pattern allows you to produce different types and representations of an object using the same construction code.
+title: Builder Design Pattern
+description: It lets you build complex objects step by step. The pattern allows you to produce different object types and representations using the same builder code.
 sidebar_position: 3
 sidebar_label: Builder
 ---

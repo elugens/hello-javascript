@@ -51,7 +51,7 @@ alert('my@mail.com @ his@site.com.uk'.match(regexp));
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Parentheses get numbered from left to right. The search engine memorizes the content matched by each of them and allows to get it in the result. They get indexed in an array structure in the order they matched. The method str.match(regexp), if regexp has no flag g, looks for the first match and returns it as an array.
+  <div><strong>Interview Response:</strong> The regular expression numbers the parentheses from left to right. The engine memorizes the content matched by each and allows it to return the result. The RegExp engine indexes them in an array structure and the order they are matched. The method str.match(regexp), if regexp has no flag g, looks for the first match and returns it as an array.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -241,7 +241,7 @@ for(let result of results) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Method str.replace(regexp, replacement) that replaces all matches with regexp in str allows using parentheses contents in the replacement string. That gets done using $n, where n is the group number (Example: $2 would be the second value we are targeting, like index[1]).
+  <div><strong>Interview Response:</strong> Method str.replace(regexp, replacement) that replaces all matches with regexp in str allows using parentheses contents in the replacement string. We can do this by using $n, where n is the group number (Example: $2 would be the second value we are targeting, like index[1]).
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -274,7 +274,7 @@ alert(str.replace(regexp, '$<day>.$<month>.$<year>'));
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We may require parentheses to apply a quantifier appropriately, but we don't want the contents of those parentheses to appear in the results. By commencing with ( ?: ), a group can get omitted. For example, if we want to locate (go)+ but don't want the contents of the parenthesis (go) as a specific array item, we may use: (?:go)+.
+  <div><strong>Interview Response:</strong> We may require parentheses to apply a quantifier appropriately, but we don't want the contents of those parentheses to appear in the results. By commencing with ( ?: ), we cannot omit the group. For example, if we want to locate (go)+ but don't want the contents of the parenthesis (go) as a specific array item, we may use: (?:go)+.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

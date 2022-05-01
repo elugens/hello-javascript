@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Several characters or character classes inside square brackets […] mean to “search for any character among given”. For example, [eao] means any of the 3 characters: 'a', 'e', or 'o'. That is called a set in regex terminology. Sets get used in a regexp along with recurring characters. We should note that although there are multiple characters in the set, they correspond to exactly one character in the match.
+  <div><strong>Interview Response:</strong> Several characters or character classes inside square brackets […] mean to “search for any character among given”. For example, [eao] means any of the 3 characters: 'a', 'e', or 'o'. That is called a set in regex terminology. We use sets in a regular expressions along with recurring characters. We should note that although there are multiple characters in the set, they correspond to exactly one character in the match.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -65,7 +65,7 @@ alert('Exception 0xAF'.match(/x[0-9A-F][0-9A-F]/g)); // xAF
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, we can write a universal pattern that looks for wordy characters in any language. That is easy; we would use the Unicode properties in regular expressions. Note that Unicode properties do not get supported in Internet Explorer, and if we need them, we can use library XRegExp for IE users.
+  <div><strong>Interview Response:</strong> Yes, we can write a universal pattern that looks for wordy characters in any language. That is easy; we would use the Unicode properties in regular expressions. You should note that Internet Explorer does not support Unicode properties, and if we need them, we can use library XRegExp for IE users.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -112,7 +112,7 @@ alert('alice15@gmail.com'.match(/[^\d\sA-Z]/gi)); // returns @ and .
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, there is no need to escape special characters in regex ranges or sets. The only characters that get escaped are the caret ^ and the closing bracket, and they are not escaped in the technical sense but rather implicitly. This technicality does not mean we cannot escape characters, but it is not necessary in most cases.
+  <div><strong>Interview Response:</strong> No, there is no need to escape special characters in regex ranges or sets. The only characters that we escape are the caret ^ and the closing bracket, and they are not escaped in the technical sense but rather implicitly. This technicality does not mean we cannot escape characters, but it is not necessary in most cases.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

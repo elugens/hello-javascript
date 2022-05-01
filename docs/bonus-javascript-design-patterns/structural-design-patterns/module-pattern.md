@@ -1,6 +1,6 @@
 ---
 title: Module Design Pattern
-description: Modules are an integral piece of any robust application’s architecture and typically help in keeping the units of code for a project both cleanly separated and organized.
+description: Another popular JavaScript design pattern for keeping our code tidy, segregated, and organized is the Module Pattern.
 sidebar_position: 8
 sidebar_label: Module
 ---
@@ -21,7 +21,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> Another popular JavaScript design pattern for keeping our code tidy, segregated, and organized is the Module Pattern. A module is a standalone code that may get modified without impacting other components. Because the concept of an access modifier does not get supported in JavaScript, the aid of the module in mimicking the behavior of private/public access, thereby ensuring encapsulation.<br/>
+      <strong>Interview Response:</strong> Another popular JavaScript design pattern for keeping our code tidy, segregated, and organized is the Module Pattern. A module is a standalone code that may modify objects without impacting other components. In JavaScript does not support the concept of an access modifier, the aid of the module in mimicking the behavior of private/public access, thereby ensures encapsulation.<br/>
     </div>
     <div>
 </div><br />

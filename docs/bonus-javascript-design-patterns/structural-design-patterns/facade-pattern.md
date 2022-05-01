@@ -21,7 +21,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Façade design pattern creates an interface that protects clients from complex functionality in one or more sub-systems. It's a simple pattern that may appear insignificant, but it's powerful and advantageous. It frequently gets found in systems based on a multi-layer architecture.<br/>
+      <strong>Interview Response:</strong> The Façade design pattern creates an interface that protects clients from complex functionality in one or more sub-systems. It's a simple pattern that may appear insignificant, but it's powerful and advantageous. We commonly find it in systems based on a multi-layer architecture.<br/>
     </div>
     <div>
 </div><br />
@@ -133,7 +133,7 @@ Order number 2: Molten Lava Cake will be served in 34 minutes.
 **Façade** -- Example code: _Mortgage_
 
 - knows which sub-systems are responsible for a request
-- Client requests get routed to the appropriate sub-system objects.
+- Client requests are routed to the appropriate sub-system objects.
 
 **Sub Systems** -- Example code: _Bank, Credit, Background_
 

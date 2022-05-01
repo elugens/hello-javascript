@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The caret ^ and dollar $ characters have special meaning in a regexp. They are called “anchors”. The caret ^ matches at the beginning of the text, and the dollar $ represents the end. You should note that we could use the startsWith and endsWith methods to perform the same task, which is the recommendation. Regular expressions get used for more complex tests.
+  <div><strong>Interview Response:</strong> The caret ^ and dollar $ characters have special meaning in a regexp. They are called “anchors”. The caret ^ matches at the beginning of the text, and the dollar $ represents the end. You should note that we could use the startsWith and endsWith methods to perform the same task, which is the recommendation. We use regular expressions for more complex tests in JavaScript.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

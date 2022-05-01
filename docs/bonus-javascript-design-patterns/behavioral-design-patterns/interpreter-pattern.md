@@ -1,6 +1,6 @@
 ---
 title: Interpreter Design Pattern
-description: Interpreters offer a scripting language that allows end users (developers) to customize their solutions.
+description: The interpreter pattern offers a scripting language that allows end users (developers) to customize their solutions.
 sidebar_position: 1
 sidebar_label: Interpreter
 ---
@@ -168,7 +168,7 @@ MCMXXVIII = 1928
 **Extendable and straightforward to modify**
 
 - Because the pattern describes grammatical rules using classes, updating and extending the grammar is trivial. Using inheritance, you can edit or expand the grammar.
-- Existing expressions can be changed progressively, and new expressions get defined as variants of existing ones.
+- Existing expressions can be changed progressively: we define new expressions as variants of existing ones.
 
 **Simple to implement**
 

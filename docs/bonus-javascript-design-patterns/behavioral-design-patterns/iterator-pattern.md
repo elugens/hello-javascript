@@ -1,6 +1,6 @@
 ---
 title: Iterator Pattern
-description: Iterator is a behavioral design pattern that lets you traverse elements of a collection without exposing its underlying representation (list, stack, tree, etc.).
+description: An iterator is a behavioral design pattern that allows you to traverse elements of a collection without revealing its underlying representation.
 sidebar_position: 5
 sidebar_label: Iterator
 ---
@@ -23,7 +23,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
     <div>
       <strong>Interview Response:</strong> The Iterator Pattern allows you to progressively access and explores elements of an aggregate object (collection) without exposing its underlying representation. This technique enables JavaScript writers to create significantly more versatile and sophisticated looping constructs. Iterators and Generators got introduced in ES6, which aids in implementing the Iteration pattern.
 <br/>
-    </div>    
+    </div>
     <div>
 </div><br />
   <div><strong className="codeExample">Code Example #1:</strong><br /><br />
@@ -182,7 +182,7 @@ false
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> This pattern helps deal with iteration-related challenges, constructing flexible looping constructs, and retrieving items from a complex collection without knowing the underlying representation. It can get used in creating a generic iterator that efficiently explores any collection regardless of its type.
+      <strong>Interview Response:</strong> This pattern helps deal with iteration-related challenges, constructing flexible looping constructs, and retrieving items from a complex collection without knowing the underlying representation. We can use it to create a generic iterator that efficiently explores any collection regardless of its type.
     </div>
 
 <br />

@@ -122,7 +122,7 @@ alert('CS4'.match(/CS.4/)); // null
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> By default, a dot does not match the newline character \n. There are many situations when we would like a dot to mean literally “any character”, newline included. To include all characters, we must use the "s" flag. We should note that the “s” flag gets no support in Internet Explorer.
+  <div><strong>Interview Response:</strong> By default, a dot does not match the newline character \n. There are many situations when we would like a dot to mean literally “any character”, newline included. To include all characters, we must use the "s" flag. We should note that Internet Explorer does not support the “s” flag.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

@@ -1,6 +1,6 @@
 ---
 title: Decorator Design Pattern
-description: Decorators are a structural JS design pattern that aims to promote code reuse. Like Mixins, they can be considered another viable alternative to object sub-classing.
+description: The decorator pattern is a JS structural pattern that promotes code reusability. They, like Mixins, can be viewed as a replacement for object sub-classing.
 sidebar_position: 4
 sidebar_label: Decorator
 ---
@@ -21,7 +21,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> Decorators are a structural JS design pattern that aims to promote code reuse. Like Mixins, they get considered as another viable alternative to object sub-classing. This pattern enables behavior that gets dynamically added to an individual object without affecting the behavior of other objects in the same class. Decorators can increase functionality in a more flexible way than sub-classing.<br/>
+      <strong>Interview Response:</strong> Decorators are a structural JS design pattern that aims to promote code reuse. Like Mixins, we can consider them as another viable alternative to object sub-classing. This pattern enables behavior that gets dynamically added to an individual object without affecting the behavior of other objects in the same class. Decorators can increase functionality in a more flexible way than sub-classing.<br/>
     </div>
     <div>
 </div><br />

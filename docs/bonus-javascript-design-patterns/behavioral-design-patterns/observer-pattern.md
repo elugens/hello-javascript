@@ -1,6 +1,6 @@
 ---
 title: Observer Design Pattern
-description: The Observer is a behavioral JS design pattern that lets you define a subscription mechanism to notify multiple objects (observers) about any events that happen to the object (subject) they’re observing.
+description: The observer pattern allows you to define a subscription mechanism that will notify multiple objects about any events on the object we attempt to observe.
 sidebar_position: 8
 sidebar_label: Observer
 ---
@@ -24,7 +24,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
       <strong>Interview Response:</strong> The Observer is a behavioral JS design pattern that allows you to construct a subscription mechanism that alerts numerous objects (observers) about any events that occur to the object (subject) they're viewing. This pattern is also known as Pub/Sub, which stands for Publication/Subscription. It establishes a one-to-many relationship between items, encourages loose coupling, and aids in effective object-oriented design.<br/><br/>The observer pattern is at the heart of event-driven programming. We create event handler routines that are informed when a specific event occurs.
 
 <br/>
-    </div>    
+    </div>
     <div>
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -132,7 +132,7 @@ Fired:event #3
     <br />
     <div></div>
 
-- To improve code management: Large programs get broken down into a system of loosely connected objects.
+- To improve code management: We break down large programs into a system of loosely connected objects.
 - To increase flexibility by allowing a dynamic relationship between observers and subscribers, which would otherwise be impossible due to tight coupling.
 - To increase communication between the application's many components.
 - To establish a one-to-many dependency between weakly related items.
@@ -178,7 +178,7 @@ Fired:event #3
     <br />
     <div></div>
 
-- Notifications get sent to subscribers in random order.
+- Sends notifications to subscribers in random order.
 
 <br />
   </div>

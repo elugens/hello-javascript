@@ -1,6 +1,6 @@
 ---
 title: Revealing Design Pattern
-description: The Revealing Module pattern's basic tenet is that all functionality and variables should be concealed unless explicitly disclosed. All of our functions and variables may be defined in the private scope. We can return an anonymous object containing references to the private functionality we want to make public.
+description: The basic tenet of the Revealing Module pattern is that all functions and variables should be hidden unless explicitly revealed.
 sidebar_position: 1
 sidebar_label: Revealing Pattern
 ---
@@ -21,7 +21,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Revealing Module pattern's basic tenet is that all functions and variables should get concealed unless explicitly disclosed. All of our functions and variables may get defined in the private scope. We can return an anonymous object containing references to the private functionality we want to make public.<br/>
+      <strong>Interview Response:</strong> The basic tenet of the Revealing Module pattern is that all functions and variables should be hidden unless explicitly revealed. All of our functions and variables may be defined in the private scope. We can return an anonymous object containing references to the private functionality we want to make public.<br/>
     </div>
     <div>
 </div><br />

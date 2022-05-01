@@ -30,7 +30,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A slash symbol `/` is not a special character, but in JavaScript, it gets used to open and close the regexp: /...pattern.../, so we should escape it too when attempting to match it. On the other hand, if we are not using /.../, but create a regexp using the new RegExp, we do not need to escape it.
+  <div><strong>Interview Response:</strong> A slash symbol `/` is not a special character, but in JavaScript, you use it to open and close the regexp: /...pattern.../, so we should escape it too when attempting to match it. On the other hand, if we are not using /.../, but create a regexp using the new RegExp, we do not need to escape it.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

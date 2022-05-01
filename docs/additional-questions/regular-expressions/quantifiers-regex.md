@@ -1,6 +1,6 @@
 ---
 title: Quantifiers
-description: A quantifier is used to find the exact count in a sequence of digits. For example, if we are looking for a sequence of numbers like 123-456. We can used \d{3} which will return 123,456.
+description: A quantifier is used to find the exact count in a sequence of digits. JavasScript Interview Questions and Answers
 sidebar_position: 9
 sidebar_label: Quantifiers
 ---
@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A quantifier gets used in finding the exact count in a sequence of digits. For example, if we are looking for a sequence of numbers like 123-456. We can used \d&#123;3&#125; which will return 123,456.
+  <div><strong>Interview Response:</strong> We can use a quantifier to find the exact count in a sequence of digits. For example, if we are looking for a sequence of numbers like 123-456. We can used \d&#123;3&#125; which will return 123,456.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

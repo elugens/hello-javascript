@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> JavaScript uses Unicode encoding for strings. Most characters get encoded with 2 bytes, but that allows them to represent at most 65536 characters. That range is not big enough to encode all possible characters, so some rare characters are encoded with 4 bytes, for instance, like 𝒳 (mathematical X) or 😄 (a smile), some hieroglyphs. So, the simple answer is 2 bytes for regular “old” characters and 4 bytes for special “surrogate pairs or new” characters. When the JavaScript language got created a long time ago, Unicode encoding was more straightforward; there were no 4-byte characters. So, some language features still mishandle them. By default, regular expressions also treat 4-byte “long characters” as a pair of 2-byte ones. And, as it happens with strings, that may lead to odd results.
+  <div><strong>Interview Response:</strong> JavaScript uses Unicode encoding for strings. Most characters encode with 2 bytes, but that allows them to represent at most 65536 characters. That range is not big enough to encode all possible characters, so some rare characters are encoded with 4 bytes, for instance, like 𝒳 (mathematical X) or 😄 (a smile), some hieroglyphs. So, the simple answer is 2 bytes for regular “old” characters and 4 bytes for special “surrogate pairs or new” characters. When the JavaScript language got created a long time ago, Unicode encoding was more straightforward; there were no 4-byte characters. So, some language features still mishandle them. By default, regular expressions also treat 4-byte “long characters” as a pair of 2-byte ones. And, as it happens with strings, that may lead to odd results.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -90,7 +90,7 @@ alert('number: xAF'.match(regexp)); // xAF
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> When we are handling script-based languages like Cyrillic, Greek, Arabic, or Han (Chinese). We should use the Unicode property for the Scriptwriting system, which can get achieved using the Script=&#8249;value&#8250; syntax.
+  <div><strong>Interview Response:</strong> When handling script-based languages like Cyrillic, Greek, Arabic, or Han (Chinese), we should use the Unicode property for the Scriptwriting system, which we achieve by using the Script=&#8249;value&#8250; syntax.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

@@ -1,6 +1,6 @@
 ---
 title: Bridge Design Pattern
-description: Bridge is a structural design pattern that lets you split a large class or a set of closely related classes into two separate hierarchies—abstraction and implementation—which can be developed independently of each other.
+description: The bridge pattern is a structural pattern used in web development to decouple an abstraction from its implementation so that the two can vary independently.
 sidebar_position: 1
 sidebar_label: Bridge
 ---
@@ -21,7 +21,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Bridge pattern allows two components, a client, and a service, to work together, with each element having its interface. The Bridge Pattern is a high-level architectural pattern, and its primary goal is to write better code through two levels of abstraction. It facilitates the very loose coupling of objects and sometimes gets referred to as a double Adapter pattern.<br/>
+      <strong>Interview Response:</strong> The Bridge pattern allows two components, a client, and a service, to work together, with each element having its interface. The Bridge Pattern is a high-level architectural pattern, and its primary goal is to write better code through two levels of abstraction. It facilitates the very loose coupling of objects and sometimes referred to as a double Adapter pattern.<br/>
     </div><br />
   <div><strong className="codeExample">Diagram:</strong><br /><br />
 
@@ -118,7 +118,7 @@ ConcreteImplementorB OperationImp
 
 **Client** -- Example code: _the run() function_
 
-- To request an operation, a call into abstraction gets made.
+- To request an operation, we make a call into abstraction.
 
 **Abstraction** -- _not used in JavaScript_
 
@@ -254,7 +254,7 @@ Sound volume up
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Bridge pattern gets classified as a Structural design pattern.
+      <strong>Interview Response:</strong> In software engineering, we define the bridge pattern as a structural design pattern.
     </div>
   </div>
 </details>
@@ -325,10 +325,10 @@ JavaScript does not support abstract classes, and as a result, Abstraction and I
     <br />
     <div></div>
 
-- Loosely coupled code - Because the bridge pattern decouples an abstraction from its implementation, changes to the implementation do not affect the client code. The client code does not need to get compiled when the implementation changes.
+- Loosely coupled code - Because the bridge pattern decouples an abstraction from its implementation, changes to the implementation do not affect the client code. The client code does not need to be compiled when the implementation changes.
 - Reduces code duplication while increasing code maintainability and reusability.
-- Classes and applications that are platform agnostic can get created.
-- Helps to promote the Open-Closed principle, new abstractions and implementations can get developed independently.
+- Classes and applications that are platform agnostic can be created.
+- Helps to promote the Open-Closed principle, new abstractions and implementations can be developed independently.
 - Decoupling abstraction from implementation: bridge pattern can avoid the binding between abstraction and implementation and select the implementation at run time.
 - Improved Extensibility – Abstraction and implementation can be extended independently.
 

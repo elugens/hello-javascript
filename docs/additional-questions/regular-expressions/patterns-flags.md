@@ -18,7 +18,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Regular expressions are patterns with optional flags that allow powerful text search and replacement. They are available in JavaScript via the RegExp object, and they get embedded into string functions and string methods combined with regular expressions.
+  <div><strong>Interview Response:</strong> Regular expressions are patterns with optional flags that allow powerful text search and replacement. They are available in JavaScript via the RegExp object, and we can embed them into string functions and string methods combined with regular expressions.
     </div>
   </div>
 </details>
@@ -30,7 +30,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Two syntaxes get used in creating a regular expression object, including the long and short syntaxes. The extended syntax uses the RegExp object with optional flags, and the short syntax uses forward slashes with optional flags. Slashes /.../ tell JavaScript that we are creating a regular expression, and they play the same role as quotes for strings. In both cases, regexp becomes an instance of the built-in RegExp class.
+  <div><strong>Interview Response:</strong> We can use two syntaxes when creating a regular expression object, including the long and short syntaxes. The extended syntax uses the RegExp object with optional flags, and the short syntax uses forward slashes with optional flags. Slashes /.../ tell JavaScript that we are creating a regular expression, and they play the same role as quotes for strings. In both cases, regexp becomes an instance of the built-in RegExp class.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

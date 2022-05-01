@@ -1,6 +1,6 @@
 ---
 title: Strategy Design Pattern
-description: Strategy is a behavioral design pattern that lets an object alter its behavior when its internal state changes. It appears as if the object changed its class.
+description: The strategy is a behavioral pattern that allows an object to shift its way of responding to changes in its internal state.
 sidebar_position: 10
 sidebar_label: Strategy
 ---
@@ -22,7 +22,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   <div>
     <div>
       <strong>Interview Response:</strong> The Strategy pattern encapsulates various algorithms (or strategies) for a specific task. It enables a method to be replaced at runtime with another method (Strategy) without the client knowing it. The Strategy pattern is essentially a collection of interchangeable algorithms.<br/>
-    </div>    
+    </div>
     <div>
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -171,7 +171,7 @@ Fedex Strategy: $43.20
 
 - At runtime, you can alter the algorithms utilized within an object.
 - You can separate an algorithm's implementation specifics from the code that utilizes it.
-- The composition can get used in place of inheritance
+- It use the composition in place of inheritance
 - The principle of open/closed. You may implement new tactics without changing the context.
 
 <br />

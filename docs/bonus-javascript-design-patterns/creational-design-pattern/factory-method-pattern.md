@@ -1,6 +1,6 @@
 ---
 title: Factory Method - Design Pattern
-description: Factory Method is a Creational design pattern that provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created.
+description: The factory pattern offers an interface for producing objects in a superclass while allowing subclasses to change the type of objects created.
 sidebar_position: 1
 sidebar_label: Factory Method
 ---
@@ -228,7 +228,7 @@ circle.draw();
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Factory Method's primary goal is extensibility. Factory Methods commonly get used in applications that manage, maintain, or manipulate groups of distinct but similar objects (i.e., methods and properties).
+      <strong>Interview Response:</strong> The Factory Method's primary goal is extensibility. We commonly use factory methods in applications that manage, maintain, or manipulate groups of distinct but similar objects (i.e., methods and properties).
     </div>
   </div>
 </details>

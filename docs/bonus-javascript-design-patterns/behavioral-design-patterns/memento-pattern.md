@@ -1,6 +1,6 @@
 ---
 title: Memento Design Pattern
-description: Memento is a behavioral design pattern that lets you save and restore the previous state of an object without revealing the details of its implementation.
+description: The memento pattern is a behavioral pattern that allows you to save and restore an object's previous state without revealing its implementation details.
 sidebar_position: 7
 sidebar_label: Memento
 ---
@@ -21,9 +21,9 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Memento pattern gets used to store and restore an object temporarily. The technology used to store the object's state gets determined by the needed persistence period, which can vary.
+      <strong>Interview Response:</strong> We use the memento pattern to store and restore an object temporarily. The technology used to store the object's state gets determined by the needed persistence period, which can vary.
 <br/>
-    </div>    
+    </div>
     <div>
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -150,7 +150,7 @@ John Wang
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> We can use the Memento pattern to create snapshots of an object's state to restore it to a previous state.<br/><br/>The Memento pattern allows you to create complete copies of an object's state, including private fields, and store them independently from the object. While most people remember this pattern because of the "undo" use case, it's also helpful when dealing with transactions (i.e., if you need to roll back an operation on an error).<br/><br/>This pattern can also get used when direct access to an object's fields/getters/setters violates its encapsulation. The Memento makes the object responsible for capturing a snapshot of its current state. Because no other object can read the snapshot, the original object's state data remains safe and secure.
+      <strong>Interview Response:</strong> We can use the Memento pattern to create snapshots of an object's state to restore it to a previous state.<br/><br/>The Memento pattern allows you to create complete copies of an object's state, including private fields, and store them independently from the object. While most people remember this pattern because of the "undo" use case, it's also helpful when dealing with transactions (i.e., if you need to roll back an operation on an error).<br/><br/>We can also use this pattern when direct access to an object's fields/getters/setters violates its encapsulation. The Memento makes the object responsible for capturing a snapshot of its current state. Because no other object can read the snapshot, the original object's state data remains safe and secure.
     </div><br/>
   </div>
 </details>

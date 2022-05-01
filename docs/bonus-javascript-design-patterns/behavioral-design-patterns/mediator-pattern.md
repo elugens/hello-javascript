@@ -1,6 +1,6 @@
 ---
 title: Mediator Design Pattern
-description: The Mediator Pattern is a design pattern that allows one item to notify another group of objects when an event or action occurs.
+description: The mediator pattern is a structural pattern that enables one item to alert another group of objects when an event or action occurs.
 sidebar_position: 6
 sidebar_label: Mediator
 ---
@@ -23,7 +23,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
     <div>
       <strong>Interview Response:</strong> The Mediator Pattern is a design pattern that allows one item to notify another group of objects when an event or action occurs. The Mediator and Observer patterns vary in that the Mediator pattern allows one object to be alerted of events occurring in other objects. In contrast, the Observer pattern allows one object to subscribe to numerous events occurring in other objects.
 <br/>
-    </div>    
+    </div>
     <div>
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -156,7 +156,7 @@ Ringo to Paul: Paul, what do you think?
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> It can get used:
+      <strong>Interview Response:</strong> We can use it:
     </div><br/>
 
 - If your system has several components that must communicate with one another.
@@ -187,7 +187,7 @@ Ringo to Paul: Paul, what do you think?
 - Singular Responsibility Principle -- You may consolidate the communications between numerous components into a single location, making them easier to understand and maintain.
 - The Open/Closed Principle You can add new mediators without changing the key components.
 - You can reduce coupling between software components.
-- Individual components can get reused more quickly.
+- We can use individual components more efficiently.
 
 <br />
   </div>

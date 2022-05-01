@@ -1,9 +1,6 @@
 ---
 title: Understanding Anti-Patterns in JavaScript
-description:
-  An anti-pattern is an imperfect solution to a particular problem that results
-  in an unintended result. An anti-pattern is a lousy design worthy of
-  documenting.
+description: An anti-pattern is an imperfect solution to a particular problem that results in an unintended result. An anti-pattern is a lousy design worthy of documenting.
 sidebar_position: 5
 sidebar_label: Anti-Patterns
 keywords:
@@ -53,7 +50,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 3. Playing with native methods in the Object class prototype (this is a particularly bad anti-pattern).
 
 4. Using JavaScript inline because it is inflexible.
-5. The usage of document.write when native DOM alternatives, such as document.createElement, are preferable. Over the years, document.write gets misapplied. Drawbacks include that it can overwrite the page we're on after the page loads, whereas document.createElement does not. It also doesn't work with XHTML, so using more DOM-friendly techniques like document.createElement is preferable.
+5. The usage of document.write when native DOM alternatives, such as document.createElement, are preferable. Over the years, developers have misused document.write. Drawbacks include that it can overwrite the page we're on after the page loads, whereas document.createElement does not. It also doesn't work with XHTML, so using more DOM-friendly techniques like document.createElement is preferable.
 
 6. Incorrect Use of True and False Evaluation
 

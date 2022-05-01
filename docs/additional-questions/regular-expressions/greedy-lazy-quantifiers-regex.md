@@ -1,6 +1,6 @@
 ---
 title: Greedy / Lazy Quantifiers
-description: By default, quantifiers are Greedy. Greedy quantifiers try to match the longest text that matches given pattern. Lazy quantifiers try to match the shortest text that matches given pattern.
+description: By default, quantifiers are Greedy. Greedy quantifiers try to match the longest text that matches given pattern.
 sidebar_position: 10
 sidebar_label: Greedy / Lazy Quants
 ---

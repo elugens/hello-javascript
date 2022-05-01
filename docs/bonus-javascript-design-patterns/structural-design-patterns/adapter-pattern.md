@@ -1,6 +1,6 @@
 ---
 title: Adapter Design Pattern
-description: Adapter is a structural design pattern that allows objects with incompatible interfaces to collaborate.
+description: Adapter is a structural design pattern that facilitates the collaboration of objects having conflicting interfaces.
 sidebar_position: 1
 sidebar_label: Adapter
 ---
@@ -21,7 +21,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> Adapters are JS design patterns that allow objects or classes with incompatible interfaces to work together. Interfaces from different classes or objects get matched to work together despite incompatible interfaces. The Wrapper pattern is another name for it.<br/>
+      <strong>Interview Response:</strong> In JavaScript, the adapter design pattern allows objects or classes with incompatible interfaces to work together. Interfaces from different classes or objects connect through an adapter work together despite their incompatible interfaces. The wrapper pattern is another name for it.<br/>
     </div><br />
   <div><strong className="codeExample">Diagram:</strong><br /><br />
 
@@ -223,7 +223,7 @@ New cost: $39.50
 **Benefits**
 
 - Based on SOLID principles.
-- New adapters can get added without breaking existing code.
+- We can add new adapters without breaking existing code.
 - The code is both reusable and adaptable.
 - Clean code — because the client/context does not use a different interface in each concrete class and can switch between additional adapters using polymorphism.
 - Single Responsibility Principle - The principle of single responsibility. You can separate the interface or data conversion code from the main business logic of the program.
