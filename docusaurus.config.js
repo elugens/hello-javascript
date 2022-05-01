@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/nightOwl');
 /** @type {import('@docusaurus/types').Config} */
 
 const config = {
-  title: 'Pass Your Next Front-end Phone Interview',
+  title: 'HelloJavaScript.info',
   tagline: 'A Complete Archive of JavaScript Interview Questions and Answers',
   url: 'https://www.hellojavascript.info',
   baseUrl: '/',

@@ -1,9 +1,15 @@
 ---
-title: Basic JavaScript Questions
+title: Basic JavaScript Interview Questions
 description: Basic JS Questions in JavasScript - JavaScript Basics
 sidebar_label: Basic JS Questions
 sidebar_position: 1
+lastmod: 2022-05-01T04:18:15.774Z
+date: 2022-05-01T04:15:29.456Z
 ---
+
+<head>
+  <title>Basic JavaScript Interview Questions and Answers</title>
+</head>
 
 **JavaScript Basics: Basic JS Questions**
 
@@ -205,7 +211,7 @@ It should be noted, to maintain efficient speed in the browser, V8 translates Ja
           JavaScript permits us to read/write files directly on the hard disk, copy them, or run applications on a web page, however, it does not have direct access to OS functionality.
         </li>
         <li>
-        	Modern browsers allow it to interact with files. Still, access is limited and only provided if the user performs specific actions, such as "dropping" a file into a browser window or choosing it through a tag.
+         Modern browsers allow it to interact with files. Still, access is limited and only provided if the user performs specific actions, such as "dropping" a file into a browser window or choosing it through a tag.
         </li>
         <li>
           Interacting with the camera/microphone and other devices is possible, but it requires the user's explicit consent. The JavaScript-enabled page may not secretly activate a web camera, examine its surroundings, and communicate the data.

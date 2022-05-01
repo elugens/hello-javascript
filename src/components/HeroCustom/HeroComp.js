@@ -16,7 +16,9 @@ function HeroComp() {
               <button className={styles.support_button}>
                 <Link to='/docs/intro'>GET STARTED!</Link>
               </button>
-              <h1 className='hero__title'>{siteConfig.title}</h1>
+              <h1 className='hero__title'>
+                Pass Your Next Frontend Phone Interview
+              </h1>
               <p className='hero__subtitle'>{siteConfig.tagline}</p>
             </div>
 

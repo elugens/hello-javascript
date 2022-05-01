@@ -1,3 +1,5 @@
 {
-  "cSpell.words": ["WAMP"]
+  "cSpell.words": ["WAMP"],
+  "frontMatter.preview.host": "",
+  "frontMatter.content.autoUpdateDate": true
 }

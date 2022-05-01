@@ -1,19 +1,25 @@
 ---
-title: Getting Started with JavaScript Questions
-description: Every frontend developer interview starts with a question about JavaScript. This is the first question in this series.
+title: Getting Started with JavaScript Interview Questions
+description: Every frontend developer interview starts with a question about JavaScript.
+  This is the first question in this series.
 image: /img/twitter-card.png
-tags:
+keywords:
   - javascript
+  - frontend
   - interview
-  - questions
-  - answers
-  - phone interview
-  - interview prep
 sidebar_position: 1
 sidebar_label: Getting Started
-keywords:
+date: 2022-05-01T02:02:20.122Z
+tags:
+  - frontend
+  - javascript
   - interview
+lastmod: 2022-05-01T04:58:47.964Z
 ---
+
+<head>
+  <title>Getting Started with JavaScript Frontend Interview Questions</title>
+</head>
 
 # Getting Started with JavaScript Questions
 
