@@ -3,7 +3,32 @@ title: Browser Default Actions
 description: Several events automatically cause the browser to do particular actions by default. These are called default browser actions. Interview Questions
 sidebar_position: 4
 sidebar_label: Browser Default Actions
+keywords:
+  - browser default actions
+  - browser defaults
+  - browser actions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - browser default actions
+  - browser defaults
+  - browser actions
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Browser Default Actions | JavaScript Frontend Interview</title>
+</head>
 
 **Browser Events: Browser Default Actions**
 

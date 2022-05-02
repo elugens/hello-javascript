@@ -3,7 +3,32 @@ title: DOM Tree
 description: DOM Tree is a tree structure that represents the structure of the HTML DOM. - JavaScript Interview Questions & Answers
 sidebar_position: 2
 sidebar_label: DOM Tree
+keywords:
+  - dom tree
+  - tree structure
+  - javascript dom tree
+  - functions  
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - dom tree
+  - tree structure
+  - javascript dom tree
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>DOM Tree | JavaScript Frontend Phone Interview Questions</title>
+</head>
 
 **Browser Document: DOM Tree**
 

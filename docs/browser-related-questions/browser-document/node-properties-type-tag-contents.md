@@ -3,7 +3,31 @@ title: Node Properties
 description: Node Properties are properties of the Node object. They are used to access the Node object. - JavaScript Interview Questions & Answers
 sidebar_position: 5
 sidebar_label: Node Properties
+keywords:
+  - node properties
+  - node object
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - node properties
+  - node object
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Node Properties | JavaScript Frontend Phone Interview</title>
+</head>
 
 **Browser Document: Node Properties**
 

@@ -3,7 +3,33 @@ title: Searching the DOM
 description: Searching the DOM is the process of finding an element in the DOM tree. - JavaScript interview questions & answers
 sidebar_position: 4
 sidebar_label: Searching the DOM
+keywords:
+  - searching the dom
+  - dom manipulation
+  - dom traversal
+  - traversing the dom
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function 
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - searching the dom
+  - dom manipulation
+  - dom traversal
+  - traversing the dom
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Searching the DOM| JavaScript Frontend Phone Interview</title>
+</head>
 
 **Browser Document: Searching the DOM**
 

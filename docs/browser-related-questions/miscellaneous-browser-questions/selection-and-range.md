@@ -3,7 +3,33 @@ title: Selection and Range
 description: Selection and Range in JavaScript is a JavaScript API that allows you to select text in a document. - JavaScript Interview Questions & Answers
 sidebar_position: 2
 sidebar_label: Selection and Range
+keywords:
+  - selection and range
+  - range object
+  - selection object
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - selection and range
+  - range object
+  - selection object
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Selection and Range | JavaScript Frontend Phone Interview</title>
+</head>
 
 **Miscellaneous: Selection and Range**
 

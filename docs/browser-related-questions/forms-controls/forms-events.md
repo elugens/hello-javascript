@@ -1,9 +1,33 @@
 ---
 title: Form Events
-description: Form Events in JavaScript are events that occur when a user interacts with a form. - JavaScript Interview Questions & Answers
+description: Form Events in JavaScript are events that occur when a user interacts with a form. The change event triggers when the element has finished changing. - JavaScript Interview Questions & Answers
 sidebar_position: 3
 sidebar_label: Form Events
+keywords:
+  - form events
+  - forms events
+  - events in forms
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - form events
+  - forms events
+  - events in forms
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Form Events | JavaScript Frontend Phone Interview</title>
+</head>
 
 **Forms / Controls: Form Events**
 

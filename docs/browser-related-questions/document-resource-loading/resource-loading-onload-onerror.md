@@ -3,7 +3,31 @@ title: Resource Loading
 description: Resource Loading in JavaScript is a way to load external resources asynchronously. - JavaScript Interview Questions & Answers
 sidebar_position: 3
 sidebar_label: Resource Loading
+keywords:
+  - resource loading
+  - loading resources
+  - loading external resources
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - resource loading
+  - loading resources
+  - loading external resources
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Resource Loading | JavaScript Frontend Developer Interview</title>
+</head>
 
 **Document / Resource Loading: Resource Loading**
 

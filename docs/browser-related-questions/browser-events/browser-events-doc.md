@@ -3,7 +3,32 @@ title: Browser Events
 description: Browser Events are the events that occur in the browser. They are used to interact with the browser. - JavaScript Interview Questions & Answers
 sidebar_position: 1
 sidebar_label: Browser Events
+keywords:
+  - browser events
+  - browser
+  - events
+  - browser interaction
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - browser events
+  - browser
+  - events
+  - browser interaction
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Browser Events | JavaScript Frontend Phone Interview Answer</title>
+</head>
 
 **Browser Events: Browser Events**
 

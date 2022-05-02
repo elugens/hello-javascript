@@ -1,9 +1,34 @@
 ---
 title: Window Sizes / Scrolling / Resizing
-description: Window Sizes / Scrolling / Resizing - JavaScript Interview Questions & Answers
+description: Window Sizes / Scrolling / Resizing - Browsers also support properties like window.innerWidth/innerHeight. - JavaScript Interview Questions & Answers
 sidebar_position: 10
 sidebar_label: Window Sizes / Scrolling / Resizing
+keywords:
+  - window sizes
+  - window scrolling
+  - window resizing
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - window sizes
+  - window scrolling
+  - window resizing
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Window Sizes / Scrolling / Resizing | HelloJavaScript.info</title>
+</head>
 
 **Browser Document: Window Sizes / Scrolling**
 

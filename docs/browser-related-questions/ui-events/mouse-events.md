@@ -3,7 +3,31 @@ title: Mouse Events
 description: Mouse Events in JavaScript are events that occur when a user interacts with a mouse. They are triggered by the user. - JavaScript Interview Questions & Answers
 sidebar_position: 1
 sidebar_label: Mouse Events
+keywords:
+  - mouse events
+  - javascript mouse events
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - mouse events
+  - javascript mouse events
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Mouse Events | JavaScript Frontend Phone Interview Questions</title>
+</head>
 
 **UI Events: Mouse Events**
 

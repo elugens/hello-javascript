@@ -1,9 +1,33 @@
 ---
 title: Bubbling and Capturing - Events
-description: Bubbling and Capturing Events in JavaScript - JavaScript Interview Questions & Answers
+description: Bubbling and Capturing Events in JavaScript - The bubbling-up principle is self-explanatory based on its name. - JavaScript Interview Questions & Answers
 sidebar_position: 2
 sidebar_label: Bubbling / Capturing
+keywords:
+  - bubbling capturing
+  - bubbling events
+  - capturing events
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - function object
+  - functions
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Bubbling and Capturing | JavaScript Frontend Phone Interview</title>
+</head>
 
 **Browser Events: Bubbling / Capturing**
 

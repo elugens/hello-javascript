@@ -3,7 +3,31 @@ title: Scripts - Async/Defer
 description: Scripts - Async/Defer in JavaScript is a way to load JavaScript files asynchronously. - JavaScript Interview Questions & Answers
 sidebar_position: 2
 sidebar_label: Scripts - Async/Defer
+keywords:
+  - scripts async defer
+  - deffered scripts
+  - async scripts
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - scripts async defer
+  - deffered scripts
+  - async scripts
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Scripts Async/Defer | JavaScript Frontend Phone Interview</title>
+</head>
 
 **Document / Resource Loading: Scripts - Async/Defer**
 

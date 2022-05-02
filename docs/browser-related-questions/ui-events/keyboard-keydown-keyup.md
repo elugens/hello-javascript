@@ -3,7 +3,33 @@ title: Keyboard Events - Keydown/Keyup
 description: Keyboard Events in JavaScript are events that occur when a user interacts with a keyboard. They are triggered by the user's keyboard. - JavaScript Interview Questions & Answers
 sidebar_position: 5
 sidebar_label: Keyboard Events
+keywords:
+  - keyboard events
+  - keydown event
+  - keyup event
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - keyboard events
+  - keydown event
+  - keyup event
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Keyboard Events - Keydown/Keyup | HelloJavaScript.info</title>
+</head>
 
 **UI Events: Keyboard Events**
 

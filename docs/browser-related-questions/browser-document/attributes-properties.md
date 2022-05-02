@@ -3,7 +3,30 @@ title: Attributes / Properties
 description: Attributes / Properties are properties of an HTML tag. They are used to add information to the tag and to control the behavior of the tag. Interview Questions
 sidebar_position: 6
 sidebar_label: Attributes / Properties
+keywords:
+  - html attributes
+  - html properties
+  - attributes
+  - tags
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - function object
+  - functions
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Attributes / Properties | JavaScript Frontend Interview</title>
+</head>
 
 **Browser Document: Attributes / Properties**
 

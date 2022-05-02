@@ -1,9 +1,36 @@
 ---
 title: Walking the DOM
-description: Walking the DOM is a process of traversing the DOM tree. - JavaScript interview questions & answers
+description: Walking the DOM is a process of traversing the DOM tree. What does it mean in JavaScript to walk the DOM? - JavaScript interview questions and answers.
 sidebar_position: 3
 sidebar_label: Walking the DOM
+keywords:
+  - walking the dom
+  - walking the dom tree
+  - traversing the dom
+  - tree traversal
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - walking the dom
+  - walking the dom tree
+  - traversing the dom
+  - tree traversal
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Walking the DOM | JavaScript Frontend Phone Interview</title>
+</head>
 
 **Browser Document: Walking the DOM**
 

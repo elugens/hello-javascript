@@ -3,7 +3,32 @@ title: Styles and Classes
 description: Modifying styles and classes in JavaScript is easy. - JavaScript Interview Questions & Answers
 sidebar_position: 8
 sidebar_label: Styles / Classes
+keywords:
+  - javascript styles
+  - javascript classes
+  - styles classes
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - javascript styles
+  - javascript classes
+  - styles classes
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Styles and Classes | JavaScript Frontend Phone Interview</title>
+</head>
 
 **Browser Document: Styles / Classes**
 

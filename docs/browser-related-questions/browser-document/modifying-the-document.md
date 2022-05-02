@@ -3,7 +3,32 @@ title: Modifying the Document
 description: JavaScript allows us to modify the HTML document by using the Document Object Model (DOM). - JavaScript Interview Questions & Answers
 sidebar_position: 7
 sidebar_label: Modifying the Document
+keywords:
+  - modifying the document
+  - html document
+  - document object model
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - modifying the document
+  - html document
+  - document object model
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Modifying the Document | JavaScript Frontend Phone Interview</title>
+</head>
 
 **Browser Document: Modifying the Document**
 

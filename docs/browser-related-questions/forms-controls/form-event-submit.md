@@ -3,7 +3,33 @@ title: Form Submit / Events
 description: Form Submit / Events in JavaScript are events that occur when a user interacts with a form. - JavaScript Interview Questions & Answers
 sidebar_position: 4
 sidebar_label: Form Submit / Events
+keywords:
+  - form submit
+  - form event
+  - form events
+  - form submission
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - form submit
+  - form event
+  - form events
+  - form submission
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Form Submit Events | JavaScript Frontend Phone Interview</title>
+</head>
 
 **Forms / Controls: Form Submit / Events**
 

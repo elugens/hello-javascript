@@ -3,7 +3,34 @@ title: Form Properties / Methods
 description: Form Properties / Methods in JavaScript are properties and methods that are associated with a form element. - JavaScript Interview Questions & Answers
 sidebar_position: 1
 sidebar_label: Form Properties / Methods
+keywords:
+  - form properties
+  - form methods
+  - form element
+  - form element properties
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - form properties
+  - form methods
+  - form element
+  - form element properties
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Form Properties / Methods | HelloJavaScript.info</title>
+</head>
 
 **Forms / Controls: Form Properties / Methods**
 

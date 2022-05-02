@@ -3,7 +3,32 @@ title: Window Coordinates
 description: Window Coordinates are the coordinates of the browser window. They are relative to the top left corner of the browser window. - JavaScript Interview Questions & Answers
 sidebar_position: 11
 sidebar_label: Window Coordinates
+keywords:
+  - window coordinates
+  - browser window coordinates
+  - browser coordinates
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - window coordinates
+  - browser window coordinates
+  - browser coordinates
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Window Coordinates | JavaScript Frontend Phone Interview</title>
+</head>
 
 **Browser Document: Coordinates**
 

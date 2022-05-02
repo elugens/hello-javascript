@@ -3,7 +3,35 @@ title: Page Lifecycle
 description: Page Lifecycle in JavaScript is a set of events that occur when a page is loaded. They are triggered by the browser. - JavaScript Interview Questions & Answers
 sidebar_position: 1
 sidebar_label: Page Lifecycle
+keywords:
+  - page lifecycle events
+  - page lifecycle
+  - beforeunload
+  - load
+  - unload
+  - page load
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - page lifecycle events
+  - page lifecycle
+  - beforeunload
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Page Lifecycle in JavaScript | Frontend Interview Answers</title>
+</head>
 
 **Document / Resource Loading: Page Lifecycle**
 

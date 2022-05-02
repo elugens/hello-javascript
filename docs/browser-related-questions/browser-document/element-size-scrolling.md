@@ -3,7 +3,32 @@ title: Element Size / Scrolling in the DOM
 description: Element Size / Scrolling in the DOM is a topic that is covered in this article. - JavaScript Interview Questions & Answers
 sidebar_position: 9
 sidebar_label: Element Size / Scrolling
+keywords:
+  - element size
+  - element size scrolling
+  - element scrolling size
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - element size
+  - element size scrolling
+  - element scrolling size
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Element Size / Scrolling in the DOM | HelloJavaScript.info</title>
+</head>
 
 **Browser Document: Element Size / Scrolling**
 

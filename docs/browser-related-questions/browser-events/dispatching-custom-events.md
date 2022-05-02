@@ -1,9 +1,34 @@
 ---
 title: Dispatching Custom Events
-description: Dispatching Custom Events in JavaScript - JavaScript Interview Questions & Answers
+description: Dispatching Custom Events in JavaScript - The Event() constructor creates a new Event. - JavaScript Interview Questions & Answers
 sidebar_position: 5
 sidebar_label: Dispatching Custom Events
+keywords:
+  - dispatching custom events
+  - dispatch custom events
+  - custom events
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - dispatching custom events
+  - dispatch custom events
+  - custom events
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Dispatching Custom Events | JavaScript Phone Interview</title>
+</head>
 
 **Browser Events: Dispatching Custom Events**
 

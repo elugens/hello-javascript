@@ -1,9 +1,31 @@
 ---
 title: Browser Environment Specification
-description: Browser Environment Specification is a set of specifications that describe the environment in which a web browser runs. - JavaScript Interview Questions & Answers
+description: Browser Environment Specification is a set of specifications that describe the environment in which a web browser runs. - JavaScript Interview Questions
 sidebar_position: 1
 sidebar_label: Browser Environment Specs
+keywords:
+  - browser environment specification
+  - browser environment specs
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - browser environment specification
+  - browser environment specs
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Browser Environment Specification | HelloJavaScript.info</title>
+</head>
 
 **Browser Document: Browser Environment Specs**
 

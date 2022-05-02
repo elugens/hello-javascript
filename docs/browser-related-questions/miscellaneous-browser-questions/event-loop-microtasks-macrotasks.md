@@ -1,9 +1,35 @@
 ---
 title: Event loop - Microtasks/Macrotasks
-description: Event loop - Microtasks / Macrotasks in JavaScript is a way to run code asynchronously. - JavaScript Interview Questions & Answers
+description: Event loop - Microtasks / Macrotasks in JavaScript is a way to run code asynchronously. The event loop is a programming construct - Interview Questions & Answer
 sidebar_position: 3
 sidebar_label: Event loop
+keywords:
+  - event loop
+  - microtasks
+  - macrotasks
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - event loop
+  - microtasks
+  - macrotasks
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Event loop - Microtasks/Macrotasks | HelloJavaScript.info</title>
+</head>
 
 **Miscellaneous: Event loop**
 

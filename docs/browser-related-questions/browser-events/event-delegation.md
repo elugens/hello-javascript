@@ -3,7 +3,32 @@ title: Event Delegation
 description: Event Delegation is a technique that allows you to listen for events on a parent element; then delegate the event to its children. Interview Questions & Answers
 sidebar_position: 3
 sidebar_label: Event Delegation
+keywords:
+  - event delegation
+  - events delegation
+  - delegating events
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - event delegation
+  - events delegation
+  - delegating events
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Event Delegation | JavaScript Frontend Phone Interview</title>
+</head>
 
 **Browser Events: Event Delegation**
 

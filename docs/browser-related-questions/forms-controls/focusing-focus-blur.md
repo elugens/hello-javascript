@@ -3,7 +3,32 @@ title: Focusing - focus/blur
 description: Focusing - focus/blur in JavaScript is an event that occurs when a user focuses on an element. - JavaScript Interview Questions & Answers
 sidebar_position: 2
 sidebar_label: Focusing - focus/blur
+keywords:
+  - focus blur
+  - onblur
+  - onfocus
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - focus blur
+  - onblur
+  - onfocus
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Focusing focus/blur | JavaScript Frontend Phone Interview</title>
+</head>
 
 **Forms / Controls: Focusing - focus/blur**
 
