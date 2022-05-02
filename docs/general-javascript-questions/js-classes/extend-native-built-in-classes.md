@@ -1,9 +1,36 @@
 ---
 title: Extending built-in classes
-description: Extending built-in classes is a process of creating a new class that inherits from an existing class.
+description: Extending built-in classes is a process of creating a new class that inherits from an existing class. Frontend Developer Phone Interview Questions
 sidebar_position: 5
 sidebar_label: Extending Natives
+keywords:
+  - built-in classes
+  - native classes
+  - extending classes
+  - native built-in classes
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - class objects
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - built-in classes
+  - native classes
+  - extending classes
+  - native built-in classes
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Extending Native built-in classes | Frontend Phone Interview</title>
+</head>
 
 **Classes: Extending Natives**
 

@@ -1,9 +1,34 @@
 ---
 title: JavaScript Functions
-description: A function is a block of code designed to perform a particular task.
+description: The 7 types of functions include the function declaration, expressions, arrow function, shorthand methods, generators, constructors, and JS built-in methods.
 sidebar_position: 17
 sidebar_label: Functions
+keywords:
+  - functions
+  - javascript function
+  - function declaration
+  - function expression
+  - arrow function
+  - interview
+  - questions
+  - answers
+  - response
+  - shorthand methods
+  - function
+  - generators
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - function object
+  - functions
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Functions | JavaScript Frontend Phone Interview Questions</title>
+</head>
 
 **JavaScript Fundamentals: JavaScript Functions**
 

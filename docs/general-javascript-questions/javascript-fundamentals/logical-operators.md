@@ -3,7 +3,31 @@ title: Logical Operators
 description: Logical operators are used to combine conditional statements. Logical operators can be applied to values of any type; they are not limited to a Boolean type.
 sidebar_position: 13
 sidbar_label: Logical Operators
+keywords:
+  - logical operators
+  - logical operator
+  - logical not
+  - logical conversion
+  - logical or operator
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - logical operators
+  - logical operator
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Logical Operators | JavaScript Frontend Interview Answers</title>
+</head>
 
 **JavaScript Fundamentals: Logical Operators**
 

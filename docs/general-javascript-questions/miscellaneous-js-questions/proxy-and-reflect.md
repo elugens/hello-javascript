@@ -1,9 +1,34 @@
 ---
 title: Proxy and Reflect
-description: JavaScript Proxy and Reflect is a way to create a proxy object that can be used to intercept and change the behavior of an object.
+description: JavaScript Proxy and Reflect is a way to create a proxy object that can be used to intercept and change the behavior of an object. Frontend Interview Questions.
 sidebar_position: 1
 sidebar_label: Proxy and Reflect
+keywords:
+  - proxy and reflect
+  - javascript proxy
+  - proxy pattern
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - proxy and reflect
+  - javascript proxy
+  - proxy pattern
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Proxy and Reflect | JavaScript Frontend Phone Interview</title>
+</head>
 
 **Miscellaneous: Proxy and Reflect**
 

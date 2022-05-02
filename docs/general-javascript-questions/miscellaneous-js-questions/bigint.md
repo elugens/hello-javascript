@@ -1,9 +1,34 @@
 ---
-title: BigInts in JavaScript
-description: BigInts in JavaScript is a new type of number in JavaScript. They are used to represent integers that are bigger than Number.MAX_SAFE_INTEGER. - JavaScript Interview Questions & Answers
+title: BigInt in JavaScript
+description: BigInt is a new type of number in JavaScript. They are used to represent integers that are bigger than the max safe integer. - Frontend Interview Questions
 sidebar_position: 5
 sidebar_label: BigInts
+keywords:
+  - bigint data type
+  - javascript bigint
+  - bigints
+  - bigint
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - bigint data type
+  - javascript bigint
+  - bigints
+  - bigint
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>BigInt | JavaScript Frontend Phone Interview Questions</title>
+</head>
 
 **Miscellaneous: BigInt**
 

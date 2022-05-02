@@ -1,9 +1,35 @@
 ---
 title: While & For Loops
-description: Learn how to use while and for loops in JavaScript.
+description: Learn how to use while loops and for loops in JavaScript. Loops are a way to repeat the same code multiple times in a iteration. Frontend Interview Questions.
 sidebar_position: 15
 sidebar_label: While & For Loops
+keywords:
+  - while loop
+  - while loop iteration
+  - for loop
+  - for loop iteration
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - while loop
+  - while loop iteration
+  - for loop
+  - for loop iteration
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>While & For Loops | Frontend Phone Interview Questions</title>
+</head>
 
 **JavaScript Fundamentals: While & For Loops (??)**
 

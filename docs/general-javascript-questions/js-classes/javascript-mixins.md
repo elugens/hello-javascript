@@ -1,9 +1,34 @@
 ---
 title: JavaScript Mixins
-description: JavaScript Mixins is a syntax for creating a mixin in JavaScript. A mixin is a class that is designed to be used as a mixin.
+description: JavaScript Mixins is a syntax for creating a mixin in JavaScript. A mixin is a class that is designed to be used as a mixin. Frontend Interview Questions
 sidebar_position: 7
 sidebar_label: Mixins
+keywords:
+  - mixins
+  - javascript mixins
+  - method sharing
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - mixins
+  - javascript mixins
+  - method sharing
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>JavaScript Mixins | Frontend Phone Interview Questions</title>
+</head>
 
 **Classes: Mixins**
 

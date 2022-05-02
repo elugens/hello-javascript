@@ -1,9 +1,34 @@
 ---
 title: Export and Import Modules
-description: JavaScript Export and Import Modules interview questions and answers.
+description: JavaScript Export and Import Modules interview questions and answers. We can label any declaration as exported by placing export before it. Interview Answers
 sidebar_position: 2
 sidebar_label: Export & Import
+keywords:
+  - export modules
+  - import modules
+  - default module export
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - export modules
+  - import modules
+  - default module export
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Export-Import Modules | Frontend Phone Interview Questions</title>
+</head>
 
 **Modules: Export & Import**
 

@@ -1,9 +1,34 @@
 ---
 title: The "Switch" Statement
-description: A switch statement can replace multiple if checks, it is more descriptive, and easier to read.
+description: What are the advantages of using a Switch statement? A switch statement can replace multiple if checks, it is more descriptive, and easier to read. 
 sidebar_position: 16
 sidebar_label: The "Switch" Statement
+keywords:
+  - switch statement
+  - switch directive
+  - conditional statements
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - switch statement
+  - switch directive
+  - conditional statements
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>The Switch Statement | JavaScript Frontend Phone Interview</title>
+</head>
 
 **JavaScript Fundamentals: The "Switch" Statement**
 

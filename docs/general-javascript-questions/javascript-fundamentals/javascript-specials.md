@@ -1,6 +1,6 @@
 ---
 title: JavaScript Specials
-description: JavaScript Specials are outliers in our code that we must understand. It's the simpliest way to understand JavaScript.
+description: JavaScript Specials are outliers in our code that we must understand. It's the simplest way to understand JavaScript. Frontend Interview Questions.
 sidebar_position: 20
 sidebar_label: JavaScript Specials
 ---

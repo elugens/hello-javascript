@@ -1,9 +1,34 @@
 ---
 title: String Evaluation
-description: String Evaluation in JavaScript works in a similar way to how it works in Python.
+description: String Evaluation in JavaScript works in a similar way to how it works in Python. You should never use eval in your applications.
 sidebar_position: 2
 sidebar_label: String Evaluation
+keywords:
+  - string evaluation
+  - eval in javascript
+  - eval
+  - function object
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - string evaluation
+  - eval in javascript
+  - eval
+  - function object
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>String Evaluation | JavaScript Frontend Phone Interview</title>
+</head>
 
 **Miscellaneous: String Evaluation**
 

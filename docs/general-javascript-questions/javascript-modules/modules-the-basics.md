@@ -1,9 +1,33 @@
 ---
 title: Modules
-description: JavaScript Modules are a way to organize code into logical units. Modules are used to break down large projects into smaller pieces.
+description: JavaScript Modules are a way to organize code into logical units. Modules are used to break down large projects into smaller pieces. Interview Questions
 sidebar_position: 1
 sidebar_label: Modules
+keywords:
+  - function object
+  - nfe
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - function object
+  - functions
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Modules the Basics | JavaScript Frontend Phone Interview</title>
+</head>
 
 **Modules: Modules the Basics**
 

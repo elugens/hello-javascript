@@ -1,9 +1,34 @@
 ---
 title: Dynamic Imports
-description: Dynamic Imports in JavaScript ES6 Modules
+description: Dynamic Imports in JavaScript ES6 Modules - We can implement dynamic imports by using the import expression. Frontend Developer Interview Questions
 sidebar_position: 3
 sidebar_label: Dynamic Imports
+keywords:
+  - dynamic imports
+  - es6 modules
+  - import expressions
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - dynamic imports
+  - es6 modules
+  - import expressions
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Dynamic Imports | JavaScript Frontend Phone Interview Answers</title>
+</head>
 
 **Modules: Dynamic Imports**
 

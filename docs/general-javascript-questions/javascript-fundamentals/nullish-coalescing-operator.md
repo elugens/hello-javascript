@@ -1,9 +1,33 @@
 ---
 title: Nullish Coalescing Operator
-description: Learn how to use the nullish coalescing operator in JavaScript.
+description: Learn how to use the nullish coalescing operator in JavaScript. Explain how the nullish coalescing operator works? Frontend Developer Interview Questions
 sidebar_position: 14
 sidebar_label: Nullish Coalescing Operator
+keywords:
+  - nullish coalescing operator
+  - nullish coalescing
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - logical operator
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - nullish coalescing operator
+  - nullish coalescing
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Function Object NFE | JavaScript Frontend Phone Interview</title>
+</head>
 
 **JavaScript Fundamentals: Nullish Coalescing Operator (??)**
 
@@ -13,7 +37,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Explain how the nullish coalescing operator works
+### Explain how the nullish coalescing operator works?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

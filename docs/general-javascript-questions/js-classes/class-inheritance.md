@@ -1,9 +1,35 @@
 ---
 title: Class Inheritance
-description: Class Inheritance in JavaScript is a syntax for creating a class in JavaScript.
+description: Class Inheritance in JavaScript is a syntax for creating a class in JavaScript. What is the extends keyword used in JavaScript classes? Interview Questions
 sidebar_position: 2
 sidebar_label: Class Inheritance
+keywords:
+  - class inheritance
+  - javascript inheritance
+  - class prototype
+  - classes
+  - extends keyword
+  - class declaration
+  - class expression
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - function object
+  - functions
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Class Inheritance | Frontend Phone Interview Questions</title>
+</head>
 
 **Classes: Class Inheritance**
 

@@ -1,9 +1,36 @@
 ---
 title: Private, Protected Props / Methods
-description: Private, Protected Props / Methods are a way to create properties and methods that are only accessible within the class.
+description: Private, Protected Props / Methods are a way to create properties and methods that are only accessible within the class. Frontend Developer Interview Questions
 sidebar_position: 4
 sidebar_label: Private, Protected Props / Methods
+keywords:
+  - private properties
+  - protected properties
+  - private methods
+  - private method
+  - private props
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - private properties
+  - protected properties
+  - private methods
+  - private method
+  - private props
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Private, Protected Props / Methods | Frontend Interview</title>
+</head>
 
 **Classes: Private, Protected Props / Methods**
 

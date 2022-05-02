@@ -1,9 +1,34 @@
 ---
 title: Class Checking "instanceof"
-description: Class Checking "instanceof" is the syntax for checking if an object is an instance of a class.
+description: Class Checking instanceof is the syntax for checking if an object is an instance of a class. The instanceof allows us to check if an object belongs to a  class.
 sidebar_position: 6
 sidebar_label: Class Checking
+keywords:
+  - class checking
+  - instanceof
+  - instanceOf operator
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - class checking
+  - instanceof
+  - instanceOf operator
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Class Checking instanceof | Frontend Phone Interview Answers</title>
+</head>
 
 **Classes: Class Checking**
 

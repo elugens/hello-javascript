@@ -1,9 +1,33 @@
 ---
 title: Function Expressions
-description: Function expressions are a way to create a function on the fly.
+description: Function expressions are a way to create a function on the fly. Describe a function expression’s code structure and behavior? Frontend Interview Questions
 sidebar_position: 18
 sidebar_label: Function Expressions
+keywords:
+  - function expression
+  - function expressions
+  - function declarations
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - dynamic function
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - function expression
+  - function expressions
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Function Expressions | JavaScript Frontend Phone Interview</title>
+</head>
 
 **JavaScript Fundamentals: Function Expressions**
 

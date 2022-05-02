@@ -1,9 +1,31 @@
 ---
 title: JavaScript Variables
-description: JavaScript variables are used to store data.
+description: JavaScript variables are used to store data. A variable is named storage for data in JavaScript. They include let, const, and var variables. Interview Questions
 sidebar_position: 6
 sidebar_label: Variables
+keywords:
+  - variables
+  - javascript variables
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - function object
+  - functions
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Variables | JavaScript Frontend Phone Interview Questions</title>
+</head>
 
 **JavaScript Fundamentals: JavaScript Variables**
 

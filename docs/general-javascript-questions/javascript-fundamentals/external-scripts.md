@@ -1,9 +1,34 @@
 ---
 title: External Scripts
-description: Learn how to use External Scripts in JavaScript.
+description: Learn how to use External Scripts in JavaScript. How do you access external script files in JavaScript development? | Frontend Developer Interview Questions
 sidebar_position: 3
 sidebar_label: External Scripts
+keywords:
+  - external scripts
+  - external script
+  - external files
+  - javascript
+  - interview
+  - questions
+  - answers
+  - frontend
+  - response
+  - technical
+  - files
+  - external
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - function object
+  - functions
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>External Scripts | JS Frontend Phone Interview Questions</title>
+</head>
 
 **JavaScript Fundamentals: EXTERNAL SCRIPTS**
 

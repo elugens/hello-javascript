@@ -3,7 +3,33 @@ title: Currying in JavaScript
 description: Currying is a technique that allows us to create functions that take multiple arguments. JavaScript Interview Questions & Answers
 sidebar_position: 3
 sidebar_label: Currying
+keywords:
+  - currying
+  - currying in javascript
+  - currying function
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - currying
+  - currying in javascript
+  - currying function
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Currying | JavaScript Frontend Phone Interview Questions</title>
+</head>
 
 **Miscellaneous: Currying**
 

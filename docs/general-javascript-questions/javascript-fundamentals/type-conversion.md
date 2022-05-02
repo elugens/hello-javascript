@@ -1,9 +1,35 @@
 ---
 title: Type Conversion in JavaScript
-description: Learn how to convert data types in JavaScript.
+description: Learn how to convert data types in JavaScript. There are two types of type conversion - implicit and explicit. Frontend Developer Interview Questions
 sidebar_position: 7
 sidebar_label: Type Conversion
+keywords:
+  - type conversion
+  - javascript type conversion
+  - conversions
+  - convert data types
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - implicit conversion
+  - function
+  - explicit conversion
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - type conversion
+  - conversions
+  - convert data types
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Type Conversion | JavaScript Frontend Phone Interview Answers</title>
+</head>
 
 **JavaScript Fundamentals: Type Conversion**
 

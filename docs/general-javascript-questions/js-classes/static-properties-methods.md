@@ -1,9 +1,35 @@
 ---
 title: Static Properties / Methods
-description: Static Properties / Methods are a way to create properties and methods that are shared by all instances of a class.
+description: Static Properties / Methods are a way to create properties and methods that are shared by all instances of a class. JavaScript Frontend Interview Questions
 sidebar_position: 3
 sidebar_label: Static Props / Methods
+keywords:
+  - static properties
+  - static methods
+  - javascript static props
+  - javascript static methods
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - static properties
+  - static methods
+  - javascript static props
+  - javascript static methods
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Static Properties / Methods | JavaScript Interview Answers</title>
+</head>
 
 **Classes: Static Props / Methods**
 

@@ -1,9 +1,35 @@
 ---
 title: JavaScript Classes the Basics
-description: Basic Class Syntax in JavaScript is a syntax for creating a class in JavaScript.
+description: Basic Class Syntax in JavaScript is a syntax for creating a class in JavaScript. Classes are a template for creating objects.
 sidebar_position: 1
 sidebar_label: Basic Syntax
+keywords:
+  - basic class syntax
+  - javascript classes
+  - classes in javascript
+  - classes
+  - class
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - basic class syntax
+  - javascript classes
+  - classes in javascript
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Basic Class Syntax | JavaScript Frontend Phone Interview</title>
+</head>
 
 **Classes: Basic Class Syntax**
 

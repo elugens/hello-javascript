@@ -1,9 +1,32 @@
 ---
 title: Understanding Strict Mode
-description: Learn how to use strict mode in JavaScript.
+description: Learn how to use strict mode in JavaScript. Strict mode is enabled by placing “use strict” at the top of your script. Frontend Developer Interview Questions
 sidebar_position: 5
 sidebar_label: Strict Mode
+keywords:
+  - strict mode
+  - use strict
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - strict mode
+  - use strict
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Strict Mode | JavaScript Frontend Phone Interview Questions</title>
+</head>
 
 **JavaScript Fundamentals: Strict Mode**
 

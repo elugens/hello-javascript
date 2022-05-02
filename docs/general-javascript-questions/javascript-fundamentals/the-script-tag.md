@@ -1,9 +1,33 @@
 ---
-title: The "script" Tag
-description: The "script" tag is used to load JavaScript files.
+title: The script Tag
+description: The Script tag is used to load JavaScript files. We can use the script tag to insert JS into HTML or import scripts from external sources. Interview Questions
 sidebar_position: 1
 sidebar_label: The "script" Tag
+keywords:
+  - script tag
+  - javascript script tag
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - script tag
+  - javascript script tag
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>The Script Tag | JavaScript Frontend Phone Interview Answers</title>
+</head>
 
 **JavaScript Fundamentals: The "script" Tag**
 
