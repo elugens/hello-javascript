@@ -1,9 +1,34 @@
 ---
 title: IndexedDB
-description: IndexedDB is a database that is stored in the browser. It is used to store data in the browser.
+description: IndexedDB is a database that is stored in the browser. It is used to store data in the browser. | JavaScript Frontend Phone Interview Questions
 sidebar_position: 3
 sidebar_label: IndexedDB
+keywords:
+  - indexeddb
+  - indexed db
+  - browser storage
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - indexeddb
+  - indexed db
+  - browser storage
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>IndexedDB | JavaScript Frontend Phone Interview Questions</title>
+</head>
 
 **Storing Browser Data: IndexedDB**
 

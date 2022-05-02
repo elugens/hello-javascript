@@ -3,7 +3,33 @@ title: Cross-Origin Requests
 description: Cross-Origin Requests uses the CORS (Cross-Origin Resource Sharing) protocol to allow web applications to access resources from other domains.
 sidebar_position: 5
 sidebar_label: Cross-Origin Requests
+keywords:
+  - cross-origin requests
+  - cors
+  - cross origin resource sharing
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - cross-origin requests
+  - cors
+  - cross origin resource sharing
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Cross-Origin Requests | JavaScript Frontend Phone Interview</title>
+</head>
 
 **Network Requests: Fetch: Cross-Origin Requests**
 

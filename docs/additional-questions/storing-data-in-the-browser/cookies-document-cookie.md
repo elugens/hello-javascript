@@ -1,9 +1,34 @@
 ---
 title: Cookies - document.cookie
-description: Cookies - document.cookie - JavaScript Interview Questions and Answers
+description: Cookies - document.cookie - JavaScript Interview Questions and Answers Cookies are tiny data strings saved directly in the browser. Frontend Developer Questions
 sidebar_position: 1
 sidebar_label: Cookies - document.cookie
+keywords:
+  - cookies document cookie
+  - cookies
+  - document cookie
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - cookies document cookie
+  - cookies
+  - document cookie
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Cookies - document.cookie | JavaScript Interview Questions</title>
+</head>
 
 **Storing Browser Data: Cookies - document.cookie**
 

@@ -1,9 +1,34 @@
 ---
 title: Unicode Regex
-description: Unicode Regex is used to match text against regular expressions. It is used to match text against regular expressions.
+description: Unicode Regex is used to match text against regular expressions. It is used to match text against regular expressions. Regular Expressions Interview Questions
 sidebar_position: 3
 sidebar_label: Unicode Regex
+keywords:
+  - unicode regex
+  - unicode regular expression
+  - regular expressions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - unicode regex
+  - unicode regular expression
+  - regular expressions
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Unicode Regex | Regular Expressions Interview Questions</title>
+</head>
 
 **Regular Expressions: Unicode Regex**
 

@@ -3,7 +3,35 @@ title: File / FileReader
 description: JavaScript File and FileReader objects are used to read and write files. FileReader objects are used to read the contents of files.
 sidebar_position: 4
 sidebar_label: File / FileReader
+keywords:
+  - file object
+  - filereader object
+  - file reader
+  - filereader
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - file object
+  - filereader object
+  - file reader
+  - filereader
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>File / FileReader| JavaScript Frontend Phone Interview</title>
+</head>
 
 **Binary Data / Files: File / FileReader**
 

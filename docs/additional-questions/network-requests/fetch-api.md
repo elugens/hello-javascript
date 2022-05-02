@@ -1,9 +1,33 @@
 ---
 title: Fetch API
-description: Fetch API is used to make network requests. It is used to make GET, POST, PUT, DELETE, and PATCH network requests.
+description: Fetch API is used to make network requests. It is used to make GET, POST, PUT, DELETE, and PATCH network requests. JavaScript Frontend Phone Interview Questions
 sidebar_position: 6
 sidebar_label: Fetch API
+keywords:
+  - fetch api
+  - network requests
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - fetch api
+  - network requests
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Fetch API | JavaScript Frontend Phone Interview Questions</title>
+</head>
 
 **Network Requests: Fetch API**
 

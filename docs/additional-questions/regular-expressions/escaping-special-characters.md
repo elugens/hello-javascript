@@ -1,9 +1,36 @@
 ---
 title: Escaping Characters
-description: To match a character having special meaning in regex, you need to use a escape sequence prefix with a backslash (\).
+description: To match a character having special meaning in regex, you need to use a escape sequence prefix with a backslash (\). Regular Expressions Interview Questions
 sidebar_position: 7
 sidebar_label: Escaping Characters
+keywords:
+  - escaping characters
+  - escaping special characters
+  - regex escape sequences
+  - regular expressions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - escaping characters
+  - escaping special characters
+  - regex escape sequences
+  - regular expressions
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Escaping Characters | Regular Expression Interview Questions</title>
+</head>
 
 **Regular Expressions: Escaping Characters**
 

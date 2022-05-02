@@ -1,9 +1,34 @@
 ---
 title: JavaScript Animations
-description: JavaScript Animations are used to animate elements in JavaScript. - JavaScript Interview Questions and Answers
+description: JavaScript Animations are used to animate elements in JavaScript. The requestAnimationFrame delivers higher-quality animation. - JavaScript Interview Answers
 sidebar_position: 3
 sidebar_label: JavaScript Animations
+keywords:
+  - javascript animations
+  - javascript animation
+  - animations in javascript
+  - requestAnimationFrame
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - javascript animations
+  - javascript animation
+  - animations in javascript
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>JavaScript Animations | JavaScript Frontend Phone Interview</title>
+</head>
 
 **Animation: JavaScript Animations**
 

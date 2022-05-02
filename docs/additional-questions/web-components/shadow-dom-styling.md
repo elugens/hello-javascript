@@ -3,7 +3,32 @@ title: Shadow DOM Styling
 description: Shadow DOM Styling is used to style elements in Shadow DOM. It is used to style elements in Shadow DOM. It is used to style elements in Shadow DOM.
 sidebar_position: 6
 sidebar_label: Shadow DOM Styling
+keywords:
+  - shadow dom styling
+  - dom styling
+  - shadow dom
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - shadow dom styling
+  - dom styling
+  - shadow dom
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Shadow DOM Styling | JavaScript Interview Questions</title>
+</head>
 
 **Web Components: Shadow DOM Styling**
 

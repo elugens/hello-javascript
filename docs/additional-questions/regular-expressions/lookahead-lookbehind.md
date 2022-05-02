@@ -3,7 +3,32 @@ title: Lookahead / Lookbehind
 description: The lookahead approach involves in catching a match based on a proceeding character or digit.
 sidebar_position: 14
 sidebar_label: Lookahead / Lookbehind
+keywords:
+  - lookahead
+  - lookbehind
+  - regular expressions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - lookahead
+  - lookbehind
+  - regular expressions
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Lookahead / Lookbehind | Regular Expressions</title>
+</head>
 
 **Regular Expressions: Lookahead / Lookbehind**
 

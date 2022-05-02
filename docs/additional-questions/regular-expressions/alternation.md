@@ -1,9 +1,35 @@
 ---
 title: Alternation (OR) |
-description: Alternation is the term in regular expression that is a simple “OR”. In a regular expression it “OR” is denoted with a vertical line character |.
+description: Alternation is the term in regular expression that is a simple “OR”. In a regular expression an “OR” is denoted with a vertical line character. Questions
 sidebar_position: 13
 sidebar_label: Alternation
+keywords:
+  - alternation
+  - javascript alternation
+  - regexp alternation
+  - regular expressions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - alternation
+  - javascript alternation
+  - regular expressions
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Alternation | Regular Expressions Interview Questions</title>
+</head>
 
 **Regular Expressions: Alternation (OR) |**
 

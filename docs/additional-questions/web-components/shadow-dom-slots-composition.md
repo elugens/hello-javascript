@@ -1,9 +1,34 @@
 ---
 title: Shadow DOM Slots - Composition
-description: Shadow DOM Slots is used to compose elements in Shadow DOM. It is used to compose elements in Shadow DOM.
+description: Shadow DOM Slots is used to compose elements in Shadow DOM. It is used to compose elements in Shadow DOM. JavaScript Frontend Phone Interview Questions
 sidebar_position: 5
 sidebar_label: Shadow DOM Slots
+keywords:
+  - shadow dom slots
+  - shadow dom composition
+  - shadow dom
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - shadow dom slots
+  - shadow dom composition
+  - shadow dom
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Shadow DOM Slots - Composition | HelloJavaScript.info</title>
+</head>
 
 **Web Components: Shadow DOM Slots - Composition**
 

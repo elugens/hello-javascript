@@ -3,7 +3,33 @@ title: URL Objects
 description: URL Objects are used to parse and create URLs in JavaScript. Proper implementation of URL Objects is important for security and performance reasons.
 sidebar_position: 7
 sidebar_label: URL Objects
+keywords:
+  - url objects
+  - network requests
+  - built-in url objects
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - url objects
+  - network requests
+  - built-in url objects
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>URL Objects | JavaScript Frontend Phone Interview Questions</title>
+</head>
 
 **Network Requests: URL Objects**
 

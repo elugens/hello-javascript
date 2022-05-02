@@ -1,9 +1,33 @@
 ---
 title: Bezier Curve
-description: Bezier Curve is used to draw curves in JavaScript. - JavaScript Interview Questions and Answers
+description: Bezier Curve is used to draw curves in JavaScript. Bezier curves are used in computer graphics to draw shapes. - JavaScript Interview Questions and Answers.
 sidebar_position: 1
 sidebar_label: Bezier Curve
+keywords:
+  - bezier curve
+  - javascript bezier curve
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - bezier curve
+  - javascript bezier curve
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Bezier Curve | JavaScript Frontend Phone Interview</title>
+</head>
 
 **Animation: Bezier Curve**
 

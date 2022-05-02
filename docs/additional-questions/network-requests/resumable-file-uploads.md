@@ -1,9 +1,35 @@
 ---
 title: Resumable File Uploads
-description: Resumable File Uploads is used to upload large files in chunks.
+description: Resumable File Uploads is used to upload large files in chunks. We may use XMLHttpRequest instead of fetch. Frontend Developer JavaScript Interview Questions
 sidebar_position: 9
 sidebar_label: Resumable File Uploads
+keywords:
+  - resumable file uploads
+  - upload large files
+  - xmlhttprequest
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - resumable file uploads
+  - upload large files
+  - xmlhttprequest
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Function Object NFE | JavaScript Frontend Phone Interview</title>
+</head>
 
 **Network Requests: Resumable File Uploads**
 

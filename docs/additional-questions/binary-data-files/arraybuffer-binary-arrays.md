@@ -3,7 +3,33 @@ title: ArrayBuffer, Binary Arrays
 description: ArrayBuffer, Binary Arrays are used to store binary data. They are used in the browser to store images, videos, sounds, etc. They are also used in the browser to store binary data.
 sidebar_position: 1
 sidebar_label: ArrayBuffer, Binary Arrays
+keywords:
+  - arraybuffer
+  - binary arrays
+  - binary data
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - arraybuffer
+  - binary arrays
+  - binary data
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>ArrayBuffer, Binary Arrays | JavaScript Frontend Interview</title>
+</head>
 
 **Binary Data / Files: ArrayBuffer, Binary Arrays**
 

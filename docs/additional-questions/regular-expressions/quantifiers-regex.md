@@ -3,7 +3,32 @@ title: Quantifiers
 description: A quantifier is used to find the exact count in a sequence of digits. JavasScript Interview Questions and Answers
 sidebar_position: 9
 sidebar_label: Quantifiers
+keywords:
+  - quantifiers
+  - regex quantifiers
+  - regular expressions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - quantifiers
+  - regex quantifiers
+  - regular expressions
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Quantifiers | Regular Expressions Interview Questions</title>
+</head>
 
 **Regular Expressions: Quantifiers**
 

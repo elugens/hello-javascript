@@ -1,9 +1,34 @@
 ---
 title: Shadow DOM
-description: Shadow DOM is used to create a virtual DOM tree that is not connected to the real DOM tree.
+description: Shadow DOM is used to create a virtual DOM tree that is not connected to the real DOM tree. Encapsulation gets provided via the Shadow DOM.
 sidebar_position: 3
 sidebar_label: Shadow DOM
+keywords:
+  - shadow dom
+  - light dom
+  - document object model
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - shadow dom
+  - light dom
+  - document object model
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Shadow DOM | JavaScript Frontend Phone Interview Questions</title>
+</head>
 
 **Web Components: Shadow DOM**
 

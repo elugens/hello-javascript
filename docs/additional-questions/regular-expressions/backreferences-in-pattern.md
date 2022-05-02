@@ -1,9 +1,34 @@
 ---
 title: Backreference Pattern
-description: A back reference in a regular expression identifies a previously matched group and looks for the same text again.
+description: A backreference in a regular expression identifies a previously matched group and looks for the same text again. Regular Expressions Interview Questions
 sidebar_position: 12
 sidebar_label: Backreferences
+keywords:
+  - backreferences in patterns
+  - regexp backreferences
+  - backreference in a regular expressions
+  - regular expressions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - backrefernces in patterns
+  - regexp backreferences
+  - backreference in a regular expressions
+  - regular expressions
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Backreference Pattern | Regular Expressions Questions</title>
+</head>
 
 **Regular Expressions: Backreference Pattern**
 

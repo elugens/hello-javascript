@@ -3,7 +3,34 @@ title: Word Boundary
 description: A word boundary \b is a test, just like ^ and $. When the regexp engine comes across \b, it checks that the position in the string is a word boundary.
 sidebar_position: 6
 sidebar_label: Word Boundary
+keywords:
+  - word boundary
+  - word boundaries
+  - regexp word boundary
+  - regular expressions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - word boundary
+  - word boundaries
+  - regexp word boundary
+  - regular expressions
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Word Boundary | Regular Expressions Interview Questions</title>
+</head>
 
 **Regular Expressions: Word Boundary**
 

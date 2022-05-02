@@ -1,9 +1,34 @@
 ---
 title: Regex / String Methods
-description: Regex / String Methods - The following are the methods available in the regular expression and string objects.
+description: Regex / String Methods - The following are the methods available in the regular expression and string objects. Regular Expressions Interview Questions
 sidebar_position: 17
 sidebar_label: Regex / String Methods
+keywords:
+  - regex string methods
+  - string objects
+  - regular expressions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - regex string methods
+  - string objects
+  - regular expressions
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Regex / String Methods | Regular Expressions Questions</title>
+</head>
 
 **Regular Expressions: Regex / String Methods**
 

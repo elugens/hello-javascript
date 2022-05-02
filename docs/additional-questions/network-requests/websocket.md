@@ -1,9 +1,34 @@
 ---
 title: WebSocket
-description: WebSockets are used to connect to a server and exchange data. It is a standard protocol for real-time communication.
+description: WebSockets are used to connect to a server and exchange data. It is a standard protocol for real-time communication. JavaScript Interview Questions and Answers
 sidebar_position: 11
 sidebar_label: WebSocket
+keywords:
+  - websocket
+  - server data
+  - network requests
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - websocket
+  - server data
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>WebSocket | JavaScript Frontend Phone Interview Questions</title>
+</head>
 
 **Network Requests: WebSocket**
 

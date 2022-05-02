@@ -3,7 +3,31 @@ title: Clickjacking Attacks
 description: Clickjacking Attacks is the process of a malicious site trying to trick a user into clicking on a link that is on another site.
 sidebar_position: 3
 sidebar_label: Clickjacking Attacks
+keywords:
+  - clickjacking attacks
+  - clickjacking
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - clickjacking attacks
+  - clickjacking
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Clickjacking Attacks | JavaScript Frontend Phone Interview</title>
+</head>
 
 **Frames / Windows: Clickjacking Attacks**
 

@@ -3,7 +3,33 @@ title: Anchors
 description: Anchors in regex are used to match the start and end of a string. They are used to match the start and end of a string.
 sidebar_position: 4
 sidebar_label: Anchors
+keywords:
+  - regex anchors
+  - anchors
+  - string anchors
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - regex anchors
+  - anchors
+  - string anchors
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Anchors | Regular Expressions Interview Questions</title>
+</head>
 
 **Regular Expressions: Anchors**
 

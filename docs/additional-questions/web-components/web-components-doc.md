@@ -1,9 +1,33 @@
 ---
 title: Web Components
-description: Web Components in JavaScript is used to create reusable components. It is used to create reusable components.
+description: Web Components in JavaScript is used to create reusable components. Their function is encapsulated away from the rest of your code and used in your web apps.
 sidebar_position: 1
 sidebar_label: Web Components
+keywords:
+  - web components
+  - reusable components
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - web components
+  - reusable components
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Web Components | JavaScript Frontend Interview Questions</title>
+</head>
 
 **Web Components: Web Components**
 

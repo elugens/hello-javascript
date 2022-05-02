@@ -1,9 +1,34 @@
 ---
 title: Character Classes
-description: Character Classes are used to match text against regular expressions. They are used to match text against regular expressions.
+description: Character Classes are used to match text against regular expressions. A character class is a special notation that matches any symbol from a set. Questions
 sidebar_position: 2
 sidebar_label: Character Classes
+keywords:
+  - character classes
+  - character class
+  - regular expressions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - character classes
+  - character class
+  - regular expressions
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Character Classes | Regular Expressions Interview Questions</title>
+</head>
 
 **Regular Expressions: Character Classes**
 

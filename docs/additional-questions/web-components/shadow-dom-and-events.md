@@ -3,7 +3,32 @@ title: Shadow DOM / Events
 description: Shadow DOM / Events are used to add event listeners to elements in Shadow DOM. They are used to add event listeners to elements in Shadow DOM.
 sidebar_position: 7
 sidebar_label: Shadow DOM / Events
+keywords:
+  - shadow dom
+  - shadow dom events
+  - event listeners
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - shadow dom
+  - shadow dom events
+  - event listeners
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Shadow DOM / Events | JavaScript Interview Questions</title>
+</head>
 
 **Web Components: Shadow DOM / Events**
 

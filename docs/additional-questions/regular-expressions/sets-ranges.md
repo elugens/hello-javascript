@@ -3,7 +3,32 @@ title: Regex Sets / Ranges
 description: In simple terms, a range in a regular is denoted or expression inside of square brackets. For instance, [a-z] denotes a range of lowercase letters.
 sidebar_position: 8
 sidebar_label: Sets / Ranges
+keywords:
+  - regex sets
+  - regex ranges
+  - regular expressions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - regex sets
+  - regex ranges
+  - regular expressions
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Regex Sets / Ranges | Regular Expression Interview Questions</title>
+</head>
 
 **Regular Expressions: Regex Sets / Ranges**
 

@@ -3,7 +3,32 @@ title: Cross-Window Communication
 description: Cross-Window Communication in JavaScript is a way to communicate between different windows. - JavaScript Interview Questions & Answers
 sidebar_position: 2
 sidebar_label: Cross-Window Communication
+keywords:
+  - cross window communication
+  - cors
+  - same-origin policy
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - cross window communication
+  - cors
+  - same-origin policy
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Cross-Window Communication | JavaScript Frontend Interview</title>
+</head>
 
 **Frames / Windows: Cross-Window Communication**
 

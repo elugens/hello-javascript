@@ -1,9 +1,34 @@
 ---
 title: Greedy / Lazy Quantifiers
-description: By default, quantifiers are Greedy. Greedy quantifiers try to match the longest text that matches given pattern.
+description: By default, quantifiers are Greedy. Greedy quantifiers try to match the longest text that matches given pattern. Regular Expressions Interview Questions
 sidebar_position: 10
 sidebar_label: Greedy / Lazy Quants
+keywords:
+  - greedy quantifiers
+  - lazy quantifiers
+  - regular expressions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - greedy quantifiers
+  - lazy quantifiers
+  - regular expressions
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Greedy / Lazy Quantifiers | HelloJavaScript.info</title>
+</head>
 
 **Regular Expressions: Greedy / Lazy Quantifiers**
 

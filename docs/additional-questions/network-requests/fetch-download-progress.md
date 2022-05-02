@@ -1,9 +1,33 @@
 ---
 title: Fetch - Download Progress
-description: Fetch - Download Progress is used to track the progress of a download.
+description: Fetch - Download Progress is used to track the progress of a download. How can we track download progress in JavaScript? JavaScript Interview Questions
 sidebar_position: 3
 sidebar_label: Fetch - Download Progress
+keywords:
+  - fetch download progress
+  - track download progress
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - fetch download progress
+  - track download progress
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Fetch Download Progress| JavaScript Interview Questions</title>
+</head>
 
 **Network Requests: Fetch - Download Progress**
 

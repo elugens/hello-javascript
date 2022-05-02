@@ -1,9 +1,33 @@
 ---
 title: CSS-Animations
-description: CSS-Animations is used to animate elements. - JavaScript Interview Questions and Answers
+description: CSS-Animations is used to animate elements. CSS animations make it possible to do simple animations without JavaScript. - JavaScript Interview Questions
 sidebar_position: 2
 sidebar_label: CSS-Animations
+keywords:
+  - css animations
+  - animate elements
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - css animations
+  - animate elements
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>CSS-Animations | HelloJavaScript.info</title>
+</head>
 
 **Animation: CSS-Animations**
 

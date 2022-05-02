@@ -3,7 +3,32 @@ title: Custom Elements
 description: Custom Elements in JavaScript web development are used to create reusable components. - JavaScript Interview Questions and Answers
 sidebar_position: 2
 sidebar_label: Custom Elements
+keywords:
+  - custom element
+  - custom elements
+  - custom javascript elements
+  - reusable components
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - custom element
+  - custom elements
+  - custom javascript elements
+  - reusable components
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Custom Elements | JavaScript Interview Questions</title>
+</head>
 
 **Web Components: Custom Elements**
 

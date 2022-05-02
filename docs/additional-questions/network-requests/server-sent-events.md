@@ -1,9 +1,34 @@
 ---
 title: Server Sent Events
-description: Server Sent Events is used to send data to the client. - JavaScript Interview Questions and Answers
+description: Server Sent Events is used to send data to the client. The Server-Sent Events specification describes the built-in class EventSource. - Interview Questions
 sidebar_position: 12
 sidebar_label: Server Sent Events
+keywords:
+  - server sent events
+  - server events
+  - eventsource
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - server sent events
+  - server events
+  - eventsource
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Server Sent Events | HelloJavaScript.Info</title>
+</head>
 
 **Network Requests: Server Sent Events**
 

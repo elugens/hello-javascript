@@ -1,9 +1,33 @@
 ---
 title: XMLHttpRequest
-description: XMLHttpRequest is an older API that allows us to send and receive data from a server.
+description: XMLHttpRequest is an older API that allows us to send and receive data from a server. XMLHttpRequest is a object that allows JavaScript to make HTTP requests.
 sidebar_position: 8
 sidebar_label: XMLHttpRequest
+keywords:
+  - xmlhttprequest
+  - network requests
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - xmlhttprequest
+  - network requests
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>XMLHttpRequest | JavaScript Frontend Phone Interview Answers</title>
+</head>
 
 **Network Requests: XMLHttpRequest**
 

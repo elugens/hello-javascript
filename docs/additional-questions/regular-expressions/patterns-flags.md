@@ -1,9 +1,34 @@
 ---
 title: Patterns and Flags
-description: Patterns and Flags are used to match text against regular expressions. They are used to match text against regular expressions.
+description: Patterns and Flags are used to match text against regular expressions. They are used to match text against regular expressions. Interview Questions
 sidebar_position: 1
 sidebar_label: Patterns and Flags
+keywords:
+  - regexp pattern
+  - regexp flags
+  - regular expressions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - regexp pattern
+  - regexp flags
+  - regular expressions
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Patterns and Flags | Regular Expressions Interview Questions</title>
+</head>
 
 **Regular Expressions: Patterns and Flags**
 

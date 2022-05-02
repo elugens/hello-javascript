@@ -1,9 +1,33 @@
 ---
 title: Fetch Requests
-description: Fetch Requests are used to make requests to the server. They are used to make GET, POST, PUT, DELETE, and PATCH requests.
+description: Fetch Requests are used to make requests to the server. Fetch is a modern browser-based alternative to XMLHttpRequest. JavaScript Interview Questions and Answer
 sidebar_position: 1
 sidebar_label: Fetch Requests
+keywords:
+  - fetch requests
+  - fetch network requests
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - fetch requests
+  - fetch network requests
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Fetch Requests | JavaScript Frontend Phone Interview Answers</title>
+</head>
 
 **Network Requests: Fetch Requests**
 

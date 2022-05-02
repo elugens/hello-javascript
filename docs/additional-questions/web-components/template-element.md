@@ -1,9 +1,33 @@
 ---
 title: Template Element
-description: A built-in template element serves as a storage for HTML markup templates. It is used to create custom elements.
+description: A built-in template element serves as a storage for HTML markup templates. It is used to create custom elements. JavaScript Frontend Phone Interview Questions
 sidebar_position: 4
 sidebar_label: Template Element
+keywords:
+  - template element
+  - html markup templates
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - template element
+  - html markup templates
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Template Element | JavaScript Interview Questions</title>
+</head>
 
 **Web Components: Template Element**
 

@@ -3,7 +3,30 @@ title: Regex Sticky Flag
 description: Regex Sticky Flag - The flag y allows us to perform the search at the given position in the source string. There is a performance gain when using flag y.
 sidebar_position: 16
 sidebar_label: Sticky Flag
+keywords:
+  - regex sticky flag
+  - regular expressions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - regex sticky flag
+  - regular expressions
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Regex Sticky Flag | Regular Expressions Interview Questions</title>
+</head>
 
 **Regular Expressions: Regex Sticky Flag**
 

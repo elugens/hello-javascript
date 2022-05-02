@@ -1,9 +1,36 @@
 ---
 title: LocalStorage / sessionStorage
-description: LocalStorage / sessionStorage in JavaScript is used to store data in the browser. It is used to store data in the browser.
+description: LocalStorage / sessionStorage in JavaScript is used to store data in the browser. It is used to store data in the browser. JavaScript Frontend Questions
 sidebar_position: 2
 sidebar_label: LocalStorage / sessionStorage
+keywords:
+  - localstorage
+  - local storage
+  - sessionstorage
+  - session storage
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - localstorage
+  - local storage
+  - sessionstorage
+  - session storage
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>LocalStorage / sessionStorage | HelloJavaScript.info</title>
+</head>
 
 **Storing Browser Data: LocalStorage / sessionStorage**
 

@@ -3,7 +3,32 @@ title: Capturing Groups
 description: A capturing group is a pattern enclosed in parentheses. It two affects consisting of getting part of match as a separate or isolated item in an array of items.
 sidebar_position: 11
 sidebar_label: Capturing Groups
+keywords:
+  - capturing groups
+  - capturing group
+  - regular expressions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - capturing groups
+  - capturing group
+  - regular expressions
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Capturing Groups | Regular Expressions Interview Questions</title>
+</head>
 
 **Regular Expressions: Capturing Groups**
 

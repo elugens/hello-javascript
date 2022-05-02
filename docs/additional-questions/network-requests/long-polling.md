@@ -1,9 +1,34 @@
 ---
 title: Long Polling
-description: Long Polling in JavaScript is used to check for changes in the server.
+description: Long Polling in JavaScript is used to check for changes in the server. Long polling is the simplest way of having a persistent connection with the server.
 sidebar_position: 10
 sidebar_label: Long Polling
+keywords:
+  - long polling
+  - javascript long polling
+  - network requests
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - long polling
+  - javascript long polling
+  - network requests
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Long Polling | JavaScript Frontend Phone Interview Questions</title>
+</head>
 
 **Network Requests: Long Polling**
 

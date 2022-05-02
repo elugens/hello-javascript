@@ -3,7 +3,30 @@ title: Catastrophic Backtracking
 description: Catastrophic backtracking is a condition that can occur if you are checking a (usually long) string against a complex regular expression.
 sidebar_position: 15
 sidebar_label: Catastrophic Backtracking
+keywords:
+  - catastrophic backtracking
+  - regular expressions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - catastrophic backtracking
+  - regular expressions
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Catastrophic Backtracking | Regular Expressions Questions</title>
+</head>
 
 **Regular Expressions: Catastrophic Backtracking**
 

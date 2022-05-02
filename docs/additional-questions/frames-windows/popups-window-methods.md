@@ -3,7 +3,33 @@ title: Popups / Window Methods
 description: Popups / Window Methods in JavaScript is a way to open a new window or a new tab. - JavaScript Interview Questions & Answers
 sidebar_position: 1
 sidebar_label: Popups / Window Methods
+keywords:
+  - popups window methods
+  - popup window
+  - window methods
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - popups window methods
+  - popup window
+  - window methods
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Popups / Window Methods | JavaScript Interview Questions</title>
+</head>
 
 **Frames / Windows: Popups and Window Methods**
 
