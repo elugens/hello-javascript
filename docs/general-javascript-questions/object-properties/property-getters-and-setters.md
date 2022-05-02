@@ -3,7 +3,34 @@ title: Property Getters & Setters
 description: Property Getters & Setters is a very common interview question. Property Getters & Setters is a process in which a property is defined as a getter and setter.
 sidebar_position: 2
 sidebar_label: Property Getters & Setters
+keywords:
+  - property getters
+  - property setters
+  - getters and setters
+  - property getter
+  - property setter
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - property getters
+  - property setters
+  - getters and setters
+  - property getter
+  - property setter
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Property Getters & Setters | Frontend Phone Interview Answer</title>
+</head>
 
 **Object Properties Configuration: Property Getters & Setters**
 

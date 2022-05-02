@@ -1,9 +1,38 @@
 ---
 title: Property Flags / Descriptors
-description: Property Flags / Descriptors interview questions. Object property attributes/flags include writeable, enumerable, and configurable flags.
+description: Property Flags / Descriptors interview questions. Object property attributes/flags include writeable, enumerable, and configurable flags. Interview Answers
 sidebar_position: 1
 sidebar_label: Property Flags / Descriptors
+keywords:
+  - property flags
+  - property descriptors
+  - flags
+  - descriptors
+  - flags and descriptors
+  - attribute flags
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - property flags
+  - property descriptors
+  - flags
+  - descriptors
+  - flags and descriptors
+  - attribute flags
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Property Flags / Descriptors | JavaScript Interview Answers</title>
+</head>
 
 **Object Properties Configuration: Property Flags / Descriptors**
 
