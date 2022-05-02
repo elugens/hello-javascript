@@ -2,7 +2,33 @@
 title: Object References & Copying
 sidebar_position: 2
 sidebar_label: References/Copying
+keywords:
+  - object references
+  - object copying
+  - primitive value copying
+  - object cloning
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - object references
+  - object copying
+  - primitive value copying
+  - object cloning
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Object References and Copying | JavaScript Frontend Phone Interview</title>
+</head>
 
 **Objects the Basics: References/Copying**
 

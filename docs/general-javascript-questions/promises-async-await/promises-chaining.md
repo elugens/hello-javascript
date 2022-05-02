@@ -1,9 +1,31 @@
 ---
 title: Promises Chaining
-description: Promises Chaining is a way to chain promises together. It is a way to handle asynchronous operations in a synchronous manner.
+description: Promises Chaining is a way to chain promises together.  Chaining promises is a process of chaining subscribers of the initial promise. Interview Questions
 sidebar_position: 3
 sidebar_label: Promises Chaining
+keywords:
+  - promises chaining
+  - promise chaining
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - promises chaining
+  - promise chaining
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Promises Chaining | JavaScript Frontend Phone Interview</title>
+</head>
 
 **Promises/Async/Await: Promises Chaining**
 

@@ -1,9 +1,32 @@
 ---
 title: Optional Chaining Operator
-description: The optional chaining operator (?.) is a JavaScript operator that is used to access properties and methods of an object.
+description: The optional chaining operator (?.) is a JavaScript operator that is used to access properties and methods of an object. Pass your next frontend phone interview
 sidebar_position: 6
 sidebar_label: Optional Chaining
+keywords:
+  - optional chaining
+  - optional chaining operator
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - optional chaining
+  - optional chaining operator
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Optional Chaining | JavaScript Frontend Interview Questions</title>
+</head>
 
 **Objects the Basics: Optional Chaining**
 

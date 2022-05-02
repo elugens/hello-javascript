@@ -1,9 +1,35 @@
 ---
 title: Callbacks
-description: Callbacks are a way to pass functions as arguments to other functions, and to return them as the result of the function.
+description: Callbacks are a way to pass functions as arguments to other functions, and to return them as the result of the function. Pass your next frontend phone interview
 sidebar_position: 1
 sidebar_label: Callbacks
+keywords:
+  - callbacks
+  - javascript callback
+  - call backs
+  - callback functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - callbacks
+  - call backs
+  - callback functions
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Callbacks | JavaScript Frontend Phone Interview Questions</title>
+</head>
 
 **Promises/Async/Await: Callbacks**
 

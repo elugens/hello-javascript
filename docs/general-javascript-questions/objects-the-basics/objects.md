@@ -1,9 +1,34 @@
 ---
 title: JavaScript Objects
-description: JavaScript Objects are a collection of key-value pairs. They are used to store data.
+description: JavaScript Objects are a collection of key-value pairs. They are used to store data. String, Symbol, BigInt, Boolean, undefined, number, and null data types.
 sidebar_position: 1
 sidebar_label: Objects
+keywords:
+  - javascript objects
+  - object values
+  - object keys
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - javascript objects
+  - object values
+  - object keys
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>JavaScript Objects | JavaScript Frontend Phone Interview</title>
+</head>
 
 **Objects the Basics: JavaScript Objects**
 

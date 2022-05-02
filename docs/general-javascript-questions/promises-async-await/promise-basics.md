@@ -3,7 +3,32 @@ title: Promise Basics
 description: JavaScript Promises are a way to handle asynchronous operations in JavaScript.
 sidebar_position: 2
 sidebar_label: Promise Basics
+keywords:
+  - javascript promises
+  - promises
+  - asynchronous operations
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - javascript promises
+  - promises
+  - asynchronous operations
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Promise Basics | JavaScript Frontend Phone Interview Answers</title>
+</head>
 
 **Promises/Async/Await: Promise Basics**
 

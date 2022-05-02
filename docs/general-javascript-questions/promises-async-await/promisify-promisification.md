@@ -1,9 +1,33 @@
 ---
 title: Promisification
-description: Promisification is a way to convert a callback-based function into a promise-based function.
+description: Promisification is a way to convert a callback-based function into a promise-based function. Promisification is a long word for a simple transformation.
 sidebar_position: 6
 sidebar_label: Promisification
+keywords:
+  - promisification
+  - promises
+  - callback functions
+  - javascript promisification
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - promisification
+  - promises
+  - callback functions
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Promisification | HelloJavaScript.info</title>
+</head>
 
 **Promises/Async/Await: Promisification**
 

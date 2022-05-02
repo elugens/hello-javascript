@@ -1,9 +1,34 @@
 ---
 title: Promise API
-description: Promise API is the standard API for promises in JavaScript.
+description: Promise API is the standard API for promises in JavaScript. What are the Promise class's six static methods? Pass Your Next Frontend Phone Interview Questions
 sidebar_position: 5
 sidebar_label: Promise API
+keywords:
+  - promise api
+  - promises
+  - asynchronous programming
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - promise api
+  - promises
+  - asynchronous programming
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Promise API | JavaScript Frontend Phone Interview Questions</title>
+</head>
 
 **Promises/Async/Await: Promise API**
 

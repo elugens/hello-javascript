@@ -1,9 +1,34 @@
 ---
 title: JavaScript Object Methods
-description: Object Methods are methods that are attached to objects. They can be called on objects.
+description: Object Methods are methods that are attached to objects. They can be called on objects. Frontend Phone Interview Questions and Answers
 sidebar_position: 4
 sidebar_label: Object Methods
+keywords:
+  - object methods
+  - object method
+  - javascript object methods
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - object methods
+  - object method
+  - javascript object methods
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Object Methods | JavaScript Frontend Phone Interview Answers</title>
+</head>
 
 **Objects the Basics: Object Methods - "This"**
 

@@ -1,9 +1,33 @@
 ---
 title: Prototype Methods
-description: Prototype Methods in JavaScript are a property of the prototype object. It is used to store the function's properties and methods.
+description: Prototype Methods in JavaScript are a property of the prototype object. It is used to store the function's properties and methods. Interview Questions
 sidebar_position: 4
 sidebar_label: Prototype Methods
+keywords:
+  - Prototype Methods
+  - prototype methods
+  - native built-ins
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - function object
+  - functions
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Prototype Methods | JavaScript Frontend Phone Interview</title>
+</head>
 
 **Prototypes / Inheritance: Prototype Methods**
 

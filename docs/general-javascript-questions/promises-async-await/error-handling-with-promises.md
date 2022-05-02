@@ -1,9 +1,34 @@
 ---
 title: Error Handling with Promises
-description: Promises Chaining is a way to chain promises together. It is a way to handle asynchronous operations in a synchronous manner.
+description: Promises Chaining is a way to chain promises together. How is error handling achieved with promises in JavaScript? Pass Your Next Frontend Interview
 sidebar_position: 4
 sidebar_label: Error / Promises
+keywords:
+  - error handling
+  - javascript promises
+  - promises
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - error handling
+  - javascript promises
+  - promises
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Error Handling with Promises | HelloJavaScript.info</title>
+</head>
 
 **Promises/Async/Await: Error / Promises**
 

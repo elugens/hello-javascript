@@ -1,9 +1,34 @@
 ---
 title: Async/Await
-description: Async/Await is a way to handle asynchronous operations in a synchronous manner.
+description: Async/Await is a way to handle asynchronous operations in a synchronous manner. An async function is a function declared with the async keyword. Questions
 sidebar_position: 8
 sidebar_label: Async/Await
+keywords:
+  - async await
+  - asynchronous programming
+  - async function
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - async await
+  - asynchronous programming
+  - async function
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Async/Await | JavaScript Frontend Phone Interview Questions</title>
+</head>
 
 **Promises/Async/Await: Async/Await**
 

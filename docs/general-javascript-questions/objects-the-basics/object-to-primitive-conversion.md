@@ -1,9 +1,34 @@
 ---
 title: Object to Primitive Conversion
-description: The object to primitive conversion is a JavaScript operator that converts an object to a primitive value.
+description: The object to primitive conversion is a JavaScript operator that converts an object to a primitive value. All objects are true in a Boolean context. Interview
 sidebar_position: 8
 sidebar_label: Object to Primitive Conversion
+keywords:
+  - object to primitive conversion
+  - object to primitive
+  - primitives
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - object to primitive conversion
+  - object to primitive
+  - primitives
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Object to Primitive Conversion | JavaScript Interview Questions</title>
+</head>
 
 **Objects the Basics: Object to Primitive Conversion**
 

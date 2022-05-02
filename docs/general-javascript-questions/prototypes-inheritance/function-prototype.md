@@ -1,9 +1,34 @@
 ---
 title: Function Prototype
-description: Function Prototype in JavaScript is a property of the function object. It is used to store the function's properties and methods.
+description: Function Prototype in JavaScript is a property of the function object. It is used to store the function's properties and methods. Interview Answers
 sidebar_position: 2
 sidebar_label: Function Prototype
+keywords:
+  - function prototype
+  - prototypes
+  - prototyping
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - function prototype
+  - prototypes
+  - prototyping
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Function Prototype | JavaScript Frontend Phone Interview</title>
+</head>
 
 **Prototypes / Inheritance: Function Prototype**
 

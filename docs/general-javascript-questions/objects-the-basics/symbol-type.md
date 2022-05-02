@@ -3,7 +3,32 @@ title: Symbol Type
 description: The symbol type in JavaScript is a primitive type that is used to create unique identifiers for objects.
 sidebar_position: 7
 sidebar_label: Symbol Type
+keywords:
+  - symbol type
+  - symbols in javascript
+  - javascript symbols
+  - primitive types
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - function object
+  - functions
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Symbol Type | JavaScript Frontend Phone Interview Questions</title>
+</head>
 
 **Objects the Basics: Symbol Type**
 

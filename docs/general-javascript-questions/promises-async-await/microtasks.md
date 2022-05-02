@@ -1,9 +1,34 @@
 ---
 title: Microtask Queue
-description: The Microtask Queue is a queue of tasks that are executed as soon as possible after the current task has finished.
+description: The Microtask Queue is a queue of tasks that are executed as soon as possible after the current task has finished. Can you explain Microtasks
 sidebar_position: 7
 sidebar_label: Microtask Queue
+keywords:
+  - microtask queue
+  - javascript microtasks
+  - micro tasks
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - microtask queue
+  - javascript microtasks
+  - micro tasks
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Microtask Queue | JavaScript Frontend Interview Questions</title>
+</head>
 
 **Promises/Async/Await: Microtask Queue**
 

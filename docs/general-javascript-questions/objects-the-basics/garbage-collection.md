@@ -1,9 +1,36 @@
 ---
 title: Garbage Collection
-description: Garbage collection is a process that removes unused objects from memory.
+description: Garbage collection is a process that removes unused objects from memory. The central concept of memory management in JavaScript is reachability. Interview
 sidebar_position: 3
 sidebar_label: Garbage Collection
+keywords:
+  - javascript garbage collection
+  - garbage collection
+  - gc root
+  - automatic memory management
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - javascript garbage collection
+  - garbage collection
+  - automatic memory management
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Garbage Collection | JavaScript Phone Interview Questions</title>
+</head>
 
 **Objects the Basics: Garbage Collection**
 

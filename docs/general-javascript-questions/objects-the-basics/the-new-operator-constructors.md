@@ -1,9 +1,34 @@
 ---
 title: The "new" Operator
-description: The "new" operator is used to create a new object instance.
+description: The "new" operator is used to create a new object instance. What is the difference between a regular function and a constructor function? Interview Question
 sidebar_position: 5
 sidebar_label: The "new" Operator
+keywords:
+  - the new operator
+  - new operator
+  - constructor function
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - constructors
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - the new operator
+  - new operator
+  - constructor function
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>The new Operator | JavaScript Frontend Interview Questions</title>
+</head>
 
 **Objects the Basics: The "new" Operator**
 

@@ -3,7 +3,31 @@ title: Native Prototypes
 description: Native Prototypes in JavaScript are a property of the Object.prototype object. It is used to store the Object's properties and methods.
 sidebar_position: 3
 sidebar_label: Native Prototypes
+keywords:
+  - native prototypes
+  - native built-ins
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - native prototypes
+  - native built-ins
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Function Object NFE | JavaScript Frontend Phone Interview</title>
+</head>
 
 **Prototypes / Inheritance: Native Prototypes**
 

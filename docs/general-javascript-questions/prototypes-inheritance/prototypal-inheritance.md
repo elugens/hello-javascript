@@ -3,7 +3,31 @@ title: Prototypal Inheritance
 description: Prototypal Inheritance is a very common interview question. Prototypal Inheritance is a process in which an object inherits properties from another object.
 sidebar_position: 1
 sidebar_label: Prototypal Inheritance
+keywords:
+  - prototypal inheritance
+  - javascript inheritance
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - prototypal inheritance
+  - javascript inheritance
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Prototypal Inheritance | JavaScript Frontend Phone Interview</title>
+</head>
 
 **Prototypes / Inheritance: Prototypal Inheritance**
 
