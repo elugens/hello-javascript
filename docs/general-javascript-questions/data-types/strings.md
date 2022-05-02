@@ -1,9 +1,35 @@
 ---
 title: String Data Type
 description: The string data type is a primitive data type that is used to represent text.
+  In JavaScript, is there a data type for a single character? Interview Answers
 sidebar_position: 3
 sidebar_label: Strings
+keywords:
+  - strings
+  - string
+  - data type
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - frontend
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - strings
+  - string data type
+  - interview answers
+  - interview questions
+lastmod: 2022-05-01T22:11:22.883Z
 ---
+
+<head>
+  <title>Strings | JavaScript Frontend Phone Interview Questions</title>
+</head>
 
 **Data Types: Strings**
 

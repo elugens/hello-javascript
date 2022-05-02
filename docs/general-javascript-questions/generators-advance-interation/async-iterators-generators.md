@@ -1,9 +1,33 @@
 ---
 title: Async Iteration and Generators
-description: Async Iteration and Generators are a way to create iterators.
+description: Async Iteration and Generators are a way to create iterators in JavaScript. What are some popular applications for asynchronous iteration in JavaScript?
 sidebar_position: 2
 sidebar_label: Async Iteration
+keywords:
+  - async iteration
+  - async generators
+  - asynchronous
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - iteration
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - async iteration
+  - async generators
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Async Iteration / Generators | JavaScript Frontend Interview</title>
+</head>
 
 **Generators, Advanced Iteration: Async Iteration and Generators**
 

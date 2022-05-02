@@ -1,9 +1,35 @@
 ---
 title: JavaScript Coding Ninja
-description: 'Ninja Code'
+description: Ninja Code - Are one-letter variables a practical idea to use in programming?
+  No, they can confuse a team and make it harder to debug. Don't be a Coding
+  Ninja!
 sidebar_position: 4
 sidebar_label: Ninja Code
+keywords:
+  - coding ninja
+  - ninja code
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - functions
+  - objects
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - coding ninja
+  - ninja code
+  - interview answers
+  - interview questions
+lastmod: 2022-05-01T20:43:26.657Z
 ---
+
+<head>
+  <title>JavaScript Coding Ninja | JavaScript Frontend Phone Interview</title>
+</head>
 
 **Code Quality: Ninja Code**
 

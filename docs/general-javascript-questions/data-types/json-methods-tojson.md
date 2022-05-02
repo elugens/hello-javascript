@@ -1,8 +1,36 @@
 ---
 title: JSON Methods & JavaScript
+description: Explain what is JSON? What are the methods available in JSON? What are the
+  differences between JSON and JavaScript? How can we use JSON methods in
+  JavaScript?
 sidebar_position: 12
 sidebar_label: JSON Methods
+keywords:
+  - json
+  - json methods
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - json methods
+  - json
+  - interview answers
+  - interview questions
+lastmod: 2022-05-01T21:25:38.596Z
 ---
+
+<head>
+  <title>JSON Methods | JavaScript Frontend Phone Interview Answers</title>
+</head>
 
 **Data Types: JSON Methods**
 
@@ -23,7 +51,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Explain the role of the JSON.stringfy() method in JavaScript?
+### Can you explain the role of the JSON.stringfy() method in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

@@ -1,9 +1,35 @@
 ---
 title: Debugging JavaScript in Chrome
-description: Debugging is the process of finding and fixing errors within a script.
+description: Explain what debugging is in JavaScript development? Debugging is finding and
+  fixing errors within a script, module, or application with tools in Chrome.
 sidebar_position: 1
 sidebar_label: Debugging in Chrome
+keywords:
+  - javascript debugging
+  - debugging in chrome
+  - debugging
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - chrome
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - javascript debugging
+  - debugging in chrome
+  - interview answers
+  - interview questions
+lastmod: 2022-05-01T20:36:00.869Z
 ---
+
+<head>
+  <title>Debugging in Chrome | JavaScript Frontend Phone Interview</title>
+</head>
 
 **Code Quality: Debugging in Chrome**
 

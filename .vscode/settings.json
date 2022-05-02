@@ -1,5 +1,11 @@
 {
   "cSpell.words": ["WAMP"],
   "frontMatter.preview.host": "",
-  "frontMatter.content.autoUpdateDate": true
+  "frontMatter.content.autoUpdateDate": true,
+  "[markdown]": {
+    "editor.fontSize": 16,
+    "editor.lineHeight": 26,
+    "editor.quickSuggestions": false,
+    "editor.minimap.enabled": false
+  }
 }

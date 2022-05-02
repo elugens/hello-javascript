@@ -1,9 +1,31 @@
 ---
 title: Rest Parameters / Spread Syntax
-description: Rest Parameters / Spread Syntax
+description: Rest Parameters / Spread Syntax is a very common interview question.
 sidebar_position: 2
 sidebar_label: Rest Parameters / Spread Syntax
+keywords:
+  - rest parameters
+  - spread syntax
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - rest parameters
+  - spread syntax
+  - interview answers
+  - interview questions
+lastmod: 2022-05-01T17:33:46.661Z
 ---
+
+<head>
+  <title>Rest Parameters and Spread Syntax | JS Frontend Interview</title>
+</head>
 
 **Advanced Functions: Rest Parameters / Spread Syntax**
 

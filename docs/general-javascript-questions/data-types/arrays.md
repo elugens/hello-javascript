@@ -1,9 +1,36 @@
 ---
 title: JavaScript Arrays
-description: Arrays are a collection of indexed values that can be accessed by a numerical index.
+description: What is an array? Arrays are a collection of indexed values that can be
+  accessed by a numerical index. We use arrays to store an collection of values.
+  Frontend
 sidebar_position: 4
 sidebar_label: Arrays
+keywords:
+  - javascript arrays
+  - arrays
+  - indexed collections
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - collections
+  - frontend
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - function object
+  - functions
+  - interview answers
+  - interview questions
+lastmod: 2022-05-01T21:02:03.566Z
 ---
+
+<head>
+  <title>JavaScript Arrays | Frontend Developer Phone Interview</title>
+</head>
 
 <!-- Developer Line Notes: If you try to access this note your brain will explode. Boom!!! -->
 

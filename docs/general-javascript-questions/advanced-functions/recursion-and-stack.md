@@ -3,7 +3,33 @@ title: Recursion & Stack
 description: Recursion & Stack is a very common interview question.
 sidebar_position: 1
 sidebar_label: Recursion & Stack
+keywords:
+  - recursion
+  - stack
+  - advanced
+  - recursion stack
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - function object
+  - functions
+  - interview answers
+  - interview questions
+lastmod: 2022-05-01T17:29:02.955Z
 ---
+
+<head>
+  <title>Recursion & Stack | JS Frontend Phone Interview Responses</title>
+</head>
 
 **Advanced Functions: Recursion & Stack**
 

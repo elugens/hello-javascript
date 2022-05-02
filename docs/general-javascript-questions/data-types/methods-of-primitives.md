@@ -1,9 +1,35 @@
 ---
 title: Methods of Primitives
 description: Methods of Primitives are functions that are attached to primitive values.
+  What are the 7 primitive data types? Interview Questions and Answers for
+  developers.
 sidebar_position: 1
 sidebar_label: Methods of Primitives
+keywords:
+  - methods of primitives
+  - primitive methods
+  - primitive values
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - js
+tags:
+  - methods of primitives
+  - primitive methods
+  - interview answers
+  - interview questions
+lastmod: 2022-05-01T21:44:10.727Z
 ---
+
+<head>
+  <title>Methods of Primitives | JavaScript Frontend Phone Interview</title>
+</head>
 
 **Data Types: Methods of Primitives**
 

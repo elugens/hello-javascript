@@ -1,9 +1,33 @@
 ---
 title: Generators
-description: JavaScript generators are a way to create iterators.
+description: JavaScript generators are a way to create iterators. What is the distinction between a generator and a regular function? Frontend Developer Interview Answers
 sidebar_position: 1
 sidebar_label: Generators
+keywords:
+  - generators
+  - javascript generator
+  - generator
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - iterators
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - generators
+  - javascript generator
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>JavaScript Generators | Frontend Phone Interview Questions</title>
+</head>
 
 **Generators, Advanced Iteration: Generators**
 

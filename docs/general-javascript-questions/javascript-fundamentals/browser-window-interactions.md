@@ -1,9 +1,34 @@
 ---
 title: Browser Window Interaction
-description: How to interact with the browser window.
+description: How to interact with the browser window. How does the alert function work? How many arguments does the prompt function accept? Frontend Interview Questions
 sidebar_position: 8
 sidebar_label: Window Interaction
+keywords:
+  - browser window interaction
+  - browser window
+  - window interaction
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - browser window interaction
+  - browser window
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Browser Window Interaction | JavaScript Frontend Interview</title>
+</head>
 
 **JavaScript Fundamentals: Interaction: alert, prompt, confirm**
 

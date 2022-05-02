@@ -1,9 +1,38 @@
 ---
 title: Comments in JavaScript
-description: The key to reducing unnecessary comments in your code is to write self-descriptive code.
+description: The key to reducing unnecessary comments in your code is to write
+  self-descriptive code. The way to achieve this is to replace a chunk of code
+  with a function.
 sidebar_position: 3
 sidebar_label: Code Comments
+keywords:
+  - comments in javascript
+  - javascript comments
+  - multiline comments
+  - multi-line comments
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - code comments
+  - code comments in javascript
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - comments
+  - javascript comments
+  - interview answers
+  - interview questions
+lastmod: 2022-05-01T18:23:05.202Z
 ---
+
+<head>
+  <title>Comments in JavaScript | JavaScript Frontend Phone Interview</title>
+</head>
 
 **Code Quality: Comments**
 

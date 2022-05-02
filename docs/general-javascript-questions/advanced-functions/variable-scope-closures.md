@@ -1,9 +1,35 @@
 ---
 title: Variable Scope / Closures
-description: Variable Scope / Closures is a very common interview question.
+description: Variable Scope / Closures is a very common interview question. A closure is a
+  function that remembers its outer variables and can access them.
 sidebar_position: 3
 sidebar_label: Variable Scope / Closures
+keywords:
+  - variable scope
+  - closures
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - variable scope
+  - closures
+  - interview answers
+  - interview questions
+lastmod: 2022-05-01T17:59:40.385Z
 ---
+
+<head>
+  <title>Variable Scope / Closures | JavaScript Frontend Phone Interview</title>
+</head>
 
 **Advanced Functions: Variable Scope / Closures**
 

@@ -1,9 +1,35 @@
 ---
 title: JavaScript Array Methods
-description: JavaScript array methods are used to manipulate arrays.
+description: Explain the function and syntax of the array splice() method? How do negative
+  array indexes work? Why can’t you use a return statement in a forEach loop?
 sidebar_position: 5
 sidebar_label: Array Methods
+keywords:
+  - function object
+  - nfe
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - function object
+  - functions
+  - interview answers
+  - interview questions
+lastmod: 2022-05-01T20:48:00.922Z
 ---
+
+<head>
+  <title>JavaScript Array Methods | Frontend Phone Interview Response</title>
+</head>
 
 **Data Types: Array Methods**
 

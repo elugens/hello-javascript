@@ -1,9 +1,35 @@
 ---
 title: Iterable Types
-description: Iterable Types are objects that can be iterated over.
+description: What are iterables in JavaScript? Iterable Types are objects that can be
+  iterated over. Iterable objects are a subset of arrays. Interview Answers
 sidebar_position: 6
 sidebar_label: Iterable Types
+keywords:
+  - iterable types
+  - iterables
+  - symbols
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - arrays
+  - data types
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - iterable types
+  - iterables
+  - interview answers
+  - interview questions
+lastmod: 2022-05-01T21:33:31.779Z
 ---
+
+<head>
+  <title>Iterables | JavaScript Frontend Phone Interview Responses</title>
+</head>
 
 **Data Types: Iterable Types**
 
@@ -24,7 +50,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### What can the Symbol.iterator get used for in JavaScript?
+### What can we use the Symbol.iterator for in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

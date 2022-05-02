@@ -3,7 +3,32 @@ title: The Global Object
 description: The global object is the root of the JavaScript object hierarchy.
 sidebar_position: 5
 sidebar_label: Global Object
+keywords:
+  - global object
+  - global
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - global object
+  - javascript globals
+  - interview answers
+  - interview questions
+date: 2022-05-01T16:51:46.299Z
+lastmod: 2022-05-01T17:19:06.674Z
 ---
+
+<head>
+  <title>The Global Object | JavaScript Frontend Phone Interview - QA</title>
+</head>
 
 **Advanced Functions: Global Object**
 

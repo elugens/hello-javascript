@@ -1,9 +1,34 @@
 ---
 title: Code Structure
-description: All programming languages must adhere to specific rules in order to function. This set of rules that determine the correct structure of programming languages is known as syntax.
+description: Define what a statement is in JavaScript code structure? Can semi-colons be omitted in JavaScript? | Frontend Developer Interview Questions & Answers
 sidebar_position: 4
 sidebar_label: Code Structure
+keywords:
+  - code structure
+  - code design
+  - coding
+  - programming architecture
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - architecture
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - code structure
+  - code design
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Code Structure | JavaScript Frontend Phone Interview Answers</title>
+</head>
 
 **JavaScript Fundamentals: Code Structure**
 
@@ -132,7 +157,7 @@ alert('All fine now'); // uses a semi-colon alerts All fine now
   <div><strong>Interview Response:</strong> Single-line comments start with two forward slash characters <strong>//</strong>.</div>
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
- 
+
   <div></div>
 
 ```javascript

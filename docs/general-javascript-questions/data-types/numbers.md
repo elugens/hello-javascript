@@ -1,9 +1,36 @@
 ---
 title: Number Data Type
-description: The Number data type is a primitive data type.
+description: What are the two primitive number data types in JavaScript? In JavaScript, the
+  two number data types include numbers and BigInts. Frontend Developer
+  Interview
 sidebar_position: 2
 sidebar_label: Numbers
+keywords:
+  - number data type
+  - numbers
+  - primitive
+  - data types
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - number data type
+  - numbers
+  - interview answers
+  - interview questions
+lastmod: 2022-05-01T21:51:22.982Z
 ---
+
+<head>
+  <title>Number Data Type | JavaScript Frontend Phone Interview</title>
+</head>
 
 **Data Types: Numbers**
 

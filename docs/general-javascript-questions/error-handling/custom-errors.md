@@ -1,9 +1,34 @@
 ---
 title: Custom Error Handling
-description: Custom Error Handling in JavaScript is a good way to handle errors in your code.
+description: Custom Error Handling in JavaScript is a good way to handle errors in your
+  code. How would you extend beyond the initial inheritance of the Error object?
 sidebar_position: 2
 sidebar_label: Custom Errors
+keywords:
+  - custom errors
+  - custom error handling
+  - error handling
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - error object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - custom errors
+  - custom error handling
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Custom Errors | JavaScript Frontend Phone Interview Answers</title>
+</head>
 
 **Error Handling: Custom Errors**
 

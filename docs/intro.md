@@ -1,6 +1,5 @@
 ---
 title: Getting Started with JavaScript Questions
-hideTitle: true
 description: Every frontend developer interview starts with a question about JavaScript.
   This is the first question in this series.
 image: /img/twitter-card.png
@@ -15,7 +14,7 @@ tags:
   - frontend
   - javascript
   - interview
-lastmod: 2022-05-01T17:04:13.709Z
+lastmod: 2022-05-01T20:26:14.124Z
 ---
 
 <head>

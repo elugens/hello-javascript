@@ -1,9 +1,37 @@
 ---
 title: Object.keys, values, entries
-description: Object.keys, values, entries are used to get the keys, values, and entries from an object. They are used to iterate over the object.
+description: Object.keys, values, entries are used to get the keys, values, and entries
+  from an object. They are used to iterate over the object. Frontend Interview
+  Answers
 sidebar_position: 9
 sidebar_label: Keys / Values / Entries
+keywords:
+  - object keys
+  - object values
+  - object entries
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - frontend
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - object keys
+  - object entries
+  - object values
+  - interview answers
+  - interview questions
+lastmod: 2022-05-01T22:05:27.079Z
 ---
+
+<head>
+  <title>Object Keys / Values / Entries | Frontend Phone Interview</title>
+</head>
 
 **Data Types: Object.keys, values, entries**
 

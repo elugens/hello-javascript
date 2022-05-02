@@ -1,9 +1,36 @@
 ---
 title: Destructuring assignment in JavaScript
-description: Destructuring assignment is a JavaScript expression that allows us to extract data from arrays, or object properties, and assign them to variables.
+description: Destructuring assignment is a JavaScript expression that allows us to extract
+  data from arrays, or object properties, and assign them to variables.
+  Interviewer
 sidebar_position: 10
 sidebar_label: Destructuring assignment
+keywords:
+  - destructuring assignment
+  - destructuring
+  - arrays
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - variables
+  - object properties
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - destructuring assignment
+  - destructuring
+  - interview answers
+  - interview questions
+lastmod: 2022-05-01T21:12:11.306Z
 ---
+
+<head>
+  <title>Destructuring Assignment | JavaScript Frontend Phone Interview</title>
+</head>
 
 **Data Types: Destructuring Assignment**
 

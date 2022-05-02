@@ -1,9 +1,36 @@
 ---
 title: WeakMap / WeakSet
-description: WeakMap and WeakSet are a data structure that are used to store key-value pairs.
+description: WeakMap and WeakSet are a data structure that are used to store key-value
+  pairs. What are some use cases in applications for a WeakMap? Interview
+  Questions
 sidebar_position: 8
 sidebar_label: WeakMap / WeakSet
+keywords:
+  - weakmap
+  - weakset
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - set
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - weakmap
+  - weakset
+  - interview answers
+  - interview questions
+lastmod: 2022-05-01T22:17:16.765Z
 ---
+
+<head>
+  <title>WeakMap and WeakSet | JavaScript Frontend Phone Interview</title>
+</head>
 
 **Data Types: WeakMap / WeakSet**
 

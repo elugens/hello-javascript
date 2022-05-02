@@ -3,7 +3,33 @@ title: The "new" Function Syntax
 description: The "new" Function Syntax is a very common interview question.
 sidebar_position: 7
 sidebar_label: The "new" Function Syntax
+keywords:
+  - The new Function Syntax
+  - new
+  - function
+  - syntax
+  - constructor
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - new function syntax
+  - new function
+  - interview answers
+  - interview questions
+date: 2022-05-01T16:51:46.299Z
+lastmod: 2022-05-01T17:23:45.164Z
 ---
+
+<head>
+  <title>The new Function Syntax | Frontend Phone Interview Answers</title>
+</head>
 
 **Advanced Functions: The "new" Function Syntax**
 

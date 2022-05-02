@@ -1,9 +1,40 @@
 ---
 title: Scheduling / Timing
-description: Scheduling / Timing - setTimeout / setInterval is a very common interview question. There are two commonly used methods for scheduling calls in JavaScript, including the setTimeout and setInterval methods.
+description: Scheduling / Timing - setTimeout / setInterval is a very common interview
+  question. There are two commonly used methods for scheduling calls in
+  JavaScript.
 sidebar_position: 8
 sidebar_label: Scheduling / Timing
+keywords:
+  - scheduling
+  - timing
+  - setinterval
+  - settimeout
+  - functions
+  - javascript
+  - interview
+  - common
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - common interview questions
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - scheduling
+  - timing
+  - interview answers
+  - interview questions
+lastmod: 2022-05-01T17:41:03.981Z
 ---
+
+<head>
+  <title>Scheduling / Timing | JavaScript Frontend Phone Interview</title>
+</head>
 
 **Advanced Functions: Scheduling: setTimeout / setInterval**
 

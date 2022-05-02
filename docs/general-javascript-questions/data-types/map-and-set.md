@@ -1,9 +1,36 @@
 ---
 title: Map and Set
-description: Map and Set are not primitive data types in JavaScript. They are objects.
+description: What is the difference between Map and Object in JavaScript? Map and Set are
+  not primitive data types in JavaScript. They are objects. Interview Answers
 sidebar_position: 7
 sidebar_label: Map and Set
+keywords:
+  - map and set
+  - map
+  - set
+  - methods
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - map and set
+  - map methods
+  - interview answers
+  - interview questions
+lastmod: 2022-05-01T21:31:29.703Z
 ---
+
+<head>
+  <title>Map and Set | JavaScript Frontend Phone Interview Answers</title>
+</head>
 
 **Data Types: Map and Set**
 

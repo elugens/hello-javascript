@@ -3,7 +3,33 @@ title: JavaScript Manuals & Specifications
 description: Professional JavaScript developers typically refer to ECMA-262 specifications, MDN JavaScript references, and compatibility tables like CanIUse.com.
 sidebar_position: 2
 sidebar_label: Manuals & Specifications
+keywords:
+  - manuals and specifications
+  - javascript specification
+  - mdn
+  - ecma script
+  - ecma 262
+  - ecma script 6
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - javascript manuals
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - manuals and specifications
+  - javascript specification
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Manuals & Specifications | JavaScript Interview Answers</title>
+</head>
 
 **JavaScript Basics: Manuals & Specifications**
 

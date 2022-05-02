@@ -1,9 +1,33 @@
 ---
 title: Arrow Functions
-description: Arrow functions are a concise way to write functions.
+description: What is the definition of an arrow function? Arrow functions are a concise way to write functions in JavaScript. Frontend developer interview questions answers.
 sidebar_position: 19
 sidebar_label: Arrow Functions
+keywords:
+  - arrow function
+  - arrow functions
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - arrow function
+  - arrow functions
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Arrow Functions | JavaScript Frontend Phone Interview Answer</title>
+</head>
 
 **JavaScript Fundamentals: Arrow Functions**
 

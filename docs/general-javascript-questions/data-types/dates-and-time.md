@@ -1,9 +1,36 @@
 ---
 title: Date and Time
-description: JavaScript dates and times are represented by the Date object. Date objects represent a single moment in time in a platform-independent format.
+description: JavaScript dates and times are represented by the Date object. Date objects
+  represent a single moment in time in a platform-independent format. Interview
+  Answer
 sidebar_position: 11
 sidebar_label: Date and Time
+keywords:
+  - javascript dates
+  - javascript time
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - date object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - date object
+  - javascript dates
+  - interview answers
+  - interview questions
+lastmod: 2022-05-01T22:21:11.156Z
 ---
+
+<head>
+  <title>Date and Time | JavaScript Frontend Phone Interview Answers</title>
+</head>
 
 **Data Types: Date and Time**
 

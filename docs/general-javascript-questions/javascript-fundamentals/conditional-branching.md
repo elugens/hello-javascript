@@ -1,9 +1,34 @@
 ---
 title: Conditional Branching in JavaScript
-description: Learn how to use conditional branching in JavaScript.
+description: Learn how to use conditional branching in JavaScript. Can you execute more than one statement in an if statement? | Frontend Interview Questions & Answers
 sidebar_position: 12
 sidebar_label: Conditional Branching
+keywords:
+  - conditional branching
+  - conditional statements
+  - branching
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - if statement
+  - ternary operator
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - conditional branching
+  - conditional statements
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Conditional Branching | JavaScript Frontend Phone Interview</title>
+</head>
 
 **JavaScript Fundamentals: Conditional Branching**
 

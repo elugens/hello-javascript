@@ -3,7 +3,32 @@ title: The Var Declaration
 description: The Var Declaration is a very common interview question.
 sidebar_position: 4
 sidebar_label: Var Declaration
+keywords:
+  - the var declaration
+  - variables
+  - var declaration
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - function object
+  - functions
+  - interview answers
+  - interview questions
+lastmod: 2022-05-01T17:44:13.207Z
 ---
+
+<head>
+  <title>The Var Declaration | JavaScript Frontend Phone Interview</title>
+</head>
 
 **Advanced Functions: Var Declaration**
 

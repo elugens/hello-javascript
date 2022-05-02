@@ -1,10 +1,27 @@
 ---
 title: Basic JavaScript Interview Questions
-description: Basic JS Questions in JavasScript - JavaScript Basics
+description: Basic JavaScript Questions |  Frontend Developer Interview Questions - What is JavaScript? JavaScript is an interpreted language, V8 compiles it to machine code.
 sidebar_label: Basic JS Questions
 sidebar_position: 1
-lastmod: 2022-05-01T04:18:15.774Z
-date: 2022-05-01T04:15:29.456Z
+keywords:
+  - javascript interview questions
+  - basic javascript questions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - frontend
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - javascript interview questions
+  - basic javascript questions
+  - interview answers
+  - interview questions
 ---
 
 <head>

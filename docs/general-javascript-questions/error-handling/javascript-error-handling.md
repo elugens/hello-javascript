@@ -1,9 +1,33 @@
 ---
 title: Error Handling in JavaScript
-description: Error Handling in JavaScript is a very important part of any web application.
+description: Error Handling in JavaScript is a very important part of any web application. The try…catch construct has two main blocks, try and then catch blocks. Questions
 sidebar_position: 1
 sidebar_label: JS Error Handling
+keywords:
+  - error handling
+  - handling errors
+  - custom errors
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - error object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - error handling
+  - handling errors
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Error Handling | Frontend JavaScript Interview Questions</title>
+</head>
 
 **Error Handling: Error handling, "try..catch"**
 

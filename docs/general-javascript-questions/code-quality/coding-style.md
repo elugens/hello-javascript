@@ -1,9 +1,36 @@
 ---
 title: Coding Style
-description: Coding style is a set of rules for writing code. This guide helps you to understand coding styles.
+description: Coding style is a set of rules for writing code. This guide helps you to
+  understand coding styles and how to follow them in JavaScript. - Interview
+  Responses
 sidebar_position: 2
 sidebar_label: Coding Style
+keywords:
+  - coding style
+  - style guide
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - guide
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - coding style
+  - style guide
+  - interview answers
+  - interview questions
+lastmod: 2022-05-01T18:11:50.564Z
 ---
+
+<head>
+  <title>Code Styling | JavaScript Frontend Phone Interview Responses</title>
+</head>
 
 **Code Quality: Coding Style**
 
