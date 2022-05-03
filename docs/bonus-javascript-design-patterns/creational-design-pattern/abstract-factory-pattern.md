@@ -3,7 +3,32 @@ title: Abstract Factory - Design Pattern
 description: The abstract factory pattern is a creational design pattern that produces families of related objects without specifying their concrete classes.
 sidebar_position: 2
 sidebar_label: Abstract Factory
+keywords:
+  - abstract factory pattern
+  - abstract factory design pattern
+  - design patterns
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - abstract factory pattern
+  - abstract factory design pattern
+  - design patterns
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Abstract Factory Pattern | JavaScript Interview Questions</title>
+</head>
 
 **Creational: Abstract Factory Pattern**
 

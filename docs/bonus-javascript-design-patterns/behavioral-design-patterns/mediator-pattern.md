@@ -1,9 +1,34 @@
 ---
 title: Mediator Design Pattern
-description: The mediator pattern is a structural pattern that enables one item to alert another group of objects when an event or action occurs.
+description: The mediator pattern is a structural pattern that enables one item to alert another group of objects when an event or action occurs. Interview Questions
 sidebar_position: 6
 sidebar_label: Mediator
+keywords:
+  - mediator pattern
+  - mediator design pattern
+  - design patterns
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - mediator pattern
+  - mediator design pattern
+  - design patterns
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Mediator Pattern | JavaScript Interview Questions</title>
+</head>
 
 **Structural: Mediator Pattern**
 

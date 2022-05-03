@@ -1,9 +1,34 @@
 ---
 title: Proxy Design Pattern
-description: A proxy is a structural pattern that lets you provide a substitute or placeholder for another object.
+description: A proxy is a structural pattern that lets you provide a substitute for another object. The Proxy Pattern acts as a placeholder for another object.
 sidebar_position: 7
 sidebar_label: Proxy
+keywords:
+  - proxy pattern
+  - proxy design pattern
+  - design patterns
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - proxy pattern
+  - proxy design pattern
+  - design patterns
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Proxy Pattern | JavaScript Interview Questions</title>
+</head>
 
 **Structural: Proxy Pattern**
 

@@ -1,9 +1,34 @@
 ---
 title: Introduction to Design Patterns in JavaScript
-description: A design pattern is a reusable piece of code that acts as a solution to recurring problems in JavaScript.
+description: A design pattern is reusable code that acts as a solution to recurring problems. The three groups are creational, structural, and behavioral design patterns.
 sidebar_position: 1
 sidebar_label: Introduction
+keywords:
+  - introduction to patterns
+  - design pattern
+  - design patterns
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - introduction to patterns
+  - design pattern
+  - design patterns
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Introduction to Design Patterns | HelloJavaScript.info</title>
+</head>
 
 <!-- check word doc notes and updates -->
 
@@ -42,7 +67,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   <div>
     <div>
       <strong>Interview Response:</strong> Creation design patterns handle object creation and reduce complexity in object creation in JavaScript. Examples of creational design patterns include the constructor, factory, prototype, and singleton patterns.
-    </div>    
+    </div>
   </div>
 </details>
 
@@ -57,7 +82,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   <div>
     <div>
       <strong>Interview Response:</strong> Structural design patterns in software engineering are design patterns that simplify the design process by identifying a straightforward approach to realizing relationships between entities. Structural design patterns include the module, decorator, facade, adapter, and proxy patterns.
-    </div>    
+    </div>
   </div>
 </details>
 
@@ -72,7 +97,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   <div>
     <div>
       <strong>Interview Response:</strong> Behavioral design patterns identify communication between objects, which increases flexibility in how our application carries out communication. Structural design patterns include the chain of responsibility, command, observer, iterator, strategy, and template patterns.
-    </div>    
+    </div>
   </div>
 </details>
 

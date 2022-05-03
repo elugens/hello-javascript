@@ -1,9 +1,34 @@
 ---
 title: Builder Design Pattern
-description: It lets you build complex objects step by step. The pattern allows you to produce different object types and representations using the same builder code.
+description: It lets you build complex objects step by step. The builder pattern allows you to produce different object types and representations using the same builder code.
 sidebar_position: 3
 sidebar_label: Builder
+keywords:
+  - builder pattern
+  - builder design pattern
+  - design patterns
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - builder pattern
+  - builder design pattern
+  - design patterns
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Builder Design Pattern | JavaScript Interview Questions</title>
+</head>
 
 **Creational: Builder Pattern**
 

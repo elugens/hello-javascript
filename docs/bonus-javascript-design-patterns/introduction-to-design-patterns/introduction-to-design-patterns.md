@@ -1,5 +1,5 @@
 ---
-title: Introduction to Patterns
+title: Introduction to Design Patterns
 description: Introduction to Patterns
 sidebar_position: 1
 sidebar_label: Introduction to Patterns

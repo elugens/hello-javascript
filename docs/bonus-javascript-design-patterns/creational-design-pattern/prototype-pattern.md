@@ -3,7 +3,32 @@ title: Prototype Design Pattern
 description: The prototype is a creational design pattern that allows you to replicate existing objects without relying on their classes. Interview Questions and Answers
 sidebar_position: 5
 sidebar_label: Prototype
+keywords:
+  - prototype pattern
+  - prototype design pattern
+  - design patterns
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - prototype pattern
+  - prototype design pattern
+  - design patterns
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Prototype Pattern | JavaScript Frontend Interview Questions</title>
+</head>
 
 **Creational: Prototype Pattern**
 

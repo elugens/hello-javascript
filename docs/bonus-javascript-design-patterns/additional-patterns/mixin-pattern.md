@@ -1,9 +1,33 @@
 ---
 title: Mixin Design Pattern
-description: A mixin is a JavaScript object that contains methods that other classes can use without inheriting from it.
+description: A mixin is a JavaScript object that contains methods that other classes can use without inheriting from it. JavaScript Frontend Phone Interview Questions
 sidebar_position: 2
 sidebar_label: Mixin Pattern
+keywords:
+  - mixin design pattern
+  - mixin pattern
+  - mixin
+  - design pattern
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - mixin design pattern
+  - mixin pattern
+  - mixin
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Mixin Design Pattern | JavaScript Interview Questions</title>
+</head>
 
 **Additional Patterns: Mixin Design Pattern**
 

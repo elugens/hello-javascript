@@ -3,7 +3,32 @@ title: Visitor Design Pattern
 description: A visitor pattern is a behavioral pattern that enables you to decouple algorithms from the objects on which they operate.
 sidebar_position: 11
 sidebar_label: Visitor
+keywords:
+  - visitor pattern
+  - visitor design pattern
+  - design patterns
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - visitor pattern
+  - visitor design pattern
+  - design patterns
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Visitor Pattern | JavaScript Interview Questions</title>
+</head>
 
 **Structural: Visitor Pattern**
 

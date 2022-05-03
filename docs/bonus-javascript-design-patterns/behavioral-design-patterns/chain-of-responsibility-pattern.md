@@ -1,9 +1,34 @@
 ---
 title: Chain of Responsibility Pattern
-description: The chain of responsibility pattern allows a client request to be received by multiple objects.
+description: The chain of responsibility pattern allows a client request to be received by multiple objects. JavaScript Frontend Phone Interview Question
 sidebar_position: 3
 sidebar_label: Chain of Responsibility
+keywords:
+  - chain of responsibility
+  - chain of responsibility pattern
+  - design patterns
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - chain of responsibility
+  - chain of responsibility pattern
+  - design patterns
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Chain of Responsibility Pattern | HelloJavaScript.info</title>
+</head>
 
 **Structural: Chain of Responsibility**
 

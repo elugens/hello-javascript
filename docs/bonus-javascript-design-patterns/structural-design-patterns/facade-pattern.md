@@ -3,7 +3,34 @@ title: Facade Design Pattern
 description: The Façade design pattern creates an interface that protects clients from complex functionality in one or more subsystems.
 sidebar_position: 5
 sidebar_label: Facade
+keywords:
+  - facade pattern
+  - façade pattern
+  - facade design pattern
+  - design patterns
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - facade pattern
+  - façade pattern
+  - facade design pattern
+  - design patterns
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Facade Pattern | JavaScript Interview Questions</title>
+</head>
 
 **Structural: Facade Pattern**
 

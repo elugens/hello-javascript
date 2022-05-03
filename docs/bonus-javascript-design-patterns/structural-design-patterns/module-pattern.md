@@ -3,7 +3,32 @@ title: Module Design Pattern
 description: Another popular JavaScript design pattern for keeping our code tidy, segregated, and organized is the Module Pattern.
 sidebar_position: 8
 sidebar_label: Module
+keywords:
+  - module pattern
+  - module design pattern
+  - design patterns
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - module pattern
+  - module design pattern
+  - design patterns
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Module Pattern | JavaScript Interview Questions</title>
+</head>
 
 **Structural: Module Pattern**
 

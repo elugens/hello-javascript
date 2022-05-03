@@ -3,7 +3,32 @@ title: Revealing Design Pattern
 description: The basic tenet of the Revealing Module pattern is that all functions and variables should be hidden unless explicitly revealed.
 sidebar_position: 1
 sidebar_label: Revealing Pattern
+keywords:
+  - revealing pattern
+  - revealing design pattern
+  - revealing module pattern
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - revealing pattern
+  - revealing design pattern
+  - revealing module pattern
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Revealing Design Pattern | JavaScript Interview Questions</title>
+</head>
 
 **Additional Patterns: Revealing Design Pattern**
 

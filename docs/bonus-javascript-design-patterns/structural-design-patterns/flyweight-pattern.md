@@ -1,9 +1,34 @@
 ---
 title: Flyweight Design Pattern
-description: It allows you to fit more objects into the available RAM by sharing parts of state between multiple objects rather than keeping all of the data in each object.
+description: Can you explain the flyweight design pattern? The Flyweight pattern gets classified as a Structural design pattern. JavaScript interview questions.
 sidebar_position: 6
 sidebar_label: Flyweight
+keywords:
+  - flyweight pattern
+  - flyweight design pattern
+  - design patterns
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - flyweight pattern
+  - flyweight design pattern
+  - design patterns
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Flyweight Pattern | JavaScript Interview Questions</title>
+</head>
 
 **Structural: Flyweight Pattern**
 

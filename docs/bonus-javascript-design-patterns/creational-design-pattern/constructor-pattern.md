@@ -3,7 +3,32 @@ title: Constructor Design Pattern
 description: The constructor pattern is a class or function-based pattern used in the creation of specific types of objects. JavaScript interview questions and answers.
 sidebar_position: 4
 sidebar_label: Constructor
+keywords:
+  - constructor pattern
+  - constructor design pattern
+  - design patterns
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - constructor pattern
+  - constructor design pattern
+  - design patterns
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Constructor Design Pattern | JavaScript Interview Questions</title>
+</head>
 
 **Creational: Constructor Pattern**
 

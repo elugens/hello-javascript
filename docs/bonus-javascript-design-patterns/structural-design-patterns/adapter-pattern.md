@@ -3,7 +3,32 @@ title: Adapter Design Pattern
 description: Adapter is a structural design pattern that facilitates the collaboration of objects having conflicting interfaces.
 sidebar_position: 1
 sidebar_label: Adapter
+keywords:
+  - adapter pattern
+  - adapter design pattern
+  - design patterns
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - adapter pattern
+  - adapter design pattern
+  - design patterns
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Adapter Pattern | JavaScript Interview Questions</title>
+</head>
 
 **Structural: Adapter Pattern**
 

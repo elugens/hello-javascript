@@ -3,7 +3,32 @@ title: Factory Method - Design Pattern
 description: The factory pattern offers an interface for producing objects in a superclass while allowing subclasses to change the type of objects created.
 sidebar_position: 1
 sidebar_label: Factory Method
+keywords:
+  - factory method
+  - factory design pattern
+  - design patterns
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - factory method
+  - factory design pattern
+  - design patterns
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Factor Method | JavaScript Interview Questions</title>
+</head>
 
 **Creational: Factory Pattern**
 

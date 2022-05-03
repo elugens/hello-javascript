@@ -3,7 +3,32 @@ title: Strategy Design Pattern
 description: The strategy is a behavioral pattern that allows an object to shift its way of responding to changes in its internal state.
 sidebar_position: 10
 sidebar_label: Strategy
+keywords:
+  - strategy pattern
+  - strategy design pattern
+  - design patterns
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - strategy pattern
+  - strategy design pattern
+  - design patterns
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Strategy Pattern | JavaScript Interview Questions</title>
+</head>
 
 **Structural: Strategy Pattern**
 

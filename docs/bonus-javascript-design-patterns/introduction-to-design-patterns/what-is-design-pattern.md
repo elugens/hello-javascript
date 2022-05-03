@@ -1,9 +1,34 @@
 ---
 title: What is a Pattern?
-description: A design pattern is a reusable piece of code that acts as a solution to recurring problems in JavaScript.
+description: A design pattern is reusable code that acts as a solution to recurring problems in JavaScript.  A design pattern can be a template for solving a problem.
 sidebar_position: 2
 sidebar_label: What is a Pattern?
+keywords:
+  - what is a pattern
+  - programming patterns
+  - design patterns
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - what is a pattern
+  - programming patterns
+  - design patterns
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>What is a Pattern? | HelloJavaScript.info</title>
+</head>
 
 <!-- check word doc notes and updates -->
 
@@ -43,7 +68,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   <div>
     <div>
       <strong>Interview Response:</strong> Design patterns provide us with a common vocabulary to describe solutions to problems within our applications. This approach can be significantly simpler than describing syntax and semantics when we are trying to show a way of structuring a proper solution in code form.
-    </div>    
+    </div>
   </div>
 </details>
 
@@ -58,7 +83,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   <div>
     <div>
       <strong>Interview Response:</strong> One of the most important aspects of writing maintainable code is noticing the recurring themes in the code and optimizing them.
-    </div>    
+    </div>
   </div>
 </details>
 
@@ -73,7 +98,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   <div>
     <div>
       <strong>Interview Response:</strong> The reason for this is that the code you write is not only used by other developers but also by your future self. To optimize your code, you need to be able to notice the patterns.
-    </div>    
+    </div>
   </div>
 </details>
 
@@ -88,7 +113,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   <div>
     <div>
       <strong>Interview Response:</strong> GoF stands for Gang of Four, representing the four engineers, including Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides, who published Design Patterns: Elements Of Reusable Object-Oriented Software.
-    </div>    
+    </div>
   </div>
 </details>
 
@@ -103,7 +128,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   <div>
     <div>
       <strong>Interview Response:</strong> It is important to understand design patterns because they provide users with a proven solution to a problem.
-    </div>    
+    </div>
   </div>
 </details>
 
@@ -144,7 +169,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   <div>
     <div>
       <strong>Interview Response:</strong> No, design patterns are not an exact solution, but it is essential to remember that the role of a pattern is merely to provide us with a solution scheme. Patterns do not solve all design problems, nor do they replace good software designers; however, they support them.
-    </div>    
+    </div>
   </div>
 </details>
 

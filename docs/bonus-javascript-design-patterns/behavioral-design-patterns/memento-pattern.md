@@ -3,7 +3,32 @@ title: Memento Design Pattern
 description: The memento pattern is a behavioral pattern that allows you to save and restore an object's previous state without revealing its implementation details.
 sidebar_position: 7
 sidebar_label: Memento
+keywords:
+  - memento pattern
+  - memento design pattern
+  - design patterns
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - memento pattern
+  - memento design pattern
+  - design patterns
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Memento Pattern | JavaScript Interview Questions</title>
+</head>
 
 **Structural: Memento Pattern**
 

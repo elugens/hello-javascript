@@ -3,7 +3,32 @@ title: State Design Pattern
 description: State is a behavioral design pattern that lets an object alter its behavior when its internal state changes. It appears as if the object changed its class.
 sidebar_position: 9
 sidebar_label: State
+keywords:
+  - state pattern
+  - state design pattern
+  - design patterns
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - state pattern
+  - state design pattern
+  - design patterns
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>State Pattern | JavaScript Interview Questions</title>
+</head>
 
 **Structural: State Pattern**
 

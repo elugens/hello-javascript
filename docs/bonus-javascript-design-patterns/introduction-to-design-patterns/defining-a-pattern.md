@@ -1,9 +1,34 @@
 ---
 title: Defining a Pattern
-description: Pattern-ity Testing, Proto-Patterns & The Rule Of Three
+description: Pattern-ity Testing, Proto-Patterns & The Rule Of Three - A pattern that has not yet passed "pattern"-ity tests is called a proto-pattern.
 sidebar_position: 3
 sidebar_label: Defining a Pattern
+keywords:
+  - defining a pattern
+  - proto patterns
+  - design patterns
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - defining a pattern
+  - proto patterns
+  - design patterns
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Defining a Pattern in JavaScript | HelloJavaScript.info</title>
+</head>
 
 <!-- check word doc notes and updates -->
 

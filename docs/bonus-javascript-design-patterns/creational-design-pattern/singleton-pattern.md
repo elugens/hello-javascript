@@ -3,7 +3,32 @@ title: Singleton Design Pattern
 description: Singleton is a creational design pattern that lets you ensure that a class has only one instance, while providing a global access point to this instance.
 sidebar_position: 6
 sidebar_label: Singleton
+keywords:
+  - singleton pattern
+  - singleton design pattern
+  - design patterns
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - singleton pattern
+  - singleton design pattern
+  - design patterns
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Singleton Pattern | JavaScript Frontend Interview Questions</title>
+</head>
 
 **Creational: Singleton Pattern**
 

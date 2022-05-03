@@ -3,7 +3,32 @@ title: Iterator Pattern
 description: An iterator is a behavioral design pattern that allows you to traverse elements of a collection without revealing its underlying representation.
 sidebar_position: 5
 sidebar_label: Iterator
+keywords:
+  - iterator pattern
+  - iterator design pattern
+  - design patterns
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - iterator pattern
+  - iterator design pattern
+  - design patterns
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Iterator Pattern | JavaScript Interview Questions</title>
+</head>
 
 **Structural: Iterator Pattern**
 

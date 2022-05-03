@@ -3,7 +3,32 @@ title: Bridge Design Pattern
 description: The bridge pattern is a structural pattern used in web development to decouple an abstraction from its implementation so that the two can vary independently.
 sidebar_position: 1
 sidebar_label: Bridge
+keywords:
+  - bridge pattern
+  - bridge design pattern
+  - design patterns
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - bridge pattern
+  - bridge design pattern
+  - design patterns
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Bridge Pattern | JavaScript Interview Questions</title>
+</head>
 
 **Structural: Bridge Pattern**
 

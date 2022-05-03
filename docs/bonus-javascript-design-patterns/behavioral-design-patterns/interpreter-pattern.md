@@ -3,7 +3,32 @@ title: Interpreter Design Pattern
 description: The interpreter pattern offers a scripting language that allows end users (developers) to customize their solutions.
 sidebar_position: 1
 sidebar_label: Interpreter
+keywords:
+  - interpreter pattern
+  - interpreter design pattern
+  - design patterns
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - interpreter pattern
+  - interpreter design pattern
+  - design patterns
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Interpreter Design Pattern | HelloJavaScript.info</title>
+</head>
 
 **Structural: Interpreter Pattern**
 

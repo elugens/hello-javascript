@@ -4,10 +4,30 @@ description: An anti-pattern is an imperfect solution to a particular problem th
 sidebar_position: 5
 sidebar_label: Anti-Patterns
 keywords:
-  - anti-patterns
-  - anti-pattern
-draft: false
+  - anti patterns
+  - javascript anti patterns
+  - functions
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - anti patterns
+  - javascript anti patterns
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Anti-Patterns in JavaScript | Interview Questions</title>
+</head>
 
 **Anti-Patterns: Understanding Anti-Patterns**
 

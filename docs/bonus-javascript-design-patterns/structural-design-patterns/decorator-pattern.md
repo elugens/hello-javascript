@@ -3,7 +3,32 @@ title: Decorator Design Pattern
 description: The decorator pattern is a JS structural pattern that promotes code reusability. They, like Mixins, can be viewed as a replacement for object sub-classing.
 sidebar_position: 4
 sidebar_label: Decorator
+keywords:
+  - decorator pattern
+  - decorator design pattern
+  - design patterns
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - decorator pattern
+  - decorator design pattern
+  - design patterns
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Decorator Pattern | JavaScript Interview Questions</title>
+</head>
 
 **Structural: Decorator Pattern**
 

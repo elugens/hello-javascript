@@ -3,7 +3,32 @@ title: Composite Design Pattern
 description: The composite is a structural pattern that composes objects into trees and then works with these structures as if they were individual objects.
 sidebar_position: 3
 sidebar_label: Composite
+keywords:
+  - composite pattern
+  - composite design pattern
+  - design patterns
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - composite pattern
+  - composite design pattern
+  - design patterns
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Composite Pattern | JavaScript Interview Questions</title>
+</head>
 
 **Structural: Composite Pattern**
 

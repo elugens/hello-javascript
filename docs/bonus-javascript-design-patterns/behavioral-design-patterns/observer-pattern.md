@@ -3,7 +3,32 @@ title: Observer Design Pattern
 description: The observer pattern allows you to define a subscription mechanism that will notify multiple objects about any events on the object we attempt to observe.
 sidebar_position: 8
 sidebar_label: Observer
+keywords:
+  - observer pattern
+  - observer design pattern
+  - design patterns
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - observer pattern
+  - observer design pattern
+  - design patterns
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Observer Pattern | JavaScript Interview Questions</title>
+</head>
 
 **Structural: Observer Pattern**
 

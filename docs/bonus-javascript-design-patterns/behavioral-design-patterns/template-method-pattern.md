@@ -3,7 +3,32 @@ title: Template Method Pattern
 description: The Template Method pattern recommends breaking down an algorithm into a series of steps and then turning these steps into methods.
 sidebar_position: 2
 sidebar_label: Template Method
+keywords:
+  - template method pattern
+  - template method design pattern
+  - design patterns
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - template method pattern
+  - template method design pattern
+  - design patterns
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Template Method Pattern | JavaScript Interview Questions</title>
+</head>
 
 **Structural: Template Method**
 

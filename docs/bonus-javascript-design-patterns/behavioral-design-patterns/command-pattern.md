@@ -1,9 +1,34 @@
 ---
 title: Command Design Pattern
-description: Command Pattern is a behavioral JS design pattern that aims to encapsulate actions or operations as objects.
+description: Command Pattern is a behavioral JS design pattern that aims to encapsulate actions or operations as objects. JavaScript Frontend Phone Interview Questions
 sidebar_position: 4
 sidebar_label: Command
+keywords:
+  - command pattern
+  - command design pattern
+  - design patterns
+  - javascript
+  - interview
+  - questions
+  - answers
+  - response
+  - technical
+  - function
+  - object
+  - interview questions
+  - interview answers
+  - js
+tags:
+  - command pattern
+  - command design pattern
+  - design patterns
+  - interview answers
+  - interview questions
 ---
+
+<head>
+  <title>Command Design Pattern | JavaScript Interview Questions</title>
+</head>
 
 **Structural: Command Pattern**
 
