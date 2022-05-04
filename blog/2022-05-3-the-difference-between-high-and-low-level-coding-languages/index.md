@@ -10,7 +10,7 @@ keywords: [difference, interpreted, compiled, high, low, level, programming, lan
   <title>The difference between High- and Low-level Coding Languages</title>
 </head>
 
-![img alt](/img/difference-between-high-level-vs-low-level-languages.png)
+![The difference between High- and Low-level Coding Languages](/img/difference-between-high-level-vs-low-level-languages.png)
 
 <!--truncate-->
 
