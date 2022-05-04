@@ -89,7 +89,7 @@ const config = {
             label: 'Get Started',
             className: 'get__started',
           },
-          // { to: '/blog', label: 'Blog', position: 'right' },
+          { to: '/blog', label: 'Blog', position: 'right' },
           // {
           //   href: 'https://patreon.com/hellojavascript',
           //   label: 'Patreon',
