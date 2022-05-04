@@ -64,8 +64,12 @@ const config = {
         textColor: '#000000',
         isCloseable: true,
       },
-      // hideable sidebar true | false
-      hideableSidebar: true,
+      docs: {
+        sidebar: {
+          // hideable sidebar true | false
+          hideable: true,
+        },
+      },
       colorMode: {
         defaultMode: 'light',
         disableSwitch: false,
