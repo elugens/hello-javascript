@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 
+// Notes and Tools
 // Hook JsonLD.js used for structured data.
 const JsonLD = (props) => {
   const type = 'application/ld+json';

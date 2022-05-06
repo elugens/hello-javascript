@@ -27,13 +27,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/ManualsSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Manuals & Specifications | JavaScript Interview Answers</title>
 </head>
 
 **JavaScript Basics: Manuals & Specifications**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

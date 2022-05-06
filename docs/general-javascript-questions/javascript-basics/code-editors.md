@@ -25,13 +25,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/CodeEditorSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Code Editors | JavaScript Frontend Phone Interview Questions</title>
 </head>
 
 **JavaScript Basics: Code Editors**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

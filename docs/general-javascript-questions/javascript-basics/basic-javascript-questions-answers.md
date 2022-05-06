@@ -28,6 +28,8 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/JSBasicsSchemaData.js';
 
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Basic JavaScript Interview Questions and Answers</title>
 </head>
@@ -369,5 +371,3 @@ It should be noted, to maintain efficient speed in the browser, V8 translates Ja
 </details>
 
 ---
-
-<JsonLD data={StructuredData} />
