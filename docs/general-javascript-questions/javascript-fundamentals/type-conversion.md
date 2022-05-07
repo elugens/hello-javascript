@@ -27,13 +27,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/TypeConversionSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Type Conversion | JavaScript Frontend Phone Interview Answers</title>
 </head>
 
 **JavaScript Fundamentals: Type Conversion**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -68,7 +72,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Explicit type conversions built-in methods and objects.</div>
+  <div><strong>Interview Response:</strong> We can implement Explicit type conversions by using built-in methods and objects.</div>
   </div>
 </details>
 
@@ -79,7 +83,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The alert method returns a string value; this is an automatic type conversion.</div>
+  <div><strong>Interview Response:</strong> The alert method returns a string value; this is automatic type conversion.</div>
   </div>
 </details>
 
@@ -127,7 +131,7 @@ alert(typeof value); // string
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We use the Number() object to explicitly convert values to a number.</div><br />
+  <div><strong>Interview Response:</strong> We can use the Number() object to explicitly convert values to a number.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -150,7 +154,7 @@ alert(typeof num); // number
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> If the string is not a valid number, the return value is NaN.</div><br />
+  <div><strong>Interview Response:</strong> If the string is not a valid number, the return value is NaN (Not a Number).</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -196,7 +200,7 @@ alert(result); // returns NaN, conversion failed
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Numeric conversions on Null values returns zero (0).</div><br />
+  <div><strong>Interview Response:</strong> If we attempt a numeric conversion on Null values it returns zero (0).</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -255,7 +259,7 @@ alert(outcome); // returns 0
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Both. Logic operations do this automatically, but you can also do it explicitly.</div>
+  <div><strong>Interview Response:</strong> Both. Logic operations do this automatically, but you can also do it explicitly by using the Boolean() native object.</div>
   </div>
 </details>
 
@@ -331,7 +335,7 @@ console.log(stringZero); // returns true
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> String, number, and Boolean conversions.</div>
+  <div><strong>Interview Response:</strong> String, number, and Boolean conversions are the most widely used type conversions in JavaScript.</div>
   </div>
 </details>
 

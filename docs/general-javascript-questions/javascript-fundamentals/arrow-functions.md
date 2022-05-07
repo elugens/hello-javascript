@@ -25,13 +25,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/ArrowFuncSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Arrow Functions | JavaScript Frontend Phone Interview Answer</title>
 </head>
 
 **JavaScript Fundamentals: Arrow Functions**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

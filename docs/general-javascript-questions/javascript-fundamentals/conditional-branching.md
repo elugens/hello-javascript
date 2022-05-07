@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/CondBranchingSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Conditional Branching | JavaScript Frontend Phone Interview</title>
 </head>
 
 **JavaScript Fundamentals: Conditional Branching**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -126,7 +130,7 @@ if (year == 2015) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To test several conditions in an if statement, you must add an “else if” statement. There can be more than one else if block and the final else is optional. </div><br />
+  <div><strong>Interview Response:</strong> To test several conditions in an if statement, you must add an “else if” statement. There can be more than one else if block and the final else is optional.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>

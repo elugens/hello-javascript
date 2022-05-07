@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/SwitchSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>The Switch Statement | JavaScript Frontend Phone Interview</title>
 </head>
 
 **JavaScript Fundamentals: The "Switch" Statement**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

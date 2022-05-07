@@ -25,13 +25,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/ComparisonsSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Comparisons Operators | JavaScript Frontend Phone Interview</title>
 </head>
 
 **JavaScript Fundamentals: Comparison Operators**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

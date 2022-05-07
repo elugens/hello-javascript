@@ -27,13 +27,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/WhileForSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>While & For Loops | Frontend Phone Interview Questions</title>
 </head>
 
 **JavaScript Fundamentals: While & For Loops (??)**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -42,7 +46,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Loops are a way to repeat the same code multiple times.</div>
+  <div><strong>Interview Response:</strong> Loops are a way to repeat or iterate over the same code multiple times.</div>
   </div>
 </details>
 
@@ -80,7 +84,7 @@ while (i < 3) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A single execution of the loop body is called an iteration.</div><br />
+  <div><strong>Interview Response:</strong> A single execution of the loop body is called an iteration in software engineering.</div><br />
   <div><strong className="codeExample">Code Example:</strong> Below, we see three iterations in the while loop body.<br /><br />
 
   <div></div>

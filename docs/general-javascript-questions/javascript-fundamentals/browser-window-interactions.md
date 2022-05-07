@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/BrowserWindowSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Browser Window Interaction | JavaScript Frontend Interview</title>
 </head>
 
 **JavaScript Fundamentals: Interaction: alert, prompt, confirm**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -41,7 +45,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Modal Window</div>
+  <div><strong>Interview Response:</strong> Web developers refer to this type of window as a Modal Window.</div>
   </div>
 </details>
 
@@ -111,7 +115,7 @@ result = prompt(title, [default]);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> It returns a null value.</div>
+  <div><strong>Interview Response:</strong> It returns a null value when it's escaped or canceled.</div>
   </div>
 </details>
 
@@ -136,7 +140,7 @@ result = prompt(title, [default]);
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Confirm produces a window with a Boolean question of OK and Cancel. Ok returns true, and Cancel returns false.</div><br />
-  <div><strong>Technical Response:</strong> The function confirm shows a modal window with a question and two buttons: OK and Cancel. The result is true if OK is pressed and false otherwise.
+  <div><strong>Technical Response:</strong> The confirm function shows a modal window with a question and two buttons: OK and Cancel. The result is true if OK is pressed and false otherwise.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

@@ -26,17 +26,21 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/CodeStructureSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Code Structure | JavaScript Frontend Phone Interview Answers</title>
 </head>
 
 **JavaScript Fundamentals: Code Structure**
 
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
-
 <CloseAllAnswers />
 
-### Define what a statement is in JavaScript code structure?
+### Can you define what a statement is in JavaScript code structure?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

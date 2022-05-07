@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/FunctionsSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Functions | JavaScript Frontend Phone Interview Questions</title>
 </head>
 
 **JavaScript Fundamentals: JavaScript Functions**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -268,7 +272,7 @@ alert(userName); // Bob, the value was modified by the function
 
 ---
 
-### Explain how you use parameters in functions?
+### Can you explain how you use parameters in functions?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

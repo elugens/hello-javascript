@@ -23,13 +23,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/VariablesSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Variables | JavaScript Frontend Phone Interview Questions</title>
 </head>
 
 **JavaScript Fundamentals: JavaScript Variables**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -412,7 +416,7 @@ alert(color); // #FF7F00
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A variable name should have a clean, obvious meaning, describing the data it stores, like currentUser or newUser. Unlike functions, a variable name should always be camelCase and begin with a noun</div><br />
+  <div><strong>Interview Response:</strong> A variable name should have a clean, obvious meaning, describing the data it stores, like currentUser or newUser. Unlike functions, a variable name should always be camelCase and begin with a noun.</div><br />
   <div><strong>Technical Response:</strong><br /><br />
   Some good-to-follow rules are: <br /><br />
     <ol>

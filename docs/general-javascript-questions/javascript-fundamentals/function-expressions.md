@@ -25,13 +25,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/FuncExpressionSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Function Expressions | JavaScript Frontend Phone Interview</title>
 </head>
 
 **JavaScript Fundamentals: Function Expressions**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

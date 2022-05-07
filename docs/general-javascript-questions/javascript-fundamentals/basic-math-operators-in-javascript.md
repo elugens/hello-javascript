@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/BasicMathOpSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Basic Math Operators in JavaScript | JS Interview Questions</title>
 </head>
 
 **JavaScript Fundamentals: Basic Operators, Math**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -93,7 +97,7 @@ alert(y - x); // 2, binary minus subtracts values
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The basic mathematical operations include addition, subtraction, multiplication, division, remainder or modulo, and exponentiation.</div><br />
-  <div><strong>Technical Response:</strong> : The basic mathematical operations allowed in JavaScript include Addition +, Subtraction -, Multiplication *, Division /, Remainder or Modulo %, and Exponentiation **.
+  <div><strong>Technical Response:</strong> The basic mathematical operations allowed in JavaScript include Addition +, Subtraction -, Multiplication *, Division /, Remainder or Modulo %, and Exponentiation **.
   </div>
   </div>
 </details>

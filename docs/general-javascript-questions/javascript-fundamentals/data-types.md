@@ -27,13 +27,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/DataTypesSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Data Types | JavaScript Frontend Phone Interview Questions</title>
 </head>
 
 **JavaScript Fundamentals: JavaScript Data Types**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

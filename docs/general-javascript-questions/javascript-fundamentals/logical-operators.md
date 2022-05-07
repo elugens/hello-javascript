@@ -25,13 +25,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/LogicalOpSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Logical Operators | JavaScript Frontend Interview Answers</title>
 </head>
 
 **JavaScript Fundamentals: Logical Operators**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

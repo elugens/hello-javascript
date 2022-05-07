@@ -24,13 +24,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/StrictModeSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Strict Mode | JavaScript Frontend Phone Interview Questions</title>
 </head>
 
 **JavaScript Fundamentals: Strict Mode**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -41,7 +45,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> 2009</div>
+  <div><strong>Interview Response:</strong> ECMAScript 5 (ES5) was released for use in 2009.</div>
   </div>
 </details>
 

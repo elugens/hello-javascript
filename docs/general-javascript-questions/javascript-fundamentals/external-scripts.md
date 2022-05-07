@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/ExternalScriptsSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>External Scripts | JS Frontend Phone Interview Questions</title>
 </head>
 
 **JavaScript Fundamentals: EXTERNAL SCRIPTS**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

@@ -27,19 +27,23 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/ModernMarkupSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Modern Markup | JavaScript Frontend Phone Interview Answers</title>
 </head>
 
 **JavaScript Fundamentals: Modern Markup**
 
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
-
 <CloseAllAnswers />
 
 ---
 
-### Can you explain the script type attribute used in Modern JavaScript development
+### Can you explain the script type attribute used in Modern JavaScript development?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

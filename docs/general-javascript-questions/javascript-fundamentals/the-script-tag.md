@@ -25,13 +25,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/TheScriptTagSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>The Script Tag | JavaScript Frontend Phone Interview Answers</title>
 </head>
 
 **JavaScript Fundamentals: The "script" Tag**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

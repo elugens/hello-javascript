@@ -5,9 +5,13 @@ sidebar_position: 20
 sidebar_label: JavaScript Specials
 ---
 
-**JavaScript Fundamentals: JavaScript Specials**
-
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/JavaScriptSpecialsSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
+**JavaScript Fundamentals: JavaScript Specials**
 
 <CloseAllAnswers />
 
@@ -40,7 +44,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> To enforce strict mode, we must use the “use strict;” directive placed at the top of our code or function body.</div><br />
-  <div><strong>Technical Response:</strong> In JavaScript, it gets enforced using the directive “use strict;”. The directive must appear at the beginning of a script or at the start of a function body. Everything still works without "use strict", but some features behave in the old fashion, “compatible” way. We would generally prefer modern behavior.<br /><br />
+  <div><strong>Technical Response:</strong> In JavaScript, To enforce strict mode, we must use the “use strict;” directive placed at the top of our code or function body. The directive must appear at the beginning of a script or at the start of a function body. Everything still works without "use strict", but some features behave in the old fashion, “compatible” way. We would generally prefer modern behavior.<br /><br />
 
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
