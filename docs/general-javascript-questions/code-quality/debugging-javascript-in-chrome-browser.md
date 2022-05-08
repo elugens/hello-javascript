@@ -27,13 +27,17 @@ tags:
 lastmod: 2022-05-01T20:36:00.869Z
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/DebuggingSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Debugging in Chrome | JavaScript Frontend Phone Interview</title>
 </head>
 
 **Code Quality: Debugging in Chrome**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -50,12 +54,12 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### How do you turn on developer tools in Chrome?
+### How do you turn on/open developer tools in Chrome?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> You can turn on your chrome developer tools by pressing F12 or for Mac: (Cmd+Opt+I).
+  <div><strong>Interview Response:</strong> You can turn on/open your chrome developer tools by pressing F12 or for Mac: (Cmd+Opt+I).
 </div>
   </div>
 </details>

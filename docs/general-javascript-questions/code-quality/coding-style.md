@@ -28,13 +28,17 @@ tags:
 lastmod: 2022-05-01T18:11:50.564Z
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/CodingStyleSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Code Styling | JavaScript Frontend Phone Interview Responses</title>
 </head>
 
 **Code Quality: Coding Style**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

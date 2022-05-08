@@ -27,13 +27,17 @@ tags:
 lastmod: 2022-05-01T20:43:26.657Z
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/NinjaCodeSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>JavaScript Coding Ninja | JavaScript Frontend Phone Interview</title>
 </head>
 
 **Code Quality: Ninja Code**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -42,7 +46,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, they can confuse a team environment and make it harder to debug your code.
+  <div><strong>Interview Response:</strong> No, they can confuse developers in a team environment and make it harder to debug your code.
 </div>
   </div>
 </details>
@@ -54,7 +58,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, they can confuse a team environment and make it harder to debug your code.
+  <div><strong>Interview Response:</strong> No, they can confuse a team coders environment and make it harder to debug your code.
 </div>
   </div>
 </details>

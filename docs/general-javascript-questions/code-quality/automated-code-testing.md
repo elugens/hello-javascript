@@ -27,13 +27,17 @@ tags:
 lastmod: 2022-05-01T18:05:22.130Z
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/AutomatedTestSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Automated Testing in JavaScript | Frontend Interview</title>
 </head>
 
 **Code Quality: Automated Testing**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -45,8 +49,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The three main components of
-      behavior-driven development include testing, documentation, and clear
+      <strong>Interview Response:</strong> The three main components of behavior-driven development include testing, documentation, and clear
       examples.
     </div>
   </div>

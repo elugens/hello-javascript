@@ -30,13 +30,17 @@ tags:
 lastmod: 2022-05-01T18:23:05.202Z
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/CommentsSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Comments in JavaScript | JavaScript Frontend Phone Interview</title>
 </head>
 
 **Code Quality: Comments**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
