@@ -28,13 +28,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/GCSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Garbage Collection | JavaScript Phone Interview Questions</title>
 </head>
 
 **Objects the Basics: Garbage Collection**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

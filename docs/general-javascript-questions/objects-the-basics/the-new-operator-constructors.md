@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/TheNewOpSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>The new Operator | JavaScript Frontend Interview Questions</title>
 </head>
 
 **Objects the Basics: The "new" Operator**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

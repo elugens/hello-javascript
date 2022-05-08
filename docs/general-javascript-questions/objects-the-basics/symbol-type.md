@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/SymbolSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Symbol Type | JavaScript Frontend Phone Interview Questions</title>
 </head>
 
 **Objects the Basics: Symbol Type**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -217,7 +221,7 @@ alert(user[id]);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Symbols allow us to create secured properties of an object so that no other part of code is accidentally accessed or overwritten. If a user object, for example, belongs to another codebase, and that code also works with the same user properties, we shouldn’t just add any fields to it, and that’s unsafe. If we use a Symbol(), the external library cannot accidentally access its property. In fact, the third-party library probably won’t even see it, so it’s probably all right to do. The benefit is a cloak created by Symbol to reduce object property conflicts.
+  <div><strong>Interview Response:</strong> Symbols allow us to create secured properties of an object so that no other part of code can accidentally accessed or overwritten. If a user object, for example, belongs to another codebase, and that code also works with the same user properties, we shouldn’t just add any fields to it, and that’s unsafe. If we use a Symbol(), the external library cannot accidentally access its property. In fact, the third-party library probably won’t even see it, so it’s probably all right to do. The benefit is a cloak created by Symbol to reduce object property conflicts.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

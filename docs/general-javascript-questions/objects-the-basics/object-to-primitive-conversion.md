@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/ObjectPrimSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Object to Primitive Conversion | JavaScript Interview Questions</title>
 </head>
 
 **Objects the Basics: Object to Primitive Conversion**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -56,7 +60,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> String, number, and default conversions.</div><br />
-  <div><strong>Technical Response:</strong> The three variants of type conversion include string, number, and default conversions. String conversion can happen explicitly when an object expects a string, and mathematical operations use explicit number conversion on primitives. In rare circumstances where the operator is unclear what type to anticipate, the default gets used.<br /><br />
+  <div><strong>Technical Response:</strong> The three variants of type conversion include string, number, and default conversions. String conversion can happen explicitly when an object expects a string, and mathematical operations use explicit number conversion on primitives. In rare circumstances where the operator is unclear about what type to anticipate, the default gets used.<br /><br />
   </div>
   </div>
 </details>

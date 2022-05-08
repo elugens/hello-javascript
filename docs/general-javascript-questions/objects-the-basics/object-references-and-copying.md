@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/ObjectRefSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Object References and Copying | JavaScript Frontend Phone Interview</title>
 </head>
 
 **Objects the Basics: References/Copying**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

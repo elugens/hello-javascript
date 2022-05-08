@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/ObjectsSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>JavaScript Objects | JavaScript Frontend Phone Interview</title>
 </head>
 
 **Objects the Basics: JavaScript Objects**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -123,7 +127,7 @@ In JavaScript, objects penetrate almost every aspect of the language.
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> You can use an object constructor or an object literal.</div><br />
-  <div><strong>Technical Response:</strong> An empty object ("empty cabinet") can get created using one of two syntaxes. You can use an object constructor or an object literal. The Object constructor gets called with the new keyword, and we should not confuse this with native Objects that should get called without the new keyword.<br />
+  <div><strong>Technical Response:</strong> We can create an empty object ("empty cabinet") using one of two syntaxes. You can use an object constructor or an object literal. The Object constructor gets called with the new keyword, and we should not confuse this with native Objects that should get called without the new keyword.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
