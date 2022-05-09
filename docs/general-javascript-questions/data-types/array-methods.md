@@ -27,17 +27,21 @@ tags:
 lastmod: 2022-05-01T20:48:00.922Z
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/ArrayMethodsSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>JavaScript Array Methods | Frontend Phone Interview Response</title>
 </head>
 
 **Data Types: Array Methods**
 
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
-
 <CloseAllAnswers />
 
-### Explain the function and syntax of the array splice() method?
+### Can you explain the function and syntax of the array splice() method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -104,7 +108,7 @@ alert(arr); // 1,2,3,4,5
 
 ---
 
-### Explain the function and syntax of the array slice() method?
+### Please explain the function and syntax of the array slice() method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -132,7 +136,7 @@ console.log(arr.slice(-2)); // s,t (copy from -2 till the end)
 
 ---
 
-### Explain the fundamental difference between the array splice and slice methods?
+### Can you explain the fundamental difference between the array splice and slice methods?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -169,7 +173,7 @@ console.log(arr2); // 1,2,3,4,5 – modified the original array
 
 ---
 
-### Explain the function and syntax of the array concat method?
+### Can you please explain the function and syntax of the array concat method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -296,7 +300,7 @@ Additionally, break and continue statements are not valid statements, resulting 
 
 ---
 
-### Explain the function and syntax of the array indexOf() method
+### Please explain the function and syntax of the array indexOf() method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -324,7 +328,7 @@ alert(arr.indexOf(null)); // -1
 
 ---
 
-### Explain, the function and syntax of the array lastIndexOf() method?
+### Can you explain the function and syntax of the array lastIndexOf() method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -355,7 +359,7 @@ console.log(numbers.lastIndexOf(2, -1)); // 3
 
 ---
 
-### Explain the function and syntax of the array includes() method?
+### Please explain the function and syntax of the array includes() method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -422,7 +426,7 @@ if (array2.indexOf(NaN) == -1) {
 
 ---
 
-### Explain the function and syntax of the array find() method?
+### Can you explain the function and syntax of the array find() method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -469,7 +473,7 @@ You should remember that index 0 gets interpreted as a falsie value in condition
 
 ---
 
-### Explain the function and syntax of the array findIndex() method?
+### Can you explain the function and syntax of the array findIndex() method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -550,7 +554,7 @@ let filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
 
 ---
 
-### Explain the function and syntax of the array sort(fn) method
+### Can you explain the function and syntax of the array sort(fn) method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -593,7 +597,7 @@ alert(arr); // 1, 2, 15
 
 ---
 
-### Explain the function and syntax of the array map() method?
+### Can you please explain the function and syntax of the array map() method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -678,7 +682,7 @@ We should note that you cannot use the reverse method to reverse a string. It st
 
 ---
 
-### Explain the function and syntax of the array split method?
+### Can you explain the function and syntax of the array split method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -743,7 +747,7 @@ arr.join(''); // 'WindWaterFire'
 
 ---
 
-### Explain the function and syntax of the array reduce() method?
+### Can you explain the function and syntax of the array reduce() method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -834,7 +838,7 @@ The reduceRight method does not execute the function for array elements without 
 
 ---
 
-### Explain the function and syntax of the array isArray() method?
+### Please explain the function and syntax of the array isArray() method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -883,7 +887,7 @@ Array.isArray({ __proto__: Array.prototype });
 
 ---
 
-### Explain what typed arrays are in JavaScript and their primary use?
+### Can you explain what typed arrays are in JavaScript and their primary use?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

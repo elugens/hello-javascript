@@ -28,13 +28,17 @@ tags:
 lastmod: 2022-05-01T21:12:11.306Z
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/DestructuringSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Destructuring Assignment | JavaScript Frontend Phone Interview</title>
 </head>
 
 **Data Types: Destructuring Assignment**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -178,7 +182,7 @@ for (let [key, value] of user) {
 
 ---
 
-### Explain the swapping of variables using destructuring in JavaScript?
+### Can you explain the swapping of variables using destructuring in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

@@ -28,13 +28,17 @@ tags:
 lastmod: 2022-05-01T22:17:16.765Z
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/WeakMapSetSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>WeakMap and WeakSet | JavaScript Frontend Phone Interview</title>
 </head>
 
 **Data Types: WeakMap / WeakSet**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

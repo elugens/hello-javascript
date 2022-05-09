@@ -27,13 +27,17 @@ tags:
 lastmod: 2022-05-01T21:44:10.727Z
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/MethodsOfSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Methods of Primitives | JavaScript Frontend Phone Interview</title>
 </head>
 
 **Data Types: Methods of Primitives**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

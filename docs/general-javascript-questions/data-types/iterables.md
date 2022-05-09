@@ -27,13 +27,17 @@ tags:
 lastmod: 2022-05-01T21:33:31.779Z
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/IterablesSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Iterables | JavaScript Frontend Phone Interview Responses</title>
 </head>
 
 **Data Types: Iterable Types**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

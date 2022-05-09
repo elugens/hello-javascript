@@ -28,13 +28,17 @@ tags:
 lastmod: 2022-05-01T21:25:38.596Z
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/JSONMethodsSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>JSON Methods | JavaScript Frontend Phone Interview Answers</title>
 </head>
 
 **Data Types: JSON Methods**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -252,7 +256,7 @@ alert(JSON.stringify(user, null, 2)); // value: user, replacer: null, space: 2
 
 ---
 
-### What is the extension of the JSON file?
+### What is the extension that we use for JSON files?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -291,7 +295,7 @@ alert(JSON.stringify(user, null, 2)); // value: user, replacer: null, space: 2
 
 ---
 
-### Explain, the function and syntax of the JSON.parse() method in JavaScript?
+### Can you explain the function and syntax of the JSON.parse() method in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

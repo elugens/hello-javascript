@@ -28,13 +28,17 @@ tags:
 lastmod: 2022-05-01T22:21:11.156Z
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/DateTimeSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Date and Time | JavaScript Frontend Phone Interview Answers</title>
 </head>
 
 **Data Types: Date and Time**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -177,7 +181,7 @@ console.log(year); // returns 2021
 
 ---
 
-### Explain the function and syntax of the date object getMonth() method?
+### Can you explain the function and syntax of the date object getMonth() method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -204,7 +208,7 @@ console.log(month); // 11
 
 ---
 
-### Explain the function and syntax of the date object getDate() method?
+### Can you please explain the function and syntax of the date object getDate() method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -230,7 +234,7 @@ console.log(day); // 25
 
 ---
 
-### Explain the function and syntax of the date object getDay() method?
+### Can you explain the function and syntax of the date object getDay() method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -367,7 +371,7 @@ The critical side effect: JavaScript can subtract date numbers; the result is th
 
 ---
 
-### Explain the function and syntax of the Date.now() method in JavaScript?
+### Can you explain the function and syntax of the Date.now() method in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -400,7 +404,7 @@ alert(`The loop took ${end - start} ms`); // subtract numbers, not dates
 
 ---
 
-### Explain the function and syntax of the Date.parse() method in JavaScript?
+### Can you please explain the function and syntax of the Date.parse() method in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

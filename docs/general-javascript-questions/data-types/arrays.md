@@ -28,6 +28,12 @@ tags:
 lastmod: 2022-05-01T21:02:03.566Z
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/ArraysSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>JavaScript Arrays | Frontend Developer Phone Interview</title>
 </head>
@@ -35,8 +41,6 @@ lastmod: 2022-05-01T21:02:03.566Z
 <!-- Developer Line Notes: If you try to access this note your brain will explode. Boom!!! -->
 
 **Data Types: Arrays**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -196,7 +200,7 @@ let fruits = [
 
 ---
 
-### Explain the function and syntax of the array pop() method?
+### Can you explain the function and syntax of the array pop() method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -276,7 +280,7 @@ console.log(total); // 4
 
 ---
 
-### Explain the function and syntax of the array shift() method?
+### Can you explain the function and syntax of the array shift() method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -304,7 +308,7 @@ alert(fruits); // Orange, Pear
 
 ---
 
-### Explain the function and syntax of the array unshift() method?
+### Can you explain the function and syntax of the array unshift() method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

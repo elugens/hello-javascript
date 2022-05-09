@@ -28,13 +28,17 @@ tags:
 lastmod: 2022-05-01T21:31:29.703Z
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/MapSetSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Map and Set | JavaScript Frontend Phone Interview Answers</title>
 </head>
 
 **Data Types: Map and Set**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

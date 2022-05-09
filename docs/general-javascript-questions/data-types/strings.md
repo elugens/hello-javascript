@@ -27,13 +27,17 @@ tags:
 lastmod: 2022-05-01T22:11:22.883Z
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/StringsSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Strings | JavaScript Frontend Phone Interview Questions</title>
 </head>
 
 **Data Types: Strings**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -169,7 +173,7 @@ alert(str1 == str2); // true
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> All special characters start with a backslash character known as the escape character.</div><br />
-  <div><strong>Technical Response:</strong> Every special character begins with a backslash (\) character. It is also known as an "escape character." We could also use it to insert a quotation inside the string.<br />
+  <div><strong>Technical Response:</strong> Every special character begins with a backslash (\) character. It is also known as an "escape character. We could also use it to insert a quotation inside the string.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

@@ -20,6 +20,7 @@ Completed on: Mon Apr 9 2022
 - JavaScript Basics
 - JavaScript Fundamentals
 - Code Quality
+- Data Types
 
 ### Add Links to Schema Section
 

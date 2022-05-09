@@ -29,13 +29,17 @@ tags:
 lastmod: 2022-05-01T22:05:27.079Z
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/ObjectKeysValueSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Object Keys / Values / Entries | Frontend Phone Interview</title>
 </head>
 
 **Data Types: Object.keys, values, entries**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -71,7 +75,7 @@ alert(doublePrices.meat); // 8
 
 ---
 
-### Explain the function and syntax of the Object.keys method?
+### Can you explain the function and syntax of the Object.keys method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -173,7 +177,7 @@ console.log(Object.values('foo')); // ['f', 'o', 'o']
 
 ---
 
-### Explain the function and syntax of the Object.entries method?
+### Can you please Explain the function and syntax of the Object.entries method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -209,7 +213,7 @@ for (const [key, value] of Object.entries(object1)) {
 
 ---
 
-### Explain, the difference between map.keys() and Object.keys(obj) in JavaScript?
+### What is the difference between map.keys() and Object.keys(obj) in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

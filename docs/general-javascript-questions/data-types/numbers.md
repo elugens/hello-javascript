@@ -28,13 +28,17 @@ tags:
 lastmod: 2022-05-01T21:51:22.982Z
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/NumbersSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Number Data Type | JavaScript Frontend Phone Interview</title>
 </head>
 
 **Data Types: Numbers**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -166,7 +170,7 @@ console.log(-1e9); // -1e9 is - 1000000000.0; minus sign applies to the number i
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Hexadecimal numbers commonly get used. We can also use binary and octal, but they get used less often.</div><br />
+  <div><strong>Interview Response:</strong> We commonly use Hexadecimal numbers. We can also use binary and octal, but they get used less often.</div><br />
   <div><strong>Technical Response:</strong> Hexadecimal numbers are the most used number to represent colors, encode characters, and more. Furthermore, hexadecimal, binary, and octal numeral systems are employed, albeit less frequently than hexadecimal numbers. For other numeral systems, we should use the function parseInt, which parses a string argument and returns an integer of the specified radix.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
