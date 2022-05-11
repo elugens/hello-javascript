@@ -30,13 +30,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/PropFlagSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Property Flags / Descriptors | JavaScript Interview Answers</title>
 </head>
 
 **Object Properties Configuration: Property Flags / Descriptors**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -341,7 +345,7 @@ You should note that the attributes of a non-extensible object can still be eras
 
 ---
 
-### Explain the function and syntax of the Object.seal(obj) method in JavaScript?
+### Can you explain the function and syntax of the Object.seal(obj) method in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -379,7 +383,7 @@ Attempting to delete or add properties to a sealed object, convert a data proper
 
 ---
 
-### Explain the function and syntax of the Object.freeze(obj) method in JavaScript?
+### Can you explain the function and syntax of the Object.freeze(obj) method in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -424,7 +428,7 @@ console.log(obj.prop);
 
 ---
 
-### Explain the function and syntax of the Object.isExtensible() method in JavaScript?
+### Can you explain the function and syntax of the Object.isExtensible() method in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -455,7 +459,7 @@ console.log(Object.isExtensible(object1));
 
 ---
 
-### Explain the function and syntax of the Object.isSealed() method in JavaScript?
+### Can you explain the function and syntax of the Object.isSealed() method in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -488,7 +492,7 @@ console.log(Object.isSealed(object1));
 
 ---
 
-### Explain the function and syntax of the Object.isFrozen() method in JavaScript?
+### Can you explain the function and syntax of the Object.isFrozen() method in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

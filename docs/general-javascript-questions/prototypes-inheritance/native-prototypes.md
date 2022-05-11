@@ -25,13 +25,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/NativeSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Function Object NFE | JavaScript Frontend Phone Interview</title>
 </head>
 
 **Prototypes / Inheritance: Native Prototypes**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

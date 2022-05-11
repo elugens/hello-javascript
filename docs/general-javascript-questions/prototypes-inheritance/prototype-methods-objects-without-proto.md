@@ -25,13 +25,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/PropMethodsSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Prototype Methods | JavaScript Frontend Phone Interview</title>
 </head>
 
 **Prototypes / Inheritance: Prototype Methods**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -71,7 +75,7 @@ console.log(Object.getPrototypeOf(rabbit) === animal); // false
 
 ---
 
-### Explain the function and syntax of the Object.create(obj) method in JavaScript?
+### Can you explain the function and syntax of the Object.create(obj) method in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

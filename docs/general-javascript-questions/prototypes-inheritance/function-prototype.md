@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/FuncProtoSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Function Prototype | JavaScript Frontend Phone Interview</title>
 </head>
 
 **Prototypes / Inheritance: Function Prototype**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

@@ -28,19 +28,23 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/PropGetterSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Property Getters & Setters | Frontend Phone Interview Answer</title>
 </head>
 
 **Object Properties Configuration: Property Getters & Setters**
 
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
-
 <CloseAllAnswers />
 
 ---
 
-### Explain what getters and setters are as it pertains to JavaScript?
+### Can you explain what getters and setters are as it pertains to JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -115,7 +119,7 @@ document.getElementById('demo').innerHTML = person.fullName;
 
 ---
 
-### Is the difference between an accessor property and a data property in JavaScript?
+### Is there a difference between an accessor property and a data property in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
