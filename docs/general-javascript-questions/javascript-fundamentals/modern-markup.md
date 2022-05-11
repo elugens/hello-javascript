@@ -27,6 +27,8 @@ tags:
   - interview questions
 ---
 
+<!-- Notes: Passed Rich Snippets validation. -->
+
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/ModernMarkupSchemaData.js';

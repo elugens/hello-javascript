@@ -23,13 +23,17 @@ tags:
 lastmod: 2022-05-01T17:33:46.661Z
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/RestParamSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Rest Parameters and Spread Syntax | JS Frontend Interview</title>
 </head>
 
-**Advanced Functions: Rest Parameters / Spread Syntax**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+**Advanced Functions: Rest Parameters /
 
 <CloseAllAnswers />
 
@@ -69,7 +73,7 @@ If you call a function and send several arguments, you receive them into the res
 
 ---
 
-### Explain, How the rest parameter works in functions?
+### How does the rest parameter works in functions?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

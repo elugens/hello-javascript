@@ -24,17 +24,19 @@ tags:
   - functions
   - interview answers
   - interview questions
-date: 2022-05-01T16:51:46.299Z
-lastmod: 2022-05-01T17:10:51.266Z
 ---
+
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/GlobalSchemaData.js';
+
+<JsonLD data={StructuredData} />
 
 <head>
   <title>Function Object | Frontend Phone Interview - JavaScript</title>
 </head>
 
 **Advanced Functions: Function object / NFE**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -50,7 +52,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Explain why are functions Objects in JavaScript?
+### Can you explain why are functions Objects in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -179,7 +181,7 @@ alert(many.length); // 2, rest parameter not counted
 
 ---
 
-### Explain what a named function expression is in JavaScript (NFE)?
+### Can you explain what a named function expression is in JavaScript (NFE)?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

@@ -21,6 +21,7 @@ Completed on: Mon Apr 9 2022
 - JavaScript Fundamentals
 - Code Quality
 - Data Types
+- Advanced - JS Functions
 
 ### Add Links to Schema Section
 

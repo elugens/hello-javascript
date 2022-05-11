@@ -13,17 +13,19 @@ tags:
   - arrow function
   - interview answers
   - interview questions
-date: 2022-05-01T16:37:39.768Z
-lastmod: 2022-05-01T16:38:41.155Z
 ---
+
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/AdvanceArrowSchemaData.js';
+
+<JsonLD data={StructuredData} />
 
 <head>
   <title>Arrow Functions Frontend Interview Questions & Answers - JS</title>
 </head>
 
 **Advanced-JS Functions: Arrow Functions**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

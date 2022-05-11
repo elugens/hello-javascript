@@ -26,13 +26,17 @@ tags:
 lastmod: 2022-05-01T17:44:13.207Z
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/TheVarSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>The Var Declaration | JavaScript Frontend Phone Interview</title>
 </head>
 
 **Advanced Functions: Var Declaration**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -183,7 +187,7 @@ If we try to do this with the let declaration, it results in an error because Ja
 
 ---
 
-### Explain what hoisting is in JavaScript?
+### Can you explain what hoisting is in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

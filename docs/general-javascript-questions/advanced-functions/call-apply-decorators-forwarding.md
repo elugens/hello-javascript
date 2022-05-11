@@ -21,17 +21,19 @@ tags:
   - arrow function
   - interview answers
   - interview questions
-date: 2022-05-01T16:37:39.768Z
-lastmod: 2022-05-01T16:48:24.708Z
 ---
+
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/CallApplySchemaData.js';
+
+<JsonLD data={StructuredData} />
 
 <head>
   <title>Decorators and forwarding Frontend Interview Answers - JS</title>
 </head>
 
 **Advanced-JS Functions: Call and Apply**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -75,7 +77,7 @@ pokemonName.apply(pokemon, ['sushi', 'algorithms']);
 
 ---
 
-### Explain how does transparent caching works in JavaScript?
+### Can you explain how transparent caching works in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -124,7 +126,7 @@ alert('Again: ' + slow(2)); // slow(2) result returned from cache
 
 ---
 
-### Explain what a decorator function/method is in JavaScript?
+### Can you explain what a decorator function/method is in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -207,7 +209,7 @@ console.log(eric.getFullName()); // method call returns Full Name: Eric Wilson
 
 ---
 
-### Explain the function and syntax of the function apply() method?
+### Can you explain the function and syntax of the function apply() method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

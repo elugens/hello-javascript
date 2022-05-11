@@ -27,13 +27,17 @@ tags:
 lastmod: 2022-05-01T17:59:40.385Z
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/VariableScopeSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Variable Scope / Closures | JavaScript Frontend Phone Interview</title>
 </head>
 
 **Advanced Functions: Variable Scope / Closures**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -165,7 +169,7 @@ Nested functions are pretty standard in JavaScript because of their dynamic abil
 
 ---
 
-### Explain what the Lexical Environment is in JavaScript?
+### Can you explain what is the Lexical Environment is in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -185,7 +189,7 @@ The Environment Record is an object that stores all local variables as its prope
 
 ---
 
-### Explain, How a variable works in the context of a JavaScript engine?
+### Can you explain how a variable works in the context of a JavaScript engine?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

@@ -29,16 +29,19 @@ tags:
   - timing
   - interview answers
   - interview questions
-lastmod: 2022-05-01T17:41:03.981Z
 ---
+
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/SchedulingSchemaData.js';
+
+<JsonLD data={StructuredData} />
 
 <head>
   <title>Scheduling / Timing | JavaScript Frontend Phone Interview</title>
 </head>
 
 **Advanced Functions: Scheduling: setTimeout / setInterval**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -55,7 +58,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Explain the function and syntax of the setTimeout() method?
+### Can you explain the function and syntax of the setTimeout() method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -99,7 +102,7 @@ We can use the clearTimeout method to clear setTimeout in our code.
 
 ---
 
-### Explain the function and syntax of the clearTimeout() method?
+### Can you explain the function and syntax of the clearTimeout() method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -128,7 +131,7 @@ It's worth noting that the pool of IDs used by setTimeout() and setInterval() ar
 
 ---
 
-### Explain the function and syntax of the setInterval() method?
+### Can you explain the function and syntax of the setInterval() method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

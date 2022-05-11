@@ -22,9 +22,13 @@ tags:
   - javascript globals
   - interview answers
   - interview questions
-date: 2022-05-01T16:51:46.299Z
-lastmod: 2022-05-01T17:19:06.674Z
 ---
+
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/GlobalSchemaData.js';
+
+<JsonLD data={StructuredData} />
 
 <head>
   <title>The Global Object | JavaScript Frontend Phone Interview - QA</title>
@@ -32,11 +36,9 @@ lastmod: 2022-05-01T17:19:06.674Z
 
 **Advanced Functions: Global Object**
 
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
-
 <CloseAllAnswers />
 
-### Explain what the global object is in JavaScript?
+### Can you explain what the global object is in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

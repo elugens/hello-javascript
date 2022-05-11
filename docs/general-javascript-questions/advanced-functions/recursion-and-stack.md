@@ -27,13 +27,17 @@ tags:
 lastmod: 2022-05-01T17:29:02.955Z
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/RecursionSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Recursion & Stack | JS Frontend Phone Interview Responses</title>
 </head>
 
 **Advanced Functions: Recursion & Stack**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

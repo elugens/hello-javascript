@@ -23,9 +23,13 @@ tags:
   - new function
   - interview answers
   - interview questions
-date: 2022-05-01T16:51:46.299Z
-lastmod: 2022-05-01T17:23:45.164Z
 ---
+
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/NewFuncSchemaData.js';
+
+<JsonLD data={StructuredData} />
 
 <head>
   <title>The new Function Syntax | Frontend Phone Interview Answers</title>
@@ -33,11 +37,9 @@ lastmod: 2022-05-01T17:23:45.164Z
 
 **Advanced Functions: The "new" Function Syntax**
 
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
-
 <CloseAllAnswers />
 
-### Explain the new Function constructor syntax in JavaScript?
+### Can you explain the new Function constructor syntax in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -68,7 +70,7 @@ sayHi(); // Hello, JavaScript
 
 ---
 
-### Explain what occurs when using the new Function constructor to create a function?
+### Can you explain what occurs when using the new Function constructor to create a function?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

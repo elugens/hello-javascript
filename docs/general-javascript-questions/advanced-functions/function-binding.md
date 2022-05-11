@@ -21,17 +21,19 @@ tags:
   - function binding
   - interview answers
   - interview questions
-date: 2022-05-01T16:51:46.299Z
-lastmod: 2022-05-01T17:07:33.626Z
 ---
+
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/FuncBindSchemaData.js';
+
+<JsonLD data={StructuredData} />
 
 <head>
   <title>Function Binding | Frontend Phone Interview - JavaScript</title>
 </head>
 
 **Advanced Functions: Function Binding**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
