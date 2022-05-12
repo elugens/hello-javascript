@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/PromiseAPISchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Promise API | JavaScript Frontend Phone Interview Questions</title>
 </head>
 
 **Promises/Async/Await: Promise API**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -50,7 +54,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Explain the function and syntax of the Promise.all static methods?
+### Can you explain the function and syntax of the Promise.all static methods?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -184,7 +188,7 @@ Promise.all([
 
 ---
 
-### Explain the function and syntax of the static method, Promise.allSettled?
+### Can you explain the function and syntax of the static method, Promise.allSettled?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -231,7 +235,7 @@ Promise.allSettled(urls.map((url) => fetch(url))).then((results) => {
 
 ---
 
-### Explain the function and syntax of the Promise.race static method?
+### Can you explain the function and syntax of the Promise.race static method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -266,7 +270,7 @@ Promise.race([promise1, promise2]).then((value) => {
 
 ---
 
-### Explain the function and syntax of the Promise.any static method?
+### Can you explain the function and syntax of the Promise.any static method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -312,7 +316,7 @@ Promise.any([
 
 ---
 
-### Explain the Promise.resolve static method's function and syntax?
+### Can you explain the Promise.resolve static method's function and syntax?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -352,7 +356,7 @@ This function flattens nested layers of promise-like objects (e.g., a promise th
 
 ---
 
-### Explain the function and syntax of the Promise.reject static method?
+### Can you explain the function and syntax of the Promise.reject static method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

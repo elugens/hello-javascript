@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/InstanceofSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Class Checking instanceof | Frontend Phone Interview Answers</title>
 </head>
 
 **Classes: Class Checking**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -127,7 +131,7 @@ alert(obj instanceof Animal); // true: Animal[Symbol.hasInstance](obj) is called
 
 ---
 
-### In plain words, explain what happens with an instanceof class check?
+### In plain words, can you explain what happens with an instanceof class check?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

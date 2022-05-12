@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/MicroTasksSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Microtask Queue | JavaScript Frontend Interview Questions</title>
 </head>
 
 **Promises/Async/Await: Microtask Queue**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

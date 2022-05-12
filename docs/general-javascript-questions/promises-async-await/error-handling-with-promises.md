@@ -26,13 +26,18 @@ tags:
   - interview questions
 ---
 
+
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/ErrorSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Error Handling with Promises | HelloJavaScript.info</title>
 </head>
 
 **Promises/Async/Await: Error / Promises**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

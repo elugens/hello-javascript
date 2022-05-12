@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/AsyncAwaitSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Async/Await | JavaScript Frontend Phone Interview Questions</title>
 </head>
 
 **Promises/Async/Await: Async/Await**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

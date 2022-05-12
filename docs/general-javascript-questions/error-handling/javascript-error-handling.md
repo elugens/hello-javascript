@@ -25,17 +25,21 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/JSErrorSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Error Handling | Frontend JavaScript Interview Questions</title>
 </head>
 
 **Error Handling: Error handling, "try..catch"**
 
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
-
 <CloseAllAnswers />
 
-### Briefly explain the behavior of the “try..catch” error handling process?
+### Can you briefly explain the behavior of the “try..catch” error handling process?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -173,7 +177,7 @@ In addition to the name and message properties, other non-standard properties ar
 
 ---
 
-### Explain what the stack error object property does?
+### Can you explain what the stack error object property does?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -257,7 +261,7 @@ The program terminates if no catch block exists among caller functions. JavaScri
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> When dealing with errors, handling them at the perimeter of your application is not always sufficient. By the time the error bubbles up, we have often lost a lot of the context in which the error gets thrown. People sometimes catch an error, record it locally somehow, and then rethrow it. Rethrowing is the basic concept of using a throw statement when there is no clear way to handle an error. This process maintains the original stack trace recorded by the error as you "pass it back up" the call stack.</div><br />
-  <div><strong>Technical Response:</strong>There is no special "rethrow" keyword in JavaScript. You throw() the error you caught, which maintains the original stack trace recorded by the error as you "pass it back up" the call stack.<br /><br />
+  <div><strong>Technical Response:</strong> There is no special "rethrow" keyword in JavaScript. You throw() the error you caught, which maintains the original stack trace recorded by the error as you "pass it back up" the call stack.<br /><br />
   <strong>More specifically, the "rethrowing" approach gets described as follows:</strong><br /><br />
   <ol>
     <li>All errors get caught.</li>

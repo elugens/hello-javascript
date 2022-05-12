@@ -27,13 +27,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/ClassInheritSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Class Inheritance | Frontend Phone Interview Questions</title>
 </head>
 
 **Classes: Class Inheritance**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

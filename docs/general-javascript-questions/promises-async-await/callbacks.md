@@ -27,19 +27,23 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/CallbacksSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Callbacks | JavaScript Frontend Phone Interview Questions</title>
 </head>
 
 **Promises/Async/Await: Callbacks**
 
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
-
 <CloseAllAnswers />
 
 ---
 
-### Explain the function and syntax of the async function in JavaScript?
+### Can you Explain the function and syntax of the async function in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

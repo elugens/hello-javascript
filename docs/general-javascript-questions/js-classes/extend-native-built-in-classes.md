@@ -28,13 +28,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/ExtendNativeSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Extending Native built-in classes | Frontend Phone Interview</title>
 </head>
 
 **Classes: Extending Natives**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -70,7 +74,7 @@ console.log(arr.constructor === PowerArray); // returns true
 
 ---
 
-### Explain the function and syntax of the Symbol.species accessor property?
+### Can you explain the function and syntax of the Symbol.species accessor property?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

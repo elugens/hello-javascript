@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/CustomErrorsSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Custom Errors | JavaScript Frontend Phone Interview Answers</title>
 </head>
 
 **Error Handling: Custom Errors**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

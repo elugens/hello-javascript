@@ -26,19 +26,23 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/PromBasicsSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Promise Basics | JavaScript Frontend Phone Interview Answers</title>
 </head>
 
 **Promises/Async/Await: Promise Basics**
 
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
-
 <CloseAllAnswers />
 
 ---
 
-### Explain the function and syntax of the Promise object in JavaScript?
+### Can you explain the function and syntax of the Promise object in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -62,7 +66,7 @@ let promise = new Promise(function (resolve, reject) {
 
 ---
 
-### What is the function called that gets passed to the newly created promise?
+### What is the function called that we pass to the newly created promise?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -169,7 +173,7 @@ let promise = new Promise(function (resolve, reject) {
 
 ---
 
-### Explain the function and syntax of the promise then() method/function in JS?
+### Can you explain the function and syntax of the promise then() method/function in JS?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -217,7 +221,7 @@ If we are interested only in errors, we can use null as the first argument ( .th
 
 ---
 
-### Explain the function and syntax of the promise catch() method/function in JS?
+### Can you explain the function and syntax of the promise catch() method/function in JS?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -246,12 +250,12 @@ promise.catch(alert); // shows "Error: Whoops!" after 1 second
 
 ---
 
-### Explain the function and syntax of the promise finally() method/function in JS?
+### Can you explain the function and syntax of the promise finally() method/function in JS?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The `finally` method schedules a function for executing when the promise gets settled, either fulfilled or rejected. </div><br />
+  <div><strong>Interview Response:</strong> The `finally` method schedules a function for executing when the promise gets settled, either fulfilled or rejected.</div><br />
   <div><strong>Technical Response:</strong> Just like there is a 'finally' clause in a standard try &#123;...&#125; catch &#123;...&#125;, there is a 'finally' clause in promises. Finally, the finally() function yields a Promise. The provided callback function gets performed when the promise resolves to be fulfilled or denied. Once the Promise has dealt with, the executing code can determine if the promise gets successfully set to fulfilled or denied. The call.finally(f) is identical to.then(f, f) in that f is always executed when the promise resolves: resolve or reject. Finally, a decent handler for cleaning up, such as halting our loading indicators because they are no longer required, regardless of the outcome.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />

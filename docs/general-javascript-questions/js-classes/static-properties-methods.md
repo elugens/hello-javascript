@@ -27,13 +27,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/StaticPropsSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Static Properties / Methods | JavaScript Interview Answers</title>
 </head>
 
 **Classes: Static Props / Methods**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

@@ -23,13 +23,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/PromChainSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Promises Chaining | JavaScript Frontend Phone Interview</title>
 </head>
 
 **Promises/Async/Await: Promises Chaining**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -161,7 +165,7 @@ new Promise(function (resolve, reject) {
 
 ---
 
-### Briefly explain what a “thenable” is in JavaScript?
+### Can you briefly explain what a thenable is in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

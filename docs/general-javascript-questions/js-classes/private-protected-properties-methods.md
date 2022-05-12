@@ -28,13 +28,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/PrivProtPropsSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Private, Protected Props / Methods | Frontend Interview</title>
 </head>
 
 **Classes: Private, Protected Props / Methods**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
