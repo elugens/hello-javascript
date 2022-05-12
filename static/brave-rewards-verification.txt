@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: hellojavascript.info
+Token: 106cdcb9ebd2d4924d8508c019c3a91ef59ef540e195f1eb594844c9cf196990
