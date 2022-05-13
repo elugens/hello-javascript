@@ -25,13 +25,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/AsyncIteratorSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Async Iteration / Generators | JavaScript Frontend Interview</title>
 </head>
 
 **Generators, Advanced Iteration: Async Iteration and Generators**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

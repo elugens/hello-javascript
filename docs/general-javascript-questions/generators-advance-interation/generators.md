@@ -25,13 +25,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/GeneratorSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>JavaScript Generators | Frontend Phone Interview Questions</title>
 </head>
 
 **Generators, Advanced Iteration: Generators**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -66,7 +70,7 @@ console.log(generator); // creates: [object Generator]
 
 ---
 
-### Explain the function of the generator “next” method in JavaScript?
+### Can you explain the function of the generator “next” method in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

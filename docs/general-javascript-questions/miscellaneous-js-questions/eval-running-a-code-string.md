@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/EvalSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>String Evaluation | JavaScript Frontend Phone Interview</title>
 </head>
 
 **Miscellaneous: String Evaluation**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

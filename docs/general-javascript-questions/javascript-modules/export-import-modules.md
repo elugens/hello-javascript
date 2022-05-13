@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/ExportImportSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Export-Import Modules | Frontend Phone Interview Questions</title>
 </head>
 
 **Modules: Export & Import**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

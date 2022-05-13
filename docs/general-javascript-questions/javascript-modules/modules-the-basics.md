@@ -25,13 +25,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/ModulesSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Modules the Basics | JavaScript Frontend Phone Interview</title>
 </head>
 
 **Modules: Modules the Basics**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -289,7 +293,7 @@ import `./alert.js`; // (shows nothing)
 
 ---
 
-### Explain how external scripts with type="module" are different from scripts without it?
+### Can you explain how external scripts with type="module" are different from scripts without it?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

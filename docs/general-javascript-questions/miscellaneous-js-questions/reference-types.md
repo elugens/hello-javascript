@@ -26,13 +26,19 @@ tags:
   - interview questions
 ---
 
+Note: Reference types
+
+<!-- import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/RefTypesSchemaData.js';
+
+<JsonLD data={StructuredData} /> -->
+
 <head>
   <title>Reference Types | JavaScript Frontend Phone Interview Answer</title>
 </head>
 
 **Miscellaneous: Reference Types**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

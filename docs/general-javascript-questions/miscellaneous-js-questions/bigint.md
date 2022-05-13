@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/BigIntSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>BigInt | JavaScript Frontend Phone Interview Questions</title>
 </head>
 
 **Miscellaneous: BigInt**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

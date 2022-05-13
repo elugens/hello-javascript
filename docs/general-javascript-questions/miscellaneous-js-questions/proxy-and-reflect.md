@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/ProxyReflectSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Proxy and Reflect | JavaScript Frontend Phone Interview</title>
 </head>
 
 **Miscellaneous: Proxy and Reflect**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -50,7 +54,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Explain the function and syntax of the proxy object in JavaScript?
+### Can you explain the function and syntax of the proxy object in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -159,7 +163,7 @@ alert(dictionary['Welcome to Proxy']); // Welcome to Proxy (no translation)
 
 ---
 
-### Explain the function and syntax of the proxy set method?
+### Can you explain the function and syntax of the proxy set method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -316,7 +320,7 @@ sayHi("John"); // Hello, John! (after 3 seconds)
 
 ---
 
-### Explain the function of the Reflect built-in JavaScript object?
+### Can you explain the function of the Reflect built-in JavaScript object?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -362,7 +366,7 @@ alert(user.name); // John
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, Built-in objects like Map, Set, Date, and Promise get proxied, the proxy does not have access to their internal slots, so built-in methods fail.</div><br />
-  <div><strong>Technical Answer:</strong> Yes, Proxies provide a unique way to alter or tweak the behavior of the existing objects at the lowest level. Still, it is not perfect. There are limitations. Many built-in objects, for example, Map, Set, Date, Promise, and others, make use of so-called “internal slots”. These are like properties but reserved for internal, specification-only purposes. For instance, Map stores items in the internal slot [[MapData]]. Built-in methods access them directly, not via [[Get]]/[[Set]] internal methods. So, Proxy cannot intercept that. The proxy does not have these internal slots after a built-in object gets proxied, so the built-in methods fail.
+  <div><strong>Technical Answer:</strong> Yes, Proxies provide a unique way to alter or tweak the behavior of the existing objects at the lowest level. Still, it is not perfect. There are limitations. Many built-in objects, for example, Map, Set, Date, Promise, and others, make use of so-called “internal slots”. These are like properties but reserved for internal, specification-only purposes. For instance, Map stores items in the internal slot [[MapData]]. Built-in methods access them directly, not via [[Get]] / [[Set]] internal methods. So, Proxy cannot intercept that. The proxy does not have these internal slots after a built-in object gets proxied, so the built-in methods fail.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
