@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/StylesClassesSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Styles and Classes | JavaScript Frontend Phone Interview</title>
 </head>
 
 **Browser Document: Styles / Classes**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -117,7 +121,7 @@ elem.style.top = top; // e.g '456px'
 
 ---
 
-### Explain the function and syntax of the elem.style object property?
+### Can you explain the function and syntax of the elem.style object property?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -317,7 +321,7 @@ We should note that getComputedStyles returns the resolved value of a property.
 
 ---
 
-### Explain how the getComputedStyle method interacts with property names?
+### Can you explain how the getComputedStyle method interacts with property names?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/ElementSizeSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Element Size / Scrolling in the DOM | HelloJavaScript.info</title>
 </head>
 
 **Browser Document: Element Size / Scrolling**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -89,7 +93,7 @@ The width may vary between devices and browsers.
 
 ---
 
-### Explain what the offsetWidth is about in an HTML element?
+### Can you explain what the offsetWidth is about in an HTML element?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -155,7 +159,7 @@ function isHidden(elem) {
 
 ---
 
-### Explain what the clientLeft is concerning an HTML element?
+### Can you explain what the clientLeft is concerning an HTML element?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -173,7 +177,7 @@ These are not border widths and heights, but relative coordinates of the inner a
 
 ---
 
-### Explain what the clientWidth is concerning an HTML element?
+### Can you explain what the clientWidth is concerning an HTML element?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -199,7 +203,7 @@ These are not border widths and heights, but relative coordinates of the inner a
 
 ---
 
-### Explain what the scrollWidth is concerning an HTML element?
+### Can you explain what the scrollWidth is concerning an HTML element?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -230,7 +234,7 @@ The width gets measured the same way as clientWidth: it includes the element's p
 
 ---
 
-### Explain what the scrollTop is concerning an HTML element?
+### Can you explain what the scrollTop is concerning an HTML element?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

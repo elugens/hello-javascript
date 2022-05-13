@@ -28,13 +28,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/WalkingSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Walking the DOM | JavaScript Frontend Phone Interview</title>
 </head>
 
 **Browser Document: Walking the DOM**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -128,7 +132,7 @@ alert(document.documentElement); // alerts [object HTMLHtmlElement] <html> node
 
 ---
 
-### Explain what the firstChild and lastChild properties do on elements?
+### Can you explain what the firstChild and lastChild properties do on elements?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

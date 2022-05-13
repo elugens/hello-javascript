@@ -27,13 +27,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/SearchingSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Searching the DOM| JavaScript Frontend Phone Interview</title>
 </head>
 
 **Browser Document: Searching the DOM**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -108,7 +112,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Explain the function and syntax of querySelectorAll method?
+### Can you explain the function and syntax of querySelectorAll method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -157,7 +161,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Explain the function and syntax of querySelector method?
+### Can you explain the function and syntax of querySelector method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -170,7 +174,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Explain the function and syntax of element.matches method?
+### Can you explain the function and syntax of element.matches method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -203,7 +207,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Explain the function and syntax of element.closest method?
+### Can you explain the function and syntax of element.closest method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -242,7 +246,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Explain the function and syntax of getElementsByTagName method?
+### Can you explain the function and syntax of getElementsByTagName method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

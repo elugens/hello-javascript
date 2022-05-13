@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/WindowSizeSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Window Sizes / Scrolling / Resizing | HelloJavaScript.info</title>
 </head>
 
 **Browser Document: Window Sizes / Scrolling**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -196,7 +200,7 @@ alert('Current scroll from the left: ' + window.pageXOffset);
 
 ---
 
-### Explain the function and syntax of the scrollBy method?
+### Can you explain the function and syntax of the scrollBy method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -235,7 +239,7 @@ window.scrollBy({
 
 ---
 
-### Explain the function and syntax of the scrollTo method?
+### Can you explain the function and syntax of the scrollTo method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -275,7 +279,7 @@ It is like setting scrollLeft/scrollTop. To scroll to the beginning, we can use 
 
 ---
 
-### Explain the function and syntax of the scrollIntoView method?
+### Can you explain the function and syntax of the scrollIntoView method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

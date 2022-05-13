@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/WindowCoordSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Window Coordinates | JavaScript Frontend Phone Interview</title>
 </head>
 
 **Browser Document: Coordinates**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -50,7 +54,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Explain the function and syntax of the element getBoundingClientRect method?
+### Can you explain the function and syntax of the element getBoundingClientRect method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

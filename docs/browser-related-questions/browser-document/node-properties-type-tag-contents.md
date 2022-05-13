@@ -25,13 +25,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/NodePropsSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Node Properties | JavaScript Frontend Phone Interview</title>
 </head>
 
 **Browser Document: Node Properties**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -49,7 +53,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Briefly explain the purpose of the EventTarget abstract class?
+### Can you briefly explain the purpose of the EventTarget abstract class?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -284,7 +288,7 @@ interface HTMLInputElement: HTMLElement {
 
 ---
 
-### Explain what the innerHTML property does in JavaScript?
+### Can you explain what the innerHTML property does in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -339,7 +343,7 @@ interface HTMLInputElement: HTMLElement {
 
 ---
 
-### Explain what the outerHTML property does in JavaScript?
+### Can you explain what the outerHTML property does in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -425,7 +429,7 @@ interface HTMLInputElement: HTMLElement {
 
 ---
 
-### Explain what the textContent property does in JavaScript?
+### Can you explain what the textContent property does in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

@@ -24,13 +24,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/AttrPropsSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Attributes / Properties | JavaScript Frontend Interview</title>
 </head>
 
 **Browser Document: Attributes / Properties**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/DomTreeSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>DOM Tree | JavaScript Frontend Phone Interview Questions</title>
 </head>
 
 **Browser Document: DOM Tree**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

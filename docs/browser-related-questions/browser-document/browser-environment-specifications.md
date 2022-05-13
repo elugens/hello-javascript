@@ -23,13 +23,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/BrowserEnvSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Browser Environment Specification | HelloJavaScript.info</title>
 </head>
 
 **Browser Document: Browser Environment Specs**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -61,7 +65,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Briefly explain the general structure of the browser window environment?
+### Can you briefly explain the general structure of the browser window environment?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
