@@ -11,7 +11,7 @@ keywords: [javascript, interpreted, jit, programming languages]
   <title>Why is JavaScript called an Interpreted Language</title>
 </head>
 
-![Why is JavaScript called an Interpreted Language](/img/why-is-javascript-called-an-interpreted-language-question-of-the-day.png)
+[![Why is JavaScript called an Interpreted Language](/img/why-is-javascript-called-an-interpreted-language-question-of-the-day.png)](/blog/2022/05/4/why-is-javascript-called-an-interpreted-language)
 
 <!--truncate-->
 
