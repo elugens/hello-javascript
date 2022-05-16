@@ -25,13 +25,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/ResourceLoadingSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Resource Loading | JavaScript Frontend Developer Interview</title>
 </head>
 
 **Document / Resource Loading: Resource Loading**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -123,7 +127,7 @@ The onload event triggers if a script is successfully loaded, even with programm
 
 ---
 
-### Are the load and error events limited to external scripts, or do they work with other external resources?
+### Are the load and error events limited to internal scripts, or do they work with other external resources?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

@@ -27,13 +27,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/KeyboardEventSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Keyboard Events - Keydown/Keyup | HelloJavaScript.info</title>
 </head>
 
 **UI Events: Keyboard Events**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

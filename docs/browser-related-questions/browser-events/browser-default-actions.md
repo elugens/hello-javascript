@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/BrowserDefaultSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Browser Default Actions | JavaScript Frontend Interview</title>
 </head>
 
 **Browser Events: Browser Default Actions**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -43,7 +47,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> TThere are several different default actions in the browser. For instance, a click on a link initiates the navigation to the specified URL. Another default action is highlighting text when pressing a mouse button as we glide over the text. As developers, we have control over many of these actions.
+  <div><strong>Interview Response:</strong> There are several different default actions in the browser. For instance, a click on a link initiates the navigation to the specified URL. Another default action is highlighting text when pressing a mouse button as we glide over the text. As developers, we have control over many of these actions.
     </div>
   </div>
 </details>

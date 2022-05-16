@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/DispatchingSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Dispatching Custom Events | JavaScript Phone Interview</title>
 </head>
 
 **Browser Events: Dispatching Custom Events**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

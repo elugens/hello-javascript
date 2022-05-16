@@ -27,19 +27,23 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/FormEventSubmitSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Form Submit Events | JavaScript Frontend Phone Interview</title>
 </head>
 
 **Forms / Controls: Form Submit / Events**
 
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
-
 <CloseAllAnswers />
 
 ---
 
-### When happens when we submit a form in the browser?
+### What happens when we submit a form in the browser?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

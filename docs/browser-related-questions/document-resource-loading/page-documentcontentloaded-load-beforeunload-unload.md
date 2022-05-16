@@ -29,13 +29,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/PageSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Page Lifecycle in JavaScript | Frontend Interview Answers</title>
 </head>
 
 **Document / Resource Loading: Page Lifecycle**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

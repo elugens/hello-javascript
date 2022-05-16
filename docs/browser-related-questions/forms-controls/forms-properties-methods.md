@@ -28,13 +28,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/FormPropsSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Form Properties / Methods | HelloJavaScript.info</title>
 </head>
 
 **Forms / Controls: Form Properties / Methods**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -192,7 +196,7 @@ document.forms[0]; // the first form in the document
 
 ---
 
-### Can you explain what form backreferencing is in JavaScript?
+### Can you explain what form back-referencing is in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

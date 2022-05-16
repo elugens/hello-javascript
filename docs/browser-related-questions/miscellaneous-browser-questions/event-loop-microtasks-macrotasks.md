@@ -27,13 +27,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/EventLoopSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Event loop - Microtasks/Macrotasks | HelloJavaScript.info</title>
 </head>
 
 **Miscellaneous: Event loop**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/BrowserEventsSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Browser Events | JavaScript Frontend Phone Interview Answer</title>
 </head>
 
 **Browser Events: Browser Events**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

@@ -25,13 +25,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/BubbleCapSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Bubbling and Capturing | JavaScript Frontend Phone Interview</title>
 </head>
 
 **Browser Events: Bubbling / Capturing**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

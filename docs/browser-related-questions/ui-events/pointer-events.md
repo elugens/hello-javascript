@@ -25,13 +25,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/PointerEventSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Pointer Events | JavaScript Frontend Phone Interview</title>
 </head>
 
 **UI Events: Pointer Events**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/FocusingSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Focusing focus/blur | JavaScript Frontend Phone Interview</title>
 </head>
 
 **Forms / Controls: Focusing - focus/blur**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -62,7 +66,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Explain how focus and blur events work in JavaScript?
+### Can you explain how focus and blur events work in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

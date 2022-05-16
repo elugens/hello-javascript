@@ -27,19 +27,23 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/ScrollingEventSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Scrolling Events | JavaScript Frontend Phone Interview</title>
 </head>
 
 **UI Events: Scrolling Events**
 
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
-
 <CloseAllAnswers />
 
 ---
 
-### What does the scroll event allow in terms of page or element?
+### What does the scroll event allow in terms of a page or element?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

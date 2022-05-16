@@ -25,13 +25,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/ScriptsSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Scripts Async/Defer | JavaScript Frontend Phone Interview</title>
 </head>
 
 **Document / Resource Loading: Scripts - Async/Defer**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -134,7 +138,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> TThere are two significant benefits of using the script defer attribute. The scripts with defer never block the page and consistently execute when the DOM is ready (but before DOMContentLoaded event).
+  <div><strong>Interview Response:</strong> There are two significant benefits of using the script defer attribute. The scripts with defer never block the page and consistently execute when the DOM is ready (but before DOMContentLoaded event).
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

@@ -27,13 +27,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/MovingSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Moving the Mouse | JavaScript Frontend Phone Interview</title>
 </head>
 
 **UI Events: Moving the Mouse: mouseover/out, mouseenter/leave**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

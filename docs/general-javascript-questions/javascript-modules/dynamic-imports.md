@@ -125,3 +125,15 @@ import(modulePath)
 </details>
 
 ---
+
+### What is tree shaking?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Tree shaking is a type of dead code removal. It implies that unnecessary modules get excluded from the bundle during the build process. It relies on the static structure of ES2015 module syntax ( i.e., import and export). Initially, the ES2015 module bundler 'rollup' promoted this. We have access to several module bundlers, including WebPack, Browserify, Fusebox, and Rollup.
+</div>
+  </div>
+</details>
+
+---
