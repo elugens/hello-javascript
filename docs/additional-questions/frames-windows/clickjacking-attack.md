@@ -25,13 +25,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/ClickJackingSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Clickjacking Attacks | JavaScript Frontend Phone Interview</title>
 </head>
 
 **Frames / Windows: Clickjacking Attacks**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -48,8 +52,6 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 </details>
 
 ---
-
-a
 
 ### Could you perhaps describe how a clickjacking attack gets carried out in detail?
 

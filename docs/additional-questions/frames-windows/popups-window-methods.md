@@ -27,13 +27,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/PopupsSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Popups / Window Methods | JavaScript Interview Questions</title>
 </head>
 
 **Frames / Windows: Popups and Window Methods**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -99,7 +103,7 @@ button.onclick = () => {
 
 ---
 
-### What when a pop-up opens from onclick, but after setTimeout?
+### What happens when a pop-up opens from onclick, but after setTimeout?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

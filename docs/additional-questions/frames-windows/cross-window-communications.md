@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/CrossWindowSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Cross-Window Communication | JavaScript Frontend Interview</title>
 </head>
 
 **Frames / Windows: Cross-Window Communication**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
