@@ -27,13 +27,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/FetchCrossSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Cross-Origin Requests | JavaScript Frontend Phone Interview</title>
 </head>
 
 **Network Requests: Fetch: Cross-Origin Requests**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

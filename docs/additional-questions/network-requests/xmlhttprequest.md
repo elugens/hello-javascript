@@ -25,13 +25,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/XMLhttpSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>XMLHttpRequest | JavaScript Frontend Phone Interview Answers</title>
 </head>
 
 **Network Requests: XMLHttpRequest**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -245,7 +249,7 @@ xhr.setRequestHeader('Content-Type', 'application/json');
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Several headers are managed exclusively by the browser, e.g., Referer and Host. XMLHttpRequest is not allowed to change them for user safety and the correctness of the request. Another peculiarity of XMLHttpRequest is that one cannot undo setRequestHeader. Once the header sets, additional calls add information to the header but do not overwrite it.
+  <div><strong>Interview Response:</strong> Several headers are managed exclusively by the browser, e.g., Referrer and Host. XMLHttpRequest is not allowed to change them for user safety and the correctness of the request. Another peculiarity of XMLHttpRequest is that one cannot undo setRequestHeader. Once the header sets, additional calls add information to the header but do not overwrite it.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -265,7 +269,7 @@ xhr.setRequestHeader('X-Auth', '456');
 
 ---
 
-### Example the function and syntax of the getResponseHeader() method?
+### Can you explain the function and syntax of the getResponseHeader() method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

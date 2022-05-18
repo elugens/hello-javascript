@@ -27,13 +27,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/ArrayBufferSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>ArrayBuffer, Binary Arrays | JavaScript Frontend Interview</title>
 </head>
 
 **Binary Data / Files: ArrayBuffer, Binary Arrays**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -44,7 +48,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> When working with files in web development, we frequently encounter binary data (create, upload, download). Image processing is another everyday use, and all of this is achievable with JavaScript, and binary operations are fast.
+  <div><strong>Interview Response:</strong> When working with files in web development, we frequently encounter binary data (create, upload, download). Image processing is another everyday use, and all of this is achievable with JavaScript. Binary operations are fast and easy to implement.
     </div>
   </div>
 </details>
@@ -75,7 +79,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Explain the function of the ArrayBuffer object in JavaScript?
+### Can you explain the function of the ArrayBuffer object in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

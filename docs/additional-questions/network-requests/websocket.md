@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/WebSocketSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>WebSocket | JavaScript Frontend Phone Interview Questions</title>
 </head>
 
 **Network Requests: WebSocket**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

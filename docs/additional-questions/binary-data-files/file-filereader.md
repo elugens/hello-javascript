@@ -29,13 +29,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/FileReaderSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>File / FileReader| JavaScript Frontend Phone Interview</title>
 </head>
 
 **Binary Data / Files: File / FileReader**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

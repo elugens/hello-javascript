@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/CookiesSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Cookies - document.cookie | JavaScript Interview Questions</title>
 </head>
 
 **Storing Browser Data: Cookies - document.cookie**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

@@ -27,13 +27,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/ResumableSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Function Object NFE | JavaScript Frontend Phone Interview</title>
 </head>
 
 **Network Requests: Resumable File Uploads**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

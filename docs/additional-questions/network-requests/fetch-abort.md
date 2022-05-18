@@ -27,13 +27,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/FetchAbortSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Fetch - Abort | JavaScript Frontend Phone Interview</title>
 </head>
 
 **Network Requests: Fetch - Abort**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

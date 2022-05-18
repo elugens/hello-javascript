@@ -27,13 +27,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/UrlObjectsSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>URL Objects | JavaScript Frontend Phone Interview Questions</title>
 </head>
 
 **Network Requests: URL Objects**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -98,7 +102,7 @@ alert(url.pathname); // /url
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> YYes, we can access the parameters via the searchParams URL property. A property formatted URL string should include encoding to ensure proper parsing. URL string parameters should be encoded if they contain spaces, Non-Latin letters. URL.searchParams returns a URLSearchParams object that we can use to access the string data. For instance, if the URL of your page is https://example.com/?name=Jonathan%20Smith&age=18, you could parse out the name and age parameters using URL.searchParams.
+  <div><strong>Interview Response:</strong> Yes, we can access the parameters via the searchParams URL property. A property formatted URL string should include encoding to ensure proper parsing. URL string parameters should be encoded if they contain spaces, Non-Latin letters. URL.searchParams returns a URLSearchParams object that we can use to access the string data. For instance, if the URL of your page is https://example.com/?name=Jonathan%20Smith&age=18, you could parse out the name and age parameters using URL.searchParams.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

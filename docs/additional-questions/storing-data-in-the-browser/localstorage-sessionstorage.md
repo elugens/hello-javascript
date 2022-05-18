@@ -28,13 +28,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/LocalSessionSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>LocalStorage / sessionStorage | HelloJavaScript.info</title>
 </head>
 
 **Storing Browser Data: LocalStorage / sessionStorage**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -220,7 +224,7 @@ alert(JSON.stringify(localStorage, null, 2));
 
 ---
 
-### Briefly explain how the JavaScript sessionStorage object functions?
+### Can you briefly explain how the JavaScript sessionStorage object functions?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/ServerSentSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Server Sent Events | HelloJavaScript.Info</title>
 </head>
 
 **Network Requests: Server Sent Events**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

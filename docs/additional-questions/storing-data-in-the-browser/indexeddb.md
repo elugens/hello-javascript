@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/IndexedDBSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>IndexedDB | JavaScript Frontend Phone Interview Questions</title>
 </head>
 
 **Storing Browser Data: IndexedDB**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -46,16 +50,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> IndexedDB is a database built into a
-      browser that is much more powerful than localStorage. It has several
-      powerful features that enhance client-side storage. IndexedDB can store
-      practically every sort of value by key, and it supports numerous key
-      types. It supports transactions for reliability and key range queries, and
-      indexes. It can also store much larger volumes of data than localStorage,
-      and it can be used in an asynchronous fashion (async/await) using
-      promises. That power is usually excessive for traditional client-server
-      apps. IndexedDB is mainly intended for offline apps combined with
-      ServiceWorkers and other technologies.
+      <strong>Interview Response:</strong> IndexedDB is a database built into a browser that is much more powerful than localStorage. It has several powerful features that enhance client-side storage. IndexedDB can store practically every sort of value by key, and it supports numerous key types. It supports transactions for reliability and key range queries, and indexes. It can also store much larger volumes of data than localStorage, and it can be used in an asynchronous fashion (async/await) using promises. That power is usually excessive for traditional client-server apps. IndexedDB is mainly intended for offline apps combined with ServiceWorkers and other technologies.
     </div>
   </div>
 </details>
@@ -124,12 +119,8 @@ openRequest.onsuccess = function () {
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> We can have many databases with
-      different names, but all exist within the current origin
-      (domain/protocol/port). Different websites cannot access each other’s
-      databases. Some novice programmers may attempt to access the database
-      within an &#8249;iframe&#8250;, but this approach does not meet the
-      recommendation, because it is insecure.
+      <strong>Interview Response:</strong> We can have many databases with different names, but all exist within the current origin
+      (domain/protocol/port). Different websites cannot access each other’s databases. Some novice programmers may attempt to access the database within an &#8249;iframe&#8250;, but this approach does not meet the recommendation, because it is insecure.
     </div>
   </div>
 </details>
@@ -251,11 +242,7 @@ openRequest.onblocked = function() {
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> We can store almost any value (except
-      objects with a circular reference), including complex objects. IndexedDB
-      uses the standard serialization algorithm to clone-and-store an object. It
-      is like JSON.stringify, but it is more powerful and can store much more
-      data.
+      <strong>Interview Response:</strong> We can store almost any value (except objects with a circular reference), including complex objects. IndexedDB uses the standard serialization algorithm to clone-and-store an object. It is like JSON.stringify, but it is more powerful and can store much more data.
     </div>
   </div>
 </details>
@@ -270,9 +257,7 @@ openRequest.onblocked = function() {
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> An example of an object that cannot
-      be stored: an object with circular references. Such objects are not
-      serializable, and JSON.stringify also fails for such objects.
+      <strong>Interview Response:</strong> An example of an object that cannot be stored: an object with circular references. Such objects are not serializable, and JSON.stringify also fails for such objects.
     </div>
   </div>
 </details>
@@ -287,10 +272,7 @@ openRequest.onblocked = function() {
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> Yes, there must be a unique key for
-      every value in the store. A key must be a number, date, string, binary, or
-      array. It is a unique identifier, so we can search/remove/update values by
-      the key index.
+      <strong>Interview Response:</strong> Yes, there must be a unique key for every value in the store. A key must be a number, date, string, binary, or array. It is a unique identifier, so we can search/remove/update values by the key index.
     </div>
   </div>
 </details>
@@ -393,11 +375,7 @@ openRequest.onupgradeneeded = function () {
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> A transaction is a group operation;
-      they should either succeed or fail. For example, when a person buys
-      something, we need to do a group of operations related to their
-      activities, such as removing money from their account or adding an item to
-      their shopping list.
+      <strong>Interview Response:</strong> A transaction is a group operation; they should either succeed or fail. For example, when a person buys something, we need to do a group of operations related to their activities, such as removing money from their account or adding an item to their shopping list.
     </div>
   </div>
 </details>
@@ -409,7 +387,7 @@ openRequest.onupgradeneeded = function () {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong>The transaction method of the IDBDatabase interface immediately returns a transaction object (IDBTransaction) containing the IDBTransaction.objectStore method, which you can use to access your object-store. We must make all data operations within a transaction in IndexedDB. The transaction method has three available arguments: store, mode/type, and options. The store/storeNames refer to the names of the object stores in the scope of the new transaction, declared as an array of strings. Specify only the object stores that you need to access. If you need to access only one object store, you can specify its name as a string. The mode or type relates to the types of access performed in the transaction. IndexedDB transactions open in one of three modes: readonly, readwrite and readwriteflush (non-standard, Firefox-only.) We should specify the object-store versionchange mode here. If you do not provide the parameter, the default access mode is readonly. Please do not open a readwrite transaction unless you need to write it into the database to avoid slowing things down. The options argument is a dictionary of option durability parameters including "default", "strict", or "relaxed". The default is "default". Using "relaxed" provides better performance but with fewer guarantees. Web applications are encouraged to use "relaxed" for transient data such as caches or quickly changing records and "strict" in cases where reducing the risk of data loss outweighs the impact on performance and power. We should note that the mode/type and options are optional arguments.
+  <div><strong>Interview Response:</strong> The transaction method of the IDBDatabase interface immediately returns a transaction object (IDBTransaction) containing the IDBTransaction.objectStore method, which you can use to access your object-store. We must make all data operations within a transaction in IndexedDB. The transaction method has three available arguments: store, mode/type, and options. The store/storeNames refer to the names of the object stores in the scope of the new transaction, declared as an array of strings. Specify only the object stores that you need to access. If you need to access only one object store, you can specify its name as a string. The mode or type relates to the types of access performed in the transaction. IndexedDB transactions open in one of three modes: readonly, readwrite and readwriteflush (non-standard, Firefox-only.) We should specify the object-store versionchange mode here. If you do not provide the parameter, the default access mode is readonly. Please do not open a readwrite transaction unless you need to write it into the database to avoid slowing things down. The options argument is a dictionary of option durability parameters including "default", "strict", or "relaxed". The default is "default". Using "relaxed" provides better performance but with fewer guarantees. Web applications are encouraged to use "relaxed" for transient data such as caches or quickly changing records and "strict" in cases where reducing the risk of data loss outweighs the impact on performance and power. We should note that the mode/type and options are optional arguments.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -665,7 +643,7 @@ books.clear(); // clear the storage.
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> : A cursor is a pointer that iterates across all the documents in each data store or index, exposing the data for the page that the cursor is presently "pointing" at on each iteration.<br /><br />It also contains a few pieces of additional metadata and a couple of methods, like continue or primaryKey. As an object store is sorted internally by key, a cursor walks the store in key order (ascending by default). The cursor also has two optional arguments, including the range and direction. The range query is a key or a key range, same as for getAll. The direction sets the order to use and includes two parameters prev, and nextunique or prevunique. The prev parameter is the reverse order: down from the record with the biggest key. The nextunique and prevunique are similar, but the skip records with the same key (only for cursors over indexes, e.g., for multiple books with price=5 only the first one returns). The main difference of the cursor is that request.onsuccess triggers multiple times: once for each result.
+  <div><strong>Interview Response:</strong> A cursor is a pointer that iterates across all the documents in each data store or index, exposing the data for the page that the cursor is presently "pointing" at on each iteration.<br /><br />It also contains a few pieces of additional metadata and a couple of methods, like continue or primaryKey. As an object store is sorted internally by key, a cursor walks the store in key order (ascending by default). The cursor also has two optional arguments, including the range and direction. The range query is a key or a key range, same as for getAll. The direction sets the order to use and includes two parameters prev, and nextunique or prevunique. The prev parameter is the reverse order: down from the record with the biggest key. The nextunique and prevunique are similar, but the skip records with the same key (only for cursors over indexes, e.g., for multiple books with price=5 only the first one returns). The main difference of the cursor is that request.onsuccess triggers multiple times: once for each result.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

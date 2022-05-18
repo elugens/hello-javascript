@@ -25,13 +25,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/FetchDownloadSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Fetch Download Progress| JavaScript Interview Questions</title>
 </head>
 
 **Network Requests: Fetch - Download Progress**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

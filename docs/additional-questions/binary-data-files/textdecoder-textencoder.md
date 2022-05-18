@@ -25,13 +25,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/TextDecoderSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>TextDecoder / TextEncoder | HelloJavaScript.info</title>
 </head>
 
 **Binary Data / Files: TextDecoder / TextEncoder**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

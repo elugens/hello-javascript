@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/BlobsSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Blob Data | JavaScript Frontend Phone Interview Questions</title>
 </head>
 
 **Binary Data / Files: Blob Data**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

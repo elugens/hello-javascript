@@ -25,13 +25,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/FetchAPISchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Fetch API | JavaScript Frontend Phone Interview Questions</title>
 </head>
 
 **Network Requests: Fetch API**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
