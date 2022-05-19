@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/SetsRangesSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Regex Sets / Ranges | Regular Expression Interview Questions</title>
 </head>
 
 **Regular Expressions: Regex Sets / Ranges**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

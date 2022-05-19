@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/UnicodeSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Unicode Regex | Regular Expressions Interview Questions</title>
 </head>
 
 **Regular Expressions: Unicode Regex**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

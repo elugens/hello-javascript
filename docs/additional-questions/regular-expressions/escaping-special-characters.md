@@ -28,13 +28,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/EscapingSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Escaping Characters | Regular Expression Interview Questions</title>
 </head>
 
 **Regular Expressions: Escaping Characters**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -76,7 +80,7 @@ alert('/'.match(new RegExp('/'))); // finds /
 
 ---
 
-### When are calling the new RegExp object, do we have to use the escape character in our regular expressions?
+### When we are calling the new RegExp object, do we have to use the escape character in our regular expressions?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

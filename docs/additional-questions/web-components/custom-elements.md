@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/CustomElementsSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Custom Elements | JavaScript Interview Questions</title>
 </head>
 
 **Web Components: Custom Elements**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -120,9 +124,7 @@ customElements.define('my-element', MyElement);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> If the browser encounters any elements we are trying to customize before customElements.define, that is not an error. But the element is yet unknown, just like any non-standard tag.<br /><br />
-  Such “undefined” elements can be styled with CSS selector :not(:defined).<br /><br />
-  When customElement.define is called, they are “upgraded”: a new instance of the element we are trying to customize gets created for each, and connectedCallback gets called. They become :defined.
+  <div><strong>Interview Response:</strong> If the browser encounters any elements we are trying to customize before customElements.define, that is not an error. But the element is yet unknown, just like any non-standard tag.<br /><br /> Such “undefined” elements can be styled with CSS selector :not(:defined).<br /><br /> When customElement.define is called, they are “upgraded”: a new instance of the element we are trying to customize gets created for each, and connectedCallback gets called. They become :defined.
     </div>
   </div>
 </details>

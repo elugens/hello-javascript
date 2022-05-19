@@ -24,13 +24,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/CatastrophicSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Catastrophic Backtracking | Regular Expressions Questions</title>
 </head>
 
 **Regular Expressions: Catastrophic Backtracking**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

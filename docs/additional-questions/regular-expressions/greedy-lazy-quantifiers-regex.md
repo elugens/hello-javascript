@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/GreedyLazySchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Greedy / Lazy Quantifiers | HelloJavaScript.info</title>
 </head>
 
 **Regular Expressions: Greedy / Lazy Quantifiers**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/CharClassesSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Character Classes | Regular Expressions Interview Questions</title>
 </head>
 
 **Regular Expressions: Character Classes**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

@@ -25,13 +25,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/TemplateElementSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Template Element | JavaScript Interview Questions</title>
 </head>
 
 **Web Components: Template Element**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

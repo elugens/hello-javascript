@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/ShadowEventsSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Shadow DOM / Events | JavaScript Interview Questions</title>
 </head>
 
 **Web Components: Shadow DOM / Events**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

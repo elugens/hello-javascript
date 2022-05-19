@@ -25,13 +25,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/CSSAnimationSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>CSS-Animations | HelloJavaScript.info</title>
 </head>
 
 **Animation: CSS-Animations**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -49,7 +53,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 ---
 
-### Briefly define the idea around CSS transitions?
+### Can you briefly define the idea around CSS transitions?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

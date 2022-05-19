@@ -28,18 +28,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/WordBoundarySchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Word Boundary | Regular Expressions Interview Questions</title>
 </head>
 
 **Regular Expressions: Word Boundary**
-
-<head>
-  <title>Word Boundaries - JavaScript Interview Questions & Answers</title>
-  <meta charSet="utf-8" />
-</head>
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/BackReferenceSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Backreference Pattern | Regular Expressions Questions</title>
 </head>
 
 **Regular Expressions: Backreference Pattern**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

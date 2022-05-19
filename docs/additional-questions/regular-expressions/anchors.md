@@ -27,13 +27,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/AnchorsSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Anchors | Regular Expressions Interview Questions</title>
 </head>
 
 **Regular Expressions: Anchors**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -44,7 +48,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The caret ^ and dollar $ characters have special meaning in a regexp. They are called “anchors”. The caret ^ matches at the beginning of the text, and the dollar $ represents the end. You should note that we could use the startsWith and endsWith methods to perform the same task, which is the recommendation. We use regular expressions for more complex tests in JavaScript.
+  <div><strong>Interview Response:</strong> The caret ^ and dollar $ characters have special meaning in a regexp. They are called \u201Canchors\u201D. The caret ^ matches at the beginning of the text, and the dollar $ represents the end. You should note that we could use the startsWith and endsWith methods to perform the same task, which is the recommendation. We use regular expressions for more complex tests in JavaScript.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

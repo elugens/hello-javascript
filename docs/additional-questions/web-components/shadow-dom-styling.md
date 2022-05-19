@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/ShadowDOMStylingSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Shadow DOM Styling | JavaScript Interview Questions</title>
 </head>
 
 **Web Components: Shadow DOM Styling**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

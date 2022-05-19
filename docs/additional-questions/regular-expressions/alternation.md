@@ -27,13 +27,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/AlternationSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Alternation | Regular Expressions Interview Questions</title>
 </head>
 
 **Regular Expressions: Alternation (OR) |**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

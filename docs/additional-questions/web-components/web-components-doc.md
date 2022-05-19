@@ -25,13 +25,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/WebComponentsSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Web Components | JavaScript Frontend Interview Questions</title>
 </head>
 
 **Web Components: Web Components**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

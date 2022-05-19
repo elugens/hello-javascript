@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/MultilineSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Multiline Mode | Regular Expressions Interview Questions</title>
 </head>
 
 **Regular Expressions: Multiline Mode**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

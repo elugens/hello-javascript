@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/CapturingSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Capturing Groups | Regular Expressions Interview Questions</title>
 </head>
 
 **Regular Expressions: Capturing Groups**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
