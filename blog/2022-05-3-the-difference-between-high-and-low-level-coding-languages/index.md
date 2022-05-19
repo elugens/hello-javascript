@@ -1,20 +1,18 @@
 ---
-title: High and Low-level Coding Languages
+title: What is difference between High & Low-level Coding Languages?
 description: Knowing the difference between high- and low-level programming languages may seem a bit daunting, but it has value when you are working in both environments.
 authors: [elugens]
 tags: [interpreted, compiled, programming, languages]
 keywords: [difference, interpreted, compiled, high, low, level, programming, languages]
 ---
 
-<head>
+<!-- <head>
   <title>The difference between High- and Low-level Coding Languages</title>
-</head>
+</head> -->
 
 ![The difference between High- and Low-level Coding Languages](/img/difference-between-high-level-vs-low-level-languages.png)
 
 <!--truncate-->
-
-## What’s the difference between a high- and low-level languages?
 
 Knowing the difference between high- and low-level programming languages may seem a bit daunting, but it has value when you are working in both environments.<br />
 

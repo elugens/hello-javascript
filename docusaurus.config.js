@@ -20,17 +20,17 @@ const config = {
   presets: [
     [
       '@docusaurus/preset-classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+      // /** @type {import('@docusaurus/preset-classic').Options} */
+      {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl: 'https://github.com/elugens/hello-javascript/edit/main/',
         },
         blog: {
-          blogTitle: 'Hello, JavaScript!',
-          blogDescription: 'HelloJavaScript Blog Posts',
-          postsPerPage: 'ALL',
+          // blogTitle: 'Hello, JavaScript!',
+          // blogDescription: 'HelloJavaScript Blog Posts',
+          postsPerPage: 10,
           showReadingTime: true,
           // Please change this to your repo.
           editUrl: 'https://github.com/elugens/hello-javascript/edit/main/',
@@ -48,7 +48,7 @@ const config = {
           trackingID: 'G-N6BRLF8Z2K',
           anonymizeIP: true,
         },
-      }),
+      },
     ],
   ],
 

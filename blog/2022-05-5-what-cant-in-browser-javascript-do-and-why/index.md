@@ -7,9 +7,9 @@ tags: [javascript, programming languages]
 keywords: [javascript, programming languages]
 ---
 
-<head>
+<!-- <head>
   <title>What CAN'T in-browser JavaScript do and why</title>
-</head>
+</head> -->
 
 [![What CAN'T in-browser JavaScript do and why?](/img/what-cant-in-browser-javascript-do-and-why-question-of-the-day.png)](/blog/2022/05/5/what-cant-in-browser-javascript-do-and-why)
 

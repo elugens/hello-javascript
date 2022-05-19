@@ -7,9 +7,9 @@ tags: [recursion, iteration, javascript, programming languages]
 keywords: [javascript, recursion, iterations, difference, programming languages]
 ---
 
-<head>
+<!-- <head>
   <title>What is the difference between recursion and Iteration?</title>
-</head>
+</head> -->
 
 Both Recursion and Iteration execute the sequence of instructions repeatedly. When a statement in a function calls itself again, this is called recursion, and Iteration occurs when a loop executes the body repeatedly until the controlling condition becomes false. The critical distinction between recursion and Iteration is that recursion is a procedure always applied to a function. In contrast,  We can apply Iteration to a sequence of instructions that we wish to run again. <!--truncate-->
 
