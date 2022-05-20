@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/DecoratorSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Decorator Pattern | JavaScript Interview Questions</title>
 </head>
 
 **Structural: Decorator Pattern**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -295,7 +299,6 @@ Decorated User: Kelly, Broadway, New York
 - At runtime, you can add or remove responsibilities from an object.
 - Wrapping an object in multiple decorators allows you to combine several behaviors.
 - Single Responsibility Principle - The principle of single responsibility. A monolithic class that implements many possible behavior variants can get divided into several smaller classes.
-  .
 
 <br />
   </div>

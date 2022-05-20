@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/AbstractFactorySchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Abstract Factory Pattern | JavaScript Interview Questions</title>
 </head>
 
 **Creational: Abstract Factory Pattern**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

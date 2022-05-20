@@ -25,13 +25,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/AntiPatternsSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Anti-Patterns in JavaScript | Interview Questions</title>
 </head>
 
 **Anti-Patterns: Understanding Anti-Patterns**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

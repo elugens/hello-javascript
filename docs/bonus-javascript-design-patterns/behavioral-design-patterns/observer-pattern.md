@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/ObserverSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Observer Pattern | JavaScript Interview Questions</title>
 </head>
 
 **Structural: Observer Pattern**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

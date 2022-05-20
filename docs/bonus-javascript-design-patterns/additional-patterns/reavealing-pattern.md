@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/RevealingSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Revealing Design Pattern | JavaScript Interview Questions</title>
 </head>
 
 **Additional Patterns: Revealing Design Pattern**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

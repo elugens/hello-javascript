@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/ChainOfSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Chain of Responsibility Pattern | HelloJavaScript.info</title>
 </head>
 
 **Structural: Chain of Responsibility**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -47,7 +51,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
   <div>
     <div>
       <strong>Interview Response:</strong> This behavioral JavaScript design pattern generates a series of receiver objects responding to a request. This approach encourages loose coupling, allowing us to avoid coupling the sender of a request to a receiver and allowing other receivers to handle the request.<br/><br/>
-      The receiving objects is coupled together, and they'll be able to act on the request before passing it over to the following receiver object. It's also simple to add additional recipient objects to the chain.
+      The receiving objects get coupled together, and they'll be able to act on the request before passing it over to the following receiver object. It's also simple to add additional recipient objects to the chain.
 <br/>
     </div>
     <div>

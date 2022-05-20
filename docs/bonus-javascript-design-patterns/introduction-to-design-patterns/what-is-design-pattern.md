@@ -26,6 +26,12 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/WhatIsSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>What is a Pattern? | HelloJavaScript.info</title>
 </head>
@@ -33,8 +39,6 @@ tags:
 <!-- check word doc notes and updates -->
 
 **Introduction: What is a Design Pattern?**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

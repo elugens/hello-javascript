@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/InterpreterSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Interpreter Design Pattern | HelloJavaScript.info</title>
 </head>
 
 **Structural: Interpreter Pattern**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/BridgeSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Bridge Pattern | JavaScript Interview Questions</title>
 </head>
 
 **Structural: Bridge Pattern**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

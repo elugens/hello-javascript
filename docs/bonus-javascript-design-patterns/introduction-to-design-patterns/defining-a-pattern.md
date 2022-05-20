@@ -26,6 +26,12 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/DefiningPatternSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Defining a Pattern in JavaScript | HelloJavaScript.info</title>
 </head>
@@ -33,8 +39,6 @@ tags:
 <!-- check word doc notes and updates -->
 
 **Introduction: Defining a Pattern**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -86,7 +90,7 @@ import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswer
 
 - **There is no clear answer to this problem:** Problem-solving frequently seeks to deduce from well-known concepts. The best design patterns frequently give indirect answers to challenges – this approach is an essential strategy for the most challenging design problems.
 
-- **The concepts must be proven solutions to a problem:** Design patterns require proof that they function as described, and without this, we should not entertain its use.
+- **The concepts must be proven solutions to a problem:** Design patterns require proof that they function as described, and without this, we should not entertain their use.
 
 - **It must describe or express a relationship:** A pattern may represent a module type in some circumstances. While an implementation may appear this way, the formal design description must specify far deeper system structures and processes that explain how it connects to our code.
 

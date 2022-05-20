@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/TemplateMethodSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Template Method Pattern | JavaScript Interview Questions</title>
 </head>
 
 **Structural: Template Method**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

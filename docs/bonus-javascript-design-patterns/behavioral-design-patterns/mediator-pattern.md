@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/MediatorSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Mediator Pattern | JavaScript Interview Questions</title>
 </head>
 
 **Structural: Mediator Pattern**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

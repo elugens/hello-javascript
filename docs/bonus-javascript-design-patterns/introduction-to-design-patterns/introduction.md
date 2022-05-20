@@ -26,6 +26,12 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/IntroSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Introduction to Design Patterns | HelloJavaScript.info</title>
 </head>
@@ -33,8 +39,6 @@ tags:
 <!-- check word doc notes and updates -->
 
 **Introduction: Categories of Design Patterns**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

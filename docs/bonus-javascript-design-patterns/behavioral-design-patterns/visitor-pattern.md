@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/VisitorSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Visitor Pattern | JavaScript Interview Questions</title>
 </head>
 
 **Structural: Visitor Pattern**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -181,7 +185,7 @@ Boss: $275000 and 53 vacation days
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The visitor pattern can get used when:
+      <strong>Interview Response:</strong> We can use the visitor pattern when:
     </div>
     <br />
     <div></div>

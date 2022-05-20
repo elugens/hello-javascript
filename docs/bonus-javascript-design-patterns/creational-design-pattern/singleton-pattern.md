@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/SingletonSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Singleton Pattern | JavaScript Frontend Interview Questions</title>
 </head>
 
 **Creational: Singleton Pattern**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 

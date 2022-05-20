@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/FactoryMethodSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Factor Method | JavaScript Interview Questions</title>
 </head>
 
 **Creational: Factory Pattern**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
@@ -341,9 +345,5 @@ circle.draw();
     </div>
   </div>
 </details>
-
----
-
-> Written with [StackEdit](https://stackedit.io/).
 
 ---

@@ -26,13 +26,17 @@ tags:
   - interview questions
 ---
 
+import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
+import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
+import StructuredData from './schemadata/AdapterSchemaData.js';
+
+<JsonLD data={StructuredData} />
+
 <head>
   <title>Adapter Pattern | JavaScript Interview Questions</title>
 </head>
 
 **Structural: Adapter Pattern**
-
-import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 
 <CloseAllAnswers />
 
