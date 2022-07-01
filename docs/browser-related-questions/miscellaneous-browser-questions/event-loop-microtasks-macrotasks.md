@@ -54,7 +54,7 @@ import StructuredData from './schemadata/EventLoopSchemaData.js';
 
   <div></div>
 
-<img src="/img/event-loop.gif" /><br /><br />
+<img alt="Event Loop" src="/img/event-loop.gif" /><br /><br />
 
 </div>
   </div>
@@ -73,7 +73,7 @@ import StructuredData from './schemadata/EventLoopSchemaData.js';
 
   <div></div>
 
-<img src='/img/callback-queue-event-loop.gif' />
+<img alt="Callback Queue Event Loop Image" src='/img/callback-queue-event-loop.gif' />
 
 </div>
   </div>
