@@ -5,7 +5,11 @@
   "[markdown]": {
     "editor.fontSize": 16,
     "editor.lineHeight": 26,
-    "editor.quickSuggestions": false,
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    },
     "editor.minimap.enabled": false
   }
 }
