@@ -289,7 +289,6 @@ h3:before {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */
   height: 0;
-  width: 90%;
 }
 .videoWrapper iframe {
   position: absolute;
