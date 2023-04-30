@@ -52,11 +52,28 @@ import StructuredData from './schemadata/IntroSchemaData.js';
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The three main design patterns categories in JavaScript are creational, structural, and behavioral design patterns.<br/><br/>
+      <strong>Interview Response:</strong> The three main design patterns categories in JavaScript are creational, structural, and behavioral design patterns.<br/>
+    </div>
+    <hr/>
+    <div>
+      <strong>Technical Response:</strong> <p>
+There are three principal categories of design patterns in web development:
+</p>
+<p>
+<strong>Creational patterns: </strong>These patterns deal with object creation and provide solutions for creating objects in a flexible and reusable way.
+</p>
+<p>
+<strong>Structural patterns: </strong>These patterns are concerned with object composition and provide solutions for organizing objects and classes to form larger structures.
+</p>
+<p>
+<strong>Behavioral patterns: </strong>These patterns are concerned with communication between objects and provide solutions for the interaction and responsibility of objects.
+</p>
+<p>
+By using these design patterns, we can create maintainable, scalable, and flexible web applications.
+</p>
       <strong>Diagram:</strong><br /><br />
     <img src="/img/design-patterns-categories.png" /><br /><br />
     </div>
-
   </div>
 </details>
 
@@ -70,7 +87,11 @@ import StructuredData from './schemadata/IntroSchemaData.js';
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> Creation design patterns handle object creation and reduce complexity in object creation in JavaScript. Examples of creational design patterns include the constructor, factory, prototype, and singleton patterns.
+      <strong>Interview Response:</strong> A creational design pattern in JavaScript provides a way to create objects and classes in a flexible and reusable manner, such as the factory and singleton patterns.
+    </div>
+    <br/>
+    <div>
+      <strong>Technical Response:</strong> A creational design pattern in JavaScript is a pattern that deals with object creation, providing a way to create objects in a flexible and reusable way. Creational patterns help developers create objects that are well-organized, easy to maintain, and extendable. Examples of creational patterns include the Factory pattern, the Singleton pattern, and the Prototype pattern.
     </div>
   </div>
 </details>
@@ -84,8 +105,12 @@ import StructuredData from './schemadata/IntroSchemaData.js';
     <strong>View Answer:</strong>
   </summary>
   <div>
+  <div>
+      <strong>Interview Response:</strong> A structural design pattern in JavaScript provides a way to organize code to solve common software design problems, such as object composition and class inheritance.
+    </div>
+    <br />
     <div>
-      <strong>Interview Response:</strong> Structural design patterns in software engineering are design patterns that simplify the design process by identifying a straightforward approach to realizing relationships between entities. Structural design patterns include the module, decorator, facade, adapter, and proxy patterns.
+      <strong>Technical Response:</strong> A structural design pattern in JavaScript is a pattern that focuses on object composition and provides solutions for organizing objects and classes to form larger structures. Structural patterns help developers create complex structures from simpler objects, making the code more manageable and flexible. Examples of structural patterns include the Adapter pattern, the Decorator pattern, and the Facade pattern.
     </div>
   </div>
 </details>
@@ -99,8 +124,12 @@ import StructuredData from './schemadata/IntroSchemaData.js';
     <strong>View Answer:</strong>
   </summary>
   <div>
+  <div>
+      <strong>Interview Response:</strong> A behavioral design pattern in JavaScript provides a way to manage communication and interaction between objects, such as observer, strategy, and command patterns.
+    </div>
+    <br/>
     <div>
-      <strong>Interview Response:</strong> Behavioral design patterns identify communication between objects, which increases flexibility in how our application carries out communication. Structural design patterns include the chain of responsibility, command, observer, iterator, strategy, and template patterns.
+      <strong>Technical Response:</strong> A behavioral design pattern in JavaScript is a pattern that focuses on communication between objects and provides solutions for the interaction and responsibility of objects. Behavioral patterns help developers manage complex behaviors and make the code more maintainable and extensible. Examples of behavioral patterns include the Observer pattern, the Command pattern, and the Strategy pattern.
     </div>
   </div>
 </details>

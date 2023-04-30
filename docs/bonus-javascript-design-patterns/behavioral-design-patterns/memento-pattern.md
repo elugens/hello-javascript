@@ -49,8 +49,13 @@ import StructuredData from './schemadata/MementoSchemaData.js';
     <strong>View Answer:</strong>
   </summary>
   <div>
+  <div>
+      <strong>Interview Response:</strong> The memento design pattern is a behavioral pattern that allows capturing and restoring an object's internal state without violating encapsulation.
+<br/>
+    </div>
+    <br/>
     <div>
-      <strong>Interview Response:</strong> We use the memento pattern to store and restore an object temporarily. The technology used to store the object's state gets determined by the needed persistence period, which can vary.
+      <strong>Technical Response:</strong> We use the memento pattern to store and restore an object temporarily. The technology used to store the object's state gets determined by the needed persistence period, which can vary.
 <br/>
     </div>
     <div>
@@ -164,7 +169,7 @@ John Wang
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Memento pattern is a type of behavioral design pattern.
+      <strong>Interview Response:</strong> The Memento pattern belongs to the behavioral category of design patterns, which are concerned with the interactions and responsibilities between objects.
     </div>
   </div>
 </details>
@@ -178,8 +183,11 @@ John Wang
     <strong>View Answer:</strong>
   </summary>
   <div>
+  <div>
+      <strong>Interview Response:</strong> The Memento pattern can be used in JavaScript to implement features such as "undo" or "rollback" for an application, where a previous state of an object needs to be restored without violating encapsulation. It can also be used in browser-based applications to preserve user data during a session.
+    </div><br/>
     <div>
-      <strong>Interview Response:</strong> We can use the Memento pattern to create snapshots of an object's state to restore it to a previous state.<br/><br/>The Memento pattern allows you to create complete copies of an object's state, including private fields, and store them independently from the object. While most people remember this pattern because of the "undo" use case, it's also helpful when dealing with transactions (i.e., if you need to roll back an operation on an error).<br/><br/>We can also use this pattern when direct access to an object's fields/getters/setters violates its encapsulation. The Memento makes the object responsible for capturing a snapshot of its current state. Because no other object can read the snapshot, the original object's state data remains safe and secure.
+      <strong>Technical Response:</strong> We can use the Memento pattern to create snapshots of an object's state to restore it to a previous state.<br/><br/>The Memento pattern allows you to create complete copies of an object's state, including private fields, and store them independently from the object. While most people remember this pattern because of the "undo" use case, it's also helpful when dealing with transactions (i.e., if you need to roll back an operation on an error).<br/><br/>We can also use this pattern when direct access to an object's fields/getters/setters violates its encapsulation. The Memento makes the object responsible for capturing a snapshot of its current state. Because no other object can read the snapshot, the original object's state data remains safe and secure.
     </div><br/>
   </div>
 </details>
@@ -193,8 +201,12 @@ John Wang
     <strong>View Answer:</strong>
   </summary>
   <div>
+  <div>
+      <strong>Interview Response:</strong> Some advantages of using the Memento pattern in JavaScript include preserving encapsulation, providing a simple way to undo/redo actions, and improving code maintainability.
+    </div>
+    <br />
     <div>
-      <strong>Interview Response:</strong> Benefits of the Memento Pattern
+      <strong>Technical Response:</strong> Benefits of the Memento Pattern
     </div>
     <br />
     <div></div>
@@ -215,8 +227,12 @@ John Wang
     <strong>View Answer:</strong>
   </summary>
   <div>
+  <div>
+      <strong>Interview Response:</strong> Drawbacks of the Memento pattern in JavaScript include increased memory usage for storing snapshots, potential performance issues, and the need for careful management of state transitions.
+    </div>
+    <br />
     <div>
-      <strong>Interview Response:</strong> Drawbacks of the Memento Pattern.
+      <strong>Technical Response:</strong> Drawbacks of the Memento Pattern.
     </div>
     <br />
     <div></div>
@@ -226,6 +242,22 @@ John Wang
 - Most dynamic programming languages, such as JavaScript, cannot guarantee that the Memento's state remains unchanged.
 
 <br />
+  </div>
+</details>
+
+---
+
+### Are there any alternatives to using the Memento pattern?
+
+<details>
+  <summary>
+    <strong>View Answer:</strong>
+  </summary>
+  <div>
+    <div>
+      <strong>Interview Response:</strong> Alternative approaches to the Memento pattern in JavaScript include using immutability, functional programming concepts, or event sourcing to manage state and changes in an application.
+    </div>
+    <br />
   </div>
 </details>
 

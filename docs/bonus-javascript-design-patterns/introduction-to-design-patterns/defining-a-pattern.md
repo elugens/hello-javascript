@@ -54,6 +54,10 @@ import StructuredData from './schemadata/DefiningPatternSchemaData.js';
     <div>
       <strong>Interview Response:</strong> A pattern that has not yet passed "pattern"-ity tests is called a proto-pattern. Proto-patterns result from the work of someone that created a specific solution that is worthy of sharing but may not have yet had the opportunity to be qualified due to its newness.
     </div>
+    <br/>
+    <div>
+      <strong>Technical Response:</strong> A proto-pattern in JavaScript design patterns refers to a pattern that is still in the process of being defined and refined. It may not have a well-established implementation or a widely accepted name.<br/><br/>One example of a proto-pattern is the "null object" pattern, which suggests using a null object to handle situations where a null value is expected.
+    </div>
   </div>
 </details>
 
@@ -67,7 +71,11 @@ import StructuredData from './schemadata/DefiningPatternSchemaData.js';
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> A brief description or snippet of a pattern is known as patlet.
+      <strong>Interview Response:</strong> A brief description or snippet of a pattern is known as patlet or pattern-let.
+    </div>
+    <br/>
+    <div>
+      <strong>Technical Response:</strong> A description or fragment of a proto-pattern is sometimes referred to as a "patternlet". A patternlet is a smaller, less well-defined version of a design pattern that is still in the process of being defined and refined.<br/>One example of a patternlet is the "parameter object" patternlet, which involves passing a single object as a parameter instead of multiple individual parameters.
     </div>
   </div>
 </details>
@@ -81,8 +89,12 @@ import StructuredData from './schemadata/DefiningPatternSchemaData.js';
     <strong>View Answer:</strong>
   </summary>
   <div>
+  <div>
+      <strong>Interview Response:</strong> A design pattern is worth utilizing if it solves a recurring design problem effectively and efficiently, maintains code simplicity and readability, and is widely accepted and used in the industry.
+    </div>
     <div>
-      <strong>Interview Response:</strong> Estimating a good design pattern.
+    <br/>
+      <strong>Technical Response:</strong> Estimating a good design pattern.
     </div>
     <div></div>
 
@@ -107,8 +119,11 @@ import StructuredData from './schemadata/DefiningPatternSchemaData.js';
     <strong>View Answer:</strong>
   </summary>
   <div>
+  <div>
+      <strong>Interview Response:</strong> The Rule of Three in design patterns suggests that a pattern should not be used until the problem it solves has occurred at least three times, to avoid premature optimization and over-engineering.<br/><br/>
+    </div>
     <div>
-      <strong>Interview Response:</strong> One of the additional requirements for a pattern to be valid is that they display some recurring phenomenon. We often qualify this approach in three key areas, known as the rule of three.<br/><br/>To show recurrence, one must demonstrate:
+      <strong>Technical Response:</strong> One of the additional requirements for a pattern to be valid is that they display some recurring phenomenon. We often qualify this approach in three key areas, known as the rule of three.<br/><br/>To show recurrence, one must demonstrate:
     </div>
     <div></div>
 
@@ -132,7 +147,7 @@ import StructuredData from './schemadata/DefiningPatternSchemaData.js';
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The process used to create a new design pattern include documentation of your intent, motivation, structural representation, and code examples.<br/><br/>
+      <strong>Interview Response:</strong> The process used to create a new design pattern includes documentation of your intent, motivation, structural representation, and code examples.<br/><br/>
     </div>
     <div>
       <strong>Technical Response:</strong> The process used to create a new design pattern includes documentation of your intent, motivation, structural representation, and code examples. Intent covers the problems and solutions and describes what the design does. The motivation explains the problem in detail and how the pattern solves the problem. The structure includes a class and object diagram that depicts each aspect of the pattern and how they are connected. The author provides a code example to represent the design.

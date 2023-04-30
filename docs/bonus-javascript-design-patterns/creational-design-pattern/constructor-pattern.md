@@ -49,15 +49,18 @@ import StructuredData from './schemadata/ConstructorSchemaData.js';
     <strong>View Answer:</strong>
   </summary>
   <div>
+  <div>
+      <strong>Interview Response:</strong> The constructor design pattern is a creational pattern that provides a standardized way to create objects by defining a common constructor interface. It can help simplify object creation and initialization.
+    </div><br />
     <div>
-      <strong>Interview Response:</strong> The constructor pattern is a design pattern that uses a class or function to create unique types of objects. A constructor is a one-of-a-kind method for initializing a newly created object after allocated memory.<br/><br/>Constructor patterns are among the most fundamental, extensively used, and modern JavaScript patterns. The objective of this pattern, as hinted by the name, is to facilitate constructor creation.
+      <strong>Technical Response:</strong> The constructor pattern is a design pattern that uses a class or function to create unique types of objects. A constructor is a one-of-a-kind method for initializing a newly created object after allocated memory.<br/><br/>Constructor patterns are among the most fundamental, extensively used, and modern JavaScript patterns. The objective of this pattern, as hinted by the name, is to facilitate constructor creation.
     </div><br />
   </div>
 </details>
 
 ---
 
-### In the constructor pattern, what kinds of objects can we implement?
+### In the constructor pattern, what kinds of objects can we create?
 
 <details className='answer'>
   <summary>
@@ -65,54 +68,8 @@ import StructuredData from './schemadata/ConstructorSchemaData.js';
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The two types of objects used in the constructor pattern include classes and traditional functions.
+      <strong>Interview Response:</strong> In JavaScript, we can implement various types of objects using the constructor pattern, including plain objects, arrays, and custom objects with specific methods and properties.
     </div><br />
-
-  <div><strong className="codeExample">Code Example:</strong> Traditional "function" based syntax<br /><br />
-
-  <div></div>
-
-```js
-//  a) Traditional "function" based syntax
-
-function Person(name, age) {
-  this.name = name;
-  this.age = age;
-  this.getDetails = function () {
-    console.log(`${this.name} is ${this.age} years old!`);
-  };
-}
-```
-
-  </div>
-
-  <br />
-  <div><strong className="codeExample">Code Example:</strong> ES6 "class" syntax<br /><br />
-
-  <div></div>
-
-```js
-// ES6 "class" syntax
-
-class Person {
-  constructor(name, age) {
-    this.name = name;
-    this.age = age;
-    this.getDetails = function () {
-      console.log(`${this.name} is ${this.age} years old!`);
-    };
-  }
-}
-
-//Creating new instance of Person
-const personOne = new Person('John', 20);
-personOne.getDetails();
-
-// Output - “John is 20 years old!”
-```
-
-  </div>
-
   </div>
 </details>
 
@@ -156,14 +113,14 @@ personOne.getDetails();
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> You can use the Constructor Pattern when you want to create multiple instances of the same object. The constructor pattern is typical in libraries and plugins.
+      <strong>Interview Response:</strong> The constructor pattern is useful when you need to create multiple instances of an object with similar properties and behavior, and when you want to encapsulate related data and behavior within a single object.
     </div>
   </div>
 </details>
 
 ---
 
-### What are some of the constructor pattern and methods issues?
+### What are some of the issues related to constructor pattern and instance checking?
 
 <details className='answer'>
   <summary>
@@ -227,6 +184,36 @@ console.log(yourPhone === myPhone); // false
   </div>
 
   </div>
+</details>
+
+---
+
+### What are the benefits of using the constructor pattern?
+
+<details>
+  <summary>
+    <strong>View Answer:</strong>
+  </summary>
+  <div>
+    <div>
+      <strong>Interview Response:</strong> The benefits of using the constructor pattern in JavaScript include encapsulation of object creation and initialization, the ability to create multiple instances, and the flexibility to add properties and methods.
+    </div><br />
+    </div>
+</details>
+
+---
+
+### What are the drawbacks of using the constructor pattern?
+
+<details>
+  <summary>
+    <strong>View Answer:</strong>
+  </summary>
+  <div>
+    <div>
+      <strong>Interview Response:</strong> The drawbacks of using the constructor pattern in JavaScript include potential performance issues with creating many instances, and the lack of true private properties and methods.
+    </div><br />
+    </div>
 </details>
 
 ---

@@ -49,8 +49,12 @@ import StructuredData from './schemadata/FlyweightSchemaData.js';
     <strong>View Answer:</strong>
   </summary>
   <div>
+  <div>
+      <strong>Interview Response:</strong> The flyweight design pattern is a structural pattern that optimizes memory usage by sharing common data between similar objects, reducing overall object creation.<br/>
+    </div>
+    <br/>
     <div>
-      <strong>Interview Response:</strong> It allows you to fit more objects into the available RAM by sharing parts of state between multiple objects rather than keeping all of the data in each object.<br/>
+      <strong>Technical Response:</strong> It allows you to fit more objects into the available RAM by sharing parts of state between multiple objects rather than keeping all of the data in each object.<br/>
     </div>
     <div>
 </div><br />
@@ -164,7 +168,7 @@ Flyweights: 2
 
 ---
 
-### The Flyweight pattern belongs to which pattern family?
+### The Flyweight pattern belongs to which design pattern family?
 
 <details>
   <summary>
@@ -172,7 +176,7 @@ Flyweights: 2
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Flyweight pattern gets classified as a Structural design pattern.
+      <strong>Interview Response:</strong> The Flyweight pattern belongs to the structural pattern family, which is concerned with the composition of classes and objects to form larger structures.
     </div>
   </div>
 </details>
@@ -186,8 +190,12 @@ Flyweights: 2
     <strong>View Answer:</strong>
   </summary>
   <div>
+  <div>
+      <strong>Interview Response:</strong> In the Flyweight pattern, two types of objects are involved: the flyweight objects, which are shared among multiple contexts, and the context objects, which contain unique state.
+    </div>
+    <br />
     <div>
-      <strong>Interview Response:</strong> The Client, FlyweightFactory, and Flyweight are all part of the Flyweight pattern.
+      <strong>Technical Response:</strong> The Client, FlyweightFactory, and Flyweight are all part of the Flyweight pattern.
     </div>
     <br />
     <div></div>
@@ -209,11 +217,14 @@ Flyweights: 2
     <strong>View Answer:</strong>
   </summary>
   <div>
+  <div>
+      <strong>Interview Response:</strong> The Flyweight pattern should be used when there is a large number of objects with similar characteristics, and memory usage needs to be optimized by sharing common data.
+    </div>
+<br />
     <div>
-      <strong>Interview Response:</strong> We should use this pattern when our application has many objects that consume the same data or when memory storage costs are high. JavaScript uses this pattern to distribute a list of immutable strings throughout the program.<br/><br/>
+      <strong>Technical Response:</strong> We should use this pattern when our application has many objects that consume the same data or when memory storage costs are high. JavaScript uses this pattern to distribute a list of immutable strings throughout the program.<br/><br/>
       This pattern most commonly gets found in network programs or word processors, and it can be used in internet browsers to prevent the same images from loading. The flyweight pattern enables image caching. As a result, only new images are loaded from the Web when a web page loads, while existing ones get extracted from the cache.
     </div>
-
 <br />
   </div>
 </details>
@@ -228,7 +239,7 @@ Flyweights: 2
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> If your software has a lot of similar objects, you can save much memory.
+      <strong>Interview Response:</strong> Advantages of using the Flyweight pattern in JavaScript include reduced memory usage, improved performance, and increased scalability and flexibility in managing large sets of similar objects.
     </div>
 
 <br />
@@ -244,8 +255,11 @@ Flyweights: 2
     <strong>View Answer:</strong>
   </summary>
   <div>
+  <div>
+      <strong>Interview Response:</strong> Disadvantages of using the Flyweight pattern in JavaScript include increased complexity due to separation of intrinsic and extrinsic state, and reduced security due to shared state.
+    </div><br/>
     <div>
-      <strong>Interview Response:</strong> Drawbacks of the Flyweight Pattern.
+      <strong>Technical Response:</strong> Drawbacks of the Flyweight Pattern.
     </div><br/>
 
 - When certain context data needs to be regenerated each time a flyweight method gets called, you may be sacrificing RAM for CPU cycles.
@@ -253,6 +267,22 @@ Flyweights: 2
 - New colleagues get perplexed as to why an entity's state gets partitioned.
 
 <br />
+  </div>
+</details>
+
+---
+
+### Are there any alternatives to using the Flyweight pattern?
+
+<details>
+  <summary>
+    <strong>View Answer:</strong>
+  </summary>
+  <div>
+  <div>
+      <strong>Interview Response:</strong> Yes, there are alternative patterns to the Flyweight pattern in JavaScript, including the Singleton pattern, the Prototype pattern, and the Factory pattern.
+    </div>
+    <br/>
   </div>
 </details>
 

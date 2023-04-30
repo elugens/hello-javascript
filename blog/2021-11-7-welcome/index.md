@@ -7,13 +7,13 @@ tags: [javascript, interview, frontend]
 
 import YTVideo from '../../src/components/YTVideo/YTVideo'
 
-# Welcome to our new website and we hope you find it useful.
+# Welcome to our new website and we hope you find it useful
 
 <div class='videoWrapper'>
 <iframe
     width="640"
     height="480"
-    src="https://www.youtube.com/embed/W6NZfCO5SIk"
+    src="https://www.youtube.com/embed/Xo1rcPYSR2o"
     frameborder="0"
     allow="autoplay; encrypted-media"
     allowfullscreen

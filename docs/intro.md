@@ -23,7 +23,19 @@ lastmod: 2022-05-01T20:26:14.124Z
 
 <!-- # Getting Started with JavaScript Questions -->
 
-![img alt](/img/js_framework_circle.png)
+<div class='videoWrapper'>
+<iframe
+    width="640"
+    height="480"
+    src="https://www.youtube.com/embed/Xo1rcPYSR2o"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen
+>
+</iframe>
+</div>
+
+<br/>
 
 ## Let's get started with the Basic JavaScript Questions
 

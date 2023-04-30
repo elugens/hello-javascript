@@ -49,8 +49,12 @@ import StructuredData from './schemadata/DecoratorSchemaData.js';
     <strong>View Answer:</strong>
   </summary>
   <div>
+  <div>
+      <strong>Interview Response:</strong> The Decorator Pattern in JavaScript allows you to dynamically add behavior or modify the behavior of an object at runtime, without affecting other objects of the same class.<br/>
+    </div>
+    <br/>
     <div>
-      <strong>Interview Response:</strong> Decorators are a structural JS design pattern that aims to promote code reuse. Like Mixins, we can consider them as another viable alternative to object sub-classing. This pattern enables behavior that gets dynamically added to an individual object without affecting the behavior of other objects in the same class. Decorators can increase functionality in a more flexible way than sub-classing.<br/>
+      <strong>Technical Response:</strong> Decorators are a structural JS design pattern that aims to promote code reuse. Like Mixins, we can consider them as another viable alternative to object sub-classing. This pattern enables behavior that gets dynamically added to an individual object without affecting the behavior of other objects in the same class. Decorators can increase functionality in a more flexible way than sub-classing.<br/>
     </div>
     <div>
 </div><br />
@@ -252,7 +256,7 @@ Decorated User: Kelly, Broadway, New York
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Decorator pattern is part of the Structural design pattern family.
+      <strong>Interview Response:</strong> The Decorator pattern in JavaScript belongs to the Structural pattern family, which focuses on organizing objects and classes to form larger structures and functionalities.
     </div>
   </div>
 </details>
@@ -266,8 +270,12 @@ Decorated User: Kelly, Broadway, New York
     <strong>View Answer:</strong>
   </summary>
   <div>
+  <div>
+      <strong>Interview Response:</strong> In the Decorator pattern in JavaScript, the object participants include the Component interface or class, ConcreteComponent, and Decorator interface or class. Additionally, there are ConcreteDecorator classes.
+    </div>
+    <br />
     <div>
-      <strong>Interview Response:</strong> The Client, Component, and Decorator are the object participants in the Decorator Pattern.
+      <strong>Technical Response:</strong> The Client, Component, and Decorator are the object participants in the Decorator Pattern.
     </div>
     <br />
     <div></div>
@@ -289,8 +297,12 @@ Decorated User: Kelly, Broadway, New York
     <strong>View Answer:</strong>
   </summary>
   <div>
+  <div>
+      <strong>Interview Response:</strong> Some advantages of using the Decorator pattern in JavaScript include its ability to add new functionality to objects dynamically, its flexibility, and its ability to allow for easy customization of object behavior.
+    </div>
+    <br />
     <div>
-      <strong>Interview Response:</strong> Benefits of the Decorator Pattern include:
+      <strong>Technical Response:</strong> Benefits of the Decorator Pattern include:
     </div>
     <br />
     <div></div>
@@ -313,8 +325,12 @@ Decorated User: Kelly, Broadway, New York
     <strong>View Answer:</strong>
   </summary>
   <div>
+  <div>
+      <strong>Interview Response:</strong> Some disadvantages of using the Decorator pattern in JavaScript include the potential for an excessive number of small objects, increased complexity, and potential performance impacts due to the added layers of abstraction.
+    </div>
+    <br />
     <div>
-      <strong>Interview Response:</strong> Drawbacks of the Decorator Pattern include:
+      <strong>Technical Response:</strong> Drawbacks of the Decorator Pattern include:
     </div>
     <br />
     <div></div>
@@ -324,6 +340,22 @@ Decorated User: Kelly, Broadway, New York
 - The initial configuration code of layers might look pretty ugly.
 
 <br />
+  </div>
+</details>
+
+---
+
+### Are there any alternatives to using the decorator pattern?
+
+<details>
+  <summary>
+    <strong>View Answer:</strong>
+  </summary>
+  <div>
+  <div>
+      <strong>Interview Response:</strong> Yes, there are alternative patterns to achieve similar functionality as the Decorator pattern in JavaScript, such as using mixins, composition, or inheritance.
+    </div>
+    <br />
   </div>
 </details>
 

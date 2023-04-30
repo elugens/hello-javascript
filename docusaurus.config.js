@@ -95,6 +95,16 @@ const config = {
             className: 'get__started',
           },
           { to: '/blog', label: 'Blog', position: 'right' },
+          {
+            to: '/about-hello-javascript',
+            label: 'About',
+            position: 'right',
+          },
+          {
+            to: '/how-to-get-the-best-experience-on-our-website',
+            label: 'Support',
+            position: 'right',
+          },
           // {
           //   href: 'https://patreon.com/hellojavascript',
           //   label: 'Patreon',

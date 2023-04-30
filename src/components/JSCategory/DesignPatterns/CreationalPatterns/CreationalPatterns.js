@@ -59,6 +59,14 @@ const GetCreationalPatternCats = () => {
               Singleton
             </Link>
           </li>
+          <li className={styles.mainCategoryItem}>
+            <Link
+              to='/docs/bonus-javascript-design-patterns/creational-design-pattern/module-pattern'
+              className={styles.mainCategoryLink}
+            >
+              Module
+            </Link>
+          </li>
         </ul>
       </div>
     </div>

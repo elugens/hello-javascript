@@ -49,8 +49,12 @@ import StructuredData from './schemadata/StateSchemaData.js';
     <strong>View Answer:</strong>
   </summary>
   <div>
+  <div>
+      <strong>Interview Response:</strong> The state design pattern is a behavioral pattern that allows objects to change behavior based on their internal state, enabling cleaner and more flexible code.<br/>
+    </div>
+    <br/>
     <div>
-      <strong>Interview Response:</strong> The State pattern provides state-specific logic to a limited set of objects in which each object represents a particular state. The State pattern is commonly used in JavaScript to convert massive switch-base state machines into objects.<br/>
+      <strong>Technical Response:</strong> The State pattern provides state-specific logic to a limited set of objects in which each object represents a particular state. The State pattern is commonly used in JavaScript to convert massive switch-base state machines into objects.<br/>
     </div>
     <div>
 </div><br />
@@ -157,7 +161,7 @@ Green --> for 1 minute
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The State pattern is a type of behavioral design pattern.
+      <strong>Interview Response:</strong> The State pattern belongs to the behavioral pattern category in JavaScript. It focuses on the behavior of objects and how they respond to changes in their internal state.
     </div>
   </div>
 </details>
@@ -171,8 +175,12 @@ Green --> for 1 minute
     <strong>View Answer:</strong>
   </summary>
   <div>
+  <div>
+      <strong>Interview Response:</strong> You should utilize the JavaScript State Pattern when you have an object with multiple behaviors that depend on its internal state, leading to complex conditional statements.
+    </div>
+    <br />
     <div>
-      <strong>Interview Response:</strong> In a real-world application, the State pattern could be handy for introducing new states that we haven't yet considered, possibly more simply than a switch case. Each state is contained and has its own set of internal functions.
+      <strong>Technical Response:</strong> In a real-world application, the State pattern could be handy for introducing new states that we haven't yet considered, possibly more simply than a switch case. Each state is contained and has its own set of internal functions.
     </div>
     <br />
   </div>
@@ -187,8 +195,12 @@ Green --> for 1 minute
     <strong>View Answer:</strong>
   </summary>
   <div>
+  <div>
+      <strong>Interview Response:</strong> Advantages of employing the State pattern in JavaScript include improved code organization, flexibility, maintainability, and reduced conditional statements. It also enables easier testing.
+    </div>
+    <br />
     <div>
-      <strong>Interview Response:</strong> Benefits of the State Pattern
+      <strong>Technical Response:</strong> Benefits of the State Pattern
     </div>
     <br />
     <div></div>
@@ -212,6 +224,22 @@ Green --> for 1 minute
   <div>
     <div>
       <strong>Interview Response:</strong> Applying the pattern may be excessive if a state machine has only a few states or infrequently changes.
+    </div>
+<br />
+  </div>
+</details>
+
+---
+
+### Are there any alternatives to using the State pattern?
+
+<details>
+  <summary>
+    <strong>View Answer:</strong>
+  </summary>
+  <div>
+    <div>
+      <strong>Interview Response:</strong> Yes, alternatives to using the State pattern in JavaScript include using conditional statements, using the Strategy pattern, or using polymorphism to represent different states.
     </div>
 <br />
   </div>

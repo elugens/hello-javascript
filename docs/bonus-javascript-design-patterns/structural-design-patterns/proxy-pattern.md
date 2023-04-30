@@ -49,8 +49,12 @@ import StructuredData from './schemadata/ProxySchemaData.js';
     <strong>View Answer:</strong>
   </summary>
   <div>
+  <div>
+      <strong>Interview Response:</strong> The Proxy pattern is a structural pattern that allows an object to act as a placeholder for another object, controlling access and providing additional functionality such as caching and security.<br/>
+    </div>
+    <br/>
     <div>
-      <strong>Interview Response:</strong> The Proxy Pattern, as the name suggests, functions as a proxy or placeholder for another object to manage access, decrease cost, and simplify the code. The proxy could connect to almost anything – a network connection, a large object in memory, a file, or another resource that would have been expensive or impossible to recreate.<br/>
+      <strong>Technical Response:</strong> The Proxy Pattern, as the name suggests, functions as a proxy or placeholder for another object to manage access, decrease cost, and simplify the code. The proxy could connect to almost anything – a network connection, a large object in memory, a file, or another resource that would have been expensive or impossible to recreate.<br/>
     </div>
     <div>
 </div><br />
@@ -293,7 +297,7 @@ Ottawa--Returning from Cache
 
 ---
 
-### The Proxy pattern belongs to which pattern family?
+### The Proxy pattern belongs to which design pattern family?
 
 <details>
   <summary>
@@ -301,7 +305,7 @@ Ottawa--Returning from Cache
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Proxy pattern is a type of structural design pattern.
+      <strong>Interview Response:</strong> The Proxy pattern belongs to the structural pattern family, which is concerned with the composition of classes and objects to form larger structures.
     </div>
   </div>
 </details>
@@ -315,8 +319,12 @@ Ottawa--Returning from Cache
     <strong>View Answer:</strong>
   </summary>
   <div>
+  <div>
+      <strong>Interview Response:</strong> A good use case for the Proxy pattern in JavaScript is providing controlled access to sensitive objects, caching expensive operations, or implementing remote services.<br/>
+    </div>
+    <br/>
     <div>
-      <strong>Interview Response:</strong> The proxy pattern attempts to lighten the load on the target object. It is useful when dealing with large applications that make many network requests. Because delays may occur when responding to such requests, using a proxy pattern prevents the target object from becoming overburdened with requests.<br/><br/>
+      <strong>Technical Response:</strong> The proxy pattern attempts to lighten the load on the target object. It is useful when dealing with large applications that make many network requests. Because delays may occur when responding to such requests, using a proxy pattern prevents the target object from becoming overburdened with requests.<br/><br/>
       HTTP requests are a real-world example. Because these are costly operations, the proxy pattern aids in reducing the number of requests forwarded to the target.<br/>
     </div>
 
@@ -333,8 +341,12 @@ Ottawa--Returning from Cache
     <strong>View Answer:</strong>
   </summary>
   <div>
+  <div>
+      <strong>Interview Response:</strong> Advantages of using the Proxy pattern in JavaScript include increased security, improved performance, and greater flexibility in controlling access to objects and their methods.
+    </div>
+    <br />
     <div>
-      <strong>Interview Response:</strong> Benefits of the Proxy Pattern.
+      <strong>Technical Response:</strong> Benefits of the Proxy Pattern.
     </div>
     <br />
     <div></div>
@@ -357,8 +369,12 @@ Ottawa--Returning from Cache
     <strong>View Answer:</strong>
   </summary>
   <div>
+  <div>
+      <strong>Interview Response:</strong> Disadvantages of using the Proxy pattern in JavaScript include increased complexity due to the use of additional objects, and potential performance overhead when using remote proxies.
+    </div>
+    <br />
     <div>
-      <strong>Interview Response:</strong> Drawbacks of the Proxy Pattern.
+      <strong>TechnicalResponse:</strong> Drawbacks of the Proxy Pattern.
     </div>
     <br />
     <div></div>
@@ -367,6 +383,22 @@ Ottawa--Returning from Cache
 - The service's response time may be delayed or hindered.
 
 <br />
+  </div>
+</details>
+
+---
+
+### Are there any alternatives to using the Proxy Pattern?
+
+<details>
+  <summary>
+    <strong>View Answer:</strong>
+  </summary>
+  <div>
+  <div>
+      <strong>Interview Response:</strong> Yes, there are alternative patterns to the Proxy pattern in JavaScript, including the Decorator pattern, the Adapter pattern, and the Facade pattern.
+    </div>
+    <br />
   </div>
 </details>
 

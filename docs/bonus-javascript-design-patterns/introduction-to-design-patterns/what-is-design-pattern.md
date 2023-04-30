@@ -70,8 +70,12 @@ import StructuredData from './schemadata/WhatIsSchemaData.js';
     <strong>View Answer:</strong>
   </summary>
   <div>
+  <div>
+      <strong>Interview Response:</strong> Design patterns in JavaScript help improve code organization, maintainability, and scalability by providing tested and proven solutions to common software development problems.
+    </div>
+    <br/>
     <div>
-      <strong>Interview Response:</strong> Design patterns provide us with a common vocabulary to describe solutions to problems within our applications. This approach can be significantly simpler than describing syntax and semantics when we are trying to show a way of structuring a proper solution in code form.
+      <strong>Technical Response:</strong> Design patterns provide us with a common vocabulary to describe solutions to problems within our applications. This approach can be significantly simpler than describing syntax and semantics when we are trying to show a way of structuring a proper solution in code form.
     </div>
   </div>
 </details>
@@ -86,7 +90,11 @@ import StructuredData from './schemadata/WhatIsSchemaData.js';
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> One of the most important aspects of writing maintainable code is noticing the recurring themes in the code and optimizing them.
+      <strong>Interview Response:</strong> One of the most important aspects of writing maintainable code is to make it easy to understand and modify.
+    </div>
+    <br/>
+    <div>
+      <strong>Technical Response:</strong> One of the most important aspects of writing maintainable code is to make it easy to understand and modify. This means writing code that is clear, concise, and well-organized, with comments and documentation to explain its purpose and structure. By making code easy to understand and modify, developers can make it easier to maintain over time.
     </div>
   </div>
 </details>
@@ -131,7 +139,7 @@ import StructuredData from './schemadata/WhatIsSchemaData.js';
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> It is important to understand design patterns because they provide users with a proven solution to a problem.
+      <strong>Interview Response:</strong> Understanding design patterns allows developers to write more efficient and effective code by utilizing proven solutions to common problems, saving time and improving code quality.
     </div>
   </div>
 </details>
@@ -172,7 +180,11 @@ import StructuredData from './schemadata/WhatIsSchemaData.js';
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> No, design patterns are not an exact solution, but it is essential to remember that the role of a pattern is merely to provide us with a solution scheme. Patterns do not solve all design problems, nor do they replace good software designers; however, they support them.
+      <strong>Interview Response:</strong> Design patterns are not exact solutions but rather general templates that can be adapted to fit specific needs and situations in software development.
+    </div>
+    <br/>
+    <div>
+      <strong>Technical Response:</strong> No, design patterns are not an exact solution, but it is essential to remember that the role of a pattern is merely to provide us with a solution scheme. Patterns do not solve all design problems, nor do they replace good software designers; however, they support them. Design patterns provide developers with a framework for solving problems in a flexible and reusable way, but they may need to be adapted or combined with other patterns to fit specific situations.
     </div>
   </div>
 </details>
@@ -185,7 +197,12 @@ import StructuredData from './schemadata/WhatIsSchemaData.js';
   <summary>
     <strong>View Answer:</strong>
   </summary>
+  
   <div>
+  <div>
+      <strong>Interview Response:</strong> JavaScript design patterns offer improved code organization, reusability, scalability, flexibility, and code quality, resulting in more efficient and effective software development.
+    </div>
+    <br/>
     <div>
       <strong>Interview Response:</strong> Advantages of using design patterns:
     </div>

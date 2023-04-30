@@ -49,8 +49,13 @@ import StructuredData from './schemadata/CommandSchemaData.js';
     <strong>View Answer:</strong>
   </summary>
   <div>
+  <div>
+      <strong>Interview Response:</strong> The Command pattern is a behavioral design pattern in JavaScript that encapsulates a request as an object, allowing for actions to be queued, logged, and undone.
+<br/>
+    </div>
+    <br/>
     <div>
-      <strong>Interview Response:</strong> Command Pattern is a behavioral JS design pattern that aims to encapsulate actions or operations as objects. This pattern is helpful in scenarios where we want to decouple or split the objects executing the commands from the objects issuing the orders. You may centralize the processing of these actions/operations by using command objects.
+      <strong>Technical Response:</strong> Command Pattern is a behavioral JS design pattern that aims to encapsulate actions or operations as objects. This pattern is helpful in scenarios where we want to decouple or split the objects executing the commands from the objects issuing the orders. You may centralize the processing of these actions/operations by using command objects.
 <br/>
     </div>
     <div>
@@ -240,7 +245,7 @@ Value: 76
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Command pattern is a type of behavioral design pattern.
+      <strong>Interview Response:</strong> The Command pattern belongs to the Behavioral pattern family in JavaScript, which is concerned with communication between objects and the assignment of responsibilities.
     </div>
   </div>
 </details>
@@ -254,9 +259,12 @@ Value: 76
     <strong>View Answer:</strong>
   </summary>
   <div>
-    <div>
-      <strong>Interview Response:</strong> Use Case:
+  <div>
+      <strong>Interview Response:</strong> You should utilize the JavaScript Command pattern when you need to decouple the object making a request from the object that handles the request.
     </div><br/>
+    <div>
+      <strong>Technical Response:</strong> Use Case:
+    </div>
 
 - If you want to queue and execute requests at different times.
 - If you're going to perform operations such as reset or undo.
@@ -268,15 +276,19 @@ Value: 76
 
 ---
 
-### What are some of the benefits of using the Command pattern?
+### What are the benefits of using the Command pattern?
 
 <details>
   <summary>
     <strong>View Answer:</strong>
   </summary>
   <div>
+  <div>
+      <strong>Interview Response:</strong> Benefits of using the Command pattern in JavaScript include decoupling, flexibility, extensibility, undo/redo functionality, and the ability to create macro commands.
+    </div>
+    <br />
     <div>
-      <strong>Interview Response:</strong> Benefits of the Command Pattern
+      <strong>Technical Response:</strong> Benefits of the Command Pattern
     </div>
     <br />
     <div></div>
@@ -301,7 +313,24 @@ Value: 76
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The code may become more complicated since you’re introducing a whole new layer between senders and receivers.
+      <strong>Interview Response:</strong> Drawbacks of the Command pattern in JavaScript include increased complexity, potential performance overhead, and difficulty with implementing some commands that require a state.
+    </div>
+    <br />
+    <div></div>
+  </div>
+</details>
+
+---
+
+### Are there any alternatives to using the Command pattern?
+
+<details>
+  <summary>
+    <strong>View Answer:</strong>
+  </summary>
+  <div>
+    <div>
+      <strong>Interview Response:</strong> Yes, there are several alternatives to the Command pattern in JavaScript, including the Strategy, Observer, and Mediator patterns, among others.
     </div>
     <br />
     <div></div>

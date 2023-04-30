@@ -49,8 +49,12 @@ import StructuredData from './schemadata/StrategySchemaData.js';
     <strong>View Answer:</strong>
   </summary>
   <div>
+  <div>
+      <strong>Interview Response:</strong> The strategy design pattern is a behavioral pattern that allows for interchangeable algorithms by encapsulating them in separate objects and selecting one dynamically.<br/>
+    </div>
+    <br/>
     <div>
-      <strong>Interview Response:</strong> The Strategy pattern encapsulates various algorithms (or strategies) for a specific task. It enables a method to be replaced at runtime with another method (Strategy) without the client knowing it. The Strategy pattern is essentially a collection of interchangeable algorithms.<br/>
+      <strong>Technical Response:</strong> The Strategy pattern encapsulates various algorithms (or strategies) for a specific task. It enables a method to be replaced at runtime with another method (Strategy) without the client knowing it. The Strategy pattern is essentially a collection of interchangeable algorithms.<br/>
     </div>
     <div>
 </div><br />
@@ -155,7 +159,7 @@ Fedex Strategy: $43.20
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Strategy pattern is part of the Behavioral design pattern set.
+      <strong>Interview Response:</strong> The Strategy pattern belongs to the behavioral pattern group in JavaScript, which focuses on communication and interaction between objects and classes.
     </div>
   </div>
 </details>
@@ -169,8 +173,12 @@ Fedex Strategy: $43.20
     <strong>View Answer:</strong>
   </summary>
   <div>
+  <div>
+      <strong>Interview Response:</strong> The JavaScript Strategy Pattern should be used when you need to dynamically switch between multiple algorithms or behaviors at runtime, while keeping the code flexible and maintainable.
+    </div>
+    <br />
     <div>
-      <strong>Interview Response:</strong> Strategy Pattern Use-Cases.
+      <strong>Technical Response:</strong> Strategy Pattern Use-Cases.
     </div>
     <br />
     <div></div>
@@ -192,8 +200,12 @@ Fedex Strategy: $43.20
     <strong>View Answer:</strong>
   </summary>
   <div>
+  <div>
+      <strong>Interview Response:</strong> Some advantages of using the Strategy pattern in JavaScript include increased flexibility, maintainability, and code reuse, as well as improved encapsulation and separation of concerns.
+    </div>
+    <br />
     <div>
-      <strong>Interview Response:</strong> Benefits of the Strategy Pattern
+      <strong>Technical Response:</strong> Benefits of the Strategy Pattern
     </div>
     <br />
     <div></div>
@@ -216,8 +228,39 @@ Fedex Strategy: $43.20
     <strong>View Answer:</strong>
   </summary>
   <div>
+  <div>
+      <strong>Interview Response:</strong> Some drawbacks of the Strategy pattern in JavaScript include increased complexity and overhead, as well as potential performance issues when switching between strategies frequently or with large datasets.
+    </div>
+    <br />
     <div>
-      <strong>Interview Response:</strong> Drawbacks of the Strategy Pattern.
+      <strong>Technical Response:</strong> Drawbacks of the Strategy Pattern.
+    </div>
+    <br />
+    <div></div>
+
+- If you only have a few algorithms that seldom change, there's no point in complicating the program with new classes and interfaces that come with the pattern.
+- Clients must understand the distinctions between tactics to choose the best one.
+- Many current programming languages feature functional types, which allow you to implement different variants of an algorithm within a collection of anonymous functions. You may then utilize these methods the same way you used Strategy objects, but without cluttering your code with unnecessary classes and interfaces.
+
+<br />
+  </div>
+</details>
+
+---
+
+### Are there any alternatives to using the Strategy pattern?
+
+<details>
+  <summary>
+    <strong>View Answer:</strong>
+  </summary>
+  <div>
+  <div>
+      <strong>Interview Response:</strong> Yes, some alternatives to the Strategy pattern in JavaScript include using conditionals, function composition, or the Factory pattern to achieve similar functionality with less overhead.
+    </div>
+    <br />
+    <div>
+      <strong>Technical Response:</strong> Drawbacks of the Strategy Pattern.
     </div>
     <br />
     <div></div>

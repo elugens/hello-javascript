@@ -49,8 +49,13 @@ import StructuredData from './schemadata/MediatorSchemaData.js';
     <strong>View Answer:</strong>
   </summary>
   <div>
+  <div>
+      <strong>Interview Response:</strong> The Mediator design pattern in JavaScript allows objects to communicate through a central mediator object, reducing dependencies between objects and improving maintainability and flexibility.
+<br/>
+    </div>
+    <br/>
     <div>
-      <strong>Interview Response:</strong> The Mediator Pattern is a design pattern that allows one item to notify another group of objects when an event or action occurs. The Mediator and Observer patterns vary in that the Mediator pattern allows one object to be alerted of events occurring in other objects. In contrast, the Observer pattern allows one object to subscribe to numerous events occurring in other objects.
+      <strong>Technical Response:</strong> The Mediator Pattern is a design pattern that allows one item to notify another group of objects when an event or action occurs. The Mediator and Observer patterns vary in that the Mediator pattern allows one object to be alerted of events occurring in other objects. In contrast, the Observer pattern allows one object to subscribe to numerous events occurring in other objects.
 <br/>
     </div>
     <div>
@@ -170,7 +175,7 @@ Ringo to Paul: Paul, what do you think?
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Mediator pattern is a type of behavioral design pattern.
+      <strong>Interview Response:</strong> The Mediator pattern in JavaScript belongs to the behavioral pattern category, which focuses on communication and interaction between objects in a system.
     </div>
   </div>
 </details>
@@ -184,8 +189,11 @@ Ringo to Paul: Paul, what do you think?
     <strong>View Answer:</strong>
   </summary>
   <div>
+  <div>
+      <strong>Interview Response:</strong> The Mediator pattern in JavaScript should be utilized when a system has a high degree of object interdependence, or when implementing event-driven architectures.
+    </div><br/>
     <div>
-      <strong>Interview Response:</strong> We can use it:
+      <strong>Technical Response:</strong> We can use it:
     </div><br/>
 
 - If your system has several components that must communicate with one another.
@@ -200,15 +208,19 @@ Ringo to Paul: Paul, what do you think?
 
 ---
 
-### What are some of the advantages of employing the Mediator pattern?
+### What are the advantages of employing the Mediator pattern?
 
 <details>
   <summary>
     <strong>View Answer:</strong>
   </summary>
   <div>
+  <div>
+      <strong>Interview Response:</strong> The advantages of employing the Mediator pattern in JavaScript include reduced coupling between objects, improved maintainability, and flexibility to change communication behaviors.
+    </div>
+    <br />
     <div>
-      <strong>Interview Response:</strong> Benefits of the Mediator Pattern
+      <strong>Technical Response:</strong> Benefits of the Mediator Pattern
     </div>
     <br />
     <div></div>
@@ -231,8 +243,12 @@ Ringo to Paul: Paul, what do you think?
     <strong>View Answer:</strong>
   </summary>
   <div>
+  <div>
+      <strong>Interview Response:</strong> Some of the drawbacks of the Mediator pattern in JavaScript include increased complexity due to the central mediator object, and potential performance overhead when handling a large number of events.
+    </div>
+    <br />
     <div>
-      <strong>Interview Response:</strong> Drawbacks of the Iterator Pattern.
+      <strong>Technical Response:</strong> Drawbacks of the Mediator Pattern.
     </div>
     <br />
     <div></div>
@@ -240,6 +256,22 @@ Ringo to Paul: Paul, what do you think?
 - A mediator can evolve into a God Object over time.
 
 <br />
+  </div>
+</details>
+
+---
+
+### Are there any alternatives to using the Mediator pattern?
+
+<details>
+  <summary>
+    <strong>View Answer:</strong>
+  </summary>
+  <div>
+  <div>
+      <strong>Interview Response:</strong> Yes, alternatives to the Mediator pattern in JavaScript include using the Observer pattern or event-driven architecture, or implementing direct communication between objects.
+    </div>
+    <br />
   </div>
 </details>
 

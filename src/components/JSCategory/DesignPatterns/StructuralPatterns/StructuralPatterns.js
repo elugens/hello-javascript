@@ -67,14 +67,6 @@ const GetStructuralPatternCats = () => {
               Proxy
             </Link>
           </li>
-          <li className={styles.mainCategoryItem}>
-            <Link
-              to='/docs/bonus-javascript-design-patterns/structural-design-patterns/module-pattern'
-              className={styles.mainCategoryLink}
-            >
-              Module
-            </Link>
-          </li>
         </ul>
       </div>
     </div>

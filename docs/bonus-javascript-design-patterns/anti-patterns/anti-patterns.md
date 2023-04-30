@@ -63,8 +63,11 @@ import StructuredData from './schemadata/AntiPatternsSchemaData.js';
     <strong>View Answer:</strong>
   </summary>
   <div>
+  <div>
+      <strong>Interview Response:</strong> An anti-pattern is a coding practice that is considered bad or ineffective in terms of design, performance, or maintenance. It is a common mistake that developers make when coding.
+    </div><br />
     <div>
-      <strong>Interview Response:</strong> Nine Anti-Patterns you should know.<br/>
+      <strong>Technical Response:</strong> Nine Anti-Patterns you should know.<br/>
     </div><br />
 
 1. Excessive variable definition in a global context pollutes the global namespace.

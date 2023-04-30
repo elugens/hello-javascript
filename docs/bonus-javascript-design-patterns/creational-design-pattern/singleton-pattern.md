@@ -49,8 +49,12 @@ import StructuredData from './schemadata/SingletonSchemaData.js';
     <strong>View Answer:</strong>
   </summary>
   <div>
+  <div>
+      <strong>Interview Response:</strong> The Singleton pattern in JavaScript ensures only one instance of a class exists by creating a global access point to it. It's commonly used for managing shared resources.
+    </div>
+    <br/>
     <div>
-      <strong>Interview Response:</strong> The Singleton pattern is a design principle restricting a class's instantiation to one object. That's also useful when just one object is required to coordinate system-wide actions. The Singleton pattern traditionally gets implemented by creating a class with a method that creates a new class instance even if one doesn't already exist. If an object's instance already exists, it simply returns a pointer to it.<br/>
+      <strong>Technical Response:</strong> The Singleton pattern is a design principle restricting a class's instantiation to one object. That's also useful when just one object is required to coordinate system-wide actions. The Singleton pattern traditionally gets implemented by creating a class with a method that creates a new class instance even if one doesn't already exist. If an object's instance already exists, it simply returns a pointer to it.<br/>
     </div><br />
   <div><strong className="codeExample">Diagram:</strong><br /><br />
 
@@ -166,7 +170,7 @@ console.log(badSingleA.getRandomNumber() !== badSingleB.getRandomNumber()); // t
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The singleton pattern is a type of Creational design pattern.
+      <strong>Interview Response:</strong> The Singleton pattern in JavaScript belongs to the Creational Design Pattern family, which is concerned with the process of object creation.
     </div>
   </div>
 </details>
@@ -180,8 +184,12 @@ console.log(badSingleA.getRandomNumber() !== badSingleB.getRandomNumber()); // t
     <strong>View Answer:</strong>
   </summary>
   <div>
+  <div>
+      <strong>Interview Response:</strong> JavaScript Singletons are similar to static classes or objects in that they only allow one instance, but they can be initialized lazily and provide a global point of access.
+    </div>
+    <br/>
     <div>
-      <strong>Interview Response:</strong> Singletons vary from static classes (or objects). Their initialization delays, typically because they require information that may not be available at the time of initialization. They don't make it easy for code that isn't aware of a previous reference to them to find them. A Singleton returns a structure rather than an object or a "class." Consider how closure variables aren't closures - the closure is the function scope that provides the closure.
+      <strong>Technical Response:</strong> Singletons vary from static classes (or objects). Their initialization delays, typically because they require information that may not be available at the time of initialization. They don't make it easy for code that isn't aware of a previous reference to them to find them. A Singleton returns a structure rather than an object or a "class." Consider how closure variables aren't closures - the closure is the function scope that provides the closure.
     </div>
 
   </div>
@@ -196,8 +204,12 @@ console.log(badSingleA.getRandomNumber() !== badSingleB.getRandomNumber()); // t
     <strong>View Answer:</strong>
   </summary>
   <div>
+  <div>
+      <strong>Interview Response:</strong> The advantages of using the Singleton pattern in JavaScript include the ability to ensure only one instance exists, providing a global access point, and efficient resource utilization.
+    </div>
+    <br/>
     <div>
-      <strong>Interview Response:</strong> Benefits of the Singleton Pattern
+      <strong>Technical Response:</strong> Benefits of the Singleton Pattern
     </div>
     <br />
     <div></div>
@@ -219,6 +231,10 @@ console.log(badSingleA.getRandomNumber() !== badSingleB.getRandomNumber()); // t
     <strong>View Answer:</strong>
   </summary>
   <div>
+  <div>
+      <strong>Interview Response:</strong> Drawbacks of the Singleton pattern in JavaScript include difficulty in testing, difficulty in extending, and potential for creating tightly-coupled code.
+    </div>
+    <br/>
     <div>
       <strong>Interview Response:</strong> Restricting the instantiation to just one instance could save a lot of memory space. Instead of setting up memory for a new instance each time, we only have to set up memory for that one instance referenced throughout the application. However, Singletons are considered an anti-pattern, and we should try to avoid using them in JavaScript.
     </div>
@@ -235,3 +251,16 @@ console.log(badSingleA.getRandomNumber() !== badSingleB.getRandomNumber()); // t
 </details>
 
 ---
+
+### In JavaScript, Are there any alternatives to using the singleton pattern?
+
+<details>
+  <summary>
+    <strong>View Answer:</strong>
+  </summary>
+  <div>
+    <div>
+      <strong>Interview Response:</strong> There are alternative patterns that can be used instead of the Singleton pattern in JavaScript. For example, the Revealing Module Pattern, Dependency Injection Pattern, and Factory Pattern can all be used to achieve similar results without the potential drawbacks of the Singleton pattern.
+    </div>
+  </div>
+</details>
