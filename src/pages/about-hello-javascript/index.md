@@ -8,15 +8,7 @@ tags: [javascript, interview, frontend]
 ## Welcome to HelloJavaScript.info
 
 <div class='videoWrapper'>
-<iframe
-    width="640"
-    height="480"
-    src="https://www.youtube.com/embed/Xo1rcPYSR2o"
-    frameborder="0"
-    allow="autoplay; encrypted-media"
-    allowfullscreen
->
-</iframe>
+<iframe class="responsive-iframe" src="https://www.youtube.com/embed/Xo1rcPYSR2o"></iframe>
 </div>
 
 <br/>
