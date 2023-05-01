@@ -1267,6 +1267,11 @@ export default function LinkDirectory() {
                 </Link>
               </li>
               <li className={styles.categorySubItem}>
+                <Link to='docs/bonus-javascript-design-patterns/creational-design-pattern/module-pattern'>
+                  Module
+                </Link>
+              </li>
+              <li className={styles.categorySubItem}>
                 <Link to='/docs/bonus-javascript-design-patterns/creational-design-pattern/prototype-pattern'>
                   Prototype
                 </Link>
@@ -1320,11 +1325,6 @@ export default function LinkDirectory() {
               <li className={styles.categorySubItem}>
                 <Link to='/docs/bonus-javascript-design-patterns/structural-design-patterns/proxy-pattern'>
                   Proxy Pattern
-                </Link>
-              </li>
-              <li className={styles.categorySubItem}>
-                <Link to='/docs/bonus-javascript-design-patterns/structural-design-patterns/module-pattern'>
-                  Module
                 </Link>
               </li>
             </ul>
