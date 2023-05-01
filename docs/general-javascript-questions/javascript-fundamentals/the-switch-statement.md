@@ -1,5 +1,5 @@
 ---
-title: The "Switch" Statement
+title: The "Switch" Statement - JavaScript Interview
 description: What are the advantages of using a Switch statement? A switch statement can replace multiple if checks, it is more descriptive, and easier to read. 
 sidebar_position: 16
 sidebar_label: The "Switch" Statement
@@ -37,6 +37,22 @@ import StructuredData from './schemadata/SwitchSchemaData.js';
 </head>
 
 **JavaScript Fundamentals: The "Switch" Statement**
+
+---
+
+<div class='videoWrapper'>
+<iframe
+    width="640"
+    height="480"
+    src="https://www.youtube.com/embed/Sxjy2d7Ldck"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen
+>
+</iframe>
+</div>
+
+---
 
 <CloseAllAnswers />
 

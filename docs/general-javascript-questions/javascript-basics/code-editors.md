@@ -39,6 +39,22 @@ import StructuredData from './schemadata/CodeEditorSchemaData.js';
 
 **JavaScript Basics: Code Editors**
 
+---
+
+<div class='videoWrapper'>
+<iframe
+    width="640"
+    height="480"
+    src="https://www.youtube.com/embed/lmJzJkiMZ1k"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen
+>
+</iframe>
+</div>
+
+---
+
 <CloseAllAnswers />
 
 ### What does IDE stand for?

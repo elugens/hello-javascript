@@ -41,6 +41,22 @@ import StructuredData from './schemadata/ManualsSchemaData.js';
 
 **JavaScript Basics: Manuals & Specifications**
 
+---
+
+<div class='videoWrapper'>
+<iframe
+    width="640"
+    height="480"
+    src="https://www.youtube.com/embed/k_5dgKumYJM"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen
+>
+</iframe>
+</div>
+
+---
+
 <CloseAllAnswers />
 
 ### What are the standard reference guides used by JavaScript developers?

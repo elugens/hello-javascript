@@ -38,9 +38,23 @@ import StructuredData from './schemadata/JSBasicsSchemaData.js';
 
 **JavaScript Basics: Basic JS Questions**
 
-<CloseAllAnswers />
+---
+
+<div class='videoWrapper'>
+<iframe
+    width="640"
+    height="480"
+    src="https://www.youtube.com/embed/5Re-egzK7fU"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen
+>
+</iframe>
+</div>
 
 ---
+
+<CloseAllAnswers />
 
 ### What is JavaScript?
 

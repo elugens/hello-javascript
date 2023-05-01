@@ -1,5 +1,5 @@
 ---
-title: Comments in JavaScript
+title: Code Comments - JavaScript Interview Questions
 description: The key to reducing unnecessary comments in your code is to write
   self-descriptive code. The way to achieve this is to replace a chunk of code
   with a function.
@@ -40,7 +40,23 @@ import StructuredData from './schemadata/CommentsSchemaData.js';
   <title>Comments in JavaScript | JavaScript Frontend Phone Interview</title>
 </head>
 
-**Code Quality: Comments**
+**Code Quality: Comments in JavaScript**
+
+---
+
+<div class='videoWrapper'>
+<iframe
+    width="640"
+    height="480"
+    src="https://www.youtube.com/embed/JDfLW97WLbc"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen
+>
+</iframe>
+</div>
+
+---
 
 <CloseAllAnswers />
 

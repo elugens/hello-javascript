@@ -1,5 +1,5 @@
 ---
-title: Browser Window Interaction
+title: Browser Window Interaction in JavaScript
 description: How to interact with the browser window. How does the alert function work? How many arguments does the prompt function accept? Frontend Interview Questions
 sidebar_position: 8
 sidebar_label: Window Interaction
@@ -37,6 +37,22 @@ import StructuredData from './schemadata/BrowserWindowSchemaData.js';
 </head>
 
 **JavaScript Fundamentals: Interaction: alert, prompt, confirm**
+
+---
+
+<div class='videoWrapper'>
+<iframe
+    width="640"
+    height="480"
+    src="https://www.youtube.com/embed/0a9rQQfgPh0"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen
+>
+</iframe>
+</div>
+
+---
 
 <CloseAllAnswers />
 

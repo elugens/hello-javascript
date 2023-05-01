@@ -1,5 +1,5 @@
 ---
-title: Mathematical Operators in JavaScript
+title: Math Operators - JavaScript Interview Questions
 description: How to use basic mathematical operators in JavaScript. The basic mathematical operations include addition, subtraction, multiplication, division, remainder or modulo, and exponentiation.
 sidebar_position: 10
 sidebar_label: Basic Operators, Math
@@ -33,10 +33,26 @@ import StructuredData from './schemadata/BasicMathOpSchemaData.js';
 <JsonLD data={StructuredData} />
 
 <head>
-  <title>Basic Math Operators in JavaScript | JS Interview Questions</title>
+  <title>Basic Math Operators - JavaScript Interview Questions</title>
 </head>
 
-**JavaScript Fundamentals: Basic Operators, Math**
+**JavaScript Fundamentals: Math Operators**
+
+---
+
+<div class='videoWrapper'>
+<iframe
+    width="640"
+    height="480"
+    src="https://www.youtube.com/embed/KzZC2IcEWwU"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen
+>
+</iframe>
+</div>
+
+---
 
 <CloseAllAnswers />
 

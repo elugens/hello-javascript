@@ -1,5 +1,5 @@
 ---
-title: JS Developers Console
+title: Dev Console - JavaScript Interview Questions
 description: What is the developer console used for in JavaScript development? A developer console is a tool that allows you to interact with the JavaScript engine.
 sidebar_position: 4
 sidebar_label: Developer Console
@@ -36,7 +36,23 @@ import StructuredData from './schemadata/DevConsoleSchemaData.js';
   <title>Developer Console | JavaScript Frontend Interview Questions</title>
 </head>
 
-**JavaScript Basics: Developers Console**
+**JavaScript Basics: Developers Console Interview Questions**
+
+---
+
+<div class='videoWrapper'>
+<iframe
+    width="640"
+    height="480"
+    src="https://www.youtube.com/embed/x5G5o2Bul2c"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen
+>
+</iframe>
+</div>
+
+---
 
 <CloseAllAnswers />
 

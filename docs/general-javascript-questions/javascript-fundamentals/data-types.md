@@ -1,5 +1,5 @@
 ---
-title: JavaScript Data Types
+title: Data Types - JavaScript Interview Questions
 description: There are eight basic data types in JavaScript including Number, String, Boolean, BigInt, Null, Undefined, Object, and Symbol. JS Frontend Interview Questions
 sidebar_position: 7
 sidebar_label: Data Types
@@ -38,6 +38,22 @@ import StructuredData from './schemadata/DataTypesSchemaData.js';
 </head>
 
 **JavaScript Fundamentals: JavaScript Data Types**
+
+---
+
+<div class='videoWrapper'>
+<iframe
+    width="640"
+    height="480"
+    src="https://www.youtube.com/embed/KOx_wRyv9pw"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen
+>
+</iframe>
+</div>
+
+---
 
 <CloseAllAnswers />
 

@@ -1,5 +1,5 @@
 ---
-title: Understanding Strict Mode
+title: Strict Mode - JavaScript Interview Questions
 description: Learn how to use strict mode in JavaScript. Strict mode is enabled by placing “use strict” at the top of your script. Frontend Developer Interview Questions
 sidebar_position: 5
 sidebar_label: Strict Mode
@@ -38,9 +38,23 @@ import StructuredData from './schemadata/StrictModeSchemaData.js';
 
 **JavaScript Fundamentals: Strict Mode**
 
-<CloseAllAnswers />
+---
+
+<div class='videoWrapper'>
+<iframe
+    width="640"
+    height="480"
+    src="https://www.youtube.com/embed/zp82_tdZ18I"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen
+>
+</iframe>
+</div>
 
 ---
+
+<CloseAllAnswers />
 
 ### When was ECMAScript 5 (ES5) released for use?
 

@@ -1,5 +1,5 @@
 ---
-title: Function Expressions
+title: Function Expressions - JavaScript Questions
 description: Function expressions are a way to create a function on the fly. Describe a function expression’s code structure and behavior? Frontend Interview Questions
 sidebar_position: 18
 sidebar_label: Function Expressions
@@ -36,6 +36,22 @@ import StructuredData from './schemadata/FuncExpressionSchemaData.js';
 </head>
 
 **JavaScript Fundamentals: Function Expressions**
+
+---
+
+<div class='videoWrapper'>
+<iframe
+    width="640"
+    height="480"
+    src="https://www.youtube.com/embed/H5OSgbtqwWU"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen
+>
+</iframe>
+</div>
+
+---
 
 <CloseAllAnswers />
 

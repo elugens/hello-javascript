@@ -1,5 +1,5 @@
 ---
-title: Type Conversion in JavaScript
+title: Type Conversion - JavaScript Interview Questions
 description: Learn how to convert data types in JavaScript. There are two types of type conversion - implicit and explicit. Frontend Developer Interview Questions
 sidebar_position: 7
 sidebar_label: Type Conversion
@@ -38,6 +38,22 @@ import StructuredData from './schemadata/TypeConversionSchemaData.js';
 </head>
 
 **JavaScript Fundamentals: Type Conversion**
+
+---
+
+<div class='videoWrapper'>
+<iframe
+    width="640"
+    height="480"
+    src="https://www.youtube.com/embed/g0xkXoYJBKM"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen
+>
+</iframe>
+</div>
+
+---
 
 <CloseAllAnswers />
 

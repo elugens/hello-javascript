@@ -1,5 +1,5 @@
 ---
-title: JavaScript Functions
+title: Functions - JavaScript Interview Questions
 description: The 7 types of functions include the function declaration, expressions, arrow function, shorthand methods, generators, constructors, and JS built-in methods.
 sidebar_position: 17
 sidebar_label: Functions
@@ -37,6 +37,22 @@ import StructuredData from './schemadata/FunctionsSchemaData.js';
 </head>
 
 **JavaScript Fundamentals: JavaScript Functions**
+
+---
+
+<div class='videoWrapper'>
+<iframe
+    width="640"
+    height="480"
+    src="https://www.youtube.com/embed/ZpOx4FvD3hw"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen
+>
+</iframe>
+</div>
+
+---
 
 <CloseAllAnswers />
 

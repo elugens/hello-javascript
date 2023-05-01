@@ -1,5 +1,5 @@
 ---
-title: JavaScript Specials
+title: JavaScript Specials Interview Questions
 description: JavaScript Specials are outliers in our code that we must understand. It's the simplest way to understand JavaScript. Frontend Interview Questions.
 sidebar_position: 20
 sidebar_label: JavaScript Specials
@@ -12,6 +12,22 @@ import StructuredData from './schemadata/JavaScriptSpecialsSchemaData.js';
 <JsonLD data={StructuredData} />
 
 **JavaScript Fundamentals: JavaScript Specials**
+
+---
+
+<div class='videoWrapper'>
+<iframe
+    width="640"
+    height="480"
+    src="https://www.youtube.com/embed/jfWVUNZWJEs"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen
+>
+</iframe>
+</div>
+
+---
 
 <CloseAllAnswers />
 

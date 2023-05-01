@@ -1,5 +1,5 @@
 ---
-title: Comparisons Operators
+title: Comparison Operators - JavaScript Interview
 description: Learn how to compare values in JavaScript.  All JavaScript comparisons return a true or false Boolean value. | Frontend Developer Interview Questions & Answers
 sidebar_position: 11
 sidebar_label: Comparisons Operators

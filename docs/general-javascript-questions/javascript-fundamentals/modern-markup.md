@@ -1,5 +1,5 @@
 ---
-title: Modern Markup in JavaScript
+title: Modern Markup - JavaScript Interview Questions
 description: Modern Markup in JavaScript - When working with modules, we use the script type attribute in Modern JavaScript. Frontend Developer Interview Questions n Answers
 sidebar_position: 2
 sidebar_label: Modern Markup
@@ -41,9 +41,23 @@ import StructuredData from './schemadata/ModernMarkupSchemaData.js';
 
 **JavaScript Fundamentals: Modern Markup**
 
-<CloseAllAnswers />
+---
+
+<div class='videoWrapper'>
+<iframe
+    width="640"
+    height="480"
+    src="https://www.youtube.com/embed/Skg3OnfabzA"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen
+>
+</iframe>
+</div>
 
 ---
+
+<CloseAllAnswers />
 
 ### Can you explain the script type attribute used in Modern JavaScript development?
 

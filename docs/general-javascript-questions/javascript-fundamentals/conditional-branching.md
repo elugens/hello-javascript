@@ -1,5 +1,5 @@
 ---
-title: Conditional Branching in JavaScript
+title: Conditional Branching - JavaScript Interview
 description: Learn how to use conditional branching in JavaScript. Can you execute more than one statement in an if statement? | Frontend Interview Questions & Answers
 sidebar_position: 12
 sidebar_label: Conditional Branching
@@ -37,6 +37,22 @@ import StructuredData from './schemadata/CondBranchingSchemaData.js';
 </head>
 
 **JavaScript Fundamentals: Conditional Branching**
+
+---
+
+<div class='videoWrapper'>
+<iframe
+    width="640"
+    height="480"
+    src="https://www.youtube.com/embed/bNuJk2HRLnE"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen
+>
+</iframe>
+</div>
+
+---
 
 <CloseAllAnswers />
 

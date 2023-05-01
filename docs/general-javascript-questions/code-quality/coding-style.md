@@ -1,5 +1,5 @@
 ---
-title: Coding Style
+title: Coding Style - JavaScript Interview Questions
 description: Coding style is a set of rules for writing code. This guide helps you to
   understand coding styles and how to follow them in JavaScript. - Interview
   Responses
@@ -35,10 +35,26 @@ import StructuredData from './schemadata/CodingStyleSchemaData.js';
 <JsonLD data={StructuredData} />
 
 <head>
-  <title>Code Styling | JavaScript Frontend Phone Interview Responses</title>
+  <title>Code Style | JavaScript Frontend Phone Interview</title>
 </head>
 
-**Code Quality: Coding Style**
+**Code Quality: Code Style**
+
+---
+
+<div class='videoWrapper'>
+<iframe
+    width="640"
+    height="480"
+    src="https://www.youtube.com/embed/Vxm6pST9wXE"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen
+>
+</iframe>
+</div>
+
+---
 
 <CloseAllAnswers />
 

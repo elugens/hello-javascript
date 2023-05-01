@@ -1,5 +1,5 @@
 ---
-title: Code Structure
+title: Code Structure - JavaScript Interview Questions
 description: Define what a statement is in JavaScript code structure? Can semi-colons be omitted in JavaScript? | Frontend Developer Interview Questions & Answers
 sidebar_position: 4
 sidebar_label: Code Structure
@@ -37,6 +37,22 @@ import StructuredData from './schemadata/CodeStructureSchemaData.js';
 </head>
 
 **JavaScript Fundamentals: Code Structure**
+
+---
+
+<div class='videoWrapper'>
+<iframe
+    width="640"
+    height="480"
+    src="https://www.youtube.com/embed/UImuBn5025U"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen
+>
+</iframe>
+</div>
+
+---
 
 <CloseAllAnswers />
 

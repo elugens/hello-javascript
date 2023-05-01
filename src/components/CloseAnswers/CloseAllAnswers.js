@@ -6,10 +6,8 @@ export default function CloseAllAnswers() {
     window.location.reload(false);
   };
   return (
-    <div className='closeAnswersContainer'>
-      <button className='closeAnswers' onClick={closeAnswers}>
-        Close Answers [X]
-      </button>
+    <div className='closeAnswersContainer' onClick={closeAnswers}>
+      <button className='closeAnswers'>Close Answers [X]</button>
     </div>
   );
 }

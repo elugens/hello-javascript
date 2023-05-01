@@ -39,6 +39,22 @@ import StructuredData from './schemadata/DebuggingSchemaData.js';
 
 **Code Quality: Debugging in Chrome**
 
+---
+
+<div class='videoWrapper'>
+<iframe
+    width="640"
+    height="480"
+    src="https://www.youtube.com/embed/p_S8Tym8HC8"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen
+>
+</iframe>
+</div>
+
+---
+
 <CloseAllAnswers />
 
 ### Explain what debugging is in JavaScript development?

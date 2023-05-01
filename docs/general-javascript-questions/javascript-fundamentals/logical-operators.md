@@ -1,5 +1,5 @@
 ---
-title: Logical Operators
+title: Logical Operators - JavaScript Interview Questions
 description: Logical operators are used to combine conditional statements. Logical operators can be applied to values of any type; they are not limited to a Boolean type.
 sidebar_position: 13
 sidbar_label: Logical Operators
@@ -37,9 +37,23 @@ import StructuredData from './schemadata/LogicalOpSchemaData.js';
 
 **JavaScript Fundamentals: Logical Operators**
 
-<CloseAllAnswers />
+---
+
+<div class='videoWrapper'>
+<iframe
+    width="640"
+    height="480"
+    src="https://www.youtube.com/embed/XI0ao2YPb_0"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen
+>
+</iframe>
+</div>
 
 ---
+
+<CloseAllAnswers />
 
 ### What makes the logical || (OR), && (AND), ! (NOT) operators unique?
 

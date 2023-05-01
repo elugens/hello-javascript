@@ -1,5 +1,5 @@
 ---
-title: Arrow Functions
+title: Arrow Functions - JavaScript Interview Questions
 description: What is the definition of an arrow function? Arrow functions are a concise way to write functions in JavaScript. Frontend developer interview questions answers.
 sidebar_position: 19
 sidebar_label: Arrow Functions
@@ -36,6 +36,22 @@ import StructuredData from './schemadata/ArrowFuncSchemaData.js';
 </head>
 
 **JavaScript Fundamentals: Arrow Functions**
+
+---
+
+<div class='videoWrapper'>
+<iframe
+    width="640"
+    height="480"
+    src="https://www.youtube.com/embed/CPNit7DO-Hk"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen
+>
+</iframe>
+</div>
+
+---
 
 <CloseAllAnswers />
 

@@ -1,5 +1,5 @@
 ---
-title: While & For Loops
+title: While & For Loops - JavaScript Interview
 description: Learn how to use while loops and for loops in JavaScript. Loops are a way to repeat the same code multiple times in a iteration. Frontend Interview Questions.
 sidebar_position: 15
 sidebar_label: While & For Loops
@@ -34,10 +34,26 @@ import StructuredData from './schemadata/WhileForSchemaData.js';
 <JsonLD data={StructuredData} />
 
 <head>
-  <title>While & For Loops | Frontend Phone Interview Questions</title>
+  <title>While & For Loops | JavaScript Frontend Interview Questions</title>
 </head>
 
-**JavaScript Fundamentals: While & For Loops (??)**
+**JavaScript Fundamentals: While & For Loops**
+
+---
+
+<div class='videoWrapper'>
+<iframe
+    width="640"
+    height="480"
+    src="https://www.youtube.com/embed/Pw1KU5PiD2g"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen
+>
+</iframe>
+</div>
+
+---
 
 <CloseAllAnswers />
 

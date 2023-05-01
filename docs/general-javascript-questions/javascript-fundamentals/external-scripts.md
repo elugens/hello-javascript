@@ -1,5 +1,5 @@
 ---
-title: External Scripts
+title: External Scripts - JavaScript Interview
 description: Learn how to use External Scripts in JavaScript. How do you access external script files in JavaScript development? | Frontend Developer Interview Questions
 sidebar_position: 3
 sidebar_label: External Scripts
@@ -40,9 +40,23 @@ import StructuredData from './schemadata/ExternalScriptsSchemaData.js';
 
 **JavaScript Fundamentals: EXTERNAL SCRIPTS**
 
-<CloseAllAnswers />
+---
+
+<div class='videoWrapper'>
+<iframe
+    width="640"
+    height="480"
+    src="https://www.youtube.com/embed/ise5kH41cT8"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen
+>
+</iframe>
+</div>
 
 ---
+
+<CloseAllAnswers />
 
 ### How do you access external script files in JavaScript development?
 
