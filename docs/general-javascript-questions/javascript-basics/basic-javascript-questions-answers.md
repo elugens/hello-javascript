@@ -78,7 +78,22 @@ It should be noted, to maintain efficient speed in the browser, V8 translates Ja
 
 ---
 
-### What is the difference between a high-level and low-level programming language?
+### What are JavaScript's main features?
+
+<details className='answer'>
+  <summary>
+    <strong>View Answer:</strong>
+  </summary>
+  <div>
+    <div>
+      <strong>Interview Response:</strong> JavaScript's main features include dynamic typing, object-oriented programming, event-driven programming, and the ability to manipulate and interact with web page content.<br/><br/>
+    </div>
+  </div>
+</details>
+
+---
+
+### What is the difference between a high and low-level programming language?
 
 <details>
   <summary>
@@ -86,16 +101,7 @@ It should be noted, to maintain efficient speed in the browser, V8 translates Ja
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> A high-level language gets compiled
-      without detailed knowledge of the underlying computer. For example,
-      managing memory, knowing what processor is running, and keeping track of
-      things like pointers are not necessary. High-level languages are more
-      accessible to write and manage than low or mid-level programming languages
-      because they are platform-independent. The major distinction between
-      high-level and low-level languages is that programmers can readily grasp,
-      interpret, and compile high-level languages when compared to machines.
-      Machines, on the other hand, can interpret low-level language more readily
-      than humans.
+      <strong>Interview Response:</strong> A high-level programming language is designed to be more abstract, and closer to natural language, making it easier for programmers to read, write, and maintain code. Low-level programming languages are closer to machine language, and provide greater control over hardware, but require more effort and knowledge to program effectively.
     </div>
   </div>
 </details>
@@ -110,8 +116,7 @@ It should be noted, to maintain efficient speed in the browser, V8 translates Ja
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> JavaScript is an interpreted
-      language.
+      <strong>Interview Response:</strong> JavaScript is an interpreted programming language. The code is executed directly by a browser or runtime environment without the need for compilation.
     </div>
     <br />
     <div>
@@ -134,8 +139,7 @@ It should be noted, to maintain efficient speed in the browser, V8 translates Ja
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> ECMAScript with a reference guide
-      named ECMA-262.
+      <strong>Interview Response:</strong> The name of the JavaScript scripting language specification is called ECMAScript, which is maintained by the ECMA International Standards organization.
     </div>
   </div>
 </details>
@@ -150,11 +154,7 @@ It should be noted, to maintain efficient speed in the browser, V8 translates Ja
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> JavaScript was initially named "Live
-      Script," but because of the popularity of Java. It was renamed too
-      JavaScript as a play on the notoriety of the Java programming language,
-      but they are considerably different. JavaScript is a high-level
-      programming language, and Java is a mid-level programming language.
+      <strong>Interview Response:</strong> In 1995, JavaScript was created by Brendan Eich at Netscape Communications Corporation, originally named Mocha and then Live Script, before being renamed to JavaScript. The name was chosen to capitalize on Java's popularity and attract Java developers to the web. Despite its name, JavaScript is a distinct language with its own unique syntax and features.
     </div>
   </div>
 </details>
@@ -174,33 +174,7 @@ It should be noted, to maintain efficient speed in the browser, V8 translates Ja
     </div>
     <br />
     <div>
-      <strong>Technical Response:</strong> Today, JavaScript can execute not
-      only in the browser but also on the server or any device with a unique
-      JavaScript engine like Node.js.
-    </div>
-  </div>
-</details>
-
----
-
-### What are the code names for Chrome, Opera, FireFox, IE, Edge, and Safari?
-
-<details>
-  <summary>
-    <strong>View Answer:</strong>
-  </summary>
-  <div>
-    <div>
-      <strong>Technical Response:</strong>
-      <br />
-      <br />
-      <ol>
-        <li>V8 - in Chrome and Opera</li>
-        <li>Spider Monkey - in FireFox</li>
-        <li>Chakra - in Internet Explorer</li>
-        <li>Chakra Core - in Microsoft Edge</li>
-        <li>Nitro / SquirrelFish - in Safari</li>
-      </ol>
+      <strong>Technical Response:</strong> JavaScript is a flexible language that can run on a wide range of platforms, as long as they support a JavaScript engine, such as web browsers, servers, desktop applications, and IoT devices.
     </div>
   </div>
 </details>
@@ -219,12 +193,6 @@ It should be noted, to maintain efficient speed in the browser, V8 translates Ja
       engines to ensure features work in all environments. If not, we must write
       a polyfill.
     </div>
-    <br />
-    <div>
-      <strong>Technical Response:</strong> The code names are good to remember
-      because they get used in developer articles on the internet. For instance,
-      if "V8 supports a feature X, " it probably works in Chrome and Opera.
-    </div>
   </div>
 </details>
 
@@ -235,7 +203,7 @@ It should be noted, to maintain efficient speed in the browser, V8 translates Ja
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In-browser JavaScript can do everything related to a webpage like manipulation, interaction with the user, and the webserver.</div><br />
+  <div><strong>Interview Response:</strong> In-browser JavaScript can manipulate the Document Object Model, respond to user events, make HTTP requests, and store data in cookies or local storage. It can also create animations and validate forms.</div><br />
   <div><strong>Technical Response:</strong> JavaScript's capabilities get heavily influenced by the environment in which it runs. Node.js, for example, includes methods that allow JavaScript to read/write arbitrary files and make network requests.<br/><br/>In-browser JavaScript can accomplish everything related to webpage alteration, user interaction, and webserver interaction.
   </div>
   </div><br/>
@@ -259,9 +227,7 @@ It should be noted, to maintain efficient speed in the browser, V8 translates Ja
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> JavaScript's abilities are limited to
-      ensure a user's safety in the browser. The aim is to prevent a malicious
-      website from accessing users' data or harming them.
+      <strong>Interview Response:</strong> In-browser JavaScript can't access files or data on the user's computer, for security reasons. It also can't perform certain network requests, due to CORS policies. The aim is to prevent a malicious website from accessing users' data or harming them.
     </div>
     <br />
     <div>
@@ -319,11 +285,7 @@ It should be noted, to maintain efficient speed in the browser, V8 translates Ja
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> JavaScript is unique because it fully
-      integrates HTML and CSS, and all major browsers support it. JavaScript is
-      the only browser technology that combines all three of these features.
-      That distinguishes JavaScript and explains why it is the most widely used
-      technology for designing browser interfaces.
+      <strong>Interview Response:</strong> JavaScript is unique because it fully integrates with HTML and CSS, and all major browsers support it. JavaScript is the only browser technology that combines, all three of these features. That distinguishes JavaScript, and explains why it is the most widely used technology for designing browser interfaces.
     </div>
     <br />
   </div>
@@ -339,9 +301,7 @@ It should be noted, to maintain efficient speed in the browser, V8 translates Ja
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> Some of the alternatives to
-      JavaScript include Coffee Script, TypeScript, Flow, Brython, Dart, and
-      Kotlin.
+      <strong>Interview Response:</strong> Some of the alternatives to JavaScript include Coffee Script, TypeScript, Flow, Bry-thon, Dart, and Kotlin.
     </div>
     <br />
     <div>
@@ -383,6 +343,22 @@ It should be noted, to maintain efficient speed in the browser, V8 translates Ja
         </li>
       </ol>
     </div>
+  </div>
+</details>
+
+---
+
+### What is the difference between "undefined" and "null" in JavaScript?
+
+<details>
+  <summary>
+    <strong>View Answer:</strong>
+  </summary>
+  <div>
+    <div>
+      <strong>Interview Response:</strong> Undefined means that a variable has been declared but has not been assigned a value, while null is a value that represents no value or an empty object.
+    </div>
+    <br />
   </div>
 </details>
 
