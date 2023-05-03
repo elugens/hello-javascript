@@ -334,41 +334,301 @@ main();
 
 ---
 
-### What is async/await in JavaScript?
+### What is the purpose of the spread operator, in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Async/await in JavaScript simplifies asynchronous code, making it more readable by using async functions and await expressions to handle Promises.
+  <div><strong>Interview Response:</strong> The spread operator in JavaScript (...) is used to expand elements of iterable objects, such as arrays or objects, making it easier to merge, copy, or insert elements.
   </div>
   </div><br />
-  <div><strong className="codeExample">Code Example:</strong> Async/Await<br /><br /></div>
+  <div><strong className="codeExample">Code Example:</strong> Spread Operator<br /><br /></div>
   
   <div></div>
 
 ```javascript
-function fetchData() {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      const data = 'Hello, world!';
-      resolve(data);
-    }, 1000);
-  });
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+
+// Merge arrays
+const merged = [...arr1, ...arr2];
+console.log(merged); // Output: [1, 2, 3, 4, 5, 6]
+
+// Copy array
+const copy = [...arr1];
+console.log(copy); // Output: [1, 2, 3]
+
+// Insert elements
+const arrayWithZero = [0, ...arr1];
+console.log(arrayWithZero); // Output: [0, 1, 2, 3]
+```
+
+<div>In this example, the spread operator is used to merge arrays, create a copy of an array, and insert elements into a new array. It simplifies array manipulation and improves code readability.
+</div><br/>
+</details>
+
+---
+
+### What is JSX in React?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> JSX (JavaScript XML) is a React-specific syntax extension for JavaScript, allowing you to write HTML-like code within JavaScript, making it easier to create and manage UI components.
+  </div>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br /></div>
+  
+  <div></div>
+
+```javascript
+import React from 'react';
+
+function Welcome(props) {
+  return <h1>Hello, {props.name}!</h1>;  // JSX
 }
 
-async function main() {
-  try {
-    const response = await fetchData();
-    console.log(response); // Output: Hello, world!
-  } catch (error) {
-    console.error(error);
+export default Welcome;
+```
+
+<div>In this example, the Welcome component is defined using JSX. The &#60;h1&#62; element is written with HTML-like syntax directly in the JavaScript code.  &#123;props.name&#125; is a JavaScript expression within the JSX, displaying the value of the name prop when the component is rendered. The component can be imported and used in other parts of a React application, making it easier to manage UI components.
+</div><br/>
+</details>
+
+---
+
+### What is ES6 in relation to JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> ES6, or ECMAScript 2015, is a major update to JavaScript introducing new features and syntax, enhancing readability, modularity, and maintainability, and promoting better programming practices.<br/>
+  </div><br/>
+  </div>
+</details>
+
+---
+
+### In JavaScript, What features were introduced in ES6?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> ES6 introduced features such as arrow functions, classes, template literals, destructuring, Promises, modules (import/export), let and const, default parameters, rest and spread operators, and more.<br/>
+  </div><br/>
+  </div>
+</details>
+
+---
+
+### In JavaScript, What is the difference between let and var in ES6?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The difference between let and var is their scoping: let has block scope, while var has function scope. Additionally, ‘let’ prevents hoisting-related issues.
+  </div>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br /></div>
+  
+  <div></div>
+
+```javascript
+function example() {
+  if (true) {
+    var varVariable = 'var';
+    let letVariable = 'let';
+  }
+
+  console.log(varVariable); // 'var'
+  console.log(letVariable); // ReferenceError: letVariable is not defined
+}
+
+example();
+```
+
+<div>In this example, varVariable has function scope, so it's accessible throughout the example function, including outside the if block. In contrast, letVariable has block scope and is only accessible within the if block. Attempting to access letVariable outside the block results in a ReferenceError. Using let provides better control over variable scope and reduces the risk of unintentional access or modification.
+</div><br/>
+</details>
+
+---
+
+### What are arrow functions in ES6?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Arrow functions in ES6 are a shorter syntax for writing function expressions, providing implicit return for single expressions, lexical binding of this, and making code more readable and maintainable.
+  </div>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong> Arrow Functions<br /><br /></div>
+  
+  <div></div>
+
+```javascript
+// Traditional function expression
+const squareTraditional = function (x) {
+  return x * x;
+};
+
+// Arrow function
+const squareArrow = (x) => x * x;
+
+console.log(squareTraditional(4)); // 16
+console.log(squareArrow(4)); // 16
+```
+
+<div>In this example, squareTraditional is a traditional function expression, while squareArrow is an arrow function. The arrow function has a more concise syntax, with an implicit return for single expressions. Both functions calculate the square of a number and produce the same result, but the arrow function makes the code shorter and more readable.
+</div><br/>
+</details>
+
+---
+
+### What are template literals in ES6?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Template literals in ES6 are a new way to create strings, using backticks (``) instead of quotes, allowing embedded expressions, multiline strings, and improved readability.
+  </div>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong> Template Literals<br /><br /></div>
+  
+  <div></div>
+
+```javascript
+const name = 'John';
+const age = 30;
+
+// Traditional string concatenation
+const greetingTraditional = 'Hello, ' + name + '. You are ' + age + ' years old.';
+
+// Template literal
+const greetingLiteral = `Hello, ${name}. You are ${age} years old.`;
+
+console.log(greetingTraditional); // Hello, John. You are 30 years old.
+console.log(greetingLiteral); // Hello, John. You are 30 years old.
+```
+
+<div>In this example, greetingTraditional uses traditional string concatenation with single quotes and + operators. greetingLiteral uses a template literal, enclosed in backticks, with embedded expressions inside $&#123;&#125;. Both strings produce the same result, but the template literal is more readable and easier to work with, especially for complex strings.
+</div><br/>
+</details>
+
+---
+
+### What are classes in ES6?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Classes in ES6 are syntactic sugar for prototype-based inheritance, providing a more intuitive and familiar syntax for defining constructors, methods, and inheritance in object-oriented programming.
+  </div>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong> Classes<br /><br /></div>
+  
+  <div></div>
+
+```javascript
+// ES6 Class
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+
+  speak() {
+    console.log(`${this.name} makes a noise.`);
   }
 }
 
-main();
+class Dog extends Animal {
+  speak() {
+    console.log(`${this.name} barks.`);
+  }
+}
+
+const dog = new Dog('Rex');
+dog.speak(); // Rex barks.
 ```
 
-<div>In this example, fetchData returns a Promise simulating an asynchronous operation. The main function is declared as async, allowing the use of await to pause execution until the Promise resolves. This results in more readable and synchronous-like code while handling asynchronous operations.</div><br/>
+<div>In this example, we define an Animal class using the class keyword. The constructor function initializes the object with a name property. The speak method is added to the class prototype.<br/><br/>The Dog class extends the Animal class, inheriting its properties and methods. We override the speak method to provide a custom implementation for dogs.<br/><br/>Finally, we create a Dog instance and call its speak method. The ES6 class syntax provides a more intuitive way to define and work with objects and inheritance in JavaScript.
+</div><br/>
+</details>
+
+---
+
+### What is destructuring in ES6?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Destructuring in ES6 is a convenient syntax for extracting values from arrays or properties from objects into distinct variables, making code more concise and readable.
+  </div>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong> Destructuring Assignment<br /><br /></div>
+  
+  <div></div>
+
+```javascript
+const person = {
+  name: 'John',
+  age: 30,
+  city: 'New York',
+};
+
+// Destructuring assignment
+const { name, age, city } = person;
+
+console.log(name); // 'John'
+console.log(age);  // 30
+console.log(city); // 'New York'
+```
+
+<div>In this example, we have a person object with three properties: name, age, and city. We use destructuring assignment to extract the properties into individual variables.<br/><br/>The line const &#123; name, age, city &#125; = person; creates three new variables with the same names as the properties and assigns the corresponding property values. This concise syntax improves readability, especially when working with complex data structures.<br/>
+</div>
+<br/>
+</details>
+
+---
+
+### What are default parameters in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Default parameters in JavaScript allow function parameters to have default values, simplifying function calls and handling cases where arguments are missing or undefined.
+  </div>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong> Destructuring Assignment<br /><br /></div>
+  
+  <div></div>
+
+```javascript
+// Function with default parameters
+function greet(name, greeting = 'Hello') {
+  console.log(`${greeting}, ${name}!`);
+}
+
+greet('John'); // 'Hello, John!'
+greet('John', 'Hi'); // 'Hi, John!'
+```
+
+<p>In this example, we define a greet function with two parameters: name and greeting. The greeting parameter has a default value of 'Hello'.
+</p>
+<p>When we call greet('John'), the greeting parameter isn't provided, so the default value 'Hello' is used. When we call greet('John', 'Hi'), the greeting parameter is provided, so the default value is overridden. Default parameters simplify function calls and help handle cases where some arguments may not be provided.
+</p>
+<br/>
+</details>
+
+---
+
+### What are JavaScript modules, and what benefits do they provide?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> JavaScript modules are separate files containing reusable code, promoting modularity, maintainability, and organization by enabling import/export of functions, classes, or variables across projects.<br/>
+  </div><br/>
+  </div>
 </details>
 
 ---

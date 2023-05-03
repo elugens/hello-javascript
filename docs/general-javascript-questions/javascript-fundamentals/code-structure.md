@@ -61,7 +61,7 @@ import StructuredData from './schemadata/CodeStructureSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Statements are syntax constructs and commands that perform actions. Usually, statements are written on separate lines to make the code more readable.
+  <div><strong>Interview Response:</strong> A statement in JavaScript is a single, standalone instruction that performs a specific action or computation within a program.
   </div><br />
   <div><strong>Technical Response:</strong> Statements are used in JavaScript to control the flow of the program. In contrast to properties, methods, and events fundamentally tied to the object that owns them, statements behave independently of any JavaScript object.
   </div><br />
@@ -89,23 +89,13 @@ alert('World');
 
 ---
 
-### How are statements separated in JavaScript?
+### What is the code structure of an Array in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, we separate statements with a semi-colon. Although semi-colons are implicit in JavaScript, we should always explicitly add them to reduce the possibility of bugs in our code.</div>
-  </div><br />
-  <div><strong className="codeExample">Code Example:</strong><br /><br />
-  
-  <div></div>
-
-```javascript
-alert('Hello');
-alert('JavaScript');
-```
-
-  </div>
+  <div><strong>Interview Response:</strong> In JavaScript, an array is defined using square brackets and consists of comma-separated values. Array elements can be of any data type.</div>
+  </div><br/>
 </details>
 
 ---
@@ -115,7 +105,8 @@ alert('JavaScript');
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, but it is not recommended.</div><br />
+  <div><strong>Interview Response:</strong> Semicolons can be omitted in JavaScript, but it is generally recommended to include them for better code readability and to avoid unexpected behaviors.
+</div><br />
   <div><strong>Technical Response:</strong> Yes, but it is not considered good code etiquette and should not be done. JavaScript interprets the line break as an “implicit” semi-colon, and this behavior is called an automatic semi-colon insertion.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -137,12 +128,23 @@ alert('JavaScript');
 
 ---
 
+### What is the code structure of an Object in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In JavaScript, an object is defined using curly braces and consists of key-value pairs separated by commas. Methods can be added using functions as values.</div>
+  </div><br/>
+</details>
+
+---
+
 ### Does JavaScript always interpret line breaks as the end of a statement?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> There are cases when a newline does not mean a semi-colon and may result in an error.</div><br />
+  <div><strong>Interview Response:</strong> No, JavaScript does not always interpret line breaks as the end of a statement. This is because JavaScript uses a semicolon (;) to indicate the end of a statement, and a line break is not always equivalent to a semicolon.</div><br />
   <div><strong>Technical Response:</strong> : There are cases when a newline does not mean a semi-colon and may result in an error. The recommendation is to put semi-colons between statements even if newlines separate them. The JavaScript community widely adopts this rule.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -169,12 +171,23 @@ alert('All fine now'); // uses a semi-colon alerts All fine now
 
 ---
 
+### What is the code structure of a Generator in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In JavaScript, a generator function is defined using the function asterisks syntax and yields values using the yield keyword within the function body.</div>
+  </div><br/>
+</details>
+
+---
+
 ### How are single-line comments created in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Single-line comments start with two forward slash characters <strong>//</strong>.</div>
+  <div><strong>Interview Response:</strong> In JavaScript, single-line comments can be created by using the double forward slash <strong>(//)</strong> followed by the comment text. The text following the double forward slash will be ignored by the JavaScript interpreter and will not be executed.</div>
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -188,6 +201,17 @@ alert('JavaScript'); // This comment follows the statement
 ```
 
   </div>
+</details>
+
+---
+
+### What is the code structure of a function in javascript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A JavaScript function consists of a function keyword, a function name, optional parameters enclosed in parentheses, and function code enclosed in curly braces.</div>
+  </div><br/>
 </details>
 
 ---
@@ -232,7 +256,7 @@ alert('JavaScript');
   /* nested comment ?!? */
   This is a comment continued <- returns a syntax error
 */ error
-alert( 'Oh no, Mr. Bill...' );
+console.log( 'Oh no, Mr. Bill...' );
 ```
 
   </div>
