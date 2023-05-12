@@ -56,12 +56,12 @@ import StructuredData from './schemadata/FunctionsSchemaData.js';
 
 <CloseAllAnswers />
 
-### What are the SEVEN types of functions in JavaScript?
+### Can you name at least three types of functions in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The seven types of functions include the function declaration, function expression, arrow function, shorthand methods, generators, constructor functions, and JS built-in methods.
+  <div><strong>Interview Response:</strong> In JavaScript, the three most common types of functions include: named functions, anonymous, and arrow functions.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -129,7 +129,7 @@ console.log(generator().next().value); // 1
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A JavaScript function is a callable block of code designed to perform a particular task.</div><br />
+  <div><strong>Interview Response:</strong> A JavaScript function is a reusable block of code designed to perform a specific task, taking input as arguments, processing the data, and returning a result.</div><br />
   <div><strong>Technical Response:</strong> Functions are one of the fundamental building blocks in JavaScript. A function is a JavaScript procedure — a set of statements that performs a task or calculates a value. To use a function, you must define it somewhere in the scope from which you wish to call it.<br /><br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -204,7 +204,7 @@ showMessage('Jane'); // Jane
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, they are only visible within the function's scope; we cannot access the variable outside of the function.
+  <div><strong>Interview Response:</strong> Variables declared inside a function have local scope, meaning they are limited to the function and not accessible outside of it, ensuring data encapsulation.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -233,8 +233,7 @@ alert(message); // <-- Error! The variable is local to the function.
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Functions can access top-level variables, variables inside of the function, and variables inside of a function that they are getting called.</div><br />
-  <div><strong>Technical Response:</strong> Globals or variables are accessible by functions because it is within their lexical scope, and they can also modify it. Functions also can access variables inside a function or the scope they are getting called.<br />
+  <div><strong>Interview Response:</strong> Yes, functions can access variables outside their body, as they have access to the outer scope, allowing them to use variables declared in a containing scope.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -268,7 +267,8 @@ alert(userName); // Bob, the value was modified by the function
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Variables declared outside of any function or code block are called global. Global variables are visible from any function (unless shadowed by locals).
+  <div><strong>Interview Response:</strong> A global variable in JavaScript is a variable declared outside any function or declared without "var", "let", or "const" keywords, accessible throughout the entire script. Global variables are visible from any function (unless shadowed by locals).
+
 </div>
   </div>
 </details>
@@ -280,20 +280,19 @@ alert(userName); // Bob, the value was modified by the function
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> It is a good practice to minimize the use of global variables. Modern code has few or no global variables.</div><br />
-  <div><strong>Technical Response:</strong> It is a good practice to minimize the use of global variables. Modern code has few or no global variables, and most variables reside in their functions. Sometimes though, global variables can be helpful to store project-level data.<br /><br />
+  <div><strong>Interview Response:</strong> The modern JavaScript rule for using global variables is to minimize their usage, as they can cause conflicts and make code harder to maintain and debug. We should use local variables and function parameters to ensure proper encapsulation of data.<br /><br />
   </div>
   </div>
 </details>
 
 ---
 
-### Can you explain how you use parameters in functions?
+### Can you explain how to use parameters in functions?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We use parameters (function arguments) to pass arbitrary data to functions.
+  <div><strong>Interview Response:</strong> In JavaScript, function parameters are used to pass values into a function. They are declared in the function signature and are accessible within the function body.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -320,7 +319,7 @@ showMessage('Ann', "What's up?"); // Ann: What's up? (**)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> If a parameter (function argument) has no default, the value becomes undefined.
+  <div><strong>Interview Response:</strong> If a function parameter isn't supplied during invocation, it assumes the value is “undefined” within the function, which may lead to unexpected results or errors.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -346,7 +345,7 @@ showMessage('Ann'); // "Ann: undefined"
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, a default parameter evaluates every time the function gets called without the respective parameter.
+  <div><strong>Interview Response:</strong> In JavaScript, a default parameter is evaluated every time the function gets called unless it's undefined or omitted.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -370,8 +369,7 @@ function showMessage(from, text = anotherFunction()) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We can use a conditional statement with strict equality or logical OR to check for the omitted parameter.</div><br />
-  <div><strong>Technical Response:</strong> Yes, you can run a conditional statement or check in the function body. The most common way is a conditional if statement or the logical || OR operator.<br /><br />
+  <div><strong>Interview Response:</strong> Yes, you can check for an omitted function parameter using default parameters or a conditional expression (ternary operator) to return a new value if the parameter is undefined.<br /><br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -439,12 +437,23 @@ if (checkAge(age)) {
 
 ---
 
+### Why is not recommended to use multiple return statements in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Using multiple return statements in JavaScript can make code harder to read, debug, and maintain, as it increases complexity and creates multiple exit points within a function.</div><br/>
+  </div>
+</details>
+
+---
+
 ### Is it possible to use a return statement without a value?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, we can use a return statement without a value. We call it an empty return statement; an empty return statement exits a program and returns undefined where it gets called.
+  <div><strong>Interview Response:</strong> Yes, it's possible to use a return statement without a value in JavaScript, which will cause the function to exit immediately and return "undefined" as the result.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -472,7 +481,7 @@ function showMovie(age) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A function with an empty return or without it returns undefined.
+  <div><strong>Interview Response:</strong> A return statement with an empty value outputs "undefined," signaling that the function completed without returning a specific value.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -500,12 +509,12 @@ alert(doNothing() === undefined); // true
 
 ---
 
-### You should use caution when using the return statement. What is the most important thing to remember when using a return statement?
+### What is the most important thing to remember when using a return statement?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The most important thing to remember when using the return statement is to add a semi-colon and never add a new line between the return and the value.</div><br />
+  <div><strong>Interview Response:</strong> The most important thing when using a return statement is to ensure it clearly communicates the function's intended output, ends with a semi-colon, and terminates the function properly.</div><br />
   
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -530,10 +539,9 @@ If you want the returned expression to wrap across multiple lines, we should sta
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Functions should start with a verb as an action word as a prefix. For example, a function that returns a user’s name should use “getUserName()” as the function name.</div><br />
-  <div><strong>Technical Response:</strong> It is a widespread practice to start a function with a verbal prefix that vaguely describes the action, and there must be an agreement on the meaning of the prefixes within the team. For example, functions that get something usually start with getting like “getUserName()”.
+  <div><strong>Interview Response:</strong> A recommended naming convention for JavaScript functions is to use a verb as a prefix to indicate an action. For instance, a function that retrieves a user's name should be named "getUserName()" using Camel Case.
   </div><br />
-  <div> It should be brief, as accurate as possible, and describe what the function does so that someone reading the code indicates what the function does.
+  <div> When writing a function, aim for accuracy and brevity in the function's name and description. This should convey the purpose and functionality of the function clearly to other developers who may read your code.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -558,7 +566,7 @@ checkPermission(..) // checks a permission, returns true/false
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A function should only do what its name implies. Even if they generally get referred to as one function, two separate actions usually warrant two functions (in that case, we can make a 3rd function that calls those two).
+  <div><strong>Interview Response:</strong> Best practices for creating a function include defining its purpose, using descriptive naming, adding comments, testing thoroughly, and following DRY or Don't Repeat Yourself principles.
 </div>
   </div>
 </details>
@@ -570,7 +578,7 @@ checkPermission(..) // checks a permission, returns true/false
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, it is imperative to make every effort to apply separate actions in each function. Sometimes, following this rule may not be that easy, but it is the best approach.
+  <div><strong>Interview Response:</strong> Yes, functions should have a clear separation of concerns, focusing on performing a single task, enhancing code reuse, and reducing the complexity of individual functions.
 </div><br />
   <div><strong className="codeExample">Example 1:</strong> Show Prime Numbers using a label (No Separation)<br /><br />
 
@@ -611,6 +619,109 @@ function isPrime(n) {
 ```
 
   </div>
+  </div>
+</details>
+
+---
+
+### What is a callback function in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In JavaScript, a callback function is a function passed as an argument to another function and executed when a specific event or action occurs.</div><br/>
+  </div>
+</details>
+
+---
+
+### What is a higher-order function in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A higher-order function is a function that takes one or more functions as arguments or returns a function as its result.</div><br/>
+  </div>
+</details>
+
+---
+
+### What is a closure in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A closure is a function that remembers and accesses its surrounding lexical scope, even when executed outside the original scope. In JavaScript, all functions are naturally closures.</div><br/>
+  </div>
+</details>
+
+---
+
+### What is a pure function in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In JavaScript, a pure function is a function that always produces the same output when given the same input, without modifying any external state or data outside of its scope.</div><br/>
+  </div>
+</details>
+
+---
+
+### What are the benefits of using pure functions in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Using pure functions in JavaScript ensures predictability, testability, and easier debugging, and allows for code optimization and functional programming patterns.</div><br/>
+  </div>
+</details>
+
+---
+
+### What are Side-Effects in JavaScript functions?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Side effects in JavaScript functions refer to changes made to data or variables outside of the function's scope.
+</div><br/>
+  </div>
+</details>
+
+---
+
+### Can a function declaration be called earlier than it is defined?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, function declarations in JavaScript can be called before they are defined due to hoisting, a process where declarations are moved to the top of their scope.
+</div><br/>
+  </div>
+</details>
+
+---
+
+### What is the scope of data in a function?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Data declared within a function has a local scope and is only accessible within that function.
+</div><br/>
+  </div>
+</details>
+
+---
+
+### What is the purpose of the “this” keyword in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The “this” keyword refers to the object that the function is a method of, or the global object if the function is not a method.
+</div><br/>
   </div>
 </details>
 

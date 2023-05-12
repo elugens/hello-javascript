@@ -44,7 +44,7 @@ import StructuredData from './schemadata/ComparisonsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> All JavaScript comparisons return a true or false Boolean value.</div><br />
+  <div><strong>Interview Response:</strong> All comparison operators in JavaScript return a Boolean value of either true or false.</div><br />
   <div><strong>Technical Response:</strong> Yes, every comparison yields a true or false Boolean value.<br /> <br />
 - true – means “yes”, “correct” or “the truth”.<br />
 - false – means “no”, “wrong” or “not the truth”.
@@ -65,12 +65,45 @@ alert(2 != 1); // true (correct)
 
 ---
 
+### What are the different types of comparison operators in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> JavaScript comparison operators include equality (==, ===), inequality (!=, !==), and relational (&#62;, &#60;, &#62;=, &#60;=) operators. They compare values for equality, inequality, or relative size, respectively.</div><br/>
+  </div>
+</details>
+
+---
+
+### What is the difference between inequality and strict inequality operators?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Inequality (!=) checks value inequality with type coercion, while strict inequality (!==) compares both value and type without coercion for accurate results.</div><br/>
+  </div>
+</details>
+
+---
+
+### Can you explain type coercion in the context of comparison operators?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Type coercion converts values to a common data type during comparisons. It occurs with loose comparison operators (==, !=) but not strict operators (===, !==).</div><br/>
+  </div>
+</details>
+
+---
+
 ### How does JavaScript compare strings to see if their greater or less than another?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> JavaScript uses “lexicographical” order. JavaScript compares letter-by-letter based on their Unicode value.</div><br />
+  <div><strong>Interview Response:</strong> In JavaScript, strings are compared lexicographically, which means that the characters in the strings are compared one by one in order until a difference is found. The comparison is based on the Unicode values of the characters.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -98,7 +131,7 @@ console.log(myLetter.charCodeAt(1)); // returns Unicode value 101
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, when comparing values of different types, it converts the values to numbers.</div><br />
+  <div><strong>Interview Response:</strong> Yes, when comparing values of different types, it converts the values to numbers. For Boolean values, true becomes 1 and false becomes 0.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -157,7 +190,7 @@ alert(a === b); // false!, strict equality operator
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The primary difference is strict equality does a value type check without any conversion.</div><br />
+  <div><strong>Interview Response:</strong> Equality (==) checks value equality with type coercion, while strict equality (===) checks both value and type without coercion, ensuring precise comparisons.</div><br />
   <div><strong>Technical Response:</strong> The regular equality check loosely compares values with type conversion. In contrast, the strict-equality check compares the value and the data type without converting the types.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -179,7 +212,18 @@ alert(0 === false); // false, because the types are different
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The strict equality operator is a bit longer to write but makes it obvious what is going on and leaves less room for errors.</div>
+  <div><strong>Interview Response:</strong> Yes, using the strict equality operator in JavaScript helps to avoid unexpected type coercion and ensures precise comparisons.</div>
+  </div>
+</details>
+
+---
+
+### What is the result of comparing "null" and "undefined" using equality and strict equality operators?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Using the equality operator (==), null and undefined are considered equal. However, with the strict equality operator (===), they are not equal, as they are different types.</div>
   </div>
 </details>
 
@@ -190,7 +234,7 @@ alert(0 === false); // false, because the types are different
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> False because they are not the same type.</div><br />
+  <div><strong>Interview Response:</strong> In JavaScript, when null and undefined are compared using the strict equality operator, they return false because they are not the same type.</div><br />
   <div><strong>Technical Response:</strong> False because each of them is a different type, but the non-strict operator returns true. For math and other comparisons such as greater and less than null/undefined are converted to numbers.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -216,7 +260,7 @@ alert(null == undefined); // true
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Bad Idea, You should never compare undefined to other values.</div><br />
+  <div><strong>Interview Response:</strong> Comparing undefined to other values in JavaScript can be a bad idea as it can lead to unexpected results and errors.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -228,6 +272,17 @@ alert(undefined == 0); // false (3)
 ```
 
   </div>
+  </div>
+</details>
+
+---
+
+### What is the behavior of comparison operators when comparing values with different types?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Loose comparison operators (==, !=) perform type coercion before comparing values, while strict operators (===, !==) compare values and types directly, avoiding coercion.</div><br/>
   </div>
 </details>
 
@@ -252,22 +307,45 @@ alert(undefined == 0); // false (3)
 
 ---
 
-### How does the if statement work?
+### What does it mean for two values to be "equal" in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The “if” statement evaluates a condition and executes a code block if the result is true.</div><br />
-  <div><strong className="codeExample">Code Example:</strong><br /><br />
-
-  <div></div>
-
-```js
-let year = prompt('In which year was ECMAScript-2015 published?', '');
-if (year == 2015) alert('You are right!'); // You are right!
-```
-
+  <div><strong>Interview Response:</strong> Two values are "equal" in JavaScript if they have the same value after type coercion.</div><br/>
   </div>
+</details>
+
+---
+
+### How do JavaScript comparison operators handle objects?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> JavaScript comparison operators evaluate objects by their memory references, not content. Two objects are equal only if they reference the same memory location.</div><br/>
+  </div>
+</details>
+
+---
+
+### What does it mean for two values to be "identical" in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Two values are "identical" in JavaScript if they have the same value and the same type.</div><br/>
+  </div>
+</details>
+
+---
+
+### Can you compare the values of different types in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, but the result may be unexpected due to type coercion in JavaScript.</div><br/>
   </div>
 </details>
 

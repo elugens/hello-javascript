@@ -1,5 +1,5 @@
 ---
-title: Logical Operators - JavaScript Interview Questions
+title: Logical Operators
 description: Logical operators are used to combine conditional statements. Logical operators can be applied to values of any type; they are not limited to a Boolean type.
 sidebar_position: 13
 sidbar_label: Logical Operators
@@ -55,12 +55,23 @@ import StructuredData from './schemadata/LogicalOpSchemaData.js';
 
 <CloseAllAnswers />
 
+### Can you name the logical operators in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The logical operators in JavaScript are: AND (&&), OR (||), and NOT (!). They are used to perform logical operations on values or expressions.</div><br/>
+  </div>
+</details>
+
+---
+
 ### What makes the logical || (OR), && (AND), ! (NOT) operators unique?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> You can apply logical operators to values of any type; logical operators are not limited to a Boolean type.</div>
+  <div><strong>Interview Response:</strong> Logical operators in JavaScript work with any data type, not just Booleans. They assess operands based on truthiness and utilize short-circuiting for efficient, compact conditional expressions.</div>
   </div>
 </details>
 
@@ -71,7 +82,7 @@ import StructuredData from './schemadata/LogicalOpSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> If an operand is not a Boolean, it converts to a Boolean for the evaluation. For instance, the number 1 gets treated as true, and the number 0 is false.</div><br />
+  <div><strong>Interview Response:</strong> If an operand is not a Boolean, the logical || OR operator will coerce the operands to Boolean values, then return the first truthy operand encountered or the last falsy one.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -99,7 +110,7 @@ console.log(0 || 0); // returns 0
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The OR || operator does the following:<br /><br />
+  <div><strong>Interview Response:</strong> In JavaScript, the logical OR operator "||" returns the first truthy value it encounters when evaluating multiple operands, or the last operand if all are falsy. The OR || operator does the following:<br /><br />
   <ol>
     <li>Operands evaluate from left to right.</li>
     <li>Converts each operand to a Boolean value, and if the result is true, the program terminates and returns the operand's original value.</li>
@@ -135,7 +146,7 @@ Logical OR “||” finds the first truthy value or the last value if there are 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> When JavaScript evaluates an OR expression, JavaScript short-circuits by not proceeding to the second operand if the first operand is true.</div><br />
+  <div><strong>Interview Response:</strong> Short-circuit evaluation is a behavior of logical operators where subsequent operands are not evaluated if the previous operands are sufficient to determine the expression's value.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -179,7 +190,7 @@ alert(false && false); // false
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Logical && (AND) converts all operands to Boolean values, true or false.</div>
+  <div><strong>Interview Response:</strong> The logical AND (&&) operator performs short-circuit conversion. It evaluates operands left-to-right and returns the first falsy value encountered or the last truthy value if all operands are truthy.</div>
   </div>
 </details>
 
@@ -190,7 +201,7 @@ alert(false && false); // false
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The AND && operator performs the following functions:<br /><br />
+  <div><strong>Interview Response:</strong> Operands evaluate from left to right, then it converts each operand to a boolean value, and if the result is false, the program terminates and returns the operand's original value. It returns the final operand if all operands evaluate to true.<br /><br />
   <ol>
     <li>Operands evaluate from left to right.</li>
     <li>Converts each operand to a Boolean value, and if the result is false, the program terminates and returns the operand's original value.</li>
@@ -224,7 +235,7 @@ alert(0 && 'no matter what'); // 0
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The difference is that AND returns the first falsie value while OR returns the first truthy.</div>
+  <div><strong>Interview Response:</strong> The difference is that AND returns the first false value while OR returns the first truthy value.</div>
   </div>
 </details>
 
@@ -278,7 +289,7 @@ if (x > 0) alert('Greater than zero!');
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The operator accepts a single argument, converts it to a Boolean, and returns the inverse value.</div><br />
+  <div><strong>Interview Response:</strong> The NOT operator accepts a single argument, converts it to a Boolean, and returns the inverse value.</div><br />
   <div><strong>Technical Response:</strong> The operator accepts a single argument and does the following:<br /><br />
   <ol>
     <li>Converts the operand to a Boolean type: true/false.</li>
@@ -328,7 +339,7 @@ alert(!!null); // false
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The Boolean object produces the same result as the double not.</div><br />
+  <div><strong>Interview Response:</strong> Yes, the built-in Boolean() function performs similarly to the double NOT (!!) operator, converting values to their respective Boolean representations.</div><br />
   <div><strong>Technical Response:</strong> The built-in Boolean object performs this in the same fashion as the !! (DOUBLE NOT) operator.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -355,9 +366,53 @@ alert(Boolean(null)); // false
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Logical NOT is the highest of all logical operators. It always executes first.</div><br />
+  <div><strong>Interview Response:</strong> The logical NOT (!) operator has the highest precedence among all logical operators in JavaScript. It always executes first.</div><br />
   <div><strong>Technical Response:</strong> The precedence of NOT ! is the highest of all logical operators, so it always executes first, before && (AND) or || (OR).
   </div>
+  </div>
+</details>
+
+---
+
+### What values are considered falsy in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In JavaScript, the following values are considered falsy: false, null, undefined, 0, NaN, and "" (empty string).</div><br/>
+  </div>
+</details>
+
+---
+
+### What is operator precedence in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Operator precedence determines the order in which operators are evaluated in expressions involving multiple operators. Operators with higher precedence are evaluated first.</div><br/>
+  </div>
+</details>
+
+---
+
+### How can you use Logical Operators to simplify complex conditions?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Logical Operators can be used to combine simple conditions into more complex ones. For example, instead of using nested if statements, you can use the AND (&&) operator to combine conditions.</div><br/>
+  </div>
+</details>
+
+---
+
+### What is the order of precedence for Logical Operators in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The order of precedence for Logical Operators in JavaScript is NOT (!), AND (&&), and then OR (||).</div><br/>
   </div>
 </details>
 

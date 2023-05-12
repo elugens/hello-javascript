@@ -56,6 +56,27 @@ import StructuredData from './schemadata/CondBranchingSchemaData.js';
 
 <CloseAllAnswers />
 
+### What is an if statement in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> An if statement is a conditional statement that checks a specified condition and executes a block of code if the condition is true. If the condition is false, the code inside the if statement is ignored.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let year = prompt('In which year was ECMAScript-2015 published?', '');
+if (year == 2015) alert('You are right!'); // You are right!
+```
+
+  </div>
+  </div>
+</details>
+
+---
+
 ### Can you execute more than one statement in an if statement?
 
 <details>
@@ -79,12 +100,34 @@ if (year == 2015) {
 
 ---
 
+### What is conditional branching in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Conditional branching in JavaScript involves using statements like 'if', 'else', and 'else if' to execute specific code blocks depending on whether certain conditions are met, allowing for dynamic behavior.</div><br/>
+  </div>
+</details>
+
+---
+
+### Can you execute more than one statement in an if statement?
+
+<details>s
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, you can execute multiple statements within an if statement by enclosing them in curly braces ({}) to form a block. This lets you perform various actions based on a single condition.</div><br/>
+  </div>
+</details>
+
+---
+
 ### What type of conversion does the JavaScript “if” statement use?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The if (_) statement evaluates the expression in its parentheses and converts it to a true or false Boolean value.</div>
+  <div><strong>Interview Response:</strong> The JavaScript "if" statement uses implicit type coercion, converting the condition to a boolean value. This is done through the Abstract Equality Comparison algorithm, often called "loose" comparison.</div><br/>
   </div>
 </details>
 
@@ -95,7 +138,7 @@ if (year == 2015) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, we can pass a pre-evaluated condition in a value to an if statement.</div><br />
+  <div><strong>Interview Response:</strong> Yes, you can pre-evaluate a condition by assigning its result to a variable and then using that variable as the condition in the if statement.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -113,12 +156,12 @@ if (cond) {
 
 ---
 
-### Is there a way to handle falsie conditions in an if statement?
+### Is there a way to handle false conditions in an if statement?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We can use an if-else statement to handle false conditions.</div><br />
+  <div><strong>Interview Response:</strong> Yes, We can use an if-else statement to handle false conditions.</div><br />
   <div><strong>Technical Response:</strong> Yes, the “if” statement may contain an optional “else” block. It executes when the condition is false.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -146,7 +189,7 @@ if (year == 2015) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To test several conditions in an if statement, you must add an “else if” statement. There can be more than one else if block and the final else is optional.</div><br />
+  <div><strong>Interview Response:</strong> To test various circumstances, you can use "else if" clauses along with the "if" statement, creating a chain of conditions to check before executing a specific code block.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -174,7 +217,7 @@ if (year < 2015) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, you can assign a variable depending on a condition in an if statement.</div><br />
+  <div><strong>Interview Response:</strong> Yes, in JavaScript you can assign a variable depending on a condition in an if statement.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -203,8 +246,7 @@ alert(accessAllowed);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We can use the ternary operator shorthand syntax.</div><br />
-  <div><strong>Technical Response:</strong> Yes, the condition/ternary (?) operator can be used to shorten the implementation of a conditional statement.
+  <div><strong>Interview Response:</strong> JavaScript offers a shorthand version called the ternary operator (condition ? trueExpression : falseExpression) for simple if-else statements, allowing for concise inline conditional evaluations.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -227,6 +269,83 @@ let accessAllowed = age > 18;
 ```
 
   </div>
+  </div>
+</details>
+
+---
+
+### What is the syntax of an if statement in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In JavaScript, the syntax for an if statement starts with the keyword 'if', followed by a condition in parentheses. Then, code blocks for true and optional false conditions are enclosed in curly braces.</div><br/>
+  </div>
+</details>
+
+---
+
+### What is the else keyword used for in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The "else" keyword is used in conjunction with an "if" statement to provide an alternative code block to execute when the condition of the "if" statement is false.</div><br/>
+  </div>
+</details>
+
+---
+
+### What is a switch statement in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A switch statement is a control structure used to execute different code blocks based on the value of a specified expression, simplifying multiple if-else conditions.</div><br/>
+  </div>
+</details>
+
+---
+
+### What is the syntax of a switch statement in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The switch statement syntax includes the 'switch' keyword, followed by an expression that is compared to values in each "case" block. When a match is found, the code in the corresponding block is executed. Optionally, a 'default' clause is added.</div><br/>
+  </div>
+</details>
+
+---
+
+### What is a ternary operator in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A ternary operator in JavaScript is a concise, shorthand way to write simple if-else statements.</div><br/>
+  </div>
+</details>
+
+---
+
+### Can multiple conditions be combined in a single if statement?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, multiple conditions can be combined in a single if statement using logical operators such as '&&' (AND), '||' (OR), and '!' (NOT) to create complex conditionals.</div><br/>
+  </div>
+</details>
+
+---
+
+### How many conditional branching methods does JavaScript have?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> JavaScript has three primary conditional branching methods: if-else statements, switch statements, and the ternary operator, each serving different use cases and levels of complexity.</div><br/>
   </div>
 </details>
 

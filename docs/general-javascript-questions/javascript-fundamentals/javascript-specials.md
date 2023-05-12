@@ -36,7 +36,7 @@ import StructuredData from './schemadata/JavaScriptSpecialsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> JavaScript treats line breaks as delimiters and uses automatic semicolon insertion to close individual statements. Most code style guides agree that we should put a semicolon after each statement.
+  <div><strong>Interview Response:</strong> JavaScript treats line breaks as delimiters, whitespace, and uses automatic semicolon insertion to close individual statements. Most code style guides agree that we should put a semicolon after each statement.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -54,12 +54,12 @@ import StructuredData from './schemadata/JavaScriptSpecialsSchemaData.js';
 
 ---
 
-### Describe the proper way to enforce strict mode in JavaScript?
+### Can you describe the proper way to enforce strict mode in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To enforce strict mode, we must use the “use strict;” directive placed at the top of our code or function body.</div><br />
+  <div><strong>Interview Response:</strong> To enable strict mode in JavaScript, add the directive "use strict" at the beginning of a script or function, which enables stricter parsing and error handling.</div><br />
   <div><strong>Technical Response:</strong> In JavaScript, To enforce strict mode, we must use the “use strict;” directive placed at the top of our code or function body. The directive must appear at the beginning of a script or at the start of a function body. Everything still works without "use strict", but some features behave in the old fashion, “compatible” way. We would generally prefer modern behavior.<br /><br />
 
   </div><br />
@@ -84,7 +84,7 @@ import StructuredData from './schemadata/JavaScriptSpecialsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Variables can contain letters and numbers, but the first character must be a letter. In some cases, the characters $ and _ are regular and acceptable. Non-Latin alphabets and hieroglyphs are also permitted but rarely utilized.
+  <div><strong>Interview Response:</strong> Variable names in JavaScript can include letters, digits, underscores, and dollar signs. They must start with a letter, underscore, or dollar sign, and are case-sensitive. Non-Latin alphabets and hieroglyphs are also permitted but rarely utilized.
 </div>
   </div>
 </details>
@@ -113,12 +113,12 @@ x = 'John';
 
 ---
 
-### What is the only operator with three parameters (arguments)?
+### What is the only operator with three parameters?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The only operator with three parameters is the ternary ( ? ) conditional operator.
+  <div><strong>Interview Response:</strong> The only JavaScript operator that takes three parameters (arguments) is the conditional operator, also known as the ternary operator (? : ).
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -136,12 +136,13 @@ console.log(beverage); // "Beer"
 
 ---
 
-### Name three types of JavaScript functions commonly used in application development?
+### What the three types of JavaScript functions commonly used in application development?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The three primary functions commonly used in JavaScript application development include a declaration, expression, and arrow functions.
+  <div><strong>Interview Response:</strong> JavaScript functions commonly used, in application development, include named functions, anonymous functions, and arrow functions, each serving different purposes and offering unique syntax.
+
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

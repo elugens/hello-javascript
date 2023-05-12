@@ -1,5 +1,5 @@
 ---
-title: Nullish Coalescing Operator - JavaScript Interview
+title: Nullish Coalescing Operator
 description: Learn how to use the nullish coalescing operator in JavaScript. Explain how the nullish coalescing operator works? Frontend Developer Interview Questions
 sidebar_position: 14
 sidebar_label: Nullish Coalescing Operator
@@ -55,12 +55,23 @@ import StructuredData from './schemadata/NullishSchemaData.js';
 
 <CloseAllAnswers />
 
+### What is the null-ish coalescing operator in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Introduced in ES2020, The nullish coalescing operator is a binary operator (??) that returns a value based on a null or undefined condition.</div><br/>
+  </div>
+</details>
+
+---
+
 ### Explain how the nullish coalescing operator works?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The nullish coalescing operator returns the first argument if it is not null or undefined—otherwise, the second one.</div><br />
+  <div><strong>Interview Response:</strong> The nullish coalescing operator is a binary operator (??) that returns the value of its left-hand side operand if it's not null or undefined; otherwise, it returns the value of its right-hand side operand.</div><br />
   <div><strong>Technical Response:</strong> In simple terms, the ?? returns the first argument if it is not null/undefined—otherwise, the second one.<br /><br />
   <strong>Example:</strong> The nullish coalescing operator, for example, is denoted by two question marks (??).<br /><br />
   <strong>The result of a ?? b is:</strong><br /><br />
@@ -94,8 +105,7 @@ console.log(baz);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The not equals operator checks the first value to see if it is null or undefined; it returns the second value if it is null or undefined.</div><br />
-  <div><strong>Technical Response:</strong> Yes, you can use the NOT (!==) Equal operator to check to see if the first value is not equal to null or undefined; return the second value.
+  <div><strong>Interview Response:</strong> Yes, we can use the not equals strict equality operator to check to see if the first value is not equal to null or undefined, otherwise, it returns the value of its right-hand side operand.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -171,7 +181,7 @@ alert(firstName ?? lastName ?? nickName ?? 'Anonymous'); // Supercoder
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The OR operator can be used the same way as the nullish coalescing operator.</div><br />
+  <div><strong>Interview Response:</strong> The logical (||) operator can be used the same way as the nullish coalescing operator.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -191,13 +201,14 @@ alert(firstName || lastName || nickName || 'Anonymous'); // Supercoder
 
 ---
 
-### What is the primary distinction between the Nullish Coalescing Operator and the Logical OR Operator?
+### What is the primary difference between the null-ish coalescing operator and the logical OR operator?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The OR operator returns the first truthy value, and the nullish operator returns the first defined value.</div><br />
-  <div><strong>Technical Response:</strong> The key distinction is that the OR operator returns the first true value, whereas the null operator returns the first specified value.<br /><br /> In other words, logical OR (||) does not differentiate between false, zero, an empty string "" and null/undefined. They're all the same — false values, and we obtain the second if any of them are the first arguments of ||.<br /><br /> However, we may wish to utilize the default value only when the variable is null/undefined in practice. When the value is unknown or not set, this is the case.
+  <div><strong>Interview Response:</strong> The null-ish coalescing operator only checks for null-ish values, null or undefined, while the logical OR operator, checks for any falsy value.
+  </div><br />
+  <div><strong>Technical Response:</strong> The primary difference is that the Nullish Coalescing Operator (??) returns the right operand only if the left operand is null or undefined, while the Logical OR (||) returns the right operand for any falsy value.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -267,6 +278,50 @@ alert(x); // 2
 ```
 
   </div>
+  </div>
+</details>
+
+---
+
+### How does the null-ish coalescing operator handle falsy values?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The nullish coalescing operator treats falsy values (such as 0, '', and false) as truthy values, and returns the left-hand side operand if it's not null or undefined.</div><br/>
+  </div>
+</details>
+
+---
+
+### What happens if the left-hand side operand of the nullish coalescing operator is a non-nullish value?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> If the left-hand side operand of the nullish coalescing operator is a non-nullish value, it's simply returned and the right-hand side operand is not evaluated.</div><br/>
+  </div>
+</details>
+
+---
+
+### Can you use the nullish coalescing operator with objects and arrays?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, you can use the nullish coalescing operator with objects and arrays, but it will only check for nullish values in the object and array itself, not in its properties or elements.</div><br/>
+  </div>
+</details>
+
+---
+
+### How does the nullish coalescing operator differ from the optional chaining operator?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The nullish coalescing operator provides a default value if a variable is null or undefined, while the optional chaining operator allows you to access properties or methods of an object without getting an error if the object is null or undefined.</div><br/>
   </div>
 </details>
 

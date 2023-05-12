@@ -61,15 +61,14 @@ import StructuredData from './schemadata/BasicMathOpSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In programming, we apply operands to operators. They can be left- or right-hand operands and a single argument or value depending on the case.</div><br />
-  <div><strong>Technical Response:</strong> Operands are expressions or values on which an operator operates or works (often constants or variables, but sub-expressions are also permitted).
+  <div><strong>Interview Response:</strong> An operand is a value or variable used in an expression with an operator to produce a result. It can be a constant, a variable, an object, or any expression that evaluates to a value.
   </div>
   </div>
 </details>
 
 ---
 
-### Explain the difference between a Binary and a Unary operand?
+### Explain the difference between a Binary, and a Unary operand
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -113,7 +112,7 @@ alert(y - x); // 2, binary minus subtracts values
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The basic mathematical operations include addition, subtraction, multiplication, division, remainder or modulo, and exponentiation.</div><br />
-  <div><strong>Technical Response:</strong> The basic mathematical operations allowed in JavaScript include Addition +, Subtraction -, Multiplication *, Division /, Remainder or Modulo %, and Exponentiation **.
+  <div><strong>Technical Response:</strong> JavaScript supports basic arithmetic operations like addition (+), subtraction (-), multiplication (*), division (/), and modulus (%). It also supports exponential (**) and increment (++) and decrement (--) operations. These can be used to perform mathematical operations on numbers and expressions.
   </div>
   </div>
 </details>
@@ -125,7 +124,7 @@ alert(y - x); // 2, binary minus subtracts values
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The remainder operator is used to find the remainder of two arguments (operands/values).</div><br />
+  <div><strong>Interview Response:</strong> TThe remainder operator, also known as the modulus operator, is used in JavaScript to find the remainder of a division operation between two numbers. In JavaScript, the modulo operator is represented by the percent sign.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -170,14 +169,14 @@ console.log(2 ** 4); // 16 (2 * 2 * 2 * 2, 4 times)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Mathematically, the exponentiation operator gets defined for non-integer numbers. We should note that the exponent used on fractions requires parentheses to ensure proper programmatic conversion.</div><br />
+  <div><strong>Interview Response:</strong> Yes, exponentiation can be defined for non-integer numbers using the Math.pow() function or the exponentiation operator. Both work with non-integer and negative exponents. We should note that exponentiation used on fractions requires parentheses to ensure proper programmatic conversion.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
 
 ```js
-alert(4 ** (1 / 2)); // 2 (power of 1/2 is the same as a square root)
-alert(8 ** (1 / 3)); // 2 (power of 1/3 is the same as a cubic root)
+console.log(4 ** (1 / 2)); // 2 (power of 1/2 is the same as a square root)
+console.log(8 ** (1 / 3)); // 2 (power of 1/3 is the same as a cubic root)
 ```
 
   </div>
@@ -229,8 +228,7 @@ alert(2 + 2 + '1'); // returns 2 + 2 = 4 and 4 + '1' = 41
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Unary plus has no effect on numbers, but it does convert non-number strings into numbers.</div><br />
-  <div><strong>Technical Response:</strong> Unary (+) plus has no conversion effect on numbers, but it converts non-numbers like strings to numbers. JavaScript also has a built-in Number(value) method that you can use to achieve the same output.
+  <div><strong>Interview Response:</strong> In JavaScript, the unary plus operator is used to convert a value to a number. When applied to a single value, the unary plus operator performs type coercion, converting the value to a number if it's not already a number.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -287,12 +285,13 @@ alert(Number(apples) + Number(oranges)); // 5
 
 ---
 
-### What is the most prominent characteristic of all operators in JavaScript?
+### What is the most prominent characteristics of all operators in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> All JavaScript operators return a value, including the assignment (=) operator.</div>
+  <div><strong>Interview Response:</strong> All JavaScript operators return a value, including the assignment (=) operator and their ability to perform various types of operations on values or expressions.
+</div>
   </div>
 </details>
 
@@ -303,7 +302,7 @@ alert(Number(apples) + Number(oranges)); // 5
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Chained assignments evaluate from right to left.</div>
+  <div><strong>Interview Response:</strong> In JavaScript, chained assignments evaluate from right to left. In simple terms, the value on the right gets assigned to the variables on the left.</div>
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -329,7 +328,7 @@ alert(c); // 4
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> If chained assignments get implemented incorrectly, it can lead to memory leaks.</div>
+  <div><strong>Interview Response:</strong> Incorrect implementation of chained assignments may result in memory leaks.</div>
   </div>
 </details>
 
@@ -341,6 +340,7 @@ alert(c); // 4
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Increment increases a variable by one, and decrement decreases a variable by one.</div><br />
+  <div><strong>Technical Response:</strong> Increment increases a value by one, while decrement decreases it by one. In JavaScript, the increment operator uses a “++” sign,while the decrement operator uses a minus minus “--” sign.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -349,14 +349,14 @@ alert(c); // 4
 let counter = 2;
 
 counter++; // works the same as counter = counter + 1, but is shorter
-alert(counter); // 3
+console.log(counter); // 3
 
 ////////////////////////////////
 
 let counter = 2;
 
 counter--; // works the same as counter = counter - 1, but is shorter
-alert(counter); // 1
+console.log(counter); // 1
 ```
 
   </div>
@@ -370,19 +370,18 @@ alert(counter); // 1
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, We should only use increment/decrement with <strong>variables</strong>. Trying to use it on a value like 5++ gives an error.</div>
+  <div><strong>Interview Response:</strong> No, We should only use increment and decrement with variables. Trying to use them on a value like 5++, results in an error.</div>
   </div>
 </details>
 
 ---
 
-### Are operators ++ and -- placed before or after a variable?
+### Are decrement and increment operators placed before or after a variable?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The operators get placed before or after a variable. Before, the variable is a prefix position, and after the variable is the postfix position.</div><br />
-  <div><strong>Technical Response:</strong> The operators ++ and -- get placed before or after a variable. When the operator goes after the variable, it is in “postfix position”: counter++. The “prefix position” is when the operator goes before the variable: ++counter.
+  <div><strong>Interview Response:</strong> The operators can be placed before or after a variable. Before the variable is defined as the prefix position, and after the variable is the postfix position.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -413,8 +412,7 @@ alert(a); // 1
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Prefix increments the counter and returns the new value. Postfix increments counter but return the old value before being incremented.</div><br />
-  <div><strong>Technical Response:</strong> Yes, the prefix form ++counter increments counter and returns the new value. The postfix form counter++ also increments the counter but returns the old value before being incremented.
+  <div><strong>Interview Response:</strong> Prefix increments the counter and returns the new value. Postfix increments the counter but returns the old value before being incremented.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -440,13 +438,13 @@ alert(b); // alerts 5
 
 ---
 
-### Can the ++/-- operators be used within expressions?
+### Can the increment and decrement operators be used within expressions?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Technically, yes, but it is not advisable because it reduces the readability of our code.</div><br />
-  <div><strong>Technical Response:</strong> Though technically okay, such notation should be avoided and usually makes code less readable. We should use a typical style of one-line action in our code.
+  <div><strong>Technical Response:</strong> Though technically okay, such notation should be avoided and usually makes code less readable. We should use a typical style of one-line one-action in our code.
   </div><br />
   <div><strong className="codeExample">Proper Implementation:</strong><br /><br />
 
@@ -486,12 +484,23 @@ console.log(1100 | 1011); // 1111
 
 ---
 
+### What occurs when multiple expressions are separated by commas within a single statement?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In JavaScript, separating expressions by a comma creates a comma-separated sequence of expressions. The expressions are evaluated left-to-right, and the result of the last expression is returned.</div><br />
+  </div>
+</details>
+
+---
+
 ### What is the comma operator used for in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The comma operator allows us to evaluate several expressions, dividing them with a comma. Each of them gets evaluated, but only the result of the last one gets returned.</div><br />
+  <div><strong>Interview Response:</strong> The comma operator in JavaScript is used to evaluate multiple expressions sequentially within a single statement, returning the result of the last expression.</div><br />s
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -513,7 +522,7 @@ alert(a); // 7 (the result of 3 + 4)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Sometimes, people use it in more complex constructs to put several actions in one line, and it is not a standard or recommended approach.</div><br />
+  <div><strong>Interview Response:</strong> The comma operator is useful for concise code, combining multiple operations in a single statement, like initializing multiple variables or running side effects in a loop. We should use the comma operator judiciously in JavaScript, as it can make code less readable.</div><br />
   <div><strong className="codeExample">Code Example:</strong> Three expressions in one line…<br /><br />
 
   <div></div>
@@ -537,7 +546,91 @@ for (a = 1, b = 3, c = a * b; a < 10; a++) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The comma operator has exceptionally low precedence, lower than the assignment operator.</div>
+  <div><strong>Interview Response:</strong> In JavaScript, the comma operator has the lowest precedence among all operators, meaning it is evaluated after all other operators in an expression.</div>
+  </div>
+</details>
+
+---
+
+### What is the mathematical order of operations in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The order of operations in JavaScript follows the standard PEMDAS rule: Parentheses, Exponents, Multiplication, and Division, from left to right, and Addition and Subtraction, from left to right.
+</div>
+  </div>
+</details>
+
+---
+
+### What is the general order of operations in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In JavaScript, the general order of operations includes: Parentheses, member and computed member access, new and function calls, unary operators, arithmetic, comparison, logical, ternary, assignment, and finally, the comma operator.
+</div>
+  </div>
+</details>
+
+---
+
+### What is NaN in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In JavaScript, NaN stands for Not a Number. It is a special value representing the result of an undefined or unrepresentative mathematical operation, such as the square root of a negative number or dividing zero by zero.
+</div>
+  </div>
+</details>
+
+---
+
+### How do you perform exponentiation operation in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In JavaScript, we can use the Math.pow() method or the exponentiation operator with double asterisks for exponentiation.
+</div>
+  </div>
+</details>
+
+---
+
+### What happens when you divide zero by zero in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In JavaScript, dividing zero by zero results in NaN, a special value representing an undefined or unrepresentative mathematical operation.
+</div>
+  </div>
+</details>
+
+---
+
+### How do you round a number to a specified number of decimal places in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> To round a number to a specified number of decimal places in JavaScript, you can use the toFixed() method.
+</div>
+  </div>
+</details>
+
+---
+
+### What is the difference between equality and strict equality operators?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Equality (==) compares values, performing type coercion if needed. Strict equality (===) compares values and types, requiring both to match for true.
+</div>
   </div>
 </details>
 

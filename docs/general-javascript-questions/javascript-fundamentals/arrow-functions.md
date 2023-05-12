@@ -62,6 +62,8 @@ import StructuredData from './schemadata/ArrowFuncSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> An arrow function expression is a compact alternative to a traditional function expression, but it is limited, and we should not use it in all situations.
 </div><br />
+<div><strong>Technical Response:</strong> An arrow function is a concise syntax for defining anonymous functions in JavaScript, using the arrow notation. It offers shorter syntax, lexical scoping of "this", and can't be used as a constructor.
+</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -85,12 +87,12 @@ console.log(sayHello('JavaScript!'));
 
 ---
 
-### What are the differences and limitations between Arrow Functions and Function Expressions?
+### How do arrow functions differ from function expressions?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> An arrow function does not have bindings to this or super, and we should not use it as a method or constructor. Also, it is not suitable for the call, apply, and bind methods.</div><br />
+  <div><strong>Interview Response:</strong> Arrow functions provide a shorter syntax, don't have their own this, arguments, super, or new.target, and can't be used as constructors, unlike function expressions.</div><br />
   <div><strong>Technical Response:</strong><br /><br /><strong>Differences & Limitations:</strong><br /><br />
   <ol>
     <li>It does not have its binding to this or super and should not get used as a method.</li>
@@ -126,12 +128,12 @@ obj.c(); // prints 10, Object {...}
 
 ---
 
-### If there are no arguments in an arrow function, do you need to add the parentheses?
+### If there are no arguments in an arrow function. Do you need to add the parentheses in the function signature?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, if there are no arguments, then the parentheses should be present in your arrow function. Otherwise, it throws a syntax error.
+  <div><strong>Interview Response:</strong> Yes, if an arrow function has no arguments, you need to include empty parentheses in the function signature to indicate the absence of parameters. This syntax is required for proper arrow function definition. Otherwise, it will throw a syntax error.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -145,6 +147,17 @@ sayHi(); // returns Hello!
 ```
 
   </div>
+  </div>
+</details>
+
+---
+
+### What is the difference between a regular function and an arrow function?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The key difference between regular and arrow functions in JavaScript is that arrow functions have a concise syntax and do not bind to their own "this" context, while regular functions do.</div><br/>
   </div>
 </details>
 
@@ -180,7 +193,7 @@ welcome();
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A multiline statement must get enclosed in curly brackets, but we can omit the curly brackets in a single-line statement.
+  <div><strong>Interview Response:</strong> In an arrow function, a single-line statement is implicitly returned while a multi-line statement requires an explicit "return" statement.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -201,6 +214,137 @@ console.log(sum(3, 6)); // returns 9
 ```
 
   </div>
+  </div>
+</details>
+
+---
+
+### What are the advantages of using arrow functions?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The advantages of using arrow functions in JavaScript include shorter syntax, implicit return, and lexical ‘this’ binding.</div><br/>
+  </div>
+</details>
+
+---
+
+### How is the 'this' keyword treated in arrow functions?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In arrow functions, the 'this' keyword is lexically bound to the surrounding scope, rather than having its own 'this' value.
+</div><br/>
+  </div>
+</details>
+
+---
+
+### What does lexical 'this' binding mean in arrow functions?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> "Lexical this" binding in arrow functions means they don't create their own 'this' context; instead, they inherit 'this' from their surrounding, enclosing scope, reducing common 'this'-related issues.
+</div><br/>
+  </div>
+</details>
+
+---
+
+### How does 'this' binding differ in arrow functions?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Arrow functions bind the “this” keyword lexically to the context where they are defined, instead of dynamically like regular functions.
+</div><br/>
+  </div>
+</details>
+
+---
+
+### Can you pass default parameters to an arrow function?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, you can use the same syntax as regular functions to pass default parameters to an arrow function.
+</div><br/>
+  </div>
+</details>
+
+---
+
+### Can arrow functions be used as constructors?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> No, arrow functions cannot be used as constructors because they don't have their own ‘this’ value.
+</div><br/>
+  </div>
+</details>
+
+---
+
+### Can arrow functions use rest parameters?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, in JavaScript, arrow functions can use rest parameters. Rest parameters are denoted with three dots (…) before the parameter name and gather remaining arguments into an array, allowing for a more flexible function.
+</div><br/>
+  </div>
+</details>
+
+---
+
+### What is an implicit return in arrow functions?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> An implicit return in an arrow function occurs when the function consists of a single expression without curly braces, automatically returning the expression's result without needing a return statement.
+</div><br/>
+  </div>
+</details>
+
+---
+
+### How do you create a higher-order function using arrow functions?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> To create a higher-order function using arrow functions, simply define an arrow function or regular function that accepts another arrow function as a parameter or returns an arrow function as its output.
+</div><br/>
+  </div>
+</details>
+
+---
+
+### Can arrow functions be used as methods in an object?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, arrow functions can be used as methods in an object. However, they should be used with caution as the ‘this’ keyword will not refer to the object itself but to the surrounding scope.
+</div><br/>
+  </div>
+</details>
+
+---
+
+### What are the common use cases for arrow functions?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Arrow functions are commonly used for array methods, event listeners, callbacks, and other functions that require shorter, more concise syntax.
+</div><br/>
   </div>
 </details>
 

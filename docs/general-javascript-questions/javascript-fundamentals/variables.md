@@ -217,6 +217,17 @@ let _ = 2; // and now a variable with the name "_"
 alert($ + _); // 3
 ```
 
+<strong className="codeExample">These names are not valid and should not be used:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Invalid variable names
+let 2ndName = "Alex";   // Cannot start with a number
+let full-name = "John Doe";   // Cannot use hyphen
+let for = "loop";    // Cannot use reserved keyword
+```
+
   </div>
   </div>
 </details>
