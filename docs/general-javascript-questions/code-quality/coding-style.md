@@ -65,6 +65,8 @@ import StructuredData from './schemadata/CodingStyleSchemaData.js';
   <div>
   <div>
   <strong>Interview Response:</strong> The goal is to take a complex task and code it correctly and in a human-readable manner.
+</div><div>
+  <strong>Technical Response:</strong> The goal of coding style and application development is to create maintainable, efficient, and readable code, ensuring optimal functionality, collaboration, and ease of understanding for developers and users alike.
 </div>
 
 <div></div><br />
@@ -83,7 +85,7 @@ Several code styling guides help programmers reach this goal.
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, it is a best practice and makes code more readable.
+  <div><strong>Interview Response:</strong> Using curly braces with a conditional if statement is not required, but it's a best practice to improve readability and prevent errors.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -104,12 +106,12 @@ if (n < 0) {
 
 ---
 
-### Is it okay to use long horizontal code lines or split them into separate lines? Give a reason why you choose your answer?
+### Should code lines in JavaScript be long and horizontal or split into separate lines? Provide a justification for your decision
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Professional JavaScript developers prefer separate lines because they are more readable than not. It is also a best practice.
+  <div><strong>Interview Response:</strong> Code lines in JavaScript should be split into separate lines, ideally not exceeding 80 to 100 characters. This improves readability, reduces horizontal scrolling, and makes the code easier to understand and maintain. It is also a best practice.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong> Proper Implementation<br /><br />
 
@@ -147,7 +149,7 @@ A great example would be long paragraphs longer than 120 characters. We can use 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The maximum length typically agreed upon by dev teams is between 80 to 120 characters.
+  <div><strong>Interview Response:</strong> In JavaScript, development teams typically agree on a maximum character length of 80 to 100 characters per line, as it strikes a balance between readability and efficient use of screen space while coding.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong> Proper Implementation<br /><br />
 
@@ -173,7 +175,7 @@ let str = `
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A best practice is to divide each code action by a line space to keep your code readable.
+  <div><strong>Interview Response:</strong> A best practice for vertical space in JavaScript includes using blank lines to separate logical sections, function declarations, and blocks of related code, improving readability and code organization.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -202,7 +204,7 @@ function pow(x, n) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A great way to reduce nesting levels is handling minimum conditions early. The goal is to reduce nested code blocks that isolate variable access. The benefits of writing code in this fashion are increased readability and faster code because of early conditional error checks. If the code fails early, then it is handled without continuity.<br /><br />
+  <div><strong>Interview Response:</strong> One way to reduce nesting levels in JavaScript is to refactor nested if statements and loops by using early returns, switch statements, and function extraction to break down complex logic into smaller, simpler pieces.<br /><br />
   <strong>Here are some rules of thumb for reducing nesting in your code:</strong><br /><br />
   <ol>
     <li>Keep your conditional blocks brief. Keeping things local improves readability.</li>
@@ -258,13 +260,58 @@ function pow(x, n) {
 
 ---
 
-### What is a Linter, and why should you use it?
+### What is the purpose of a linter in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Linters are tools that can automatically check the style of your code and make improvement suggestions. The great thing about linters is that style-checking can also find bugs, like typos in variable or function names. Because of this feature, using a linter is recommended even if you do not want to stick to one particular code style.
-</div>
+  <div><strong>Interview Response:</strong> A linter in JavaScript helps identify potential errors, enforce coding conventions, improve code quality, maintain consistency, and provide suggestions for best practices during development.
+</div><br/>
+
+:::note
+
+The great thing about linters is that style-checking can also find bugs, like typos in variable or function names. Because of this feature, using a linter is recommended even if you do not want to stick to one particular code style.
+
+:::
+
+  </div>
+</details>
+
+---
+
+### How does the use of semicolons contribute to a clean and organized JavaScript code?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Semicolons help in maintaining a clean and organized code base, by explicitly indicating the end of a statement. This eliminates ambiguity and makes the code easier to read and understand.
+
+</div><br/>
+  </div>
+</details>
+
+---
+
+### What is the significance of indentation in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Indentation is essential in JavaScript for improving code readability and maintainability. It helps to visually separate blocks of code, making it easier to understand the flow and structure of the program.
+
+</div><br/>
+  </div>
+</details>
+
+---
+
+### How can you ensure consistent code style across your JavaScript project?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> To ensure consistent code style across a project, you can use tools like ESLint or Prettier. These tools help to enforce a specific set of conventions and automatically format the code according to the predefined rules. Additionally, having a well-documented style guide and conducting regular code reviews can also help maintain consistency.
+</div><br/>
   </div>
 </details>
 
