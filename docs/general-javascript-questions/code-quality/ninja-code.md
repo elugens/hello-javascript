@@ -58,7 +58,11 @@ import StructuredData from './schemadata/NinjaCodeSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
+<<<<<<< HEAD
   <div><strong>Interview Response:</strong> No, they can confuse a developers in a team environment, reduce code readability, and make it harder to debug your code. Descriptive names are generally recommended for better code quality.
+=======
+  <div><strong>Interview Response:</strong> Abbreviating variable and function names can harm readability and maintainability. It's generally better to use clear, descriptive names to make your code self-explanatory and easier to understand.
+>>>>>>> d699652 (update)
 </div><br/>
   </div>
 </details>
@@ -100,7 +104,11 @@ function render() {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
+<<<<<<< HEAD
   <div><strong>Interview Response:</strong> 'Callback hell' in JavaScript refers to deeply nested callback functions, which can make code hard to read and maintain, and lead to errors and inefficiencies.
+=======
+  <div><strong>Interview Response:</strong> 'Callback hell' refers to nesting multiple asynchronous callbacks, leading to complex, hard-to-read code. This pyramid-like structure can make logic flow unclear and error handling difficult. Promises and async/await help mitigate this.
+>>>>>>> d699652 (update)
 </div><br/>
   </div>
 </details>
@@ -112,8 +120,12 @@ function render() {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
+<<<<<<< HEAD
   <div><strong>Interview Response:</strong> Common issues with global variables in JavaScript include naming collisions, security risks, and reduced code modularity. These issues can be avoided by using local variables, closures, and module patterns.
 
+=======
+  <div><strong>Interview Response:</strong> Global variables can cause naming conflicts, and unintended mutations, and make debugging difficult. Avoid them by using local variables, closures, or module patterns, and favoring encapsulation and information hiding.
+>>>>>>> d699652 (update)
 </div><br/>
   </div>
 </details>
@@ -125,7 +137,11 @@ function render() {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
+<<<<<<< HEAD
   <div><strong>Interview Response:</strong> Using 'eval()' in JavaScript can be a security risk and reduce code performance, and can also make the code harder to debug and maintain. It is generally considered a bad practice.
+=======
+  <div><strong>Interview Response:</strong> Using 'eval()' can pose security risks, as it executes any JavaScript code passed to it. It also hinders performance optimizations. It's generally best to avoid 'eval()' and use safer alternatives.
+>>>>>>> d699652 (update)
 </div><br/>
   </div>
 </details>
@@ -137,7 +153,11 @@ function render() {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
+<<<<<<< HEAD
   <div><strong>Interview Response:</strong> Using '==' instead of '===' in JavaScript can lead to unexpected type coercion, where different data types are compared as equal. It is recommended to use '===' for strict equality comparison.
+=======
+  <div><strong>Interview Response:</strong> Using '==' performs type coercion, which can lead to unexpected results due to automatic type conversion. '===' checks for strict equality, ensuring both value and type match, providing more predictable comparisons.
+>>>>>>> d699652 (update)
 </div><br/>
   </div>
 </details>
@@ -149,7 +169,11 @@ function render() {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
+<<<<<<< HEAD
   <div><strong>Interview Response:</strong> 'use strict' is a JavaScript directive that enforces stricter parsing and error handling, preventing certain bad coding practices such as implicit variable declaration, and providing a safer and more predictable environment for coding.
+=======
+  <div><strong>Interview Response:</strong> 'use strict' enforces stricter parsing and error handling in JavaScript, helping to prevent common coding mistakes like undeclared variables. It can make debugging easier and code more predictable.
+>>>>>>> d699652 (update)
 </div><br/>
   </div>
 </details>
@@ -173,7 +197,11 @@ function render() {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
+<<<<<<< HEAD
   <div><strong>Interview Response:</strong> Modifying built-in JavaScript objects or prototypes can cause compatibility issues, unexpected behavior, bugs, conflicts with libraries or future JavaScript versions, and make debugging difficult.
+=======
+  <div><strong>Interview Response:</strong> Modifying built-in JavaScript objects or prototypes risks introducing bugs, as changes can affect all instances of the object, causing unexpected behavior. It can also lead to compatibility issues with future code or libraries.
+>>>>>>> d699652 (update)
   </div>
   </div>
 </details>
@@ -185,7 +213,11 @@ function render() {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
+<<<<<<< HEAD
   <div><strong>Interview Response:</strong> Excessive use of anonymous functions in JavaScript can lead to increased memory consumption and reduced code performance due to the overhead of function creation and garbage collection. Reusing named functions can improve performance.
+=======
+  <div><strong>Interview Response:</strong> Excessive use of anonymous functions can lead to memory inefficiency, as each instance creates a new function object. It can also make debugging harder, as stack traces will not provide meaningful function names.
+>>>>>>> d699652 (update)
   </div>
   </div>
 </details>
@@ -197,7 +229,11 @@ function render() {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
+<<<<<<< HEAD
   <div><strong>Interview Response:</strong> A classic pitfall with 'for-in' loop in JavaScript comes from the fact that it iterates over all enumerable properties of an object, including those in the prototype chain. This can lead to unintended consequences if the object's prototype has properties that you weren't expecting to deal with.
+=======
+  <div><strong>Interview Response:</strong> A 'for-in' loop in JavaScript iterates over all enumerable properties, including inherited ones, which may lead to unintended results. Use 'hasOwnProperty' check or use 'for-of' loop or 'Object.keys()' for array iteration.
+>>>>>>> d699652 (update)
   </div><br />
 
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -239,7 +275,11 @@ Surprise!
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
+<<<<<<< HEAD
   <div><strong>Interview Response:</strong> Improper error handling in JavaScript can lead to unexpected program behavior, security vulnerabilities, and code that is difficult to debug and maintain, which contributes to bad coding practices.
+=======
+  <div><strong>Interview Response:</strong> Improper error handling can cause silent failures, making debugging difficult. It may also lead to unintended behavior, creating user experience issues or security vulnerabilities. Proper error handling improves code reliability and maintainability.
+>>>>>>> d699652 (update)
 </div><br/>
   </div>
 </details>
@@ -251,7 +291,11 @@ Surprise!
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
+<<<<<<< HEAD
   <div><strong>Interview Response:</strong> Using 'setTimeout' or 'setInterval' with string arguments is akin to using 'eval', posing security risks and performance issues. Instead, pass a function or an arrow function directly.
+=======
+  <div><strong>Interview Response:</strong> Using strings as arguments with 'setTimeout' or 'setInterval' in JavaScript can result in security vulnerabilities and reduced code maintainability. This can be avoided by passing function references instead.
+>>>>>>> d699652 (update)
 </div><br/>
   </div>
 </details>
@@ -263,7 +307,11 @@ Surprise!
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
+<<<<<<< HEAD
   <div><strong>Interview Response:</strong> Inline event handlers mix HTML with JavaScript, leading to less maintainable code and potential XSS vulnerabilities. Instead, we should use addEventListener for separation of concerns and improved security.
+=======
+  <div><strong>Interview Response:</strong> Inline event handlers mix HTML and JavaScript, reducing maintainability and readability. A better alternative is using the 'addEventListener' method to separate code and markup, adhering to the principle of separation of concerns.
+>>>>>>> d699652 (update)
 </div><br/>
   </div>
 </details>
@@ -275,8 +323,20 @@ Surprise!
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
+<<<<<<< HEAD
   <div><strong>Interview Response:</strong> The 'with' statement in JavaScript can lead to ambiguity and unpredictability in code due to scope confusion. It's recommended to use dot notation or destructuring instead.
 </div><br/>
+=======
+  <div><strong>Interview Response:</strong> TThe 'with' statement in JavaScript can lead to ambiguity and unpredictable results, as it changes the scope chain, potentially modifying unintended variables. Its use is generally discouraged to maintain code clarity and predictability.
+</div><br/>
+
+:::note
+
+The ‘with’ statement is deprecated and no longer recommended, according to the MDN.
+
+:::
+
+>>>>>>> d699652 (update)
   </div>
 </details>
 
@@ -287,7 +347,11 @@ Surprise!
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
+<<<<<<< HEAD
   <div><strong>Interview Response:</strong> Direct DOM manipulation is slow and can cause reflows/repaints, hurting performance. Use document fragments, batch updates, or virtual DOM libraries (like React) for efficient updates.
+=======
+  <div><strong>Interview Response:</strong> Direct DOM manipulation is costly and can lead to performance issues. To improve performance, minimize DOM changes, use document fragments for multiple changes, or use virtual DOM-based libraries like React for efficient diffing and updating.
+>>>>>>> d699652 (update)
 </div><br/>
   </div>
 </details>
@@ -299,7 +363,11 @@ Surprise!
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
+<<<<<<< HEAD
   <div><strong>Interview Response:</strong> Poor naming conventions in code can lead to confusion, reduced code readability, and maintenance difficulties, making it harder for developers to understand and modify the code. Descriptive, consistent naming is recommended.
+=======
+  <div><strong>Interview Response:</strong> Poor naming conventions can make code hard to understand and debug, as they don't convey the purpose or type of variables and functions. Good names improve readability, making the code self-explanatory and easier to maintain.
+>>>>>>> d699652 (update)
 </div><br/>
   </div>
 </details>
