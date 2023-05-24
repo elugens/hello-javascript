@@ -47,7 +47,7 @@ import StructuredData from './schemadata/ObjectMethodsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A function that is a property of an object is called its method.
+  <div><strong>Interview Response:</strong> A function that is a property of an object is called a "method" in object-oriented programming. Methods are used to perform actions or manipulate object data.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -73,12 +73,24 @@ user.sayHi(); // Hello, JavaScript
 
 ---
 
+### What is the difference between a regular function and an object method in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In JavaScript, regular functions are standalone, while object methods are functions attached to objects. Methods have access to object properties through the 'this' keyword.<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
 ### What is the programming paradigm that uses objects to represent entities?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Object-oriented Programming, or OOP, is the programming paradigm that uses objects to represent entities.
+  <div><strong>Interview Response:</strong> The programming paradigm that uses objects to represent entities is called Object-Oriented Programming (OOP). It emphasizes encapsulation, inheritance, and polymorphism for code organization.
 </div>
   </div>
 </details>
@@ -111,7 +123,7 @@ user.sayHi(); // Hello, JavaScript
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The "this" keyword holds a reference to the object and, in return, removes any effort to nullify it later in the code.
+  <div><strong>Interview Response:</strong> The "this" keyword provides object context, allowing access to its properties and methods, promoting code reusability, and easier maintenance. The "this" keyword holds a reference to the object and, in return, removes any effort to nullify it later in the code.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong> “THIS” refers to the object<br /><br />
 
@@ -123,7 +135,7 @@ let user = {
   age: 30,
 
   sayHi() {
-    alert(this.name); // this works as intended
+    console.log(this.name); // this works as intended
   },
 };
 
@@ -144,7 +156,7 @@ let user = {
   age: 30,
 
   sayHi() {
-    alert(user.name); // leads to an error
+    console.log(user.name); // leads to an error
   },
 };
 
@@ -165,20 +177,18 @@ admin.sayHi(); // TypeError: Cannot read property 'name' of null
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In strict mode, "this" returns undefined, and in the non-strict mode, it returns the global window.
+  <div><strong>Interview Response:</strong> In non-strict mode, the ‘this’ keyword in a function refers to the global object if the function is called without being accessed on anything. In strict mode, the ‘this’ keyword in a function is undefined if the function is called without being accessed on anything.
 </div><br />
-  <div><strong className="codeExample">Code Example:</strong> Strict Mode<br /><br />
+  <div><strong className="codeExample">Code Example:</strong> In non-strict mode, the following code will print "window"<br /><br />
 
   <div></div>
 
 ```js
-'use strict';
-
-function sayHi() {
-  alert(this);
+function myFunction() {
+  console.log(this);
 }
 
-sayHi(); // returns undefined
+myFunction();
 ```
 
   </div><br />
@@ -187,11 +197,13 @@ sayHi(); // returns undefined
   <div></div>
 
 ```js
-function sayHi() {
-  alert(this);
+"use strict";
+
+function myFunction() {
+  console.log(this);
 }
 
-sayHi(); // returns global window object
+myFunction();
 ```
 
   </div>
@@ -205,6 +217,8 @@ sayHi(); // returns global window object
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
+  <div><strong>Interview Response:</strong> Unbound this in JavaScript leads to the loss of context, resulting in runtime errors or unexpected behavior when attempting to access properties or methods that rely on the proper binding of this.
+</div><br /><br />
   <div><strong>Interview Response:</strong> In JavaScript, the “this” keyword is free. Its value is evaluated at run-time and does not depend on where the method was defined. But instead, the object that precedes the dot. The concept of run-time evaluated "this" has both pluses and minuses. On the one hand, a function can get reused for different objects, and on the other hand, greater flexibility creates more possibilities for mistakes.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong> Unbound "this"<br /><br />
@@ -212,18 +226,19 @@ sayHi(); // returns global window object
   <div></div>
 
 ```js
-// non-strict mode
-const author = {
-  name: 'JavaScript',
-  hello() {
-    console.log(this.name);
-  },
-};
+function myFunction() {
+  console.log(this); // 'this' refers to the global object (e.g., Window in a browser)
 
-const hello = author.hello();
-// hello is unbound, this refers to nothing in the global scope
-// or window/global in non-strict mode
-hello();
+  this.myProperty = "Hello"; // Adding a property to the global object
+
+  function innerFunction() {
+    console.log(this.myProperty); // 'this' is unbound, so 'myProperty' is undefined
+  }
+
+  innerFunction();
+}
+
+myFunction();
 ```
 
   </div>
@@ -293,6 +308,158 @@ const brunch = {
 
 // the console log returns "I'll have the pizza with beer please."
 console.log(brunch.order());
+```
+
+  </div>
+  </div>
+</details>
+
+---
+
+### How can you define an object method in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In JavaScript, you can define an object method by assigning a function to a property within an object literal or using the ES6 method shorthand syntax.<br /><br />
+  </div>
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+const myObject = {
+  myMethod: function() {
+    console.log("This is a method.");
+  }
+};
+
+// Logs "This is a method."
+myObject.myMethod(); // Calling the object method
+```
+
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you use the same method for multiple objects in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, in JavaScript you can use the same method for multiple objects by assigning the method to their prototype or creating a shared function and referencing it.<br /><br />
+  </div>
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Method definition
+function myMethod() {
+  console.log("This is a shared method.");
+}
+
+// Object creation
+const obj1 = {};
+const obj2 = {};
+
+// Assigning method to objects
+obj1.myMethod = myMethod;
+obj2.myMethod = myMethod;
+
+// Calling the shared method on objects
+obj1.myMethod(); // Prints "This is a shared method."
+obj2.myMethod(); // Prints "This is a shared method."
+```
+
+  </div>
+  </div>
+</details>
+
+---
+
+### What happens if you call an object method on an object that does not have that method?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> If you call a method on an object that doesn't have it, a TypeError is thrown, stating that the method is not a function.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+const obj1 = {
+  myMethod: function() {
+    console.log("This is obj1's method.");
+  }
+};
+
+const obj2 = {};
+
+obj1.myMethod(); // Calling method on obj1
+obj2.myMethod(); // Calling method on obj2 (which does not have the method)
+```
+
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the difference between a static method and an instance method?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In JavaScript, a static method is associated with a class and called on the class itself, while an instance method is associated with an object instance and called on that instance.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+class MyClass {
+  static staticMethod() {
+    console.log('This is a static method.');
+  }
+
+  instanceMethod() {
+    console.log('This is an instance method.');
+  }
+}
+
+MyClass.staticMethod(); // "This is a static method."
+
+let instance = new MyClass();
+instance.instanceMethod(); // "This is an instance method."
+```
+
+  </div>
+  </div>
+</details>
+
+---
+
+### How can you call a static method in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> To call a static method in JavaScript, you reference the class itself followed by the static method name, separated by a period. No instance is required.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+class MyClass {
+  static myStaticMethod() {
+    console.log('Hello from the static method!');
+  }
+}
+
+MyClass.myStaticMethod(); // Outputs: "Hello from the static method!"
 ```
 
   </div>

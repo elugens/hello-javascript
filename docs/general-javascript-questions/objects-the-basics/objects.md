@@ -47,8 +47,20 @@ import StructuredData from './schemadata/ObjectsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> String, Symbol, BigInt, Boolean, undefined, number, and null data types.</div><br />
+  <div><strong>Interview Response:</strong> The seven primitive data types include String, Symbol, BigInt, Boolean, undefined, number, and null data types.</div><br />
   <div><strong>Technical Response:</strong> There are seven primitive data types: text, integer, BigInt, Boolean, undefined, Symbol, and null. A primitive value gets directly represented at the language implementation's lowest level most of the time.<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you name the five primitive wrapper objects?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The five primitive wrapper objects in JavaScript are: String, Number, Boolean, Symbol, and BigInt.<br /><br />
   </div>
   </div>
 </details>
@@ -60,7 +72,7 @@ import StructuredData from './schemadata/ObjectsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> All primitives are immutable and cannot be changed.</div><br />
+  <div><strong>Interview Response:</strong> JavaScript primitives are immutable, meaning their values cannot be changed after they are created. This ensures data consistency.</div><br />
   <div><strong>Technical Response:</strong> All primitives are unchanging and unchangeable. It is crucial to distinguish between a primitive and a variable with a primitive value. The variable can assign a new value, but it cannot get modified like objects, arrays, and functions can. A primitive can get swapped, but we cannot directly alter them.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -95,7 +107,7 @@ bar = bar.toUpperCase(); // BAZ
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We use Objects to store keyed collections of various data and more complex entities.
+  <div><strong>Interview Response:</strong> Objects serve as collections of key-value pairs, organizing and storing data, allowing for complex structures, and facilitating methods for manipulating data.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -126,7 +138,7 @@ In JavaScript, objects penetrate almost every aspect of the language.
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> You can use an object constructor or an object literal.</div><br />
+  <div><strong>Interview Response:</strong> You can use an object constructor or an object literal. The two methods for creating an empty object in JavaScript are: using object literal syntax (let obj = &#123;&#125;), and the Object constructor (let obj = new Object())</div><br />
   <div><strong>Technical Response:</strong> We can create an empty object ("empty cabinet") using one of two syntaxes. You can use an object constructor or an object literal. The Object constructor gets called with the new keyword, and we should not confuse this with native Objects that should get called without the new keyword.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -149,7 +161,7 @@ let user = {}; // "object literal" syntax
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> You can separate Object key-value pairs with a colon.
+  <div><strong>Interview Response:</strong> In an Object, the delimiter that separates a key from the value is the colon.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -174,7 +186,7 @@ let user = {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, since all values in JavaScript are dynamically typed and observed while the script executes.
+  <div><strong>Interview Response:</strong> Yes, a value in JavaScript can be of any type, including primitive data types, objects, arrays, and functions, allowing for versatile data structures.
 </div>
   </div>
 </details>
@@ -186,7 +198,7 @@ let user = {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, You can use dot (obj.property) and bracket (obj[property]) notation to access the object property values.</div><br />
+  <div><strong>Interview Response:</strong> Two ways to access a value in an object: dot notation (obj.key), and bracket notation (obj['key']). Both return the corresponding value.</div><br />
   <div><strong>Technical Response:</strong> In JavaScript, the dot notation and bracket notation get used in accessing object attributes. The dot notation commonly gets used because it is easier to read and grasp and is less verbose. The primary distinction between dot notation and bracket notation is that bracket notation allows us to access object characteristics through variables.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -245,12 +257,14 @@ console.log(user.likes birds); // returns a SyntaxError
 
 ---
 
-### Is JavaScript able to implement computed properties using object-literal notation?
+### Can object-literal notation be used to implement computed properties?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, you may assign the expression as a property to an object without first creating it with object-literal notation.
+</div><br />
+<div><strong>Technical Response:</strong> Yes, object-literal notation in JavaScript can be used to implement computed properties using square bracket notation &#123; [expression]: value &#125;. The expression inside brackets is evaluated as the property key.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -287,7 +301,7 @@ console.log(bag.appleComputers); // logs 5
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, there are no known restrictions on Object property names, but we should avoid reserved words even though we can technically use them.</div><br />
+  <div><strong>Interview Response:</strong> Object property names in JavaScript can be any string or Symbol. They should not conflict with built-in method names or reserved keywords, and avoid special characters.</div><br />
   <div><strong>Technical Response:</strong> There are no known constraints on naming Object properties. However, we should not use reserved keywords in most JavaScript components. It is possible to utilize reserved keywords as property names without making a mistake, although it is not encouraged. They can be strings or symbols (a specific form of identifier).<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -316,7 +330,7 @@ alert(obj.for + obj.let + obj.return); // 6
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> You should not set the special property name `__proto__` to a non-object value such as a primitive value. It can have unexpected results.
+  <div><strong>Interview Response:</strong> It is not recommended to assign a non-object value, like a primitive value, to the special property name `__proto__` in JavaScript, as it may lead to unexpected outcomes.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -339,7 +353,7 @@ alert(obj.__proto__); // [object Object] - the value is an object, didn't work a
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The “in” operator is used to check if a property exists or loop over object properties. Using it to compare against undefined can have less than truthy results.</div><br />
+  <div><strong>Interview Response:</strong> The "in" operator checks for property existence, including inherited properties. Comparing against undefined won't detect a property explicitly set to undefined.</div><br />
   <div><strong>Note:</strong> We should not use the "in" operator to loop over arrays; not a recommended approach.
   </div><br />
   <div><strong>Technical Answer:</strong>The comparison with undefined, on the other hand, works most of the time. However, there is one exception where it fails yet "in" works ideally. We may use the "in" operator to check if a property exists.
@@ -366,12 +380,12 @@ console.log('test' in obj); // true, the property does exist!
 
 ---
 
-### Are object properties in order? In other words, do we get all attributes in the same order they get introduced if we loop over an object? Can we put our faith in this?
+### When we loop over an object in JavaScript, are its properties guaranteed to be in the order they were introduced, or is it unreliable?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The short answer is that they get ordered in a particular way, integer properties get sorted, and others appear in creation order. This behavior is not a reliable approach, and we are seeking a specific numbered order.
+  <div><strong>Interview Response:</strong> As of ES2015, the order of property enumeration in JavaScript is predictable for non-symbol keys: firstly, integer-like keys in numeric order; then, string keys in creation order.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -409,12 +423,12 @@ for (let prop in user) {
 
 ---
 
-### Explain what an integer property is in JavaScript?
+### Can you explain what an integer property is in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The "integer property" term here means a string that converts to and from an integer without a change.
+  <div><strong>Interview Response:</strong> The "integer property" term here means a string that converts to and from an integer without a change. Basically, an integer property is a property whose key is a string representation of a non-negative integer.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -422,10 +436,170 @@ for (let prop in user) {
 
 ```js
 // Math.trunc is a built-in function that removes the decimal part
-alert(String(Math.trunc(Number('49')))); // "49", same, integer property
-alert(String(Math.trunc(Number('+49')))); // "49", not same "+49" ⇒ not integer property
-alert(String(Math.trunc(Number('1.2')))); // "1", not same "1.2" ⇒ not integer property
+console.log(String(Math.trunc(Number('49')))); // "49", same, integer property
+console.log(String(Math.trunc(Number('+49')))); // "49", not same "+49" ⇒ not integer property
+console.log(String(Math.trunc(Number('1.2')))); // "1", not same "1.2" ⇒ not integer property
 ```
+
+  </div>
+  </div>
+</details>
+
+---
+
+### How do you access a property in an Object using dot notation?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> You can access a property in an Object using dot notation by specifying the Object followed by a dot and the property name: objectName.propertyKey.<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### How do you access a property in an Object using bracket notation?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> You can access a property in an Object using bracket notation by specifying the Object followed by square brackets and the property name as a string: objectName['propertyKey']<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the difference between dot and bracket notation?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Dot notation (obj.property) is shorter and readable, but can't handle property names with spaces/special characters. Bracket notation (obj["property"]) can handle any string as a property name.<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you add or remove properties from an Object in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, you can add a property to an object with (obj.newProp = value) and remove it with (delete obj.propName) in JavaScript.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let obj = {};
+
+// Adding property
+obj.newProp = 'Hello';
+console.log(obj); // Output: { newProp: 'Hello' }
+
+// Removing property
+delete obj.newProp;
+console.log(obj); // Output: {}
+
+```
+
+  </div>
+  </div>
+</details>
+
+---
+
+### What is a computed property in JavaScript Objects?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A computed property in JavaScript is a property of an object defined using bracket notation with an expression, which is computed as the property name.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let propName = "age";
+
+let user = {
+  ["first" + "Name"]: "John", // computed property
+  [propName]: 25              // computed property
+};
+
+console.log(user); // Output: { firstName: 'John', age: 25 }
+```
+
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the special property "**proto**" in JavaScript Objects?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The __proto__ property in JavaScript is a non-standard, deprecated way to get or set the prototype of an object, part of the object's internal [[Prototype]] property.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let animal = {
+  eats: true
+};
+
+let rabbit = {
+  jumps: true
+};
+
+rabbit.__proto__ = animal; // set rabbit's prototype to animal
+
+console.log(rabbit.eats); // Output: true
+```
+
+<p>In this example, rabbit inherits the eats property from animal through the prototype chain, thanks to the __proto__ property. However, the use of __proto__ is not recommended due to compatibility and performance issues. Instead, you should use Object.create(), Object.getPrototypeOf(), and Object.setPrototypeOf().</p>
+
+  </div>
+  </div>
+</details>
+
+---
+
+### What are a getters and setters in JavaScript Objects?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In JavaScript, getters and setters are special methods in an object, defined with `get` and `set`, used for retrieving and setting property values, allowing additional control.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let user = {
+  firstName: "John",
+  lastName: "Doe",
+  get fullName() {
+    return `${this.firstName} ${this.lastName}`;
+  },
+  set fullName(name) {
+    [this.firstName, this.lastName] = name.split(' ');
+  }
+};
+
+console.log(user.fullName); // Output: John Doe
+
+user.fullName = "Jane Doe";
+console.log(user.fullName); // Output: Jane Doe
+```
+
+<p>In this example, fullName is a getter that returns the concatenation of firstName and lastName, and a setter that splits a name into firstName and lastName.</p>
 
   </div>
   </div>

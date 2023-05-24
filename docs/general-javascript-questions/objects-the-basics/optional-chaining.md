@@ -40,13 +40,24 @@ import StructuredData from './schemadata/OptChainSchemaData.js';
 
 ---
 
-### Explain what JavaScript's optional chaining operator (?.) does?
+### What is the optional chaining operator in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The optional chaining operator is safe to access nested object properties, even if an intermediate property does not exist.</div><br />
-  <div><strong>Technical Response:</strong> The optional chaining operator (?.) allows you to read the value of property deep inside a chain of related objects without explicitly validating each reference in the chain. If the value preceding (?.) is undefined or null, optional chaining (?.) terminates the evaluation and returns undefined.<br /><br />
+  <div><strong>Interview Response:</strong> The optional chaining operator is a safe way to access nested object properties, even if an intermediate property does not exist.<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you explain what JavaScript's optional chaining operator (?.) does?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> JavaScript's optional chaining operator (?.) allows you to access nested properties of an object while protecting against null or undefined values, by short-circuiting the evaluation if a property is missing.<br /><br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -110,7 +121,7 @@ let x = 0;
 
 user?.sayHi(x++); // no "sayHi", so the execution doesn't reach x++
 
-alert(x); // 0, value not incremented.
+console.log(x); // 0, value not incremented.
 ```
 
 :::note
@@ -175,7 +186,7 @@ alert(user2?.[key]); // undefined
 
 ---
 
-### Can the optional chaining (syntax construct) operator be used to store or write values?
+### Can you use the optional chaining operator to write or store values?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -191,6 +202,117 @@ let user = null;
 
 user?.name = "John"; // Error, does not work
 // because it evaluates to undefined = "John"
+```
+
+  </div>
+  </div>
+</details>
+
+---
+
+### How does optional chaining differ from traditional object property access?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Optional chaining in JavaScript allows safe access to deeply nested properties of an object without having to check each intermediate object in the chain for null or undefined, reducing error risk.</div><br />
+  <div><strong className="codeExample">
+Traditional object property access:</strong><br /><br />
+
+  <div></div>
+
+```js
+let name = obj && obj.user && obj.user.name ? obj.user.name : 'default';
+```
+
+  </div><br/>
+  <div><strong className="codeExample">
+Using optional chaining:</strong><br /><br />
+
+  <div></div>
+
+```js
+let name = obj?.user?.name ?? 'default';
+```
+
+  </div>
+  </div>
+</details>
+
+---
+
+### What are some potential pitfalls of using the optional chaining operator?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Overuse of optional chaining can decrease code readability and obscure real errors by skipping necessary null or undefined checks. It may not be supported in older browsers.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// A hypothetical object with nested structure
+let user = {
+  profile: {
+    name: "Alice",
+    address: {
+      street: "10 Downing St."
+      // city is missing
+    }
+  }
+}
+
+// Using optional chaining
+let city = user?.profile?.address?.city; // undefined
+
+// Now, if you're expecting city to be a String, this could lead to unintended behavior
+console.log(city.toUpperCase()); // TypeError: Cannot read properties of undefined (reading 'toUpperCase')
+
+```
+
+  </div>
+  </div>
+</details>
+
+---
+
+### Is the optional chaining operator widely supported in modern browsers?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, the optional chaining operator is widely supported in modern browsers, including all major desktop and mobile browsers as well as Node.js.<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### How does the optional chaining operator differ from the nullish coalescing operator (??)?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The optional chaining operator (?.) safely accesses nested object properties, while the nullish coalescing operator (??) provides a default value for null or undefined values.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Optional chaining operator (?.)
+let obj = {
+  data: {
+    name: "Alice"
+  }
+};
+
+let name1 = obj?.data?.name; // "Alice"
+let age1 = obj?.data?.age; // undefined
+
+// Nullish coalescing operator (??)
+let name2 = obj?.data?.name ?? "Unknown"; // "Alice"
+let age2 = obj?.data?.age ?? 25; // 25
 ```
 
   </div>

@@ -42,12 +42,24 @@ import StructuredData from './schemadata/NumbersSchemaData.js';
 
 <CloseAllAnswers />
 
+### In JavaScript, What is the Number object?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The Number object is a built-in object in JavaScript that represents numerical values and provides methods for working with numbers.<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
 ### What are the two primitive number data types in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, the two number data types include numbers and BigInts.
+  <div><strong>Interview Response:</strong> There are two primitive number data types including Number for integers and floating-point values, and BigInt for arbitrarily large integers.
 </div>
   </div>
 </details>
@@ -59,26 +71,26 @@ import StructuredData from './schemadata/NumbersSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Regular numbers in JavaScript get stored in 64-bit format IEEE-754, also known as double-precision floating-point numbers.
+  <div><strong>Interview Response:</strong> JavaScript stores regular numbers using the double-precision 64-bit binary format IEEE 754, which represents floating-point numbers and integers within its range.
 </div>
   </div>
 </details>
 
 ---
 
-### Explain the limitations of BigInts in JavaScript?
+### Can you explain the limitations of BigInt in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> BigInt is a built-in object that provides a way to represent whole numbers larger than 2<sup>53-1</sup> (max safe number) or be less than -2<sup>53-1</sup> (min. safe number), which is the largest number JavaScript can reliably represent with the Number primitive and represented by the Number.MAX_SAFE_INTEGER constant. BigInt gets used for arbitrarily large integers.
+  <div><strong>Interview Response:</strong> BigInt has some limitations, including an inability to mix with regular numbers in operations, incompatibility with some built-in methods like Math functions, and a lack of support in JSON.
 </div>
   </div>
 </details>
 
 ---
 
-### In JavaScript, there are several ways to write a number. Is there a safe way to separate large number groups like 1,000,000,000 and maintain a formal format?
+### In JavaScript, Is there a safe way to separate large number groups like 1,000,000,000 and maintain a formal format?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -104,12 +116,12 @@ console.log(typeof billons) // Uncaught SyntaxError: Unexpected number
 
 ---
 
-### As programmers, we are constantly looking for methods to decrease the amount of code we write. What is the most straightforward approach to avoid writing large numerical sequences like 1,000,000,000?
+### What is the most straightforward approach to avoid writing large numerical sequences like 1,000,000,000?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We can shorten a number by appending the letter (e) to the number and specifying the zeroes count.
+  <div><strong>Interview Response:</strong> To avoid writing large numerical sequences, we can use e-notation (1e9 for 1,000,000,000) or store the value in a variable with a descriptive name.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -118,12 +130,12 @@ console.log(typeof billons) // Uncaught SyntaxError: Unexpected number
 ```js
 let billion = 1e9;  // 1 billion, literally: 1 and 9 zeroes
 
-alert( 7.3e9 );  // 7.3 billions (same as 7300000000 or 7_300_000_000)
+console.log( 7.3e9 );  // 7.3 billions (same as 7300000000 or 7_300_000_000)
 
 // In other words, e multiplies the number by 1 with the given zeroes count.
 
-1e3 = 1 * 1000 // e3 means *1000
-1.23e6 = 1.23 * 1000000 // e6 means *1000000
+// 1e3 = 1 * 1000 // e3 means *1000
+// 1.23e6 = 1.23 * 1000000 // e6 means *1000000
 
 // Now let’s write something very small as a regular number.
 // Say, 1 microsecond (one millionth of a second):
@@ -142,12 +154,26 @@ let ms = 1e-6; // six zeroes to the left from 1
 
 ---
 
-### Is there a difference in the position of the subtraction operator when numbers are using (e) notation to shorten your numerical syntax?
+### Can you explain what the exponential notation is used for in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, if the minus sign is preceding the number, it returns the number as a negative. A number like -1e9 equals negative 1 billion (-1000000000.0 – minus sign applies to itself), and 1e-9 results in a floating-point number where the minus sign applies to the exponent (result: 0.000000001).
+  <div><strong>Interview Response:</strong> Exponential notation or e-notation is used to represent very large or very small numbers more concisely, by using a shortened form of scientific notation, using "e" to indicate the power of 10.<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### In exponential notation, What happens when the minus sign precedes a number in JavaScript, and how does it affect numbers expressed?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In JavaScript, placing a minus sign before a number negates its value. When used with numbers in exponential notation, it negates the exponent, effectively making the number smaller if it was positive, or larger if it was negative.
+  <br /><br />
+  <p><strong>For example, -1e3 is equivalent to -1000 or 1e-3 is equivalent to 0.001</strong></p>
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -165,28 +191,27 @@ console.log(-1e9); // -1e9 is - 1000000000.0; minus sign applies to the number i
 
 ---
 
-### What numeral systems get used to represent colors, encode characters, and base representation in JavaScript?
+### Which numeral systems are utilized in JavaScript for character encoding, color representation, and base representation purposes?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We commonly use Hexadecimal numbers. We can also use binary and octal, but they get used less often.</div><br />
-  <div><strong>Technical Response:</strong> Hexadecimal numbers are the most used number to represent colors, encode characters, and more. Furthermore, hexadecimal, binary, and octal numeral systems are employed, albeit less frequently than hexadecimal numbers. For other numeral systems, we should use the function parseInt, which parses a string argument and returns an integer of the specified radix.<br />
+  <div><strong>Interview Response:</strong> JavaScript uses the UTF-16 encoding for character representation, hexadecimal notation for color representation, and supports base 10 and base 16 (hexadecimal) representation of numbers.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
 
 ```js
-alert(0xff); // 255
-alert(0xff); // 255 (the same, case doesn't matter)
+console.log(0xff); // 255
+console.log(0xFF); // 255 (the same, case doesn't matter)
 
 // Binary and octal numeral systems
 
 let a = 0b11111111; // binary form of 255
 let b = 0o377; // octal form of 255
 
-alert(a == b); // true, the same number 255 at both sides
+console.log(a == b); // true, the same number 255 at both sides
 ```
 
 :::note
@@ -201,12 +226,24 @@ Hexadecimal is base 16, The decimal is base 10, Octal is base 8, and Binary is b
 
 ---
 
+### What is the most common numeral system used in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The most common numeral system used in JavaScript is Base 10, which is the decimal system used for representing ordinary numbers.<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
 ### Is there a method in JavaScript that returns a string representation of a number within a given base?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The toString(base) method returns a string representation of a number value with a given base.
+  <div><strong>Interview Response:</strong> Yes, the toString(base) method in JavaScript returns a string representation of a number in a given base. It takes an optional argument to specify the base.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -215,8 +252,8 @@ Hexadecimal is base 16, The decimal is base 10, Octal is base 8, and Binary is b
 ```js
 let num = 255;
 
-alert(num.toString(16)); // ff
-alert(num.toString(2)); // 11111111
+console.log(num.toString(16)); // ff
+console.log(num.toString(2)); // 11111111
 ```
 
   </div>
@@ -237,11 +274,154 @@ alert(num.toString(2)); // 11111111
   <div></div>
 
 ```js
-console.log(parseInt('-15', 10)); // returns -15
+console.log(parseInt('-15', 2)); // returns -15
+console.log(parseInt('-15', 16)); // returns -21
 
 // parseInt() syntax: parseInt(‘string’, [radix]);
 ```
 
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the difference between regular numbers and BigInts in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Regular numbers are 64-bit floating-point values that can represent integers and decimals up to a certain precision, while BigInts are a built-in type for representing integers of arbitrary precision.<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the difference between Number() and new Number()?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Number() is a function that converts a value to a number, while new Number() is a constructor that creates a Number object. The former returns a primitive value, the latter an object.
+<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### Should we use the new Number() constructor in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> No, it's generally not recommended to use the new Number() constructor in JavaScript, as it can lead to unexpected results and is less efficient than using the Number() function.
+<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the purpose of the toFixed() method?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The toFixed() method is used in JavaScript to format a number with a specified number of digits after the decimal point and return it as a string.
+<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the purpose of the toString() method in relation to numbers?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The toString() method in JavaScript is used to convert a number to a string representation, allowing it to be displayed as text or manipulated in various ways.
+<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What are some solutions to deal with the issue of imprecise numbers in JavaScript, and how can they be implemented?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> One solution is to use a library like BigNumber.js, which provides arbitrary-precision arithmetic. Another is to use integer math where possible, or use rounding methods like Math.round().
+<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the function of the valueOf() method in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The valueOf() method returns the primitive value of a Number object.
+<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the difference between Number.isNaN() and isNaN()?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In JavaScript, Number.isNaN() strictly checks if a value is NaN, while isNaN() first attempts to convert the value to a number, resulting in potential type coercion and false positives. Therefore, Number.isNaN() is more reliable for checking if a value is NaN.
+<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the purpose of the Number.isFinite() method?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The purpose of the Number.isFinite() method in JavaScript is to determine if a given value is a finite number, excluding Infinity, -Infinity, and NaN.
+<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the purpose of the Number.parseFloat() method?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The purpose of the Number.parseFloat() method in JavaScript is to parse a string argument and return a floating-point number or NaN if parsing fails.
+<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the purpose of the Number.parseInt() method?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The purpose of the Number.parseInt() method in JavaScript is to parse a string argument and return an integer, or NaN if parsing fails, allowing for optional radix specification.
+<br /><br />
   </div>
   </div>
 </details>

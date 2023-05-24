@@ -41,13 +41,50 @@ import StructuredData from './schemadata/MethodsOfSchemaData.js';
 
 <CloseAllAnswers />
 
+### What is a primitive in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A primitive is a basic data type that represents a single, immutable value, such as a string, number, boolean, null, undefined, symbol, or bigint.<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What are the methods of primitives in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Each primitive type has a set of methods associated with it that allow you to perform common operations on values of that type. For example, the toUpperCase() method can be used on strings to convert them to uppercase.
+<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you modify a primitive value using its methods in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> No, because primitives are immutable, you cannot modify them using methods. Instead, methods return new values.
+<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
 ### What are the seven (7) primitive JavaScript data types?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> String, Symbol, Boolean, BigInt, number, null, and undefined.</div><br />
-  <div><strong>Technical Response:</strong> The seven primitive data types include the string, number, BigInt, Boolean, undefined, symbol, and null data types. Most of the time, a primitive value is represented directly at the lowest level of the language implementation.<br /><br />
+  <div><strong>Interview Response:</strong> The seven JavaScript primitives include String, Symbol, Boolean, BigInt, number, null, and undefined data types. These represent basic values that can be manipulated in JavaScript code.<br /><br />
   </div>
   </div>
 </details>
@@ -59,8 +96,7 @@ import StructuredData from './schemadata/MethodsOfSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> String, Symbol, BigInt, Boolean, and Number.</div><br />
-  <div><strong>Technical Response:</strong> The five primitive wrapper objects include the String, Number, BigInt, Boolean, and Symbol.<br /><br />
+  <div><strong>Interview Response:</strong> In JavaScript, there are five primitive wrapper objects, which are used to wrap the corresponding primitive data types. These include String, Symbol, BigInt, Boolean, and Number, allowing access to additional methods and properties.<br /><br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -87,12 +123,12 @@ temp = null;
 
 ---
 
-### Why isn’t an Object a primitive data type?
+### What is the reason for an Object not being considered a primitive data type in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A primitive data type has only a single value. On the other hand, objects can contain more than one value stored in collections and more complex structures.
+  <div><strong>Interview Response:</strong> Primitive data types have a single value, while objects can hold multiple values in collections and more intricate structures.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -120,7 +156,7 @@ let user = {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, a function gets used as a property of an object, and it is more commonly called an object method.
+  <div><strong>Interview Response:</strong> Yes, an object can store a function as a property. In JavaScript, functions are first-class objects, enabling them to be assigned as object properties.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -143,13 +179,12 @@ john.sayHi(); // Hi buddy!
 
 ---
 
-### Does a primitive remain a primitive or return a primitive value when you use it in conjunction with one of its methods?
+### Does a primitive remain primitive when you use it in conjunction with one of its methods?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, a primitive remains a primitive regardless of what method gets called on it.</div><br />
-  <div><strong>Technical Response:</strong> Yes, a primitive remains a primitive. For instance, a string method str.toUpperCase() exists that returns a capitalized string. The type of the returned value remains a string.<br />
+  <div><strong>Interview Response:</strong> When a primitive is used in conjunction with one of its methods, it is temporarily converted into an object. After execution, it reverts back to a primitive.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -158,7 +193,7 @@ john.sayHi(); // Hi buddy!
 ```js
 let str = 'Hello';
 
-alert(str.toUpperCase()); // HELLO
+console.log(str.toUpperCase()); // returns string "HELLO"
 ```
 
   </div>
@@ -167,22 +202,22 @@ alert(str.toUpperCase()); // HELLO
 
 ---
 
-### Some languages like Java allow us to explicitly create “wrapper objects” for primitives using a syntax like new Number(1) or new Boolean(false). Is this a best practice in JavaScript?
+### Some languages like Java allow us to explicitly create “wrapper objects” for primitives. Is this a best practice in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Technically, using the “new” syntax can be done but is not recommended because it returns an object and not the primitive value as intended.</div><br />
-  <div><strong>Technical Response:</strong> Technically, this gets done in JavaScript, but it is not recommended based on the specifications. There are several unintended consequences of using this practice, which should get avoided. A best practice is to use Number and Boolean object wrappers without the new operator.<br /><br />
+  <div><strong>Interview Response:</strong> No, creating wrapper objects for primitives in JavaScript is not considered a best practice, as it can result in unnecessary memory usage and performance overhead.</div><br />
+  <div><strong>Technical Response:</strong> Technically, this can be done in JavaScript, but it is not recommended based on the specifications. There are several unintended consequences of using this practice, which should be avoided. A best practice is to use Number and Boolean object wrappers without the new operator.<br /><br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
 
 ```js
-alert(typeof 0); // "number"
+console.log(typeof 0); // "number"
 
-alert(typeof new Number(0)); // "object"! – not a number Huh!
+console.log(typeof new Number(0)); // "object"! – not a number Huh!
 
 // Objects are always truthy in if, so here the alert will show up:
 
@@ -204,7 +239,19 @@ let num = Number('123'); // convert a string to number
 
 ---
 
-### Do the null and undefined primitive data types have methods?
+### What is the difference between a primitive value and a wrapper object in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A primitive value is an immutable value representing a single, simple data entity, while a wrapper object is a mutable object used to represent and manipulate the corresponding primitive value.<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### Is it possible for the null and undefined primitive data types to have methods in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -216,13 +263,64 @@ let num = Number('123'); // convert a string to number
   <div></div>
 
 ```js
-alert('Hello'.test); // return undefined, but shows no error
+console.log('Hello'.test); // return undefined, but shows no error
 
-alert(null.test); // returns type error
+console.log(null.test); // returns type error
 
-alert(undefined.test); // returns type error
+console.log(undefined.test); // returns type error
 ```
 
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you create your own methods for primitive values in JavaScript?  
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, you can create your own methods for primitive values in JavaScript by adding properties and methods to the prototype of the corresponding wrapper object (e.g. Number.prototype, String.prototype).<br /><br />
+  </div>
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+String.prototype.customMethod = function() {
+  return "Custom method called on: " + this;
+};
+
+var message = "Hello, World!"; // primitive string
+
+console.log(message.customMethod()); // Output: "Custom method called on: Hello, World!"
+```
+
+  </div>
+  </div>
+</details>
+
+---
+
+### What are some common string methods in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Some common string methods in JavaScript include toUpperCase(), toLowerCase(), slice(), indexOf(), replace(), concat(), and trim().<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What are some common number methods in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Some common number methods in JavaScript include toFixed(), toPrecision(), toString(), parseInt(), and parseFloat().<br /><br />
   </div>
   </div>
 </details>

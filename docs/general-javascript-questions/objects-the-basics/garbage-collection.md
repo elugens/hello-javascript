@@ -44,12 +44,24 @@ import StructuredData from './schemadata/GCSchemaData.js';
 
 ---
 
+### What is garbage collection in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Garbage collection in JavaScript is the automatic process of managing memory by freeing up unused memory no longer needed.<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
 ### How does JavaScript manage memory manually or automatically?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> JavaScript automatically allocates memory when objects get created and clears the memory when the object no longer references it. (Garbage Collection)
+  <div><strong>Interview Response:</strong> JavaScript automatically allocates memory when objects are created and clears the memory when the object no longer references it. (Garbage Collection)
 </div><br />
 
 :::note
@@ -63,7 +75,19 @@ This automaticity is a potential source of confusion: it can give developers the
 
 ---
 
-### Explain the three steps of the memory life cycle in JavaScript?
+### Why is garbage collection important in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Garbage collection is important in JavaScript because it prevents memory leaks and improves overall performance by managing memory automatically.<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you explain the three steps of the memory life cycle in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -114,7 +138,7 @@ var n = null;
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The central concept of memory management in JavaScript is reachability. Simply put, "reachable" means values that are accessible or usable somehow and are guaranteed to get stored in memory.
+  <div><strong>Interview Response:</strong> The central concept of memory management in JavaScript is reachability. Simply put, "reachable" means values that are accessible or usable somehow and are guaranteed to be stored in memory.
 </div>
   </div>
 </details>
@@ -125,8 +149,9 @@ var n = null;
 
 <details>
   <summary><strong>View Answer:</strong></summary>
-  <div>
-  <div><strong>Interview Response:</strong> A "root" is simply an object that the garbage collector assumes is reachable by default, which then has its references traced to find all other current objects that are reachable. Any object that is not reachable through any reference chain of any root objects is considered unreachable and eventually gets destroyed by the garbage collector.
+  <div><div><strong>Interview Response:</strong> A GC root in JavaScript is an object that is inherently accessible, like global variables. It's the starting point for garbage collection, which identifies unneeded objects to reclaim memory.
+</div><br/><br/>
+  <div><strong>Technical Response:</strong> A "root" is simply an object that the garbage collector assumes is reachable by default, which then has its references traced to find all other current objects that are reachable. Any object that is not reachable through any reference chain of any root objects is considered unreachable and eventually gets destroyed by the garbage collector.
 </div>
   </div>
 </details>
@@ -138,7 +163,7 @@ var n = null;
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> JavaScript cannot delete Global variables directly, and the global variable must be set to null before the memory can be collected. However, the variable still exists and references null (nothingness).
+  <div><strong>Interview Response:</strong> One inherently reachable value in JavaScript that cannot be deleted is the global object, which is the top-level object in the scope chain.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -157,6 +182,12 @@ null:
 
 // global -> var a -> null
 ```
+
+:::note
+
+JavaScript cannot delete Global variables directly, and the global variable must be set to null before the memory can be collected. However, the variable still exists and references null (nothingness).
+
+:::
 
   </div>
   </div>
@@ -200,12 +231,12 @@ delete family.mother.husband;
 
 ---
 
-### Is it possible that all the interlinked objects in a GC root become unreachable and removed from memory?
+### Is it possible that all the interlinked objects in a root Object become unreachable and removed from memory?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, it is possible if the root gets nullified in the program.
+  <div><strong>Interview Response:</strong> Yes, interlinked objects can be garbage collected based on the nullification of a specific object on the GC root in JavaScript, as long as they are not reachable from any other live object.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -240,19 +271,21 @@ family = null;
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The basic garbage collection algorithm is called mark-and-sweep.
+  <div><strong>Interview Response:</strong> The basic garbage-collection algorithm in JavaScript is called Mark and Sweep. It marks live objects and sweeps away the unreachable ones.
 </div>
   </div>
 </details>
 
 ---
 
-### Explain how the internal JavaScript garbage collector algorithm works?
+### Can you explain how the internal JavaScript garbage collector algorithm works?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong><br /><br />
+   <div><strong>Interview Response:</strong> The JavaScript garbage collector uses the Mark and Sweep algorithm. It first identifies and marks all live objects, then sweeps and removes unreachable objects, and finally compacts memory to reduce fragmentation.
+  </div><br /><br />
+  <div><strong>Technical Response:</strong><br /><br />
   <strong>The following "garbage collection" steps regularly get performed:</strong><br /><br />
   <ol>
     <li>The garbage collector takes roots and "marks" (remembers) them.</li>
@@ -272,7 +305,7 @@ family = null;
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The three standard garbage collection optimizations include generalization, incremental, and idle-time collection.
+  <div><strong>Interview Response:</strong> The three standard garbage collection optimizations are generational collection, incremental collection, and idle-time collection in JavaScript.
 </div><br />
 
 :::note
@@ -281,6 +314,54 @@ You should note that each engine implements different tweaks and techniques.
 
 :::
 
+  </div>
+</details>
+
+---
+
+### What is the GC root in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The GC root in JavaScript is the starting point for the garbage collector's traversal of objects in memory, typically including global variables.<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### Can global variables be garbage collected in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, a global variable that is equal to null is garbage collected in JavaScript. This is because the garbage collector will remove any object that is no longer referenced by any other variable. When a global variable is set to null, it no longer references any object so that it can be garbage collected.<br /><br />
+  </div>  
+  </div>
+</details>
+
+---
+
+### What are some strategies for optimizing garbage collection in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Strategies for optimizing garbage collection in JavaScript include minimizing global variables, avoiding circular references, utilizing weak references to objects, and reducing object creation and deletion.<br /><br />
+  </div>  
+  </div>
+</details>
+
+---
+
+### How can you detect and diagnose memory leaks in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> We can detect and diagnose memory leaks in JavaScript by profiling memory usage, analyzing heap snapshots, using Chrome DevTools, monitoring performance, and employing garbage collection tracking.<br /><br />
+  </div>  
   </div>
 </details>
 

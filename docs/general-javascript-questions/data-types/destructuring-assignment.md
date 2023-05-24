@@ -42,12 +42,12 @@ import StructuredData from './schemadata/DestructuringSchemaData.js';
 
 <CloseAllAnswers />
 
-### What is a de-structuring assignment, and what are two data structures commonly use it in JavaScript?
+### What is destructuring assignment in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Destructuring assignment allows us to “unpack” arrays or objects into variables, which is sometimes more convenient. Destructuring also works great with complex functions with many parameters and default values.</div><br />
+  <div><strong>Interview Response:</strong> Destructuring assignment is a syntax in JavaScript that allows you to extract or unpack values from arrays or objects and assign them to variables in a concise way. </div><br />
   <div><strong>Technical Response:</strong> De-structuring assignment is a special syntax that allows us to “unpack” arrays or objects into many variables, which is sometimes more convenient. De-structuring also works great with complex functions with many parameters, default values, and more. We can use destructuring on both objects and arrays in JavaScript. It is a “destructuring assignment” because it “destructures” by copying items into variables. But the array itself is not modified.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -92,7 +92,46 @@ realName; // => 'Bruce Wayne'
 
 ---
 
-### If you want to ignore or skip an array element to be destructured (on the right-hand side of the assignment), what delimiter can you use when destructuring an array?
+### How do you destructure an object in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> To destructure an object in JavaScript, you can use curly braces &#123;&#125; and specify the names of the properties you want to extract and assign to variables with the same name.
+<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### How do you destructure an array in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> To destructure an array in JavaScript, you can use square brackets [] and specify the variable names in the order that matches the array elements' positions.
+<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What are two data structures commonly used in destructuring in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The two data structures commonly used in destructuring in JavaScript are objects and arrays. Destructuring allows you to extract values from these data structures and assign them to variables.
+<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What delimiter can you use in array destructuring to skip or ignore an element on the right-hand side of the assignment?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -143,12 +182,12 @@ let [one, two, three] = new Set([1, 2, 3]);
 
 ---
 
-### Is there a method you can use to destructure and loop over an object?
+### Is there a method you can use to extract an object's key/value pairs?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We can use the Object.entries(object) method to loop over an object and a combination of [key, value] destructuring.
+  <div><strong>Interview Response:</strong> Yes, you can use the Object.entries() method in JavaScript to extract an object's key/value pairs as an array.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -182,7 +221,7 @@ for (let [key, value] of user) {
 
 ---
 
-### Can you explain the swapping of variables using destructuring in JavaScript?
+### Can you explain the swapping of variables in JavaScript destructuring?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -209,7 +248,7 @@ alert(`${guest} ${admin}`); // Pete Jane (successfully swapped!)
 
 ---
 
-### Is there a way to handle mismatched arrays that we need to destructure in JavaScript?
+### How can we handle mismatched arrays when we need to destructure them in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -250,6 +289,18 @@ alert(rest.length); // 2
 
 ---
 
+### What is the rest parameter in destructuring?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In destructuring in JavaScript, the rest parameter is denoted by the ellipsis (...) syntax and allows you to capture the remaining elements of an iterable object into a new array.<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
 ### What is the rule regarding the naming convention of a rest operator?
 
 <details>
@@ -277,12 +328,12 @@ let [name1, name2, ...titles] = [
 
 ---
 
-### If you implement destructuring on empty values, what gets returned?
+### If you implement array destructuring on an empty array, what value gets returned when you access the left-hand side?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> There are no errors if the array is shorter than the list of variables at the left. Missing values are considered undefined on return.
+  <div><strong>Interview Response:</strong> If you implement array destructuring on an empty array in JavaScript, the left-hand side variables will be assigned the value of undefined.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -295,13 +346,31 @@ alert(firstName); // undefined
 alert(surname); // undefined
 ```
 
+:::note
+
+There are no errors if the array is shorter than the list of variables at the left. Missing values are considered undefined on return.
+
+:::
+
   </div>
   </div>
 </details>
 
 ---
 
-### What is an excellent destructuring technique you can use to eliminate the return of undefined array values?
+### What is a default value in destructuring?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A default value in destructuring is a fallback value that is assigned to a variable if the value extracted from the object or array is undefined.<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What is a useful destructuring technique in JavaScript to avoid the return of undefined array values?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -338,7 +407,7 @@ alert(surname); // whatever prompt gets
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We can use destructing on any iterable, including objects in JavaScript.</div><br />
+  <div><strong>Interview Response:</strong> Yes, in JavaScript you can use destructuring on objects, which allows you to extract values from an object and assign them to variables with the same name as the object's properties.</div><br />
   <div><strong>Technical Response:</strong> We can use destructing on any iterable, including objects in JavaScript. There should be an existing object on the right side of the assignment operator, and the left side contains an object-like “pattern” for corresponding properties. In the simplest case, that is a list of variable names in &#123;...&#125;.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -367,12 +436,12 @@ console.log(height); // 200
 
 ---
 
-### What is the distinction between array destructuring and object destructuring?
+### What is the difference between object and array destructuring in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Object destructuring is like array destructuring, with one exception, instead of values getting pulled out of an array, object keys and values get pulled out of an object.</div><br />
+  <div><strong>Interview Response:</strong> In JavaScript, object destructuring allows you to extract values from an object based on their property name, while array destructuring allows you to extract values from an array based on their position.</div><br />
   <div><strong>Technical Response:</strong> Object destructuring is like array destructuring, with one exception, instead of values getting pulled out of an array, object keys and values get pulled out of an object. In an array, the order of the elements is relevant, and it depends on your intent to handle the elements, such as swapping variables. However, the rule for arrays does not apply to objects, and order is insignificant.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -396,12 +465,14 @@ In an array, the order of the elements is relevant. It depends on your intent, t
 
 ---
 
-### Is it feasible to use the destructuring procedure to modify the name of an object variable?
+### Is it possible to use the destructuring procedure to modify the name of an object variable?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> If we want to assign a property to a variable with another name. We can set the new or shortened name by implementing a semi-colon in the destructing process. The colon shows what goes where and specifies the new or shortened name.
+   <div><strong>Interview Response:</strong> Yes, you can use object destructuring with aliasing in JavaScript to assign a new name to an extracted property.
+</div><br />
+  <div><strong>Technical Response:</strong> If we want to assign a property to a variable with another name. We can set the new or shortened name by implementing a colon in the destructing process. The colon shows what goes where and specifies the new or shortened name.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -451,9 +522,9 @@ let options = {
 
 let { width = 100, height = 200, title } = options;
 
-alert(title); // Menu
-alert(width); // 100
-alert(height); // 200
+console.log(title); // Menu
+console.log(width); // 100
+console.log(height); // 200
 
 // In the code below prompt asks for width, but not for title:
 let options = {
@@ -462,8 +533,8 @@ let options = {
 
 let { width = prompt('width?'), title = prompt('title?') } = options;
 
-alert(title); // Menu
-alert(width); // (whatever the result of prompt is)
+console.log(title); // Menu
+console.log(width); // (whatever the result of prompt is)
 ```
 
   </div>
@@ -477,7 +548,7 @@ alert(width); // (whatever the result of prompt is)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> If you want to shorten a property and supply a value to a property, we can combine both with a colon and assign a shortened property name. The semi-colon sets the new shortened property name, and the assignment operator assigns a new value.
+  <div><strong>Interview Response:</strong> To abbreviate a property and assign a value to it, we can merge the two using a colon and assign a shortened property name. The use of a colon defines the new abbreviated property name, while the assignment operator assigns a fresh value.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -490,9 +561,9 @@ let options = {
 
 let { width: w = 100, height: h = 200, title } = options;
 
-alert(title); // Menu
-alert(w); // 100
-alert(h); // 200
+console.log(title); // Menu
+console.log(w); // 100
+console.log(h); // 200
 ```
 
   </div>
@@ -522,7 +593,7 @@ let options = {
 // only extract title as a variable
 let { title } = options;
 
-alert(title); // Menu
+console.log(title); // Menu
 ```
 
   </div>
@@ -570,12 +641,37 @@ Some older browsers do not support it (IE, use Babel to polyfill it), but it wor
 
 ---
 
-### What are some of the issues you can run into with destructuring objects?
+### Can you destructure a nested object in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The most significant issue is the curly brackets that encapsulate the properties. Since objects use block scoping, an issue can arise when you separate the variable initialization from the destructuring properties on a new line. The problem is that JavaScript treats &#123;...&#125; in the main code flow (not inside another expression) as a code block. We can wrap the expression in parentheses to show JavaScript that it is not a code block (...).
+  <div><strong>Interview Response:</strong> Yes, you can destructure a nested object in JavaScript by using nested destructuring patterns that match the structure of the object.<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### Are there any issues you can run into with object destructuring?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, some potential issues with object destructuring include undefined properties, incorrect assignment, and unexpected behavior with nested objects.<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the main issue that you can run into with curly brackets and object destructuring?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div><div><strong>Interview Response:</strong> The main issue with curly brackets and object destructuring is ambiguity between a block statement and an object literal, which requires parentheses to wrap the destructuring expression to avoid syntax errors.
+  </div><br />
+  <div><strong>Technical Response:</strong> The most significant issue is the curly brackets that encapsulate the properties. Since objects use block scoping, an issue can arise when you separate the variable initialization from the destructuring properties on a new line. The problem is that JavaScript treats &#123;...&#125; in the main code flow (not inside another expression) as a code block. We can wrap the expression in parentheses to show JavaScript that it is not a code block (...).
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -604,7 +700,7 @@ alert( title ); // Menu
 
 ---
 
-### Can we use more complex left-side patterns to extract deeper portions if an object or an array contains other nested objects and arrays?
+### Is it possible to use left-side patterns to extract deeper sections of an object or an array that comprises nested arrays and objects?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -642,6 +738,35 @@ alert(width); // 100
 alert(height); // 200
 alert(item1); // Cake
 alert(item2); // Donut
+```
+
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you destructure function arguments in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, you can destructure function arguments in JavaScript, allowing you to extract properties from objects or elements from arrays directly within the function signature.
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+function greet(name) {
+  // Destructuring `name` into `firstName` and `lastName` variables
+  const [firstName, lastName] = name;
+
+  // Greet the user
+  console.log(`Hello ${firstName} ${lastName}`);
+}
+
+greet("John Doe"); // Output: Hello John Doe
 ```
 
   </div>

@@ -42,12 +42,42 @@ import StructuredData from './schemadata/ObjectPrimSchemaData.js';
 
 ---
 
+### What is Object to Primitive Conversion in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Object to Primitive Conversion in JavaScript is the process of converting an object to a primitive value (string, number, or boolean) when it is used in a context that expects a primitive.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+const obj = {
+  valueOf() {
+    return 42;
+  },
+  toString() {
+    return "Object Value";
+  }
+};
+
+console.log(obj + 10); // Output: 52
+console.log(String(obj)); // Output: "Object Value"
+```
+
+  </div>
+  </div>
+</details>
+
+---
+
 ### What is the rule for objects in a Boolean context?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> All objects are true in a Boolean context.
+  <div><strong>Interview Response:</strong> In a boolean context, all objects are considered truthy. When coerced to a boolean, they evaluate to true, regardless of their properties or content.
 </div>
   </div>
 </details>
@@ -59,8 +89,33 @@ import StructuredData from './schemadata/ObjectPrimSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> String, number, and default conversions.</div><br />
+  <div><strong>Interview Response:</strong> String, Number, and Boolean conversions are the three variants of primitive type conversion in JavaScript.</div><br />
   <div><strong>Technical Response:</strong> The three variants of type conversion include string, number, and default conversions. String conversion can happen explicitly when an object expects a string, and mathematical operations use explicit number conversion on primitives. In rare circumstances where the operator is unclear about what type to anticipate, the default gets used.<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What are the three variants of Object to Primitive Conversion in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In JavaScript, Object to Primitive Conversion has three variants: ToPrimitive for general conversion, which calls valueOf or toString methods; ToNumber for numeric conversion, which also calls valueOf or toString methods; and ToString for string conversion, which calls toString or valueOf methods.<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What methods are called in order during Object to Primitive Conversion?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> During Object to Primitive Conversion, JavaScript tries to call the methods valueOf(), toString(), and Symbol.toPrimitive() in that order.
+<br /><br />
   </div>
   </div>
 </details>
@@ -80,12 +135,12 @@ import StructuredData from './schemadata/ObjectPrimSchemaData.js';
 
 ---
 
-### Explain what Symbol.toPrimitive() is and what it does?
+### Can you explain what Symbol.toPrimitive() is and what it does?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The Symbol.toPrimitive is a symbol that specifies a function valued property called to convert an object to a corresponding primitive value.
+  <div><strong>Interview Response:</strong> Symbol.toPrimitive() is a method that can be defined on an object to customize its conversion to a primitive value. It is called by the ToPrimitive() abstract operation.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -97,15 +152,15 @@ let user = {
   money: 1000,
 
   [Symbol.toPrimitive](hint) {
-    alert(`hint: ${hint}`);
+    console.log(`hint: ${hint}`);
     return hint == 'string' ? `{name: "${this.name}"}` : this.money;
   },
 };
 
 // conversions demo:
-alert(user); // hint: string -> {name: "John"}
-alert(+user); // hint: number -> 1000
-alert(user + 500); // hint: default -> 1500
+console.log(user); // hint: string -> {name: "John"}
+console.log(+user); // hint: number -> 1000
+console.log(user + 500); // hint: default -> 1500
 ```
 
   </div>
@@ -153,7 +208,7 @@ for (let prop in user) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> No, because toString and valueOf came before Symbols debuted in the JavaScript codebase. They are regular string-name methods.</div><br />
-  <div><strong>Technical Response:</strong>No, because toString and valueOf came before Symbols debuted in the JavaScript codebase. They are regular string-name methods. If there is no Symbol.toPrimitive, JavaScript tries to find them.<br /><br />
+  <div><strong>Technical Response:</strong>No, toString and valueOf methods are not considered symbols. They are standard JavaScript methods inherited from Object.prototype, while symbols are unique and non-enumerable properties.<br /><br />
   </div>
   </div>
 </details>
@@ -165,7 +220,7 @@ for (let prop in user) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The toString method returns a string "[object Object]", and the valueOf method returns the object itself.
+  <div><strong>Interview Response:</strong> By default, a plain object's toString method returns "[object Object]", a string representation, and the valueOf method returns the object itself, without any conversion.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -174,8 +229,8 @@ for (let prop in user) {
 ```js
 let user = { name: 'John' };
 
-alert(user); // [object Object]
-alert(user.valueOf() === user); // true
+console.log(user); // [object Object]
+console.log(user.valueOf() === user); // true
 ```
 
   </div>
@@ -203,7 +258,8 @@ alert(user.valueOf() === user); // true
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The object gets converted to a primitive. If the resulting primitive is not the right type, it gets converted.</div><br />
-  <div><strong>Technical Response:</strong> If we pass an object as an argument, there are two stages.<br /><br />
+  <div><strong>Technical Response:</strong> When passing an object as an argument, these stages occur: argument evaluation, object-to-primitive conversion if required by the function, function execution, and return value processing.
+<br /><br />
     <ol>
         <li>The object gets converted into a primitive.</li>
         <li>If the resulting primitive is not of the right type, it gets converted.</li>
@@ -221,9 +277,21 @@ let obj = {
   },
 };
 
-alert(obj * 2); // 4, object converted to primitive "2", then multiplication made it a number
+console.log(obj * 2); // 4, object converted to primitive "2", then multiplication made it a number
 ```
 
+  </div>
+  </div>
+</details>
+
+---
+
+### When passing an object as an argument, how is it passed in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In JavaScript, when passing an object as an argument, it's passed by reference, meaning the function receives a reference to the original object, not a copy. This means that changes to the object will persist outside of the function.<br /><br />
   </div>
   </div>
 </details>

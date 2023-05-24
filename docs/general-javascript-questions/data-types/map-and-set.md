@@ -42,13 +42,55 @@ import StructuredData from './schemadata/MapSetSchemaData.js';
 
 <CloseAllAnswers />
 
+### What is a Map in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A map in JavaScript is a data structure that stores key-value pairs, allowing efficient lookup, insertion, and deletion operations based on the keys.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Creating a new Map
+let myMap = new Map();
+
+// Adding key-value pairs
+myMap.set('name', 'John');
+myMap.set('age', 30);
+
+// Accessing values
+console.log(myMap.get('name')); // Output: John
+console.log(myMap.get('age')); // Output: 30
+
+// Checking if a key exists
+console.log(myMap.has('name')); // Output: true
+
+// Deleting a key-value pair
+myMap.delete('age');
+
+// Checking the size of the Map
+console.log(myMap.size); // Output: 1
+
+// Clearing all key-value pairs
+myMap.clear();
+console.log(myMap.size); // Output: 0
+
+```
+
+  </div>
+  </div>
+</details>
+
+---
+
 ### What is the difference between Map and Object in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The main difference is that Map allows keys of any type, and objects also convert keys to strings, which is another known difference. As you look at Objects and Maps, another apparent difference is that Objects cannot use another object as a key.</div><br />
-  <div><strong>Technical Response:</strong> The Map object holds key-value pairs (Just like Objects) and remembers the original insertion order of the keys. We may use any value (both objects and primitive values) as a key or a value. But the main difference is that Map allows keys of any type. Objects also convert keys to strings, which is another known difference. The keys of an Object must be either a String or a Symbol. As you look at Objects and Maps, another apparent difference is that Objects cannot use another object as a key.
+  <div><strong>Interview Response:</strong> Maps are similar to objects in JavaScript, but they differ in their key types and methods. Maps allow any type of data as keys, have built-in iteration methods, and maintain key-value order, whereas objects only allow string or symbol keys and have fewer built-in methods.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong> Different types as keys<br /><br />
 
@@ -63,10 +105,10 @@ map.set(true, 'bool1'); // a boolean key
 
 // remember the regular Object? it would convert keys to string
 // Map keeps the type, so these two are different:
-alert(map.get(1)); // 'num1'
-alert(map.get('1')); // 'str1'
+console.log(map.get(1)); // 'num1'
+console.log(map.get('1')); // 'str1'
 
-alert(map.size); // 3
+console.log(map.size); // 3
 ```
 
   </div>
@@ -75,12 +117,12 @@ alert(map.size); // 3
 
 ---
 
-### What are some methods and properties that the Map Object implements?
+### What are some methods and properties that a Map implements?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> There are several built-in methods and properties of the Map Object, including new Map(), set, get, has, delete, clear, and size.<br /><br />
+  <div><strong>Interview Response:</strong> Some methods and properties that a Map implements in JavaScript include set(), get(), delete(), has(), size, clear(), keys(), values(), and entries().<br /><br />
   <strong>Methods and properties are as follows:</strong><br /><br />
   <ul>
     <li>new Map() – constructs the map.</li>
@@ -145,8 +187,8 @@ visitsCountObj[ben] = 234; // try to use ben object as the key
 visitsCountObj[john] = 123; // try to use john object as the key, ben object will get replaced
 
 // That's what got written!
-alert(visitsCountObj['[object Object]']); // 123
-alert(visitsCountObj[ben]); // ben returns 123 because it was overwritten by john
+console.log(visitsCountObj['[object Object]']); // 123
+console.log(visitsCountObj[ben]); // ben returns 123 because it was overwritten by john
 ```
 
   </div>
@@ -217,7 +259,7 @@ recipeMap.forEach((quantity, veg) => console.log(`${veg}, ${quantity}`));
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, we can use the forEach method to iterate over the Map Object.</div><br />
+  <div><strong>Interview Response:</strong> The forEach() method can also be used to iterate over a Map object in JavaScript, passing a callback function to execute on each key-value pair.</div><br />
   <div><strong>Technical Response:</strong> You can use forEach method to iterate over the Map Object. The forEach() method executes a provided function once for each Map entry. You should note that instead of producing a [key, value], as a result, it creates the opposite [value, key]. You can choose the format of your choice to meet the proposed outcome.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -246,7 +288,9 @@ recipeMap.forEach((quantity, veg) => console.log(`${veg}, ${quantity}`));
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Technically, yes, but it is not recommended because it uses the feature of a generic object. There is a significant loss of built-in Map methods like set and delete when it we transform it into a generic object.
+  <div><strong>Interview Response:</strong> No, properties cannot be set for a Map in the same way as adding properties to a regular object-literal in JavaScript.
+</div><br />
+  <div><strong>Technical Response:</strong> Technically, yes, but it is not recommended because it uses the feature of a generic object. There is a significant loss of built-in Map methods like set and delete when it we transform it into a generic object.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -285,12 +329,24 @@ console.log(contacts.size); // 1
 
 ---
 
+### Can you add properties to a Map using bracket notation?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Technically, yes, but it is not recommended because it uses the feature of a generic object. There is a significant loss of built-in Map methods like set and delete when we transform it into a generic object. It is better to use the set() method to add new key-value pairs to a Map.<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
 ### Can you convert a plain object into a Map in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, we can create a new map object and extract the object entries using the object.entries method.</div><br />
+  <div><strong>Interview Response:</strong> Yes, you can convert a plain object into a Map in JavaScript using the Map constructor and Object.entries().</div><br />
   <div><strong>Technical Response:</strong> Yes, if we have a plain object and would like to create a Map from it, we can use the built-in method Object.entries(obj) that returns an array of key/value pairs for an object precisely in that format.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -319,7 +375,7 @@ alert(map.get('name')); // John
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The Object.fromEntries method transforms a list of key-value (Map Object) pairs into an object. Object.entries extracts the entries that we can place on a Map.</div><br />
+  <div><strong>Interview Response:</strong> Object.entries() returns an array of key-value pairs from an object, which can be used to create a new Map, while Object.fromEntries() creates an object from an array of key-value pairs, which can be converted to a Map.</div><br />
   <div><strong>Technical Response:</strong> If we have a plain object, and we would like to create a Map from it, then we can use the built-in method Object.entries(obj) that returns an array of key/value pairs for an object exactly in that format. The Object.fromEntries() method transforms a list of key-value (Map Object) pairs into an object. So, both have conversion components that are the opposite of one another.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong> Object.fromEntries();<br /><br />
@@ -362,12 +418,12 @@ alert(map.get('name')); // John
 
 ---
 
-### Explain how does the Set Object function in JavaScript?
+### How does the Set Object function in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The Set object is a special object that lets you store “unique” values of any type, whether primitive values or object references.</div><br />
+  <div><strong>Interview Response:</strong> The Set object is a special object that lets you store “unique” values of any type, whether primitive values or object references. It provides methods for adding, deleting, and checking the presence of values.</div><br />
   <div><strong>Technical Response:</strong> The Set object is a special object that lets you store unique values of any type, whether primitive values or object references. The Set() constructor creates the base structure of the object. The main feature is that repeated calls of set.add(value) with the same value do not do anything, and that is why each value appears in a Set only once.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -420,7 +476,7 @@ for (let user of set) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We can use the for..of and forEach loops. We can also use a traditional iteration, but this does not meet standard recommendations.</div><br />
+  <div><strong>Interview Response:</strong> The best way to iterate over a Set in JavaScript is using the for...of loop or the forEach() method. Both options provide a clean and concise syntax for iterating through all elements of the Set.</div><br />
   <div><strong>Technical Response:</strong> There are two ways to iterate over a Set() in JavaScript. The for..of and forEach loops. You can also use a traditional iterative for loop, but it is much more complex and not recommended (Ninja Code).
   </div><br />
   <div><strong className="codeExample">Code Example:</strong> Iteration over Set using for..of and forEach<br /><br />
@@ -451,6 +507,138 @@ for (let i = set.values(), val = null; (val = i.next().value); ) {
 }
 ```
 
+:::note
+
+You can also use a traditional iterative for loop, but it is much more complex and not recommended.
+
+:::
+
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the difference between the set() and add() methods in Map?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The set() method is used to set a value for a specific key in a Map, while the add() method is used to add a new value to a Set.<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### How can you convert a Map to an array?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> You can convert a Map to an array using the Array.from() method or the spread operator [...myMap] in an array literal.<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the difference between the has() and get() methods in Map?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The has() method in Map checks if a key exists in the map and returns a boolean, while the get() method retrieves the value associated with the key or undefined if the key does not exist.<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you use objects as keys in a Map? If so, how does it compare them?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, you can use objects as keys in a Map. Map compares object keys using the same-value-zero algorithm, which checks if the objects have the same value and type.<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What is a Set in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In JavaScript, a Set is a built-in object that allows the creation of a collection of unique values. Each value in a Set may only occur once.
+<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### How do you add an element to a Set?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> You can add an element to a Set using the add() method, which takes the element as an argument and adds it to the Set.
+<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### How do you remove an element from a Set?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> You can remove an element from a Set using the delete() method, which takes the element as an argument and removes it from the Set.
+<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### How can you determine the size of a Set?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> You can determine the size of a Set using the size property, which returns the number of elements in the Set.
+<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### How can you convert a Set to an array?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> You can convert a Set to an array using the Array.from() method or the spread operator [...mySet].
+<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### How can you convert a Set to an array?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> You can convert a Set to an array using the Array.from() method or the spread operator [...mySet].
+<br /><br />
   </div>
   </div>
 </details>

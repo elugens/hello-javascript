@@ -46,8 +46,20 @@ import StructuredData from './schemadata/IterablesSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> An iterable interface specifies that an object is accessible if it implements a key method [symbol.iterator]. The built-in data structures that use iterables are Strings, Arrays, Maps, and custom objects.</div><br />
+  <div><strong>Interview Response:</strong> Iterables in JavaScript are objects that can be iterated upon using the "for...of" loop. They include arrays, strings, maps, sets, and other custom objects with a Symbol.iterator property.</div><br />
   <div><strong>Technical Response:</strong> Iterable objects are a subset of arrays. This notion allows us to use any object in a for...of loop. Arrays, of course, are iterable. However, several additional built-in objects are iterable as well. Strings, for example, are also iterable. It is a data structure that allows consumption of its data in general. It does this by implementing a method with the key Symbol.iterator, which returns an iterator. The iterator interface provides another method called return(), which gets performed when the iteration reaches the last value or is deliberately halted by calling it directly or using break; a for loop.
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the purpose of the Symbol.iterator method?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The Symbol.iterator method is used to define a custom iteration behavior for an object and make it iterable.<br /><br />
   </div>
   </div>
 </details>
@@ -59,7 +71,7 @@ import StructuredData from './schemadata/IterablesSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The most common use case for Symbol.iterator is creating a custom object iterator.
+  <div><strong>Interview Response:</strong> The Symbol.iterator is used to define a custom iteration behavior for objects, making them iterable and compatible with the for...of loop.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -108,7 +120,7 @@ for (let num of range) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, you can call an iterator explicitly in JavaScript. There are several benefits, including more control over the process than for...of.
+  <div><strong>Interview Response:</strong> Yes, you can call an iterator explicitly using the iterator's next() method. Benefits include precise control over iteration, customized iteration behavior, and on-demand value generation.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -140,7 +152,7 @@ while (true) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Iterables are objects that implement the Symbol.iterator method, such as arrays and strings. Array-likes are objects that have indexes and a length property, so they look like arrays. When we use JavaScript for practical tasks in a browser or any other environment, we may meet objects that are iterables or array-likes or both, like strings.
+  <div><strong>Interview Response:</strong> An iterable is an object with a [Symbol.iterator] method that returns an iterator, while an array-like object has numeric keys and a length property. Iterables can be iterated over with for-of loops, while array-like objects cannot.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong> Array-like but not Iterable<br /><br />
 
@@ -155,7 +167,9 @@ let arrayLike = {
 };
 
 // Error (no Symbol.iterator)
+// TypeError: arrayLike is not **iterable**
 for (let item of arrayLike) {
+    console.log(item)
 }
 ```
 
@@ -170,7 +184,7 @@ for (let item of arrayLike) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The Array.from() method can turn an iterable or array-like value into an array. Then we can call array methods on it.
+  <div><strong>Interview Response:</strong> In JavaScript, by using the Array.from() method, we can convert an iterable or an array-like value into an array, which allows us to call array methods on it or looping mechanisms.
 </div><br />
   <div><strong className="codeExample">Syntax Example:</strong> Array.from(arrayLike, (element, index) => { /*...*/ } )<br /><br />
 
@@ -193,7 +207,11 @@ let arrayLike = {
 };
 
 let arr = Array.from(arrayLike); // (*)
-alert(arr.pop()); // World (method works)
+console.log(arr.pop()); // World (method works)
+
+for(let item of arr) {
+    console.log(item); // logs "Hello"
+}
 
 // Here we use Array.from to turn a string into an array of characters:
 
@@ -202,9 +220,128 @@ let str = '𝒳😂';
 // splits str into array of characters
 let chars = Array.from(str);
 
-alert(chars[0]); // 𝒳
-alert(chars[1]); // 😂
-alert(chars.length); // 2
+console.log(chars[0]); // 𝒳
+console.log(chars[1]); // 😂
+console.log(chars.length); // 2
+```
+
+  </div>
+  </div>
+</details>
+
+---
+
+### How can we create our own iterable object?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> To create an iterable object in JavaScript, define a custom iterator function within the object, implementing the Symbol.iterator method, which returns an iterator with next() method to control iteration.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+const myIterableObject = {
+  data: [1, 2, 3, 4, 5],
+  [Symbol.iterator]() {
+    let index = 0;
+    const data = this.data;
+
+    return {
+      next() {
+        if (index < data.length) {
+          return { value: data[index++], done: false };
+        } else {
+          return { done: true };
+        }
+      }
+    };
+  }
+};
+
+for (const item of myIterableObject) {
+  console.log(item);
+}
+
+```
+
+  </div>
+  </div>
+</details>
+
+---
+
+### How does lazy evaluation work with iterable objects?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Lazy evaluation involves delaying the evaluation of data until it is actually needed. With iterable objects, this means that data is only loaded into memory as it is iterated over, which can reduce memory usage and improve performance.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+const lazyIterableObject = {
+  data: [1, 2, 3, 4, 5],
+  [Symbol.iterator]() {
+    let index = 0;
+    const data = this.data;
+
+    return {
+      next() {
+        if (index < data.length) {
+          // Perform some lazy computation
+          const computedValue = data[index] * 2;
+          index++;
+
+          return { value: computedValue, done: false };
+        } else {
+          return { done: true };
+        }
+      }
+    };
+  }
+};
+
+for (const item of lazyIterableObject) {
+  console.log(item);
+}
+
+```
+
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the difference between forEach() and for...of when iterating over arrays?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  
+  <div><strong>Interview Response:</strong> The forEach() is a method that iterates over array elements and executes a callback function on each element. for...of is a language construct that provides a concise syntax for iterating over iterable objects, including arrays, to access each element directly.</div><br />
+  <div><strong>Interview Response:</strong> forEach() is a method on the array prototype that calls a provided function for each element in the array. for...of is a language feature for iterating over any iterable object, including arrays, yielding the values one-by-one. The primary difference is that forEach() provides no way to break out of the loop or to skip to the next iteration, while for...of allows for the use of the break and continue statements.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+const myArray = [1, 2, 3, 4, 5];
+
+// Using forEach()
+myArray.forEach((element) => {
+  console.log(element);
+});
+
+// Using for...of
+for (const element of myArray) {
+  console.log(element);
+}
+
 ```
 
   </div>

@@ -42,12 +42,13 @@ import StructuredData from './schemadata/JSONMethodsSchemaData.js';
 
 <CloseAllAnswers />
 
-### Explain what is JSON?
+### What is JSON?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> JSON or JavaScript Object Notation is a lightweight and straightforward data exchange format used across multiple language platforms, including JavaScript. JSON means JavaScript Object Notation, and it is language and platform-independent.</div><br />
+  <div><strong>Interview Response:</strong>JSON stands for JavaScript Object Notation, a lightweight data interchange format widely used for web APIs.
+</div><br />
   <div><strong>Technical Response:</strong> JSON is a simple and lightweight data exchange format used across multiple language platforms. JSON means JavaScript Object Notation, and it is language and platform-independent. JSON often gets used when data gets sent from a server to a web page, and it works both on the front and back end of development environments. Several built-in JavaScript methods convert JSON objects from and back to their original format.
   </div>
   </div>
@@ -55,7 +56,19 @@ import StructuredData from './schemadata/JSONMethodsSchemaData.js';
 
 ---
 
-### Can you explain the role of the JSON.stringfy() method in JavaScript?
+### How is JSON related to JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> JSON syntax is derived from JavaScript, making it easy to use with JavaScript. JSON data can be parsed and converted into JavaScript objects.<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you explain the role of the JSON.stringify() method in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -114,7 +127,7 @@ alert(json);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> JSON supports the following data types: Objects, Arrays, (primitive) strings, Boolean values, numbers, and null.
+  <div><strong>Interview Response:</strong> JSON supports six data types including string, number, object, array, boolean, and null types. The string and object data types must be enclosed in quotes.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -138,12 +151,12 @@ alert(JSON.stringify([1, 2, 3])); // [1,2,3]
 
 ---
 
-### JSON is a data-only, language-independent specification. What are some JavaScript-specific object properties that JSON.stringify skips?
+### JSON is a language-neutral, data-only format. What JavaScript object properties are excluded by JSON.stringify()?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> JSON.stringify() ignores several JavaScript-specific object properties, including function properties, Symbolic keys and values, and properties that hold a value of undefined.
+  <div><strong>Interview Response:</strong> `JSON.stringify()` excludes functions, `undefined`, and symbol-typed properties. It also omits non-enumerable properties and properties from the prototype chain.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -159,7 +172,7 @@ let user = {
   something: undefined, // ignored
 };
 
-alert(JSON.stringify(user)); // {} (empty object)
+console.log(JSON.stringify(user)); // {} (empty object)
 ```
 
   </div>
@@ -173,7 +186,9 @@ alert(JSON.stringify(user)); // {} (empty object)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The difference between JSON and JSONP is that JSON is a simple data format for communication between different systems, and JSONP is also known as JSON with Padding. JSONP is a methodology for using that format with cross-domain ajax requests while not being affected by same-origin policy issues. The critical thing to remember with JSONP is that it is not a protocol or data type, and it is just a way of loading a script on the fly and processing the script that gets introduced to the page. In the spirit of JSONP, this means introducing a new JavaScript object from the server into the client application/ script.
+  <div><strong>Interview Response:</strong> JSON is a data format for exchanging data between systems, while JSONP (JSON with Padding) is a technique that allows JavaScript code to make cross-domain requests, bypassing the Same-Origin Policy.
+</div><br/>
+  <div><strong>Technical Response:</strong> The difference between JSON and JSONP is that JSON is a simple data format for communication between different systems, and JSONP is also known as JSON with Padding. JSONP is a methodology for using that format with cross-domain ajax requests while not being affected by same-origin policy issues. The critical thing to remember with JSONP is that it is not a protocol or data type, and it is just a way of loading a script on the fly and processing the script that gets introduced to the page. In the spirit of JSONP, this means introducing a new JavaScript object from the server into the client application/ script.
 </div>
   </div>
 </details>
@@ -185,7 +200,7 @@ alert(JSON.stringify(user)); // {} (empty object)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The third argument of JSON.stringify(value, replacer, space) is the number of spaces to use for pretty object formatting.</div><br />
+  <div><strong>Interview Response:</strong> The optional third argument, "space," in JSON.stringify() adds indentation and white space to the outputted JSON string.</div><br />
   <div><strong>Technical Response:</strong> The third argument of JSON.stringify(value, replacer, space) is the number of spaces to use for pretty formatting. Previously, all stringified objects had no indents and extra spaces. That is fine if we want to send an object over a network. The space argument is used exclusively for nice formatting. Remember that if you do not use the replacer, we should set it to null.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -202,7 +217,7 @@ let user = {
   },
 };
 
-alert(JSON.stringify(user, null, 2)); // value: user, replacer: null, space: 2
+console.log(JSON.stringify(user, null, 2)); // value: user, replacer: null, space: 2
 ```
 
   </div><br />
@@ -295,12 +310,12 @@ alert(JSON.stringify(user, null, 2)); // value: user, replacer: null, space: 2
 
 ---
 
-### Can you explain the function and syntax of the JSON.parse() method in JavaScript?
+### Can you explain the function of the JSON.parse() method in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The JSON.parse() method parses a string and returns a JavaScript object. The string must get written in JSON format. The JSON.parse() method can optionally transform the result with a function.</div><br />
+  <div><strong>Interview Response:</strong> JSON.parse() method in JavaScript parses a JSON string and converts it into a JavaScript object, making it easy to work with JSON data in JavaScript.</div><br />
   <div><strong>Technical Response:</strong> The JSON.parse() method parses a JSON string, constructing the JavaScript value or object described by the string. We can use an optional reviver function to perform a transformation on the resulting object before our code returns it. JSON parse is the opposite of the stringify method, and it returns an Object, Array, string, number, a boolean, or null value corresponding to the given JSON object text. You should note that JSON.parse() does not allow trailing commas.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -338,6 +353,69 @@ We should note that JSON.parse() does not allow trailing commas.
 
 :::
 
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the difference between JSON.stringify() and JSON.parse()?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> JSON.stringify() converts a JavaScript object to a JSON string, while JSON.parse() converts a JSON string to a JavaScript object.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let obj = {name: "John", age: 30};
+
+let jsonString = JSON.stringify(obj);
+console.log(jsonString); // '{"name":"John","age":30}'
+
+let parsedObj = JSON.parse(jsonString);
+console.log(parsedObj); // {name: 'John', age: 30}
+```
+
+  </div>
+  </div>
+</details>
+
+---
+
+### What is a JSON Schema?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> JSON Schema is a specification for validating the structure and content of JSON data, allowing for standardized data validation and interchange.<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### How is the JSON Schema used?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The JSON Schema is used to validate the structure and data of JSON documents, ensuring consistency and interoperability between systems.
+<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What are some common use cases for JSON in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> JSON is often used in JavaScript for data exchange between a client and a server, for storing data in a file or a database, or for sending and receiving data through APIs.<br /><br />
   </div>
   </div>
 </details>
