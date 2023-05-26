@@ -46,7 +46,7 @@ import StructuredData from './schemadata/RecursionSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Recursion is the process by which a function calls itself as a subroutine.</div><br />
+  <div><strong>Interview Response:</strong> Recursion is a programming technique where a function calls itself to solve a problem by breaking it into smaller, simpler subproblems, leading to a solution through repeated self-calls</div><br />
   <div><strong>Technical Response:</strong> Recursion is a programming pattern when work needs to naturally split into several more straightforward tasks of the same type. Or when a task gets simplified into an easy action plus a simpler variant of the same task. When a function solves a task, it can call many other functions. A partial example is when a function calls itself, known as recursion.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong> Recursion<br /><br />
@@ -69,12 +69,12 @@ function pow(x, n) {
 
 ---
 
-### What is the difference between recursion and iterative approaches in JavaScript?
+### What is the difference between recursive and iterative approaches in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The difference between recursion and iteration is that recursion is simply a function call. The function is being called by itself until a specific condition gets met, while iteration is when a loop gets repeatedly executed until a specific condition gets met. A recursive solution is usually shorter than an iterative one.
+  <div><strong>Interview Response:</strong> The recursive approach uses self-calling functions to break problems into sub-problems, while the iterative approach uses loops for repetition. Recursion relies on the call stack, while iteration relies on loop control structures.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -99,7 +99,7 @@ alert(pow(2, 3)); // 8
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The maximal recursion depth is reliably around 10000, some engines allow more, but 100000 is probably outside the limits of their capabilities.</div><br />
+  <div><strong>Interview Response:</strong> JavaScript engines vary, but most have a maximum call stack size of around 10,000 to 15,000 calls. Exceeding this limit causes a "RangeError: Maximum call stack size exceeded" error due to stack overflow.</div><br />
   <div><strong>Technical Response:</strong> The JavaScript engine limits the maximum recursion depth. We can rely on it being 10000; some engines allow more, but 100000 is likely to be beyond most of them. Automatic optimizations help alleviate this ("tail calls optimizations"), but they are not yet supported everywhere and work only in simple cases. That limits the application of recursion, but it remains very widely used. There are many tasks where the recursive way of thinking makes the code more straightforward.
   </div>
   </div>
@@ -112,7 +112,9 @@ alert(pow(2, 3)); // 8
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To adequately explain how recursion works in JavaScript. First, we need to explain the execution context and its relationship to the stack. The execution context of a running function stores information about its execution process. The execution context is an internal data structure that contains information about a function's execution, such as where the control flow is currently, the current variables, the value of “this”, and a few other internal details. Each function call connects with a single execution context.<br /><br />
+  <div><strong>Interview Response:</strong> In JavaScript, recursion works when a function calls itself to solve a problem by dividing it into smaller subproblems. Each call reduces complexity until a base case is reached, producing a solution.<br /><br />
+  </div>
+  <div><strong>Technical Response:</strong> To adequately explain how recursion works in JavaScript. First, we need to explain the execution context and its relationship to the stack. The execution context of a running function stores information about its execution process. The execution context is an internal data structure that contains information about a function's execution, such as where the control flow is currently, the current variables, the value of “this”, and a few other internal details. Each function call connects with a single execution context.<br /><br />
   <strong>The following occurs when a function makes a nested call:</strong><br /><br />
   <ul>
     <li>The current function gets paused.</li>
@@ -126,12 +128,24 @@ alert(pow(2, 3)); // 8
 
 ---
 
+### Can you explain what the execution context is in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The execution context in JavaScript is the environment where code is executed, including variables, scopes, and the value of this. It's created each time a function is called.<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
 ### What characteristics do the three tree traversal methods have in common? (Inorder, Preorder, and Postorder)
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Left subtree always gets visited before the right subtree.
+  <div><strong>Interview Response:</strong> The three tree traversal methods (pre-order, in-order, post-order) share the characteristics of visiting every node in a tree, following a specific order, and utilizing recursion or iteration for traversal.
 </div>
   </div>
 </details>
@@ -143,7 +157,8 @@ alert(pow(2, 3)); // 8
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Recursion refers to the process of repeatedly calling the same function. Backtracking is when the algorithm makes an opportunistic decision, which may be wrong. If the decision was wrong, the backtracking algorithm restores the state before the decision. It builds candidates for the solution and abandons those who cannot fulfill the conditions.</div><br />
+  <div><strong>Interview Response:</strong> Backtracking is a general algorithm for finding solutions by incrementally building candidates and abandoning them if invalid. Recursion is a technique where a function calls itself to solve sub-problems. Backtracking often employs recursion.
+</div><br />
   <div><strong>Technical Response:</strong> Recursion refers to the process of repeatedly calling the same function. The typical example of a recursive function is the factorial process. It would help if you always had a condition that makes recursion stop (base case). Backtracking is when the algorithm makes an opportunistic decision*, which may be wrong. If the decision was wrong, the backtracking algorithm restores the state before the decision. It builds candidates for the solution and abandons those who cannot fulfill the conditions. A typical example of a task to solve would be the Eight Queens Puzzle. Backtracking is also commonly used within Neuronal Networks. Many times, backtracking does not get implemented recursively. If backtracking uses recursion, it is called Recursive Backtracking.
   </div>
   </div>
@@ -185,12 +200,14 @@ let company = {
 
 ---
 
-### What is a linked list in JavaScript?
+### What is the definition of a linked list?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A linked list is a linear data structure like an array. Unlike arrays, the elements do not get stored in a particular memory location or index. Instead, each element gets its own object with a pointer or link to the next object in the list. Each element node has two components: stored data and a link to the next node. Any appropriate data type gets used to store the information. (Diagram below.) The entry point to a linked list is called the head. The head is a reference to the first node in the linked list. The last node on the list points to null. If a list is empty, the head is a null reference.
+   <div><strong>Interview Response:</strong> A linked list is a linear data structure where each element (node) contains a value and a reference to the next node, forming a sequence. It can be easily modified and resized.
+</div><br />
+  <div><strong>Technical Response:</strong> A linked list is a linear data structure like an array. Unlike arrays, the elements do not get stored in a particular memory location or index. Instead, each element gets its own object with a pointer or link to the next object in the list. Each element node has two components: stored data and a link to the next node. Any appropriate data type gets used to store the information. (Diagram below.) The entry point to a linked list is called the head. The head is a reference to the first node in the linked list. The last node on the list points to null. If a list is empty, the head is a null reference.
 </div><br />
   <div>
 
@@ -237,6 +254,8 @@ list.next.next.next.next = null;
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
+  <div><strong>Interview Response:</strong> An iterative approach is often preferred for traversing linked lists, as it avoids call stack overflow risk and provides better performance with lower memory usage. However, recursion can be more elegant and easier to understand.
+</div><br />
   <div><strong>Interview Response:</strong> It varies; there are advantages to both ways that we must consider. We commonly use recursion because it is easier to build and more 'elegant' than iterative methods. Remember that anything done in recursion has an alternative iterative approach, but we should use caution with our approach because there is usually a performance penalty with recursion. However, depending on the situation at hand, that performance disadvantage may be negligible — in which case, recursion makes sense. With recursion, you also have the extra benefit of making your code more understandable to other programmers, which is always a plus.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong> Iterative vs. Recursive<br /><br />
@@ -284,6 +303,66 @@ function printRecursively(list) {
 printRecursively(list);
 ```
 
+  </div>
+  </div>
+</details>
+
+---
+
+### What is a stack in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A stack is a linear data structure that follows the Last-In-First-Out (LIFO) principle, meaning the last element added to the stack is the first to be removed.<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### How can a stack be implemented in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A stack can be implemented in JavaScript using a class, where push() and pop() methods add or remove elements from the top.<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What are the main operations in a stack?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The main operations in a stack are push to add an element to the top, pop to remove the top element, peek to view the top element, and isEmpty to check if the stack is empty.<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What is a call stack in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A call stack is a stack data structure that manages the execution context of function calls in JavaScript, tracking the sequence of functions being called and their local variables.<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What is a stack overflow?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A stack overflow occurs when the call stack exceeds its maximum size due to excessive function calls, often due to infinite recursion or deeply nested calls, causing a RangeError.<br /><br />
   </div>
   </div>
 </details>

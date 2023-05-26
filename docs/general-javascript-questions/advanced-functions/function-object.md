@@ -40,12 +40,12 @@ import StructuredData from './schemadata/GlobalSchemaData.js';
 
 <CloseAllAnswers />
 
-### In JavaScript, what type is a function?
+### In JavaScript, what type of data type is a function?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> All functions in JavaScript are objects. The concept of functions as callable "action objects" is an excellent approach to thinking about them. We can not only invoke them but also treat them as objects. The add/remove properties, pass by reference, and other implementations.
+  <div><strong>Interview Response:</strong> In JavaScript, every function is considered an object. It is beneficial to view functions as "action objects" that can be called upon. Not only do they have the capability to be invoked, but they can also be manipulated like objects. This includes adding or removing properties, passing by reference, and incorporating them into various other operations.
 </div>
   </div>
 </details>
@@ -147,7 +147,7 @@ You should not confuse this question with a question about how to name a functio
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The function length property returns the number of function parameters (arguments). The function length property does not count rest parameters. The length property sometimes gets used for introspection in functions that operate on other functions.
+  <div><strong>Interview Response:</strong> In JavaScript, the function length property provides the number of parameters expected by a function, excluding rest parameters. It is often used for introspection in functions that operate on other functions.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -174,19 +174,31 @@ alert(many.length); // 2, rest parameter not counted
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, A property assigned to a function does not define as a local variable inside it. We can treat a function as an object and store properties in it, but that does not affect its execution, and variables are not properties and vice versa.
+  <div><strong>Interview Response:</strong> No, a function property is not considered a variable, but rather a property of the function object. Variables are used to store values, while properties are used to store object-related data.
 </div>
   </div>
 </details>
 
 ---
 
-### Can you explain what a named function expression is in JavaScript (NFE)?
+### What does NFE stand for in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Named Function Expression, or NFE, is a term for function expressions with a name. The named function acts as a value of the allocated variable, isolating it from the assigned variable. You can call the named function inside the expression, but any attempts to call it outside the function result in an error.
+  <div><strong>Interview Response:</strong> In JavaScript, NFE stands for Named Function Expression, which refers to a function expression with a specific name, allowing self-reference and improving debugging and code readability.<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you explain what a named function expression is in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A named function expression or a JavaScript NFE is a function that has a name and is defined as an expression, allowing it to be referenced by its name only within its scope. You can call the named function inside the expression, but any attempts to call it outside the function result in an error.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -218,7 +230,7 @@ func(); // Error, func is not defined (not visible outside of the function)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> There are times when a regular function expression does not meet our needs. A named function expression gives us access to the components of a function even if the reference gets nullified on the primary variable.
+  <div><strong>Interview Response:</strong> A named function expression provides a named reference to a function, enabling self-reference, better debugging, and improved readability in code. It also enables recursion and event handling without polluting the global scope. A named function expression gives us access to the components of a function even if the reference gets nullified on the primary variable.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -251,9 +263,213 @@ welcome('JavaScript'); // Hello, JavaScript
 ```
 
 :::note
-You should note that a regular function declaration gets used to achieve the same result.
+You should note that a regular function declaration can be used to achieve the same result.
 :::
 
+  </div>
+  </div>
+</details>
+
+---
+
+### How does a named function expression differ from a regular function expression?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A named function expression has a specific name, enabling self-reference and improved debugging. Regular function expressions are anonymous, lacking a name, which can limit their functionality and debuggability.<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What are the benefits of using named function expressions over anonymous function expressions?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Named function expressions have several advantages over anonymous function expressions. They enable self-referencing, which is useful for recursion, event handlers, and unbinding event listeners. They also provide clearer stack traces during debugging, making it easier to identify and fix issues in the code. Additionally, named function expressions enhance code readability, as the descriptive names give better insight into the specific functionality of each function, improving maintainability and collaboration.<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you explain the concept of function hoisting?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Function hoisting is a JavaScript behavior where function declarations are moved to the top of their scope during compilation, making them accessible before they appear in the code. This allows calling a function before its declaration, avoiding errors due to the order of code execution.<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What are the two-phases of function hoisting in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The two phases of function hoisting in JavaScript are: 1) The Compilation phase, where the engine scans for variable and function declarations and hoists them, and 2) The Execution phase, where the code runs sequentially.<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### How do named function expressions affect the readability and maintainability of the code?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Named function expressions enhance code readability and maintainability by providing descriptive names for functions, indicating their specific purpose, which improves understanding and collaboration among developers.
+<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you explain the difference between a function's name property and its identifier when using named function expressions?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A function's name property is its displayed name in stack traces, while the identifier is the variable it's assigned to. Named function expressions have both, improving debuggability and code readability.<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the behavior of the 'this' keyword inside a named function expression?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The 'this' keyword inside a named function expression refers to the object that invokes the function, behaving the same way as in regular function expressions or declarations.<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What are some common use cases for named function expressions?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Common use cases for named function expressions include recursion, event handling with self-unbinding, and callback functions for better debugging, as they provide clear stack traces and improved readability.<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What is event handling with self-unbinding in relation to JavaScript function expressions?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> JavaScript primitives are immutable, meaning their values cannot be changed after they are created. This ensures data consistency.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+var button = document.getElementById('myButton');
+
+button.addEventListener('click', function handleClick() {
+  alert('Button clicked!');
+
+  // Remove this event listener after it's executed
+  button.removeEventListener('click', handleClick); // <- self-unbinding
+});
+
+```
+
+  </div>
+  </div>
+</details>
+
+---
+
+### Are there any performance implications when using named function expressions as opposed to anonymous function expressions?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In general, there are no significant performance implications when using named function expressions as opposed to anonymous function expressions. However, named function expressions may slightly increase memory usage due to the additional name property being stored.<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### How does the behavior of named function expressions change when used with arrow functions?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Arrow functions in JavaScript don't have their own `this` or `arguments`, making them ill-suited as method functions or constructors. Named expressions with arrow functions lack function name property, affecting debugging and self-referential scenarios.<br /><br />
+  </div>
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Regular Named Function Expression
+var regularFunction = function namedFunction() {
+  console.log(namedFunction.name); // Output: namedFunction
+}
+
+regularFunction();
+
+// Arrow Function
+var arrowFunction = () => {
+  console.log(arrowFunction.name); // Output: arrowFunction
+}
+
+arrowFunction();
+
+// Named Arrow Function (Not possible in JavaScript)
+var namedArrowFunction = () => {
+  console.log(namedArrowFunction.name); // Error: namedArrowFunction is not defined
+}
+
+namedArrowFunction();
+
+```
+
+<p>In the above example, the named function expression logs its name as expected. The unnamed arrow function logs its variable name as the function name. However, trying to give an arrow function a name (like a named function expression) results in an error because arrow functions can't be named in the same way.</p>
+
+  </div>
+  </div>
+</details>
+
+---
+
+### What are the compatibility considerations when using named function expressions in different browsers or JavaScript environments?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Named function expressions are widely supported in modern browsers and JavaScript environments. However, older environments like IE8 and below may exhibit inconsistencies or lack support, requiring workarounds or polyfills.<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you discuss some best practices or recommendations for using named function expressions?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> You should use named function expressions for self-referencing scenarios, debugging improvements, and creating more readable code. However, you should be mindful of scope and avoid naming conflicts between function expressions and variables.<br /><br />
   </div>
   </div>
 </details>
