@@ -39,12 +39,25 @@ import StructuredData from './schemadata/BrowserEnvSchemaData.js';
 
 ---
 
+### What is the Browser Environment Specification?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It's a set of standards defining how JavaScript interacts with web browsers, including the DOM, events, and communication with servers via AJAX.
+
+</div>
+  </div>
+</details>
+
+---
+
 ### What was the original purpose of JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Originally intended for web browsers, the JavaScript programming language has evolved into a language with many practical uses and platforms.
+  <div><strong>Interview Response:</strong> The original purpose of JavaScript was to add interactivity and dynamic content to web pages, enabling user interactions, form validation, and manipulation of HTML elements in the browser environment.
 </div>
   </div>
 </details>
@@ -56,7 +69,7 @@ import StructuredData from './schemadata/BrowserEnvSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> JavaScript can execute on a browser, a web server, or another host, even a "smart" coffee machine if it supports JavaScript. Each one offers platform-specific features.
+  <div><strong>Interview Response:</strong> JavaScript operates on various platforms, including web browsers, server-side with Node.js, desktop and mobile applications using frameworks like Electron and React Native, and even IoT devices through specialized libraries.
 </div><br/>
   <div><strong>Technical Response:</strong> The JavaScript language can run on a browser, or a webserver or another host, even a “smart” coffee machine, if it can run JavaScript. Each of them provides platform-specific functionality. The JavaScript specification calls that a host environment. A host environment provides its own objects and functions additional to the language core. Web browsers give a means to control web pages. Node.js provides server-side features, and so on.
 </div>
@@ -77,12 +90,12 @@ import StructuredData from './schemadata/BrowserEnvSchemaData.js';
 
 ---
 
-### What is the Document Object Model in JavaScript?
+### What is the Document Object Model (DOM) in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The Document Object Model, or DOM, represents all page content as editable objects. The principal "entry point" to the page is the document object, and we may use it to edit or create anything on the website.
+  <div><strong>Interview Response:</strong> The DOM is a tree-like structure representing an HTML document, allowing scripts to manipulate the content, structure, and styles of a webpage. The Document Object Model, or DOM, represents all page content as editable objects.  The principal "entry point" to the page is the document object, and we may use it to edit or create anything on the website.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -114,12 +127,24 @@ setTimeout(() => (document.body.style.background = ''), 1000);
 
 ---
 
+### What is the DOM Living Standard?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The DOM Living Standard is a constantly evolving specification that defines the structure, behavior, and APIs of the Document Object Model, ensuring cross-browser consistency and addressing modern web development requirements.
+</div>
+  </div>
+</details>
+
+---
+
 ### Is the DOM only used in Browsers, or can it be found on other platforms?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The DOM standard describes a document's structure and offers objects for manipulating it. Other non-browser instruments make use of the DOM. Server-side programs that download and parse HTML pages, for example, can also make use of DOM. However, they may only support a portion of the standard.
+  <div><strong>Interview Response:</strong> While the DOM is primarily used in browsers, it can also be found on other platforms, such as server-side environments like Node.js, using libraries like JSDOM to simulate browser-like DOM interactions.
 </div>
   </div>
 </details>
@@ -131,7 +156,7 @@ setTimeout(() => (document.body.style.background = ''), 1000);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The CSS Object Model is a set of APIs that allow JavaScript to manipulate CSS. It is similar to the DOM, but for CSS rather than HTML.</div><br />
+  <div><strong>Interview Response:</strong> The CSS Object Model (CSSOM) is a browser API that represents stylesheets, allowing JavaScript to interact with and manipulate CSS rules and styles applied to HTML elements.</div><br />
   <div><strong>Technical Response:</strong> The CSS Object Model is a set of APIs that allow JavaScript to manipulate CSS. It is similar to the DOM, but for CSS rather than HTML. It enables users to view and alter CSS styles in real-time. It is independent of the DOM, yet they collaborate when we change the document's style rules. CSSOM, on the other hand, is rarely a necessity in reality.
   </div>
   </div>
@@ -144,7 +169,7 @@ setTimeout(() => (document.body.style.background = ''), 1000);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The Browser Object Model (BOM) represents additional objects provided by the browser (host environment) for working with everything except the document, as the navigator and location objects.</div><br />
+  <div><strong>Interview Response:</strong> The Browser Object Model (BOM) in JavaScript represents browser components, such as 'window', 'navigator', and 'location', enabling developers to interact with the browser environment and its properties.</div><br />
   <div><strong>Technical Response:</strong> The Browser Object Model (BOM) represents additional objects provided by the browser (host environment) for working with everything except the document.<br /><br />
   <strong>For Example:</strong><br /><br />
   <ol>
@@ -176,7 +201,7 @@ if (confirm('Go to Wikipedia?')) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> BOM includes functions such as alert/confirm/prompt, which are not directly connected to the content but represent pure browser means of communicating with the user.
+  <div><strong>Interview Response:</strong> The alert, confirm, and prompt functions are part of the Browser Object Model (BOM), specifically the 'window' object, and are used for displaying simple dialogs to interact with users.
 </div>
   </div>
 </details>
@@ -188,9 +213,185 @@ if (confirm('Go to Wikipedia?')) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The BOM is part of the general HTML specification.</div><br />
+  <div><strong>Interview Response:</strong> The BOM falls under the HTML Living Standard specification, which defines the browser environment, including the 'window', 'navigator', and other related objects, in addition to the DOM and HTML elements.</div><br />
   <div><strong>Technical Response:</strong> The BOM is part of the HTML standard. Yes, you read that correctly. The HTML standard, available at https://html.spec.whatwg.org, encompasses more than just the "HTML language" (tags, attributes) and a slew of objects, methods, and browser-specific DOM extensions. That's "HTML in broad strokes." Additionally, certain parts have supplementary specifications given at https://spec.whatwg.org.
   </div>
+  </div>
+</details>
+
+---
+
+### What is the HTML Living Standard?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The HTML Living Standard is an evolving specification that defines HTML, DOM, and browser-related APIs, ensuring consistent behavior across browsers and addressing modern web development needs.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What key specifications are related to the browser?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Key manuals related to the browser are the HTML Living Standard, Document Object Model (DOM) specification, CSS Object Model (CSSOM), JavaScript ECMAScript specification, and Web API interfaces documentation.<br /><br />
+  <ol>
+      <li>HTML Living Standard: Covers HTML, DOM, and browser-related APIs.</li>
+      <li>CSS Specifications: Defines the behavior and styling of CSS, including CSSOM.</li>
+      <li>ECMAScript (JavaScript): Specifies the core JavaScript language features.</li>
+      <li>Web APIs: Defines additional APIs for web development, like Fetch, Web Storage, and Web Workers.</li>
+      <li>WebRTC: Covers real-time communication between browsers.</li>
+      <li>WebAssembly: Describes a binary instruction format for secure and efficient code execution in web browsers.</li>
+  </ol>
+  </div>
+  </div>
+</details>
+
+---
+
+### What are JavaScript events?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Events are actions or occurrences, like clicks or keypresses, that trigger functions or event listeners to execute code in response to user interactions.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the purpose of the 'window' object?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The 'window' object represents the browser window and provides properties, methods, and events for interacting with the global environment and document content.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the same-origin policy?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> AJAX (Asynchronous JavaScript and XML) is a technique that enables web applications to send and receive data asynchronously, updating content without reloading the entire page.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What is AJAX?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The same-origin policy restricts web pages from interacting with resources from different origins, protecting against potential security vulnerabilities like cross-site scripting.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What is event bubbling?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Event bubbling is the propagation of an event from a child to parent elements in the DOM tree, triggering event listeners on each element along the way.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What are Web Storage APIs?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Web Storage APIs (localStorage and sessionStorage) are used to store key-value pairs in the browser, providing a simple way to persist data across page reloads and sessions.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the difference between localStorage and sessionStorage?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> localStorage stores data with no expiration, while sessionStorage stores data for the duration of the page session, deleting the data when the browser is closed.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What is feature detection?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Feature detection is a technique used to identify browser capabilities, allowing developers to provide fallback solutions or enhancements for unsupported or partially supported features.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What are cookies?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Cookies are small pieces of data stored by the browser, used to maintain state between requests or visits, often for user authentication, preferences, or tracking.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What is CORS?
+
+<details>
+  <summary><strong>View Answer:</strong></summary><br />
+  <div>
+  <div><strong>Interview Response:</strong> CORS (Cross-Origin Resource Sharing) is a mechanism that enables many resources, like fonts, images, and scripts, to be requested across origins, while maintaining security restrictions in the browser.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### What are Service Workers?
+
+<details>
+  <summary><strong>View Answer:</strong></summary><br />
+  <div>
+  <div><strong>Interview Response:</strong> Service Workers are scripts that run in the background, independent of a web page, enabling features like offline support, push notifications, and background data updates.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### What is the 'navigator' object?
+
+<details>
+  <summary><strong>View Answer:</strong></summary><br />
+  <div>
+  <div><strong>Interview Response:</strong> The 'navigator' object provides information about the user's browser, OS, and device, helping developers optimize their applications for different environments.
+  </div><br />
   </div>
 </details>
 

@@ -45,9 +45,20 @@ import StructuredData from './schemadata/AttrPropsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> When the browser loads the page, it parses the HTML and generates DOM objects.</div><br />
-  <div><strong>Technical Response:</strong> When a page gets loaded, the browser "reads" (also known as "parses") the HTML and builds DOM objects from it. Most standard HTML characteristics for element nodes are automatically converted to DOM object properties. If the element is &#8249;body id="page"&#8250;, the DOM object contains body.id="page." The attribute-property mapping, however, is not one-to-one.
+  <div><strong>Interview Response:</strong> The browser fetches the HTML, parses it into the Document Object Model (DOM), applies CSS styles, runs JavaScript, and then renders the final visual representation on the screen.
+  </div><br/>
   </div>
+</details>
+
+---
+
+### What is the difference between attributes and properties in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Attributes are defined on HTML elements and represent the initial state. Properties are in DOM objects, reflecting the current state of elements and can change over time.
+  </div><br />
   </div>
 </details>
 
@@ -58,7 +69,8 @@ import StructuredData from './schemadata/AttrPropsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Because DOM nodes are ordinary JavaScript objects, we can modify them just like any other object. This object may change or add methods and attributes, as well as edit built-in prototypes such as Element.prototype and add new methods to all elements.</div><br />
+  <div><strong>Interview Response:</strong> Yes, you can modify a DOM node. JavaScript allows you to change content, attributes, CSS styles, and even add or remove nodes to and from the DOM tree.</div><br />
+  <div><strong>Technical Response:</strong> Because DOM nodes are ordinary JavaScript objects, we can modify them just like any other object. This object may change or add methods and attributes, as well as edit built-in prototypes such as Element.prototype and add new methods to all elements.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -99,12 +111,84 @@ DOM properties and methods behave just like those of regular JavaScript objects.
 
 ---
 
+### How can you get the value of an attribute in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> You can get the value of an attribute using the `getAttribute()` method on the element, passing the attribute name as the argument.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### How can you set an attribute value in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> You can set an attribute value using the `setAttribute()` method on the element, passing the attribute name and the new value as arguments.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### How do you remove an attribute from an HTML element in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> You can remove an attribute using the `removeAttribute()` method on the element, passing the attribute name as the argument.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### What is the role of the "className" property in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The `className` property gets or sets the value of the `class` attribute, allowing you to manipulate CSS classes of an element.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### What is the "dataset" property in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The `dataset` property is an object that holds all the custom data attributes (`data-*`) of an element, allowing easy access and manipulation.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### How can you modify the "src" attribute of an "img" element in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> To modify the `src` attribute, you can use the `setAttribute()` method or directly update the `src` property of the `img` element.
+  </div><br />
+  </div>
+</details>
+
+---
+
 ### Do different elements have different standard HTML attributes?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, We should note that a standard attribute for one element can be unknown for another. An example is the input element with a standard type attribute used to specify the input type.
+  <div><strong>Interview Response:</strong> Yes, different HTML elements have different standard attributes. For example, an "img" tag has "src" and "alt", while an anchor "a" tag has "href" and "target" attributes. We should note that a standard attribute for one element can be unknown for another. An example is the input element with a standard type attribute used to specify the input type.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -136,7 +220,9 @@ The "type" attribute is standard for &#8249;input&#8250; (HTMLInputElement), but
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In HTML, tags may have attributes. When the browser parses the HTML to create DOM objects for tags, it recognizes standard attributes and creates DOM properties from them. In the case of non-standard attributes, DOM properties get created, and any invocation of those attributes returns undefined.<br /><br />
+  <div><strong>Interview Response:</strong> Non-standard attributes don't become DOM properties directly, but they can be accessed via the "getAttribute" method or dataset for data-* attributes. They don't affect rendering unless used by JavaScript or CSS.
+    </div><br />
+  <div><strong>Technical Response:</strong> In HTML, tags may have attributes. When the browser parses the HTML to create DOM objects for tags, it recognizes standard attributes and creates DOM properties from them. In the case of non-standard attributes, DOM properties are created, and any invocation of those attributes returns undefined.<br /><br />
  The attribute exists, but it does not get defined as DOM property, which inevitably returns undefined.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -164,7 +250,9 @@ The "type" attribute is standard for &#8249;input&#8250; (HTMLInputElement), but
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, various JavaScript methods, such as hasAttribute, getAttribute, setAttribute, and removeAttribute, are used to access non-standard HTML attributes. These approaches work with precisely what is written in HTML. Additionally, elem.attributes may be used to read all attributes: a collection of objects that belong to the built-in Attr class, containing name and value properties.
+  <div><strong>Interview Response:</strong> Yes, you can access non-standard HTML attributes using JavaScript's "getAttribute" method or the "dataset" property for data-* attributes on the corresponding DOM object.
+    </div><br />
+  <div><strong>Technical Response:</strong> Yes, various JavaScript methods, such as hasAttribute, getAttribute, setAttribute, and removeAttribute, are used to access non-standard HTML attributes. These approaches work with precisely what is written in HTML. Additionally, elem.attributes may be used to read all attributes: a collection of objects that belong to the built-in Attr class, containing name and value properties.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -225,7 +313,7 @@ The "type" attribute is standard for &#8249;input&#8250; (HTMLInputElement), but
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> When a standard attribute changes, the corresponding property is auto-updated, and vice versa, but there are some exceptions to the rule. This behavior gets defined as property-attribute synchronization in JavaScript.
+  <div><strong>Interview Response:</strong> When a standard attribute changes, the corresponding property is auto-updated, and vice versa, maintaining a synchronized state between them, but there are some exceptions to the rule. This behavior gets defined as property-attribute synchronization in JavaScript.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -293,7 +381,7 @@ That “feature” may come in handy because the user actions may lead to value 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, DOM properties are not always strings because they have property types. For instance, the input.checked property (for checkboxes) is a Boolean (either checked or not checked). There are other examples. The style attribute is a string, but the style property is an object. Most properties are strings, however.
+  <div><strong>Interview Response:</strong> No, DOM properties are not always strings because they have property types. They can be different types like boolean, object, or function, depending on the property. For instance, "classList" is an object, "disabled" is a boolean. For instance, the input.checked property (for checkboxes) is a Boolean (either checked or not checked). There are other examples. The style attribute is a string, but the style property is an object. Most properties are strings, however.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -332,7 +420,7 @@ That “feature” may come in handy because the user actions may lead to value 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We can use non-standard attributes to pass custom data from HTML to JavaScript or “mark” HTML elements for JavaScript.
+  <div><strong>Interview Response:</strong> We can use non-standard attributes to pass custom data from HTML to JavaScript or “mark” HTML elements for JavaScript. Non-standard attributes, especially data-* attributes are used to store extra information directly within an HTML element for later use in JavaScript, without affecting the presentation or semantics.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -414,7 +502,9 @@ We should note that this is not exactly the recommended approach for implementin
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, we should prepend custom attributes with the “data-*” attribute to avoid conflicts in your code. All attributes starting with “data-” are reserved for programmers’ use and available in the dataset property. The main reason to use the data attribute is if the standard attribute specification is updated. You can avoid any conflicts in your code. Using data-* attributes is a proper, safe way to pass custom data.
+  <div><strong>Interview Response:</strong> Yes, to avoid conflicts, use the "data-*" prefix when creating custom attributes. This naming convention is specified by HTML standards for user-defined data attributes.
+    </div><br />
+  <div><strong>Technical Response:</strong> Yes, we should prepend custom attributes with the “data-*” attribute to avoid conflicts in your code. All attributes starting with “data-” are reserved for programmers’ use and available in the dataset property. The main reason to use the data attribute is if the standard attribute specification is updated. You can avoid any conflicts in your code. Using data-* attributes is a proper, safe way to pass custom data.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -439,7 +529,7 @@ We should note that this is not exactly the recommended approach for implementin
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, multi-word attributes are case-sensitive in dataset properties. We should use camel-cased styling when we are using dataset properties.
+  <div><strong>Interview Response:</strong> Yes, multi-word "data-*" attributes become camelCase properties in "dataset". For example, "data-my-attribute" becomes "dataset.myAttribute". HTML attributes are case-insensitive, but their dataset properties are not.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -472,6 +562,18 @@ We should note that this is not exactly the recommended approach for implementin
 ```
 
   </div>
+  </div>
+</details>
+
+---
+
+### What is the difference between attributes and properties in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The five primitive wrapper objects in JavaScript are: String, Number, Boolean, Symbol, and BigInt.
+  </div><br />
   </div>
 </details>
 

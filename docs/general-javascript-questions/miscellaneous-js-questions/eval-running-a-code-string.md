@@ -42,12 +42,39 @@ import StructuredData from './schemadata/EvalSchemaData.js';
 
 ---
 
-### What is the eval functions’ purpose in JavaScript?
+### What are the potential security risks associated with using the eval function?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> According to the MDN, the honest answer is that you should never use eval in your applications. However, the purpose of eval is to evaluate JavaScript code represented as a string value. One string parameter evaluates in the built-in eval function, and returns the completed value of the evaluated code. If the completion value is empty, undefined is returned.
+  <div><strong>Interview Response:</strong> The main risk is the potential for code injection, where malicious code can be executed. It's important to validate and sanitize any input used with `eval`.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### Is it recommended to use the `eval` function in production code?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In general, it is discouraged to use `eval` in production code due to security risks and potential performance implications. There are usually alternative approaches to achieve the desired functionality.
+<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the purpose of the eval() function in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The eval() function is used to evaluate a string as a JavaScript expression or code snippet, allowing dynamic execution of code. However, it's generally discouraged due to security risks.
+</div><br />
+  <div><strong>Technical Response:</strong> According to the MDN, the honest answer is that you should never use eval in your applications. However, the purpose of eval is to evaluate JavaScript code represented as a string value. One string parameter evaluates in the built-in eval function, and returns the completed value of the evaluated code. If the completion value is empty, undefined is returned.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -64,7 +91,7 @@ eval(code); // alerts Hello
 
 ---
 
-### Should you use the eval built-in JavaScript function property JavaScript? Why or why not?
+### Should you use the eval built-in JavaScript function property? Why or why not?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -87,7 +114,7 @@ Executing JavaScript from a string is an enormous security risk. It is far too e
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, the recommended option is to use the built-in Function() object. The benefits include increased application security and engine optimization. If your code needs some data from the outer scope, use new Function and pass it as arguments.
+  <div><strong>Interview Response:</strong> Yes, safer alternatives to eval() include the Function constructor for creating functions dynamically or JSON.parse() for parsing JSON strings without executing arbitrary code.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong> Converting from eval to a Function() object.<br /><br />
 

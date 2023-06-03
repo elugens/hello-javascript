@@ -42,6 +42,18 @@ import StructuredData from './schemadata/DomTreeSchemaData.js';
 
 ---
 
+### What is the DOM tree?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The DOM tree is a hierarchical, tree-like representation of an HTML document, with each element represented as a node. It allows easier interaction and manipulation of the webpage using JavaScript.
+  </div><br />
+  </div>
+</details>
+
+---
+
 ### What is an HTML tag considered in the Document Object Model?
 
 <details>
@@ -174,14 +186,50 @@ alert(document.body); // alerts [object HTMLBodyElement]
 
 ---
 
-### What are the four most regularly utilized node types?
+### What are the different types of DOM nodes?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The four main node types include document, element, text, and comment nodes.</div><br />
+  <div><strong>Interview Response:</strong> The main types of DOM nodes include Element nodes, Text nodes, Comment nodes, Document nodes, and DocumentType nodes. These nodes allow for various interactions with the HTML structure.</div><br />
   <div><strong>Technical Response:</strong> There are 12 different types of nodes. We usually work with four of them in practice. The four major node types are document, element, text, and comment nodes. The document node is the DOM's starting point. The makeup of element nodes include all HTML tags, which we use as the tree's building blocks. We use the comment node to display information in our code, but it does not show in the browser, but JS can read it from the DOM.
   </div>
+  </div>
+</details>
+
+---
+
+### What is event propagation in the context of the DOM?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Event propagation is the process through which events travel through the DOM tree, allowing multiple event handlers to be triggered. It consists of three phases: capturing, target, and bubbling.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### Can you explain the Shadow DOM?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, the Shadow DOM is a Web Components feature allowing encapsulation of DOM trees and styles within a custom element, keeping them separate from the main DOM, avoiding conflicts, and promoting reusability.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### What is the Light DOM?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The Light DOM refers to the normal HTML content inside an element. It's visible to the end user and can be manipulated by both the developer and user-facing scripts like JavaScript.
+  </div><br />
   </div>
 </details>
 

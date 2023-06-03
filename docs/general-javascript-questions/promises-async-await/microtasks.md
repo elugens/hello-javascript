@@ -42,6 +42,66 @@ import StructuredData from './schemadata/MicroTasksSchemaData.js';
 
 ---
 
+### What is the Microtask Queue in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The Microtask Queue is a task queue in the JavaScript event loop that processes microtasks, which are small, short-lived tasks created by asynchronous operations like Promises, MutationObserver, or queueMicrotask.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### How does the Microtask Queue differ from the Task Queue?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Microtask Queue has higher priority than Task Queue. Microtasks are executed immediately after the current synchronous code finishes, before any other tasks, like rendering or I/O callbacks, are processed.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the role of Promises in the Microtask Queue?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Promises use the Microtask Queue to schedule the execution of their "then" and "catch" callbacks, ensuring these callbacks are executed after the current synchronous code finishes and before any other tasks.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you explain how the Microtask Queue is processed?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> After the current synchronous code finishes, the Microtask Queue is processed. All micro tasks are executed one by one until the queue is empty. Then, the event loop proceeds to the Task Queue.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the purpose of the queueMicrotask() function?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The queueMicrotask() function allows developers to directly enqueue a microtask in the Microtask Queue. This enables scheduling the execution of a callback after the current synchronous code and before other tasks.<br />
+  </div>
+  </div>
+</details>
+
+---
+
 ### Can you explain how the Job Queue (Microtasks Queue) works?
 
 <details>

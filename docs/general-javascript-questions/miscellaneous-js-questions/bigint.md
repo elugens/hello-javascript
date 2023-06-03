@@ -42,12 +42,12 @@ import StructuredData from './schemadata/BigIntSchemaData.js';
 
 ---
 
-### Can you briefly explain what a BigInt is in JavaScript?
+### What is BigInt in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> BigInt is a unique numeric type that allows integers of any length. A BigInt gets formed by attaching n to the end of an integer literal or by using the BigInt function, which generates BigInts from strings and numbers.</div><br />
+  <div><strong>Interview Response:</strong> BigInt is a built-in object in JavaScript that allows the representation of integers with arbitrary precision, beyond the limit of the Number type, for computations that require high precision.</div><br />
   <div><strong>Technical Response:</strong> BigInt is a unique numeric type that allows integers of any length. A BigInt gets formed by attaching n to the end of an integer literal or by using the BigInt function, which generates BigInts from strings, numbers. BigInt gets used chiefly as a regular integer. All operations on BigInts return BigInts. BigInts and regular numbers cannot be blended. If necessary, we should explicitly convert them using BigInt() or Number(). The conversion procedures are always quiet and never produce errors, but if the BigInt is too huge, it won’t fit the number type, and excess bits get chopped off; thus, we should exercise caution while doing such conversions.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -83,12 +83,48 @@ alert(Number(bigint) + number); // 3
 
 ---
 
+### How do you declare a BigInt in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> You can declare a BigInt by appending 'n' to the end of an integer or by using the BigInt constructor with a number or string as argument.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### Why was BigInt introduced in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> BigInt was introduced to handle large numbers which are beyond the safe integer limit for Numbers in JavaScript. This is useful in cryptography, finance, and other number-heavy computations.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you perform mathematical operations with BigInts and Numbers together?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> No, you cannot directly perform operations between BigInts and Numbers. You must convert them to the same type before performing operations.<br />
+  </div>
+  </div>
+</details>
+
+---
+
 ### How does the division operator interact with BigInts?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> When we use BigInts with the division operator, it rounds the BigInt towards zero. All operations on BigInts return BigInts.
+  <div><strong>Interview Response:</strong> In JavaScript, the division operator with BigInts truncates any fractional part, always resulting in a BigInt, unlike division with Numbers which can yield fractional results.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -108,12 +144,36 @@ alert(5n / 2n); // 2, rounds towards zero
 
 ---
 
+### How does BigInt handle decimal numbers?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> BigInt only represents whole numbers. Decimals are not supported and will cause a SyntaxError.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### Can BigInt be used as a key in a Map or Set?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, BigInt can be used as a key in a Map or Set in JavaScript.<br />
+  </div>
+  </div>
+</details>
+
+---
+
 ### What happens when you mix regular numbers with BigInts?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We should never mix BigInts and regular numbers in mathematical operations because they result in errors. If needed, we should explicitly convert them using BigInt() or Number().
+  <div><strong>Interview Response:</strong> We should never mix BigInts and regular numbers in mathematical operations because they result in errors without conversion. If needed, we should explicitly convert them using BigInt() or Number(). They must be the same type for such operations.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -144,17 +204,24 @@ alert(Number(bigint) + number); // 3
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, we should use Number() to convert a BigInt to a number.
+  <div><strong>Interview Response:</strong> Yes, you can use the unary '-' operator to negate BigInts in JavaScript. However, the unary '+' operator cannot be used with BigInts; it will cause a TypeError.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
 
-```js
-let bigint = 1n;
+```javascript
+let bigIntVal = BigInt(10);
+console.log(-bigIntVal); // Outputs: -10n
+```
 
-console.log(Number(bigint)); // returns 1
-console.log(+bigint); // TypeError
+In this example, the unary '-' operator is used to negate a BigInt.
+
+However, using the '+' operator will result in a TypeError:
+
+```javascript
+let bigIntVal = BigInt(10);
+console.log(+bigIntVal); // TypeError: Cannot convert a BigInt value to a number
 ```
 
   </div>
@@ -168,7 +235,7 @@ console.log(+bigint); // TypeError
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Comparisons, such as (&#8249; &#8250;) work with BigInts and numbers without issue, but as numbers and BigInts belong to different types, they can be equal ==, but not strictly equal === each other.
+  <div><strong>Interview Response:</strong> When comparing BigInt values, you should always remember to use the appropriate comparison operators (===, !==, &#60;, &#60;=, &#62;, &#62;=), and not the identity operator (== or !=), which may perform a type coercion and produce unexpected results.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -181,6 +248,54 @@ alert(1 === 1n); // false
 ```
 
   </div>
+  </div>
+</details>
+
+---
+
+### Can you compare BigInt and Number using comparison operators?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, BigInt and Number can be compared directly using comparison operators, such as '&#62;', '&#60;', '&#62;=', and '&#60;='.<br />
+  </div><br />
+  </div>
+</details>
+
+---
+
+### How does JavaScript handle equality checks between BigInt and Number?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> JavaScript treats BigInt and Number as different types. Therefore, even if their values are the same, '===' equality check will return false.<br />
+  </div><br />
+  </div>
+</details>
+
+---
+
+### Can you use BigInt with JSON.stringify?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> No, JSON.stringify does not support BigInt values. It will throw an error unless a custom toJSON method is provided.<br />
+  </div><br />
+  </div>
+</details>
+
+---
+
+### Is BigInt fully supported across all browsers?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> No, BigInt is not fully supported in all browsers, notably in Internet Explorer. Always check compatibility before using new features.<br />
+  </div><br />
   </div>
 </details>
 

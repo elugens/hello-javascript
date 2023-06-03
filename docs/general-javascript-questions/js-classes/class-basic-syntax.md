@@ -41,12 +41,14 @@ import StructuredData from './schemadata/ClassBasicSchemaData.js';
 
 <CloseAllAnswers />
 
-### What is a JavaScript Class in Object-Oriented Programming (OOP)?
+### What is a class in JavaScript and why is it important?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Classes are a template for creating objects. They encapsulate data with code to work on that data. Classes in JS are built on prototypes and have the same syntax and semantics that do not get shared with ES5 class-like semantics. Classes are, in fact, "special functions", and just as you can define function expressions and function declarations, the class syntax has two components: class expressions and class declarations.
+  <div><strong>Interview Response:</strong> A class in JavaScript is a blueprint for creating objects with shared properties and methods. It provides a convenient way to encapsulate related code, enabling inheritance, promoting code reuse, and improving readability.
+</div><br />
+  <div><strong>Technical Response:</strong> Classes are a template for creating objects. They encapsulate data with code to work on that data. Classes in JS are built on prototypes and have the same syntax and semantics that do not get shared with ES5 class-like semantics. Classes are, in fact, "special functions", and just as you can define function expressions and function declarations, the class syntax has two components: class expressions and class declarations.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -69,7 +71,139 @@ class MyClass {
 
 ---
 
-### What is the difference between function declarations and class declarations?
+### Can you briefly explain the ES6 class syntax in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> ES6 class syntax is a cleaner, more concise way to create classes in JavaScript, using the 'class' keyword, constructors, and methods. It simplifies inheritance and improves code readability.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### How do you create a class in JavaScript using the ES6 class syntax?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> To create a class in JavaScript using ES6 syntax, use the 'class' keyword, followed by the class name, and then define a constructor and methods inside the class body using curly braces.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What is a constructor method in a JavaScript class and what is its purpose?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A constructor method in a JavaScript class is a special function that initializes new objects. It sets default properties and behaviors for instances created from the class.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### How do you define a method inside a JavaScript class?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> To define a method inside a JavaScript class, write the method name followed by parentheses and curly braces, containing the method's logic, within the class body. There is no need for the 'function' keyword in classes.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the 'super' keyword in JavaScript and when do you use it?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The 'super' keyword in JavaScript refers to the parent class, used within a subclass constructor to call the parent constructor, ensuring proper inheritance of properties and methods.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### How do you create a static method in a JavaScript class, and what are its use cases?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> To create a static method in a JavaScript class, you use the 'static' keyword before the method definition. Static methods are called on the class itself, not instances, often used for utility functions or factory methods.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### How do you create a getter and setter method within a JavaScript class?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In a JavaScript class, you create getter and setter methods using 'get' and 'set' keywords before method names. Getters retrieve property values, while setters update property values while enforcing validation or triggering side effects.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you explain how the 'this' keyword works in the context of JavaScript classes?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The 'this' keyword in JavaScript classes refers to the instance of the class that called the method. It can be used to access and modify instance properties and methods within the class.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the difference between a class expression and a class declaration in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A class declaration in JavaScript defines a named class using the class keyword, while a class expression creates an unnamed or named class without requiring the class keyword. Class expressions are typically used in variable assignments, as arguments, or inside other expressions.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you describe the concept of polymorphism in JavaScript classes and provide a high-level example?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Polymorphism in JavaScript allows objects of different classes to be treated as objects of a common superclass, enabling shared behavior. Example: classes Dog and Cat inherit from Animal, both implementing a speak() method.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### How can you make a class method or property private in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In JavaScript, you can make a class method or property private by using the hash (#) symbol before its name. Private methods and properties are only accessible within the class they're defined in.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the difference between a function declaration and a class declaration?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

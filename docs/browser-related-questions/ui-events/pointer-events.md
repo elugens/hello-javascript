@@ -41,13 +41,201 @@ import StructuredData from './schemadata/PointerEventSchemaData.js';
 
 ---
 
-### What are pointer events?
+### What are Pointer Events in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Pointer events are a modern way to handle input from various pointing devices, such as a mouse, a pen/stylus, and a touchscreen. For every mouse&#8249;event&#8250;, a pointer&#8249;event&#8250; plays a similar role.
+  <div><strong>Interview Response:</strong> Pointer Events are a unified API in JavaScript for handling input from various devices like a mouse, touch, or pen, allowing developers to build more flexible and accessible interfaces across different platforms. For every mouse&#8249;event&#8250;, a pointer&#8249;event&#8250; plays a similar role.
     </div>
+  </div>
+</details>
+
+---
+
+### What are the main properties of a Pointer Event object?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Key properties of a Pointer Event object include: pointerId, width, height, pressure, tiltX, tiltY, pointerType, isPrimary, clientX, clientY, screenX, screenY, button, buttons, and relatedTarget.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### What is the difference between 'pointerdown' and 'pointerup' events?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The pointerdown event is triggered when a pointer device is pressed down, while the pointerup event is triggered when it is released.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### How can you prevent the default behavior of a pointer event?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> To prevent the default behavior of a pointer event in JavaScript, you use the preventDefault() method on the event object like this: event.preventDefault().
+  </div><br />
+  </div>
+</details>
+
+---
+
+### What is the difference between pointermove and pointerover events?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The pointermove event is triggered when the pointer device is moved, while the pointerover event is triggered when the pointer enters the hit-testing boundaries of an element.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### How can you determine the type of pointer device used?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In JavaScript, you can determine the type of pointer device used by accessing the pointerType property of the pointer event object. For example, event.pointerType will return 'mouse', 'pen', 'touch', or 'unknown'.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### How can you check if the pointer device supports pressure?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In JavaScript, you can check if a pointer device supports pressure by examining the 'pressure' property of the pointer event object. If event.pressure returns a value other than 0, the device supports pressure.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### How can you handle multiple pointer events simultaneously?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In JavaScript, you handle multiple pointer events simultaneously by tracking the unique 'pointerId' property for each event. This allows you to distinguish and handle inputs from multiple pointers at once.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here is an example of handling multiple pointer events simultaneously:
+
+```javascript
+let activePointers = {};
+
+document.addEventListener('pointerdown', (event) => {
+  activePointers[event.pointerId] = { x: event.clientX, y: event.clientY };
+});
+
+document.addEventListener('pointermove', (event) => {
+  if (activePointers[event.pointerId]) {
+    activePointers[event.pointerId].x = event.clientX;
+    activePointers[event.pointerId].y = event.clientY;
+  }
+});
+
+document.addEventListener('pointerup', (event) => {
+  delete activePointers[event.pointerId];
+});
+
+document.addEventListener('pointercancel', (event) => {
+  delete activePointers[event.pointerId];
+});
+```
+
+This code will track the position of each active pointer using the pointer's ID. When a pointer is no longer active (on `pointerup` or `pointercancel`), it is removed from the activePointers object.
+
+  </div>
+  </div>
+</details>
+
+---
+
+### How can you detect if the primary button was pressed during a pointer event?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In JavaScript, during a pointer event, you can detect if the primary button was pressed by checking if the 'button' property of the pointer event object equals 0. For example, event.button === 0.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here is an example of how to detect if the primary button was pressed during a pointer event:
+
+```javascript
+document.addEventListener('pointerdown', (event) => {
+  if (event.button === 0) {
+    console.log("Primary button pressed");
+  } else {
+    console.log("Non-primary button pressed");
+  }
+});
+```
+
+In this example, when a `pointerdown` event occurs, the code checks if the `button` property of the event is 0 (which represents the primary button, usually the left mouse button or the only button on a one-button device). If it is, it logs "Primary button pressed", otherwise it logs "Non-primary button pressed".
+
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the purpose of the pointerleave event?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The `pointerleave` event in JavaScript is triggered when a pointer device moves out of an element or its children. It's used to detect when the pointer has left the boundaries of an element.
+  </div><br/>
+  </div>
+</details>
+
+---
+
+### How can you detect if a pointer event occurred within a specific element?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In JavaScript, you can detect if a pointer event occurred within a specific element by adding an event listener to that element. The listener function will be called only when the event occurs inside that element.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here is a JavaScript example of how to detect if a pointer event occurred within a specific element:
+
+```javascript
+let element = document.getElementById('myElement');
+
+element.addEventListener('pointerdown', (event) => {
+  console.log("Pointer event occurred within myElement!");
+});
+```
+
+In this code, a `pointerdown` event listener is added to an element with the id 'myElement'. The listener function logs a message to the console when the event occurs within 'myElement'.
+
+  </div>
   </div>
 </details>
 
@@ -58,19 +246,31 @@ import StructuredData from './schemadata/PointerEventSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, we can replace mouse&#8249;event&#8250; events in our code with pointer&#8249;event&#8250; events and expect everything to operate perfectly with the mouse. Touch device support will also "magically" increase. However, in some places in CSS, we may need to include 'touch-action:none'.
+  <div><strong>Interview Response:</strong>  Yes, modern applications can replace "mouse&#8249;event&#8250;" with "pointer&#8249;event&#8250;" to handle various input devices, including touchscreens, styluses, and mice, using the Pointer Events API for improved compatibility and flexibility. Touch device support will also "magically" increase. However, in some places in CSS, we may need to include 'touch-action:none'.
     </div>
   </div>
 </details>
 
 ---
 
-### What are the three types of pointer-device types?
+### How many types of pointer-device are there in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The three types of pointer-device types include the string mouse, pen, and touch. They must be of a string type.
+  <div><strong>Interview Response:</strong> In JavaScript, there are five types of pointer devices: "mouse" for traditional mice, "pen" for styluses, "touch" for touchscreens, "kinect" for Microsoft Kinect sensors, and "unknown" for unrecognized or unsupported devices.
+    </div>
+  </div>
+</details>
+
+---
+
+### What are the three main types of pointer-devices in web development?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The three main types of pointer devices commonly encountered in JavaScript are "mouse" for traditional mice, "pen" for styluses or digital pens, and "touch" for touchscreens or touch-enabled devices.
     </div>
   </div>
 </details>
@@ -82,7 +282,9 @@ import StructuredData from './schemadata/PointerEventSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> This is considered a multi-touch event with several steps involved. Here is what happens when a user touches a touchscreen in one place, then puts another finger somewhere else on it. At the first finger touch: pointerdown with isPrimary=true and some pointerId. For the second finger and more fingers (assuming the first one is still touching): pointerdown with isPrimary=false and a different pointerId for every finger.
+  <div><strong>Interview Response:</strong> When a user touches a touchscreen in one place and subsequently puts another finger somewhere else, it is recognized as a <strong>multi-touch gesture</strong>, allowing for simultaneous tracking and interpretation of multiple touch points.
+    </div><br />
+  <div><strong>Technical Response:</strong> This is considered a multi-touch event with several steps involved. Here is what happens when a user touches a touchscreen in one place, then puts another finger somewhere else on it. At the first finger touch: pointerdown with isPrimary=true and some pointerId. For the second finger and more fingers (assuming the first one is still touching): pointerdown with isPrimary=false and a different pointerId for every finger.
     </div><br />
 
 :::note
@@ -94,24 +296,28 @@ The pointerId gets allocated to each contacting finger rather than the whole dev
 
 ---
 
-### Can you explain why the pointercancel event fires?
+### Can you explain why the 'pointercancel' event fires?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The pointercancel event fires when there is an ongoing pointer interaction, then something happens that causes it to abort so that no more pointer-events generate. There are several reasons this behavior may manifest itself, including the pointer device hardware was physically disabled, and the device orientation changed (tablet rotated). The browser decided to handle the interaction independently, considering it a mouse gesture, zoom-and-pan action,  or anything related to user interaction.
+  <div><strong>Interview Response:</strong> The pointercancel event fires in JavaScript when the system cancels pointer events due to scenarios like a hardware failure, interruption, or the operating system's gesture recognition taking precedence over the application's handling of pointer events.
+    </div><br/>
+  <div><strong>Technical Response:</strong> The pointercancel event fires when there is an ongoing pointer interaction and something happens that causes it to abort so that no more pointer-events generate. There are several reasons this behavior may manifest itself, including the pointer device hardware was physically disabled, and the device orientation changed (tablet rotated). The browser decided to handle the interaction independently, considering it a mouse gesture, zoom-and-pan action,  or anything related to user interaction.
     </div>
   </div>
 </details>
 
 ---
 
-### Explain the function and syntax of the setPointerCapture() method?
+### Can you explain the function of the 'setPointerCapture()' method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Developers can use the setPointerCapture() method of the Element interface to designate a specific element as the capture target of future pointer events. Subsequent events for the pointer get targeted at the capture element until capture releases via Element.releasePointerCapture(). Pointer capture allows events for a particular pointer event (PointerEvent) to be re-targeted to a particular element instead of the normal (or hit test) target at a pointer's location. We may use this approach to ensure that an element continues to receive pointer events even if the pointer device's contact moves away from the element (such as by scrolling or panning).
+  <div><strong>Interview Response:</strong> The setPointerCapture() method in JavaScript is used to assign pointer capture to a specific element, allowing that element to receive pointer events even if the pointer moves outside its boundaries.
+    </div><br />
+  <div><strong>Technical Response:</strong> Developers can use the setPointerCapture() method of the Element interface to designate a specific element as the capture target of future pointer events. Subsequent events for the pointer get targeted at the capture element until capture releases via Element.releasePointerCapture(). Pointer capture allows events for a particular pointer event (PointerEvent) to be re-targeted to a particular element instead of the normal (or hit test) target at a pointer's location. We may use this approach to ensure that an element continues to receive pointer events even if the pointer device's contact moves away from the element (such as by scrolling or panning).
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

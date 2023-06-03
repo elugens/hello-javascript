@@ -34,7 +34,9 @@ import StructuredData from './schemadata/AdvanceArrowSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> An arrow function is a compact alternative to a traditional function expression but is limited, and we cannot use it in all situations. Arrow Functions lack bindings to "this" or "super", and you should not utilize them as methods. They also have no access to the arguments or the new.target keywords. You should note that arrow functions are not agreeable with the call, apply, and bind methods that generally rely on establishing scope. They cannot be used as constructors and cannot use yield within their bodies.
+  <div><strong>Interview Response:</strong> An arrow function is a compact alternative to a traditional function expression but is limited, and we cannot use it in all situations.
+</div><br />
+  <div><strong>Technical Response:</strong> An arrow function is a compact alternative to a traditional function expression but is limited, and we cannot use it in all situations. Arrow Functions lack bindings to "this" or "super", and you should not utilize them as methods. They also have no access to the arguments or the new.target keywords. You should note that arrow functions are not agreeable with the call, apply, and bind methods that generally rely on establishing scope. They cannot be used as constructors and cannot use yield within their bodies.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -75,8 +77,8 @@ console.log(arrowFunc(200)); // logs 300
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Arrow functions have no "this," which means that whenever we use "this" in an arrow function, it starts looking up the scope to find the value of "this". During lookup, it finds that the object does not have a "this" of its own as it goes up the global scope and bound the value of this with the global scope, where it does not find anything and returns undefined.</div><br />
-  <div><strong>Technical Response:</strong> Unlike regular functions, Arrow functions do not have a this of their own; only regular functions and global scope have this of their own. Whenever "this" gets referenced in an arrow function, it begins by going up the scope to locate " this " value. Suppose the object does not have a "this" during the lookup. It goes up the global scope and binds the value of "this" to the global scope where nothing gets found.
+  <div><strong>Interview Response:</strong> Arrow functions don't have their own "this" value. Instead, they inherit "this" from their surrounding scope. This makes handling context easier, as it avoids unexpected behavior related to "this".</div><br />
+  <div><strong>Technical Response:</strong> Arrow functions have no "this," which means that whenever we use "this" in an arrow function, it starts looking up the scope to find the value of "this". During lookup, it finds that the object does not have a "this" of its own as it goes up the global scope and bound the value of this with the global scope, where it does not find anything and returns undefined.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -114,12 +116,12 @@ let b = 'global!!!'; // global this
 
 ---
 
-### Explain why you cannot use the new.target keyword with Arrow Functions?
+### Why can’t you use the `new.target` keyword with Arrow Functions?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The reason you cannot use the new.target keyword with Arrow Functions is that it has no constructor, [[Construct]] internal method.
+  <div><strong>Interview Response:</strong> The reason you cannot use the new.target keyword with Arrow Functions is that it has no constructor, [[Construct]] internal method. Arrow functions don't support the new.target keyword because they're not meant for constructing objects. They're designed for simplicity and inheriting "this", making them unsuitable as constructor functions.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -143,13 +145,15 @@ This is relatively simple, as seen by the engine's reaction to any call of "new"
 
 ---
 
-### What is the distinction between the Arrow and Regular functions for binding this?
+### What distinguishes arrow function from regular functions? In terms of how they bind the "this" value?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> There is a subtle difference between an arrow function and a regular function called with bind(this). The bind(this) syntax creates a "bound version" of a regular function, and the arrow does not create any binding. So, the arrow function does not have "this". The lookup of "this" is made the same way as a regular variable search in the outer lexical environment.
-</div>
+  <div><strong>Interview Response:</strong> Arrow functions inherit "this" from their surrounding scope, while regular functions create their own "this" context. This difference makes arrow functions more predictable when handling "this" values.
+</div><br/>
+  <div><strong>Technical Response:</strong> There is a subtle difference between an arrow function and a regular function called with bind(this). The bind(this) syntax creates a "bound version" of a regular function, and the arrow does not create any binding. So, the arrow function does not have "this". The lookup of "this" is made the same way as a regular variable search in the outer lexical environment.
+</div><br/>
   </div>
 </details>
 
@@ -160,7 +164,9 @@ This is relatively simple, as seen by the engine's reaction to any call of "new"
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, arrow functions can be used in decorators to reduce code size. You can pass the arguments variable in a wrapper because arrow functions do not bind to the arguments object. This behavior gives you the ability to reduce code and write simple abstractions in JavaScript.
+  <div><strong>Interview Response:</strong> Arrow functions not having an arguments variable simplifies code, avoids confusion with multiple arguments objects, and encourages using rest parameters for handling multiple arguments.
+</div><br />
+  <div><strong>Technical Response:</strong> Yes, arrow functions can be used in decorators to reduce code size. You can pass the arguments variable in a wrapper because arrow functions do not bind to the arguments object. This behavior gives you the ability to reduce code and write simple abstractions in JavaScript.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -187,12 +193,36 @@ sayHiDeferred('John'); // Hello, John after 2 seconds
 
 ---
 
+### What is a good use case for Arrow Functions?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A good use case for arrow functions is in callback functions or event handlers, where concise syntax and automatic "this" binding are advantageous.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### Can arrow functions be used in decorators?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Arrow functions can be used in decorators to write simple abstractions, but they might not be suitable in all cases due to their lexical "this" binding, which can cause unexpected behavior.<br />
+  </div>
+  </div>
+</details>
+
+---
+
 ### What is the definition of a Higher-Order function?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Functions that operate on other functions are called higher-order functions, either by taking them as arguments or returning them.
+  <div><strong>Interview Response:</strong> A higher-order function is a function that either takes other functions as input (arguments) or returns a function as output. It enables more modular, reusable, and concise code.A higher-order function is a function that either takes other functions as input (arguments) or returns a function as output. It enables more modular, reusable, and concise code.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -235,6 +265,12 @@ repeat(3, (n) => {
 // → 0 is even
 // → 2 is even
 ```
+
+:::note
+
+Functions that operate on other functions are called higher-order functions, either by taking them as arguments or returning them.
+
+:::
 
   </div>
   </div>

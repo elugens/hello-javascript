@@ -43,7 +43,43 @@ import StructuredData from './schemadata/CallbacksSchemaData.js';
 
 ---
 
-### Can you Explain the function and syntax of the async function in JavaScript?
+### What is a callback function in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A callback function is a function passed as an argument to another function, which is invoked within the latter function, usually for asynchronous tasks or to customize behavior.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### How do callbacks work in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Callbacks in JavaScript are functions passed as arguments to other functions. They're invoked within the parent function, typically to handle asynchronous tasks or customized behavior, enabling a non-blocking code execution flow.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### Why are callbacks important in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Callbacks enable asynchronous operations, allowing code execution to continue while waiting for tasks like HTTP requests or timer events, ensuring a non-blocking and efficient code execution flow.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you explain the function of the async function in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -194,6 +230,102 @@ function step3(error, script) {
 }
 ```
 
+  </div>
+  </div>
+</details>
+
+---
+
+### What are some common use cases for callbacks?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Common use cases for callbacks include handling asynchronous operations (like reading files or making HTTP requests), handling events (like click or keypress events), and for higher-order functions (like Array's map, filter, reduce).<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### How do you identify a callback function in a function signature?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A callback function is usually the last argument in the function signature, and its type is a function, often denoted as Function or function.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What is callback hell, and how can it be avoided?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Callback hell refers to deeply nested, difficult-to-read callback functions. It can be avoided by modularizing code, using Promises, or async/await syntax for better code readability and maintainability.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### How do JavaScript's event-driven nature and callbacks relate?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> JavaScript's event-driven nature relies on callbacks to handle events, allowing code execution to continue without waiting for events to complete, improving efficiency and enabling asynchronous behavior.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you pass multiple callbacks to a single function?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, you can pass multiple callback functions as arguments, which can be invoked in different scenarios or at various stages within the parent function, providing flexibility and customization.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What are higher-order functions, and how do they relate to callbacks?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Higher-order functions are functions that either take other functions as arguments or return functions. Callbacks are an example of higher-order functions, as they are passed as arguments to other functions.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the difference between synchronous and asynchronous callbacks?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Synchronous callbacks execute immediately within the calling function, blocking further code execution, while asynchronous callbacks allow other code to execute before the callback is invoked, enabling non-blocking operations.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### How do error-first callbacks work?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Error-first callbacks expect the first argument to be an error object, which is null or undefined if no error occurred. This convention ensures consistent error handling across asynchronous operations.<br />
   </div>
   </div>
 </details>

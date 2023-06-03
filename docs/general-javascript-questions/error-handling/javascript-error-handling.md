@@ -39,6 +39,44 @@ import StructuredData from './schemadata/JSErrorSchemaData.js';
 
 <CloseAllAnswers />
 
+---
+
+### What is error handling in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The five primitive wrapper objects in JavaScript are: String, Number, Boolean, Symbol, and BigInt.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What is an exception in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> An exception is an unexpected event or error that occurs during code execution, which can disrupt the normal flow of the program.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the purpose of a try-catch block?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A try-catch block is used to handle exceptions by enclosing error-prone code in a try block and catching errors in the catch block.<br />
+  </div>
+  </div>
+</details>
+
+---
+
 ### Can you briefly explain the behavior of the “try..catch” error handling process?
 
 <details>
@@ -202,12 +240,12 @@ try {
 
 ---
 
-### What does the throw operator do in JavaScript?
+### What is the purpose of the throw statement in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The throw operator/statement throws a user-defined exception in simple terms. The current function terminates, and control hands off to the first catch block on the call stack.
+  <div><strong>Interview Response:</strong> The throw statement is used to manually generate an error or exception in a program. It allows developers to create custom error messages and trigger the catch block of a try-catch statement, allowing for more specific and fine-grained error handling.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -300,12 +338,14 @@ try {
 
 ---
 
-### How does the try..catch..finally function in JavaScript error handling?
+### How does the finally block work in error handling?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, the try..catch..finally statement works in an ordered fashion. The first try block is where code execution happens. The catch statement executes if an exception gets thrown in the try block. The finally statement block contains all of the code executed after the try and catch statements resolve. If the try block executes without errors, the finally block gets executed. If the try statement results in an error, it passes the error to the catch block, and then and only then does the finally statement run.
+  <div><strong>Interview Response:</strong> The finally block in error handling executes regardless of whether an exception occurs or not. It's often used for cleanup tasks, like closing files or database connections.
+</div><br />
+  <div><strong>Technical Response:</strong> In JavaScript, the try..catch..finally statement works in an ordered fashion. The first try block is where code execution happens. The catch statement executes if an exception gets thrown in the try block. The finally statement block contains all of the code executed after the try and catch statements resolve. If the try block executes without errors, the finally block gets executed. If the try statement results in an error, it passes the error to the catch block, and then and only then does the finally statement run.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -385,6 +425,313 @@ function readData() {
 
 readData();
 ```
+
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the difference between throw and throw new Error?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> `throw` raises any object as an exception. `throw new Error` creates a new Error object with a specific message. The latter provides stack trace for debugging, which the former may not, depending on the thrown object.<br />
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+try {
+    let condition = false;
+
+    if (!condition) {
+        // throw any object
+        // throw "An error occurred"; 
+
+        // throw new Error
+        throw new Error("An error occurred");
+    }
+} catch (error) {
+    console.log(error); // Prints: Error: An error occurred
+} finally {
+    console.log("Finally block executed");
+}
+
+```
+
+In this code, if `condition` is `false`, an exception is thrown. In the `catch` block, this exception is caught and its message is logged. Regardless of whether an exception occurs, the `finally` block always executes.
+
+  </div>
+  </div>
+</details>
+
+---
+
+### What is an uncaught exception?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> An uncaught exception is an error that has not been caught by any try-catch block and can lead to program termination.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+try {
+    throw new Error("An error occurred");
+    // No catch block here
+} finally {
+    console.log("Finally block executed");
+}
+// Output: Uncaught Error: An error occurred
+```
+
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the difference between error propagation and error handling?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Error propagation allows errors to bubble up through the function call stack until caught. Error handling involves using strategies (like try/catch/finally blocks) to intercept, log, or respond to errors when they occur.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+function functionA() {
+    throw new Error("An error occurred in functionA");
+}
+
+function functionB() {
+    functionA();
+}
+
+try {
+    // Error propagation: The error in functionA propagates to functionB, then up to here
+    functionB();
+} catch (error) {
+    // Error handling: The error is caught and handled here
+    console.log(error.message); // Prints: An error occurred in functionA
+}
+```
+
+In this example, an error is thrown in `functionA`. This error is not caught within `functionA`, so it propagates up the call stack to `functionB`. From `functionB`, the error propagates up to the `try` block. This is where the error is caught and handled.
+
+  </div>
+  </div>
+</details>
+
+---
+
+### How can you handle asynchronous errors in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Asynchronous errors can be handled using callbacks with error-first arguments, Promises with .catch(), or async/await with try-catch blocks.<br />
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+async function asyncFunc() {
+    try {
+        await someAsyncOperation();
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+```
+
+  </div>
+  </div>
+</details>
+
+---
+
+### Why is it important to properly handle errors in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Proper error handling helps maintain application stability, improves user experience, simplifies debugging, and enhances security.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What are the main error-handling mechanisms in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> JavaScript primarily handles errors using `try/catch/finally` for synchronous code, callbacks with error parameters for asynchronous operations in Node.js style, and Promises combined with `async/await` for modern asynchronous operations.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+1. `try/catch/finally`:
+
+```javascript
+try {
+    // code that may throw an error
+    throw new Error("An error occurred");
+} catch (error) {
+    console.log(error.message);
+} finally {
+    console.log("This always runs");
+}
+```
+
+2. Callbacks with error parameters:
+
+```javascript
+fs.readFile('/nonexistentfile.txt', function(err, data) {
+  if (err) {
+    console.log("Error reading file:", err);
+  } else {
+    console.log(data);
+  }
+});
+```
+
+3. Promises and `async/await`:
+
+```javascript
+async function asyncFunc() {
+    try {
+        let data = await fetch('https://nonexistenturl.com');
+        console.log(data);
+    } catch (error) {
+        console.log("Error fetching data:", error);
+    }
+}
+asyncFunc();
+```
+
+In these examples, `fs` represents the Node.js file system module and `fetch` is a browser-based API used for making HTTP requests. Please replace `/nonexistentfile.txt` and `'https://nonexistenturl.com'` with valid file path and URL respectively.
+
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you explain the difference between synchronous and asynchronous error handling in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Synchronous error handling occurs when code is executed in a linear, sequential manner, and errors are handled immediately when they occur. Asynchronous error handling, on the other hand, involves handling errors that may occur during the execution of asynchronous operations, such as AJAX calls or promises. Asynchronous error handling often requires different techniques, such as using error callbacks or the catch method in promises.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What are the main types of errors in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The main types of errors in JavaScript are Syntax Errors, Runtime Errors, and Logical Errors. Syntax Errors occur when there is a mistake in the syntax of the code, preventing it from being parsed.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you explain the concept of unhandled exceptions in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> An unhandled exception in JavaScript is an error or exception that isn't captured by any `catch` block in the current execution context, typically causing the program to crash.<br />
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+function throwsError() {
+    throw new Error("An error occurred");
+}
+
+try {
+    // This function invocation is not within a try block
+    throwsError();
+} catch (error) {
+    // This catch block does not catch the error thrown by throwsError()
+}
+
+// Output: Uncaught Error: An error occurred
+```
+
+In this example, the function `throwsError()` throws an error. Because the invocation of `throwsError()` is not wrapped in a `try` block, the thrown error is an unhandled exception.
+
+  </div>
+  </div>
+</details>
+
+---
+
+### How can developers manage unhandled exceptions in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Developers can manage unhandled exceptions in JavaScript using `try/catch` blocks, Promise rejection handlers, or global error event handlers like `window.onerror` or `process.on('uncaughtException')`.<br />
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+1. `try/catch` blocks:
+
+```javascript
+try {
+    throw new Error("An error occurred");
+} catch (error) {
+    console.log(error.message); // Handles the error
+}
+```
+
+2. Promise rejection handlers:
+
+```javascript
+Promise.reject("Promise Error").catch(error => {
+    console.log(error); // Handles the promise rejection
+});
+```
+
+3. Global error event handlers:
+
+```javascript
+// In a browser environment
+window.onerror = function(message, url, line, column, error) {
+    console.log(message);
+    return true; // Prevents default handling
+};
+
+// In a Node.js environment
+process.on('uncaughtException', function(error) {
+    console.log(error.message);
+});
+```
+
+Please note that using `process.on('uncaughtException')` in Node.js should be done carefully as it can keep the process running even when it's in an unknown state. It's usually better to log the error, then gracefully shut down and restart the process.
 
   </div>
   </div>

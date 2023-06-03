@@ -44,11 +44,13 @@ import StructuredData from './schemadata/WalkingSchemaData.js';
 
 ---
 
-### What does it mean in JavaScript to walk the DOM?
+### What does "Walking the DOM" mean in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
+  <div><strong>Interview Response:</strong> The term "Walking the DOM" means to navigate the DOM tree by moving through parent, child, and sibling elements in order to read or make changes to the content.
+</div><br />
   <div><strong>Interview Response:</strong> We can do anything with elements and their contents thanks to the DOM, but first, we must locate the proper DOM object. This step-by-step procedure is known as walking the DOM. All DOM actions begin with the document object. This point is the primary "entry point" into DOM, and we can reach any node from it.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -65,12 +67,143 @@ alert(document.documentElement); // alerts [object HTMLHtmlElement] <html> node
 
 ---
 
-### What are the topmost tree nodes available direct as document properties?
+### What properties does a node have for "Walking the DOM"?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The topmost tree nodes are available directly as document properties, including the HTML, body, and head nodes document nodes.</div><br />
+  <div><strong>Interview Response:</strong> A node has several properties for DOM traversal including the parentNode, firstChild, lastChild, nextSibling, previousSibling, childNodes, and children. These allow navigation between parent, child, and sibling nodes in the DOM tree.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let node = document.body; // Start with the body element
+
+// Traverse through each child node
+for(let i = 0; i < node.childNodes.length; i++) {
+    console.log(node.childNodes[i]);
+}
+
+// Access first and last child
+console.log(node.firstChild);
+console.log(node.lastChild);
+
+// Access the next sibling
+console.log(node.nextSibling);
+
+// Access the previous sibling
+console.log(node.previousSibling);
+```
+
+This code will output each child node of the body, the first and last child of the body, and the next and previous sibling of the body (if they exist).
+
+  </div>
+  </div>
+</details>
+
+---
+
+### What is a Node in the context of the DOM?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A Node in the DOM is a single point in the node tree. Various types of nodes exist, including element nodes, text nodes, and comment nodes. Each node can have parent, child, and sibling nodes.
+  </div><br />
+  <div><strong className="codeExample">Here's a simple JavaScript code example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+// Access the body element which is a node in the DOM
+let node = document.body;
+
+// Log the node type - Element node should return 1
+console.log(node.nodeType);
+
+// Log the node name - should return "BODY"
+console.log(node.nodeName);
+
+// Access and log first child node - could be an element, text or comment
+console.log(node.firstChild);
+```
+
+This code will output the type and name of the body element node, as well as the first child node of the body.
+
+  </div>
+  </div>
+</details>
+
+---
+
+### What are the main types of nodes in the DOM?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The main types of nodes in the DOM are: document nodes, element nodes, text nodes, attribute nodes, comment nodes, and document type nodes. Each represents different parts of the document's structure.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### What does the parentNode property return?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The parentNode property returns the parent node of the specified node in the DOM tree. If the node has no parent, it returns null.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### What is the difference between childNodes and children properties?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The childNodes property returns all child nodes including text and comment nodes, while the children property returns only child elements, excluding non-element nodes like text and comments.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### How would you access the first and last child of a node?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> You can access the first and last child of a node using the firstChild and lastChild properties respectively. These refer to the first and last child nodes.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### How do you check if a node has child nodes?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> You can check if a node has child nodes using the hasChildNodes() method. It returns true if the node has one or more child nodes, and false otherwise.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### What are the topmost tree nodes available directly as document properties?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The topmost tree nodes available directly as document properties are: document.documentElement, document.head, document.body, and document.doctype. (HTML, body, and head nodes document nodes)</div><br />
   <div><strong>Technical Response:</strong> The topmost tree nodes, including the HTML, body, and head nodes, are accessible as document properties right away. document.documentElement The uppermost document node is called an element. That is the DOM node for the &#8249;HTML&#8250; element. Another often used DOM component is the &#8249;body&#8250; element — document.body. The &#8249;head&#8250; tag is also known as document.head. Any node that extends beyond this point is a part of the body node.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -92,7 +225,9 @@ alert(document.documentElement); // alerts [object HTMLHtmlElement] <html> node
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The null value in the DOM implies "doesn't exist" or "no such node". A script can't access an element that doesn't exist when it runs. If we include a script within &#8249;head&#8250;, document.body is inaccessible since the browser has not yet read it.
+  <div><strong>Interview Response:</strong> In the DOM, null represents the absence of a node in a specific location or context. It is commonly used to indicate a missing or invalid object reference.
+</div><br />
+  <div><strong>Technical Response:</strong> The null value in the DOM implies "doesn't exist" or "no such node". A script can't access an element that doesn't exist when it runs. If we include a script within &#8249;head&#8250;, document.body is inaccessible since the browser has not yet read it.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -125,7 +260,7 @@ alert(document.documentElement); // alerts [object HTMLHtmlElement] <html> node
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A child node in the DOM is a direct child of the provided parent. Descendants include all components nested within the provided one, such as children and their children.
+  <div><strong>Interview Response:</strong> Child nodes are direct offspring of the provided parent node. Descendants are all nodes nested beneath a parent node, including grandchildren, great-grandchildren, etc.
 </div>
   </div>
 </details>
@@ -137,7 +272,7 @@ alert(document.documentElement); // alerts [object HTMLHtmlElement] <html> node
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The firstChild and lastChild element properties give fast access to a parent element's first and last children.</div><br />
+  <div><strong>Interview Response:</strong> The firstChild and lastChild element properties give fast access to a parent element's first and last children. The firstChild property returns the first child node of an element, while the lastChild returns the last. These nodes could be any type: element, text, or comment.</div><br />
   <div><strong>Technical Response:</strong> The first and last child element characteristics provide quick access to a parent element's first and last children. The firstChild and lastChild attributes are considered shorthand. We utilize the childNodes property to communicate with nodes using brackets. There is also a specific function elem.hasChildNodes() that we can determine whether or not there are any child nodes.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -160,7 +295,7 @@ elem.childNodes[elem.childNodes.length - 1] === elem.lastChild; // true
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Child nodes make up a structure like an Array. In simple terms, it's a unique array-like iterable object that we can loop over.</div><br />
+  <div><strong>Interview Response:</strong> The childNodes property returns a live NodeList object, which is a collection of all child nodes of an element, represented as a list (array-like object) of Node objects. In simple terms, it's a unique array-like iterable object that we can loop over.</div><br />
   <div><strong>Technical Response:</strong> The childNodes looks like an array, but it is not an array but rather a collection (a particular array-like iterable object). This object allows us to iterate over the childNodes using a for…of loop, which is consequential. That is because it is iterable (provides the Symbol.iterator property, as required). Since it's an array-like object we do not get all the benefits of arrays like the filter and map methods. However, there is a solution that we can use by invoking Array.from() and turning the childNodes into an array.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -190,7 +325,9 @@ alert(Array.from(document.body.childNodes).filter); // function
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Theoretically, you may use a for...in loop to cycle across collections. However, it is not advised—the for..in loop loops over all enumerable attributes. And collections include several "additional" attributes that seldomly get used, and we usually do not want, such as entries, forEach, and keys.
+  <div><strong>Interview Response:</strong> Technically, it is possible to loop over node collections with a for...in loop, but it is not recommended, as it may include non-numeric properties and cause unexpected behavior. It is better to use a for...of or forEach loop.
+</div><br />
+  <div><strong>Technical Response:</strong> Theoretically, you may use a for...in loop to cycle across collections. However, it is not advised, the for..in loop loops over all enumerable attributes. And collections include several "additional" attributes that seldomly get used, and we usually do not want, such as entries, forEach, and keys.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -212,8 +349,7 @@ for (let prop in document.body.childNodes) alert(prop);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong>
-  Siblings are nodes that are the same parent's children. The head and body nodes, siblings, and both offspring of the HTML node are an example. The &#8249;body&#8250; is the "next" or "right" sibling of the &#8249;head&#8250;, while the &#8249;head&#8250; is the "previous" or "left" sibling of the &#8249;body&#8250;.
+  <div><strong>Interview Response:</strong> Siblings are nodes that are the same parent's children. The head and body nodes, siblings, and both offspring of the HTML node are an example. The &#8249;body&#8250; is the "next" or "right" sibling of the &#8249;head&#8250;, while the &#8249;head&#8250; is the "previous" or "left" sibling of the &#8249;body&#8250;. Siblings can be accessed using properties like nextSibling and previousSibling.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -241,7 +377,7 @@ for (let prop in document.body.childNodes) alert(prop);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, we can access the next sibling via the nextSibling property, and the previous sibling node gets accessed via the previousSibling property. We can access the parent node via the parentNode property. We should note that using these properties allows direct access to all nodes, including the text and comment nodes.
+  <div><strong>Interview Response:</strong> Yes, we can access the next sibling via the nextSibling property, and the previous sibling node can be accessed via the previousSibling property. We can access the parent node via the parentNode property. We should note that using these properties allows direct access to all nodes, including the text and comment nodes.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -269,14 +405,16 @@ alert(document.body.previousSibling); // HTMLHeadElement
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, when we are interested in only accessing element nodes. Some properties serve that purpose for the previous and the next sibling element nodes. For the next sibling element node, we can use nextElementSibling property, and for the previous element node, we use previousElementSibling property. Web developers commonly referred to this feature as element-only navigation.
-</div>
+  <div><strong>Interview Response:</strong> Yes, the Element.nextElementSibling property can be used to access the next sibling element node, ignoring any text or comment nodes.
+</div><br/>
+  <div><strong>Interview Response:</strong> Yes, when we are interested in only accessing element nodes. Some properties serve that purpose for the previous and the next sibling element nodes. For the next sibling element, we can use nextElementSibling property, and for the previous element, we use previousElementSibling property. Web developers commonly referred to this feature as element-only navigation.
+</div><br/>
   </div>
 </details>
 
 ---
 
-### Why parentElement? Can the parent be not an element?
+### Is it possible that the parent element is not an element?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

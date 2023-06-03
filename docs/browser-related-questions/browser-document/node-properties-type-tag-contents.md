@@ -41,25 +41,126 @@ import StructuredData from './schemadata/NodePropsSchemaData.js';
 
 ---
 
-### Can you explain the hierarchy in classes of DOM nodes?
+### What is a DOM node?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Each DOM node belongs to the corresponding built-in class. The root of the hierarchy is EventTarget, inherited by the node, and other DOM nodes inherit from it, such as text, element, and comment nodes.
-</div>
+  <div><strong>Interview Response:</strong> A DOM node is an object representing a part of the document tree structure, such as elements, text, comments, or attributes.
+  </div><br />
   </div>
 </details>
 
 ---
 
-### Can you briefly explain the purpose of the EventTarget abstract class?
+### What are some common node properties?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> EventTarget is the root “abstract” class. Objects of that class do not adhere to an abstract creation process; it serves as a base so that all DOM nodes support so-called “events”.
+  <div><strong>Interview Response:</strong> Common node properties include nodeName, nodeType, nodeValue, parentNode, childNodes, firstChild, lastChild, nextSibling, and previousSibling.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### What is the nodeName property?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The nodeName property returns the name of a node, such as the tag name for element nodes, or "#text" for text nodes, depending on the node type.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### How does nodeValue differ from textContent?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The nodeValue property returns the value of certain node types (text, comment, or attribute nodes), while textContent retrieves the text content of an element and its descendants.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### Can you explain the hierarchy in classes of DOM nodes?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The DOM hierarchy consists of nodes, organized in a tree structure: Document (root), Element (tags), Text (content), Comment, and Attribute (properties). Parent, child, and sibling relationships connect nodes for traversal and manipulation. Each DOM node belongs to the corresponding built-in class. The root of the hierarchy is EventTarget, inherited by the node, and other DOM nodes inherit from it, such as text, element, and comment nodes.
+</div><br />
+  <div><strong className="codeExample">Diagram:</strong><br /><br />
+
+  <div></div>
+
+<img src="/img/dom-class-hierarchy.svg" /><br /><br />
+
 </div>
+
+  </div>
+</details>
+
+---
+
+### How can you access an element's attributes using node properties?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> We can use the attributes property to access a live NamedNodeMap of an element's attributes, where each attribute is represented as an Attr node.
+</div><br/>
+
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```html
+<pre test="test"></pre>
+
+<script>
+const pre = document.querySelector("pre");
+const attrMap = pre.attributes;
+const value = attrMap.getNamedItem("test").value;
+pre.textContent = `The 'test' attribute contains ${value}.
+And 'boum' has ${attrMap["boum"] ? "been" : "not been"} found.`;
+</script>
+```
+
+  </div>
+  </div>
+</details>
+
+---
+
+### How do you access an element's class list using node properties?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> You can access an element's class list using the classList property. For instance, element.classList returns a DOMTokenList object of the class attributes.
+</div><br/>
+
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let element = document.querySelector('.example-class');
+let classList = element.classList;
+
+classList.forEach(className => {
+    console.log(className);
+});
+```
+
+  </div>
   </div>
 </details>
 
@@ -70,7 +171,9 @@ import StructuredData from './schemadata/NodePropsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Node is also an “abstract” class, serving as a base for DOM nodes. It provides the core tree functionality: parentNode, nextSibling, childNodes, and more (they are getters). Objects of the node class get created. But concrete node classes inherit from it: Text nodes for text nodes, Element nodes for element nodes, and more exotic ones like Comment nodes for comment nodes.
+  <div><strong>Interview Response:</strong> The Node abstract class represents a single node in the DOM tree, defining shared properties and methods for various node types, facilitating tree traversal, manipulation, and event handling.
+</div><br/>
+  <div><strong>Technical Response:</strong> Node is also an “abstract” class, serving as a base for DOM nodes. It provides the core tree functionality: parentNode, nextSibling, childNodes, and more (they are getters). Objects of the node class get created. But concrete node classes inherit from it: Text nodes for text nodes, Element nodes for element nodes, and more exotic ones like Comment nodes for comment nodes.
 </div>
   </div>
 </details>
@@ -82,7 +185,7 @@ import StructuredData from './schemadata/NodePropsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Element is a base class for DOM elements. It provides element-level navigation like nextElementSibling, children and searching methods like getElementsByTagName, querySelector. A browser supports not only HTML, but also XML and SVG. The Element class serves as a base for more specific classes: SVGElement, XMLElement and HTMLElement.
+  <div><strong>Interview Response:</strong> The Element base class represents an HTML element, defining methods and properties for manipulation and interaction. It encapsulates attributes, content, and child elements, while providing access and modification capabilities.<br/><br/>Element is a base class for DOM elements. It provides element-level navigation like nextElementSibling, children and searching methods like getElementsByTagName, querySelector. A browser supports not only HTML, but also XML and SVG. The Element class serves as a base for more specific classes: SVGElement, XMLElement and HTMLElement.
 </div>
   </div>
 </details>
@@ -94,7 +197,7 @@ import StructuredData from './schemadata/NodePropsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> HTMLElement is the base class for all HTML elements. It is inherited by concrete HTML elements such as the HTMLInputElement, HTMLBodyElement, and HTMLAnchorElement classes.<br /><br />
+  <div><strong>Interview Response:</strong> HTMLElement base class represents an HTML-specific element, inheriting from Element. It is inherited by concrete HTML elements such as the HTMLInputElement, HTMLBodyElement, and HTMLAnchorElement classes. It provides properties and methods for styling, form control, and accessibility, tailored to HTML-specific behaviors and attributes.<br /><br />
   <strong>Additional Information:</strong><br /><br />
   <ul>
     <li>HTMLInputElement is the class for &#8249;input&#8250; elements.</li>
@@ -112,7 +215,7 @@ import StructuredData from './schemadata/NodePropsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To see the DOM node class name, we recall that an object usually has the constructor property. It references the class constructor and constructor.name is its name, or we can toString it. We also can use instanceof to check the inheritance, which returns a Boolean value.
+  <div><strong>Interview Response:</strong> To see the DOM node class name, we recall that an object usually has the constructor property. It references the class constructor and node.constructor.name is its name, or we can toString it. We can also use instanceof to check the inheritance, which returns a Boolean value.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -120,17 +223,17 @@ import StructuredData from './schemadata/NodePropsSchemaData.js';
 
 ```js
 // Using the Object constructor
-alert(document.body.constructor.name); // HTMLBodyElement
+console.log(document.body.constructor.name); // HTMLBodyElement
 
 // Built-in toString return value
-alert(document.body); // [object HTMLBodyElement]
+console.log(document.body); // [object HTMLBodyElement]
 
 // Check to see if its a instanceof of an Element
-alert(document.body instanceof HTMLBodyElement); // true
-alert(document.body instanceof HTMLElement); // true
-alert(document.body instanceof Element); // true
-alert(document.body instanceof Node); // true
-alert(document.body instanceof EventTarget); // true
+console.log(document.body instanceof HTMLBodyElement); // true
+console.log(document.body instanceof HTMLElement); // true
+console.log(document.body instanceof Element); // true
+console.log(document.body instanceof Node); // true
+console.log(document.body instanceof EventTarget); // true
 ```
 
   </div>
@@ -144,7 +247,7 @@ alert(document.body instanceof EventTarget); // true
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In brief, console.log(elem) shows the element DOM tree and console.dir(elem) shows the element as a DOM object, and it is excellent to explore its properties.</div><br />
+  <div><strong>Interview Response:</strong> In brief, console.log displays a string representation of an object, while console.dir presents an interactive, navigable tree view of object properties, making it easier to explore object structure.</div><br />
   <div><strong>Technical Response:</strong> Most browsers allow two commonly used commands in their development tools: console.log and console.dir. Their arguments get printed on the console. These instructions typically have the same effect on JavaScript objects. However, console.log(elem) displays the element's DOM tree for DOM elements. The element gets shown as a DOM object using console.dir(elem), allowing you to examine its properties.
   </div>
   </div>
@@ -157,7 +260,9 @@ alert(document.body instanceof EventTarget); // true
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> An interface description language or interface definition language (IDL), is a specification language used to describe a software component's application programming interface (API). IDLs describe an interface in a language-independent way, enabling communication between software components that do not share one language, such as those written in C++ and those written in Java.
+  <div><strong>Interview Response:</strong> Interface Description Language (IDL) is a formal language used to define interfaces between software components, specifying data types, methods, and structures, enabling cross-language communication and code generation.
+    </div><br/>
+  <div><strong>Technical Response:</strong> An interface description language or interface definition language (IDL), is a specification language used to describe a software component's application programming interface (API). IDLs describe an interface in a language-independent way, enabling communication between software components that do not share one language, such as those written in C++ and those written in Java.
     </div>
   </div>
 </details>
@@ -169,7 +274,7 @@ alert(document.body instanceof EventTarget); // true
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In the specification, DOM classes don’t get described by using JavaScript but a unique Interface description language (IDL) that is easy to understand. In IDL, all properties get prepended with their types. For instance, DOMString, boolean, and so on.
+  <div><strong>Interview Response:</strong> DOM classes are described in the specification using WebIDL, an interface description language that defines interfaces, methods, properties, and data types, serving as a blueprint for DOM API implementations.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -208,7 +313,7 @@ interface HTMLInputElement: HTMLElement {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> It has a numeric value that reflects the type of node you are returning. For element nodes, it is 1; for text nodes, it is 3; and for the document object 9. There are others listed in the specification: https://dom.spec.whatwg.org/#node
+  <div><strong>Interview Response:</strong> The nodeType property in JavaScript returns an integer constant representing the node's type, such as Element (1), Attribute (2), Text (3), Comment (8), or Document (9). There are others listed in the specification: https://dom.spec.whatwg.org/#node
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -273,13 +378,13 @@ interface HTMLInputElement: HTMLElement {
 
 ---
 
-### Is there a difference between what gets returned when the tagName attribute gets used on HTML and XML?
+### Is there a difference between what gets returned when the tagName attribute gets used in HTML and XML?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> YES. The browser may handle documents in two ways: HTML and XML. Typically, HTML mode gets used for web pages. When the browser receives an XML document with the header content-type XML/XHTML, XML-mode is activated. In HTML mode, tagName and nodeName always get capitalized. The case is left "as is" in XML mode.</div><br />
-  <div><strong>Note:</strong> Nowadays, XML mode gets rarely used, but you may come across it in older applications.
+  <div><strong>Note:</strong> Nowadays, XML mode is rarely used, but you may come across it in older applications.
   </div><br />
   <div><strong>Technical Response:</strong> Although this may seem trivial, the answer is YES. The browser has two modes of processing documents: HTML and XML. Usually, the HTML-mode gets used for web pages. XML-mode is enabled when the browser receives an XML-document with the header: Content-Type: application/xml+xhtml. In HTML mode tagName/nodeName is always uppercased: it is BODY either for &#8249;body&#8250; or &#8249;BoDy&#8250;. In XML mode, the case gets kept “as is”. Nowadays, XML mode rarely gets used, but you may encounter it in older applications.
   </div>
@@ -323,7 +428,7 @@ interface HTMLInputElement: HTMLElement {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> If innerHTML inserts a &#8249;script&#8250; tag into the document – it becomes a part of HTML but does not execute.
+  <div><strong>Interview Response:</strong> If innerHTML inserts a &#8249;script&#8250; tag into the document – it becomes a part of HTML as text content but does not execute.
     </div>
   </div>
 </details>
@@ -335,7 +440,7 @@ interface HTMLInputElement: HTMLElement {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> When using the “innerHTML+=” we should know the property is not an addition but a full overwrite.</div><br />
+  <div><strong>Interview Response:</strong> When using "innerHTML+=", be aware that it destroys and recreates element content, causing loss of attached event listeners, inefficient performance, and potential security risks from script injection.</div><br />
   <div><strong>Note:</strong> We can append HTML to an element by using elem.innerHTML+="more HTML". But we should be careful about doing it.
   </div>
   </div>
@@ -348,7 +453,9 @@ interface HTMLInputElement: HTMLElement {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The element's full HTML gets stored in the outerHTML attribute. This structure is equivalent to innerHTML plus the element itself. Be aware that, unlike innerHTML, writing to outerHTML does not affect the element. Instead, it substitutes it in the DOM. We can write to elem.outerHTML, but this does not modify the element we're writing to ('elem'). Instead, it replaces it with the new HTML. By accessing the DOM, we may obtain pointers to the new items.
+  <div><strong>Interview Response:</strong> The outerHTML property in JavaScript gets or sets the serialized HTML including the element itself, allowing retrieval and replacement of an element along with its content and attributes.
+    </div><br />
+  <div><strong>Technical Response:</strong> The element's full HTML gets stored in the outerHTML attribute. This structure is equivalent to innerHTML plus the element itself. Be aware that, unlike innerHTML, writing to outerHTML does not affect the element. Instead, it substitutes it in the DOM. We can write to elem.outerHTML, but this does not modify the element we're writing to ('elem'). Instead, it replaces it with the new HTML. By accessing the DOM, we may obtain pointers to the new items.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -374,12 +481,12 @@ interface HTMLInputElement: HTMLElement {
 
 ---
 
-### For element nodes, we can use innerHTML, but what is the recommended for use with the other node types like text nodes?
+### For element nodes, we can use innerHTML, but what is recommended for use with the other node types like text nodes?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We should use the nodeValue and data properties instead of innerHTML. These two are almost the same for practical use, and there are only minor specification differences. So, we should use the data property; it's shorter to implement.</div><br />
+  <div><strong>Interview Response:</strong> For text nodes, we use the nodeValue or textContent properties, which enable getting or setting the content of text and comment nodes, without parsing or rendering HTML.</div><br />
   <div><strong>Technical Response:</strong> The innerHTML attribute applies exclusively to element nodes. Other node kinds, such as text nodes, have an equivalent: nodeValue and data properties. These two are nearly identical in terms of practical usage, with just minor specification changes. As a result, we should utilize the data property because it is easier to implement.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -411,7 +518,7 @@ interface HTMLInputElement: HTMLElement {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We can use comments to embed information or template instructions into HTML. Then JavaScript can read it from data property and process embedded instructions.
+  <div><strong>Interview Response:</strong> A good use case for reading data from comments is extracting metadata, such as version information or instructions, from HTML templates or application source code for diagnostics or documentation.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -434,7 +541,9 @@ interface HTMLInputElement: HTMLElement {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The textContent provides access to the text inside the element: only text, minus all &#8249;tags&#8250;. In practice, reading such text is rarely needed. Writing to textContent is much more helpful because it allows us to write text the “secure way”.
+  <div><strong>Interview Response:</strong> The textContent property in JavaScript gets or sets the text content of a node and its descendants, allowing manipulation of element content without parsing HTML or exposing HTML tags.Writing to textContent is much more helpful because it allows us to write text the “secure way”.
+    </div><br />
+  <div><strong>Technical Response:</strong> The textContent provides access to the text inside the element: only text, minus all &#8249;tags&#8250;. In practice, reading such text is rarely needed. Writing to textContent is much more helpful because it allows us to write text the “secure way”.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -458,12 +567,12 @@ interface HTMLInputElement: HTMLElement {
 
 ---
 
-### Explain what the hidden attribute and DOM property does in JavaScript?
+### Can you explain what the hidden attribute and DOM property do in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The “hidden” attribute and the DOM property specifies whether the element is visible or not. Technically, hidden works the same as style="display:none". But it’s shorter to write.
+  <div><strong>Interview Response:</strong> The hidden attribute and DOM property in JavaScript control an element's visibility, hiding it from rendering when set to true, without affecting layout or functionality, it's useful for toggling content in the browser. Technically, hidden works the same as style="display:none". But it’s shorter to write.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

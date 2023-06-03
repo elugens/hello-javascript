@@ -47,21 +47,18 @@ import StructuredData from './schemadata/ModifyingDocSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Two methods, including the createElement and createTextNode methods, are used to create DOM nodes. The document.createElement(tag) creates a new element node. The document.createTextNode(‘text’) creates a new text node with the give ‘text’. We need to create element nodes, such as a div, most of the time.
+  <div><strong>Interview Response:</strong> You can create new DOM nodes using the document.createElement(tagName) method, and add text with textContent. Then append to an existing node with parentNode.appendChild(newNode).
+    </div><br />
+  <div><strong>Technical Response:</strong> Two methods, including the createElement and createTextNode methods, are used to create DOM nodes. The document.createElement(tag) creates a new element node. The document.createTextNode(‘text’) creates a new text node with the give ‘text’. We need to create element nodes, such as a div, most of the time.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
 
 ```js
-// 1. Create <div> element
-let div = document.createElement('div');
-
-// 2. Set its class to "alert"
-div.className = 'alert';
-
-// 3. Fill it with the content
-div.innerHTML = "<strong>Hi there!</strong> You've read an important message.";
+let newNode = document.createElement('div');
+newNode.textContent = 'Hello!';
+document.body.appendChild(newNode);
 ```
 
   </div>
@@ -75,43 +72,29 @@ div.innerHTML = "<strong>Hi there!</strong> You've read an important message.";
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We can use the special append method to insert a new DOM node into an HTML document. We can use additional methods such as the prepend, before, after, and replaceWith to place the new DOM node into a specific place in the document.
+  <div><strong>Interview Response:</strong> You can insert a DOM node into an HTML document by selecting the parent node using document.querySelector(selector) and then using parentNode.appendChild(newNode).
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
 
 ```html
-<ol id="ol">
-  <li>0</li>
-  <li>1</li>
-  <li>2</li>
-</ol>
+<ul id="menu">
+</ul>
 
 <script>
-  ol.before('before'); // insert string "before" before <ol>
-  ol.after('after'); // insert string "after" after <ol>
-
-  let liFirst = document.createElement('li');
-  liFirst.innerHTML = 'prepend';
-  ol.prepend(liFirst); // insert liFirst at the beginning of <ol>
-
-  let liLast = document.createElement('li');
-  liLast.innerHTML = 'append';
-  ol.append(liLast); // insert liLast at the end of <ol>
+function createMenuItem(name) {
+    let li = document.createElement('li');
+    li.textContent = name;
+    return li;
+}
+// get the ul#menu
+const menu = document.querySelector('#menu');
+// add menu item
+menu.appendChild(createMenuItem('Home'));
+menu.appendChild(createMenuItem('Services'));
+menu.appendChild(createMenuItem('About Us'));
 </script>
-
-<!-- FINAL OUTPUT -->
-
-<!-- before -->
-<ol id="ol">
-  <li>prepend</li>
-  <li>0</li>
-  <li>1</li>
-  <li>2</li>
-  <li>append</li>
-</ol>
-<!-- after -->
 ```
 
   </div>
@@ -210,6 +193,8 @@ div.innerHTML = "<strong>Hi there!</strong> You've read an important message.";
 <div id="first">First</div>
 <div id="second">Second</div>
 <script>
+  const first = document.getElementById('first');
+  const second = document.getElementById('second');
   // no need to call remove
   second.after(first); // take #second and after it insert #first
 </script>
@@ -230,7 +215,7 @@ div.innerHTML = "<strong>Hi there!</strong> You've read an important message.";
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, you can clone an element node using the cloneNode method in JavaScript. The cloneNode() method creates a node copy and returns the clone.
+  <div><strong>Interview Response:</strong> Yes, you can clone an element in JavaScript using the cloneNode() method. You can use element.cloneNode(true) to include all child nodes.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -274,7 +259,7 @@ Once you have cloned the node, you use the appendChild() or insertBefore() metho
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> DocumentFragment is a special DOM node that serves as a wrapper to pass around lists of nodes. We can append other nodes to it, but its content gets inserted instead when we insert it somewhere.
+  <div><strong>Interview Response:</strong> A DocumentFragment is a minimal document object that stores nodes. It helps improve performance by limiting reflows and repaints when manipulating multiple nodes simultaneously.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -322,8 +307,8 @@ We rarely use DocumentFragment explicitly. Why append to a special kind of node 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> There are several methods, including appendChild, insertBefore, replaceChild, and removeChild.</div><br />
-  <div><strong>Technical Response:</strong> Several methods were used before the more modern methods for inserting and removing nodes. They include appendChild, insertBefore, replaceChild, and removeChild. Although they aren’t getting used in modern code, we should be aware of their function, use, and syntax, because we may run across them in older applications.
+  <div><strong>Interview Response:</strong> Older methods include appendChild(), removeChild(), insertBefore(). Despite being less intuitive than modern methods, they're important to know for understanding, maintaining, and refactoring legacy code.</div><br />
+  <div><strong>Technical Response:</strong> Several methods were used before the more modern methods for inserting and removing nodes. They include appendChild, insertBefore, replaceChild, and removeChild. Although they aren’t used in modern code, we should be aware of their function, use, and syntax, because we may run across them in older applications.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -368,12 +353,12 @@ These methods come from ancient times. Nowadays, there is no reason to use them,
 
 ---
 
-### Can you explain the function and syntax of the document.write method?
+### Can you explain the function of the document.write() method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The document.write() method writes a string of text to a document stream opened by document.open().
+  <div><strong>Interview Response:</strong> document.write() is a JavaScript method used to output string content into the HTML document, typically during page load. It's not recommended for updating content post-rendering due to potentially destructive behavior.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

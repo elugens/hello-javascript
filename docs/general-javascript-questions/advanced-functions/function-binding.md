@@ -37,13 +37,150 @@ import StructuredData from './schemadata/FuncBindSchemaData.js';
 
 <CloseAllAnswers />
 
-### Can you explain the three types of binding techniques in JavaScript?
+### What is function binding in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, there are three types of binding techniques Window, Implicit, and Explicit function binding.
+  <div><strong>Interview Response:</strong> Function binding in JavaScript is the process of tying a function to an object context, ensuring it uses that context as its 'this' value when called.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let dog = {
+  name: "Rover",
+  sound: "Woof",
+  makeSound: function() {
+    console.log(this.sound);
+  }
+};
+
+let cat = {
+  name: "Whiskers",
+  sound: "Meow"
+};
+
+// Bind makeSound function from dog to cat
+let catSound = dog.makeSound.bind(cat);
+
+catSound(); // Output: Meow
+```
+
+  </div>
+  </div>
+</details>
+
+---
+
+### What are the three types of function binding techniques?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> IThree function binding techniques are implicit binding (using object method), explicit binding (with call, apply, or bind), and constructor binding (new keyword for creating objects).
 </div>
+<div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+**1. Default Binding:**
+
+```javascript
+function sayHello() {
+  console.log(this.message);
+}
+
+// A global variable
+message = "Hello, World!";
+
+sayHello(); // Output: "Hello, World!"
+```
+
+**2. Implicit Binding:**
+
+```javascript
+let obj = {
+  message: "Hello, Object!",
+  sayHello: function() {
+    console.log(this.message);
+  }
+}
+
+obj.sayHello(); // Output: "Hello, Object!"
+```
+
+**3. Explicit Binding (using call()):**
+
+```javascript
+function sayHello() {
+  console.log(this.message);
+}
+
+let obj = {
+  message: "Hello, Explicit!"
+}
+
+sayHello.call(obj); // Output: "Hello, Explicit!"
+```
+
+  </div>
+  </div>
+</details>
+
+---
+
+### How does the bind() method work in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The bind() method creates a new function that, when called, has its 'this' keyword set to the provided value, with a given sequence of arguments preceding any others.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What are the advantages of using the bind() method?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The bind() method allows for explicit function context setting, function reuse with different objects, and partial application (pre-setting some arguments), improving code flexibility and reusability.<br />
+  </div>
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let car1 = {
+    brand: 'Tesla',
+    getBrand: function(){
+        console.log(this.brand);
+    }
+};
+
+let car2 = {
+    brand: 'Ford'
+};
+
+// Create a new function with 'this' set to car2
+let getCar2Brand = car1.getBrand.bind(car2);
+
+getCar2Brand(); // Output: 'Ford'
+
+// Partial application
+function multiply(x, y) {
+    return x * y;
+}
+
+let double = multiply.bind(null, 2); // 'this' is irrelevant here, so set to null
+
+console.log(double(5)); // Output: 10
+```
+
+  </div>
   </div>
 </details>
 
@@ -54,7 +191,9 @@ import StructuredData from './schemadata/FuncBindSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Window, Implicit, and Explicit function binding are JavaScript's three types of binding strategies. Explicit binding compels a function call to bind to a specific context object by utilizing call, apply, or bind. These predefined JavaScript methods get passed down to all functions via the function prototype. Functions have a method bind that allows us to fix "this." Binding is the ideal option for tying the context to the correct object and preventing "this" from being lost.
+  <div><strong>Interview Response:</strong> Explicit function binding in JavaScript lets you set "this" value for a function using call, apply, or bind, allowing greater control over function execution context.
+</div><br />
+  <div><strong>Technical Response:</strong> Window, Implicit, and Explicit function binding are JavaScript's three types of binding strategies. Explicit binding compels a function call to bind to a specific context object by utilizing call, apply, or bind. These predefined JavaScript methods get passed down to all functions via the function prototype. Functions have a method bind that allows us to fix "this." Binding is the ideal option for tying the context to the correct object and preventing "this" from being lost.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -79,12 +218,26 @@ funcUser(); // John
 
 ---
 
-### Explain the function and syntax of the function bind() method?
+### Can you explain what implicit function binding is in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The bind method generates a new function that, when called, sets the "this" keyword to the provided value, with a specified sequence of arguments preceding any arguments provided when the new function gets invoked. Bind creates a new function that may be called later in the code while keeping the desired context binding.
+  <div><strong>Interview Response:</strong> Implicit binding occurs when a function is called as a method of an object, and "this" automatically refers to the object before the dot.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you explain the function of the bind() method?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The bind() method creates a new function with a specific "this" value, allowing you to control the context in which the original function is executed.
+</div><br />
+  <div><strong>Technical Response:</strong> The bind method generates a new function that, when called, sets the "this" keyword to the provided value, with a specified sequence of arguments preceding any arguments provided when the new function gets invoked. Bind creates a new function that may be called later in the code while keeping the desired context binding.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -119,12 +272,12 @@ This is useful for passing functions into other functions, like setTimeout(), wh
 
 ---
 
-### Can you explain what a partial function application is in JavaScript?
+### What is a partial function application?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A partial function application in JavaScript refers to the process of fixing several arguments to a function and, in the process producing another function of smaller arity.
+  <div><strong>Interview Response:</strong> Partial function application means predefining some of a function's arguments, creating a new function that requires fewer arguments to execute the original logic.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

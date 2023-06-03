@@ -44,12 +44,156 @@ import StructuredData from './schemadata/ExtendNativeSchemaData.js';
 
 ---
 
-### When extending built-in classes, what is used in their internal implementation to extend the built-in class?
+### What is a native built-in class in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Built-in methods like an array, filter, map, and others return new objects of the inherited type. Their internal implementation uses the object’s constructor property for that. If you test the strict equality between the newly created object and child class on the constructor, it returns true.
+  <div><strong>Interview Response:</strong> A native built-in class in JavaScript is a class provided by the language itself, such as Array, String, Object, Map, Set, etc. These classes are predefined and available for use in any JavaScript environment.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What does it mean to extend a native built-in class?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Extending a built-in class means creating a new class that inherits the properties and methods of the built-in class, allowing you to add or override functionality.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### How do you extend a built-in class in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> You can extend a built-in class by using the class keyword, followed by the extends keyword and the name of the built-in class you want to inherit from. </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+class MyArray extends Array {
+  // Custom methods and properties
+}
+```
+
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you provide an example of a custom method added to a built-in class?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> An example of a custom method added to a built-in class is extending the String class with a reverse() method that returns the reversed string.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+class MyString extends String {
+  reverse() {
+    return this.split('').reverse().join('');
+  }
+```
+
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you provide an example of a custom method added to a built-in class?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> An example of a custom method added to a built-in class is extending the String class with a reverse() method that returns the reversed string.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+class MyString extends String {
+  reverse() {
+    return this.split('').reverse().join('');
+  }
+}
+
+const reversedString = new MyString('hello').reverse(); // 'olleh'
+console.log(reversedString); // logs 'olleh'
+```
+
+  </div>
+  </div>
+</details>
+
+---
+
+### Are there any limitations when extending built-in classes?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Some built-in objects like Error, Array, and HTMLElement have special behaviors that may not be inherited by their subclasses. Additionally, extending built-in classes can make the code harder to understand and maintain, as developers might not be familiar with the custom functionality.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### When should you extend built-in classes?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> We can extend built-in classes when adding or modifying their behavior for specific use cases. However, we should use composition or utility functions in most cases for better flexibility, maintainability, and performance.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you provide an example of when it's better to use a utility function instead of extending a built-in class?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Instead of extending the Array class to add a sum() method, you can create a utility function as an independent action. This approach is more flexible and easier to maintain, as it doesn't rely on inheritance and can be used with any array-like object.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+function sum(array) {
+  return array.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+}
+
+const result = sum([1, 2, 3, 4]); // 10
+```
+
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you explain the internal constructor implementation when extending built-in classes in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> When extending built-in classes, JavaScript internally calls the superclass constructor (super()) to initialize the instance with the built-in class's properties, ensuring proper inheritance and preserving special behavior. Built-in methods like an array, filter, map, and others return new objects of the inherited type. Their internal implementation uses the object’s constructor property for that. If you test the strict equality between the newly created object and child class on the constructor, it returns true.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -74,12 +218,12 @@ console.log(arr.constructor === PowerArray); // returns true
 
 ---
 
-### Can you explain the function and syntax of the Symbol.species accessor property?
+### Can you explain the function of the Symbol.species accessor property?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Subclasses can override the default constructor for objects using the species accessor attribute. When we wish to retrieve Array instances in our derived array class, we utilize Symbol.species. When utilizing methods that return the default constructor, such as map(), we may wish these methods to return a parent Array object rather than the extending object.</div><br />
+  <div><strong>Interview Response:</strong> The Symbol.species accessor property provides a way to define a constructor for derived objects when subclassing built-in classes, ensuring the new instances inherit from the correct prototype, and preserving intended behavior.</div><br />
   <div><strong>Technical Response:</strong> The symbol Symbol.species specifies a function-valued property that the constructor function uses to create derived objects. Subclasses can override the default constructor for objects using the species accessor attribute. Symbol.species gets used when you may want to return Array objects in your derived array class. When utilizing methods that return the default constructor, such as map(), you want these methods to return a parent Array object rather than the extending object.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -94,17 +238,20 @@ class MyArray extends Array {
   static get [Symbol.species]() {
     return Array;
   }
+
+  sum() {
+    return this.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+  }
 }
-let a = new MyArray(1, 2, 3);
-let mapped = a.map((x) => x * x);  We are using map to return the object constructor
 
-console.log(mapped instanceof MyArray); // false
-console.log(mapped instanceof Array); // true
+const myArrayInstance = new MyArray(1, 2, 3, 4);
+const sliced = myArrayInstance.slice(1, 3); // creates a new Array instance, not MyArray
 
-console.log(mapped[1]); // returns value at index 1 times 2 - value = 4
-
-console.log(a); // returns Array - [ 1, 2, 3 ]
+console.log(sliced instanceof Array); // true
+console.log(sliced instanceof MyArray); // false
 ```
+
+<p>In this example, the Symbol.species accessor property is used to ensure that the slice method returns a new instance of the built-in Array class, instead of a MyArray instance.</p>
 
 :::note
 To guarantee that you are accessing the correct array, maintain track of the supplied object (Array). If the method returns a new array like the filter() method, it may unexpectedly negatively affect your application when used in conjunction with the species Symbol. There are benefits to this behavior that allow us to customize specific interactions within the inheriting class.
@@ -121,8 +268,28 @@ To guarantee that you are accessing the correct array, maintain track of the sup
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Normally, static and non-static methods are inherited when one class extends another. But built-in classes are an exception, and they do not inherit statics from each other.</div><br />
+  <div><strong>Interview Response:</strong> In JavaScript, static methods are not inherited from native built-in classes. To use them in a subclass, you need to reference them directly from the superclass, e.g., Array.isArray().</div><br />
   <div><strong>Example:</strong> Both Array and Date inherit from Object, so their instances have methods from Object.prototype. But Array.[[Prototype]] does not reference Object, so there’s no, for instance, Array.keys() (or Date.keys()) static method.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+class ExtendedArray extends Array {
+    static greet() {
+        console.log("Hello, World!");
+    }
+}
+
+// Calling static method from subclass
+ExtendedArray.greet(); // Output: Hello, World!
+
+// Built-in static method is not inherited, needs direct reference
+console.log(ExtendedArray.isArray([])); // Output: Error
+console.log(Array.isArray([])); // Output: True
+```
+
   </div>
   </div>
 </details>

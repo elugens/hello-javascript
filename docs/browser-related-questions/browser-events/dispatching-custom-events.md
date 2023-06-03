@@ -42,7 +42,31 @@ import StructuredData from './schemadata/DispatchingSchemaData.js';
 
 ---
 
-### Can you explain the function and syntax of the Event constructor?
+### What is a custom event in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A custom event is a user-defined event that can be created and dispatched to perform actions not covered by built-in events.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### What method is used to create a custom event in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The CustomEvent() constructor is used to create and initialize custom events in JavaScript. You can then dispatch these events using the dispatchEvent() method.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### Can you explain the function of the Event constructor?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -71,12 +95,36 @@ myDiv.dispatchEvent(evt);
 
 ---
 
-### Explain the function and syntax of the dispatchEvent() method?
+### How do you dispatch a custom event in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> After an event object gets created, we should “run” it on an element using the call elem.dispatchEvent(event). Then handlers react to it as if it were a regular browser event. If the event was created with the bubbles flag, it bubbles up.
+  <div><strong>Interview Response:</strong> In JavaScript, a custom event is dispatched using the dispatchEvent() method.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let event = new CustomEvent('myEvent', {detail: {key: 'value'}});
+document.dispatchEvent(event);
+```
+
+This code creates and dispatches a custom event named 'myEvent'.
+
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you explain the function of the dispatchEvent() method?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The `dispatchEvent()` method is used to dispatch an event to a target element. It triggers all listeners for that event type and returns a boolean indicating if the event was cancelled. After an event object gets created, we should “run” it on an element using the call elem.dispatchEvent(event). Then handlers react to it as if it were a regular browser event. If the event was created with the bubbles flag, it bubbles up.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -94,6 +142,18 @@ myDiv.dispatchEvent(evt);
 ```
 
   </div>
+  </div>
+</details>
+
+---
+
+### Can custom events carry additional information?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, custom events in JavaScript can carry additional information in the `detail` property, which can be accessed in the event listener when the event is triggered.
+  </div><br />
   </div>
 </details>
 
@@ -131,7 +191,7 @@ if (e.isTrusted) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> CustomEvent provides the unique detail field to evade conflicts with other event properties. In this case, it is the recommended approach. Besides, the event class describes “what kind of event” it is, and if the event is custom, we should use CustomEvent to be clear about it.</div><br />
+  <div><strong>Interview Response:</strong> The CustomEvent constructor extends the Event constructor, adding the detail property, which allows passing custom data and aiding in resolving conflicts. The Event constructor doesn't have this additional functionality. In this case, it is the recommended approach. Besides, the event class describes “what kind of event” it is, and if the event is custom, we should use CustomEvent to be clear about it.</div><br />
   <div><strong>Technical Response:</strong> Technically, CustomEvent is the same as Event, with one exception. In the second argument (object), we can add property details for any custom information we want to pass with the event. The detail property can have any data. Technically we could live without it because we can assign any properties to a regular new Event object after its creation. But CustomEvent provides the unique detail field to evade conflicts with other event properties. In this case, it is the recommended approach. Besides, the event class describes “what kind of event” it is, and if the event is custom, we should use CustomEvent to be clear about it.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -166,7 +226,9 @@ if (e.isTrusted) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, you can use event.preventDefault as you would with a regular Event. By calling event.preventDefault(), an event handler may signal that those actions should get canceled. In that case, the call to elem.dispatchEvent(event) returns false. And the code that dispatched it knows that it should not continue. Please note: the event must have the flag cancelable: true, otherwise the call event.preventDefault() is ignored.
+  <div><strong>Interview Response:</strong> Yes, if a CustomEvent is dispatched with the `cancelable` property set to `true`, its default behavior can be overridden using `preventDefault()`.
+    </div><br />
+  <div><strong>Technical Response:</strong> Yes, you can use event.preventDefault as you would with a regular Event. By calling event.preventDefault(), an event handler may signal that those actions should get canceled. In that case, the call to elem.dispatchEvent(event) returns false. And the code that dispatched it knows that it should not continue. Please note: the event must have the flag cancelable: true, otherwise the call event.preventDefault() is ignored.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -213,7 +275,9 @@ if (e.isTrusted) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Nested events are handled synchronously by default. Usually, events get processed in a queue. If the browser is processing onclick and a new event occurs, e.g., the mouse moved, then handling is queued up, corresponding mousemove handlers call after onclick processing finishes. The notable exception is when one event is initiated from within another, e.g., using dispatchEvent. Such events are processed immediately: new event handlers get called, and the current handling is resumed. However, you can implement asynchronous behavior explicitly by using setTimeout method.
+  <div><strong>Interview Response:</strong> Nested events in JavaScript are handled synchronously. The outer event will pause its execution until the nested (or inner) event has completed.
+    </div><br />
+  <div><strong>Technical Response:</strong> Nested events are handled synchronously by default. Usually, events get processed in a queue. If the browser is processing onclick and a new event occurs, e.g., the mouse moved, then handling is queued up, corresponding mousemove handlers call after onclick processing finishes. The notable exception is when one event is initiated from within another, e.g., using dispatchEvent. Such events are processed immediately: new event handlers get called, and the current handling is resumed. However, you can implement asynchronous behavior explicitly by using setTimeout method.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -241,6 +305,215 @@ if (e.isTrusted) {
 ```
 
   </div>
+  </div>
+</details>
+
+---
+
+### Why would one use custom events?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Custom events allow for more flexible communication between objects or components, especially for complex applications.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### Can custom events bubble up through the DOM?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, custom events in JavaScript can bubble up through the DOM. Bubbling can be controlled with the `bubbles` property when the event is created using `CustomEvent()`.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### Can custom events be used across different browsers?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, custom events are part of the standard DOM API and are supported across all modern browsers, including Chrome, Firefox, Safari, and Edge.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### How do you listen for a custom event?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> You can listen for a custom event using the `addEventListener()` method.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+document.addEventListener('myEvent', function(e) {
+  // handle the event
+});
+```
+
+  </div>
+  </div>
+</details>
+
+---
+
+### How do you remove an event listener for a custom event?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The `removeEventListener()` method is used to stop listening to a custom event.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+function handler(e) { /*...*/ }
+document.addEventListener('myEvent', handler);
+// ...
+document.removeEventListener('myEvent', handler);
+```
+
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you stop a custom event from bubbling up?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, you can stop a custom event from bubbling up in JavaScript by calling the stopPropagation() method within the event handler for that custom event.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+document.addEventListener('myEvent', function(e) {
+  e.stopPropagation(); // stops the event from bubbling up
+  // handle the event
+});
+
+let event = new CustomEvent('myEvent', {bubbles: true});
+document.dispatchEvent(event);
+```
+
+In this case, if 'myEvent' is dispatched on a child element, it will not bubble up to the document.
+
+  </div>
+  </div>
+</details>
+
+---
+
+### Can custom events be dispatched asynchronously?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, custom events can be dispatched asynchronously using JavaScript's asynchronous functions, like `setTimeout`, `setInterval`, or inside a Promise or an async function.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### Can you dispatch a custom event on the "window" object?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, you can dispatch a custom event on the `window` object using the `dispatchEvent()` method, just like with any other EventTarget in JavaScript.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### Can you modify the "detail" property of a custom event after it's been dispatched?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> No, you cannot modify the `detail` property of a custom event after it has been dispatched. The `detail` property is read-only after the event is created.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### Can you use custom events with forms?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, you can use custom events with forms in JavaScript. For example, you can dispatch a custom event when form data changes, validating input, or upon form submission.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's an example of how you could dispatch a custom event when a form is submitted:
+
+```javascript
+let form = document.querySelector('form');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  let event = new CustomEvent('formSubmitted', { 
+    detail: {
+      formData: new FormData(form)
+    }
+  });
+  form.dispatchEvent(event);
+});
+
+form.addEventListener('formSubmitted', function(e) {
+  // handle form submission...
+  console.log('Form was submitted with data: ', e.detail.formData);
+});
+```
+
+In this example, a 'formSubmitted' custom event is dispatched when the form is submitted. The event carries the form data in its `detail` property.
+
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you trigger a custom event from a user interaction, like a click?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, a custom event can be dispatched in response to a user interaction, like a click. In the event handler for the click, call dispatchEvent() with the custom event.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### Is it necessary to remove event listeners for custom events?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It's good practice to remove listeners when they're no longer needed to prevent memory leaks.
+  </div><br />
   </div>
 </details>
 

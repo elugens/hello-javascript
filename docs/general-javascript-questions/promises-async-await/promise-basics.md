@@ -42,7 +42,43 @@ import StructuredData from './schemadata/PromBasicsSchemaData.js';
 
 ---
 
-### Can you explain the function and syntax of the Promise object in JavaScript?
+### What is a Promise in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A Promise is a JavaScript object representing the eventual completion (or failure) of an asynchronous operation and its resulting value.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What are the three states of a Promise?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The three states are pending, fulfilled (resolved), and rejected.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the purpose of the resolve and reject functions within a Promise?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The resolve and reject are used to settle the Promise's outcome. resolve fulfills the Promise with a value, while reject rejects it with a reason.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you explain the function of the Promise object in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -90,7 +126,7 @@ let promise = new Promise(function (resolve, reject) {
 
 ---
 
-### Can you name the properties that the promise object returned by the Promise constructor has internally?
+### Could you list the internal properties of a Promise object created by the Promise constructor?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -161,24 +197,24 @@ let promise = new Promise(function (resolve, reject) {
 
 ---
 
-### What are the three subscribing (consumers) methods/functions used in Promises?
+### What are the three subscribing (consumers) methods used in Promises?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A Promise object is a link between the executor and the consuming functions, which receive the result or error. Consuming functions can be registered using methods .then, .catch and .finally.
+  <div><strong>Interview Response:</strong> The three subscribing methods used in Promises are `.then()` for handling fulfilled promises, `.catch()` for handling rejected promises, and `.finally()` that always executes regardless of fulfillment or rejection.
 </div>
   </div>
 </details>
 
 ---
 
-### Can you explain the function and syntax of the promise then() method/function in JS?
+### Can you explain the function of the promise.then() method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The then method returns a Promise. It takes up to two arguments in the form of callbacks that handle resolved or rejected promises. The first argument of .then is a function that runs when the promise is `resolved` and receives the result. The second argument of .then is a function that runs when the promise is `rejected` and receives the error.</div><br />
+  <div><strong>Interview Response:</strong> The then() method in JavaScript is used to attach callbacks that handle resolved values from a Promise, allowing you to process the results of successful asynchronous operations in a chainable manner.</div><br />
   <div><strong>Technical Response:</strong> The then() method returns a Promise. It takes up to two arguments: callback functions for the success and failure cases of the Promise. The first argument of .then is a function that runs when the promise is `resolved` and receives the result. The second argument of .then is a function that runs when the promise is `rejected` and receives the error. If we are interested only in errors, we can use null as the first argument ( .then(null, errorHandlingFunction); ). The then method/function returns a Promise which allows for method chaining.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -221,12 +257,12 @@ If we are interested only in errors, we can use null as the first argument ( .th
 
 ---
 
-### Can you explain the function and syntax of the promise catch() method/function in JS?
+### Can you explain the function of the promise catch() method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The catch method returns a Promise and deals with rejected cases only, and it behaves the same as calling dot then. This behavior means that you must provide an onRejected function even if you want to fall back to an undefined result.</div><br />
+  <div><strong>Interview Response:</strong> The catch() method in JavaScript is used to attach error-handling callbacks to a Promise, allowing you to catch and handle rejected errors from asynchronous operations in a clean and chainable manner.</div><br />
   <div><strong>Technical Response:</strong> The catch() method returns a Promise and deals with rejected cases only. It behaves the same as calling Promise.prototype.then(undefined, onRejected) (in fact, calling obj.catch(onRejected) internally calls obj.then(undefined, onRejected)). This means that you have to provide an onRejected function even if you want to fall back to an undefined result value - for example obj.catch(() => &#123;&#125;).
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -250,12 +286,12 @@ promise.catch(alert); // shows "Error: Whoops!" after 1 second
 
 ---
 
-### Can you explain the function and syntax of the promise finally() method/function in JS?
+### Can you explain the function of the promise finally() method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The `finally` method schedules a function for executing when the promise gets settled, either fulfilled or rejected.</div><br />
+  <div><strong>Interview Response:</strong> The finally() method in JavaScript is used to attach callbacks that execute regardless of a Promise's outcome, allowing you to run cleanup or follow-up code after both successful resolution and error rejection.</div><br />
   <div><strong>Technical Response:</strong> Just like there is a 'finally' clause in a standard try &#123;...&#125; catch &#123;...&#125;, there is a 'finally' clause in promises. Finally, the finally() function yields a Promise. The provided callback function gets performed when the promise resolves to be fulfilled or denied. Once the Promise has dealt with, the executing code can determine if the promise gets successfully set to fulfilled or denied. The call.finally(f) is identical to.then(f, f) in that f is always executed when the promise resolves: resolve or reject. Finally, a decent handler for cleaning up, such as halting our loading indicators because they are no longer required, regardless of the outcome.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -303,6 +339,66 @@ new Promise((resolve, reject) => {
   .then((result) => alert(result)); // <-- .then handles the result
 ```
 
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the difference between .then() and .catch()?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The .then() is used for handling fulfilled Promises, while .catch() is for handling rejected Promises.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### How can you chain multiple Promises together?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> You can chain Promises by returning a new Promise from a .then() or .catch() callback, allowing further chaining.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What is Promise.all() and when would you use it?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Promise.all() is a method that takes an array of Promises and returns a single Promise that fulfills with an array of results when all input Promises fulfill.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you explain the use of Promise.race() in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Promise.race() takes an array of Promises and returns a single Promise that settles with the value or reason of the first input Promise to settle.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the purpose of Promise.resolve() and Promise.reject()?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Promise.resolve() and Promise.reject() are helper methods that return a fulfilled or rejected Promise, respectively, with the given value or reason.<br />
   </div>
   </div>
 </details>

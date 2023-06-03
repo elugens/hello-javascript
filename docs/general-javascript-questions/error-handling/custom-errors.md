@@ -40,6 +40,69 @@ import StructuredData from './schemadata/CustomErrorsSchemaData.js';
 
 <CloseAllAnswers />
 
+---
+
+### What is a custom error in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A custom error in JavaScript is a user-defined class that extends the built-in `Error` class, providing additional or specific functionality for error handling purposes.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### Why would you create a custom error class?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Creating a custom error class allows more specific error types, aiding in precise error handling and providing clearer error context, improving debugging and error reporting.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### How do you create a custom error class in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> To create a custom error class, define a new class that extends the built-in Error class and override the constructor to set custom properties.<br />
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+class CustomError extends Error {
+    constructor(message, errorCode) {
+        super(message); // Pass the message to the Error constructor
+        this.name = "CustomError"; // Set the name of the error
+        this.errorCode = errorCode; // Add a custom property
+    }
+}
+
+try {
+    throw new CustomError("A custom error occurred", 123);
+} catch (error) {
+    console.log(error.name); // Prints: CustomError
+    console.log(error.message); // Prints: A custom error occurred
+    console.log(error.errorCode); // Prints: 123
+}
+```
+
+In this example, `CustomError` is a user-defined class that extends the built-in `Error` class. It adds a custom `errorCode` property. When a `CustomError` is thrown, the `catch` block is able to handle it and access the custom `errorCode` property.
+
+  </div>
+  </div>
+</details>
+
+---
+
 ### What are the benefits of inheriting from the Error object vs. simply using the throw statement?
 
 <details>
@@ -198,6 +261,130 @@ try {
     throw err; // unknown error, rethrow it
   }
 }
+```
+
+  </div>
+  </div>
+</details>
+
+---
+
+### What properties should a custom error class include?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A custom error class should include a `name` property for identifying the error type and a `message` property for describing the error. Optionally, it may include custom properties relevant to the error context.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+class CustomError extends Error {
+    constructor(message, errorCode) {
+        super(message); // Essential property
+        this.name = "CustomError"; // Essential property
+        this.errorCode = errorCode; // Custom property
+        this.time = new Date(); // Custom property
+    }
+}
+
+try {
+    throw new CustomError("A custom error occurred", 123);
+} catch (error) {
+    console.log(error.name); // Prints: CustomError
+    console.log(error.message); // Prints: A custom error occurred
+    console.log(error.errorCode); // Prints: 123
+    console.log(error.time); // Prints: current date and time
+}
+```
+
+  </div>
+  </div>
+</details>
+
+---
+
+### How do you throw a custom error in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> To throw a custom error in JavaScript, first, define a custom error class extending Error, then use throw followed by new CustomError(arguments).<br />
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+class CustomError extends Error {
+    constructor(message, errorCode) {
+        super(message);
+        this.name = "CustomError";
+        this.errorCode = errorCode;
+    }
+}
+
+try {
+    throw new CustomError("A custom error occurred", 123);
+} catch (error) {
+    console.log(error.name); // Prints: CustomError
+    console.log(error.message); // Prints: A custom error occurred
+    console.log(error.errorCode); // Prints: 123
+}
+```
+
+In this example, a `CustomError` is defined and then thrown inside a `try` block. The thrown error is caught by the `catch` block and its properties are logged.
+
+  </div>
+  </div>
+</details>
+
+---
+
+### How can custom errors improve application maintainability?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Custom errors enhance maintainability by providing clearer error categorization, better error messages, and targeted handling, making it easier to identify, debug, and fix issues.<br />
+  </div>
+  </div>
+</details>
+
+---
+
+### How is error handling achieved with promises in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Error handling with Promises in JavaScript is achieved using the .catch() method or .then()'s second argument to handle rejected promises and catch errors in the promise chain.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let promise = new Promise((resolve, reject) => {
+    // some operation that could fail
+    let operationSucceeded = false;
+
+    if (operationSucceeded) {
+        resolve("Operation succeeded");
+    } else {
+        reject(new Error("Operation failed"));
+    }
+});
+
+promise
+    .then(result => {
+        console.log(result);
+    })
+    .catch(error => {
+        // handle the error here
+        console.log(error.message); // Prints: Operation failed
+    });
+
 ```
 
   </div>
