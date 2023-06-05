@@ -41,7 +41,7 @@ import StructuredData from './schemadata/ClickJackingSchemaData.js';
 
 ---
 
-### Can you explain what is clickjacking?
+### Can you explain what is Clickjacking?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

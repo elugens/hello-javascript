@@ -241,6 +241,18 @@ In this code, a `pointerdown` event listener is added to an element with the id 
 
 ---
 
+### What is the difference between capturing and bubbling phase in pointer events?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In the capturing phase, events are triggered on the ancestors of the target element, while in the bubbling phase, events are triggered on the target element first and then propagate to its ancestors.
+  </div><br />
+  </div>
+</details>
+
+---
+
 ### Can you replacing `mouse<event>` with `pointer<event>` in modern applications?
 
 <details>

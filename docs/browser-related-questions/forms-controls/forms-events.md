@@ -41,12 +41,246 @@ import StructuredData from './schemadata/FormEventsSchemaData.js';
 
 ---
 
-### How does an event change function or work?
+### What is a form event in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The change event triggers when the element has finished changing. The behavior depends on the kind of element getting changed and how the user interacts with the element. The change event fires at a different moment. For text inputs, the event occurs when it loses focus.
+  <div><strong>Interview Response:</strong> JavaScript form events are initiated by the user's interactions with form elements, such as input, select, and text area. These events include:
+  </div><br />
+
+* **submit:** This event is triggered when the user submits the form.
+* **change:** This event is triggered when the user changes the value of a form element.
+* **input:** This event is triggered when the user enters text into a form element.
+
+Form events can be used to validate user input, update the page based on user input, and prevent the form from being submitted if the user has not entered valid data.
+
+  </div>
+</details>
+
+---
+
+### Can you please explain the purpose of the 'submit' event?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Whenever a form is submitted, the 'submit' event gets triggered. Developers can confidently make use of this event to validate the form data and, if necessary, prevent any submission.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### Can you provide an explanation of the 'change' event and the circumstances under which it is triggered?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The 'change' event triggers when the value of an input or select element changes and the element loses focus.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### How can you prevent a form from submitting in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> You can prevent form submission by using event.preventDefault() method in the 'submit' event handler.
+  </div><br />
+  <div><strong>Technical Response:</strong> You can prevent a form from submitting by using the event.preventDefault() method in the 'submit' event handler. This method will stop the form from submitting to the server, even if the user has clicked the submit button. You can use this method to prevent forms from being submitted if there are any errors in the form data, or if you want to perform some additional validation before submitting the form. For example, you could use the event.preventDefault() method to prevent a form from being submitted if the user has not entered a value in a required field. You could also use it to prevent a form from being submitted if the user has entered an invalid value in a field. The event.preventDefault() method is a very powerful tool that can be used to prevent forms from being submitted in a variety of situations.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### How would you attach an event handler to a form event?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> You attach an event handler to a form event by using the `addEventListener()` method, specifying the event type and callback function to handle the event. This function is called when the event occurs.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's a simple code example of attaching an event handler to a form's submit event:
+
+```javascript
+document.getElementById('myForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    console.log('Form submitted!');
+});
+```
+
+In this example, when the form with the ID 'myForm' is submitted, it will prevent the default form submission and log a message to the console.
+
+  </div>
+  </div>
+</details>
+
+---
+
+### What does the 'reset' form event do?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The reset event is fired when a form is reset, restoring all form controls to their initial values. This means that any changes that were made to the form's controls are lost, and the controls are returned to the state they were in when the form was first loaded.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### Can we trigger form events programmatically?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, form events can be triggered programmatically in JavaScript using the `dispatchEvent()` method. It creates an event and dispatches it to the specified target.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's a code example showing how to programmatically trigger a form event, specifically a 'submit' event:
+
+```javascript
+let event = new Event('submit');
+let form = document.getElementById('myForm');
+form.dispatchEvent(event);
+```
+
+In this example, a new 'submit' event is created and then dispatched to the form with the ID 'myForm'.
+
+  </div>
+  </div>
+</details>
+
+---
+
+### What is event bubbling in the context of form events?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Event bubbling in the context of form events refers to the phenomenon where an event triggers on an element and then bubbles up through its parent elements in the DOM hierarchy.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### What's the difference between the 'change' and 'input' events?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The 'change' event triggers when an input field's value changes and loses focus, while the 'input' event fires immediately as the user types or alters the input field's value.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### How can you stop an event from bubbling up in a form?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> To stop an event from bubbling up in a form, you can use the `event.stopPropagation()` method within the event handler function. It prevents the event from reaching parent elements.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### What happens when a 'select' event is triggered?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A "select" event is triggered when a user selects some text in a text field. This can be done by clicking and dragging the mouse over the text, or by using the keyboard to select the text. The "select" event can be used to perform a variety of actions, such as copying the selected text, pasting the selected text, or searching for the selected text.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### What is form validation in the context of form events?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Form validation involves checking whether a form's input fields meet specific criteria, often during a 'submit' event, to ensure that submitted data is complete, correct, and secure.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's a basic example of form validation on 'submit' event using JavaScript:
+
+```javascript
+document.getElementById('myForm').addEventListener('submit', function(event) {
+    let input = document.getElementById('myInput').value;
+    if(input === '') {
+        event.preventDefault();
+        alert('Input field cannot be empty!');
+    }
+});
+```
+
+In this example, the form's submit event is intercepted and checked if the input field with the ID 'myInput' is empty. If it is, the form submission is prevented, and an alert is displayed.
+
+  </div>
+  </div>
+</details>
+
+---
+
+### Can we capture the data entered in a form field?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, the data entered in a form field can be captured using JavaScript. You can access the field's value using the 'value' property of the form field element.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's a simple code example showing how to capture the data entered in a form field:
+
+```javascript
+document.getElementById('myForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    let inputField = document.getElementById('myInput');
+    let enteredData = inputField.value;
+    console.log('Entered data: ', enteredData);
+});
+```
+
+In this example, when the form is submitted, the default action is prevented, the value of the input field with the ID 'myInput' is accessed, and it's logged to the console.
+
+  </div>
+  </div>
+</details>
+
+---
+
+### How does an event onchange function or work?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The "onchange" event triggers when the value of an input field is altered and then the element loses focus, allowing specific code to be executed in response.
+    </div><br />
+  <div><strong>Technical Response:</strong> The change event triggers when the element has finished changing. The behavior depends on the kind of element getting changed and how the user interacts with the element. The change event fires at a different moment. For text inputs, the event occurs when it loses focus.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong> text input<br /><br />
 
@@ -82,7 +316,9 @@ import StructuredData from './schemadata/FormEventsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The input event triggers whenever the user changes a value. It initiates any value change, even ones that do not require keyboard activities, such as copying with a mouse or using speech recognition to dictate the text. This event is the ideal solution if we want to handle every change to an &#8249;input&#8250;. In contrast, the input event does not trigger through a keyboard input or other activities that do not require a value change, such as hitting the right or left arrow keys when in the input.
+  <div><strong>Interview Response:</strong> The "oninput" event triggers immediately when the value of an input field changes, allowing specific code to be executed in response.
+    </div><br />
+  <div><strong>Technical Response:</strong> The input event triggers whenever the user changes a value. It initiates any value change, even ones that do not require keyboard activities, such as copying with a mouse or using speech recognition to dictate the text. This event is the ideal solution if we want to handle every change to an &#8249;input&#8250;. In contrast, the input event does not trigger through a keyboard input or other activities that do not require a value change, such as hitting the right or left arrow keys when in the input.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -112,7 +348,7 @@ After we update the value, the input event happens. As a result, we are unable t
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> They belong to ClipboardEvent class and provide access to the data that is copied/pasted.
+  <div><strong>Interview Response:</strong> Cut, copy, and paste events belong to the ClipboardEvent class in JavaScript, which handles interaction with the clipboard.
     </div>
   </div>
 </details>
@@ -158,7 +394,9 @@ It is possible to copy/paste everything, not just text. For example, we can copy
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, the clipboard is a “global” OS-level application program interface. So, most browsers allow read/write access to the clipboard only in the scope of specific user actions for security, e.g., an onclick event handlers. Also, it is forbidden to generate “custom” clipboard events with dispatchEvent in all browsers except Firefox.
+  <div><strong>Interview Response:</strong> Yes, for security and privacy reasons, clipboard access is often restricted to ensure user-initiated actions and requires explicit permission from the user.
+    </div><br />
+  <div><strong>Technical Response:</strong> Yes, the clipboard is a “global” OS-level application program interface. So, most browsers allow read/write access to the clipboard only in the scope of specific user actions for security, e.g., an onclick event handlers. Also, it is forbidden to generate “custom” clipboard events with dispatchEvent in all browsers except Firefox.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
