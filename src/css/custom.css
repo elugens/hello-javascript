@@ -53,8 +53,9 @@ h3 {
 } */
 
 /* controls size of the font in the details responses */
-details div {
-  font-size: 1rem;
+details div:first-child {
+  font-size: 1.025rem;
+  padding-top: 5px;
 }
 
 .docusaurus-highlight-code-line {
