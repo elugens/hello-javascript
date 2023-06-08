@@ -54,12 +54,12 @@ import StructuredData from './schemadata/LongPollingSchemaData.js';
 
 ---
 
-### What is the difference between long and regular polling?
+### What is the difference between long and short polling?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The main difference is that long polling is a much better way to poll the server because it is relatively easy to implement and delivers messages without delays. Regular polling can suffer from delays between requests of up to 10 seconds, and the server is bombed with a request every 10 seconds, leaving regular polling as a less than equitable way of polling.
+  <div><strong>Interview Response:</strong> The main difference is that long polling is a much better way to poll the server because it is relatively easy to implement and delivers messages without delays. Regular polling can suffer from delays between requests of up to 10 seconds, and the server is bombed with a request every 10 seconds, leaving short polling as a less than equitable way of polling.
     </div>
   </div>
 </details>
