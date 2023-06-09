@@ -47,8 +47,164 @@ import StructuredData from './schemadata/ShadowDOMSlotsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The HTML &#8249;slot&#8250; element is part of the Web Components technology suite, which acts as a placeholder inside a web component that you can fill with your markup. It lets you create separate DOM trees and present them together.
+  <div><strong>Interview Response:</strong> The HTML `&#60;slot&#62;` element is used in web development to create placeholder slots in web components where users can insert their own custom markup, enabling content composition.
     </div>
+  </div>
+</details>
+
+---
+
+### Why are Slots used in Web Components?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Slots allow content composition by letting developers distribute child elements into predefined places in the template of a custom element.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### How many types of slots are there?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> There are two types of slots: named and default.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### What's the difference between a named slot and a default slot?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Named slots are for specific content, while a default slot catches all unassigned or unspecified content.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### How can you select elements assigned to slots in Shadow DOM?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> We can use the assignedElements method of the Slot API to select elements assigned to slots in the Shadow DOM.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### What's the difference between assignedNodes and assignedElements?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The assignedNodes method returns all assigned nodes, including text nodes, while the assignedElements method only returns element nodes.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### Can you change the slot an element is assigned to?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, by changing the slot attribute of an element.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### What happens when multiple elements have the same slot name?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> All elements with the same slot name will be inserted into the named slot in order.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### Can a web component have more than one slot?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, a web component can have multiple slots.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### What happens to elements that don't have a slot attribute?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Elements without a slot attribute are assigned to the default slot.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### What happens if there is no default slot?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> If there's no default slot, elements without a slot attribute will not be displayed.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### Is it necessary to use slots when creating custom elements?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> No, but slots provide a flexible way to customize content in custom elements.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### What happens when a slot is deleted from the Shadow DOM?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> If a slot is removed, the assigned nodes are not displayed but still exist in the Light DOM.
+  </div><br />
+  </div>
+</details>
+
+---
+
+### Can a slotted element access data from the shadow host?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> No, a slotted element operates in the light DOM and cannot directly access the shadow host's internal state.
+  </div><br />
   </div>
 </details>
 
@@ -59,7 +215,7 @@ import StructuredData from './schemadata/ShadowDOMSlotsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The combination of the Light DOM and the shadow DOM is considered the flattened DOM result. The flattened DOM is viewable in the developer tools for inspection but unavailable in the source.
+  <div><strong>Interview Response:</strong> A flattened DOM refers to the resulting structure when shadow DOM's nodes and light DOM's slotted content are combined, creating a single tree that represents the rendered layout. The combination of the Light DOM and the shadow DOM is considered the flattened DOM result. The flattened DOM is viewable in the developer tools for inspection but unavailable in the source.
     </div>
   </div>
 </details>
@@ -113,7 +269,7 @@ import StructuredData from './schemadata/ShadowDOMSlotsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The first &#8249;slot&#8250; in shadow DOM that does not have a name is a “default” slot. The default slot gets all nodes from the light DOM that are not slotted elsewhere.
+  <div><strong>Interview Response:</strong> In Shadow DOM, the default slot is the `&#8249;slot&#8250;` element without a `name` attribute, which catches all unassigned or unspecified content from the light DOM.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -162,7 +318,9 @@ import StructuredData from './schemadata/ShadowDOMSlotsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The HTML slot element has three main methods, including assignedSlot, assignedNodes, and assignedElements used to handle or assess element node assignment. The assignedSlot method returns the &#8249;slot&#8250; element that the node gets assigned. The assignedElements() method returns a sequence of the nodes assigned to this slot, and if the flatten option sets to true, the assigned nodes of any other slots are descendants of this slot. If no assigned nodes return, the slot's fallback content returns. The assignedSlot method returns an HTMLSlotElement representing the &#8249;slot&#8250; element the node is inserted in. These methods are useful when we need to show the slotted content and track it in JavaScript.
+  <div><strong>Interview Response:</strong> The three methods handling HTML slot assignment are `slot.assignedNodes()`, `slot.assignedElements()`, and the `slotchange` event listener.
+    </div><br />
+  <div><strong>Technical Response:</strong> The HTML slot element has three main methods, including assignedSlot, assignedNodes, and assignedElements used to handle or assess element node assignment. The assignedSlot method returns the &#8249;slot&#8250; element that the node gets assigned. The assignedElements() method returns a sequence of the nodes assigned to this slot, and if the flatten option sets to true, the assigned nodes of any other slots are descendants of this slot. If no assigned nodes return, the slot's fallback content returns. The assignedSlot method returns an HTMLSlotElement representing the &#8249;slot&#8250; element the node is inserted in. These methods are useful when we need to show the slotted content and track it in JavaScript.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
