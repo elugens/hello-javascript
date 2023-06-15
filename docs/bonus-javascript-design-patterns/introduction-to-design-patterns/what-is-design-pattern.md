@@ -90,7 +90,7 @@ import StructuredData from './schemadata/WhatIsSchemaData.js';
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> One of the most important aspects of writing maintainable code is to make it easy to understand and modify.
+      <strong>Interview Response:</strong> One of the most important aspects of writing maintainable code is to make it easy to understand and modify. Good coding practices, include keeping functions small and simple, to enhance readability and maintainability.
     </div>
     <br/>
     <div>
@@ -109,7 +109,7 @@ import StructuredData from './schemadata/WhatIsSchemaData.js';
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The reason for this is that the code you write is not only used by other developers but also by your future self. To optimize your code, you need to be able to notice the patterns.
+      <strong>Interview Response:</strong> Managing written code is more complicated due to the dynamic nature of software development. Code evolves over time, requiring regular refactoring, updates, bug fixes, and adaptation to new requirements, beyond initial design patterns.
     </div>
   </div>
 </details>
@@ -180,7 +180,7 @@ import StructuredData from './schemadata/WhatIsSchemaData.js';
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> Design patterns are not exact solutions but rather general templates that can be adapted to fit specific needs and situations in software development.
+      <strong>Interview Response:</strong> No, design patterns in JavaScript are not exact solutions. They are guidelines or templates that solve common problems in software design. They need to be adapted and modified to fit specific needs of each unique application.
     </div>
     <br/>
     <div>
@@ -219,6 +219,18 @@ import StructuredData from './schemadata/WhatIsSchemaData.js';
 - **Frequently used design patterns are improved over time by harnessing the knowledge of the many.** Using design patterns gives back to the design pattern community and helps improve application development. In some cases, this leads to creating entirely new design patterns, while in others, it can lead to improved guidelines. This approach can ensure that pattern-based solutions continue to become more robust than ad-hoc solutions may be.
 
 <br />
+  </div>
+</details>
+
+---
+
+### Can you name some common design patterns in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Common design patterns in JavaScript include the Module pattern, Observer (or Pub/Sub) pattern, Prototype pattern, Factory pattern, Singleton pattern, Decorator pattern, and the Revealing Module pattern.
+  </div>
   </div>
 </details>
 

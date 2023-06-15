@@ -5,7 +5,7 @@
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The five primitive wrapper objects in JavaScript are: String, Number, Boolean, Symbol, and BigInt.
-  </div><br />
+  </div>
   </div>
 </details>
 

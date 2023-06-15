@@ -34,6 +34,11 @@ h3 {
   font-size: 1.5rem;
   line-height: 1.2;
   margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+strong {
+  font-weight: 600;
 }
 
 /* html[data-theme='light'] details {

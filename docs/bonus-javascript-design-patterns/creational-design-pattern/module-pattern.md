@@ -42,7 +42,7 @@ import StructuredData from './schemadata/ModuleSchemaData.js';
 
 ---
 
-### Can you explain the Module design pattern?
+### What is the Module Design Pattern in JavaScript?
 
 <details className='answer'>
   <summary>
@@ -50,7 +50,8 @@ import StructuredData from './schemadata/ModuleSchemaData.js';
   </summary>
   <div>
   <div>
-      <strong>Interview Response:</strong> The Module pattern is a design pattern that encapsulates related variables and functions into a single object, providing privacy and preventing naming collisions.<br/>
+      <strong>Interview Response:</strong> It's a pattern that provides a way to wrap a mix of public and private methods and variables, protecting pieces from leaking into the global scope and accidentally colliding with another developer's interface.
+<br/>
     </div>
     <br/>
     <div>
@@ -99,6 +100,18 @@ testModule.resetCounter();
 
 </div>
 <br />
+  </div>
+</details>
+
+---
+
+### Why is the Module Pattern used?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It's used for maintaining encapsulation, modularity, and namespace management, enhancing code organization, and reducing global scope pollution while providing public/private access control.
+  </div>
   </div>
 </details>
 
@@ -191,6 +204,90 @@ testModule.resetCounter();
       <strong>Technical Response:</strong> There are several alternative patterns to the Module pattern in JavaScript. One alternative is the Revealing Module pattern, which exposes only the public properties and methods of a module. Another alternative is the Prototype pattern, which uses prototypal inheritance to create objects and share behavior between them. Other patterns include the Singleton and Factory patterns.<br/>
     </div>
     <br/>
+  </div>
+</details>
+
+---
+
+### What are public and private methods in the context of the Module Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Public methods are accessible outside the module. Private methods are encapsulated within the module, and can only be accessed by other methods within the same module.
+  </div>
+  </div>
+</details>
+
+---
+
+### How does the Module Pattern help in reducing global scope pollution?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It limits the number of global variables by encapsulating code inside modules, minimizing potential variable name clashes across scripts.
+  </div>
+  </div>
+</details>
+
+---
+
+### How does the Revealing Module Pattern relate to the Module Design Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It's a variant of the Module Pattern, where an object literal is returned, revealing only the pointers to methods or variables which should be accessible, enhancing readability and maintainability.
+  </div>
+  </div>
+</details>
+
+---
+
+### Can modules communicate with each other in the Module Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, one module can import methods from another module, facilitating inter-module communication, while maintaining encapsulation.
+  </div>
+  </div>
+</details>
+
+---
+
+### How does the Module Pattern support code reusability?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It groups related functions and variables into modules, allowing for easier import and reuse across different parts of an application.
+  </div>
+  </div>
+</details>
+
+---
+
+### How can the Module Pattern help improve code maintainability?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It enhances maintainability by encapsulating code, promoting better organization and understanding of the codebase, and enabling easy updates of individual modules.
+  </div>
+  </div>
+</details>
+
+---
+
+### What Modern ECMAScript feature uses the Module Design Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The ECMAScript 2015 (ES6) feature that uses the Module Design Pattern is Modules. Modules are a way to organize code into self-contained units that can be imported and exported.
+  </div>
   </div>
 </details>
 

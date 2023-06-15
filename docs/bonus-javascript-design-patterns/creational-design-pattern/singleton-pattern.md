@@ -42,7 +42,7 @@ import StructuredData from './schemadata/SingletonSchemaData.js';
 
 ---
 
-### Could you please explain the singleton pattern?
+### What is the Singleton Design Pattern?
 
 <details className='answer'>
   <summary>
@@ -50,7 +50,7 @@ import StructuredData from './schemadata/SingletonSchemaData.js';
   </summary>
   <div>
   <div>
-      <strong>Interview Response:</strong> The Singleton pattern in JavaScript ensures only one instance of a class exists by creating a global access point to it. It's commonly used for managing shared resources.
+      <strong>Interview Response:</strong> The Singleton Pattern ensures a class has only one instance, and provides a global point of access to it, enabling controlled and shared resource access across the entire application.
     </div>
     <br/>
     <div>
@@ -170,7 +170,7 @@ console.log(badSingleA.getRandomNumber() !== badSingleB.getRandomNumber()); // t
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Singleton pattern in JavaScript belongs to the Creational Design Pattern family, which is concerned with the process of object creation.
+      <strong>Interview Response:</strong> The Singleton pattern belongs to the Creational design patterns family, as it deals with object creation mechanisms, intending to create objects in a manner suitable to the situation.
     </div>
   </div>
 </details>
@@ -185,13 +185,12 @@ console.log(badSingleA.getRandomNumber() !== badSingleB.getRandomNumber()); // t
   </summary>
   <div>
   <div>
-      <strong>Interview Response:</strong> JavaScript Singletons are similar to static classes or objects in that they only allow one instance, but they can be initialized lazily and provide a global point of access.
+      <strong>Interview Response:</strong> Singletons can implement interfaces, extend classes, and allow for lazy initialization, while static classes or objects can't. They can also be passed as parameters or be serialized. JavaScript Singletons are similar to static classes and objects in that they only allow one instance, but they can be initialized lazily and provide a global point of access.
     </div>
     <br/>
     <div>
       <strong>Technical Response:</strong> Singletons vary from static classes (or objects). Their initialization delays, typically because they require information that may not be available at the time of initialization. They don't make it easy for code that isn't aware of a previous reference to them to find them. A Singleton returns a structure rather than an object or a "class." Consider how closure variables aren't closures - the closure is the function scope that provides the closure.
     </div>
-
   </div>
 </details>
 
@@ -205,7 +204,7 @@ console.log(badSingleA.getRandomNumber() !== badSingleB.getRandomNumber()); // t
   </summary>
   <div>
   <div>
-      <strong>Interview Response:</strong> The advantages of using the Singleton pattern in JavaScript include the ability to ensure only one instance exists, providing a global access point, and efficient resource utilization.
+      <strong>Interview Response:</strong> Singleton pattern ensures controlled access to sole instance, can reduce system resources usage, and enables shared state across application. Also, it allows for lazy and controlled initialization.
     </div>
     <br/>
     <div>
@@ -232,7 +231,7 @@ console.log(badSingleA.getRandomNumber() !== badSingleB.getRandomNumber()); // t
   </summary>
   <div>
   <div>
-      <strong>Interview Response:</strong> Drawbacks of the Singleton pattern in JavaScript include difficulty in testing, difficulty in extending, and potential for creating tightly-coupled code.
+      <strong>Interview Response:</strong> Singletons can introduce global state, making debugging difficult. They may violate the single responsibility principle, hinder testability, and promote tight coupling, affecting code modularity.
     </div>
     <br/>
     <div>
@@ -260,7 +259,242 @@ console.log(badSingleA.getRandomNumber() !== badSingleB.getRandomNumber()); // t
   </summary>
   <div>
     <div>
+      <strong>Interview Response:</strong> In JavaScript, alternatives to Singleton include 'module pattern', dependency injection, and state management libraries like Redux.
+    </div><br/>
+    <div>
       <strong>Interview Response:</strong> There are alternative patterns that can be used instead of the Singleton pattern in JavaScript. For example, the Revealing Module Pattern, Dependency Injection Pattern, and Factory Pattern can all be used to achieve similar results without the potential drawbacks of the Singleton pattern.
     </div>
   </div>
 </details>
+
+---
+
+### How do you ensure that the Singleton instance is created only once in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In JavaScript, you can use a closure to ensure that the Singleton instance is created only once. This is done by defining a private variable to hold the instance and a function to create the instance if it does not already exist.
+  </div>
+  <div><strong>Technical Response:</strong> To ensure that the Singleton pattern is thread-safe in JavaScript, you can use a combination of closures and the module pattern. By using closures, you can create private variables and methods that are inaccessible from the outside world. And by using the module pattern, you can create a single instance of an object that can be shared across multiple modules without the risk of it being overwritten or modified by other threads.
+  </div>
+  </div>
+</details>
+
+---
+
+### When is a Singleton useful?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Singleton is useful when you need a single, globally accessible instance of a class, such as a logging system, database connections, or configuration manager.
+  </div>
+  </div>
+</details>
+
+---
+
+### How does Singleton enforce single instantiation?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Singleton enforces single instantiation by making the constructor private and providing a static method to get the singleton instance.
+  </div>
+  </div>
+</details>
+
+---
+
+### Why can Singleton make unit testing difficult?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Singleton can make unit testing difficult due to its global state, which can introduce unwanted dependencies between tests.
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you modify a Singleton object once it is created?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, the Singleton object can be modified once it's created. Singleton controls instantiation, not object immutability.
+  </div>
+  </div>
+</details>
+
+---
+
+### How do you handle multiple threads in a Singleton design pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> To handle multiple threads, synchronization should be used to ensure only one instance is created in a multithreaded environment.
+  </div>
+  </div>
+</details>
+
+---
+
+### How can we create a Singleton in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> To create a Singleton in JavaScript, we can use a combination of closures and the module pattern. By returning an object with only one instance, we ensure that the Singleton is created and accessed in a safe and efficient manner.
+  </div>
+  </div>
+</details>
+
+---
+
+### Can there be multiple instances of a Singleton class?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> No, the Singleton pattern ensures there is only one instance of a class.
+  </div>
+  </div>
+</details>
+
+---
+
+### Is the Singleton pattern common in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, Singleton is common in JavaScript due to its module pattern, which encapsulates code within a single unit of functionality.
+  </div>
+  </div>
+</details>
+
+---
+
+### Can a Singleton class be inherited?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Inheritance can be problematic with Singleton, since the base class might produce multiple instances, violating the Singleton design principle.
+  </div>
+  </div>
+</details>
+
+---
+
+### What is a practical example of Singleton in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A practical example could be a config object storing application settings, ensuring settings remain consistent across the application.
+  </div>
+  </div>
+</details>
+
+---
+
+### What are other design patterns related to Singleton?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Singleton is part of creational design patterns. Other patterns in this category include Factory, Abstract Factory, Builder, and Prototype.
+  </div>
+  </div>
+</details>
+
+---
+
+### Can Singleton be considered an anti-pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, some developers consider Singleton as an anti-pattern because it introduces a global state, making code harder to understand, test, and maintain.
+  </div>
+  </div>
+</details>
+
+---
+
+### Is Singleton's global access always advantageous?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> No, while global access is convenient, it can make code dependencies less clear and cause problems with resource contention and coupling.
+  </div>
+  </div>
+</details>
+
+---
+
+### Can we use Singleton in a distributed system?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In distributed systems, Singleton can be challenging due to the difficulty in maintaining a single instance across multiple servers or processes.
+  </div>
+  </div>
+</details>
+
+---
+
+### How does JavaScript's module pattern relate to Singleton?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> JavaScript's module pattern implements Singleton, as it encapsulates code in a single unit of functionality, restricting direct access to some of its components.
+  </div>
+  </div>
+</details>
+
+---
+
+### Does Singleton violate the Single Responsibility Principle?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, Singleton can violate the Single Responsibility Principle, as it manages its own creation and lifecycle in addition to its primary functionality.
+  </div>
+  </div>
+</details>
+
+---
+
+### How does garbage collection work with Singletons?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Since Singleton objects are intended to exist for the program's lifespan, they are not subject to regular garbage collection.
+  </div>
+  </div>
+</details>
+
+---
+
+### Are there any alternatives to Singleton for global state management in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, alternatives to Singleton for global state management in JavaScript include the module pattern, dependency injection, and state management libraries such as Redux, MobX, or the Context API in React.
+  </div>
+  </div>
+</details>
+
+---

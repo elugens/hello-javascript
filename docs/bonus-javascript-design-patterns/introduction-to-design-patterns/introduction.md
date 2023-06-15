@@ -44,6 +44,18 @@ import StructuredData from './schemadata/IntroSchemaData.js';
 
 ---
 
+### What is a design pattern in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A design pattern in JavaScript is a reusable solution to commonly occurring problems in software design, categorized into creational, structural, and behavioral, focusing on object creation, composition, and interaction respectively.
+  </div>
+  </div>
+</details>
+
+---
+
 ### Can you name the three principal categories of design patterns in web development?
 
 <details>
@@ -52,7 +64,7 @@ import StructuredData from './schemadata/IntroSchemaData.js';
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The three main design patterns categories in JavaScript are creational, structural, and behavioral design patterns.<br/>
+      <strong>Interview Response:</strong> The three principal categories of design patterns in web development are: Creational, Structural, and Behavioral design patterns.<br/>
     </div>
     <hr/>
     <div>
@@ -79,7 +91,7 @@ By using these design patterns, we can create maintainable, scalable, and flexib
 
 ---
 
-### Can you explain what a creational design pattern is in JavaScript?
+### Can you explain what a "Creational" design pattern is in JavaScript?
 
 <details>
   <summary>
@@ -87,7 +99,7 @@ By using these design patterns, we can create maintainable, scalable, and flexib
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> A creational design pattern in JavaScript provides a way to create objects and classes in a flexible and reusable manner, such as the factory and singleton patterns.
+      <strong>Interview Response:</strong> A creational design pattern in JavaScript deals with object creation mechanisms, aiming to create objects in a manner suitable to a given situation, while providing increased flexibility and reusability.
     </div>
     <br/>
     <div>
@@ -98,7 +110,7 @@ By using these design patterns, we can create maintainable, scalable, and flexib
 
 ---
 
-### Explain what a structural design pattern is in JavaScript?
+### Can you describe what a "Structural" design pattern is in JavaScript?
 
 <details>
   <summary>
@@ -106,7 +118,7 @@ By using these design patterns, we can create maintainable, scalable, and flexib
   </summary>
   <div>
   <div>
-      <strong>Interview Response:</strong> A structural design pattern in JavaScript provides a way to organize code to solve common software design problems, such as object composition and class inheritance.
+      <strong>Interview Response:</strong> A structural design pattern in JavaScript concerns object composition and the design of relationships between objects, focusing on simplifying the structure and identifying simple ways for entities to relate.
     </div>
     <br />
     <div>
@@ -117,7 +129,7 @@ By using these design patterns, we can create maintainable, scalable, and flexib
 
 ---
 
-### Can you explain what a behavioral design pattern is in JavaScript?
+### Can you explain what a "Behavioral" design pattern is in JavaScript?
 
 <details>
   <summary>
@@ -125,7 +137,7 @@ By using these design patterns, we can create maintainable, scalable, and flexib
   </summary>
   <div>
   <div>
-      <strong>Interview Response:</strong> A behavioral design pattern in JavaScript provides a way to manage communication and interaction between objects, such as observer, strategy, and command patterns.
+      <strong>Interview Response:</strong> A behavioral design pattern in JavaScript focuses on improving or streamlining the interaction between objects, enhancing how they communicate, fulfill duties, or manage user interactions.
     </div>
     <br/>
     <div>

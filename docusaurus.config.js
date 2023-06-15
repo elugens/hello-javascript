@@ -96,6 +96,12 @@ const config = {
           },
           { to: '/blog', label: 'Blog', position: 'right' },
           {
+            to: 'https://www.youtube.com/@hellojavascript',
+            label: 'Videos',
+            target: '_blank',
+            position: 'right',
+          },
+          {
             to: '/about-hello-javascript',
             label: 'About',
             position: 'right',

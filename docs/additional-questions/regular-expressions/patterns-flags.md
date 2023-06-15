@@ -42,7 +42,7 @@ import StructuredData from './schemadata/PatternsFlagsSchemaData.js';
 
 ---
 
-### What is a regular expression?
+### What is a Regular Expression (Regex) in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -54,12 +54,26 @@ import StructuredData from './schemadata/PatternsFlagsSchemaData.js';
 
 ---
 
+### What is a flag in Regular Expressions?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Flags are modifiers that define how a search should be conducted. Examples: 'g' for global, 'i' for case-insensitive, 'm' for multiline.
+    </div>
+  </div>
+</details>
+
+---
+
 ### What are the two syntaxes used to create a regular expression?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We can use two syntaxes when creating a regular expression object, including the long and short syntaxes. The extended syntax uses the RegExp object with optional flags, and the short syntax uses forward slashes with optional flags. Slashes /.../ tell JavaScript that we are creating a regular expression, and they play the same role as quotes for strings. In both cases, regexp becomes an instance of the built-in RegExp class.
+  <div><strong>Interview Response:</strong> Regular expressions can be created using literal syntax (/pattern/) or the RegExp constructor.
+    </div><br />
+  <div><strong>Technical Response:</strong> We can use two syntaxes when creating a regular expression object, including the long and short syntaxes. The extended syntax uses the RegExp object with optional flags, and the short syntax uses forward slashes with optional flags. Slashes /.../ tell JavaScript that we are creating a regular expression, and they play the same role as quotes for strings. In both cases, regexp becomes an instance of the built-in RegExp class.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -85,6 +99,8 @@ regexp = /pattern/gim; // with flags g,i and m (to be covered soon)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
+  <div><strong>Interview Response:</strong> Six flags in regular expressions are: global (g), case-insensitive (i), multiline (m), dotall (s), unicode (u), and sticky (y).
+  </div><br/>
   <div><strong>Interview Response:</strong> Regular expressions may have flags that affect the search. There are only 6 of them in JavaScript, including the i, g, m, s, u, and y regular expression flags:<br /><br />
   <strong>Flag Descriptions:</strong><br />
   <ul>
@@ -106,7 +122,7 @@ regexp = /pattern/gim; // with flags g,i and m (to be covered soon)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The method myString.match(regexp) finds all matches of regexp in the string myString.
+  <div><strong>Interview Response:</strong> The match method applies a regex to a string, returning an array of matches or null if no matches.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -129,37 +145,43 @@ alert(myString.match(/we/gi)); // We,we (an array of 2 substrings that match)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The match method has three working regex modes. First, if a regular expression has flag g, it returns an array of all matches. Second, if there is no such flag, it returns only the first match in the form of an array, with the whole match at index 0 and some additional details in properties. The array may have other indexes besides 0 if a part of the regular expression gets enclosed in parentheses. And finally, if there are no matches, null is returned (it does not matter if there’s flag g or not). This behavior is an essential nuance. If there are no matches, we do not receive an empty array but instead receive null. Forgetting about that may lead to errors, e.g.
+  <div><strong>Interview Response:</strong> The match method has three modes: single match returning the first match, global match returning all matches, and sticky match executing from a specified position.
+    </div><br />
+  <div><strong>Technical Response:</strong> The match method has three working regex modes. First, if a regular expression has flag g, it returns an array of all matches. Second, if there is no such flag, it returns only the first match in the form of an array, with the whole match at index 0 and some additional details in properties. The array may have other indexes besides 0 if a part of the regular expression gets enclosed in parentheses. And finally, if there are no matches, null is returned (it does not matter if there’s flag g or not). This behavior is an essential nuance. If there are no matches, we do not receive an empty array but instead receive null. Forgetting about that may lead to errors, e.g.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
 
-```js
-// First Mode: Example
-let myString = 'We will, we will rock you';
+Here are JavaScript code examples of the three modes:
 
-alert(myString.match(/we/gi)); // We,we (an array of 2 substrings that match)
+1. Single match:
 
-// Second Mode: Example
-let str = 'We will, we will rock you';
+```javascript
+let str = "Hello world!";
+let result = str.match(/world/); // Returns ["world"]
 
-let result = str.match(/we/i); // without flag g
-
-alert(result[0]); // We (1st match)
-alert(result.length); // 1
-
-// Details:
-alert(result.index); // 0 (position of the match)
-alert(result.input); // We will, we will rock you (source string)
-
-// Third Mode: Example
-let matches = 'JavaScript'.match(/HTML/) || [];
-
-if (!matches.length) {
-  alert('No matches'); // now it works
-}
 ```
+
+2. Global match:
+
+```javascript
+let str = "Hello world, world!";
+let result = str.match(/world/g); // Returns ["world", "world"]
+
+```
+
+3. Sticky match:
+
+```javascript
+let str = "Hello world!";
+let regex = /world/y;
+regex.lastIndex = 6;
+let result = str.match(regex); // Returns ["world"]
+
+```
+
+In the sticky match, the `lastIndex` property sets the index at which to start the next match.
 
   </div>
   </div>
@@ -206,7 +228,7 @@ if (!matches.length) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The method str.replace(regexp, replacement) replaces regexp matches in string str with replacement (all matches if flag g is present; otherwise, only the first one). The replacement string is the second parameter. We can utilize specific character combinations in it to insert match pieces.
+  <div><strong>Interview Response:</strong> The method str.replace(regexp, replacement) replaces regular expression matches in string str with replacement (all matches if flag g is present; otherwise, only the first one). The replacement string is the second parameter. We can utilize specific character combinations in it to insert match pieces.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -241,7 +263,7 @@ alert('I love HTML'.replace(/HTML/, '$& and JavaScript'));
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Basically, we should use the method regexp.test(str), which looks for at least one match, if found, returns true, otherwise false.
+  <div><strong>Interview Response:</strong> Yes, you can use the "test()" function or "match()" method with a regular expression to find a string fragment.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

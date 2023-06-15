@@ -223,6 +223,18 @@ New cost: $39.50
 
 ---
 
+### What problem does the Adapter Pattern solve?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It solves the issue of working with classes or components having incompatible interfaces by encapsulating differences and providing a unified, compatible interface.
+  </div>
+  </div>
+</details>
+
+---
+
 ### What is the Adapter Pattern's most noticeable feature?
 
 <details>
@@ -312,6 +324,78 @@ New cost: $39.50
       <strong>Interview Response:</strong> Yes, some alternatives to the Adapter pattern in JavaScript include refactoring the code to use a common interface, using the Facade pattern, or using the Decorator pattern.
     </div>
 
+  </div>
+</details>
+
+---
+
+### How does the Adapter Pattern maintain the principle of single responsibility?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The Adapter Pattern supports the single responsibility principle by allowing classes to focus on their core functions, while it handles compatibility between different interfaces or systems.
+  </div>
+  </div>
+</details>
+
+---
+
+### Can the Adapter Pattern be used with legacy code?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, it's often used to make legacy code work with newer systems without modifying existing interfaces or code.
+  </div>
+  </div>
+</details>
+
+---
+
+### Is the Adapter Pattern the same as the Decorator Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> No, while both involve wrapping, Adapter changes the interface for compatibility, Decorator adds behavior without altering the interface.
+  </div>
+  </div>
+</details>
+
+---
+
+### What are the key components of the Adapter Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Key components are the Target interface, the Adaptee (existing incompatible interface), and the Adapter (wraps Adaptee to match Target).
+  </div>
+  </div>
+</details>
+
+---
+
+### What’s the difference between object and class adapter patterns?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The Object adapter uses composition to wrap the adaptee, while the Class adapter uses multiple inheritance, not available in JavaScript.
+  </div>
+  </div>
+</details>
+
+---
+
+### Is the Adapter Pattern used frequently in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, JavaScript frequently uses the pattern due to its dynamic nature, often when integrating with third-party libraries or APIs.
+  </div>
   </div>
 </details>
 
