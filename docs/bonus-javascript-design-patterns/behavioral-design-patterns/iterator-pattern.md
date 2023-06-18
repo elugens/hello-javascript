@@ -42,6 +42,18 @@ import StructuredData from './schemadata/IteratorSchemaData.js';
 
 ---
 
+### What is the Iterator Design Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The Iterator Pattern provides a way to access elements sequentially in a collection without exposing its underlying representation.
+  </div>
+  </div>
+</details>
+
+---
+
 ### Can you explain the iterator design pattern?
 
 <details className='answer'>
@@ -193,6 +205,18 @@ false
 
 ---
 
+### Why use the Iterator Pattern in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It simplifies client code, provides a uniform interface for traversing different types of collections, and encapsulates responsibilities for iteration.
+  </div>
+  </div>
+</details>
+
+---
+
 ### The Iterator pattern belongs to which pattern category?
 
 <details>
@@ -264,11 +288,11 @@ false
   </summary>
   <div>
   <div>
-      <strong>Interview Response:</strong> Some of the drawbacks of the Iterator pattern in JavaScript include increased code complexity when implementing custom iterators, and potential performance overhead when using iterators extensively.
+      <strong>Interview Response:</strong> It can add unnecessary complexity if you only need to iterate through simple lists or arrays.
     </div>
     <br />
     <div>
-      <strong>Technical Response:</strong> Drawbacks of the Iterator Pattern.
+      <strong>Technical Response:</strong> Some of the drawbacks of the Iterator pattern in JavaScript include increased code complexity when implementing custom iterators, and potential performance overhead when using iterators extensively.<br/><br/> Drawbacks of the Iterator Pattern.
     </div>
     <br />
     <div></div>
@@ -293,6 +317,90 @@ false
       <strong>Interview Response:</strong> Yes, alternatives to the Iterator design pattern in JavaScript include using generators, async/await, for...of loops, and higher-order array methods like forEach, map, filter, and reduce.
     </div>
     <br />
+  </div>
+</details>
+
+---
+
+### In which scenarios would you use the Iterator Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> You would use it when you want to provide a consistent way to sequentially access elements from a complex data structure.
+  </div>
+  </div>
+</details>
+
+---
+
+### How does the Iterator Pattern differ from the Factory Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> While Factory Pattern is about creating objects, Iterator Pattern is about traversing through a collection of objects.
+  </div>
+  </div>
+</details>
+
+---
+
+### How does the Iterator Pattern promote Single Responsibility Principle?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> By separating traversal logic from the collection, the pattern follows the principle of each class or module having one responsibility.
+  </div>
+  </div>
+</details>
+
+---
+
+### How does the Iterator Pattern affect the time complexity of accessing collection elements?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It doesn't affect the time complexity; it just provides a standardized way to access elements of a collection.
+  </div>
+  </div>
+</details>
+
+---
+
+### Is the Iterator Pattern only suitable for homogeneous collections?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> No, the Iterator Pattern can handle heterogeneous collections, allowing different object types within a single collection.
+  </div>
+  </div>
+</details>
+
+---
+
+### How does JavaScript's ES6 syntax enhance the Iterator Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> ES6 introduces "for...of" loops and iterable protocols, simplifying the implementation and usage of the Iterator Pattern.
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the relationship between the Iterator Pattern and the Composite Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The Composite Pattern often uses the Iterator Pattern to traverse composite structures consistently.
+  </div>
   </div>
 </details>
 

@@ -42,7 +42,7 @@ import StructuredData from './schemadata/RevealingSchemaData.js';
 
 ---
 
-### What is the revealing design pattern?
+### What is the Revealing Module Pattern in JavaScript?
 
 <details className='answer'>
   <summary>
@@ -178,6 +178,236 @@ myRevealingModule.setName('Paul Kinlan');
     </div>
     <br/>
 </div>
+</details>
+
+---
+
+### Why should one use the Revealing Module Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It provides better organization of code, encapsulates private data, and reveals only necessary parts, improving code maintainability and minimizing global scope pollution.
+  </div>
+  </div>
+</details>
+
+---
+
+### How is the Revealing Module Pattern structured?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Traditionally, It's an immediately invoked function expression (IIFE) that returns an object with methods and properties that have been declared inside it.
+  </div>
+  </div>
+</details>
+
+---
+
+### How is the Revealing Pattern implemented in Modern JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In modern JavaScript, the Revealing Module Pattern is applied by using functions and exporting an object literal, which exposes only the public parts, preserving private members within the function's closure.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's an example of the Revealing Module Pattern using modern JavaScript:
+
+```javascript
+const myModule = (() => {
+  let privateData = 'Private data';
+
+  function privateFunction() {
+    return 'This is private!';
+  }
+
+  function publicFunction() {
+    return 'Public can see this!' + privateFunction();
+  }
+
+  return {
+    publicFunction
+  };
+})();
+
+console.log(myModule.publicFunction()); // Outputs: Public can see this! This is private!
+```
+
+In this example, `myModule` is an object with a method `publicFunction()`. The function `privateFunction` and the variable `privateData` are not accessible directly from outside the function's scope, hence they are private.
+
+  </div>
+  </div>
+</details>
+
+---
+
+### How does the Revealing Module Pattern handle privacy?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It uses closures to encapsulate functions and variables within a module, only revealing necessary parts, thereby enforcing privacy.
+  </div>
+  </div>
+</details>
+
+---
+
+### How can you modify private variables using the Revealing Module Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The Revealing Module Pattern in JavaScript allows private variables to be modified through public methods that have access to the same scope. This encapsulation is called "closure".
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+var Counter = (function() {
+    var count = 0; // private variable
+
+    function increment() {
+        count++;
+    }
+
+    function decrement() {
+        count--;
+    }
+
+    function getCount() {
+        return count;
+    }
+
+    return {
+        increment: increment,
+        decrement: decrement,
+        getCount: getCount
+    };
+})();
+
+console.log(Counter.getCount()); // Outputs: 0
+Counter.increment();
+Counter.increment();
+console.log(Counter.getCount()); // Outputs: 2
+Counter.decrement();
+console.log(Counter.getCount()); // Outputs: 1
+```
+
+In this example, we have a `Counter` module created using the Revealing Module Pattern. The `count` variable is a private variable that can only be accessed and modified through the public methods `increment`, `decrement`, and `getCount`.
+
+The `Counter` module returns an object that reveals only the public methods, allowing external code to interact with the private `count` variable indirectly.
+
+  </div>
+  </div>
+</details>
+
+---
+
+### What are the downsides of the Revealing Module Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Testing becomes challenging due to encapsulation. Also, if a private function refers to a public one and the public changes, it can cause issues.
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you extend a module in the Revealing Module Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> No, extending modules is not inherently supported. A module must be modified or wrapped to extend its functionality.
+  </div>
+  </div>
+</details>
+
+---
+
+### Is the Revealing Module Pattern a good option for large applications?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, its ability to organize code, encapsulate details, and minimize global scope makes it suitable for large applications.
+  </div>
+  </div>
+</details>
+
+---
+
+### Does the Revealing Module Pattern have any performance implications?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Generally, no. But, frequent access to private members via public functions may cause minor overhead.
+  </div>
+  </div>
+</details>
+
+---
+
+### How does the Revealing Module Pattern handle inheritance?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Inheritance isn't handled directly, as the pattern primarily provides encapsulation and structure, not object creation.
+  </div>
+  </div>
+</details>
+
+---
+
+### How is the Revealing Module Pattern different from the JavaScript Modules?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> JavaScript Modules separate code into distinct files, supporting import/export of functions or variables. The Revealing Module Pattern, on the other hand, uses a single function to encapsulate public and private elements within one module.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Sure, here's an example of JavaScript Modules:
+
+You can have two separate JavaScript files:
+
+1. `module1.js`:
+
+```javascript
+export const myData = 'Exported data';
+export function myFunction() {
+    return 'Exported function';
+}
+```
+
+2. `main.js`:
+
+```javascript
+import { myData, myFunction } from './module1.js';
+
+console.log(myData); // Outputs: Exported data
+console.log(myFunction()); // Outputs: Exported function
+```
+
+In this example, `module1.js` is exporting `myData` and `myFunction` which can then be imported into `main.js` or any other JavaScript file that needs them. The advantage of JavaScript modules is the separation of concerns and reusability. It's different from the Revealing Module Pattern which deals with encapsulation within a single function scope.
+
+  </div>
+  </div>
 </details>
 
 ---

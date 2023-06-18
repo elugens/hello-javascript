@@ -42,7 +42,7 @@ import StructuredData from './schemadata/StateSchemaData.js';
 
 ---
 
-### Can you explain the state design pattern?
+### What is the State Design Pattern in JavaScript?
 
 <details className='answer'>
   <summary>
@@ -50,7 +50,7 @@ import StructuredData from './schemadata/StateSchemaData.js';
   </summary>
   <div>
   <div>
-      <strong>Interview Response:</strong> The state design pattern is a behavioral pattern that allows objects to change behavior based on their internal state, enabling cleaner and more flexible code.<br/>
+      <strong>Interview Response:</strong> TThe State Design Pattern allows an object to alter its behavior when its internal state changes, seemingly changing its class. It promotes loose coupling and increases manageability.<br/>
     </div>
     <br/>
     <div>
@@ -215,7 +215,7 @@ Green --> for 1 minute
 
 ---
 
-### What are some of the State pattern's drawbacks?
+### What are some drawbacks of using the State Design Pattern?
 
 <details>
   <summary>
@@ -223,7 +223,7 @@ Green --> for 1 minute
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> Applying the pattern may be excessive if a state machine has only a few states or infrequently changes.
+      <strong>Interview Response:</strong> It might increase complexity due to the creation of multiple new classes and also involve additional memory costs. Applying the pattern may be excessive if a state machine has only a few states or infrequently changes.
     </div>
 <br />
   </div>
@@ -242,6 +242,90 @@ Green --> for 1 minute
       <strong>Interview Response:</strong> Yes, alternatives to using the State pattern in JavaScript include using conditional statements, using the Strategy pattern, or using polymorphism to represent different states.
     </div>
 <br />
+  </div>
+</details>
+
+---
+
+### Why use the State Design Pattern in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It's used to manage complexity in code by allowing objects to change their behavior according to their current state, improving readability and maintainability.
+  </div>
+  </div>
+</details>
+
+---
+
+### What kind of problems does the State Design Pattern solve?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It solves problems where an object's behavior needs to change based on its state, avoiding long conditionals and making state transitions explicit.
+  </div>
+  </div>
+</details>
+
+---
+
+### How does the State Design Pattern differ from the Strategy Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> While both involve encapsulated behaviors, State Pattern changes behavior based on internal state, while Strategy Pattern does so based on external control.
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you explain the concept of 'Context' and 'State' in the State Design Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The 'Context' is the entity having varying behavior, while 'State' encapsulates the behavior associated with a particular state of 'Context'.
+  </div>
+  </div>
+</details>
+
+---
+
+### What's the benefit of encapsulating state-specific behavior in a State Design Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It makes the code more organized, easier to understand, and the states are easier to manage or extend in the future.
+  </div>
+  </div>
+</details>
+
+---
+
+### When is the State Design Pattern not suitable?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> When there are only a few states or transitions, or the complexity of different states doesn't justify the overhead of the pattern.
+  </div>
+  </div>
+</details>
+
+---
+
+### Can State Design Pattern lead to performance issues?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Generally not, but if there are numerous complex states, it might potentially lead to performance considerations.
+  </div>
   </div>
 </details>
 

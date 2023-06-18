@@ -42,7 +42,7 @@ import StructuredData from './schemadata/VisitorSchemaData.js';
 
 ---
 
-### Can you explain the visitor design pattern?
+### What is the Visitor Design Pattern in JavaScript?
 
 <details className='answer'>
   <summary>
@@ -54,7 +54,7 @@ import StructuredData from './schemadata/VisitorSchemaData.js';
     </div>
     <br/>
     <div>
-      <strong>Interview Response:</strong> Visitor is a behavioral design pattern that lets you detach algorithms from the objects on which they act. The Visitor pattern adds new methods to a group of objects without affecting them, and the new logic gets housed in a distinct entity known as the Visitor.<br/>
+      <strong>Technical Response:</strong> Visitor is a behavioral design pattern that lets you detach algorithms from the objects on which they act. The Visitor pattern adds new methods to a group of objects without affecting them, and the new logic gets housed in a distinct entity known as the Visitor.<br/>
     </div>
     <div>
 </div><br />
@@ -181,7 +181,7 @@ Boss: $275000 and 53 vacation days
 
 ---
 
-### When should you utilize the JavaScript Visitor Pattern?
+### Why use the Visitor Design Pattern?
 
 <details>
   <summary>
@@ -189,11 +189,11 @@ Boss: $275000 and 53 vacation days
   </summary>
   <div>
   <div>
-      <strong>Interview Response:</strong> The JavaScript Visitor Pattern should be used when you have a complex object structure and need to add new operations without modifying the object classes, or when you need to separate concerns.
+      <strong>Interview Response:</strong> The Visitor Pattern is useful when you need to perform operations across a disparate set of objects. It promotes loose coupling and easier addition of operations.
     </div>
     <br />
     <div>
-      <strong>Technical Response:</strong> We can use the visitor pattern when:
+      <strong>Technical Response:</strong> The JavaScript Visitor Pattern should be used when you have a complex object structure and need to add new operations without modifying the object classes, or when you need to separate concerns.<br/><br/><strong>We can use the visitor pattern when:</strong>
     </div>
     <br />
     <div></div>
@@ -272,6 +272,102 @@ Boss: $275000 and 53 vacation days
       <strong>Interview Response:</strong> There are several alternatives to the Visitor pattern including the Command Pattern, using sealed types, lambda expressions, or polymorphism.
     </div>
     <br />
+  </div>
+</details>
+
+---
+
+### What problems does the Visitor Pattern solve?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It helps in adding new operations without changing the classes of the elements on which they operate, thus avoiding a major change in an existing codebase.
+  </div>
+  </div>
+</details>
+
+---
+
+### How does the Visitor Pattern achieve separation of concerns?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It separates algorithms from structures, allowing structures to be modified independently from the algorithms applied to them.
+  </div>
+  </div>
+</details>
+
+---
+
+### When might the Visitor Pattern not be ideal?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It's not ideal when an object structure changes often, as each change might require a new visitor interface or the existing visitors to be modified.
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you name a real-world scenario where the Visitor Pattern would be beneficial?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It's useful in document object models (DOMs) for web pages, where various operations like rendering, text extraction, etc. can be performed on the elements.
+  </div>
+  </div>
+</details>
+
+---
+
+### How does the Visitor Pattern help in extending functionality?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It lets you add new operations without changing the classes of the elements, facilitating the extension of functionality.
+  </div>
+  </div>
+</details>
+
+---
+
+### What are the main components of the Visitor Design Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The main components are the Visitor, Concrete Visitor, Element, Concrete Element, and Object Structure.
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the role of the 'Visitor' in the Visitor Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The Visitor is an interface declaring a visit operation for each type of Concrete Element in the object structure.
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the role of the 'Element' in the Visitor Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The Element is an interface defining an accept operation that takes a visitor object as an argument.
+  </div>
   </div>
 </details>
 

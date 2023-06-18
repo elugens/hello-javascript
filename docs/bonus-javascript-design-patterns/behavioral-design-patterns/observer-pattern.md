@@ -42,7 +42,7 @@ import StructuredData from './schemadata/ObserverSchemaData.js';
 
 ---
 
-### Can you explain the observer design pattern?
+### What is the Observer Design Pattern?
 
 <details className='answer'>
   <summary>
@@ -50,13 +50,11 @@ import StructuredData from './schemadata/ObserverSchemaData.js';
   </summary>
   <div>
   <div>
-      <strong>Interview Response:</strong> The observer pattern is a behavioral design pattern where a subject maintains a list of its observers, and notifies them automatically of any changes to its state.<br/>
+      <strong>Interview Response:</strong> It's a behavioral pattern that establishes a one-to-many relationship between objects, so when one object changes its state, all its dependents are notified and updated.<br/>
     </div>
     <br/>
     <div>
-      <strong>Technical Response:</strong> The Observer is a behavioral JS design pattern that allows you to construct a subscription mechanism that alerts numerous objects (observers) about any events that occur to the object (subject) they're viewing. This pattern is also known as Pub/Sub, which stands for Publication/Subscription. It establishes a one-to-many relationship between items, encourages loose coupling, and aids in effective object-oriented design.<br/><br/>The observer pattern is at the heart of event-driven programming. We create event handler routines that are informed when a specific event occurs.
-
-<br/>
+      <strong>Technical Response:</strong> The Observer is a behavioral JS design pattern that allows you to construct a subscription mechanism that alerts numerous objects (observers) about any events that occur to the object (subject) they're viewing. This pattern is also known as Pub/Sub, which stands for Publication/Subscription. It establishes a one-to-many relationship between items, encourages loose coupling, and aids in effective object-oriented design.<br/><br/>The observer pattern is at the heart of event-driven programming. We create event handler routines that are informed when a specific event occurs.<br/>
     </div>
     <div>
 </div><br />
@@ -206,15 +204,19 @@ Fired:event #3
 
 ---
 
-### What are some of the Observer pattern's drawbacks?
+### What's a disadvantage of the Observer Pattern?
 
 <details>
   <summary>
     <strong>View Answer:</strong>
   </summary>
   <div>
+  <div>
+      <strong>Interview Response:</strong> It can lead to complexity and unintended side effects if not carefully managed, especially when observers trigger other changes.
+    </div>
+    <br />
     <div>
-      <strong>Interview Response:</strong> Drawbacks of the Observer pattern can include increased complexity and coupling between objects, potential performance issues with a large number of observers, and difficulty in debugging and tracing event flows.
+      <strong>Technical Response:</strong> Drawbacks of the Observer pattern can include increased complexity and coupling between objects, potential performance issues with a large number of observers, and difficulty in debugging and tracing event flows.
     </div>
     <br />
     <div></div>
@@ -238,6 +240,102 @@ Fired:event #3
       <strong>Interview Response:</strong> Yes, alternatives to the Observer pattern include the Publish/Subscribe pattern, the Event Emitter pattern, and using callbacks or promises to handle asynchronous events and updates between objects.
     </div>
     <br />
+  </div>
+</details>
+
+---
+
+### What are the key components of the Observer Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The key components are the Subject (or Observable), the Observers, and a method for adding, removing, and notifying observers.
+  </div>
+  </div>
+</details>
+
+---
+
+### How is the Observer Pattern implemented in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It is implemented using objects which subscribe (or register) to another object (the subject), and then get notified when the subject’s state changes.
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you use the Observer Pattern with React?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, React's Component State and Props can be thought of as a form of the Observer Pattern, where state changes trigger UI updates.
+  </div>
+  </div>
+</details>
+
+---
+
+### When should you use the Observer Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It should be used when a change to one object requires changing others, and you don’t know how many objects need to be changed.
+  </div>
+  </div>
+</details>
+
+---
+
+### What is a practical example of the Observer Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A practical example is event handling in JavaScript, where elements can subscribe to events and get notified when they occur.
+  </div>
+  </div>
+</details>
+
+---
+
+### What's the difference between the Observer and the Publish/Subscribe Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In Publish/Subscribe, publishers don't need to know subscribers, unlike the Observer pattern. There's typically an event bus handling the notifications.
+  </div>
+  </div>
+</details>
+
+---
+
+### How does Observer Pattern differ from MVC?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In MVC, Model and View are separate but can communicate. The Observer pattern is one way this communication can be implemented.
+  </div>
+  </div>
+</details>
+
+---
+
+### How does Observer Pattern contribute to code modularity?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It allows decoupling of objects, making them independent while still allowing communication, improving code modularity.
+  </div>
   </div>
 </details>
 

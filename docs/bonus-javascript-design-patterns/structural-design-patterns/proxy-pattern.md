@@ -42,7 +42,7 @@ import StructuredData from './schemadata/ProxySchemaData.js';
 
 ---
 
-### Could you please explain the proxy design pattern?
+### What is the Proxy Design Pattern in JavaScript?
 
 <details className='answer'>
   <summary>
@@ -297,6 +297,18 @@ Ottawa--Returning from Cache
 
 ---
 
+### What is the main purpose of the Proxy Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Its purpose is to create a surrogate or stand-in for another object to control its access or simplify its interface.
+  </div>
+  </div>
+</details>
+
+---
+
 ### The Proxy pattern belongs to which design pattern family?
 
 <details>
@@ -399,6 +411,42 @@ Ottawa--Returning from Cache
       <strong>Interview Response:</strong> Yes, there are alternative patterns to the Proxy pattern in JavaScript, including the Decorator pattern, the Adapter pattern, and the Facade pattern.
     </div>
     <br />
+  </div>
+</details>
+
+---
+
+### How does the Proxy Pattern provide additional security?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> By controlling access to the object, proxies can enforce permissions, validation, or other security measures.
+  </div>
+  </div>
+</details>
+
+---
+
+### How can the Proxy Pattern simplify complex interfaces?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> By providing a simpler interface to interact with complex underlying objects, easing usage and reducing potential errors.
+  </div>
+  </div>
+</details>
+
+---
+
+### Why would you use the Proxy Pattern over direct interaction?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Using proxies can add control, simplify interfaces, manage resource-intensive operations, and separate concerns, improving code maintainability.
+  </div>
   </div>
 </details>
 

@@ -42,7 +42,7 @@ import StructuredData from './schemadata/CommandSchemaData.js';
 
 ---
 
-### Can you explain the command design pattern?
+### What is the Command Design Pattern?
 
 <details className='answer'>
   <summary>
@@ -334,6 +334,162 @@ Value: 76
     </div>
     <br />
     <div></div>
+  </div>
+</details>
+
+---
+
+### What are some typical uses of the Command Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It's used for operations like queueing tasks, tracking history, and managing high-level operations with complex sequences.
+  </div>
+  </div>
+</details>
+
+---
+
+### What are the main components of the Command Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The main components of the Command Pattern include Command, Receiver, Invoker, and Client.
+  </div>
+  </div>
+</details>
+
+---
+
+### What's the role of the 'Command' component in the Command pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It encapsulates all the information required to perform an action or trigger an event.
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you explain the 'Receiver' in the Command Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The Receiver is an object that performs a set of cohesive actions. It's the object being controlled.
+  </div>
+  </div>
+</details>
+
+---
+
+### How does the 'Invoker' function in the Command pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The Invoker is an object that knows how to execute a command but doesn't know how the command works.
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the role of the 'Client' in the Command Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The Client creates a Command and sets its receiver.
+  </div>
+  </div>
+</details>
+
+---
+
+### How does Command Pattern support Undo operations?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It does so by maintaining a history of commands. To undo, it executes the reverse operation.
+  </div>
+  </div>
+</details>
+
+---
+
+### How can Command Pattern encapsulate a request as an object?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> By letting the sender of the request refer to the receiver indirectly, promoting loose coupling.
+  </div>
+  </div>
+</details>
+
+---
+
+### Can Command Pattern help in reducing system complexity?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, it simplifies the code as it separates the objects sending a request from those receiving the request.
+  </div>
+  </div>
+</details>
+
+---
+
+### Is the Command Pattern a good fit for JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, JavaScript's first-class function nature allows for straightforward implementation of the Command Pattern.
+  </div>
+  </div>
+</details>
+
+---
+
+### How does the Command Pattern influence code testability?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It improves testability by decoupling objects and promoting single responsibility principle.
+  </div>
+  </div>
+</details>
+
+---
+
+### How does the Command Pattern support Macro Recording?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> By keeping a list of commands in sequence, it can reproduce the sequence when needed.
+  </div>
+  </div>
+</details>
+
+---
+
+### How does the Command Pattern aid in handling high-level operations?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It can manage complex operations by encapsulating multiple actions within one command.
+  </div>
   </div>
 </details>
 

@@ -64,8 +64,20 @@ import StructuredData from './schemadata/JSBasicsSchemaData.js';
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> JavaScript is a high-level, dynamically typed, interpreted scripting language used to create interactive effects in the browser or server.<br/><br/>
+      <strong>Interview Response:</strong> JavaScript is a high-level, interpreted programming language primarily used for enhancing interactivity and providing rich web content in browser-based applications. It supports event-driven, functional, and imperative programming styles.<br/><br/>
     </div>
+
+Here is a simple JavaScript code example:
+
+```javascript
+function sayHello(name) {
+    return "Hello, " + name + "!";
+}
+
+console.log(sayHello("JavaScript")); // Prints: Hello, JavaScript!
+```
+
+This code defines a function that concatenates a string with an input name, and logs the output to the console.
 
 :::note
 
@@ -86,8 +98,35 @@ It should be noted, to maintain efficient speed in the browser, V8 translates Ja
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> JavaScript's main features include dynamic typing, object-oriented programming, event-driven programming, and the ability to manipulate and interact with web page content.<br/><br/>
+      <strong>Interview Response:</strong> JavaScript's main features include dynamic typing, object-oriented programming, first-class functions, closures, asynchronous programming (promises, async/await), event-driven interaction, and integration with web technologies like HTML and CSS.<br/><br/>
     </div>
+
+Here's an example illustrating a few key features of JavaScript, including dynamic typing, object-oriented programming, and asynchronous programming:
+
+```javascript
+// Object-oriented programming
+let student = {
+    firstName: 'John',
+    lastName: 'Doe',
+    age: 20,
+    getFullName: function() {
+        return this.firstName + ' ' + this.lastName;
+    }
+}
+
+// Dynamic typing
+let variable = 'Hello, ';
+variable = variable + student.getFullName();
+console.log(variable); // Prints: Hello, John Doe
+
+// Asynchronous programming
+setTimeout(function() {
+    console.log('This is printed after 2 seconds');
+}, 2000);
+```
+
+In this code, `student` is an object with properties and a method. We demonstrate dynamic typing by changing `variable` from a string to another string. The `setTimeout` function shows a simple example of asynchronous behavior.
+
   </div>
 </details>
 
@@ -102,7 +141,52 @@ It should be noted, to maintain efficient speed in the browser, V8 translates Ja
   <div>
     <div>
       <strong>Interview Response:</strong> A high-level programming language is designed to be more abstract, and closer to natural language, making it easier for programmers to read, write, and maintain code. Low-level programming languages are closer to machine language, and provide greater control over hardware, but require more effort and knowledge to program effectively.
-    </div>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here is an example of high-level programming language code (JavaScript):
+
+```javascript
+let a = 10;
+let b = 20;
+let sum = a + b;
+console.log(sum); // prints 30
+```
+
+And here's a comparative example in a low-level language (Assembly, specifically x86 assembly):
+
+```assembly
+section .data
+    a db 10
+    b db 20
+    sum db 0
+
+section .text
+    global _start
+
+_start:
+    mov al, [a]
+    add al, [b]
+    mov [sum], al
+
+    ; Print sum
+    mov eax, 4
+    mov ebx, 1
+    mov ecx, sum
+    mov edx, 1
+    int 0x80
+
+    ; Exit
+    mov eax, 1
+    xor ebx, ebx
+    int 0x80
+```
+
+In this assembly code, we manually load the values of `a` and `b` into a register, add them, and store the result back into `sum`. Then we call an interrupt to print `sum` and another to exit the program. This level of detail and manual control is characteristic of low-level languages.
+
+  </div>
   </div>
 </details>
 
@@ -116,16 +200,31 @@ It should be noted, to maintain efficient speed in the browser, V8 translates Ja
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> JavaScript is an interpreted programming language. The code is executed directly by a browser or runtime environment without the need for compilation.
+      <strong>Interview Response:</strong> JavaScript is traditionally considered an interpreted language, as it's executed line by line in a browser. However, modern engines use Just-In-Time (JIT) compilation for improved performance, blurring the line between interpreted and compiled.
     </div>
     <br />
     <div>
-      <strong>Technical Response:</strong> In a compiled language, the target
+      <strong>Technical Details:</strong> In a compiled language, the target
       machine directly translates the program. The target machine does not
       translate the source code directly into an interpreted language. Instead,
       a different program, an interpreter, reads and executes the code. In
       simple terms: JavaScript is an interpreted language.
-    </div>
+    </div><br />
+  <div><strong className="codeExample">Table: Interpreted vs Compiled</strong><br /><br />
+
+  <div></div>
+
+Here's a simple table of differences between Interpreted and Compiled languages using JavaScript as an example of an interpreted language and C++ as an example of a compiled language:
+
+| Criteria | JavaScript (Interpreted) | C++ (Compiled) |
+|----------|--------------------------|----------------|
+| Compilation | No separate compilation step. Code is typically parsed and executed line-by-line by a JavaScript engine using JIT compilation. | Requires a separate compilation step before running, where the source code is translated to machine code. |
+| Execution Speed | Generally slower, due to the overhead of interpreting code or JIT compiling at runtime. | Generally faster, as the code is already compiled to machine code before execution. |
+| Debugging | Easier to debug, errors appear at runtime, line by line. | Debugging can be more complex. Errors not caught at compile time may cause unpredictable behaviors. |
+| Portability | Highly portable as long as the host system has a JavaScript engine (like a web browser). | Compiled binaries are platform-dependent and may require recompiling for different systems. |
+| Use Case | Commonly used for web development, enhancing interactivity in web pages. | Used for system software, game development, and where performance is critical. |
+
+  </div>
   </div>
 </details>
 
@@ -192,7 +291,25 @@ It should be noted, to maintain efficient speed in the browser, V8 translates Ja
       <strong>Interview Response:</strong> It is good to remember the names of
       engines to ensure features work in all environments. If not, we must write
       a polyfill.
-    </div>
+    </div><br />
+  <div><strong className="codeExample">Code Names:</strong><br /><br />
+
+  <div></div>
+
+Here's a table of some commonly used JavaScript engines and their code names:
+
+| JavaScript Engine | Code Name |
+|-------------------|-----------|
+| Google Chrome     | V8        |
+| Firefox           | SpiderMonkey |
+| Safari            | JavaScriptCore (Nitro) |
+| Edge (pre-Chromium) | Chakra  |
+| Node.js           | V8        |
+| Opera             | Carakan (pre-2013), V8 (post-2013) |
+
+These engines are used to parse and execute JavaScript code in their respective environments.
+
+  </div>
   </div>
 </details>
 

@@ -238,6 +238,11 @@ Dispense 3 $1 bills
       <strong>Interview Response:</strong> Disadvantages of using the Chain of Responsibility pattern in JavaScript include the potential for requests to go unhandled, increased complexity and potential performance issues with long chains.
     </div>
     <br />
+
+:::warning
+This pattern can lead to high runtime overhead and the handling order may not always be predictable.
+:::
+
   </div>
 </details>
 
@@ -254,6 +259,102 @@ Dispense 3 $1 bills
       <strong>Interview Response:</strong> Yes, some alternatives to the Chain of Responsibility pattern in JavaScript include the Command pattern, the Observer pattern, and the Strategy pattern.
     </div>
     <br />
+  </div>
+</details>
+
+---
+
+### In which scenarios is the Chain of Responsibility pattern beneficial?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It's useful when multiple objects can handle a request and the handler doesn't need to be specified explicitly.
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the primary purpose of the Chain of Responsibility pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Its primary purpose is to decouple the sender of a request from its receiver by allowing multiple objects to handle the request.
+  </div>
+  </div>
+</details>
+
+---
+
+### What's the role of the 'handler' in the Chain of Responsibility pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The handler is an interface representing part of the chain. It either handles the request or forwards it to the next handler.
+  </div>
+  </div>
+</details>
+
+---
+
+### What can make the Chain of Responsibility pattern more effective?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Ensuring that the chain is set up correctly with careful consideration of handlers can make it more effective.
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you break the chain in the Chain of Responsibility pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, a handler in the chain can decide not to pass the request further down the chain.
+  </div>
+  </div>
+</details>
+
+---
+
+### How is the Chain of Responsibility pattern different from the Observer pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In the Chain of Responsibility, the event is handled by one handler. In Observer, multiple observers react to an event.
+  </div>
+  </div>
+</details>
+
+---
+
+### How does the Chain of Responsibility pattern promote the single responsibility principle?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Each handler in the chain is responsible for one type of request, promoting single responsibility.
+  </div>
+  </div>
+</details>
+
+---
+
+### How is the Chain of Responsibility related to Middleware in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Middleware in JavaScript often follows this pattern where requests pass through functions until a response is sent.
+  </div>
   </div>
 </details>
 

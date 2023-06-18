@@ -1,5 +1,5 @@
 ---
-title: Template Method Pattern
+title: Template Method Design Pattern
 description: The Template Method pattern recommends breaking down an algorithm into a series of steps and then turning these steps into methods.
 sidebar_position: 2
 sidebar_label: Template Method
@@ -33,7 +33,7 @@ import StructuredData from './schemadata/TemplateMethodSchemaData.js';
 <JsonLD data={StructuredData} />
 
 <head>
-  <title>Template Method Pattern | JavaScript Interview Questions</title>
+  <title>Template Method Design Pattern | JavaScript Interview Questions</title>
 </head>
 
 **Structural: Template Method**
@@ -42,7 +42,7 @@ import StructuredData from './schemadata/TemplateMethodSchemaData.js';
 
 ---
 
-### Can you explain the template method design pattern?
+### What is the Template Method design pattern in JavaScript?
 
 <details className='answer'>
   <summary>
@@ -50,7 +50,7 @@ import StructuredData from './schemadata/TemplateMethodSchemaData.js';
   </summary>
   <div>
   <div>
-      <strong>Interview Response:</strong> The template method pattern is a behavioral design pattern in JavaScript that defines an outline of an algorithm and lets subclasses implement specific steps.
+      <strong>Interview Response:</strong> It's a behavioral pattern that defines a program skeleton in a method, deferring some steps to subclasses, which lets subclasses redefine certain steps of an algorithm without changing its structure.
     </div>
     <br/>
     <div>
@@ -147,7 +147,7 @@ MySQL: disconnect step
 
 ---
 
-### What is the use case for the template method design pattern?
+### Can you give an example of when to use the Template Method?
 
 <details>
   <summary>
@@ -155,11 +155,11 @@ MySQL: disconnect step
   </summary>
   <div>
   <div>
-      <strong>Interview Response:</strong> The template method pattern is useful when you want to define a skeletal structure of an algorithm in JavaScript and allow subclasses to customize some steps.
+      <strong>Interview Response:</strong> You can use the Template Method when you want to let clients extend only particular steps of an algorithm, but not the whole algorithm or its structure.
     </div>
     <br />
     <div>
-      <strong>Technical Response:</strong> When to Use the Template Method Pattern.
+      <strong>Technical Response:</strong> The template method pattern is useful when you want to define a skeletal structure of an algorithm in JavaScript and allow subclasses to customize some steps.<br/><br/><strong>When to Use the Template Method Pattern:</strong>
     </div>
     <br />
     <div></div>
@@ -244,6 +244,102 @@ MySQL: disconnect step
     </div>
     <br />
 <br />
+  </div>
+</details>
+
+---
+
+### How does the Template Method contribute to code reuse?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It promotes code reuse by encapsulating common behavior in a superclass while allowing subclasses to implement specific behavior.
+  </div>
+  </div>
+</details>
+
+---
+
+### What are the key components of the Template Method pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The key components are an abstract class with a template method containing the algorithm skeleton, and concrete classes that implement these operations.
+  </div>
+  </div>
+</details>
+
+---
+
+### How does the Template Method maintain the Open/Closed Principle?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It maintains the Open/Closed Principle by allowing new steps to be added in subclasses without modifying the abstract class or the algorithm's structure.
+  </div>
+  </div>
+</details>
+
+---
+
+### How do the Template Method and the Strategy Pattern differ?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The Strategy Pattern uses composition to change parts of the algorithm, while the Template Method uses inheritance to modify parts of the algorithm.
+  </div>
+  </div>
+</details>
+
+---
+
+### What is a potential downside of the Template Method pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> One downside is that you might create a superclass with a large template method that's difficult to understand and maintain.
+  </div>
+  </div>
+</details>
+
+---
+
+### Can the Template Method pattern lead to problems in JavaScript due to its prototypal inheritance?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, because JavaScript uses prototypal rather than classical inheritance, implementing classical patterns like Template Method can be less straightforward and potentially less idiomatic.
+  </div>
+  </div>
+</details>
+
+---
+
+### Is it common to use the Template Method pattern in functional programming?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> No, it's less common since functional programming discourages the use of mutable state and often prefers composition over inheritance.
+  </div>
+  </div>
+</details>
+
+---
+
+### Can the Template Method pattern be used with JavaScript's ES6 class syntax?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, the ES6 class syntax supports the key concepts needed for the Template Method pattern, including inheritance and method overriding.
+  </div>
   </div>
 </details>
 

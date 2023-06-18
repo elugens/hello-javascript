@@ -42,7 +42,7 @@ import StructuredData from './schemadata/MementoSchemaData.js';
 
 ---
 
-### Can you explain the memento design pattern?
+### What is the Memento Design Pattern in JavaScript?
 
 <details className='answer'>
   <summary>
@@ -161,6 +161,18 @@ John Wang
 
 ---
 
+### Why use the Memento Pattern in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It's beneficial when you need to save snapshots of an object's state for later restoration, such as in a undo-redo functionality.
+  </div>
+  </div>
+</details>
+
+---
+
 ### The Memento pattern belongs to which pattern category?
 
 <details>
@@ -220,7 +232,7 @@ John Wang
 
 ---
 
-### What are some of the Memento pattern's drawbacks?
+### What are the shortcomings of the Memento Pattern?
 
 <details>
   <summary>
@@ -228,11 +240,11 @@ John Wang
   </summary>
   <div>
   <div>
-      <strong>Interview Response:</strong> Drawbacks of the Memento pattern in JavaScript include increased memory usage for storing snapshots, potential performance issues, and the need for careful management of state transitions.
+      <strong>Interview Response:</strong> It could lead to high memory usage due to multiple memento objects. Also, it might cause complexity if mementos need to be saved and retrieved across system boundaries.
     </div>
     <br />
     <div>
-      <strong>Technical Response:</strong> Drawbacks of the Memento Pattern.
+      <strong>Technical Response:</strong> Drawbacks of the Memento pattern in JavaScript include increased memory usage for storing snapshots, potential performance issues, and the need for careful management of state transitions.<br/><br/> <strong>Drawbacks of the Memento Pattern.</strong>
     </div>
     <br />
     <div></div>
@@ -258,6 +270,90 @@ John Wang
       <strong>Interview Response:</strong> Alternative approaches to the Memento pattern in JavaScript include using immutability, functional programming concepts, or event sourcing to manage state and changes in an application.
     </div>
     <br />
+  </div>
+</details>
+
+---
+
+### How does the Memento Pattern differ from other design patterns?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Unlike other patterns, Memento encapsulates a snapshot of an object's state outside the object, without violating encapsulation.
+  </div>
+  </div>
+</details>
+
+---
+
+### What are the main components of the Memento Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The pattern mainly includes three parts: Originator (creates a memento of state), Caretaker (stores mementos), and Memento (the object state's snapshot).
+  </div>
+  </div>
+</details>
+
+---
+
+### Can the Memento Pattern create performance issues?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, if misused. The pattern can consume lots of memory, as it involves creating and storing the object's state copies.
+  </div>
+  </div>
+</details>
+
+---
+
+### How does Memento Pattern adhere to the Single Responsibility Principle?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> By segregating the responsibility of saving and restoring object states into different objects, it follows the Single Responsibility Principle.
+  </div>
+  </div>
+</details>
+
+---
+
+### What type of applications can benefit from using the Memento Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Applications with operations that may require rollback, like text editors, or games where players can undo moves, can benefit from the Memento Pattern.
+  </div>
+  </div>
+</details>
+
+---
+
+### Is it possible to implement the Memento pattern in other languages?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, it's not exclusive to JavaScript. It can be implemented in any language that supports object-oriented programming, like Python, Java, etc.
+  </div>
+  </div>
+</details>
+
+---
+
+### Can we use the Memento Pattern in combination with other design patterns?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, it can be combined with other patterns. For instance, it's often used with the Command Pattern for implementing undo-redo functionality.
+  </div>
   </div>
 </details>
 

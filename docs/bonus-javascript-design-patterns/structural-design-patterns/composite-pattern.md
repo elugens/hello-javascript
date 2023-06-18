@@ -173,6 +173,18 @@ Get freelance developer's progress:
 
 ---
 
+### Where is the Composite Design Pattern commonly used?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It's often used in systems where a hierarchy or tree-like structure exists, such as a file system.
+  </div>
+  </div>
+</details>
+
+---
+
 ### The Composite pattern belongs to which design pattern family?
 
 <details>
@@ -229,6 +241,54 @@ Get freelance developer's progress:
 - **Composite** – The Composite object represents branches of subtrees in the composition and maintains a collection of child components.
 
 <br />
+  </div>
+</details>
+
+---
+
+### What is the purpose of the 'Component' in the Composite Design Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The 'Component' declares the interface for objects in the composition and for accessing and managing its child components.
+  </div>
+  </div>
+</details>
+
+---
+
+### How does the 'Leaf' in Composite Design Pattern function?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The 'Leaf' represents leaf objects in the composition and doesn't have any children. It defines behavior for primitive objects.
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the role of 'Composite' in the Composite Design Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The 'Composite' stores child components and implements child-related operations in the Component interface.
+  </div>
+  </div>
+</details>
+
+---
+
+### How does Composite Design Pattern handle adding or removing components?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The Composite objects manage their children (add/remove), while Leaf objects have no children to manage.
+  </div>
   </div>
 </details>
 
@@ -296,6 +356,42 @@ Get freelance developer's progress:
       <strong>Interview Response:</strong> Yes, other patterns like the decorator pattern, observer pattern, and mediator pattern can also be used to simplify and organize complex JavaScript code.
     </div>
     <br />
+  </div>
+</details>
+
+---
+
+### How does the Composite Design Pattern provide client simplicity?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It allows clients to treat individual objects and compositions uniformly, simplifying the client code.
+  </div>
+  </div>
+</details>
+
+---
+
+### What are some potential downsides of the Composite Design Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It can make design overly general and complicate the component's implementation due to added functionality.
+  </div>
+  </div>
+</details>
+
+---
+
+### Can the Composite Design Pattern be used with other design patterns?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, it often collaborates with Iterator and Visitor design patterns.
+  </div>
   </div>
 </details>
 

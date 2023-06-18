@@ -42,7 +42,7 @@ import StructuredData from './schemadata/MediatorSchemaData.js';
 
 ---
 
-### Can you explain the mediator design pattern?
+### What is the Mediator Design Pattern?
 
 <details className='answer'>
   <summary>
@@ -50,7 +50,7 @@ import StructuredData from './schemadata/MediatorSchemaData.js';
   </summary>
   <div>
   <div>
-      <strong>Interview Response:</strong> The Mediator design pattern in JavaScript allows objects to communicate through a central mediator object, reducing dependencies between objects and improving maintainability and flexibility.
+      <strong>Interview Response:</strong> The Mediator design pattern is a behaviorial design pattern in JavaScript allows objects to communicate through a central mediator object, reducing dependencies between objects and improving maintainability and flexibility.
 <br/>
     </div>
     <br/>
@@ -236,7 +236,7 @@ Ringo to Paul: Paul, what do you think?
 
 ---
 
-### What are some of the Mediator pattern's drawbacks?
+### What are some downsides of the Mediator Pattern?
 
 <details>
   <summary>
@@ -244,11 +244,11 @@ Ringo to Paul: Paul, what do you think?
   </summary>
   <div>
   <div>
-      <strong>Interview Response:</strong> Some of the drawbacks of the Mediator pattern in JavaScript include increased complexity due to the central mediator object, and potential performance overhead when handling a large number of events.
+      <strong>Interview Response:</strong> It can become complex and it could also potentially become a God object.
     </div>
     <br />
     <div>
-      <strong>Technical Response:</strong> Drawbacks of the Mediator Pattern.
+      <strong>Technical Response:</strong> Some of the drawbacks of the Mediator pattern in JavaScript include increased complexity due to the central mediator object, and potential performance overhead when handling a large number of events.<br/><br/> <strong>Drawbacks of the Mediator Pattern.</strong>
     </div>
     <br />
     <div></div>
@@ -272,6 +272,90 @@ Ringo to Paul: Paul, what do you think?
       <strong>Interview Response:</strong> Yes, alternatives to the Mediator pattern in JavaScript include using the Observer pattern or event-driven architecture, or implementing direct communication between objects.
     </div>
     <br />
+  </div>
+</details>
+
+---
+
+### What are the main components of the Mediator Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The main components are the mediator, colleagues, and the concrete mediator.
+  </div>
+  </div>
+</details>
+
+---
+
+### What problem does the Mediator Pattern solve?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It reduces dependencies between objects, improving maintainability, flexibility, and testing.
+  </div>
+  </div>
+</details>
+
+---
+
+### How does the Mediator Pattern differ from Observer Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The Observer Pattern facilitates broadcast communication, whereas Mediator encapsulates centralized and complex communications.
+  </div>
+  </div>
+</details>
+
+---
+
+### When is the Mediator Pattern most effective?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It's effective when working with a set of objects that are tightly coupled.
+  </div>
+  </div>
+</details>
+
+---
+
+### How does the Mediator Pattern promote single responsibility?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Each object focuses on its own functionality while the mediator handles communication.
+  </div>
+  </div>
+</details>
+
+---
+
+### Why would you choose the Mediator Pattern over direct communication?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> To reduce dependencies between objects and to simplify updates and modifications.
+  </div>
+  </div>
+</details>
+
+---
+
+### How does the Mediator Pattern influence application performance?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It may slightly reduce performance due to indirect communication, but it improves maintainability and flexibility.
+  </div>
   </div>
 </details>
 

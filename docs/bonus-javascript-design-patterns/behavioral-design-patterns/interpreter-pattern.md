@@ -162,6 +162,30 @@ MCMXXVIII = 1928
 
 ---
 
+### What's the basic structure of the Interpreter pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It typically consists of an AbstractExpression interface and Terminal and NonTerminal expressions that implement this interface.
+  </div>
+  </div>
+</details>
+
+---
+
+### In which scenarios can we use the Interpreter pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> We can use the Interpreter pattern when parsing and interpreting complex and structured language patterns, such as SQL, mathematical expressions, or programming languages.
+  </div>
+  </div>
+</details>
+
+---
+
 ### In what pattern category does the Interpreter pattern belong?
 
 <details>
@@ -262,6 +286,54 @@ MCMXXVIII = 1928
     <br />
     <div></div>
 <br />
+  </div>
+</details>
+
+---
+
+### How does the Interpreter pattern relate to the Composite pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Both patterns use tree structures. The Interpreter pattern uses it to represent grammar expressions while the Composite pattern organizes objects into tree structures.
+  </div>
+  </div>
+</details>
+
+---
+
+### What are Terminal and NonTerminal expressions in the Interpreter pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Terminal expressions represent the most elemental, indivisible expressions. Non-Terminal expressions are composed of these terminal expressions.
+  </div>
+  </div>
+</details>
+
+---
+
+### What role does the 'context' play in the Interpreter pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In the Interpreter pattern, 'context' stores and manages the global information that's shared among all expressions during interpretation, like variables' values.
+  </div>
+  </div>
+</details>
+
+---
+
+### Is the Interpreter pattern frequently used in JavaScript applications?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> No, the Interpreter pattern isn't frequently used in JavaScript applications. It's more common in compilers or interpreters, while in JavaScript, simpler or more practical design patterns are preferred.
+  </div>
   </div>
 </details>
 

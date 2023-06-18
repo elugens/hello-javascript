@@ -258,7 +258,7 @@ Joan Templeton has been approved for a $100,000 mortgage
 
 ---
 
-### When should you employ the Façade Pattern?
+### Why use the Facade Design Pattern?
 
 <details>
   <summary>
@@ -277,7 +277,7 @@ Joan Templeton has been approved for a $100,000 mortgage
 
 ---
 
-### Can you explain, What are the Façade Pattern's object participants?
+### What are the Façade Pattern's object participants?
 
 <details>
   <summary>
@@ -347,6 +347,102 @@ Joan Templeton has been approved for a $100,000 mortgage
       <strong>Interview Response:</strong> Yes, there are alternative patterns that can simplify complex systems in JavaScript, such as using dependency injection, adapters, or proxies.
     </div>
 <br />
+  </div>
+</details>
+
+---
+
+### How does the Facade Pattern improve code readability?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It simplifies interaction with subsystems by providing a single, easy-to-use interface.
+  </div>
+  </div>
+</details>
+
+---
+
+### How does the Facade Pattern affect coupling?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It decreases coupling by isolating dependencies to a single facade, improving code maintainability.
+  </div>
+  </div>
+</details>
+
+---
+
+### Can the Facade Pattern increase performance?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Indirectly, yes. It simplifies interactions and could streamline system use, potentially boosting performance.
+  </div>
+  </div>
+</details>
+
+---
+
+### Can multiple facades exist for a subsystem?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, multiple facades can be created for different parts or views of a subsystem.
+  </div>
+  </div>
+</details>
+
+---
+
+### What's the difference between the Facade Pattern and Adapter Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The Facade Pattern simplifies an interface, whereas the Adapter Pattern makes incompatible interfaces compatible.
+  </div>
+  </div>
+</details>
+
+---
+
+### How does the Facade Pattern contribute to encapsulation?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It encapsulates complex subsystems into a simpler interface, adhering to the principle of information hiding.
+  </div>
+  </div>
+</details>
+
+---
+
+### What's the role of the Facade Pattern in SOLID principles?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It directly supports the Interface Segregation Principle, creating smaller, more specific interfaces.
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you use the Facade Pattern with other design patterns?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, the Facade Pattern can be used alongside other patterns to manage system complexity.
+  </div>
   </div>
 </details>
 

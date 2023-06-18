@@ -42,7 +42,7 @@ import StructuredData from './schemadata/FlyweightSchemaData.js';
 
 ---
 
-### Can you explain the flyweight design pattern?
+### What is the Flyweight Design Pattern?
 
 <details className='answer'>
   <summary>
@@ -256,10 +256,10 @@ Flyweights: 2
   </summary>
   <div>
   <div>
-      <strong>Interview Response:</strong> Disadvantages of using the Flyweight pattern in JavaScript include increased complexity due to separation of intrinsic and extrinsic state, and reduced security due to shared state.
+      <strong>Interview Response:</strong> It can increase complexity by splitting state and may lead to more complicated and error-prone code.
     </div><br/>
     <div>
-      <strong>Technical Response:</strong> Drawbacks of the Flyweight Pattern.
+      <strong>Technical Response:</strong> Disadvantages of using the Flyweight pattern in JavaScript include increased complexity due to separation of intrinsic and extrinsic state, and reduced security due to shared state.<br/><br/> Drawbacks of the Flyweight Pattern.
     </div><br/>
 
 - When certain context data needs to be regenerated each time a flyweight method gets called, you may be sacrificing RAM for CPU cycles.
@@ -283,6 +283,115 @@ Flyweights: 2
       <strong>Interview Response:</strong> Yes, there are alternative patterns to the Flyweight pattern in JavaScript, including the Singleton pattern, the Prototype pattern, and the Factory pattern.
     </div>
     <br/>
+  </div>
+</details>
+
+---
+
+### In what cases is the Flyweight Design Pattern most beneficial?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It's beneficial when dealing with a large number of objects which have common, repeated state that can be externalized.
+  </div>
+  </div>
+</details>
+
+---
+
+### How does the Flyweight Pattern reduce memory usage?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It reduces memory by sharing common data among objects instead of each object storing identical data.
+  </div>
+  </div>
+</details>
+
+---
+
+### What are the two states in a Flyweight pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> There are 'intrinsic' states (inside the Flyweight) and 'extrinsic' states (outside the Flyweight and passed in).
+
+  </div>
+  </div>
+</details>
+
+---
+
+### How does Flyweight handle intrinsic and extrinsic states?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Intrinsic states are shared and stored inside the Flyweight; extrinsic states are stored or computed by client objects.
+  </div>
+  </div>
+</details>
+
+---
+
+### What's a Flyweight Factory and its role in the Flyweight Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It creates and manages Flyweight objects, ensuring they're adequately shared to minimize memory use.
+  </div>
+  </div>
+</details>
+
+---
+
+### Does the Flyweight Pattern affect performance? How?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, it can improve memory usage and potentially improve performance but might increase complexity due to separating intrinsic and extrinsic states.
+  </div>
+  </div>
+</details>
+
+---
+
+### How does the Flyweight Pattern affect scalability?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It increases scalability by reducing memory usage when dealing with a large number of objects.
+  </div>
+  </div>
+</details>
+
+---
+
+### What is a real-world example of the Flyweight Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It's often used in game development, where many similar objects, like trees or NPCs, share common properties.
+  </div>
+  </div>
+</details>
+
+---
+
+### What are the downsides of the Flyweight Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It can increase complexity by splitting state and may lead to more complicated and error-prone code.
+  </div>
   </div>
 </details>
 

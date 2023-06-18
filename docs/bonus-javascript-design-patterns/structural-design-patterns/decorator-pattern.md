@@ -42,7 +42,19 @@ import StructuredData from './schemadata/DecoratorSchemaData.js';
 
 ---
 
-### Could you please explain the decorator design pattern?
+### What is the Decorator Pattern in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It's a structural pattern providing a flexible alternative to sub-classing for extending functionality by wrapping an object with new behavior.
+  </div>
+  </div>
+</details>
+
+---
+
+### Could you please explain the Decorator design pattern?
 
 <details className='answer'>
   <summary>
@@ -248,6 +260,18 @@ Decorated User: Kelly, Broadway, New York
 
 ---
 
+### Why use the Decorator Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It promotes code flexibility, allowing dynamic addition of responsibilities to objects and avoids sub-classing clutter.
+  </div>
+  </div>
+</details>
+
+---
+
 ### The Decorator pattern belongs to which pattern family?
 
 <details>
@@ -356,6 +380,102 @@ Decorated User: Kelly, Broadway, New York
       <strong>Interview Response:</strong> Yes, there are alternative patterns to achieve similar functionality as the Decorator pattern in JavaScript, such as using mixins, composition, or inheritance.
     </div>
     <br />
+  </div>
+</details>
+
+---
+
+### Can Decorators Affect the underlying object?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, Decorators can modify behavior, but the object itself remains unaltered.
+  </div>
+  </div>
+</details>
+
+---
+
+### How does the Decorator Pattern affect code maintenance?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It enhances code maintenance by allowing isolated changes to individual objects without impacting the object class.
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you describe a typical use case for the Decorator Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A common use case is enhancing object functionalities dynamically, like adding premium features to a basic service.
+  </div>
+  </div>
+</details>
+
+---
+
+### Does the Decorator Pattern impact the object's identity?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> No, it doesn't impact the object’s identity as it encapsulates the original object rather than replacing it.
+  </div>
+  </div>
+</details>
+
+---
+
+### What principle does the Decorator Pattern support?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It supports the Open/Closed principle, classes should be open for extension but closed for modification.
+  </div>
+  </div>
+</details>
+
+---
+
+### How does the Decorator Pattern differ from Inheritance?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In JavaScript, the Decorator Pattern enhances or alters an object's functionality at runtime, while inheritance involves a new object inheriting properties from a parent class at the creation time, implying a static relationship.
+  </div>
+  </div>
+</details>
+
+---
+
+### Can multiple Decorators be applied to a single object?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, multiple Decorators can be "stacked" on an object to add combined behaviors.
+  </div>
+  </div>
+</details>
+
+---
+
+### Is the Decorator Pattern similar to the Adapter Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> No, Decorator extends functionality while Adapter changes the interface of an existing object.
+  </div>
   </div>
 </details>
 

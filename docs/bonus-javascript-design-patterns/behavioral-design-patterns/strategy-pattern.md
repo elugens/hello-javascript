@@ -42,7 +42,7 @@ import StructuredData from './schemadata/StrategySchemaData.js';
 
 ---
 
-### Can you explain the strategy design pattern?
+### What is the Strategy Design Pattern in JavaScript?
 
 <details className='answer'>
   <summary>
@@ -174,18 +174,18 @@ Fedex Strategy: $43.20
   </summary>
   <div>
   <div>
-      <strong>Interview Response:</strong> The JavaScript Strategy Pattern should be used when you need to dynamically switch between multiple algorithms or behaviors at runtime, while keeping the code flexible and maintainable.
+      <strong>Interview Response:</strong> The JavaScript Strategy Pattern is beneficial when different variations of an algorithm exist or when an algorithm may change dynamically at runtime.
     </div>
     <br />
     <div>
-      <strong>Technical Response:</strong> Strategy Pattern Use-Cases.
+      <strong>Technical Response:</strong> The JavaScript Strategy Pattern should be used when you need to dynamically switch between multiple algorithms or behaviors at runtime, while keeping the code flexible and maintainable.<br/><br/><strong>Strategy Pattern Use-Cases:</strong>
     </div>
     <br />
     <div></div>
 
 - When you need to employ several algorithms with varying versions, you must construct a concrete class (this may include one or more functions) to implement your algorithm.
 - When there are conditional statements around by several connected algorithms
-- When the majority of your classes exhibit similar behaviors
+- When the majority of your objects or classes exhibit similar behaviors
 
 <br />
   </div>
@@ -221,7 +221,7 @@ Fedex Strategy: $43.20
 
 ---
 
-### What are some of the Strategy pattern's drawbacks?
+### What's a disadvantage of the Strategy Pattern?
 
 <details>
   <summary>
@@ -229,11 +229,11 @@ Fedex Strategy: $43.20
   </summary>
   <div>
   <div>
-      <strong>Interview Response:</strong> Some drawbacks of the Strategy pattern in JavaScript include increased complexity and overhead, as well as potential performance issues when switching between strategies frequently or with large datasets.
+      <strong>Interview Response:</strong> It can over complicate the code if used for only slightly different algorithms or if overused.
     </div>
     <br />
     <div>
-      <strong>Technical Response:</strong> Drawbacks of the Strategy Pattern.
+      <strong>Technical Response:</strong> Some drawbacks of the Strategy pattern in JavaScript include increased complexity and overhead, as well as potential performance issues when switching between strategies frequently or with large datasets.<br/><br/><strong>Drawbacks of the Strategy Pattern:</strong>
     </div>
     <br />
     <div></div>
@@ -270,6 +270,78 @@ Fedex Strategy: $43.20
 - Many current programming languages feature functional types, which allow you to implement different variants of an algorithm within a collection of anonymous functions. You may then utilize these methods the same way you used Strategy objects, but without cluttering your code with unnecessary classes and interfaces.
 
 <br />
+  </div>
+</details>
+
+---
+
+### What are the main components of the Strategy Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It mainly consists of the Context, Strategy Abstract, and a set of Concrete Strategies.
+  </div>
+  </div>
+</details>
+
+---
+
+### How does the Context work in the Strategy Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The Context maintains a reference to a Strategy object and delegates it to execute the required algorithm.
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you explain Concrete Strategies?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Concrete Strategies implement different variants of an algorithm the Context uses.
+  </div>
+  </div>
+</details>
+
+---
+
+### Is the Strategy Pattern similar to the State Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, they're similar, but the State Pattern is about changing behavior based on internal state, while Strategy changes behavior externally.
+  </div>
+  </div>
+</details>
+
+---
+
+### How does the Strategy Pattern aid in unit testing?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It allows easy mocking of strategies in unit tests, making code more testable.
+  </div>
+  </div>
+</details>
+
+---
+
+### Can the Strategy Pattern increase performance?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It can help in some cases, as it allows choosing the most efficient algorithm at runtime.
+  </div>
   </div>
 </details>
 

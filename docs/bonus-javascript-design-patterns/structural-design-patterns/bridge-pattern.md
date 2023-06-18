@@ -42,7 +42,7 @@ import StructuredData from './schemadata/BridgeSchemaData.js';
 
 ---
 
-### Could you please explain, What is the bridge design pattern?
+### Can you define the Bridge Design Pattern?
 
 <details className='answer'>
   <summary>
@@ -408,6 +408,66 @@ JavaScript does not support abstract classes, and as a result, Abstraction and I
     <div>
       <strong>Interview Response:</strong> Some alternatives to using the Bridge pattern in JavaScript include the Strategy pattern, the Decorator pattern, and the Adapter pattern, depending on the specific requirements of the project.
     </div>
+  </div>
+</details>
+
+---
+
+### When is it suitable to use the Bridge Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It's suitable when you expect changes in classes' abstraction and implementation, particularly if they're not tightly related.
+  </div>
+  </div>
+</details>
+
+---
+
+### How does the Bridge Pattern aid in reducing complexity?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The Bridge Pattern aids in reducing complexity by splitting complex classes into separate hierarchies, it simplifies and organizes code, making it easier to understand and maintain.
+  </div>
+  </div>
+</details>
+
+---
+
+### Does the Bridge Pattern provide any performance benefits?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Not inherently. Its benefits are structural rather than performance-based. It provides cleaner, more flexible code but doesn't directly improve performance.
+  </div>
+  </div>
+</details>
+
+---
+
+### What's the difference between Adapter and Bridge Pattern?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The Adapter makes unrelated interfaces work together while Bridge Pattern separates abstraction from implementation to independently manage hierarchies.
+  </div>
+  </div>
+</details>
+
+---
+
+### How does Bridge Pattern facilitate the Open/Closed Principle?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Bridge Pattern allows adding new abstractions or implementations without changing existing code, thus adhering to the Open/Closed Principle.
+  </div>
   </div>
 </details>
 
