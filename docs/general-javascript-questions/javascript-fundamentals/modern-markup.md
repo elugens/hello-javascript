@@ -206,25 +206,31 @@ dog.speak(); // Output: Buddy makes a noise.
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> let is used to declare block-scoped, mutable variables, while const declares block-scoped, immutable variables that cannot be reassigned.
-  </div>
   </div><br />
-  <div><strong className="codeExample">Code Example:</strong> let and const<br /><br /></div>
-  
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
   <div></div>
 
+Here's an example:
+
 ```javascript
-let count = 0;
-const maxLimit = 10;
+let variableLet = "Hello";
+variableLet = "Goodbye"; // This is allowed
 
-for (let i = 0; i < maxLimit; i++) {
-  count++;
-}
+console.log(variableLet); // Outputs: Goodbye
 
-console.log(count); // Output: 10
-// maxLimit = 15; // Error: Assignment to constant variable.
+////////////////////////////////////
+
+const variableConst = "Hello";
+variableConst = "Goodbye"; // This will cause an error
+
+console.log(variableConst); // Uncaught TypeError: Assignment to constant variable.
 ```
 
-<div>In this example, count is declared with let since its value changes, while maxLimit uses const as it remains constant. Attempting to reassign maxLimit results in an error.</div><br/>
+In the example above, `variableLet` is a `let` variable and it is allowed to be re-assigned. However, when we try to re-assign `variableConst`, which is a `const` variable, JavaScript throws a `TypeError`.
+
+  </div>
+  </div>
 </details>
 
 ---

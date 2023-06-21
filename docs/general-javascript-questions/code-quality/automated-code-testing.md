@@ -43,7 +43,7 @@ import StructuredData from './schemadata/AutomatedTestSchemaData.js';
 
 ---
 
-### What is automated testing?
+### What is automated testing in JavaScript?
 
 <details>
   <summary>
@@ -52,7 +52,26 @@ import StructuredData from './schemadata/AutomatedTestSchemaData.js';
   <div>
     <div>
       <strong>Interview Response:</strong> Automated testing is the use of software tools to run tests on a codebase automatically, checking for errors or issues that may arise during development.
-    </div>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Code to be tested (sum.js)
+function sum(a, b) {
+  return a + b;
+}
+
+// Test (sum.test.js)
+const sum = require('./sum');
+
+test('adds 1 + 2 to equal 3', () => {
+  expect(sum(1, 2)).toBe(3);
+});
+```
+
+  </div>
   </div>
 </details>
 

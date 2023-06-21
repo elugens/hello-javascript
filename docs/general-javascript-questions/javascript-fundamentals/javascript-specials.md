@@ -67,11 +67,30 @@ import StructuredData from './schemadata/JavaScriptSpecialsSchemaData.js';
 
   <div></div>
 
-```html
-<script>
-  'use strict;'; // Your first line of code starts here...
-</script>
+Certainly! Here's how you would enforce strict mode in a JavaScript file or function:
+
+For the entire script:
+
+```javascript
+'use strict'; // Your first line of code starts here...
+
+var x = 10;
+console.log(x);
 ```
+
+For a specific function:
+
+```javascript
+function strictFunc() {
+  'use strict'; // Your first line of code in a function...
+  var y = 20;
+  console.log(y);
+}
+
+strictFunc();
+```
+
+In both examples, 'use strict'; helps to enforce better coding practices by making the JavaScript interpreter more strict.
 
   </div>
   </div>
@@ -85,7 +104,27 @@ import StructuredData from './schemadata/JavaScriptSpecialsSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Variable names in JavaScript can include letters, digits, underscores, and dollar signs. They must start with a letter, underscore, or dollar sign, and are case-sensitive. Non-Latin alphabets and hieroglyphs are also permitted but rarely utilized.
-</div>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here are some examples of valid variable names in JavaScript.
+
+```javascript
+var myVariable = 1;
+let _anotherVariable = 2;
+const $yetAnotherVariable = 3;
+var Ω = 4; // Unicode variable names are allowed
+```
+
+And here's an example of an invalid variable name:
+
+```javascript
+var 123abc; // this will cause an error, because variable names cannot start with a digit
+```
+
+  </div>
   </div>
 </details>
 
@@ -118,7 +157,7 @@ x = 'John';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The only JavaScript operator that takes three parameters (arguments) is the conditional operator, also known as the ternary operator (? : ).
+  <div><strong>Interview Response:</strong> The only operator in JavaScript with three parameters is the conditional (ternary) operator (?:). It's a short way to write an if-else condition, formatted as condition ? exprIfTrue : exprIfFalse.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -136,7 +175,7 @@ console.log(beverage); // "Beer"
 
 ---
 
-### What the three types of JavaScript functions commonly used in application development?
+### What three types of JavaScript functions are commonly used in application development?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

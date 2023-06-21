@@ -64,6 +64,40 @@ import StructuredData from './schemadata/TypeConversionSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> Explicit and Implicit type conversion.</div><br />
   <div><strong>Technical Response:</strong> There are two types of type conversion in JavaScript: implicit (coercion) and explicit (casting). Implicit occurs automatically when the interpreter converts data types, while explicit requires manual intervention using specific methods or functions.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+1. **Implicit Conversion (Coercion)**
+
+In this example, we're adding a number to a string. JavaScript automatically converts the number to a string before performing the concatenation.
+
+```javascript
+let num = 5;
+let str = '10';
+let result = num + str; // num is implicitly converted to a string.
+console.log(result); // Output: '510'
+```
+
+2. **Explicit Conversion**
+
+Here, we're explicitly converting a string to a number using the `Number()` function before adding it to another number.
+
+```javascript
+let str = '10';
+let num = 5;
+let result = Number(str) + num; // str is explicitly converted to a number.
+console.log(result); // Output: 15
+```
+
+In another example, we're explicitly converting a boolean to a string using the `String()` function.
+
+```javascript
+let bool = true;
+let result = String(bool); // bool is explicitly converted to a string.
+console.log(result); // Output: 'true'
+```
 
   </div>
   </div>
@@ -88,18 +122,70 @@ import StructuredData from './schemadata/TypeConversionSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Explicit type conversion in JavaScript is implemented using built-in functions that convert values of one type to another type. These functions include Number(), String(), Boolean(), and parseInt().</div>
+  <div><strong>Interview Response:</strong> Explicit type conversion in JavaScript is implemented using built-in functions that convert values of one type to another type. These functions include Number(), String(), Boolean(), and parseInt().
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Conversion from string to number
+let str = "123";
+let num = Number(str); // str is explicitly converted to a number.
+console.log(num);      // Output: 123
+console.log(typeof num); // Output: 'number'
+
+// Conversion from number to string
+let num2 = 456;
+let str2 = String(num2); // num2 is explicitly converted to a string.
+console.log(str2);      // Output: '456'
+console.log(typeof str2); // Output: 'string'
+
+// Conversion from boolean to number
+let bool = true;
+let numFromBool = Number(bool); // bool is explicitly converted to a number.
+console.log(numFromBool); // Output: 1
+console.log(typeof numFromBool); // Output: 'number'
+```
+
+  </div>
   </div>
 </details>
 
 ---
 
-### Name one method that automatically converts a value to a string
+### Can you name one method that automatically converts a value to a string?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The toString() method in JavaScript is commonly used to automatically convert a value to a string representation. This method can be called on various data types such as numbers, booleans, and objects to obtain a string representation of their values.</div>
+  <div><strong>Interview Response:</strong> The toString() method in JavaScript is commonly used to automatically convert a value to a string representation. This method can be called on various data types such as numbers, booleans, and objects to obtain a string representation of their values.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+1. **Number to String Conversion:**
+
+```javascript
+let num = 123;
+let str = num.toString(); // num is explicitly converted to a string.
+console.log(str);         // Output: '123'
+console.log(typeof str);  // Output: 'string'
+```
+
+2. **Boolean to String Conversion:**
+
+```javascript
+let bool = true;
+let str = bool.toString(); // bool is explicitly converted to a string.
+console.log(str);          // Output: 'true'
+console.log(typeof str);   // Output: 'string'
+```
+
+Keep in mind that not all types in JavaScript have a `toString()` method. For instance, `null` and `undefined` do not have this method, and trying to use `toString()` on these values will result in a TypeError.
+
+  </div>
   </div>
 </details>
 
@@ -135,7 +221,41 @@ alert(typeof value); // string
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Numeric conversions occur during arithmetic operations, comparison operations using the equality operator, or when explicitly converting a value using methods, like Number(), parseInt(), or parseFloat().</div>
+  <div><strong>Interview Response:</strong> Numeric conversions occur during arithmetic operations, comparison operations using the equality operator, or when explicitly converting a value using methods, like Number(), parseInt(), or parseFloat().
+  </div><br />
+  <div><strong className="codeExample">Code Examples:</strong><br /><br />
+
+  <div></div>
+
+Here are a few examples illustrating when numeric conversions happen in JavaScript:
+
+1. **Implicit Numeric Conversion with Mathematical Operators:**
+
+```javascript
+let str = '123';
+let result = str / 3; // str is implicitly converted to a number.
+console.log(result);  // Output: 41
+```
+
+2. **Explicit Numeric Conversion with `Number()` Function:**
+
+```javascript
+let bool = true;
+let result = Number(bool); // bool is explicitly converted to a number.
+console.log(result);       // Output: 1
+```
+
+3. **Explicit Numeric Conversion with `parseInt()` Function:**
+
+```javascript
+let str = '350px';
+let result = parseInt(str); // str is explicitly converted to a number.
+console.log(result);        // Output: 350
+```
+
+In all these examples, JavaScript converts the non-number data types to numbers in order to perform the operations or as explicitly instructed by the built-in functions.
+
+  </div>
   </div>
 </details>
 
@@ -177,7 +297,7 @@ alert(typeof num); // number
 ```js
 let age = Number('an arbitrary string instead of a number');
 
-alert(age); // NaN, conversion failed
+console.log(age); // NaN, conversion failed
 ```
 
   </div>
@@ -186,7 +306,7 @@ alert(age); // NaN, conversion failed
 
 ---
 
-### If there is an attempt to convert an undefined value. What is the return result?
+### If there is an attempt to convert an undefined value to a number. What is the return result?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -201,7 +321,7 @@ let thisNumber;
 
 let result = Number(thisNumber);
 
-alert(result); // returns NaN, conversion failed
+console.log(result); // returns NaN, conversion failed
 ```
 
   </div>
@@ -225,7 +345,7 @@ let thisNumber = null;
 
 let result = Number(thisNumber);
 
-alert(result); // returns 0
+console.log(result); // returns 0
 ```
 
   </div>
@@ -239,13 +359,36 @@ alert(result); // returns 0
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, when converting true to a number, the return value is 1. When converting false to a number, the return value is 0.</div>
+  <div><strong>Interview Response:</strong> In JavaScript, when converting true to a number, the return value is 1. When converting false to a number, the return value is 0.</div><br />
+  <div><strong className="codeExample">Code Examples:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let numFromTrue = Number(true);  // Explicitly converting true to a number.
+console.log(numFromTrue);        // Output: 1
+
+let numFromFalse = Number(false);  // Explicitly converting false to a number.
+console.log(numFromFalse);         // Output: 0
+```
+
+This conversion also applies when `true` and `false` are used in mathematical operations, as JavaScript implicitly converts them to `1` and `0` respectively:
+
+```javascript
+let num = 10 + true;  // true is implicitly converted to 1.
+console.log(num);     // Output: 11
+
+num = 10 + false;     // false is implicitly converted to 0.
+console.log(num);     // Output: 10
+```
+
+  </div>
   </div>
 </details>
 
 ---
 
-### Give a brief description of the potential outcomes when converting a string to a number
+### Can you give a brief description of the potential outcomes when converting a string to a number?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -260,7 +403,7 @@ let myString = '';
 
 let outcome = Number(myString);
 
-alert(outcome); // returns 0
+console.log(outcome); // returns 0
 ```
 
   </div>
@@ -269,12 +412,48 @@ alert(outcome); // returns 0
 
 ---
 
-### Do Boolean conversions happen implicitly, explicitly, or both?
+### Do boolean conversions happen implicitly, explicitly, or both?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Both, Boolean type conversions can happen both implicitly, through type coercion in expressions, and explicitly, using the Boolean function or the double knot operator.</div>
+  <div><strong>Interview Response:</strong> Both. Boolean conversions in JavaScript can happen implicitly, such as when using boolean contexts (if, while, ? :), and explicitly, using the Boolean() function or the !! operator.
+  </div><br />
+  <div><strong className="codeExample">Code Examples:</strong><br /><br />
+
+  <div></div>
+
+**Implicit Boolean Conversion:**
+
+JavaScript implicitly converts values to boolean in logical contexts (like in `if` conditions).
+
+```javascript
+let str = 'hello';
+if (str) { // str is implicitly converted to boolean.
+  console.log('The string is not empty.'); // Output: The string is not empty.
+}
+
+let num = 0;
+if (num) { // num is implicitly converted to boolean.
+  console.log('This won\'t be printed.'); // This line won't execute as num converts to false.
+}
+```
+
+**Explicit Boolean Conversion:**
+
+You can explicitly convert values to boolean using the `Boolean()` function or the `!!` operator.
+
+```javascript
+let str = 'hello';
+let bool = Boolean(str); // str is explicitly converted to boolean.
+console.log(bool); // Output: true
+
+let num = 0;
+bool = !!num; // num is explicitly converted to boolean using !! operator.
+console.log(bool); // Output: false
+```
+
+  </div>
   </div>
 </details>
 
@@ -361,7 +540,7 @@ console.log(stringZero); // returns true
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Type coercion is the process of converting a value from one type to another type in JavaScript automatically.</div>
+  <div><strong>Interview Response:</strong> Type coercion in JavaScript refers to the automatic or implicit conversion of values from one data type to another during the execution of operations involving different types.</div>
   </div>
 </details>
 
@@ -372,7 +551,7 @@ console.log(stringZero); // returns true
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The toString() method is a built-in method in JavaScript that converts an object to a string representation.</div>
+  <div><strong>Interview Response:</strong> The `toString()` method in JavaScript converts and returns a value as a string. It's commonly used on numbers, booleans, and objects.</div>
   </div>
 </details>
 
@@ -383,7 +562,29 @@ console.log(stringZero); // returns true
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The valueOf() method is a built-in method in JavaScript that returns the primitive value of an object.</div>
+  <div><strong>Interview Response:</strong> The valueOf() method is a built-in method in JavaScript that returns the primitive value of an object.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let strObj = new String("Hello");
+let strVal = strObj.valueOf();
+console.log(strVal); // Output: "Hello"
+
+let numObj = new Number(123);
+let numVal = numObj.valueOf();
+console.log(numVal); // Output: 123
+
+let boolObj = new Boolean(true);
+let boolVal = boolObj.valueOf();
+console.log(boolVal); // Output: true
+```
+
+In this example, `valueOf()` is used to get the primitive values ("Hello", 123, and true) of the String, Number, and Boolean objects respectively. Note that, when called on a primitive type (not an object), `valueOf()` will return the primitive itself.
+
+  </div>
   </div>
 </details>
 

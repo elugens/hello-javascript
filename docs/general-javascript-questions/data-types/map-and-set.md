@@ -202,7 +202,7 @@ console.log(visitsCountObj[ben]); // ben returns 123 because it was overwritten 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Map uses the algorithm SameValueZero. It is roughly the same as strict equality ===, but the difference is that NaN is considered equal to NaN. So, NaN can be used as the key as well. This algorithm cannot be changed or customized.
+  <div><strong>Interview Response:</strong> Map uses the algorithm 'SameValueZero'. It is roughly the same as strict equality ===, but the difference is that NaN is considered equal to NaN. So, NaN can be used as the key as well. This algorithm cannot be changed or customized.
 </div>
   </div>
 </details>
@@ -334,7 +334,7 @@ console.log(contacts.size); // 1
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Technically, yes, but it is not recommended because it uses the feature of a generic object. There is a significant loss of built-in Map methods like set and delete when we transform it into a generic object. It is better to use the set() method to add new key-value pairs to a Map.<br /><br />
+  <div><strong>Interview Response:</strong> Technically, yes, but it is not recommended because it uses the feature of a generic object. There is a significant loss of built-in Map methods like set and delete when we transform it into a generic object. It is better to use the set() method to add new key-value pairs to a Map.
   </div>
   </div>
 </details>
@@ -465,6 +465,23 @@ for (let user of set) {
   <div>
   <div><strong>Interview Response:</strong> The main difference is that Set only allows unique data values, while an Array allows duplicates.</div><br />
   <div><strong>Technical Response:</strong> Well, in general, Array is a type of structure representing a block of data (numbers, objects) allocated in consecutive memory. Set, more familiar as a Math concept, is an abstract data type that contains only distinct elements/objects without the need of being allocated orderly by index. Array and Set are technically different concepts in JavaScript. One of the most significant differences here, you may notice, is that elements in Array can be duplicated (unless you tell it not to be), and in Set, they just cannot (regardless of what you decide). In addition, Array is an “indexed collection” type of data structure, while Set is considered a “keyed collection”.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Array
+let array = [1, 2, 2, 3];
+console.log(array[1]); // outputs: 2
+console.log(array.length); // outputs: 4
+
+// Set
+let set = new Set([1, 2, 2, 3]);
+console.log(set.has(2)); // outputs: true
+console.log(set.size); // outputs: 3, because "2" only counts once.
+```
+
   </div>
   </div>
 </details>
@@ -524,7 +541,28 @@ You can also use a traditional iterative for loop, but it is much more complex a
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The set() method is used to set a value for a specific key in a Map, while the add() method is used to add a new value to a Set.<br /><br />
+  <div><strong>Interview Response:</strong> The Map object in JavaScript only has a set(key, value) method for adding key-value pairs. add() method doesn't exist in Map but is used in Set objects to add unique values.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here is a simple JavaScript code example showing the use of `set()` in a `Map` and `add()` in a `Set`:
+
+```javascript
+// Map
+let map = new Map();
+map.set('key1', 'value1');
+console.log(map.get('key1')); // outputs: 'value1'
+
+// Set
+let set = new Set();
+set.add('value1');
+console.log(set.has('value1')); // outputs: true
+```
+
+In the above example, `set()` is used to add key-value pairs to the `Map` and `add()` is used to add unique values to the `Set`.
+
   </div>
   </div>
 </details>
@@ -536,7 +574,26 @@ You can also use a traditional iterative for loop, but it is much more complex a
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> You can convert a Map to an array using the Array.from() method or the spread operator [...myMap] in an array literal.<br /><br />
+  <div><strong>Interview Response:</strong> You can convert a Map to an array using the Array.from() method or the spread operator (...), like this: Array.from(map) or [...map]. Both return an array of [key, value] pairs.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let map = new Map();
+map.set('key1', 'value1');
+map.set('key2', 'value2');
+
+// Convert Map to Array using Array.from()
+let array1 = Array.from(map);
+console.log(array1); // outputs: [ ['key1', 'value1'], ['key2', 'value2'] ]
+
+// Convert Map to Array using spread operator
+let array2 = [...map];
+console.log(array2); // outputs: [ ['key1', 'value1'], ['key2', 'value2'] ]`
+```
+
   </div>
   </div>
 </details>
@@ -548,7 +605,27 @@ You can also use a traditional iterative for loop, but it is much more complex a
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The has() method in Map checks if a key exists in the map and returns a boolean, while the get() method retrieves the value associated with the key or undefined if the key does not exist.<br /><br />
+  <div><strong>Interview Response:</strong> The `has(key)` method in Map checks if a key exists and returns a boolean. The `get(key)` method retrieves the value associated with the key, or `undefined` if the key doesn't exist.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's a simple JavaScript code example showing the use of `has()` and `get()` in a `Map`:
+
+```javascript
+let map = new Map();
+map.set('key1', 'value1');
+
+console.log(map.has('key1')); // outputs: true
+console.log(map.get('key1')); // outputs: 'value1'
+
+console.log(map.has('key2')); // outputs: false
+console.log(map.get('key2')); // outputs: undefined
+```
+
+In the above example, `has('key1')` returns true because 'key1' exists in the map, and `get('key1')` returns 'value1' which is the value associated with 'key1'. However, 'key2' does not exist in the map, so `has('key2')` returns false and `get('key2')` returns undefined.
+
   </div>
   </div>
 </details>
@@ -560,7 +637,30 @@ You can also use a traditional iterative for loop, but it is much more complex a
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, you can use objects as keys in a Map. Map compares object keys using the same-value-zero algorithm, which checks if the objects have the same value and type.<br /><br />
+  <div><strong>Interview Response:</strong> Yes, you can use objects as keys in a `Map`. They are compared using the `SameValueZero` algorithm, so each object is considered distinct unless it's the same instance.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's a JavaScript code example showing how to use objects as keys in a `Map`:
+
+```javascript
+let obj1 = {name: 'Object 1'};
+let obj2 = {name: 'Object 2'};
+
+let map = new Map();
+map.set(obj1, 'value1');
+
+console.log(map.has(obj1)); // outputs: true
+console.log(map.get(obj1)); // outputs: 'value1'
+
+console.log(map.has(obj2)); // outputs: false
+console.log(map.get(obj2)); // outputs: undefined
+```
+
+In this example, `obj1` and `obj2` are different instances, so they are considered distinct keys. `map.has(obj2)` returns false and `map.get(obj2)` returns undefined, even though `obj1` and `obj2` have the same structure.
+
   </div>
   </div>
 </details>
@@ -573,7 +673,35 @@ You can also use a traditional iterative for loop, but it is much more complex a
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> In JavaScript, a Set is a built-in object that allows the creation of a collection of unique values. Each value in a Set may only occur once.
-<br /><br />
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let set = new Set();
+
+// Adding values to the set
+set.add(1);
+set.add('Hello');
+set.add(true);
+
+console.log(set.size); // outputs: 3
+
+// Checking if a value exists in the set
+console.log(set.has('Hello')); // outputs: true
+console.log(set.has(2)); // outputs: false
+
+// Deleting a value from the set
+set.delete(1);
+console.log(set.size); // outputs: 2
+
+// Iterating over the set
+for (let item of set) {
+  console.log(item);
+}
+```
+
   </div>
   </div>
 </details>
@@ -586,7 +714,22 @@ You can also use a traditional iterative for loop, but it is much more complex a
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> You can add an element to a Set using the add() method, which takes the element as an argument and adds it to the Set.
-<br /><br />
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let set = new Set();
+
+// Adding elements to the set
+set.add(1);
+set.add('Hello');
+set.add(true);
+
+console.log(set); // outputs: Set { 1, 'Hello', true }
+```
+
   </div>
   </div>
 </details>
@@ -599,7 +742,27 @@ You can also use a traditional iterative for loop, but it is much more complex a
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> You can remove an element from a Set using the delete() method, which takes the element as an argument and removes it from the Set.
-<br /><br />
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let set = new Set();
+
+// Adding elements to the set
+set.add(1);
+set.add('Hello');
+set.add(true);
+
+console.log(set); // outputs: Set { 1, 'Hello', true }
+
+// Removing an element from the set
+set.delete('Hello');
+
+console.log(set); // outputs: Set { 1, true }
+```
+
   </div>
   </div>
 </details>
@@ -612,7 +775,22 @@ You can also use a traditional iterative for loop, but it is much more complex a
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> You can determine the size of a Set using the size property, which returns the number of elements in the Set.
-<br /><br />
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let set = new Set();
+
+// Adding elements to the set
+set.add(1);
+set.add('Hello');
+set.add(true);
+
+console.log(set.size); // outputs: 3
+```
+
   </div>
   </div>
 </details>
@@ -625,20 +803,26 @@ You can also use a traditional iterative for loop, but it is much more complex a
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> You can convert a Set to an array using the Array.from() method or the spread operator [...mySet].
-<br /><br />
-  </div>
-  </div>
-</details>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
----
+  <div></div>
 
-### How can you convert a Set to an array?
+```js
+let set = new Set();
+set.add(1);
+set.add('Hello');
+set.add(true);
 
-<details>
-  <summary><strong>View Answer:</strong></summary>
-  <div>
-  <div><strong>Interview Response:</strong> You can convert a Set to an array using the Array.from() method or the spread operator [...mySet].
-<br /><br />
+// Convert Set to Array using Array.from()
+let array1 = Array.from(set);
+console.log(array1); // outputs: [1, 'Hello', true]
+
+// Convert Set to Array using spread operator
+let array2 = [...set];
+console.log(array2); // outputs: [1, 'Hello', true]
+```
+
   </div>
   </div>
 </details>

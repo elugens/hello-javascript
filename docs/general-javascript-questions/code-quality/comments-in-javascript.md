@@ -60,13 +60,37 @@ import StructuredData from './schemadata/CommentsSchemaData.js';
 
 <CloseAllAnswers />
 
-### What are coding comments?
+### What are code comments in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Coding comments are notes added to a program's source code to explain the code to programmers or to serve as reminders for future updates.
-</div><br/>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+There are two types of comments in JavaScript:
+
+**Single line comments:** These begin with two forward slashes `//`. Everything to the right of `//` on the same line is a comment.
+
+```javascript
+// This is a single line comment in JavaScript
+```
+
+**Multi-line comments:** These begin with `/*` and end with `*/`. Everything between `/*` and `*/` is a comment, even if it spans multiple lines.
+
+```javascript
+/*
+ This is a multi-line comment
+ in JavaScript
+*/
+```
+
+Remember, while comments are important for code readability and maintainability, they do not affect the execution of the code.
+
+  </div>
   </div>
 </details>
 
@@ -78,7 +102,7 @@ import StructuredData from './schemadata/CommentsSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Code comments in JavaScript serve to explain code, improve readability, and assist in debugging. They provide context and clarification, making it easier for developers to maintain and understand the codebase.
-</div><br/>
+</div>
   </div>
 </details>
 
@@ -174,7 +198,20 @@ function pow(x, n) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> You use the param tag followed by the name and description of the parameter. For example, "param &#123;string&#125; name - the name of the person."
-</div><br/>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+/**
+ * @param {number} a - The first number
+ * @param {number} b - The second number
+ */
+function add(a, b) {...}
+```
+
+  </div>
   </div>
 </details>
 
@@ -185,8 +222,26 @@ function pow(x, n) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> JSDoc comments are a type of coding comment that follows a specific syntax to generate documentation for code. They help developers understand the API, parameters, and return values of a function or module.
-</div><br/>
+  <div><strong>Interview Response:</strong> JSDoc comments in JavaScript are used to document code. They provide descriptions of functions, parameters, return values, and more, improving readability and aiding in generating documentation automatically.
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+/**
+ * Calculates the sum of two numbers.
+ *
+ * @param {number} a - The first input number
+ * @param {number} b - The second input number
+ * @returns {number} The sum of a and b
+ */
+function sum(a, b) {
+  return a + b;
+}
+```
+
+  </div>
   </div>
 </details>
 
@@ -198,7 +253,7 @@ function pow(x, n) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> To document code using JSDoc, start with /**, describe elements using tags like @param, @return, @class, and @type, add descriptions, and close with */. This allows for automatic documentation generation and IDE support.
-</div><br/>
+</div>
   </div>
 </details>
 
@@ -210,7 +265,7 @@ function pow(x, n) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> We use two forward slashes (//) followed by the comment text to write a single-line comment in JavaScript.
-</div><br/>
+</div>
   </div>
 </details>
 
@@ -222,7 +277,19 @@ function pow(x, n) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> To create a multi-line comment in JavaScript, place your comment between a forward slash followed by an asterisk (/*), and finally, end the comment with an asterisk followed by a forward slash (*/). This allows you to write comments that span multiple lines
-</div><br/>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+/*
+ This is a multi-line
+ comment in JavaScript.
+*/
+```
+
+  </div>
   </div>
 </details>
 
@@ -234,7 +301,7 @@ function pow(x, n) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> In collaborative programming, code comments enhance communication among developers, clarify complex logic, provide context, and document functions or variables, improving code understanding, maintainability, and overall team productivity.
-</div><br/>
+</div>
   </div>
 </details>
 
@@ -246,7 +313,7 @@ function pow(x, n) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> To write effective and clear code comments, ensure conciseness and clarity. We should focus on explaining the 'why' instead of the 'what', as the code should be self-explanatory. We should use consistent commenting styles, such as single-line or multi-line comments, and avoid redundancy. Lastly, keep comments up-to-date as code evolves to prevent confusion and miscommunication.
-</div><br/>
+</div>
   </div>
 </details>
 
@@ -258,7 +325,7 @@ function pow(x, n) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Comments can help identify issues, clarify intentions, and provide context during debugging, making it easier to trace problematic code sections, understand the logic, and fix errors efficiently.
-</div><br/>
+</div>
   </div>
 </details>
 
@@ -270,19 +337,43 @@ function pow(x, n) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Disadvantages of comments include potential clutter, outdated information, and redundancy. Poorly written comments can confuse readers and hinder maintainability instead of improving code comprehension.
-</div><br/>
+</div>
   </div>
 </details>
 
 ---
 
-### Describe the role of comments in self-documenting code, and how you can strike a balance between comments and clean, readable code
+### Can you describe the role of comments in self-documenting code, and how you can strike a balance between comments and clean, readable code?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> In self-documenting code, comments clarify complex logic or intent, while descriptive variable and function names make code readable. We can strike a balance by using comments sparingly and emphasizing clear code structure.
-</div><br/>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's an example illustrating the balance between self-documenting code and comments.
+
+```javascript
+// Function to calculate the area of a rectangle
+function calculateArea(length, width) {
+  return length * width;
+}
+
+const length = 10;
+const width = 5;
+
+// Calculate the area of the rectangle
+const area = calculateArea(length, width);
+
+console.log(`The area of the rectangle is ${area}`);
+```
+
+In this example, function and variable names are descriptive, and the code is straightforward. The comments aren't necessarily needed but can be helpful for someone unfamiliar with the code. A more complex function or algorithm might require more detailed comments.
+
+  </div>
   </div>
 </details>
 
@@ -294,19 +385,31 @@ function pow(x, n) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, tools like JSDoc generate documentation from comments, while linters, like ESLint, enforce consistent commenting practices. We also use extensions like Comment Anchors, in VSCode, which help us navigate and organize comments effectively.
-</div><br/>
+</div>
   </div>
 </details>
 
 ---
 
-### Can you give an example of when we might use a "TODO" comment
+### Can you give an example of when we might use a "TODO" comment?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> A "TODO" comment is used to mark incomplete features or areas requiring improvement. For example, when we may need to optimize performance by implementing a caching mechanism.
-</div><br/>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+function calculateSum(a, b) {
+    // TODO: Add input validation checks
+    return a + b;
+}
+```
+
+  </div>
   </div>
 </details>
 
@@ -318,7 +421,7 @@ function pow(x, n) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Comments provide inline explanations, while JSDoc generates external documentation using structured comments. JSDoc offers better organization, searchability, and consistency, while in-code comments aid understanding during development.
-</div><br/>
+</div>
   </div>
 </details>
 

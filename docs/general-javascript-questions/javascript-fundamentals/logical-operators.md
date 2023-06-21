@@ -60,7 +60,7 @@ import StructuredData from './schemadata/LogicalOpSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The logical operators in JavaScript are: AND (&&), OR (||), and NOT (!). They are used to perform logical operations on values or expressions.</div><br/>
+  <div><strong>Interview Response:</strong> The logical operators in JavaScript are: AND (&&), OR (||), and NOT (!). They are used to perform logical operations on values or expressions.</div>
   </div>
 </details>
 
@@ -123,12 +123,12 @@ console.log(0 || 0); // returns 0
   <div></div>
 
 ```js
-alert(1 || 0); // 1 (1 is truthy)
+console.log(1 || 0); // 1 (1 is truthy)
 
-alert(null || 1); // 1 (1 is the first truthy value)
-alert(null || 0 || 1); // 1 (the first truthy value)
+console.log(null || 1); // 1 (1 is the first truthy value)
+console.log(null || 0 || 1); // 1 (the first truthy value)
 
-alert(undefined || null || 0); // 0 (all falsy, returns the last value)
+console.log(undefined || null || 0); // 0 (all falsy, returns the last value)
 ```
 
 :::note
@@ -152,8 +152,8 @@ Logical OR “||” finds the first truthy value or the last value if there are 
   <div></div>
 
 ```js
-true || alert('not printed');
-false || alert('printed');
+true || console.log('not printed');
+false || console.log('printed');
 ```
 
   </div>
@@ -173,10 +173,10 @@ false || alert('printed');
   <div></div>
 
 ```js
-alert(true && true); // true
-alert(false && true); // false
-alert(true && false); // false
-alert(false && false); // false
+console.log(true && true); // true
+console.log(false && true); // false
+console.log(true && false); // false
+console.log(false && false); // false
 ```
 
   </div>
@@ -190,7 +190,26 @@ alert(false && false); // false
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The logical AND (&&) operator performs short-circuit conversion. It evaluates operands left-to-right and returns the first falsy value encountered or the last truthy value if all operands are truthy.</div>
+  <div><strong>Interview Response:</strong> The logical && (AND) performs a Boolean conversion. It evaluates two operands and returns true if both operands are true, and false otherwise.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let x = 5;
+let y = 10;
+
+if (x > 0 && y < 20) {
+  console.log("Both conditions are true!");
+} else {
+  console.log("At least one condition is false.");
+}
+```
+
+In this example, the logical AND operator (`&&`) is used to check if both `x` is greater than 0 and `y` is less than 20. If both conditions are true, it will print "Both conditions are true!" to the console. Otherwise, it will print "At least one condition is false."
+
+  </div>
   </div>
 </details>
 
@@ -235,19 +254,62 @@ alert(0 && 'no matter what'); // 0
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The difference is that AND returns the first false value while OR returns the first truthy value.</div>
+  <div><strong>Interview Response:</strong> The logical || (OR) returns true if at least one operand is true. The logical && (AND) returns true only if both operands are true.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let x = 5;
+let y = 10;
+
+// Logical OR (||) example
+if (x > 0 || y > 20) {
+  console.log("At least one condition is true!"); // Logs "At least one condition is true!"
+} else {
+  console.log("Both conditions are false.");
+}
+
+// Logical AND (&&) example
+if (x > 0 && y > 20) {
+  console.log("Both conditions are true!");
+} else {
+  console.log("At least one condition is false."); // "At least one condition is false."
+}
+```
+
+  </div>
   </div>
 </details>
 
 ---
 
-### Which of the two, Logical || (OR) and && (AND) operators have the higher operator precedence?
+### Between Logical || (OR) and && (AND) operators which has higher operator precedence?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The AND operator has higher precedence than the OR operator.</div><br />
+  <div><strong>Interview Response:</strong> The '&&' (AND) operator has higher operator precedence than the '||' (OR) operator in most programming languages.</div><br />
   <div><strong>Technical Response:</strong> The precedence of the AND && operator is greater than that of the OR || operator. As a result, the code a && b || c && d is effectively the same as if the && expressions were enclosed in parentheses: (a && b) || (c && d).
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let a = true;
+let b = false;
+let c = true;
+
+// Due to precedence, '&&' operation will be performed before '||' operation
+let result = a || b && c; 
+
+console.log(result);  // Outputs: true
+```
+
+In this case, the `b && c` operation happens first due to `&&` having higher precedence, returning `false`. Then, `a || false` is evaluated, which results in `true`.
+
   </div>
   </div>
 </details>
@@ -301,8 +363,8 @@ if (x > 0) alert('Greater than zero!');
   <div></div>
 
 ```js
-alert(!true); // false
-alert(!0); // true
+console.log(!true); // false
+console.log(!0); // true
 ```
 
   </div>
@@ -324,8 +386,8 @@ alert(!0); // true
   <div></div>
 
 ```js
-alert(!!'non-empty string'); // true
-alert(!!null); // false
+console.log(!!'non-empty string'); // true
+console.log(!!null); // false
 ```
 
   </div>
@@ -379,7 +441,27 @@ alert(Boolean(null)); // false
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, the following values are considered falsy: false, null, undefined, 0, NaN, and "" (empty string).</div><br/>
+  <div><strong>Interview Response:</strong> In JavaScript, the following values are considered falsy: false, null, undefined, 0, NaN, and "" (empty string).
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let falsyValues = [false, 0, "", null, undefined, NaN];
+
+falsyValues.forEach(value => {
+    if (value) {
+        console.log(`${value} is truthy`);
+    } else {
+        console.log(`${value} is falsy`);
+    }
+});
+```
+
+This code will output that each value in the `falsyValues` array is falsy.
+
+  </div>
   </div>
 </details>
 
@@ -401,7 +483,47 @@ alert(Boolean(null)); // false
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Logical Operators can be used to combine simple conditions into more complex ones. For example, instead of using nested if statements, you can use the AND (&&) operator to combine conditions.</div><br/>
+  <div><strong>Interview Response:</strong> Logical operators (`&&`, `||`, `!`) can simplify complex conditions by chaining or negating boolean expressions, enhancing code readability and reducing redundancy in conditions.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Let's consider this JavaScript example where you need to check if a user is valid.
+
+*Without logical operators:*
+
+```javascript
+let userName = "John";
+let userAge = 20;
+
+if (userName !== "") {
+    if (userAge >= 18) {
+        console.log("User is valid");
+    } else {
+        console.log("User is not valid");
+    }
+} else {
+    console.log("User is not valid");
+}
+```
+
+*Now, the same thing with logical operators:*
+
+```javascript
+let userName = "John";
+let userAge = 20;
+
+if (userName !== "" && userAge >= 18) {
+    console.log("User is valid");
+} else {
+    console.log("User is not valid");
+}
+```
+
+As you can see, the code is more simplified and readable when using logical operators.
+
+  </div>
   </div>
 </details>
 

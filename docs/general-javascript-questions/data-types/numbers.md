@@ -47,7 +47,37 @@ import StructuredData from './schemadata/NumbersSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The Number object is a built-in object in JavaScript that represents numerical values and provides methods for working with numbers.<br /><br />
+  <div><strong>Interview Response:</strong> The Number object is a built-in object in JavaScript that represents numerical values and provides methods for working with numbers.
+  </div><br />
+  <div><strong>Technical Response:</strong> In JavaScript, the Number object is a wrapper object that allows you to work with numerical values. The Number object can be created using the Number() constructor, but it's often not necessary because JavaScript automatically converts number literals and variables to instances of the Number object when necessary.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let num = new Number(10);
+```
+
+However, you generally don't need to explicitly create Number objects in this way. Instead, you can just work with number primitives, like so:
+
+```javascript
+let num = 10;
+```
+
+JavaScript will automatically convert `num` to a Number object when you call methods on it. For example:
+
+```javascript
+let num = 10;
+console.log(num.toFixed(2)); // "10.00"
+```
+
+In this case, JavaScript temporarily converts the number primitive `10` to a Number object so that the `toFixed` method can be used.
+
+The Number object also has properties for numerical constants, such as `Number.MAX_VALUE`, `Number.MIN_VALUE`, `Number.NaN` (representing "Not a Number"), `Number.POSITIVE_INFINITY`, and `Number.NEGATIVE_INFINITY`.
+
+Finally, note that while the Number object is useful, using number primitives is generally more efficient. You should avoid using the Number constructor unless necessary because creating Number objects can slow down execution speed.
+
   </div>
   </div>
 </details>
@@ -96,7 +126,7 @@ import StructuredData from './schemadata/NumbersSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, we can use an underscore to ensure that the number maintains its primitive format.</div><br />
-  <div><strong>Technical Response:</strong> The most common way to safely separate number groups without using a comma (which would cause an error) and keep its primitive format. We use an underscore (syntactic sugar) to ensure that the number maintains its primitive format. However, there are easier ways to propagate large numbers in most programming languages.<br />
+  <div><strong>Technical Response:</strong> The most common way to safely separate number groups without using a comma (which would cause an error) and keep its primitive format. We use an underscore (syntactic sugar) to ensure that the number maintains its primitive format. However, there are easier ways to propagate large numbers in most programming languages.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -159,7 +189,7 @@ let ms = 1e-6; // six zeroes to the left from 1
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Exponential notation or e-notation is used to represent very large or very small numbers more concisely, by using a shortened form of scientific notation, using "e" to indicate the power of 10.<br /><br />
+  <div><strong>Interview Response:</strong> Exponential notation or e-notation is used to represent very large or very small numbers more concisely, by using a shortened form of scientific notation, using "e" to indicate the power of 10.
   </div>
   </div>
 </details>
@@ -174,7 +204,7 @@ let ms = 1e-6; // six zeroes to the left from 1
   <div><strong>Interview Response:</strong> In JavaScript, placing a minus sign before a number negates its value. When used with numbers in exponential notation, it negates the exponent, effectively making the number smaller if it was positive, or larger if it was negative.
   <br /><br />
   <p><strong>For example, -1e3 is equivalent to -1000 or 1e-3 is equivalent to 0.001</strong></p>
-</div><br />
+</div>
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -196,7 +226,7 @@ console.log(-1e9); // -1e9 is - 1000000000.0; minus sign applies to the number i
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> JavaScript uses the UTF-16 encoding for character representation, hexadecimal notation for color representation, and supports base 10 and base 16 (hexadecimal) representation of numbers.<br />
+  <div><strong>Interview Response:</strong> JavaScript uses the UTF-16 encoding for character representation, hexadecimal notation for color representation, and supports base 10 and base 16 (hexadecimal) representation of numbers.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -231,7 +261,7 @@ Hexadecimal is base 16, The decimal is base 10, Octal is base 8, and Binary is b
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The most common numeral system used in JavaScript is Base 10, which is the decimal system used for representing ordinary numbers.<br /><br />
+  <div><strong>Interview Response:</strong> The most common numeral system used in JavaScript is Base 10, which is the decimal system used for representing ordinary numbers.
   </div>
   </div>
 </details>
@@ -291,7 +321,7 @@ console.log(parseInt('-15', 16)); // returns -21
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Regular numbers are 64-bit floating-point values that can represent integers and decimals up to a certain precision, while BigInts are a built-in type for representing integers of arbitrary precision.<br /><br />
+  <div><strong>Interview Response:</strong> Regular numbers are 64-bit floating-point values that can represent integers and decimals up to a certain precision, while BigInts are a built-in type for representing integers of arbitrary precision.
   </div>
   </div>
 </details>
@@ -304,7 +334,6 @@ console.log(parseInt('-15', 16)); // returns -21
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Number() is a function that converts a value to a number, while new Number() is a constructor that creates a Number object. The former returns a primitive value, the latter an object.
-<br /><br />
   </div>
   </div>
 </details>
@@ -317,7 +346,6 @@ console.log(parseInt('-15', 16)); // returns -21
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> No, it's generally not recommended to use the new Number() constructor in JavaScript, as it can lead to unexpected results and is less efficient than using the Number() function.
-<br /><br />
   </div>
   </div>
 </details>
@@ -330,7 +358,6 @@ console.log(parseInt('-15', 16)); // returns -21
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The toFixed() method is used in JavaScript to format a number with a specified number of digits after the decimal point and return it as a string.
-<br /><br />
   </div>
   </div>
 </details>
@@ -343,7 +370,6 @@ console.log(parseInt('-15', 16)); // returns -21
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The toString() method in JavaScript is used to convert a number to a string representation, allowing it to be displayed as text or manipulated in various ways.
-<br /><br />
   </div>
   </div>
 </details>
@@ -356,7 +382,6 @@ console.log(parseInt('-15', 16)); // returns -21
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> One solution is to use a library like BigNumber.js, which provides arbitrary-precision arithmetic. Another is to use integer math where possible, or use rounding methods like Math.round().
-<br /><br />
   </div>
   </div>
 </details>
@@ -368,8 +393,7 @@ console.log(parseInt('-15', 16)); // returns -21
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The valueOf() method returns the primitive value of a Number object.
-<br /><br />
+  <div><strong>Interview Response:</strong> The valueOf() method in JavaScript returns the primitive value of a specified object, commonly used with number, string, and boolean objects.
   </div>
   </div>
 </details>
@@ -382,7 +406,6 @@ console.log(parseInt('-15', 16)); // returns -21
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> In JavaScript, Number.isNaN() strictly checks if a value is NaN, while isNaN() first attempts to convert the value to a number, resulting in potential type coercion and false positives. Therefore, Number.isNaN() is more reliable for checking if a value is NaN.
-<br /><br />
   </div>
   </div>
 </details>
@@ -395,7 +418,6 @@ console.log(parseInt('-15', 16)); // returns -21
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The purpose of the Number.isFinite() method in JavaScript is to determine if a given value is a finite number, excluding Infinity, -Infinity, and NaN.
-<br /><br />
   </div>
   </div>
 </details>
@@ -408,7 +430,6 @@ console.log(parseInt('-15', 16)); // returns -21
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The purpose of the Number.parseFloat() method in JavaScript is to parse a string argument and return a floating-point number or NaN if parsing fails.
-<br /><br />
   </div>
   </div>
 </details>
@@ -421,7 +442,6 @@ console.log(parseInt('-15', 16)); // returns -21
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The purpose of the Number.parseInt() method in JavaScript is to parse a string argument and return an integer, or NaN if parsing fails, allowing for optional radix specification.
-<br /><br />
   </div>
   </div>
 </details>

@@ -100,9 +100,26 @@ import StructuredData from './schemadata/CodeEditorSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> I'm familiar with several code editors such as Visual Studio Code, Sublime Text, Atom, and Notepad++.
+  <div><strong>Interview Response:</strong> Visual Studio Code, Sublime Text, Atom, Webstorm, Brackets and Notepad++.
   </div>
-  <br/>
+  <br />
+  <div><strong className="codeExample">Comparison Table:</strong><br /><br />
+
+  <div></div>
+
+Here's a basic comparison table of some popular Integrated Development Environments (IDEs) used by web developers:
+
+| IDE           | Supported Languages | Key Features                         | Platform       |
+| ------------- | ------------------- | ------------------------------------ | -------------- |
+| Visual Studio Code | JavaScript, TypeScript, CSS, HTML, and more | Extensibility, Git integration, Debugging support, Free | Windows, macOS, Linux |
+| Sublime Text  | JavaScript, TypeScript, CSS, HTML, Python, and more | Goto Anything, Multiple Selections, Command Palette, Customizable, License required | Windows, macOS, Linux |
+| Atom          | JavaScript, TypeScript, CSS, HTML, and more | Built-in package manager, Smart autocompletion, File system browser, Free | Windows, macOS, Linux |
+| WebStorm      | JavaScript, TypeScript, CSS, HTML, and more | Smart coding assistance, Navigation & Search, Debugging, Testing & profiling, License required | Windows, macOS, Linux |
+| Brackets      | HTML, CSS, JavaScript | Inline Editors, Preprocessor Support, Visual Tools, Free | Windows, macOS, Linux |
+
+Please note that there are many more IDEs available, and the best one largely depends on individual needs and preferences. The IDEs listed here are some of the more popular options among web developers as of my knowledge cutoff in September 2021. The features and support might have changed after that.
+
+  </div>
   </div>
 </details>
 
@@ -141,7 +158,6 @@ import StructuredData from './schemadata/CodeEditorSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> A code snippet is a small piece of reusable code that can be inserted into a file with a few keystrokes. I use code snippets in my code editor to speed up my workflow and reduce errors. For example, I might use a code snippet to insert a block of HTML or CSS code that I frequently use, instead of typing it out each time.
   </div>
-  <br/>
   </div>
 </details>
 
@@ -152,9 +168,8 @@ import StructuredData from './schemadata/CodeEditorSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> I collaborate with other developers using a code editor by using a version control system, such as Git, and by sharing files or projects through cloud-based services like GitHub or Bitbucket. I might also use collaboration tools built into the code editor, such as live share features or commenting functionality.
+  <div><strong>Interview Response:</strong> You can collaborate with other developers using a code editor by using a version control system, such as Git, and by sharing files or projects through cloud-based services like GitHub or Bitbucket. You might also use collaboration tools built into the code editor, such as live share features or commenting functionality.
   </div>
-  <br/>
   </div>
 </details>
 
@@ -167,7 +182,43 @@ import StructuredData from './schemadata/CodeEditorSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> Some keyboard shortcuts you can use in a code editor include Ctrl or Cmd + C to copy, Ctr or Cmd + V to paste, Ctrl or Cmd + Z to undo, and Ctrl or Cmd + Shift + P to access the command palette.
   </div>
-  <br/>
+  <br />
+  <div><strong className="codeExample">Here's a table with some commonly used keyboard shortcuts for Visual Studio Code:</strong><br /><br />
+
+  <div></div>
+
+| Action | Windows | macOS |
+| --- | --- | --- |
+| **File Operations** | | |
+| Open File | Ctrl + O | Cmd + O |
+| Save File | Ctrl + S | Cmd + S |
+| Close File | Ctrl + W | Cmd + W |
+| **Editing** | | |
+| Cut line (empty selection) | Ctrl + X | Cmd + X |
+| Copy line (empty selection) | Ctrl + C | Cmd + C |
+| Paste | Ctrl + V | Cmd + V |
+| Undo | Ctrl + Z | Cmd + Z |
+| Redo | Ctrl + Y or Ctrl + Shift + Z | Cmd + Shift + Z |
+| **Navigation** | | |
+| Go to Beginning of Line | Home | Cmd + Left Arrow |
+| Go to End of Line | End | Cmd + Right Arrow |
+| Go to File... | Ctrl + P | Cmd + P |
+| **Search and Replace** | | |
+| Find | Ctrl + F | Cmd + F |
+| Replace | Ctrl + H | Cmd + H |
+| Find Next | F3 or Enter (in Find input) | Cmd + G or Enter (in Find input) |
+| Find Previous | Shift + F3 or Shift + Enter (in Find input) | Cmd + Shift + G or Shift + Enter (in Find input) |
+| **Debugging** | | |
+| Start/Continue | F5 | F5 |
+| Step Over | F10 | F10 |
+| Step Into | F11 | F11 |
+| Step Out | Shift + F11 | Shift + F11 |
+| Restart | Shift + F5 | Shift + F5 |
+| Stop | Shift + F5 | Cmd + F5 |
+
+This is not an exhaustive list, but it includes many of the most frequently used shortcuts in VS Code. You can customize these shortcuts and add more through the Keyboard Shortcuts editor (`File > Preferences > Keyboard Shortcuts`).
+
+  </div>
   </div>
 </details>
 
@@ -251,14 +302,39 @@ import StructuredData from './schemadata/CodeEditorSchemaData.js';
 
 ---
 
-### What is Refactoring?
+### What is Refactoring in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Refactoring is the process of improving the quality and maintainability of code by restructuring it without changing its functionality.
+  <div><strong>Interview Response:</strong> Refactoring in JavaScript is the process of restructuring existing code without changing its external behavior, to improve code readability, reduce complexity, and make it easier to maintain or extend.
   </div>
-  <br/>
+  <br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's a simple example of JavaScript code that could benefit from refactoring:
+
+```javascript
+function priceCalculation(price, discount) {
+    var discountAmount = price * discount;
+    var finalPrice = price - discountAmount;
+    return finalPrice;
+}
+```
+
+The above function could be refactored to be more concise and readable:
+
+```javascript
+function calculateFinalPrice(price, discount) {
+    return price * (1 - discount);
+}
+```
+
+The refactored function does the same thing, but it's shorter and easier to understand. It calculates and returns the final price directly instead of using intermediate variables.
+
+  </div>
   </div>
 </details>
 

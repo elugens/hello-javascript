@@ -72,7 +72,17 @@ import StructuredData from './schemadata/BrowserWindowSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The alert() function in JavaScript displays a pop-up window with a message to the user. The function takes a string argument which is the message to be displayed. The alert blocks further execution of the code until the user dismisses the alert by clicking "OK".</div>
+  <div><strong>Interview Response:</strong> The alert() function in JavaScript displays a pop-up window with a message to the user. The function takes a string argument which is the message to be displayed. The alert blocks further execution of the code until the user dismisses the alert by clicking "OK".
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+alert('Hello, JavaScript!');
+```
+
+  </div>
   </div>
 </details>
 
@@ -97,6 +107,27 @@ import StructuredData from './schemadata/BrowserWindowSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> It shows a window with text and a request for input, then returns a string.</div><br />
   <div><strong>Technical Response:</strong> The window prompt() in JavaScript displays a pop-up window with a message and an input field, allowing the user to input a value. The function returns the value entered by the user as a string, or null if the user cancels the prompt. The window prompt() takes two optional arguments: a message string to display and a default value for the input field.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let userName = prompt("Please enter your name:", "Harry Potter");
+
+if (userName) {
+    console.log(`Hello, ${userName}!`);
+} else {
+    console.log("No name entered.");
+}
+```
+
+In this example, the `prompt()` function displays a dialog box asking the user to enter their name. The text "Please enter your name:" is the prompt, and "Harry Potter" is the default input text. The function returns the input from the user as a string. If the user clicks "OK" without entering a name, or if the user clicks "Cancel", the function returns `null`.
+
+Please **note** that `prompt()` is a method of the `window` object and only works in the browser environment, it won't work in server-side JavaScript environments like Node.js.
+
+Also, the usage of `prompt` is not recommended for modern web development practices due to usability and user experience concerns. It blocks the browser interaction until the user responds which creates a bad user experience, and moreover, some browsers may also ignore these dialogs. Consider using more user-friendly interfaces like form controls or modal windows for user input.
+
   </div>
   </div>
 </details>
@@ -233,6 +264,31 @@ console.log(isBoss); // true if OK is pressed and false otherwise
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> You can use the window.open() method in JavaScript, providing the URL and target ('_blank' for a new window) as arguments to open a new browser window.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+// Opens a new window and navigates it to a specific URL
+let newWindow = window.open('https://www.example.com', '_blank');
+
+// Checks if the new window was blocked
+if(newWindow === null || typeof(newWindow)=='undefined'){ 
+   alert('Please disable your pop-up blocker and click the "Open" link again.'); 
+} else { 
+   newWindow.focus();
+}
+```
+
+In this code:
+
+- `window.open('https://www.example.com', '_blank')` opens a new window or tab (depending on the user's browser settings) and loads '<https://www.example.com>' in it. '_blank' is used to specify that a new window or tab should be opened.
+- The `if` condition checks whether the pop-up window was blocked. If the pop-up was blocked, `window.open()` will return `null` or `undefined`.
+- `newWindow.focus()` brings the new window or tab to the front.
+
+Please note, as this function can be misused to open unwanted pop-ups, some browsers and pop-up blockers may restrict its usage. Ensure to use this method in a way that enhances user experience and respects user preferences.
+
   </div>
   </div>
 </details>
@@ -245,6 +301,20 @@ console.log(isBoss); // true if OK is pressed and false otherwise
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> You can use the window.resizeTo() method to resize a browser window. It takes two arguments, the width, and height of the window in pixels.
+  </div><br />
+  <div><strong className="codeExample">Here's a simple example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+// Resizing the window to a width of 500px and a height of 400px
+window.resizeTo(500, 400);
+```
+
+In this example, `window.resizeTo(500, 400);` resizes the current window to 500 pixels wide and 400 pixels tall.
+
+Please note, the `resizeTo()` method might not work as expected in all modern browsers due to user preferences and browser settings. Some browsers might not support this method, or they might only support it if the window was originally opened with JavaScript using `window.open()`. The usage of such methods that manipulate the user's browser window are generally considered a bad practice as it takes control away from the user.
+
   </div>
   </div>
 </details>
@@ -257,6 +327,30 @@ console.log(isBoss); // true if OK is pressed and false otherwise
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> You can use the window.close() method to close the current browser window.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Close Window</title>
+</head>
+<body>
+<h1>Close Window</h1>
+<button onclick="closeWindow()">Close Window</button>
+<script>
+function closeWindow() {
+  window.close();
+}
+</script>
+</body>
+</html>
+
+```
+
   </div>
   </div>
 </details>
@@ -268,9 +362,26 @@ console.log(isBoss); // true if OK is pressed and false otherwise
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> You can use the window.open() method with a unique name, and then check if the window reference is not null. If it is null, then the window was likely blocked by the browser.
+  <div><strong>Interview Response:</strong> In JavaScript, you can check if a pop-up window is blocked by the browser by testing if window.open() returns null or undefined. If it does, the pop-up was blocked.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let newWindow = window.open('https://www.example.com', '_blank');
+
+if (newWindow === null || typeof(newWindow) == 'undefined') {
+    console.log('The pop-up was blocked.');
+} else {
+    console.log('The pop-up was not blocked.');
+    newWindow.focus();
+}
+```
+
   </div>
   </div>
+
 </details>
 
 ---
@@ -281,6 +392,20 @@ console.log(isBoss); // true if OK is pressed and false otherwise
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> You can use the window.innerWidth and window.innerHeight properties to get the current size of the browser window.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let windowWidth = window.innerWidth;
+let windowHeight = window.innerHeight;
+
+console.log(`Current window width is ${windowWidth} pixels and height is ${windowHeight} pixels.`);
+```
+
+Please note that `innerWidth` and `innerHeight` include the width and height of the scrollbar if it's visible. If you need the width and height without the scrollbar, you can use `document.documentElement.clientWidth` and `document.documentElement.clientHeight` respectively.
+
   </div>
   </div>
 </details>

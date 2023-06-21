@@ -66,7 +66,7 @@ import StructuredData from './schemadata/NullishSchemaData.js';
 
 ---
 
-### Explain how the nullish coalescing operator works?
+### How does the nullish coalescing operator work?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -113,7 +113,6 @@ console.log(baz);
 
 ```js
 // We can rewrite result = a ?? b using the NOT equal (!==) operator.
-
 result = a !== null && a !== undefined ? a : b;
 ```
 
@@ -137,12 +136,12 @@ result = a !== null && a !== undefined ? a : b;
 // here we show Anonymous if user is not defined
 let user;
 
-alert(user ?? 'Anonymous'); // Anonymous
+console.log(user ?? 'Anonymous'); // Anonymous
 
 // if the user has any value except null or undefined
 let user = 'John';
 
-alert(user ?? 'Anonymous'); // John
+console.log(user ?? 'Anonymous'); // John
 ```
 
   </div>
@@ -167,7 +166,7 @@ let lastName = null;
 let nickName = 'Supercoder';
 
 // shows the first defined value:
-alert(firstName ?? lastName ?? nickName ?? 'Anonymous'); // Supercoder
+console.log(firstName ?? lastName ?? nickName ?? 'Anonymous'); // Supercoder
 ```
 
   </div>
@@ -201,12 +200,12 @@ alert(firstName || lastName || nickName || 'Anonymous'); // Supercoder
 
 ---
 
-### What is the primary difference between the null-ish coalescing operator and the logical OR operator?
+### How do the nullish coalescing and the logical 'OR' operator differ?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The null-ish coalescing operator only checks for null-ish values, null or undefined, while the logical OR operator, checks for any falsy value.
+  <div><strong>Interview Response:</strong> The nullish coalescing operator only checks for nullish values, null or undefined, while the logical OR operator, checks for any falsy value.
   </div><br />
   <div><strong>Technical Response:</strong> The primary difference is that the Nullish Coalescing Operator (??) returns the right operand only if the left operand is null or undefined, while the Logical OR (||) returns the right operand for any falsy value.
   </div><br />
@@ -217,8 +216,8 @@ alert(firstName || lastName || nickName || 'Anonymous'); // Supercoder
 ```js
 let height = 0;
 
-alert(height || 100); // 100
-alert(height ?? 100); // 0
+console.log(height || 100); // 100
+console.log(height ?? 100); // 0
 ```
 
   </div>
@@ -310,18 +309,70 @@ alert(x); // 2
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, you can use the nullish coalescing operator with objects and arrays, but it will only check for nullish values in the object and array itself, not in its properties or elements.</div><br/>
+  <div><strong>Interview Response:</strong> Yes, you can use the nullish coalescing operator with objects and arrays. It will return the first non-null and non-undefined operand, whether it's an object, array, or other data type.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let obj1 = null;
+let obj2 = { name: "John" };
+
+let resultObj = obj1 ?? obj2;
+
+console.log(resultObj);  // Outputs: { name: "John" }
+
+let arr1 = undefined;
+let arr2 = [1, 2, 3];
+
+let resultArr = arr1 ?? arr2;
+
+console.log(resultArr);  // Outputs: [1, 2, 3]
+```
+
+In these examples, `resultObj` is assigned the value of `obj2` because `obj1` is null, and `resultArr` is assigned the value of `arr2` because `arr1` is undefined.
+
+  </div>
   </div>
 </details>
 
 ---
 
-### How does the nullish coalescing operator differ from the optional chaining operator?
+### How do the nullish coalescing and optional chaining operators differ?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The nullish coalescing operator provides a default value if a variable is null or undefined, while the optional chaining operator allows you to access properties or methods of an object without getting an error if the object is null or undefined.</div><br/>
+  <div><strong>Interview Response:</strong> The nullish coalescing operator provides a default value if a variable is null or undefined, while the optional chaining operator allows you to access properties or methods of an object without getting an error if the object is null or undefined.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let user = null;
+
+// Nullish coalescing operator
+let username = user?.name ?? 'Guest';
+
+console.log(username);  // Outputs: "Guest"
+```
+
+In this code, `user?.name` is trying to access the `name` property of `user`. But `user` is null, so `user?.name` evaluates to undefined. As a result, the nullish coalescing operator `??` then assigns the string 'Guest' to `username`.
+
+```javascript
+let user2 = { address: null };
+
+// Optional chaining operator
+let address = user2.address?.street;
+
+console.log(address);  // Outputs: undefined
+```
+
+In this code, `user2.address?.street` is trying to access the `street` property of `address`. But `address` is null, so `user2.address?.street` evaluates to undefined, which is then assigned to `address`.
+
+  </div>
   </div>
 </details>
 

@@ -170,7 +170,7 @@ console.log(message); // returns 'World!'
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, you can declare a variable twice in JavaScript, but it can lead to unexpected behavior or errors. In non-Strict Mode, you can declare the same variable multiple times with 'var', but it can lead to bugs. In Strict Mode, or using let or const, and redeclaring a variable throws an error.</div>
+  <div><strong>Interview Response:</strong> You can declare a variable twice in JavaScript, but it can lead to unexpected behavior or errors. In non-Strict Mode, you can declare the same variable multiple times with 'var', but it can lead to bugs. In Strict Mode, or using let or const, and redeclaring a variable throws an error.</div>
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

@@ -49,7 +49,7 @@ import StructuredData from './schemadata/GCSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Garbage collection in JavaScript is the automatic process of managing memory by freeing up unused memory no longer needed.<br /><br />
+  <div><strong>Interview Response:</strong> Garbage collection in JavaScript is the automatic process of managing memory by freeing up unused memory no longer needed.
   </div>
   </div>
 </details>
@@ -66,7 +66,7 @@ import StructuredData from './schemadata/GCSchemaData.js';
 
 :::note
 
-This automaticity is a potential source of confusion: it can give developers the false impression that they do not need to worry about memory management.
+This type automaticity is a potential source of confusion: it can give developers the false impression that they do not need to worry about memory management.
 
 :::
 
@@ -80,7 +80,7 @@ This automaticity is a potential source of confusion: it can give developers the
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Garbage collection is important in JavaScript because it prevents memory leaks and improves overall performance by managing memory automatically.<br /><br />
+  <div><strong>Interview Response:</strong> Garbage collection is important in JavaScript because it prevents memory leaks and improves overall performance by managing memory automatically.
   </div>
   </div>
 </details>
@@ -100,20 +100,25 @@ This automaticity is a potential source of confusion: it can give developers the
   <div></div>
 
 ```js
-var n = 123; // allocates memory for a number
-var s = 'azerty'; // allocates memory for a string
+// allocates memory for a number
+var n = 123;
 
+// allocates memory for a string
+var s = 'azerty';
+
+// allocates memory for an object and contained values
 var o = {
   a: 1,
   b: null,
-}; // allocates memory for an object and contained values
+};
 
 // allocates memory for the array and contained values
 var a = [1, null, 'abra'];
 
+// allocates a function (which is a callable object)
 function f(a) {
   return a + 2;
-} // allocates a function (which is a callable object)
+} 
 
 // function expressions also allocate an object
 someElement.addEventListener(
@@ -150,7 +155,7 @@ var n = null;
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div><div><strong>Interview Response:</strong> A GC root in JavaScript is an object that is inherently accessible, like global variables. It's the starting point for garbage collection, which identifies unneeded objects to reclaim memory.
-</div><br/><br/>
+</div><br/>
   <div><strong>Technical Response:</strong> A "root" is simply an object that the garbage collector assumes is reachable by default, which then has its references traced to find all other current objects that are reachable. Any object that is not reachable through any reference chain of any root objects is considered unreachable and eventually gets destroyed by the garbage collector.
 </div>
   </div>
@@ -284,7 +289,7 @@ family = null;
   <summary><strong>View Answer:</strong></summary>
   <div>
    <div><strong>Interview Response:</strong> The JavaScript garbage collector uses the Mark and Sweep algorithm. It first identifies and marks all live objects, then sweeps and removes unreachable objects, and finally compacts memory to reduce fragmentation.
-  </div><br /><br />
+  </div><br />
   <div><strong>Technical Response:</strong><br /><br />
   <strong>The following "garbage collection" steps regularly get performed:</strong><br /><br />
   <ol>
@@ -324,7 +329,7 @@ You should note that each engine implements different tweaks and techniques.
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The GC root in JavaScript is the starting point for the garbage collector's traversal of objects in memory, typically including global variables.<br /><br />
+  <div><strong>Interview Response:</strong> The GC root in JavaScript is the starting point for the garbage collector's traversal of objects in memory, typically including global variables.
   </div>
   </div>
 </details>
@@ -336,7 +341,7 @@ You should note that each engine implements different tweaks and techniques.
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, a global variable that is equal to null is garbage collected in JavaScript. This is because the garbage collector will remove any object that is no longer referenced by any other variable. When a global variable is set to null, it no longer references any object so that it can be garbage collected.<br /><br />
+  <div><strong>Interview Response:</strong> Yes, a global variable that is equal to null is garbage collected in JavaScript. This is because the garbage collector will remove any object that is no longer referenced by any other variable. When a global variable is set to null, it no longer references any object so that it can be garbage collected.
   </div>  
   </div>
 </details>
@@ -348,7 +353,7 @@ You should note that each engine implements different tweaks and techniques.
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Strategies for optimizing garbage collection in JavaScript include minimizing global variables, avoiding circular references, utilizing weak references to objects, and reducing object creation and deletion.<br /><br />
+  <div><strong>Interview Response:</strong> Strategies for optimizing garbage collection in JavaScript include minimizing global variables, avoiding circular references, utilizing weak references to objects, and reducing object creation and deletion.
   </div>  
   </div>
 </details>
@@ -360,7 +365,7 @@ You should note that each engine implements different tweaks and techniques.
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We can detect and diagnose memory leaks in JavaScript by profiling memory usage, analyzing heap snapshots, using Chrome DevTools, monitoring performance, and employing garbage collection tracking.<br /><br />
+  <div><strong>Interview Response:</strong> We can detect and diagnose memory leaks in JavaScript by profiling memory usage, analyzing heap snapshots, using Chrome DevTools, monitoring performance, and employing garbage collection tracking.
   </div>  
   </div>
 </details>

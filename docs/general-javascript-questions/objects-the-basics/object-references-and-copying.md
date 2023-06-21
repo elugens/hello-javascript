@@ -247,7 +247,7 @@ console.log(user.name); // Pete
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A shallow clone copies an object and its direct properties, but not nested objects. A deep copy duplicates an object and all nested objects, creating independent copies.<br /><br />
+  <div><strong>Interview Response:</strong> A shallow clone copies an object and its direct properties, but not nested objects. A deep copy duplicates an object and all nested objects, creating independent copies.
   </div>
   </div>
 </details>
@@ -414,7 +414,7 @@ console.log(obj); // { name: 'John' }
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> You can remove a property from an object in JavaScript using the `delete` operator. For example: `delete object.propertyName;` or `delete object['propertyName'];`.<br /><br />
+  <div><strong>Interview Response:</strong> You can remove a property from an object in JavaScript using the `delete` operator. For example: `delete object.propertyName;` or `delete object['propertyName'];`.
   </div>
   </div>
 </details>
@@ -448,7 +448,24 @@ console.log(name, age); // "John" 30
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> You can use the hasOwnProperty method or the in keyword. For example: object.hasOwnProperty('propertyName') or 'propertyName' in object.<br /><br />
+  <div><strong>Interview Response:</strong> You can use the hasOwnProperty method or the in keyword. For example: object.hasOwnProperty('propertyName') or 'propertyName' in object.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+const object = { name: 'John', age: 30 };
+
+// Using hasOwnProperty method
+console.log(object.hasOwnProperty('name')); // true
+console.log(object.hasOwnProperty('address')); // false
+
+// Using in operator
+console.log('name' in object); // true
+console.log('address' in object); // false
+```
+
   </div>
   </div>
 </details>

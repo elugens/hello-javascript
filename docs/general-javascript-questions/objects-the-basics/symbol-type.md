@@ -87,7 +87,7 @@ Symbol('foo') === Symbol('foo'); // false, Symbol returns a unique
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> No, the Symbol function is not registered in the global symbol registry. It is a built-in function provided by the language.
-</div>
+</div><br/>
   <div><strong>Technical Response:</strong> No, the Symbol object does not create a global symbol available in your whole codebase. To create symbols available across files and even across realms (each of which has its global scope), use the methods Symbol.for() and Symbol.keyFor() to set and retrieve symbols from the global symbol registry.
 </div>
   </div>
@@ -111,6 +111,7 @@ let id1 = Symbol('id');
 let id2 = Symbol('id');
 
 console.log(id1 == id2); // false
+console.log(id1.description === id2.description); // true
 ```
 
 :::note
@@ -192,7 +193,7 @@ alert(id.toString()); // Symbol(id), now it works
 
 ```js
 let id = Symbol('id');
-alert(id.description); // returns id
+console.log(id.description); // returns id
 ```
 
   </div>
@@ -213,17 +214,15 @@ alert(id.description); // returns id
   <div></div>
 
 ```js
-let user = {
-  // belongs to another code
-  name: 'John',
+let user = { // belongs to another code
+  name: "John"
 };
 
-let id = Symbol('id');
+let id = Symbol("id");
 
 user[id] = 1;
 
-alert(user[id]);
-// returns 1, in user[id], we can access the data using the symbol as the key
+console.log( user[id] ); // we can access the data using the symbol as the key
 ```
 
   </div>
@@ -488,12 +487,69 @@ alert(localSymbol.description); // name
 
 ---
 
-### Can you use Symbols to create private properties in Classes?
+### Can you use the Symbol type to create private properties in Classes?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, you can use Symbols to create private properties in JavaScript classes by defining them as Symbol properties in the class constructor.<br /><br />
+  <div><strong>Interview Response:</strong> Yes, you can use Symbols to create private properties in JavaScript classes by defining them as Symbol properties in the class constructor.
+  </div><br/>
+  <div><strong>Technical Response:</strong> Yes, you can use the Symbol type to create private properties in classes in JavaScript. Symbol creates a unique identifier that can be used as an object property. This makes it hard to accidentally access or modify the property, giving a similar effect to a private property.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let privateProperty = Symbol();
+
+class MyClass {
+    constructor() {
+    this[privateProperty] = 'private';
+  }
+
+  checkPrivate() {
+    return this[privateProperty];
+  }
+}
+
+let instance = new MyClass();
+
+console.log(instance.checkPrivate()); // 'private'
+console.log(instance.privateProperty); // undefined
+```
+
+In the above example, the `privateProperty` variable is a unique symbol that is used as the key for a property in the `MyClass` object. This property can't be accessed outside of the object except through a method defined in the class (like the `checkPrivate` method in this case).
+
+However, do note that even though it acts like a private property, it's not completely private. You can still access it if you have a reference to the Symbol or by using the `Object.getOwnPropertySymbols()` method:
+
+```javascript
+let privateSymbols = Object.getOwnPropertySymbols(instance);
+console.log(instance[privateSymbols[0]]); // 'private'
+```
+
+If you want true private fields, you can use the private field syntax (`#`) in JavaScript classes (introduced in ECMAScript 2020). These are only accessible inside the class they are defined:
+
+```javascript
+class MyClass {
+  #privateField;
+
+  constructor() {
+    this.#privateField = 'private';
+  }
+
+  checkPrivate() {
+    return this.#privateField;
+  }
+}
+
+let instance = new MyClass();
+console.log(instance.checkPrivate()); // 'private'
+console.log(instance.privateField); // undefined
+```
+
+In this example, `#privateField` is truly private and can't be accessed from outside the class.
+
   </div>
   </div>
 </details>

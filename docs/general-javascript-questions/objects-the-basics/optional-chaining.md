@@ -57,7 +57,7 @@ import StructuredData from './schemadata/OptChainSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> JavaScript's optional chaining operator (?.) allows you to access nested properties of an object while protecting against null or undefined values, by short-circuiting the evaluation if a property is missing.<br /><br />
+  <div><strong>Interview Response:</strong> JavaScript's optional chaining operator (?.) allows you to access nested properties of an object while protecting against null or undefined values, by short-circuiting the evaluation if a property is missing.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -142,7 +142,7 @@ If it is not optional, it can result in a false scenario that goes unchecked. Th
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Technically, it is a syntax construct, but most developers refer to it as an operator.</div><br />
-  <div><strong>Technical Response:</strong> It is technically a syntactic construct. However, it generally gets referred to as an operator. It is more than simply an operator, though, and may get used with functions (?.()) and square brackets (?.[]). For instance, ?.() is used to invoke a function that may or may not exist. If we want to utilize brackets [] instead of dot to access properties, we may use the?.[] syntax (.).<br /><br />
+  <div><strong>Technical Response:</strong> It is technically a syntactic construct. However, it generally gets referred to as an operator. It is more than simply an operator, though, and may get used with functions (?.()) and square brackets (?.[]). For instance, ?.() is used to invoke a function that may or may not exist. If we want to utilize brackets [] instead of dot to access properties, we may use the?.[] syntax (.).
   </div><br />
   <div><strong className="codeExample">Code Example:</strong> Function Call<br /><br />
 
@@ -282,7 +282,7 @@ console.log(city.toUpperCase()); // TypeError: Cannot read properties of undefin
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, the optional chaining operator is widely supported in modern browsers, including all major desktop and mobile browsers as well as Node.js.<br /><br />
+  <div><strong>Interview Response:</strong> Yes, the optional chaining operator is widely supported in modern browsers, including all major desktop and mobile browsers as well as Node.js.
   </div>
   </div>
 </details>

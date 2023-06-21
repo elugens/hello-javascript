@@ -39,6 +39,39 @@ import StructuredData from './schemadata/ComparisonsSchemaData.js';
 
 <CloseAllAnswers />
 
+### What is a comparison operator in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A comparison operator in JavaScript is used to compare two values and returns a boolean result (true or false) based on the comparison.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong> Example showcasing the usage of comparison operators in JavaScript.<br /><br />
+
+  <div></div>
+
+```javascript
+let num1 = 5;
+let num2 = 10;
+
+console.log(num1 > num2);   // Output: false (Greater than)
+console.log(num1 < num2);   // Output: true (Less than)
+console.log(num1 >= num2);  // Output: false (Greater than or equal to)
+console.log(num1 <= num2);  // Output: true (Less than or equal to)
+console.log(num1 == num2);  // Output: false (Equality)
+console.log(num1 === num2); // Output: false (Strict equality)
+console.log(num1 != num2);  // Output: true (Inequality)
+console.log(num1 !== num2); // Output: true (Strict inequality)
+```
+
+In this example, the comparison operators are used to compare the values of `num1` and `num2`. The result of each comparison is a boolean value (`true` or `false`) based on the outcome of the comparison.
+
+  </div>
+  </div>
+</details>
+
+---
+
 ### Do all comparison operators return a Boolean value?
 
 <details>
@@ -54,9 +87,9 @@ import StructuredData from './schemadata/ComparisonsSchemaData.js';
   <div></div>
 
 ```js
-alert(2 > 1); // true (correct)
-alert(2 == 1); // false (wrong)
-alert(2 != 1); // true (correct)
+console.log(2 > 1); // true (correct)
+console.log(2 == 1); // false (wrong)
+console.log(2 != 1); // true (correct)
 ```
 
   </div>
@@ -70,7 +103,7 @@ alert(2 != 1); // true (correct)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> JavaScript comparison operators include equality (==, ===), inequality (!=, !==), and relational (&#62;, &#60;, &#62;=, &#60;=) operators. They compare values for equality, inequality, or relative size, respectively.</div><br/>
+  <div><strong>Interview Response:</strong> JavaScript comparison operators include equality (==, ===), inequality (!=, !==), and relational (&#62;, &#60;, &#62;=, &#60;=) operators. They compare values for equality, inequality, or relative size, respectively.</div>
   </div>
 </details>
 
@@ -81,7 +114,20 @@ alert(2 != 1); // true (correct)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Inequality (!=) checks value inequality with type coercion, while strict inequality (!==) compares both value and type without coercion for accurate results.</div><br/>
+  <div><strong>Interview Response:</strong> Inequality (!=) checks value inequality with type coercion, while strict inequality (!==) compares both value and type without coercion for accurate results.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+console.log(5 != "5");    // Output: false (Inequality with type coercion)
+console.log(5 !== "5");   // Output: true (Strict inequality without type coercion)
+
+console.log(true != 1);   // Output: false (Inequality with type coercion)
+console.log(true !== 1);  // Output: true (Strict inequality without type coercion)
+```
+
+  </div>
   </div>
 </details>
 
@@ -109,9 +155,9 @@ alert(2 != 1); // true (correct)
   <div></div>
 
 ```js
-alert('Z' > 'A'); // true
-alert('Glow' > 'Glee'); // true
-alert('Bee' > 'Be'); // true
+console.log('Z' > 'A'); // true
+console.log('Glow' > 'Glee'); // true
+console.log('Bee' > 'Be'); // true
 
 // Unicode Values
 let myLetter = 'Hello';
@@ -137,8 +183,8 @@ console.log(myLetter.charCodeAt(1)); // returns Unicode value 101
   <div></div>
 
 ```js
-alert('2' > 1); // true, string '2' becomes a number 2
-alert('01' == 1); // true, the string '01' becomes a number 1
+console.log('2' > 1); // true, string '2' becomes a number 2
+console.log('01' == 1); // true, the string '01' becomes a number 1
 ```
 
   </div><br />
@@ -147,8 +193,8 @@ alert('01' == 1); // true, the string '01' becomes a number 1
   <div></div>
 
 ```js
-alert(true == 1); // true
-alert(false == 0); // true
+console.log(true == 1); // true
+console.log(false == 0); // true
 ```
 
   </div>
@@ -169,14 +215,14 @@ alert(false == 0); // true
 
 ```js
 let a = 0;
-alert(Boolean(a)); // false
+console.log(Boolean(a)); // false
 
 let b = '0';
-alert(Boolean(b)); // true
+console.log(Boolean(b)); // true
 
-alert(a == b); // true!, equality operator
+console.log(a == b); // true!, equality operator
 
-alert(a === b); // false!, strict equality operator
+console.log(a === b); // false!, strict equality operator
 ```
 
   </div>
@@ -198,7 +244,7 @@ alert(a === b); // false!, strict equality operator
   <div></div>
 
 ```js
-alert(0 === false); // false, because the types are different
+console.log(0 === false); // false, because the types are different
 ```
 
   </div>
@@ -207,23 +253,39 @@ alert(0 === false); // false, because the types are different
 
 ---
 
-### Is there a benefit of using the strict equality operator?
+### What is the benefit of using the strict equality operator?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, using the strict equality operator in JavaScript helps to avoid unexpected type coercion and ensures precise comparisons.</div>
+  <div><strong>Interview Response:</strong> Yes, using the strict equality operator in JavaScript helps to avoid unexpected type coercion issues and ensures precise comparisons.</div><br/>
+  <div><strong>Interview Response:</strong> The benefit of using the strict equality (`===`) operator is that it ensures both the value and type are compared, providing more precise and predictable results, avoiding potential type coercion issues, and promoting code correctness.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+console.log(5 === 5);      // Output: true (Strict equality with matching value and type)
+console.log(5 === "5");    // Output: false (Strict equality with different types)
+console.log(true === 1);   // Output: false (Strict equality with different types)
+console.log(null === undefined);  // Output: false (Strict equality with different types)
+```
+
+Using strict equality helps ensure that comparisons are performed accurately based on both value and type, reducing potential bugs and unexpected behavior.
+
+  </div>
   </div>
 </details>
 
 ---
 
-### What is the result of comparing "null" and "undefined" using equality and strict equality operators?
+### What results from comparing "null" and "undefined" using equality and strict equality operators?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Using the equality operator (==), null and undefined are considered equal. However, with the strict equality operator (===), they are not equal, as they are different types.</div>
+  <div><strong>Interview Response:</strong> Using the equality operator (==), null and undefined are considered equal. However, with the strict equality operator (===), they are not equal, as they are different types.
+  </div>
   </div>
 </details>
 
@@ -243,10 +305,10 @@ alert(0 === false); // false, because the types are different
 
 ```js
 // Strict Equality Check
-alert(null === undefined); // false
+console.log(null === undefined); // false
 
 // Regular Equality Check
-alert(null == undefined); // true
+console.log(null == undefined); // true
 ```
 
   </div>
@@ -266,9 +328,9 @@ alert(null == undefined); // true
   <div></div>
 
 ```js
-alert(undefined > 0); // false (1)
-alert(undefined < 0); // false (2)
-alert(undefined == 0); // false (3)
+console.log(undefined > 0); // false (1)
+console.log(undefined < 0); // false (2)
+console.log(undefined == 0); // false (3)
 ```
 
   </div>
@@ -282,7 +344,8 @@ alert(undefined == 0); // false (3)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Loose comparison operators (==, !=) perform type coercion before comparing values, while strict operators (===, !==) compare values and types directly, avoiding coercion.</div><br/>
+  <div><strong>Interview Response:</strong> Loose comparison operators (==, !=) perform type coercion before comparing values, while strict operators (===, !==) compare values and types directly, avoiding coercion.
+  </div>
   </div>
 </details>
 
@@ -323,7 +386,22 @@ alert(undefined == 0); // false (3)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> JavaScript comparison operators evaluate objects by their memory references, not content. Two objects are equal only if they reference the same memory location.</div><br/>
+  <div><strong>Interview Response:</strong> JavaScript comparison operators compare object references, not the contents. They check if the compared objects refer to the same memory location, rather than comparing their properties or values.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let obj1 = { name: "Alice" };
+let obj2 = { name: "Alice" };
+let obj3 = obj1;
+
+console.log(obj1 === obj2);  // Output: false (Different object references)
+console.log(obj1 === obj3);  // Output: true (Same object reference)
+```
+
+  </div>
   </div>
 </details>
 
@@ -345,7 +423,22 @@ alert(undefined == 0); // false (3)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, but the result may be unexpected due to type coercion in JavaScript.</div><br/>
+  <div><strong>Interview Response:</strong> Yes, but the result may be unexpected due to type coercion in JavaScript.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+console.log(5 == "5");     // Output: true (Equality with type coercion)
+console.log(5 === "5");    // Output: false (Strict equality without type coercion)
+console.log(true == 1);    // Output: true (Equality with type coercion)
+console.log(true === 1);   // Output: false (Strict equality without type coercion)
+console.log(null == undefined);   // Output: true (Equality with type coercion)
+console.log(null === undefined);  // Output: false (Strict equality without type coercion)
+```
+
+  </div>
   </div>
 </details>
 

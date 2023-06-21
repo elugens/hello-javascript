@@ -47,7 +47,7 @@ import StructuredData from './schemadata/ObjectMethodsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A function that is a property of an object is called a "method" in object-oriented programming. Methods are used to perform actions or manipulate object data.
+  <div><strong>Interview Response:</strong> A function that is a property of an object is called a "method" in JavaScript programming. Methods are used to perform actions or manipulate object data.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -78,7 +78,31 @@ user.sayHi(); // Hello, JavaScript
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, regular functions are standalone, while object methods are functions attached to objects. Methods have access to object properties through the 'this' keyword.<br /><br />
+  <div><strong>Interview Response:</strong> In JavaScript, regular functions are standalone, while object methods are functions attached to objects. Methods have access to object properties through the 'this' keyword.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Regular Function
+function greet() {
+  console.log('Hello!');
+}
+
+greet(); // Invoking the regular function
+
+// Object with a Method
+const person = {
+  name: 'John',
+  greet: function() {
+    console.log('Hello, ' + this.name + '!');
+  }
+};
+
+person.greet(); // Invoking the object method
+```
+
   </div>
   </div>
 </details>
@@ -218,7 +242,7 @@ myFunction();
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Unbound this in JavaScript leads to the loss of context, resulting in runtime errors or unexpected behavior when attempting to access properties or methods that rely on the proper binding of this.
-</div><br /><br />
+</div><br />
   <div><strong>Interview Response:</strong> In JavaScript, the “this” keyword is free. Its value is evaluated at run-time and does not depend on where the method was defined. But instead, the object that precedes the dot. The concept of run-time evaluated "this" has both pluses and minuses. On the one hand, a function can get reused for different objects, and on the other hand, greater flexibility creates more possibilities for mistakes.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong> Unbound "this"<br /><br />
@@ -321,8 +345,8 @@ console.log(brunch.order());
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, you can define an object method by assigning a function to a property within an object literal or using the ES6 method shorthand syntax.<br /><br />
-  </div>
+  <div><strong>Interview Response:</strong> In JavaScript, you can define an object method by assigning a function to a property within an object literal or using the ES6 method shorthand syntax.
+  </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -349,8 +373,8 @@ myObject.myMethod(); // Calling the object method
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, in JavaScript you can use the same method for multiple objects by assigning the method to their prototype or creating a shared function and referencing it.<br /><br />
-  </div>
+  <div><strong>Interview Response:</strong> Yes, in JavaScript you can use the same method for multiple objects by assigning the method to their prototype or creating a shared function and referencing it.
+  </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>

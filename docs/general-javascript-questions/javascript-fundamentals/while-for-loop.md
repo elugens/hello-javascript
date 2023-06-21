@@ -68,7 +68,7 @@ import StructuredData from './schemadata/WhileForSchemaData.js';
 
 ---
 
-### Explain how a while loop works?
+### Can you explain how a while loop works?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -83,7 +83,7 @@ import StructuredData from './schemadata/WhileForSchemaData.js';
 let i = 0;
 while (i < 3) {
   // shows 0, then 1, then 2
-  alert(i);
+ console.log(i);
   i++;
 }
 ```
@@ -108,7 +108,7 @@ while (i < 3) {
 let i = 1;
 while (i < 3) {
   // shows 1, then 2, then 3
-  alert(i);
+  console.log(i);
   i++;
 }
 ```
@@ -135,7 +135,7 @@ while (i < 3) {
 let i = 3;
 while (i) {
   // shows 0, then 1, then 2
-  alert(i);
+  console.log(i);
   i--; // if the incrementor (i--) is missing then it results in an endless loop.
 }
 
@@ -222,7 +222,7 @@ do {
 
 ---
 
-### Explain how a for-loop functions in JavaScript
+### How does a for-loop function in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -269,7 +269,7 @@ if (i < 3) {
 
 ---
 
-### What is a For-Loop inline variable declaration?
+### What is a for-Loop inline variable declaration?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -283,10 +283,10 @@ if (i < 3) {
 
 ```js
 for (let i = 0; i < 3; i++) {
-  alert(i); // 0, 1, 2
+  console.log(i); // 0, 1, 2
 }
 
-alert(i); // error, no such variable
+console.log(i); // error, no such variable
 ```
 
   </div><br />
@@ -299,10 +299,10 @@ let i = 0;
 
 for (i = 0; i < 3; i++) {
   // use an existing variable
-  alert(i); // 0, 1, 2
+  console.log(i); // 0, 1, 2
 }
 
-alert(i); // 3, visible, because declared outside of the loop
+console.log(i); // 3, visible, because declared outside of the loop
 ```
 
   </div>
@@ -549,7 +549,35 @@ label: for (...)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> An infinite loop is a loop that runs indefinitely without stopping. It can be avoided by ensuring that the loop's exit condition is met at some point.</div><br/>
+  <div><strong>Interview Response:</strong> An infinite loop is a loop that runs indefinitely without stopping. It can be avoided by ensuring that the loop's exit condition is met at some point.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+An example of an infinite loop would be:
+
+```javascript
+while (true) {
+  console.log('This is an infinite loop');
+}
+```
+
+This loop will never stop because the condition for the `while` loop is always `true`.
+
+To avoid an infinite loop, you should always ensure the loop's exit condition will be met. Here is a corrected version of the above code:
+
+```javascript
+let counter = 0;
+while (counter < 5) {
+  console.log('This will not be an infinite loop');
+  counter++;
+}
+```
+
+In this corrected version, the loop will exit after it has run 5 times because `counter` will be equal to 5, making the condition `counter < 5` false.
+
+  </div>
   </div>
 </details>
 
@@ -560,7 +588,39 @@ label: for (...)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A nested loop in JavaScript refers to a loop that's located within another loop. It's commonly used to traverse and manipulate data that has a hierarchical structure, like multi-dimensional arrays.</div><br/>
+  <div><strong>Interview Response:</strong> A nested loop in JavaScript refers to a loop that's located within another loop. It's commonly used to traverse and manipulate data that has a hierarchical structure, like multi-dimensional arrays.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's a simple example of a nested loop in JavaScript where we print a multiplication table.
+
+```javascript
+for (let i = 1; i <= 3; i++) {
+    for (let j = 1; j <= 3; j++) {
+        console.log(`${i} * ${j} = ${i * j}`);
+    }
+}
+```
+
+This code will output:
+
+```
+1 * 1 = 1
+1 * 2 = 2
+1 * 3 = 3
+2 * 1 = 2
+2 * 2 = 4
+2 * 3 = 6
+3 * 1 = 3
+3 * 2 = 6
+3 * 3 = 9
+```
+
+In this example, for each iteration of the outer loop (i), the inner loop (j) runs completely, performing the multiplication and logging the result. This gives us the multiplication table for numbers 1 to 3.
+
+  </div>
   </div>
 </details>
 
@@ -571,7 +631,31 @@ label: for (...)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> You can create an infinite loop intentionally by omitting the loop's condition or providing a condition that is always true.</div><br/>
+  <div><strong>Interview Response:</strong> You can create an infinite loop intentionally by omitting the loop's condition or providing a condition that is always true.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's a simple example of intentionally creating an infinite loop in JavaScript:
+
+```javascript
+while (true) {
+    console.log('This is an intentional infinite loop');
+}
+```
+
+Remember, this code will run indefinitely and print 'This is an intentional infinite loop' until you manually stop the execution. For example, in a browser, you might need to close the tab or the entire browser.
+
+Infinite loops should be used with caution, as they can cause your program to become unresponsive and may consume a lot of CPU resources. Always make sure there's a good reason to use them, and they are managed correctly.
+
+:::note
+
+This questions is intended to give the interviewee the chance to show whether they have a clear understanding of loop dynamics in programming.
+
+:::
+
+  </div>
   </div>
 </details>
 
@@ -582,7 +666,7 @@ label: for (...)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The structure of a For loop consists of three components: initialization, a condition, and an iteration, enclosed in parentheses and followed by a code block.</div><br/>
+  <div><strong>Interview Response:</strong> The structure of a For loop consists of three components: initialization, a condition, and an iteration, enclosed in parentheses and followed by a code block.</div>
   </div>
 </details>
 
@@ -593,18 +677,7 @@ label: for (...)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, the syntax for a while loop consists of the keyword, while, followed by a condition enclosed in parentheses, and then a block of code, or loop body, enclosed in curly braces.</div><br/>
-  </div>
-</details>
-
----
-
-### What is the syntax for the While loop in JavaScript?
-
-<details>
-  <summary><strong>View Answer:</strong></summary>
-  <div>
-  <div><strong>Interview Response:</strong> In JavaScript, the syntax for a while loop consists of the keyword, while, followed by a condition enclosed in parentheses, and then a block of code, or loop body, enclosed in curly braces.</div><br/>
+  <div><strong>Interview Response:</strong> In JavaScript, the syntax for a while loop consists of the keyword, while, followed by a condition enclosed in parentheses, and then a block of code, or loop body, enclosed in curly braces.</div>
   </div>
 </details>
 

@@ -410,7 +410,7 @@ These engines are used to parse and execute JavaScript code in their respective 
 
 ---
 
-### Name some modern alternative languages that convert to JavaScript?
+### Can you name some modern alternative languages that convert to JavaScript?
 
 <details>
   <summary>
@@ -459,7 +459,39 @@ These engines are used to parse and execute JavaScript code in their respective 
           language that can target the browser or Node.
         </li>
       </ol>
-    </div>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong> TypeScript<br /><br />
+
+  <div></div>
+
+TypeScript is a strongly typed, object-oriented, compiled language. It is a super-set of JavaScript. TypeScript adds optional types, classes, and modules to JavaScript.
+
+```typescript
+class Greeter {
+    greeting: string;
+
+    constructor(message: string) {
+        this.greeting = message;
+    }
+
+    greet() {
+        return "Hello, " + this.greeting;
+    }
+}
+
+let greeter = new Greeter("JavaScript!");
+console.log(greeter.greet()); // Outputs: Hello, JavaScript!
+```
+
+In this example, the `Greeter` class has a property `greeting` of type `string`. The `constructor` method is a special method for creating and initializing an object created with a class. This method accepts one parameter `message` of type `string`.
+
+The `greet` method returns a `string` that includes the `greeting` property.
+
+The `let greeter = new Greeter("JavaScript!");` line creates a new `Greeter` object with the `greeting` property set to "World".
+
+Finally, `console.log(greeter.greet());` calls the `greet` method on the `greeter` object and logs the return value to the console.
+
+  </div>
   </div>
 </details>
 
@@ -473,9 +505,22 @@ These engines are used to parse and execute JavaScript code in their respective 
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> Undefined means that a variable has been declared but has not been assigned a value, while null is a value that represents no value or an empty object.
+      <strong>Interview Response:</strong> "Undefined" means a variable has been declared but not assigned a value. "Null" is an assignment value that means no value or no object. It implies absence of value.
     </div>
     <br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let test; 
+console.log(test); // Outputs: undefined
+
+test = null;
+console.log(test); // Outputs: null
+```
+
+  </div>
   </div>
 </details>
 

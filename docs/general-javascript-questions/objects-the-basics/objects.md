@@ -48,7 +48,7 @@ import StructuredData from './schemadata/ObjectsSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The seven primitive data types include String, Symbol, BigInt, Boolean, undefined, number, and null data types.</div><br />
-  <div><strong>Technical Response:</strong> There are seven primitive data types: text, integer, BigInt, Boolean, undefined, Symbol, and null. A primitive value gets directly represented at the language implementation's lowest level most of the time.<br /><br />
+  <div><strong>Technical Response:</strong> There are seven primitive data types: text, integer, BigInt, Boolean, undefined, Symbol, and null. A primitive value gets directly represented at the language implementation's lowest level most of the time.
   </div>
   </div>
 </details>
@@ -60,7 +60,30 @@ import StructuredData from './schemadata/ObjectsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The five primitive wrapper objects in JavaScript are: String, Number, Boolean, Symbol, and BigInt.<br /><br />
+  <div><strong>Interview Response:</strong> The five primitive wrapper objects in JavaScript are: String, Number, Boolean, Symbol, and BigInt.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+const str = new String("Hello");
+console.log(str.length); // Outputs: 5
+console.log(str.toUpperCase()); // Outputs: HELLO
+
+const num = new Number(42);
+console.log(num.toFixed(2)); // Outputs: 42.00
+
+const bool = new Boolean(true);
+console.log(bool.valueOf()); // Outputs: true
+
+const sym = Symbol("mySymbol");
+console.log(sym.toString()); // Outputs: Symbol(mySymbol)
+
+const bigInt = BigInt("9007199254740991");
+console.log(bigInt.toString()); // Outputs: 9007199254740991
+```
+
   </div>
   </div>
 </details>
@@ -187,7 +210,40 @@ let user = {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, a value in JavaScript can be of any type, including primitive data types, objects, arrays, and functions, allowing for versatile data structures.
-</div>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Number
+let age = 25;
+
+// String
+let name = "John";
+
+// Boolean
+let isStudent = true;
+
+// Object
+let person = { name: "Alice", age: 30 };
+
+// Array
+let numbers = [1, 2, 3, 4, 5];
+
+// Function
+function greet() {
+  console.log("Hello!");
+}
+
+// Undefined
+let undefinedValue;
+
+// Null
+let nullValue = null;
+```
+
+  </div>
   </div>
 </details>
 
@@ -385,7 +441,7 @@ console.log('test' in obj); // true, the property does exist!
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> As of ES2015, the order of property enumeration in JavaScript is predictable for non-symbol keys: firstly, integer-like keys in numeric order; then, string keys in creation order.
+  <div><strong>Interview Response:</strong> For objects, JavaScript does not guarantee the order of properties. However, for Array and Map objects, items are ordered in the sequence they were added.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -452,7 +508,22 @@ console.log(String(Math.trunc(Number('1.2')))); // "1", not same "1.2" ⇒ not i
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> You can access a property in an Object using dot notation by specifying the Object followed by a dot and the property name: objectName.propertyKey.<br /><br />
+  <div><strong>Interview Response:</strong> You can access a property in an Object using dot notation by specifying the Object followed by a dot and the property name: objectName.propertyKey.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let car = {
+  brand: 'Toyota',
+  model: 'Corolla',
+  year: 2022
+};
+
+console.log(car.brand); // Output: 'Toyota'
+```
+
   </div>
   </div>
 </details>
@@ -464,7 +535,22 @@ console.log(String(Math.trunc(Number('1.2')))); // "1", not same "1.2" ⇒ not i
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> You can access a property in an Object using bracket notation by specifying the Object followed by square brackets and the property name as a string: objectName['propertyKey']<br /><br />
+  <div><strong>Interview Response:</strong> You can access a property in an Object using bracket notation by specifying the Object followed by square brackets and the property name as a string: objectName['propertyKey']
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let person = {
+  name: 'John',
+  age: 30,
+  occupation: 'Engineer'
+};
+
+console.log(person['name']); // Output: 'John'
+```
+
   </div>
   </div>
 </details>
@@ -476,7 +562,7 @@ console.log(String(Math.trunc(Number('1.2')))); // "1", not same "1.2" ⇒ not i
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Dot notation (obj.property) is shorter and readable, but can't handle property names with spaces/special characters. Bracket notation (obj["property"]) can handle any string as a property name.<br /><br />
+  <div><strong>Interview Response:</strong> Dot notation (obj.property) is shorter and readable, but can't handle property names with spaces/special characters. Bracket notation (obj["property"]) can handle any string as a property name.
   </div>
   </div>
 </details>

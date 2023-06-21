@@ -63,59 +63,32 @@ import StructuredData from './schemadata/FunctionsSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> In JavaScript, the three most common types of functions include: named functions, anonymous, and arrow functions.
 </div><br />
-  <div><strong className="codeExample">Code Example:</strong><br /><br />
+  <div><strong className="codeExample">Code Example:</strong> Here are examples of each type of function<br /><br />
 
   <div></div>
 
-```js
-// 1. Function Declaration
-function timesSelf(x) {
-  return x * x;
+**Regular Function:**
+
+```javascript
+function greeting(name) {
+    return `Hello, ${name}!`;
 }
+console.log(greeting("John")); // Outputs: Hello, John!
+```
 
-console.log(timesSelf(5));
-// expected output: 25
+**Arrow Function:**
 
-// 2. Function Expression
-const getRectArea = function (width, height) {
-  return width * height;
-};
+```javascript
+const greeting = (name) => `Hello, ${name}!`;
+console.log(greeting("John")); // Outputs: Hello, John!
+```
 
-console.log(getRectArea(3, 4));
-// expected output: 12
+**Anonymous Function:**
 
-// 3. Arrow Function
-const helloUser = (name) => 'Hello, ' + name;
-
-console.log(helloUser('JavaScript'));
-// expected output: Hello, JavaScript
-
-// 4. Shorthand Methods - Function
-const fruits = {
-  items: [],
-  add(...items) {
-    this.items.push(...items);
-  },
-  get(index) {
-    return this.items[index];
-  },
-};
-
-fruits.add('mango', 'banana', 'guava'); // shortand method function
-fruits.get(1); // banana
-
-// 5. Generator - Function
-function* generator() {
-  yield 1;
-  yield 2;
-  yield 3;
-}
-
-const gen = generator(); // "Generator { }"
-
-console.log(gen.next().value); // 1
-console.log(generator().next().value); // 1
-console.log(generator().next().value); // 1
+```javascript
+setTimeout(function() {
+    console.log("This is an anonymous function!");
+}, 1000);
 ```
 
   </div>
@@ -149,7 +122,7 @@ square(10); // 100
 
 ---
 
-### Describe the basic structure of a JavaScript function declaration?
+### Can you describe the basic structure of a JavaScript function declaration?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -189,8 +162,8 @@ function showMessage(name) {
   alert('Hello, ' + name);
 }
 
-showMessage('John'); // John
-showMessage('Jane'); // Jane
+showMessage('John'); // Hello, John
+showMessage('Jane'); // Hello, Jane
 ```
 
   </div>
@@ -246,14 +219,14 @@ function showMessage() {
   userName = 'Bob'; // (1) changed the outer variable
 
   let message = 'Hello, ' + userName;
-  alert(message);
+  console.log(message);
 }
 
-alert(userName); // John before the function call
+console.log(userName); // John before the function call
 
 showMessage(); // Hello, Bob modified through invocation
 
-alert(userName); // Bob, the value was modified by the function
+console.log(userName); // Bob, the value was modified by the function
 ```
 
   </div>
@@ -267,9 +240,23 @@ alert(userName); // Bob, the value was modified by the function
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A global variable in JavaScript is a variable declared outside any function or declared without "var", "let", or "const" keywords, accessible throughout the entire script. Global variables are visible from any function (unless shadowed by locals).
+  <div><strong>Interview Response:</strong> A global variable in JavaScript is defined outside any function and can be accessed and altered by any function or script throughout the program. It has global scope throughout your JavaScript code.
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-</div>
+  <div></div>
+
+```javascript
+let globalVar = "I am a global variable";
+
+function showGlobalVar() {
+    console.log(globalVar); // Outputs: I am a global variable
+}
+
+showGlobalVar();
+```
+
+  </div>
   </div>
 </details>
 
@@ -281,6 +268,34 @@ alert(userName); // Bob, the value was modified by the function
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The modern JavaScript rule for using global variables is to minimize their usage, as they can cause conflicts and make code harder to maintain and debug. We should use local variables and function parameters to ensure proper encapsulation of data.<br /><br />
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the difference between a parameter and a argument in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In JavaScript, a parameter is a variable named in the function declaration. An argument is the actual value that gets passed into the function when it is invoked.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+// 'x' and 'y' are parameters in this function declaration
+function add(x, y) {
+    return x + y;
+}
+
+// '5' and '7' are arguments in this function invocation
+console.log(add(5, 7)); // Outputs: 12
+```
+
+In the `add` function, `x` and `y` are parameters. When we call `add(5, 7)`, `5` and `7` are the arguments.
+
   </div>
   </div>
 </details>
@@ -301,7 +316,7 @@ alert(userName); // Bob, the value was modified by the function
 ```js
 function showMessage(from, text) {
   // arguments: from, text
-  alert(from + ': ' + text);
+ console.log(from + ': ' + text);
 }
 
 showMessage('Ann', 'Hello!'); // Ann: Hello! (*)
@@ -314,12 +329,12 @@ showMessage('Ann', "What's up?"); // Ann: What's up? (**)
 
 ---
 
-### What happens when a function parameter does not get provided?
+### What happens when a function argument does not get provided?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> If a function parameter isn't supplied during invocation, it assumes the value is “undefined” within the function, which may lead to unexpected results or errors.
+  <div><strong>Interview Response:</strong> If a function argument isn't supplied during invocation, it assumes the value is “undefined” within the function, which may lead to unexpected results or errors.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -521,12 +536,15 @@ alert(doNothing() === undefined); // true
   <div></div>
 
 ```js
-return some + long + expression + or + whatever * f(a) + f(b);
-```
+function multiply(a, b) {
+    let result = a * b;
+    
+    // this return statement provides the intended output and ends the function
+    return result;
+}
 
-:::tip Hint:
-If you want the returned expression to wrap across multiple lines, we should start it at the same line as return. Or at least put the opening parentheses.
-:::
+console.log(multiply(5, 3)); // Outputs: 15
+```
 
   </div>
   </div>
@@ -629,7 +647,26 @@ function isPrime(n) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, a callback function is a function passed as an argument to another function and executed when a specific event or action occurs.</div><br/>
+  <div><strong>Interview Response:</strong> In JavaScript, a callback function is a function passed as an argument to another function and executed when a specific event or action occurs.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+function greeting(name) {
+    console.log(`Hello, ${name}!`);
+}
+
+function processUserInput(callback) {
+    let name = prompt('Please enter your name.');
+    callback(name);
+}
+
+processUserInput(greeting); // Outputs: Hello, [entered name]!
+```
+
+  </div>
   </div>
 </details>
 
@@ -640,7 +677,34 @@ function isPrime(n) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A higher-order function is a function that takes one or more functions as arguments or returns a function as its result.</div><br/>
+  <div><strong>Interview Response:</strong> A higher-order function is a function that takes one or more functions as arguments or returns a function as its result.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+// A higher-order function 'operate' that takes a function as an argument
+function operate(a, b, operation) {
+    return operation(a, b);
+}
+
+// Functions that can be passed as arguments
+function add(a, b) {
+    return a + b;
+}
+
+function multiply(a, b) {
+    return a * b;
+}
+
+console.log(operate(5, 3, add)); // Outputs: 8
+console.log(operate(5, 3, multiply)); // Outputs: 15
+```
+
+In this code, the `operate` function is a higher-order function. It accepts two numbers and a function as arguments, and returns the result of applying the function to the numbers. The `add` and `multiply` functions can be passed as arguments to the `operate` function.
+
+  </div>
   </div>
 </details>
 
@@ -651,7 +715,27 @@ function isPrime(n) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A closure is a function that remembers and accesses its surrounding lexical scope, even when executed outside the original scope. In JavaScript, all functions are naturally closures.</div><br/>
+  <div><strong>Interview Response:</strong> A closure is a function that has access to its own scope, the outer function's scope, and the global scope. It has access to variables from the outer function even after it has returned.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+function outerFunction(outerVariable) {
+    return function innerFunction(innerVariable) {
+        console.log('outerVariable:', outerVariable);
+        console.log('innerVariable:', innerVariable);
+    }
+}
+
+const newFunction = outerFunction('outside');
+newFunction('inside'); // Outputs: outerVariable: outside, innerVariable: inside
+```
+
+In this code, `innerFunction` is a closure that is defined inside `outerFunction` and has access to `outerFunction`'s variables and parameters. Even when `outerFunction` has returned and its execution context is gone, `innerFunction` still has access to `outerVariable` due to closure.
+
+  </div>
   </div>
 </details>
 
@@ -662,7 +746,24 @@ function isPrime(n) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, a pure function is a function that always produces the same output when given the same input, without modifying any external state or data outside of its scope.</div><br/>
+  <div><strong>Interview Response:</strong> In JavaScript, a pure function is a function that always produces the same output when given the same input, without modifying any external state or data outside of its scope.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+function add(a, b) {
+    return a + b;
+}
+
+console.log(add(5, 3)); // Outputs: 8
+console.log(add(5, 3)); // Outputs: 8
+```
+
+In this code, add is a pure function. Given the same arguments (5 and 3), it will always return the same result (8). It doesn't rely on or modify any external state or variables, making it predictable and consistent.
+
+  </div>
   </div>
 </details>
 
@@ -684,8 +785,26 @@ function isPrime(n) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Side effects in JavaScript functions refer to changes made to data or variables outside of the function's scope.
-</div><br/>
+  <div><strong>Interview Response:</strong> Side effects in JavaScript functions occur when the function changes state outside its scope. This can include modifying a global variable, making an HTTP request, changing the DOM, writing to a database, etc.
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let count = 1;
+
+function increaseCount(value) {
+    count = count + value; // Modifying global variable 'count' is a side effect
+}
+
+increaseCount(5);
+console.log(count); // Outputs: 6
+```
+
+In this code, the `increaseCount` function modifies the global variable `count`, which is a side effect. The function is therefore not pure, because it changes state outside its scope.
+
+  </div>
   </div>
 </details>
 
@@ -697,7 +816,26 @@ function isPrime(n) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, function declarations in JavaScript can be called before they are defined due to hoisting, a process where declarations are moved to the top of their scope.
-</div><br/>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's a JavaScript code example that demonstrates how function declarations can be invoked before they are defined due to hoisting.
+
+```javascript
+// Function invocation before declaration
+console.log(greet('John')); // Outputs: Hello, John!
+
+// Function declaration
+function greet(name) {
+    return `Hello, ${name}!`;
+}
+```
+
+In this code, the `greet` function is called before it's defined. But because JavaScript hoists function declarations, it works without any errors.
+
+  </div>
   </div>
 </details>
 
@@ -721,7 +859,26 @@ function isPrime(n) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The “this” keyword refers to the object that the function is a method of, or the global object if the function is not a method.
-</div><br/>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Define an object
+const person = {
+  name: "John",
+  age: 30,
+  greet: function() {
+    console.log("Hello, my name is " + this.name + " and I am " + this.age + " years old.");
+  }
+};
+
+// Call the greet method
+person.greet();
+```
+
+  </div>
   </div>
 </details>
 

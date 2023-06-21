@@ -140,7 +140,47 @@ switch(x) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> If no match is found in a switch statement, the code inside the default case executes, if provided. Otherwise, the switch statement exits without action.</div><br/>
+  <div><strong>Interview Response:</strong> If no match is found in a switch statement, the code inside the default case executes, if provided. Otherwise, the switch statement exits without action.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here is an example of a switch statement with and without a default case.
+
+```javascript
+let fruit = "apple";
+
+switch (fruit) {
+    case "banana":
+        console.log("I am a banana.");
+        break;
+    case "orange":
+        console.log("I am an orange.");
+        break;
+    default:
+        console.log("Unknown fruit.");  // This line will execute
+}
+
+let vegetable = "carrot";
+
+switch (vegetable) {
+    case "potato":
+        console.log("I am a potato.");
+        break;
+    case "tomato":
+        console.log("I am a tomato.");
+        break;
+    // No default case
+}
+
+// Output:
+// Unknown fruit.
+```
+
+In the first `switch` statement, because there's no case for "apple", the `default` case is executed. In the second `switch` statement, because there's no case for "carrot" and no `default` case, the entire `switch` statement is skipped.
+
+  </div>
   </div>
 </details>
 
@@ -151,7 +191,7 @@ switch(x) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The break statement in a switch statement terminates the current case block, preventing fall-through to subsequent cases and ensuring only one case block executes.</div><br/>
+  <div><strong>Interview Response:</strong> The `break` statement in a JavaScript `switch` statement is used to prevent the code from running into the next `case` once a match is found and its code has been executed.</div><br/>
   </div>
 </details>
 
@@ -317,7 +357,30 @@ switch (arg) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The order of case statements is important in a switch statement, especially when employing fall-through behavior. Cases are evaluated sequentially, so a matching case found earlier will prevent subsequent cases from being tested, affecting execution and performance.</div><br/>
+  <div><strong>Interview Response:</strong> The order of case statements is important in a switch statement, especially when employing fall-through behavior. Cases are evaluated sequentially, so a matching case found earlier will prevent subsequent cases from being tested, affecting execution and performance.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let value = 'apple';
+
+switch (value) {
+  case 'apple':
+    console.log('Apple');
+    break;
+  case 'apple':
+    console.log('Second Apple');
+    break;
+  default:
+    console.log('Default');
+}
+```
+
+In this code, the output will be 'Apple'. Even though there's a second case for 'apple', it never gets executed because the first match triggers a `break`, stopping the switch.
+
+  </div>
   </div>
 </details>
 

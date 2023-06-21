@@ -89,8 +89,8 @@ if (year == 2015) alert('You are right!'); // You are right!
 
 ```js
 if (year == 2015) {
-  alert("That's correct!");
-  alert("You're so smart!");
+ console.log("That's correct!");
+ console.log("You're so smart!");
 }
 ```
 
@@ -105,18 +105,25 @@ if (year == 2015) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Conditional branching in JavaScript involves using statements like 'if', 'else', and 'else if' to execute specific code blocks depending on whether certain conditions are met, allowing for dynamic behavior.</div><br/>
+  <div><strong>Interview Response:</strong> Conditional branching is a programming concept that allows code execution to take different paths based on specified conditions. It enables the execution of specific code blocks depending on whether certain conditions are true or false. Conditional branching in JavaScript involves using statements like 'if', 'else', and 'else if' to execute specific code blocks depending on whether certain conditions are met, allowing for dynamic behavior.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let temperature = 75;
+
+if (temperature > 90) {
+  console.log("It's hot outside!");
+} else if (temperature > 80) {
+  console.log("It's warm outside.");
+} else {
+  console.log("It's cool outside.");
+}
+```
+
   </div>
-</details>
-
----
-
-### Can you execute more than one statement in an if statement?
-
-<details>s
-  <summary><strong>View Answer:</strong></summary>
-  <div>
-  <div><strong>Interview Response:</strong> Yes, you can execute multiple statements within an if statement by enclosing them in curly braces ({}) to form a block. This lets you perform various actions based on a single condition.</div><br/>
   </div>
 </details>
 
@@ -127,7 +134,7 @@ if (year == 2015) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The JavaScript "if" statement uses implicit type coercion, converting the condition to a boolean value. This is done through the Abstract Equality Comparison algorithm, often called "loose" comparison.</div><br/>
+  <div><strong>Interview Response:</strong> The JavaScript "if" statement uses implicit type coercion, converting the condition to a boolean value. This is done through the Abstract Equality Comparison algorithm, often called "loose" comparison.</div>
   </div>
 </details>
 
@@ -279,7 +286,7 @@ let accessAllowed = age > 18;
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, the syntax for an if statement starts with the keyword 'if', followed by a condition in parentheses. Then, code blocks for true and optional false conditions are enclosed in curly braces.</div><br/>
+  <div><strong>Interview Response:</strong> In JavaScript, the syntax for an if statement starts with the keyword 'if', followed by a condition in parentheses. Then, code blocks for true and optional false conditions are enclosed in curly braces.</div>
   </div>
 </details>
 
@@ -301,7 +308,42 @@ let accessAllowed = age > 18;
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A switch statement is a control structure used to execute different code blocks based on the value of a specified expression, simplifying multiple if-else conditions.</div><br/>
+  <div><strong>Interview Response:</strong> A switch statement is a control structure used to execute different code blocks based on the value of a specified expression, simplifying multiple if-else conditions.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let day = 3;
+let dayName;
+
+switch (day) {
+  case 1:
+    dayName = "Monday";
+    break;
+  case 2:
+    dayName = "Tuesday";
+    break;
+  case 3:
+    dayName = "Wednesday";
+    break;
+  case 4:
+    dayName = "Thursday";
+    break;
+  case 5:
+    dayName = "Friday";
+    break;
+  default:
+    dayName = "Unknown";
+}
+
+console.log("Today is " + dayName);
+```
+
+In this example, the value of the `day` variable is evaluated in the switch statement. Based on the value, the code execution "falls through" to the matching case, assigning the corresponding `dayName`. If no matching case is found, the code falls back to the default case. Finally, the assigned `dayName` is logged to the console.
+
+  </div>
   </div>
 </details>
 
@@ -312,7 +354,8 @@ let accessAllowed = age > 18;
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The switch statement syntax includes the 'switch' keyword, followed by an expression that is compared to values in each "case" block. When a match is found, the code in the corresponding block is executed. Optionally, a 'default' clause is added.</div><br/>
+  <div><strong>Interview Response:</strong> The switch statement syntax includes the 'switch' keyword, followed by an expression that is compared to values in each "case" block. When a match is found, the code in the corresponding block is executed. Optionally, a 'default' clause is added.
+  </div>
   </div>
 </details>
 
@@ -323,7 +366,20 @@ let accessAllowed = age > 18;
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A ternary operator in JavaScript is a concise, shorthand way to write simple if-else statements.</div><br/>
+  <div><strong>Interview Response:</strong> A ternary operator in JavaScript is a concise, shorthand way to write simple if-else statements.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let age = 20;
+let message = (age >= 18) ? "You are an adult" : "You are a minor";
+
+console.log(message); // logs "You are an adult"
+```
+
+  </div>
   </div>
 </details>
 
@@ -334,7 +390,24 @@ let accessAllowed = age > 18;
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, multiple conditions can be combined in a single if statement using logical operators such as '&&' (AND), '||' (OR), and '!' (NOT) to create complex conditionals.</div><br/>
+  <div><strong>Interview Response:</strong> Yes, multiple conditions can be combined in a single if statement using logical operators such as '&&' (AND), '||' (OR), and '!' (NOT) to create complex conditionals.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let temperature = 25;
+let time = "morning";
+
+if (temperature > 20 && time === "morning") {
+  console.log("It's a warm morning!");
+}
+```
+
+In this example, the if statement combines two conditions using the logical AND operator (`&&`). It checks if the temperature is greater than 20 AND if the time is "morning". If both conditions evaluate to true, it executes the code block inside the if statement, which logs "It's a warm morning!" to the console.
+
+  </div>
   </div>
 </details>
 
@@ -345,7 +418,7 @@ let accessAllowed = age > 18;
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> JavaScript has three primary conditional branching methods: if-else statements, switch statements, and the ternary operator, each serving different use cases and levels of complexity.</div><br/>
+  <div><strong>Interview Response:</strong> JavaScript has three primary conditional branching methods: if-else statements, switch statements, and the ternary operator, each serving different use cases and levels of complexity.</div>
   </div>
 </details>
 

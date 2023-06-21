@@ -65,7 +65,7 @@ import StructuredData from './schemadata/CodingStyleSchemaData.js';
   <div>
   <div>
   <strong>Interview Response:</strong> The goal is to take a complex task and code it correctly and in a human-readable manner.
-</div><div>
+</div><div><br/>
   <strong>Technical Response:</strong> The goal of coding style and application development is to create maintainable, efficient, and readable code, ensuring optimal functionality, collaboration, and ease of understanding for developers and users alike.
 </div>
 
@@ -285,8 +285,7 @@ The great thing about linters is that style-checking can also find bugs, like ty
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Semicolons help in maintaining a clean and organized code base, by explicitly indicating the end of a statement. This eliminates ambiguity and makes the code easier to read and understand.
-
-</div><br/>
+</div>
   </div>
 </details>
 
@@ -298,8 +297,7 @@ The great thing about linters is that style-checking can also find bugs, like ty
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Indentation is essential in JavaScript for improving code readability and maintainability. It helps to visually separate blocks of code, making it easier to understand the flow and structure of the program.
-
-</div><br/>
+</div>
   </div>
 </details>
 
@@ -311,7 +309,7 @@ The great thing about linters is that style-checking can also find bugs, like ty
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> To ensure consistent code style across a project, you can use tools like ESLint or Prettier. These tools help to enforce a specific set of conventions and automatically format the code according to the predefined rules. Additionally, having a well-documented style guide and conducting regular code reviews can also help maintain consistency.
-</div><br/>
+</div>
   </div>
 </details>
 

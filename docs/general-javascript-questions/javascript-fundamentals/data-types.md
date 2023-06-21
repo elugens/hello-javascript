@@ -238,12 +238,25 @@ console.log(myTemplateLiteralString); // Output: Hello, Alice!
 
   <div></div>
 
-```js
-let myName = "Alice";
-let myTemplateLiteralString = `Hello, ${myName}!`; // using template literals
+1. **Single quotes (`''`)** and **double quotes (`""`)** work virtually identically. They are used to enclose and define string data.
 
-console.log(myTemplateLiteralString); // Output: Hello, Alice!
+```javascript
+let singleQuote = 'Hello';
+let doubleQuote = "JavaScript!";
+
+console.log(singleQuote + " " + doubleQuote); // Hello, JavaScript!
 ```
+
+2. **Backticks (`` ` ` ``)** were introduced in ES6. They allow for string interpolation (template literals) and multi-line strings.
+
+```javascript
+let name = 'JavaScript';
+let greeting = `Hello, ${name}!`; // Hello, JavaScript!
+let multiLine = `Hello,
+World!`;
+```
+
+Remember, all three can be used to define strings, but only backticks offer string interpolation and multi-line features.
 
 :::note
 

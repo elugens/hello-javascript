@@ -157,7 +157,27 @@ sayHi(); // returns Hello!
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The key difference between regular and arrow functions in JavaScript is that arrow functions have a concise syntax and do not bind to their own "this" context, while regular functions do.</div><br/>
+  <div><strong>Interview Response:</strong> The key difference between regular and arrow functions in JavaScript is that arrow functions have a concise syntax and do not bind to their own "this" context, while regular functions do.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+ let language = {
+  name: "JavaScript",
+  javascript1:() => {
+   console.log(`Hello, ${this.name}!`); // no 'this' binding here
+  },
+  javascript2(){
+   console.log(`I love ${this.name}!`); // 'this' binding works here
+  }
+ };
+ language.javascript1(); // Hello, undefined!
+ language.javascript2(); // I love JavaScript!
+```
+
+  </div>
   </div>
 </details>
 
@@ -206,7 +226,7 @@ let sum = (a, b) => {
   return result; // if we use curly braces, then we need an explicit "return”.
 };
 
-alert(sum(1, 2)); //
+console.log(sum(1, 2)); //
 
 // Single Line
 let sum = (a, b) => a + b;
@@ -224,7 +244,8 @@ console.log(sum(3, 6)); // returns 9
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The advantages of using arrow functions in JavaScript include shorter syntax, implicit return, and lexical ‘this’ binding.</div><br/>
+  <div><strong>Interview Response:</strong> The advantages of using arrow functions in JavaScript include shorter syntax, implicit return, and lexical ‘this’ binding.
+  </div>
   </div>
 </details>
 
@@ -236,7 +257,7 @@ console.log(sum(3, 6)); // returns 9
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> In arrow functions, the 'this' keyword is lexically bound to the surrounding scope, rather than having its own 'this' value.
-</div><br/>
+</div>
   </div>
 </details>
 
@@ -248,7 +269,7 @@ console.log(sum(3, 6)); // returns 9
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> "Lexical this" binding in arrow functions means they don't create their own 'this' context; instead, they inherit 'this' from their surrounding, enclosing scope, reducing common 'this'-related issues.
-</div><br/>
+</div>
   </div>
 </details>
 
@@ -260,7 +281,7 @@ console.log(sum(3, 6)); // returns 9
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Arrow functions bind the “this” keyword lexically to the context where they are defined, instead of dynamically like regular functions.
-</div><br/>
+</div>
   </div>
 </details>
 
@@ -272,7 +293,21 @@ console.log(sum(3, 6)); // returns 9
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, you can use the same syntax as regular functions to pass default parameters to an arrow function.
-</div><br/>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+const greet = (name = 'friend') => {
+  console.log(`Hello, ${name}!`);
+};
+
+greet(); // Output: Hello, friend!
+greet('John'); // Output: Hello, John!
+```
+
+  </div>
   </div>
 </details>
 
@@ -284,7 +319,20 @@ console.log(sum(3, 6)); // returns 9
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> No, arrow functions cannot be used as constructors because they don't have their own ‘this’ value.
-</div><br/>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+const Person = (name) => {
+  this.name = name;
+};
+
+const john = new Person('John'); // Throws an error: Person is not a constructor
+```
+
+  </div>
   </div>
 </details>
 
@@ -296,7 +344,25 @@ console.log(sum(3, 6)); // returns 9
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, in JavaScript, arrow functions can use rest parameters. Rest parameters are denoted with three dots (…) before the parameter name and gather remaining arguments into an array, allowing for a more flexible function.
-</div><br/>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+const sum = (...numbers) => {
+  let total = 0;
+  for (let number of numbers) {
+    total += number;
+  }
+  return total;
+};
+
+console.log(sum(1, 2, 3)); // Output: 6
+console.log(sum(4, 5, 6, 7)); // Output: 22
+```
+
+  </div>
   </div>
 </details>
 
@@ -308,7 +374,19 @@ console.log(sum(3, 6)); // returns 9
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> An implicit return in an arrow function occurs when the function consists of a single expression without curly braces, automatically returning the expression's result without needing a return statement.
-</div><br/>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+const multiply = (a, b) => a * b;
+
+console.log(multiply(2, 3)); // Output: 6
+console.log(multiply(4, 5)); // Output: 20
+```
+
+  </div>
   </div>
 </details>
 
@@ -319,8 +397,25 @@ console.log(sum(3, 6)); // returns 9
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To create a higher-order function using arrow functions, simply define an arrow function or regular function that accepts another arrow function as a parameter or returns an arrow function as its output.
-</div><br/>
+  <div><strong>Interview Response:</strong> We can define a function that takes one or more functions as arguments or returns a function. Arrow functions can be used as higher-order functions in the same way as regular functions.
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+const withGreeting = (greeting) => (name) => {
+  console.log(`${greeting}, ${name}!`);
+};
+
+const greetHello = withGreeting('Hello');
+const greetHi = withGreeting('Hi');
+
+greetHello('John'); // Output: Hello, John!
+greetHi('Jane'); // Output: Hi, Jane!
+```
+
+  </div>
   </div>
 </details>
 
@@ -332,7 +427,7 @@ console.log(sum(3, 6)); // returns 9
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, arrow functions can be used as methods in an object. However, they should be used with caution as the ‘this’ keyword will not refer to the object itself but to the surrounding scope.
-</div><br/>
+</div>
   </div>
 </details>
 
@@ -343,8 +438,45 @@ console.log(sum(3, 6)); // returns 9
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Arrow functions are commonly used for array methods, event listeners, callbacks, and other functions that require shorter, more concise syntax.
-</div><br/>
+  <div><strong>Interview Response:</strong> Arrow functions are commonly used for Object methods, event listeners, callbacks, and other functions that require shorter, more concise syntax.
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Concise anonymous functions:
+
+```javascript
+setTimeout(() => {
+  console.log('Delayed execution');
+}, 1000);
+```
+
+Callback functions:
+
+```javascript
+const numbers = [1, 2, 3, 4, 5];
+const doubled = numbers.map((num) => num * 2);
+console.log(doubled); // Output: [2, 4, 6, 8, 10]
+```
+
+Lexical 'this' binding in React components:
+
+```javascript
+class MyComponent extends React.Component {
+  handleClick = () => {
+    // Function logic using 'this' to access component's state and props
+  };
+
+  render() {
+    return <button onClick={this.handleClick}>Click me</button>;
+  }
+}
+```
+
+In these examples, arrow functions are used for concise anonymous functions, as callback functions for array methods like `map`, and to maintain the lexical 'this' binding in React components for accessing component state and props.
+
+  </div>
   </div>
 </details>
 

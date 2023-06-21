@@ -85,7 +85,35 @@ Before 2020, JavaScript did not have a nullish coalescing operator (??). We need
   <div>
     <div>
       <strong>Interview Response:</strong> TypeScript is a statically-typed superset of JavaScript that compiles to JavaScript, enhancing code maintainability, readability, and error detection with optional type annotations and transpilation.
-    </div>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+JavaScript Code:
+
+```js
+function greet(name) {
+  return "Hello, " + name + "!";
+}
+
+const result = greet("John");
+console.log(result);
+```
+
+TypeScript Code:
+
+```typescript
+function greet(name: string): string {
+  return `Hello, ${name}!`;
+}
+
+const result = greet("John");
+console.log(result);
+
+```
+
+  </div>
   </div>
 </details>
 
@@ -130,7 +158,25 @@ Before 2020, JavaScript did not have a nullish coalescing operator (??). We need
   <div>
     <div>
       <strong>Interview Response:</strong> To configure a JavaScript transpiler, install it as a dependency, create a configuration file with required settings, and integrate it with your build process or development environment.
-    </div>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's an example of configuring Babel using a `.babelrc` file:
+
+```json
+{
+  "presets": ["@babel/preset-env"],
+  "plugins": ["@babel/plugin-transform-arrow-functions"]
+}
+```
+
+In this configuration, we specify that we want to use the `@babel/preset-env` preset, which enables transformation of JavaScript syntax based on target environments. We also include the `@babel/plugin-transform-arrow-functions` plugin, which transforms arrow functions to regular functions for broader browser compatibility.
+
+Babel can be executed with this configuration file to transpile JavaScript code accordingly.
+
+  </div>
   </div>
 </details>
 

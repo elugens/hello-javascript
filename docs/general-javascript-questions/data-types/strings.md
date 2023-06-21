@@ -46,8 +46,50 @@ import StructuredData from './schemadata/StringsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A string is a sequence of characters enclosed in quotes, either single quotes ('') or double quotes (" "), and is represented as a primitive data type in JavaScript.
-<br /><br />
+  <div><strong>Interview Response:</strong> A string is a sequence of characters enclosed in quotes, either single quotes (''), double quotes (" "), template literal (` `) and is represented as a primitive data type in JavaScript.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Sure, here are a few examples of creating and using strings in JavaScript.
+
+**1. Creating Strings:**
+
+```javascript
+let str1 = 'Hello, JavaScript!'; // single quotes
+let str2 = "Hello, JavaScript!"; // double quotes
+let str3 = `Hello, ${name}!`; // template literal
+```
+
+**2. Concatenating Strings:**
+
+```javascript
+let hello = 'Hello, ';
+let javascript = 'JavaScript!';
+let helloJavaScrpt = hello + javascript; // 'Hello, JavaScript!'
+```
+
+**3. Using Template Literals:**
+
+```javascript
+let name = 'JavaScript';
+let greeting = `Hello, ${name}!`; // 'Hello, JavaScript!'
+```
+
+**4. String Methods:**
+
+```javascript
+let text = 'The quick brown fox jumps over the lazy dog.';
+
+let textLength = text.length; // 43
+let textInUpperCase = text.toUpperCase(); // 'THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.'
+let wordPosition = text.indexOf('fox'); // 16
+let replacedText = text.replace('dog', 'cat'); // 'The quick brown fox jumps over the lazy cat.'
+```
+
+In these examples, we are performing various operations on strings such as concatenation, conversion to uppercase, finding the position of a word in the string, and replacing a word in the string with another word. These are just a few of the many methods available for working with strings in JavaScript.
+
   </div>
   </div>
 </details>
@@ -59,8 +101,27 @@ import StructuredData from './schemadata/StringsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, JavaScript represents all text as a string. There is no specific data type for a single character. Instead, characters are treated as strings with a length of 1.
-</div>
+  <div><strong>Interview Response:</strong> No, JavaScript does not have a specific data type for single characters. It treats single characters as strings of length 1. If you want to represent a single character, you would just use a string.
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let char = 'a';
+```
+
+If you want to access a specific character in a string, you can use bracket notation or the `charAt` method, like so:
+
+```javascript
+let str = 'Hello';
+console.log(str[1]);   // "e"
+console.log(str.charAt(1)); // "e"
+```
+
+These both access the character at index 1 (zero-based indexing) of the string 'Hello', which is the character 'e'.
+
+  </div>
   </div>
 </details>
 
@@ -132,7 +193,7 @@ function sum(a, b) {
   return a + b;
 }
 
-alert(`1 + 2 = ${sum(1, 2)}.`); // 1 + 2 = 3.
+console.log(`1 + 2 = ${sum(1, 2)}.`); // 1 + 2 = 3.
 
 // spanning multiple lines
 
@@ -142,7 +203,7 @@ let guestList = `Guests:
  * Mary
 `;
 
-alert(guestList); // a list of guests, multiple lines
+console.log(guestList); // a list of guests, multiple lines
 
 // this will result in an error with single or double quotes
 
@@ -223,7 +284,7 @@ console.log(`The backslash: \\`); // The backslash: \
 
 ---
 
-### Is the length property or a function in JavaScript?
+### Is string length a property or function in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -245,7 +306,7 @@ console.log(`Hello`.length); // 5
 
 ---
 
-### When you are accessing string characters at a specific position. What is the difference between accessing it with square brackets and the charAt() method?
+### When accessing string characters at a specific position. What is the difference between accessing it with square brackets and the charAt() method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -261,13 +322,13 @@ console.log(`Hello`.length); // 5
 ```js
 let str = `Hello`;
 
-alert(str[1000]); // undefined
-alert(str.charAt(1000)); // '' (an empty string)
+console.log(str[1000]); // undefined
+console.log(str.charAt(1000)); // '' (an empty string)
 
 // We can also iterate over characters using for..of:
 
 for (let char of 'Hello') {
-  alert(char); // H,e,l,l,o (char becomes "H", then "e", then "l" etc)
+  console.log(char); // H,e,l,l,o (char becomes "H", then "e", then "l" etc)
 }
 ```
 
@@ -290,13 +351,13 @@ for (let char of 'Hello') {
 
 ```js
 // Using a string method doesn't mutate the string
-var bar = 'baz';
+let bar = 'baz';
 console.log(bar); // baz
 bar.toUpperCase();
 console.log(bar); // baz
 
 // Using an array method mutates the array
-var foo = [];
+let foo = [];
 console.log(foo); // []
 foo.push('plugh');
 console.log(foo); // ["plugh"]
@@ -311,7 +372,7 @@ bar = bar.toUpperCase(); // BAZ
 
 ---
 
-### What two methods should we use to change the case of a string?
+### What two methods can we use to change the case of a string?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -324,12 +385,12 @@ bar = bar.toUpperCase(); // BAZ
   <div></div>
 
 ```js
-alert('Interface'.toUpperCase()); // INTERFACE
-alert('Interface'.toLowerCase()); // interface
+console.log('Interface'.toUpperCase()); // INTERFACE
+console.log('Interface'.toLowerCase()); // interface
 
 // Or, if we want a single character lower cased
 
-alert('Interface'[0].toLowerCase()); // 'i'
+console.log('Interface'[0].toLowerCase()); // 'i'
 ```
 
   </div>
@@ -354,10 +415,10 @@ alert('Interface'[0].toLowerCase()); // 'i'
 ```js
 let str = 'Widget with id';
 
-alert(str.indexOf('Widget')); // 0, because 'Widget' is found at the beginning
-alert(str.indexOf('widget')); // -1, not found, the search is case-sensitive
+console.log(str.indexOf('Widget')); // 0, because 'Widget' is found at the beginning
+console.log(str.indexOf('widget')); // -1, not found, the search is case-sensitive
 
-alert(str.indexOf('id')); // 1, "id" is found at position 1 (..idget with id)
+console.log(str.indexOf('id')); // 1, "id" is found at position 1 (..idget with id)
 
 // Running indexOf in a LOOP
 
@@ -370,7 +431,7 @@ while (true) {
   let foundPos = str.indexOf(target, pos);
   if (foundPos == -1) break;
 
-  alert(`Found at ${foundPos}`);
+  console.log(`Found at ${foundPos}`);
   pos = foundPos + 1; // continue the search from the next position
 }
 ```
@@ -423,15 +484,34 @@ console.log(
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The search method cannot take a second start position argument, but it does accept regular expressions. The indexOf method does not accept regular expressions.</div><br />
-  <div><strong>Technical Response:</strong> Although indexOf and search methods are similar. They are not equal and have some notable differences. The search() method cannot take a second start position argument, but it does accept regular expressions. The indexOf() method cannot take powerful search values (regular expressions).<br /><br />
+  <div><strong>Interview Response:</strong> The `indexOf` method returns the index of a substring in a string. `search` does the same but accepts a regular expression, providing more flexible pattern searching. Both return -1 if no match is found.</div><br />
+  <div><strong>Technical Response:</strong> Although indexOf and search methods are similar. They are not equal and have some notable differences. The search() method cannot take a second start position argument, but it does accept regular expressions. The indexOf() method cannot take powerful search values (regular expressions).
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here are examples of `indexOf` and `search` methods in JavaScript.
+
+```javascript
+let str = 'Hello, JavaScript!';
+
+let index = str.indexOf('JavaScript');  // returns 7
+console.log(index);
+
+let regexSearch = str.search(/JavaScript/); // returns 7
+console.log(regexSearch);
+```
+
+Both `indexOf` and `search` found the substring 'JavaScript' at the index 7 in the string 'Hello, JavaScript!'. The difference is, `search` used a regular expression (/JavaScript/).
+
   </div>
   </div>
 </details>
 
 ---
 
-### Can you explain the potential negative outcome when using the indexOf() method in an ` if ` statement?
+### What is the potential negative outcome when using the indexOf() method in an  if-statement?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -471,7 +551,7 @@ if (str.indexOf('Widget') != -1) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The bitwise NOT ~ operator can be used to convert a number to a 32-bit integer; it removes the decimal part if they exist and then reverses all bits in its binary representation.</div><br />
-  <div><strong>Technical Response:</strong> The bitwise NOT operator is a well-known trick. It converts the digit to a 32-bit integer (removing any decimal parts) then reverses all of the bits in its binary representation. In practice, that means simple: for 32-bit integers, ~n equals -(n+1).<br />
+  <div><strong>Technical Response:</strong> The bitwise NOT operator is a well-known trick. It converts the digit to a 32-bit integer (removing any decimal parts) then reverses all of the bits in its binary representation. In practice, that means simple: for 32-bit integers, ~n equals -(n+1).
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -561,7 +641,6 @@ The includes() method is case sensitive.
 </div><br />
   <div><strong>Technical Response:</strong> The methods str.startsWith and str.endsWith do what they say.<br /><br />
   The startsWith() method determines whether a string begins with the characters of a specified string. This method returns true if the string begins with the characters and false if not. The startsWith() method accepts two arguments search value and start position, and by default, the start position gets set to zero (0).<br /><br />The endsWith() method determines whether a string ends with the characters of a specified string. This method returns true if the string ends with the characters and false if not. The endsWith() method accepts two arguments search value and length. If omitted, the default value is the length of the string.
-  <br />
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -597,7 +676,19 @@ Both the startsWith() and endsWith() methods are case sensitive.
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The three substring methods in JavaScript are "substring", "substr", and "slice".
-<br /><br />
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let str = 'Hello, JavaScript!';
+
+console.log(str.substring(0, 5));  // "Hello"
+console.log(str.substr(7, 10));     // "JavaScript"
+console.log(str.slice(-1));        // "!"
+```
+
   </div>
   </div>
 </details>
@@ -738,7 +829,22 @@ The substr() method does not change the original string.
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Of the three variants, the slice method is slightly more flexible. It allows negative arguments and seems to be shorter to write. So, it is enough to remember a slice of these three methods solely.
-</div>
+</div><br/>
+  <div><strong>Technical Response:</strong> Among the three, slice() is the most flexible because it allows both positive and negative indices. Positive indices count from the start of the string, and negative indices count from the end of the string. This can be especially handy when you want to extract parts of a string from the end.
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let str = 'Hello, JavaScript!';
+
+console.log(str.slice(-6, -1));  // "JavaScript"
+```
+
+In this example, `slice()` is used to get the word "World" from the string by using negative indices.
+
+  </div>
   </div>
 </details>
 
@@ -749,7 +855,40 @@ The substr() method does not change the original string.
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, The acronym UTF stands for Unicode Transformation Format, which is a character encoding standard used in JavaScript and many other programming languages.<br /><br />
+  <div><strong>Interview Response:</strong> In JavaScript, The acronym UTF stands for Unicode Transformation Format, which is a character encoding standard used in JavaScript and many other programming languages.
+  </div><br/>
+  <div><strong>Technical Response:</strong> In JavaScript, and more generally in the context of character encoding schemes, the acronym "UTF" stands for "Unicode Transformation Format". This format is used to encode strings of text for use in digital systems, and it is capable of representing any character in the Unicode standard. The most common forms are UTF-8, UTF-16, and UTF-32, which use 8-bit, 16-bit, and 32-bit numbers respectively for each character. As of my knowledge cutoff in September 2021, JavaScript uses UTF-16 encoding internally for its strings.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Although JavaScript handles most Unicode and encoding matters internally, you can interact with Unicode characters and their representations in various ways.
+
+```javascript
+let str = 'Hello, JavaScript!';
+
+// Get the Unicode value of the first character in a string (H)
+let unicode = str.charCodeAt(0);
+console.log(unicode);  // 72
+
+// Convert a Unicode value back into a character
+let character = String.fromCharCode(72);
+console.log(character);  // H
+
+// Using Unicode escape sequences in strings:
+let unicodeStr = '\u0048ello, JavaScript!';
+console.log(unicodeStr);  // Hello, JavaScript!
+
+// From ES6 onwards, JavaScript allows using Unicode code points beyond the 16-bit limit using the following syntax:
+let astro = '\u{1F680}';
+console.log(astro);  // 🚀
+```
+
+In this example, the `charCodeAt` method is used to get the Unicode value (UTF-16 code unit) of the character at position 0, which is 'H'. The `fromCharCode` method is used to convert a Unicode value back into a character.
+
+The last two parts show how you can include Unicode characters directly in a string using escape sequences. The 'H' character has the Unicode value 0048, and you can include it in a string using '\u0048'. The last example shows an ES6 feature where Unicode code points beyond the 16-bit limit can be included using the '\u{...}' syntax. In this case, '1F680' is the Unicode code point for the rocket emoji.
+
   </div>
   </div>
 </details>
@@ -780,7 +919,7 @@ The substr() method does not change the original string.
   <div></div>
 
 ```js
-alert('a' > 'Z'); // true a = 97, Z = 90, so 97 is greater than 90
+console.log('a' > 'Z'); // true a = 97, Z = 90, so 97 is greater than 90
 ```
 
   </div>
@@ -803,8 +942,8 @@ alert('a' > 'Z'); // true a = 97, Z = 90, so 97 is greater than 90
 
 ```js
 // different case letters have different codes
-alert('z'.codePointAt(0)); // numeric code: 122
-alert('Z'.charCodeAt(0)); // numeric code: 90
+console.log('z'.codePointAt(0)); // numeric code: 122
+console.log('Z'.charCodeAt(0)); // numeric code: 90
 ```
 
   </div>
@@ -818,7 +957,21 @@ alert('Z'.charCodeAt(0)); // numeric code: 90
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The main difference is that charCodeAt() returns the UTF-16 code unit of a character (16-bit), while codePointAt() returns the full Unicode code point (21-bit), allowing for handling of characters outside the BMP (Basic Multilingual Plane).<br /><br />
+  <div><strong>Interview Response:</strong> The main difference is that charCodeAt() returns the UTF-16 code unit of a character (16-bit), while codePointAt() returns the full Unicode code point (21-bit), allowing for handling of characters outside the BMP (Basic Multilingual Plane).
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let str = '𠮷a'; // '𠮷' is an astral symbol
+
+console.log(str.charCodeAt(0));   // 55362
+console.log(str.codePointAt(0));  // 134071
+```
+
+The first character '𠮷' is an astral symbol that lies outside the BMP. `charCodeAt(0)` returns 55362, which is the code for the high surrogate of the surrogate pair that represents '𠮷'. `codePointAt(0)`, however, returns 134071, which is the actual Unicode code point of '𠮷'.
+
   </div>
   </div>
 </details>

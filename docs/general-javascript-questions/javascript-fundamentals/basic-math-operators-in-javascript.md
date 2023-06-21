@@ -68,7 +68,7 @@ import StructuredData from './schemadata/BasicMathOpSchemaData.js';
 
 ---
 
-### Explain the difference between a Binary, and a Unary operand
+### Can you explain the difference between a Binary, and Unary operand?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -85,7 +85,7 @@ let x = 1;
 
 x = -x;
 
-alert(x); // -1, unary negation was applied
+console.log(x); // -1, unary negation was applied
 ```
 
   </div><br />
@@ -97,7 +97,7 @@ alert(x); // -1, unary negation was applied
 let x = 1,
   y = 3;
 
-alert(y - x); // 2, binary minus subtracts values
+console.log(y - x); // 2, binary minus subtracts values
 ```
 
   </div>
@@ -130,8 +130,8 @@ alert(y - x); // 2, binary minus subtracts values
   <div></div>
 
 ```js
-alert(5 % 2); // 1, a remainder of 5 divided by 2
-alert(8 % 3); // 2, a remainder of 8 divided by 3
+console.log(5 % 2); // 1, a remainder of 5 divided by 2
+console.log(8 % 3); // 2, a remainder of 8 divided by 3
 ```
 
   </div>
@@ -200,19 +200,19 @@ console.log(8 ** (1 / 3)); // 2 (power of 1/3 is the same as a cubic root)
 ```js
 let s = 'my' + 'String';
 
-alert(s); // myString
+console.log(s); // myString
 // Using the Built-in concat() method
 
 let a = 'concat';
 
-alert(a.concat('String')); // concatString
+console.log(a.concat('String')); // concatString
 // String Conversion
 
-alert('1' + 2); // "12"
-alert(2 + '1'); // "21"
+console.log('1' + 2); // "12"
+console.log(2 + '1'); // "21"
 // Order of Operations still applies
 
-alert(2 + 2 + '1'); // returns 2 + 2 = 4 and 4 + '1' = 41
+console.log(2 + 2 + '1'); // returns 2 + 2 = 4 and 4 + '1' = 41
 
 // returns "41" and not "221"
 ```
@@ -238,15 +238,15 @@ alert(2 + 2 + '1'); // returns 2 + 2 = 4 and 4 + '1' = 41
 // No effect on numbers
 let x = 1;
 
-alert(+x); // 1
+console.log(+x); // 1
 let y = -2;
 
-alert(+y); // -2
+console.log(+y); // -2
 
 // Converts non-numbers
-alert(+true); // 1
-alert(+''); // 0
-alert(+'7'); // converts string “7” to number 7
+console.log(+true); // 1
+console.log(+''); // 0
+console.log(+'7'); // converts string “7” to number 7
 ```
 
   </div>
@@ -273,10 +273,10 @@ let apples = '2';
 let oranges = '3';
 
 // both values converted to numbers before the binary plus
-alert(+apples + +oranges); // 5
+console.log(+apples + +oranges); // 5
 
 // the longer variant
-alert(Number(apples) + Number(oranges)); // 5
+console.log(Number(apples) + Number(oranges)); // 5
 ```
 
   </div>
@@ -313,9 +313,9 @@ let a, b, c;
 
 a = b = c = 2 + 2; // <- Chained Assignment right to left
 
-alert(a); // 4
-alert(b); // 4
-alert(c); // 4
+console.log(a); // 4
+console.log(b); // 4
+console.log(c); // 4
 ```
 
   </div>
@@ -328,7 +328,7 @@ alert(c); // 4
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Incorrect implementation of chained assignments may result in memory leaks.</div>
+  <div><strong>Interview Response:</strong> Chained assignments in JavaScript can lead to unintended side effects due to the right-to-left evaluation, making the code harder to read, understand, debug, and maintain.</div>
   </div>
 </details>
 
@@ -365,12 +365,26 @@ console.log(counter); // 1
 
 ---
 
-### Can increment/decrement operators be applied to numbers?
+### Can increment/decrement operators be attached to numbers?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, We should only use increment and decrement with variables. Trying to use them on a value like 5++, results in an error.</div>
+  <div><strong>Interview Response:</strong> No, increment/decrement operators (++, --) cannot be directly attached to numbers. They are unary operators that can only be used with variables or expressions containing variables.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let num = 5;
+console.log(num++)
+
+// example with direct attachment to a number
+console.log(++5) // results in a SyntaxError
+```
+
+  </div>
   </div>
 </details>
 
@@ -392,13 +406,13 @@ console.log(counter); // 1
 let counter = 1;
 let a = ++counter; // (*)
 
-alert(a); // 2
+console.log(a); // 2
 
 // Prefix Position Counter
 let counter = 1;
 let a = counter++; // (*) changed ++counter to counter++
 
-alert(a); // 1
+console.log(a); // 1
 ```
 
   </div>
@@ -423,13 +437,13 @@ alert(a); // 1
 let counterOne = 5;
 let a = ++counterOne; // (*)
 
-alert(a); // alerts 6
+console.log(a); // console.logs 6
 
 // Postfix Position:
 let counterTwo = 5;
 let b = counterTwo++; // (*) changed ++counter to counter++
 
-alert(b); // alerts 5
+console.log(b); // console.logs 5
 ```
 
   </div>
@@ -453,7 +467,7 @@ alert(b); // alerts 5
 ```js
 // We advise a style of “one line – one action”:
 let counter = 1;
-alert(2 * counter); // 2
+console.log(2 * counter); // 2
 counter++;
 ```
 
@@ -489,7 +503,30 @@ console.log(1100 | 1011); // 1111
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, separating expressions by a comma creates a comma-separated sequence of expressions. The expressions are evaluated left-to-right, and the result of the last expression is returned.</div><br />
+  <div><strong>Interview Response:</strong> In JavaScript, separating expressions by a comma creates a comma-separated sequence of expressions. The expressions are evaluated left-to-right, and the result of the last expression is returned.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's an example to demonstrate the behavior of using commas to separate multiple expressions within a single statement:
+
+```js
+let a = 1, b = 2, c = 3;
+
+let result = (a++, b++, c++, a + b + c);
+console.log(result);  // Output: 7
+
+console.log(a);  // Output: 2
+console.log(b);  // Output: 3
+console.log(c);  // Output: 4
+```
+
+:::note
+While this code demonstrates the evaluation and side effects of using commas in expressions, it's generally recommended to use separate statements or more explicit and readable code for better code maintainability.
+:::
+
+  </div>
   </div>
 </details>
 
@@ -500,7 +537,7 @@ console.log(1100 | 1011); // 1111
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The comma operator in JavaScript is used to evaluate multiple expressions sequentially within a single statement, returning the result of the last expression.</div><br />s
+  <div><strong>Interview Response:</strong> The comma operator in JavaScript is used to evaluate multiple expressions sequentially within a single statement, returning the result of the last expression.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -508,7 +545,7 @@ console.log(1100 | 1011); // 1111
 ```js
 let a = (1 + 2, 3 + 4);
 
-alert(a); // 7 (the result of 3 + 4)
+console.log(a); // 7 (the result of 3 + 4)
 ```
 
   </div>
@@ -582,7 +619,22 @@ for (a = 1, b = 3, c = a * b; a < 10; a++) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> In JavaScript, NaN stands for Not a Number. It is a special value representing the result of an undefined or unrepresentative mathematical operation, such as the square root of a negative number or dividing zero by zero.
-</div>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's a simple code example to demonstrate the NaN value in JavaScript.
+
+```js
+let result = "Hello" / 5;
+console.log(result);  // Output: NaN
+
+console.log(typeof result);  // Output: "number"
+console.log(Number.isNaN(result));  // Output: true
+```
+
+  </div>
   </div>
 </details>
 
@@ -594,7 +646,20 @@ for (a = 1, b = 3, c = a * b; a < 10; a++) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> In JavaScript, we can use the Math.pow() method or the exponentiation operator with double asterisks for exponentiation.
-</div>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let result1 = 2 ** 3;
+console.log(result1);  // Output: 8
+
+let result2 = Math.pow(2, 3);
+console.log(result2);  // Output: 8
+```
+
+  </div>
   </div>
 </details>
 
@@ -606,7 +671,22 @@ for (a = 1, b = 3, c = a * b; a < 10; a++) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> In JavaScript, dividing zero by zero results in NaN, a special value representing an undefined or unrepresentative mathematical operation.
-</div>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's a code example that demonstrates the result of dividing zero by zero in JavaScript.
+
+```js
+let result = 0 / 0;
+console.log(result);  // Output: NaN
+
+console.log(typeof result);  // Output: "number"
+console.log(Number.isNaN(result));  // Output: true
+```
+
+  </div>
   </div>
 </details>
 
@@ -618,7 +698,22 @@ for (a = 1, b = 3, c = a * b; a < 10; a++) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> To round a number to a specified number of decimal places in JavaScript, you can use the toFixed() method.
-</div>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let num = 7.14159;
+let roundedNum = num.toFixed(2);
+console.log(roundedNum);  // Output: "7.14"
+```
+
+:::note
+Please note that the toFixed() method returns a string, so if you need a numeric value, you may need to convert it back using parseFloat() or Number().
+:::
+
+  </div>
   </div>
 </details>
 
@@ -630,7 +725,20 @@ for (a = 1, b = 3, c = a * b; a < 10; a++) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Equality (==) compares values, performing type coercion if needed. Strict equality (===) compares values and types, requiring both to match for true.
-</div>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+console.log(5 == "5");    // Output: true (Equality with type coercion)
+console.log(5 === "5");   // Output: false (Strict equality without type coercion)
+
+console.log(true == 1);   // Output: true (Equality with type coercion)
+console.log(true === 1);  // Output: false (Strict equality without type coercion)
+```
+
+  </div>
   </div>
 </details>
 

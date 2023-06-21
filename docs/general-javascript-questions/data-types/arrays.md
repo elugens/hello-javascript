@@ -50,7 +50,7 @@ import StructuredData from './schemadata/ArraysSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> In JavaScript, an array is an ordered list of values that can be of any type, indexed numerically starting from zero.</div><br />
-  <div><strong>Technical Response:</strong> An array is a special data structure that we use to store an ordered collection of values. Arrays are ordered with numbered indexes starting at zero and encapsulated in square brackets. To access the values, you must use the variable and an assigned index number to extract the value.<br />
+  <div><strong>Technical Response:</strong> An array is a special data structure that we use to store an ordered collection of values. Arrays are ordered with numbered indexes starting at zero and encapsulated in square brackets. To access the values, you must use the variable and an assigned index number to extract the value.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -102,7 +102,7 @@ let objectArray = [[1, 2], [3, 4]];
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The two syntaxes to create an empty array in JavaScript are using array literal notation ([ ]) or the Array() constructor using the new operator.<br /><br />
+  <div><strong>Interview Response:</strong> The two syntaxes to create an empty array in JavaScript are using array literal notation ([ ]) or the Array() constructor using the new operator.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -248,7 +248,7 @@ queue.shift();   // ["b"]
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The pop() method in an array removes and returns its last element, and doesn't take any arguments or parameters.</div><br />
-  <div><strong>Technical Response:</strong> The array pop() method removes the last element of an array and returns the element. It also affects the array's length and returns undefined if the array is empty. The pop method is considered a generic method, and it can be called or applied to array-like objects. However, it may not work correctly with objects that have no length. The pop method has no parameters/arguments.<br />
+  <div><strong>Technical Response:</strong> The array pop() method removes the last element of an array and returns the element. It also affects the array's length and returns undefined if the array is empty. The pop method is considered a generic method, and it can be called or applied to array-like objects. However, it may not work correctly with objects that have no length. The pop method has no parameters/arguments.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -292,7 +292,7 @@ console.log(popped); // 'sturgeon'
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The push() method adds one or more elements to the end of an array in JavaScript, and increases the array length.</div><br />
-  <div><strong>Technical Response:</strong> The array push() method appends one or more elements to the end of an array. The push method is generic by design and allows it to get used on array-like objects. The push method relies on a length property to determine where to start inserting the given values. If the length property cannot convert into a number, the index used is 0. This outcome includes the possibility of length being nonexistent, in which case length gets created. Although strings are native, Array-like objects, they are not suitable in applications of the push method, as strings are immutable, similarly to the native, Array-like object arguments. The push syntax allows for single or multiple elements.<br />
+  <div><strong>Technical Response:</strong> The array push() method appends one or more elements to the end of an array. The push method is generic by design and allows it to get used on array-like objects. The push method relies on a length property to determine where to start inserting the given values. If the length property cannot convert into a number, the index used is 0. This outcome includes the possibility of length being nonexistent, in which case length gets created. Although strings are native, Array-like objects, they are not suitable in applications of the push method, as strings are immutable, similarly to the native, Array-like object arguments. The push syntax allows for single or multiple elements.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -328,7 +328,7 @@ console.log(total); // 4
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The shift() method removes and returns the first element of an array in JavaScript, shifting all other elements down by one index.</div><br />
-  <div><strong>Technical Response:</strong> The array shift() method removes the first element at the beginning of an array and returns the removed element. The shift method always changes the length of the array. If the array is empty, then the shift method returns undefined. The shift method is intentionally generic; this method can be called or applied to objects resembling arrays. Objects which do not contain a length property reflecting the last in a series of consecutive, zero-based numerical properties may not behave in any meaningful manner. The shift method has no additional parameters because of its generic design.<br />
+  <div><strong>Technical Response:</strong> The array shift() method removes the first element at the beginning of an array and returns the removed element. The shift method always changes the length of the array. If the array is empty, then the shift method returns undefined. The shift method is intentionally generic; this method can be called or applied to objects resembling arrays. Objects which do not contain a length property reflecting the last in a series of consecutive, zero-based numerical properties may not behave in any meaningful manner. The shift method has no additional parameters because of its generic design.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -356,7 +356,7 @@ alert(fruits); // Orange, Pear
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The unshift() method adds one or more elements to the beginning of an array in JavaScript, shifting existing elements up by one index, and returns the new length of the array.</div><br />
-  <div><strong>Technical Response:</strong> The array shift() method removes the first element at the beginning array and returns the removed element. The shift method constantly changes the length of the collection. If the array is empty, then the shift method returns undefined. The shift method is generic; this method gets applied to objects that look like arrays. Objects that do not contain a length property mirroring the last in a series of consecutive, zero-based numerical properties may not behave properly. The shift method has no additional parameters because of its generic design.<br />
+  <div><strong>Technical Response:</strong> The array shift() method removes the first element at the beginning array and returns the removed element. The shift method constantly changes the length of the collection. If the array is empty, then the shift method returns undefined. The shift method is generic; this method gets applied to objects that look like arrays. Objects that do not contain a length property mirroring the last in a series of consecutive, zero-based numerical properties may not behave properly. The shift method has no additional parameters because of its generic design.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -393,7 +393,7 @@ console.log(arr);
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> An array is a special object because the square brackets used to access a property arr[0] come from the object syntax.</div><br />
-  <div><strong>Technical Response:</strong> An array is a special object because the square brackets used to access a property arr[0] come from the object syntax. That is essentially the same as obj[key], where arr is the object, while numbers get used as keys. An array-like object typically has the length property within its structure, like regular arrays. They extend objects by providing special methods to work with ordered collections of data and the length property. But at the core, it is still an object. Unlike array-like objects, arrays are optimized for fast performance and handling of internal components.<br />
+  <div><strong>Technical Response:</strong> An array is a special object because the square brackets used to access a property arr[0] come from the object syntax. That is essentially the same as obj[key], where arr is the object, while numbers get used as keys. An array-like object typically has the length property within its structure, like regular arrays. They extend objects by providing special methods to work with ordered collections of data and the length property. But at the core, it is still an object. Unlike array-like objects, arrays are optimized for fast performance and handling of internal components.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -432,13 +432,13 @@ console.log(arrFruits.length); // length returns 2
 
 ---
 
-### What happens when you try to utilize an array in JavaScript as an object?
+### What happens when you try to utilize an Array in JavaScript as an Object?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> In JavaScript, you can use an array as an object, but its numerical indices will be converted to strings, and it will lose some of its array-specific functionality including its optimizations and benefits.</div><br />
-  <div><strong>Technical Response:</strong>An array is a specialized object with internal optimized components. When you attempt to use an array as an object, it loses all its optimizations and benefits. It is good to think of arrays as special structures to work with the ordered data, and they provide special methods for that. Arrays are carefully tuned inside JavaScript engines to work with contiguous ordered data; please use them this way. And if you need arbitrary keys, the chances are high that you require a regular object &#123; &#125;.<br /><br />
+  <div><strong>Technical Response:</strong> An array is a specialized object with internal optimized components. When you attempt to use an array as an object, it loses all its optimizations and benefits. It is good to think of arrays as special structures to work with the ordered data, and they provide special methods for that. Arrays are carefully tuned inside JavaScript engines to work with contiguous ordered data; please use them this way. And if you need arbitrary keys, the chances are high that you require a regular object &#123; &#125;.<br /><br />
   <strong>Examples: Misusing an array.</strong><br /><br />
   <ol>
     <li>Add a non-numeric property like arr.test = 5.</li>
@@ -475,7 +475,7 @@ console.log(arrFruits.length); // length returns 2
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Three common ways to loop over an array are the for loop, forEach() method, and for...of loop in JavaScript.<br />
+  <div><strong>Interview Response:</strong> Three common ways to loop over an array are the for loop, forEach() method, and for...of loop in JavaScript.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -535,7 +535,7 @@ for (let element of arr) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The range limitation for the length property must be lower than 2 to the 32<sup>nd</sup> power. Another limitation is the length property’s inability to return the correct number of elements.</div><br />
-  <div><strong>Technical Response:</strong> According to the MDN, the range limitation for the length property must be lower than 2<sup>32</sup>. Another limitation is the length property’s inability to return the correct number of elements. For example, if there is no element in one of the indices, the length property still counts that position, and length returns the highest index, not the number of elements. A less common issue is array mutation when an element is deleted (delete colors[0]) from an array. (Note: You should never use the delete method to clear an array or remove elements.) The length is not updated with the new number of elements and returns the highest index.<br />
+  <div><strong>Technical Response:</strong> According to the MDN, the range limitation for the length property must be lower than 2<sup>32</sup>. Another limitation is the length property’s inability to return the correct number of elements. For example, if there is no element in one of the indices, the length property still counts that position, and length returns the highest index, not the number of elements. A less common issue is array mutation when an element is deleted (delete colors[0]) from an array. (Note: You should never use the delete method to clear an array or remove elements.) The length is not updated with the new number of elements and returns the highest index.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -586,7 +586,7 @@ A less common issue is array mutation when an element gets deleted from an array
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Array constructor (new Array()) creates an array, optionally with a set length or predefined elements. Array literal ([]) creates an array with given elements, if any.</div><br />
-  <div><strong>Technical Response:</strong> There are several differences in the behaviors of the Array constructor and array literal. The constructor is rarely used in modern JavaScript because array literals use the square bracket [] syntax, which is shorter. Array constructors (new Array(2)) also have glitchy features that can produce adverse effects. When a new Array function gets invoked with a single argument, a number, it returns an array with no items but the specified length.<br />
+  <div><strong>Technical Response:</strong> There are several differences in the behaviors of the Array constructor and array literal. The constructor is rarely used in modern JavaScript because array literals use the square bracket [] syntax, which is shorter. Array constructors (new Array(2)) also have glitchy features that can produce adverse effects. When a new Array function gets invoked with a single argument, a number, it returns an array with no items but the specified length.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

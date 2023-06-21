@@ -176,12 +176,16 @@ const config = {
                 href: 'https://fb.me/hellojavascriptinfo',
               },
               {
-                label: 'Facebook Discussion',
+                label: 'Facebook Group',
                 href: 'https://www.facebook.com/groups/hellojavascript',
               },
               {
                 label: 'Twitter',
                 href: 'https://twitter.com/hellojavascript',
+              },
+              {
+                label: 'YouTube Channel',
+                href: 'https://www.youtube.com/@hellojavascript',
               },
             ],
           },

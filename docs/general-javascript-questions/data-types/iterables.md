@@ -48,6 +48,32 @@ import StructuredData from './schemadata/IterablesSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> Iterables in JavaScript are objects that can be iterated upon using the "for...of" loop. They include arrays, strings, maps, sets, and other custom objects with a Symbol.iterator property.</div><br />
   <div><strong>Technical Response:</strong> Iterable objects are a subset of arrays. This notion allows us to use any object in a for...of loop. Arrays, of course, are iterable. However, several additional built-in objects are iterable as well. Strings, for example, are also iterable. It is a data structure that allows consumption of its data in general. It does this by implementing a method with the key Symbol.iterator, which returns an iterator. The iterator interface provides another method called return(), which gets performed when the iteration reaches the last value or is deliberately halted by calling it directly or using break; a for loop.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's an example of using an iterable (an array) in JavaScript:
+
+```javascript
+// Arrays contain Symbol.iterator property
+const myArray = [1, 2, 3, 4, 5];
+
+for (const item of myArray) {
+  console.log(item);
+}
+```
+
+In this code, the `myArray` variable is an iterable (an array) containing numbers. The `for...of` loop iterates over each item in the array and logs it to the console. Output:
+
+```
+1
+2
+3
+4
+5
+```
+
   </div>
   </div>
 </details>
@@ -59,7 +85,49 @@ import StructuredData from './schemadata/IterablesSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The Symbol.iterator method is used to define a custom iteration behavior for an object and make it iterable.<br /><br />
+  <div><strong>Interview Response:</strong> The purpose of the Symbol.iterator method is to define the default iterator for an object. It allows the object to be iterable, enabling it to be used with iteration protocols like the for...of loop.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's an example of implementing the `Symbol.iterator` method to create a custom iterable object in JavaScript.
+
+```javascript
+const myIterable = {
+  data: [1, 2, 3, 4, 5],
+  [Symbol.iterator]() {
+    let index = 0;
+    const data = this.data;
+    return {
+      next() {
+        if (index < data.length) {
+          return { value: data[index++], done: false };
+        } else {
+          return { done: true };
+        }
+      }
+    };
+  }
+};
+
+for (const item of myIterable) {
+  console.log(item);
+}
+```
+
+In this code, `myIterable` is an object that implements the `Symbol.iterator` method. The method returns an iterator object with a `next()` function, which is responsible for generating the values in the iteration. The `for...of` loop iterates over the iterable object and logs each item to the console. Output:
+
+```
+1
+2
+3
+4
+5
+```
+
+Note that the `Symbol.iterator` method allows custom objects to be iterable, providing control over how they can be iterated.
+
   </div>
   </div>
 </details>

@@ -75,7 +75,24 @@ import StructuredData from './schemadata/FuncExpressionSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> A function expression is used to assign a function to a variable, allowing for encapsulation and reuse of the function.
-</div>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Function expression
+const addNumbers = function(a, b) {
+  return a + b;
+};
+
+// Using the function expression
+const result = addNumbers(5, 7);
+console.log(result); // Output: 12
+
+```
+
+  </div>
   </div>
 </details>
 
@@ -87,7 +104,27 @@ import StructuredData from './schemadata/FuncExpressionSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> To declare a named function expression in JavaScript, assign a function to a variable using the function keyword followed by a name.
-</div>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Named Function Expression
+const factorial = function factorial(n) {
+  if (n === 0 || n === 1) {
+    return 1;
+  } else {
+    return n * factorial(n - 1);
+  }
+};
+
+// Using the named function expression
+const result = factorial(5);
+console.log(result); // Output: 120
+```
+
+  </div>
   </div>
 </details>
 
@@ -99,8 +136,23 @@ import StructuredData from './schemadata/FuncExpressionSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> You can declare an anonymous function expression by assigning a function to a variable without giving the function a name.
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-</div>
+  <div></div>
+
+```js
+// Anonymous Function expression
+const addNumbers = function(a, b) {
+  return a + b;
+};
+
+// Using the Anonymous function expression
+const result = addNumbers(5, 7);
+console.log(result); // Output: 12
+```
+
+  </div>
   </div>
 </details>
 
@@ -113,8 +165,7 @@ import StructuredData from './schemadata/FuncExpressionSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> A function declaration is a statement that declares a function in the current scope, while a function expression defines a function as a value assigned to a variable or property.</div><br />
   <div><strong>Technical Response:</strong> Function declarations load before any code executes, while Function expressions load only when the interpreter passes the right side of the expression. A global Function Declaration is visible in the whole script, no matter where.<br /><br />
-  Function Declarations are functions declared as a separate statement in the main code flow.<br /><br />
-  Function Expressions are functions created inside an expression or another syntax construct.
+  Function Declarations are functions declared as a separate statement in the main code flow. Function Expressions are functions created inside an expression or another syntax construct.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong> Function Declaration<br /><br />
 
@@ -141,6 +192,8 @@ let sayHi = function (name) {
   alert(`Hello, ${name}`);
 };
 ```
+
+In this example, the function declaration is hoisted to the top of it's scope, while the function expression is not and results in an error.
 
   </div>
   </div>
@@ -236,17 +289,31 @@ console.log(getRectArea(3, 4)); // returns 12
   <div></div>
 
 ```js
-function sayHi() {
-  // (1) create
-  alert('Hello');
+// Assigning function to a variable
+let greet = function() {
+  console.log("Hello World");
+};
+
+// Storing function in data structure
+let arr = [function() { return "Hello Array"; }];
+console.log(arr[0]()); // Output: Hello Array
+
+// Passing function as an argument
+function executeFunction(func) {
+  console.log(func());
 }
 
-let func = sayHi; // (2) copy
+executeFunction(greet);
 
-func(); // Hello     // (3) run the copy (it works)!
-sayHi(); // Hello    //  <- this still works too (why wouldn't it)
+// Returning a function
+function createAdder(x) {
+  return function(y) {
+    return x + y;
+  };
+}
 
-// This will work for every function that is considered a value
+let add5 = createAdder(5);
+console.log(add5(3));  // Output: 8
 ```
 
   </div>
@@ -379,7 +446,7 @@ welcome(); // ok now
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, a global Function Declaration is visible in the whole script, no matter where it is. As soon as it initializes, it is available.</div><br />
+  <div><strong>Interview Response:</strong> Yes, a Function Declaration is visible in the whole script, no matter where it is. As soon as it initializes, it is available.</div><br />
   <div><strong>Technical Response:</strong> Yes, a global Function Declaration is visible in the whole script, no matter where it is. When JavaScript prepares to run the script, it first looks for global Function Declarations and creates the functions. We can think of it as an “initialization stage”. And after all Function Declarations are processed, the code is executed. So, it has access to these functions. Function expressions do not have this capability, which is an important factor when choosing between the two.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong> Function Declaration, it works…<br /><br />
@@ -434,7 +501,6 @@ let sayHi = function (name) {
   <div><strong>Technical Response:</strong> When we need to declare a function, the first thing to examine is the Function Declaration syntax. It allows us to structure our code more freely because we may call such functions before they are declared.<br /><br />
 That's also better for readability because function f(...); is more straightforward to find in the code than let f = function(...);. Function declarations are more visually appealing.<br /><br />
 ...However, if a Function Declaration is not appropriate for whatever reason, or if a conditional declaration is required, a Function Expression should be utilized.
-
   </div>
   </div>
 </details>
@@ -446,7 +512,34 @@ That's also better for readability because function f(...); is more straightforw
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, you can pass a function expression as an argument to another function, enabling higher-order functions and promoting functional programming concepts such as callbacks and event handling.</div><br/>
+  <div><strong>Interview Response:</strong> In JavaScript, you can pass a function expression as an argument to another function, enabling higher-order functions and promoting functional programming concepts such as callbacks and event handling.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's an example that demonstrates passing a function expression as an argument to another function.
+
+```javascript
+function calculate(operation, a, b) {
+  return operation(a, b);
+}
+
+let add = function(x, y) {
+  return x + y;
+};
+
+let multiply = function(x, y) {
+  return x * y;
+};
+
+console.log(calculate(add, 5, 3));       // Output: 8
+console.log(calculate(multiply, 5, 3));  // Output: 15
+```
+
+In the example above, the `calculate` function takes an `operation` parameter, which is expected to be a function. We pass different function expressions (`add` and `multiply`) as the `operation` argument when calling `calculate`, allowing it to perform addition and multiplication accordingly.
+
+  </div>
   </div>
 </details>
 
@@ -458,19 +551,7 @@ That's also better for readability because function f(...); is more straightforw
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The scope of a function expression is determined by where it is defined, which can be in the global scope or inside another function.
-</div><br/>
-  </div>
-</details>
-
----
-
-### What is the scope of a function expression?
-
-<details>
-  <summary><strong>View Answer:</strong></summary>
-  <div>
-  <div><strong>Interview Response:</strong> The scope of a function expression is determined by where it is defined, which can be in the global scope or inside another function.
-</div><br/>
+</div>
   </div>
 </details>
 
@@ -482,7 +563,21 @@ That's also better for readability because function f(...); is more straightforw
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> You can create a self-invoking function expression by wrapping a function expression in parentheses and immediately invoking it. Using self-invoking function expressions, also known as Immediately Invoked Function Expressions (IIFE), is a common approach for creating isolated scopes, preventing global scope pollution, and executing one-time setup tasks.
-</div><br/>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+(function() {
+  let myFunction = function() {
+    console.log('Hello, JavaScript!')
+  }
+  myFunction(); // Hello, JavaScript!
+})();
+```
+
+  </div>
   </div>
 </details>
 
@@ -494,7 +589,26 @@ That's also better for readability because function f(...); is more straightforw
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The value of the 'this' keyword inside a function expression depends on how the function is called. If the function is called as a method of an object, 'this' refers to the object. Otherwise, 'this' refers to the global object or undefined, it all depends on the mode the function is being called.
-</div><br/>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+const obj = {
+  language: 'JavaScript',
+  sayHello: function() {
+    console.log(`Hello, ${this.language}!`);
+  }
+};
+
+obj.sayHello(); // Output: Hello, JavaScript!
+
+const greeting = obj.sayHello;
+greeting(); // Output: Hello, undefined! (or the global object, depending on strict mode)
+```
+
+  </div>
   </div>
 </details>
 

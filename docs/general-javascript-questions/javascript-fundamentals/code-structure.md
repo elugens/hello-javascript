@@ -133,8 +133,23 @@ alert('JavaScript');
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, an object is defined using curly braces and consists of key-value pairs separated by commas. Methods can be added using functions as values.</div>
-  </div><br/>
+  <div><strong>Interview Response:</strong> In JavaScript, an object is defined using curly braces and consists of key-value pairs separated by commas. Methods can be added using functions as values.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let person = {
+  name: "John",
+  age: 30,
+  greet: function() {
+    console.log("Hello!");
+  }
+};
+```
+
+  </div>
+  </div>
 </details>
 
 ---
@@ -145,7 +160,7 @@ alert('JavaScript');
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> No, JavaScript does not always interpret line breaks as the end of a statement. This is because JavaScript uses a semicolon (;) to indicate the end of a statement, and a line break is not always equivalent to a semicolon.</div><br />
-  <div><strong>Technical Response:</strong> : There are cases when a newline does not mean a semi-colon and may result in an error. The recommendation is to put semi-colons between statements even if newlines separate them. The JavaScript community widely adopts this rule.
+  <div><strong>Technical Response:</strong> There are cases when a newline does not mean a semi-colon and may result in an error. The recommendation is to put semi-colons between statements even if newlines separate them. The JavaScript community widely adopts this rule.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
   
@@ -176,8 +191,30 @@ alert('All fine now'); // uses a semi-colon alerts All fine now
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, a generator function is defined using the function asterisks syntax and yields values using the yield keyword within the function body.</div>
-  </div><br/>
+  <div><strong>Interview Response:</strong> In JavaScript, a generator function is defined using the function asterisks syntax and yields values using the yield keyword within the function body.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+function* numberGenerator() {
+  yield 1;
+  yield 2;
+  yield 3;
+}
+
+// Creating an instance of the generator
+const generator = numberGenerator();
+
+// Using the generator to produce values
+console.log(generator.next().value); // Output: 1
+console.log(generator.next().value); // Output: 2
+console.log(generator.next().value); // Output: 3
+console.log(generator.next().value); // Output: undefined
+```
+
+  </div>
+  </div>
 </details>
 
 ---
@@ -210,8 +247,40 @@ alert('JavaScript'); // This comment follows the statement
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A JavaScript function consists of a function keyword, a function name, optional parameters enclosed in parentheses, and function code enclosed in curly braces.</div>
-  </div><br/>
+  <div><strong>Interview Response:</strong> A JavaScript function consists of a function keyword, a function name, optional parameters enclosed in parentheses, and function code enclosed in curly braces.</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's an example:
+
+```javascript
+function greet(name) {
+  console.log("Hello, " + name + "!");
+}
+
+// Invoking the function
+greet("John"); // Output: Hello, John!
+```
+
+In this example, `greet` is a function that takes a parameter `name` and logs a greeting message to the console. When the function is invoked with an argument ("John" in this case), it executes the code inside the function body, which produces the desired output.
+
+Functions in JavaScript can also have a return statement to provide a value back to the caller. Here's an example:
+
+```javascript
+function add(a, b) {
+  return a + b;
+}
+
+// Invoking the function and storing the result
+let sum = add(5, 3);
+console.log(sum); // Output: 8
+```
+
+In this case, the `add` function takes two parameters `a` and `b`, performs the addition operation, and returns the result. The returned value is then assigned to the variable `sum` and printed to the console.
+
+  </div>
+  </div>
 </details>
 
 ---
@@ -228,11 +297,13 @@ alert('JavaScript'); // This comment follows the statement
   <div></div>
 
 ```javascript
-/* An example with two messages.
-This is a multiline comment.
+/*
+This is a multi-line comment.
+It can span across multiple lines.
+It is commonly used for documenting code or temporarily disabling code blocks.
 */
-alert('Hello');
-alert('JavaScript');
+
+console.log("Hello, JavaScript!");
 ```
 
   </div>

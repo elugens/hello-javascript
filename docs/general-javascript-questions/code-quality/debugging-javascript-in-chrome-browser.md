@@ -24,7 +24,7 @@ tags:
   - debugging in chrome
   - interview answers
   - interview questions
-lastmod: 2022-05-01T20:36:00.869Z
+lastmod: 2023-05-01T20:36:00.869Z
 ---
 
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
@@ -63,7 +63,7 @@ import StructuredData from './schemadata/DebuggingSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Debugging is finding and fixing errors within a script.</div><br />
-  <div><strong>Technical Response:</strong> Debugging is finding and fixing errors within a script. Modern browsers and most other environments support debugging tools – a unique UI in developer tools makes debugging much more manageable. It also allows us to trace the code step by step to see what is going on.<br /><br />
+  <div><strong>Technical Response:</strong> Debugging is finding and fixing errors within a script. Modern browsers and most other environments support debugging tools – a unique UI in developer tools makes debugging much more manageable. It also allows us to trace the code step by step to see what is going on.
   </div>
   </div>
 </details>
@@ -75,7 +75,7 @@ import StructuredData from './schemadata/DebuggingSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Developer Tools is a set of web developer tools integrated into Google Chrome, offering features like debugging JavaScript code, performance analysis, DOM manipulation, and network activity monitoring.<br /><br />
+  <div><strong>Interview Response:</strong> Developer Tools is a set of web developer tools integrated into Google Chrome, offering features like debugging JavaScript code, performance analysis, DOM manipulation, and network activity monitoring.
   </div>
   </div>
 </details>
@@ -88,7 +88,6 @@ import StructuredData from './schemadata/DebuggingSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> To open Developer Tools in Chrome, you can press F-12 or use the CTRL+Shift I shortcut on Windows/Linux, or you use the Option+Cmd I on MacOS. Alternatively, you can right-click inside the browser window and select inspect.
-
 </div>
   </div>
 </details>
@@ -127,8 +126,22 @@ import StructuredData from './schemadata/DebuggingSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In Chrome Developer Tools, you will find the File Navigator pane in the Sources tab. We can open DevTools by clicking the "Sources" tab, and the File Navigator pane will appear on the left-hand side.
-</div>
+  <div><strong>Interview Response:</strong> In Chrome Developer Tools, you will find the File Navigator pane in the Sources tab. We can open DevTools by clicking the "Sources" tab, and the File Navigator pane will appear on the left-hand side (It's pane number 1 in the image below).
+</div><br /><br />
+  <img src='/img/three-panes-dev-tools.svg' />
+  </div>
+</details>
+
+---
+
+### In Chrome Dev Tools, How do you search for a file in the file navigator?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In Chrome Dev Tools, press Ctrl + P (or Cmd + P on Mac) to open the quick file search and then type the filename.
+</div><br /><br />
+  <img src='/img/dev-tools-source-tab-ctrl-p.png' />
   </div>
 </details>
 
@@ -139,8 +152,9 @@ import StructuredData from './schemadata/DebuggingSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> You can find the JavaScript debugging pane on the right-hand side of the code editor, under the sources tab in the Chrome Dev Tools.
-</div>
+  <div><strong>Interview Response:</strong> You can find the JavaScript debugging pane on the right-hand side of the code editor, under the sources tab in the Chrome Dev Tools.(It's pane number 3 in the image below).
+</div><br /><br />
+  <img src='/img/three-panes-dev-tools.svg' />
   </div>
 </details>
 
@@ -218,7 +232,7 @@ function hello(name) {
   <div><strong>Interview Response:</strong> In Windows, you can press F5 to reload the page; you must use Cmd+R on a MAC.
 </div><br/>
 <div><strong>Technical Response:</strong> To reload the source page after setting breakpoints in the Chrome Developer Console, you can press the F5 key, click the circular reload button in the top-left corner, use the Cmd+R shortcut, or right-click and select "Reload".
-</div><br/>
+</div>
   </div>
 </details>
 
@@ -256,7 +270,7 @@ function hello(name) {
   <div>
   <div><strong>Interview Response:</strong> The Call Stack panel in Chrome Developer Tools displays the sequence of function calls leading to the current execution point, allowing you to navigate and debug through the functions involved in the code execution.<br /><br />
   <img src='/img/callstack.svg' />
-</div><br/>
+</div>
   </div>
 </details>
 
@@ -268,7 +282,7 @@ function hello(name) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The console is part of the Browser Object Model (BOM), not the Document Object Model (DOM). It allows interaction with the browser, not directly with the webpage's document structure.
-</div><br/>
+</div>
   </div>
 </details>
 
@@ -280,7 +294,7 @@ function hello(name) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Developers use the Source panel in web development for debugging JavaScript, setting breakpoints, stepping through code execution, viewing and modifying CSS, examining the DOM, and interacting with source files in a structured manner.
-</div><br/>
+</div>
   </div>
 </details>
 
@@ -292,7 +306,7 @@ function hello(name) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> To set a breakpoint in Chrome Developer Tools, open DevTools, navigate to the Sources panel, locate the desired JavaScript file, click the line number where you want the breakpoint, and the breakpoint will be added.
-</div><br/>
+</div>
   </div>
 </details>
 
@@ -304,7 +318,7 @@ function hello(name) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> In Chrome Developer Tools, open the Sources panel, find the desired JavaScript file, right-click the line number, where you want the breakpoint, select "Add conditional breakpoint," and enter your conditional expression.
-</div><br/>
+</div>
   </div>
 </details>
 
@@ -316,7 +330,7 @@ function hello(name) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Common use cases for breakpoints in JavaScript development include debugging, investigating variable values, understanding code execution flow, identifying logical errors, and examining event listeners or asynchronous operations.
-</div><br/>
+</div>
   </div>
 </details>
 
@@ -328,7 +342,7 @@ function hello(name) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The "watch" panel in Chrome Developer Tools allows developers to manually track the value of specific variables or expressions, while the "scope" panel displays the current scope chain and variable values. Both panels can be used to debug JavaScript code by monitoring and changing variable values during runtime.
-</div><br/>
+</div>
   </div>
 </details>
 
@@ -340,7 +354,7 @@ function hello(name) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The Network panel in Chrome Developer Tools can be used to monitor and inspect the HTTP requests and responses sent between a web application and its server-side APIs, allowing developers to debug issues related to network connectivity, request and response headers, and data payloads, among other things.
-</div><br/>
+</div>
   </div>
 </details>
 
@@ -352,7 +366,7 @@ function hello(name) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The Timeline panel in Chrome Developer Tools provides a graphical representation of the performance of a web application, including information about JavaScript execution, rendering, and network activity. It can be used to debug performance issues, such as slow-loading pages, by identifying areas of the code that are causing performance bottlenecks.
-</div><br/>
+</div>
   </div>
 </details>
 
@@ -364,7 +378,7 @@ function hello(name) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The Memory panel in Chrome Developer Tools can be used to track the memory usage of a web application and identify potential memory leaks in JavaScript code. Developers can take snapshots and compare them to see which objects and functions are consuming excessive memory and causing leaks.
-</div><br/>
+</div>
   </div>
 </details>
 
@@ -376,7 +390,7 @@ function hello(name) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Some common JavaScript errors that developers may encounter while debugging in Chrome Developer Tools include undefined variables, null values, syntax errors, and type errors. To resolve them, developers can check their code for correct syntax, use the console to log and investigate the error messages, and use try-catch blocks to handle exceptions.
-</div><br/>
+</div>
   </div>
 </details>
 
@@ -388,7 +402,7 @@ function hello(name) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> A watch in Chrome Developer Tools allows you to track changes in variables and expressions during code execution, while a breakpoint stops execution at a specific line of code.
-</div><br/>
+</div>
   </div>
 </details>
 
@@ -400,21 +414,7 @@ function hello(name) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> You can check the value of a variable in Chrome Developer Tools by typing its name in the console or adding it to the watch list.
-
-</div><br/>
-  </div>
-</details>
-
----
-
-### How do you check the value of a variable in Chrome Developer Tools?
-
-<details>
-  <summary><strong>View Answer:</strong></summary>
-  <div>
-  <div><strong>Interview Response:</strong> You can check the value of a variable in Chrome Developer Tools by typing its name in the console or adding it to the watch list.
-
-</div><br/>
+</div>
   </div>
 </details>
 

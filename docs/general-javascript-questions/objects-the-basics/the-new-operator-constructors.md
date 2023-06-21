@@ -47,7 +47,27 @@ import StructuredData from './schemadata/TheNewOpSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The new "operator" in JavaScript creates a new object instance from a constructor function, invoking the function with the provided arguments and setting its prototype.<br /><br />
+  <div><strong>Interview Response:</strong> The new "operator" in JavaScript creates a new object instance from a constructor function, invoking the function with the provided arguments and setting its prototype.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Constructor function
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+// Creating instances using the new operator
+const person1 = new Person('John', 30);
+const person2 = new Person('Jane', 25);
+
+console.log(person1); // Output: Person { name: 'John', age: 30 }
+console.log(person2); // Output: Person { name: 'Jane', age: 25 }
+```
+
   </div>
   </div>
 </details>
@@ -135,7 +155,7 @@ let myCar = new Car('Toyota', 'Corolla', 2005);
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The primary function of constructor functions is to initialize new object instances with specific properties and methods, establishing their structure and behavior.
-</div><br/>
+</div>
   </div>
 </details>
 
@@ -198,8 +218,8 @@ let user = new User(); // <-- proper implementation
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Technical Response:</strong> Constructors automatically return this (the new object). If you explicitly return an object, that's returned instead. Non-object explicit returns are ignored, this is returned.
-  </div>
+  <div><strong>Interview Response:</strong> Constructors automatically return this (the new object). If you explicitly return an object, that's returned instead. Non-object explicit returns are ignored, this is returned.
+  </div><br />
   <div><strong>Technical Response:</strong> Constructors often do not contain a return statement. Their role is to enter all relevant information into this, and it immediately becomes the outcome; nevertheless, if there is a return statement, the rule is straightforward.<br /><br />
   <ol>
     <li>If the return function gets used with an object, the object is returned instead of this.</li>
@@ -262,8 +282,7 @@ console.log(window.make); // Outputs: 'Toyota', if in a browser environment
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> You can use the `instanceof` operator in JavaScript. For example, if `obj` was created by `Constructor`, check with `obj instanceof Constructor`. It returns `true` if `obj` was created by `Constructor`.
-<br /><br />
-  </div>
+  </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
