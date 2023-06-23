@@ -176,7 +176,24 @@ This was part of the old rules in JavaScript when there was no lexical environme
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Using 'var' inside a for loop in JavaScript declares a function-scoped variable. This can cause unintended behavior due to hoisting and sharing the variable across iterations, unlike 'let' or 'const'.<br /><br />
+  <div><strong>Interview Response:</strong> Using 'var' inside a for loop in JavaScript declares a function-scoped variable. This can cause unintended behavior due to hoisting and sharing the variable across iterations, unlike 'let' or 'const'.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's an example showing unexpected behavior due to 'var' having function scope:
+
+```javascript
+for (var i = 0; i < 3; i++) {
+  setTimeout(function() {
+    console.log(i);
+  }, 1000);
+}
+```
+
+This will output '3' three times (3, 3, 3), not '0', '1', '2' as you might expect. `i` is shared across each iteration and the callbacks reference the same `i`.
+
   </div>
   </div>
 </details>
@@ -261,7 +278,32 @@ console.log(user); // ReferenceError: user is not defined
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Both var and let are hoisted. But var is initialized with undefined upon hoisting, while let isn't initialized, causing a ReferenceError if accessed before the declaration.<br /><br />
+  <div><strong>Interview Response:</strong> Both var and let are hoisted. But var is initialized with undefined upon hoisting, while let isn't initialized, causing a ReferenceError if accessed before the declaration.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here are examples to illustrate the difference between 'var' and 'let' in terms of hoisting:
+
+**1. Using 'var':**
+
+```javascript
+console.log(x); // Output: undefined
+var x = 5;
+console.log(x); // Output: 5
+```
+
+**2. Using 'let':**
+
+```javascript
+console.log(y); // Output: ReferenceError: y is not defined
+let y = 5;
+console.log(y); // Output: 5
+```
+
+In the first example, `x` is hoisted and initialized with 'undefined'. In the second example, `y` is hoisted, but cannot be accessed until it's declared.
+
   </div>
   </div>
 </details>
@@ -276,29 +318,25 @@ console.log(user); // ReferenceError: user is not defined
   <div><strong>Interview Response:</strong> An Immediately Invoked Function Expression (IIFE) is a function expression that's executed immediately after declaration. It's used with var to create local scope, preventing global scope pollution.</div><br />
   <div><strong>Technical Response:</strong> In the past, as there was only var, and it had no block-level visibility, programmers invented a way to emulate it. An IIFE (Immediately Invoked Function Expression) is a JavaScript function that runs as the code defines it. We should not use it in modern JavaScript code, but you can still find them in old scripts. So, you should know what they are when you see them in code.
   </div><br />
-  <div><strong className="codeExample">Code Example:</strong> IIFE<br /><br />
+  <div><strong className="codeExample">Code Example:</strong> IIFE with Var<br /><br />
 
   <div></div>
 
-```js
-// Ways to create IIFE in JavaScript
+Here's an example of using 'var' with an Immediately Invoked Function Expression (IIFE):
 
-(function () {
-  alert('Parentheses around the function');
+```javascript
+(function() {
+  for (var i = 0; i < 3; i++) {
+    setTimeout(function() {
+      console.log(i);
+    }, 1000);
+  }
 })();
 
-(function () {
-  alert('Parentheses around the whole thing');
-})();
-
-!(function () {
-  alert('Bitwise NOT operator starts the expression');
-})();
-
-+(function () {
-  alert('Unary plus starts the expression');
-})();
+// Outputs: 3, 3, 3
 ```
+
+In this example, `i` is declared with `var`, so it's hoisted to the top of the function scope created by the IIFE. Therefore, all of the callback functions share the same `i`.
 
 :::note
 It is not something we should use in modern JavaScript code, but you can still find them in old scripts. So, you should know what they are when you see them in code.

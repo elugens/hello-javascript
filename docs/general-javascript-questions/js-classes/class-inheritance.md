@@ -48,7 +48,43 @@ import StructuredData from './schemadata/ClassInheritSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Class inheritance in JavaScript allows a subclass to inherit properties and methods from a parent class, enabling code reuse and reducing redundancy.<br />
+  <div><strong>Interview Response:</strong> Class inheritance in JavaScript allows a subclass to inherit properties and methods from a parent class, enabling code reuse and reducing redundancy.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+  
+  speak() {
+    console.log(`${this.name} makes a sound.`);
+  }
+}
+
+class Dog extends Animal {
+  constructor(name, breed) {
+    super(name);
+    this.breed = breed;
+  }
+  
+  speak() {
+    console.log(`${this.name} barks!`);
+  }
+  
+  fetch() {
+    console.log(`${this.name} fetches the ball.`);
+  }
+}
+
+const myDog = new Dog("Buddy", "Golden Retriever");
+myDog.speak(); // Output: "Buddy barks!"
+myDog.fetch(); // Output: "Buddy fetches the ball."
+```
+
   </div>
   </div>
 </details>
@@ -60,7 +96,7 @@ import StructuredData from './schemadata/ClassInheritSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The "extends" keyword in JavaScript class inheritance creates a subclass that inherits properties and methods from a parent class, and can also define new properties and methods.<br />
+  <div><strong>Interview Response:</strong> The "extends" keyword in JavaScript class inheritance creates a subclass that inherits properties and methods from a parent class, and can also define new properties and methods.
   </div>
   </div>
 </details>
@@ -72,7 +108,7 @@ import StructuredData from './schemadata/ClassInheritSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A superclass is a class that is inherited from by other classes, while a subclass is a class that inherits properties and methods from a superclass.<br />
+  <div><strong>Interview Response:</strong> A superclass is a class that is inherited from by other classes, while a subclass is a class that inherits properties and methods from a superclass.
   </div>
   </div>
 </details>
@@ -84,7 +120,30 @@ import StructuredData from './schemadata/ClassInheritSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To call a superclass's constructor from a subclass in JavaScript, use the "super()" method within the subclass's constructor, passing any necessary arguments.<br />
+  <div><strong>Interview Response:</strong> To call a superclass's constructor from a subclass in JavaScript, use the "super()" method within the subclass's constructor, passing any necessary arguments.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+class Dog extends Animal {
+  constructor(name, breed) {
+    super(name); // Call superclass's constructor
+    this.breed = breed;
+  }
+}
+
+const myDog = new Dog("Buddy", "Golden Retriever");
+console.log(myDog.name); // Output: "Buddy"
+```
+
   </div>
   </div>
 </details>
@@ -96,7 +155,29 @@ import StructuredData from './schemadata/ClassInheritSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To override a superclass method in a subclass in JavaScript, define a new method with the same name in the subclass, which will replace the superclass method.<br />
+  <div><strong>Interview Response:</strong> To override a superclass method in a subclass in JavaScript, define a new method with the same name in the subclass, which will replace the superclass method.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+class Animal {
+  speak() {
+    console.log("Animal makes a sound.");
+  }
+}
+
+class Dog extends Animal {
+  speak() {               // overriding Animal Class
+    console.log("Dog barks!");
+  }
+}
+
+const myDog = new Dog();
+myDog.speak(); // Output: "Dog barks!"
+```
+
   </div>
   </div>
 </details>
@@ -108,7 +189,7 @@ import StructuredData from './schemadata/ClassInheritSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The "super" keyword in JavaScript refers to the parent class and is used to call the parent's constructor or methods from a subclass.<br />
+  <div><strong>Interview Response:</strong> The "super" keyword in JavaScript refers to the parent class and is used to call the parent's constructor or methods from a subclass.
   </div>
   </div>
 </details>
@@ -120,7 +201,41 @@ import StructuredData from './schemadata/ClassInheritSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To prevent a class from being inherited in JavaScript, create a private constructor using a Symbol and throw an error if the constructor is invoked by a subclass during inheritance.<br />
+  <div><strong>Interview Response:</strong> To prevent a class from being inherited in JavaScript, create a private constructor using a Symbol and throw an error if the constructor is invoked by a subclass during inheritance.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Explicit Prevention using Symbol():
+
+```js
+const FinalClassSymbol = Symbol('FinalClass');
+
+class FinalClass {
+    constructor() {
+        if (this[FinalClassSymbol] !== FinalClassSymbol) {
+            throw new Error('This class cannot be extended');
+        }
+        // The rest of your constructor code goes here...
+    }
+}
+
+class ChildClass extends FinalClass {
+    constructor() {
+        super();
+        this[FinalClassSymbol] = FinalClassSymbol;
+    }
+}
+
+try {
+    const child = new ChildClass();
+} catch (e) {
+    console.error(e.message);
+}
+
+```
+
   </div>
   </div>
 </details>
@@ -132,7 +247,37 @@ import StructuredData from './schemadata/ClassInheritSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> JavaScript doesn't support multiple inheritance directly. However, you can achieve similar functionality using mixins, where you can extend and combine properties and methods from multiple objects.<br />
+  <div><strong>Interview Response:</strong> JavaScript doesn't support multiple inheritance directly. However, you can achieve similar functionality using mixins, where you can extend and combine properties and methods from multiple objects.
+  </div><br />
+  <div><strong className="codeExample">Here's a simple example of a mixin:</strong><br /><br />
+
+  <div></div>
+
+```js
+let mixin = {
+    sayHi() {
+        console.log(`Hello ${this.name}`);
+    },
+    sayBye() {
+        console.log(`Bye ${this.name}`);
+    },
+};
+
+class User {
+    constructor(name) {
+        this.name = name;
+    }
+}
+
+// copy the methods
+Object.assign(User.prototype, mixin);
+
+// now User can say hi and bye
+let user = new User("John");
+user.sayHi(); // Hello John
+user.sayBye(); // Bye John
+```
+
   </div>
   </div>
 </details>
@@ -144,7 +289,7 @@ import StructuredData from './schemadata/ClassInheritSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Advantages include code reusability, well-structured, easier maintenance, and encapsulation. Disadvantages include tight coupling, the potential for complexity, inflexibility, unintended side effects, and difficulty managing multiple inheritances (requires mixins).<br /><br />
+  <div><strong>Interview Response:</strong> Advantages include code reusability, well-structured, easier maintenance, and encapsulation. Disadvantages include tight coupling, the potential for complexity, inflexibility, unintended side effects, and difficulty managing multiple inheritances (requires mixins).
   </div>
   </div>
 </details>
@@ -431,7 +576,7 @@ new Rabbit(); // rabbit
 
 ---
 
-### Can you explain how super works under the hood as the `[[HomeObject]]`?
+### Can you explain how super works under the hood as the [[HomeObject]]?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

@@ -46,7 +46,7 @@ import StructuredData from './schemadata/JSErrorSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The five primitive wrapper objects in JavaScript are: String, Number, Boolean, Symbol, and BigInt.<br />
+  <div><strong>Interview Response:</strong> Error handling is the process of catching and managing exceptions or errors that occur during code execution to prevent program failure.
   </div>
   </div>
 </details>

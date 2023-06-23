@@ -52,6 +52,21 @@ import StructuredData from './schemadata/SchedulingSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> The two most common JavaScript methods for scheduling a call are setTimeout() for single delayed execution and setInterval() for repeated execution at specified intervals.</div><br/>
   <div><strong>Technical Response:</strong> There are two commonly used methods for scheduling calls in JavaScript, including the setTimeout and setInterval methods. setTimeout allows us to run a function once after the interval of time. setInterval allows us to run a function repeatedly, starting after the interval of time, then repeating continuously at that interval. Both methods are helpful when you need to schedule specific events or actions in JavaScript. These methods don’t get included in the JavaScript specification. However, most settings have an internal scheduler, and these methods are available. All browsers, as well as Node.js, support them. Both methods are part of the WindowOrGlobalScope interface as a specification.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+setTimeout(function() {
+  // Code to be executed after the delay
+}, 3000); // Delay of 3000 milliseconds (3 seconds)
+
+setInterval(function() {
+  // Code to be executed repeatedly at the specified interval
+}, 5000); // Interval of 5000 milliseconds (5 seconds)
+```
+
   </div>
   </div>
 </details>
@@ -63,7 +78,7 @@ import StructuredData from './schemadata/SchedulingSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The setTimeout method schedules a single function execution after a specified delay, while setInterval method schedules a function to execute repeatedly at specified intervals, enabling continuous updates or recurring tasks.<br /><br />
+  <div><strong>Interview Response:</strong> The setTimeout method schedules a single function execution after a specified delay, while setInterval method schedules a function to execute repeatedly at specified intervals, enabling continuous updates or recurring tasks.
   </div>
   </div>
 </details>
@@ -119,7 +134,22 @@ We can use the clearTimeout method to clear setTimeout in our code.
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To cancel a scheduled setTimeout call, you can use the clearTimeout() method, passing the timeout identifier returned by the corresponding setTimeout() invocation as its argument.<br /><br />
+  <div><strong>Interview Response:</strong> To cancel a scheduled setTimeout call, you can use the clearTimeout() method, passing the timeout identifier returned by the corresponding setTimeout() invocation as its argument.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Schedule a function to be executed after 5 seconds
+var timeoutId = setTimeout(function() {
+  console.log("Scheduled function executed.");
+}, 5000);
+
+// Cancel the scheduled setTimeout call
+clearTimeout(timeoutId);
+```
+
   </div>
   </div>
 </details>
@@ -200,7 +230,21 @@ setTimeout(() => {
 
 ```js
 // the function stays in memory until the scheduler calls it
-setTimeout(function() {...}, 100);
+
+// Example using setInterval
+function doRepeatedTask() {
+  console.log("Executing repeated task...");
+}
+
+// Schedule a repeated task every 1 second
+var intervalId = setInterval(doRepeatedTask, 1000);
+
+// Clear the interval after 5 seconds
+setTimeout(function() {
+  clearInterval(intervalId);
+  console.log("Interval cleared after 5 seconds.");
+}, 5000);
+
 ```
 
 :::note
@@ -225,9 +269,9 @@ There is a side-effect. A function references the outer lexical environment, so,
   <div></div>
 
 ```js
-setTimeout(() => alert('World')); // returns second
+setTimeout(() => console.log('JavaScript!')); // returns second
 
-alert('Hello'); // returns first
+console.log('Hello'); // returns first
 ```
 
 :::note
@@ -245,7 +289,25 @@ There are also advanced browser-related use cases of the zero-delay timeout, suc
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To cancel a scheduled setInterval call, we invoke the clearInterval() method with the interval identifier as its argument, which is the value returned by the corresponding setInterval() call that initiated the repetition.<br /><br />
+  <div><strong>Interview Response:</strong> To cancel a scheduled setInterval call, we invoke the clearInterval() method with the interval identifier as its argument, which is the value returned by the corresponding setInterval() call that initiated the repetition.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Schedule a repeated task every 1 second
+var intervalId = setInterval(function() {
+  console.log("Executing repeated task...");
+}, 1000);
+
+// Cancel the scheduled interval after 5 seconds
+setTimeout(function() {
+  clearInterval(intervalId);
+  console.log("Interval canceled after 5 seconds.");
+}, 5000);
+```
+
   </div>
   </div>
 </details>
@@ -258,8 +320,7 @@ There are also advanced browser-related use cases of the zero-delay timeout, suc
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> We can create a recursive setTimeout by scheduling a new setTimeout call within the callback function itself, ensuring it executes repeatedly with the desired delay, thereby mimicking setInterval behavior.
-<br /><br />
-  </div>
+  </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -292,7 +353,30 @@ recursiveSetTimeout(function() {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The minimum delay for setTimeout and setInterval in modern browsers is four milliseconds, after the 5th call, due to browser-imposed limitations on timers.<br /><br />
+  <div><strong>Interview Response:</strong> The minimum delay for setTimeout and setInterval in modern browsers is four milliseconds, after the 5th call, due to browser-imposed limitations on timers.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Minimum delay for setTimeout
+setTimeout(function() {
+  console.log("Minimum delay reached for setTimeout");
+}, 4);
+
+// Minimum delay for setInterval
+var counter = 0;
+var intervalId = setInterval(function() {
+  console.log("Minimum delay reached for setInterval");
+  counter++;
+  if (counter === 5) {
+    clearInterval(intervalId);
+    console.log("Interval cleared after 5 iterations.");
+  }
+}, 4);
+```
+
   </div>
   </div>
 </details>
@@ -304,7 +388,46 @@ recursiveSetTimeout(function() {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To throttle or debounce functions using setTimeout, wrap the original function in a higher-order function that uses setTimeout to delay the function call, ensuring a minimum delay between successive calls, reducing the frequency of execution.<br /><br />
+  <div><strong>Interview Response:</strong> To throttle or debounce functions using setTimeout, wrap the original function in a higher-order function that uses setTimeout to delay the function call, ensuring a minimum delay between successive calls, reducing the frequency of execution.
+  </div><br />
+  <div><strong className="codeExample">Simple Code Example:</strong><br /><br />
+
+  <div></div>
+
+**1. Debounce Example**
+
+```js
+function debounce(func, timeout = 300){
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => { func.apply(this, args); }, timeout);
+  };
+}
+function saveInput(){
+  console.log('Saving data');
+}
+const processChange = debounce(() => saveInput());
+```
+
+**2. Throttle Example**
+
+```js
+function throttle(callback, delay = 1000) {
+  let shouldWait = false;
+
+  return (...args) => {
+    if (shouldWait) return;
+
+    callback(...args);
+    shouldWait = true;
+    setTimeout(() => {
+      shouldWait = false;
+    }, delay);
+  };
+}
+```
+
   </div>
   </div>
 </details>
@@ -316,7 +439,7 @@ recursiveSetTimeout(function() {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> setTimeout and setInterval are added to the message queue by the event loop after the specified delay, allowing the JavaScript engine to execute other tasks while waiting for the timer to expire.<br /><br />
+  <div><strong>Interview Response:</strong> The setTimeout and setInterval methods are added to the message queue by the event loop after the specified delay, allowing the JavaScript engine to execute other tasks while waiting for the timer to expire.
   </div>
   </div>
 </details>
@@ -328,7 +451,7 @@ recursiveSetTimeout(function() {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Using setInterval can cause performance issues, especially if the interval duration is too short, leading to higher CPU and memory usage and reduced user experience, especially on low-end devices.<br /><br />
+  <div><strong>Interview Response:</strong> Using setInterval can cause performance issues, especially if the interval duration is too short, leading to higher CPU and memory usage and reduced user experience, especially on low-end devices.
   </div>
   </div>
 </details>
@@ -340,7 +463,25 @@ recursiveSetTimeout(function() {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We can wrap the callback function in a try-catch block to handle errors in setTimeout and setInterval callbacks. Alternatively, utilize error handling mechanisms like window.onerror or try-catch in the outer scope of the callback.<br /><br />
+  <div><strong>Interview Response:</strong> We can wrap the callback function in a try-catch block to handle errors in setTimeout and setInterval callbacks. Alternatively, utilize error handling mechanisms like window.onerror or try-catch in the outer scope of the callback.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+setTimeout(() => {
+  try {
+    let code = null;
+    console.log(code.hello); // this will fail
+  } catch (error) {
+    // Handle the error
+      console.log(error.name); // TypeError
+      console.log(error.stack); // TypeError: Cannot read properties of null (reading 'hello') at <anonymous>:4:24
+  }
+}, 4);
+```
+
   </div>
   </div>
 </details>
@@ -352,7 +493,26 @@ recursiveSetTimeout(function() {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> When used in conjunction with Promises and async/await, the setTimeout and setInterval methods return a Promise or an Async Function, respectively, allowing for more precise control over the timing of code execution.<br /><br />
+  <div><strong>Interview Response:</strong> When used in conjunction with Promises and async/await, the setTimeout and setInterval methods return a Promise or an Async Function, respectively, allowing for more precise control over the timing of code execution.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+function delay(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function myFunction() {
+  console.log('Before delay');
+  await delay(2000); // Wait for 2 seconds
+  console.log('After delay');
+}
+
+myFunction();
+```
+
   </div>
   </div>
 </details>
@@ -364,8 +524,33 @@ recursiveSetTimeout(function() {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> requestAnimationFrame is designed for animation use cases, ensuring smooth, optimized performance at a consistent frame rate. It reduces CPU and GPU usage, improves battery life, and avoids flickering and jank associated with setInterval.
-<br /><br />
+  <div><strong>Interview Response:</strong> The requestAnimationFrame method is designed for animation use cases, ensuring smooth, optimized performance at a consistent frame rate. It reduces CPU and GPU usage, improves battery life, and avoids flickering and jank associated with setInterval.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+const element = document.getElementById('animationElement');
+let start;
+
+function step(timestamp) {
+  if (start === undefined) start = timestamp;
+  const elapsed = timestamp - start;
+
+  // `Math.min()` is used here to make sure that the element stops at exactly 200px.
+  element.style.transform =
+    'translateX(' + Math.min(0.1 * elapsed, 200) + 'px)';
+
+  if (elapsed < 2000) {
+    // Stop the animation after 2 seconds
+    window.requestAnimationFrame(step);
+  }
+}
+
+window.requestAnimationFrame(step);
+```
+
   </div>
   </div>
 </details>
@@ -378,7 +563,19 @@ recursiveSetTimeout(function() {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> setTimeout schedules tasks to run after a specified delay, while requestIdleCallback schedules tasks to run during idle periods when the browser has free CPU time, optimizing for performance and user experience.
-<br /><br />
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+function myCallback() {
+  // do something when the browser is idle
+}
+
+requestIdleCallback(myCallback);
+```
+
   </div>
   </div>
 </details>
@@ -390,8 +587,29 @@ recursiveSetTimeout(function() {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To measure elapsed time between two events in JavaScript, store the current timestamp using the Date.now() method and subtract it from the timestamp at the end of the event.
-<br /><br />
+  <div><strong>Interview Response:</strong> To measure elapsed time between two events in JavaScript, store the current timestamp using the 'Date.now()' or 'performance.now()' methods and subtract it from the timestamp at the end of the event.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Capture the start time
+const startTime = performance.now();
+
+for(let i = 0; i < 10000; i++) {
+    console.log(i);
+}
+
+// Capture the end time
+const endTime = performance.now();
+
+// Calculate the elapsed time
+const elapsed = endTime - startTime;
+
+console.log('Elapsed time:', elapsed, 'milliseconds'); // Elapsed time: 211.9000000357628 milliseconds
+```
+
   </div>
   </div>
 </details>

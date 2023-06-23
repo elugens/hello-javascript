@@ -50,6 +50,19 @@ import StructuredData from './schemadata/JSONMethodsSchemaData.js';
   <div><strong>Interview Response:</strong>JSON stands for JavaScript Object Notation, a lightweight data interchange format widely used for web APIs.
 </div><br />
   <div><strong>Technical Response:</strong> JSON is a simple and lightweight data exchange format used across multiple language platforms. JSON means JavaScript Object Notation, and it is language and platform-independent. JSON often gets used when data gets sent from a server to a web page, and it works both on the front and back end of development environments. Several built-in JavaScript methods convert JSON objects from and back to their original format.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```json
+{
+  "name": "John",
+  "age": 30,
+  "isStudent": false
+}
+```
+
   </div>
   </div>
 </details>
@@ -61,7 +74,9 @@ import StructuredData from './schemadata/JSONMethodsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> JSON syntax is derived from JavaScript, making it easy to use with JavaScript. JSON data can be parsed and converted into JavaScript objects.<br /><br />
+  <div><strong>Interview Response:</strong> JSON syntax is derived from JavaScript, making it easy to use with JavaScript. JSON data can be parsed and converted into JavaScript objects.
+  </div><br/>
+  <div><strong>Technical Response:</strong> JSON is closely related to JavaScript because it is based on a subset of the JavaScript programming language syntax. JSON was inspired by JavaScript's object and array literal syntax and adopted it as the foundation for its data representation format. JavaScript provides built-in methods to parse and stringify JSON data, making it convenient for working with JSON in JavaScript applications.
   </div>
   </div>
 </details>
@@ -390,7 +405,34 @@ console.log(parsedObj); // {name: 'John', age: 30}
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> JSON Schema is a specification for validating the structure and content of JSON data, allowing for standardized data validation and interchange.<br /><br />
+  <div><strong>Interview Response:</strong> JSON Schema is a specification for validating the structure and content of JSON data, allowing for standardized data validation and interchange.
+  </div>
+  <div><strong>Technical Response:</strong> A JSON Schema is a declarative specification that defines the structure, content, and validation rules for JSON data. It provides a way to describe the expected format and properties of JSON objects, enabling validation, documentation, and interoperability between systems.<br/><br/>A JSON Schema is itself represented as a JSON object and follows a specific schema defined by the JSON Schema specification. It describes the constraints and expectations for the JSON data it validates. A JSON Schema can define properties, data types, required fields, minimum and maximum values, regular expressions, and more.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```json
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "age": {
+      "type": "number",
+      "minimum": 0
+    },
+    "isStudent": {
+      "type": "boolean"
+    }
+  },
+  "required": ["name", "age"]
+}
+```
+
   </div>
   </div>
 </details>
@@ -403,7 +445,6 @@ console.log(parsedObj); // {name: 'John', age: 30}
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The JSON Schema is used to validate the structure and data of JSON documents, ensuring consistency and interoperability between systems.
-<br /><br />
   </div>
   </div>
 </details>
@@ -415,7 +456,37 @@ console.log(parsedObj); // {name: 'John', age: 30}
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> JSON is often used in JavaScript for data exchange between a client and a server, for storing data in a file or a database, or for sending and receiving data through APIs.<br /><br />
+  <div><strong>Interview Response:</strong> JSON is often used in JavaScript for data exchange between a client and a server, for storing data in a file or a database, or for sending and receiving data through APIs.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// JSON data representing a person
+var jsonStr = '{"name":"John","age":30,"isStudent":false}';
+
+// Parsing JSON string into a JavaScript object
+var obj = JSON.parse(jsonStr);
+
+// Accessing properties of the JavaScript object
+console.log(obj.name);  // Output: John
+console.log(obj.age);   // Output: 30
+console.log(obj.isStudent);  // Output: false
+
+// Modifying the JavaScript object
+obj.age = 31;
+obj.isStudent = true;
+
+// Converting the JavaScript object back to a JSON string
+var updatedJsonStr = JSON.stringify(obj);
+
+console.log(updatedJsonStr);
+// Output: {"name":"John","age":31,"isStudent":true}
+```
+
+This code illustrates the basic operations of parsing JSON, accessing object properties, modifying data, and converting JavaScript objects to JSON strings.
+
   </div>
   </div>
 </details>

@@ -170,7 +170,24 @@ Prototypes do not affect "this", regardless of the method the location in an obj
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Object.create() creates a new object with a specified prototype, without invoking a constructor. The new keyword creates an object from a constructor, also setting its prototype to the constructor's prototype.<br />
+  <div><strong>Interview Response:</strong> `Object.create(proto)` directly sets `proto` as the prototype of a new object, whereas `new Constructor()` creates an object with `Constructor.prototype` as its prototype.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Using Object.create()
+let proto = { name: "Proto" };
+let obj = Object.create(proto);
+console.log(obj.name); // "Proto"
+
+// Using new keyword
+function Constructor() { this.name = "Constructor"; }
+let newObj = new Constructor();
+console.log(newObj.name); // "Constructor"
+```
+
   </div>
   </div>
 </details>
@@ -182,7 +199,7 @@ Prototypes do not affect "this", regardless of the method the location in an obj
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> JavaScript implements inheritance through prototypal inheritance, where objects inherit properties and methods directly from other objects. Classical inheritance uses classes to define and inherit behavior.<br />
+  <div><strong>Interview Response:</strong> JavaScript implements inheritance through prototypal inheritance, where objects inherit properties and methods directly from other objects. Classical inheritance uses classes to define and inherit behavior.
   </div>
   </div>
 </details>
@@ -194,7 +211,35 @@ Prototypes do not affect "this", regardless of the method the location in an obj
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, a prototype is an object used for inheritance, while a constructor is a function that creates new instances of objects and initializes their properties and methods.<br />
+  <div><strong>Interview Response:</strong> In JavaScript, a prototype is an object used for inheritance, while a constructor is a function that creates new instances of objects and initializes their properties and methods.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+// Constructor
+function Car(make, model) {
+    this.make = make;
+    this.model = model;
+}
+
+// Create a new object using the Car constructor
+let car1 = new Car('Toyota', 'Corolla');
+console.log(car1.make);  // Output: Toyota
+console.log(car1.model); // Output: Corolla
+
+// Prototype
+Car.prototype.getDetails = function() {
+    return this.make + ' ' + this.model;
+}
+
+// Use the prototype method
+console.log(car1.getDetails()); // Output: Toyota Corolla
+```
+
+In the above example, `Car` is a constructor function. We use this constructor to create `car1`. We then add a method `getDetails` to `Car.prototype`. Now every object created with `new Car()` will have access to `getDetails`.
+
   </div>
   </div>
 </details>
@@ -206,7 +251,7 @@ Prototypes do not affect "this", regardless of the method the location in an obj
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The prototype chain in JavaScript is a series of linked prototypes from which objects inherit properties and methods. It enables property lookups through parent prototypes until found or undefined.<br />
+  <div><strong>Interview Response:</strong> The prototype chain in JavaScript is a series of linked prototypes from which objects inherit properties and methods. It enables property lookups through parent prototypes until found or undefined.
   </div>
   </div>
 </details>
@@ -218,7 +263,21 @@ Prototypes do not affect "this", regardless of the method the location in an obj
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We can create a new object that inherits from another by using Object.create() with the desired object as the prototype or by setting the constructor's prototype.<br />
+  <div><strong>Interview Response:</strong> We can create a new object that inherits from another by using Object.create() with the desired object as the prototype or by setting the constructor's prototype.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let decoration = {
+  color: 'red',
+};
+
+let rose = Object.create(decoration);
+console.log(rose.color) // rose color: red
+```
+
   </div>
   </div>
 </details>
@@ -230,7 +289,7 @@ Prototypes do not affect "this", regardless of the method the location in an obj
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In prototypal inheritance, "this" refers to the instance object, allowing access to its properties and methods. It enables sharing and reuse of code across objects in a prototype chain.<br />
+  <div><strong>Interview Response:</strong> In prototypal inheritance, "this" refers to the instance object, allowing access to its properties and methods. It enables sharing and reuse of code across objects in a prototype chain.
   </div>
   </div>
 </details>
@@ -289,6 +348,12 @@ for (let prop in rabbit) {
 }
 ```
 
+:::warning
+
+The **proto** notation is not recommended in JavaScript because it is deprecated. The proto notation is a way of creating objects that inherit from other objects. However, the proto notation is not as efficient as other methods of creating objects, and it can be difficult to use. Therefore, it is recommended to use other methods of creating objects, such as the constructor function.
+
+:::
+
   </div>
   </div>
 </details>
@@ -300,7 +365,7 @@ for (let prop in rabbit) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Advantages: flexibility, memory efficiency, easy object creation. Disadvantages: readability issues, inadvertent property/method sharing, and potential performance impact due to longer prototype chains.<br />
+  <div><strong>Interview Response:</strong> Advantages: flexibility, memory efficiency, easy object creation. Disadvantages: readability issues, inadvertent property/method sharing, and potential performance impact due to longer prototype chains.
   </div>
   </div>
 </details>
@@ -312,7 +377,21 @@ for (let prop in rabbit) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To prevent inheritance, create an object with null as its prototype using Object.create(null). This results in an object without a prototype, so it won't inherit properties or methods from any prototype chain.<br />
+  <div><strong>Interview Response:</strong> To prevent inheritance, create an object with null as its prototype using Object.create(null). This results in an object without a prototype, so it won't inherit properties or methods from any prototype chain.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let obj = Object.create(null);
+
+// Try to use a method from Object.prototype
+console.log(obj.toString); // Output: undefined
+```
+
+In the above example, `obj` doesn't have access to `toString` method from `Object.prototype` as it was created with no prototype.
+
   </div>
   </div>
 </details>

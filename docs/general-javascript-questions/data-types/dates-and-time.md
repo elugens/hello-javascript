@@ -50,6 +50,54 @@ import StructuredData from './schemadata/DateTimeSchemaData.js';
   <div><strong>Interview Response:</strong> The Date object is a built-in object in JavaScript that represents a specific point in time and provides methods for working with dates and times.
 </div><br />
   <div><strong>Technical Response:</strong> JavaScript Date objects represent a single moment in time in a platform-independent format. Date objects contain a Number that represents milliseconds since 1 January 1970 UTC. These date and time objects are not the same as the UNIX epoch (the number of seconds elapsed since midnight on January 1, 1970, UTC), the principal base value for computer-recorded date and time values. It's essential to keep in mind that while the time value at the heart of a Date object is UTC, the primary methods to fetch the date and time or its components all work in the local (i.e., host system) time zone and offset.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Creating a `Date` object representing the current date and time:
+
+```javascript
+const currentDate = new Date();
+console.log(currentDate);
+// logs Wed Jun 21 2023 16:45:26 GMT-0700 (Pacific Daylight Time)
+```
+
+Creating a `Date` object with a specific date and time:
+
+```javascript
+const specificDate = new Date('2023-06-21T10:30:00');
+console.log(specificDate);
+```
+
+Getting various components of a `Date` object:
+
+```javascript
+const date = new Date();
+
+const year = date.getFullYear();
+const month = date.getMonth(); // Month is zero-based (0-11)
+const day = date.getDate();
+const hours = date.getHours();
+const minutes = date.getMinutes();
+const seconds = date.getSeconds();
+
+console.log(year, month, day, hours, minutes, seconds);
+```
+
+Performing calculations with `Date` objects:
+
+```javascript
+const now = new Date();
+const futureDate = new Date(now.getFullYear() + 1, now.getMonth(), now.getDate());
+
+console.log(futureDate);
+```
+
+In this example, we calculate a future date by adding one year to the current date using the `getFullYear`, `getMonth`, and `getDate` methods of the `Date` object.
+
+The `Date` object provides many more methods and properties to work with dates and times, allowing you to perform various operations and manipulate dates according to your needs.
+
   </div>
   </div>
 </details>
@@ -103,7 +151,31 @@ console.log(date); // Logs the current date and time
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> JavaScript has a Date object, which includes both date and time functionality, but it does not have a separate "time object".<br /><br />
+  <div><strong>Interview Response:</strong> JavaScript has a Date object, which includes both date and time functionality, but it does not have a separate "time object".
+  </div><br/>
+  <div><strong>Technical Response:</strong> No, JavaScript does not have a built-in "Time" object. However, the `Date` object in JavaScript is commonly used to work with both dates and times. It represents a specific point in time, including the date, time, and time zone information. By utilizing the methods and properties of the `Date` object, you can perform operations related to time, such as getting the current time, setting specific times, extracting time components, and performing calculations involving time intervals.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Getting the current time:
+
+```js
+const currentTime = new Date();
+console.log(currentTime.toLocaleTimeString());
+```
+
+Setting a specific time:
+
+```js
+const specificTime = new Date();
+specificTime.setHours(10);
+specificTime.setMinutes(30);
+specificTime.setSeconds(0);
+console.log(specificTime.toLocaleTimeString()); // logs 10:30:00 AM
+```
+
   </div>
   </div>
 </details>
@@ -137,7 +209,7 @@ console.log(currentDate); // Logs the current date and time
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> he integer number representing the number of milliseconds since the beginning of 1970 is called Unix Time or Epoch Time.</div><br />
+  <div><strong>Interview Response:</strong> The integer number representing the number of milliseconds since the beginning of 1970 is called a timestamp (Unix Time or Epoch Time).</div><br />
   <div><strong>Technical Response:</strong> An integer number representing the number of milliseconds since 1970 is called a timestamp. It is a lightweight numeric representation of a date. We can always create a date from a timestamp using the new Date(timestamp) and convert the existing Date object to a timestamp using the date.getTime() method. You should be aware that dates before 01.01.1970 have a negative timestamp.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -147,7 +219,7 @@ console.log(currentDate); // Logs the current date and time
 ```js
 // 31 Dec 1969
 let Dec31_1969 = new Date(-24 * 3600 * 1000);
-alert(Dec31_1969);
+console.log(Dec31_1969);
 ```
 
   </div>
@@ -228,6 +300,12 @@ let date = new Date();
 let year = date.getFullYear();
 console.log(year); // returns 2021
 ```
+
+:::warning
+
+The getYear() method is **deprecated**, and you should not use it.
+
+:::
 
   </div>
   </div>
@@ -320,7 +398,7 @@ console.log(weekday); // 1
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In programming, UTC stands for Coordinated Universal Time, which is a time standard that provides a consistent, global time reference and is used as a basis for local time zones.<br /><br />
+  <div><strong>Interview Response:</strong> In programming, UTC stands for Coordinated Universal Time, which is a time standard that provides a consistent, global time reference and is used as a basis for local time zones.
   </div>
   </div>
 </details>
@@ -334,6 +412,24 @@ console.log(weekday); // 1
   <div>
   <div><strong>Interview Response:</strong> In the context of date and time, UTC stands for Coordinated Universal Time, and JavaScript provides several methods for working with UTC, including getUTCDate(), getUTCDay(), getUTCMonth(), and getUTCHours().</div><br />
   <div><strong>Technical Response:</strong> UTC is an acronym for Universal Time Coordinated, established in 1972. This time was called Greenwich Mean Time (GMT) but now referred to as Coordinated Universal Time or Universal Time Coordinated (UTC). In JavaScript, there are also their UTC-counterparts, that return day, month, year and so on for the time zone UTC+0: getUTCFullYear(), getUTCMonth(), getUTCDay(). Just insert the "UTC" right after "get". Besides the given methods, two special ones do not have a UTC-variant, including getTime and getTimezoneOffset.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+const date = new Date();
+
+const utcYear = date.getUTCFullYear();
+const utcMonth = date.getUTCMonth(); // Month is zero-based (0-11)
+const utcDate = date.getUTCDate();
+const utcHours = date.getUTCHours();
+const utcMinutes = date.getUTCMinutes();
+const utcSeconds = date.getUTCSeconds();
+
+console.log(utcYear, utcMonth, utcDate, utcHours, utcMinutes, utcSeconds);
+```
+
   </div>
   </div>
 </details>
@@ -509,8 +605,20 @@ alert(date);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The Unix Epoch time is the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC. You can convert a Unix timestamp to a JavaScript Date object by multiplying the timestamp by 1000 and passing the result to the new Date() constructor.
-<br /><br />
+  <div><strong>Interview Response:</strong> The Unix Epoch time is the number of seconds that have passed since January 1, 1970, at 00:00:00 UTC. To convert a Unix timestamp to a JavaScript Date object, use new Date(unixTimestamp * 1000), multiplying the timestamp by 1000 to convert it from seconds to milliseconds.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+const unixTimestamp = 1624298400; // Unix timestamp representing July 21, 2021, 00:00:00 UTC
+
+const date = new Date(unixTimestamp * 1000);
+
+console.log(date);
+```
+
   </div>
   </div>
 </details>
@@ -523,7 +631,6 @@ alert(date);
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> UTC is a standard time zone used globally, whereas local time is the time zone of the user's computer. UTC does not take into account daylight saving time, while local time does. In JavaScript, the methods for working with UTC and local time are different.
-<br /><br />
   </div>
   </div>
 </details>
@@ -535,7 +642,7 @@ alert(date);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> You can format a date in JavaScript using various methods of the Date object, such as toLocaleDateString() and toLocaleTimeString(). You can also use third-party libraries such as Moment.js for more advanced formatting options.<br /><br />
+  <div><strong>Interview Response:</strong> You can format a date in JavaScript using various methods of the Date object, such as toLocaleDateString() and toLocaleTimeString(). You can also use third-party libraries such as Moment.js for more advanced formatting options.
   </div>
   </div>
 </details>
@@ -618,7 +725,7 @@ date.setTime(date.getTime() + (3*60*60*1000)); // adds 3 hours
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The maximum date that can be represented in JavaScript is approximately 285,616 years in the future (8640000000000000 milliseconds after January 1, 1970). The minimum date is approximately 271,821 years BCE (8640000000000000 milliseconds before January 1, 1970).<br /><br /> In days, JavaScript can represent dates from -100,000,000 days to 100,000,000 days relative to January 1, 1970 UTC, about 273,790 BCE to 273,790 CE.<br /><br />
+  <div><strong>Interview Response:</strong> The maximum date that can be represented in JavaScript is approximately 285,616 years in the future (8640000000000000 milliseconds after January 1, 1970). The minimum date is approximately 271,821 years BCE (8640000000000000 milliseconds before January 1, 1970).<br /><br /> In days, JavaScript can represent dates from -100,000,000 days to 100,000,000 days relative to January 1, 1970 UTC, about 273,790 BCE to 273,790 CE.
   </div>
   </div>
 </details>

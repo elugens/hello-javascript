@@ -72,6 +72,37 @@ sayHi(); // Hello, JavaScript
 
 ---
 
+### Why would you want to use the new Function constructor?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The new Function constructor in JavaScript provides a way to dynamically create functions at runtime. While its usage should be approached with caution due to potential security risks, there are a few scenarios where the new Function constructor can be useful.
+  </div><br />
+  <div><strong className="codeExample">Use Cases:</strong><br /><br />
+
+  <div></div>
+
+**Dynamic code execution**: The `new Function` constructor allows you to generate and execute code dynamically based on runtime conditions or user inputs. This can be useful in cases where you need to evaluate or execute code that is not known until runtime.
+
+**Runtime code generation**: You can use the `new Function` constructor to generate functions dynamically based on specific requirements or configurations. This can be valuable in scenarios where you need to generate functions programmatically or generate functions with varying behaviors.
+
+**Isolation and encapsulation**: By using the `new Function` constructor within a closure or IIFE (Immediately Invoked Function Expression), you can create a new function with its own scope, isolating it from the surrounding code. This can be useful for creating isolated, self-contained functions.
+
+**Eval alternative**: In some cases, the `new Function` constructor can be used as an alternative to `eval()` for executing dynamic code. It provides a controlled environment for executing code and can be more secure when used appropriately.
+
+---
+
+:::warning
+It's important to note that while the `new Function` constructor provides flexibility, it also comes with **potential security risks if used improperly**. Dynamic code execution should be handled carefully, ensuring that any generated code is from trusted sources and properly validated to prevent code injection vulnerabilities.
+:::
+
+  </div>
+  </div>
+</details>
+
+---
+
 ### Can you explain what occurs when using the new Function constructor to create a function?
 
 <details>
@@ -93,7 +124,35 @@ sayHi(); // Hello, JavaScript
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, you can isolate a new Function constructor inside of a closure by defining the function code as a string inside the closure and passing it as a parameter to the constructor. This can help to avoid potential security issues related to executing code from an untrusted source.
-<br /><br />
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let MyModule = (function() {
+  function MyConstructor(name) {
+    this.name = name;
+  }
+
+  MyConstructor.prototype.greet = function() {
+    console.log("Hello, " + this.name + "!");
+  };
+
+  // Other private variables and functions can be defined here
+
+  // Return an object or expose only necessary members
+  return {
+    createInstance: function(name) {
+      return new MyConstructor(name);
+    }
+  };
+})();
+
+var instance = MyModule.createInstance("JavaScript");
+instance.greet(); // Outputs: "Hello, JavaScript!"
+```
+
   </div>
   </div>
 </details>
@@ -106,7 +165,6 @@ sayHi(); // Hello, JavaScript
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The new Function constructor differs from regular function declarations and expressions in syntax, scope, and performance. It uses the Function constructor with a string parameter, executes in the global scope, and is slower to execute.
-<br /><br />
   </div>
   </div>
 </details>
@@ -119,7 +177,17 @@ sayHi(); // Hello, JavaScript
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The new Function constructor can pose security risks when used with untrusted input, as it allows for the execution of arbitrary code. This can lead to code injection attacks, cross-site scripting, and other vulnerabilities.
-<br /><br />
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+var userInput = "console.log('This is malicious code!');";
+var myFunction = new Function(userInput);
+myFunction();
+```
+
   </div>
   </div>
 </details>
@@ -132,7 +200,24 @@ sayHi(); // Hello, JavaScript
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> You can isolate a new Function constructor inside of a closure by defining the function code as a string inside the closure and passing it as a parameter to the constructor.
-<br /><br />
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+(function() {
+  var functionString = "console.log('This function is isolated.');";
+  var isolatedFunction = new Function(functionString);
+  
+  isolatedFunction();
+})();
+```
+
+:::note
+This is not a modern way to handle passing of string related code. It is recommended that you use higher order functions to encapsulate the passing of dynamic strings.
+:::
+
   </div>
   </div>
 </details>
@@ -145,7 +230,17 @@ sayHi(); // Hello, JavaScript
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Arrow functions and template literals can be used with the new Function constructor to create concise and readable function code, making it easier to generate functions dynamically at runtime.
-<br /><br />
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+const generateMessage = new Function('name', 'return `Hello, ${name}! Welcome to our website.`');
+const message = generateMessage('JavaScript');
+console.log(message); // Output: Hello, JavaScript! Welcome to our website.
+```
+
   </div>
   </div>
 </details>
@@ -158,8 +253,7 @@ sayHi(); // Hello, JavaScript
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Regular functions have an `arguments` object, which contains the function's arguments. Arrow functions, even when created with `new Function`, don't have their own `arguments` object; they inherit it from the surrounding scope.
-<br /><br />
-  </div>
+  </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -206,7 +300,7 @@ outerFunction(3, 4);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Avoid using the Function constructor due to security risks, poor performance, and limited use cases. We should use alternatives like regular functions or arrow functions.<br /><br />
+  <div><strong>Interview Response:</strong> Avoid using the Function constructor due to security risks, poor performance, and limited use cases. We should use alternatives like regular functions or arrow functions.
   </div>
   </div>
 </details>
@@ -218,8 +312,8 @@ outerFunction(3, 4);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To create a function with dynamic parameters using the Function constructor, pass an array of parameter names and a function body string as arguments. The constructor combines them, generating a new function with the specified parameters and behavior.<br /><br />
-  </div>
+  <div><strong>Interview Response:</strong> To create a function with dynamic parameters using the Function constructor, pass an array of parameter names and a function body string as arguments. The constructor combines them, generating a new function with the specified parameters and behavior.
+  </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -242,8 +336,8 @@ console.log(dynamicFunction(1, 2)); // Output: 3
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The new Function constructor parses and compiles the function code when it's created. If there are syntax errors in the code, it will throw a SyntaxError exception at creation time.<br /><br />
-  </div>
+  <div><strong>Interview Response:</strong> The new Function constructor parses and compiles the function code when it's created. If there are syntax errors in the code, it will throw a SyntaxError exception at creation time.
+  </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -271,8 +365,8 @@ try {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Ensuring the safety of executing code passed to the new Function constructor can be challenging because it involves dealing with potential code injection. One of the practices could be to whitelist allowed characters or syntax by sanitizing the input (regex test).<br /><br />
-  </div>
+  <div><strong>Interview Response:</strong> Ensuring the safety of executing code passed to the new Function constructor can be challenging because it involves dealing with potential code injection. One of the practices could be to whitelist allowed characters or syntax by sanitizing the input (regex test).
+  </div><br />
   <div><strong className="codeExample">For example, if we only expect numerical operations, we can filter the input accordingly:</strong><br /><br />
 
   <div></div>

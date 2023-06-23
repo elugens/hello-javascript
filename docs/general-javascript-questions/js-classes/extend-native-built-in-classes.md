@@ -49,7 +49,7 @@ import StructuredData from './schemadata/ExtendNativeSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A native built-in class in JavaScript is a class provided by the language itself, such as Array, String, Object, Map, Set, etc. These classes are predefined and available for use in any JavaScript environment.<br />
+  <div><strong>Interview Response:</strong> A native built-in class in JavaScript is a class provided by the language itself, such as Array, String, Object, Map, Set, etc. These classes are predefined and available for use in any JavaScript environment.
   </div>
   </div>
 </details>
@@ -61,7 +61,29 @@ import StructuredData from './schemadata/ExtendNativeSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Extending a built-in class means creating a new class that inherits the properties and methods of the built-in class, allowing you to add or override functionality.<br />
+  <div><strong>Interview Response:</strong> Extending a built-in class means creating a new class that inherits the properties and methods of the built-in class, allowing you to add or override functionality.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+class MyArray extends Array {
+    get first() {
+        return this[0];
+    }
+
+    get last() {
+        return this[this.length - 1];
+    }
+}
+
+let myArr = new MyArray();
+myArr.push(1, 2, 3, 4, 5);
+console.log(myArr.first);  // Output: 1
+console.log(myArr.last);   // Output: 5
+```
+
   </div>
   </div>
 </details>
@@ -113,39 +135,55 @@ class MyString extends String {
 
 ---
 
-### Can you provide an example of a custom method added to a built-in class?
-
-<details>
-  <summary><strong>View Answer:</strong></summary>
-  <div>
-  <div><strong>Interview Response:</strong> An example of a custom method added to a built-in class is extending the String class with a reverse() method that returns the reversed string.</div><br />
-  <div><strong className="codeExample">Code Example:</strong><br /><br />
-
-  <div></div>
-
-```js
-class MyString extends String {
-  reverse() {
-    return this.split('').reverse().join('');
-  }
-}
-
-const reversedString = new MyString('hello').reverse(); // 'olleh'
-console.log(reversedString); // logs 'olleh'
-```
-
-  </div>
-  </div>
-</details>
-
----
-
 ### Are there any limitations when extending built-in classes?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Some built-in objects like Error, Array, and HTMLElement have special behaviors that may not be inherited by their subclasses. Additionally, extending built-in classes can make the code harder to understand and maintain, as developers might not be familiar with the custom functionality.<br />
+  <div><strong>Interview Response:</strong> Some built-in objects like Error, Array, and HTMLElement have special behaviors that may not be inherited by their subclasses. Additionally, extending built-in classes can make the code harder to understand and maintain, as developers might not be familiar with the custom functionality.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong> Using composition instead extending the built-in Array class.<br /><br />
+
+  <div></div>
+
+```javascript
+class MyArray {
+    constructor() {
+        this.array = []; // using array literal
+    }
+
+    push(value) {
+        this.array.push(value);
+    }
+
+    pop() {
+        return this.array.pop();
+    }
+
+    get first() {
+        return this.array[0];
+    }
+
+    get last() {
+        return this.array[this.array.length - 1];
+    }
+
+    // ... any other methods you want to expose
+}
+
+let myArr = new MyArray();
+myArr.push(1);
+myArr.push(2);
+myArr.push(3);
+myArr.push(4);
+myArr.push(5);
+
+console.log(myArr.first);  // Output: 1
+console.log(myArr.last);   // Output: 5
+```
+
+In this example, we're defining a new class `MyArray` that mimics some of the functionality of the `Array` class (`push` and `pop` methods), but also adds custom properties `first` and `last`. Note that `MyArray` is not a subclass of `Array`, but rather uses an `Array` instance internally (`this.array`). This can often be a safer and more flexible approach than subclassing built-in classes directly.
+
   </div>
   </div>
 </details>
@@ -157,7 +195,7 @@ console.log(reversedString); // logs 'olleh'
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We can extend built-in classes when adding or modifying their behavior for specific use cases. However, we should use composition or utility functions in most cases for better flexibility, maintainability, and performance.<br />
+  <div><strong>Interview Response:</strong> We can extend built-in classes when adding or modifying their behavior for specific use cases. However, we should use composition or utility functions in most cases for better flexibility, maintainability, and performance.
   </div>
   </div>
 </details>
@@ -223,7 +261,7 @@ console.log(arr.constructor === PowerArray); // returns true
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The Symbol.species accessor property provides a way to define a constructor for derived objects when subclassing built-in classes, ensuring the new instances inherit from the correct prototype, and preserving intended behavior.</div><br />
+  <div><strong>Interview Response:</strong> The Symbol.species accessor property provides a way to define a constructor for derived objects when sub-classing built-in classes, ensuring the new instances inherit from the correct prototype, and preserving intended behavior.</div><br />
   <div><strong>Technical Response:</strong> The symbol Symbol.species specifies a function-valued property that the constructor function uses to create derived objects. Subclasses can override the default constructor for objects using the species accessor attribute. Symbol.species gets used when you may want to return Array objects in your derived array class. When utilizing methods that return the default constructor, such as map(), you want these methods to return a parent Array object rather than the extending object.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />

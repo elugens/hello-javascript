@@ -67,6 +67,26 @@ let doublePrices = Object.fromEntries(
 );
 
 alert(doublePrices.meat); // 8
+
+// Object
+let obj = { a: 1, b: 2, c: 3 };
+console.log(Object.keys(obj)); // outputs: ['a', 'b', 'c']
+console.log(Object.values(obj)); // outputs: [1, 2, 3]
+console.log(Object.entries(obj)); // outputs: [['a', 1], ['b', 2], ['c', 3]]
+
+// Map
+let map = new Map();
+map.set('key1', 'value1');
+map.set('key2', 'value2');
+console.log(Array.from(map.keys())); // outputs: ['key1', 'key2']
+console.log(Array.from(map.values())); // outputs: ['value1', 'value2']
+console.log(Array.from(map.entries())); // outputs: [['key1', 'value1'], ['key2', 'value2']]
+
+// Set
+let set = new Set([1, 2, 3]);
+console.log(Array.from(set.keys())); // outputs: [1, 2, 3]
+console.log(Array.from(set.values())); // outputs: [1, 2, 3]
+console.log(Array.from(set.entries())); // outputs: [[1, 1], [2, 2], [3, 3]]
 ```
 
   </div>

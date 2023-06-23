@@ -77,7 +77,8 @@ console.log(arrowFunc(200)); // logs 300
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Arrow functions don't have their own "this" value. Instead, they inherit "this" from their surrounding scope. This makes handling context easier, as it avoids unexpected behavior related to "this".</div><br />
+  <div><strong>Interview Response:</strong> Arrow functions don't have their own "this" value. Instead, they inherit "this" from their surrounding scope. This makes handling context easier, as it avoids unexpected behavior related to "this".
+  </div><br />
   <div><strong>Technical Response:</strong> Arrow functions have no "this," which means that whenever we use "this" in an arrow function, it starts looking up the scope to find the value of "this". During lookup, it finds that the object does not have a "this" of its own as it goes up the global scope and bound the value of this with the global scope, where it does not find anything and returns undefined.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -153,7 +154,31 @@ This is relatively simple, as seen by the engine's reaction to any call of "new"
   <div><strong>Interview Response:</strong> Arrow functions inherit "this" from their surrounding scope, while regular functions create their own "this" context. This difference makes arrow functions more predictable when handling "this" values.
 </div><br/>
   <div><strong>Technical Response:</strong> There is a subtle difference between an arrow function and a regular function called with bind(this). The bind(this) syntax creates a "bound version" of a regular function, and the arrow does not create any binding. So, the arrow function does not have "this". The lookup of "this" is made the same way as a regular variable search in the outer lexical environment.
-</div><br/>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Let's consider an example where the behavior of 'this' differs between a regular function and an arrow function.
+
+```javascript
+let obj = {
+  value: 'Hello',
+  regularFunction: function() {
+    console.log(this.value); // refers to obj
+  },
+  arrowFunction: () => {
+    console.log(this.value); // refers to surrounding scope, not obj
+  }
+};
+
+obj.regularFunction(); // outputs: 'Hello'
+obj.arrowFunction(); // likely outputs: undefined
+```
+
+In the `regularFunction` method, `this` refers to `obj` as expected. But in `arrowFunction`, `this` does not refer to `obj`. It refers to the enclosing lexical context, which is the global scope in this case. If `value` is not defined in the global scope, this will output `undefined`.
+
+  </div>
   </div>
 </details>
 
@@ -198,7 +223,23 @@ sayHiDeferred('John'); // Hello, John after 2 seconds
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A good use case for arrow functions is in callback functions or event handlers, where concise syntax and automatic "this" binding are advantageous.<br />
+  <div><strong>Interview Response:</strong> A good use case for arrow functions is in callback functions or event handlers, where concise syntax and automatic "this" binding are advantageous.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's a simple example of using an arrow function as a callback function in JavaScript.
+
+```js
+let numbers = [1, 2, 3, 4, 5];
+
+// Here, an arrow function is used as the callback function for the .map() method.
+let squares = numbers.map((number) => number * number);
+
+console.log(squares); // outputs: [1, 4, 9, 16, 25]
+```
+
   </div>
   </div>
 </details>
@@ -210,7 +251,7 @@ sayHiDeferred('John'); // Hello, John after 2 seconds
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Arrow functions can be used in decorators to write simple abstractions, but they might not be suitable in all cases due to their lexical "this" binding, which can cause unexpected behavior.<br />
+  <div><strong>Interview Response:</strong> Arrow functions can be used in decorators to write simple abstractions, but they might not be suitable in all cases due to their lexical "this" binding, which can cause unexpected behavior.
   </div>
   </div>
 </details>

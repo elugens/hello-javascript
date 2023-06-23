@@ -112,7 +112,7 @@ alert(pow(2, 3)); // 8
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, recursion works when a function calls itself to solve a problem by dividing it into smaller subproblems. Each call reduces complexity until a base case is reached, producing a solution.<br /><br />
+  <div><strong>Interview Response:</strong> In JavaScript, recursion works when a function calls itself to solve a problem by dividing it into smaller sub-problems. Each call reduces complexity until a base case is reached, producing a solution.<br /><br />
   </div>
   <div><strong>Technical Response:</strong> To adequately explain how recursion works in JavaScript. First, we need to explain the execution context and its relationship to the stack. The execution context of a running function stores information about its execution process. The execution context is an internal data structure that contains information about a function's execution, such as where the control flow is currently, the current variables, the value of “this”, and a few other internal details. Each function call connects with a single execution context.<br /><br />
   <strong>The following occurs when a function makes a nested call:</strong><br /><br />
@@ -133,7 +133,7 @@ alert(pow(2, 3)); // 8
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The execution context in JavaScript is the environment where code is executed, including variables, scopes, and the value of this. It's created each time a function is called.<br /><br />
+  <div><strong>Interview Response:</strong> The execution context in JavaScript is the environment where code is executed, including variables, scopes, and the value of this. It's created each time a function is called.
   </div>
   </div>
 </details>
@@ -314,7 +314,7 @@ printRecursively(list);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A stack is a linear data structure that follows the Last-In-First-Out (LIFO) principle, meaning the last element added to the stack is the first to be removed.<br /><br />
+  <div><strong>Interview Response:</strong> A stack is a linear data structure that follows the Last-In-First-Out (LIFO) principle, meaning the last element added to the stack is the first to be removed.
   </div>
   </div>
 </details>
@@ -326,7 +326,50 @@ printRecursively(list);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A stack can be implemented in JavaScript using a class, where push() and pop() methods add or remove elements from the top.<br /><br />
+  <div><strong>Interview Response:</strong> A stack can be implemented in JavaScript using a class, where push() and pop() methods add or remove elements from the top.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+class Stack {
+  constructor() {
+    this.items = [];
+  }
+
+  // Push element to the stack
+  push(element) {
+    this.items.push(element);
+  }
+
+  // Pop element from the stack
+  pop() {
+    if (this.items.length === 0) {
+      return 'Underflow';
+    }
+    return this.items.pop();
+  }
+
+  // Get the top element of the stack
+  peek() {
+    return this.items[this.items.length - 1];
+  }
+
+  // Check if the stack is empty
+  isEmpty() {
+    return this.items.length === 0;
+  }
+
+  // Get the size of the stack
+  size() {
+    return this.items.length;
+  }
+}
+
+const stack = new Stack();
+```
+
   </div>
   </div>
 </details>
@@ -338,7 +381,7 @@ printRecursively(list);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The main operations in a stack are push to add an element to the top, pop to remove the top element, peek to view the top element, and isEmpty to check if the stack is empty.<br /><br />
+  <div><strong>Interview Response:</strong> The main operations in a stack are push to add an element to the top, pop to remove the top element, peek to view the top element, and isEmpty to check if the stack is empty.
   </div>
   </div>
 </details>
@@ -350,7 +393,46 @@ printRecursively(list);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A call stack is a stack data structure that manages the execution context of function calls in JavaScript, tracking the sequence of functions being called and their local variables.<br /><br />
+  <div><strong>Interview Response:</strong> A call stack is a stack data structure that manages the execution context of function calls in JavaScript, tracking the sequence of functions being called and their local variables.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here is how it works:
+
+1. When a script calls a function, the JavaScript engine pushes that function call onto the call stack and then starts carrying out the function.
+
+2. If that function calls another function, that function is pushed onto the top of the call stack, and the JavaScript engine starts executing that function.
+
+3. If a function finishes executing, the JavaScript engine pops it off the call stack and resumes execution where it left off in the last code listing.
+
+4. If the stack takes up more space than it had assigned to it, it results in a "stack overflow" error.
+
+The call stack is crucial for understanding how JavaScript works, especially its single-threaded, synchronous execution model. It's also vital for understanding more complex concepts like closures, callbacks, and promises.
+
+Here's a simple example:
+
+```javascript
+function functionOne() {
+    functionTwo();
+}
+
+function functionTwo() {
+    functionThree();
+}
+
+function functionThree() {
+    console.log('Hello, World!');
+}
+
+functionOne();
+```
+
+In this example, when `functionOne` is called, it is pushed onto the call stack. Inside `functionOne`, `functionTwo` is called, and it gets pushed onto the call stack. This process continues until `functionThree` is pushed onto the call stack.
+
+Once `functionThree` finishes execution (it logs "Hello, World!" to the console), it gets popped off the call stack. Then, `functionTwo` gets popped, and finally `functionOne` is popped from the stack, at which point the stack is empty, and the program ends.
+
   </div>
   </div>
 </details>
@@ -362,7 +444,7 @@ printRecursively(list);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A stack overflow occurs when the call stack exceeds its maximum size due to excessive function calls, often due to infinite recursion or deeply nested calls, causing a RangeError.<br /><br />
+  <div><strong>Interview Response:</strong> A stack overflow occurs when the call stack exceeds its maximum size due to excessive function calls, often due to infinite recursion or deeply nested calls, causing a RangeError.
   </div>
   </div>
 </details>

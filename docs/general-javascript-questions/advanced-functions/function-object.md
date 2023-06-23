@@ -186,7 +186,20 @@ alert(many.length); // 2, rest parameter not counted
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, NFE stands for Named Function Expression, which refers to a function expression with a specific name, allowing self-reference and improving debugging and code readability.<br /><br />
+  <div><strong>Interview Response:</strong> In JavaScript, NFE stands for Named Function Expression, which refers to a function expression with a specific name, allowing self-reference and improving debugging and code readability.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+var greet = function greeting(name) {
+    return "Hello, " + name + "!";
+};
+
+console.log(greet("Alice")); // Outputs: Hello, Alice!
+```
+
   </div>
   </div>
 </details>
@@ -277,7 +290,7 @@ You should note that a regular function declaration can be used to achieve the s
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A named function expression has a specific name, enabling self-reference and improved debugging. Regular function expressions are anonymous, lacking a name, which can limit their functionality and debuggability.<br /><br />
+  <div><strong>Interview Response:</strong> A named function expression has a specific name, enabling self-reference and improved debugging. Regular function expressions are anonymous, lacking a name, which can limit their functionality and debuggability.
   </div>
   </div>
 </details>
@@ -289,7 +302,47 @@ You should note that a regular function declaration can be used to achieve the s
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Named function expressions have several advantages over anonymous function expressions. They enable self-referencing, which is useful for recursion, event handlers, and unbinding event listeners. They also provide clearer stack traces during debugging, making it easier to identify and fix issues in the code. Additionally, named function expressions enhance code readability, as the descriptive names give better insight into the specific functionality of each function, improving maintainability and collaboration.<br /><br />
+  <div><strong>Interview Response:</strong> Named function expressions have several advantages over anonymous function expressions. They enable self-referencing, which is useful for recursion, event handlers, and unbinding event listeners. They also provide clearer stack traces during debugging, making it easier to identify and fix issues in the code. Additionally, named function expressions enhance code readability, as the descriptive names give better insight into the specific functionality of each function, improving maintainability and collaboration.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong> Benefits of using a named function expression.<br /><br />
+
+  <div></div>
+
+```javascript
+// Example 1: Improved stack traces
+var calculateSum = function sum(a, b) {
+    if (a + b > 10) {
+        throw new Error("Sum exceeds limit");
+    }
+    return a + b;
+};
+
+try {
+    console.log(calculateSum(5, 8));
+    console.log(calculateSum(7, 6));
+} catch (error) {
+    console.log(error.stack);
+}
+```
+
+In this example, the named function expression `sum` is assigned to the variable `calculateSum`. If the sum of the two numbers exceeds 10, an error is thrown. When an error occurs, the stack trace will include the function name (`sum`) in the output, making it clear which function caused the error. This improves the debugging process by providing more informative stack traces.
+
+```javascript
+// Example 2: Self-referencing for recursion
+var factorial = function findFactorial(n) {
+    if (n === 0) {
+        return 1;
+    }
+    return n * findFactorial(n - 1);
+};
+
+console.log(factorial(5)); // Outputs: 120
+```
+
+In this example, the named function expression `findFactorial` is assigned to the variable `factorial`. The function recursively calculates the factorial of a number. By referencing itself using its own name, it can call itself repeatedly until the base case (`n === 0`) is reached. The use of a named function expression facilitates recursion.
+
+These examples demonstrate how named function expressions can provide more informative stack traces, enable self-referencing for recursion, and enhance the readability and self-documentation of the code.
+
   </div>
   </div>
 </details>
@@ -301,7 +354,20 @@ You should note that a regular function declaration can be used to achieve the s
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Function hoisting is a JavaScript behavior where function declarations are moved to the top of their scope during compilation, making them accessible before they appear in the code. This allows calling a function before its declaration, avoiding errors due to the order of code execution.<br /><br />
+  <div><strong>Interview Response:</strong> Function hoisting is a JavaScript behavior where function declarations are moved to the top of their scope during compilation, making them accessible before they appear in the code. This allows calling a function before its declaration, avoiding errors due to the order of code execution.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+hoistedFunction(); // Outputs: "This function has been hoisted."
+
+function hoistedFunction() {
+    console.log("This function has been hoisted.");
+}
+```
+
   </div>
   </div>
 </details>
@@ -313,7 +379,7 @@ You should note that a regular function declaration can be used to achieve the s
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The two phases of function hoisting in JavaScript are: 1) The Compilation phase, where the engine scans for variable and function declarations and hoists them, and 2) The Execution phase, where the code runs sequentially.<br /><br />
+  <div><strong>Interview Response:</strong> The two phases of function hoisting in JavaScript are: 1) The Compilation phase, where the engine scans for variable and function declarations and hoists them, and 2) The Execution phase, where the code runs sequentially.
   </div>
   </div>
 </details>
@@ -326,7 +392,6 @@ You should note that a regular function declaration can be used to achieve the s
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Named function expressions enhance code readability and maintainability by providing descriptive names for functions, indicating their specific purpose, which improves understanding and collaboration among developers.
-<br /><br />
   </div>
   </div>
 </details>
@@ -338,7 +403,21 @@ You should note that a regular function declaration can be used to achieve the s
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A function's name property is its displayed name in stack traces, while the identifier is the variable it's assigned to. Named function expressions have both, improving debuggability and code readability.<br /><br />
+  <div><strong>Interview Response:</strong> A function's name property is its displayed name in stack traces, while the identifier is the variable it's assigned to. Named function expressions have both, improving debuggability and code readability.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+var greet = function greeting(name) {
+    return "Hello, " + name + "!";
+};
+
+console.log(greet.name);      // Outputs the name of the named function: "greeting"
+console.log(greet("Alice"));  // Outputs: "Hello, Alice!"
+```
+
   </div>
   </div>
 </details>
@@ -350,7 +429,23 @@ You should note that a regular function declaration can be used to achieve the s
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The 'this' keyword inside a named function expression refers to the object that invokes the function, behaving the same way as in regular function expressions or declarations.<br /><br />
+  <div><strong>Interview Response:</strong> The 'this' keyword inside a named function expression refers to the object that invokes the function, behaving the same way as in regular function expressions or declarations.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+var person = {
+  name: "Alice",
+  greet: function greeting() {
+    console.log("Hello, " + this.name + "!");
+  }
+};
+
+person.greet(); // Outputs: "Hello, Alice!"
+```
+
   </div>
   </div>
 </details>
@@ -362,7 +457,25 @@ You should note that a regular function declaration can be used to achieve the s
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Common use cases for named function expressions include recursion, event handling with self-unbinding, and callback functions for better debugging, as they provide clear stack traces and improved readability.<br /><br />
+  <div><strong>Interview Response:</strong> Common use cases for named function expressions include recursion, event handling with self-unbinding, and callback functions for better debugging, as they provide clear stack traces and improved readability.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+**Recursion: Named Function Expression**
+
+```js
+var factorial = function findFactorial(n) {
+  if (n === 0) {
+    return 1;
+  }
+  return n * findFactorial(n - 1);
+};
+
+console.log(factorial(5)); // Outputs: 120
+```
+
   </div>
   </div>
 </details>
@@ -402,7 +515,7 @@ button.addEventListener('click', function handleClick() {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In general, there are no significant performance implications when using named function expressions as opposed to anonymous function expressions. However, named function expressions may slightly increase memory usage due to the additional name property being stored.<br /><br />
+  <div><strong>Interview Response:</strong> In general, there are no significant performance implications when using named function expressions as opposed to anonymous function expressions. However, named function expressions may slightly increase memory usage due to the additional name property being stored.
   </div>
   </div>
 </details>
@@ -457,7 +570,7 @@ namedArrowFunction();
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Named function expressions are widely supported in modern browsers and JavaScript environments. However, older environments like IE8 and below may exhibit inconsistencies or lack support, requiring workarounds or polyfills.<br /><br />
+  <div><strong>Interview Response:</strong> Named function expressions are widely supported in modern browsers and JavaScript environments. However, older environments like IE8 and below may exhibit inconsistencies or lack support, requiring workarounds or polyfills.
   </div>
   </div>
 </details>
@@ -469,7 +582,7 @@ namedArrowFunction();
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> You should use named function expressions for self-referencing scenarios, debugging improvements, and creating more readable code. However, you should be mindful of scope and avoid naming conflicts between function expressions and variables.<br /><br />
+  <div><strong>Interview Response:</strong> You should use named function expressions for self-referencing scenarios, debugging improvements, and creating more readable code. However, you should be mindful of scope and avoid naming conflicts between function expressions and variables.
   </div>
   </div>
 </details>

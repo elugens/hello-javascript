@@ -76,7 +76,7 @@ class MyClass {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> ES6 class syntax is a cleaner, more concise way to create classes in JavaScript, using the 'class' keyword, constructors, and methods. It simplifies inheritance and improves code readability.<br />
+  <div><strong>Interview Response:</strong> ES6 class syntax is a cleaner, more concise way to create classes in JavaScript, using the 'class' keyword, constructors, and methods. It simplifies inheritance and improves code readability.
   </div>
   </div>
 </details>
@@ -88,7 +88,30 @@ class MyClass {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To create a class in JavaScript using ES6 syntax, use the 'class' keyword, followed by the class name, and then define a constructor and methods inside the class body using curly braces.<br />
+  <div><strong>Interview Response:</strong> To create a class in JavaScript using ES6 syntax, use the 'class' keyword, followed by the class name, and then define a constructor and methods inside the class body using curly braces.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+class MyClass {
+  // constructor
+  constructor() {
+    // do something
+  }
+
+  // methods
+  method1() {
+    // do something
+  }
+
+  method2() {
+    // do something
+  }
+}
+```
+
   </div>
   </div>
 </details>
@@ -100,7 +123,31 @@ class MyClass {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A constructor method in a JavaScript class is a special function that initializes new objects. It sets default properties and behaviors for instances created from the class.<br />
+  <div><strong>Interview Response:</strong> A constructor method in a JavaScript class is a special function that initializes new objects. It sets default properties and behaviors for instances created from the class.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+
+class UserClass {
+
+  constructor(name) {
+    this.name = name;
+  }
+
+  sayHi() {
+    console.log(`Hello, ${this.name}`);
+  }
+
+}
+
+// Usage:
+let user = new UserClass("Javascript!");
+user.sayHi(); // Hello, JavaScript!
+```
+
   </div>
   </div>
 </details>
@@ -112,7 +159,25 @@ class MyClass {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To define a method inside a JavaScript class, write the method name followed by parentheses and curly braces, containing the method's logic, within the class body. There is no need for the 'function' keyword in classes.<br />
+  <div><strong>Interview Response:</strong> To define a method inside a JavaScript class, write the method name followed by parentheses and curly braces, containing the method's logic, within the class body. There is no need for the 'function' keyword in classes.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+class MyClass {
+  constructor() {
+    this.name = "JavaScript!";
+  }
+
+  // This is a Class method
+  sayHello() {
+    return "Hello, my name is " + this.name; // Hello, my name is JavaScript!
+  }
+}
+```
+
   </div>
   </div>
 </details>
@@ -124,7 +189,37 @@ class MyClass {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The 'super' keyword in JavaScript refers to the parent class, used within a subclass constructor to call the parent constructor, ensuring proper inheritance of properties and methods.<br />
+  <div><strong>Interview Response:</strong> The 'super' keyword in JavaScript refers to the parent class, used within a subclass constructor to call the parent constructor, ensuring proper inheritance of properties and methods.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+class Car {
+  constructor(brand) {
+    this.carname = brand;
+  }
+  present() {
+    return 'I have a ' + this.carname;
+  }
+}
+
+class Model extends Car {
+  constructor(brand, mod) {
+    super(brand); // calling super
+    this.model = mod;
+  }
+  show() {
+    return this.present() + ', it is a ' + this.model;
+  }
+}
+
+mycar = new Model("Ford", "Mustang");
+console.log(mycar.present()); // I have a Ford
+console.log(mycar.show()); // I have a Ford, it is a Mustang
+```
+
   </div>
   </div>
 </details>
@@ -136,7 +231,22 @@ class MyClass {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To create a static method in a JavaScript class, you use the 'static' keyword before the method definition. Static methods are called on the class itself, not instances, often used for utility functions or factory methods.<br />
+  <div><strong>Interview Response:</strong> To create a static method in a JavaScript class, you use the 'static' keyword before the method definition. Static methods are called on the class itself, not instances, often used for utility functions or factory methods.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+class MathUtils {
+  static multiply(a, b) {
+    return a * b;
+  }
+}
+
+console.log(MathUtils.multiply(2, 3)); // Output: 6
+```
+
   </div>
   </div>
 </details>
@@ -148,7 +258,34 @@ class MyClass {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In a JavaScript class, you create getter and setter methods using 'get' and 'set' keywords before method names. Getters retrieve property values, while setters update property values while enforcing validation or triggering side effects.<br />
+  <div><strong>Interview Response:</strong> In a JavaScript class, you create getter and setter methods using 'get' and 'set' keywords before method names. Getters retrieve property values, while setters update property values while enforcing validation or triggering side effects.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+class Circle {
+  constructor(radius) {
+    this.radius = radius;
+  }
+
+  get diameter() {
+    return this.radius * 2;
+  }
+
+  set diameter(diameter) {
+    this.radius = diameter / 2;
+  }
+}
+
+const circle = new Circle(5);
+console.log(circle.diameter); // Output: 10
+
+circle.diameter = 14;
+console.log(circle.radius); // Output: 7
+```
+
   </div>
   </div>
 </details>
@@ -160,7 +297,31 @@ class MyClass {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The 'this' keyword in JavaScript classes refers to the instance of the class that called the method. It can be used to access and modify instance properties and methods within the class.<br />
+  <div><strong>Interview Response:</strong> The 'this' keyword in JavaScript classes refers to the instance of the class that called the method. It can be used to access and modify instance properties and methods within the class.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+class Person {
+  constructor(name) {
+    this.name = name; // using the this keyword
+  }
+
+  sayHello() {
+    console.log(`Hello, my name is ${this.name}!.`); // using the this keyword
+  }
+}
+
+const person1 = new Person('JavaScript');
+person1.sayHello(); // Output: Hello, my name is JavaScript!
+
+const person2 = new Person('Joe');
+person2.sayHello(); // Output: Hello, my name is Joe.
+
+```
+
   </div>
   </div>
 </details>
@@ -172,7 +333,32 @@ class MyClass {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A class declaration in JavaScript defines a named class using the class keyword, while a class expression creates an unnamed or named class without requiring the class keyword. Class expressions are typically used in variable assignments, as arguments, or inside other expressions.<br />
+  <div><strong>Interview Response:</strong> A class declaration in JavaScript defines a named class using the class keyword, while a class expression creates an unnamed or named class without requiring the class keyword. Class expressions are typically used in variable assignments, as arguments, or inside other expressions.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+**Class Expression**
+
+```js
+const MyClass = class {
+  constructor() {
+    this.name = "MyClass";
+  }
+};
+```
+
+**Class Declaration**
+
+```js
+class MyClass {
+  constructor() {
+    this.name = "MyClass";
+  }
+};
+```
+
   </div>
   </div>
 </details>
@@ -184,7 +370,49 @@ class MyClass {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Polymorphism in JavaScript allows objects of different classes to be treated as objects of a common superclass, enabling shared behavior. Example: classes Dog and Cat inherit from Animal, both implementing a speak() method.<br />
+  <div><strong>Interview Response:</strong> Polymorphism in JavaScript classes refers to the ability of different classes to share a common interface, allowing objects of different classes to be used interchangeably. Example: Shape classes (Circle, Square) sharing a calculateArea() method
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+class Shape {
+  calculateArea() {
+    // Common interface for calculating area
+  }
+}
+
+class Circle extends Shape {
+  constructor(radius) {
+    super();
+    this.radius = radius;
+  }
+
+  calculateArea() {
+    return Math.PI * this.radius ** 2;
+  }
+}
+
+class Square extends Shape {
+  constructor(sideLength) {
+    super();
+    this.sideLength = sideLength;
+  }
+
+  calculateArea() {
+    return this.sideLength ** 2;
+  }
+}
+
+// Usage
+const circle = new Circle(5);
+const square = new Square(4);
+
+console.log(circle.calculateArea()); // Output: 78.53981633974483
+console.log(square.calculateArea()); // Output: 16
+```
+
   </div>
   </div>
 </details>
@@ -196,7 +424,7 @@ class MyClass {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, you can make a class method or property private by using the hash (#) symbol before its name. Private methods and properties are only accessible within the class they're defined in.<br />
+  <div><strong>Interview Response:</strong> In JavaScript, you can make a class method or property private by using the hash (#) symbol before its name. Private methods and properties are only accessible within the class they're defined in.
   </div>
   </div>
 </details>
@@ -350,11 +578,11 @@ new User().sayHello(); // Hello, Jane
 // Class Implementation
 class User {
   ['say' + 'Hi']() {
-    alert('Hello');
+    console.log('Hello');
   }
 }
 
-new User().sayHi();
+new User().sayHi(); // hello
 
 // Computed property names (ES2015)
 let prop = 'foo';

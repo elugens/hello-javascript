@@ -91,7 +91,36 @@ john = null; // overwrite the reference
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The main area of application for WeakMap is an additional data storage, such as third-party data that you may not have an indefinite use. Another typical example is caching. We can store (“cache”) results from a function so that future calls on the same object can reuse.
-</div>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Creating a WeakMap
+let weakMap = new WeakMap();
+
+// Creating objects
+let obj1 = {};
+let obj2 = {};
+
+// Associating data with objects using WeakMap
+weakMap.set(obj1, 'Private Data 1');
+weakMap.set(obj2, 'Private Data 2');
+
+// Retrieving data associated with objects
+console.log(weakMap.get(obj1)); // outputs: 'Private Data 1'
+console.log(weakMap.get(obj2)); // outputs: 'Private Data 2'
+
+// Garbage collection behavior of WeakMap
+obj1 = null; // Removing reference to obj1
+
+// The associated data is automatically cleared when the object is no longer accessible
+console.log(weakMap.get(obj1)); // outputs: undefined
+console.log(weakMap.get(obj2)); // outputs: 'Private Data 2'
+```
+
+  </div>
   </div>
 </details>
 

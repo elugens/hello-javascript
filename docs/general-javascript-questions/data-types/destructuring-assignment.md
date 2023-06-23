@@ -98,7 +98,42 @@ realName; // => 'Bruce Wayne'
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> To destructure an object in JavaScript, you can use curly braces &#123;&#125; and specify the names of the properties you want to extract and assign to variables with the same name.
-<br /><br />
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+const person = {
+  name: 'John Doe',
+  age: 30,
+  city: 'New York'
+};
+
+// Destructuring the 'person' object
+const { name, age, city } = person;
+
+console.log(name); // Output: John Doe
+console.log(age); // Output: 30
+console.log(city); // Output: New York
+```
+
+You can also assign new variable names to the extracted properties by using the following syntax:
+
+```javascript
+const person = {
+  name: 'John Doe',
+  age: 30,
+  city: 'New York'
+};
+
+const { name: personName, age: personAge, city: personCity } = person;
+
+console.log(personName); // Output: John Doe
+console.log(personAge); // Output: 30
+console.log(personCity); // Output: New York
+```
+
   </div>
   </div>
 </details>
@@ -111,7 +146,34 @@ realName; // => 'Bruce Wayne'
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> To destructure an array in JavaScript, you can use square brackets [] and specify the variable names in the order that matches the array elements' positions.
-<br /><br />
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+const numbers = [1, 2, 3, 4, 5];
+
+// Destructuring the 'numbers' array with rest operator
+const [firstNumber, secondNumber, ...restNumbers] = numbers;
+
+console.log(firstNumber); // Output: 1
+console.log(secondNumber); // Output: 2
+console.log(restNumbers); // Output: [3, 4, 5]
+```
+
+It's worth noting that you can skip elements in the array destructuring syntax by leaving empty commas. For example:
+
+```js
+const numbers = [1, 2, 3, 4, 5];
+
+// Skipping the second element
+const [firstNumber, , thirdNumber] = numbers;
+
+console.log(firstNumber); // Output: 1
+console.log(thirdNumber); // Output: 3
+```
+
   </div>
   </div>
 </details>
@@ -172,7 +234,12 @@ console.log(title); // Consul
   <div></div>
 
 ```js
+// strings
 let [a, b, c] = 'abc'; // ["a", "b", "c"]
+console.log([a, b, c][1]); // logs "b"
+console.log(typeof [a, b, c][1]); // string
+
+// Sets
 let [one, two, three] = new Set([1, 2, 3]);
 ```
 
@@ -294,7 +361,28 @@ alert(rest.length); // 2
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In destructuring in JavaScript, the rest parameter is denoted by the ellipsis (...) syntax and allows you to capture the remaining elements of an iterable object into a new array.<br /><br />
+  <div><strong>Interview Response:</strong> In destructuring in JavaScript, the rest parameter is denoted by the ellipsis (...) syntax and allows you to capture the remaining elements of an iterable object into a new array.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+const person = {
+  name: 'John Doe',
+  age: 30,
+  city: 'New York',
+  country: 'USA'
+};
+
+// Destructuring with rest parameter
+const { name, age, ...restInfo } = person;
+
+console.log(name); // Output: John Doe
+console.log(age); // Output: 30
+console.log(restInfo); // Output: { city: 'New York', country: 'USA' }
+```
+
   </div>
   </div>
 </details>
@@ -363,7 +451,41 @@ There are no errors if the array is shorter than the list of variables at the le
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A default value in destructuring is a fallback value that is assigned to a variable if the value extracted from the object or array is undefined.<br /><br />
+  <div><strong>Interview Response:</strong> A default value in destructuring is a fallback value that is assigned to a variable if the value extracted from the object or array is undefined.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+const person = {
+  name: 'John Doe',
+  age: 30
+};
+
+// Destructuring with default values
+const { name, age, city = 'New York' } = person;
+
+console.log(name); // Output: John Doe
+console.log(age); // Output: 30
+console.log(city); // Output: New York
+
+////////////////////////////////////////////////
+
+const person = {
+  name: 'John Doe',
+  age: 30,
+  city: 'London'
+};
+
+// Destructuring with default values
+const { name, age, city = 'New York' } = person;
+
+console.log(name); // Output: John Doe
+console.log(age); // Output: 30
+console.log(city); // Output: London
+```
+
   </div>
   </div>
 </details>
@@ -631,7 +753,7 @@ alert(rest.width); // 100
 
 :::note
 
-Some older browsers do not support it (IE, use Babel to polyfill it), but it works in modern ones.
+Some older browsers do not support it (IE, use Babel to polyfill it), but it works in modern browsers.
 
 :::
 
@@ -646,7 +768,31 @@ Some older browsers do not support it (IE, use Babel to polyfill it), but it wor
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, you can destructure a nested object in JavaScript by using nested destructuring patterns that match the structure of the object.<br /><br />
+  <div><strong>Interview Response:</strong> Yes, you can destructure a nested object in JavaScript by using nested destructuring patterns that match the structure of the object.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+const person = {
+  name: 'John Doe',
+  age: 30,
+  address: {
+    city: 'New York',
+    country: 'USA'
+  }
+};
+
+// Destructuring nested object
+const { name, age, address: { city, country } } = person;
+
+console.log(name); // Output: John Doe
+console.log(age); // Output: 30
+console.log(city); // Output: New York
+console.log(country); // Output: USA
+```
+
   </div>
   </div>
 </details>
@@ -658,7 +804,28 @@ Some older browsers do not support it (IE, use Babel to polyfill it), but it wor
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, some potential issues with object destructuring include undefined properties, incorrect assignment, and unexpected behavior with nested objects.<br /><br />
+  <div><strong>Interview Response:</strong> Yes, some potential issues with object destructuring include undefined properties, incorrect assignment, and unexpected behavior with nested objects.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+const person = {
+  name: 'John Doe',
+  age: 30
+  // No 'address' property present
+};
+
+// Destructuring with nested property
+const { name, age, address: { city, country } } = person;
+
+console.log(name); // Output: John Doe
+console.log(age); // Output: 30
+console.log(city); // Error: Cannot destructure property 'city' of 'undefined' or 'null'
+console.log(country); // This line will not be reached
+```
+
   </div>
   </div>
 </details>

@@ -79,7 +79,7 @@ catSound(); // Output: Meow
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> IThree function binding techniques are implicit binding (using object method), explicit binding (with call, apply, or bind), and constructor binding (new keyword for creating objects).
-</div>
+</div><br />
 <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -135,7 +135,29 @@ sayHello.call(obj); // Output: "Hello, Explicit!"
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The bind() method creates a new function that, when called, has its 'this' keyword set to the provided value, with a given sequence of arguments preceding any others.<br />
+  <div><strong>Interview Response:</strong> The bind() method creates a new function that, when called, has its 'this' keyword set to the provided value, with a given sequence of arguments preceding any others.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let person1 = {
+  name: 'John',
+  hello: function() {
+    console.log(`Hello, my name is ${this.name}.`);
+  }
+};
+
+let person2 = {
+  name: 'Sarah'
+};
+
+let sarahSayHello = person1.hello.bind(person2);
+
+sarahSayHello();  // outputs: "Hello, my name is Sarah."
+```
+
   </div>
   </div>
 </details>
@@ -147,8 +169,8 @@ sayHello.call(obj); // Output: "Hello, Explicit!"
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The bind() method allows for explicit function context setting, function reuse with different objects, and partial application (pre-setting some arguments), improving code flexibility and reusability.<br />
-  </div>
+  <div><strong>Interview Response:</strong> The bind() method allows for explicit function context setting, function reuse with different objects, and partial application (pre-setting some arguments), improving code flexibility and reusability.
+  </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -178,6 +200,35 @@ function multiply(x, y) {
 let double = multiply.bind(null, 2); // 'this' is irrelevant here, so set to null
 
 console.log(double(5)); // Output: 10
+```
+
+  </div>
+  </div>
+</details>
+
+---
+
+### What is constructor binding in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Constructor binding is when a function is used as a constructor with the 'new' keyword, causing 'this' to refer to the newly created object.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+function Car(brand) {
+    this.brand = brand;
+    this.getBrand = function() {
+        console.log(this.brand);
+    };
+}
+
+let car = new Car('Tesla');
+car.getBrand(); // Output: 'Tesla'
 ```
 
   </div>
@@ -223,7 +274,25 @@ funcUser(); // John
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Implicit binding occurs when a function is called as a method of an object, and "this" automatically refers to the object before the dot.<br />
+  <div><strong>Interview Response:</strong> Implicit binding occurs when a function is called as a method of an object, and "this" automatically refers to the object before the dot.
+  </div><br />
+  <div><strong className="codeExample">Here's a simple code example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let obj = {
+  name: 'John',
+  sayHello: function() {
+    console.log('Hello, ' + this.name);
+  }
+};
+
+obj.sayHello(); // outputs: "Hello, John"
+```
+
+In this example, when `sayHello()` is invoked as a method of `obj` (`obj.sayHello()`), the `this` inside `sayHello` implicitly binds to `obj`.
+
   </div>
   </div>
 </details>
