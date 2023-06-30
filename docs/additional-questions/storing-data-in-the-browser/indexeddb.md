@@ -66,7 +66,7 @@ import StructuredData from './schemadata/IndexedDBSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Unlike LocalStorage which stores data as strings, IndexedDB stores data as JavaScript objects. Also, IndexedDB allows for more storage space and supports transactions.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -77,8 +77,35 @@ import StructuredData from './schemadata/IndexedDBSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Key components include database, object store, index, transaction, key, value, and cursor.
+  <div><strong>Interview Response:</strong> Key components include the database, object stores, indexes, transactions, keys, values, and cursors.
   </div><br />
+  <div><strong>Technical Response:</strong> IndexedDB is a low-level API for client-side storage of significant amounts of structured data, including files/blobs. This API uses indexes to enable high-performance searches of this data.
+  </div><br />
+  <div><strong className="codeExample">The key components of IndexedDB include:</strong><br /><br />
+
+  <div></div>
+
+**1. Database**: This is the actual container for data storage. An IndexedDB database has a version and a set of object stores.
+
+**2. Object Stores**: These are the IndexedDB equivalent of tables. Each database can have multiple object stores, and each object store can contain different types of data.
+
+**3. Keys**: These are used to identify records in an object store. Every record in an object store must have a unique key. Keys can be simple types like integers, dates, and strings, or they can be arrays.
+
+**4. Indexes**: Indexes are essentially object stores that store a key for every record in another object store. An index on a specific field in an object store allows efficient lookup of records based on that field, even if it's not the key.
+
+**5. Transactions**: All interactions with data in IndexedDB happen in the context of a transaction. A transaction is a wrapper around an operation, or group of operations, with three possible modes: readonly, readwrite, and versionchange.
+
+**6. Versioning**: IndexedDB uses a versioning model. Whenever the structure of the database changes (e.g., when object stores or indexes are created or removed), the version number of the database is increased.
+
+**7. Cursors**: Cursors are used to iterate over multiple records in database. They offer a way to retrieve and update data in a specific sequence.
+
+**8. Requests**: Almost every operation in IndexedDB is asynchronous and returns a request object. These requests are not the actual data but act as a placeholder for the data.
+
+**9. Queries**: These are requests for data that meet certain criteria. Queries can retrieve data from both object stores and indexes.
+
+**10. Events**: IndexedDB operations communicate success or failure by firing events at request objects. There are three types of events: success events, error events, and blocked events.
+
+  </div>
   </div>
 </details>
 
@@ -89,8 +116,35 @@ import StructuredData from './schemadata/IndexedDBSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Object Stores in IndexedDB hold records, and they can be likened to tables in a relational database. Each record comprises a key-value pair.
+  <div><strong>Interview Response:</strong> Object Stores in IndexedDB are like tables in a relational database, containing records of data. Each record includes a key for identification and a value, which can be of any data type.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let openRequest = indexedDB.open("myDatabase", 1);
+
+openRequest.onupgradeneeded = function(e) {
+  let db = e.target.result;
+
+  // Create an object store named "books", with a key path of "isbn"
+  let store = db.createObjectStore("books", {keyPath: "isbn"});
+
+  // Create an index on the "author" property of the objects in the store
+  store.createIndex("author", "author", {unique: false});
+};
+
+openRequest.onsuccess = function(e) {
+  console.log("Success! Got a handle on the database.");
+};
+
+openRequest.onerror = function(e) {
+  console.error("Unable to open database: ", e.target.errorCode);
+};
+```
+
+  </div>
   </div>
 </details>
 
@@ -101,8 +155,8 @@ import StructuredData from './schemadata/IndexedDBSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Keys in IndexedDB are used to retrieve and organize data. They can be generated automatically or provided by the user.
-  </div><br />
+  <div><strong>Interview Response:</strong> Keys in IndexedDB uniquely identify records in an object store, serving as an essential element for efficient data retrieval and manipulation. They can be simple types or arrays, providing flexibility in data organization.
+  </div>
   </div>
 </details>
 
@@ -113,8 +167,38 @@ import StructuredData from './schemadata/IndexedDBSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Indexing in IndexedDB allows for efficient searching of values within an object store, by creating an index on a property of the objects.
+  <div><strong>Interview Response:</strong> In IndexedDB, an index allows efficient lookup of records based on a specific field, apart from the key. This enables high-performance searches, even for fields that aren't the object store's primary key.
   </div><br />
+  <div><strong className="codeExample">Here's a code example of creating an index in IndexedDB:</strong><br /><br />
+
+  <div></div>
+
+```js
+let openRequest = indexedDB.open("myDatabase", 1);
+
+openRequest.onupgradeneeded = function(e) {
+  let db = e.target.result;
+
+  // Create an object store named "books", with a key path of "isbn"
+  let store = db.createObjectStore("books", {keyPath: "isbn"});
+
+  // Create an index on the "author" property of the objects in the store.
+  // The third parameter is an options object, and here we're saying we
+  // want the "author" index to allow non-unique keys.
+  store.createIndex("author", "author", {unique: false});
+};
+
+openRequest.onsuccess = function(e) {
+  console.log("Success! Got a handle on the database.");
+};
+
+openRequest.onerror = function(e) {
+  console.error("Unable to open database: ", e.target.errorCode);
+};
+
+```
+
+  </div>
   </div>
 </details>
 
@@ -125,8 +209,46 @@ import StructuredData from './schemadata/IndexedDBSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Cursors in IndexedDB are used to traverse records in a database. They provide a mechanism to iterate over multiple records with a key range.
+  <div><strong>Interview Response:</strong> CCursors in IndexedDB are objects used to traverse and interact with the data in object stores and indexes. They allow you to iterate over records, retrieve data from specific ranges, and can navigate in any direction.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let openRequest = indexedDB.open("myDatabase", 1);
+
+openRequest.onsuccess = function(e) {
+  let db = e.target.result;
+  let transaction = db.transaction("books", "readonly");
+  let objectStore = transaction.objectStore("books");
+  let request = objectStore.openCursor();
+
+  request.onsuccess = function(e) {
+    let cursor = e.target.result;
+    
+    if (cursor) {
+      console.log("Key: ", cursor.key);
+      console.log("Value: ", cursor.value);
+      
+      // Continue to the next item
+      cursor.continue();
+    } else {
+      console.log("End of data");
+    }
+  };
+
+  request.onerror = function(e) {
+    console.error("Error opening cursor: ", e.target.errorCode);
+  };
+};
+
+openRequest.onerror = function(e) {
+  console.error("Unable to open database: ", e.target.errorCode);
+};
+```
+
+  </div>
   </div>
 </details>
 
@@ -137,8 +259,57 @@ import StructuredData from './schemadata/IndexedDBSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, IndexedDB isn't a relational database and doesn't support joins like SQL, but related data can be manually fetched and combined.
+  <div><strong>Interview Response:</strong> No, IndexedDB doesn't support join operations like SQL. However, you can manually implement relationships by storing keys from one object store in another and using separate requests to fetch related data.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Sure, here's a simple example of how you might manually implement relationships in IndexedDB:
+
+Suppose you have two object stores, `authors` and `books`. Each `book` object has an `authorId` field, which is the key of the author in the `authors` object store.
+
+```javascript
+let db; // Assuming db is the opened IndexedDB database
+
+// Get the transaction
+let transaction = db.transaction(["books", "authors"]);
+
+// Get the object stores
+let bookStore = transaction.objectStore("books");
+let authorStore = transaction.objectStore("authors");
+
+// Let's find the details of the book and its author with bookId=1
+let bookId = 1;
+
+// Request to get the book
+let bookRequest = bookStore.get(bookId);
+
+bookRequest.onsuccess = function(e) {
+  let book = e.target.result;
+  console.log("Book: ", book.title);
+
+  // Request to get the author using the authorId from the book
+  let authorRequest = authorStore.get(book.authorId);
+
+  authorRequest.onsuccess = function(e) {
+    let author = e.target.result;
+    console.log("Author: ", author.name);
+  };
+
+  authorRequest.onerror = function(e) {
+    console.error("Error fetching author: ", e.target.error);
+  };
+};
+
+bookRequest.onerror = function(e) {
+  console.error("Error fetching book: ", e.target.error);
+};
+```
+
+This code gets a book and its corresponding author from the database. First, it fetches the book from the "books" object store. Then, using the `authorId` from the book, it fetches the author from the "authors" object store. This simulates a join operation.
+
+  </div>
   </div>
 </details>
 
@@ -151,6 +322,17 @@ import StructuredData from './schemadata/IndexedDBSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> Errors in IndexedDB can be handled by listening to the "error" event on the request or transaction objects.
   </div><br />
+  <div><strong className="codeExample">Simple Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+authorRequest.onerror = function(e) {
+  console.error("Error fetching author: ", e.target.error);
+};
+```
+
+  </div>
   </div>
 </details>
 
@@ -163,6 +345,27 @@ import StructuredData from './schemadata/IndexedDBSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> IndexedDB doesn't have a defined limit, but it's constrained by the available disk space. Browsers may also impose their own quotas.
   </div><br />
+  <div><strong className="codeExample">Table outlining the browser storage limitations of IndexedDB:</strong><br /><br />
+
+  <div></div>
+
+| Browser              | Max. Storage Size       | Max. Number of Databases | Max. Size per Database |
+|----------------------|----------------------------|-----------------------------|---------------------------|
+| Chrome               | No limit                   | No limit                    | No limit                  |
+| Firefox              | No limit                   | No limit                    | No limit                  |
+| Safari (Desktop)     | 50 MB                      | 1                           | 50 MB                     |
+| Safari (iOS)         | 50 MB                      | 1                           | 50 MB                     |
+| Microsoft Edge       | No limit                   | No limit                    | No limit                  |
+| Internet Explorer 11 | 250 MB                     | 10                          | 250 MB                    |
+| Opera                | No limit                   | No limit                    | No limit                  |
+
+---
+
+:::note
+Please note that these limitations are based on the information available up until March 2021. Browser versions and storage limitations may have changed since then. It's always recommended to refer to the latest browser documentation for the most up-to-date information on IndexedDB storage limitations.
+:::
+
+  </div>
   </div>
 </details>
 
@@ -175,6 +378,41 @@ import StructuredData from './schemadata/IndexedDBSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> Versioning in IndexedDB allows for control over database structure modifications. Each database has a version number that increments after structural changes.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Open the database
+const dBOpenRequest = window.indexedDB.open("toDoList", 4);
+
+dBOpenRequest.onupgradeneeded = (event) => {
+  const db = event.target.result;
+  console.log(`Upgrading to version ${db.version}`);
+
+  // Create an objectStore for this database
+  const objectStore = db.createObjectStore("toDoList", {
+    keyPath: "taskTitle",
+  });
+
+  // define what data items the objectStore will contain
+  objectStore.createIndex("hours", "hours", { unique: false });
+  objectStore.createIndex("minutes", "minutes", { unique: false });
+  objectStore.createIndex("day", "day", { unique: false });
+  objectStore.createIndex("month", "month", { unique: false });
+  objectStore.createIndex("year", "year", { unique: false });
+};
+```
+
+Overall, this code example demonstrates how to open an IndexedDB database, handle the upgrade event, create an object store, and define indexes on the object store.
+
+---
+
+:::note
+Note: It's important to handle versioning properly to ensure smooth database upgrades and migrations in real-world scenarios.
+:::
+
+  </div>
   </div>
 </details>
 
@@ -187,6 +425,38 @@ import StructuredData from './schemadata/IndexedDBSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> IndexedDB API is primarily asynchronous to prevent blocking the main thread, but it also provides a synchronous API for use in web workers.
   </div><br />
+  <div><strong>Technical Response:</strong> IndexedDB is primarily used asynchronously, as most operations, such as database opening, transactions, and requests, are asynchronous by nature. However, there are synchronous APIs available, such as the deprecated `openDatabaseSync()` in some browser environments, but it's not recommended for most use cases.
+  </div><br />
+  <div><strong className="codeExample">Old Deprecated Code:</strong> Do not Use!<br /><br />
+
+  <div></div>
+
+```js
+// this is an example of deprecrated openDatabaseSync()
+let db = window.openDatabaseSync("myDatabase", "1.0", "My Database", 2 * 1024 * 1024);
+
+db.transaction(function(tx) {
+  tx.executeSql('CREATE TABLE IF NOT EXISTS books (id INTEGER PRIMARY KEY, title TEXT)');
+  tx.executeSql('INSERT INTO books (id, title) VALUES (?, ?)', [1, 'Book 1']);
+  tx.executeSql('INSERT INTO books (id, title) VALUES (?, ?)', [2, 'Book 2']);
+});
+
+let results = db.readTransaction(function(tx) {
+  let resultSet = tx.executeSql('SELECT * FROM books');
+  return resultSet.rows;
+});
+
+console.log(results);
+```
+
+  </div>
+
+---
+
+:::warning
+Please note that **openDatabaseSync()** is a deprecated API, and it's recommended to use the asynchronous IndexedDB API for most modern applications.
+:::
+
   </div>
 </details>
 
@@ -199,6 +469,8 @@ import StructuredData from './schemadata/IndexedDBSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> Yes, IndexedDB is transactional. It ensures data integrity and allows for error recovery in case of failures.
   </div><br />
+  <div><strong>Technical Response:</strong> IndexedDB is transactional. Transactions ensure data integrity and consistency by allowing atomic operations. They provide isolation for multiple database operations and allow for rollback in case of errors, ensuring data integrity and reliability.
+  </div>
   </div>
 </details>
 
@@ -223,6 +495,88 @@ import StructuredData from './schemadata/IndexedDBSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> Yes, IndexedDB can handle multiple read transactions, but it queues write transactions to maintain data integrity.
   </div><br />
+  <div><strong>Technical Details:</strong> IndexedDB supports concurrent transactions, but with some restrictions. Multiple transactions can be created on the same database simultaneously, but they must operate on different object stores or use different modes (readonly, readwrite). Transactions that attempt to access the same object store in a conflicting mode (e.g., two readwrite transactions) will be queued and executed sequentially. This ensures data consistency and avoids conflicts that could arise from concurrent modifications.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's an example demonstrating concurrent transactions in IndexedDB.
+
+```javascript
+let openRequest = indexedDB.open("myDatabase", 1);
+
+openRequest.onupgradeneeded = function(e) {
+  let db = e.target.result;
+
+  // Create object stores
+  db.createObjectStore("books");
+  db.createObjectStore("authors");
+};
+
+openRequest.onsuccess = function(e) {
+  let db = e.target.result;
+
+  // Start the first transaction (readwrite)
+  let transaction1 = db.transaction("books", "readwrite");
+  let store1 = transaction1.objectStore("books");
+
+  // Start the second transaction (readonly)
+  let transaction2 = db.transaction("authors", "readonly");
+  let store2 = transaction2.objectStore("authors");
+
+  // Perform operations on store1
+  let request1 = store1.put({ id: 1, title: "Book 1" });
+
+  request1.onsuccess = function() {
+    console.log("Added book to store1");
+  };
+
+  request1.onerror = function() {
+    console.error("Error adding book to store1");
+  };
+
+  // Perform operations on store2
+  let request2 = store2.get(1);
+
+  request2.onsuccess = function() {
+    console.log("Retrieved author from store2");
+  };
+
+  request2.onerror = function() {
+    console.error("Error retrieving author from store2");
+  };
+
+  // Commit the transactions
+  transaction1.oncomplete = function() {
+    console.log("Transaction 1 completed");
+  };
+
+  transaction2.oncomplete = function() {
+    console.log("Transaction 2 completed");
+  };
+};
+
+openRequest.onerror = function(e) {
+  console.error("Unable to open database: ", e.target.errorCode);
+};
+```
+
+In this example, we open a database called "myDatabase" with version 1. We create two object stores, "books" and "authors".
+
+We then start two transactions: transaction1 (readwrite) on the "books" object store and transaction2 (readonly) on the "authors" object store. Within each transaction, we perform separate operations on their respective object stores.
+
+The example adds a book to store1 using `put()` and retrieves an author from store2 using `get()`. These operations are performed concurrently within their respective transactions.
+
+After the operations, the transactions complete, and the corresponding `oncomplete` event handlers are triggered.
+
+---
+
+:::warning
+Please note that concurrent transactions should be used with caution to avoid conflicts and ensure data consistency.
+:::
+
+  </div>
   </div>
 </details>
 
@@ -235,6 +589,23 @@ import StructuredData from './schemadata/IndexedDBSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> While IndexedDB is not encrypted by default, data can be manually encrypted before storing. It is bound by same-origin policy for security.
   </div><br />
+  <div><strong className="codeExample">Detailed Overview:</strong><br /><br />
+
+  <div></div>
+
+IndexedDB itself does not provide built-in encryption or security features. The data stored in IndexedDB is typically stored locally on the client-side and can be accessed by scripts running within the same origin. Therefore, it's important to be cautious when storing sensitive or confidential data in IndexedDB.
+
+To secure the data stored in IndexedDB, you can employ encryption techniques yourself. One approach is to encrypt the data before storing it in IndexedDB and decrypt it when retrieving it. This way, the data remains encrypted while it's stored and can only be accessed with the appropriate encryption keys.
+
+Encryption libraries or frameworks can be used in conjunction with IndexedDB to implement data encryption. Common cryptographic algorithms like AES or RSA can be utilized for encryption and decryption operations.
+
+---
+
+:::tip
+It's worth noting that encryption implementation and key management are critical aspects of securing data in IndexedDB, and proper security practices should be followed to protect sensitive information.
+:::
+
+  </div>
   </div>
 </details>
 
@@ -247,6 +618,43 @@ import StructuredData from './schemadata/IndexedDBSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> The onupgradeneeded event in IndexedDB is triggered when a database of a higher version number than the existing stored database is loaded.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong> onupgradeneeded event<br /><br />
+
+  <div></div>
+
+```js
+let openRequest = indexedDB.open("myDatabase", 1);
+
+openRequest.onupgradeneeded = function(event) {
+  let db = event.target.result;
+
+  // Perform database schema changes or initialization
+  // Example: Creating object stores, indexes, etc.
+
+  // Access the transaction associated with the upgrade
+  let upgradeTransaction = event.target.transaction;
+
+  // Do any necessary database modifications
+  // For example, creating object stores or indexes
+  let store = db.createObjectStore("books", { keyPath: "id" });
+  store.createIndex("titleIndex", "title", { unique: false });
+};
+
+openRequest.onsuccess = function(event) {
+  // Database opened or upgraded successfully
+  let db = event.target.result;
+
+  // Continue with other database operations
+  // For example, reading or writing data
+};
+
+openRequest.onerror = function(event) {
+  // Error occurred while opening or upgrading the database
+  console.error("Error opening database:", event.target.errorCode);
+};
+```
+
+  </div>
   </div>
 </details>
 
@@ -259,12 +667,51 @@ import StructuredData from './schemadata/IndexedDBSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> Yes, IndexedDB can be accessed within a Service Worker. It is the recommended storage API for managing data within Service Workers.
   </div><br />
+  <div><strong>Technical Details:</strong> IndexedDB can be used in a Service Worker. Service Workers are background scripts that run separately from web pages, enabling them to handle tasks like caching, push notifications, and background synchronization. IndexedDB provides a persistent storage solution that can be used within a Service Worker to store and retrieve data.
+  </div><br />
+  <div><strong className="codeExample">Here's an example of using IndexedDB within a Service Worker:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+// Open IndexedDB in the Service Worker
+let openRequest = indexedDB.open("myDatabase", 1);
+
+openRequest.onupgradeneeded = function(event) {
+  let db = event.target.result;
+
+  // Perform database schema changes or initialization
+  // Example: Creating object stores, indexes, etc.
+};
+
+openRequest.onsuccess = function(event) {
+  let db = event.target.result;
+
+  // Perform database operations
+  // Example: Store and retrieve data
+
+  // Close the IndexedDB connection
+  db.close();
+};
+
+openRequest.onerror = function(event) {
+  console.error("Error opening database:", event.target.errorCode);
+};
+```
+
+You will have to wrap this code in your service worker. Here is a link if you would like to see a complete implemenation of the code. [Integrating IndexedDB into site with a Service Worker](https://gist.github.com/prof3ssorSt3v3/7724c092b7acd45048a2499c3ba223b4)
+
+:::note
+It's important to note that IndexedDB in a Service Worker operates in a different context compared to IndexedDB in a web page. The Service Worker has its own global scope, separate from web pages, and can persistently store data even when web pages are closed or not actively in use.
+:::
+
+  </div>
   </div>
 </details>
 
 ---
 
-### Can you clarify where the data in the IndexedDB is stored?
+### Where is data in the IndexedDB stored?
 
 <details>
   <summary>
@@ -352,8 +799,22 @@ openRequest.onsuccess = function () {
 <div></div>
 
 ```js
-// currently update
+let deleteRequest = indexedDB.deleteDatabase("myDatabase");
+
+deleteRequest.onsuccess = function() {
+  console.log("Database deleted successfully");
+};
+
+deleteRequest.onerror = function(event) {
+  console.error("Error deleting database:", event.target.errorCode);
+};
 ```
+
+---
+
+:::warning
+It's important to note that deleting a database is a permanent action, and the data within the database will be permanently removed. Therefore, exercise caution when deleting databases and ensure it's the desired outcome.
+:::
 
   </div>
   </div>
@@ -423,7 +884,7 @@ openRequest.onblocked = function() {
 
 ---
 
-### What do we need to use to store data in an IndexedDB database?
+### What components do we need to store data in an IndexedDB database?
 
 <details>
   <summary>
@@ -431,11 +892,69 @@ openRequest.onblocked = function() {
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> To store data in IndexedDB, you need a transaction on an object store, then use the `put()` or `add()` methods to save data.
+      <strong>Interview Response:</strong> To store data in an IndexedDB database, you need the following components: database object, object store, key for records, transaction for data operations, and requests to perform CRUD operations on the data.
     </div>
     <div>
       <strong>Technical Details:</strong> To store something in IndexedDB, we need an object store. An object store is a core concept in IndexedDB. Counterparts in other databases are called “tables” or “collections”, where the data is stored. A database may have multiple stores: one for users, another for goods, and more. Despite being named an “object-store” IndexedDB, primitives get stored too.
-    </div>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let openRequest = indexedDB.open("myDatabase", 1);
+
+openRequest.onupgradeneeded = function(e) {
+  let db = e.target.result;
+
+  // Create an object store named "books" with "isbn" as the key path
+  let store = db.createObjectStore("books", { keyPath: "isbn" });
+};
+
+openRequest.onsuccess = function(e) {
+  let db = e.target.result;
+
+  // Start a transaction on the "books" object store
+  let transaction = db.transaction("books", "readwrite");
+  let store = transaction.objectStore("books");
+
+  // Add a book to the object store
+  let book = { isbn: "9781234567890", title: "Sample Book" };
+  let request = store.add(book);
+
+  request.onsuccess = function() {
+    console.log("Book added successfully");
+  };
+
+  request.onerror = function(event) {
+    console.error("Error adding book:", event.target.errorCode);
+  };
+
+  // Commit the transaction
+  transaction.oncomplete = function() {
+    console.log("Transaction completed");
+  };
+
+  transaction.onerror = function(event) {
+    console.error("Transaction error:", event.target.errorCode);
+  };
+
+  // Close the database connection
+  db.close();
+};
+
+openRequest.onerror = function(e) {
+  console.error("Unable to open database:", e.target.errorCode);
+};
+```
+
+---
+
+:::note
+Please note that this is a simplified example, and in a real-world scenario, you may need to handle asynchronous operations and consider error handling, versioning, and more complex data manipulation.
+:::
+
+  </div>
   </div>
 </details>
 
@@ -482,7 +1001,7 @@ openRequest.onblocked = function() {
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> IndexedDB keys can be strings, dates, floating-point numbers, or arrays. They must be unique within an object store if it uses in-line keys.
+      <strong>Interview Response:</strong> No, there isn't a specific type of key that must be used in IndexedDB. Keys can be of various types, including numbers, strings, dates, and even arrays. The choice of key type depends on the data and requirements of your application.
     </div>
   </div>
 </details>
@@ -582,7 +1101,7 @@ let objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> Object stores in IndexedDB can be created or modified only during the upgrade transaction, which is triggered by `onupgradeneeded` event when opening a database with a higher version number.
+      <strong>Interview Response:</strong> Object stores in IndexedDB can be created or modified during the onupgradeneeded event, which is triggered when the database is opened or upgraded. This event allows for changes to the database schema, including the creation or modification of object stores and indexes.
     </div><br/>
     <div>
       <strong>Technical Response:</strong> We can only create/modify an object store while updating the upgraded handler's DB version in the 'upgradeneeded' handler. That is a technical limitation. Outside of the handler, we need to be able to add/remove/update the data, but we can only create/remove/alter object stores during a version update.
@@ -618,6 +1137,12 @@ openRequest.onupgradeneeded = function () {
 };
 ```
 
+---
+
+:::warning
+Please note that **setVersion()** is **deprecated**, and it's recommended to use the onupgradeneeded event instead to handle versioning and schema changes in IndexedDB.
+:::
+
   </div>
   </div>
 </details>
@@ -639,12 +1164,12 @@ openRequest.onupgradeneeded = function () {
 
 ---
 
-### Can you explain the function and syntax of the transaction method?
+### Can you explain the function of the transaction method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The `transaction` method in IndexedDB starts a transaction on specified object stores. Syntax: `IDBDatabase.transaction(storeNames, mode)`, where `mode` can be 'readonly' or 'readwrite'.
+  <div><strong>Interview Response:</strong> The transaction method in IndexedDB is used to define and manage a transaction that encompasses one or more database operations. It ensures data consistency, isolation, and atomicity during read and write operations within the specified scope.
     </div><br />
   <div><strong>Technical Response:</strong> The transaction method of the IDBDatabase interface immediately returns a transaction object (IDBTransaction) containing the IDBTransaction.objectStore method, which you can use to access your object-store. We must make all data operations within a transaction in IndexedDB. The transaction method has three available arguments: store, mode/type, and options. The store/storeNames refer to the names of the object stores in the scope of the new transaction, declared as an array of strings. Specify only the object stores that you need to access. If you need to access only one object store, you can specify its name as a string. The mode or type relates to the types of access performed in the transaction. IndexedDB transactions open in one of three modes: readonly, readwrite and readwriteflush (non-standard, Firefox-only.) We should specify the object-store versionchange mode here. If you do not provide the parameter, the default access mode is readonly. Please do not open a readwrite transaction unless you need to write it into the database to avoid slowing things down. The options argument is a dictionary of option durability parameters including "default", "strict", or "relaxed". The default is "default". Using "relaxed" provides better performance but with fewer guarantees. Web applications are encouraged to use "relaxed" for transient data such as caches or quickly changing records and "strict" in cases where reducing the risk of data loss outweighs the impact on performance and power. We should note that the mode/type and options are optional arguments.
     </div><br />
@@ -692,7 +1217,7 @@ request.onerror = function () {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> IndexedDB provides 'readonly' and 'readwrite' transactions to optimize concurrency. 'Readonly' allows multiple simultaneous reads, improving performance, while 'readwrite' ensures data integrity during writes.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -750,7 +1275,7 @@ let transaction = db.transaction('books', 'readwrite'); // (1)
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> There is no way to mark an IndexedDB transaction as finished (this is not the same as oncomplete) in version 2.0. In IndexedDB, a transaction automatically finishes when there are no more pending requests or when the commit() method is called. You don't need to manually mark it as finished.
+      <strong>Interview Response:</strong> There is no way to manually mark an IndexedDB transaction as finished (this is not the same as oncomplete) in version 2.0. To assess an IndexedDB transaction as finished, you can listen to the transaction.oncomplete event, which indicates that all requests within the transaction have been successfully executed. This event signifies the completion of the transaction, allowing you to perform additional actions or cleanup tasks.
     </div>
   </div>
 </details>
@@ -794,7 +1319,7 @@ request1.onsuccess = function () {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, it's not necessary to have onerror/onsuccess for every request. You can handle errors and successes at the transaction level, which will catch events from all requests within the transaction.
+  <div><strong>Interview Response:</strong> No, it's not necessary to have `onerror`/`onsuccess` handlers for every request in IndexedDB. You can use a single set of handlers at the transaction level to handle success or error events for multiple requests within the transaction.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -829,7 +1354,7 @@ request.onerror = function (event) {
   <div>
     <div>
       <strong>Interview Response:</strong> The two main types of searches in an IndexedDB object store are "get" and "cursor" operations. "Get" retrieves an item by its key, while a "cursor" iterates over multiple items.
-    </div>
+    </div><br/>
     <div>
       <strong>Technical Details:</strong> There are two ways of searching in an object store: searching by key-value or key range or another object field. This process requires an additional data structure named “index”.
     </div><br />
@@ -877,7 +1402,7 @@ In this example, the "get" operation retrieves the object with key 1, and the "c
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A key range in IndexedDB allows searching within a specific range of keys. It's created using IDBKeyRange methods (like lowerBound, upperBound, bound, only), and used in cursor operations or getAll methods.
+  <div><strong>Interview Response:</strong> A key range in IndexedDB allows searching within a specific range of keys. It's created using IDBKeyRange methods (like lowerBound, upperBound, bound, only), and used in cursor operations or getAll methods. A value search involves querying records based on a specific property value, using an index. Both searches allow for efficient retrieval of data that matches the specified criteria.
     </div><br />
   <div><strong>Technical Response:</strong> To search an IndexedDB database by key range or value, we must implement the IDBKeyrange object and call on the lowerbound and upperbound methods. lowerBound() generates a new key range with only a lower bound. It is closed by default and includes the lower endpoint value. The upperBound() function generates a new upper-bound key range, and it is closed by default and includes the upper endpoint value. The following methods include store get, getAll, getKey, getAllKeys, or count to perform the actual search. They accept a query argument that can be either an exact key or a key range.
     </div><br />
@@ -910,7 +1435,7 @@ books.getAllKeys(IDBKeyRange.lowerBound('js', true));
 
 ---
 
-### By default, how does Object store sort values?
+### By default, how does a IndexedDB Object store sort values?
 
 <details>
   <summary>
@@ -918,7 +1443,7 @@ books.getAllKeys(IDBKeyRange.lowerBound('js', true));
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> By default, an IndexedDB object store sorts values by their keys in ascending order. This ordering is followed during cursor-based traversal or when getting multiple records using key ranges.
+      <strong>Interview Response:</strong> By default, an IndexedDB Object store sorts values in ascending order by key. The key is a unique identifier for each record in the object store. If two records have the same key, they will be sorted by their value. This ordering is followed during cursor-based traversal or when getting multiple records using key ranges.
     </div>
   </div>
 </details>
@@ -959,7 +1484,7 @@ books.clear(); // clear the storage.
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A cursor in IndexedDB is an object that iterates over records in a store or index, in key order. It's used to retrieve, update, or delete records, offering fine-grained access to data.
+  <div><strong>Interview Response:</strong> A cursor is a mechanism in IndexedDB that allows you to iterate over a set of records in an object store or an index. It provides a way to navigate and retrieve data in a sequential or specified order from the database.
     </div><br />
   <div><strong>Technical Response:</strong> A cursor is a pointer that iterates across all the documents in each data store or index, exposing the data for the page that the cursor is presently "pointing" at on each iteration.<br /><br />It also contains a few pieces of additional metadata and a couple of methods, like continue or primaryKey. As an object store is sorted internally by key, a cursor walks the store in key order (ascending by default). The cursor also has two optional arguments, including the range and direction. The range query is a key or a key range, same as for getAll. The direction sets the order to use and includes two parameters prev, and nextunique or prevunique. The prev parameter is the reverse order: down from the record with the biggest key. The nextunique and prevunique are similar, but the skip records with the same key (only for cursors over indexes, e.g., for multiple books with price=5 only the first one returns). The main difference of the cursor is that request.onsuccess triggers multiple times: once for each result.
     </div><br />

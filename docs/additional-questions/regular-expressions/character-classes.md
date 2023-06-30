@@ -71,8 +71,18 @@ console.log(str.match(regexp)); // logs CSS4
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The \d character class represents any digit from 0 to 9.
+  <div><strong>Interview Response:</strong> In JavaScript regular expressions, the character class `\d` represents any digit from 0 to 9. It's equivalent to the character set `[0-9]`.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let str = '123 abc';
+let match = str.match(/\d/g); // match is now ["1", "2", "3"]
+```
+
+  </div>
   </div>
 </details>
 
@@ -83,8 +93,27 @@ console.log(str.match(regexp)); // logs CSS4
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The \w character class stands for any alphanumeric character, including underscore.
+  <div><strong>Interview Response:</strong> In JavaScript regular expressions, the character class `\w` represents any alphanumeric character including the underscore. It's equivalent to the character set `[A-Za-z0-9_]`.
   </div><br />
+  <div><strong className="codeExample">Technical Details:</strong><br /><br />
+
+  <div></div>
+
+It includes:
+
+- Uppercase letters (A-Z)
+- Lowercase letters (a-z)
+- Digits (0-9)
+- The underscore (_)
+
+Here's an example of how you might use it:
+
+```javascript
+let str = 'abc123_ def';
+let match = str.match(/\w/g); // match is now ["a", "b", "c", "1", "2", "3", "_", "d", "e", "f"]
+```
+
+  </div>
   </div>
 </details>
 
@@ -97,6 +126,30 @@ console.log(str.match(regexp)); // logs CSS4
   <div>
   <div><strong>Interview Response:</strong> The \s character class corresponds to any whitespace character, such as spaces, tabs, or line breaks.
   </div><br />
+  <div><strong className="codeExample">Technical Details:</strong><br /><br />
+
+  <div></div>
+
+This includes:
+
+- Spaces
+- Tabs (`\t`)
+- Carriage returns (`\r`)
+- New lines (`\n`)
+- Form feeds (`\f`)
+- Vertical tabs (`\v`)
+
+It's a convenient way to match any kind of space, regardless of what kind it is.
+
+Here's an example of how you might use it:
+
+```javascript
+let str = 'Hello World';
+let match = str.match(/\s/g); 
+console.log(match); // match is now [" "]
+```
+
+  </div>
   </div>
 </details>
 
@@ -107,8 +160,21 @@ console.log(str.match(regexp)); // logs CSS4
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The \D represents any non-digit character.
+  <div><strong>Interview Response:</strong> In JavaScript regular expressions, `\D` is a shorthand character class that matches any character that's not a digit (0-9). It's equivalent to the character class `[^0-9]`.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let str = "hello123";
+let match = str.match(/\D/g);  // match will be ['h', 'e', 'l', 'l', 'o']
+console.log(match);
+```
+
+Remember that JavaScript's regular expressions are case-sensitive, so `\D` and `\d` are not the same. While `\D` matches any non-digit character, `\d` matches any digit character.
+
+  </div>
   </div>
 </details>
 
@@ -119,8 +185,19 @@ console.log(str.match(regexp)); // logs CSS4
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The \W character class refers to any non-alphanumeric character, excluding underscore.
+  <div><strong>Interview Response:</strong> In JavaScript regular expressions, the \W (uppercase W) character class is used to find non-word characters. It's essentially the inverse of \w.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let str = "hello world!";
+let match = str.match(/\W/g);  // match will be [' ', '!']
+console.log(match);
+```
+
+  </div>
   </div>
 </details>
 
@@ -131,8 +208,25 @@ console.log(str.match(regexp)); // logs CSS4
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The \S character class denotes any non-whitespace character.
+  <div><strong>Interview Response:</strong> The `\S` (uppercase S) character class is used to find any non-whitespace character. It is essentially the inverse of `\s` (lowercase s).
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let str = "hello world!";
+let match = str.match(/\S/g);  
+// match will be ['h', 'e', 'l', 'l', 'o', 'w', 'o', 'r', 'l', 'd', '!']
+```
+
+---
+
+:::note
+The \s character class matches any whitespace character, including space ( ), tab (\t), carriage return (\r), new line (\n), vertical tab (\v), or form feed (\f).
+:::
+
+  </div>
   </div>
 </details>
 
@@ -143,32 +237,94 @@ console.log(str.match(regexp)); // logs CSS4
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The '.' character class matches any character except newline.
+  <div><strong>Interview Response:</strong> In JavaScript regular expressions, the `.` (dot) is a special character class that matches almost any character except for the newline character (`\n`), unless the `s` flag (dotAll flag) is used.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let str = "hello world!";
+let match = str.match(/./g);  
+// match will be ['h', 'e', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd', '!']
+```
+
+In this example, the regex `./g` matches every character in the string. The `g` at the end of the regex is a flag that makes the regex match globally, i.e., find all matches in the string instead of stopping after the first match. Here, it matches all the letters, the exclamation point, and the space.
+
+However, it will not match the newline character. For example:
+
+```javascript
+let str = "hello\nworld!";
+let match = str.match(/./g);  
+// match will be ['h', 'e', 'l', 'l', 'o', 'w', 'o', 'r', 'l', 'd', '!']
+```
+
+Here, the newline character (`\n`) between "hello" and "world!" is not included in the match result. If you want to include newline characters in the `.` match, you can use the `s` flag:
+
+```javascript
+let str = "hello\nworld!";
+let match = str.match(/./gs);  
+// match will be ['h', 'e', 'l', 'l', 'o', '\n', 'w', 'o', 'r', 'l', 'd', '!']
+```
+
+In this example, the `s` flag makes the `.` match any character including newlines.
+
+  </div>
   </div>
 </details>
 
 ---
 
-### If you want to match a digit or whitespace, what class combination would you use?
+### If you want to match a digit and whitespace, what class combination would you use?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> For a digit or whitespace, use the combination \d or \s.
+  <div><strong>Interview Response:</strong> If you want to match a digit or a whitespace character, you would use the character classes for digits (`\d`) and whitespace (`\s`) inside a set of square brackets `[]`.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's how you could do it:
+
+```javascript
+let str = "hello world123!";
+let match = str.match(/[\d\s]/g);  
+// match will be [' ', '1', '2', '3', ' ']
+```
+
+---
+
+:::note
+Note that inside a set of square brackets, you do not need to separate the character classes with a pipe `|` or anything else. The square brackets signify a character set and will match any single character that is represented inside the brackets. In this case, any digit or whitespace character will be matched.
+:::
+
+  </div>
   </div>
 </details>
 
 ---
 
-### What character class would you use to match only non-alphanumeric characters?
+### What character class would you use to match only non-alphanumeric word characters?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To match non-alphanumeric characters, you can use the \W character class.
+  <div><strong>Interview Response:</strong> In JavaScript regular expressions, if you want to match non-alphanumeric word characters, you would use the `\W` (uppercase W) character class. This will match any character that is not included in the set `[A-Za-z0-9_]`.
+
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let str = "hello world123!";
+let match = str.match(/\W/g);  
+console.log(match); // match will be [" ", "!"]
+```
+
+  </div>
   </div>
 </details>
 
@@ -179,8 +335,19 @@ console.log(str.match(regexp)); // logs CSS4
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To match anything other than a digit or whitespace, use the combination \D or \S.
+  <div><strong>Interview Response:</strong> In JavaScript regular expressions, if you want to match anything other than a digit or a whitespace character, you can combine the shorthand character classes for digits (\d) and whitespace (\s) inside a set of square brackets [] and precede it with the caret (^) symbol to negate the set.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let str = "hello world123!";
+let match = str.match(/[^\d\s]/g); 
+console.log(match); // output: ["h", "e", "l", "l", "o", "w", "o", "r", "l", "d", "!"]
+```
+
+  </div>
   </div>
 </details>
 
@@ -191,8 +358,26 @@ console.log(str.match(regexp)); // logs CSS4
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To match only digits and letters, you can use the \w character class.
+  <div><strong>Interview Response:</strong> You can match only digits and letters by using the \w (lowercase w) character class which matches any alphanumeric character (letters or digits) and the underscore. However, if you want to exclude the underscore, you'll have to define a custom character set using the square brackets [A-Za-z0-9].
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let str = "hello_world123!";
+let match = str.match(/[A-Za-z0-9]/g);  
+console.log(match);
+
+//////////////////////////////////////////
+
+let str = "hello_world123!";
+let match = str.match(/\w/g);
+// ["h", "e", "l", "l", "o", "_", "w", "o", "r", "l", "d", "1", "2", "3"]
+console.log(match);
+```
+
+  </div>
   </div>
 </details>
 
@@ -217,6 +402,18 @@ console.log(str.match(regexp)); // logs CSS4
   <div>
   <div><strong>Interview Response:</strong> We can include shorthand character classes within brackets like [abc\w] to match 'a', 'b', 'c', or any alphanumeric character.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let str = "abcdef";
+let match = str.match(/[abc\W]/g);  
+// match will be ["a", "b", "c"]
+console.log(match);
+```
+
+  </div>
   </div>
 </details>
 
@@ -229,6 +426,18 @@ console.log(str.match(regexp)); // logs CSS4
   <div>
   <div><strong>Interview Response:</strong> To match non-whitespace characters, you would use the \S shorthand character class.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let str = "Hello JavaScript!";
+let match = str.match(/\S/g); 
+// match will be "H", "e", "l", "l", "o", "J", "a", "v", "a", "S", "c", "r", "i", "p", "t", "!"]
+console.log(match);
+```
+
+  </div>
   </div>
 </details>
 
@@ -239,8 +448,22 @@ console.log(str.match(regexp)); // logs CSS4
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, we can use them with quantifiers. For instance, \d{2,4} will match between 2 and 4 digits.
+  <div><strong>Interview Response:</strong> Yes, you can use shorthand character classes in combination with quantifiers in JavaScript regular expressions. Quantifiers specify how many instances of a character, group, or character class must be present in the input for a match to be found.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let str = "hello world123! 345";
+let match = str.match(/\d+/g);  
+// match will be ['123', '345']
+console.log(match);
+```
+
+In this example, the regex /\d+/g matches one or more digits in the string. The g at the end of the regex is a flag that makes the regex match globally, or in other words, find all matches in the string instead of stopping after the first match. The plus sign + is a quantifier that matches one or more of the preceding character or character class. Here, it matches each group of digits as a whole string, rather than individual digits.
+
+  </div>
   </div>
 </details>
 
@@ -263,8 +486,20 @@ console.log(str.match(regexp)); // logs CSS4
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> For non-digits and non-alphanumeric characters, use the combination \D or \W.
+  <div><strong>Interview Response:</strong> If you want to match only non-digits and non-alphanumeric characters, you would use a combination of the shorthand character classes for non-digits (\D) and non-alphanumeric characters (\W). However, these two classes overlap, as \D includes all non-digit characters, and \W includes all non-word characters (which includes all non-digits). Therefore, you only need to use \W.<br/><br/>The \W character class matches any character that is not included in the set [A-Za-z0-9_], including all non-alphanumeric characters such as punctuation and symbols, as well as whitespace.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let str = "hello world123!";
+let match = str.match(/\W/g);  
+// match will be [' ', , '!']
+console.log(match);
+```
+
+  </div>
   </div>
 </details>
 

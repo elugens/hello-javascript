@@ -46,8 +46,28 @@ import StructuredData from './schemadata/NodePropsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A DOM node is an object representing a part of the document tree structure, such as elements, text, comments, or attributes.
+  <div><strong>Interview Response:</strong> A DOM (Document Object Model) node is an object representing a part of an HTML document. This can be elements, attributes, or text. It's the core interface for web page manipulation.
   </div><br />
+  <div><strong className="codeExample">Here is a simple JavaScript code example that manipulates DOM nodes:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+// Select a DOM node
+let node = document.getElementById('myDiv');
+
+// Change its text content
+node.textContent = 'New Text';
+
+// Add a new child element
+let newElement = document.createElement('p');
+newElement.textContent = 'I am a new paragraph!';
+node.appendChild(newElement);
+```
+
+This code selects a `<div>` element with the id 'myDiv', changes its text, and adds a new `<p>` child node to it.
+
+  </div>
   </div>
 </details>
 
@@ -59,7 +79,7 @@ import StructuredData from './schemadata/NodePropsSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Common node properties include nodeName, nodeType, nodeValue, parentNode, childNodes, firstChild, lastChild, nextSibling, and previousSibling.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -70,8 +90,25 @@ import StructuredData from './schemadata/NodePropsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The nodeName property returns the name of a node, such as the tag name for element nodes, or "#text" for text nodes, depending on the node type.
+  <div><strong>Interview Response:</strong> The nodeName property returns the name of a specific node in the DOM, like the tag name for HTML elements or '#text' for text nodes.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here is a simple JavaScript code example showing how to use the `nodeName` property.
+
+```javascript
+// Select a DOM node
+let node = document.getElementById('myDiv');
+
+// Log its node name
+console.log(node.nodeName);  // Logs: 'DIV'
+```
+
+This code selects a `<div>` element with the id 'myDiv' and logs its node name, which is 'DIV'.
+
+  </div>
   </div>
 </details>
 
@@ -82,8 +119,31 @@ import StructuredData from './schemadata/NodePropsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The nodeValue property returns the value of certain node types (text, comment, or attribute nodes), while textContent retrieves the text content of an element and its descendants.
+  <div><strong>Interview Response:</strong> The nodeValue property returns or sets the value of a node. For text nodes, it's the text itself, but for elements, it's null. textContent gets or sets the text inside an element, including its descendants.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here is a JavaScript code example that shows the difference between `nodeValue` and `textContent`:
+
+```javascript
+// Create a new text node
+let textNode = document.createTextNode('Hello, World!');
+
+console.log(textNode.nodeValue); // Logs: 'Hello, World!'
+console.log(textNode.textContent); // Logs: 'Hello, World!'
+
+// Select an element
+let elementNode = document.getElementById('myDiv');
+
+console.log(elementNode.nodeValue); // Logs: null
+console.log(elementNode.textContent); // Logs: text content of 'myDiv', including any child elements
+```
+
+In this code, both `nodeValue` and `textContent` return the same result for a text node. But for an element, `nodeValue` returns null while `textContent` returns the element's text content.
+
+  </div>
   </div>
 </details>
 
@@ -249,6 +309,18 @@ console.log(document.body instanceof EventTarget); // true
   <div>
   <div><strong>Interview Response:</strong> In brief, console.log displays a string representation of an object, while console.dir presents an interactive, navigable tree view of object properties, making it easier to explore object structure.</div><br />
   <div><strong>Technical Response:</strong> Most browsers allow two commonly used commands in their development tools: console.log and console.dir. Their arguments get printed on the console. These instructions typically have the same effect on JavaScript objects. However, console.log(elem) displays the element's DOM tree for DOM elements. The element gets shown as a DOM object using console.dir(elem), allowing you to examine its properties.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+const obj = { name: 'John', age: 30 };
+
+console.log(obj);  // Output: { name: 'John', age: 30 }
+console.dir(obj);  // Output: Object: { name: 'John', age: 30, ... }
+```
+
   </div>
   </div>
 </details>
@@ -442,6 +514,70 @@ interface HTMLInputElement: HTMLElement {
   <div>
   <div><strong>Interview Response:</strong> When using "innerHTML+=", be aware that it destroys and recreates element content, causing loss of attached event listeners, inefficient performance, and potential security risks from script injection.</div><br />
   <div><strong>Note:</strong> We can append HTML to an element by using elem.innerHTML+="more HTML". But we should be careful about doing it.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+**The Problem:**
+
+```js
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Example</title>
+</head>
+<body>
+    <div id="myDiv">
+        Initial content
+    </div>
+
+    <script>
+        let div = document.getElementById('myDiv');
+        let items = ['Item 1', 'Item 2', 'Item 3'];
+
+        // Incorrect usage: appending content using innerHTML +=
+        for (let item of items) {
+            div.innerHTML += '<p>' + item + '</p>';
+        }
+    </script>
+</body>
+</html>
+
+```
+
+**The Solution:**
+
+To efficiently append content to an element without the issues of using `innerHTML +=`, you can use the `createElement` and `appendChild` methods. Here's an updated code example that demonstrates the recommended approach:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Example</title>
+</head>
+<body>
+    <div id="myDiv">
+        Initial content
+    </div>
+
+    <script>
+        let div = document.getElementById('myDiv');
+        let items = ['Item 1', 'Item 2', 'Item 3'];
+
+        // Correct usage: appending content using createElement and appendChild
+        for (let item of items) {
+            let paragraph = document.createElement('p');
+            paragraph.textContent = item;
+            div.appendChild(paragraph);
+        }
+    </script>
+</body>
+</html>
+```
+
+In this updated example, instead of using `innerHTML +=`, we create a new `<p>` element for each item in the array using `createElement`. We set the text content of the paragraph element using `textContent`, and then append it to the `myDiv` element using `appendChild`. This approach avoids the performance and event handling issues associated with `innerHTML +=` and provides a more reliable way to append content to the element.
+
   </div>
   </div>
 </details>

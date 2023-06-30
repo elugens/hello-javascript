@@ -47,6 +47,21 @@ import StructuredData from './schemadata/JSErrorSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Error handling is the process of catching and managing exceptions or errors that occur during code execution to prevent program failure.
+  </div><br />
+  <div><strong className="codeExample">Base Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+try {
+  // Code that may throw an exception
+} catch (error) {
+  // Code to handle the exception
+} finally {
+  // Code to be executed regardless of an exception
+}
+```
+
   </div>
   </div>
 </details>
@@ -58,7 +73,24 @@ import StructuredData from './schemadata/JSErrorSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> An exception is an unexpected event or error that occurs during code execution, which can disrupt the normal flow of the program.<br />
+  <div><strong>Interview Response:</strong> An exception is an unexpected event or error that occurs during code execution, which can disrupt the normal flow of the program.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's an example of catching and handling an exception in JavaScript.
+
+```js
+try {
+  // Code that may throw an exception
+  throw new Error("Something went wrong!");
+} catch (error) {
+  // Code to handle the exception
+  console.log(error.message);
+}
+```
+
   </div>
   </div>
 </details>
@@ -70,7 +102,7 @@ import StructuredData from './schemadata/JSErrorSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A try-catch block is used to handle exceptions by enclosing error-prone code in a try block and catching errors in the catch block.<br />
+  <div><strong>Interview Response:</strong> A try-catch block is used to handle exceptions by enclosing error-prone code in a try block and catching errors in the catch block.
   </div>
   </div>
 </details>
@@ -565,7 +597,7 @@ async function asyncFunc() {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Proper error handling helps maintain application stability, improves user experience, simplifies debugging, and enhances security.<br />
+  <div><strong>Interview Response:</strong> Proper error handling helps maintain application stability, improves user experience, simplifies debugging, and enhances security.
   </div>
   </div>
 </details>
@@ -634,7 +666,55 @@ In these examples, `fs` represents the Node.js file system module and `fetch` is
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Synchronous error handling occurs when code is executed in a linear, sequential manner, and errors are handled immediately when they occur. Asynchronous error handling, on the other hand, involves handling errors that may occur during the execution of asynchronous operations, such as AJAX calls or promises. Asynchronous error handling often requires different techniques, such as using error callbacks or the catch method in promises.<br />
+  <div><strong>Interview Response:</strong> Synchronous error handling occurs immediately when an error is encountered, while asynchronous error handling involves handling errors that occur during asynchronous operations, such as callbacks or promises, at a later point in time.
+  </div><br/>
+  <div><strong>Technical Response:</strong> Synchronous error handling occurs when code is executed in a linear, sequential manner, and errors are handled immediately when they occur. Asynchronous error handling, on the other hand, involves handling errors that may occur during the execution of asynchronous operations, such as AJAX calls or promises. Asynchronous error handling often requires different techniques, such as using error callbacks or the catch method in promises.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Sure! Here's a code example that demonstrates synchronous and asynchronous error handling in JavaScript:
+
+**Synchronous Error Handling:**
+
+```javascript
+try {
+  // Synchronous code that may throw an exception
+  throw new Error("Synchronous error occurred!");
+} catch (error) {
+  // Synchronous error handling
+  console.log("Synchronous error caught:", error.message);
+}
+```
+
+In the above example, the error is thrown synchronously within the `try` block, and the `catch` block immediately catches the error and handles it.
+
+**Asynchronous Error Handling:**
+
+```javascript
+// Asynchronous code using a setTimeout callback
+setTimeout(() => {
+  try {
+    // Asynchronous code that may throw an exception
+    throw new Error("Asynchronous error occurred!");
+  } catch (error) {
+    // Asynchronous error handling
+    console.log("Asynchronous error caught:", error.message);
+  }
+}, 1000);
+```
+
+In the asynchronous example, an error is thrown within a `setTimeout` callback function. The `try` block is unable to catch the error directly since the code is executed asynchronously. Instead, the error is caught and handled within the callback function itself.
+
+In practice, when working with asynchronous operations like promises or event handlers, it is common to use mechanisms such as `.catch()` for promises or error callbacks to handle errors asynchronously. These approaches allow errors to be captured and processed at a later point in time when the asynchronous operation completes or encounters an error.
+
+---
+
+:::note
+Please note that in the asynchronous example, the error handling is done within the same execution context as the asynchronous operation. In more complex scenarios, error handling may involve chaining promises, using `async/await`, or utilizing error handling mechanisms provided by specific libraries or frameworks.
+:::
+
   </div>
   </div>
 </details>
@@ -646,8 +726,27 @@ In these examples, `fs` represents the Node.js file system module and `fetch` is
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The main types of errors in JavaScript are Syntax Errors, Runtime Errors, and Logical Errors. Syntax Errors occur when there is a mistake in the syntax of the code, preventing it from being parsed.<br />
+  <div><strong>Interview Response:</strong> The main types of errors in JavaScript are Syntax Errors, Runtime Errors, and Logical Errors. Syntax Errors occur when there is a mistake in the syntax of the code, preventing it from being parsed.
+  </div><br/>
+  <div><strong>Technical Response:</strong> In JavaScript, there are several main types of errors that can occur during the execution of a program. These errors are represented by different built-in error types, each serving a specific purpose. Here are some of the main types of errors in JavaScript:
   </div>
+
+1. **Error**: The base class for all built-in error types. It is commonly used as a generic error type when a more specific error type is not available.
+
+2. **SyntaxError**: Occurs when there is a syntax error in the code. This can happen due to misspelled keywords, unclosed brackets, or other syntax-related issues.
+
+3. **TypeError**: Indicates that a value is not of the expected type. It occurs when an operation or function is performed on a value that is incompatible or undefined. For example, trying to call a non-function as a function.
+
+4. **ReferenceError**: Occurs when an invalid reference is made. It happens when trying to access a variable or function that is not defined or out of scope.
+
+5. **RangeError**: Thrown when a numeric value is not within the valid range. For example, trying to create an array with a negative length or calling a function with too many arguments.
+
+6. **EvalError**: Deprecated in modern JavaScript versions, this error was previously thrown when an error occurred during the evaluation of code in the `eval()` function.
+
+7. **URIError**: Thrown when there is an error in encoding or decoding a URI component using functions like `encodeURIComponent()` or `decodeURIComponent()`.
+
+These error types provide valuable information about the nature of the error, such as the error message and, in some cases, the line number where the error occurred. By understanding these error types, developers can identify and handle specific errors appropriately, improving the debugging and error-handling process in their JavaScript programs.
+
   </div>
 </details>
 
@@ -733,6 +832,18 @@ process.on('uncaughtException', function(error) {
 
 Please note that using `process.on('uncaughtException')` in Node.js should be done carefully as it can keep the process running even when it's in an unknown state. It's usually better to log the error, then gracefully shut down and restart the process.
 
+  </div>
+  </div>
+</details>
+
+---
+
+### When should a developer handle errors during the coding process?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A developer should handle errors during the coding process whenever there is a potential for an error to occur that could disrupt the normal execution of the program or cause undesirable consequences. You should do this before completing the initial writing of the code. Coming back to the code at a later time is not recommended because it could lead to excessive refactoring of code.
   </div>
   </div>
 </details>

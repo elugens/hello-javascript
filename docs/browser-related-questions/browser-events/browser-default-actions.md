@@ -111,8 +111,25 @@ In this case, clicking the link will not navigate to its href.
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Use the `defaultPrevented` property on the event object to check if the default action has been prevented or if the event has a default action.
+  <div><strong>Interview Response:</strong> Use the `event.defaultPrevented` property on the event object to check if the default action has been prevented or if the event has a default action.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+button.addEventListener('click', function(event) {
+  event.preventDefault();
+  if (event.defaultPrevented) {
+    console.log('The event had a default action which was prevented');
+  } else {
+    console.log('The event did not have a default action');
+  }
+});
+
+```
+
+  </div>
   </div>
 </details>
 
@@ -160,7 +177,7 @@ In this case, clicking the link will not navigate to its href.
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Event propagation is the process through which events travel in the DOM hierarchy. It consists of capturing, target, and bubbling phases. Default actions occur after event propagation, if not prevented.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -171,8 +188,28 @@ In this case, clicking the link will not navigate to its href.
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> While most events' default actions can be canceled, some events, such as `scroll` or `readystatechange`, do not have cancelable default actions.
+  <div><strong>Interview Response:</strong> While most events' default actions can be canceled, some events, such as `load`, `scroll` or `readystatechange`, do not have cancelable default actions.
   </div><br />
+  <div><strong>Technical Details:</strong> The Event interface has a read-only property named cancelable which indicates whether or not the event is cancelable. An event is cancelable if it can be cancelled by calling the preventDefault method. For example, the 'click' event is usually cancelable, while the 'load' event is usually not.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+You can check if an event is cancelable by reading the **cancelable** property.
+
+```js
+element.addEventListener('click', function(event) {
+  if (event.cancelable) {
+    // The event can be cancelled
+    event.preventDefault();
+  } else {
+    // The event cannot be cancelled
+  }
+});
+```
+
+  </div>
   </div>
 </details>
 
@@ -184,7 +221,7 @@ In this case, clicking the link will not navigate to its href.
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Preventing default actions allows developers to implement custom behaviors for events, such as handling form submissions with AJAX or creating custom context menus.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -195,8 +232,34 @@ In this case, clicking the link will not navigate to its href.
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> `preventDefault()` prevents the default action of the event from happening while `stopPropagation()` prevents further propagation of the event in the capturing and bubbling phases.
+  <div><strong>Interview Response:</strong> `preventDefault()` stops the default action of an event from occurring. `stopPropagation()` prevents further propagation of an event through the DOM tree, stopping any parent handlers from being notified.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's a code example illustrating both methods.
+
+```javascript
+document.querySelector("#child").addEventListener('click', function(event) {
+  event.preventDefault(); // Prevents the default action.
+  event.stopPropagation(); // Stops the event from bubbling up.
+  console.log('Child clicked!');
+});
+
+document.querySelector("#parent").addEventListener('click', function(event) {
+  console.log('Parent clicked!'); // This won't be triggered when child is clicked because of stopPropagation().
+});
+
+// Assuming HTML structure like:
+// <div id="parent">
+//   <button id="child">Click me</button>
+// </div>
+```
+
+In this example, when the child button is clicked, 'Child clicked!' is logged to the console. The event does not bubble up to the parent due to `stopPropagation()`, and so 'Parent clicked!' is not logged. `preventDefault()` would be more meaningful in a context where the event has a default action, such as a form submission or a link click.
+
+  </div>
   </div>
 </details>
 
@@ -208,7 +271,7 @@ In this case, clicking the link will not navigate to its href.
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, preventing the default action only stops the browser's built-in behavior, not any custom scripts or event handlers you've attached.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -220,7 +283,7 @@ In this case, clicking the link will not navigate to its href.
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Preventing the default action of a `click` event on a hyperlink will stop the browser from navigating to the hyperlink's URL.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -232,7 +295,7 @@ In this case, clicking the link will not navigate to its href.
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Preventing default on a form's `submit` event stops the form from being submitted to the server, which is useful when handling form submission via JavaScript or AJAX.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -243,8 +306,25 @@ In this case, clicking the link will not navigate to its href.
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> If the default action of a `keydown` event for a specific key is prevented, the key press will not result in its default input action, such as typing a character.
+  <div><strong>Interview Response:</strong> Preventing the default action of a "keydown" event for a specific key stops that key from performing its default function, so the input associated with it won't be reflected in the UI.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+document.querySelector('#textInput').addEventListener('keydown', function(event) {
+  if (event.key === 'Enter') {
+    event.preventDefault(); // Prevents the default action.
+    console.log('Enter key was pressed but its default action was prevented.');
+  }
+});
+
+// Assuming HTML like:
+// <input type="text" id="textInput" />
+```
+
+  </div>
   </div>
 </details>
 

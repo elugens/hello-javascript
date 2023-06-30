@@ -73,8 +73,34 @@ import StructuredData from './schemadata/ShadowDOMSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A Shadow DOM tree is attached to an element using the `attachShadow()` method on that element. This creates a shadow root to which you can append content.
-    </div>
+  <div><strong>Interview Response:</strong> A Shadow DOM tree is attached to an element using the <strong>attachShadow()</strong> method on that element. This creates a shadow root to which you can append content.
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+HTML:
+
+```html
+<div id="shadowHost"> </div>
+```
+
+JavaScript:
+
+```javascript
+// Select the host element
+let shadowHost = document.getElementById('shadowHost');
+
+// Attach the shadow root
+let shadowRoot = shadowHost.attachShadow({mode: 'open'});
+
+// Now we can populate the shadow DOM
+let content = document.createElement('p');
+content.textContent = 'This is content in the Shadow DOM!';
+shadowRoot.appendChild(content);
+```
+
+  </div>
   </div>
 </details>
 
@@ -351,7 +377,7 @@ This code assumes there's a custom element `<my-element>` in the document with a
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Nodes in Shadow DOM are distributed using the `&#60;slot&#62;` element. Light DOM content intended for a particular slot can be directed there using the `slot` attribute, matching the `name` attribute of the desired `&#60;slot&#62;`.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -452,10 +478,12 @@ This assumes an element with the id `shadow-host` contains a Shadow DOM, and the
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The two types of subtrees in the DOM are the Light DOM, which is the regular DOM content, and the Shadow DOM, which is a hidden, encapsulated DOM subtree attached to an element, providing style and behavior isolation.
-    </div><br/>
-  <div><strong>Technical Response:</strong> Regarding the DOM, there are two subtrees: light trees and shadow trees. The light tree is a standard DOM subtree made-up of standard HTML children, and the Shadow tree is a hidden DOM subtree that is not mirrored in HTML and is hence invisible to inquisitive eyes. If an element has both, the browser only draws the shadow tree. But we may also create a scene with shadow and light trees.
-    </div>
+  <div><strong>Interview Response:</strong> Regarding the DOM, there are two subtrees: light trees and shadow trees. The light tree is a standard DOM subtree made-up of standard HTML children, and the Shadow tree is a hidden DOM subtree that is not mirrored in HTML and is hence invisible to inquisitive eyes. If an element has both, the browser only draws the shadow tree. But we may also create a scene with shadow and light trees.
+    </div><br />
+  <div><strong className="codeExample">Diagram:</strong><br /><br />
+
+<img src="/img/shadow-tree.svg" /><br /><br/>
+  </div>
   </div>
 </details>
 

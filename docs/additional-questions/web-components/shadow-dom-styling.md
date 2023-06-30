@@ -47,10 +47,61 @@ import StructuredData from './schemadata/ShadowDOMStylingSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> You can include CSS styles directly inside a Shadow DOM template using a &#8249;style&#8250; tag. These styles are scoped to the shadow tree and don't leak outside, providing style encapsulation.
+  <div><strong>Interview Response:</strong> You can include CSS styles directly inside a Shadow DOM template using a &#60;style&#62; tag. These styles are scoped to the shadow tree and don't leak outside, providing style encapsulation.
     </div><br/>
-  <div><strong>Interview Response:</strong> The Shadow DOM may include both &#8249;style&#8250; and &#8249;link rel="stylesheet" href="…"&#8250; tags. In the latter case, stylesheets are HTTP-cached, so they are not redownloaded for multiple components that use the same template. As a rule, local styles work only inside the shadow tree, and document styles work outside the shadow tree. But there are few exceptions.
-    </div>
+  <div><strong>Interview Response:</strong> The Shadow DOM may include both &#60;style&#62; and &#60;link rel="stylesheet" href="…"&#62; tags. In the latter case, stylesheets are HTTP-cached, so they are not redownloaded for multiple components that use the same template. As a rule, local styles work only inside the shadow tree, and document styles work outside the shadow tree. But there are few exceptions.
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shadow DOM CSS Example</title>
+</head>
+<body>
+    <my-component></my-component>
+
+    <script>
+        class MyComponent extends HTMLElement {
+            constructor() {
+                super();
+                this.attachShadow({ mode: 'open' });
+            }
+
+            connectedCallback() {
+                this.render();
+            }
+
+            render() {
+                // setting our styles
+                this.shadowRoot.innerHTML = `
+                    <style>
+                        p {
+                            color: blue;
+                            font-size: 24px;
+                        }
+                    </style>
+                    <template id="my-component-template">
+                        <p>This is a Shadow DOM component.</p>
+                    </template>
+                `;
+
+                const template = this.shadowRoot.querySelector("#my-component-template");
+                const node = document.importNode(template.content, true);
+                this.shadowRoot.appendChild(node);
+            }
+        }
+
+        customElements.define('my-component', MyComponent);
+    </script>
+</body>
+</html>
+```
+
+  </div>
   </div>
 </details>
 
@@ -63,6 +114,102 @@ import StructuredData from './schemadata/ShadowDOMStylingSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> CSS custom properties, also known as CSS variables, are entities defined by CSS authors that contain specific values to be reused throughout a document. They follow the syntax `--name: value`.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Custom Properties Example</title>
+    <style>
+        :root {
+            --main-color: #4CAF50;
+            --text-light: #FFFFFF;
+        }
+
+        body {
+            background-color: var(--main-color);
+            color: var(--text-light);
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Website</h1>
+    <p>This is some text.</p>
+</body>
+</html>
+```
+
+  </div>
+  </div>
+</details>
+
+---
+
+### How do CSS custom properties work in relation to Shadow DOM styling?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> CSS custom properties can penetrate Shadow DOM boundaries, enabling style theming. Variables defined outside can be used inside a Shadow DOM and vice versa, allowing effective communication of styles.
+  </div><br />
+  <div><strong className="codeExample">Here's a brief code example showcasing how CSS custom properties can be used with Shadow DOM:</strong><br /><br />
+
+  <div></div>
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shadow DOM and CSS Variables</title>
+    <style>
+        :root {
+            --main-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <my-component></my-component>
+
+    <script>
+        class MyComponent extends HTMLElement {
+            constructor() {
+                super();
+                this.attachShadow({ mode: 'open' });
+            }
+
+            connectedCallback() {
+                this.render();
+            }
+
+            render() {
+                this.shadowRoot.innerHTML = `
+                    <style>
+                        p {
+                            color: var(--main-color);
+                        }
+                    </style>
+                    <p>Hello, world!</p>
+                `;
+            }
+        }
+
+        customElements.define('my-component', MyComponent);
+    </script>
+</body>
+</html>
+```
+
+In this example, a CSS custom property `--main-color` is defined in the main document. The shadow DOM in `my-component` uses this custom property to color the paragraph text.
+
+  </div>
   </div>
 </details>
 
@@ -74,19 +221,7 @@ import StructuredData from './schemadata/ShadowDOMStylingSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> No, global styles from the main document do not penetrate the Shadow DOM due to its style encapsulation feature. This ensures component styles are isolated, avoiding conflicts with external styles.
-  </div><br />
   </div>
-</details>
-
----
-
-### Can we style Shadow DOM with external stylesheets?
-
-<details>
-  <summary><strong>View Answer:</strong></summary>
-  <div>
-  <div><strong>Interview Response:</strong> Yes, external stylesheets can be applied to Shadow DOM by including a &#60;link rel="stylesheet"&#62; element inside the Shadow Root. However, global styles from the main document still won't penetrate the Shadow DOM.
-  </div><br />
   </div>
 </details>
 
@@ -140,13 +275,64 @@ import StructuredData from './schemadata/ShadowDOMStylingSchemaData.js';
 
 ---
 
-### Can you style a shadow DOM from a light DOM?
+### Can you style elements in the  shadow DOM from a light DOM?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Directly, no—due to style encapsulation. But with the `part` attribute in the Shadow DOM and `::part` selector in the Light DOM, you can selectively expose and style internal elements from the Light DOM.
+  <div><strong>Interview Response:</strong> No, You can't directly style elements in the Shadow DOM from the Light DOM due to the encapsulation provided by the Shadow DOM. CSS styles from the Light DOM won't bleed into the Shadow DOM. However, you can use CSS custom properties or CSS <strong>::part</strong> pseudo-element to style certain properties.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Styling Shadow DOM Elements from Light DOM</title>
+    <style>
+        my-component::part(paragraph) {
+            color: #4CAF50;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <my-component></my-component>
+
+    <script>
+        class MyComponent extends HTMLElement {
+            constructor() {
+                super();
+                this.attachShadow({ mode: 'open' });
+            }
+
+            connectedCallback() {
+                this.render();
+            }
+
+            render() {
+                this.shadowRoot.innerHTML = `
+                    <style>
+                        p {
+                            font-family: Arial, sans-serif;
+                        }
+                    </style>
+                    <p part="paragraph">Hello, world!</p>
+                `;
+            }
+        }
+
+        customElements.define('my-component', MyComponent);
+    </script>
+</body>
+</html>
+```
+
+In this example, the paragraph in the Shadow DOM is given a part name of "paragraph". The Light DOM CSS then targets `my-component::part(paragraph)` to apply color and font-size properties.
+
+  </div>
   </div>
 </details>
 
@@ -157,8 +343,8 @@ import StructuredData from './schemadata/ShadowDOMStylingSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The @apply rule in CSS was a proposed method for using and reusing blocks of declarations, intended for Shadow DOM styling. However, as of 2021, it's deprecated and not recommended for use.
-  </div><br />
+  <div><strong>Interview Response:</strong> The @apply rule in CSS was a proposed method for using and reusing blocks of declarations, intended for Shadow DOM styling. However, as of 2021, it's <strong>deprecated</strong> and not recommended for use.
+  </div>
   </div>
 </details>
 
@@ -171,6 +357,52 @@ import StructuredData from './schemadata/ShadowDOMStylingSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> Shadow DOM content is naturally accessible to screen readers. To enhance accessibility, use semantic HTML, ARIA roles, labels where appropriate, and ensure keyboard navigability within your custom elements.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Accessible Shadow DOM Example</title>
+</head>
+<body>
+    <my-component></my-component>
+
+    <script>
+        class MyComponent extends HTMLElement {
+            constructor() {
+                super();
+                this.attachShadow({ mode: 'open' });
+            }
+
+            connectedCallback() {
+                this.render();
+            }
+
+            render() {
+                // Using Aria Label Here...
+                this.shadowRoot.innerHTML = `
+                    <style>
+                        h1 {
+                            color: #4CAF50;
+                        }
+                    </style>
+                    <h1 tabindex="0" aria-label="Greeting">Hello, world!</h1>
+                `;
+            }
+        }
+
+        customElements.define('my-component', MyComponent);
+    </script>
+</body>
+</html>
+```
+
+These techniques can improve the accessibility of custom elements that use Shadow DOM. It's essential to always consider accessibility when creating web components.
+
+  </div>
   </div>
 </details>
 
@@ -182,7 +414,7 @@ import StructuredData from './schemadata/ShadowDOMStylingSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, Shadow DOM has limitations: it can complicate event handling, lacks full browser support, can make debugging tricky, and may involve performance cost for creating many shadow roots. Also, its encapsulation can limit styling flexibility.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -195,18 +427,122 @@ import StructuredData from './schemadata/ShadowDOMStylingSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> The `::part` pseudo-element in CSS allows you to style elements in the Shadow DOM from the main document. This is achieved by exposing parts of the Shadow DOM via the `part` attribute, providing selective styling control.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Styling Shadow DOM Elements from Light DOM</title>
+    <style>
+        my-component::part(paragraph) {
+            color: #4CAF50;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <my-component></my-component>
+
+    <script>
+        class MyComponent extends HTMLElement {
+            constructor() {
+                super();
+                this.attachShadow({ mode: 'open' });
+            }
+
+            connectedCallback() {
+                this.render();
+            }
+
+            render() {
+                this.shadowRoot.innerHTML = `
+                    <style>
+                        p {
+                            font-family: Arial, sans-serif;
+                        }
+                    </style>
+                    <p part="paragraph">Hello, world!</p>
+                `;
+            }
+        }
+
+        customElements.define('my-component', MyComponent);
+    </script>
+</body>
+</html>
+```
+
+In this example, the paragraph in the Shadow DOM is given a part name of "paragraph". The Light DOM CSS then targets `my-component::part(paragraph)` to apply color and font-size properties.
+
+  </div>
   </div>
 </details>
 
 ---
 
-### What does the all: initial rule do in CSS?
+### What does the CSS "all:" initial rule do in relation to the Shadow DOM?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The `all: initial` rule in CSS resets all the inheritable and non-inheritable properties on an element to their initial values. It essentially removes all styles applied to that element.
+  <div><strong>Interview Response:</strong> The all: initial CSS rule resets all inheritable and non-inheritable properties to their initial values, providing a clean slate for styling inside a Shadow DOM, preventing style leakage.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shadow DOM and 'all: initial'</title>
+    <style>
+        body {
+            font-size: 20px;
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <my-component></my-component>
+
+    <script>
+        class MyComponent extends HTMLElement {
+            constructor() {
+                super();
+                this.attachShadow({ mode: 'open' });
+            }
+
+            connectedCallback() {
+                this.render();
+            }
+
+            render() {
+                this.shadowRoot.innerHTML = `
+                    <style>
+                        :host {
+                            all: initial;
+                            font-size: 16px;
+                            color: #000000;
+                        }
+                    </style>
+                    <p>Hello, world!</p>
+                `;
+            }
+        }
+
+        customElements.define('my-component', MyComponent);
+    </script>
+</body>
+</html>
+```
+
+In this example, the `all: initial` rule in the `:host` pseudo-class selector resets all styles for the Shadow DOM root, effectively isolating it from the external styles. The paragraph text inside `my-component` will be displayed with a font-size of 16px and color of black (#000000), regardless of the styles defined outside the Shadow DOM.
+
+  </div>
   </div>
 </details>
 
@@ -218,13 +554,13 @@ import StructuredData from './schemadata/ShadowDOMStylingSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> To debug Shadow DOM in the browser, use browser developer tools like Chrome DevTools. You can inspect, modify Shadow DOM elements, and view encapsulated styles and events directly within these tools.
-  </div><br />
+  </div>
   </div>
 </details>
 
 ---
 
-### Can you explain what the CSS :host psuedo-class does?
+### Can you explain what the CSS :host psuedo-class does in the Shadow DOM?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

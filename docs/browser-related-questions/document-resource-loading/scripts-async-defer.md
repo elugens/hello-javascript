@@ -47,13 +47,41 @@ import StructuredData from './schemadata/ScriptsSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> When the browser loads HTML and comes across a &#8249;script&#8250;...&#8249;/script&#8250; tag, it cannot continue building the DOM. It must execute the script straight away. The same happens for external scripts &#8249;script src="..."&#8250;&#8249;/script&#8250;: the browser must wait for the script to download, execute the downloaded script, and only then can it process the rest of the page.
-    </div>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Website</title>
+
+    <!-- Loading script in the head -->
+    <script src="myScript.js"></script>
+</head>
+<body>
+    <h1>Welcome to My Website!</h1>
+
+    <!-- Loading script in the body -->
+    <script src="myOtherScript.js"></script>
+
+    <p>This is some text.</p>
+
+    <!-- Loading script at the end of the body to improve page load -->
+    <script src="myLastScript.js"></script>
+</body>
+</html>
+```
+
+  </div>
   </div>
 </details>
 
 ---
 
-### Since HTML documents have to wait for scripts to run once they get reached. Can you name two issues that can lead to adverse outcomes?
+### Since HTML documents have to wait for scripts to run once they are reached. Can you name two issues that can lead to adverse outcomes?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -97,8 +125,31 @@ import StructuredData from './schemadata/ScriptsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We can use two script attributes to manage script loading in HTML documents. They include the defer and async attributes.
-    </div>
+  <div><strong>Interview Response:</strong> We can use two script attributes to manage script loading in HTML documents. They include the <strong>defer</strong> and <strong>async</strong> attributes. These attributes can be used to control how the script is loaded and executed in relation to the HTML document.
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Website</title>
+
+    <!-- Script with the async attribute -->
+    <script async src="myAsyncScript.js"></script>
+
+    <!-- Script with the defer attribute -->
+    <script defer src="myDeferScript.js"></script>
+</head>
+<body>
+    <h1>Welcome to My Website!</h1>
+</body>
+</html>
+```
+
+  </div>
   </div>
 </details>
 

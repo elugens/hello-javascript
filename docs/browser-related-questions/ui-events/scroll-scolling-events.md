@@ -75,8 +75,8 @@ Please replace `alert` with a more user-friendly function in a real application,
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Scroll events are used to execute code when the user scrolls a page or element, often for effects like parallax or infinite scrolling.
-  </div><br />
+  <div><strong>Interview Response:</strong> Scroll events are typically used to detect and respond to scrollable element interactions, such as scrolling a webpage or a container. They allow for dynamic updates, animations, lazy loading, or implementing custom scrolling behaviors.
+  </div>
   </div>
 </details>
 
@@ -116,6 +116,39 @@ Remember to replace the function with one that suits your application needs. Thi
   <div>
   <div><strong>Interview Response:</strong> Scroll events can lead to performance issues if not handled properly, because they can fire many times per second during scrolling, which could overload the browser if the handler function is complex.
   </div><br />
+  <div><strong>Technical Response:</strong> One common problem with scroll events is that they can fire at a high rate, leading to a phenomenon known as 'scroll jank'. This can degrade performance and create a poor user experience, particularly on lower-powered devices or heavy websites. The solution for this problem is throttling or debouncing the scroll event.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+window.addEventListener('scroll', function() {
+    // Some heavy operation
+    for(let i = 0; i < 10000; i++) {
+        console.log(i);
+    }
+});
+```
+
+In the above example, every time a scroll event fires (which can be many times per second), the code will execute a heavy operation. This could slow down the website significantly.
+
+To solve the problem, you can 'throttle' or 'debounce' the scroll event. Here's an example of throttling with lodash:
+
+```javascript
+import _ from 'lodash';
+
+window.addEventListener('scroll', _.throttle(function() {
+    // Some heavy operation
+    for(let i = 0; i < 10000; i++) {
+        console.log(i);
+    }
+}, 200));  // Execute at most once every 200ms
+```
+
+In this second example, even if the scroll event fires many times per second, the heavy operation will be executed at most once every 200 milliseconds, reducing the load on the browser. This helps to prevent the page from becoming unresponsive or laggy during rapid scrolling.
+
+  </div>
   </div>
 </details>
 
@@ -306,8 +339,29 @@ In this example, we're storing the last known scroll position in `lastScrollTop`
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> 'window.pageYOffset' is a read-only property that returns the number of pixels the document has been scrolled vertically from the origin.
+  <div><strong>Interview Response:</strong> The property `window.pageYOffset` is a read-only property that returns the number of pixels the document is currently scrolled vertically from the top. This property is equivalent to `window.scrollY`.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+// Get the navbar
+let navbar = document.getElementById('navbar');
+
+// When the user scrolls down 50px from the top of the document, change the color of the navbar
+window.onscroll = function() {
+    if (window.pageYOffset > 50) {
+        navbar.style.backgroundColor = "#3e8e41"; // Change to green
+    } else {
+        navbar.style.backgroundColor = "transparent"; // Otherwise, make it transparent
+    }
+};
+```
+
+In this example, as the user scrolls down the page and the vertical offset from the top becomes greater than 50 pixels, the color of the navbar changes to green. When the user scrolls back up and the offset becomes less than or equal to 50 pixels, the navbar becomes transparent again.
+
+  </div>
   </div>
 </details>
 
@@ -318,8 +372,21 @@ In this example, we're storing the last known scroll position in `lastScrollTop`
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> 'window.scrollX' is a read-only window property that returns the number of pixels that the document has been scrolled horizontally from the origin.
+  <div><strong>Interview Response:</strong> The `window.scrollX` property is a read-only property that returns the number of pixels that the document is currently scrolled horizontally from the left side. This property is equivalent to `window.pageXOffset`.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+window.addEventListener('scroll', function() {
+    console.log('Current horizontal scroll from the left: ' + window.scrollX + 'px');
+});
+```
+
+In this example, whenever a user scrolls horizontally, the `scroll` event will be fired and the current horizontal scroll position from the left in pixels will be logged to the console. If there's no horizontal scroll, `window.scrollX` will be 0.
+
+  </div>
   </div>
 </details>
 
@@ -330,8 +397,45 @@ In this example, we're storing the last known scroll position in `lastScrollTop`
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> 'Element.scrollTop' is a property that gets or sets the number of pixels that an element's content is scrolled vertically.
+  <div><strong>Interview Response:</strong> The `Element.scrollTop` property in JavaScript gets or sets the number of pixels that an element's content is scrolled vertically. This value is read-only for some elements, such as `&#60;body&#62;` or `&#60;html&#62;`.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```html
+<!DOCTYPE html>
+<html>
+<body>
+    <button onclick="scrollToTop()" id="myBtn">Scroll to Top</button>
+    <!-- Assume lots of content here so that the page will scroll -->
+    <div style="height:2000px"></div>
+
+    <script>
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        };
+
+        // When the user clicks on the button, scroll to the top of the document
+        function scrollToTop() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
+</body>
+</html>
+```
+
+In the above example, a button is shown when you scroll down 20px from the top of the page. When you click the button, the `scrollTop` property is set to `0` for `body` and `documentElement` (which corresponds to the `<html>` element), which scrolls the page back to the top.
+
+  </div>
   </div>
 </details>
 
@@ -342,8 +446,41 @@ In this example, we're storing the last known scroll position in `lastScrollTop`
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> 'Element.scrollLeft' is a property that gets or sets the number of pixels that an element's content is scrolled horizontally.
+  <div><strong>Interview Response:</strong> The `Element.scrollLeft` property in JavaScript gets or sets the number of pixels that an element's content is scrolled horizontally. It represents the left scroll offset.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+If you had a horizontally scrolling container and you wanted to programmatically scroll the container 50px from the left, you could use `Element.scrollLeft` as follows:
+
+```html
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="scrollableDiv" style="width: 300px; height: 100px; overflow: auto; white-space: nowrap;">
+  <div style="width: 800px;">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  </div>
+</div>
+
+<button onclick="scrollContainer()">Scroll Container</button>
+
+<script>
+function scrollContainer() {
+  var div = document.getElementById('scrollableDiv');
+  div.scrollLeft += 50; // Scroll the container 50px to the right
+}
+</script>
+
+</body>
+</html>
+```
+
+In this example, we have a button that when clicked, scrolls the `scrollableDiv` container 50px to the right. If you click the button multiple times, it will keep scrolling to the right in increments of 50px.
+
+  </div>
   </div>
 </details>
 
@@ -355,7 +492,7 @@ In this example, we're storing the last known scroll position in `lastScrollTop`
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> In JavaScript, 'scrollHeight' is the total height of an element, including content not visible due to overflow. 'clientHeight' is the visible height of an element, excluding scrollbar height.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -368,6 +505,34 @@ In this example, we're storing the last known scroll position in `lastScrollTop`
   <div>
   <div><strong>Interview Response:</strong> The 'scrollIntoView' method in JavaScript is used to scroll the specified element into the visible area of the browser window. It can accept an optional object to define the scroll behavior.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```html
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2 id="content">Content</h2>
+
+<button onclick="scrollToContent()">Scroll to Content</button>
+
+<!-- A bunch of text to create a scrollbar -->
+<p id="para">Lorem ipsum ... (assume a lot of text here)</p>
+
+<script>
+function scrollToContent() {
+  var element = document.getElementById("content");
+  element.scrollIntoView(); 
+}
+</script>
+
+</body>
+</html>
+```
+
+  </div>
   </div>
 </details>
 
@@ -380,6 +545,35 @@ In this example, we're storing the last known scroll position in `lastScrollTop`
   <div>
   <div><strong>Interview Response:</strong> `Element.scrollWidth` is a read-only property in JavaScript that returns the total width of an element in pixels, including padding, border, and scrollable content area not visible on screen.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="scrollableDiv" style="width: 200px; height: 100px; overflow: auto; white-space: nowrap;">
+  <div style="width: 800px;">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  </div>
+</div>
+
+<button onclick="scrollToEnd()">Scroll to End</button>
+
+<script>
+function scrollToEnd() {
+  var div = document.getElementById('scrollableDiv');
+  div.scrollLeft = div.scrollWidth; // Scroll to the far-right end of the content
+}
+</script>
+
+</body>
+</html>
+```
+
+  </div>
   </div>
 </details>
 
@@ -392,6 +586,32 @@ In this example, we're storing the last known scroll position in `lastScrollTop`
   <div>
   <div><strong>Interview Response:</strong> The 'window.scrollTo' method in JavaScript is used to scroll to a specific set of coordinates in the document. It accepts two arguments: the X-coordinate (horizontal scroll) and Y-coordinate (vertical scroll).
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="scrollToTop()">Scroll to Top</button>
+
+<!-- A bunch of text to create a scrollbar -->
+<p>Lorem ipsum ... (assume a lot of text here)</p>
+
+<script>
+function scrollToTop() {
+  window.scrollTo(0, 0); 
+}
+</script>
+
+</body>
+</html>
+
+```
+
+  </div>
   </div>
 </details>
 
@@ -402,8 +622,26 @@ In this example, we're storing the last known scroll position in `lastScrollTop`
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> 'requestAnimationFrame' in the context of scrolling is often used to optimize scroll events or animations, ensuring they're synced with the browser's refresh rate, reducing jank and improving performance.
+  <div><strong>Interview Response:</strong> The 'requestAnimationFrame' in the context of scrolling is often used to optimize scroll events or animations, ensuring they're synced with the browser's refresh rate, reducing 'jank' and improving performance.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+function smoothScrollToTop() {
+    const c = document.documentElement.scrollTop || document.body.scrollTop;
+    if (c > 0) {
+        window.requestAnimationFrame(smoothScrollToTop);
+        window.scrollTo(0, c - c / 8);
+    }
+}
+
+// When this function is called, it will smooth scroll to the top of the page
+smoothScrollToTop();
+```
+
+  </div>
   </div>
 </details>
 
@@ -456,7 +694,60 @@ In this example, we first define a `handleIntersect` function that will be calle
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Scroll snapping is a web design technique where the scroll position automatically adjusts or "snaps" to a certain point, such as the start of a section, as the user scrolls through a document.
+  </div><br/>
+  <div><strong>Technical Response:</strong> Scroll snapping refers to the technique that helps to enhance scroll interactions by forcing the viewport to stop at certain points. With CSS scroll snap points, a page can smoothly glide to a stop at the top of a column of text, for example, regardless of how fast or slow the scrolling action was. Although scroll snapping is primarily handled by CSS with the properties `scroll-snap-type` and `scroll-snap-align`, JavaScript can still play a part in controlling the behavior dynamically.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+First, let's define some **CSS**:
+
+```css
+.scroll-container {
+  width: 100%;
+  height: 100vh;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  display: flex;
+}
+
+.scroll-section {
+  width: 100%;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+```
+
+The `.scroll-container` will snap on its children, which are `.scroll-section`.
+
+Then, you could have some **HTML** like this:
+
+```html
+<div class="scroll-container">
+  <div class="scroll-section">Section 1</div>
+  <div class="scroll-section">Section 2</div>
+  <div class="scroll-section">Section 3</div>
+  <!-- More sections... -->
+</div>
+```
+
+And here is how **JavaScript** can be used to dynamically control which section to snap to:
+
+```javascript
+let scrollContainer = document.querySelector('.scroll-container');
+let sections = Array.from(document.querySelectorAll('.scroll-section'));
+
+// Scroll to third section
+scrollContainer.scrollTo({
+  left: sections[2].offsetLeft,
+  behavior: 'smooth'
+});
+```
+
+In this JavaScript example, we select the `.scroll-container` and the `.scroll-section` elements and make the container scroll to the third section. This will cause the scroll snapping to occur due to the CSS we have set up.
+
+  </div>
   </div>
 </details>
 
@@ -489,13 +780,43 @@ In this example, when links are clicked that point to different sections of the 
 
 ---
 
-### Can you explain 'window.scrollBy'?
+### Can you explain the 'window.scrollBy' method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> 'window.scrollBy' is a method that scrolls the document by the specified number of pixels. It's relative to the current scroll position.
-  </div><br/>
+  <div><strong>Interview Response:</strong> The `window.scrollBy()` method in JavaScript is used to scroll the document by a certain number of pixels. This is relative to its current location.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```html
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="scrollDown()">Scroll Down 100px</button>
+<button onclick="scrollUp()">Scroll Up 100px</button>
+
+<!-- A bunch of text to create a scrollbar -->
+<p>Lorem ipsum ... (assume a lot of text here)</p>
+
+<script>
+function scrollDown() {
+  window.scrollBy(0, 100); // Scroll down by 100px
+}
+
+function scrollUp() {
+  window.scrollBy(0, -100); // Scroll up by 100px
+}
+</script>
+
+</body>
+</html>
+```
+
+  </div>
   </div>
 </details>
 
@@ -540,10 +861,25 @@ In this example, when links are clicked that point to different sections of the 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To block scrolling, you can set 'overflow' to 'hidden' on the body element in CSS, preventing the user from scrolling on the webpage.
+  <div><strong>Interview Response:</strong> You can prevent scrolling on a web page using JavaScript by setting the overflow property of the body to hidden. This can be done directly using JavaScript's interaction with CSS.
     </div><br/>
   <div><strong>Technical Response:</strong> We cannot use event.preventDefault() in the onscroll listener to prevent scrolling because it fires after the scroll has already occurred. We may, however, disable event-based scrolling by using preventDefault() which invokes on a scroll-triggering event, such as the keydown event for pageUp and pageDown. The scroll does not begin if we add an event handler to these events and use event.preventDefault().
-    </div>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Block scrolling
+document.body.style.overflow = 'hidden';
+
+// Do some operations...
+
+// Unblock scrolling
+document.body.style.overflow = 'auto';
+```
+
+  </div>
   </div>
 </details>
 

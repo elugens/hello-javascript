@@ -50,6 +50,24 @@ import StructuredData from './schemadata/UrlObjectsSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> A URL object in JavaScript is a built-in object that provides methods and properties to manipulate and parse URLs.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+new URL(url)
+new URL(url, base)
+
+// Mozilla Example
+
+let B = new URL(baseUrl);
+// => 'https://developer.mozilla.org/'
+
+new URL("en-US/docs", B);
+// => 'https://developer.mozilla.org/en-US/docs'
+```
+
+  </div>
   </div>
 </details>
 
@@ -62,6 +80,33 @@ import StructuredData from './schemadata/UrlObjectsSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> The `href` property of a URL object in JavaScript provides the entire URL as a string, including the protocol, hostname, port, path, query string, and fragment identifier.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+- **Creating a new URL object**
+
+```javascript
+let url = new URL("https://www.example.com/path?query=example#fragment");
+
+console.log(url.href);
+// Output: "https://www.example.com/path?query=example#fragment"
+```
+
+- **Modifying an existing URL**
+
+```javascript
+let url = new URL("https://www.example.com");
+
+url.href = "https://www.newexample.com/newpath?newquery=newexample#newfragment";
+
+console.log(url.href);
+// Output: "https://www.newexample.com/newpath?newquery=newexample#newfragment"
+```
+
+As you can see, the `href` property can be used to both read the full URL, and set a new URL. Note that when you modify the `href` of a URL object, all the other properties (like `protocol`, `host`, `pathname`, `search`, and `hash`) get updated as well.
+
+  </div>
   </div>
 </details>
 
@@ -74,6 +119,23 @@ import StructuredData from './schemadata/UrlObjectsSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> The protocol property represents the protocol scheme of the URL, like http, https, etc.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let url = new URL("https://www.example.com/path?query=example#fragment");
+
+url.host = "www.newexample.com:9090";
+
+console.log(url.protocol);
+// Output: "https:"
+
+console.log(url.href);
+// Output: "https://www.newexample.com:9090/path?query=example#fragment"
+```
+
+  </div>
   </div>
 </details>
 
@@ -84,8 +146,25 @@ import StructuredData from './schemadata/UrlObjectsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The host property contains the full host portion of the URL, including the port if specified.
+  <div><strong>Interview Response:</strong> The <strong>"host"</strong> property contains the full host portion of the URL, including the port if specified.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let url = new URL("https://www.example.com/path?query=example#fragment");
+
+url.host = "www.newexample.com:9090";
+
+console.log(url.host);
+// Output: "www.newexample.com:9090"
+
+console.log(url.href);
+// Output: "https://www.newexample.com:9090/path?query=example#fragment"
+```
+
+  </div>
   </div>
 </details>
 
@@ -98,6 +177,23 @@ import StructuredData from './schemadata/UrlObjectsSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> The pathname is the path section of the URL that comes after the host and before the query, including the initial slash.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let url = new URL("https://www.example.com/path?query=example#fragment");
+
+url.host = "www.newexample.com:9090";
+
+console.log(url.pathname);
+// Output: "/path"
+
+console.log(url.href);
+// Output: "https://www.newexample.com:9090/path?query=example#fragment"
+```
+
+  </div>
   </div>
 </details>
 
@@ -110,6 +206,23 @@ import StructuredData from './schemadata/UrlObjectsSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> The `search` property in a URL object retrieves or sets the query string parameters of a URL.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let url = new URL("https://www.example.com/path?query=example#fragment");
+
+url.host = "www.newexample.com:9090";
+
+console.log(url.search);
+// Output: "?query=example"
+
+console.log(url.href);
+// Output: "https://www.newexample.com:9090/path?query=example#fragment"
+```
+
+  </div>
   </div>
 </details>
 
@@ -122,6 +235,36 @@ import StructuredData from './schemadata/UrlObjectsSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> The `hash` property in a URL object represents the fragment identifier (the part of a URL after the '#'), typically used for linking to specific sections within a webpage.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+- **Creating a new URL object and accessing the hash**
+
+```js
+let url = new URL("https://www.example.com/path?query=example#fragment");
+
+console.log(url.hash);
+// Output: "#fragment"
+```
+
+- **Modifying the hash of an existing URL**
+
+```js
+let url = new URL("https://www.example.com/path?query=example");
+
+url.hash = "newfragment";
+
+console.log(url.hash);
+// Output: "#newfragment"
+
+console.log(url.href);
+// Output: "https://www.example.com/path?query=example#newfragment"
+```
+
+Note that when you modify the hash of a URL object, the href property is updated to reflect the new URL.
+
+  </div>
   </div>
 </details>
 
@@ -134,6 +277,36 @@ import StructuredData from './schemadata/UrlObjectsSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> The `port` property in a URL object represents the port number specified in the URL, indicating the communication endpoint for the requested resource.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+- **Creating a new URL object and accessing the port**
+
+```js
+let url = new URL("https://www.example.com:8080/path?query=example#fragment");
+
+console.log(url.port);
+// Output: "8080"
+```
+
+- **Modifying the port of an existing URL**
+
+```js
+let url = new URL("https://www.example.com/path?query=example");
+
+url.port = "9090";
+
+console.log(url.port);
+// Output: "9090"
+
+console.log(url.href);
+// Output: "https://www.example.com:9090/path?query=example"
+```
+
+Note that when you modify the hash of a URL object, the href property is updated to reflect the new URL.
+
+  </div>
   </div>
 </details>
 
@@ -146,6 +319,43 @@ import StructuredData from './schemadata/UrlObjectsSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> The `username` and `password` properties in a URL object are used to store the credentials (login information) for authentication when accessing protected resources through the URL.
   </div><br />
+  <div><strong>Technical Response:</strong> In JavaScript, the `username` and `password` properties of a URL object are used to represent the username and password in a URL, respectively. They're part of the user information subcomponent in a URI, and can be used to authenticate the user with the server. Note that usage of passwords directly in URLs is generally not recommended due to security reasons.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+- **Creating a new URL object and accessing the username and password**
+
+```javascript
+let url = new URL("https://username:password@example.com/path?query=example#fragment");
+
+console.log(url.username); // Output: "username"
+console.log(url.password); // Output: "password"
+```
+
+- **Modifying the username and password of an existing URL**
+
+```javascript
+let url = new URL("https://example.com/path?query=example");
+
+url.username = "newusername";
+url.password = "newpassword";
+
+console.log(url.username); // Output: "newusername"
+console.log(url.password); // Output: "newpassword"
+
+console.log(url.href); 
+// Output: "https://newusername:newpassword@example.com/path?query=example"
+```
+
+---
+
+:::warning
+Note that usage of passwords directly in URLs is generally not recommended due to security reasons.
+:::
+
+  </div>
   </div>
 </details>
 
@@ -156,8 +366,28 @@ import StructuredData from './schemadata/UrlObjectsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The `origin` property in a URL object represents the combination of the scheme, host, and port, providing the unique identifier for a web origin or the base URL of a resource.
+  <div><strong>Interview Response:</strong> The `origin` property in a URL object represents the combination of the scheme, host, and port, providing the unique identifier for a web origin or the base URL of a resource. It's read-only, so you can't modify it directly like you can with other properties.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+- **Creating a new URL object and accessing the origin**
+
+```javascript
+let url = new URL("https://www.example.com:8080/path?query=example#fragment");
+
+console.log(url.origin);
+// Output: "https://www.example.com:8080"
+```
+
+---
+
+:::note
+Note that `origin` property is read-only. You cannot modify the `origin` directly; instead, you can modify the `protocol`, `hostname`, or `port` properties individually, and the `origin` will update accordingly.
+:::
+
+  </div>
   </div>
 </details>
 
@@ -170,6 +400,39 @@ import StructuredData from './schemadata/UrlObjectsSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> The `URLSearchParams` interface provides utility methods to manipulate and interact with the query string parameters of a URL, allowing easy parsing, modification, and creation of query strings.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+- **Creating a new URL object and accessing the search parameters**
+
+```javascript
+let url = new URL("https://www.example.com/path?query1=example1&query2=example2#fragment");
+
+let params = new URLSearchParams(url.search);
+
+console.log(params.get('query1')); // Output: "example1"
+console.log(params.get('query2')); // Output: "example2"
+```
+
+- **Modifying the search parameters of an existing URL**
+
+```javascript
+let url = new URL("https://www.example.com/path?query=example");
+
+let params = new URLSearchParams(url.search);
+params.set('query', 'newexample');
+params.append('newquery', 'example');
+
+url.search = params.toString();
+
+console.log(url.href); 
+// Output: "https://www.example.com/path?query=newexample&newquery=example"
+```
+
+The `URLSearchParams` interface is very useful for manipulating the query string of a URL without having to deal with string parsing and serialization yourself.
+
+  </div>
   </div>
 </details>
 

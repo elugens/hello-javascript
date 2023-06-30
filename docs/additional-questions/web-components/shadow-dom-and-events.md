@@ -48,19 +48,61 @@ import StructuredData from './schemadata/ShadowEventsSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Shadow DOM events maintain component encapsulation by default, ensuring internal component interactions don't leak into the broader application, thus providing better modularity, reusability, and separation of concerns.
-  </div><br />
+  </div>
   </div>
 </details>
 
 ---
 
-### How does event propagation work with Shadow DOM?
+### How does event propagation work with the Shadow DOM?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Event propagation in Shadow DOM follows the same bubble and capture phases, but with event retargeting at shadow boundaries. The `composed` flag determines if events cross shadow boundaries.
+  <div><strong>Interview Response:</strong> Shadow DOM's event propagation has two phases: capture and bubbling. Events don't cross shadow boundaries in the capture phase but do in the bubbling phase. Event targets are retargeted to respect encapsulation.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here is a simple example demonstrating event propagation with the Shadow DOM. In this example, a shadow root is attached to a custom element, and an event listener is added to the document to log clicks:
+
+```javascript
+// Define custom element
+class MyShadowElem extends HTMLElement {
+  constructor() {
+    super();
+
+    let shadowRoot = this.attachShadow({ mode: 'open' });
+    let div = document.createElement('div');
+    div.textContent = 'Click me!';
+    div.addEventListener('click', (e) => {
+      console.log('Inside shadow DOM, original target: ', e.target);
+      console.log('Inside shadow DOM, retargeted target: ', e.composedPath()[0]);
+    });
+
+    shadowRoot.appendChild(div);
+  }
+}
+
+// Define custom element
+customElements.define('my-shadow-elem', MyShadowElem);
+
+// Add element to body
+let elem = new MyShadowElem();
+document.body.appendChild(elem);
+
+// Add event listener to document
+document.addEventListener('click', (e) => {
+  console.log('Outside shadow DOM, target: ', e.target);
+});
+```
+
+When you click on the text "Click me!", the `click` event originates from the `div` inside the shadow tree. The event listener inside the shadow DOM logs the original target (`div`) and the retargeted target (`my-shadow-elem`), while the event listener attached to the document logs the retargeted target (`my-shadow-elem`). The retargeted target is the closest ancestor of the original target that is also an ancestor of the event listener, in this case, the custom element itself.
+
+Note that, in this example, the `div` inside the shadow DOM is encapsulated and not exposed to the light DOM. The event propagation also respects the encapsulation provided by the Shadow DOM.
+
+  </div>
   </div>
 </details>
 
@@ -71,8 +113,40 @@ import StructuredData from './schemadata/ShadowEventsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> You can listen to all events within a Shadow DOM by adding a listener on the shadow root for the 'event' and setting 'useCapture' flag to true, catching all bubbling and capturing events.
+  <div><strong>Interview Response:</strong> To listen to all events within a Shadow DOM, you can use the addEventListener method in conjunction with Event on the Shadow Root. It's important to note that you can't listen to every single event that might occur, but you can listen to a broad range of common ones.
   </div><br />
+  <div><strong className="codeExample">Here's a simple code example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+class MyShadowElem extends HTMLElement {
+  constructor() {
+    super();
+
+    let shadowRoot = this.attachShadow({ mode: 'open' });
+    let div = document.createElement('div');
+    div.textContent = 'Click me!';
+    shadowRoot.appendChild(div);
+    
+    // Listen to a variety of events
+    ['click', 'dblclick', 'keydown', 'keyup', 'mousemove'].forEach(eventType => {
+      shadowRoot.addEventListener(eventType, (e) => {
+        console.log(`Shadow DOM received ${eventType} event`);
+      });
+    });
+  }
+}
+
+customElements.define('my-shadow-elem', MyShadowElem);
+
+let elem = new MyShadowElem();
+document.body.appendChild(elem);
+```
+
+In this example, we are listening to a variety of events including `click`, `dblclick`, `keydown`, `keyup`, and `mousemove`. When one of these events occurs within the Shadow DOM, a corresponding message will be logged to the console. If you want to listen to more events, you can add their types to the array.
+
+  </div>
   </div>
 </details>
 
@@ -85,6 +159,49 @@ import StructuredData from './schemadata/ShadowEventsSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> Yes, events can be dispatched from within a shadow tree. However, by default, they don't cross shadow boundaries unless the `composed` flag is set to `true` in the event initialization.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+// Define custom element
+class MyShadowElem extends HTMLElement {
+  constructor() {
+    super();
+
+    let shadowRoot = this.attachShadow({ mode: 'open' });
+    let div = document.createElement('div');
+    div.textContent = 'Click me!';
+
+    div.addEventListener('click', (e) => {
+      console.log('Click event inside shadow DOM');
+      let customEvent = new CustomEvent('custom', { 
+        bubbles: true, 
+        composed: true // allows the event to bubble across the shadow boundary
+      });
+      div.dispatchEvent(customEvent);
+    });
+
+    shadowRoot.appendChild(div);
+  }
+}
+
+// Define custom element
+customElements.define('my-shadow-elem', MyShadowElem);
+
+// Add element to body
+let elem = new MyShadowElem();
+document.body.appendChild(elem);
+
+// Listen for custom event
+document.addEventListener('custom', () => {
+  console.log('Custom event received outside shadow DOM');
+});
+```
+
+In this example, when you click on the text "Click me!", a custom event named 'custom' is dispatched. Since `composed: true` is set for the custom event, it is able to cross the shadow boundary and be caught by the event listener attached to the document.
+
+  </div>
   </div>
 </details>
 
@@ -96,7 +213,7 @@ import StructuredData from './schemadata/ShadowEventsSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> To make events bubble up outside the shadow root, when you create the event, you need to set the `bubbles` and `composed` properties to `true` in the event initialization object.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -108,7 +225,7 @@ import StructuredData from './schemadata/ShadowEventsSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> In a shadow tree, `event.target` gets retargeted to the shadow host when the event crosses the shadow boundary, maintaining the encapsulation provided by the Shadow DOM.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -119,8 +236,44 @@ import StructuredData from './schemadata/ShadowEventsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In the context of Shadow DOM, `event.currentTarget` refers to the element on which the current event listener is being processed, unaffected by shadow boundaries or retargeting.
+  <div><strong>Interview Response:</strong> `event.currentTarget` refers to the element that the listener is attached to. When dealing with Shadow DOM, `event.currentTarget` will be set to the host element of the shadow tree if the listener is attached to it.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+// Define custom element
+class MyShadowElem extends HTMLElement {
+  constructor() {
+    super();
+
+    let shadowRoot = this.attachShadow({ mode: 'open' });
+    let div = document.createElement('div');
+    div.textContent = 'Click me!';
+    
+    div.addEventListener('click', (e) => {
+      console.log('Inside shadow DOM, currentTarget: ', e.currentTarget);
+    });
+
+    shadowRoot.appendChild(div);
+  }
+}
+
+// Define custom element
+customElements.define('my-shadow-elem', MyShadowElem);
+
+// Add element to body
+let elem = new MyShadowElem();
+document.body.appendChild(elem);
+
+// Add event listener to custom element
+elem.addEventListener('click', (e) => {
+  console.log('Outside shadow DOM, currentTarget: ', e.currentTarget);
+});
+```
+
+  </div>
   </div>
 </details>
 
@@ -133,6 +286,45 @@ import StructuredData from './schemadata/ShadowEventsSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> The `slotchange` event fires when the set of nodes distributed to a `&#60;slot&#62;` element changes. This enables tracking of dynamic content changes inside the shadow DOM's slot.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+// Define custom element
+class MyShadowElem extends HTMLElement {
+  constructor() {
+    super();
+
+    let shadowRoot = this.attachShadow({ mode: 'open' });
+    let slot = document.createElement('slot');
+    
+    slot.addEventListener('slotchange', (e) => {
+      console.log('slotchange event fired');
+      console.log('Assigned nodes:', slot.assignedNodes());
+    });
+
+    shadowRoot.appendChild(slot);
+  }
+}
+
+// Define custom element
+customElements.define('my-shadow-elem', MyShadowElem);
+
+// Add element to body
+let elem = new MyShadowElem();
+document.body.appendChild(elem);
+
+// Add child to custom element
+let child = document.createElement('div');
+child.textContent = 'I am a child node.';
+elem.appendChild(child);
+
+// Remove child from custom element
+elem.removeChild(child);
+```
+
+  </div>
   </div>
 </details>
 
@@ -145,6 +337,43 @@ import StructuredData from './schemadata/ShadowEventsSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> Yes, you can stop event propagation in a Shadow DOM by calling `event.stopPropagation()`. However, this won't prevent the event from reaching the shadow host if `composed` is set to `true`.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+// Define custom element
+class MyShadowElem extends HTMLElement {
+  constructor() {
+    super();
+
+    let shadowRoot = this.attachShadow({ mode: 'open' });
+    let div = document.createElement('div');
+    div.textContent = 'Click me!';
+    
+    div.addEventListener('click', (e) => {
+      console.log('Click event inside shadow DOM');
+      e.stopPropagation();  // Stops event propagation
+    });
+
+    shadowRoot.appendChild(div);
+  }
+}
+
+// Define custom element
+customElements.define('my-shadow-elem', MyShadowElem);
+
+// Add element to body
+let elem = new MyShadowElem();
+document.body.appendChild(elem);
+
+// Add event listener to custom element
+elem.addEventListener('click', (e) => {
+  console.log('Click event outside shadow DOM');
+});
+```
+
+  </div>
   </div>
 </details>
 
@@ -157,6 +386,42 @@ import StructuredData from './schemadata/ShadowEventsSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> A click event in the Shadow DOM can be captured by a click event listener in the main document only if the event is configured with `composed: true`, allowing it to cross shadow boundaries.
   </div><br />
+  <div><strong>Technical Response:</strong> Yes, a click event in the Shadow DOM can be captured by a click event listener in the main document, if the event is configured to be both `bubbling` and `composed`. By default, a `click` event is `bubbling`, but not `composed`, so you don't have to worry about it for standard events like `click`. However, for custom events or non-standard events, you will need to set `composed: true` for them to cross the shadow boundary.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+// Define custom element
+class MyShadowElem extends HTMLElement {
+  constructor() {
+    super();
+
+    let shadowRoot = this.attachShadow({ mode: 'open' });
+    let div = document.createElement('div');
+    div.textContent = 'Click me!';
+    
+    shadowRoot.appendChild(div);
+  }
+}
+
+// Define custom element
+customElements.define('my-shadow-elem', MyShadowElem);
+
+// Add element to body
+let elem = new MyShadowElem();
+document.body.appendChild(elem);
+
+// Add event listener to document
+document.addEventListener('click', (e) => {
+  console.log('Click event captured outside shadow DOM');
+});
+```
+
+In this example, when you click on the text "Click me!" inside the Shadow DOM, the click event bubbles up and crosses the shadow boundary, triggering the click event listener in the main document and logging "Click event captured outside shadow DOM" to the console.
+
+  </div>
   </div>
 </details>
 
@@ -170,7 +435,7 @@ import StructuredData from './schemadata/ShadowEventsSchemaData.js';
   <div><strong>Interview Response:</strong> The event.path and event.composedPath() properties are used to get the list of elements that an event has propagated through. The difference between the two properties is that event.path includes nodes in shadow trees, while event.composedPath() does not.
   </div><br />
   <div><strong>Technical Details:</strong> In Shadow DOM, a shadow root is a virtual DOM that is separate from the main DOM. This allows developers to encapsulate custom components and their styles. When an event propagates through a shadow tree, it does not propagate through the main DOM. This means that the event.path property will include nodes in the shadow tree, while the event.composedPath() property will not.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -181,8 +446,36 @@ import StructuredData from './schemadata/ShadowEventsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The shadowRoot property returns the shadow root if the element has one; otherwise, it returns null.
+  <div><strong>Interview Response:</strong> The `shadowRoot` property returns the shadow root that is hosted by the element, or `null` if no shadow root is present. This property gives you access to the Shadow DOM of an element so you can interact with it.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+// Define custom element
+class MyShadowElem extends HTMLElement {
+  constructor() {
+    super();
+
+    this.attachShadow({ mode: 'open' });
+    this.shadowRoot.innerHTML = '<div>Content inside shadow DOM</div>';
+  }
+}
+
+// Define custom element
+customElements.define('my-shadow-elem', MyShadowElem);
+
+// Add element to body
+let elem = new MyShadowElem();
+document.body.appendChild(elem);
+
+// Access Shadow DOM via shadowRoot
+let shadow = elem.shadowRoot;
+console.log(shadow.innerHTML);  // Logs: '<div>Content inside shadow DOM</div>'
+```
+
+  </div>
   </div>
 </details>
 
@@ -194,7 +487,7 @@ import StructuredData from './schemadata/ShadowEventsSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, you can catch events from a closed Shadow DOM as they bubble up and cross the shadow boundary.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -205,8 +498,46 @@ import StructuredData from './schemadata/ShadowEventsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The relatedTarget refers to another interacting element, and target is the element that dispatched the event. Both get retargeted as the event bubbles.
+  <div><strong>Interview Response:</strong> In the Shadow DOM event context, event.target is the original target of the event, while event.relatedTarget refers to a secondary target, like the element the mouse moved from/to.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+// Define custom element
+class MyShadowElem extends HTMLElement {
+  constructor() {
+    super();
+
+    let shadowRoot = this.attachShadow({ mode: 'open' });
+    let div = document.createElement('div');
+    let span = document.createElement('span');
+    
+    div.textContent = 'Hover over me!';
+    span.textContent = ' I am here!';
+    
+    div.addEventListener('mouseover', (e) => {
+      console.log('mouseover event inside shadow DOM, target: ', e.target);
+      console.log('mouseover event inside shadow DOM, relatedTarget: ', e.relatedTarget);
+    });
+
+    shadowRoot.appendChild(div);
+    shadowRoot.appendChild(span);
+  }
+}
+
+// Define custom element
+customElements.define('my-shadow-elem', MyShadowElem);
+
+// Add element to body
+let elem = new MyShadowElem();
+document.body.appendChild(elem);
+```
+
+In this example, a `mouseover` event listener is attached to a `div` element inside the Shadow DOM of a custom element. When you hover over the `div`, `event.target` is the `div` that the mouse moved onto, and `event.relatedTarget` is the element that the mouse moved away from, which can be either the `span` in the Shadow DOM or any element in the Light DOM.
+
+  </div>
   </div>
 </details>
 
@@ -310,10 +641,42 @@ In this example, even though the button is clicked inside the shadow DOM, the ev
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> When `attachShadow` method mode is set to 'closed', the shadow tree becomes inaccessible from outside the shadow root, enhancing encapsulation but reducing options for interaction.
+  <div><strong>Interview Response:</strong> When the `attachShadow` method's mode is set to `closed`, the shadow root becomes inaccessible from the outside of the shadow tree. In other words, you won't be able to use `element.shadowRoot` to get a reference to the shadow root. The shadow tree becomes fully encapsulated.
     </div><br/>
   <div><strong>Technical Details:</strong> If the shadow tree gets created with &#123;mode: 'closed'&#125;, then the composed path starts from the host and upwards. That is similar to other methods that work with shadow DOM, and the Internals of the closed tree are hidden.
-    </div>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's a code example:
+
+```javascript
+// Define custom element
+class MyShadowElem extends HTMLElement {
+  constructor() {
+    super();
+
+    this.attachShadow({ mode: 'closed' });
+    this.shadowRoot.innerHTML = '<div>Content inside shadow DOM</div>';
+  }
+}
+
+// Define custom element
+customElements.define('my-shadow-elem', MyShadowElem);
+
+// Add element to body
+let elem = new MyShadowElem();
+document.body.appendChild(elem);
+
+// Try to access Shadow DOM via shadowRoot
+let shadow = elem.shadowRoot;
+console.log(shadow);  // Logs: null
+```
+
+In this example, a shadow root is attached to a custom element in 'closed' mode. Despite the fact that the `shadowRoot` property is used to attempt to access the Shadow DOM, it logs `null` to the console because the Shadow DOM is fully encapsulated and not accessible from the outside when its mode is 'closed'.
+
+  </div>
   </div>
 </details>
 
@@ -325,7 +688,45 @@ In this example, even though the button is clicked inside the shadow DOM, the ev
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The Flattened DOM is used for event bubbling to preserve the encapsulation provided by the Shadow DOM, ensuring events appear as if they are coming from the hosting element.
-    </div>
+    </div><br/>
+  <div><strong>Technical Response:</strong> Event bubbling in the Shadow DOM uses the flattened DOM (also known as the composed tree) to ensure events can still propagate upwards to ancestor elements even when they originate from inside a shadow tree. This maintains the encapsulation provided by the Shadow DOM while still allowing interaction with the broader document.
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+// Define custom element
+class MyShadowElem extends HTMLElement {
+  constructor() {
+    super();
+
+    let shadowRoot = this.attachShadow({ mode: 'open' });
+    let div = document.createElement('div');
+    div.textContent = 'Click me!';
+    
+    shadowRoot.appendChild(div);
+  }
+}
+
+// Define custom element
+customElements.define('my-shadow-elem', MyShadowElem);
+
+// Add element to body
+let elem = new MyShadowElem();
+document.body.appendChild(elem);
+
+// Add event listener to document
+document.addEventListener('click', (e) => {
+  console.log('Click event captured in document');
+});
+```
+
+In this example, if you click on the text "Click me!" inside the shadow DOM, the `click` event bubbles up through the shadow tree, then continues to bubble up through the flattened DOM. As a result, the click event listener in the document is triggered, and "Click event captured in document" is logged to the console.
+
+Without event bubbling using the flattened DOM, the event would stop at the shadow root and would not reach the document, making it impossible for the main document to react to the event.
+
+  </div>
   </div>
 </details>
 
@@ -339,6 +740,18 @@ In this example, even though the button is clicked inside the shadow DOM, the ev
   <div><strong>Interview Response:</strong> The Event.composedPath() method returns an array of the objects on which listeners will be invoked when an event is propagating, from the event target through the shadow host to Window, respecting shadow boundaries and encapsulation.
     </div><br />
     <strong>Syntax: </strong> let composed = Event.composedPath();<br /><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+document.querySelector("html").addEventListener("click", (e) => {
+  console.log(e.composed);
+  console.log(e.composedPath());
+});
+```
+
+  </div>
   </div>
 </details>
 
@@ -350,7 +763,7 @@ In this example, even though the button is clicked inside the shadow DOM, the ev
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> For UI events to pass across a shadow DOM boundary, we use the `composed` attribute in the event initialization. When set to `true`, the event can bubble out of the shadow DOM into the light DOM.
-    </div>
+    </div><br/>
   <div><strong>Technical Response:</strong> The composed event object property governs this process. If it is true, then the event crosses the boundary. Otherwise, it only can be caught from inside the shadow DOM. The read-only composed property returns a Boolean, which indicates whether the event propagates across the shadow DOM boundary into the standard DOM. Most UI Events have the composed property set to true in most cases.
     </div>
   </div>

@@ -313,7 +313,7 @@ public bool HttpOnly { get; set; }
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Third-party cookies are set by domains other than the one being visited directly by the user, often for tracking and online-advertising purposes.
-    </div>
+    </div><br/>
   <div><strong>Technical Response:</strong> A cookie is referred to as "third-party" if it gets placed by a domain not visited by the user. Because of their nature, Developers commonly use third-party cookies for tracking and advertising services. Because of coupling tied to the original domain, ads.com may monitor the same person across other sites if they all visit it. Because some individuals dislike third-party monitoring, browsers allow you to disable such cookies.
     </div>
   </div>
@@ -327,7 +327,7 @@ public bool HttpOnly { get; set; }
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The GDPR (General Data Protection Regulation) governs data privacy in the EU, protecting individuals' rights over personal data, requiring consent for data processing, and imposing strict penalties for non-compliance.
-    </div>
+    </div><br/>
   <div><strong>Detailed Response:</strong> There is legislation in Europe called GDPR, that enforces a set of rules for websites to respect the users’ privacy. One of these rules is to require explicit permission for tracking cookies from the user. Please note that this is only about tracking / identifying / authorizing cookies. So, if we set a cookie that saves some information but neither tracks nor identifies the user, we are free to do it. But if we are going to set a cookie with an authentication session or a tracking id, then a user must allow that.
     </div>
   </div>

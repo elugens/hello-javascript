@@ -47,7 +47,28 @@ import StructuredData from './schemadata/EvalSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The main risk is the potential for code injection, where malicious code can be executed. It's important to validate and sanitize any input used with `eval`.<br />
+  <div><strong>Interview Response:</strong> The main risk is the potential for code injection, where malicious code can be executed. It's important to validate and sanitize any input used with `eval`.
+  </div><br />
+  <div><strong className="codeExample">Technical Details:</strong><br /><br />
+
+  <div></div>
+
+The `eval()` function in JavaScript is a powerful feature that evaluates a string of JavaScript code and executes it. Because it has the ability to execute arbitrary code, it presents several security risks:
+
+**1. Code Injection**: If `eval()` is used on strings that can be manipulated by users (for example, form inputs or URL parameters), it opens up the potential for malicious code injection. An attacker could input a string that contains harmful JavaScript code, which would then be executed.
+
+**2. Scope Access**: Code executed by `eval()` runs in the same scope as the call to `eval()`, meaning it has access to local variables, functions, and potentially sensitive data within that scope.
+
+**3. Performance**: While not a security risk per se, it's worth noting that `eval()` can lead to performance issues. Modern JavaScript engines optimize code by compiling it into a more efficient format, but they can't do this as effectively with `eval()`, because the code within `eval()` is dynamically parsed and executed.
+
+Given these security and performance considerations, it's generally recommended to avoid `eval()` if possible. Alternatives include using `JSON.parse()` for converting JSON strings into objects, using functions like `setTimeout` and `setInterval` with function arguments instead of string arguments, or using the `Function` constructor to create functions from strings in a more controlled manner.
+
+---
+
+:::tip
+Remember, always sanitize and validate any user-provided data if you absolutely must use `eval()`, though in general it's best to avoid it if at all possible.
+:::
+
   </div>
   </div>
 </details>

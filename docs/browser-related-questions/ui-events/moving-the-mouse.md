@@ -49,8 +49,55 @@ import StructuredData from './schemadata/MovingSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The `mouseout` event in JavaScript triggers when the mouse pointer leaves the area of an element, opposite to `mouseover` which triggers when the mouse enters.
-
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mouse Events Example</title>
+  <style>
+    #myElement {
+      width: 200px;
+      height: 200px;
+      background-color: lightgray;
+    }
+  </style>
+</head>
+<body>
+  <div id="myElement"></div>
+
+  <script>
+    var element = document.getElementById('myElement');
+
+    element.addEventListener('mouseout', function(event) {
+      console.log("Mouse out!");
+      // Additional code for mouseout event
+    });
+
+    element.addEventListener('mouseover', function(event) {
+      console.log("Mouse over!");
+      // Additional code for mouseover event
+    });
+  </script>
+</body>
+</html>
+```
+
+**Output:**
+
+```html
+"Mouse over!"
+"Mouse out!"
+"Mouse over!"
+"Mouse out!"
+"Mouse over!"
+```
+
+  </div>
   </div>
 </details>
 
@@ -62,7 +109,7 @@ import StructuredData from './schemadata/MovingSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> `mouseenter` fires when the pointer moves into the target element, not including its children.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -74,7 +121,7 @@ import StructuredData from './schemadata/MovingSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> `mouseenter` triggers when the mouse enters an element, `mouseleave` when it leaves. Unlike `mouseover` and `mouseout`, these events do not bubble and ignore child elements.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -86,7 +133,7 @@ import StructuredData from './schemadata/MovingSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> We use mouseover when you want the event to bubble up the DOM and also trigger for child elements. Use mouseenter when only interested in the event for the target element.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -98,7 +145,7 @@ import StructuredData from './schemadata/MovingSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> You should use `mouseleave` instead of `mouseout` to avoid event triggering when the mouse moves over child elements. `mouseleave` only triggers when exiting the target element's area.
-  </div><br />
+  </div>
   </div>
 </details>
 

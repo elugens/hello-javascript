@@ -50,7 +50,7 @@ import StructuredData from './schemadata/WordBoundarySchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> It represents a position where a word character is not followed or preceded by another word character.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -63,6 +63,37 @@ import StructuredData from './schemadata/WordBoundarySchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> In Regex, Word boundaries are represented by the '\b' meta-character.
   </div><br />
+  <div><strong>Technical Response:</strong> A word boundary in JavaScript's regular expressions is represented by the `\b` character sequence. It denotes a position where a word character is not followed or preceded by another word-character. This position can be at the start or end of a string, or between a word character and a non-word character.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let str = "Hello, welcome to HelloJavaScript. HelloJavaScript is great!";
+let regex = /\bHelloJavaScript\b/g; 
+
+let matches = str.match(regex);
+
+console.log(matches); // prints: [ 'HelloJavaScript', 'HelloJavaScript' ]
+```
+
+In this example, the regular expression `/\bHelloJavaScript\b/g` matches the word "HelloJavaScript" where it appears as a whole word (not part of another word). The `g` at the end of the regular expression indicates a global search (find all matches rather than stopping after the first match).
+
+If we didn't use the word boundary `\b`, we would also match words that contain "HelloJavaScript" as a substring. For example:
+
+```javascript
+let str = "Hello, welcome to HelloJavaScript. HelloJavaScript is great!";
+let regex = /HelloJavaScript/g;
+
+let matches = str.match(regex);
+
+console.log(matches); // prints: [ 'HelloJavaScript', 'HelloJavaScript' ]
+```
+
+Here, the regular expression `/HelloJavaScript/g` matches both "HelloJavaScript" and "HelloJavaScript" because we didn't specify the word boundary.
+
+  </div>
   </div>
 </details>
 
@@ -75,6 +106,37 @@ import StructuredData from './schemadata/WordBoundarySchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> In Regex, The '\B' meta-character matches a non-word boundary position.
   </div><br />
+  <div><strong>Technical Response:</strong> The opposite of a word boundary in regular expressions is denoted by `\B`. While `\b` matches the position where a word character is not followed or preceded by another word character, `\B` matches the position where a word character is followed or preceded by another word character.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let str = "Hello, welcome to HelloJavaScript. HelloJavaScriptProgramming is great!";
+let regex = /\BHelloJavaScript\B/g;
+
+let matches = str.match(regex);
+
+console.log(matches); // prints: [ 'HelloJavaScript' ]
+```
+
+In this example, the regular expression `/\BHelloJavaScript\B/g` matches "HelloJavaScript" only when it's part of another word, like "HelloJavaScriptProgramming". The `g` at the end of the regular expression indicates a global search (find all matches rather than stopping after the first match).
+
+If the string was "Hello, welcome to HelloJavaScript. HelloJavaScript is great!", the same regex would not match "HelloJavaScript" because in this case, "HelloJavaScript" is not part of another word, it stands alone:
+
+```javascript
+let str = "Hello, welcome to HelloJavaScript. HelloJavaScript is great!";
+let regex = /\BHelloJavaScript\B/g;
+
+let matches = str.match(regex);
+
+console.log(matches); // prints: null
+```
+
+In this case, there is no match, so the `match` function returns `null`.
+
+  </div>
   </div>
 </details>
 
@@ -87,6 +149,34 @@ import StructuredData from './schemadata/WordBoundarySchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> JavaScript considers alphanumeric characters (A-Z, a-z, 0-9) and the underscore (_) as word characters.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let str = "Hello, world! This is sample text with_123 some word boundaries.";
+let regex = /\b\w+\b/g;
+
+let matches = str.match(regex);
+
+console.log(matches); 
+// prints: "Hello", "world", "This", "is", "sample", "text", "with_123", "some", "word", "boundaries"]
+```
+
+Note that characters other than alphanumeric characters and the underscore are considered non-word characters by \b. Therefore, if a word is followed or preceded by any non-word character, it is considered a word boundary.
+
+```javascript
+let str = "Hello, world! This is a sample-text with_123 some word-boundaries.";
+let regex = /\b\w+\b/g;
+
+let matches = str.match(regex);
+
+console.log(matches); // prints: [ 'Hello', 'world', 'This', 'is', 'a', 'sample', 'text', 'with_123', 'some', 'word', 'boundaries' ]
+```
+
+In this case, the words "sample-text" and "word-boundaries" are treated as separate words because they are separated by non-word characters (`-` and `-`, respectively).
+
+  </div>
   </div>
 </details>
 
@@ -99,6 +189,20 @@ import StructuredData from './schemadata/WordBoundarySchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> The '\bat' specifies a word boundary before 'at', but 'c' before 'at' in 'cat' forms a word, violating the boundary.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let str = "cat in the hat";
+let regex = /\bat\b/g;
+
+let matches = str.match(regex);
+
+console.log(matches);  // output: null
+```
+
+  </div>
   </div>
 </details>
 
@@ -111,6 +215,23 @@ import StructuredData from './schemadata/WordBoundarySchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> At the start, '\b' matches if the first character is a word character. At the end, it matches if the last character is a word character.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Using '\b' at the start of a string
+const regexStart = /\bfoo/;
+console.log(regexStart.test('foo bar')); // Output: true
+console.log(regexStart.test('foobar')); // Output: true
+
+// Using '\b' at the end of a string
+const regexEnd = /bar\b/;
+console.log(regexEnd.test('foo bar')); // Output: true
+console.log(regexEnd.test('barfoo')); // Output: false
+```
+
+  </div>
   </div>
 </details>
 
@@ -123,6 +244,21 @@ import StructuredData from './schemadata/WordBoundarySchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> No, it matches between a word character and a non-word character or at the start or end of a string.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+const regex = /\bfoo\b/;
+console.log(regex.test('foo'));         // Output: true
+console.log(regex.test('foo bar'));     // Output: true
+console.log(regex.test('foobar'));      // Output: false
+console.log(regex.test('foo_bar'));     // Output: false
+console.log(regex.test('foo123'));      // Output: false
+console.log(regex.test('123 foo 456'));   // Output: true
+```
+
+  </div>
   </div>
 </details>
 
@@ -134,7 +270,7 @@ import StructuredData from './schemadata/WordBoundarySchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Word boundaries are used to perform whole-word matches, preventing partial matches within larger words.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -147,6 +283,19 @@ import StructuredData from './schemadata/WordBoundarySchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> The '\b' matches positions before 'a' and after 'e' because these are boundaries between word and non-word characters.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let str = '#apple#'
+const regex = /\bapple\b/;
+const match = str.match(regex);
+console.log(match); // output: ["apple"]
+console.log(regex.test('#apple#'));  // Output: true
+```
+
+  </div>
   </div>
 </details>
 
@@ -158,19 +307,39 @@ import StructuredData from './schemadata/WordBoundarySchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> No, word boundaries do not consume characters, they match positions in a string.
-  </div><br />
+  </div>
   </div>
 </details>
 
 ---
 
-### How would a word boundary handle punctuation in JavaScript regex?
+### How would a word boundary handle punctuations in JavaScript regex?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Punctuations are treated as a non-word character. A word boundary can match the position before the word or after, near punctuation.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+const regex = /\bfoo\b/;
+console.log(regex.test('foo!bar'));  // Output: true
+console.log(regex.test('foo!'));  // Output: true
+console.log(regex.test('bar?foo')); // Output: true
+console.log(regex.test('bar.foo')); // Output: true
+
+////////////////////////////////////
+
+let str = 'bar?foo'
+const regex = /\bfoo\b/;
+const match = str.match(regex)
+console.log(match); // ["foo"]
+```
+
+  </div>
   </div>
 </details>
 
@@ -181,8 +350,22 @@ import StructuredData from './schemadata/WordBoundarySchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> It will find all matches that are preceded or followed by a non-word character or are at the start or end of a string.
+  <div><strong>Interview Response:</strong> In JavaScript, the \b meta-character in regex is used as a word boundary. This essentially means that the regex will match the position where a word character is not followed or preceded by another word-character, such as between a letter and a space.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let text = "I like apple. I love to eat an apple. The apple is red.";
+let regex = /\bapple\b/g;
+
+let result = text.match(regex);
+
+console.log(result); // This will output: [ 'apple', 'apple', 'apple' ]
+```
+
+  </div>
   </div>
 </details>
 
@@ -193,8 +376,22 @@ import StructuredData from './schemadata/WordBoundarySchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> It doesn't match positions between consecutive word characters because they don't form a word boundary.
+  <div><strong>Interview Response:</strong> It doesn't match positions between consecutive word characters because they don't form a word boundary. However, it will match at the start and end of the sequence of word characters.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let text = "apple123 orange4567 banana89";
+let regex = /\b/g;
+
+let result = text.split(regex);
+
+console.log(result); // This will output: [ 'apple123', ' ', 'orange4567', ' ', 'banana89' ]
+```
+
+  </div>
   </div>
 </details>
 
@@ -206,7 +403,7 @@ import StructuredData from './schemadata/WordBoundarySchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> No, word boundaries don't match space characters. They match positions between word and non-word characters.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -217,8 +414,24 @@ import StructuredData from './schemadata/WordBoundarySchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> You can combine word boundaries with character sets, quantifiers, and other regex elements to define more complex patterns.
+  <div><strong>Interview Response:</strong> You can combine word boundaries with other regex elements in JavaScript by placing `\b` around the element in the pattern. For instance, to match the word "apple", you can use `/\bapple\b/g`. The `\b` ensures "apple" isn't part of a larger word.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let text = "cat, concatenate, cataract";
+let regex = /\bcat\b/g;
+
+let result = text.match(regex);
+
+console.log(result); // Outputs: ['cat']
+```
+
+In this code, `\bcat\b` only matches the standalone word "cat", not "cat" in "concatenate" or "cataract".
+
+  </div>
   </div>
 </details>
 
@@ -229,8 +442,24 @@ import StructuredData from './schemadata/WordBoundarySchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> By using '\bend\b', it matches 'end' as a whole word, not as part of another word like 'ending'.
+  <div><strong>Interview Response:</strong> You can use word boundaries in a JavaScript regex to match 'end' but not 'ending' by using the pattern `/\bend\b/g`. This ensures only the standalone word 'end' is matched.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let text = "end ending bend";
+let regex = /\bend\b/g;
+
+let result = text.match(regex);
+
+console.log(result); // Outputs: ['end']
+```
+
+In this code, `\bend\b` only matches the standalone word "end", not "end" in "ending" or "bend".
+
+  </div>
   </div>
 </details>
 
@@ -243,6 +472,25 @@ import StructuredData from './schemadata/WordBoundarySchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> Word boundaries can help to ensure that user input matches exact patterns or words, improving data validation.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here is a code snippet where word boundaries are used to validate user input for a specific username format (only allows alphanumeric characters and underscores).
+
+```javascript
+function validateUsername(username) {
+  let regex = /^\b\w+\b$/g;
+  return regex.test(username);
+}
+
+console.log(validateUsername('username_1')); // Outputs: true
+console.log(validateUsername('username@1')); // Outputs: false
+```
+
+Here, the regex `^\b\w+\b$` checks that the entire username (`^...$`) consists of one or more word characters (`\w+`) enclosed by word boundaries (`\b`). This ensures the username doesn't contain invalid characters.
+
+  </div>
   </div>
 </details>
 
@@ -254,7 +502,7 @@ import StructuredData from './schemadata/WordBoundarySchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> No, '\b' doesn't match line boundaries. It matches word boundaries at the start or end of a string.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -267,6 +515,22 @@ import StructuredData from './schemadata/WordBoundarySchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> Yes, word boundaries can be used with the replace method to replace specific whole words in a string.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let text = "I love apples. I love to eat apples.";
+let regex = /\bapples\b/g;
+
+let newText = text.replace(regex, 'oranges');
+
+console.log(newText); // Outputs: "I love oranges. I love to eat oranges."
+```
+
+In the above code, the `replace()` method uses the regex with word boundaries (`\b`) to replace all standalone instances of "apple" with "orange".
+
+  </div>
   </div>
 </details>
 
@@ -278,7 +542,7 @@ import StructuredData from './schemadata/WordBoundarySchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> No, word boundaries are not valid within a character set. They match positions, not actual characters.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -327,7 +591,27 @@ console.log('12,34,56'.match(/\b\d\d\b/g)); // returns 12,34,56
   <div><strong>Interview Response:</strong> Word boundaries may not function as expected with Non-Latin alphabets as they're designed to work with alphanumeric characters and underscores.
     </div><br/>
   <div><strong>Technical Details:</strong> The word boundary test \b checks that there should be \w on the one side from the position and "not \w" – on the other side. But \w means a Latin letter a-z (or a digit or an underscore), so the test does not work for other characters, e.g., Cyrillic letters or Hieroglyphs.
-    </div>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's an example with Cyrillic characters:
+
+```javascript
+let text = "яблоко груша банан";
+let regex = /\bяблоко\b/g;
+
+let result = text.match(regex);
+
+console.log(result); // Outputs: null
+```
+
+In this code, we're trying to match the word for "apple" in Russian ("яблоко"). However, the output is `null`, indicating no matches, because `\b` doesn't recognize the Cyrillic characters as word characters.
+
+While `\b` is useful for many scenarios with English and other languages using the Latin alphabet, for non-Latin alphabets, you may need to use different approaches or libraries that support Unicode word boundaries.
+
+  </div>
   </div>
 </details>
 

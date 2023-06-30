@@ -47,8 +47,17 @@ import StructuredData from './schemadata/BlobsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A Blob represents immutable raw data, used for operations involving large amounts of data like files, images, or video streams.
+  <div><strong>Interview Response:</strong> A Blob is a file-like object that represents a sequence of bytes (immutable raw data), used for operations involving large amounts of data like files, images, or video streams.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+const blob = new Blob(data, {type: 'text/plain'});
+```
+
+  </div>
   </div>
 </details>
 
@@ -61,6 +70,15 @@ import StructuredData from './schemadata/BlobsSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> It's created using the Blob constructor, which takes an array of data parts and optional MIME type.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+const blob = new Blob(["This is a sample file content."], { type: "text/plain;charset=utf-8" });
+```
+
+  </div>
   </div>
 </details>
 
@@ -111,7 +129,7 @@ console.log(myBlob.type + ' is the type');
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Blobs are often used for handling file uploads, download, reading large files, and managing binary data.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -122,8 +140,23 @@ console.log(myBlob.type + ' is the type');
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We can use the FileReader object to read data from a Blob.
+  <div><strong>Interview Response:</strong> To read data from a Blob in JavaScript, you can use the `FileReader` API. Create a new `FileReader` instance, use its `readAsText()` or `readAsArrayBuffer()` method, and listen for the `onload` event to access the data.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+const blob = new Blob(["Hello, JavaScript!"], {type: "text/plain"});
+const reader = new FileReader();
+reader.readAsText(blob);
+reader.onload = function() {
+  const text = reader.result;
+  console.log(text); // "Hello, JavaScript!"
+};
+```
+
+  </div>
   </div>
 </details>
 
@@ -135,7 +168,7 @@ console.log(myBlob.type + ' is the type');
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, Blob data can be converted to a text string, binary string, or a data URL.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -148,6 +181,49 @@ console.log(myBlob.type + ' is the type');
   <div>
   <div><strong>Interview Response:</strong> Yes, Blob objects can be sent to a server using HTTP protocols like POST or PUT, typically using JavaScript's `fetch` or `XMLHttpRequest` APIs.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```html
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Fetch Request example</title>
+  </head>
+
+  <body>
+    <h1>Fetch Request example</h1>
+    <img src="" />
+  </body>
+  <script>
+    const myImage = document.querySelector("img");
+    const myRequest = new Request("flowers.jpg");
+
+    fetch(myRequest)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error, status = ${response.status}`);
+        }
+        return response.blob();
+      })
+      .then((myBlob) => {
+        const objectURL = URL.createObjectURL(myBlob);
+        myImage.src = objectURL;
+      })
+      .catch((error) => {
+        const p = document.createElement("p");
+        p.appendChild(document.createTextNode(`Error: ${error.message}`));
+        document.body.insertBefore(p, myImage);
+      });
+  </script>
+</html>
+```
+
+  </div>
   </div>
 </details>
 
@@ -158,8 +234,27 @@ console.log(myBlob.type + ' is the type');
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> You can slice a part of a Blob using the `slice` method. It takes start and end byte indices, and optionally a content type, returning a new Blob with that range.
+  <div><strong>Interview Response:</strong> To slice a part of a Blob in JavaScript, you can use the Blob.slice() method. Specify the start and end offsets (optional) to create a new Blob containing the desired portion of data.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Assuming you have a Blob object named 'originalBlob'
+
+// Define the start and end offsets for the slice
+const startOffset = 10; // Starting offset in bytes
+const endOffset = 50; // Ending offset in bytes (optional)
+
+// Create a new Blob slice using the slice() method
+const slicedBlob = originalBlob.slice(startOffset, endOffset);
+
+// Use the slicedBlob as desired (e.g., upload or process it)
+console.log('Sliced Blob:', slicedBlob);
+```
+
+  </div>
   </div>
 </details>
 
@@ -170,8 +265,23 @@ console.log(myBlob.type + ' is the type');
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> You can create a URL for a Blob using the `createObjectURL` method of the `URL` interface in JavaScript. It returns a string representing the Blob's URL.
+  <div><strong>Interview Response:</strong> You can create a URL for a Blob using the `URL.createObjectURL()` method of the `URL` interface in JavaScript. It returns a string representing the Blob's URL.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Assuming you have a Blob object named 'blobData'
+
+// Create a URL for the Blob
+const blobURL = URL.createObjectURL(blobData);
+
+// Use the blobURL as desired (e.g., set it as the source of an image or a download link)
+console.log('Blob URL:', blobURL);
+```
+
+  </div>
   </div>
 </details>
 
@@ -183,7 +293,7 @@ console.log(myBlob.type + ' is the type');
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> A Blob is a file-like object of immutable, raw data, useful for storing large data, while an ArrayBuffer is a low-level, mutable binary data buffer, ideal for complex data manipulation.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -194,8 +304,41 @@ console.log(myBlob.type + ' is the type');
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, Blobs can be stored directly in IndexedDB. It's a JavaScript database that supports the storage of structured data, including files and blobs.
+  <div><strong>Interview Response:</strong> IndexedDB can store Blob objects, which are often used for storing large amounts of binary data, like images or files, directly in the database.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Open a database
+var openDB = indexedDB.open('blobDB', 1);
+
+openDB.onupgradeneeded = function() {
+  var db = openDB.result;
+  var store = db.createObjectStore('blobs', { autoIncrement: true });
+};
+
+openDB.onsuccess = function() {
+  var db = openDB.result;
+  var tx = db.transaction('blobs', 'readwrite');
+  var store = tx.objectStore('blobs');
+  
+  // Create a new blob
+  var blob = new Blob(["Hello, world!"], {type: "text/plain"});
+  
+  // Add the blob to IndexedDB
+  store.put(blob, 'hello.txt');
+  
+  tx.oncomplete = function() {
+    db.close();
+  };
+};
+```
+
+In this example, we're storing a simple text Blob in an IndexedDB store. The 'readwrite' parameter in db.transaction is used because we're writing data to the store. The blob is stored with the key 'hello.txt'.
+
+  </div>
   </div>
 </details>
 
@@ -207,7 +350,7 @@ console.log(myBlob.type + ' is the type');
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The maximum size of a Blob object is determined by the available memory of the user's device. There isn't a fixed limit defined in the Blob API specification.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -218,8 +361,29 @@ console.log(myBlob.type + ' is the type');
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A Blob URL is a unique URL representing a Blob object or File object for temporary access, generated via `URL.createObjectURL()`. It starts with "blob:".
+  <div><strong>Interview Response:</strong> A Blob URL is a URL that points to a Blob or File object. It's created using the URL.createObjectURL() function in JavaScript.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+// Create a Blob from a string
+var blob = new Blob(["Hello, world!"], {type: "text/plain"});
+
+// Create a Blob URL for the Blob
+var blobURL = URL.createObjectURL(blob);
+
+console.log(blobURL);
+// This will log a Blob URL like: blob:http://your-site.com/12345678-1234-1234-1234567890ab
+
+// Remember to revoke the Blob URL when you're done with it
+URL.revokeObjectURL(blobURL);
+```
+
+In this example, `blobURL` will be a Blob URL that you can use as a source in a `<img>`, `<audio>`, `<video>`, `<link>`, or `<script>` tag, or you can open it in a new window or tab. It's important to revoke the Blob URL when you're done with it to free up memory.
+
+  </div>
   </div>
 </details>
 
@@ -230,8 +394,28 @@ console.log(myBlob.type + ' is the type');
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Blob URLs are typically revoked when the document is unloaded, meaning they will no longer be valid and cannot be used to access the Blob content.
+  <div><strong>Interview Response:</strong> Blob URLs are not automatically revoked when the page unloads. They persist until the document is fully de-referenced or the URLs are explicitly revoked with URL.revokeObjectURL().
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+// Create a Blob from a string
+var blob = new Blob(["Hello, world!"], {type: "text/plain"});
+
+// Create a Blob URL for the Blob
+var blobURL = URL.createObjectURL(blob);
+
+window.addEventListener('unload', function() {
+  // Revoke the Blob URL when the page unloads
+  URL.revokeObjectURL(blobURL);
+});
+```
+
+In this example, the Blob URL `blobURL` will be automatically revoked when the page unloads, freeing up memory. Note that Blob URLs should also be revoked as soon as they are no longer needed, even if the page is not unloading.
+
+  </div>
   </div>
 </details>
 
@@ -244,6 +428,15 @@ console.log(myBlob.type + ' is the type');
   <div>
   <div><strong>Interview Response:</strong> You can manually release a Blob URL using the `URL.revokeObjectURL()` method in JavaScript, which frees up the memory associated with the Blob.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+URL.revokeObjectURL(blobURL);
+```
+
+  </div>
   </div>
 </details>
 
@@ -254,20 +447,26 @@ console.log(myBlob.type + ' is the type');
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The 'type' property of a Blob represents the MIME type of the data. It's useful in determining how the Blob should be interpreted or displayed. Basically, the 'type' property returns the MIME type set upon creation of the Blob.
+  <div><strong>Interview Response:</strong> The Blob 'type' property returns the MIME type of the data contained within the Blob. It's useful when we want to specify how the Blob should be interpreted.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+// Create a Blob from a string with 'text/plain' MIME type
+var textBlob = new Blob(["Hello, world!"], {type: "text/plain"});
+console.log(textBlob.type); // Outputs: text/plain
+
+// Create a Blob for a .png image with 'image/png' MIME type
+var binaryData = []; // Add your binary image data here
+var imageBlob = new Blob(binaryData, {type: "image/png"});
+console.log(imageBlob.type); // Outputs: image/png
+```
+
+In this code, the 'type' property is used to define the content type of the data stored in the Blob object. This can be useful when serving the Blob data, as the receiving end can know how to handle the data based on its MIME type.
+
   </div>
-</details>
-
----
-
-### What's the use of the Blob's 'type' property?
-
-<details>
-  <summary><strong>View Answer:</strong></summary>
-  <div>
-  <div><strong>Interview Response:</strong> The 'type' property of a Blob represents the MIME type of the data. It's useful in determining how the Blob should be interpreted or displayed. Basically, the 'type' property returns the MIME type set upon creation of the Blob.
-  </div><br />
   </div>
 </details>
 
@@ -431,8 +630,38 @@ reader.onload = function () {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> When creating an Object URL, we need to know the memory ramifications. Using URL.createObjectURL requires use to revoke it when it is no longer needed. However, a Blob conversion does not require revocation of the invoked conversion. If we are concerned about simplicity, speed, and stability, the URL.createObjectURL gets recommended.
-    </div>
+  <div><strong>Interview Response:</strong> When creating an Object URL, we need to know the memory ramifications. Using URL.createObjectURL requires us use to revoke it when it is no longer needed. However, a Blob conversion does not require revocation of the invoked conversion. If we are concerned about simplicity, speed, and stability, the URL.createObjectURL is recommended.
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Create a Blob
+var blob = new Blob(["Hello, world!"], {type: "text/plain"});
+
+// Convert Blob to base64
+var reader = new FileReader();
+reader.onloadend = function() {
+  var base64data = reader.result;                
+  console.log(base64data); // "data:text/plain;base64,SGVsbG8sIHdvcmxkIQ=="
+}
+reader.readAsDataURL(blob);
+
+// Create Blob URL
+var blobURL = URL.createObjectURL(blob);
+console.log(blobURL); // blob:http://your-site.com/12345678-1234-1234-1234567890ab
+```
+
+In this code, **FileReader.readAsDataURL()** is used to read the Blob as a base64-encoded string (data URL), while **URL.createObjectURL()** is used to create a Blob URL. These two methods can be used in different scenarios depending on the requirements of your application.
+
+---
+
+:::note
+Creating a Blob URL is more memory-efficient and faster for large files. Converting to base64 increases size by about 33% but is necessary when data needs to be embedded or stored as text.
+:::
+
+  </div>
   </div>
 </details>
 

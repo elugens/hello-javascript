@@ -47,7 +47,38 @@ import StructuredData from './schemadata/CustomErrorsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A custom error in JavaScript is a user-defined class that extends the built-in `Error` class, providing additional or specific functionality for error handling purposes.<br />
+  <div><strong>Interview Response:</strong> A custom error in JavaScript is a user-defined class that extends the built-in `Error` class, providing additional or specific functionality for error handling purposes.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's an example of creating a custom error by extending the `Error` class.
+
+```javascript
+class CustomError extends Error {
+  constructor(message) {
+    super(message);
+    this.name = 'CustomError';
+  }
+}
+```
+
+In the above example, a custom error class named `CustomError` is created by extending the `Error` class. The `constructor` function is used to initialize the error object with a custom message and set the `name` property.
+
+Once the custom error is defined, it can be thrown and caught like any other error:
+
+```javascript
+try {
+  throw new CustomError('This is a custom error.');
+} catch (error) {
+  console.log(error.name);     // Output: CustomError
+  console.log(error.message);  // Output: This is a custom error.
+}
+```
+
+By using custom errors, developers can have more control and expressiveness in their error handling, leading to better error management and more robust applications.
+
   </div>
   </div>
 </details>
@@ -103,12 +134,38 @@ In this example, `CustomError` is a user-defined class that extends the built-in
 
 ---
 
+### What is Error Differentiation?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Error differentiation refers to the ability to distinguish between different types of errors based on their specific characteristics or error codes, allowing for customized and targeted error handling strategies in software development.
+  </div>
+  </div>
+</details>
+
+---
+
+### How does Hierarchical Error Handling work in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Hierarchical error handling in JavaScript involves organizing custom error types in a hierarchical structure, with subtypes inheriting from a base error type. This allows catch blocks to handle multiple related error types or specific subtypes of an error with targeted error-specific logic.
+  </div>
+  </div>
+</details>
+
+---
+
 ### What are the benefits of inheriting from the Error object vs. simply using the throw statement?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Because JavaScript allows us to use a throw with any parameter, our error classes do not need to derive from Error. However, we may use obj instanceof Error to identify and track error objects if we inherit. As a result, it is preferable to inherit from it. Our errors automatically build a hierarchy as the program evolves, and ValidationError, for example, may derive from the Error Object, and so forth.
+  <div><strong>Interview Response:</strong> Inheriting from the Error object allows custom error types to retain standard error properties and behaviors, facilitating consistent error handling and enabling differentiation based on error types, while the throw statement is used for immediate error throwing.
+</div><br />
+  <div><strong>Technical Details:</strong> Because JavaScript allows us to use a throw with any parameter, our error classes do not need to derive from Error. However, we may use obj instanceof Error to identify and track error objects if we inherit. As a result, it is preferable to inherit from it. Our errors automatically build a hierarchy as the program evolves, and ValidationError, for example, may derive from the Error Object, and so forth.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong> Custom ValidationError that extends the built-in Error Object<br /><br />
 
@@ -347,7 +404,7 @@ In this example, a `CustomError` is defined and then thrown inside a `try` block
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Custom errors enhance maintainability by providing clearer error categorization, better error messages, and targeted handling, making it easier to identify, debug, and fix issues.<br />
+  <div><strong>Interview Response:</strong> Custom errors enhance maintainability by providing clearer error categorization, better error messages, and targeted handling, making it easier to identify, debug, and fix issues.
   </div>
   </div>
 </details>
@@ -359,7 +416,8 @@ In this example, a `CustomError` is defined and then thrown inside a `try` block
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Error handling with Promises in JavaScript is achieved using the .catch() method or .then()'s second argument to handle rejected promises and catch errors in the promise chain.</div><br />
+  <div><strong>Interview Response:</strong> Error handling with Promises in JavaScript is achieved using the .catch() method or .then()'s second argument to handle rejected promises and catch errors in the promise chain.
+  </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>

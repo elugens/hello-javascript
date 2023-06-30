@@ -47,7 +47,42 @@ import StructuredData from './schemadata/DynamicImportSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Dynamic import is a feature that allows you to load JavaScript modules on-demand during runtime, which helps reduce initial load time and optimize application performance.<br />
+  <div><strong>Interview Response:</strong> Dynamic import is a feature that allows you to load JavaScript modules on-demand during runtime, which helps reduce initial load time and optimize application performance.
+  </div><br />
+  <div><strong>Technical Response:</strong> Dynamic import is a method introduced in modern JavaScript that allows you to import JavaScript modules (i.e., .js files) dynamically as part of your regular JavaScript code execution. This is in contrast to static import declarations, which only load modules at compile time. With dynamic import(), you can load modules on-demand, or conditionally, based on various factors in your code.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+The syntax of dynamic import() in JavaScript looks like this...
+
+```javascript
+import(moduleSpecifier)
+```
+
+Where moduleSpecifier is a string that specifies the path of the module to import.
+
+Dynamic import() returns a promise that resolves to the module object of the requested module when the promise is fulfilled.
+
+Here's an example of how it can be used:
+
+```javascript
+let modulePath = './path/to/module.js';
+
+import(modulePath)
+  .then((module) => {
+    // You can use the exported items from the module here.
+    console.log(module.exportedFunction());
+  })
+  .catch((err) => {
+    // Handle any errors in loading the module or any subsequent errors.
+    console.error(err);
+  });
+```
+
+This is particularly useful for code splitting, lazy loading, and managing the loading of optional JavaScript functionality that might not be used in every user interaction. It can greatly improve the performance of your web application by reducing the initial load time, because not all of the code needs to be loaded up front.
+
   </div>
   </div>
 </details>
@@ -59,7 +94,26 @@ import StructuredData from './schemadata/DynamicImportSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Dynamic imports are used when you want to load a module conditionally or on-demand, whereas static imports load all modules upfront, which may not be necessary and can impact performance.<br />
+  <div><strong>Interview Response:</strong> Dynamic imports are used when you want to load a module conditionally or on-demand, whereas static imports load all modules upfront, which may not be necessary and can impact performance.
+  </div><br />
+  <div><strong className="codeExample">Here are some reasons why you might choose to use dynamic imports:</strong><br /><br />
+
+  <div></div>
+
+**1. Code Splitting**: Dynamic imports allow you to split your code into smaller chunks that can be loaded on demand. This means the browser only needs to load the minimal amount of code necessary to display the current view to the user. The rest of the code can be loaded in the background or when the user performs certain actions.
+
+**2. Lazy Loading**: If some parts of your app are not immediately necessary, you can load them only when they are actually needed. This can be particularly useful for features that are expensive in terms of code size, but not always used, like a complex but seldom-used component in a web app.
+
+**3. Conditional Loading**: With dynamic imports, you can conditionally load modules based on certain conditions. For example, you might choose to load a module only if the user is logged in, or only if they are using a certain browser or device.
+
+**4. Error Handling**: Dynamic imports return a promise, allowing you to catch errors at the module level. This means you can have a more fine-grained control over error handling and recovery in your application.
+
+**5. Loading Third-party Modules**: Sometimes, you may want to load a third-party module that is not required initially when the application loads. You can dynamically import it only when it's needed.
+
+**6. Performance Optimization**: By loading code only when it's needed, dynamic imports can significantly reduce the initial load time of your application, leading to a better user experience, especially for users with slower internet connections.
+
+Static imports, on the other hand, load all modules up front when the application starts, which can lead to longer initial load times if your application has a lot of JavaScript code. However, static imports are easier to handle and analyze (for things like dependency graph, static analysis tools, etc.) because of their predictability.
+
   </div>
   </div>
 </details>
@@ -151,8 +205,43 @@ loadModule();
   <div>
   <div><strong>Interview Response:</strong> Dynamic import benefits include on-demand module loading, reduced initial load time, improved application performance, code splitting, better resource management, conditional module loading, and compatibility with lazy-loading techniques.
 </div><br/>
-  <div><strong>Technical Response:</strong> The main benefit of dynamic imports is that they allow you to load JavaScript modules dynamically. This implementation makes it useful for lazy-loading or computed module specifier strings. In addition, dynamic imports provide us with a promise, allowing access to the .then and .catch methods for handling (catch error). Dynamic imports work in regular scripts; they don’t require script type="module".
-</div>
+  <div><strong>Technical Response:</strong> The main benefit of dynamic imports is that they allow you to load JavaScript modules dynamically. This implementation makes it useful for lazy-loading or computed module specifier strings. In addition, dynamic imports provide us with a promise, allowing access to the .then and .catch methods for handling (catch error). Dynamic imports work in regular scripts; they don’t require script tags using type="module".
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's an example of how you can achieve code splitting and lazy loading using dynamic import expressions in JavaScript...
+
+```javascript
+// App.js - main entry point of your application
+function handleClick() {
+  import('./module.js')
+    .then((module) => {
+      // Use the module here
+      module.someFunction();
+    })
+    .catch((error) => {
+      // Handle any errors
+      console.error('Error loading module:', error);
+    });
+}
+
+// Other parts of your application
+
+// Event listener for a button click
+document.getElementById('myButton').addEventListener('click', handleClick);
+```
+
+In this example, when the button with the ID "myButton" is clicked, the `handleClick` function is called. Inside that function, we use the dynamic import expression to load the `module.js` file asynchronously.
+
+The import statement returns a Promise, which allows us to use `.then()` to handle the successful loading of the module. In this case, we invoke a function (`someFunction`) from the loaded module.
+
+If there is an error during the module loading process, it is caught in the `.catch()` block, where you can handle the error appropriately.
+
+By using dynamic import in this way, the `module.js` file is only loaded when the button is clicked, thus achieving code splitting and lazy loading. The module is not loaded during the initial application startup, reducing the initial bundle size and improving performance.
+
+  </div>
   </div>
 </details>
 
@@ -207,7 +296,27 @@ By setting the `mode` to `production`, Webpack automatically enables tree shakin
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A Dynamic import returns a promise that resolves with the module object, enabling you to access the module's exports using the 'then' method or async/await syntax.<br />
+  <div><strong>Interview Response:</strong> A Dynamic import returns a promise that resolves with the module object, enabling you to access the module's exports using the 'then' method or async/await syntax.
+  </div>
+  <div><strong>Technical Response:</strong> The dynamic import returns a Promise that resolves to the module object of the imported module. The module object represents the exported values from the module being imported. When you use dynamic import, you can access the exported values of the module by chaining a .then() method to the import() call and passing a callback function that receives the module object as an argument.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+import('./module.js')
+  .then((module) => {
+    // Access the exported values from the module
+    console.log(module.someExportedFunction());
+    console.log(module.someExportedVariable);
+  })
+  .catch((error) => {
+    // Handle any errors during the module loading
+    console.error('Error loading module:', error);
+  });
+```
+
   </div>
   </div>
 </details>
@@ -219,7 +328,24 @@ By setting the `mode` to `production`, Webpack automatically enables tree shakin
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To handle errors, you can use the 'catch' method on the returned promise or a try-catch block with async/await to manage exceptions during module loading.<br />
+  <div><strong>Interview Response:</strong> To handle errors, you can use the 'catch' method on the returned promise or a try-catch block with async/await to manage exceptions during module loading.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+try {
+  const module = await import('path/to/module');
+  // Use the imported module
+} catch (error) {
+  // Handle the error
+  console.error('Error occurred during dynamic import:', error);
+  // Display meaningful error messages
+  console.error('Failed to load module. Please check the network connection or the module path.');
+}
+```
+
   </div>
   </div>
 </details>
@@ -231,7 +357,7 @@ By setting the `mode` to `production`, Webpack automatically enables tree shakin
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> You can use Promise.all() to load multiple modules concurrently, which resolves when all modules are imported, or use multiple dynamic imports sequentially based on application requirements.<br />
+  <div><strong>Interview Response:</strong> You can use Promise.all() to load multiple modules concurrently, which resolves when all modules are imported, or use multiple dynamic imports sequentially based on application requirements.
   </div>
   </div>
 </details>
@@ -243,7 +369,7 @@ By setting the `mode` to `production`, Webpack automatically enables tree shakin
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Dynamic imports enable code splitting, which divides the application into smaller chunks that are loaded on-demand, reducing initial load time and improving overall performance.<br />
+  <div><strong>Interview Response:</strong> Dynamic imports enable code splitting, which divides the application into smaller chunks that are loaded on-demand, reducing initial load time and improving overall performance.
   </div>
   </div>
 </details>
@@ -255,7 +381,7 @@ By setting the `mode` to `production`, Webpack automatically enables tree shakin
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Modern browsers natively support dynamic imports, while older browsers can use polyfills or bundlers like Webpack or Rollup to handle dynamic imports and code splitting.<br />
+  <div><strong>Interview Response:</strong> Modern browsers natively support dynamic imports, while older browsers can use polyfills or bundlers like Webpack or Rollup to handle dynamic imports and code splitting.
   </div>
   </div>
 </details>
@@ -267,7 +393,7 @@ By setting the `mode` to `production`, Webpack automatically enables tree shakin
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, you can use dynamic imports to load third-party libraries on-demand, reducing the initial bundle size and improving application performance.<br />
+  <div><strong>Interview Response:</strong> Yes, you can use dynamic imports to load third-party libraries on-demand, reducing the initial bundle size and improving application performance.
   </div>
   </div>
 </details>
@@ -279,7 +405,7 @@ By setting the `mode` to `production`, Webpack automatically enables tree shakin
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The syntax for dynamic import is import(moduleSpecifier), where moduleSpecifier is a string representing the path or URL of the module to be imported.<br />
+  <div><strong>Interview Response:</strong> The syntax for dynamic import is import(moduleSpecifier), where moduleSpecifier is a string representing the path or URL of the module to be imported.
   </div>
   </div>
 </details>
@@ -291,7 +417,38 @@ By setting the `mode` to `production`, Webpack automatically enables tree shakin
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, you can access named exports from the module object returned by the dynamic import. The resolved module object has properties for each named export.<br />
+  <div><strong>Interview Response:</strong> Yes, you can access named exports from the module object returned by the dynamic import. The resolved module object has properties for each named export.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Module.js
+
+// named export
+export const foo = () => {
+  console.log("This is the foo function.");
+};
+
+// named export
+export const bar = () => {
+  console.log("This is the bar function.");
+};
+
+// Main.js
+const loadModule = async () => {
+  const module = await import('./Module.js');
+  const { foo, bar } = module;
+  
+  foo(); // This is the foo function.
+  bar(); // This is the bar function.
+};
+
+loadModule();
+
+```
+
   </div>
   </div>
 </details>
@@ -303,7 +460,7 @@ By setting the `mode` to `production`, Webpack automatically enables tree shakin
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Dynamic imports are useful for loading heavy dependencies, code splitting, lazy-loading components, loading polyfills only when needed, and conditionally importing modules based on user actions or features.<br />
+  <div><strong>Interview Response:</strong> Dynamic imports are useful for loading heavy dependencies, code splitting, lazy-loading components, loading polyfills only when needed, and conditionally importing modules based on user actions or features.
   </div>
   </div>
 </details>
@@ -315,7 +472,29 @@ By setting the `mode` to `production`, Webpack automatically enables tree shakin
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, dynamic imports can be used within Web Workers to load modules on-demand, allowing for better resource management and improved performance in web applications.<br />
+  <div><strong>Interview Response:</strong> Yes, dynamic imports can be used within Web Workers to load modules on-demand, allowing for better resource management and improved performance in web applications. However, it is not permitted in all execution contexts. For example, import() can be used in the main thread, a shared worker, or a dedicated worker, but will throw if called within a service worker or a worklet.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's an example of how you can use dynamic imports inside a Web Worker:
+
+```javascript
+// main.js
+const worker = new Worker('worker.js');
+
+worker.postMessage('Hello from main.js!');
+
+// worker.js
+self.onmessage = async (event) => {
+  const module = await import('./module.js');
+  console.log(module);
+};
+```
+
+In this example, the `worker.js` file is loaded as a Web Worker. When the worker receives a message from the main thread, it uses dynamic import to load the `module.js` file asynchronously. Once the module is loaded, it is logged to the console.
+
   </div>
   </div>
 </details>
@@ -327,7 +506,7 @@ By setting the `mode` to `production`, Webpack automatically enables tree shakin
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In SSR, dynamic imports are resolved on the server and sent as separate chunks to the client. The client then loads these chunks on-demand, improving the overall user experience.<br />
+  <div><strong>Interview Response:</strong> In SSR, dynamic imports are resolved on the server and sent as separate chunks to the client. The client then loads these chunks on-demand, improving the overall user experience.
   </div>
   </div>
 </details>
@@ -339,7 +518,7 @@ By setting the `mode` to `production`, Webpack automatically enables tree shakin
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To optimize performance, you can use bundlers like Webpack or Rollup for code splitting, configure caching headers for modules, and apply lazy-loading techniques with dynamic imports.<br />
+  <div><strong>Interview Response:</strong> To optimize performance, you can use bundlers like Webpack or Rollup for code splitting, configure caching headers for modules, and apply lazy-loading techniques with dynamic imports.
   </div>
   </div>
 </details>
@@ -351,7 +530,7 @@ By setting the `mode` to `production`, Webpack automatically enables tree shakin
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> When using module bundlers, dynamic imports are transformed into separate output files called "chunks". These chunks are loaded on-demand, enabling code splitting and optimizing application performance.<br />
+  <div><strong>Interview Response:</strong> When using module bundlers, dynamic imports are transformed into separate output files called "chunks". These chunks are loaded on-demand, enabling code splitting and optimizing application performance.
   </div>
   </div>
 </details>

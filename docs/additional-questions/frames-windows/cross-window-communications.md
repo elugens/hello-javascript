@@ -48,7 +48,7 @@ import StructuredData from './schemadata/CrossWindowSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Cross-Window Communication is a technique allowing different browser windows or tabs, either on the same domain or different, to communicate with each other.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -140,7 +140,7 @@ In this example, when you set an item in `localStorage` from Tab 1, Tab 2 will r
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Security concerns include Cross-Site Scripting (XSS), where malicious scripts are injected into trusted websites, and Cross-Site Request Forgery (CSRF), tricking users into unwanted actions.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -153,12 +153,25 @@ In this example, when you set an item in `localStorage` from Tab 1, Tab 2 will r
   <div>
   <div><strong>Interview Response:</strong> JavaScript can communicate with an iframe using the `contentWindow` property to access the iframe's window object, or `postMessage` method for cross-origin communication.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+const iframe = document.getElementById("myframe");
+const contentWindow = iframe.contentWindow;
+
+// Change the background color of the iframe's document
+contentWindow.document.body.style.backgroundColor = "red"; 
+```
+
+  </div>
   </div>
 </details>
 
 ---
 
-### What are the rules for origin policy for an iframe?
+### What are the rules for same-origin policy for an iframe?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -207,7 +220,7 @@ In this example, when you set an item in `localStorage` from Tab 1, Tab 2 will r
 
 ---
 
-### What is the difference between iframe.onload vs. iframe.contentWindow.onload?
+### How do iframe.onload and iframe.contentWindow.onload differ?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -422,7 +435,7 @@ In this example, when you set an item in `localStorage` from Tab 1, Tab 2 will r
 
 ```js
 window.addEventListener('message', function (event) {
-  if (event.origin != 'http://javascript.info') {
+  if (event.origin != 'https://www.hellojavascript.info') {
     // something from an unknown domain, let's ignore it
     return;
   }
@@ -468,8 +481,8 @@ if (newWindow) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In the context of cross-window communication, "origin" refers to the combination of scheme (protocol), host (domain), and port from which a document or script originates.
-  </div><br />
+  <div><strong>Interview Response:</strong> In the context of cross-window communication, "origin" refers to the combination of scheme (<strong>protocol</strong>), <strong>host</strong> (domain), and <strong>port</strong> from which a document or script originates.
+  </div>
   </div>
 </details>
 
@@ -514,8 +527,34 @@ In this code, a new BroadcastChannel object is created named 'test_channel'. The
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Event listeners enable receiving side in cross-window communication to react to events such as messages from `postMessage`, `storage` events for localStorage changes, or messages from a `BroadcastChannel`.
+  <div><strong>Interview Response:</strong> Event listeners enable the receiving side in cross-window communication to react to events such as messages from `postMessage`, `storage` events for localStorage changes, or messages from a `BroadcastChannel`.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong> This is a simple example to give you a general explanation of the code.<br /><br />
+
+  <div></div>
+
+**Sender:**
+
+```js
+window.postMessage("Hello, JavaScript!", "*");
+```
+
+The * in the postMessage() method indicates that the message should be sent to all windows, regardless of their origin.
+
+**Receiver:**
+
+```js
+// This function will be called when a message is received.
+function handleMessage(event) {
+  console.log("Received message from: " + event.origin);
+  console.log("Message Data: " + event.data); // Message Data: Hello, JavaScript!
+}
+
+// Listen for messages from other windows.
+window.addEventListener("message", handleMessage);
+```
+
+  </div>
   </div>
 </details>
 
@@ -528,6 +567,19 @@ In this code, a new BroadcastChannel object is created named 'test_channel'. The
   <div>
   <div><strong>Interview Response:</strong> In the context of `postMessage`, a MessageEvent is an event fired when a message is received, containing data sent from the other window, its origin, and a reference to the source.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+const event = new MessageEvent('message', {
+  data: 'This is a message',
+  origin: 'https://example.com',
+  source: window.top
+});
+```
+
+  </div>
   </div>
 </details>
 
@@ -539,7 +591,7 @@ In this code, a new BroadcastChannel object is created named 'test_channel'. The
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Data leakage can be prevented by using the Same Origin Policy, validating message origin and data in `postMessage`, employing secure contexts (HTTPS), and mitigating against XSS and CSRF attacks.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -552,6 +604,35 @@ In this code, a new BroadcastChannel object is created named 'test_channel'. The
   <div>
   <div><strong>Interview Response:</strong> In JavaScript, `window.opener` is a reference to the window that opened the current window or tab, typically via the `window.open` method. It's `null` for windows not opened by script.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```html
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The Window Object</h1>
+<h2>The opener Property</h2>
+
+<p id="test">Click the Button</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  const myWindow = window.open("", "", "width=600,height=600");
+  // target the opener using the window.opener property
+  myWindow.opener.document.getElementById("test").innerHTML = "Hello, JavaScript!";
+}
+</script>
+
+</body>
+</html>
+```
+
+  </div>
   </div>
 </details>
 
@@ -567,7 +648,7 @@ In this code, a new BroadcastChannel object is created named 'test_channel'. The
 
   <div></div>
 
-Sure, here's a simple example of using a SharedWorker:
+Here's a simple example of using a SharedWorker:
 
 **SharedWorker script (mySharedWorker.js):**
 
@@ -610,7 +691,7 @@ In this code, the SharedWorker script listens for connection events and messages
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> In JavaScript, a 'browsing context' is an environment in which documents are presented to the user. It includes windows, tabs, iframes, or other embedded documents in a webpage.
-  </div><br/>
+  </div>
   </div>
 </details>
 
@@ -622,7 +703,30 @@ In this code, the SharedWorker script listens for connection events and messages
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, WebSocket can be used for cross-window communication. All tabs can connect to the same WebSocket server and exchange real-time messages, even with different origins.
-  </div><br/>
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let ws;
+
+function connect() {
+  ws = new WebSocket("ws://localhost:8080/");
+  ws.onopen = function() {
+    alert("Connection opened");
+  };
+  ws.onmessage = function(event) {
+    alert(event.data);
+  };
+}
+
+function sendMessage() {
+  ws.send("Hello from window 1");
+}
+```
+
+  </div>
   </div>
 </details>
 
@@ -634,7 +738,7 @@ In this code, the SharedWorker script listens for connection events and messages
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Cross-Document Messaging is a mechanism that allows documents to communicate with each other regardless of their source domain, using the `postMessage` method for safe cross-origin communication.
-  </div><br/>
+  </div>
   </div>
 </details>
 
@@ -646,7 +750,7 @@ In this code, the SharedWorker script listens for connection events and messages
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Potential issues include: lack of real-time updates without `storage` event listeners, size limitations, synchronous API can block main thread, potential for data conflicts, and not secure for sensitive data.
-  </div><br/>
+  </div>
   </div>
 </details>
 
@@ -657,8 +761,54 @@ In this code, the SharedWorker script listens for connection events and messages
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, Service Workers can be used for cross-window communication. They can respond to messages sent from pages under their control, send messages to them, and broadcast them to multiple pages.
-  </div><br/>
+  <div><strong>Interview Response:</strong> Yes, Service Workers can be used for cross-window communication. They act as a proxy, receiving and relaying messages between different browser contexts, including multiple windows or tabs.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's a simple example of using Service Workers for cross-window communication.
+
+**1. Register the service worker:**
+
+```javascript
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service-worker.js')
+  .then(function() {
+    console.log('Service Worker Registered');
+  });
+}
+```
+
+**2. Implement the message receiver in `service-worker.js`:**
+
+```javascript
+self.addEventListener('message', function(event){
+  clients.matchAll().then(clients => {
+    clients.forEach(client => {
+        client.postMessage(event.data);
+    })
+  })
+});
+```
+
+**3. Send a message to the service worker:**
+
+```javascript
+navigator.serviceWorker.controller.postMessage('Hello from page!');
+```
+
+**4. Implement the message receiver on the page:**
+
+```javascript
+navigator.serviceWorker.onmessage = function(event) {
+  console.log('Received a message from service worker: ', event.data);
+};
+```
+
+In this example, when a message is posted to the service worker, it's relayed to all connected clients. Each client that has a message handler setup (`navigator.serviceWorker.onmessage`) will then log the message.
+
+  </div>
   </div>
 </details>
 
@@ -669,8 +819,44 @@ In this code, the SharedWorker script listens for connection events and messages
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The Channel Messaging API enables direct communication between different browsing contexts (like different tabs, windows, or iframes) or workers via two-way communication channels called MessageChannels.
-  </div><br/>
+  <div><strong>Interview Response:</strong> The Channel Messaging API allows for communication between different contexts (like different tabs, iframes, or workers) in the same origin. It uses two-way channels with a port at each end to send messages.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's a simple example of using the Channel Messaging API for cross-window communication.
+
+**1. The first window creates a message channel and sends one port to the second window using `window.postMessage`:**
+
+```javascript
+// Create a channel
+var channel = new MessageChannel();
+
+// Send port2 to the other window
+otherWindow.postMessage('Hello from first window', '*', [channel.port2]);
+
+// Listen for messages on port1
+channel.port1.onmessage = function(event) {
+  console.log('Received:', event.data);
+};
+```
+
+**2. The second window receives the message channel port and uses it to send a message back to the first window:**
+
+```javascript
+window.addEventListener('message', function(event) {
+  // Check the origin of the message
+  if (event.origin !== 'http://your-expected-origin.com') return;
+
+  // Use the received port to send a message back
+  event.ports[0].postMessage('Hello from second window');
+});
+```
+
+In this example, the first window sends a message channel port to the second window. The second window then uses this port to send a message back to the first window. This provides a way for the two windows to communicate directly.
+
+  </div>
   </div>
 </details>
 

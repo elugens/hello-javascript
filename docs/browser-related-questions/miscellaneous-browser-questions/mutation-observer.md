@@ -99,6 +99,15 @@ observer.observe(targetNode, config);
   <div>
   <div><strong>Interview Response:</strong> A MutationObserver is created by instantiating a new MutationObserver object and providing a callback function to handle mutations.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let observer = new MutationObserver(callback);
+```
+
+  </div>
   </div>
 </details>
 
@@ -109,8 +118,39 @@ observer.observe(targetNode, config);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> It can monitor changes like attribute modifications, child list changes, and character data changes in the DOM tree.
+  <div><strong>Interview Response:</strong> A MutationObserver can monitor changes to the DOM, including changes to an element's attributes, text content, or child nodes, as well as addition or removal of elements in the tree.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Select the node that will be observed for mutations
+let targetNode = document.getElementById('target');
+
+// Create an observer instance linked to the callback function
+let observer = new MutationObserver(function(mutationsList, observer) {
+    for(let mutation of mutationsList) {
+        if (mutation.type === 'childList') {
+            console.log('A child node has been added or removed.');
+        }
+        else if (mutation.type === 'attributes') {
+            console.log('The ' + mutation.attributeName + ' attribute was modified.');
+        }
+    }
+});
+
+// Configuration of the observer: 
+let config = { attributes: true, childList: true, subtree: true };
+
+// Start observing the target node for configured mutations
+observer.observe(targetNode, config);
+
+// Later, you can stop observing
+// observer.disconnect();
+```
+
+  </div>
   </div>
 </details>
 
@@ -148,10 +188,44 @@ observer.observe(targetNode, config);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> MutationObserver could be used to dynamically apply styles or trigger actions when a specific element in the DOM changes, like an attribute modification.
+  <div><strong>Interview Response:</strong> A common use case for MutationObserver is to perform actions when specific changes to the DOM occur. For instance, you might want to trigger a function whenever a certain element is added to the page.
     </div><br/>
   <div><strong>Technical Response:</strong> A good use case is when you need to add a third-party script that contains proper functionality and does something unwanted, like injecting unwanted HTML elements. Naturally, the third-party script provides no mechanisms to remove it. Using MutationObserver, we can detect when the unwanted element appears in our DOM and remove it.
-    </div>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Define a callback function to be executed when mutations are observed
+let callback = function(mutationsList, observer) {
+    for(let mutation of mutationsList) {
+        if (mutation.type === 'childList') {
+            let addedNodes = Array.from(mutation.addedNodes);
+            let dynamicElements = addedNodes.filter(node => node.classList && node.classList.contains('dynamic-element'));
+            if (dynamicElements.length > 0) {
+                console.log('A .dynamic-element node has been added.');
+                dynamicElements.forEach(node => {
+                    // Perform operations with the new dynamic element
+                    node.style.color = 'red';
+                });
+            }
+        }
+    }
+};
+
+// Create a new observer instance linked to the callback function
+let observer = new MutationObserver(callback);
+
+// Start observing the document with the configured parameters
+observer.observe(document.body, { childList: true, subtree: true });
+
+// Later, you can stop observing
+// observer.disconnect();
+
+```
+
+  </div>
   </div>
 </details>
 
@@ -164,7 +238,38 @@ observer.observe(targetNode, config);
   <div>
   <div><strong>Interview Response:</strong> Yes, you can stop or disconnect the observer by calling the `disconnect()` method. It tells the observer to stop watching for mutations. We can reuse the observer by calling its `observe()` method again.
     </div><br />
-    <strong>Syntax: </strong> mutationObserver.disconnect();<br /><br />
+    <strong>Syntax: </strong> observer.disconnect();<br /><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Select the node that will be observed for mutations
+let targetNode = document.getElementById('target');
+
+// Define a callback function to be executed when mutations are observed
+let callback = function(mutationsList, observer) {
+    for(let mutation of mutationsList) {
+        if (mutation.type === 'childList') {
+            console.log('A child node has been added or removed.');
+        }
+    }
+};
+
+// Create a new observer instance linked to the callback function
+let observer = new MutationObserver(callback);
+
+// Configuration of the observer: 
+let config = { childList: true };
+
+// Start observing the target node for configured mutations
+observer.observe(targetNode, config);
+
+// Later, you can stop observing
+observer.disconnect();
+```
+
+  </div>
   </div>
 </details>
 
@@ -204,8 +309,39 @@ observer.disconnect();
   <div>
   <div><strong>Interview Response:</strong> An Observer does not prevent garbage collection of its target. If the target or observer is dereferenced and not reachable, it can be garbage collected.
     </div>
-  <div><strong>Technical Response:</strong> Internally, observers employ weak references to nodes. A node can be trash collected if it is deleted from the DOM and becomes inaccessible, and the observation of a DOM node does not stop garbage collection.
-    </div>
+  <div><strong>Technical Response:</strong> Internally, observers employ weak references to nodes. A node can be trash collected if it is deleted from the DOM and becomes inaccessible, and the observation of a DOM node does not stop garbage collection. With MutationObserver, it is important to explicitly disconnect the observer when you are done with it, especially when the observer is scoped globally or outside of the function that starts it. If not disconnected, the observer keeps watching for mutations, which could lead to memory leaks.
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+function observeNode(node) {
+    // Create an observer instance
+    let observer = new MutationObserver(function() {
+        console.log('Node changed!');
+    });
+
+    // Start observing the node for configured mutations
+    observer.observe(node, { attributes: true, childList: true, subtree: true });
+
+    // Return the observer
+    return observer;
+}
+
+// Assume someNode is a DOM node
+let someNode = document.getElementById('target');
+
+let observer = observeNode(someNode);
+
+// When you're done observing changes, disconnect the observer
+// This allows the JavaScript engine to garbage collect the observer instance, avoiding a memory leak
+setTimeout(() => {
+    observer.disconnect();
+}, 5000); // Stop observing after 5 seconds
+```
+
+  </div>
   </div>
 </details>
 
@@ -217,7 +353,7 @@ observer.disconnect();
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The observe method in MutationObserver is used to monitor changes to DOM nodes and their descendants. It can be used to detect changes such as insertions, deletions, and modifications of elements.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -230,6 +366,17 @@ observer.disconnect();
   <div>
   <div><strong>Interview Response:</strong> Yes, a MutationObserver can observe changes in multiple elements simultaneously. It does this by registering multiple MutationObservers, each of which observes a different set of elements. When any of the observed elements changes, the MutationObserver will be notified.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// call `observe()` on that MutationObserver instance,
+// passing it the element to observe, and the options object
+observer.observe(elementToObserve, { subtree: true, childList: true });
+```
+
+  </div>
   </div>
 </details>
 
@@ -241,7 +388,7 @@ observer.disconnect();
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> By using the `disconnect` method, you can stop a MutationObserver from monitoring changes in the DOM.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -254,18 +401,34 @@ observer.disconnect();
   <div>
   <div><strong>Interview Response:</strong> The callback function takes two parameters: an array of MutationRecords and the MutationObserver instance itself.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Define a callback function to be executed when mutations are observed
+let callback = function(mutationsList, observer) {
+    for(let mutation of mutationsList) {
+        if (mutation.type === 'childList') {
+            console.log('A child node has been added or removed.');
+        }
+        else if (mutation.type === 'attributes') {
+            console.log(`The ${mutation.attributeName} attribute was modified on ${mutation.target.nodeName}`);
+        }
+    }
+};
+
+// Create a new observer instance linked to the callback function
+let observer = new MutationObserver(callback);
+
+// Start observing the document with the configured parameters
+observer.observe(document.body, { attributes: true, childList: true, subtree: true });
+
+// Later, you can stop observing
+// observer.disconnect();
+```
+
   </div>
-</details>
-
----
-
-### What parameters does the callback function passed to a MutationObserver take?
-
-<details>
-  <summary><strong>View Answer:</strong></summary>
-  <div>
-  <div><strong>Interview Response:</strong> The callback function takes two parameters: an array of MutationRecords and the MutationObserver instance itself.
-  </div><br />
   </div>
 </details>
 
@@ -289,7 +452,7 @@ observer.disconnect();
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, by invoking the `observe` method on the document object or the root node of your DOM.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -300,8 +463,41 @@ observer.disconnect();
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> This is done through the configuration object passed to the `observe` method, which can specify attributes, childList, and characterData changes.
+  <div><strong>Interview Response:</strong> You specify what changes a MutationObserver should observe by passing a configuration object to the `observe()` method. The object can have properties: `childList`, `attributes`, `characterData`, and `subtree`.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Select the node that will be observed for mutations
+let targetNode = document.getElementById('target');
+
+// Define a callback function to be executed when mutations are observed
+let callback = function(mutationsList, observer) {
+    for(let mutation of mutationsList) {
+        if (mutation.type === 'childList') {
+            console.log('A child node has been added or removed.');
+        } else if (mutation.type === 'attributes') {
+            console.log('The ' + mutation.attributeName + ' attribute was modified.');
+        }
+    }
+};
+
+// Create a new observer instance linked to the callback function
+let observer = new MutationObserver(callback);
+
+// Configuration of the observer: 
+let config = { attributes: true, childList: true };
+
+// Start observing the target node for configured mutations
+observer.observe(targetNode, config);
+
+// Later, you can stop observing
+// observer.disconnect();
+```
+
+  </div>
   </div>
 </details>
 
@@ -312,8 +508,27 @@ observer.disconnect();
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, if the `attributeOldValue` or `characterDataOldValue` is set to true in the configuration object.
+  <div><strong>Interview Response:</strong> Yes, a `MutationObserver` can track old values of mutations. This can be done by setting the `attributeOldValue` or `characterDataOldValue` properties to `true` in the observer's configuration.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Create a new observer instance linked to the callback function
+let observer = new MutationObserver(callback);
+
+// Configuration of the observer:
+let config = { attributes: true, attributeOldValue: true };
+
+// Start observing the target node for configured mutations
+observer.observe(targetNode, config);
+
+// Later, you can stop observing
+// observer.disconnect();
+```
+
+  </div>
   </div>
 </details>
 
@@ -326,6 +541,16 @@ observer.disconnect();
   <div>
   <div><strong>Interview Response:</strong> The 'subtree' option, when set to true, directs the MutationObserver to also observe changes in the descendants of the target node.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Configuration of the observer:
+let config = { attributes: true, subtree: true };
+```
+
+  </div>
   </div>
 </details>
 
@@ -337,7 +562,7 @@ observer.disconnect();
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> MutationObserver batches changes that occur in quick succession and calls the callback function once with all changes.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -349,7 +574,7 @@ observer.disconnect();
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, MutationObservers can impact performance if used excessively or improperly due to the overhead of monitoring DOM changes.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -361,7 +586,7 @@ observer.disconnect();
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> We should use MutationObserver when we need to react to DOM changes that can't be tracked through event handlers or other means.
-  </div><br />
+  </div>
   </div>
 </details>
 

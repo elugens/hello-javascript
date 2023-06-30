@@ -49,6 +49,22 @@ import StructuredData from './schemadata/WindowCoordSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> Window coordinates are pixel measurements from the top left corner of the browser window or viewport.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+var element = document.getElementById("myElement");
+var rect = element.getBoundingClientRect();
+
+var windowX = rect.left + window.scrollX;
+var windowY = rect.top + window.scrollY;
+
+console.log("Window X Coordinate: " + windowX);
+console.log("Window Y Coordinate: " + windowY);
+```
+
+  </div>
   </div>
 </details>
 
@@ -60,7 +76,7 @@ import StructuredData from './schemadata/WindowCoordSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Some properties of the window object in JavaScript include `window.location`, `window.document`, `window.innerHeight`, `window.innerWidth`, `window.navigator`, `window.localStorage`, `window.sessionStorage`, `window.alert`, `window.setTimeout`, and `window.console`.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -133,6 +149,16 @@ In this example, `window.pageYOffset` is logged to the console, displaying the c
   <div>
   <div><strong>Interview Response:</strong> `window.innerWidth` represents the interior width of the browser window, excluding scrollbars, while `window.innerHeight` represents the interior height of the browser window, excluding scrollbars.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+console.log("Window Width: " + window.innerWidth);
+console.log("Window Height: " + window.innerHeight);
+```
+
+  </div>
   </div>
 </details>
 
@@ -144,7 +170,7 @@ In this example, `window.pageYOffset` is logged to the console, displaying the c
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> JavaScript handles coordinate changes with scrolling by maintaining fixed coordinates relative to the viewport, where the coordinates of elements remain constant regardless of scrolling, allowing accurate positioning and interaction with elements on the page.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -156,7 +182,7 @@ In this example, `window.pageYOffset` is logged to the console, displaying the c
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> When you resize the browser window, the window coordinates (e.g., `window.innerWidth` and `window.innerHeight`) are updated to reflect the new dimensions, allowing accurate calculation and positioning of elements based on the resized window.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -168,7 +194,7 @@ In this example, `window.pageYOffset` is logged to the console, displaying the c
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> No, it is not possible to directly change the window coordinates in JavaScript. The window coordinates, such as window.innerWidth and window.innerHeight, are read-only properties that reflect the dimensions of the browser window.
-  </div><br/>
+  </div>
   </div>
 </details>
 
@@ -268,6 +294,8 @@ function handleClick(event) {
 
 In this example, we add a click event listener to the document. When the document is clicked, the `handleClick` function is called. Inside the function, we retrieve the `screenX/Y` coordinates, which represent the position relative to the screen, and the `clientX/Y` coordinates, which represent the position relative to the viewport. We then log these coordinates to the console.
 
+---
+
 :::note
 Please note that the values logged in the console will vary depending on where you click on the screen.
 :::
@@ -285,6 +313,15 @@ Please note that the values logged in the console will vary depending on where y
   <div>
   <div><strong>Interview Response:</strong> `window.scrollX` (alias for `window.pageXOffset`) is a property in JavaScript that returns the number of pixels by which the document is currently scrolled horizontally from the leftmost position. It provides the horizontal scroll position of the window.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+console.log("Horizontal Scroll Amount: " + window.scrollX);
+```
+
+  </div>
   </div>
 </details>
 
@@ -297,6 +334,15 @@ Please note that the values logged in the console will vary depending on where y
   <div>
   <div><strong>Interview Response:</strong> `window.scrollY` (alias for `window.pageYOffset`) is a property in JavaScript that returns the number of pixels by which the document is currently scrolled vertically from the topmost position. It provides the vertical scroll position of the window.
   </div><br />
+  <div><strong className="codeExample">Here's a simple code example:</strong><br /><br />
+
+  <div></div>
+
+```js
+console.log("Vertical Scroll Amount: " + window.scrollY);
+```
+
+  </div>
   </div>
 </details>
 
@@ -333,8 +379,20 @@ In this example, the `window.scrollTo()` method is used to scroll the window to 
   <div>
   <div><strong>Interview Response:</strong> The two main coordinate systems in JavaScript are the Window Coordinates (relative to the browser window) and the Document Coordinates (relative to the entire document).
     </div><br/>
-  <div><strong>Technical Response:</strong> Most JavaScript methods work with one of two coordinate systems: relative to the window and document coordinate systems. We indicate these coordinates as clientX/clientY relative to the window — similar to position:fixed, derived from the window top/left edge. We identify them as pageX/pageY relative to the document — analogous to position:absolute in the document root, derived from the document top/left edge. When the page scrolls to the bottom, these coordinates equal each other, thus the top/left corner of the window matches the top/left corner of the content.However, as the document moves, the window-relative coordinates of elements change as they travel across the window, but the document-relative coordinates remain constant.
-    </div>
+  <div><strong>Technical Details:</strong> Most JavaScript methods work with one of two coordinate systems: relative to the window and document coordinate systems. We indicate these coordinates as clientX/clientY relative to the window — similar to position:fixed, derived from the window top/left edge. We identify them as pageX/pageY relative to the document — analogous to position:absolute in the document root, derived from the document top/left edge. When the page scrolls to the bottom, these coordinates equal each other, thus the top/left corner of the window matches the top/left corner of the content.However, as the document moves, the window-relative coordinates of elements change as they travel across the window, but the document-relative coordinates remain constant.
+    </div><br />
+  <div><strong className="codeExample">Differences between the Window Coordinate System and the Document Coordinate System:</strong><br /><br />
+
+  <div></div>
+
+| Coordinate System          | Description                                                                                  |
+|----------------------------|----------------------------------------------------------------------------------------------|
+| Window Coordinate System  | Represents the position of an element relative to the browser window.                        |
+| Document Coordinate System| Represents the position of an element relative to the entire document or the HTML document. |
+
+Please note that the table provides a brief summary of each coordinate system and their purpose.
+
+  </div>
   </div>
 </details>
 
@@ -393,6 +451,8 @@ In this example, the `window.scrollTo()` method is used to scroll the window to 
   left : 146.5454559326172
 -->
 ```
+
+---
 
 :::note
 If box-sizing: border-box is set for the element this would be directly equal to its width or height. The returned result is the union of the rectangles returned by getClientRects() for the element, i.e. the CSS border-boxes connected with the element.

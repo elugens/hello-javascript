@@ -82,7 +82,7 @@ In this example, we have an HTML button with the id "myButton". We use JavaScrip
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> There are several DOM events, including mouse, keyboard, form element, document, and CSS events. The most common is mouse and keyboard events, like mouse click and keyboard `keydown` events.
+  <div><strong>Interview Response:</strong> There are several DOM events, including mouse, keyboard, form element, document, and CSS events. The most common is mouse and keyboard events, like mouse `click` and keyboard `keydown` events.
     </div>
   </div>
 </details>
@@ -248,7 +248,20 @@ document.body.setAttribute('onclick', function () {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> DOM property names are case-sensitive in JavaScript, meaning that differences in letter case (uppercase vs. lowercase) are considered significant when accessing or setting property values on DOM elements. We should assign a handler to elem.onclick, not elem.ONCLICK.
-    </div>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong> element.innerHTML<br /><br />
+
+  <div></div>
+
+```js
+var element = document.createElement('div');
+element.innerHTML = 'Hello, JavaScript!';
+
+console.log(element.innerHTML); // Output: Hello, JavaScript!
+console.log(element.innerhtml); // Output: undefined
+```
+
+  </div>
   </div>
 </details>
 
@@ -451,6 +464,56 @@ document.addEventListener("DOMContentLoaded", function() {
   <div>
   <div><strong>Interview Response:</strong> In an event handler, `event.target` refers to the actual element that triggered the event, while `event.currentTarget` refers to the element to which the event handler is attached (the element on which the event listener was registered).
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Target vs CurrentTarget</title>
+</head>
+<body>
+  <div id="outer">
+    <div id="inner">
+      Click me!
+    </div>
+  </div>
+
+  <script>
+    function handleClick(event) {
+      console.log('Target:', event.target.id);
+      console.log('CurrentTarget:', event.currentTarget.id);
+    }
+
+    var outer = document.getElementById('outer');
+    var inner = document.getElementById('inner');
+
+    outer.addEventListener('click', handleClick);
+    inner.addEventListener('click', handleClick);
+  </script>
+</body>
+</html>
+
+```
+
+Output:
+
+```js
+Target: inner
+CurrentTarget: outer
+```
+
+In the example, we have an outer `<div>` with an id of "outer" and an inner `<div>` with an id of "inner". Both elements have a click event listener attached to them.
+
+When you click on the inner `<div>`, the event bubbles up to the outer `<div>`. The event handler `handleClick` is called, and within the function, `event.target` refers to the element that triggered the event (in this case, the inner `<div>` with the id "inner"). On the other hand, `event.currentTarget` refers to the element that currently has the event listener attached to it (in this case, the outer `<div>` with the id "outer").
+
+Running the code and inspecting the console will display the following output when clicking on the inner `<div>`:
+
+This demonstrates the difference between `event.target` and `event.currentTarget`.
+
+  </div>
   </div>
 </details>
 

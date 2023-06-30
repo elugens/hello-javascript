@@ -50,6 +50,32 @@ import StructuredData from './schemadata/FetchAbortSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> Aborting a fetch means cancelling an ongoing fetch request. This can be useful when you no longer need the response or if the fetch takes too long.
   </div><br />
+  <div><strong className="codeExample">Here is a simple code example:</strong><br /><br />
+
+  <div></div>
+
+```js
+const controller = new AbortController();
+const signal = controller.signal;
+
+// Start fetch
+fetch('https://api.example.com/data', { signal })
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(err => {
+    // On abort, the promise is rejected with an AbortError
+    if (err.name === 'AbortError') {
+      console.log('Fetch aborted');
+    } else {
+      console.error('Another error', err);
+    }
+  });
+
+// Abort fetch after 2 seconds
+setTimeout(() => controller.abort(), 2000);
+```
+
+  </div>
   </div>
 </details>
 
@@ -62,6 +88,15 @@ import StructuredData from './schemadata/FetchAbortSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> AbortController is an interface that allows you to cancel one or more web requests as and when desired using an AbortSignal.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+const controller = new AbortController();
+```
+
+  </div>
   </div>
 </details>
 
@@ -74,6 +109,34 @@ import StructuredData from './schemadata/FetchAbortSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> AbortSignal is used by passing it to the fetch request. When the associated AbortController’s abort() method is called, the fetch is cancelled.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Initialize a new AbortController
+const controller = new AbortController();
+
+// Get the AbortSignal from the AbortController
+const signal = controller.signal;
+
+// Start a fetch request
+fetch('https://api.example.com/data', { signal })
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(err => {
+    if (err.name === 'AbortError') {
+      console.log('Fetch operation was aborted');
+    } else {
+      console.error('Fetch operation failed', err);
+    }
+  });
+
+// Abort the fetch request after 5 seconds
+setTimeout(() => controller.abort(), 5000);
+```
+
+  </div>
   </div>
 </details>
 
@@ -86,6 +149,31 @@ import StructuredData from './schemadata/FetchAbortSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> The abort() method signals to cancel the fetch operations associated with it. This causes the fetch promises to reject with an AbortError.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Create a new AbortController
+const controller = new AbortController();
+
+// Fetch some data, passing the AbortSignal as part of the options
+fetch('https://api.example.com/data', { signal: controller.signal })
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => {
+    if (error.name === 'AbortError') {
+      console.log('Fetch operation was aborted');
+    } else {
+      console.error('Fetch operation failed', error);
+    }
+  });
+
+// After 5 seconds, call abort() on the controller
+setTimeout(() => controller.abort(), 5000);
+```
+
+  </div>
   </div>
 </details>
 
@@ -98,6 +186,22 @@ import StructuredData from './schemadata/FetchAbortSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> When a fetch is aborted, it rejects the promise with a DOMException named AbortError.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+fetch('https://example.com', { signal })
+  .then(response => {
+})
+  .catch(err => {
+    if (err.name === 'AbortError') {
+      console.log('AbortError: Fetch request aborted');
+    }
+});
+```
+
+  </div>
   </div>
 </details>
 
@@ -110,6 +214,22 @@ import StructuredData from './schemadata/FetchAbortSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> You can handle an abort error in a catch block of the fetch promise, checking if the error's name is 'AbortError'.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+fetch('https://example.com', { signal })
+  .then(response => {
+})
+  .catch(err => {
+    if (err.name === 'AbortError') {
+      console.log('AbortError: Fetch request aborted');
+    }
+});
+```
+
+  </div>
   </div>
 </details>
 
@@ -121,7 +241,7 @@ import StructuredData from './schemadata/FetchAbortSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> No, once the abort() method is called on an AbortController, it can't be reset or reused.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -132,8 +252,41 @@ import StructuredData from './schemadata/FetchAbortSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, aborting unnecessary or slow fetches can free up resources and prevent unneeded processing, improving the overall performance.
+  <div><strong>Interview Response:</strong> Yes, aborting fetches can potentially improve the performance of a web application. This can be especially useful in situations where you have a new fetch that supersedes an ongoing one.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let controller = new AbortController();
+
+// Function to fetch data based on a query
+function fetchData(query) {
+  // If there's an ongoing fetch, abort it
+  if (controller) controller.abort();
+
+  // Create a new controller for the new fetch
+  controller = new AbortController();
+
+  // Start the new fetch
+  fetch(`https://api.example.com/search?q=${query}`, { signal: controller.signal })
+    .then(response => response.json())
+    .then(data => console.log(data)) // Do something with the data here
+    .catch(error => {
+      if (error.name !== 'AbortError') {
+        console.error('Fetch operation failed', error);
+      }
+    });
+}
+
+// Function to handle input from the user
+function handleInput(input) {
+  fetchData(input);
+}
+```
+
+  </div>
   </div>
 </details>
 
@@ -145,7 +298,7 @@ import StructuredData from './schemadata/FetchAbortSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> No, aborting a fetch request only stops the client from listening to the response. It doesn't affect the process on the server side, which will usually complete as normal.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -157,7 +310,7 @@ import StructuredData from './schemadata/FetchAbortSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The browser doesn't signal the server when a fetch is aborted. Once the request is sent, it's processed server-side regardless of client-side cancellation.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -169,7 +322,7 @@ import StructuredData from './schemadata/FetchAbortSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, you can call `controller.abort()` after the response starts arriving. This will reject the fetch promise with an `AbortError`, stopping the processing of the response.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -194,6 +347,23 @@ import StructuredData from './schemadata/FetchAbortSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> If you don't provide an AbortSignal to a fetch request, the fetch operation will continue as normal and cannot be programmatically cancelled using the AbortController mechanism.
   </div><br />
+  <div><strong className="codeExample">Here's an example of a fetch request without an AbortSignal:</strong><br /><br />
+
+  <div></div>
+
+```js
+fetch('https://api.example.com/data')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => console.log(data))
+  .catch(error => console.error('There has been a problem with your fetch operation: ', error));
+```
+
+  </div>
   </div>
 </details>
 
@@ -258,6 +428,27 @@ In this example, the main script creates an `AbortController`, passes the `Abort
   <div>
   <div><strong>Interview Response:</strong> The aborted flag is initially set to false. It becomes true when abort() is called on the associated AbortController.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Create a new AbortController
+const controller = new AbortController();
+
+// Get the signal from the controller
+const signal = controller.signal;
+
+// Log the initial state of the aborted flag
+console.log(signal.aborted); // Outputs: false
+
+controller.abort(); // abort controller
+
+// Log the final state of the aborted flag
+console.log(signal.aborted); // Outputs: true
+```
+
+  </div>
   </div>
 </details>
 
@@ -270,6 +461,43 @@ In this example, the main script creates an `AbortController`, passes the `Abort
   <div>
   <div><strong>Interview Response:</strong> Abort functionality is not exclusive to fetch. It can be used with any API that supports or is configured to work with the AbortSignal, including DOM APIs and various async tasks.
   </div><br />
+  <div><strong>Technical Response:</strong> The AbortController and AbortSignal APIs are not exclusive to the Fetch API. They're part of the DOM standard and can be used to abort various kinds of operations, such as ongoing Fetch requests, streams, or even ongoing animations using the Web Animations API.
+  </div><br />
+  <div><strong className="codeExample">Here's a simple example of using `AbortController` with the `addEventListener` method:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+// Create a new AbortController
+const controller = new AbortController();
+
+// Get the AbortSignal from the controller
+const signal = controller.signal;
+
+// Listen for click events on the document
+document.addEventListener('click', () => {
+  console.log('Document was clicked');
+}, { signal });
+
+// Call abort on the controller after 5 seconds
+setTimeout(() => {
+  controller.abort();
+  console.log('No longer listening for clicks');
+}, 5000);
+```
+
+In this code:
+
+- A new `AbortController` is created and its `AbortSignal` is obtained.
+- A click event listener is added to the document, with the `AbortSignal` passed in the options object. This associates the event listener with the abort controller.
+- A `setTimeout` call is set up to call `controller.abort()` after 5 seconds. This will remove the click event listener from the document, as the `AbortSignal` associated with it has been aborted.
+- After the `abort` call, "No longer listening for clicks" will be logged to the console, and no further click events on the document will be logged.
+
+This is a simplistic example and there's not often a need to abort event listeners like this in practice, but it shows how the `AbortController`/`AbortSignal` APIs can be used outside of the Fetch API.
+
+As always, be sure to check for compatibility as not all APIs or browsers may support `AbortController` and `AbortSignal`.
+
+  </div>
   </div>
 </details>
 
@@ -341,7 +569,35 @@ In this example, the fetch operation is aborted after 2 seconds, causing the `aw
   <div><strong>Interview Response:</strong> Yes, it's possible to abort an ongoing Fetch using the AbortController and AbortSignal interfaces in the Fetch API. The `abort()` method on the AbortController cancels the Fetch.
     </div><br/>
   <div><strong>Technical Response:</strong> Yes, there is a special built-in object for such purposes: AbortController. We can use it to abort, fetch, and do other asynchronous tasks. The usage is very straightforward. The AbortController interface represents a controller object that allows you to abort one or more Web requests as and when desired. You can create a new AbortController object using the AbortController.AbortController() constructor. Communicating with a DOM request is done using an AbortSignal object (calling abort()).
-    </div>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Initialize a new AbortController
+const controller = new AbortController();
+
+// Get the AbortSignal from the AbortController
+const signal = controller.signal;
+
+// Start a fetch request
+fetch('https://api.example.com/data', { signal })
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(err => {
+    if (err.name === 'AbortError') {
+      console.log('Fetch operation was aborted');
+    } else {
+      console.error('Fetch operation failed', err);
+    }
+  });
+
+// Abort the fetch request after 5 seconds
+setTimeout(() => controller.abort(), 5000);
+```
+
+  </div>
   </div>
 </details>
 

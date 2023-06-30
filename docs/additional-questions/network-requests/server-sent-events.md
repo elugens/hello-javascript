@@ -48,7 +48,7 @@ import StructuredData from './schemadata/ServerSentSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Server-Sent Events (SSE) in JavaScript are a standard that allows a web server to push real-time updates to the client through a persistent HTTP connection, using the EventSource API.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -60,7 +60,7 @@ import StructuredData from './schemadata/ServerSentSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, Server-Sent Events are designed for real-time data transmission from the server to the client, with automatic reconnection features.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -73,6 +73,72 @@ import StructuredData from './schemadata/ServerSentSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> An SSE connection is established by creating a new EventSource object in JavaScript, which opens a persistent HTTP connection to the server at the specified URL, ready to receive events.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's an example using JavaScript (Node.js) and Express.js for the server side and JavaScript for the client side. Server-Sent Events (SSE) allows a server to push updates to a client whenever they are available.
+
+**On the server side:**
+
+```javascript
+const express = require('express');
+const app = express();
+
+app.get('/events', (req, res) => {
+  res.setHeader('Content-Type', 'text/event-stream');
+  res.setHeader('Cache-Control', 'no-cache');
+  res.setHeader('Connection', 'keep-alive');
+  res.flushHeaders();
+
+  // Here you could actually decide on the logic of what updates you send to the client
+  // and when you send them. Below is just an example of sending the current time every second.
+  setInterval(() => {
+    const timeNow = new Date().toISOString();
+    res.write(`data: ${timeNow}\n\n`);  // "\n\n" is necessary to distinguish between different messages
+  }, 1000);
+
+  req.on('close', () => {
+    console.log('Connection closed');
+  });
+});
+
+app.listen(3000, () => {
+  console.log('Server listening on port 3000');
+});
+```
+
+**On the client side:**
+
+```javascript
+let source = new EventSource('http://localhost:3000/events');
+
+source.addEventListener('message', (event) => {
+  console.log(event.data);
+});
+
+source.addEventListener('open', () => {
+  console.log('Connection was opened');
+});
+
+source.addEventListener('error', (event) => {
+  if (event.readyState === EventSource.CLOSED) {
+    console.log('Connection was closed');
+  } else {
+    console.log('An error has occurred');
+  }
+});
+```
+
+This example code opens an SSE connection to the server at '<http://localhost:3000/events>'. The server will send a message with the current date and time every second, and the client will log these messages to the console.
+
+---
+
+:::note
+Please note that this is just an illustrative example, in a real-world scenario, you would want to consider various factors such as error handling, controlling intervals, and handling user-specific data. Also, consider that you need to handle potential issues like reconnections on the client-side or handle the number of connections on the server-side.
+:::
+
+  </div>
   </div>
 </details>
 
@@ -84,7 +150,7 @@ import StructuredData from './schemadata/ServerSentSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> SSE is suitable for real-time updates like live news headlines, stock prices, live sports scores, online multiplayer games, social media feeds, or system monitoring dashboards.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -147,7 +213,7 @@ In this example, two different types of events (`messageType1` and `messageType2
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> SSE (Server-Sent Events) limitations include lack of support in Internet Explorer, unidirectional communication (server to client), a maximum limit on open connections, and potential higher overhead compared to WebSockets.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -192,13 +258,63 @@ In this example, the server is set up to push Server-Sent Events to the client. 
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, servers can send an ID with each update. If the connection drops, the browser includes the last ID when reconnecting, allowing the server to resend any missed updates.</div><br />
+  <div><strong>Technical Details:</strong> In Server-Sent Events (SSE), the browser automatically reconnects to the server when the connection is lost, and the server can identify where to restart the event stream. This is done through the `id` field in the event data. If the connection drops, the browser includes a header `Last-Event-ID` in the next request, which the server can use to resend missed events.</div><br />
   <div><strong className="codeExample">Code Example:</strong> Code is being updated!<br /><br />
 
   <div></div>
 
-```js
-// Code is being updated
+**On the server side (using Node.js and Express.js):**
+
+```javascript
+const express = require('express');
+const app = express();
+
+let eventId = 0;
+
+app.get('/events', (req, res) => {
+  res.setHeader('Content-Type', 'text/event-stream');
+  res.setHeader('Cache-Control', 'no-cache');
+  res.setHeader('Connection', 'keep-alive');
+  res.flushHeaders();
+
+  const interval = setInterval(() => {
+    const timeNow = new Date().toISOString();
+    res.write(`id: ${eventId}\ndata: ${timeNow}\n\n`);
+    eventId++;
+  }, 1000);
+
+  req.on('close', () => {
+    clearInterval(interval);
+    console.log('Connection closed');
+  });
+});
+
+app.listen(3000, () => {
+  console.log('Server listening on port 3000');
+});
 ```
+
+**On the client side:**
+
+```javascript
+let source = new EventSource('http://localhost:3000/events');
+
+source.onmessage = (event) => {
+  console.log(`ID: ${event.lastEventId}, Data: ${event.data}`);
+};
+
+source.onerror = (event) => {
+  console.log('An error has occurred');
+};
+```
+
+In this example, the server sends an event every second with an increasing ID and the current date and time. If the connection drops, the browser reconnects and includes the header `Last-Event-ID` with the ID of the last received event. In a real-world scenario, the server would use this ID to decide where to restart the event stream.
+
+---
+
+:::note
+However, do note that in this example the server isn't actually handling lost updates, it's just sending messages with increasing IDs. You would need to implement your own logic to handle lost updates based on your application's requirements.
+:::
 
   </div>
   </div>
@@ -212,33 +328,54 @@ In this example, the server is set up to push Server-Sent Events to the client. 
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> You can close an SSE connection on the client side by calling the `close()` method on the EventSource object, effectively terminating the connection to the server.</div><br />
-  <div><strong className="codeExample">Code Example:</strong> Code is being updated!<br /><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
 
-```js
-// Code is being updated
+```javascript
+let source = new EventSource('http://localhost:3000/events');
+
+source.onmessage = (event) => {
+  console.log(`Data: ${event.data}`);
+};
+
+// Some condition or user action that prompts you to close the connection
+if (someCondition) {
+  source.close();
+}
 ```
 
-  </div>
-  </div>
-</details>
+In this example, once `source.close()` is called, the browser will not attempt to reconnect to the server. If you want to start receiving events again, you will need to create a new `EventSource` instance.
 
----
+On the server side, it's important to note that an SSE connection is basically a long-running HTTP connection. So, if you want to close it from the server side, you would do so by ending the HTTP response. This could look like the following:
 
-### How can you close an SSE (EventSource) connection?
+```javascript
+app.get('/events', (req, res) => {
+  res.setHeader('Content-Type', 'text/event-stream');
+  res.setHeader('Cache-Control', 'no-cache');
+  res.setHeader('Connection', 'keep-alive');
+  res.flushHeaders();
 
-<details>
-  <summary><strong>View Answer:</strong></summary>
-  <div>
-  <div><strong>Interview Response:</strong> SSE uses text-based format. Each event is sent as a block of text, divided by a pair of newline characters. Standard fields include: "data", "id", "event", and "retry".</div><br />
-  <div><strong className="codeExample">Code Example:</strong> Code is being updated!<br /><br />
+  const interval = setInterval(() => {
+    const timeNow = new Date().toISOString();
+    res.write(`data: ${timeNow}\n\n`);
+  }, 1000);
 
-  <div></div>
+  req.on('close', () => {
+    clearInterval(interval);
+    console.log('Connection closed by the client');
+  });
 
-```js
-// Code is being updated
+  // Some condition or event that prompts you to close the connection
+  if (someCondition) {
+    clearInterval(interval);
+    res.end();
+    console.log('Connection closed by the server');
+  }
+});
 ```
+
+Remember, you need to properly handle events and clear any intervals or timeouts that are associated with the connection to avoid memory leaks when the connection is closed.
 
   </div>
   </div>
@@ -252,7 +389,7 @@ In this example, the server is set up to push Server-Sent Events to the client. 
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, but only with a polyfill, as native EventSource API does not support it. This is one limitation of SSE. Workarounds may involve server-side handling or using libraries.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -264,7 +401,7 @@ In this example, the server is set up to push Server-Sent Events to the client. 
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The HTTP status code used for a successful SSE connection is 200 OK, along with the "Content-Type" header set to "text/event-stream" to indicate a valid SSE connection.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -275,8 +412,8 @@ In this example, the server is set up to push Server-Sent Events to the client. 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The last-event-id header lets the server know the ID of the last event received by the client, useful for resending missed events after reconnection.
-  </div><br />
+  <div><strong>Interview Response:</strong> The `Last-Event-ID` HTTP header in SSE allows the server to resend missed events after a connection loss, by specifying the ID of the last successfully received event from the client's perspective.
+  </div>
   </div>
 </details>
 
@@ -288,7 +425,7 @@ In this example, the server is set up to push Server-Sent Events to the client. 
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> HTTP/2 is ideal for SSE because it supports multiplexing, allowing multiple messages to be sent concurrently on the same connection, improving performance and resource usage for real-time updates.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -300,7 +437,7 @@ In this example, the server is set up to push Server-Sent Events to the client. 
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, Server-Sent Events can work with cross-origin requests by implementing Cross-Origin Resource Sharing (CORS) and setting the appropriate server headers for allowing the cross-origin request.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -336,7 +473,7 @@ In this example, the server is set up to push Server-Sent Events to the client. 
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> SSE maintains a single, long-lived connection and is more efficient compared to long-polling and short-polling which involve repeated requests.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -390,30 +527,28 @@ In this example, the server is set up to push Server-Sent Events to the client. 
   <div><strong>Interview Response:</strong> To open an EventSource server connection, instantiate the `EventSource` object and pass the URL of the server-side script to its constructor.
     </div><br />
   <div><strong>Technical Response:</strong> To start receiving messages, we need to create a new EventSource(URL). The browser connects to the URL and keeps the connection open, waiting for events. The server should respond with status 200 and the header Content-Type: text/event-stream, then keep the connection and write messages into it in the unique format. In practice, complex messages usually transmit JSON-encoded data. Line-breaks typically encode as \n, so multiline data: messages are not necessary.
-    </div><br />
-  <div><strong className="codeExample">Message Output:</strong><br /><br />
-
-  <div></div>
-
-```json
-data: {"user":"John","message":"First line\n Second line"}
-```
-
-  </div><br />
+    </div>><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
 
-```js
-let eventSource = new EventSource('/events/subscribe');
+```javascript
+let source = new EventSource('http://localhost:3000/events');
 
-eventSource.onmessage = function (event) {
-  console.log('New message', event.data);
-  // will log 3 times for the data stream above
+source.onopen = (event) => {
+  console.log('Connection to server opened');
 };
 
-// or eventSource.addEventListener('message', ...)
+source.onmessage = (event) => {
+  console.log('Message received from server:', event.data);
+};
+
+source.onerror = (event) => {
+  console.log('Error occurred');
+};
 ```
+
+In this code, a new `EventSource` is created with the URL of the server sending the events. The `onopen`, `onmessage`, and `onerror` event handlers are used to handle the connection opening, receiving a message, and handling errors, respectively.
 
   </div>
   </div>
@@ -430,15 +565,53 @@ eventSource.onmessage = function (event) {
     </div><br />
   <div><strong>Technical Response:</strong> Yes, EventSource supports cross-origin requests, like fetch and other networking methods. We can use whatever URL we like. After receiving the Origin header, the remote server must respond with "Access-Control-Allow-Origin". We must enable the withCredentials option to pass credentials.
     </div><br />
-  <div><strong className="codeExample">Code Example:</strong><br /><br />
+  <div><strong className="codeExample">Here's an example of how you might do this.</strong><br /><br />
 
   <div></div>
 
-```js
-let source = new EventSource('https://another-site.com/events', {
-  withCredentials: true,
+On the server-side, you'll need to include the appropriate CORS headers. If you're using Express.js, you might do something like this:
+
+```javascript
+const express = require('express');
+const cors = require('cors');
+const app = express();
+
+app.use(cors());
+
+app.get('/events', (req, res) => {
+  res.setHeader('Content-Type', 'text/event-stream');
+  res.setHeader('Cache-Control', 'no-cache');
+  res.setHeader('Connection', 'keep-alive');
+  res.flushHeaders();
+
+  setInterval(() => {
+    const message = `data: The server time is: ${new Date().toLocaleTimeString()}\n\n`;
+    res.write(message);
+  }, 1000);
+});
+
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
 });
 ```
+
+And on the client side, you would open an `EventSource` connection as usual:
+
+```javascript
+let source = new EventSource('https://another-site.com/events', {
+  withCredentials: true, // setting credentials to true
+});
+
+source.onmessage = (event) => {
+  console.log(event.data);
+};
+
+source.onerror = (event) => {
+  console.log('Error:', event);
+};
+```
+
+In this example, the server is configured to allow CORS, and the client is able to connect to the server and receive server-sent events, even if it's hosted on a different origin. Please replace `'http://localhost:3000/events'` with your actual server URL.
 
   </div>
   </div>
@@ -459,10 +632,14 @@ let source = new EventSource('https://another-site.com/events', {
 
   <div></div>
 
-```js
-// retry: 15000
-// data: Hello, I set the reconnection delay to 15 seconds
+```html
+retry: 15000
+data: Hello, I set the reconnection delay to 15 seconds
 ```
+
+In a real-world scenario, you might want to implement backoff strategies (like exponential backoff) for reconnection attempts to handle temporary server unavailability.
+
+You can view more about the exponential backoff JavaScript algorithm here. [How to implement an exponential backoff retry strategy in Javascript](https://advancedweb.hu/how-to-implement-an-exponential-backoff-retry-strategy-in-javascript/).
 
   </div>
   </div>
@@ -483,11 +660,51 @@ let source = new EventSource('https://another-site.com/events', {
 
   <div></div>
 
-```js
-let eventSource = new EventSource(...);
+Server side (using Node.js and Express.js):
 
-eventSource.close();
+```javascript
+const express = require('express');
+const app = express();
+
+app.get('/events', (req, res) => {
+  res.setHeader('Content-Type', 'text/event-stream');
+  res.flushHeaders();
+
+  // Send a message every second
+  const interval = setInterval(() => {
+    const timeNow = new Date().toISOString();
+    
+    // Retry field sets the reconnection time to 3000 milliseconds
+    res.write(`retry: 3000\ndata: ${timeNow}\n\n`);
+  }, 1000);
+
+  req.on('close', () => {
+    clearInterval(interval);
+  });
+});
+
+app.listen(3000);
 ```
+
+Client side:
+
+```javascript
+let source = new EventSource('http://localhost:3000/events');
+
+source.onmessage = (event) => {
+  console.log(`Data: ${event.data}`);
+};
+
+source.onerror = (event) => {
+  if (source.readyState === EventSource.CONNECTING) {
+    console.log('Connection lost. Reconnecting...');
+  } else {
+    console.log('An error occurred');
+  }
+};
+```
+
+In this example, the server sends a message every second. If the connection is lost, the browser waits for the time specified in the `retry` field (3000 milliseconds in this case) before attempting to reconnect. The `onerror` handler on the client side logs the reconnection attempts.
 
   </div>
   </div>

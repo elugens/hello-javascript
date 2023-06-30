@@ -62,8 +62,28 @@ import StructuredData from './schemadata/ResourceLoadingSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> In JavaScript, there are two primary events for monitoring resource loading. The first is the "load" event, which triggers once the resource has finished loading. The second is the "error" event, which triggers when loading fails.
     </div><br/>
-  <div><strong>Technical Response:</strong> As a developers, we have the capability to monitor the loading of external resources, such as scripts, iframes, and pictures, through the use of the browser. This can be achieved by utilizing two key events: onload and onerror. The onload event is triggered when an object is successfully loaded, while the onerror event is activated when there is an error encountered while loading an external file, such as a document or image.
-    </div>
+  <div><strong>Technical Details:</strong> As a developers, we have the capability to monitor the loading of external resources, such as scripts, iframes, and pictures, through the use of the browser. This can be achieved by utilizing two key events: onload and onerror. The onload event is triggered when an object is successfully loaded, while the onerror event is activated when there is an error encountered while loading an external file, such as a document or image.
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let img = new Image();
+
+img.src = "https://example.com/some-image.jpg";
+
+img.addEventListener('load', function() {
+    console.log('Image has loaded successfully');
+});
+
+img.addEventListener('error', function() {
+    console.error('An error occurred while loading the image');
+});
+
+```
+
+  </div>
   </div>
 </details>
 
@@ -180,10 +200,42 @@ img.onerror = function () {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Cross-origin policy, or Same-Origin Policy, restricts how a document or script from one origin can interact with a resource from another origin, to prevent malicious activities.
+  <div><strong>Interview Response:</strong> In frontend web development, Cross-Origin Resource Sharing (CORS) is a mechanism that allows many resources (e.g., fonts, JavaScript, etc.) on a web page to be requested from another domain outside the domain from which the resource originated.
     </div><br/>
   <div><strong>Technical Response:</strong> There is a rule: scripts from one site cannot access the other site's contents. So, a script at https://facebook.com cannot read the user’s mailbox at https://gmail.com. Or, to be more precise, one origin (domain/port/protocol triplet) cannot access the content from another one. So even if we have a subdomain or just another port, these are different origins with no access to each other.
-    </div>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+A simple example is fetching data from a different domain.
+
+```javascript
+fetch('https://api.different-domain.com/data')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.log('An error occurred:', error));
+```
+
+In this case, the server `https://api.different-domain.com` must include the appropriate CORS headers to allow the request. The server could respond with headers like:
+
+```
+Access-Control-Allow-Origin: https://your-domain.com
+```
+
+This tells the browser that it's okay to make a request from `https://your-domain.com` to `https://api.different-domain.com`.
+
+However, without the appropriate server configuration, the CORS policy will block the request. You would see an error in your browser's console along the lines of:
+
+```
+Access to fetch at 'https://api.different-domain.com/data' from origin 'https://your-domain.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+```
+
+That's why it's important to properly set up your server's CORS policy when you expect to serve resources to different domains.
+
+(Note: This is a simplified explanation. The actual CORS policy and implementation can be more complex and involves other headers as well, like `Access-Control-Allow-Methods`, `Access-Control-Allow-Headers`, `Access-Control-Max-Age`, etc.)
+
+  </div>
   </div>
 </details>
 
@@ -195,7 +247,49 @@ img.onerror = function () {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, cross-origin scripts without the correct CORS headers return only a generic error message due to security reasons, hiding detailed information about the error.
-    </div>
+    </div><br />
+  <div><strong>Technical Details:</strong> When dealing with cross-origin scripts, the error information that you can receive from a window's `onerror` event handler is restricted due to the same-origin policy, and this is a key limitation in cross-origin error handling. In the case of a script error occurring in a file hosted from a different origin, instead of receiving detailed error information, you will receive a generic "Script error." message with null or non-descriptive values for the other parameters (URL, line number, etc.).
+    </div><br />
+  <div><strong className="codeExample">Consider the following example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+window.onerror = function(message, url, lineNo, colNo, error) {
+    console.log('Error:', message, 'Script:', url, 'Line:', lineNo, 'Column:', colNo, 'Error object:', error);
+    return true;
+};
+
+var script = document.createElement('script');
+script.src = "https://different-domain.com/some-script.js";
+document.body.appendChild(script);
+```
+
+If the script at "<https://different-domain.com/some-script.js>" encounters an error and the server doesn't allow for proper CORS configuration, your `onerror` handler would log something like:
+
+```
+Error: Script error. Script:  Line: 0 Column: 0 Error object: null
+```
+
+To handle cross-origin errors effectively, you need to set the `crossorigin` attribute on the script tag and ensure the server responds with appropriate CORS headers.
+
+Here's how you can modify the script tag:
+
+```javascript
+window.onerror = function(message, url, lineNo, colNo, error) {
+    console.log('Error:', message, 'Script:', url, 'Line:', lineNo, 'Column:', colNo, 'Error object:', error);
+    return true;
+};
+
+var script = document.createElement('script');
+script.src = "https://different-domain.com/some-script.js";
+script.crossOrigin = "anonymous"; // New line
+document.body.appendChild(script);
+```
+
+Now, if the server includes `Access-Control-Allow-Origin: *` (or the specific origin instead of `*`) in its headers, you will receive full error details in your `onerror` handler, even if the script is loaded from a different origin. This can greatly enhance your ability to debug cross-origin scripts.
+
+  </div>
   </div>
 </details>
 
@@ -207,7 +301,7 @@ img.onerror = function () {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Detailed error information is vital for identifying issues in cross-origin scripts. Without it, developers might not understand the cause of issues, making debugging difficult.
-    </div>
+    </div><br/>
   <div><strong>Technical Details:</strong> There are many services (and we can build our own) that listen for global errors using window.onerror, save errors, and provide an interface to access and analyze them. That is great, as we can see actual errors triggered by our users. But if a script comes from another origin, then there is not much information about its errors, as we’ve just seen.
     </div>
   </div>
@@ -450,7 +544,7 @@ This would change the text in the paragraph with id "demo" to "Hello JavaScript!
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Both download scripts without blocking rendering. However, "async" executes scripts as soon as they're available, while "defer" waits until the document is fully parsed.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -505,7 +599,7 @@ Note that preloaded resources need to be consumed by a matching resource request
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Browser caching stores downloaded resources locally, reducing the need for additional network requests. This can significantly speed up resource loading on subsequent visits, improving website performance.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -517,7 +611,7 @@ Note that preloaded resources need to be consumed by a matching resource request
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> HTTP/2 improves resource loading by enabling multiplexing, allowing multiple requests and responses to be sent simultaneously on the same TCP connection, reducing latency and boosting performance.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -530,6 +624,33 @@ Note that preloaded resources need to be consumed by a matching resource request
   <div>
   <div><strong>Interview Response:</strong> CDNs reduce resource loading times by serving content from the closest geographically located server to the user, improving speed, reducing latency, and enhancing the overall user experience.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Web Page</title>
+    <!-- Using Google CDN to load jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <button id="clickMe">Click Me!</button>
+
+    <script>
+        $(document).ready(function() {
+            $('#clickMe').click(function() {
+                alert('You clicked the button!');
+            });
+        });
+    </script>
+</body>
+</html>
+```
+
+  </div>
   </div>
 </details>
 
@@ -669,6 +790,46 @@ The `ETag` and `Last-Modified` headers are used for validation. When the cache i
   <div>
   <div><strong>Interview Response:</strong> `ETags` are part of HTTP headers and provide a validation mechanism to check if a cached resource has changed. If unchanged, the server returns a `304 Not Modified`, saving bandwidth and improving load times.
   </div><br />
+  <div><strong>Technical Details:</strong> Etag (Entity Tag) HTTP header is one of several mechanisms that HTTP provides for web cache validation - a way to allow a client to make conditional requests to allow servers to tell clients whether the copy that they (the client) have is still valid or not.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here is a very simplified example of a Node.js server using Express.js framework which utilizes the **etag** functionality.
+
+```js
+const express = require('express');
+const app = express();
+const port = 3000;
+
+app.get('/some-resource', (req, res) => {
+    // This could be a database call or some I/O operation in a real-world scenario
+    let data = {
+        id: 1,
+        name: "John Doe",
+        email: "johndoe@example.com"
+    };
+
+    // Compute an ETag for the data (you might use a different method in reality)
+    const etag = require('crypto').createHash('md5').update(JSON.stringify(data)).digest('hex');
+
+    // Check if the client sent an 'If-None-Match' header, and if it matches the ETag, send a '304 Not Modified' response
+    if (req.header('If-None-Match') === etag) {
+        res.sendStatus(304);
+    } else {
+        // Include the ETag in the response
+        res.setHeader('ETag', etag);
+        res.json(data);
+    }
+});
+
+app.listen(port, () => {
+  console.log(`App listening at http://localhost:${port}`)
+});
+```
+
+  </div>
   </div>
 </details>
 
@@ -681,6 +842,38 @@ The `ETag` and `Last-Modified` headers are used for validation. When the cache i
   <div>
   <div><strong>Interview Response:</strong> The `Cache-Control` HTTP header controls how, and for how long, individual responses are cached by the browser. This can greatly reduce load times and server load for subsequent visits.
   </div><br />
+  <div><strong>Technical Response:</strong> The `Cache-Control` HTTP header is used to specify directives for caching mechanisms in both requests and responses. The directives specify who can cache the response, under which conditions, and for how long.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's a simple Node.js server example using Express.js that serves static files with specific `Cache-Control` directives.
+
+```javascript
+const express = require('express');
+const path = require('path');
+const app = express();
+const port = 3000;
+
+// Set up static file serving
+app.use(express.static(path.join(__dirname, 'public'), {
+  setHeaders: (res, path) => {
+    // Set Cache-Control header
+    res.setHeader('Cache-Control', 'public, max-age=86400'); // Cache for 24 hours (86400 seconds)
+  }
+}));
+
+app.listen(port, () => {
+  console.log(`App listening at http://localhost:${port}`)
+});
+```
+
+In this example, any static files served from the `public` directory will include the `Cache-Control: public, max-age=86400` header in the response. This tells clients that they're allowed to publicly cache the resource and that the resource is considered fresh for 24 hours (86400 seconds). After that, the client needs to check back with the server to see if the resource has been updated.
+
+Please note that different types of resources might need different caching strategies. For example, you might want to cache images, CSS, and JavaScript files for a longer period because they might not change frequently, but HTML files could be cached for a shorter period or not cached at all if they are dynamic and change frequently.
+
+  </div>
   </div>
 </details>
 
@@ -693,6 +886,40 @@ The `ETag` and `Last-Modified` headers are used for validation. When the cache i
   <div>
   <div><strong>Interview Response:</strong> The `Expires` header provides a date/time after which the response is considered stale, informing the cache when a new request for the resource should be made.
   </div><br />
+  <div><strong>Technical Response:</strong> The `Expires` header is used to specify the date/time after which the response is considered stale. This means that the client (often the browser) can cache the response until that time. After the time specified in the `Expires` header, the client must make a new request to the server to validate that the cached data is still accurate.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Below is a simple example of a Node.js server using the Express.js framework that serves a static file with the `Expires` header:
+
+```javascript
+const express = require('express');
+const path = require('path');
+const app = express();
+const port = 3000;
+
+app.get('/some-file', function(req, res) {
+    // Set the Expires header
+    let oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+    let oneDayFromNow = new Date(Date.now() + oneDay);
+    res.setHeader('Expires', oneDayFromNow.toUTCString());
+
+    // Send the file
+    res.sendFile(path.join(__dirname, 'some-file.txt'));
+});
+
+app.listen(port, () => {
+  console.log(`App listening at http://localhost:${port}`);
+});
+```
+
+In this example, when a GET request is made to "/some-file", the server responds with the contents of "some-file.txt" and sets the `Expires` header to one day from the current time. This means that the client can cache this file and consider it fresh without needing to check with the server again until that time has elapsed.
+
+Note that HTTP/1.1 introduced the `Cache-Control` header, which offers more fine-grained control over caching and is generally preferred over `Expires`. However, `Expires` is still useful for HTTP/1.0 compatibility.
+
+  </div>
   </div>
 </details>
 
@@ -705,6 +932,46 @@ The `ETag` and `Last-Modified` headers are used for validation. When the cache i
   <div>
   <div><strong>Interview Response:</strong> `304 Not Modified` is a response code indicating that the resource has not changed since the last request, allowing the browser to load it from the cache.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's an example using a Node.js server and the Express.js framework.
+
+```js
+const express = require('express');
+const app = express();
+const port = 3000;
+
+let data = {
+    id: 1,
+    name: "John Doe",
+    email: "johndoe@example.com",
+    lastModified: new Date() // Initial last modification time
+};
+
+app.get('/data', (req, res) => {
+    // Check if 'If-Modified-Since' header is set in the request
+    if (req.header('If-Modified-Since')) {
+        let ifModifiedSinceDate = new Date(req.header('If-Modified-Since'));
+        
+        // If the data hasn't been modified since the date provided, return a '304 Not Modified' response
+        if (data.lastModified <= ifModifiedSinceDate) {
+            return res.status(304).send();
+        }
+    }
+
+    // Otherwise, include the 'Last-Modified' header in the response and send the data
+    res.setHeader('Last-Modified', data.lastModified.toUTCString());
+    res.json(data);
+});
+
+app.listen(port, () => {
+  console.log(`App listening at http://localhost:${port}`);
+});
+```
+
+  </div>
   </div>
 </details>
 
@@ -716,7 +983,7 @@ The `ETag` and `Last-Modified` headers are used for validation. When the cache i
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Resource loading can be prioritized by techniques like preloading, inlining critical assets, deferring non-critical assets, and using efficient loading strategies like lazy loading.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -728,7 +995,7 @@ The `ETag` and `Last-Modified` headers are used for validation. When the cache i
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The `Link` HTTP header allows the server to indicate related resources and their relationship to the requested resource, which can be used for preloading, prefetching, or other purposes.
-  </div><br />
+  </div>
   </div>
 </details>
 

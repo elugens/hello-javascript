@@ -47,8 +47,25 @@ import StructuredData from './schemadata/SetsRangesSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A set is a group of characters inside square brackets [], indicating that any of those characters can match.
+  <div><strong>Interview Response:</strong> In JavaScript regular expressions, a set is defined by using square brackets [], which matches any one character enclosed in the brackets. For example, [abc] will match any one character being either 'a', 'b', or 'c'.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let str = "The quick brown fox jumps over the lazy dog.";
+
+// Define a regex with a set
+let regex = /[aeiou]/gi;
+
+// Using the regex to find all vowels in the string
+let result = str.match(regex);
+
+console.log(result); // Outputs: ['e', 'u', 'i', 'o', 'o', 'u', 'o', 'e', 'e', 'a', 'o']
+```
+
+  </div>
   </div>
 </details>
 
@@ -59,8 +76,26 @@ import StructuredData from './schemadata/SetsRangesSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, a range can be indicated using hyphen. E.g., [a-z] matches any lowercase letter.
+  <div><strong>Interview Response:</strong> Yes, a set in Regex can include a range. You can specify a range of characters using a hyphen `-`. For instance, `[a-z]` matches any lowercase letter, `[A-Z]` matches any uppercase letter, and `[0-9]` matches any digit.
+
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let str = "Hello, JS! 123";
+
+// Define a regex with a set that includes a range
+let regex = /[a-z0-9]/gi;
+
+// Using the regex to find all alphanumeric characters in the string
+let result = str.match(regex);
+
+console.log(result); // ["H", "e", "l", "l", "o", "J", "S", "1", "2", "3"]
+```
+
+  </div>
   </div>
 </details>
 
@@ -71,8 +106,26 @@ import StructuredData from './schemadata/SetsRangesSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Multiple ranges can be included within one set, e.g., [A-Za-z0-9] matches any alphanumeric character.
+  <div><strong>Interview Response:</strong> To specify multiple ranges in a Regex set, you simply include the multiple ranges within the square brackets. For example, `[a-zA-Z0-9]` will match any uppercase letter, lowercase letter, or digit.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let str = "Hello, JS! 123";
+
+// Define a regex with a set that includes multiple ranges
+let regex = /[a-zA-Z]/g;
+
+// Using the regex to find all alphanumeric characters in the string
+let result = str.match(regex);
+
+console.log(result); 
+// Outputs: ["H", "e", "l", "l", "o", "J", "S"]
+```
+
+  </div>
   </div>
 </details>
 
@@ -83,8 +136,26 @@ import StructuredData from './schemadata/SetsRangesSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A caret in a set negates the set, matching anything not included in the set.
+  <div><strong>Interview Response:</strong> In a regular expression, a caret (^) at the start of a set (i.e., right after the opening square bracket) negates the set. This is often called a negated or complemented character set. It matches any character that is not in the set.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let str = "Hello, JS! 123";
+
+// Define a regex with a set that includes a caret (^) to negate the set
+let regex = /[^a-zA-Z0-9]/g;
+
+// Using the regex to find all non-alphanumeric characters in the string
+let result = str.match(regex);
+
+console.log(result); 
+// Outputs: [',', ' ', '!', ' ', ' ']
+```
+
+  </div>
   </div>
 </details>
 
@@ -96,7 +167,7 @@ import StructuredData from './schemadata/SetsRangesSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, It is crucial to keep in mind that when special characters are used in sets, they lose their intended function. This means that the special character will no longer function as it typically would, potentially causing errors or misunderstandings in the output. Therefore, it is important to be aware of the impact of special characters when utilizing them in sets.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -109,6 +180,21 @@ import StructuredData from './schemadata/SetsRangesSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> To specify a regex set to match only lowercase vowels, you can use the following pattern'[aeiou]' which will match any lowercase vowel.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let str = "Hello my name is larry and I want you to know JavaScript!";
+
+let regex = /[aeiou]/g;
+let result = str.match(regex);
+
+console.log(result);
+// ["e", "o", "a", "e", "i", "a", "a", "a", "o", "u", "o", "o", "a", "a", "i"]
+```
+
+  </div>
   </div>
 </details>
 
@@ -129,11 +215,11 @@ import StructuredData from './schemadata/SetsRangesSchemaData.js';
 
 ```js
 // find [t or m], and then "op"
-alert('Mop top'.match(/[tm]op/gi)); // "Mop", "top"
+console.log('Mop top'.match(/[tm]op/gi)); // "Mop", "top"
 
 // Return null or no matches
 // find "V", then [o or i], then "la"
-alert('Voila'.match(/V[oi]la/)); // null, no matches
+console.log('Voila'.match(/V[oi]la/)); // null, no matches
 ```
 
   </div>
@@ -244,12 +330,12 @@ alert('alice15@gmail.com'.match(/[^\d\sA-Z]/gi)); // returns @ and .
 // No need to escape
 let regexp = /[-().^+]/g;
 
-alert('1 + 2 - 3'.match(regexp)); // Matches +, -
+console.log('1 + 2 - 3'.match(regexp)); // Matches +, -
 
 // Escaped everything
 let regexp = /[\-\(\)\.\^\+]/g;
 
-alert('1 + 2 - 3'.match(regexp)); // also works: +, -
+console.log('1 + 2 - 3'.match(regexp)); // also works: +, -
 ```
 
   </div>

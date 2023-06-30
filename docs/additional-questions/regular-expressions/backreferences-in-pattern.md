@@ -79,12 +79,23 @@ alert(str.match(regexp)); // "She's the one!"
 
 ---
 
-### How many backreferences can a single regex have?
+### How many backreferences can a single regular expression have?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> There is no strict limit on the number of backreferences in a regex. However, practical constraints like memory and performance may affect their usage. Generally, you can have at least 99 backreferences.
+  <div><strong>Interview Response:</strong> There is no strict limit on the number of backreferences in a regular expression. However, practical constraints like memory and performance may affect their usage. Generally, you can have at least 99 backreferences.
+  </div>
+  <div>
+
+  <div></div>
+
+---
+
+:::note
+Note that the actual number of backreferences supported may vary depending on the JavaScript engine you are using.
+:::
+
   </div>
   </div>
 </details>

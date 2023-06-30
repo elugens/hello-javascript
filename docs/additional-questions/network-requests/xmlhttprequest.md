@@ -47,7 +47,7 @@ import StructuredData from './schemadata/XMLhttpSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> XMLHttpRequest is a web API used by JavaScript to send HTTP or HTTPS requests directly to a web server and load the server response data back into the script.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -59,7 +59,7 @@ import StructuredData from './schemadata/XMLhttpSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> XMLHttpRequest is used for asynchronous communication with a server, allowing web applications to fetch data from the server without requiring a full page reload, improving user experience.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -71,7 +71,7 @@ import StructuredData from './schemadata/XMLhttpSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> XMLHttpRequest can operate in both synchronous and asynchronous modes, but the asynchronous mode is preferred because synchronous requests can block the browser's UI thread.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -84,6 +84,45 @@ import StructuredData from './schemadata/XMLhttpSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> To make an XMLHttpRequest, you first create an XMLHttpRequest object, then open a connection using the open() method, set up a callback for the onreadystatechange event, and finally, send the request with the send() method.
   </div><br />
+  <div><strong className="codeExample">Here's a simple example of how you can use it:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Step 1: Create a new XMLHttpRequest object
+let xhr = new XMLHttpRequest();
+
+// Step 2: Initialize a request
+xhr.open('GET', 'https://api.example.com/data');
+
+// Step 3: Set the responseType if you are expecting a specific data type
+xhr.responseType = 'json';
+
+// Step 4: Send the request
+xhr.send();
+
+// Step 5: Event handler for the request
+xhr.onload = function() {
+    if (xhr.status == 200) { // If the HTTP status is 200 OK
+        console.log(xhr.response);
+    } else {
+        console.error('Error: ' + xhr.status); // e.g. 'Error: 404'
+    }
+}
+
+// Step 6: Handle network errors
+xhr.onerror = function() {
+    console.error('Network Error');
+};
+```
+
+---
+
+:::note
+Remember that XMLHttpRequest is a way to make HTTP requests, but it is not the only way. The Fetch API provides a more modern and powerful alternative to the XMLHttpRequest object, and it's recommended for new projects if it's supported in your target browsers.
+:::
+
+  </div>
   </div>
 </details>
 
@@ -96,6 +135,34 @@ import StructuredData from './schemadata/XMLhttpSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> The `open()` method in XMLHttpRequest initializes a request, setting the method (GET, POST, etc.), URL, and whether the request should be handled asynchronously or not.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+- **Here's a simple example**
+
+```js
+// Step 1: Create a new XMLHttpRequest object
+let xhr = new XMLHttpRequest();
+
+// Step 2: Initialize a request
+xhr.open('GET', 'https://api.example.com/data');
+
+// Here, the open() method is used to initialize a GET request to 'https://api.example.com/data'.
+```
+
+- **Here's an example using the optional parameters**
+
+```js
+let xhr = new XMLHttpRequest();
+
+// Initialize a request with user credentials and set it to be handled asynchronously
+xhr.open('GET', 'https://api.example.com/data', true, 'username', 'password');
+```
+
+In the example above, the open() method initializes a GET request to '<https://api.example.com/data>', to be handled asynchronously, with the username 'username' and password 'password'.
+
+  </div>
   </div>
 </details>
 
@@ -108,18 +175,77 @@ import StructuredData from './schemadata/XMLhttpSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> The `send()` method in XMLHttpRequest is used to send the request to the server. It may include request body data for methods like POST or PUT.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+// Step 1: Create a new XMLHttpRequest object
+let xhr = new XMLHttpRequest();
+
+// Step 2: Initialize a request
+xhr.open('GET', 'https://api.example.com/data');
+
+// Step 3: Send the request
+xhr.send();
+```
+
+In the example above, after the request is set up with `xhr.open()`, it is sent to the server with `xhr.send()`.
+
+If you're making a `POST` request or otherwise need to send data to the server as part of the request, you can pass that data as a parameter to the `send()` method:
+
+```javascript
+// Step 1: Create a new XMLHttpRequest object
+let xhr = new XMLHttpRequest();
+
+// Step 2: Initialize a request
+xhr.open('POST', 'https://api.example.com/data');
+
+// Step 3: Set appropriate headers for POST request
+xhr.setRequestHeader("Content-Type", "application/json");
+
+// Step 4: Prepare the data
+let data = JSON.stringify({ key1: 'value1', key2: 'value2' });
+
+// Step 5: Send the request with data
+xhr.send(data);
+```
+
+In this `POST` request example, `xhr.setRequestHeader()` is used to set the content type of the request to 'application/json', and then the `send()` method is used to send a JSON string to the server.
+
+  </div>
   </div>
 </details>
 
 ---
 
-### How do you handle the response from an XMLHttpRequest?
+### How do you handle the server response from an XMLHttpRequest?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> You handle the response from an XMLHttpRequest in the `onreadystatechange` event handler, checking if `readyState` is 4 and `status` is 200, then processing `responseText` or `responseXML`.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let xhr = new XMLHttpRequest();
+xhr.open('GET', 'https://api.example.com/data', true);
+
+xhr.onreadystatechange = function() {
+  if (xhr.readyState === 4 && xhr.status === 200) {
+    // Request completed and response received
+    var response = xhr.responseText;
+    console.log('Response: ' + response);
+  }
+};
+
+xhr.send();
+```
+
+  </div>
   </div>
 </details>
 
@@ -139,7 +265,7 @@ import StructuredData from './schemadata/XMLhttpSchemaData.js';
 Here's an example of how to use the `readyState` property in XMLHttpRequest:
 
 ```javascript
-var xhr = new XMLHttpRequest();
+let xhr = new XMLHttpRequest();
 xhr.open('GET', 'https://api.example.com/data', true);
 
 xhr.onreadystatechange = function() {
@@ -168,6 +294,39 @@ In this example, the `onreadystatechange` event is used to track the changes in 
   <div>
   <div><strong>Interview Response:</strong> The `status` property in XMLHttpRequest represents the HTTP status code returned by the server, such as 200 for successful requests or 404 for not found.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+const xhr = new XMLHttpRequest();
+console.log("UNSENT: ", xhr.status);
+
+xhr.open("GET", "/server");
+console.log("OPENED: ", xhr.status);
+
+xhr.onprogress = () => {
+  console.log("LOADING: ", xhr.status);
+};
+
+xhr.onload = () => {
+  console.log("DONE: ", xhr.status);
+};
+
+xhr.send();
+
+/**
+ * Outputs the following:
+ *
+ * UNSENT: 0
+ * OPENED: 0
+ * LOADING: 200
+ * DONE: 200
+ */
+
+```
+
+  </div>
   </div>
 </details>
 
@@ -180,6 +339,16 @@ In this example, the `onreadystatechange` event is used to track the changes in 
   <div>
   <div><strong>Interview Response:</strong> The `responseText` property in XMLHttpRequest represents the text data received from a server following a successful HTTP request, typically in JSON or XML format.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// If specified, responseType must be empty string or "text"
+xhr.responseType = "text";
+```
+
+  </div>
   </div>
 </details>
 
@@ -190,8 +359,46 @@ In this example, the `onreadystatechange` event is used to track the changes in 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> `responseText` provides the server's response as a string, while `responseXML` returns it as an XML Document object, which can be traversed using DOM methods.
+  <div><strong>Interview Response:</strong> The `responseText` and `responseXML` properties of an `XMLHttpRequest` object provide access to the response data. `responseText` returns the response as plain text while `responseXML` returns it as an XML document object, which you can traverse using JavaScript DOM methods.
   </div><br />
+  <div><strong className="codeExample">Here's an example that shows how to use both:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+// Create a new XMLHttpRequest object
+let xhr = new XMLHttpRequest();
+
+// Initialize a request
+xhr.open('GET', 'https://api.example.com/data.xml'); // Assuming the server returns XML data
+
+// Send the request
+xhr.send();
+
+// Event handler for successful request
+xhr.onload = function() {
+    if (xhr.status == 200) { // If the HTTP status is 200 OK
+        console.log(xhr.responseText); // Access the response data as plain text
+
+        if(xhr.responseXML) {
+            console.log(xhr.responseXML.getElementsByTagName("tagname")); // Access the XML data
+        } else {
+            console.log("The response is not XML");
+        }
+    } else {
+        console.error('Error: ' + xhr.status);
+    }
+}
+
+// Event handler for network error
+xhr.onerror = function() {
+    console.error('Network Error');
+};
+```
+
+In this example, `xhr.responseText` will log the XML data as a string. If the server returned valid XML data, `xhr.responseXML` will parse the XML into a document object, which you can then traverse using DOM methods. If the response is not XML or is not correctly formatted, `responseXML` will be `null`.
+
+  </div>
   </div>
 </details>
 
@@ -249,6 +456,30 @@ In this example, the `onerror` event handler is set to handle any error that occ
   <div>
   <div><strong>Interview Response:</strong> Yes, an XMLHttpRequest can be aborted by calling the `abort()` method on the XMLHttpRequest object, which immediately terminates the request.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Create a new XMLHttpRequest object
+let xhr = new XMLHttpRequest();
+
+// Initialize a request
+xhr.open('GET', 'https://api.example.com/data');
+
+// Send the request
+xhr.send();
+
+// Abort the request
+xhr.abort();
+
+// Event handler for abort event
+xhr.onabort = function() {
+    console.log('Request aborted');
+}
+```
+
+  </div>
   </div>
 </details>
 
@@ -260,7 +491,7 @@ In this example, the `onerror` event handler is set to handle any error that occ
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> XMLHttpRequest has limitations such as difficulty with cross-domain requests due to same-origin policy, inability to handle binary data until XMLHttpRequest 2, and issues with real-time communication compared to WebSockets.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -284,7 +515,7 @@ In this example, the `onerror` event handler is set to handle any error that occ
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> To send data to a server using XMLHttpRequest, use the `open()` method to initiate a POST request, then pass the data as an argument to the `send()` method.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -296,7 +527,7 @@ In this example, the `onerror` event handler is set to handle any error that occ
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, you can send a GET request with XMLHttpRequest by using the `open()` method, specifying 'GET' as the method, and the URL as the second argument, then call `send()`.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -308,7 +539,7 @@ In this example, the `onerror` event handler is set to handle any error that occ
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, you can send a POST request with XMLHttpRequest by using the `open()` method, specifying 'POST' as the method, and then passing data in the `send()` method.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -320,7 +551,7 @@ In this example, the `onerror` event handler is set to handle any error that occ
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong>HTTP headers in XMLHttpRequest provide additional parameters for the HTTP request or response, such as content type, encoding, authorization, and cookies, communicated between the client and server.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -647,7 +878,7 @@ try {
 
 ---
 
-### What does the setRequestHeader method do?
+### What does the setRequestHeader() method do?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

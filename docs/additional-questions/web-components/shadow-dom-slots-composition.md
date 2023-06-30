@@ -60,7 +60,7 @@ import StructuredData from './schemadata/ShadowDOMSlotsSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Slots allow content composition by letting developers distribute child elements into predefined places in the template of a custom element.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -71,8 +71,40 @@ import StructuredData from './schemadata/ShadowDOMSlotsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> There are two types of slots: named and default.
+  <div><strong>Interview Response:</strong> There are two types of slots: named and default. Named slots are defined by a "slot" attribute, while default slots hold any unassigned content.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```html
+<template id="myComponent">
+  <div>
+    <slot name="header"></slot> <!-- named slot -->
+    <slot></slot> <!-- default slot -->
+  </div>
+</template>
+
+<script>
+class MyComponent extends HTMLElement {
+  connectedCallback() {
+    const template = document.getElementById('myComponent');
+    const node = document.importNode(template.content, true);
+    this.attachShadow({mode: 'open'}).appendChild(node);
+  }
+}
+customElements.define('my-component', MyComponent);
+</script>
+
+<my-component>
+  <h1 slot="header">Hello World</h1> <!-- content for named slot -->
+  <p>This is some text.</p> <!-- content for default slot -->
+</my-component>
+```
+
+In this example, we create a Web Component with a named slot (for a header) and a default slot. We then use the custom element, providing content for both slots.
+
+  </div>
   </div>
 </details>
 
@@ -84,7 +116,7 @@ import StructuredData from './schemadata/ShadowDOMSlotsSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Named slots are for specific content, while a default slot catches all unassigned or unspecified content.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -95,8 +127,47 @@ import StructuredData from './schemadata/ShadowDOMSlotsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We can use the assignedElements method of the Slot API to select elements assigned to slots in the Shadow DOM.
+  <div><strong>Interview Response:</strong> We can use the assignedElements() method of the Slot API to select elements assigned to slots in the Shadow DOM.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```html
+<template id="myComponent">
+  <div>
+    <slot name="header"></slot> <!-- named slot -->
+    <slot></slot> <!-- default slot -->
+  </div>
+</template>
+
+<script>
+class MyComponent extends HTMLElement {
+  connectedCallback() {
+    const template = document.getElementById('myComponent');
+    const node = document.importNode(template.content, true);
+    this.attachShadow({mode: 'open'}).appendChild(node);
+
+    // After the node is attached
+    this.shadowRoot.addEventListener('slotchange', function(e) {
+      let slotElement = e.target;
+      let nodes = slotElement.assignedElements();
+      nodes.forEach(node => console.log(node.tagName));  // Outputs the tag names of the assigned elements
+    });
+  }
+}
+customElements.define('my-component', MyComponent);
+</script>
+
+<my-component>
+  <h1 slot="header">Hello World</h1> <!-- content for named slot -->
+  <p>This is some text.</p> <!-- content for default slot -->
+</my-component>
+```
+
+In this example, after the Shadow DOM is attached, a 'slotchange' event listener is added. Whenever a slot change occurs, it selects the slot that changed (`e.target`), gets all elements assigned to that slot with `slotElement.assignedElements()`, and logs the tag name of each assigned element.
+
+  </div>
   </div>
 </details>
 
@@ -109,6 +180,45 @@ import StructuredData from './schemadata/ShadowDOMSlotsSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> The assignedNodes method returns all assigned nodes, including text nodes, while the assignedElements method only returns element nodes.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```html
+<template id="myComponent">
+  <div>
+    <slot name="header"></slot> <!-- named slot -->
+  </div>
+</template>
+
+<script>
+class MyComponent extends HTMLElement {
+  connectedCallback() {
+    const template = document.getElementById('myComponent');
+    const node = document.importNode(template.content, true);
+    this.attachShadow({mode: 'open'}).appendChild(node);
+
+    // After the node is attached
+    this.shadowRoot.addEventListener('slotchange', function(e) {
+      let slotElement = e.target;
+      let nodes = slotElement.assignedNodes();
+      let elements = slotElement.assignedElements();
+      console.log('assignedNodes: ', nodes);  
+      console.log('assignedElements: ', elements);
+    });
+  }
+}
+customElements.define('my-component', MyComponent);
+</script>
+
+<my-component>
+  <span slot="header">Hello </span>World <!-- content for named slot -->
+</my-component>
+```
+
+In this example, `slotElement.assignedNodes()` returns both the `<span>` element and the following text node ("World"), while `slotElement.assignedElements()` only returns the `<span>` element.
+
+  </div>
   </div>
 </details>
 
@@ -121,6 +231,46 @@ import StructuredData from './schemadata/ShadowDOMSlotsSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> Yes, by changing the slot attribute of an element.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```html
+<template id="myComponent">
+  <div>
+    <slot name="header"></slot> <!-- named slot -->
+    <slot name="footer"></slot> <!-- another named slot -->
+  </div>
+</template>
+
+<script>
+class MyComponent extends HTMLElement {
+  connectedCallback() {
+    const template = document.getElementById('myComponent');
+    const node = document.importNode(template.content, true);
+    this.attachShadow({mode: 'open'}).appendChild(node);
+  }
+}
+customElements.define('my-component', MyComponent);
+</script>
+
+<my-component>
+  <h1 slot="header">Hello World</h1> <!-- content for named slot -->
+</my-component>
+
+<button onclick="changeSlot()">Change Slot</button>
+
+<script>
+function changeSlot() {
+  const h1 = document.querySelector('my-component h1');
+  h1.setAttribute('slot', 'footer'); // Changes the slot from "header" to "footer"
+}
+</script>
+```
+
+In this example, there's a `<h1>` element initially assigned to the "header" slot. When the "Change Slot" button is clicked, the `changeSlot()` function changes the `slot` attribute of the `<h1>` element from "header" to "footer", thereby changing which slot it is assigned to. After the function runs, the `<h1>` element is assigned to the "footer" slot instead of the "header" slot.
+
+  </div>
   </div>
 </details>
 
@@ -133,6 +283,57 @@ import StructuredData from './schemadata/ShadowDOMSlotsSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> All elements with the same slot name will be inserted into the named slot in order.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+HTML (Light DOM):
+
+```html
+<my-element>
+    <p slot="same-slot">First</p>
+    <p slot="same-slot">Second</p>
+    <p slot="same-slot">Third</p>
+</my-element>
+```
+
+HTML (Shadow DOM):
+
+```html
+<template id="my-element-template">
+    <div>
+        <slot name="same-slot"></slot>
+    </div>
+</template>
+
+<script>
+class MyElement extends HTMLElement {
+    constructor() {
+        super();
+        let shadowRoot = this.attachShadow({mode: 'open'});
+        let template = document.getElementById('my-element-template');
+        shadowRoot.appendChild(template.content.cloneNode(true));
+    }
+}
+customElements.define('my-element', MyElement);
+</script>
+```
+
+In this case, the shadow DOM has a single slot named `same-slot`. The light DOM of the custom element `my-element` has three `<p>` elements, each also assigned to `same-slot`. When the browser renders this, the content assigned to `same-slot` in the light DOM gets inserted into the `same-slot` slot of the shadow DOM. Since there are multiple elements assigned to `same-slot`, they are inserted in order. So the resulting rendered HTML would look like:
+
+```html
+<my-element>
+    <div>
+        <p slot="same-slot">First</p>
+        <p slot="same-slot">Second</p>
+        <p slot="same-slot">Third</p>
+    </div>
+</my-element>
+```
+
+So the answer to your question is, when multiple elements have the same slot name, they are inserted into the slot in the order they appear in the light DOM.
+
+  </div>
   </div>
 </details>
 
@@ -144,7 +345,7 @@ import StructuredData from './schemadata/ShadowDOMSlotsSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, a web component can have multiple slots.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -156,7 +357,7 @@ import StructuredData from './schemadata/ShadowDOMSlotsSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Elements without a slot attribute are assigned to the default slot.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -168,7 +369,7 @@ import StructuredData from './schemadata/ShadowDOMSlotsSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> If there's no default slot, elements without a slot attribute will not be displayed.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -180,7 +381,7 @@ import StructuredData from './schemadata/ShadowDOMSlotsSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> No, but slots provide a flexible way to customize content in custom elements.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -192,7 +393,7 @@ import StructuredData from './schemadata/ShadowDOMSlotsSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> If a slot is removed, the assigned nodes are not displayed but still exist in the Light DOM.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -204,7 +405,7 @@ import StructuredData from './schemadata/ShadowDOMSlotsSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> No, a slotted element operates in the light DOM and cannot directly access the shadow host's internal state.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -257,7 +458,7 @@ import StructuredData from './schemadata/ShadowDOMSlotsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> If we put something inside a &#8249;slot&#8250;, it becomes the fallback, “default” content. The browser shows it if there is no corresponding filler in light DOM. If the slot is in the shadow DOM it renders if there is no slot available in the light DOM.
+  <div><strong>Interview Response:</strong> If we put something inside a &#60;slot&#62;, it becomes the fallback, “default” content. The browser shows it if there is no corresponding filler in light DOM. If the slot is in the shadow DOM it renders if there is no slot available in the light DOM.
     </div>
   </div>
 </details>

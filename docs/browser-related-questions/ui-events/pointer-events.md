@@ -47,7 +47,34 @@ import StructuredData from './schemadata/PointerEventSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Pointer Events are a unified API in JavaScript for handling input from various devices like a mouse, touch, or pen, allowing developers to build more flexible and accessible interfaces across different platforms. For every mouse&#8249;event&#8250;, a pointer&#8249;event&#8250; plays a similar role.
-    </div>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+// Assume we have a target element
+let target = document.getElementById('target');
+
+// Handle pointerdown event
+target.onpointerdown = function(event) {
+    console.log('pointerdown event triggered');
+}
+
+// Handle pointerup event
+target.onpointerup = function(event) {
+    console.log('pointerup event triggered');
+}
+
+// Handle pointermove event
+target.onpointermove = function(event) {
+    console.log(`Pointer moved to: ${event.clientX}, ${event.clientY}`);
+}
+```
+
+In this example, we listen to `pointerdown`, `pointerup`, and `pointermove` events on a target element. `pointerdown` is triggered when the pointer is activated or when a button is pressed, `pointerup` when a button is released, and `pointermove` when a pointer is moved.
+
+  </div>
   </div>
 </details>
 
@@ -58,8 +85,25 @@ import StructuredData from './schemadata/PointerEventSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Key properties of a Pointer Event object include: pointerId, width, height, pressure, tiltX, tiltY, pointerType, isPrimary, clientX, clientY, screenX, screenY, button, buttons, and relatedTarget.
+  <div><strong>Interview Response:</strong> Key properties of a Pointer Event object include `pointerId` (unique identifier), `width` and `height` (contact geometry), `pressure` (force), `pointerType` (device type), and `clientX`/`clientY` (coordinates).
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let target = document.getElementById('target');
+
+target.onpointerdown = function(event) {
+    console.log('Pointer ID:', event.pointerId);
+    console.log('Pointer type:', event.pointerType);
+    console.log('Width and Height:', event.width, event.height);
+    console.log('Pressure:', event.pressure);
+    console.log('Position:', event.clientX, event.clientY);
+}
+```
+
+  </div>
   </div>
 </details>
 
@@ -70,8 +114,31 @@ import StructuredData from './schemadata/PointerEventSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The pointerdown event is triggered when a pointer device is pressed down, while the pointerup event is triggered when it is released.
+  <div><strong>Interview Response:</strong> The 'pointerdown' event is triggered when a pointer becomes active or when a button is pressed, while 'pointerup' is fired when the pointer is deactivated or when the button is released.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let target = document.getElementById('target');
+
+// This function logs the type of event (pointerdown or pointerup)
+function logPointerEvent(e) {
+    console.log('Event type:', e.type);
+}
+
+// Handle pointerdown event
+target.addEventListener('pointerdown', logPointerEvent);
+
+// Handle pointerup event
+target.addEventListener('pointerup', logPointerEvent);
+
+```
+
+In this example, the 'pointerdown' and 'pointerup' events are logged to the console when they are triggered on the target element.
+
+  </div>
   </div>
 </details>
 
@@ -83,19 +150,39 @@ import StructuredData from './schemadata/PointerEventSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> To prevent the default behavior of a pointer event in JavaScript, you use the preventDefault() method on the event object like this: event.preventDefault().
-  </div><br />
+  </div>
   </div>
 </details>
 
 ---
 
-### What is the difference between pointermove and pointerover events?
+### What is the difference between 'pointermove' and 'pointerover' events?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The pointermove event is triggered when the pointer device is moved, while the pointerover event is triggered when the pointer enters the hit-testing boundaries of an element.
+  <div><strong>Interview Response:</strong> The 'pointermove' event is triggered when the pointer device is moved, while the 'pointerover' event is triggered when the pointer enters the hit-testing boundaries of an element.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let target = document.getElementById('target');
+
+// This function logs the type of event (pointermove or pointerover)
+function logPointerEvent(e) {
+    console.log('Event type:', e.type);
+}
+
+// Handle pointermove event
+target.addEventListener('pointermove', logPointerEvent);
+
+// Handle pointerover event
+target.addEventListener('pointerover', logPointerEvent);
+```
+
+  </div>
   </div>
 </details>
 
@@ -108,6 +195,19 @@ import StructuredData from './schemadata/PointerEventSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> In JavaScript, you can determine the type of pointer device used by accessing the pointerType property of the pointer event object. For example, event.pointerType will return 'mouse', 'pen', 'touch', or 'unknown'.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let target = document.getElementById('target');
+
+target.onpointerdown = function(event) {
+    console.log('Pointer type:', event.pointerType);
+}
+```
+
+  </div>
   </div>
 </details>
 
@@ -118,8 +218,25 @@ import StructuredData from './schemadata/PointerEventSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, you can check if a pointer device supports pressure by examining the 'pressure' property of the pointer event object. If event.pressure returns a value other than 0, the device supports pressure.
+  <div><strong>Interview Response:</strong> You can check if the pointer device supports pressure by observing the `pressure` property of the PointerEvent object, which ranges from 0.0 to 1.0. A device that does not support pressure will always return 0.5 unless a button is active.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let target = document.getElementById('target');
+
+target.onpointerdown = function(event) {
+    if (event.pressure === 0.5) {
+        console.log('This device may not support pressure or no pressure is applied.');
+    } else {
+        console.log('Pressure:', event.pressure);
+    }
+}
+```
+
+  </div>
   </div>
 </details>
 
@@ -200,13 +317,29 @@ In this example, when a `pointerdown` event occurs, the code checks if the `butt
 
 ---
 
-### What is the purpose of the pointerleave event?
+### What is the purpose of the "pointerleave" event?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The `pointerleave` event in JavaScript is triggered when a pointer device moves out of an element or its children. It's used to detect when the pointer has left the boundaries of an element.
-  </div><br/>
+  <div><strong>Interview Response:</strong> The "pointerleave" event is fired when a pointer has exited an element's boundaries, including its descendants. It's different from "pointerout" as it doesn't bubble.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let target = document.getElementById('target');
+
+// Log a message when the pointer leaves the target element
+target.onpointerleave = function(event) {
+    console.log('The pointer has left the target.');
+}
+```
+
+In this code, a message is logged to the console when the pointer leaves the boundaries of the target element, signifying that the "pointerleave" event has been fired.
+
+  </div>
   </div>
 </details>
 
@@ -247,19 +380,44 @@ In this code, a `pointerdown` event listener is added to an element with the id 
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> In the capturing phase, events are triggered on the ancestors of the target element, while in the bubbling phase, events are triggered on the target element first and then propagate to its ancestors.
-  </div><br />
+  </div>
   </div>
 </details>
 
 ---
 
-### Can you replacing `mouse<event>` with `pointer<event>` in modern applications?
+### Can you replace "mouse&#8249;event&#8250;" with "pointer&#8249;event&#8250;" in modern applications?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong>  Yes, modern applications can replace "mouse&#8249;event&#8250;" with "pointer&#8249;event&#8250;" to handle various input devices, including touchscreens, styluses, and mice, using the Pointer Events API for improved compatibility and flexibility. Touch device support will also "magically" increase. However, in some places in CSS, we may need to include 'touch-action:none'.
-    </div>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let target = document.getElementById('target');
+
+function handleEvent(event) {
+    console.log('Event type:', event.type);
+}
+
+// Using mouse events
+target.addEventListener('mousedown', handleEvent);
+target.addEventListener('mouseup', handleEvent);
+target.addEventListener('mousemove', handleEvent);
+
+// Equivalent using pointer events
+target.addEventListener('pointerdown', handleEvent);
+target.addEventListener('pointerup', handleEvent);
+target.addEventListener('pointermove', handleEvent);
+```
+
+In this example, the functions handling the `mouse<event>` and `pointer<event>` are the same. However, using `pointer<event>` would also handle touch and pen input, not just mouse input.
+
+  </div>
   </div>
 </details>
 
@@ -298,6 +456,23 @@ In this code, a `pointerdown` event listener is added to an element with the id 
     </div><br />
   <div><strong>Technical Response:</strong> This is considered a multi-touch event with several steps involved. Here is what happens when a user touches a touchscreen in one place, then puts another finger somewhere else on it. At the first finger touch: pointerdown with isPrimary=true and some pointerId. For the second finger and more fingers (assuming the first one is still touching): pointerdown with isPrimary=false and a different pointerId for every finger.
     </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let target = document.getElementById('target');
+
+target.onpointerdown = function(event) {
+    console.log('Pointer ID:', event.pointerId);
+    console.log('Pointer type:', event.pointerType);
+    console.log('Position:', event.clientX, event.clientY);
+}
+```
+
+  </div>
+
+---
 
 :::note
 The pointerId gets allocated to each contacting finger rather than the whole device. When we use five fingers to touch the screen simultaneously, we can extract five pointerdown events with unique coordinates and pointerId. The events linked with the first finger have isPrimary=true at all times.
@@ -313,7 +488,7 @@ The pointerId gets allocated to each contacting finger rather than the whole dev
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The pointercancel event fires in JavaScript when the system cancels pointer events due to scenarios like a hardware failure, interruption, or the operating system's gesture recognition taking precedence over the application's handling of pointer events.
+  <div><strong>Interview Response:</strong> The 'pointercancel' event fires in JavaScript when the system cancels pointer events due to scenarios like a hardware failure, interruption, or the operating system's gesture recognition taking precedence over the application's handling of pointer events.
     </div><br/>
   <div><strong>Technical Response:</strong> The pointercancel event fires when there is an ongoing pointer interaction and something happens that causes it to abort so that no more pointer-events generate. There are several reasons this behavior may manifest itself, including the pointer device hardware was physically disabled, and the device orientation changed (tablet rotated). The browser decided to handle the interaction independently, considering it a mouse gesture, zoom-and-pan action,  or anything related to user interaction.
     </div>

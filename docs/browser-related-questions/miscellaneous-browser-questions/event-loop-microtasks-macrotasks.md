@@ -174,8 +174,33 @@ console.log("code");
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A Macrotask in JavaScript is a unit of work scheduled by the event loop, such as I/O operations, UI rendering, or setTimeout() callbacks. They run after all Microtasks have been completed.
+  <div><strong>Interview Response:</strong> A macrotask in JavaScript refers to a unit of work that is scheduled and executed asynchronously, typically involving I/O operations or rendering updates, using mechanisms like timers or event listeners.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+console.log("Start");
+
+setTimeout(() => {
+  console.log("Inside macrotask");
+}, 0);
+
+console.log("End");
+```
+
+In this example, the code will output:
+
+```
+Start
+End
+Inside macrotask
+```
+
+Even though the setTimeout is set to 0 milliseconds, it still executes asynchronously as a macrotask, allowing other synchronous tasks (like the second console.log) to execute before it.
+
+  </div>
   </div>
 </details>
 
@@ -187,8 +212,7 @@ console.log("code");
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Microtasks and Macrotasks are both tasks in the Event Loop. Microtasks have higher priority and execute between Macro-tasks, often associated with Promise resolutions and mutation observers. Tasks include callbacks from setTimeout, setInterval, and other Web APIs.
-
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -200,7 +224,7 @@ console.log("code");
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> JavaScript is single-threaded, means it executes one operation at a time. Despite this, it can handle asynchronous operations via its non-blocking, event-driven model and the Event Loop mechanism.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -212,7 +236,7 @@ console.log("code");
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The Event Loop moves asynchronous callbacks from the Message Queue to the Call Stack when it's empty, allowing JavaScript to handle asynchronous operations without blocking the main thread.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -290,7 +314,36 @@ console.log("code");
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Promise ‘resolves’ are handled by a 'microtask' queue which has higher priority than the Message Queue. All microtasks are completed before moving to the next callback in the Message Queue.
+  <div><strong>Interview Response:</strong> Promises resolve after current synchronous code and before next render. In the event loop, promise callbacks (.then/.catch/.finally) run in the microtask queue, after the macro-task queue is empty.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+console.log('Start');
+
+setTimeout(() => console.log('Timeout 1'), 0);
+
+Promise.resolve().then(() => console.log('Promise 1'));
+
+setTimeout(() => console.log('Timeout 2'), 0);
+
+Promise.resolve().then(() => console.log('Promise 2'));
+
+console.log('End');
+
+// The output will be:
+// Start
+// End
+// Promise 1
+// Promise 2
+// Timeout 1
+// Timeout 2
+```
+
+Promises are resolved before timeouts because promise callbacks run in the microtask queue, which is processed before the next run of the macro-task queue (which includes timers).
+
   </div>
   </div>
 </details>
@@ -314,7 +367,7 @@ console.log("code");
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The Event Loop facilitates non-blocking I/O by delegating these operations to Web APIs, then handling their callbacks, ensuring they execute when the Call Stack is empty.
+  <div><strong>Interview Response:</strong> The Event Loop enables non-blocking I/O operations by offloading these tasks, running them asynchronously, and then processing their callbacks once they're complete, without blocking the execution of other code.
   </div>
   </div>
 </details>
@@ -326,11 +379,28 @@ console.log("code");
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Event-driven programming is a paradigm where the flow of the program is determined by events, like user actions, sensor outputs, or message passing, instead of the program's control flow.
+  <div><strong>Interview Response:</strong> Event-driven programming is a paradigm where the flow of the program is determined by events like user actions, sensor outputs, or messages from other programs, rather than a pre-defined sequence.
   </div><br/>  
   <div><strong>Technical Response:</strong> Event-driven programming is a programming paradigm that facilitates the creation of software applications that respond to external or internal events in real-time. Instead of following a predetermined sequence of instructions, event-driven programs are designed to react to events triggered by user actions, sensor outputs, or message passing. This approach enables developers to create highly responsive and interactive applications that can adapt to changing circumstances and user inputs, making them particularly well-suited for complex and dynamic systems. By relying on events to drive the program flow, event-driven programming can offer greater flexibility, scalability, and modularity than traditional procedural programming.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+document.getElementById('myButton').addEventListener('click', function() {
+  alert('Button was clicked!');
+});
+```
+
+In this code:
+
+**1.** An event listener is attached to a button with the id 'myButton'.
+**2.** When the 'click' event is detected (i.e., the user clicks the button), the function is triggered, and an alert is displayed on the screen. This is an example of event-driven programming because the execution of the function is determined by the 'click' event.
+
   </div>
   </div>
+
 </details>
 
 ---
@@ -340,7 +410,7 @@ console.log("code");
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> While JavaScript is single-threaded, it can handle concurrent operations using asynchronous callbacks, the Event Loop, and non-blocking I/O operations.
+  <div><strong>Interview Response:</strong> JavaScript handles concurrency using an event-driven, non-blocking I/O model. It uses a single-threaded event loop and asynchronous callbacks for potentially blocking operations, allowing concurrent processing.
   </div>
   </div>
 </details>
@@ -352,7 +422,28 @@ console.log("code");
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Long-running operations in JavaScript are typically handled by asynchronous programming. Promises, async/await syntax, or Web Workers can be used to avoid blocking the main thread and keep the UI responsive.
+  <div><strong>Interview Response:</strong> Long-running operations in JavaScript are often handled with asynchronous callbacks, Promises, or async/await syntax to prevent blocking the main thread, allowing other code to run concurrently.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's an example of a long-running operation, such as a network request, using the Fetch API and async/await syntax in JavaScript.
+
+```javascript
+async function fetchUserData() {
+    try {
+        const response = await fetch('https://api.example.com/user');
+        const data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+
+fetchUserData();
+```
+
   </div>
   </div>
 </details>
@@ -364,7 +455,7 @@ console.log("code");
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> If the Call Stack isn't empty when the Message Queue has tasks, those tasks wait. The Event Loop only pushes tasks from the Message Queue to the Call Stack when it's empty.
+  <div><strong>Interview Response:</strong> If the call stack is not empty when the message queue has tasks, those tasks wait. The event loop only pushes tasks from the queue to the stack when the stack is empty.
   </div>
   </div>
 </details>
@@ -376,7 +467,31 @@ console.log("code");
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The `setImmediate()` function is a Node.js API that schedules a callback function to be run after the current event loop turn completes. It's like `setTimeout` with a 0ms delay but with higher priority.
+  <div><strong>Interview Response:</strong> `setImmediate()` is a Node.js method that schedules a callback function to be run on the next iteration of the event loop, after I/O events callbacks and before timers set by setTimeout().
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's a simple example of how `setImmediate()` works in Node.js.
+
+```javascript
+console.log('Start');
+
+setImmediate(() => {
+    console.log('setImmediate callback');
+});
+
+console.log('End');
+
+// Output:
+// Start
+// End
+// setImmediate callback
+```
+
+In this example, even though the `setImmediate()` function call appears before the second `console.log()`, its callback function is not run until after all the other code in the current iteration of the event loop has run. Thus, 'End' is logged before 'setImmediate callback'.
+
   </div>
   </div>
 </details>
@@ -389,6 +504,30 @@ console.log("code");
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The `process.nextTick()` is a Node.js method that adds a callback to the "nextTick queue", which is processed after the current operation completes but before the Event Loop continues.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's an example of how `process.nextTick()` works in Node.js.
+
+```javascript
+console.log('Start');
+
+process.nextTick(() => {
+    console.log('nextTick callback');
+});
+
+console.log('End');
+
+// Output:
+// Start
+// End
+// nextTick callback
+```
+
+In this example, `process.nextTick()` schedules the callback function to be invoked in the next iteration of the event loop, but before any other I/O events or timers fire. Despite its placement after the second `console.log()` statement, the 'nextTick callback' message is logged after 'End'.
+
   </div>
   </div>
 </details>

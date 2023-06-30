@@ -47,7 +47,7 @@ import StructuredData from './schemadata/MouseEventsSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Mouse events are JavaScript events that get triggered due to the user's interaction with the mouse, like click, double-click, mouse move, and mouse over.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -71,7 +71,7 @@ import StructuredData from './schemadata/MouseEventsSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> 'Click' event triggers on a single mouse button click. 'Dblclick' triggers when the mouse button is clicked twice in quick succession.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -82,8 +82,23 @@ import StructuredData from './schemadata/MouseEventsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> For a MAC user, the 'metaKey' property of the event object is used to check if the Command (CMD) key was pressed during the event.
-    </div>
+  <div><strong>Interview Response:</strong> The event property key for the Command key on a Mac within JavaScript is `event.metaKey`. It returns a Boolean value `true` if the key is pressed, otherwise `false`.
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+document.addEventListener('keydown', function(event) {
+    if (event.metaKey) {
+        console.log('Command key was pressed');
+    }
+});
+```
+
+In this code, when a key is pressed, if it's the Command key, the message 'Command key was pressed' will be logged to the console.
+
+  </div>
   </div>
 </details>
 
@@ -94,8 +109,21 @@ import StructuredData from './schemadata/MouseEventsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The 'mousemove' event is triggered when a user moves the mouse within the element's boundaries.
+  <div><strong>Interview Response:</strong> The 'mousemove' event in JavaScript is triggered when the mouse pointer is moving over an element. It provides real-time position of the mouse cursor while it is over the targeted element.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+document.addEventListener('mousemove', function(event) {
+    console.log(`Mouse position: X = ${event.clientX}, Y = ${event.clientY}`);
+});
+```
+
+This code logs the current mouse position in the console every time the mouse moves.
+
+  </div>
   </div>
 </details>
 
@@ -107,7 +135,7 @@ import StructuredData from './schemadata/MouseEventsSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The most common mouse button events are include mousedown, mouseup, and click.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -118,8 +146,40 @@ import StructuredData from './schemadata/MouseEventsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> the 'mouseover' event triggers when the pointer moves onto the element, including its children. The 'mouseenter' event doesn't bubble and only triggers on the actual element.
+  <div><strong>Interview Response:</strong> The 'mouseover' event triggers when the mouse enters an element or its child elements, while 'mouseenter' only triggers when the mouse enters the element itself, not its children.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```html
+<div id="parent">
+    Parent
+    <div id="child">Child</div>
+</div>
+
+<script>
+document.getElementById('parent').addEventListener('mouseover', function() {
+    console.log('Mouseover on parent');
+});
+
+document.getElementById('parent').addEventListener('mouseenter', function() {
+    console.log('Mouseenter on parent');
+});
+
+document.getElementById('child').addEventListener('mouseover', function() {
+    console.log('Mouseover on child');
+});
+
+document.getElementById('child').addEventListener('mouseenter', function() {
+    console.log('Mouseenter on child');
+});
+</script>
+```
+
+In this example, moving the mouse over the 'Child' div will trigger both the 'Mouseover on child' and 'Mouseover on parent' logs, but only the 'Mouseenter on child' log, not the 'Mouseenter on parent'.
+
+  </div>
   </div>
 </details>
 
@@ -133,7 +193,21 @@ import StructuredData from './schemadata/MouseEventsSchemaData.js';
   <div><strong>Interview Response:</strong> Window-relative mouse positions (pageX/Y) are from the top left corner of the whole document and do not change when the page begins to scroll, while document-relative positions (clientX/Y) are from the viewport (visible area of the document).
     </div>
   <div><strong>Technical Response:</strong> In summary, document-relative coordinates pageX/Y are numbered from the document's left top corner and do not change when the page begins to scroll. ClientX/Y, on the other hand, are counted from the upper left-hand corner of the current window and do not move or shift when the user navigates the website.
-    </div>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+document.addEventListener('mousemove', function(event) {
+    console.log(`Window-relative position: X = ${event.clientX}, Y = ${event.clientY}`);
+    console.log(`Document-relative position: X = ${event.pageX}, Y = ${event.pageY}`);
+});
+```
+
+In this code, every time the mouse moves, it logs the current mouse position relative to the window (viewport) and the document (page including scroll).
+
+  </div>
   </div>
 </details>
 
@@ -196,7 +270,7 @@ import StructuredData from './schemadata/MouseEventsSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Event bubbling with mouse events refers to the process where an event propagates upward through the DOM, starting from the element where the event occurred to the root element.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -208,7 +282,7 @@ import StructuredData from './schemadata/MouseEventsSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> It's used to stop the browser's default action triggered by a mouse event.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -221,6 +295,20 @@ import StructuredData from './schemadata/MouseEventsSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> The 'contextmenu' event is triggered when the right mouse button is clicked (before the context menu is displayed).
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+document.addEventListener('contextmenu', function(event) {
+    event.preventDefault(); // Prevents the default context menu from appearing
+    console.log('Context menu was triggered');
+});
+```
+
+In this code, when the user right-clicks on the document, the default context menu is prevented from appearing, and the message 'Context menu was triggered' is logged to the console. You can perform custom actions or show a custom context menu instead of the default behavior.
+
+  </div>
   </div>
 </details>
 
@@ -232,7 +320,7 @@ import StructuredData from './schemadata/MouseEventsSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The 'mouseleave' event is only triggered when the mouse pointer leaves the element, while 'mouseout' is triggered when the mouse pointer leaves the element or one of its children.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -243,8 +331,31 @@ import StructuredData from './schemadata/MouseEventsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> `event.stopPropagation()` in mouse events prevents the event from bubbling up the DOM tree, stopping any parent handlers from being notified of the event.
+  <div><strong>Interview Response:</strong> The 'event.stopPropagation()' method stops the propagation of mouse events to parent elements, preventing their event handlers from being triggered, while allowing the current event's handler to execute.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+<div id="parent">
+    Parent Element
+    <button id="child">Click Me!</button>
+</div>
+
+<script>
+document.getElementById('parent').addEventListener('click', function() {
+    console.log('Parent element clicked');
+});
+
+document.getElementById('child').addEventListener('click', function(event) {
+    event.stopPropagation(); // Stop event propagation to parent elements
+    console.log('Child element clicked');
+});
+</script>
+```
+
+  </div>
   </div>
 </details>
 
@@ -255,8 +366,33 @@ import StructuredData from './schemadata/MouseEventsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The 'clientX' and 'clientY' represent the horizontal and vertical coordinates of the mouse when the event was triggered, relative to the viewport.
+  <div><strong>Interview Response:</strong> The 'clientX' and 'clientY' properties in a mouse event represent the X and Y coordinates of the mouse pointer relative to the browser's viewport, excluding any scroll offsets.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+document.addEventListener('mousemove', function(event) {
+    console.log(`Mouse position: X = ${event.clientX}, Y = ${event.clientY}`);
+});
+```
+
+**Output:**
+
+```html
+"Mouse position: X = 90, Y = 84"
+"Mouse position: X = 93, Y = 79"
+"Mouse position: X = 95, Y = 77"
+"Mouse position: X = 100, Y = 71"
+"Mouse position: X = 101, Y = 68"
+"Mouse position: X = 101, Y = 65"
+"Mouse position: X = 101, Y = 59"
+```
+
+In this code, whenever the mouse moves, it logs the current X and Y coordinates of the mouse pointer relative to the viewport (browser window) in the console.
+
+  </div>
   </div>
 </details>
 
@@ -267,8 +403,32 @@ import StructuredData from './schemadata/MouseEventsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The 'screenX' and 'screenY' properties represent the coordinates of the mouse pointer relative to the screen when a mouse event is triggered.
+  <div><strong>Interview Response:</strong> The 'screenX' and 'screenY' properties in a mouse event represent the X and Y coordinates of the mouse pointer relative to the screen or monitor, regardless of the browser window or viewport.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+document.addEventListener('mousemove', function(event) {
+    console.log(`Mouse position: X = ${event.screenX}, Y = ${event.screenY}`);
+});
+```
+
+**Output:**
+
+```html
+"Mouse position: X = 138, Y = 152"
+"Mouse position: X = 141, Y = 156"
+"Mouse position: X = 148, Y = 163"
+"Mouse position: X = 164, Y = 179"
+"Mouse position: X = 169, Y = 187"
+"Mouse position: X = 169, Y = 195"
+```
+
+In this code, whenever the mouse moves, it logs the current X and Y coordinates of the mouse pointer relative to the screen or monitor in the console, regardless of the browser window or viewport.
+
+  </div>
   </div>
 </details>
 

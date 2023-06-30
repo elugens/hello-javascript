@@ -428,7 +428,54 @@ As you can see, trying to use a for-of loop with this object results in an error
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Error handling in a for-await-of loop can be done using try-catch blocks. If an error occurs during iteration, the catch block will be executed, allowing proper error handling.<br />
+  <div><strong>Interview Response:</strong> Error handling in a for-await-of loop can be done using try-catch blocks. If an error occurs during iteration, the catch block will be executed, allowing proper error handling.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's a simplified example to illustrate...
+
+```javascript
+async function exampleFunction() {
+  const asyncIterable = getAsyncIterable(); // some function that returns an async iterable
+
+  try {
+    for await (const item of asyncIterable) {
+      // do something with item
+      processItem(item); // some function that processes the item
+    }
+  } catch (error) {
+    console.error('An error occurred:', error);
+  }
+}
+```
+
+In this example, `try`/`catch` is used to handle any errors that may occur while iterating over the async iterable `asyncIterable` or during the processing of an item in the iterable.
+
+In the `catch` block, we handle the error. In this case, we're just logging the error, but you could handle it in whatever way is appropriate for your use case.
+
+It's important to note that if an error occurs, the loop will be immediately terminated. This means that if there are still items left in the iterable when an error occurs, those items will not be processed.
+
+If you want to handle errors on a per-item basis and continue processing remaining items even if an error occurs, you should move the `try`/`catch` block inside the loop:
+
+```javascript
+async function exampleFunction() {
+  const asyncIterable = getAsyncIterable(); // some function that returns an async iterable
+
+  for await (const item of asyncIterable) {
+    try {
+      // do something with item
+      processItem(item); // some function that processes the item
+    } catch (error) {
+      console.error('An error occurred while processing an item:', error);
+    }
+  }
+}
+```
+
+In this example, if an error occurs while processing an item, that error is logged, but the loop continues to the next item.
+
   </div>
   </div>
 </details>
@@ -535,7 +582,7 @@ Note: This example requires Node.js and its built-in `events` module to run.
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> When there is an asynchronous need to retrieve data, we typically use asynchronous iteration. The most common use case is an object needs to make a network request to deliver the next value. This approach is also a great way to handle controlled chunks of data to reduce the impact on resources.
+  <div><strong>Interview Response:</strong> Asynchronous iteration is popular for handling data streams, fetching data from APIs, reading large files, processing database results, or iterating over data from websockets or server-sent events.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -587,7 +634,7 @@ let range = {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, because the spread syntax expects to find Symbol.iterator, not Symbol.asyncIterator. It’s also the case for for..of: the syntax without await needs Symbol.iterator.
+  <div><strong>Interview Response:</strong> No, it is not possible to use spread syntax (...) with asynchronous iterators in JavaScript. Spread syntax essentially requires an iterable (synchronous) object, such as an Array or a String. Asynchronous iterables (objects implementing a [Symbol.asyncIterator] method), like those used in a for-await-of loop, do not work with spread syntax.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

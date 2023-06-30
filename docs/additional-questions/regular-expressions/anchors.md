@@ -49,7 +49,7 @@ import StructuredData from './schemadata/AnchorsSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Regex Anchors in JavaScript, "^" and "$", are special characters used to match the start and end of a string respectively. They help target precise positions in pattern searches.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -72,8 +72,23 @@ import StructuredData from './schemadata/AnchorsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript Regex, the "$" symbol is an anchor that matches the end of a string or line.
+  <div><strong>Interview Response:</strong> In JavaScript Regex, the "$" symbol is an anchor that matches the end of a string, input, or line.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let str1 = "Hello, world!";
+let str2 = "It's a small toy!";
+
+let regex = /world!$/;
+
+console.log(regex.test(str1)); // Outputs: true
+console.log(regex.test(str2)); // Outputs: false
+```
+
+  </div>
   </div>
 </details>
 
@@ -118,6 +133,29 @@ In this code, the regex `[^a-zA-Z\s]` matches any character that is not a letter
   <div>
   <div><strong>Interview Response:</strong> Anchors influence the 'g' flag in JavaScript Regex by determining where matches are sought. "^" makes the pattern match start at the string's beginning, "$" matches the end, even with global searches.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let regexWithoutAnchors = /apple/g;
+console.log(str.match(regexWithoutAnchors)); 
+// Outputs: [ 'apple', 'apple', 'apple' ]
+
+let regexWithAnchors = /^apple$/g;
+console.log(str.match(regexWithAnchors)); 
+// Outputs: null
+
+///////////////////////////////////////
+
+let str2 = "apple";
+
+let regexWithAnchors2 = /^apple$/g;
+console.log(str2.match(regexWithAnchors2)); 
+// Outputs: ["apple"]
+```
+
+  </div>
   </div>
 </details>
 
@@ -130,6 +168,25 @@ In this code, the regex `[^a-zA-Z\s]` matches any character that is not a letter
   <div>
   <div><strong>Interview Response:</strong> In multiline mode, the "^" and "$" anchors in JavaScript Regex match the start and end of each line, respectively, rather than just the start or end of the entire string.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let str = "apple\nbanana\napple";
+
+let regexWithoutM = /^apple$/g;
+console.log(str.match(regexWithoutM)); 
+// Outputs: null (Without "m" flag)
+
+let regexWithM = /^apple$/gm;
+console.log(str.match(regexWithM)); 
+// Outputs: [ 'apple', 'apple' ] (With "m" flag)
+```
+
+In this example, `^apple$` doesn't match anything because without the "m" flag, it expects the entire string to be "apple". However, with the "m" flag, `^apple$` matches each line where "apple" is the only content. Hence, it matches the first and the third lines.
+
+  </div>
   </div>
 </details>
 
@@ -141,7 +198,7 @@ In this code, the regex `[^a-zA-Z\s]` matches any character that is not a letter
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Anchors can improve the performance of JavaScript Regex by limiting the search space, reducing unnecessary checks, and enabling faster failure when a match is not possible.
-  </div><br />
+  </div>
   </div>
 </details>
 

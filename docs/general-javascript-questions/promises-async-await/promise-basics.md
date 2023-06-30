@@ -47,7 +47,29 @@ import StructuredData from './schemadata/PromBasicsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A Promise is a JavaScript object representing the eventual completion (or failure) of an asynchronous operation and its resulting value.<br />
+  <div><strong>Interview Response:</strong> A Promise is a JavaScript object representing the eventual completion (or failure) of an asynchronous operation and its resulting value.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let promise = new Promise(function(resolve, reject) {
+  // a mock async action using setTimeout
+  setTimeout(function() {
+    resolve('Hello world!'); // The async operation was successful
+  }, 1000);
+});
+
+promise.then(function(successMessage) {
+  // successMessage is whatever we passed in the resolve(...) function above.
+  console.log(successMessage);
+}, function(errorMessage) {
+  // errorMessage is whatever we passed in the reject(...) function above.
+  console.log(errorMessage);
+});
+```
+
   </div>
   </div>
 </details>
@@ -59,7 +81,20 @@ import StructuredData from './schemadata/PromBasicsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The three states are pending, fulfilled (resolved), and rejected.<br />
+  <div><strong>Interview Response:</strong> The three states are pending, fulfilled (resolved), and rejected.
+  </div><br />
+  <div><strong className="codeExample">Technical Details:</strong><br />
+
+  <div></div>
+
+1. **Pending**: The Promise's outcome hasn't yet been determined, because the asynchronous operation that will produce its result hasn't completed yet.
+
+2. **Fulfilled**: The asynchronous operation completed successfully, and the Promise's resulting value is now available.
+
+3. **Rejected**: The asynchronous operation failed, and the Promise will never be fulfilled. In the rejected state, a Promise has a reason that indicates why the operation failed.
+
+It's important to note that a Promise is only pending before it is either fulfilled or rejected. Once a Promise has been fulfilled or rejected, it becomes settled and its state can't change. The Promise's value or reason, once set, can't change either.
+
   </div>
   </div>
 </details>
@@ -71,7 +106,32 @@ import StructuredData from './schemadata/PromBasicsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The resolve and reject are used to settle the Promise's outcome. resolve fulfills the Promise with a value, while reject rejects it with a reason.<br />
+  <div><strong>Interview Response:</strong> The resolve and reject are used to settle the Promise's outcome. resolve fulfills the Promise with a value, while reject rejects it with a reason.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's an example of using resolve:
+
+```js
+let promise = new Promise(function(resolve, reject) {
+  setTimeout(() => resolve("Operation successful"), 1000);
+});
+
+promise.then(value => console.log(value));  // logs "Operation successful" after 1 second
+```
+
+Here's an example of using reject:
+
+```js
+let promise = new Promise(function(resolve, reject) {
+  setTimeout(() => reject(new Error("Operation failed")), 1000);
+});
+
+promise.catch(error => console.log(error));  // logs "Error: Operation failed" after 1 second
+```
+
   </div>
   </div>
 </details>
@@ -362,7 +422,32 @@ new Promise((resolve, reject) => {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> You can chain Promises by returning a new Promise from a .then() or .catch() callback, allowing further chaining.<br />
+  <div><strong>Interview Response:</strong> You can chain Promises by returning a new Promise from a .then() or .catch() callback, allowing further chaining.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let promise = new Promise((resolve, reject) => {
+  setTimeout(() => resolve(1), 1000);
+});
+
+promise
+  .then(result => {
+    console.log(result); // 1
+    return result * 2;
+  })
+  .then(result => {
+    console.log(result); // 2
+    return result * 2;
+  })
+  .then(result => {
+    console.log(result); // 4
+    return result * 2;
+  });
+```
+
   </div>
   </div>
 </details>
@@ -374,7 +459,35 @@ new Promise((resolve, reject) => {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Promise.all() is a method that takes an array of Promises and returns a single Promise that fulfills with an array of results when all input Promises fulfill.<br />
+  <div><strong>Interview Response:</strong> Promise.all() is a method that takes an array of Promises and returns a single Promise that fulfills with an array of results when all input Promises fulfill.
+  </div><br/>
+  <div><strong>Technical Response:</strong> Promise.all() is a method in JavaScript that takes an iterable (like an array) of Promise objects and returns a new Promise that fulfills when all of the promises in the iterable have been fulfilled or rejects as soon as one of them rejects. The purpose of Promise.all() is to run multiple Promises in parallel and wait until all of them have finished. It's useful when you need to perform multiple independent asynchronous operations and want to wait until all of them have completed.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+const promises = [
+  new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('Promise 1');
+    }, 1000);
+  }),
+  new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('Promise 2');
+    }, 2000);
+  }),
+];
+
+const allPromises = Promise.all(promises);
+
+allPromises.then((values) => {
+  console.log(values); // ['Promise 1', 'Promise 2']
+});
+```
+
   </div>
   </div>
 </details>
@@ -386,7 +499,18 @@ new Promise((resolve, reject) => {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Promise.race() takes an array of Promises and returns a single Promise that settles with the value or reason of the first input Promise to settle.<br />
+  <div><strong>Interview Response:</strong> Promise.race() takes an array of Promises and returns a single Promise that settles with the value or reason of the first input Promise to settle.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+Promise.race([promise1, promise2, promise3]).then(function(value) {
+  // do something with the value of the first promise that resolves
+});
+```
+
   </div>
   </div>
 </details>
@@ -398,7 +522,39 @@ new Promise((resolve, reject) => {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Promise.resolve() and Promise.reject() are helper methods that return a fulfilled or rejected Promise, respectively, with the given value or reason.<br />
+  <div><strong>Interview Response:</strong> Promise.resolve() and Promise.reject() are helper methods that return a fulfilled or rejected Promise, respectively, with the given value or reason.
+  </div>
+  </div>
+</details>
+
+---
+
+### How do you conditionally handle promise reject or resolve?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Use the then method for resolving, and catch for rejecting. Add conditional logic within these handlers to perform different actions based on the resolved value or reason for rejection.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let promise = new Promise((resolve, reject) => {
+  let value = /* some async operation */;
+  if (value) resolve(value);
+  else reject('error');
+});
+
+promise.then(result => {
+  if (result > 10) console.log('High');
+  else console.log('Low');
+}).catch(error => {
+  if (error === 'error') console.log('Failed');
+});
+```
+
   </div>
   </div>
 </details>

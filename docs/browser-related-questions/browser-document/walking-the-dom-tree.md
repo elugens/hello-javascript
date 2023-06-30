@@ -144,7 +144,7 @@ This code will output the type and name of the body element node, as well as the
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The main types of nodes in the DOM are: document nodes, element nodes, text nodes, attribute nodes, comment nodes, and document type nodes. Each represents different parts of the document's structure.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -157,6 +157,30 @@ This code will output the type and name of the body element node, as well as the
   <div>
   <div><strong>Interview Response:</strong> The parentNode property returns the parent node of the specified node in the DOM tree. If the node has no parent, it returns null.
   </div><br />
+  <div><strong>Technical Response:</strong> The parentNode property in JavaScript returns the parent node of the specified node as a Node object. The parent of an element is the element or node that directly encloses it in the HTML structure. This could be any kind of node including an element node, the document node, or a document fragment.
+  </div><br />
+  <div><strong className="codeExample">For example, if you have the following HTML:</strong><br /><br />
+
+  <div></div>
+
+```html
+<div id="parent">
+  <p id="child">Hello, world!</p>
+</div>
+```
+
+You can use JavaScript to access the parent node of the `<p>` element like this:
+
+```javascript
+var child = document.getElementById("child");
+console.log(child.parentNode);
+```
+
+This would return the `<div>` element with the id of "parent", because that is the parent node of the `<p>` element.
+
+Remember, the `parentNode` property is read-only, and will return `null` if the node does not have a parent, such as in the case of the `document` node.
+
+  </div>
   </div>
 </details>
 
@@ -169,6 +193,35 @@ This code will output the type and name of the body element node, as well as the
   <div>
   <div><strong>Interview Response:</strong> The childNodes property returns all child nodes including text and comment nodes, while the children property returns only child elements, excluding non-element nodes like text and comments.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's an example that illustrates the difference...
+
+```html
+<div id="parent">
+  <!-- Comment -->
+  Text content
+  <p>Paragraph</p>
+</div>
+```
+
+And the corresponding JavaScript:
+
+```javascript
+let parent = document.getElementById('parent');
+
+console.log(parent.childNodes);
+// Returns a NodeList: [Comment, Text, HTMLParagraphElement]
+
+console.log(parent.children);
+// Returns an HTMLCollection: [HTMLParagraphElement]
+```
+
+As you can see, `childNodes` includes the comment and text nodes, while `children` only includes the `<p>` element. This difference is very important and must be considered when traversing the DOM in your JavaScript code.
+
+  </div>
   </div>
 </details>
 
@@ -179,8 +232,42 @@ This code will output the type and name of the body element node, as well as the
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> You can access the first and last child of a node using the firstChild and lastChild properties respectively. These refer to the first and last child nodes.
+  <div><strong>Interview Response:</strong> In JavaScript, you can access the first and last child of a DOM node using the firstChild and lastChild properties, or firstElementChild and lastElementChild properties, depending on whether you want to include all node types or just element nodes.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```html
+<div id="parent">
+  <!-- Comment -->
+  Text content
+  <p>First paragraph</p>
+  <p>Second paragraph</p>
+</div>
+```
+
+And the corresponding JavaScript:
+
+```javascript
+let parent = document.getElementById('parent');
+
+console.log(parent.firstChild); 
+// Returns a Comment node: <!-- Comment -->
+
+console.log(parent.firstElementChild); 
+// Returns an Element node: <p>First paragraph</p>
+
+console.log(parent.lastChild);
+// Returns an Element node: <p>Second paragraph</p>
+
+console.log(parent.lastElementChild); 
+// Returns an Element node: <p>Second paragraph</p>
+```
+
+In most cases, when dealing with HTML elements, you'll probably want to use `firstElementChild` and `lastElementChild` to avoid getting unexpected text or comment nodes. However, it's good to be aware of both sets of properties and their differences.
+
+  </div>
   </div>
 </details>
 
@@ -193,6 +280,21 @@ This code will output the type and name of the body element node, as well as the
   <div>
   <div><strong>Interview Response:</strong> You can check if a node has child nodes using the hasChildNodes() method. It returns true if the node has one or more child nodes, and false otherwise.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let parent = document.getElementById('parent');
+
+if (parent.hasChildNodes()) {
+  console.log('The parent node has child nodes.');
+} else {
+  console.log('The parent node does not have child nodes.');
+}
+```
+
+  </div>
   </div>
 </details>
 
@@ -211,7 +313,7 @@ This code will output the type and name of the body element node, as well as the
   <div></div>
 
 ```js
-alert(document.documentElement); // alerts [object HTMLHtmlElement] <html> node
+console.log(document.documentElement); // alerts [object HTMLHtmlElement] <html> node
 ```
 
   </div>
@@ -237,13 +339,13 @@ alert(document.documentElement); // alerts [object HTMLHtmlElement] <html> node
 <html>
   <head>
     <script>
-      alert('From HEAD: ' + document.body); // null, there's no <body> yet
+      console.log('From HEAD: ' + document.body); // null, there's no <body> yet
     </script>
   </head>
 
   <body>
     <script>
-      alert('From BODY: ' + document.body); // HTMLBodyElement, now it exists
+     console.log('From BODY: ' + document.body); // HTMLBodyElement, now it exists
     </script>
   </body>
 </html>
@@ -304,14 +406,14 @@ elem.childNodes[elem.childNodes.length - 1] === elem.lastChild; // true
 
 ```js
 for (let node of document.body.childNodes) {
-  alert(node); // shows all nodes from the collection
+  console.log(node); // shows all nodes from the collection
 }
 
 // Doesn't work returns undefined
-alert(document.body.childNodes.filter); // undefined (there's no filter method!)
+console.log(document.body.childNodes.filter); // undefined (there's no filter method!)
 
 // Solution: turn childNodes into an array
-alert(Array.from(document.body.childNodes).filter); // function
+console.log(Array.from(document.body.childNodes).filter); // function
 ```
 
   </div>
@@ -335,7 +437,7 @@ alert(Array.from(document.body.childNodes).filter); // function
 
 ```js
 // shows 0, 1, length, item, values, forEach, and more.
-for (let prop in document.body.childNodes) alert(prop);
+for (let prop in document.body.childNodes) console.log(prop);
 ```
 
   </div>
@@ -385,13 +487,13 @@ for (let prop in document.body.childNodes) alert(prop);
 
 ```js
 // parent of <body> is <html>
-alert(document.body.parentNode === document.documentElement); // true
+console.log(document.body.parentNode === document.documentElement); // true
 
 // after <head> goes <body>
-alert(document.head.nextSibling); // HTMLBodyElement
+console.log(document.head.nextSibling); // HTMLBodyElement
 
 // before <body> goes <head>
-alert(document.body.previousSibling); // HTMLHeadElement
+console.log(document.body.previousSibling); // HTMLHeadElement
 ```
 
   </div>
@@ -408,7 +510,32 @@ alert(document.body.previousSibling); // HTMLHeadElement
   <div><strong>Interview Response:</strong> Yes, the Element.nextElementSibling property can be used to access the next sibling element node, ignoring any text or comment nodes.
 </div><br/>
   <div><strong>Interview Response:</strong> Yes, when we are interested in only accessing element nodes. Some properties serve that purpose for the previous and the next sibling element nodes. For the next sibling element, we can use nextElementSibling property, and for the previous element, we use previousElementSibling property. Web developers commonly referred to this feature as element-only navigation.
-</div><br/>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's an example of how to use nextElementSibling:
+
+```js
+<div id="parent">
+  <!-- Comment -->
+  Text content
+  <p id="first">First paragraph</p>
+  <p id="second">Second paragraph</p>
+</div>
+```
+
+And the corresponding JavaScript:
+
+```js
+let first = document.getElementById('first');
+
+console.log(first.nextElementSibling);
+// Returns an Element node: <p id="second">Second paragraph</p>
+```
+
+  </div>
   </div>
 </details>
 
@@ -427,8 +554,8 @@ alert(document.body.previousSibling); // HTMLHeadElement
   <div></div>
 
 ```js
-alert(document.documentElement.parentNode); // document
-alert(document.documentElement.parentElement); // null
+console.log(document.documentElement.parentNode); // document
+console.log(document.documentElement.parentElement); // null
 ```
 
   </div>

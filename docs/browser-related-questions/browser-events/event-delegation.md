@@ -90,7 +90,7 @@ In this example, we attach a single event listener to the parent `ul` element, r
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Event delegation improves performance by reducing the number of event handlers needed. It also handles events on future child elements, useful when dynamically adding elements to the DOM.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -102,7 +102,7 @@ In this example, we attach a single event listener to the parent `ul` element, r
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Event delegation relies on event bubbling since the event triggered on a child element will bubble up to the parent, where the single event listener is placed.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -201,8 +201,33 @@ In this scenario, clicking on an item in the list will log the item element to t
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Event delegation reduces memory usage by minimizing the number of event listeners. One parent listener can handle events from numerous child elements.
+  <div><strong>Interview Response:</strong> Event delegation can reduce memory usage by binding event listeners to a parent element instead of individual child elements. This way, fewer event handlers are created, resulting in efficient memory management.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+HTML:
+
+```html
+<div id="parent">
+  <button class="child">Button 1</button>
+  <button class="child">Button 2</button>
+  <button class="child">Button 3</button>
+</div>
+```
+
+JavaScript: *We are targeting the `parent` instead of each individual child.*
+
+```javascript
+document.getElementById('parent').addEventListener('click', function(event) {
+  if (event.target.classList.contains('child')) {
+    console.log('Button clicked:', event.target.textContent);
+  }
+});
+```
+
+  </div>
   </div>
 </details>
 
@@ -214,7 +239,7 @@ In this scenario, clicking on an item in the list will log the item element to t
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> `event.target` is crucial in event delegation as it refers to the actual element that triggered the event, allowing us to correctly handle the event even when it bubbles up to a parent element.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -278,6 +303,39 @@ In this scenario, clicking items in `myList` will trigger its own event listener
   <div>
   <div><strong>Interview Response:</strong> The main disadvantage is complexity when dealing with specific event types that don't bubble, such as `focus`, `blur`, and `mouseenter` events, which may require different strategies.
   </div><br />
+  <div><strong>Technical Details:</strong> In the case of focus, blur, and mouseenter events, event delegation may not work as expected or may have limitations. These events are not capable of bubbling up through the DOM tree, making it difficult to effectively delegate them to parent elements. As a result, handling these events using delegation might not be straightforward or even possible in certain scenarios.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's an example that demonstrates the limitations of event delegation with focus, blur, and mouseenter events:
+
+```html
+<div id="parent">
+  <input type="text" class="child" placeholder="Input 1">
+  <input type="text" class="child" placeholder="Input 2">
+  <input type="text" class="child" placeholder="Input 3">
+</div>
+```
+
+```javascript
+document.getElementById('parent').addEventListener('focus', function(event) {
+  console.log('Input focused:', event.target.placeholder);
+}, true); // Using the "capture" phase
+
+document.getElementById('parent').addEventListener('blur', function(event) {
+  console.log('Input blurred:', event.target.placeholder);
+}, true); // Using the "capture" phase
+
+document.getElementById('parent').addEventListener('mouseenter', function(event) {
+  console.log('Mouse entered:', event.target.placeholder);
+});
+```
+
+In this example, we attempt to use event delegation with focus, blur, and mouseenter events. However, due to the nature of these events, they don't naturally bubble up through the DOM tree. To capture these events, we need to use the "capture" phase by passing `true` as the third argument to the `addEventListener` method. Even with this approach, event delegation with these events might not work as expected or may require additional workarounds, making it less suitable for delegation compared to other events that naturally bubble up.
+
+  </div>
   </div>
 </details>
 
@@ -385,7 +443,7 @@ document.getElementById("app").innerHTML = `
 `;
 
 document.getElementById("itemList").addEventListener("click", (event) => {
-  alert(event.type);
+  console.log(event.type);
 });
 
 ```

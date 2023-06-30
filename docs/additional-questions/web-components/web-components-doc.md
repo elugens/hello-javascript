@@ -111,7 +111,7 @@ In this way, components can be modular, reusable, and easy to maintain.
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Web Components are primarily created using three main web technologies: HTML Templates (for defining reusable markup), Custom Elements (for defining custom behavior), and Shadow DOM (for encapsulation and style scoping).
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -124,6 +124,41 @@ In this way, components can be modular, reusable, and easy to maintain.
   <div>
   <div><strong>Interview Response:</strong> Custom Elements are a Web Components standard, allowing developers to define and use new types of HTML tags, with their own behaviors and properties, extending the existing HTML vocabulary.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong> Custom element in JavaScript using the `CustomElementRegistry`:<br /><br />
+
+  <div></div>
+
+```javascript
+// Define a custom element called "my-element"
+class MyElement extends HTMLElement {
+  constructor() {
+    super();
+
+    // Create a shadow root
+    const shadow = this.attachShadow({ mode: 'open' });
+
+    // Create a paragraph element
+    const paragraph = document.createElement('p');
+    paragraph.textContent = 'This is a custom element.';
+
+    // Append the paragraph to the shadow root
+    shadow.appendChild(paragraph);
+  }
+}
+
+// Register the custom element with the browser
+customElements.define('my-element', MyElement);
+```
+
+Once the custom element is defined and registered, you can use it in your HTML markup like any other HTML element:
+
+```html
+<my-element></my-element>
+```
+
+When the browser encounters `<my-element>` in the HTML, it will create an instance of the `MyElement` class and display its contents. In this example, it will show the paragraph "This is a custom element."
+
+  </div>
   </div>
 </details>
 
@@ -268,6 +303,49 @@ In this example, the `greeting-component.js` file defines and exports a new web 
   <div>
   <div><strong>Interview Response:</strong> Yes, Web Components are designed to be library and framework agnostic. They can be used with JavaScript libraries and frameworks like React, Angular, or Vue, ensuring interoperability across different codebases.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's an example of using a custom Web Component in conjunction with the React framework.
+
+```js
+// Define a custom Web Component called "my-element"
+class MyElement extends HTMLElement {
+  constructor() {
+    super();
+
+    const shadow = this.attachShadow({ mode: 'open' });
+
+    const paragraph = document.createElement('p');
+    paragraph.textContent = 'This is a custom element.';
+
+    shadow.appendChild(paragraph);
+  }
+}
+
+// Register the custom Web Component
+customElements.define('my-element', MyElement);
+
+// Create a React component that uses the custom Web Component
+function App() {
+  return (
+    <div>
+      <h1>Hello, React!</h1>
+      <my-element></my-element>
+    </div>
+  );
+}
+
+// Render the React component
+ReactDOM.render(<App />, document.getElementById('root'));
+```
+
+We use the ReactDOM.render method to render the App component and mount it on the DOM element with the ID 'root'.
+
+By combining Web Components with React, you can take advantage of the component-based architecture of React while using the custom Web Component as a reusable UI element within your React application.
+
+  </div>
   </div>
 </details>
 
@@ -280,6 +358,45 @@ In this example, the `greeting-component.js` file defines and exports a new web 
   <div>
   <div><strong>Interview Response:</strong> Lifecycle callbacks in Custom Elements are special methods triggered at different stages of a component's lifecycle, including creation (constructor), insertion (connectedCallback), removal (disconnectedCallback), and attribute changes (attributeChangedCallback).
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Sure! Lifecycle callbacks in Custom Elements allow you to define and execute code at different stages of the element's lifecycle. Here's an example that demonstrates some of the lifecycle callbacks available in Custom Elements:
+
+```javascript
+class MyElement extends HTMLElement {
+  // `constructor` is called when an instance of the element is created.
+  constructor() {
+    super();
+    console.log('Constructor called');
+  }
+  // `connectedCallback` is called when the element is connected to the DOM
+  connectedCallback() {
+    console.log('Element connected to the DOM');
+  }
+  // `disconnectedCallback` is called when the element is removed from the DOM.
+  disconnectedCallback() {
+    console.log('Element removed from the DOM');
+  }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    console.log(`Attribute ${name} changed from ${oldValue} to ${newValue}`);
+  }
+
+  adoptedCallback() {
+    console.log('Element moved to a new document');
+  }
+}
+
+customElements.define('my-element', MyElement);
+```
+
+After defining the `MyElement` class and its lifecycle callbacks, we register the custom element using `customElements.define`.
+
+When an instance of `MyElement` is created and added to the DOM, you'll see the corresponding messages logged to the console, depending on the lifecycle events that occur.
+
+  </div>
   </div>
 </details>
 
@@ -292,6 +409,58 @@ In this example, the `greeting-component.js` file defines and exports a new web 
   <div>
   <div><strong>Interview Response:</strong> The `slot` element in Web Components is part of the Shadow DOM specification and allows for content projection, i.e., passing HTML content from outside into designated places within your component's template.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's a code example that demonstrates the usage of the `<slot>` element:
+
+```javascript
+class MyComponent extends HTMLElement {
+  constructor() {
+    super();
+
+    const shadow = this.attachShadow({ mode: 'open' });
+
+    // Create a template element
+    const template = document.createElement('template');
+
+    // Define the component's HTML structure
+    template.innerHTML = `
+      <style>
+        .container {
+          border: 1px solid black;
+          padding: 10px;
+        }
+      </style>
+      <div class="container">
+        <h1>My Component</h1>
+        <slot></slot>
+      </div>
+    `;
+
+    // Clone the template content and attach it to the shadow root
+    const content = template.content.cloneNode(true);
+    shadow.appendChild(content);
+  }
+}
+
+customElements.define('my-component', MyComponent);
+```
+
+The `<slot></slot>` element is used to define a slot where content can be inserted. In this case, it is placed inside a `<div>` element with the class "container". Any content that is passed into the component when using it in the HTML will be inserted into this slot.
+
+To use the `MyComponent` component in HTML, you can simply include it and any content you want to insert into the slot:
+
+```html
+<my-component>
+  <p>This content will be inserted into the slot.</p>
+</my-component>
+```
+
+In this example, the `<p>` element with the text "This content will be inserted into the slot." will be inserted into the slot defined by the `<slot>` element inside the `MyComponent` component.
+
+  </div>
   </div>
 </details>
 
@@ -303,7 +472,7 @@ In this example, the `greeting-component.js` file defines and exports a new web 
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Encapsulation is important in Web Components for isolating styles and behaviors, avoiding clashes between global and component-specific code. It enhances maintainability, reusability, and ensures components function reliably across different environments.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -361,6 +530,16 @@ In this example, changing the `length` attribute of `custom-square` will change 
   <div>
   <div><strong>Interview Response:</strong> The `define()` method, part of the Custom Elements API, registers a new custom element in the browser, associating a given class with a string name that is used as the custom element's tag name.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Define the new element
+customElements.define("popup-info", PopUpInfo);
+```
+
+  </div>
   </div>
 </details>
 
@@ -373,6 +552,100 @@ In this example, changing the `length` attribute of `custom-square` will change 
   <div>
   <div><strong>Interview Response:</strong> To share styles among Web Components, you can use CSS Custom Properties (CSS Variables) or shared stylesheets, imported into the Shadow DOM of each component where the styles should be applied.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's an example that demonstrates how to share styles among multiple web components.
+
+```javascript
+// Define a shared style using CSS variables
+const sharedStyles = `
+  :host {
+    --text-color: blue;
+  }
+
+  .container {
+    border: 1px solid var(--text-color);
+    padding: 10px;
+    color: var(--text-color);
+  }
+`;
+
+// Define the first web component
+class ComponentA extends HTMLElement {
+  constructor() {
+    super();
+
+    const shadow = this.attachShadow({ mode: 'open' });
+
+    const template = document.createElement('template');
+    template.innerHTML = `
+      <style>
+        ${sharedStyles}
+      </style>
+      <div class="container">
+        <h1>Component A</h1>
+        <slot></slot>
+      </div>
+    `;
+
+    const content = template.content.cloneNode(true);
+    shadow.appendChild(content);
+  }
+}
+
+customElements.define('component-a', ComponentA);
+
+// Define the second web component
+class ComponentB extends HTMLElement {
+  constructor() {
+    super();
+
+    const shadow = this.attachShadow({ mode: 'open' });
+
+    const template = document.createElement('template');
+    template.innerHTML = `
+      <style>
+        ${sharedStyles}
+      </style>
+      <div class="container">
+        <h1>Component B</h1>
+        <slot></slot>
+      </div>
+    `;
+
+    const content = template.content.cloneNode(true);
+    shadow.appendChild(content);
+  }
+}
+
+customElements.define('component-b', ComponentB);
+```
+
+In this example, we define two web components: `ComponentA` and `ComponentB`. Both components have a shared style defined using CSS variables. The shared style is stored in the `sharedStyles` variable.
+
+To use the components in HTML, you can include them and customize the shared style by overriding the CSS variables:
+
+```html
+<component-a>
+  <p slot="content">Content for Component A</p>
+</component-a>
+
+<component-b>
+  <p slot="content">Content for Component B</p>
+</component-b>
+
+<style>
+  component-a, component-b {
+    --text-color: red;
+  }
+</style>
+```
+
+In this example, both components will have a red border and text color because the CSS variable `--text-color` is overridden in the `<style>` block. The content for each component is passed using the `<slot>` element with the `slot="content"` attribute.
+
+  </div>
   </div>
 </details>
 

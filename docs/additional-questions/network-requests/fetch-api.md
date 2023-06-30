@@ -47,7 +47,7 @@ import StructuredData from './schemadata/FetchAPISchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Fetch API is a modern interface that provides a powerful and flexible feature to fetch resources asynchronously over the network, like XMLHttpRequest, but with a more powerful and flexible feature set.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -59,7 +59,7 @@ import StructuredData from './schemadata/FetchAPISchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, using the AbortController API. You signal a fetch request to cancel by calling the abort() method.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -72,6 +72,34 @@ import StructuredData from './schemadata/FetchAPISchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> The Fetch API provides the `.json()` method on the Response object to handle JSON responses. This method returns a Promise that resolves to the JSON object once it is parsed.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's a simple example of how you might use the Fetch API to handle JSON responses.
+
+```javascript
+// fetch data from some API endpoint
+fetch('https://api.example.com/data')
+  .then(response => {
+    // Check if the response is okay
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    // parse the result as JSON
+    return response.json();
+  })
+  .then(data => {
+    // handle the JSON data here
+    console.log(data);
+  })
+  .catch(error => {
+    // handle any errors here
+    console.error('There has been a problem with your fetch operation:', error);
+  });
+```
+
+  </div>
   </div>
 </details>
 
@@ -82,8 +110,31 @@ import StructuredData from './schemadata/FetchAPISchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The Fetch API treats HTTP error statuses (400-599) as successful promises, returning a Response object. To handle these errors, manually check Response.ok or status codes in your .then() chain.
+  <div><strong>Interview Response:</strong> The Fetch API treats HTTP error statuses (400-599) as successful promises, returning a Response object. To handle these errors, we manually check response.ok or status codes in your .then() chain.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+fetch('https://api.example.com/data')
+    .then(response => {
+        if (!response.ok) { // check if response is ok
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        // proceed with the response if it's okay
+        return response.json();
+    })
+    .then(data => {
+        console.log(data);
+    })
+    .catch(error => {
+        console.log('There was a problem with the fetch operation: ' + error.message);
+    });
+
+```
+
+  </div>
   </div>
 </details>
 
@@ -124,7 +175,7 @@ import StructuredData from './schemadata/FetchAPISchemaData.js';
 
 Here's a simple example of sending a POST request with Fetch API.
 
-```javascript
+```js
 fetch('https://api.example.com/data', {
   method: 'POST',
   headers: {
@@ -155,6 +206,33 @@ This script sends a JSON payload to the specified URL and logs the response or a
   <div>
   <div><strong>Interview Response:</strong> A Promise is an object representing the eventual completion or failure of an asynchronous operation. Fetch returns a Promise.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Fetch data from an API
+fetch('https://api.example.com/data')
+    .then(response => {
+        // The fetch() Promise resolved and we received a response object
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+
+        // This is another Promise for the response body that we return here
+        return response.json();
+    })
+    .then(data => {
+        // The response.json() Promise resolved and we have the actual data
+        console.log(data);
+    })
+    .catch(error => {
+        // Any thrown errors or rejected Promises end up here
+        console.error('There has been a problem with your fetch operation: ', error);
+    });
+```
+
+  </div>
   </div>
 </details>
 
@@ -223,6 +301,18 @@ fetch('url')
   <div>
   <div><strong>Interview Response:</strong> Fetch API makes cross-origin requests by default, but the server must allow it using CORS headers. To include cookies in cross-origin requests, set `credentials: 'include'` in options.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+fetch('<https://example.com>', {
+  method: 'GET',
+  credentials: 'include'  // include cookies
+})
+```
+
+  </div>
   </div>
 </details>
 
@@ -235,6 +325,30 @@ fetch('url')
   <div>
   <div><strong>Interview Response:</strong> Yes, since fetch returns a promise, it can be used with async/await for more readable asynchronous code.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong> 3.5<br /><br />
+
+  <div></div>
+
+```js
+async function fetchData() {
+  try {
+    const response = await fetch('https://api.example.com/data');
+    
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error('There has been a problem with your fetch operation:', error);
+  }
+}
+
+fetchData();
+```
+
+  </div>
   </div>
 </details>
 
@@ -246,7 +360,7 @@ fetch('url')
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> In Fetch API, you can use .catch() for network errors. For HTTP errors, manually check Response.ok or Response.status in .then(), because Fetch treats these as successful promises.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -257,8 +371,45 @@ fetch('url')
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Headers interface allows you to perform various actions on HTTP request and response headers. It's used in fetch to set request metadata.
+  <div><strong>Interview Response:</strong> The Headers interface allows you to perform various actions on HTTP request and response headers. It's used in fetch to set request metadata.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Simple Header Interface Example:
+
+```js
+const headers = new Headers();
+headers.set('Content-Type', 'application/json');
+headers.get('Content-Type'); // 'application/json'
+```
+
+Here's an example code snippet that demonstrates the use of headers in the Fetch API:
+
+```js
+// Create a new Fetch request with custom headers
+const url = 'https://api.example.com/data';
+const headers = new Headers();
+headers.append('Content-Type', 'application/json');
+headers.append('Authorization', 'Bearer your-token-goes-here');
+
+fetch(url, {
+  method: 'GET',
+  headers: headers
+})
+  .then(response => response.json())
+  .then(data => {
+    // Handle the response data
+    console.log(data);
+  })
+  .catch(error => {
+    // Handle any errors
+    console.error(error);
+  });
+```
+
+  </div>
   </div>
 </details>
 
@@ -271,6 +422,52 @@ fetch('url')
   <div>
   <div><strong>Interview Response:</strong> Fetch is built into the JavaScript language, whereas jQuery.ajax() is a part of the jQuery library. Fetch returns Promises, while jQuery uses callbacks.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Using the Fetch API:
+
+```javascript
+fetch('https://api.example.com/data')
+  .then(response => response.json())
+  .then(data => {
+    // Handle the response data
+    console.log(data);
+  })
+  .catch(error => {
+    // Handle any errors
+    console.error(error);
+  });
+```
+
+Using the jQuery.ajax() method:
+
+```javascript
+$.ajax({
+  url: 'https://api.example.com/data',
+  method: 'GET',
+  dataType: 'json',
+  success: function(data) {
+    // Handle the response data
+    console.log(data);
+  },
+  error: function(error) {
+    // Handle any errors
+    console.error(error);
+  }
+});
+```
+
+The Fetch API provides a more modern and standardized approach to making HTTP requests, while `jQuery.ajax()` is a jQuery-specific method that includes additional features and compatibility for older browsers.
+
+---
+
+:::note
+It's worth noting that the Fetch API is supported by most modern browsers natively, whereas using `jQuery.ajax()` requires including the jQuery library in your project. If you're already using jQuery in your project and require its additional features, using `jQuery.ajax()` can be a suitable choice. However, if you're working with modern browsers and want a more lightweight solution, the Fetch API is a good option.
+:::
+
+  </div>
   </div>
 </details>
 
@@ -315,7 +512,7 @@ In this example, an input element with type 'file' is expected in your HTML. The
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Fetch API doesn't send or receive cookies by default and doesn't reject the promise on HTTP error status. Also, it's not supported in Internet Explorer.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -328,6 +525,26 @@ In this example, an input element with type 'file' is expected in your HTML. The
   <div>
   <div><strong>Interview Response:</strong> Yes, Fetch can make cross-origin requests but requires the server to opt-in using CORS headers due to the same-origin policy.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+fetch('https://api.another.com/data')
+  .then(response => response.json())
+  .then(data => {
+    // Handle the response data
+    console.log(data);
+  })
+  .catch(error => {
+    // Handle any errors
+    console.error(error);
+  });
+```
+
+It's important to ensure that you have the necessary permissions and comply with the CORS policy of the domain you're making the request to.
+
+  </div>
   </div>
 </details>
 
@@ -377,6 +594,22 @@ In this example, we make a fetch request and then clone the response. The origin
   <div>
   <div><strong>Interview Response:</strong> The option 'no-cors' is used for requests to a different domain where you don’t have control over the server and it doesn’t support CORS.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+const result = await fetch('https://api.example.org', {
+  method: 'POST',
+  mode: 'no-cors', // mode set to 'no-cors'
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({ foo: 'bar' }),
+});
+```
+
+  </div>
   </div>
 </details>
 
@@ -471,7 +704,7 @@ fetch('/page', {
 
 ---
 
-### Could you please clarify the fetch 'mode' option?
+### Could you please clarify what the fetch 'mode' option does?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -479,7 +712,25 @@ fetch('/page', {
   <div><strong>Interview Response:</strong> The `mode` option in Fetch defines the type of request, which can be `cors`, `no-cors`, `same-origin`, or `navigate`, affecting CORS behavior and request/response visibility.
     </div><br/>
   <div><strong>Technical Response:</strong> The mode option is a safeguard that prevents occasional cross-origin requests. It has three parameters, including cors, same-origin, and no-cors. The cors parameter is the default state which allows cross-origin requests. The same-origin parameter only allows requests from the origin. When the same-origin sets, all cross-origin requests are forbidden. The no-cors parameter only allows safe cross-origin requests. The mode option may be helpful when the URL for fetch comes from a 3rd-party, and we want a “power off switch” to limit cross-origin capabilities.
-    </div>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+fetch('https://api.example.com/data', { mode: 'cors' }) // mode set to the default value
+  .then(response => {
+    // Handle the response data
+    console.log(response);
+  })
+  .catch(error => {
+    // Handle any errors
+    console.error(error);
+  });
+
+```
+
+  </div>
   </div>
 </details>
 
@@ -499,8 +750,15 @@ fetch('/page', {
   <div></div>
 
 ```js
-var myRequest = new Request('flowers.jpg');
-var myCred = myRequest.credentials; // returns "same-origin" by default
+fetch('https://api.example.com/data', { credentials: 'include' })
+  .then(response => {
+    // Handle the response data
+    console.log(response);
+  })
+  .catch(error => {
+    // Handle any errors
+    console.error(error);
+  });
 ```
 
   </div>
@@ -517,13 +775,32 @@ var myCred = myRequest.credentials; // returns "same-origin" by default
   <div><strong>Interview Response:</strong> The `cache` option in Fetch influences how the request interacts with the HTTP cache. It can enforce specific cache behavior, like bypassing cache or only using cache.
     </div><br/>
   <div><strong>Technical Response:</strong> By default, fetch requests make use of standard HTTP-caching. It respects the Expires and Cache-Control headers, sends If-Modified-Since, and other options. Just like the behavior of a regular HTTP-request. The cache option allows us to ignore HTTP-cache or fine-tune its usage.
-    </div>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+fetch('https://api.example.com/data', { cache: 'no-store' })
+  .then(response => {
+    // Handle the response data
+    console.log(response);
+  })
+  .catch(error => {
+    // Handle any errors
+    console.error(error);
+  });
+```
+
+In this example the browser fetches the resource from the remote server without first looking in the cache, and will not update the cache with the downloaded resource.
+
+  </div>
   </div>
 </details>
 
 ---
 
-### How can we change the default behavior a HTTP-redirect using fetch?
+### How can we change the default behavior of a HTTP-redirect using fetch?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -531,7 +808,32 @@ var myCred = myRequest.credentials; // returns "same-origin" by default
   <div><strong>Interview Response:</strong> By using the redirect option in Fetch, you can change the default HTTP-redirect behavior. The options include 'follow', 'error', or 'manual' to handle or reject redirects.
     </div>
   <div><strong>Technical Response:</strong> Normally, fetch transparently follows HTTP-redirects such as 301, 302, but there are more in the specification. The fetch redirect option allows us to tweak or modify the HTTP-behavior. Redirect's contains three redirect modification parameters: follow, error, and manual. The default value for the “follow” option transparently follows HTTP-redirects. In the case of an HTTP-redirect, the error argument returns an error, and the manual argument allows us to process HTTP-redirects manually. In the event of a redirect, we receive a specific response object containing the response. type="opaqueredirect" and zeroed/empty status and most other properties.
-    </div>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+fetch('https://api.example.com/data', { redirect: 'manual' })
+  .then(response => {
+    // Check if it's a redirect response
+    if (response.redirected) {
+      // Manually handle the redirect
+      console.log('Redirect URL:', response.url);
+      // Make another request to the redirect URL if needed
+      // fetch(response.url);
+    } else {
+      // Handle the response data
+      console.log(response);
+    }
+  })
+  .catch(error => {
+    // Handle any errors
+    console.error(error);
+  });
+```
+
+  </div>
   </div>
 </details>
 
@@ -568,7 +870,7 @@ fetch('http://site.com/file', {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Fetch is supported in most modern browsers, but not in Internet Explorer. You can use polyfills to support older browsers.
-  </div><br />
+  </div>
   </div>
 </details>
 

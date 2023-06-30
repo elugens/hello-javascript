@@ -48,7 +48,7 @@ import StructuredData from './schemadata/CustomElementsSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Custom Elements are a feature of Web Components, allowing developers to define and use new HTML tags in the browser.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -61,6 +61,46 @@ import StructuredData from './schemadata/CustomElementsSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> They are defined using the customElements.define() method, passing the element name and class.
   </div><br />
+  <div><strong>Technical Response:</strong> Custom Elements are defined using the Web Components specification, which allows for the creation of reusable custom elements that encapsulate functionality on an HTML page, beyond the regular HTML elements that are part of the HTML specification. This is a very powerful feature because it allows for the creation of reusable, encapsulated, and modular code.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+// Define your custom element class
+class MyCustomElement extends HTMLElement {
+  constructor() {
+    // Always call super first in constructor
+    super();
+
+    // Write element functionality in here
+    const shadow = this.attachShadow({mode: 'open'});
+    const wrapper = document.createElement('span');
+    wrapper.setAttribute('class','wrapper');
+    
+    const info = document.createElement('span');
+    info.setAttribute('class', 'info');
+    info.textContent = "Hello, I'm a custom element!";
+    
+    shadow.appendChild(wrapper);
+    wrapper.appendChild(info);
+  }
+}
+
+// Define the new element
+customElements.define('my-custom-element', MyCustomElement);
+```
+
+To use this element in HTML, you would simply include `<my-custom-element></my-custom-element>` somewhere in your HTML source.
+
+---
+
+:::note
+Please keep in mind that not all browsers support Custom Elements and you might need a polyfill for unsupported browsers. As of March 2021, the latest versions of Firefox, Chrome, Safari, and Edge all support Custom Elements.
+:::
+
+  </div>
   </div>
 </details>
 
@@ -72,7 +112,56 @@ import StructuredData from './schemadata/CustomElementsSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> We classify custom elements into two groups: autonomous custom elements and modified built-in components. Autonomous custom elements — elements that are "all-new" and extend the abstract HTMLElement class. Customized built-in elements — extending built-in components, such as a customized button based on HTMLButtonElement.
-    </div>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here is an example of an autonomous custom element:
+
+```javascript
+class MyElement extends HTMLElement {
+  constructor() {
+    super();
+    this.innerHTML = "<p>I'm an autonomous custom element!</p>";
+  }
+}
+
+customElements.define('my-element', MyElement);
+```
+
+You would use this in your HTML like so:
+
+```html
+<my-element></my-element>
+```
+
+Here is an example of a customized built-in element:
+
+```javascript
+class MyParagraph extends HTMLParagraphElement {
+  constructor() {
+    super();
+    this.style.color = 'blue';
+  }
+}
+
+customElements.define('my-paragraph', MyParagraph, { extends: 'p' });
+```
+
+You would use this in your HTML like so:
+
+```html
+<p is="my-paragraph">Hello, world!</p>
+```
+
+---
+
+:::note
+Please note that as of March 2021, customized built-in elements are not as widely supported as autonomous custom elements. For example, they are not supported in the standard configuration of the Apple Safari browser. Always check the current compatibility status before using this feature.
+:::
+
+  </div>
   </div>
 </details>
 
@@ -142,7 +231,30 @@ The constructor is used to set up element properties. However, connectedCallback
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The connectedCallBack() invokes each time the custom element appends into a document-connected element. This action happens each time the node moves and before the element's contents completely propagates. It's ideal for setting up initial state, event listeners or fetching resources.
-    </div>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+class MyElement extends HTMLElement {
+  constructor() {
+    super();
+  }
+
+  connectedCallback() {
+    console.log('Custom element added to page.');
+    this.innerHTML = "<p>Hello, world!</p>";
+  }
+}
+
+customElements.define('my-element', MyElement);
+
+```
+
+In the browser console, you'll see the message "Custom element added to page." printed each time a **my-element** is attached to the DOM. The **my-element** will also display "Hello, world!" on the webpage.
+
+  </div>
   </div>
 </details>
 
@@ -154,7 +266,48 @@ The constructor is used to set up element properties. However, connectedCallback
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The "attributeChangedCallback" method detects when the element's attributes are added, removed, or changed.
-    </div>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+class MyElement extends HTMLElement {
+  static get observedAttributes() {
+    return ['my-attribute'];
+  }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    console.log(`The attribute ${name} has changed from ${oldValue} to ${newValue}!`);
+  }
+}
+
+customElements.define('my-element', MyElement);
+```
+
+In this example, every time the `my-attribute` attribute of a `my-element` custom element changes, the `attributeChangedCallback` method will be invoked, logging a message to the console about this change.
+
+You can use it in your HTML like so:
+
+```html
+<my-element my-attribute="foo"></my-element>
+```
+
+Then, if you were to later change the attribute in JavaScript like so:
+
+```javascript
+document.querySelector('my-element').setAttribute('my-attribute', 'bar');
+```
+
+You would see a message in your console that says: "The attribute my-attribute has changed from foo to bar!"
+
+---
+
+:::note
+Remember, `attributeChangedCallback` will only monitor changes for attributes that are included in the array returned by the `observedAttributes` method. If you want to monitor multiple attributes, you can include all of them in this array.
+:::
+
+  </div>
   </div>
 </details>
 
@@ -166,7 +319,49 @@ The constructor is used to set up element properties. However, connectedCallback
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The "observedAttributes" method is a static getter that returns an array of observed attribute names.
-    </div>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+class MyElement extends HTMLElement {
+  // Specify observed attributes so that attributeChangedCallback will work
+  static get observedAttributes() {
+    return ['my-attribute', 'my-other-attribute'];
+  }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    console.log(`The attribute ${name} has changed from ${oldValue} to ${newValue}!`);
+  }
+}
+
+customElements.define('my-element', MyElement);
+```
+
+You can use this in HTML like so:
+
+```html
+<my-element my-attribute="foo" my-other-attribute="bar"></my-element>
+```
+
+Then, if you were to later change these attributes in JavaScript:
+
+```javascript
+let element = document.querySelector('my-element');
+element.setAttribute('my-attribute', 'newFoo');
+element.setAttribute('my-other-attribute', 'newBar');
+```
+
+You would see messages in your console saying: "The attribute my-attribute has changed from foo to newFoo!" and "The attribute my-other-attribute has changed from bar to newBar!"
+
+---
+
+:::note
+Note that if you add, remove, or change an attribute that is not included in the `observedAttributes` array, the `attributeChangedCallback` will not be invoked.
+:::
+
+  </div>
   </div>
 </details>
 
@@ -179,6 +374,48 @@ The constructor is used to set up element properties. However, connectedCallback
   <div>
   <div><strong>Interview Response:</strong> The "adoptedCallback" is a lifecycle method in Custom Elements used to handle when an element is moved to a new document.
   </div><br />
+  <div><strong>Technical Response:</strong> The `adoptedCallback` is a lifecycle hook that is called when the custom element is moved to a new document. It is rarely used but can be very important in specific situations, especially when working with iframe, where a document may have multiple browsing contexts.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+class MyElement extends HTMLElement {
+  constructor() {
+    super();
+  }
+
+  adoptedCallback(oldDocument, newDocument) {
+    console.log('Custom element has been moved to a new document.');
+  }
+}
+
+customElements.define('my-element', MyElement);
+```
+
+In this example, every time a `my-element` custom element is moved from one document to another, the `adoptedCallback` method will be invoked, and it will log a message to the console.
+
+To demonstrate `adoptedCallback`, you need two documents: the main document and an iframe. You can create the custom element in the main document and then move it to the iframe document:
+
+```html
+<iframe id="my-iframe"></iframe>
+<my-element id="my-element"></my-element>
+
+<script>
+  let iframe = document.querySelector('#my-iframe');
+  let myElement = document.querySelector('#my-element');
+  
+  // When the iframe is loaded, move myElement to the iframe's document
+  iframe.addEventListener('load', () => {
+    iframe.contentWindow.document.body.appendChild(myElement);
+  });
+</script>
+```
+
+In this scenario, when the custom element is moved to the iframe's document, the `adoptedCallback` will be called and you will see the message "Custom element has been moved to a new document." in the console.
+
+  </div>
   </div>
 </details>
 
@@ -190,7 +427,7 @@ The constructor is used to set up element properties. However, connectedCallback
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, with the "extends" option. This creates a customized built-in element. Once you have defined the custom element, you can use it in your HTML code just like any other built-in element.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -202,7 +439,7 @@ The constructor is used to set up element properties. However, connectedCallback
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, Custom elements can be used with older browsers like Internet Explorer, but you will need to use a polyfill. A polyfill is a piece of code that adds support for a new feature to an older browser. In this case, the polyfill will add support for custom elements.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -306,7 +543,7 @@ By nesting these custom elements within each other, you can create a structured 
   <div>
   <div><strong>Interview Response:</strong> If a base element loads before the customized one, it's treated as an unknown element until the defining script for the custom element is loaded and executed.
     </div><br/>
-  <div><strong>Technical Response:</strong> If the browser encounters any elements we are trying to customize before customElements.define, that is not an error. But the element is yet unknown, just like any non-standard tag.<br /><br /> Such “undefined” elements can be styled with CSS selector :not(:defined).<br /><br /> When customElement.define is called, they are “upgraded”: a new instance of the element we are trying to customize gets created for each, and connectedCallback gets called. They become :defined.
+  <div><strong>Technical Response:</strong> If the browser encounters any elements we are trying to customize before customElements.define, that is not an error. But the element is yet unknown, just like any non-standard tag. Such “undefined” elements can be styled with CSS selector :not(:defined). When customElement.define is called, they are “upgraded”: a new instance of the element we are trying to customize gets created for each, and connectedCallback gets called. They become :defined.
     </div>
   </div>
 </details>
@@ -321,7 +558,36 @@ By nesting these custom elements within each other, you can create a structured 
   <div><strong>Interview Response:</strong> The constructor is used to set up element properties. However, connectedCallback is preferred for setup work because certain attributes may not be defined at construction.
     </div><br/>
   <div><strong>Technical Response:</strong> The reason is simple: it is too early when the constructor gets called. The element gets created, but the browser did not yet process/assign attributes at this stage: calls to getAttribute would return null. So, we cannot render there. Besides, if you think about it, it is better to delay the work until needed.<br /><br />When the element gets added to the document, the connectedCallback is triggered. It is not just attached to another element as a child but instead becomes a part of the page. As a result, we may construct detached DOM, create elements, and prepare them for subsequent usage. They do not render until they get included on the page.
-    </div>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+class MyElement extends HTMLElement {
+  constructor() {
+    super();
+    // Trying to manipulate attributes or children here may not work as expected
+  }
+
+  connectedCallback() {
+    // It's more reliable to perform setup work here
+    this.innerHTML = "<p>I'm a custom element!</p>";
+  }
+}
+
+customElements.define('my-element', MyElement);
+```
+
+You use the custom element in your HTML like so:
+
+```html
+<my-element></my-element>
+```
+
+In this example, if you tried to set `innerHTML` in the `constructor`, it might not work as expected because the element might not be fully ready and its context might not be completely defined. However, if you set `innerHTML` in `connectedCallback`, it's more likely to work reliably because the element is already in the DOM.
+
+  </div>
   </div>
 </details>
 
@@ -476,7 +742,7 @@ It does not trigger unlisted properties (for performance reasons).
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, a new or autonomous element like &#8249;my-element&#8250; does not give a search engine enough information, like associated semantics. The elements are unknown to search engines, and accessibility devices cannot translate them. We can extend and customize built-in HTML elements by inheriting them from their classes to fix this.
+  <div><strong>Interview Response:</strong> Yes, a new or autonomous element like &#60;my-element&#62; does not give a search engine enough information, like associated semantics. The elements are unknown to search engines, and accessibility devices cannot translate them. We can extend and customize built-in HTML elements by inheriting them from their classes to fix this.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

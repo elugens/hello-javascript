@@ -49,7 +49,7 @@ import StructuredData from './schemadata/PopupsSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> A popup window is a new browser window opened by JavaScript, typically to display additional information without leaving the current page.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -62,6 +62,21 @@ import StructuredData from './schemadata/PopupsSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> The JavaScript method to open a popup window is `window.open()`. It accepts parameters for URL, window name, and window features like dimensions and toolbar visibility.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let newWindow = window.open('https://www.example.com', '_blank');
+
+if (newWindow) {
+    newWindow.focus();
+} else {
+    alert('Please allow popups for this website');
+}
+```
+
+  </div>
   </div>
 </details>
 
@@ -86,6 +101,25 @@ import StructuredData from './schemadata/PopupsSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> `window.open()` parameters include: URL (page to load), window name, and a features string defining window size (height, width), position (left, top), and visibility of elements (toolbar, scrollbars).
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let newWindow = window.open(
+  'https://www.example.com', 
+  '_blank', 
+  'toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400'
+);
+
+if (newWindow) {
+    newWindow.focus();
+} else {
+    alert('Please allow popups for this website');
+}
+```
+
+  </div>
   </div>
 </details>
 
@@ -102,7 +136,7 @@ import StructuredData from './schemadata/PopupsSchemaData.js';
 
   <div></div>
 
-Here's a simple example of communication between a parent window and a popup window:
+Here's a simple example of communication between a parent window and a popup window.
 
 In your main HTML file:
 
@@ -139,7 +173,7 @@ This code opens a new window with the URL 'popup.html', and once it's loaded, se
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> When a popup is blocked by a browser, the `window.open()` method returns `null` and the browser may notify the user about the blocked popup, depending on its settings.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -152,6 +186,23 @@ This code opens a new window with the URL 'popup.html', and once it's loaded, se
   <div>
   <div><strong>Interview Response:</strong> Yes, a popup window can navigate its opener window by using the `window.opener.location` property, assuming they are from the same origin due to the same-origin policy.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Open a new window
+let newWindow = window.open('', '_blank');
+
+if (newWindow) {
+    // Use the opener property to navigate the original window
+    newWindow.opener.location.href = 'https://www.example.com';
+} else {
+    alert('Please allow popups for this website');
+}
+```
+
+  </div>
   </div>
 </details>
 
@@ -324,11 +375,15 @@ open('/', 'test', params);
   <div></div>
 
 ```js
-let newWin = window.open('about:blank', 'hello', 'width=200,height=200');
+// Open a new window
+let newWindow = window.open('', '_blank');
 
-newWin.document.write(
-  "<script>window.opener.document.body.innerHTML = 'Test'</script>"
-);
+if (newWindow) {
+    // Use the opener property to access and modify the original window
+    newWindow.opener.document.body.innerHTML = "<h1>This is changed by the popup</h1>";
+} else {
+    alert('Please allow popups for this website');
+}
 ```
 
   </div>
@@ -383,7 +438,7 @@ newWindow.onload = function () {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, JavaScript `window.open()` can request full-screen mode using features like `fullscreen=yes`, but most modern browsers restrict or ignore this due to user experience concerns and potential security issues.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -395,7 +450,7 @@ newWindow.onload = function () {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, to an extent, by defining window features in the `window.open()` method parameters.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -407,7 +462,7 @@ newWindow.onload = function () {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Modal dialogs, tooltips, or information displayed directly in the page can be used instead of popups.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -420,6 +475,30 @@ newWindow.onload = function () {
   <div>
   <div><strong>Interview Response:</strong> Yes, the `moveTo()`, `moveBy()`, `resizeTo()`, and `resizeBy()` methods allow to move or resize the popup.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+function openWindow() {
+  let newWindow = window.open('https://www.hellojavascript.info', '_blank', 'width=200,height=200');
+
+  if (newWindow) {
+    newWindow.moveTo(40, 40);
+    newWindow.resizeTo(400, 400);
+  } else {
+    alert('Please allow popups for this website');
+  }
+}
+
+const button = document.querySelector('button');
+
+button.addEventListener('click', function() {
+openWindow();
+})
+```
+
+  </div>
   </div>
 </details>
 
@@ -432,6 +511,25 @@ newWindow.onload = function () {
   <div>
   <div><strong>Interview Response:</strong> The `window.close()` method is used to close a popup window.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Open a new window
+let newWindow = window.open('', '_blank');
+
+if (newWindow) {
+    // Do something with the new window
+
+    // Close the new window
+    newWindow.close();
+} else {
+    alert('Please allow popups for this website');
+}
+```
+
+  </div>
   </div>
 </details>
 
@@ -444,6 +542,28 @@ newWindow.onload = function () {
   <div>
   <div><strong>Interview Response:</strong> Yes, by checking the `window.closed` property of the popup window object.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let newWindow = window.open('', '_blank');
+
+if (newWindow) {
+    // Do something with the new window
+
+    // Check if the new window has been closed
+    if (newWindow.closed) {
+        console.log('The popup has been closed');
+    } else {
+        console.log('The popup is still open');
+    }
+} else {
+    alert('Please allow popups for this website');
+}
+```
+
+  </div>
   </div>
 </details>
 
@@ -454,8 +574,26 @@ newWindow.onload = function () {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The `window.focus()` method gives focus to a popup window.
+  <div><strong>Interview Response:</strong> You can give focus to a popup window using the focus() method in JavaScript.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+let newWindow = window.open('', '_blank');
+
+if (newWindow) {
+    // Do something with the new window
+
+    // Give focus to the new window
+    newWindow.focus();
+} else {
+    alert('Please allow popups for this website');
+}
+```
+
+  </div>
   </div>
 </details>
 
@@ -468,6 +606,34 @@ newWindow.onload = function () {
   <div>
   <div><strong>Interview Response:</strong> Yes, using `window.blur()` on the popup window prevents it from gaining focus.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```html
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The Window Object</h1>
+<h2>The window.blur() Method</h2>
+
+<p>Click the button to open a new window, and blur it (remove focus from it).</p>
+
+<button onclick="windowFunction()">Try it</button>
+
+<script>
+function windowFunction() {
+  let newWindow = window.open("", "", "width=200, height=100");
+  newWindow.blur();
+}
+</script>
+
+</body>
+</html>
+```
+
+  </div>
   </div>
 </details>
 
@@ -478,8 +644,49 @@ newWindow.onload = function () {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, JavaScript doesn't support modal popup windows natively. HTML5 introduces modal dialogs via the `&#60;dialog&#62;` element.
+  <div><strong>Interview Response:</strong> No, JavaScript popup windows cannot be made truly modal (blocking user interaction with other windows) using native JavaScript methods. However, you can create a modal-like experience by overlaying a semi-transparent div or dialog over the parent window.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* CSS for modal overlay */
+    #modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 9999;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="openModal()">Open Modal</button>
+
+  <div id="modal-overlay" style="display: none;"></div>
+
+  <script>
+    function openModal() {
+      // Show modal overlay
+      document.getElementById('modal-overlay').style.display = 'block';
+
+      // Other modal operations
+      // ...
+    }
+  </script>
+</body>
+</html>
+
+```
+
+  </div>
   </div>
 </details>
 
@@ -491,7 +698,7 @@ newWindow.onload = function () {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> JavaScript doesn't support this natively. However, you can create a modal-like effect using CSS and JavaScript together.
-  </div><br />
+  </div>
   </div>
 </details>
 

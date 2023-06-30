@@ -48,6 +48,52 @@ import StructuredData from './schemadata/BubbleCapSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> Event bubbling is the process where an event triggers on the innermost target element first and then successively triggers on ancestors (parents) in the same nesting hierarchy up to the outermost DOM element.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+HTML:
+
+```html
+<div id="outer">
+  <div id="inner">
+    <button id="button">Click me!</button>
+  </div>
+</div>
+```
+
+JavaScript:
+
+```javascript
+// Event listener for the outer div
+document.getElementById("outer").addEventListener("click", function() {
+  console.log("Outer div clicked");
+});
+
+// Event listener for the inner div
+document.getElementById("inner").addEventListener("click", function() {
+  console.log("Inner div clicked");
+});
+
+// Event listener for the button
+document.getElementById("button").addEventListener("click", function() {
+  console.log("Button clicked");
+});
+```
+
+In this example, when you click the button, the event will propagate upwards through the nested elements. So, when you click the button, the console will display the following output:
+
+Output:
+
+```js
+Button clicked
+Inner div clicked
+Outer div clicked
+```
+
+This demonstrates the event bubbling behavior, where the event is triggered on the innermost element and then propagates up through its parent elements.
+
+  </div>
   </div>
 </details>
 
@@ -60,6 +106,52 @@ import StructuredData from './schemadata/BubbleCapSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> Event capturing is the opposite of bubbling. It's when an event starts at the outermost element and triggers on descendents, moving towards the innermost target element.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+HTML:
+
+```html
+<div id="outer">
+  <div id="inner">
+    <button id="button">Click me!</button>
+  </div>
+</div>
+```
+
+JavaScript:
+
+```javascript
+// Event listener for the outer div with event capturing
+document.getElementById("outer").addEventListener("click", function() {
+  console.log("Outer div clicked (capturing)");
+}, true);
+
+// Event listener for the inner div with event capturing
+document.getElementById("inner").addEventListener("click", function() {
+  console.log("Inner div clicked (capturing)");
+}, true);
+
+// Event listener for the button with event capturing
+document.getElementById("button").addEventListener("click", function() {
+  console.log("Button clicked (capturing)");
+}, true);
+```
+
+In this example, when you click the button, the event will be captured in the capturing phase and propagate downwards through the nested elements. So, when you click the button, the console will display the following output:
+
+Output:
+
+```
+Outer div clicked (capturing)
+Inner div clicked (capturing)
+Button clicked (capturing)
+```
+
+This demonstrates the event capturing behavior, where the event is triggered on the outermost element and then propagates down through its child elements.
+
+  </div>
   </div>
 </details>
 
@@ -107,23 +199,73 @@ import StructuredData from './schemadata/BubbleCapSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> The most deeply nesting element that created the event is known as a target element, and it may be accessed using event.target. The event target does not change through the bubbling process; JavaScript views it as the initial point of the event.
     </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+HTML:
+
+```html
+<button id="myButton">Click me!</button>
+```
+
+JavaScript:
+
+```javascript
+document.getElementById("myButton").addEventListener("click", function(event) {
+  console.log("Event target:", event.target);
+});
+```
+
+In this example, we have a button with the id "myButton". When you click the button, the event listener function will be triggered, and it will log the event target to the console.
+
+For instance, if you click on the button, the console **output** will be:
+
+```
+Event target: <button id="myButton">Click me!</button>
+```
+
+The `event.target` property gives you access to the actual element that triggered the event, in this case, the button element with the id "myButton".
+
+---
 
 :::note
 The current target is the precise target at which the current action takes place, where "this = event.currentTarget." It is conceivable that event.target equals either this or the current target.
 :::
 
   </div>
+  </div>
 </details>
 
 ---
 
-### How can you prevent the default action?
+### How can you prevent the default action using JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The `event.preventDefault()` method is used to prevent the browser from executing the default action of the event.
+  <div><strong>Interview Response:</strong> To prevent the default action triggered by an event, you can use the `event.preventDefault()` method in JavaScript. Calling this method within an event listener will prevent the default behavior associated with the event.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+HTML:
+
+```html
+<a href="https://www.example.com" id="myLink">Click me!</a>
+```
+
+JavaScript:
+
+```js
+document.getElementById("myLink").addEventListener("click", function(event) {
+  event.preventDefault(); // Prevents the default action (navigating to the URL)
+  console.log("Default action prevented");
+});
+```
+
+  </div>
   </div>
 </details>
 
@@ -134,8 +276,40 @@ The current target is the precise target at which the current action takes place
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, events in JavaScript first capture down to the target, then bubble up. This process is called event propagation.
+  <div><strong>Interview Response:</strong> Yes, by setting the third parameter of addEventListener to true, you can enable event capturing, and events will propagate from the capturing phase to the target phase and then to the bubbling phase.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+HTML:
+
+```html
+<div id="myElement">
+  <button id="myButton">Click me!</button>
+</div>
+```
+
+JavaScript:
+
+```js
+document.getElementById("myElement").addEventListener("click", function(event) {
+  console.log("Event captured: (capturing phase)");
+}, true);
+
+document.getElementById("myElement").addEventListener("click", function(event) {
+  console.log("Event bubbled: (bubbling phase)");
+}, false);
+```
+
+Output:
+
+```html
+Event captured: (capturing phase)
+Event bubbled: (bubbling phase)
+```
+
+  </div>
   </div>
 </details>
 
@@ -198,13 +372,53 @@ When you click on the inner element, both event handlers will be called, but the
 
 ---
 
-### How can you stop event propagation?
+### How can you stop event propagation in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> You can stop event propagation in JavaScript by using the `event.stopPropagation()` method, which prevents further propagation of the current event in the capturing and bubbling phases.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+HTML:
+
+```html
+<div id="outer">
+  <div id="inner">
+    <button id="button">Click me!</button>
+  </div>
+</div>
+```
+
+JavaScript:
+
+```javascript
+document.getElementById("outer").addEventListener("click", function(event) {
+  console.log("Outer div clicked");
+});
+
+document.getElementById("inner").addEventListener("click", function(event) {
+  console.log("Inner div clicked");
+  event.stopPropagation(); // Stops event propagation
+});
+
+document.getElementById("button").addEventListener("click", function(event) {
+  console.log("Button clicked");
+});
+```
+
+Only the following **output** will be logged to the console:
+
+```
+Inner div clicked
+```
+
+The event propagation is prevented from reaching the outer div's event listener due to the call to `event.stopPropagation()` within the event listener of the inner div.
+
+  </div>
   </div>
 </details>
 
@@ -264,7 +478,50 @@ When you click on the inner element, the `innerClick` event handler will be trig
   <div><strong>Interview Response:</strong> The stopPropagation() method prevents further bubbling or capturing of an event, while stopImmediatePropagation() does the same but also prevents other event handlers on the same element from executing.
     </div><br/>
   <div><strong>Technical Response:</strong> If an element has multiple event handlers on a single event, then even if one of them stops the bubbling, the other ones still execute. In other words, event.stopPropagation() stops the move upwards, but all other handlers run on the current element. To stop the bubbling and prevent handlers on the current element from running, we use event.stopImmediatePropagation(). After it, no other handlers execute.
-    </div>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+HTML:
+
+```html
+<div id="myElement">
+  <button id="myButton">Click me!</button>
+</div>
+```
+
+JavaScript:
+
+```javascript
+document.getElementById("myElement").addEventListener("click", function(event) {
+  console.log("Event captured");
+});
+
+document.getElementById("myButton").addEventListener("click", function(event) {
+  console.log("Button clicked");
+  event.stopPropagation(); // Stops propagation to parent elements
+});
+
+document.getElementById("myButton").addEventListener("click", function(event) {
+  console.log("Additional listener on button");
+  event.stopImmediatePropagation(); // Stops further listeners on the same element
+});
+
+document.getElementById("myElement").addEventListener("click", function(event) {
+  console.log("Additional listener on element");
+});
+```
+
+Output:
+
+```
+Button clicked
+```
+
+The "Additional listener on button" and "Additional listener on element" event listeners are not triggered due to the use of `event.stopImmediatePropagation()`.
+
+  </div>
   </div>
 </details>
 
@@ -288,7 +545,40 @@ When you click on the inner element, the `innerClick` event handler will be trig
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Event delegation takes advantage of event bubbling. Instead of assigning event handlers to specific nodes, the event handler is added to one parent and because of event bubbling, events on child nodes bubble up to the parent.
-    </div>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+HTML:
+
+```html
+<ul id="myList">
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+```
+
+JavaScript:
+
+```javascript
+document.querySelector("#myList").addEventListener("click", function(e) {
+  if(e.target && e.target.nodeName === "LI") {
+    console.log("List item ", e.target.textContent, " was clicked");
+  }
+});
+```
+
+Output:
+
+```html
+"List item ", "Item 1", " was clicked"
+"List item ", "Item 2", " was clicked"
+"List item ", "Item 3", " was clicked"
+```
+
+  </div>
   </div>
 </details>
 

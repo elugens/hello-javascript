@@ -49,8 +49,36 @@ import StructuredData from './schemadata/ProxyReflectSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> A Proxy is an object in JavaScript that wraps another object, enabling you to intercept and customize operations performed on the wrapped object, such as property access, assignment, or function invocation.
 </div><br/>
-  <div><strong>Interview Response:</strong> A Proxy object surrounds another object and intercepts activities such as reading/writing properties and others, processing them optionally on its own or transparently letting the object handle them. Many libraries and browser frameworks make use of proxies.
-</div>
+  <div><strong>Technical Response:</strong> A Proxy in JavaScript is a special object that is used to define custom behavior for fundamental operations (e.g., property lookup, assignment, enumeration, function invocation, etc). The syntax to create a proxy in JavaScript is `new Proxy(target, handler)`, where `target` is the object which the proxy will virtualize and `handler` is an object that defines which operations will be intercepted and how to redefine intercepted operations.
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here is a simple example of how a Proxy can be used to intercept the get operation on an object...
+
+```javascript
+let target = {
+  message: 'hello, world'
+};
+
+let handler = {
+  get: function(target, prop, receiver) {
+    console.log(`GET was called for property ${prop}`);
+    return Reflect.get(...arguments);
+  }
+};
+
+let proxy = new Proxy(target, handler);
+
+console.log(proxy.message); // logs: 'GET was called for property message' then logs: 'hello, world'
+```
+
+In this example, whenever a property is accessed on the `proxy` object, it logs a message to the console and then proceeds with the normal operation. The actual get operation is performed using `Reflect.get()`, which is a built-in function that performs a property access operation.
+
+Proxies are a powerful tool that allow developers to control and redefine fundamental JavaScript operations. However, they should be used carefully, because they can greatly increase the complexity of your code and make debugging more difficult. They are best used for meta-programming tasks, or where you need to handle some complex object-access logic.
+
+  </div>
   </div>
 </details>
 
@@ -61,7 +89,40 @@ import StructuredData from './schemadata/ProxyReflectSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Proxies are used for various purposes, including access control, data validation, object virtualization, performance optimization, and implementing custom behavior for object operations.<br />
+  <div><strong>Interview Response:</strong> Proxies are used for various purposes, including access control, data validation, object virtualization, performance optimization, and implementing custom behavior for object operations.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+**Data Validation:** Proxies can be used to validate incoming data before setting it to an object's properties.
+
+```js
+let handler = {
+    set: function(obj, prop, value) {
+        if (prop === 'age') {
+            if (!Number.isInteger(value)) {
+                throw new TypeError('The age is not an integer');
+            }
+            if (value <= 0) {
+                throw new RangeError('The age must be a positive integer');
+            }
+        }
+
+        // The default behavior to store the value
+        obj[prop] = value;
+
+        // Indicate success
+        return true;
+    }
+};
+
+let person = new Proxy({}, handler);
+
+person.age = 100;
+console.log(person.age); // 100
+```
+
   </div>
   </div>
 </details>
@@ -73,7 +134,49 @@ import StructuredData from './schemadata/ProxyReflectSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To create a Proxy, we use the Proxy constructor, passing in the target object and a handler object containing traps for intercepting specific operations on the target.<br />
+  <div><strong>Interview Response:</strong> To create a Proxy, we use the Proxy constructor, passing in the target object and a handler object containing traps for intercepting specific operations on the target. Creating a Proxy in JavaScript involves calling the Proxy constructor with two arguments: the target object and a handler object.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's the basic syntax:
+
+```javascript
+let proxy = new Proxy(target, handler);
+```
+
+Here's a detailed example:
+
+```javascript
+let target = {
+  name: "John"
+};
+
+let handler = {
+  get: function(target, prop, receiver) {
+    console.log(`Property "${prop}" has been read.`);
+    return Reflect.get(...arguments);
+  },
+  set: function(target, prop, value, receiver) {
+    console.log(`Property "${prop}" is being set to "${value}".`);
+    return Reflect.set(...arguments);
+  }
+};
+
+let proxy = new Proxy(target, handler);
+
+proxy.name; // Outputs: Property "name" has been read.
+proxy.age = 25; // Outputs: Property "age" is being set to "25".
+```
+
+In this example, the `handler` object defines two traps:
+
+- The `get` trap is called when a property on the `proxy` object is read. It logs a message to the console and then uses the `Reflect.get()` method to perform the default get operation.
+- The `set` trap is called when a property on the `proxy` object is set. It logs a message to the console and then uses the `Reflect.set()` method to perform the default set operation.
+
+Note: `Reflect.get()` and `Reflect.set()` are built-in functions that perform the default get and set operations respectively.
+
   </div>
   </div>
 </details>
@@ -268,9 +371,58 @@ alert('This line is never reached (error in the line above)');
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Semantics that remain unchanged when implementing custom operations are called invariants. Invariants in JavaScript proxies refer to rules enforced by the language that must be followed when implementing proxy traps, ensuring consistency and preventing unexpected behavior or errors in the code.
- If you violate the invariants of a handler, a TypeError gets thrown.</div><br />
-  <div><strong>Technical Response:</strong> In JavaScript, proxy invariants are a condition that the internal methods and traps must fulfill. In most cases, this refers to return values. The internal [[Set]] method must return true if the value gets successfully written. Otherwise false. Most of the internal methods require a specific return value. Traps can intercept these operations, but they must follow these rules. Invariants ensure correct and consistent behavior of language features. The complete invariants list is in the specification. You probably won’t violate them if you are not doing something weird.
+ If you violate the invariants of a handler, a TypeError gets thrown.
+ </div><br />
+  <div><strong>Technical Response:</strong> In the context of JavaScript Proxies, "invariants" refer to rules that JavaScript's internal methods must follow. These rules help maintain the consistency and predictability of the language. The Proxy API is designed to respect these invariants. That means, when you define a handler for a Proxy, it's expected that your handler logic will also respect these invariants. If it doesn't, JavaScript will throw a TypeError to prevent the invariant violation.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here are a few examples of such invariants:
+
+**1. Non-configurable, non-writable properties**: If an object has a property that's non-configurable and non-writable, the `set` trap for a Proxy must not change the value of that property, or else JavaScript will throw a TypeError.
+
+```javascript
+let target = {};
+Object.defineProperty(target, 'prop', {
+    value: 1,
+    writable: false,
+    configurable: false
+});
+
+let handler = {
+    set: function(target, prop, value, receiver) {
+        target[prop] = value;
+        return true;
+    }
+};
+
+let proxy = new Proxy(target, handler);
+proxy.prop = 2; // TypeError
+```
+
+**2. Non-extensibility and defining properties**: If an object is non-extensible, you can't add new properties to it. Hence, the `defineProperty` trap for a Proxy should not successfully add new properties to a non-extensible target object, or else JavaScript will throw a TypeError.
+
+```javascript
+let target = {};
+Object.preventExtensions(target);
+
+let handler = {
+    defineProperty: function(target, prop, descriptor) {
+        return Reflect.defineProperty(target, prop, descriptor);
+    }
+};
+
+let proxy = new Proxy(target, handler);
+Object.defineProperty(proxy, 'prop', { value: 1 }); // TypeError
+```
+
+**3. Property descriptors and non-configurability**: If a property is non-configurable on a target object, then the `getOwnPropertyDescriptor` trap must return a descriptor that says the property is non-configurable. If it says the property is configurable, JavaScript will throw a TypeError.
+
+These are just a few examples. The main point is that JavaScript expects certain rules to be respected in the implementation of Proxy handlers, and if these rules are not respected, a TypeError will be thrown.
+
+  </div>
   </div>
 </details>
 
@@ -321,7 +473,40 @@ alert(Object.values(user)); // John,30
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Private properties and methods in a class don't require proxies. They're built-in language features, prefixed with #, that provide encapsulation, limiting access to class instances and preventing external manipulation.
-</div>
+</div><br/>
+  <div><strong>Technical Response:</strong> No, private properties and methods in JavaScript classes do not require proxies. They are a feature of the JavaScript language itself, and their privacy is enforced by the language. Private class fields, both properties and methods, are defined by prefixing the name of the field with a `#` character. This makes them private to the class, meaning they can only be accessed or called from methods within the same class.
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+class MyClass {
+  #privateField = 'Hello, world';
+
+  #privateMethod() {
+    return 'Private method has been called';
+  }
+
+  callPrivateMethod() {
+    return this.#privateMethod();
+  }
+
+  getPrivateField() {
+    return this.#privateField;
+  }
+}
+
+let instance = new MyClass();
+console.log(instance.callPrivateMethod()); // logs: 'Private method has been called'
+console.log(instance.getPrivateField()); // logs: 'Hello, world'
+```
+
+In this example, `#privateField` and `#privateMethod` are private to instances of `MyClass`. They can't be accessed or called from outside the class. The public methods `callPrivateMethod` and `getPrivateField` provide a way to interact with the private field and method.
+
+Proxies could be used if you wanted to customize the behavior of property access or method invocation on an object, including private properties or methods. However, please note that as of my knowledge cutoff in September 2021, private fields are not accessible or interceptable by JavaScript proxies, as per the language design. The main use case of a Proxy is to define custom behavior for fundamental operations on objects, such as property lookups or function invocations.
+
+  </div>
   </div>
 </details>
 
@@ -427,7 +612,7 @@ alert(user.name); // John
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Some common Reflect methods include get(), set(), apply(), has(), deleteProperty(), and construct(), which correspond to object operations like property access, assignment, function invocation, and object creation.<br />
+  <div><strong>Interview Response:</strong> Some common Reflect methods include get(), set(), apply(), has(), deleteProperty(), and construct(), which correspond to object operations like property access, assignment, function invocation, and object creation.
   </div>
   </div>
 </details>
@@ -439,7 +624,37 @@ alert(user.name); // John
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The Reflect API and Proxies are often used together, as Reflect methods can be used within Proxy traps to perform the default behavior of intercepted operations, while allowing customization or additional logic.<br />
+  <div><strong>Interview Response:</strong> The Reflect API and Proxies are often used together, as Reflect methods can be used within Proxy traps to perform the default behavior of intercepted operations, while allowing customization or additional logic.
+  </div><br/>
+  <div><strong>Technical Response:</strong> The Reflect API in JavaScript is closely related to Proxies because it provides a set of methods that correspond to the JavaScript language's internal methods. Each method in the Reflect API corresponds to a specific kind of operation that can be performed on a JavaScript object, which is exactly what Proxies intercept and customize. In simple terms, Proxies let you intercept and customize operations on an object, and the Reflect API provides a way to carry out those operations with their default behavior.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let target = {
+  message: 'hello, world'
+};
+
+let handler = {
+  get: function(target, prop, receiver) {
+    console.log(`GET was called for property ${prop}`);
+    return Reflect.get(...arguments); // Use Reflect API to perform the default operation
+  }
+};
+
+let proxy = new Proxy(target, handler);
+
+console.log(proxy.message); // logs: 'GET was called for property message' then logs: 'hello, world'
+```
+
+In this example, the `handler` object defines a `get` method that intercepts all get operations on the `proxy` object. It logs a message and then uses `Reflect.get()` to perform the default get operation.
+
+Because every method in the Reflect API corresponds to a Proxy handler method, you can use the Reflect API to easily fallback to the default behavior within a Proxy handler.
+
+Furthermore, using Reflect methods in Proxy handlers helps to maintain the invariants of the JavaScript language, preventing possible TypeErrors that could be thrown if these invariants are violated.
+
   </div>
   </div>
 </details>
@@ -544,7 +759,31 @@ The solution has drawbacks. It exposes the original object to the method, potent
   <div><strong>Interview Response:</strong> No, proxies cannot intercept strict equality tests, as these tests directly compare the object references. Proxies don't modify the reference, but wrap the target object for intercepted operations.
 </div><br/>
   <div><strong>Interview Response:</strong> No, proxies may intercept a wide range of operations, including new (with construct), in (with has), delete (with deleteProperty), and so on. A strict equality test for objects, on the other hand, cannot be intercepted. An item has no other value and is precisely equal to itself. As a result, every operation or built-in class that compares objects for equality distinguishes between the object and the proxy. There is no obvious substitute here.
-</div>
+</div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let target = { message: 'hello, world' };
+
+let handler = {
+  get: function(target, prop, receiver) {
+    console.log(`GET was called for property ${prop}`);
+    return Reflect.get(...arguments);
+  }
+};
+
+let proxy = new Proxy(target, handler);
+
+console.log(proxy === target); // logs: false
+```
+
+In this example, the Proxy (`proxy`) is not strictly equal to the target object (`target`), and no message is logged to the console because the strict equality operation doesn't trigger the `get` trap.
+
+Proxies can intercept a range of operations, including property lookup, assignment, function invocation, and more. However, some operations like strict equality check and identity (`===`) comparison can't be intercepted. It's worth noting that two distinct Proxy instances for the same target are also not strictly equal to each other, because they are different objects.
+
+  </div>
   </div>
 </details>
 
@@ -632,7 +871,35 @@ alert(proxy.data); // Error (revoked)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, you can use a Proxy to create a read-only object by intercepting the set trap and preventing any changes to the wrapped object's properties.<br />
+  <div><strong>Interview Response:</strong> Yes, you can use a Proxy to create a read-only object by intercepting the set trap and preventing any changes to the wrapped object's properties.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+const target = { message: 'Hello, world' };
+
+const handler = {
+  set: function(target, prop, value) {
+    console.log(`Set operation is not allowed on property "${prop}"`);
+    return true;
+  }
+};
+
+const proxy = new Proxy(target, handler);
+
+console.log(proxy.message); // Outputs: 'Hello, world'
+proxy.message = 'Goodbye, world'; // Outputs: 'Set operation is not allowed on property "message"'
+console.log(proxy.message); // Still outputs: 'Hello, world'
+```
+
+In this example, the `set` trap in the handler prevents changes to the target object. When you try to set the `message` property on the `proxy` object, it just logs a message to the console and does not change the property.
+
+The `set` handler returns `true` to indicate that the assignment was "successful", even though it didn't actually change anything. If it returned `false` or threw an error, that would indicate that the assignment failed, which could cause issues if the Proxy is used in strict mode.
+
+Remember, this will make all properties of the target object read-only through the proxy, even if they are writable on the target object itself. You can still change the target object directly, because the Proxy doesn't affect the actual target object, it only controls access to it.
+
   </div>
   </div>
 </details>

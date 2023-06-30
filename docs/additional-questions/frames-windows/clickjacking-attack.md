@@ -115,7 +115,7 @@ It's important to note that actual clickjacking attacks can be more sophisticate
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Clickjacking can lead to unintended actions such as unauthorized transactions, privacy violation, forced downloads of malicious software, and theft of sensitive information like passwords or credit card details.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -126,8 +126,29 @@ It's important to note that actual clickjacking attacks can be more sophisticate
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Frame-busting code is JavaScript used to prevent a webpage from being displayed inside a frame or iframe, defending against clickjacking by disrupting the framing process.
+  <div><strong>Interview Response:</strong> Frame-busting code is JavaScript code used by websites to prevent their pages from being displayed within a frame (or iframe) of another site, thus protecting against clickjacking and other security threats.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's a basic example of a frame-busting script. This script checks if the current window is the top window. If it's not (meaning it's within a frame), it replaces the content of the top window with its own.
+
+```javascript
+if (top != self) {
+  top.location = self.location;
+}
+```
+
+However, this simple frame-busting method can be circumvented by modern "frame-busting busting" techniques. A more secure solution, whenever possible, is to use the `X-Frame-Options` HTTP response header:
+
+```
+X-Frame-Options: SAMEORIGIN
+```
+
+This option disallows the browser from rendering a page in a frame, iframe, or object unless the site including it is the same as the page itself. Other options include `DENY` (disallows all framing) and `ALLOW-FROM uri` (allows framing by a specific URI).
+
+  </div>
   </div>
 </details>
 
@@ -140,6 +161,22 @@ It's important to note that actual clickjacking attacks can be more sophisticate
   <div>
   <div><strong>Interview Response:</strong> The X-Frame-Options is an HTTP response header used to indicate whether a browser should be allowed to render a page within a frame or iframe.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+In Node.js with Express.js:
+
+```javascript
+app.use(function(req, res, next) {
+  res.setHeader('X-Frame-Options', 'SAMEORIGIN');
+  next();
+});
+```
+
+In this example, the `X-Frame-Options` header is set to `SAMEORIGIN`, which means the page can only be displayed in a frame on the same origin as the page itself. Other possible values are `DENY` (no framing allowed) and `ALLOW-FROM uri` (allows framing by a specific URI).
+
+  </div>
   </div>
 </details>
 
@@ -251,8 +288,24 @@ Please note that these code examples provide a basic understanding of the approa
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> UI redressing is a malicious technique where an attacker manipulates the appearance of a website to deceive users into performing unintended actions, often used in clickjacking attacks.
+  <div><strong>Interview Response:</strong> UI redressing, also known as clickjacking, is a malicious technique where an attacker manipulates the appearance of a website to deceive users into performing unintended actions, often used in clickjacking attacks.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```html
+<div style="position:relative; width:200px; height:200px;">
+  <iframe src="http://legitimate.com/button" 
+          style="opacity:0; position:absolute; width:100%; height:100%;">
+  </iframe>
+  <button style="position:relative;">Click me for a free cookie!</button>
+</div>
+```
+
+Here, a user thinks they're clicking a button for a free cookie, but they're actually interacting with an invisible iframe over the button. The real action might be something harmful, like deleting an account on the "legitimate.com" page.
+
+  </div>
   </div>
 </details>
 
@@ -296,20 +349,24 @@ It applies the strictest restrictions: the framed content cannot run scripts, su
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The X-Content-Type-Options header doesn't directly prevent Clickjacking. Its main function is to stop MIME-type sniffing, which can help prevent certain types of attacks, like drive-by downloads.
+  <div><strong>Interview Response:</strong> Actually, the 'X-Content-Type-Options' header does not help prevent clickjacking. It helps prevent MIME type sniffing, a completely different security issue. The correct header for clickjacking is 'X-Frame-Options'.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+In Node.js with Express.js:
+
+```javascript
+app.use(function(req, res, next) {
+  res.setHeader('X-Content-Type-Options', 'nosniff');
+  next();
+});
+```
+
+This 'nosniff' option helps to prevent the browser from trying to MIME-sniff the content type and forces it to use the type given in the 'Content-Type' header.
+
   </div>
-</details>
-
----
-
-### What is the impact of using the 'allow-same-origin' directive in the 'X-Frame-Options' header?
-
-<details>
-  <summary><strong>View Answer:</strong></summary>
-  <div>
-  <div><strong>Interview Response:</strong> The `X-Frame-Options` header doesn't support the 'allow-same-origin' directive. It only supports `DENY` and `SAMEORIGIN`, which prevent all framing and allow framing by the same origin respectively.
-  </div><br />
   </div>
 </details>
 
@@ -320,8 +377,24 @@ It applies the strictest restrictions: the framed content cannot run scripts, su
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The 'frame-ancestors' directive in the CSP specifies domains allowed to frame a site. This restricts potential click-jackers from framing the page, thus mitigating clickjacking threats.
+  <div><strong>Interview Response:</strong> The `frame-ancestors` directive in Content Security Policy (CSP) specifies valid parents that may embed a page using `frame`, `iframe`, `object`, or `embed`. It helps to mitigate clickjacking by controlling which origins can embed the resource.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+ Here's how you might set it:
+
+```javascript
+app.use(function(req, res, next) {
+  res.setHeader("Content-Security-Policy", "frame-ancestors 'self' https://trusted.com");
+  next();
+});
+```
+
+In this Node.js/Express example, the server sets the `frame-ancestors` directive to only allow the page to be framed by the same origin ('self') or '<https://trusted.com>'. This can prevent the page from being framed by potential clickjacking sites.
+
+  </div>
   </div>
 </details>
 
@@ -333,7 +406,7 @@ It applies the strictest restrictions: the framed content cannot run scripts, su
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Reverse clickjacking is when an attacker uses a legitimate website's functionality against itself by tricking users into interacting with it in unintended ways, usually through a disguised overlay.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -345,7 +418,7 @@ It applies the strictest restrictions: the framed content cannot run scripts, su
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The `window.blur()` method can't effectively counter clickjacking. Its function is to remove focus from the current window, but it doesn't prevent a site from being framed or users from interacting with hidden elements.
-  </div><br />
+  </div>WW
   </div>
 </details>
 
@@ -370,6 +443,18 @@ It applies the strictest restrictions: the framed content cannot run scripts, su
   <div>
   <div><strong>Interview Response:</strong> Yes, clickjacking can be exploited without JavaScript. It can be achieved purely through HTML and CSS, by using frames and CSS properties to overlay invisible interactive elements over visible content.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```html
+<div style="position:relative;">
+  <iframe src="http://target-site.com" style="opacity:0; position:absolute; width:100px; height:100px;"></iframe>
+  <button style="position:relative;">A harmless button</button>
+</div>
+```
+
+  </div>
   </div>
 </details>
 
@@ -381,7 +466,7 @@ It applies the strictest restrictions: the framed content cannot run scripts, su
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The `X-Frame-Options` header cannot be set using JavaScript. It's an HTTP response header that must be set on the server-side by the server or application handling the response.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -393,7 +478,7 @@ It applies the strictest restrictions: the framed content cannot run scripts, su
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Modern browsers have implemented various security measures like the X-Frame-Options header, Content Security Policy (CSP), and frame-busting scripts, making them more effective at preventing Clickjacking attacks.
-  </div><br />
+  </div>
   </div>
 </details>
 

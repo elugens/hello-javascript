@@ -48,7 +48,7 @@ import StructuredData from './schemadata/DispatchingSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> A custom event is a user-defined event that can be created and dispatched to perform actions not covered by built-in events.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -61,6 +61,37 @@ import StructuredData from './schemadata/DispatchingSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> The CustomEvent() constructor is used to create and initialize custom events in JavaScript. You can then dispatch these events using the dispatchEvent() method.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+You can create custom events in JavaScript using the `CustomEvent` constructor. This allows you to define your own events that can carry custom data.
+
+```javascript
+// Create a custom event with the name 'myEvent'
+let myEvent = new CustomEvent('myEvent', {
+  detail: {
+    message: 'This is my custom event!'
+  }
+});
+
+// Dispatch the event
+document.dispatchEvent(myEvent);
+```
+
+In this example, 'myEvent' is a custom event that carries data in its `detail` property. The data can be anything you want - in this case, an object with a `message` property.
+
+You can listen for the custom event just like you would with standard events:
+
+```javascript
+document.addEventListener('myEvent', function(event) {
+  console.log(event.detail.message); // Logs 'This is my custom event!'
+});
+```
+
+When the 'myEvent' event is dispatched, the event listener logs the message stored in the event's `detail` property.
+
+  </div>
   </div>
 </details>
 
@@ -152,8 +183,37 @@ This code creates and dispatches a custom event named 'myEvent'.
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, custom events in JavaScript can carry additional information in the `detail` property, which can be accessed in the event listener when the event is triggered.
+  <div><strong>Interview Response:</strong> Yes, custom events in JavaScript can carry additional information in the `detail` property when they're created with the `CustomEvent` constructor. This `detail` property can hold any kind of data.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+// Create a custom event 'userLogin' with additional data
+let userLoginEvent = new CustomEvent('userLogin', {
+  detail: {
+    username: 'JohnDoe',
+    timestamp: new Date()
+  }
+});
+
+// Dispatch the event
+document.dispatchEvent(userLoginEvent);
+```
+
+And then, you can listen for this event and access the data like this:
+
+```javascript
+// Listen for 'userLogin' event
+document.addEventListener('userLogin', function(event) {
+  console.log(`User ${event.detail.username} logged in at ${event.detail.timestamp}`);
+});
+```
+
+In this example, when the 'userLogin' event is dispatched, the username and timestamp stored in the event's `detail` property are logged to the console.
+
+  </div>
   </div>
 </details>
 
@@ -186,7 +246,7 @@ if (e.isTrusted) {
 
 ---
 
-### What is the distinction between creating a new Event and creating a new CustomEvent?
+### What is the difference between creating a new Event and creating a new CustomEvent?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -315,8 +375,8 @@ if (e.isTrusted) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Custom events allow for more flexible communication between objects or components, especially for complex applications.
-  </div><br />
+  <div><strong>Interview Response:</strong> Custom events are used to decouple components in a JavaScript application, allowing them to communicate and synchronize actions without directly depending on each other, thus enhancing code maintainability and readability.
+  </div>
   </div>
 </details>
 
@@ -327,8 +387,36 @@ if (e.isTrusted) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, custom events in JavaScript can bubble up through the DOM. Bubbling can be controlled with the `bubbles` property when the event is created using `CustomEvent()`.
+  <div><strong>Interview Response:</strong> Yes, custom events in JavaScript can bubble up through the DOM if the `bubbles` property is set to `true` in the options object when creating the event.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong> Showing a custom event bubbling up through the DOM.<br /><br />
+
+  <div></div>
+
+```javascript
+// Create a custom event 'myEvent' with bubbles set to true
+let myEvent = new CustomEvent('myEvent', {
+  bubbles: true,
+  detail: { message: 'This is my custom event!' }
+});
+
+// Add an event listener to the parent element
+document.querySelector('#parent').addEventListener('myEvent', function(event) {
+  console.log('Parent received:', event.detail.message);
+});
+
+// Dispatch the event on the child element
+document.querySelector('#child').dispatchEvent(myEvent);
+
+// Assuming HTML structure like:
+// <div id="parent">
+//   <div id="child"></div>
+// </div>
+```
+
+In this example, the 'myEvent' event is dispatched on the child element. Because the `bubbles` property is set to `true`, the event bubbles up to the parent element. The parent's event listener then logs the message stored in the event's `detail` property.
+
+  </div>
   </div>
 </details>
 
@@ -340,7 +428,7 @@ if (e.isTrusted) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, custom events are part of the standard DOM API and are supported across all modern browsers, including Chrome, Firefox, Safari, and Edge.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -426,6 +514,32 @@ In this case, if 'myEvent' is dispatched on a child element, it will not bubble 
   <div>
   <div><strong>Interview Response:</strong> Yes, custom events can be dispatched asynchronously using JavaScript's asynchronous functions, like `setTimeout`, `setInterval`, or inside a Promise or an async function.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong> dispatching a custom event asynchronously with `setTimeout`.<br /><br />
+
+  <div></div>
+
+```javascript
+// Create a custom event 'myEvent' with additional data
+let myEvent = new CustomEvent('myEvent', {
+  detail: {
+    message: 'This is my custom event!'
+  }
+});
+
+// Listen for 'myEvent' event
+document.addEventListener('myEvent', function(event) {
+  console.log(event.detail.message);
+});
+
+// Dispatch the event asynchronously
+setTimeout(function() {
+  document.dispatchEvent(myEvent);
+}, 2000); // Dispatch event after 2 seconds
+```
+
+In this example, the 'myEvent' custom event is dispatched asynchronously 2 seconds after the script runs. When the event is dispatched, the message 'This is my custom event!' is logged to the console.
+
+  </div>
   </div>
 </details>
 
@@ -438,6 +552,30 @@ In this case, if 'myEvent' is dispatched on a child element, it will not bubble 
   <div>
   <div><strong>Interview Response:</strong> Yes, you can dispatch a custom event on the `window` object using the `dispatchEvent()` method, just like with any other EventTarget in JavaScript.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong> custom event being dispatched on the `window` object<br /><br />
+
+  <div></div>
+
+```javascript
+// Create a custom event 'myEvent' with additional data
+let myEvent = new CustomEvent('myEvent', {
+  detail: {
+    message: 'This is my custom event!'
+  }
+});
+
+// Listen for 'myEvent' event on window
+window.addEventListener('myEvent', function(event) {
+  console.log(event.detail.message);
+});
+
+// Dispatch the event on window
+window.dispatchEvent(myEvent);
+```
+
+In this example, the 'myEvent' custom event is dispatched on the `window` object. When the event is dispatched, the message 'This is my custom event!' is logged to the console.
+
+  </div>
   </div>
 </details>
 
@@ -449,7 +587,7 @@ In this case, if 'myEvent' is dispatched on a child element, it will not bubble 
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> No, you cannot modify the `detail` property of a custom event after it has been dispatched. The `detail` property is read-only after the event is created.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -465,8 +603,6 @@ In this case, if 'myEvent' is dispatched on a child element, it will not bubble 
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
-
-Here's an example of how you could dispatch a custom event when a form is submitted:
 
 ```javascript
 let form = document.querySelector('form');
@@ -501,7 +637,7 @@ In this example, a 'formSubmitted' custom event is dispatched when the form is s
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, a custom event can be dispatched in response to a user interaction, like a click. In the event handler for the click, call dispatchEvent() with the custom event.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -514,6 +650,39 @@ In this example, a 'formSubmitted' custom event is dispatched when the form is s
   <div>
   <div><strong>Interview Response:</strong> It's good practice to remove listeners when they're no longer needed to prevent memory leaks.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+// Create a custom event 'myEvent' with additional data
+let myEvent = new CustomEvent('myEvent', {
+  detail: {
+    message: 'This is my custom event!'
+  }
+});
+
+// Define the event listener function
+function customEventHandler(event) {
+  console.log(event.detail.message);
+}
+
+// Add the event listener
+window.addEventListener('myEvent', customEventHandler);
+
+// Dispatch the event on window
+window.dispatchEvent(myEvent);
+
+// Remove the event listener
+window.removeEventListener('myEvent', customEventHandler);
+
+// Try to dispatch the event again
+window.dispatchEvent(myEvent); // Nothing will be logged to the console this time because the event listener was removed.
+```
+
+In this example, we first create the event, then define the event listener function, and add the listener. We dispatch the event, and the message 'This is my custom event!' gets logged to the console. Then we remove the event listener, and when we dispatch the event again, nothing is logged to the console because the event listener has been removed.
+
+  </div>
   </div>
 </details>
 

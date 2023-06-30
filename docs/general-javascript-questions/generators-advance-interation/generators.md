@@ -422,7 +422,28 @@ generator.next(4); // --> pass the result into the generator
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A generator object is an iterable created using a generator function. It generates values on the fly, allowing efficient memory usage as it produces values one at a time rather than generating them all upfront.<br />
+  <div><strong>Interview Response:</strong> A generator object in JavaScript is a special type of function that can pause its execution and resume later, allowing it to produce a sequence of results over time, instead of computing them at once.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+function* idGenerator() {
+    let id = 1;
+    while (true) {
+        yield id++;
+    }
+}
+
+const gen = idGenerator();
+
+console.log(gen.next().value); // 1
+console.log(gen.next().value); // 2
+console.log(gen.next().value); // 3
+console.log(typeof idGenerator); // function
+```
+
   </div>
   </div>
 </details>
@@ -434,7 +455,7 @@ generator.next(4); // --> pass the result into the generator
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The "next" method is used to resume the execution of a generator function, returning the next yielded value wrapped in an object with "value" and "done" properties.<br />
+  <div><strong>Interview Response:</strong> The "next" method is used to resume the execution of a generator function, returning the next yielded value wrapped in an object with "value" and "done" properties.
   </div>
   </div>
 </details>
@@ -446,7 +467,25 @@ generator.next(4); // --> pass the result into the generator
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, generators are iterable and can be used with "for...of" loops to iterate through the yielded values.<br />
+  <div><strong>Interview Response:</strong> Yes, generators are iterable and can be used with "for...of" loops to iterate through the yielded values.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+function* idGenerator() {
+    let id = 1;
+    while (id <= 5) {
+        yield id++;
+    }
+}
+
+for (let value of idGenerator()) {
+    console.log(value); // Logs 1, 2, 3, 4, 5
+}
+```
+
   </div>
   </div>
 </details>
@@ -458,7 +497,32 @@ generator.next(4); // --> pass the result into the generator
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Generator delegation is the process of using "yield*" to delegate to another generator, allowing you to combine and reuse generator functions more easily.<br />
+  <div><strong>Interview Response:</strong> Generator delegation is the process of using "yield*" to delegate to another generator, allowing you to combine and reuse generator functions more easily.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+function* gen1() {
+    yield 1;
+    yield 2;
+}
+
+function* gen2() {
+    yield* gen1();
+    yield 3;
+}
+
+let generator = gen2();
+
+console.log(generator.next().value); // 1
+console.log(generator.next().value); // 2
+console.log(generator.next().value); // 3
+```
+
+In this example, `gen2` delegates to `gen1` using `yield*`. So when we start iterating over `gen2`, the first two values come from `gen1`, and the third value comes from `gen2` itself.
+
   </div>
   </div>
 </details>
@@ -470,7 +534,28 @@ generator.next(4); // --> pass the result into the generator
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, you can use "return" in a generator function to signal the end of the generator and return a final value, making the "done" property true.<br />
+  <div><strong>Interview Response:</strong> Yes, you can use "return" in a generator function in JavaScript. It will provide the final value for the generator and end the generator's execution, making the "done" property of the iterator object true.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+function* numberGenerator() {
+    yield 1;
+    yield 2;
+    return 3;
+}
+
+const gen = numberGenerator();
+
+console.log(gen.next()); // { value: 1, done: false }
+console.log(gen.next()); // { value: 2, done: false }
+console.log(gen.next()); // { value: 3, done: true }
+```
+
+In this example, after yielding 1 and 2, the generator function returns 3 and ends its execution.
+
   </div>
   </div>
 </details>
@@ -482,7 +567,53 @@ generator.next(4); // --> pass the result into the generator
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> You can use "try-catch" blocks within the generator function, or the "throw" method on the generator object to catch errors outside the generator.<br />
+  <div><strong>Interview Response:</strong> You can catch errors in a generator function by using a try/catch block inside the function. Alternatively, call the generator's throw() method to pass an error directly into the generator.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+**1. Using a try/catch block inside the generator function:**
+
+```javascript
+function* generatorFunction() {
+    try {
+        yield "Start";
+        throw new Error("Error occurred");
+    } catch (error) {
+        console.log(error.message); // Logs "Error occurred"
+    }
+    yield "End";
+}
+
+const gen = generatorFunction();
+
+console.log(gen.next()); // { value: "Start", done: false }
+console.log(gen.next()); // Logs "Error occurred", then { value: "End", done: false }
+```
+
+**2. Using the generator's `throw()` method:**
+
+```javascript
+function* generatorFunction() {
+    try {
+        yield "Start";
+    } catch (error) {
+        console.log(error.message); // Logs "Error thrown into generator"
+        yield "Caught";
+    }
+    yield "End";
+}
+
+const gen = generatorFunction();
+
+console.log(gen.next()); // { value: "Start", done: false }
+console.log(gen.throw(new Error("Error thrown into generator"))); // Logs "Error thrown into generator", then { value: "Caught", done: false }
+console.log(gen.next()); // { value: "End", done: false }
+```
+
+In the first example, the error is thrown and caught within the generator. In the second, the error is thrown from outside the generator and caught within it.
+
   </div>
   </div>
 </details>
@@ -494,7 +625,31 @@ generator.next(4); // --> pass the result into the generator
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, generators can be used with async/await in combination with Promises, allowing you to handle asynchronous code in a more readable manner.<br />
+  <div><strong>Interview Response:</strong> Yes, generators can be combined with Promises and async/await to manage asynchronous operations. This can be achieved using libraries like co or techniques like async iterators (for-await-of).
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's an example using async iterators (for-await-of) to handle asynchronous operations in a generator.
+
+```javascript
+async function* asyncGenerator() {
+    const promises = [Promise.resolve(1), Promise.resolve(2), Promise.resolve(3)];
+    for (const promise of promises) {
+        yield promise;
+    }
+}
+
+(async function() {
+    for await (const value of asyncGenerator()) {
+        console.log(value); // Logs 1, 2, 3
+    }
+})();
+```
+
+In this example, `asyncGenerator` is an asynchronous generator that yields promises. The `for await...of` loop then waits for each of these promises to resolve before logging the resolved value. This allows you to handle asynchronous operations within a generator in a linear, easy-to-understand way.
+
   </div>
   </div>
 </details>
@@ -506,7 +661,32 @@ generator.next(4); // --> pass the result into the generator
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, you can create an infinite sequence by using a loop that continuously yields values within a generator function.<br />
+  <div><strong>Interview Response:</strong> Yes, you can create an infinite sequence by using a loop that continuously yields values within a generator function.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+  
+Here's a simple example of an infinite sequence...
+
+```javascript
+function* infiniteSequence() {
+    let i = 0;
+    while (true) {
+        yield i++;
+    }
+}
+
+const gen = infiniteSequence();
+
+console.log(gen.next().value); // 0
+console.log(gen.next().value); // 1
+console.log(gen.next().value); // 2
+// This can go on indefinitely
+```
+
+In this example, the `infiniteSequence` generator will yield an infinite sequence of numbers. Because generators only calculate their yielded value when `.next()` is called, this won't cause any performance issues as long as you don't try to iterate over the entire sequence at once (which would be impossible, as it's infinite).
+
   </div>
   </div>
 </details>
@@ -518,7 +698,37 @@ generator.next(4); // --> pass the result into the generator
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Generators allow for lazy evaluation by only computing the next value in a sequence when it's requested, rather than computing all values upfront.<br />
+  <div><strong>Interview Response:</strong> Generators allow for lazy evaluation by only computing the next value in a sequence when it's requested, rather than computing all values upfront.
+  </div><br/>
+  <div><strong>Technical Response:</strong> Generators in JavaScript are perfect for implementing lazy evaluation because they only compute their yielded values on demand. This means that you can have a generator that represents a large (or even infinite) sequence of values, but it only takes up a small amount of memory because it only computes values as they are needed.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's an example of using a generator for lazy evaluation...
+
+```javascript
+function* fibonacci() {
+    let [prev, curr] = [0, 1];
+    while (true) {
+        yield curr;
+        [prev, curr] = [curr, prev + curr];
+    }
+}
+
+const gen = fibonacci();
+
+console.log(gen.next().value); // 1
+console.log(gen.next().value); // 1
+console.log(gen.next().value); // 2
+console.log(gen.next().value); // 3
+console.log(gen.next().value); // 5
+// And so on...
+```
+
+In this example, the `fibonacci` generator represents the infinite sequence of Fibonacci numbers. But even though this sequence is infinite, the generator only uses a constant amount of memory because it only computes the next Fibonacci number when `.next()` is called. This is the essence of lazy evaluation: only computing values as they are needed.
+
   </div>
   </div>
 </details>
@@ -530,7 +740,32 @@ generator.next(4); // --> pass the result into the generator
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> "yield" returns a single value from a generator, while "yield*" delegates to another generator or iterable, yielding all its values in sequence.<br />
+  <div><strong>Interview Response:</strong> "yield" returns a single value from a generator, while "yield*" delegates to another generator or iterable, yielding all its values in sequence.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+function* generatorA() {
+    yield 1;
+    yield 2;
+}
+
+function* generatorB() {
+    yield* generatorA();
+    yield 3;
+}
+
+const gen = generatorB();
+
+console.log(gen.next().value); // 1
+console.log(gen.next().value); // 2
+console.log(gen.next().value); // 3
+```
+
+In the above code, `yield*` in `generatorB` is delegating to `generatorA`.
+
   </div>
   </div>
 </details>
@@ -542,7 +777,29 @@ generator.next(4); // --> pass the result into the generator
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Generators can be used to implement coroutines by pausing and resuming execution between multiple generator functions, allowing for more complex control flow.<br />
+  <div><strong>Interview Response:</strong> Generators can be used to implement coroutines by pausing and resuming execution between multiple generator functions, allowing for more complex control flow.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+function* coroutine() {
+    console.log('Coroutine started');
+    yield 'Yield 1';
+    console.log('Coroutine resumed');
+    yield 'Yield 2';
+    console.log('Coroutine ended');
+}
+
+const gen = coroutine();
+
+console.log(gen.next().value); // Logs "Coroutine started", then "Yield 1"
+console.log(gen.next().value); // Logs "Coroutine resumed", then "Yield 2"
+```
+
+In this example, the `coroutine` function is a generator that yields two values. The `.next()` method is used to transfer control back and forth between the "main" routine (the sequence of console.log statements outside the generator) and the coroutine. This allows the coroutine and the main routine to cooperatively control the flow of the program.
+
   </div>
   </div>
 </details>
@@ -554,7 +811,7 @@ generator.next(4); // --> pass the result into the generator
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, you can use "this" within a generator function, but it's discouraged since generator functions are intended to be used with "new" or "call/apply" methods.<br />
+  <div><strong>Interview Response:</strong> Yes, you can use "this" within a generator function, but it's discouraged since generator functions are intended to be used with "new" or "call/apply" methods.
   </div>
   </div>
 </details>
@@ -566,7 +823,33 @@ generator.next(4); // --> pass the result into the generator
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Generators can be used for asynchronous control flow, lazy evaluation, infinite sequences, coroutines, and code that requires complex state management.<br />
+  <div><strong>Interview Response:</strong> Generators can be used for asynchronous control flow, lazy evaluation, infinite sequences, coroutines, and code that requires complex state management.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Pipelines Example
+
+```js
+function* multiplyByTwo(iterable) {
+    for (const num of iterable) {
+        yield num * 2;
+    }
+}
+
+function* addOne(iterable) {
+    for (const num of iterable) {
+        yield num + 1;
+    }
+}
+
+const numbers = [1, 2, 3, 4];
+const pipeline = addOne(multiplyByTwo(numbers));
+
+console.log(Array.from(pipeline)); // [3, 5, 7, 9]
+```
+
   </div>
   </div>
 </details>
@@ -578,7 +861,36 @@ generator.next(4); // --> pass the result into the generator
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Generators cannot be arrow functions, as they don't support "function*", but you can use generator functions as methods within ES6 classes.<br />
+  <div><strong>Interview Response:</strong> Generators cannot be arrow functions, as they don't support "function*", but you can use generator functions as methods within ES6 classes.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+class MyClass {
+    constructor(data) {
+        this.data = data;
+    }
+
+    *dataGenerator() {
+        for (let item of this.data) {
+            yield item;
+        }
+    }
+}
+
+const myInstance = new MyClass([1, 2, 3, 4, 5]);
+const gen = myInstance.dataGenerator();
+
+console.log(gen.next().value); // 1
+console.log(gen.next().value); // 2
+console.log(gen.next().value); // 3
+// And so on...
+```
+
+In this example, `dataGenerator` is a generator method inside the `MyClass` class. It yields the items in the `data` array one by one.
+
   </div>
   </div>
 </details>

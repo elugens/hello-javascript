@@ -85,7 +85,7 @@ import StructuredData from './schemadata/TemplateElementSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The main use of the Template Element is to define reusable content that can be cloned and inserted into the DOM programmatically. It provides a way to create inert templates that can be activated later to generate dynamic content.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -98,6 +98,28 @@ import StructuredData from './schemadata/TemplateElementSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> The Template Element is defined using the &#60;template&#62; tag in HTML. The content within the &#60;template&#62; tag serves as a template that can be cloned and used later to generate dynamic content.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+<template id="myTemplate">
+  <h2>Template Heading</h2>
+  <p>This is a paragraph inside a template.</p>
+</template>
+
+<button onclick="loadTemplate()">Load Template</button>
+
+<script>
+function loadTemplate() {
+  var temp = document.getElementById('myTemplate');
+  var clon = temp.content.cloneNode(true);
+  document.body.appendChild(clon);
+}
+</script>
+```
+
+  </div>
   </div>
 </details>
 
@@ -109,7 +131,7 @@ import StructuredData from './schemadata/TemplateElementSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> No, the content inside a Template Element is not rendered upon initial page load. It serves as a inert template that can be cloned and activated later to generate dynamic content programmatically.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -122,6 +144,37 @@ import StructuredData from './schemadata/TemplateElementSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> Yes, JavaScript can manipulate the content inside a Template Element. The content can be accessed, modified, and cloned programmatically using JavaScript methods like `.content`, `.querySelector()`, and `.cloneNode()`.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```html
+<template id="myTemplate">
+  <h2></h2>
+  <p></p>
+</template>
+
+<button onclick="loadTemplate()">Load Template</button>
+
+<script>
+function loadTemplate() {
+  // Get a reference to the template
+  var temp = document.getElementById('myTemplate');
+  
+  // Clone the template content
+  var clon = temp.content.cloneNode(true);
+
+  // Manipulate the content
+  clon.querySelector('h2').innerText = 'This is the updated heading';
+  clon.querySelector('p').innerText = 'This is the updated paragraph';
+  
+  // Append to the body
+  document.body.appendChild(clon);
+}
+</script>
+```
+
+  </div>
   </div>
 </details>
 
@@ -134,6 +187,36 @@ import StructuredData from './schemadata/TemplateElementSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> The 'content' property is a DocumentFragment, which is a lightweight copy of the template's child nodes.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```html
+<template id="myTemplate">
+  <h2>Template Heading</h2>
+  <p>This is a paragraph inside a template.</p>
+</template>
+
+<button onclick="loadTemplate()">Load Template</button>
+
+<script>
+function loadTemplate() {
+  // Get a reference to the template
+  var temp = document.getElementById('myTemplate');
+  
+  // Access the content property
+  var tempContent = temp.content;
+
+  // Clone the template content
+  var clon = tempContent.cloneNode(true);
+  
+  // Append to the body
+  document.body.appendChild(clon);
+}
+</script>
+```
+
+  </div>
   </div>
 </details>
 
@@ -146,6 +229,43 @@ import StructuredData from './schemadata/TemplateElementSchemaData.js';
   <div>
   <div><strong>Interview Response:</strong> No, styles and scripts inside a Template Element are inert and do not affect the main page unless explicitly activated by cloning and inserting the template content into the DOM.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```html
+<template id="myTemplate">
+  <style>
+    h2 {
+      color: blue;
+    }
+  </style>
+  <h2>Template Heading</h2>
+  <p>This is a paragraph inside a template.</p>
+</template>
+
+<h2>Main Page Heading</h2>
+<p>This is a paragraph on the main page.</p>
+
+<button onclick="loadTemplate()">Load Template</button>
+
+<script>
+function loadTemplate() {
+  // Get a reference to the template
+  var temp = document.getElementById('myTemplate');
+  
+  // Clone the template content
+  var clon = temp.content.cloneNode(true);
+  
+  // Append to the body
+  document.body.appendChild(clon);
+}
+</script>
+```
+
+In this example, there is a style rule inside the template that sets &#60;h2&#62; elements to be blue. However, this rule does not affect the &#60;h2&#62; on the main page, only the &#60;h2&#62; inside the template.
+
+  </div>
   </div>
 </details>
 
@@ -205,6 +325,41 @@ In this example, the content of the `<template>` element is cloned using `.conte
   <div>
   <div><strong>Interview Response:</strong> In the context of a Template Element, the `cloneNode` method creates a copy of the template's content, including its child nodes and attributes. It allows you to clone the template content for dynamic insertion into the DOM.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+The `cloneNode()` method creates a copy of the node on which it's called. When used in the context of a Template Element, it creates a clone of the template's content, which can then be inserted into the document.
+
+Here's an example:
+
+```html
+<template id="myTemplate">
+  <h2>Template Heading</h2>
+  <p>This is a paragraph inside a template.</p>
+</template>
+
+<button onclick="loadTemplate()">Load Template</button>
+
+<script>
+function loadTemplate() {
+  // Get a reference to the template
+  var temp = document.getElementById('myTemplate');
+  
+  // Use cloneNode to clone the template content
+  var clon = temp.content.cloneNode(true);
+  
+  // Append to the body
+  document.body.appendChild(clon);
+}
+</script>
+```
+
+In this example, `cloneNode(true)` is used to create a deep copy of the content inside the template element. The `true` argument means it's a deep clone, which includes all the descendant nodes of the node being cloned (in this case, the `<h2>` and `<p>` elements).
+
+The cloned content is then appended to the body of the document when the "Load Template" button is clicked, adding the template's content to the page. This allows the template's content to be reused multiple times without altering the original template.
+
+  </div>
   </div>
 </details>
 
@@ -216,7 +371,7 @@ In this example, the content of the `<template>` element is cloned using `.conte
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> No, content within a Template Element does not directly affect page accessibility, including ARIA attributes or tab order. These considerations should be applied when the template content is cloned and inserted into the DOM.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -228,7 +383,7 @@ In this example, the content of the `<template>` element is cloned using `.conte
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The Template Element is supported in all modern browsers, including Chrome, Firefox, Safari, and Edge. However, some older versions of Internet Explorer do not fully support it.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -284,7 +439,7 @@ When this code is rendered, it will create a layout with two nested div elements
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Template Elements are more powerful and flexible because they create actual DOM trees, not strings of HTML.
-  </div><br />
+  </div>
   </div>
 </details>
 
