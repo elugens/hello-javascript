@@ -55,8 +55,7 @@ import StructuredData from './schemadata/CommandSchemaData.js';
     </div>
     <br/>
     <div>
-      <strong>Technical Response:</strong> Command Pattern is a behavioral JS design pattern that aims to encapsulate actions or operations as objects. This pattern is helpful in scenarios where we want to decouple or split the objects executing the commands from the objects issuing the orders. You may centralize the processing of these actions/operations by using command objects.
-<br/>
+      <strong>Technical Response:</strong> The Command design pattern is a behavioral design pattern that turns a request into a stand-alone object that contains all information about the request. This transformation lets you pass requests as a method arguments, delay or queue a request's execution, and support undoable operations.
     </div>
     <div>
 </div><br />
@@ -73,162 +72,54 @@ import StructuredData from './schemadata/CommandSchemaData.js';
 
 <br/>
 
-```js
-let calculator = {
-  add: function (x, y) {
-    return x + y;
-  },
-  subtract: function (x, y) {
-    return x - y;
-  },
-  divide: function (x, y) {
-    return x / y;
-  },
-  multiply: function (x, y) {
-    return x * y;
-  },
-};
+Here's an example of how to implement the Command pattern in modern JavaScript.
 
-let manager = {
-  execute: function (name, args) {
-    if (name in calculator) {
-      return calculator[name].apply(calculator, [].slice.call(arguments, 1));
-    }
-    return false;
-  },
-};
-console.log(manager.execute('add', 5, 2)); // prints 7
-console.log(manager.execute('multiply', 2, 4)); // prints 8
-```
-
-</div><br />
-  <div><strong className="codeExample">Code Example #2:</strong><br /><br />
-
-<img src="/img/javascript-command.jpg" /><br /><br />
-
-**This pattern's objects are as follows:**
-
-**Client** -- example code: _the run() function_
-
-- refers to the Receiver object.
-
-**Receiver** -- example code: _Calculator_
-
-- understands how to carry out the command's associated operation
-- keeps a history of commands executed (optionally)
-
-**Command** -- example code: _Command_
-
-- keeps track of information concerning the activity that gets taken
-
-**Invoker** -- example code: _the user activating the buttons._
-
-- requests that the request carries out
-
-<br/>
-
-```js
-function add(x, y) {
-  return x + y;
-}
-
-function sub(x, y) {
-  return x - y;
-}
-
-function mul(x, y) {
-  return x * y;
-}
-
-function div(x, y) {
-  return x / y;
-}
-
-let Command = function (execute, undo, value) {
-  this.execute = execute;
-  this.undo = undo;
-  this.value = value;
-};
-
-let AddCommand = function (value) {
-  return new Command(add, sub, value);
-};
-
-let SubCommand = function (value) {
-  return new Command(sub, add, value);
-};
-
-let MulCommand = function (value) {
-  return new Command(mul, div, value);
-};
-
-let DivCommand = function (value) {
-  return new Command(div, mul, value);
-};
-
-let Calculator = function () {
-  let current = 0;
-  let commands = [];
-
-  function action(command) {
-    let name = command.execute.toString().substr(9, 3);
-    return name.charAt(0).toUpperCase() + name.slice(1);
+```javascript
+// The Command class
+class Command {
+  constructor(subject) {
+    this.subject = subject;
+    this.commandsExecuted = [];
   }
 
-  return {
-    execute: function (command) {
-      current = command.execute(current, command.value);
-      commands.push(command);
-      console.log(action(command) + ': ' + command.value);
-    },
-
-    undo: function () {
-      let command = commands.pop();
-      current = command.undo(current, command.value);
-      console.log('Undo ' + action(command) + ': ' + command.value);
-    },
-
-    getCurrentValue: function () {
-      return current;
-    },
-  };
-};
-
-function run() {
-  let calculator = new Calculator();
-
-  // issue commands
-
-  calculator.execute(new AddCommand(100));
-  calculator.execute(new SubCommand(24));
-  calculator.execute(new MulCommand(6));
-  calculator.execute(new DivCommand(2));
-
-  // reverse last two commands
-
-  calculator.undo();
-  calculator.undo();
-
-  console.log('\nValue: ' + calculator.getCurrentValue());
+  execute(command) {
+    this.commandsExecuted.push(command);
+    return this.subject[command]();
+  }
 }
 
-run();
+// The subject class
+class BankAccount {
+  constructor() {
+    this.balance = 0;
+  }
 
-/*
+  deposit() {
+    this.balance += 10;
+    console.log(`Balance is: ${this.balance}`);
+  }
 
-OUTPUT:
+  withdraw() {
+    if(this.balance >= 10) {
+      this.balance -= 10;
+    }
+    console.log(`Balance is: ${this.balance}`);
+  }
+}
 
-Add: 100
-Sub: 24
-Mul: 6
-Div: 2
-Undo Div: 2
-Undo Mul: 6
+// Use the Command and the BankAccount classes
+const bankAccount = new BankAccount();
+const bankAccountCommand = new Command(bankAccount);
 
-Value: 76
+bankAccountCommand.execute('deposit');
+bankAccountCommand.execute('withdraw');
 
-*/
+console.log(`Commands Executed: ${bankAccountCommand.commandsExecuted}`);
 ```
+
+In this example, `Command` is the command class. It has a method `execute` that, when called with a command name, executes that command on the subject (an instance of `BankAccount`). It also keeps track of the commands that have been executed. `BankAccount` is the subject class, and it has two methods, `deposit` and `withdraw`, that can be executed through the command class.
+
+In the usage section, we create instances of `BankAccount` and `Command`, execute some commands on the bank account through the command instance, and print out the commands that have been executed.
 
 </div>
  </div>
@@ -344,7 +235,75 @@ Value: 76
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> It's used for operations like queueing tasks, tracking history, and managing high-level operations with complex sequences.
+  <div><strong>Interview Response:</strong> The Command pattern is typically used in situations where you want to decouple the sender and receiver of a request, provide callbacks, handle queue or logging operations, or support undo operations.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's a practical example in modern JavaScript, which illustrates undo operation.
+
+```javascript
+// Command class
+class Command {
+  constructor(execute, undo, value) {
+    this.execute = execute;
+    this.undo = undo;
+    this.value = value;
+  }
+}
+
+// Calculator class
+class Calculator {
+  constructor() {
+    this.currentValue = 0;
+    this.commands = [];
+  }
+
+  executeCommand(command) {
+    this.currentValue = command.execute(this.currentValue, command.value);
+    this.commands.push(command);
+  }
+
+  undoCommand() {
+    const command = this.commands.pop();
+    this.currentValue = command.undo(this.currentValue, command.value);
+  }
+
+  getCurrentValue() {
+    return this.currentValue;
+  }
+}
+
+// Calculator operations
+function add(value, amount) {
+  return value + amount;
+}
+
+function subtract(value, amount) {
+  return value - amount;
+}
+
+// Usage
+const calculator = new Calculator();
+
+// Add 10
+const addCommand = new Command(add, subtract, 10);
+calculator.executeCommand(addCommand);
+console.log(calculator.getCurrentValue());  // Output: 10
+
+// Subtract 5
+const subtractCommand = new Command(subtract, add, 5);
+calculator.executeCommand(subtractCommand);
+console.log(calculator.getCurrentValue());  // Output: 5
+
+// Undo last command (Subtract 5)
+calculator.undoCommand();
+console.log(calculator.getCurrentValue());  // Output: 10
+```
+
+In this example, the Calculator class uses the Command pattern to handle arithmetic operations. Each operation (add, subtract) is encapsulated in a Command object, which has an `execute` function to carry out the operation and an `undo` function to reverse it. The Calculator maintains a history of executed commands and provides an `undoCommand` method to undo the most recently executed command. This pattern provides a flexible and powerful way to organize and manipulate operations.
+
   </div>
   </div>
 </details>
@@ -356,9 +315,102 @@ Value: 76
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The main components of the Command Pattern include Command, Receiver, Invoker, and Client.
+  <div><strong>Interview Response:</strong> The main components of the Command Pattern are Command interface, ConcreteCommand classes, a Receiver, an Invoker, and a Client that initiates and manages commands through the Invoker.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+The main components of the Command Pattern are:
+
+- **Command:** This is the interface for executing operations.
+- **ConcreteCommand:** This class extends the Command interface and implements the execute method.
+- **Client:** This class creates and executes the command.
+- **Invoker:** This class asks the command to carry out the request.
+- **Receiver:** This is the class that performs the actual work when the execute method in ConcreteCommand is called.
+
+Here's an example of how to implement these components in modern JavaScript:
+
+```javascript
+// Receiver
+class Light {
+  turnOn() {
+    console.log("The light is on");
+  }
+
+  turnOff() {
+    console.log("The light is off");
+  }
+}
+
+// Command
+class Command {
+  constructor(light) {
+    this.light = light;
+  }
+
+  execute() {}
+}
+
+// ConcreteCommand
+class OnCommand extends Command {
+  constructor(light) {
+    super(light);
+  }
+
+  execute() {
+    this.light.turnOn();
+  }
+}
+
+class OffCommand extends Command {
+  constructor(light) {
+    super(light);
+  }
+
+  execute() {
+    this.light.turnOff();
+  }
+}
+
+// Invoker
+class Switch {
+  constructor(onCommand, offCommand) {
+    this.onCommand = onCommand;
+    this.offCommand = offCommand;
+  }
+
+  flipUp() {
+    this.onCommand.execute();
+  }
+
+  flipDown() {
+    this.offCommand.execute();
+  }
+}
+
+// Client
+let light = new Light();
+let onCommand = new OnCommand(light);
+let offCommand = new OffCommand(light);
+let switchButton = new Switch(onCommand, offCommand);
+
+switchButton.flipUp();  // Output: The light is on
+switchButton.flipDown();  // Output: The light is off
+```
+
+In this example:
+
+- `Light` is the Receiver class that performs the actual operations (turning the light on or off).
+- `Command` is the Command interface that declares the `execute` method.
+- `OnCommand` and `OffCommand` are the ConcreteCommand classes that implement the `execute` method.
+- `Switch` is the Invoker class that calls the `execute` method on a Command object.
+
+The client, represented in the last section of the code, creates instances of the Receiver, ConcreteCommand, and Invoker classes, and then invokes the commands through the Invoker.
+
   </div>
   </div>
+
 </details>
 
 ---
@@ -416,7 +468,66 @@ Value: 76
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> It does so by maintaining a history of commands. To undo, it executes the reverse operation.
+  <div><strong>Interview Response:</strong> In the Command Pattern, each command class encapsulates a particular action on a receiver with its associated state. By storing the previous state, a command can also implement an undo action. It does so by maintaining a history of commands. To undo, it executes the reverse operation.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's a simple example of how to support undo operations using the Command Pattern in JavaScript:
+
+```javascript
+class Command {
+  constructor(execute, undo, value) {
+    this.execute = execute;
+    this.undo = undo;
+    this.value = value;
+  }
+}
+
+class Calculator {
+  constructor() {
+    this.currentValue = 0;
+    this.commands = [];
+  }
+
+  executeCommand(command) {
+    this.currentValue = command.execute(this.currentValue, command.value);
+    this.commands.push(command);
+  }
+
+  undo() {
+    const command = this.commands.pop();
+    this.currentValue = command.undo(this.currentValue, command.value);
+  }
+
+  getValue() {
+    return this.currentValue;
+  }
+}
+
+function add(value, amount) {
+  return value + amount;
+}
+
+function subtract(value, amount) {
+  return value - amount;
+}
+
+const calculator = new Calculator();
+
+// execute add command
+const addCommand = new Command(add, subtract, 10);
+calculator.executeCommand(addCommand);
+console.log(calculator.getValue());  // Output: 10
+
+// undo add command
+calculator.undo();
+console.log(calculator.getValue());  // Output: 0
+```
+
+In this example, the Command class encapsulates an action (add) and its undo action (subtract) along with the value associated with the action. The Calculator class keeps track of the commands that are executed. When the undo method is called on the Calculator, it retrieves the most recent command and calls its undo action.
+
   </div>
   </div>
 </details>

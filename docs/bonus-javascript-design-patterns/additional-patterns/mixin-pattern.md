@@ -353,9 +353,63 @@ In this example, the `swimMixin` is a mixin that defines a `swim` function. The 
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The main components of the Mixin pattern are the target object and the mixin object. The target object is the object that will receive the mixed-in functionality, and the mixin object is the object that provides the functionality.
-    </div>
-    <br/>
+      <strong>Interview Response:</strong> The main components of the Mixin pattern are the target object and the mixin object (base objects). The target object is the object that will receive the mixed-in functionality, and the mixin object is the object that provides the functionality.
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+The main components of the Mixin pattern in modern JavaScript are:
+
+1. **Base objects or classes**, from which we want to borrow methods or properties.
+
+2. **A Mixin function**, that combines the properties and methods of the base objects or classes into a new object or class.
+
+3. **Target Object:** The target object is the object that will receive the mixed-in functionality
+
+Here's a simple example:
+
+```javascript
+// Base objects (or classes)
+const CanWalk = {
+  walk() {
+    console.log('Walking...');
+  }
+}
+
+const CanSwim = {
+  swim() {
+    console.log('Swimming...');
+  }
+}
+
+// Mixin function
+function mixin(target, ...sources) {
+  Object.assign(target, ...sources);
+}
+
+// Usage - duck is our target object
+const duck = {};
+
+mixin(duck, CanWalk, CanSwim);
+
+duck.walk(); // Output: 'Walking...'
+duck.swim(); // Output: 'Swimming...'
+```
+
+In this example:
+
+- `CanWalk` and `CanSwim` are the base objects. They have the `walk` and `swim` methods respectively.
+
+- `mixin` is the Mixin function. It takes a target object and one or more source objects, and it uses the `Object.assign` function to copy the properties of the source objects into the target object.
+
+- `duck` is the target object. After the `mixin` function is called with `duck`, `CanWalk`, and `CanSwim`, the `duck` object has both the `walk` and `swim` methods.
+
+:::tip Note:
+Note that the Mixin pattern can be implemented with both objects and classes in JavaScript. In the example above, objects are used for simplicity.
+:::
+
+  </div>
   </div>
 </details>
 
@@ -411,6 +465,53 @@ In this example, the `swimMixin` is a mixin that defines a `swim` function. The 
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, Mixins can be used with ES6 classes, typically by defining a function that extends the class with the Mixin's methods.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+// Define the Mixins
+const Walkable = (Base) => class extends Base {
+  walk() {
+    console.log('Walking...');
+  }
+};
+
+const Swimable = (Base) => class extends Base {
+  swim() {
+    console.log('Swimming...');
+  }
+};
+
+// Define the base class
+class Creature {}
+
+// Create a new class using the Mixins
+class Frog extends Swimable(Walkable(Creature)) {
+  jump() {
+    console.log('Jumping...');
+  }
+}
+
+// Instantiate the new class
+const frog = new Frog();
+
+frog.walk(); // Output: 'Walking...'
+frog.swim(); // Output: 'Swimming...'
+frog.jump(); // Output: 'Jumping...'
+```
+
+In this example, `Walkable` and `Swimable` are Mixins that can be used to extend a base class with `walk` and `swim` methods, respectively. They're implemented as functions that take a base class as a parameter and return a new class that extends the base class with the additional methods.
+
+The `Frog` class is created by applying the `Swimable` and `Walkable` Mixins to the `Creature` base class. The resulting class has `walk`, `swim`, and `jump` methods.
+
+---
+
+:::tip Note:
+Note that the order in which the Mixins are applied matters. If a Mixin overrides a method provided by a Mixin that was applied earlier, the last applied Mixin's method will be the one used.
+:::
+
   </div>
   </div>
 </details>
@@ -424,6 +525,43 @@ In this example, the `swimMixin` is a mixin that defines a `swim` function. The 
   <div>
   <div><strong>Interview Response:</strong> No, mixins don't inherently support private properties or methods. Privacy in JavaScript is generally achieved through closures or more recently, with private class fields and methods denoted by '#', which mixins can't directly utilize.
   </div>
+  <div><strong>Technical Details:</strong> Please note that using private fields or methods in mixins can be tricky, as they are not directly accessible from the mixin because the private fields or methods are truly private to the class in which they are declared. However, you can design your classes to expose specific interfaces to interact with these private fields or methods indirectly.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+// Define a Mixin that uses a private method and a public method to interact with it
+const Walkable = (Base) => class extends Base {
+  #distance = 0;
+
+  walk() {
+    this.#distance++;
+    this.#logDistance();
+  }
+
+  #logDistance() {
+    console.log(`Walked ${this.#distance} step(s)`);
+  }
+};
+
+// Define a base class
+class Creature {}
+
+// Create a new class using the Mixin
+class Human extends Walkable(Creature) {}
+
+// Instantiate the new class
+const human = new Human();
+
+human.walk(); // Output: 'Walked 1 step(s)'
+human.walk(); // Output: 'Walked 2 step(s)'
+```
+
+In this example, `Walkable` is a mixin that introduces a private field `#distance` and a private method `#logDistance` into any class it's mixed into. `#logDistance` is truly private and can't be called from an instance of `Human`. It's used internally by the `walk` method, which is publicly available and increments the `#distance` field each time it's called. The use of private fields and methods encapsulates and protects the internal state and behavior of the mixin.
+
+  </div>
   </div>
 </details>
 
@@ -435,6 +573,46 @@ In this example, the `swimMixin` is a mixin that defines a `swim` function. The 
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, a class can incorporate multiple Mixins, thereby inheriting functionality from multiple sources.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+// Define some simple mixins
+const Walkable = Base => class extends Base {
+  walk() {
+    console.log("Walking...");
+  }
+};
+
+const Swimable = Base => class extends Base {
+  swim() {
+    console.log("Swimming...");
+  }
+};
+
+const Flyable = Base => class extends Base {
+  fly() {
+    console.log("Flying...");
+  }
+};
+
+// Base class
+class Animal {}
+
+// Use multiple mixins with a class
+class Duck extends Flyable(Swimable(Walkable(Animal))) {}
+
+// Instantiate and use the mixed class
+const daffy = new Duck();
+daffy.walk();  // Output: "Walking..."
+daffy.swim();  // Output: "Swimming..."
+daffy.fly();   // Output: "Flying..."
+```
+
+In this example, the `Duck` class is created by applying the `Flyable`, `Swimable`, and `Walkable` mixins to the `Animal` base class. The order in which the mixins are applied can be important if the mixins provide methods with the same name, as the mixin applied last will override methods from the earlier mixins.
+
   </div>
   </div>
 </details>

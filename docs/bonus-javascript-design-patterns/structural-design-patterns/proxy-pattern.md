@@ -50,15 +50,14 @@ import StructuredData from './schemadata/ProxySchemaData.js';
   </summary>
   <div>
   <div>
-      <strong>Interview Response:</strong> The Proxy pattern is a structural pattern that allows an object to act as a placeholder for another object, controlling access and providing additional functionality such as caching and security.<br/>
-    </div>
-    <br/>
+      <strong>Interview Response:</strong> The Proxy pattern is a structural pattern that allows an object to act as a placeholder for another object, controlling access and providing additional functionality such as caching and security.
+    </div><br/>
     <div>
-      <strong>Technical Response:</strong> The Proxy Pattern, as the name suggests, functions as a proxy or placeholder for another object to manage access, decrease cost, and simplify the code. The proxy could connect to almost anything – a network connection, a large object in memory, a file, or another resource that would have been expensive or impossible to recreate.<br/>
-    </div>
+      <strong>Technical Response:</strong> The Proxy pattern provides a surrogate or placeholder object for another object and controls access to it. In JavaScript, the Proxy object is used to define custom behavior for fundamental operations (e.g., property lookup, assignment, enumeration, function invocation, etc.).
+    </div><br/>
     <div>
 </div><br />
-  <div><strong className="codeExample">Code Example #1:</strong><br /><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
 <img src="/img/javascript-proxy.jpg" /><br /><br />
 
@@ -80,217 +79,54 @@ import StructuredData from './schemadata/ProxySchemaData.js';
 
 <br/>
 
-```js
-function Flyweight(make, model, processor) {
-  this.make = make;
-  this.model = model;
-  this.processor = processor;
-}
+Here's a simple example of using a Proxy in modern JavaScript.
 
-let FlyWeightFactory = (function () {
-  let flyweights = {};
-
-  return {
-    get: function (make, model, processor) {
-      if (!flyweights[make + model]) {
-        flyweights[make + model] = new Flyweight(make, model, processor);
-      }
-      return flyweights[make + model];
-    },
-
-    getCount: function () {
-      let count = 0;
-      for (let f in flyweights) count++;
-      return count;
-    },
-  };
-})();
-
-function ComputerCollection() {
-  let computers = {};
-  let count = 0;
-
-  return {
-    add: function (make, model, processor, memory, tag) {
-      computers[tag] = new Computer(make, model, processor, memory, tag);
-      count++;
-    },
-
-    get: function (tag) {
-      return computers[tag];
-    },
-
-    getCount: function () {
-      return count;
-    },
-  };
-}
-
-let Computer = function (make, model, processor, memory, tag) {
-  this.flyweight = FlyWeightFactory.get(make, model, processor);
-  this.memory = memory;
-  this.tag = tag;
-  this.getMake = function () {
-    return this.flyweight.make;
-  };
-  // ...
-};
-
-function run() {
-  let computers = new ComputerCollection();
-
-  computers.add('Dell', 'Studio XPS', 'Intel', '5G', 'Y755P');
-  computers.add('Dell', 'Studio XPS', 'Intel', '6G', 'X997T');
-  computers.add('Dell', 'Studio XPS', 'Intel', '2G', 'U8U80');
-  computers.add('Dell', 'Studio XPS', 'Intel', '2G', 'NT777');
-  computers.add('Dell', 'Studio XPS', 'Intel', '2G', '0J88A');
-  computers.add('HP', 'Envy', 'Intel', '4G', 'CNU883701');
-  computers.add('HP', 'Envy', 'Intel', '2G', 'TXU003283');
-
-  console.log('Computers: ' + computers.getCount());
-  console.log('Flyweights: ' + FlyWeightFactory.getCount());
-}
-
-run();
-
-/*
-
-OUTPUT:
-
-Computers: 7
-Flyweights: 2
-
-*/
-```
-
-</div><br />
-  <div><strong className="codeExample">Code Example #2:</strong><br /><br />
-
-<img src="/img/proxy-pattern.png" /><br /><br />
-
-```js
-/*  External API*/
-var FlightListAPI = function () {
-  //creation
-};
-
-FlightListAPI.prototype = {
-  getFlight: function () {
-    // get master list of flights
-    console.log('Generating flight List');
-  },
-
-  searchFlight: function (flightDetails) {
-    // search through the flight list based on criteria
-    console.log('Searching for flight');
-  },
-
-  addFlight: function (flightData) {
-    // add a new flight to the database
-    console.log('Adding new flight to DB');
-  },
-};
-
-// creating the proxy
-var FlightListProxy = function () {
-  // getting a reference to the original object
-  this.flightList = new FlightListAPI();
-};
-
-FlightListProxy.prototype = {
-  getFlight: function () {
-    return this.flightList.getFlight();
-  },
-
-  searchFlight: function (flightDetails) {
-    return this.flightList.searchFlight(flightDetails);
-  },
-
-  addFlight: function (flightData) {
-    return this.flightList.addFlight(flightData);
-  },
-};
-
-console.log('----------With Proxy----------');
-const proxy = new FlightListProxy();
-console.log(proxy.getFlight());
-/*
- 
-OUTPUT
- 
-----------With Proxy----------
-Generating flight List
- 
- 
-*/
-```
-
-</div><br />
-  <div><strong className="codeExample">Code Example #3:</strong><br /><br />
-
-```js
-class GetCapital {
-  getMycapital(country) {
-    if (country === 'Pakistan') {
-      return 'Islamabad';
-    } else if (country === 'India') {
-      return 'New Delhi';
-    } else if (country === 'Canada') {
-      return 'Ottawa';
-    } else if (country === 'Egypt') {
-      return 'Cairo';
-    } else {
-      return '';
-    }
+```javascript
+class RealObject {
+  execute() {
+    console.log('Executing...');
   }
 }
 
-class ProxyGetCapital {
+class ProxyObject {
   constructor() {
-    this.capital = new GetCapital();
-    this.cache = {};
+    this.realObject = new RealObject();
   }
 
-  getMycapital(country) {
-    if (!this.cache[country]) {
-      var value = this.capital.getMycapital(country);
-      this.cache[country] = value;
-      return `${value}--Returning From GetCaptial`;
-    } else {
-      return `${this.cache[country]}--Returning from Cache`;
+  execute() {
+    console.log('Proxy: Checking preconditions before executing.');
+    if (this.checkAccess()) {
+      this.realObject.execute();
+      console.log('Proxy: Checking postconditions after executing.');
     }
+  }
+
+  checkAccess() {
+    // Some precondition check.
+    console.log('Proxy: Checked access permissions.');
+    return true;
   }
 }
 
-var capital = new ProxyGetCapital();
-console.log(capital.getMycapital('Pakistan'));
-console.log(capital.getMycapital('India'));
-console.log(capital.getMycapital('Canada'));
-console.log(capital.getMycapital('Egypt'));
-console.log(capital.getMycapital('Egypt'));
-console.log(capital.getMycapital('Egypt'));
-console.log(capital.getMycapital('Pakistan'));
-console.log(capital.getMycapital('Pakistan'));
-console.log(capital.getMycapital('Canada'));
+function clientCode(subject) {
+  // The client code is supposed to work with all objects (both subjects) via the Subject interface in order to support both real subjects and proxies.
+  subject.execute();
+}
 
-/*
+console.log('Client: Executing the client code with a real subject:');
+const realSubject = new RealObject();
+clientCode(realSubject);
 
-OUTPUT:
+console.log('');
 
-Islamabad--Returning From GetCaptial
-New Delhi--Returning From GetCaptial
-Ottawa--Returning From GetCaptial
-Cairo--Returning From GetCaptial
-Cairo--Returning from Cache
-Cairo--Returning from Cache
-Islamabad--Returning from Cache
-Islamabad--Returning from Cache
-Ottawa--Returning from Cache
-
-*/
+console.log('Client: Executing the same client code with a proxy:');
+const proxySubject = new ProxyObject();
+clientCode(proxySubject);
 ```
 
-</div>
+In this example, a `ProxyObject` class is created that mimics the `RealObject` class interface (`execute()` method). The `ProxyObject` includes additional functionality like precondition check (`checkAccess()` method). The `clientCode` function can use both `RealObject` and `ProxyObject` due to them having the same interface, thus illustrating the utility of the Proxy pattern.
+
+ </div>
  </div>
 
 </details>
@@ -332,15 +168,43 @@ Ottawa--Returning from Cache
   </summary>
   <div>
   <div>
-      <strong>Interview Response:</strong> A good use case for the Proxy pattern in JavaScript is providing controlled access to sensitive objects, caching expensive operations, or implementing remote services.<br/>
-    </div>
-    <br/>
-    <div>
-      <strong>Technical Response:</strong> The proxy pattern attempts to lighten the load on the target object. It is useful when dealing with large applications that make many network requests. Because delays may occur when responding to such requests, using a proxy pattern prevents the target object from becoming overburdened with requests.<br/><br/>
-      HTTP requests are a real-world example. Because these are costly operations, the proxy pattern aids in reducing the number of requests forwarded to the target.<br/>
-    </div>
+      <strong>Interview Response:</strong> One good use case of the Proxy pattern in modern JavaScript is to create a logging mechanism to log each operation performed on an object.
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-<br />
+  <div></div>
+
+One good use case of the Proxy pattern in modern JavaScript is to create a logging mechanism to log each operation performed on an object. Here's how you can do it:
+
+```javascript
+const targetObject = {
+  prop1: 'Hello',
+  prop2: 'World',
+};
+
+const handler = {
+  get: function (target, prop, receiver) {
+    console.log(`"get" was called for property "${prop}"`);
+    return Reflect.get(...arguments);
+  },
+  set: function (target, prop, value, receiver) {
+    console.log(`"set" was called for property "${prop}" with value "${value}"`);
+    return Reflect.set(...arguments);
+  }
+};
+
+const proxyObject = new Proxy(targetObject, handler);
+
+// Trying to access the properties
+console.log(proxyObject.prop1); // Output: "get" was called for property "prop1"
+
+// Trying to set the properties
+proxyObject.prop2 = 'Universe'; // Output: "set" was called for property "prop2" with value "Universe"
+```
+
+In this example, every time you get or set a property on the `proxyObject`, it logs the operation, the property name, and in case of a "set" operation, the new value. This allows you to monitor what happens to an object, which can be useful for debugging, for example.
+
+  </div>
   </div>
 </details>
 

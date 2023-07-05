@@ -50,7 +50,7 @@ import StructuredData from './schemadata/ObserverSchemaData.js';
   </summary>
   <div>
   <div>
-      <strong>Interview Response:</strong> It's a behavioral pattern that establishes a one-to-many relationship between objects, so when one object changes its state, all its dependents are notified and updated.<br/>
+      <strong>Interview Response:</strong> The Observer pattern is a software design pattern where an object, known as the subject, maintains a list of its dependents, called observers, and notifies them automatically of any state changes, usually by calling one of their methods.
     </div>
     <br/>
     <div>
@@ -77,56 +77,53 @@ import StructuredData from './schemadata/ObserverSchemaData.js';
 
 <br/>
 
-```js
-function Click() {
-  this.observers = []; // observers
+**In Modern JavaScript, you might implement the Observer pattern like this:**
+
+```javascript
+class Observable {
+  constructor() {
+        this.observers = [];
+  }
+
+  subscribe(f) {
+    this.observers.push(f);
+  }
+
+  unsubscribe(f) {
+    this.observers = this.observers.filter(subscriber => subscriber !== f);
+  }
+
+  notify(data) {
+    this.observers.forEach(observer => observer(data));
+  }
 }
 
-Click.prototype = {
-  subscribe: function (fn) {
-    this.observers.push(fn);
-  },
+// Example usage:
 
-  unsubscribe: function (fn) {
-    this.observers = this.observers.filter(function (item) {
-      if (item !== fn) {
-        return item;
-      }
-    });
-  },
+const observable = new Observable();
 
-  fire: function (o, thisObj) {
-    var scope = thisObj;
-    this.observers.forEach(function (item) {
-      item.call(scope, o);
-    });
-  },
-};
+// Observers
+const observer1 = data => console.log(`Observer 1: ${data}`);
+const observer2 = data => console.log(`Observer 2: ${data}`);
+const observer3 = data => console.log(`Observer 3: ${data}`);
 
-function run() {
-  var clickHandler = function (item) {
-    console.log('Fired:' + item);
-  };
+observable.subscribe(observer1);
+observable.subscribe(observer2);
+observable.subscribe(observer3);
 
-  var click = new Click();
+observable.notify('notified!');
 
-  click.subscribe(clickHandler);
-  click.fire('event #1');
-  click.unsubscribe(clickHandler);
-  click.fire('event #2');
-  click.subscribe(clickHandler);
-  click.fire('event #3');
-}
-
-run();
-
-/* OUTPUT:
- 
-Fired:event #1
-Fired:event #3
- 
-*/
+// Example output:
+// Observer 1: notified!
+// Observer 2: notified!
+// Observer 3: notified!
 ```
+
+In this example, the `Observable` class represents the subject. It has three primary methods: `subscribe`, `unsubscribe`, and `notify`. `subscribe` adds a new observer to the list, `unsubscribe` removes an observer, and `notify` goes through each observer and calls it with the provided data.
+
+Then we define three observer functions, `observer1`, `observer2`, and `observer3`. Each of these is a function that logs a message to the console.
+
+We create a new instance of `Observable`, subscribe the observers, and then call `notify`, which triggers each of the observers and logs the corresponding messages to the console.
 
 </div>
  </div>
@@ -159,13 +156,14 @@ Fired:event #3
   <div>
   <div>
       <strong>Interview Response:</strong> The Observer pattern is useful when you have a one-to-many relationship between objects, and want to notify a group of objects automatically when the state of one object changes.
-    </div>
-    <br />
+    </div><br/>
     <div>
-      <strong>Technical Response:</strong> Use Cases:
+      <strong>Technical Response:</strong> The Observer pattern is commonly used when there's a need to maintain consistency in state between related components or modules in a software system. A good example is when you have UI components that need to update based on changes in another component or server data.
     </div>
     <br />
     <div></div>
+
+**Use Cases:**
 
 - To improve code management: We break down large programs into a system of loosely connected objects.
 - To increase flexibility by allowing a dynamic relationship between observers and subscribers, which would otherwise be impossible due to tight coupling.
@@ -173,6 +171,77 @@ Fired:event #3
 - To establish a one-to-many dependency between weakly related items.
 
 <br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's a practical example of using the Observer pattern in modern JavaScript to handle updates to a user's profile.
+
+```javascript
+// Defining the Observable class
+class Observable {
+    constructor() {
+        this.observers = [];
+    }
+
+    subscribe(f) {
+        this.observers.push(f);
+    }
+
+    unsubscribe(f) {
+        this.observers = this.observers.filter(subscriber => subscriber !== f);
+    }
+
+    notify(data) {
+        this.observers.forEach(observer => observer(data));
+    }
+}
+
+// User Profile Observable
+const userProfileObservable = new Observable();
+
+// Observer 1: Display User Profile
+const displayProfile = profile => console.log(`Display Profile: ${profile.name}, ${profile.email}`);
+
+// Observer 2: Update User Menu
+const updateUserMenu = profile => console.log(`Update User Menu: ${profile.name}`);
+
+// Observer 3: Send Profile Update Confirmation
+const sendConfirmation = profile => console.log(`Send Confirmation Email to: ${profile.email}`);
+
+// Subscribe Observers to the User Profile Observable
+userProfileObservable.subscribe(displayProfile);
+userProfileObservable.subscribe(updateUserMenu);
+userProfileObservable.subscribe(sendConfirmation);
+
+// Simulating a profile update
+const updatedProfile = {
+    name: 'John Doe',
+    email: 'johndoe@example.com'
+};
+
+// Notify all observers about the updated profile
+userProfileObservable.notify(updatedProfile);
+
+// Example output:
+// Display Profile: John Doe, johndoe@example.com
+// Update User Menu: John Doe
+// Send Confirmation Email to: johndoe@example.com
+```
+
+In this example, when a user's profile is updated, several different actions need to take place across the system:
+
+1. The displayed user profile must be updated (`displayProfile`).
+2. The user menu must reflect the changes (`updateUserMenu`).
+3. A confirmation email should be sent to the updated email (`sendConfirmation`).
+
+---
+
+:::note
+By using the Observer pattern, each of these actions can be handled independently as observers that respond to the changes in the observable user profile. This makes the system more flexible and easier to extend (for example, by adding more observers) in the future.
+:::
+
+  </div>
   </div>
 </details>
 
@@ -237,9 +306,8 @@ Fired:event #3
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> Yes, alternatives to the Observer pattern include the Publish/Subscribe pattern, the Event Emitter pattern, and using callbacks or promises to handle asynchronous events and updates between objects.
+      <strong>Interview Response:</strong> Yes, alternatives to the Observer pattern include the Publish/Subscribe (Pub/Sub) pattern, the Event Emitter pattern, and using callbacks or promises to handle asynchronous events and updates between objects.
     </div>
-    <br />
   </div>
 </details>
 
@@ -250,7 +318,108 @@ Fired:event #3
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The key components are the Subject (or Observable), the Observers, and a method for adding, removing, and notifying observers.
+  <div><strong>Interview Response:</strong> The Observer Pattern in JavaScript comprises the Subject (stores observers, notifies them), Observers (update when notified), ConcreteSubject (manages state, broadcasts updates), and ConcreteObserver (updates in response to state changes).
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+The Observer Pattern consists of three key components:
+
+1. **Subject:** This maintains a list of observers, facilitates adding or removing observers, and is responsible for notifying observers of changes.
+
+2. **Observer:** This defines an updating interface for objects that should be notified of changes in the subject.
+
+3. **ConcreteSubject:** This broadcasts notifications to observers on state changes and stores the state of the ConcreteSubject.
+
+4. **ConcreteObserver:** This stores a reference to the ConcreteSubject, implements an update interface for the Observer, and maintains the observer's state.
+
+**Here's a code example demonstrating these components in JavaScript:**
+
+```javascript
+// Subject
+class Subject {
+  constructor() {
+    this._observers = [];
+  }
+
+  subscribe(observer) {
+    this._observers.push(observer);
+  }
+
+  unsubscribe(observer) {
+    this._observers = this._observers.filter(obs => obs !== observer);
+  }
+
+  fire(change) {
+    this._observers.forEach(observer => {
+      observer.update(change);
+    });
+  }
+}
+
+// ConcreteSubject
+class ConcreteSubject extends Subject {
+  constructor() {
+    super();
+    this._state = {};
+  }
+
+  get state() {
+    return this._state;
+  }
+
+  set state(state) {
+    this._state = state;
+    this.fire(this._state);
+  }
+}
+
+// Observer
+class Observer {
+  constructor(state) {
+    this.state = state;
+    this.initialState = state;
+  }
+
+  update(change) {
+    let newState = Object.assign({}, this.state, change);
+    this.state = newState;
+  }
+}
+
+// ConcreteObserver
+class ConcreteObserver extends Observer {
+  constructor(state) {
+    super(state);
+  }
+
+  update(change) {
+    super.update(change);
+    console.log(`ConcreteObserver's new state is ${JSON.stringify(this.state)}`);
+  }
+}
+
+// Usage
+let sub = new ConcreteSubject();
+
+let obs1 = new ConcreteObserver({name: 'Observer 1', state: 'active'});
+let obs2 = new ConcreteObserver({name: 'Observer 2', state: 'inactive'});
+
+sub.subscribe(obs1);
+sub.subscribe(obs2);
+
+sub.state = {name: 'Changed Name', state: 'active'};
+
+// Output:
+// ConcreteObserver's new state is {"name":"Changed Name","state":"active"}
+// ConcreteObserver's new state is {"name":"Changed Name","state":"active"}
+```
+
+In the example above, the `Subject` class is an abstract representation for our concrete subjects. `ConcreteSubject` maintains the state and notifies the observers of any change.
+
+The `Observer` class provides an update interface that concrete observers (like `ConcreteObserver`) will use to update their state when the subject's state changes. The `ConcreteObserver` receives these updates, applies them to its state, and logs the change to the console.
+
   </div>
   </div>
 </details>
@@ -310,7 +479,7 @@ Fired:event #3
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In Publish/Subscribe, publishers don't need to know subscribers, unlike the Observer pattern. There's typically an event bus handling the notifications.
+  <div><strong>Interview Response:</strong> In Publish/Subscribe (Pub/Sub), publishers don't need to know subscribers, unlike the Observer pattern. There's typically an event bus handling the notifications.
   </div>
   </div>
 </details>

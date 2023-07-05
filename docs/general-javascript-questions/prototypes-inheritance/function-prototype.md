@@ -33,21 +33,21 @@ import StructuredData from './schemadata/FuncProtoSchemaData.js';
 <JsonLD data={StructuredData} />
 
 <head>
-  <title>Function Prototype | JavaScript Frontend Phone Interview</title>
+  <title>Function Prototype | JavaScript Frontend Interview Questions</title>
 </head>
 
-**Prototypes / Inheritance: Function Prototype**
+**Prototypes / Inheritance: The Prototype Property**
 
 <CloseAllAnswers />
 
 ---
 
-### What is the function.prototype property in JavaScript?
+### What is the prototype property in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In simple terms, the function.prototype is a regular property in a function. Every Object in JavaScript contains the prototype meaning a regular property with the prototype name.
+  <div><strong>Interview Response:</strong> In simple terms, the prototype is a regular property in a function or object. Every Object in JavaScript contains the prototype meaning a regular property with the prototype name.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -75,7 +75,7 @@ alert(rabbit.eats); // true
 
 ---
 
-### Can you explain how the function.prototype property works in JavaScript?
+### Can you explain how the prototype property works in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -103,7 +103,7 @@ alert(rabbit.constructor == Rabbit); // true (from prototype)
 
 ---
 
-### What happens when you replace the default function prototype in JavaScript?
+### What happens when you replace the default prototype in JavaScript?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -121,8 +121,643 @@ Rabbit.prototype = {
 };
 
 let rabbit = new Rabbit();
-alert(rabbit.constructor === Rabbit); // false
+console.log(rabbit.constructor === Rabbit); // false
+
+function Dog() {}
+
+let dog = new Dog();
+console.log(dog.constructor === Dog); // true
 ```
+
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the difference between "*proto*" and prototype?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> `__proto__` is an object's actual prototype, while prototype is the blueprint for what will be assigned to `__proto__` when a new object is created.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+First let's clarify the concepts.
+
+In JavaScript, each object has a `__proto__` property which is an internal reference to the prototype object from which the instance object inherited. The prototype object is special type of enumerable object to which additional properties can be attached to it which will be shared across all the instances of its constructor function.
+
+Here's an example that showcases the difference:
+
+```javascript
+function Person(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+}
+
+Person.prototype.getFullName = function() {
+    return this.firstName + ' ' + this.lastName;
+}
+
+let john = new Person('John', 'Doe');
+
+console.log(john.__proto__); // This will output the prototype object of the "john" instance
+console.log(Person.prototype); // This will output the prototype object of the "Person" constructor function
+
+console.log(john.__proto__ === Person.prototype); // This will output true, meaning both refer to the same object
+
+console.log(john.getFullName()); // Output: John Doe. This is because "getFullName" method is defined in Person's prototype, so it's accessible to "john" instance.
+```
+
+In this example, you can see that `john.__proto__` and `Person.prototype` both refer to the same object. This is because `john` was created with the `Person` constructor, so its prototype (`__proto__`) is the same as `Person.prototype`.
+
+The `getFullName` method is defined on `Person.prototype`, meaning it's not directly attached to `john` object. However, it's still accessible to `john` because `john`'s `__proto__` points to `Person.prototype`.
+
+---
+
+:::warning
+**Note:** The `__proto__` property is considered **deprecated** and non-standard. It's better to use `Object.getPrototypeOf(object)` method to get the prototype of an object.
+:::
+
+  </div>
+  </div>
+</details>
+
+---
+
+### How does prototypal inheritance work in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In JavaScript, each object has a prototype from which it can inherit properties or methods. A chain of these is called the prototype chain.
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the purpose of the Object.prototype property?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Object.prototype forms the end of the prototype chain. It's the prototype from which all objects inherit methods and properties.
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you modify the prototype of an existing object?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, you can modify the prototype of an existing object in JavaScript. But it's not recommended due to performance implications. The `Object.setPrototypeOf()` method is used to set the prototype (i.e., the internal [[Prototype]] property) of a specified object to another object or null.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let animal = {
+    speaks: true
+};
+
+let dog = {
+    bark: function() {
+        return 'Woof!';
+    }
+};
+
+// dog is an ordinary object, it doesn't have the 'speaks' property
+console.log(dog.speaks); // undefined
+
+// Set animal to be the prototype of dog
+Object.setPrototypeOf(dog, animal);
+
+// Now dog has 'speaks' property from its prototype chain
+console.log(dog.speaks); // true
+
+// dog can also access the 'bark' method that's directly on it.
+console.log(dog.bark()); // 'Woof!'
+```
+
+In this code, `dog` doesn't initially have a `speaks` property. When `animal` is set as the prototype of `dog`, the `dog` object can then access `animal`'s `speaks` property.
+
+---
+
+:::warning
+Note: While it's possible to change the [[Prototype]] of an object, it's considered a bad practice in production code because it can lead to performance problems. In general, it's better to create the right prototype chain when creating objects. This method is there for completeness and should be used sparingly, if at all.
+:::
+
+  </div>
+  </div>
+</details>
+
+---
+
+### What happens if you look for a property or a method that's not present in the object but exists in the prototype chain?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The JavaScript engine will look up the prototype chain until it finds the property/method or reaches Object.prototype which will return undefined.
+  </div><br />
+  <div><strong>Technical Response:</strong> In JavaScript, when you try to access a property or method that doesn't exist in an object, JavaScript will look up the prototype chain to see if it can find it there. If the property or method is found in the prototype chain, it will be returned. If not, `undefined` will be returned.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let animal = {
+    speaks: true,
+    sound: function() {
+        return 'Generic animal sound!';
+    }
+};
+
+let dog = Object.create(animal); // animal is the prototype of dog
+
+dog.bark = function() {
+    return 'Woof!';
+};
+
+console.log(dog.bark()); // 'Woof!', since 'bark' method exists directly on the 'dog' object
+console.log(dog.speaks); // true, 'speaks' property doesn't exist directly on the 'dog', but exists in the prototype chain (in 'animal')
+console.log(dog.sound()); // 'Generic animal sound!', 'sound' method doesn't exist directly on the 'dog', but exists in the prototype chain (in 'animal')
+console.log(dog.meow); // undefined, 'meow' neither exists directly on the 'dog' nor in the prototype chain
+```
+
+In this example, when we call `dog.speaks` or `dog.sound()`, JavaScript first checks if these properties/methods exist directly on the `dog` object. Since they don't, JavaScript then checks `dog`'s prototype, which is `animal`. Since `animal` has the `speaks` property and `sound` method, these values are returned.
+
+However, when we try to access `dog.meow`, JavaScript first checks the `dog` object, and then its prototype `animal`. Since neither has a `meow` property, `undefined` is returned.
+
+  </div>
+  </div>
+</details>
+
+---
+
+### What is a prototype chain?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> A prototype chain is a succession of links from one object's prototype to another, used when looking for a property or method.
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the role of the constructor property?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The `constructor` property returns a reference to the `Object` constructor function that created the instance object. Note that this property is derived from the object's prototype.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+function Person(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+}
+
+let john = new Person('John', 'Doe');
+
+console.log(john.constructor); // [Function: Person]
+```
+
+In this code, `john.constructor` is `Person`, which is the function used to create `john`.
+
+The `constructor` property is also useful when you want to create a new instance and you only have an instance of the object, but not the original constructor. Here's an example:
+
+```javascript
+function Person(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+}
+
+let john = new Person('John', 'Doe');
+let jane = new john.constructor('Jane', 'Doe'); 
+
+console.log(jane.firstName); // Output: Jane
+console.log(jane.lastName); // Output: Doe
+```
+
+Here, `john.constructor` refers to the `Person` function, which we can use to create a new `Person`.
+
+---
+
+:::note
+Note that the `constructor` property can be overridden, so it's not a completely reliable way to determine the constructor of an object. The `instanceof` operator is generally a better choice for that.
+:::
+
+  </div>
+  </div>
+</details>
+
+---
+
+### What's the difference between prototypal and classical inheritance?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Prototypal inheritance uses instances as prototypes, while classical inheritance uses classes and creates hierarchy through "is-a" relationships.
+  </div><br />
+  <div><strong>Technical Response:</strong> Prototypal Inheritance (JavaScript-style) and Classical Inheritance (like in Java or C++) are two different ways of dealing with object-oriented code. JavaScript uses prototypal inheritance, but it can mimic classical inheritance with constructor functions and the `new` keyword.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Let's see an example of both:
+
+**Classical Inheritance (Simulation in JavaScript)**
+
+```javascript
+// Constructor for Superclass
+function Animal(name) {
+    this.name = name;
+}
+
+Animal.prototype.speak = function() {
+    return this.name + ' makes a sound.';
+}
+
+// Constructor for Subclass
+function Dog(name) {
+    Animal.call(this, name); // Call the parent's constructor
+}
+
+// Establish the prototype chain to inherit methods
+Dog.prototype = Object.create(Animal.prototype);
+Dog.prototype.constructor = Dog; // Repair the constructor reference
+
+Dog.prototype.bark = function() {
+    return this.name + ' barks.';
+}
+
+var dog = new Dog('Rex');
+console.log(dog.speak()); // Output: Rex makes a sound.
+console.log(dog.bark()); // Output: Rex barks.
+```
+
+In this example, we simulate classical inheritance using constructor functions. `Dog` is a subclass of `Animal` and inherits its methods.
+
+**Prototypal Inheritance**
+
+```javascript
+var animal = {
+    init: function(name) {
+        this.name = name;
+    },
+    speak: function() {
+        return this.name + ' makes a sound.';
+    }
+};
+
+var dog = Object.create(animal);
+dog.bark = function() {
+    return this.name + ' barks.';
+}
+
+var rex = Object.create(dog);
+rex.init('Rex');
+console.log(rex.speak()); // Output: Rex makes a sound.
+console.log(rex.bark()); // Output: Rex barks.
+```
+
+In this prototypal inheritance example, we directly create objects from other objects. `rex` is an object created from `dog`, which is created from `animal`. The methods from `animal` are available to `dog` and `rex` through the prototype chain.
+
+In prototypal inheritance, an object can directly inherit from another object. This is different from classical inheritance where classes inherit from classes.
+
+  </div>
+  </div>
+</details>
+
+---
+
+### What are some common pitfalls with prototypes and inheritance in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Pitfalls include performance issues with changing prototypes, accidental sharing of properties, and confusion with this in prototype methods.
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the prototype property used for?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It's used to implement object inheritance, to share properties and methods across instances, reducing memory usage.
+  </div>
+  </div>
+</details>
+
+---
+
+### Do all objects in JavaScript have a prototype?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Almost all objects in JavaScript have a prototype. The root object in the prototype chain is typically Object.prototype, which has null as its prototype.
+  </div><br />
+  <div><strong className="codeExample">Here's a code example demonstrating that:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let obj = {};
+console.log(obj.__proto__ === Object.prototype); // true
+
+function Func() {}
+console.log(Func.__proto__ === Function.prototype); // true
+
+let arr = [];
+console.log(arr.__proto__ === Array.prototype); // true
+```
+
+In this code, `obj` is an object literal, so its prototype is `Object.prototype`. `Func` is a function, so its prototype is `Function.prototype`. `arr` is an array, so its prototype is `Array.prototype`.
+
+However, it's possible to create an object without a prototype using `Object.create(null)`. Such objects do not inherit anything, including basic methods like `toString()`:
+
+```javascript
+let noProto = Object.create(null);
+console.log(noProto.__proto__); // undefined
+```
+
+In this code, `noProto` does not have a prototype, so `noProto.__proto__` is `undefined`. Attempting to call `toString()` on `noProto` would result in an error.
+
+  </div>
+  </div>
+</details>
+
+---
+
+### What is shadowing in JavaScript with regards to prototypes?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Shadowing (also known as method overriding) in JavaScript occurs when a property in an object's prototype chain has the same name as a property in the object itself. In such a case, the object's property "shadows" the property in the prototype.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let animal = {
+    speak: function() {
+        return 'The animal makes a sound!';
+    }
+};
+
+let dog = Object.create(animal);
+
+dog.speak = function() {
+    return 'The dog barks!';
+};
+
+console.log(dog.speak()); // Output: The dog barks!
+```
+
+In this code, `dog` is created with `animal` as its prototype. `animal` has a `speak` method, and `dog` also has a `speak` method. When `dog.speak()` is called, JavaScript first looks for a `speak` method on the `dog` object. Since it finds one, it uses that method and does not continue looking up the prototype chain.
+
+If the `speak` method is deleted from `dog`, then the `speak` method from `animal` is used instead:
+
+```javascript
+delete dog.speak;
+
+console.log(dog.speak()); // Output: The animal makes a sound!
+```
+
+In this code, after the `speak` method is deleted from `dog`, `dog.speak()` outputs 'The animal makes a sound!'. This is because JavaScript doesn't find a `speak` method on `dog`, so it looks up the prototype chain and finds the `speak` method on `animal`.
+
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you remove properties from a prototype?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, you can remove properties from a prototype in JavaScript using the `delete` keyword, which can delete properties from any object. However, you should be careful when doing this, as it can affect all objects that inherit from the prototype.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+function Person(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+}
+
+Person.prototype.getFullName = function() {
+    return this.firstName + ' ' + this.lastName;
+}
+
+let john = new Person('John', 'Doe');
+
+console.log(john.getFullName()); // Output: John Doe
+
+// Deleting property from prototype
+delete Person.prototype.getFullName;
+
+console.log(john.getFullName); // Output: undefined
+```
+
+In this example, `john.getFullName()` initially outputs 'John Doe'. After `getFullName` is deleted from `Person.prototype`, `john.getFullName` is `undefined`.
+
+While it's possible to delete properties from a prototype, it's generally not a good idea because it can have unexpected side effects. For example, if other code is depending on that property being present in the prototype, that code could stop working correctly.
+
+  </div>
+  </div>
+</details>
+
+---
+
+### Can we use arrow functions for prototype methods?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It's possible, but not recommended due to "this" scope issues. Arrow functions don't have their own "this".
+  </div><br />
+  <div><strong>Technical Response:</strong> While you can technically use arrow functions as prototype methods in JavaScript, it's generally not a good idea because arrow functions behave differently than traditional functions. Specifically, arrow functions don't have their own `this` context, but instead inherit `this` from the surrounding (parent) scope at the time of definition.
+  </div><br />
+  <div><strong className="codeExample">Consider the following code example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+function Person(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+}
+
+Person.prototype.getFullName = () => {
+    return this.firstName + ' ' + this.lastName;
+}
+
+let john = new Person('John', 'Doe');
+
+console.log(john.getFullName()); // Output: undefined undefined
+```
+
+In this case, the `getFullName` method is an arrow function, so `this` doesn't refer to the `john` object. Instead, it refers to the surrounding scope, which in a non-strict global context is the `window` object (or `global` object in Node.js environment). Since `window.firstName` and `window.lastName` are not defined, `john.getFullName()` returns "undefined undefined".
+
+Compare this with a traditional function:
+
+```javascript
+Person.prototype.getFullName = function() {
+    return this.firstName + ' ' + this.lastName;
+}
+
+console.log(john.getFullName()); // Output: John Doe
+```
+
+In this case, the `getFullName` method is a traditional function, so `this` refers to the `john` object. `john.getFullName()` therefore correctly returns "John Doe".
+
+For this reason, arrow functions are generally not used as object methods when those methods need to access other properties of the object.
+
+  </div>
+  </div>
+</details>
+
+---
+
+### Why do we say JavaScript has a dynamic prototype?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Because you can add or remove properties and methods even after the object is created.
+  </div>
+  </div>
+</details>
+
+---
+
+### How does the JavaScript engine find a property in a prototype chain?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> It looks from the object up through the prototype chain until it finds the property or reaches Object.prototype.
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the difference between a prototype and an instance in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In JavaScript, an instance is an object that's created from a constructor function using the `new` keyword. The prototype is an object that is used as a blueprint for creating new objects (instances).
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+// Define a constructor function
+function Car(make, model) {
+    this.make = make;
+    this.model = model;
+}
+
+// Add a method to the prototype
+Car.prototype.displayCar = function() {
+    return this.make + ' ' + this.model;
+}
+
+// Create a new instance of Car
+let myCar = new Car('Toyota', 'Corolla');
+
+console.log(myCar.displayCar()); // Outputs: Toyota Corolla
+```
+
+In this code:
+
+- `Car` is a constructor function. It defines a blueprint for creating new car objects.
+- `Car.prototype.displayCar` is a method added to the prototype of `Car`. This method will be shared by all instances of `Car`.
+- `myCar` is an instance of `Car`. It's an object created from the `Car` constructor, and it has access to properties and methods defined in the `Car` constructor and the `Car` prototype.
+
+So the main difference is that an instance is an individual object created from a constructor, while a prototype is an object that serves as a blueprint for instances. Changes to the prototype affect all instances, while changes to an instance only affect that instance.
+
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the default prototype of an object created using an object literal?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The default prototype of an object created using an object literal in JavaScript is `Object.prototype`.
+  </div>
+  </div>
+</details>
+
+---
+
+### What is Object.create() and how does it relate to prototypes?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> `Object.create()` is a static method in JavaScript that creates a new object with the specified prototype object and properties.
+  </div><br />
+  <div><strong className="codeExample">Here's how it works in relation to prototypes:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let animal = {
+    speaks: true,
+    sound: function() {
+        return 'Generic animal sound!';
+    }
+};
+
+let dog = Object.create(animal);
+
+dog.bark = function() {
+    return 'Woof!';
+};
+
+console.log(dog.speaks); // true, inherited from 'animal' via prototype chain
+console.log(dog.sound()); // 'Generic animal sound!', inherited from 'animal' via prototype chain
+console.log(dog.bark()); // 'Woof!', present directly on 'dog'
+```
+
+In this example, `animal` is used as a prototype for creating `dog` with `Object.create()`. As a result, `dog` has access to the `speaks` property and the `sound` method via the prototype chain, while also having its own `bark` method directly on it.
 
   </div>
   </div>

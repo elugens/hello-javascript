@@ -135,7 +135,7 @@ import StructuredData from './schemadata/DefiningPatternSchemaData.js';
     </div>
     <br/>
     <div>
-      <strong>Technical Response:</strong> A description or fragment of a proto-pattern is sometimes referred to as a "patternlet" or "patlet". A patternlet is a smaller, less well-defined version of a design pattern that is still in the process of being defined and refined.<br/>One example of a patternlet is the "parameter object" patternlet, which involves passing a single object as a parameter instead of multiple individual parameters.
+      <strong>Technical Response:</strong> A description or fragment of a proto-pattern is sometimes referred to as a "patternlet" or "patlet". A patternlet is a smaller, less well-defined version of a design pattern that is still in the process of being defined and refined.<br/><br/>One example of a patternlet is the "parameter object" patternlet, which involves passing a single object as a parameter instead of multiple individual parameters.
     </div>
   </div>
 </details>

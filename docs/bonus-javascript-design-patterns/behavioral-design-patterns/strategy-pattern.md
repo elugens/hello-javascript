@@ -50,11 +50,11 @@ import StructuredData from './schemadata/StrategySchemaData.js';
   </summary>
   <div>
   <div>
-      <strong>Interview Response:</strong> The strategy design pattern is a behavioral pattern that allows for interchangeable algorithms by encapsulating them in separate objects and selecting one dynamically.<br/>
+      <strong>Interview Response:</strong> The Strategy Design Pattern allows you to select an algorithm's behavior at runtime. Instead of implementing a single algorithm directly within a class, the functionality is abstracted to separate strategy classes which are interchangeable.
     </div>
     <br/>
     <div>
-      <strong>Technical Response:</strong> The Strategy pattern encapsulates various algorithms (or strategies) for a specific task. It enables a method to be replaced at runtime with another method (Strategy) without the client knowing it. The Strategy pattern is essentially a collection of interchangeable algorithms.<br/>
+      <strong>Technical Response:</strong> The Strategy pattern encapsulates various algorithms (or strategies) for a specific task. It enables a method to be replaced at runtime with another method (Strategy) without the client knowing it. The Strategy pattern is essentially a collection of interchangeable algorithms.
     </div>
     <div>
 </div><br />
@@ -76,73 +76,64 @@ import StructuredData from './schemadata/StrategySchemaData.js';
 
 <br/>
 
-```js
-let Shipping = function () {
-  this.company = '';
-};
+Here's an example using modern JavaScript where different shipping strategies are implemented for an ecommerce system:
 
-Shipping.prototype = {
-  setStrategy: function (company) {
+```javascript
+class Shipping {
+  constructor() {
+    this.company = '';
+  }
+
+  setStrategy(company) {
     this.company = company;
-  },
+  }
 
-  calculate: function (package) {
+  calculate(package) {
     return this.company.calculate(package);
-  },
-};
-
-let UPS = function () {
-  this.calculate = function (package) {
-    // calculations...
-    return '$45.95';
-  };
-};
-
-let USPS = function () {
-  this.calculate = function (package) {
-    // calculations...
-    return '$39.40';
-  };
-};
-
-let Fedex = function () {
-  this.calculate = function (package) {
-    // calculations...
-    return '$43.20';
-  };
-};
-
-function run() {
-  let package = { from: '76712', to: '10012', weigth: 'lkg' };
-
-  // the 3 strategies
-
-  let ups = new UPS();
-  let usps = new USPS();
-  let fedex = new Fedex();
-
-  let shipping = new Shipping();
-
-  shipping.setStrategy(ups);
-  console.log('UPS Strategy: ' + shipping.calculate(package));
-  shipping.setStrategy(usps);
-  console.log('USPS Strategy: ' + shipping.calculate(package));
-  shipping.setStrategy(fedex);
-  console.log('Fedex Strategy: ' + shipping.calculate(package));
+  }
 }
 
-run();
+class UPS {
+  calculate(package) {
+    // calculations...
+    return '$45.95';
+  }
+}
 
-/*
+class USPS {
+  calculate(package) {
+    // calculations...
+    return '$39.40';
+  }
+}
 
-OUTPUT:
+class Fedex {
+  calculate(package) {
+    // calculations...
+    return '$43.20';
+  }
+}
 
-UPS Strategy: $45.95
-USPS Strategy: $39.40
-Fedex Strategy: $43.20
+// usage
+const package = { from: '76712', to: '10012', weigth: 'lkg' };
 
-*/
+// the Shipping object uses the strategy interface
+const shipping = new Shipping();
+
+shipping.setStrategy(new UPS());
+console.log(`UPS Strategy: ${shipping.calculate(package)}`);
+// Output: UPS Strategy: $45.95
+
+shipping.setStrategy(new USPS());
+console.log(`USPS Strategy: ${shipping.calculate(package)}`);
+// Output: USPS Strategy: $39.40
+
+shipping.setStrategy(new Fedex());
+console.log(`Fedex Strategy: ${shipping.calculate(package)}`);
+// Output: Fedex Strategy: $43.20
 ```
+
+In this example, `Shipping` is the context, `UPS`, `USPS`, and `Fedex` are strategy classes, and `calculate` is the method the context will use to interchange strategies. This pattern provides a way to encapsulate related algorithms to make them interchangeable and provides the flexibility to select the most appropriate strategy for a particular scenario.
 
 </div>
  </div>
@@ -281,6 +272,68 @@ Fedex Strategy: $43.20
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> It mainly consists of the Context, Strategy Abstract, and a set of Concrete Strategies.
+  </div><br />
+  <div><strong>Technical Response:</strong> The main components of the Strategy Pattern are the Context, Strategy, and Concrete Strategies. The Context maintains a reference to a Strategy, the Strategy provides an interface common to all supported algorithms, and Concrete Strategies implement the algorithm using the Strategy interface.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's an example with a `Sorter` context and different sorting strategies.
+
+```javascript
+// Context
+class Sorter {
+  constructor(sortStrategy) {
+    this.sortStrategy = sortStrategy;
+  }
+
+  setStrategy(sortStrategy) {
+    this.sortStrategy = sortStrategy;
+  }
+
+  sort(dataset) {
+    return this.sortStrategy.sort(dataset);
+  }
+}
+
+// Strategy
+class SortStrategy {
+  sort(dataset) {
+    throw new Error("This method must be overridden in a derived class.");
+  }
+}
+
+// Concrete Strategy A
+class BubbleSortStrategy extends SortStrategy {
+  sort(dataset) {
+    console.log("Sorting using bubble sort");
+    // Perform bubble sort and return sorted dataset
+    return dataset.sort((a, b) => a - b);
+  }
+}
+
+// Concrete Strategy B
+class QuickSortStrategy extends SortStrategy {
+  sort(dataset) {
+    console.log("Sorting using quick sort");
+    // Perform quick sort and return sorted dataset
+    return dataset.sort((a, b) => a - b); // Simplified for example purposes
+  }
+}
+
+// Usage
+const dataset = [1, 5, 4, 3, 2, 8];
+
+let sorter = new Sorter(new BubbleSortStrategy());
+sorter.sort(dataset); // Outputs: Sorting using bubble sort
+
+sorter.setStrategy(new QuickSortStrategy());
+sorter.sort(dataset); // Outputs: Sorting using quick sort
+```
+
+In this example, `Sorter` is the Context, `SortStrategy` is the Strategy, and `BubbleSortStrategy` and `QuickSortStrategy` are Concrete Strategies. The `Sorter` can use different sorting strategies interchangeably depending on the needs of the application.
+
   </div>
   </div>
 </details>
@@ -316,7 +369,7 @@ Fedex Strategy: $43.20
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, they're similar, but the State Pattern is about changing behavior based on internal state, while Strategy changes behavior externally.
+  <div><strong>Interview Response:</strong> Yes, they're similar, but the State Pattern works by changing behavior based on internal state, while Strategy changes behavior externally.
   </div>
   </div>
 </details>

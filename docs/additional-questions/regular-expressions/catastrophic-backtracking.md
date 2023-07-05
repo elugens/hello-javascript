@@ -104,21 +104,49 @@ alert(regexp.test(str));
 
   <div></div>
 
-Here's a JavaScript example that shows how to avoid catastrophic backtracking with atomic grouping:
-
 ```javascript
-let regex = /^(?>\d+|[a-z]+|[@#]+)+$/;
-
-let testString = '123abc@##';
-
-if(regex.test(testString)) {
-    console.log('Match found!');
-} else {
-    console.log('Match not found!');
-}
+const regex = /(\d+)+([a-z]+)+/i;
 ```
 
+This will work in most cases, but because it has nested quantifiers, it might suffer from catastrophic backtracking if the string is long and doesn't match the pattern.
+
+Here's how we can improve it:
+
+**1. Remove unnecessary quantifiers**:
+
+```javascript
+const regex = /\d+[a-z]+/i;
+```
+
+In this case, we don't need the `+` after the groups, because `\d+` already matches one or more digits, and `[a-z]+` matches one or more letters.
+
+**2. Simulating atomic grouping**:
+
+Atomic groups are not supported in JavaScript, but can be simulated to some extent. If we know that once we have a match of numbers, there's no need to backtrack into it, we can use a positive lookahead to simulate an atomic group:
+
+```javascript
+const regex = /(?=\d+)(\d+)(?=[a-z]+)([a-z]+)/i;
+```
+
+In this case, `(?=\d+)` is a positive lookahead that asserts that what follows is one or more digits. Once this is satisfied, the engine won't backtrack into this group. The same applies to `(?=[a-z]+)`, which asserts that what follows is one or more letters.
+
+**3. Simulating possessive quantifiers**:
+
+Possessive quantifiers are also not natively supported in JavaScript. However, they can be simulated using a positive lookahead. A possessive quantifier, once it matches something, won't give it back. This can be useful to prevent backtracking:
+
+```javascript
+const regex = /(?=(\d+))\d+(?=(\d+))[a-z]+/i;
+```
+
+In this case, `(?=(\d+))\d+` is simulating a possessive quantifier: it matches one or more digits and doesn't allow backtracking into this group. The same does not apply to the letter group as it is not preceded by a lookahead.
+
+Keep in mind these are complex solutions for problems that might be easier solved by simplifying and optimizing your regex pattern to your specific needs, so they should only be used when necessary.
+
+---
+
+:::note
 **Note:** Please note, JavaScript doesn't natively support atomic groups, so in practical cases, you can use other strategies like replacing `*` with `*?` to make it non-greedy, or use lookahead and lookbehind assertions.
+:::
 
   </div>
   </div>
@@ -144,18 +172,6 @@ if(regex.test(testString)) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> A typical problematic pattern leading to catastrophic backtracking in JavaScript could be a nested quantifier like /(a+)*b/. If the string doesn't contain 'b', this can lead to excessive backtracking.
-  </div>
-  </div>
-</details>
-
----
-
-### How can you prevent Catastrophic Backtracking in Regular Expressions?
-
-<details>
-  <summary><strong>View Answer:</strong></summary>
-  <div>
-  <div><strong>Interview Response:</strong> To prevent catastrophic backtracking in JavaScript regex, avoid ambiguous patterns and excessive nested quantifiers. Use non-greedy quantifiers, lookahead and lookbehind assertions, and non-capturing groups appropriately.
   </div>
   </div>
 </details>

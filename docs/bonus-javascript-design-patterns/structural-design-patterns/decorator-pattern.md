@@ -47,14 +47,45 @@ import StructuredData from './schemadata/DecoratorSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> It's a structural pattern providing a flexible alternative to sub-classing for extending functionality by wrapping an object with new behavior.
+  <div><strong>Interview Response:</strong> The Decorator Pattern is a design pattern that allows behavior to be added to an individual object, either statically or dynamically, without affecting the behavior of other objects from the same class.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+class Coffee {
+  cost() {
+    return 5;
+  }
+}
+
+const withMilk = coffee => {
+  const cost = coffee.cost();
+  coffee.cost = () => cost + 1;
+};
+
+const withSugar = coffee => {
+  const cost = coffee.cost();
+  coffee.cost = () => cost + 2;
+};
+
+// Example usage:
+const coffee = new Coffee();
+withMilk(coffee);
+withSugar(coffee);
+console.log(coffee.cost());  // Outputs: 8
+```
+
+In this example, `Coffee` is the object we're decorating. The `withMilk` and `withSugar` decorators add additional functionality to the `Coffee` object's `cost` method. We can call these decorators on any `Coffee` object, and they modify only the object they're called on without changing the `Coffee` class or affecting other `Coffee` objects.
+
   </div>
   </div>
 </details>
 
 ---
 
-### Could you please explain the Decorator design pattern?
+### Can you explain the Decorator design pattern in JavaScript?
 
 <details className='answer'>
   <summary>
@@ -297,18 +328,72 @@ Decorated User: Kelly, Broadway, New York
   <div>
       <strong>Interview Response:</strong> In the Decorator pattern in JavaScript, the object participants include the Component interface or class, ConcreteComponent, and Decorator interface or class. Additionally, there are ConcreteDecorator classes.
     </div>
-    <br />
-    <div>
-      <strong>Technical Response:</strong> The Client, Component, and Decorator are the object participants in the Decorator Pattern.
-    </div>
-    <br />
     <div></div>
 
-- **Client** – The Client object participant references the decorated Component.
-- **Component** – The object to which additional functionality gets added is a Component.
-- **Decorator** – By keeping a reference to the Component, defining an interface that conforms to the Component's interface, and implementing the additional functionality, the Decorator acts as a wrapper around it. In an application, there can be more than one Decorator.
+- **Component**: An interface defining the default behavior objects.
+- **ConcreteComponent**: An object to be decorated.
+- **Decorator**: An abstract class that implements the component interface and holds an instance of a component.
+- **ConcreteDecorator**: A class that adds responsibilities to the component.
 
 <br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Let's illustrate these with a modern JavaScript code:
+
+```javascript
+// Component
+class Car {
+  constructor() {
+    this.cost = function() {
+      return 0;
+    };
+  }
+}
+
+// ConcreteComponent
+class ModelS extends Car {
+  constructor() {
+    super();
+    this.cost = function() {
+      return 50000;
+    };
+  }
+}
+
+// Decorator
+class CarOptions extends Car {
+  constructor(car) {
+    super();
+    this.decoratedCar = car;
+  }
+
+  cost() {
+    return this.decoratedCar.cost();
+  }
+}
+
+// ConcreteDecorator
+class EnhancedAutopilot extends CarOptions {
+  constructor(car) {
+    super(car);
+  }
+
+  cost() {
+    return this.decoratedCar.cost() + 5000;
+  }
+}
+
+// Example usage
+let myCar = new ModelS();
+myCar = new EnhancedAutopilot(myCar);
+console.log(myCar.cost());  // Outputs: 55000
+```
+
+In this example, `Car` is the Component, `ModelS` is the ConcreteComponent, `CarOptions` is the Decorator, and `EnhancedAutopilot` is the ConcreteDecorator. Each ConcreteDecorator enhances the behavior of the ConcreteComponent it wraps.
+
+  </div>
   </div>
 </details>
 
@@ -414,7 +499,72 @@ Decorated User: Kelly, Broadway, New York
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A common use case is enhancing object functionalities dynamically, like adding premium features to a basic service.
+  <div><strong>Interview Response:</strong> A common use case of the Decorator Pattern is when you need to add new responsibilities or behaviors to an object dynamically without affecting other instances of the same class.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Consider an example where we're building a pizza ordering system. Different types of pizzas have different base costs, and toppings like cheese, tomatoes, and bacon can be added to any pizza. Here's how this could be achieved with the Decorator Pattern:
+
+```javascript
+// Component
+class Pizza {
+  cost() {
+    return 0;
+  }
+}
+
+// ConcreteComponent
+class MargheritaPizza extends Pizza {
+  cost() {
+    return 10;
+  }
+}
+
+// Decorator
+class ToppingDecorator extends Pizza {
+  constructor(pizza) {
+    super();
+    this.decoratedPizza = pizza;
+  }
+
+  cost() {
+    return this.decoratedPizza.cost();
+  }
+}
+
+// ConcreteDecorator
+class CheeseTopping extends ToppingDecorator {
+  constructor(pizza) {
+    super(pizza);
+  }
+
+  cost() {
+    return this.decoratedPizza.cost() + 2;
+  }
+}
+
+// ConcreteDecorator
+class TomatoTopping extends ToppingDecorator {
+  constructor(pizza) {
+    super(pizza);
+  }
+
+  cost() {
+    return this.decoratedPizza.cost() + 1;
+  }
+}
+
+// Example usage
+let myPizza = new MargheritaPizza();
+myPizza = new CheeseTopping(myPizza);
+myPizza = new TomatoTopping(myPizza);
+console.log(myPizza.cost());  // Outputs: 13
+```
+
+In this example, we define the `cost` methods inside the classes, not inside the constructor. This allows us to create a `MargheritaPizza` object, then decorate it with additional toppings, each affecting the final cost of the pizza.
+
   </div>
   </div>
 </details>
@@ -463,6 +613,52 @@ Decorated User: Kelly, Broadway, New York
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, multiple Decorators can be "stacked" on an object to add combined behaviors.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Yes, multiple decorators can be applied to a single object in modern JavaScript.
+
+Here is an example using a coffee order system where we decorate a base coffee with multiple add-ons:
+
+```javascript
+class Coffee {
+  cost() {
+    return 5;
+  }
+}
+
+class Milk {
+  constructor(coffee) {
+    this.coffee = coffee;
+  }
+  
+  cost() {
+    return this.coffee.cost() + 1;
+  }
+}
+
+class Sugar {
+  constructor(coffee) {
+    this.coffee = coffee;
+  }
+  
+  cost() {
+    return this.coffee.cost() + 2;
+  }
+}
+
+// Example usage
+let coffee = new Coffee();
+coffee = new Milk(coffee);
+coffee = new Sugar(coffee);
+
+console.log(coffee.cost());  // Outputs: 8
+```
+
+In this example, we start with a base coffee object. Then we wrap (or "decorate") that base coffee with a `Milk` object, and then wrap the `Milk` object with a `Sugar` object. Each decorator adds its own cost to the total, resulting in a final cost of 8.
+
   </div>
   </div>
 </details>

@@ -425,6 +425,32 @@ console.log(square.calculateArea()); // Output: 16
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> In JavaScript, you can make a class method or property private by using the hash (#) symbol before its name. Private methods and properties are only accessible within the class they're defined in.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+class MyClass {
+  #privateProperty = "I'm private!";
+
+  #privateMethod() {
+    return 'Hello from private method!';
+  }
+
+  usePrivate() {
+    return this.#privateMethod() + ' ' + this.#privateProperty;
+  }
+}
+
+let instance = new MyClass();
+console.log(instance.usePrivate()); // "Hello from private method! I'm private!"
+// console.log(instance.#privateMethod()); // This would throw an error
+// console.log(instance.#privateProperty); // This would also throw an error
+```
+
+In this code, `#privateProperty` and `#privateMethod` are private, meaning they can only be accessed from within the `MyClass` class. The `usePrivate` method is public and can access the private members. If you uncomment the last two lines and try to access the private members directly, JavaScript will throw an error.
+
   </div>
   </div>
 </details>
@@ -546,18 +572,6 @@ new User().sayHello(); // Hello, Jane
 ```
 
   </div>
-  </div>
-</details>
-
----
-
-### In your opinion, is classical inheritance ever the right choice? If so, when? If not, why?
-
-<details>
-  <summary><strong>View Answer:</strong></summary>
-  <div>
-  <div><strong>Interview Response:</strong> Classical inheritance is rarely the best solution, and we can utilize it for a single levels in rare situations.
-</div>
   </div>
 </details>
 

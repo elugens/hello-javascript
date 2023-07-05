@@ -50,7 +50,7 @@ import StructuredData from './schemadata/StateSchemaData.js';
   </summary>
   <div>
   <div>
-      <strong>Interview Response:</strong> TThe State Design Pattern allows an object to alter its behavior when its internal state changes, seemingly changing its class. It promotes loose coupling and increases manageability.<br/>
+      <strong>Interview Response:</strong> The State Design Pattern allows an object to alter its behavior when its internal state changes, seemingly changing its class. It promotes loose coupling and increases manageability.
     </div>
     <br/>
     <div>
@@ -76,75 +76,83 @@ import StructuredData from './schemadata/StateSchemaData.js';
 
 <br/>
 
-```js
-let TrafficLight = function () {
-  let count = 0;
-  let currentState = new Red(this);
+Here's an example of a Traffic Light system using the State Design Pattern.
 
-  this.change = function (state) {
-    // limits number of changes
-    if (count++ >= 10) return;
-    currentState = state;
-    currentState.go();
-  };
+```javascript
+class TrafficLight {
+  constructor() {
+    this.states = [new GreenLight(), new YellowLight(), new RedLight()];
+    this.current = this.states[0];
+  }
 
-  this.start = function () {
-    currentState.go();
-  };
-};
+  change() {
+    const totalStates = this.states.length;
+    let currentIndex = this.states.findIndex(light => light === this.current);
 
-let Red = function (light) {
-  this.light = light;
+    if (currentIndex + 1 < totalStates) this.current = this.states[currentIndex + 1];
+    else this.current = this.states[0];
+  }
 
-  this.go = function () {
-    console.log('Red --> for 1 minute');
-    light.change(new Green(light));
-  };
-};
-
-let Yellow = function (light) {
-  this.light = light;
-
-  this.go = function () {
-    console.log('Yellow --> for 10 seconds');
-    light.change(new Red(light));
-  };
-};
-
-let Green = function (light) {
-  this.light = light;
-
-  this.go = function () {
-    console.log('Green --> for 1 minute');
-    light.change(new Yellow(light));
-  };
-};
-
-function run() {
-  let light = new TrafficLight();
-  light.start();
+  sign() {
+    return this.current.sign();
+  }
 }
 
-run();
+class Light {
+  constructor(light) {
+    this.light = light;
+  }
+}
 
-/*
+class GreenLight extends Light {
+  constructor() {
+    super('green');
+  }
 
-OUTPUT:
+  sign() {
+    return 'Go';
+  }
+}
 
-Red --> for 1 minute
-Green --> for 1 minute
-Yellow --> for 10 seconds
-Red --> for 1 minute
-Green --> for 1 minute
-Yellow --> for 10 seconds
-Red --> for 1 minute
-Green --> for 1 minute
-Yellow --> for 10 seconds
-Red --> for 1 minute
-Green --> for 1 minute
+class YellowLight extends Light {
+  constructor() {
+    super('yellow');
+  }
 
-*/
+  sign() {
+    return 'Caution';
+  }
+}
+
+class RedLight extends Light {
+  constructor() {
+    super('red');
+  }
+
+  sign() {
+    return 'Stop';
+  }
+}
+
+// usage
+const trafficLight = new TrafficLight();
+
+console.log(trafficLight.sign()); // Green: Go
+trafficLight.change();
+
+console.log(trafficLight.sign()); // Yellow: Caution
+trafficLight.change();
+
+console.log(trafficLight.sign()); // Red: Stop
+trafficLight.change();
+
+// Example output:
+// Go
+// Caution
+// Stop
 ```
+
+In this example, the `TrafficLight` class represents the Context, and it maintains a reference to a state object (`current`) which serves as the Current State. `GreenLight`, `YellowLight`, and `RedLight` classes represent Concrete States, each with different behaviors encapsulated in the `sign()` method.
 
 </div>
  </div>
@@ -168,7 +176,7 @@ Green --> for 1 minute
 
 ---
 
-### When should you utilize the JavaScript State Pattern?
+### When should you utilize the State Design Pattern in JavaScript?
 
 <details>
   <summary>
@@ -225,7 +233,6 @@ Green --> for 1 minute
     <div>
       <strong>Interview Response:</strong> It might increase complexity due to the creation of multiple new classes and also involve additional memory costs. Applying the pattern may be excessive if a state machine has only a few states or infrequently changes.
     </div>
-<br />
   </div>
 </details>
 
@@ -289,6 +296,114 @@ Green --> for 1 minute
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The 'Context' is the entity having varying behavior, while 'State' encapsulates the behavior associated with a particular state of 'Context'.
+  </div><br/>
+  <div><strong>Technical Response:</strong> In the State Design Pattern, "Context" is an object that can exhibit a variety of behaviors based on its current "State". The "State" is an interface that defines a common set of methods that Concrete States will implement.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's an example with a `Water` object that changes state between `Solid`, `Liquid`, and `Gas`.
+
+```javascript
+class Water {
+  constructor() {
+    this.state = new SolidState(this);
+  }
+
+  heat() {
+    this.state.heat();
+  }
+
+  cool() {
+    this.state.cool();
+  }
+
+  changeState(state) {
+    this.state = state;
+  }
+
+  printState() {
+    this.state.printState();
+  }
+}
+
+class State {
+  constructor(water) {
+    this.water = water;
+  }
+
+  heat() {
+    throw new Error('This method must be overwritten!');
+  }
+
+  cool() {
+    throw new Error('This method must be overwritten!');
+  }
+
+  printState() {
+    throw new Error('This method must be overwritten!');
+  }
+}
+
+class SolidState extends State {
+  heat() {
+    console.log('Heating ice. Turning to water.');
+    this.water.changeState(new LiquidState(this.water));
+  }
+
+  cool() {
+    console.log('Ice is already cool.');
+  }
+
+  printState() {
+    console.log('The water is solid.');
+  }
+}
+
+class LiquidState extends State {
+  heat() {
+    console.log('Heating water. Turning to gas.');
+    this.water.changeState(new GasState(this.water));
+  }
+
+  cool() {
+    console.log('Cooling water. Turning to ice.');
+    this.water.changeState(new SolidState(this.water));
+  }
+
+  printState() {
+    console.log('The water is liquid.');
+  }
+}
+
+class GasState extends State {
+  heat() {
+    console.log('Gas is already hot.');
+  }
+
+  cool() {
+    console.log('Cooling gas. Turning to water.');
+    this.water.changeState(new LiquidState(this.water));
+  }
+
+  printState() {
+    console.log('The water is gas.');
+  }
+}
+
+const water = new Water();
+water.printState(); // The water is solid.
+water.heat(); // Heating ice. Turning to water.
+water.printState(); // The water is liquid.
+water.heat(); // Heating water. Turning to gas.
+water.printState(); // The water is gas.
+water.cool(); // Cooling gas. Turning to water.
+water.printState(); // The water is liquid.
+```
+
+In this example, `Water` is the "Context". The "State" is an interface represented by the `State` class, and `SolidState`, `LiquidState`, and `GasState` are the "Concrete States". The `heat()` and `cool()` methods in the `Water` class delegate to the current state's corresponding methods.
+
   </div>
   </div>
 </details>

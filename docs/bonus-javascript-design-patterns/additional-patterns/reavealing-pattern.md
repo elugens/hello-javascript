@@ -60,40 +60,47 @@ import StructuredData from './schemadata/RevealingSchemaData.js';
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-```js
-// ES2015+ keywords/syntax used: let, const, method declaration, arrow function
-//              template literals for string interpolation, import, export
+Here's an example that demonstrates this pattern.
 
-let privateVar = 'Ben Cherry';
-const publicVar = 'Hey there!';
+```javascript
+let myModule = (function() {
+  // Private variables and functions
+  let privateCounter = 0;
+  function privateFunction() {
+    console.log('Inside a private function!');
+    privateCounter++;
+  }
 
-const privateFunction = () => {
-  console.log(`Name:${privateVar}`);
-};
+  // Public functions
+  function incrementCounter() {
+    privateFunction();
+    return privateCounter;
+  }
 
-const publicSetName = (strName) => {
-  privateVar = strName;
-};
+  function getCounter() {
+    return `Current counter value: ${privateCounter}`;
+  }
 
-const publicGetName = () => {
-  privateFunction();
-};
+  // Reveal public pointers to private functions and properties
+  return {
+    increment: incrementCounter,
+    getCount: getCounter
+  };
 
-// Reveal public pointers to
-// private functions and properties
-const myRevealingModule = {
-  setName: publicSetName,
-  greeting: publicVar,
-  getName: publicGetName,
-};
+})();
 
-export default myRevealingModule;
-
-// Usage:
-import myRevealingModule from './myRevealingModule';
-
-myRevealingModule.setName('Paul Kinlan');
+console.log(myModule.getCount()); // Outputs: "Current counter value: 0"
+myModule.increment();
+console.log(myModule.getCount()); // Outputs: "Current counter value: 1"
 ```
+
+In this example, `privateCounter` and `privateFunction()` are private (not directly accessible) and `incrementCounter` and `getCounter` are public, accessible through the returned object. The function `privateFunction()` can be accessed and modified indirectly through the `incrementCounter` method.
+
+---
+
+:::tip Note:
+Although not typically "modern" as of 2023, revealing module pattern has been used extensively in JavaScript for module encapsulation, particularly before the advent of ES6 modules. Now, we have import/export statements for better encapsulation and module management, but revealing module pattern is still a useful and prevalent design pattern to understand.
+:::
 
 </div>
 <br />
@@ -199,7 +206,7 @@ myRevealingModule.setName('Paul Kinlan');
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Traditionally, It's an immediately invoked function expression (IIFE) that returns an object with methods and properties that have been declared inside it.
+  <div><strong>Interview Response:</strong> Traditionally, It's an immediately invoked function expression (IIFE) that returns an object with methods and properties that have been declared inside it. Since the advent of ES6 modules, we have import/export statements for better encapsulation and module management, but revealing module pattern is still a useful and prevalent design pattern to understand.
   </div>
   </div>
 </details>
@@ -211,35 +218,50 @@ myRevealingModule.setName('Paul Kinlan');
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In modern JavaScript, the Revealing Module Pattern is applied by using functions and exporting an object literal, which exposes only the public parts, preserving private members within the function's closure.
+  <div><strong>Interview Response:</strong> In modern JavaScript, especially with the advent of ES6 (ES2015) and later versions, we have the concepts of modules and module exports. While the revealing module pattern can still be used, it's now common to leverage `export` and `import` to control the visibility of functions and variables in a module.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
 
-Here's an example of the Revealing Module Pattern using modern JavaScript:
-
 ```javascript
-const myModule = (() => {
-  let privateData = 'Private data';
+// myModule.js
 
-  function privateFunction() {
-    return 'This is private!';
-  }
+// Private variables and functions
+let privateCounter = 0;
+function privateFunction() {
+  console.log('Inside a private function!');
+  privateCounter++;
+}
 
-  function publicFunction() {
-    return 'Public can see this!' + privateFunction();
-  }
+// Public functions
+function incrementCounter() {
+  privateFunction();
+  return privateCounter;
+}
 
-  return {
-    publicFunction
-  };
-})();
+function getCounter() {
+  return `Current counter value: ${privateCounter}`;
+}
 
-console.log(myModule.publicFunction()); // Outputs: Public can see this! This is private!
+// Export the public functions
+export { incrementCounter as increment, getCounter as getCount };
 ```
 
-In this example, `myModule` is an object with a method `publicFunction()`. The function `privateFunction` and the variable `privateData` are not accessible directly from outside the function's scope, hence they are private.
+You can use these exported functions in another file as follows:
+
+```javascript
+// main.js
+
+// Import the functions from myModule.js
+import { increment, getCount } from './myModule.js';
+
+console.log(getCount()); // Outputs: "Current counter value: 0"
+increment();
+console.log(getCount()); // Outputs: "Current counter value: 1"
+```
+
+In this code, we use `export` to make `incrementCounter` and `getCounter` available for other modules to import. `privateCounter` and `privateFunction` are not exported and thus remain private to `myModule.js`. This is similar to the revealing module pattern, but is more aligned with modern JavaScript practices.
 
   </div>
   </div>
@@ -252,7 +274,7 @@ In this example, `myModule` is an object with a method `publicFunction()`. The f
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> It uses closures to encapsulate functions and variables within a module, only revealing necessary parts, thereby enforcing privacy.
+  <div><strong>Interview Response:</strong> The Revealing Module Pattern in JavaScript emulates private variables and methods by leveraging scope. Only exposed methods and variables (through return or export) are publicly accessible; everything else remains private within the module.
   </div>
   </div>
 </details>
@@ -304,6 +326,12 @@ console.log(Counter.getCount()); // Outputs: 1
 In this example, we have a `Counter` module created using the Revealing Module Pattern. The `count` variable is a private variable that can only be accessed and modified through the public methods `increment`, `decrement`, and `getCount`.
 
 The `Counter` module returns an object that reveals only the public methods, allowing external code to interact with the private `count` variable indirectly.
+
+---
+
+:::tip Note:
+Although not typically "modern" as of 2023, revealing module pattern has been used extensively in JavaScript for module encapsulation, particularly before the advent of ES6 modules. Now, we have import/export statements for better encapsulation and module management, but revealing module pattern is still a useful and prevalent design pattern to understand.
+:::
 
   </div>
   </div>

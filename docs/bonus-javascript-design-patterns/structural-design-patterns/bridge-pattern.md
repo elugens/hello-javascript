@@ -42,7 +42,7 @@ import StructuredData from './schemadata/BridgeSchemaData.js';
 
 ---
 
-### Can you define the Bridge Design Pattern?
+### What is the Bridge Design Pattern in Modern JavaScript?
 
 <details className='answer'>
   <summary>
@@ -50,16 +50,13 @@ import StructuredData from './schemadata/BridgeSchemaData.js';
   </summary>
   <div>
   <div>
-      <strong>Interview Response:</strong> The Bridge pattern in JavaScript is a structural pattern that enables decoupling of an abstraction and its implementation, allowing them to vary independently. It promotes flexibility, extensibility, and code reuse.
-    </div><br />
-    <div>
-      <strong>Technical Response:</strong> The Bridge pattern allows two components, a client, and a service, to work together, with each element having it's own interface. The Bridge Pattern is a high-level architectural pattern, and its primary goal is to write better code through two levels of abstraction. It facilitates the very loose coupling of objects and sometimes referred to as a double Adapter pattern.<br/>
+      <strong>Interview Response:</strong> The Bridge Design Pattern is a structural design pattern that decouples an abstraction from its implementation, allowing both to vary independently. It enables the separation of a class's interface from its implementation, often for the purposes of providing multiple implementations.
     </div><br />
   <div><strong className="codeExample">Diagram:</strong><br /><br />
 
   <div></div>
 
-  <div><strong className="codeExample">Code Example #1:</strong><br /><br />
+  <div><strong className="codeExample">Code Example</strong><br /><br />
 
 <img src="/img/bridge-pattern.png" /><br /><br />
 
@@ -67,212 +64,66 @@ import StructuredData from './schemadata/BridgeSchemaData.js';
 
   <div></div>
 
-```js
-'use strict';
+Here's an example using modern JavaScript (ES6).
 
-class Abstraction {
-  constructor() {}
+```javascript
+// The abstraction
+class SmartDevice {
+  constructor(operatingSystem) {
+    this.operatingSystem = operatingSystem;
+  }
 
-  Operation() {
-    this.imp.OperationImp();
+  turnOn() {
+    this.operatingSystem.start();
+  }
+
+  turnOff() {
+    this.operatingSystem.shutDown();
   }
 }
 
-class RefinedAbstraction extends Abstraction {
-  constructor() {
-    super();
-    console.log('RefinedAbstraction created');
+// The implementation
+class OperatingSystem {
+  start() {
+    throw new Error("This method must be overwritten!");
   }
 
-  setImp(imp) {
-    this.imp = imp;
-  }
-}
-
-class Implementor {
-  constructor() {}
-
-  OperationImp() {}
-}
-
-class ConcreteImplementorA extends Implementor {
-  constructor() {
-    super();
-    console.log('ConcreteImplementorA created');
-  }
-
-  OperationImp() {
-    console.log('ConcreteImplementorA OperationImp');
+  shutDown() {
+    throw new Error("This method must be overwritten!");
   }
 }
 
-class ConcreteImplementorB extends Implementor {
-  constructor() {
-    super();
-    console.log('ConcreteImplementorB created');
+class Android extends OperatingSystem {
+  start() {
+    console.log("Starting the Android system...");
   }
 
-  OperationImp() {
-    console.log('ConcreteImplementorB OperationImp');
+  shutDown() {
+    console.log("Shutting down the Android system...");
   }
 }
 
-function run() {
-  var abstraction = new RefinedAbstraction();
-  var state = Math.floor(Math.random() * 2);
-  if (state) abstraction.setImp(new ConcreteImplementorA());
-  else abstraction.setImp(new ConcreteImplementorB());
+class iOS extends OperatingSystem {
+  start() {
+    console.log("Starting the iOS system...");
+  }
 
-  abstraction.Operation();
+  shutDown() {
+    console.log("Shutting down the iOS system...");
+  }
 }
 
-run();
+// Using the Bridge Design Pattern
+const myAndroidDevice = new SmartDevice(new Android());
+myAndroidDevice.turnOn(); // Output: Starting the Android system...
 
-/*
-
-output:
-
-RefinedAbstraction created
-ConcreteImplementorB created
-ConcreteImplementorB OperationImp
-
-*/
+const myIOSDevice = new SmartDevice(new iOS());
+myIOSDevice.turnOn(); // Output: Starting the iOS system...
 ```
 
-  </div>
-
-  <br />
-  <div><strong className="codeExample">Code Example #2:</strong><br /><br />
-
-<img src="/img/javascript-bridge-pattern.jpg" /><br /><br />
-
-**This pattern's objects are as follows**
-
-**Client** -- Example code: _the run() function_
-
-- To request an operation, we make a call into abstraction.
-
-**Abstraction** -- _not used in JavaScript_
-
-- declares a first-level abstraction interface
-- manages a reference/pointer to the Implementor
-
-**RefinedAbstraction** -- Example code: _Gestures, Mouse_
-
-- implements and expands on the abstraction-defined interface
-
-**Implementor** -- _not used in JavaScript_
-
-- declares an interface for second-level or implementor abstraction
-
-**ConcreteImplementor** -- In example code: _Screen, Audio_
-
-- implements the Implementor interface and defines its effects
-
-  <div></div>
-
-```js
-// input devices
-let Gestures = function (output) {
-  this.output = output;
-
-  this.tap = function () {
-    this.output.click();
-  };
-  this.swipe = function () {
-    this.output.move();
-  };
-  this.pan = function () {
-    this.output.drag();
-  };
-  this.pinch = function () {
-    this.output.zoom();
-  };
-};
-
-let Mouse = function (output) {
-  this.output = output;
-
-  this.click = function () {
-    this.output.click();
-  };
-  this.move = function () {
-    this.output.move();
-  };
-  this.down = function () {
-    this.output.drag();
-  };
-  this.wheel = function () {
-    this.output.zoom();
-  };
-};
-
-// output devices
-
-let Screen = function () {
-  this.click = function () {
-    console.log('Screen select');
-  };
-  this.move = function () {
-    console.log('Screen move');
-  };
-  this.drag = function () {
-    console.log('Screen drag');
-  };
-  this.zoom = function () {
-    console.log('Screen zoom in');
-  };
-};
-
-let Audio = function () {
-  this.click = function () {
-    console.log('Sound oink');
-  };
-  this.move = function () {
-    console.log('Sound waves');
-  };
-  this.drag = function () {
-    console.log('Sound screetch');
-  };
-  this.zoom = function () {
-    console.log('Sound volume up');
-  };
-};
-
-function run() {
-  let screen = new Screen();
-  let audio = new Audio();
-
-  let hand = new Gestures(screen);
-  let mouse = new Mouse(audio);
-
-  hand.tap();
-  hand.swipe();
-  hand.pinch();
-
-  mouse.click();
-  mouse.move();
-  mouse.wheel();
-}
-
-run();
-
-/*
-
-OUTPUT:
-
-Screen select
-Screen move
-Screen zoom in
-Sound oink
-Sound waves
-Sound volume up
-
-*/
-```
+In this example, `SmartDevice` is our abstraction that we want to decouple from its implementation (the `OperatingSystem`), allowing each to vary independently. The `SmartDevice` class isn't concerned with how the `OperatingSystem` is implemented, and similarly, the `OperatingSystem` doesn't care how it's used by `SmartDevice`. This makes it easy to add new types of devices and operating systems without modifying existing code.
 
   </div>
-
   </div>
 </details>
 
@@ -315,29 +166,96 @@ Sound volume up
     <strong>View Answer:</strong>
   </summary>
   <div>
-    <div>
-      <strong>Interview Response:</strong> The objects that participate in the Bridge Pattern include the Client, Abstraction, Refined Abstraction, Implementor, and ConcreteImplementor.
-    </div>
-    <br />
-    <div>
-      <strong>Technical Response:</strong> The Bridge Pattern objects include the Client, Abstraction, Refined Abstraction, Implementor, and ConcreteImplementor.
-    </div>
-    <br />
-    <div></div>
+    <div><strong>Interview Response:</strong> The participating objects in the Bridge pattern are the Abstraction, RefinedAbstraction, Implementor, and ConcreteImplementor, which decouple the interface from the implementation allowing both to vary independently.
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-- **Client** – To request an operation, the Client makes a call to the abstraction.
-- **Abstraction** – The Abstraction, which is uncommon in JavaScript, declares an interface for the first level of abstraction and keeps a reference to the Implementor.
-- **RefinedAbstraction** – The RefinedAbstraction implements and extends the abstraction-defined interface.
-- **Implementor** – The Implementor interface provides an interface for the second level of implementor abstraction.
-- **ConcreteImplementor** – The ConcreteImplementor is responsible for implementing the Implementor interface and defining its effects.
+  <div></div>
 
-:::note
+Objects that participate in the Bridge pattern include:
 
-JavaScript does not support abstract classes, and as a result, Abstraction and Implementor get excluded.
+**1. Abstraction:** defines the abstraction's interface and maintains a reference to an object of type `Implementor`.
 
-:::
+**2. RefinedAbstraction:** extends the interface defined by `Abstraction`.
 
-<br />
+**3. Implementor**: defines the interface for implementation classes. This interface doesn't have to correspond exactly to `Abstraction`'s interface; in fact, the two interfaces can be quite different.
+
+**4. ConcreteImplementor:** implements the `Implementor` interface and defines its concrete implementation.
+
+Here's a code example in modern JavaScript (ES6) which showcases these components.
+
+```javascript
+// Implementor
+class DrawingAPI {
+  drawCircle(x, y, radius) {
+    throw new Error('This method must be overridden!');
+  }
+}
+
+// ConcreteImplementor 1
+class DrawingAPI1 extends DrawingAPI {
+  drawCircle(x, y, radius) {
+    console.log(`API1.circle at ${x}:${y} radius ${radius}`);
+  }
+}
+
+// ConcreteImplementor 2
+class DrawingAPI2 extends DrawingAPI {
+  drawCircle(x, y, radius) {
+    console.log(`API2.circle at ${x}:${y} radius ${radius}`);
+  }
+}
+
+// Abstraction
+class Shape {
+  constructor(drawingAPI) {
+    if (this.constructor === Shape) {
+      throw new Error('Cannot instantiate abstract class!');
+    }
+
+    this.drawingAPI = drawingAPI;
+  }
+
+  draw() {
+    throw new Error('This method must be overridden!');
+  }
+
+  resizeByPercentage(pct) {
+    throw new Error('This method must be overridden!');
+  }
+}
+
+// RefinedAbstraction
+class CircleShape extends Shape {
+  constructor(x, y, radius, drawingAPI) {
+    super(drawingAPI);
+    this.x = x;
+    this.y = y;
+    this.radius = radius;
+  }
+
+  draw() {
+    this.drawingAPI.drawCircle(this.x, this.y, this.radius);
+  }
+
+  resizeByPercentage(pct) {
+    this.radius *= pct;
+  }
+}
+
+// Usage:
+const shapes = [
+  new CircleShape(1, 2, 3, new DrawingAPI1()),
+  new CircleShape(5, 7, 11, new DrawingAPI2())
+];
+
+for (let shape of shapes) {
+  shape.resizeByPercentage(2.5);
+  shape.draw();
+}
+```
+
+  </div>
   </div>
 </details>
 
@@ -418,7 +336,7 @@ JavaScript does not support abstract classes, and as a result, Abstraction and I
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> It's suitable when you expect changes in classes' abstraction and implementation, particularly if they're not tightly related.
+  <div><strong>Interview Response:</strong> It's suitable when you expect changes in the classes' abstraction and implementation, particularly if they're not tightly related.
   </div>
   </div>
 </details>

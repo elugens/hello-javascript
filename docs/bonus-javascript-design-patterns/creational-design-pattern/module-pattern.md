@@ -59,7 +59,7 @@ import StructuredData from './schemadata/ModuleSchemaData.js';
     </div>
     <div>
 </div><br />
-  <div><strong className="codeExample">Code Example:</strong> Modern Implementation<br /><br />
+  <div><strong className="codeExample">Code Example:</strong> Modern Implementation using JavaScript Modules<br /><br />
 
 <img src="/img/module-pattern.png" /><br /><br/>
 
@@ -177,11 +177,10 @@ testModule.resetCounter();
   </summary>
   <div>
   <div>
-      <strong>Interview Response:</strong> Some disadvantages of the Module pattern in JavaScript are increased complexity, reduced flexibility, and difficulties with unit testing and dependency management.<br/>
-    </div>
-    <br/>
+      <strong>Interview Response:</strong> Some disadvantages of the Module pattern in JavaScript are increased complexity, reduced flexibility, and difficulties with unit testing and dependency management.
+    </div><br/>
     <div>
-      <strong>Technical Response:</strong> Although the Module pattern in JavaScript has many benefits, there are also some disadvantages. It can lead to increased complexity and reduced flexibility, making it harder to modify code. Additionally, the use of private variables and methods can make unit testing and dependency management more challenging. Finally, the pattern can create hidden dependencies between modules, making it harder to understand and maintain code.<br/>
+      <strong>Technical Response:</strong> Although the Module pattern in JavaScript has many benefits, there are also some disadvantages. It can lead to increased complexity and reduced flexibility, making it harder to modify code. Additionally, the use of private variables and methods can make unit testing and dependency management more challenging. Finally, the pattern can create hidden dependencies between modules, making it harder to understand and maintain code.
     </div>
     <br/>
   </div>
@@ -197,13 +196,11 @@ testModule.resetCounter();
   </summary>
   <div>
   <div>
-      <strong>Interview Response:</strong> Yes, some alternatives to the Module pattern in JavaScript are the Revealing Module pattern, Prototype pattern, Singleton pattern, and Factory pattern.<br/>
-    </div>
-    <br/>
+      <strong>Interview Response:</strong> Yes, some alternatives to the Module pattern in JavaScript are the Revealing Module pattern, Prototype pattern, Singleton pattern, and Factory pattern.
+    </div><br/>
     <div>
-      <strong>Technical Response:</strong> There are several alternative patterns to the Module pattern in JavaScript. One alternative is the Revealing Module pattern, which exposes only the public properties and methods of a module. Another alternative is the Prototype pattern, which uses prototypal inheritance to create objects and share behavior between them. Other patterns include the Singleton and Factory patterns.<br/>
+      <strong>Technical Response:</strong> There are several alternative patterns to the Module pattern in JavaScript. One alternative is the Revealing Module pattern, which exposes only the public properties and methods of a module. Another alternative is the Prototype pattern, which uses prototypal inheritance to create objects and share behavior between them. Other patterns include the Singleton and Factory patterns.
     </div>
-    <br/>
   </div>
 </details>
 
@@ -214,7 +211,44 @@ testModule.resetCounter();
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Public methods are accessible outside the module. Private methods are encapsulated within the module, and can only be accessed by other methods within the same module.
+  <div><strong>Interview Response:</strong> The module pattern is a structural pattern that provides a way to wrap a set of variables and functions to create a kind of private scope. This is particularly useful for encapsulating methods (functions) and attributes (variables, properties), and controlling the access to them, to prevent unintentional changes from outside.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+var myModule = (function () {
+  var privateVariable = 'private';
+
+  var privateMethod = function() {
+    console.log('Accessed private method');
+    return privateVariable;
+  };
+
+  return {
+    publicMethod: function() {
+      console.log('Accessed public method');
+      return privateMethod();
+    }
+  };
+})();
+
+console.log(myModule.publicMethod());  // Logs: 'Accessed public method', 'Accessed private method', and then returns 'private'
+console.log(myModule.privateMethod);  // Logs: undefined, because it's private and not accessible directly
+console.log(myModule.privateVariable);  // Logs: undefined, because it's private and not accessible directly
+```
+
+In this pattern, only the properties and methods that are returned from the anonymous function are available publicly. Everything else within the function remains private.
+
+Notice the use of an IIFE (Immediately Invoked Function Expression), `(function () { /* code */ })()`. This technique is used to create a new scope that is immediately executed and does not pollute the global namespace. Anything defined inside this function is in its own private scope and can't be accessed from the outside, unless explicitly exposed (like `publicMethod` in our example).
+
+---
+
+:::tip
+Although, we can use an IIFE (Immediately Invoked Function Expression), in Modern JavaScript using JS Modules is the recommended approach. Modern ECMAScript (ES6 and onwards) introduced a native module system that inherently uses the module design pattern.
+:::
+
   </div>
   </div>
 </details>
@@ -228,6 +262,13 @@ testModule.resetCounter();
   <div>
   <div><strong>Interview Response:</strong> It limits the number of global variables by encapsulating code inside modules, minimizing potential variable name clashes across scripts.
   </div>
+
+---
+
+:::tip
+Although, we can use an IIFE (Immediately Invoked Function Expression), in Modern JavaScript using JS Modules is the recommended approach. Modern ECMAScript (ES6 and onwards) introduced a native module system that inherently uses the module design pattern.
+:::
+
   </div>
 </details>
 
@@ -286,7 +327,62 @@ testModule.resetCounter();
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The ECMAScript 2015 (ES6) feature that uses the Module Design Pattern is Modules. Modules are a way to organize code into self-contained units that can be imported and exported.
+  <div><strong>Interview Response:</strong> The ECMAScript 2015 (ES6) feature that uses the Module Design Pattern are Modules. Modules are a way to organize code into self-contained units that can be imported and exported.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here is an example of how to define and use modules using `export` and `import`.
+
+Consider a file `mathModule.js`:
+
+```javascript
+// mathModule.js
+export function add(x, y) {
+  return x + y;
+}
+
+export function subtract(x, y) {
+  return x - y;
+}
+
+var pi = 3.141592653589793;
+export { pi };
+```
+
+And then, in another file `app.js`, you can import these exported methods and variables:
+
+```javascript
+// app.js
+import { add, subtract, pi } from './mathModule.js';
+
+console.log(add(2, 3));  // Outputs: 5
+console.log(subtract(5, 2));  // Outputs: 3
+console.log(pi);  // Outputs: 3.141592653589793
+```
+
+In the example above, `add`, `subtract`, and `pi` are encapsulated within `mathModule.js` and can be imported in other JS files using the `import` statement.
+
+You can also import all exported members at once using the `*` operator:
+
+```javascript
+// app.js
+import * as math from './mathModule.js';
+
+console.log(math.add(2, 3));  // Outputs: 5
+console.log(math.subtract(5, 2));  // Outputs: 3
+console.log(math.pi);  // Outputs: 3.141592653589793
+```
+
+With this syntax, you get an object `math` that contains all the exported members from `mathModule.js`.
+
+---
+
+:::note
+Native ES6 modules are static, meaning you can't conditionally import or export modules. They are also subject to CORS and can be used in browsers with the `type="module"` attribute on a `script` tag. Node.js also supports ES modules, but the implementation may be different from browsers.
+:::
+
   </div>
   </div>
 </details>

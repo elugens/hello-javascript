@@ -62,102 +62,73 @@ import StructuredData from './schemadata/VisitorSchemaData.js';
 
 <img src="/img/javascript-visitor.jpg" /><br /><br />
 
-**The objects participating in this pattern are:**
-
-**ObjectStructure** -- example code: _employees array_
-
-- maintains a collection of elements that can get iterated over
-
-**Elements** -- example code: _Employee objects_
-
-- defines an accept method that accepts visitor objects
-- in the accept method, the Visitor's visit method gets invoked with 'this' as a parameter
-
-**Visitor** -- example code: _ExtraSalary, ExtraVacation_
-
-- implements a visit method. The element getting visited is the argument when the element's changes get made.
-
 <br/>
 
-```js
-let Employee = function (name, salary, vacation) {
-  let self = this;
+Below is an example of the Visitor design pattern in JavaScript:
 
-  this.accept = function (visitor) {
-    visitor.visit(self);
-  };
+```javascript
+class ObjectStructure {
+  constructor() {
+    this.nodes = [];
+  }
 
-  this.getName = function () {
-    return name;
-  };
+  add(node) {
+    this.nodes.push(node);
+  }
 
-  this.getSalary = function () {
-    return salary;
-  };
-
-  this.setSalary = function (sal) {
-    salary = sal;
-  };
-
-  this.getVacation = function () {
-    return vacation;
-  };
-
-  this.setVacation = function (vac) {
-    vacation = vac;
-  };
-};
-
-let ExtraSalary = function () {
-  this.visit = function (emp) {
-    emp.setSalary(emp.getSalary() * 1.1);
-  };
-};
-
-let ExtraVacation = function () {
-  this.visit = function (emp) {
-    emp.setVacation(emp.getVacation() + 2);
-  };
-};
-
-function run() {
-  let employees = [
-    new Employee('John', 10000, 10),
-    new Employee('Mary', 20000, 21),
-    new Employee('Boss', 250000, 51),
-  ];
-
-  let visitorSalary = new ExtraSalary();
-  let visitorVacation = new ExtraVacation();
-
-  for (let i = 0, len = employees.length; i < len; i++) {
-    let emp = employees[i];
-
-    emp.accept(visitorSalary);
-    emp.accept(visitorVacation);
-    console.log(
-      emp.getName() +
-        ': $' +
-        emp.getSalary() +
-        ' and ' +
-        emp.getVacation() +
-        ' vacation days'
-    );
+  accept(visitor) {
+    this.nodes.forEach(node => node.accept(visitor));
   }
 }
 
-run();
+class NodeA {
+  accept(visitor) {
+    visitor.visitNodeA(this);
+  }
 
-/*
+  operationA() {
+    return 'NodeA is visited';
+  }
+}
 
-OUTPUT:
+class NodeB {
+  accept(visitor) {
+    visitor.visitNodeB(this);
+  }
 
-John: $11000 and 12 vacation days
-Mary: $22000 and 23 vacation days
-Boss: $275000 and 53 vacation days
+  operationB() {
+    return 'NodeB is visited';
+  }
+}
 
-*/
+class Visitor {
+  visitNodeA(node) {
+    console.log(node.operationA());
+  }
+
+  visitNodeB(node) {
+    console.log(node.operationB());
+  }
+}
+
+// Usage
+const objectStructure = new ObjectStructure();
+objectStructure.add(new NodeA());
+objectStructure.add(new NodeB());
+
+const visitor = new Visitor();
+
+// This will run the corresponding visitor method for each node in the object structure
+objectStructure.accept(visitor);
 ```
+
+In this example, we have a couple of node classes (`NodeA` and `NodeB`) each with a method `accept` that accepts a visitor object. The visitor has a method for each type of node that it can visit (`visitNodeA` and `visitNodeB`). These methods are then called on each of the nodes in the `ObjectStructure` when the `accept` method is called on the `ObjectStructure`, passing the visitor as a parameter. The result is that the corresponding method on the visitor is called for each type of node in the `ObjectStructure`.
+
+---
+
+:::note
+This is a simple example, and the real value of the Visitor pattern comes when the object structure and/or the algorithms being separated out are more complex, but this should give you a basic idea of how it works.
+:::
 
 </div>
  </div>
@@ -343,6 +314,93 @@ Boss: $275000 and 53 vacation days
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The main components are the Visitor, Concrete Visitor, Element, Concrete Element, and Object Structure.
+  </div><br />
+  <div><strong className="codeExample">The Visitor Design Pattern in JavaScript comprises several components, mainly:</strong><br /><br />
+
+  <div></div>
+
+1. `Visitor`: This is an interface or abstract class that declares a `visit` method for each type of `Visitable` object.
+
+2. `ConcreteVisitor`: This is a concrete class that implements the `Visitor` interface or extends the abstract `Visitor` class. It implements the `visit` method for each type of `Visitable` object.
+
+3. `Visitable` or `Element`: This is an interface or abstract class that declares the `accept` method, which takes a `Visitor` as an argument.
+
+4. `ConcreteElement`: This is a concrete class that implements the `Visitable` or `Element` interface or extends the abstract `Element` class. It implements the `accept` method.
+
+5. `ObjectStructure`: This is a collection of `ConcreteElements`. It can enumerate its elements and may provide a high-level interface to allow the visitor to visit its elements.
+
+**Code Example:**
+
+```javascript
+// Visitable or Element
+class Employee {
+  constructor(name, salary) {
+    this.name = name;
+    this.salary = salary;
+  }
+
+  accept(visitor) {
+    visitor.visit(this);
+  }
+}
+
+// ConcreteElement
+class Developer extends Employee {
+  constructor(name, salary) {
+    super(name, salary);
+  }
+}
+
+// ConcreteElement
+class Manager extends Employee {
+  constructor(name, salary) {
+    super(name, salary);
+  }
+}
+
+// Visitor
+class Payroll {
+  visit(employee) {
+    let monthlySalary;
+
+    if (employee instanceof Manager) {
+      monthlySalary = employee.salary / 12;
+      console.log(`${employee.name}'s monthly salary is ${monthlySalary.toFixed(2)}`);
+    }
+
+    if (employee instanceof Developer) {
+      monthlySalary = employee.salary / 12;
+      console.log(`${employee.name}'s monthly salary is ${monthlySalary.toFixed(2)}`);
+    }
+  }
+}
+
+// ObjectStructure
+class Employees {
+  constructor() {
+    this.employees = [];
+  }
+
+  addEmployee(employee) {
+    this.employees.push(employee);
+  }
+
+  accept(visitor) {
+    this.employees.forEach(employee => employee.accept(visitor));
+  }
+}
+
+// Usage
+let employees = new Employees();
+employees.addEmployee(new Manager('John Doe', 120000));
+employees.addEmployee(new Developer('Jane Doe', 80000));
+
+let payroll = new Payroll();
+employees.accept(payroll);
+```
+
+In this example, `Employee` is the `Visitable` or `Element` class, `Developer` and `Manager` are the `ConcreteElement` classes, `Payroll` is the `Visitor` or `ConcreteVisitor`, and `Employees` is the `ObjectStructure`. The `accept` method in the `Employee` class lets a `Visitor` object visit it, in this case, to calculate monthly salaries. The `Payroll` class implements the `visit` method to calculate and print the monthly salary for each type of `Employee`. The `Employees` class represents an object structure that can enumerate its elements and allow a visitor to visit them.
+
   </div>
   </div>
 </details>

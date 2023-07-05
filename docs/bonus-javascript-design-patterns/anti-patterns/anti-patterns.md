@@ -355,7 +355,7 @@ function calculateArea(radius) {
 console.log(calculateArea(5));  // Output: 78.53975
 ```
 
-Solution:
+**Solution:**
 
 ```javascript
 const PI = 3.14159;  // Define a named constant for the magic number

@@ -86,152 +86,70 @@ Though the definition particularly mentions that an interface needs to be define
 :::
 
 </div><br />
-  <div><strong className="codeExample">Code Example #1:</strong><br /><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
 
-```js
-let Factory = function () {
-  this.createEmployee = function (type) {
-    let employee;
+In JavaScript, you can implement the Factory pattern like this.
 
-    if (type === 'fulltime') {
-      employee = new FullTime();
-    } else if (type === 'parttime') {
-      employee = new PartTime();
-    } else if (type === 'temporary') {
-      employee = new Temporary();
-    } else if (type === 'contractor') {
-      employee = new Contractor();
-    }
+```javascript
+function CarMaker() {}
 
-    employee.type = type;
-
-    employee.say = function () {
-      console.log(this.type + ': rate ' + this.hourly + '/hour');
-    };
-
-    return employee;
-  };
-};
-
-let FullTime = function () {
-  this.hourly = '$12';
-};
-
-let PartTime = function () {
-  this.hourly = '$11';
-};
-
-let Temporary = function () {
-  this.hourly = '$10';
-};
-
-let Contractor = function () {
-  this.hourly = '$15';
-};
-
-function run() {
-  let employees = [];
-  let factory = new Factory();
-
-  employees.push(factory.createEmployee('fulltime'));
-  employees.push(factory.createEmployee('parttime'));
-  employees.push(factory.createEmployee('temporary'));
-  employees.push(factory.createEmployee('contractor'));
-
-  for (let i = 0, len = employees.length; i < len; i++) {
-    employees[i].say();
-  }
+CarMaker.prototype.drive = function() {
+    return `I am a ${this.type} and I can drive`;
 }
 
-run();
-
-/*
-
-OUTPUT:
-
-fulltime: rate $12/hour
-parttime: rate $11/hour
-temporary: rate $10/hour
-contractor: rate $15/hour
-
-*/
-```
-
-  </div>
-
-  <br />
-  <div><strong className="codeExample">Code Example #2:</strong><br /><br />
-
-  <div></div>
-
-```js
-//Factory method for creating new shape instances
-function shapeFactory() {
-  this.createShape = function (shapeType) {
-    var shape;
-    switch (shapeType) {
-      case 'rectangle':
-        shape = new Rectangle();
-        break;
-      case 'square':
-        shape = new Square();
-        break;
-      case 'circle':
-        shape = new Circle();
-        break;
-      default:
-        shape = new Rectangle();
-        break;
+// Static factory method
+CarMaker.factory = function(type) {
+    let constr = type,
+        newCar;
+    
+    // Check if the constructor exists
+    if(typeof CarMaker[constr] !== 'function') {
+        throw {
+            name: "Error",
+            message: `${constr} does not exist`
+        };
     }
-    return shape;
-  };
+
+    // At this point, the constructor is known to exist
+    // Let's have it inherit the parent but only once
+    if(typeof CarMaker[constr].prototype.drive !== 'function') {
+        CarMaker[constr].prototype = new CarMaker();
+    }
+
+    // Create a new instance
+    newCar = new CarMaker[constr]();
+    
+    return newCar;
 }
 
-// Constructor for defining new Rectangle
-var Rectangle = function () {
-  this.draw = function () {
-    console.log('This is a Rectangle');
-  };
+// Define specific car makers
+CarMaker.Compact = function() {
+    this.type = 'Compact car';
 };
 
-// Constructor for defining new Square
-var Square = function () {
-  this.draw = function () {
-    console.log('This is a Square');
-  };
+CarMaker.Sedan = function() {
+    this.type = 'Sedan car';
 };
 
-// Constructor for defining new Circle
-var Circle = function () {
-  this.draw = function () {
-    console.log('This is a Circle');
-  };
+CarMaker.Suv = function() {
+    this.type = 'SUV car';
 };
 
-var factory = new shapeFactory();
-//Creating instance of factory that makes rectangle,square,circle respectively
-var rectangle = factory.createShape('rectangle');
-var square = factory.createShape('square');
-var circle = factory.createShape('circle');
+// Usage:
+let corolla = CarMaker.factory('Compact');
+let camry = CarMaker.factory('Sedan');
+let highlander = CarMaker.factory('Suv');
 
-rectangle.draw();
-square.draw();
-circle.draw();
-
-/*
-  OUTPUT
-  
-  This is a Rectangle
-  This is a Square
-  This is a Circle
- 
-*/
+console.log(corolla.drive());  // I am a Compact car and I can drive
+console.log(camry.drive());    // I am a Sedan car and I can drive
+console.log(highlander.drive());// I am a SUV car and I can drive
 ```
 
-  </div>
+In this example, the `CarMaker` factory has a `factory` method that creates a new object based on the `type` argument. Each type of car is a function constructor, and they all inherit from `CarMaker`.
 
+  </div>
   </div>
 </details>
 
@@ -257,7 +175,7 @@ circle.draw();
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A factory method in JavaScript is a creational design pattern that provides an interface for creating objects. It encapsulates object creation logic within a method, allowing subclasses or implementing objects to determine the type of object to be created.
+  <div><strong>Interview Response:</strong> The Factory Method is a creational design pattern that provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -340,10 +258,77 @@ In this example, the `Factory` class provides a `createProduct` method that take
     <div>
       <strong>Interview Response:</strong> The object participants in the factory pattern include the Creator, which defines the factory method, the ConcreteCreator, which implements the factory method, and the Product, which is the object being created.
     </div><br />
-    <div>
-      <strong>Technical Response:</strong> There are three participants in the factory pattern, including the Creator, AbstractProduct, and ConcreteProduct. The Creator is the factory object that creates new products and implements “factoryMethod” which returns newly manufactured products. The AbstractProduct declares an interface for the products, except in JavaScript. The ConcreteProduct is the product getting created, and all ConcreteProducts support the same interface.
-    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
+  <div></div>
+
+The Factory pattern involves several key participants:
+
+1. The `Product` (Interface for creating objects)
+2. The `ConcreteProduct` (Implements the `Product` interface)
+3. The `Creator` (Declares the factory method, which returns an object of `Product` type)
+4. The `ConcreteCreator` (Overrides the factory method to return an instance of a `ConcreteProduct`)
+
+Here is an example in JavaScript:
+
+```javascript
+// Product
+class Shape {
+    constructor() { }
+    draw() { }
+}
+
+// ConcreteProduct
+class Circle extends Shape {
+    constructor() {
+        super();
+    }
+
+    draw() {
+        console.log("Drawing a Circle");
+    }
+}
+
+// ConcreteProduct
+class Square extends Shape {
+    constructor() {
+        super();
+    }
+
+    draw() {
+        console.log("Drawing a Square");
+    }
+}
+
+// Creator
+class ShapeFactory {
+    constructor() { }
+    
+    createShape(type) {
+        switch (type) {
+            case 'circle':
+                return new Circle();
+            case 'square':
+                return new Square();
+            default:
+                return null;
+        }
+    }
+}
+
+// Let's use our factory to create objects
+const shapeFactory = new ShapeFactory();
+
+let shape1 = shapeFactory.createShape('circle');
+shape1.draw();  // "Drawing a Circle"
+
+let shape2 = shapeFactory.createShape('square');
+shape2.draw();  // "Drawing a Square"
+```
+
+In this example, `Shape` is the `Product` interface, `Circle` and `Square` are `ConcreteProduct` implementing the `Shape` interface. `ShapeFactory` is the `Creator` that contains the `createShape` factory method for creating objects of the `Shape` type. The factory method returns an instance of the required `ConcreteProduct` (Circle or Square), depending on the input parameter.
+
+  </div>
   </div>
 </details>
 
@@ -374,6 +359,79 @@ In this example, the `Factory` class provides a `createProduct` method that take
 
 <br />
 
+  </div>
+</details>
+
+---
+
+### When should you use the Factory Pattern in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The Factory Pattern in JavaScript should be used when the creation of an object is complex or should be separated from the main code for reasons of modularity and clarity.
+  </div><br />
+  <div><strong>Technical Details:</strong> This pattern is also useful when you need to create many objects of the same general type, but with different settings or behaviors. For example, consider a case where you're building a game and you have many types of enemies. Each enemy can have different attributes like health, speed, power, and attack type. Instead of creating each enemy manually, you could use a Factory to streamline the process.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+class Enemy {
+  constructor(name, speed, health, power, attackType) {
+    this.name = name;
+    this.speed = speed;
+    this.health = health;
+    this.power = power;
+    this.attackType = attackType;
+  }
+
+  attack() {
+    return `${this.name} attacks with ${this.attackType}`;
+  }
+
+  defend(damage) {
+    this.health -= damage;
+    if (this.health <= 0) {
+      return `${this.name} is defeated`;
+    }
+    return `${this.name} has ${this.health} health remaining`;
+  }
+}
+
+class EnemyFactory {
+  createEnemy(type) {
+    switch(type) {
+      case 'warrior':
+        return new Enemy('Warrior', 3, 100, 10, 'sword');
+      case 'archer':
+        return new Enemy('Archer', 5, 75, 7, 'bow');
+      case 'mage':
+        return new Enemy('Mage', 1, 50, 25, 'magic');
+      default:
+        throw new Error('Invalid enemy type');
+    }
+  }
+}
+
+const enemyFactory = new EnemyFactory();
+
+const enemies = [
+  enemyFactory.createEnemy('warrior'),
+  enemyFactory.createEnemy('archer'),
+  enemyFactory.createEnemy('mage')
+];
+
+enemies.forEach(enemy => {
+  console.log(enemy.attack());
+  console.log(enemy.defend(20));
+});
+```
+
+In this example, we've abstracted the creation of different enemy types into a Factory. This way, the main code doesn't need to know the details about how to create each type of enemy. If we need to add more enemy types in the future, we can do so easily by modifying the factory, without touching the rest of the code.
+
+  </div>
   </div>
 </details>
 
@@ -413,9 +471,11 @@ In this example, the `Factory` class provides a `createProduct` method that take
     <strong>View Answer:</strong>
   </summary>
   <div>
+   <div>
+      <strong>Interview Response:</strong> It can make the code more complex, obscure object types, and it can be overkill for simple object creation.
+    </div>
     <div>
-      <strong>Interview Response:</strong> Drawbacks of the Factory Pattern.<br /><br />
-      The code may become more complicated as you introduce large numbers of new subclasses to implement the pattern. It can make the code more complex, obscure object types, and it can be overkill for simple object creation. The best-case scenario is incorporating the design into an existing creator class hierarchy.<br /><br />
+      <strong>Technical Response:</strong> Drawbacks of the Factory Pattern. The code may become more complicated as you introduce large numbers of new subclasses to implement the pattern. It can make the code more complex, obscure object types, and it can be overkill for simple object creation. The best-case scenario is incorporating the design into an existing creator class hierarchy.
     </div>
   </div>
 </details>
@@ -456,7 +516,9 @@ These alternatives provide various ways to handle object creation and instantiat
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The Factory Pattern uses a separate factory method to create objects, allowing subclasses or implementing objects to determine the type, while the Constructor Pattern directly creates objects using constructor functions or classes. The constructor in the pattern is instantiated using the "new" operator.
+  <div><strong>Interview Response:</strong> The Factory Pattern returns new objects without using the 'new' keyword unlike the Constructor Pattern which requires it.
+  </div>
+  <div><strong>Technical Response:</strong> The Factory Pattern uses a separate factory method to create objects, allowing subclasses or implementing objects to determine the type, while the Constructor Pattern directly creates objects using constructor functions or classes. The constructor in the pattern is instantiated using the "new" operator.
   </div>
   </div>
 </details>
@@ -468,7 +530,9 @@ These alternatives provide various ways to handle object creation and instantiat
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, a Factory Pattern is not optimal for creating many identical objects; it's best used for creating similar but not identical objects. The Prototype Pattern is more suitable for creating a large number of identical objects because it allows objects to be cloned from a prototype, avoiding the overhead of repeated object construction in the Factory Pattern.
+  <div><strong>Interview Response:</strong> No, a Factory Pattern is not optimal for creating many identical objects; it's best used for creating similar but not identical objects. The Prototype Pattern is more suitable.
+  </div>
+  <div><strong>Technical Response:</strong> No, a Factory Pattern is not optimal for creating many identical objects; it's best used for creating similar but not identical objects. The Prototype Pattern is more suitable for creating a large number of identical objects because it allows objects to be cloned from a prototype, avoiding the overhead of repeated object construction in the Factory Pattern.
   </div>
   </div>
 </details>
@@ -492,7 +556,53 @@ These alternatives provide various ways to handle object creation and instantiat
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A simple Factory Pattern is a subset of the Factory Pattern that returns an instance of one of several possible classes based on provided data.
+  <div><strong>Interview Response:</strong> The Simple Factory pattern is a simplified version of the Factory pattern. It doesn't use an interface for creating objects, instead, it uses a single method to create objects of different types.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's an example of the Simple Factory pattern in JavaScript.
+
+```javascript
+class Car {
+    constructor(model, doors, color) {
+        this.model = model;
+        this.doors = doors;
+        this.color = color;
+    }
+}
+
+class CarFactory {
+    createCar(type) {
+        switch(type) {
+            case 'sedan':
+                return new Car('Sedan', 4, 'black');
+            case 'coupe':
+                return new Car('Coupe', 2, 'red');
+            case 'suv':
+                return new Car('SUV', 5, 'blue');
+            default:
+                return null;
+        }
+    }
+}
+
+// Usage
+const carFactory = new CarFactory();
+
+const sedan = carFactory.createCar('sedan');
+console.log(sedan); // Car { model: 'Sedan', doors: 4, color: 'black' }
+
+const coupe = carFactory.createCar('coupe');
+console.log(coupe); // Car { model: 'Coupe', doors: 2, color: 'red' }
+
+const suv = carFactory.createCar('suv');
+console.log(suv); // Car { model: 'SUV', doors: 5, color: 'blue' }
+```
+
+In this example, the `CarFactory` class has a `createCar` method that creates a new `Car` object based on the `type` argument. The `Car` class, which is the object being created by the factory, takes `model`, `doors`, and `color` as arguments to its constructor. This is a simpler implementation than a full Factory pattern, but it achieves a similar result: it provides a way to delegate the creation of objects to a specific method, which can be modified to change the creation behavior.
+
   </div>
   </div>
 </details>
@@ -504,7 +614,84 @@ These alternatives provide various ways to handle object creation and instantiat
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> It's useful in a logging system where objects represent different types of logs, like error logs, info logs, debug logs, etc.
+  <div><strong>Interview Response:</strong> The Factory Pattern is often used when setting up database connections. For instance, you might have different types of databases (MySQL, PostgreSQL, MongoDB) in your application, and you want to create a specific database connection depending on the environment (development, test, production), or depending on user's selection at runtime.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's an example using Node.js...
+
+```javascript
+class DbConnection {
+    constructor() {}
+
+    connect() {
+        throw new Error("This method must be overwritten!");
+    }
+
+    disconnect() {
+        throw new Error("This method must be overwritten!");
+    }
+}
+
+class MySqlConnection extends DbConnection {
+    constructor() {
+        super();
+    }
+
+    connect() {
+        console.log("Connecting to MySQL...");
+        // Here you would have code that sets up a connection to MySQL
+    }
+
+    disconnect() {
+        console.log("Disconnecting from MySQL...");
+        // Code to disconnect from MySQL
+    }
+}
+
+class PostgresConnection extends DbConnection {
+    constructor() {
+        super();
+    }
+
+    connect() {
+        console.log("Connecting to PostgreSQL...");
+        // Here you would have code that sets up a connection to PostgreSQL
+    }
+
+    disconnect() {
+        console.log("Disconnecting from PostgreSQL...");
+        // Code to disconnect from PostgreSQL
+    }
+}
+
+class DbConnectionFactory {
+    createDbConnection(type) {
+        switch(type) {
+            case 'mysql':
+                return new MySqlConnection();
+            case 'postgresql':
+                return new PostgresConnection();
+            default:
+                throw new Error(`Database type ${type} not supported.`);
+        }
+    }
+}
+
+// Usage
+const factory = new DbConnectionFactory();
+
+const dbConnection = factory.createDbConnection('mysql'); // Depending on the environment or user selection, you might choose 'postgresql'
+dbConnection.connect(); // Connecting to MySQL...
+
+// Somewhere later in your code when you're done with the connection
+dbConnection.disconnect(); // Disconnecting from MySQL...
+```
+
+In this example, the `DbConnectionFactory` class serves as a Factory for creating different types of `DbConnection` instances. The specific type of `DbConnection` that gets instantiated depends on the string that's passed into the `createDbConnection` method. This can easily be extended to support other types of databases as well, you would just need to create a new class for that database type and add another case in the `switch` statement.
+
   </div>
   </div>
 </details>
@@ -569,6 +756,109 @@ class PizzaFactory {
 ```
 
 In this Factory Pattern example, we have a `PizzaFactory` class with two static methods: `createCheesePizza` and `createPepperoniPizza`. Each of these methods creates a specific type of Pizza object.
+
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the modern approach used in the factory pattern, Classes or Functions?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In modern JavaScript, developers often utilize classes and factory functions to implement the Factory pattern.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+The examples below will demonstrate both approaches.
+
+**Factory Function Approach:**
+
+```javascript
+const carFactory = (type) => {
+  switch(type) {
+    case 'Compact':
+      return {
+        doors: 4,
+        drive: () => 'Vroom, I have 4 doors'
+      };
+    case 'Convertible':
+      return {
+        doors: 2,
+        drive: () => 'Vroom, I have 2 doors'
+      };
+    case 'SUV':
+      return {
+        doors: 24,
+        drive: () => 'Vroom, I have 24 doors'
+      };
+    default:
+      throw new Error('Invalid car type');
+  }
+};
+
+const corolla = carFactory('Compact');
+console.log(corolla.drive()); // "Vroom, I have 4 doors"
+```
+
+**Class Approach:**
+
+```javascript
+class Car {
+  constructor(doors) {
+    this.doors = doors;
+  }
+
+  drive() {
+    return `Vroom, I have ${this.doors} doors`;
+  }
+}
+
+class CompactCar extends Car {
+  constructor() {
+    super(4);
+  }
+}
+
+class ConvertibleCar extends Car {
+  constructor() {
+    super(2);
+  }
+}
+
+class SUVCars extends Car {
+  constructor() {
+    super(24);
+  }
+}
+
+class CarFactory {
+  createCar(type) {
+    switch(type) {
+      case 'Compact':
+        return new CompactCar();
+      case 'Convertible':
+        return new ConvertibleCar();
+      case 'SUV':
+        return new SUVCars();
+      default:
+        throw new Error('Invalid car type');
+    }
+  }
+}
+
+const carFactory = new CarFactory();
+const corolla = carFactory.createCar('Compact');
+console.log(corolla.drive()); // "Vroom, I have 4 doors"
+```
+
+In this example, we first define a base `Car` class and then subclasses for specific types of cars. Then we define a `CarFactory` class that creates an instance of the appropriate subclass based on the given type.
+
+Both these approaches can be used in modern JavaScript to implement the Factory pattern. The class approach is more structured and can be more suitable if there are many types of cars, or if the logic to construct a car is complex. On the other hand, the factory function approach is more flexible and less verbose for simpler cases.
 
   </div>
   </div>

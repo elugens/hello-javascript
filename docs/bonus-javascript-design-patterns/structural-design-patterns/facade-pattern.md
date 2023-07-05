@@ -44,7 +44,7 @@ import StructuredData from './schemadata/FacadeSchemaData.js';
 
 ---
 
-### Could you please explain the facade design pattern?
+### What is the facade design pattern in JavaScript?
 
 <details className='answer'>
   <summary>
@@ -52,191 +52,59 @@ import StructuredData from './schemadata/FacadeSchemaData.js';
   </summary>
   <div>
   <div>
-      <strong>Interview Response:</strong> The Facade pattern in JavaScript provides a simplified interface for accessing a complex system or set of objects, hiding its underlying complexity and making it easier to use.<br/>
+      <strong>Interview Response:</strong> The Facade design pattern is a software design pattern that provides a simple interface to a complex system. A facade is an object that serves as a front-facing interface masking more complex underlying code.
     </div>
     <br/>
     <div>
-      <strong>Technical Response:</strong> The Façade design pattern creates an interface that protects clients from complex functionality in one or more sub-systems. It's a simple pattern that may appear insignificant, but it's powerful and advantageous. We commonly find it in systems based on a multi-layer architecture.<br/>
-    </div>
+      <strong>Technical Response:</strong> The Façade design pattern creates an interface that protects clients from complex functionality in one or more sub-systems. It's a simple pattern that may appear insignificant, but it's powerful and advantageous. We commonly find it in systems based on a multi-layer architecture.
+    </div><br/>
     <div>
 </div><br />
-  <div><strong className="codeExample">Code Example #1:</strong><br /><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-```js
-let orderNumber = 0;
+  <div></div>
 
-// Facade
-class PlaceFoodOrder {
-  placeOrder(orderDetails) {
-    const orderId = PlaceFoodOrder.generateId();
-    let chef;
-    if (orderDetails.foodType === 'Main Course') {
-      chef = new MainCourseChef();
-    } else if (orderDetails.foodType == 'Dessert') {
-      chef = new DessertChef();
+```javascript
+class ComplexSystem {
+    operationA() {
+        return 'Doing complex operation A\n';
     }
-    return chef.addFoodOrder({ orderId, orderDetails });
-  }
 
-  static generateId() {
-    return ++orderNumber;
-  }
+    operationB() {
+        return 'Doing complex operation B\n';
+    }
+
+    operationC() {
+        return 'Doing complex operation C\n';
+    }
 }
 
-// Sub Systems
-class FoodOrders {
-  constructor() {
-    this.orders = [];
-  }
+class Facade {
+    constructor(system) {
+        this.system = system;
+    }
 
-  addFoodOrder(order) {
-    this.orders.push(order);
-    return this.conveyOrder(order);
-  }
-
-  timetoMakeOrder() {}
-  conveyOrder(order) {}
+    simpleOperation() {
+        let result = '';
+        result += this.system.operationA();
+        result += this.system.operationB();
+        result += this.system.operationC();
+        return result;
+    }
 }
 
-class MainCourseChef extends FoodOrders {
-  constructor() {
-    super();
-    this.assigned = true;
-    return this;
-  }
+// Using the facade
+let system = new ComplexSystem();
+let facade = new Facade(system);
 
-  timetoMakeOrder() {
-    return Math.floor(Math.random() * 50) + 10;
-  }
-
-  conveyOrder({ orderId, orderDetails }) {
-    const time = this.timetoMakeOrder();
-    console.log(
-      `Order number ${orderId}: ${orderDetails.foodDetails} will be served in ${time} minutes.`
-    );
-  }
-}
-
-class DessertChef extends FoodOrders {
-  constructor() {
-    super();
-    this.assigned = true;
-    return this;
-  }
-
-  timetoMakeOrder() {
-    return Math.floor(Math.random() * 30) + 10;
-  }
-
-  conveyOrder({ orderId, orderDetails }) {
-    const time = this.timetoMakeOrder();
-    console.log(
-      `Order number ${orderId}: ${orderDetails.foodDetails} will be served in ${time} minutes.`
-    );
-  }
-}
-
-const customer = new PlaceFoodOrder();
-
-const order1 = customer.placeOrder({
-  foodType: 'Main Course',
-  foodDetails: 'Pasta with Shrimps',
-});
-
-const order2 = customer.placeOrder({
-  foodType: 'Dessert',
-  foodDetails: 'Molten Lava Cake',
-});
-
-/*
-
-output:
-
-Order number 1: Pasta with Shrimps will be served in 40 minutes.
-Order number 2: Molten Lava Cake will be served in 34 minutes.
-
-*/
+console.log(facade.simpleOperation()); // Runs all operations at once and masks the complexity.
 ```
 
-</div><br />
-  <div><strong className="codeExample">Code Example #2:</strong><br /><br />
+In this example, `ComplexSystem` has multiple methods (`operationA`, `operationB`, and `operationC`) that can be called individually, but it may be more convenient to perform these operations all at once. The `Facade` class provides a method `simpleOperation` that does exactly that.
 
-<img src="/img/javascript-facade.jpg" /><br /><br />
+When a client interacts with the `Facade` instance (by calling `simpleOperation`), the facade forwards those requests to appropriate methods of the `ComplexSystem`. The client doesn't need to be aware of the `ComplexSystem` class, which encapsulates complex functionality. This simplifies the client's interaction with the system.
 
-**The objects participating in this pattern are:**
-
-**Façade** -- Example code: _Mortgage_
-
-- knows which sub-systems are responsible for a request
-- Client requests are routed to the appropriate sub-system objects.
-
-**Sub Systems** -- Example code: _Bank, Credit, Background_
-
-- carries out and implements specialized sub-system functionality
-- have no knowledge of or connection to the façade
-
-<br/>
-
-```js
-let Mortgage = function (name) {
-  this.name = name;
-};
-
-Mortgage.prototype = {
-  applyFor: function (amount) {
-    // access multiple subsystems...
-    let result = 'approved';
-    if (!new Bank().verify(this.name, amount)) {
-      result = 'denied';
-    } else if (!new Credit().get(this.name)) {
-      result = 'denied';
-    } else if (!new Background().check(this.name)) {
-      result = 'denied';
-    }
-    return this.name + ' has been ' + result + ' for a ' + amount + ' mortgage';
-  },
-};
-
-let Bank = function () {
-  this.verify = function (name, amount) {
-    // complex logic ...
-    return true;
-  };
-};
-
-let Credit = function () {
-  this.get = function (name) {
-    // complex logic ...
-    return true;
-  };
-};
-
-let Background = function () {
-  this.check = function (name) {
-    // complex logic ...
-    return true;
-  };
-};
-
-function run() {
-  let mortgage = new Mortgage('Joan Templeton');
-  let result = mortgage.applyFor('$100,000');
-
-  console.log(result);
-}
-
-run();
-
-/*
-
-OUTPUT:
-
-Joan Templeton has been approved for a $100,000 mortgage
-
-*/
-```
-
-</div>
+  </div>
  </div>
 
 </details>
@@ -289,7 +157,7 @@ Joan Templeton has been approved for a $100,000 mortgage
     </div>
     <br />
     <div>
-      <strong>Technical Response:</strong> There are two types of objects represented in the Façade Pattern. They consist of the Façade and the Sub Systems (There can be multiple sub-system objects in this pattern).
+      <strong>Technical Response:</strong> There are two types of objects represented in the Façade Pattern. They consist of the Façade and the Sub Systems (There can be multiple sub-system objects in this pattern). The facade provides a simplified interface to the complex subsystem, while the subsystem classes implement more complex functionality. The client interacts with the facade, not the subsystem.
     </div>
     <br />
     <div></div>
@@ -298,6 +166,64 @@ Joan Templeton has been approved for a $100,000 mortgage
 - **Sub Systems** – A sub-system implements and executes specialized sub-system activities, but it has no cohesive knowledge or connection to the Façade itself.
 
 <br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+// Subsystem classes
+class SubSystemOne {
+    methodOne() {
+        console.log('SubSystemOne Method');
+    }
+}
+
+class SubSystemTwo {
+    methodTwo() {
+        console.log('SubSystemTwo Method');
+    }
+}
+
+class SubSystemThree {
+    methodThree() {
+        console.log('SubSystemThree Method');
+    }
+}
+
+// Facade
+class Facade {
+    constructor() {
+        this.one = new SubSystemOne();
+        this.two = new SubSystemTwo();
+        this.three = new SubSystemThree();
+    }
+
+    wrapOperation() {
+        console.log('Wrap Operation Starts');
+        this.one.methodOne();
+        this.two.methodTwo();
+        this.three.methodThree();
+        console.log('Wrap Operation Ends\n');
+    }
+}
+
+// Client code
+const facade = new Facade();
+facade.wrapOperation();
+
+// This will output:
+// Wrap Operation Starts
+// SubSystemOne Method
+// SubSystemTwo Method
+// SubSystemThree Method
+// Wrap Operation Ends
+```
+
+In this example, `Facade` is the facade, `SubSystemOne`, `SubSystemTwo`, and `SubSystemThree` are the subsystem classes. `wrapOperation` in `Facade` provides a simplified interface for the operations in the subsystems, and is the method that the client will call.
+
+The subsystem classes may be complex and difficult to use directly, so the facade provides a simple interface to the complex subsystems. The subsystem classes handle tasks required by the facade, but the facade encapsulates this complexity and exposes a simplified interface to the clients. The clients only interact with the facade, not the subsystems.
+
+  </div>
   </div>
 </details>
 
@@ -393,7 +319,81 @@ Joan Templeton has been approved for a $100,000 mortgage
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, multiple facades can be created for different parts or views of a subsystem.
+  <div><strong>Interview Response:</strong> Yes, it is possible to have multiple facades for a single subsystem. Each facade might provide a different simplified interface to the subsystem, depending on the context or requirements of the client code.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+// Subsystem classes
+class SubSystem {
+    methodA() {
+        console.log('SubSystem Method A');
+    }
+
+    methodB() {
+        console.log('SubSystem Method B');
+    }
+
+    methodC() {
+        console.log('SubSystem Method C');
+    }
+}
+
+// First Facade
+class Facade1 {
+    constructor(system) {
+        this.system = system;
+    }
+
+    operationX() {
+        console.log('Operation X Starts');
+        this.system.methodA();
+        this.system.methodB();
+        console.log('Operation X Ends\n');
+    }
+}
+
+// Second Facade
+class Facade2 {
+    constructor(system) {
+        this.system = system;
+    }
+
+    operationY() {
+        console.log('Operation Y Starts');
+        this.system.methodB();
+        this.system.methodC();
+        console.log('Operation Y Ends\n');
+    }
+}
+
+// Client code
+let system = new SubSystem();
+
+let facade1 = new Facade1(system);
+facade1.operationX();
+
+let facade2 = new Facade2(system);
+facade2.operationY();
+
+// This will output:
+// Operation X Starts
+// SubSystem Method A
+// SubSystem Method B
+// Operation X Ends
+
+// Operation Y Starts
+// SubSystem Method B
+// SubSystem Method C
+// Operation Y Ends
+```
+
+In this example, the `SubSystem` has three methods, and two different facades (`Facade1` and `Facade2`) provide different simplified interfaces to these methods. `Facade1` provides `operationX`, which uses `methodA` and `methodB` of the `SubSystem`, and `Facade2` provides `operationY`, which uses `methodB` and `methodC`.
+
+The client code decides which facade to use based on the operations it wants to perform. The use of multiple facades allows different clients or different parts of the code to interact with the subsystem in different ways, while still abstracting the complexity of the subsystem.
+
   </div>
   </div>
 </details>
@@ -441,7 +441,7 @@ Joan Templeton has been approved for a $100,000 mortgage
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, the Facade Pattern can be used alongside other patterns to manage system complexity.
+  <div><strong>Interview Response:</strong> Yes, the Facade Pattern can be combined with other design patterns in JavaScript, like Factory, Singleton, or Decorator Patterns, enhancing encapsulation, instance control, and functionality extension respectively.
   </div>
   </div>
 </details>

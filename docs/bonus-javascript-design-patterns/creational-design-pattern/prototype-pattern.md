@@ -50,11 +50,10 @@ import StructuredData from './schemadata/PrototypeSchemaData.js';
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Prototype pattern involves creating new objects by cloning existing ones, instead of using constructors. It promotes code reuse and inheritance.<br/>
+      <strong>Interview Response:</strong> The Prototype pattern involves creating new objects by cloning existing ones, instead of using constructors. It promotes code reuse and inheritance.
     </div><br />
     <div>
       <strong>Technical Response:</strong> We commonly refer to an object you can clone as a prototype. The Prototype Pattern creates new objects, but instead of producing uninitialized objects, it creates objects with values copied from a prototype - or example - object. The Prototype pattern is also known as the Properties pattern.<br/><br/>We can use the prototype pattern to create new objects based on its blueprint by cloning an existing object. The prototype pattern based on prototypal inheritance can use JavaScript's native prototyping capabilities.
-<br/><br/>
     </div><br />
   <div><strong className="codeExample">Diagram:</strong><br /><br />
 
@@ -81,38 +80,34 @@ import StructuredData from './schemadata/PrototypeSchemaData.js';
 
   <div></div>
 
-```js
-const myCar = {
-  name: 'Ford Escort',
+In JavaScript, every object has a prototype from which it can inherit properties and methods. The `Object.create()` method is one way to implement the Prototype Design Pattern.
 
-  drive() {
-    console.log("Weeee. I'm driving!");
-  },
+Here's an example:
 
-  panic() {
-    console.log('Wait. How do you stop this thing?');
-  },
+```javascript
+var carPrototype = {
+    start: function () {
+        return 'Engine of ' + this.model + ' starting...';
+    },
+    stop: function () {
+        return 'Engine of ' + this.model + ' stopping...';
+    }
 };
 
-// Use Object.create to instantiate a new car
-const yourCar = Object.create(myCar);
+function Car(model, year) {
+    this.model = model;
+    this.year = year;
+}
 
-// Now we can see that one is a prototype of the other
-console.log(yourCar.name);
+Car.prototype = carPrototype;
 
-const yourCarProto = Object.getPrototypeOf(yourCar);
-
-console.log(yourCarProto === myCar); // true
-
-/*
-
-output:
-
-Ford Escort
-true
-
-*/
+var car1 = new Car('Toyota Corolla', 2005);
+console.log(car1.start()); // Engine of Toyota Corolla starting...
 ```
+
+In this example, `carPrototype` is the prototype object with methods common to all cars, `start()` and `stop()`. The `Car` function is a constructor that creates a new car. It sets the prototype of the newly created object to `carPrototype` using `Car.prototype = carPrototype;`.
+
+By using the prototype, any car we create has access to the `start` and `stop` methods. This allows us to have common functionality across all instances of a type (in this case, `Car`), while still allowing individual instances to have their own properties (in this case, `model` and `year`).
 
   </div>
 
@@ -145,12 +140,60 @@ true
   <div>
   <div>
       <strong>Interview Response:</strong> The Prototype pattern is useful when object creation is costly, and you need to duplicate existing instances, retaining their state, especially in performance-intensive situations like gaming or graphics rendering.
-    </div>
-    <hr/>
+    </div><br/>
     <div>
-      <strong>Technical Response:</strong> You can use the Prototype pattern to help initialize business objects with values that match the database's default values. The prototype object contains the default values that you can copy into a newly created business object.<br/><br/>Classical languages rarely use the Prototype pattern, but JavaScript is a prototypal language that uses this pattern to construct new objects and their prototypes.<br/><br/>We should use the Prototype pattern when your code shouldn't depend on the concrete classes of objects you need to copy.
-    </div>
+      <strong>Technical Response:</strong> The Prototype Pattern is particularly useful when the cost of creating a new object is expensive and resource-intensive, and you want to avoid the overhead of initializing an object. This is especially relevant when the object has complex behavior that is loaded dynamically. Let's say we have a scenario where we need to manipulate a large number of 'Book' objects, which contain a large amount of data and have a complex initialization process.
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
+  <div></div>
+
+```javascript
+function Book(title, author, genre, publicationDate) {
+    this.title = title;
+    this.author = author;
+    this.genre = genre;
+    this.publicationDate = publicationDate;
+    
+    // Let's assume that getting these details is a complex task, maybe involving a database call or complex computations
+    this.getDetails = function() {
+        // complex code goes here...
+        return this.title + ' by ' + this.author + ', ' + this.genre + ', published on ' + this.publicationDate;
+    }
+}
+
+var book1 = new Book('The Great Book', 'John Doe', 'Science Fiction', '2001-01-01');
+```
+
+If you need to create a new book that shares some properties with `book1`, you could create a new `Book` object and pass in the required details. However, if the initialization process is complex and resource-intensive, creating a new `Book` from scratch may not be the most efficient approach.
+
+In such cases, you can use the Prototype Pattern to clone the existing book and just modify the properties that differ:
+
+```javascript
+function clone(source) {
+    var Constructor = source.constructor;
+    var prototype = Object.create(Constructor.prototype);
+    var clone = new Constructor();
+    
+    for (var attr in source) {
+        if (source.hasOwnProperty(attr)) {
+            clone[attr] = source[attr];
+        }
+    }
+    
+    return clone;
+}
+
+var book2 = clone(book1);
+book2.title = 'Another Great Book';
+book2.author = 'Jane Doe';
+
+console.log(book2.getDetails()); // Another Great Book by Jane Doe, Science Fiction, published on 2001-01-01
+```
+
+In this example, the `clone` function creates a new object that is a copy of an existing object and allows you to modify the new object as needed. This approach reduces the cost of initializing a new object when it shares most of its properties and behavior with an existing object.
+
+  </div>
   </div>
 </details>
 
@@ -207,7 +250,7 @@ true
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> Yes, alternatives include the Factory pattern for creating objects, the Constructor pattern for initializing new objects, or ES6 classes that handle prototypal inheritance under the hood.<br />
+      <strong>Interview Response:</strong> Yes, alternatives include the Factory pattern for creating objects, the Constructor pattern for initializing new objects, or ES6 classes that handle prototypal inheritance under the hood.
     </div>
   </div>
 </details>

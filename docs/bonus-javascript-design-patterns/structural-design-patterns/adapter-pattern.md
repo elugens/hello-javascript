@@ -371,6 +371,60 @@ New cost: $39.50
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Key components are the Target interface, the Adaptee (existing incompatible interface), and the Adapter (wraps Adaptee to match Target).
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+// Target Interface
+class Target {
+  request() {
+    throw new Error('request() method must be implemented.');
+  }
+}
+
+// Adaptee
+class Adaptee {
+  specificRequest() {
+    console.log('Adaptee specific request');
+  }
+}
+
+// Adapter
+class Adapter extends Target {
+  constructor(adaptee) {
+    super();
+    this.adaptee = adaptee;
+  }
+
+  request() {
+    this.adaptee.specificRequest();
+  }
+}
+
+// Client
+function clientCode(target) {
+  target.request();
+}
+
+// Usage
+const adaptee = new Adaptee();
+const adapter = new Adapter(adaptee);
+
+clientCode(adapter);
+```
+
+In this example, we have a `Target` class representing the target interface. The `Adaptee` class represents the existing object with an incompatible interface. The `Adapter` class extends the `Target` class and internally uses the `Adaptee` object to bridge the gap between the target interface and the adaptee.
+
+When the `clientCode` function is called with the `adapter` object, it calls the `request` method on the `adapter`. Internally, the `adapter` delegates the request to the `Adaptee` object by calling its `specificRequest` method. This allows the client to use the `Adapter` object as if it were a `Target` object, even though the underlying implementation comes from the `Adaptee`.
+
+---
+
+:::note
+Note that this is a simplified example to demonstrate the concept of the Adapter Pattern in JavaScript. In a real-world scenario, the Adapter may need to perform additional logic or transformation to adapt the interface of the adaptee to the target interface.
+:::
+
   </div>
   </div>
 </details>
@@ -382,7 +436,104 @@ New cost: $39.50
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The Object adapter uses composition to wrap the adaptee, while the Class adapter uses multiple inheritance, not available in JavaScript.
+  <div><strong>Interview Response:</strong> In JavaScript, both the Object Adapter Pattern and the Class Adapter Pattern are used to implement the Adapter Pattern. The main difference between the two lies in how they achieve the adaptation between the target interface and the adaptee.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+**1. Object Adapter Pattern:**
+
+- In this pattern, the adapter object contains an instance of the adaptee object and implements the target interface. It uses composition to "adapt" the adaptee's interface to the target interface.
+- The adapter object wraps the adaptee object and translates the calls from the target interface to the adaptee's interface.
+
+Here's an example:
+
+```javascript
+// Target Interface
+class Target {
+  request() {
+    throw new Error('request() method must be implemented.');
+  }
+}
+
+// Adaptee
+class Adaptee {
+  specificRequest() {
+    console.log('Adaptee specific request');
+  }
+}
+
+// Object Adapter
+class ObjectAdapter extends Target {
+  constructor(adaptee) {
+    super();
+    this.adaptee = adaptee;
+  }
+
+  request() {
+    this.adaptee.specificRequest();
+  }
+}
+
+// Client
+function clientCode(target) {
+  target.request();
+}
+
+// Usage
+const adaptee = new Adaptee();
+const adapter = new ObjectAdapter(adaptee);
+
+clientCode(adapter);
+```
+
+In this example, the `ObjectAdapter` class adapts the `Adaptee` object by containing an instance of it (`this.adaptee`). It implements the `Target` interface and internally delegates the request to the `Adaptee` object.
+
+**2. Class Adapter Pattern:**
+
+- In this pattern, the adapter class extends both the target class and the adaptee class. It uses multiple inheritance to "adapt" the adaptee's interface to the target interface.
+- The adapter class directly inherits the functionality and properties from the adaptee class, while also implementing the target interface.
+
+Here's an example:
+
+```javascript
+// Target Interface
+class Target {
+  request() {
+    throw new Error('request() method must be implemented.');
+  }
+}
+
+// Adaptee
+class Adaptee {
+  specificRequest() {
+    console.log('Adaptee specific request');
+  }
+}
+
+// Class Adapter
+class ClassAdapter extends Adaptee {
+  request() {
+    this.specificRequest();
+  }
+}
+
+// Client
+function clientCode(target) {
+  target.request();
+}
+
+// Usage
+const adapter = new ClassAdapter();
+
+clientCode(adapter);
+```
+
+In this example, the `ClassAdapter` class extends both the `Adaptee` class and implements the `Target` interface. It directly inherits the `specificRequest` method from the `Adaptee` class and also implements the `request` method defined by the `Target` interface.
+
+Both the Object Adapter Pattern and the Class Adapter Pattern achieve the same goal of adapting the interface of the adaptee to the target interface. The choice between the two depends on the specific requirements and constraints of your project.
+
   </div>
   </div>
 </details>

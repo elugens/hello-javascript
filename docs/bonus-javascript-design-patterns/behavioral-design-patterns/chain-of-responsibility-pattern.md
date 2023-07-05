@@ -50,10 +50,8 @@ import StructuredData from './schemadata/ChainOfSchemaData.js';
   </summary>
   <div>
   <div>
-      <strong>Interview Response:</strong> The Chain of Responsibility pattern is a behavioral design pattern in JavaScript that allows objects to handle requests or events sequentially, passing them on if necessary.
-<br/>
-    </div>
-    <br/>
+      <strong>Interview Response:</strong> The Chain of Responsibility pattern is a behavioral design pattern that lets you pass requests along a chain of handlers. When a request comes in, each handler decides either to process the request or to pass it to the next handler in the chain.
+    </div><br/>
     <div>
       <strong>Technical Response:</strong> This behavioral JavaScript design pattern generates a series of receiver objects responding to a request. This approach encourages loose coupling, allowing us to avoid coupling the sender of a request to a receiver and allowing other receivers to handle the request.<br/><br/>
       The receiving objects get coupled together, and they'll be able to act on the request before passing it over to the following receiver object. It's also simple to add additional recipient objects to the chain.
@@ -81,120 +79,80 @@ import StructuredData from './schemadata/ChainOfSchemaData.js';
 
 <br/>
 
-```js
-class Request {
-  constructor(amount) {
-    this.amount = amount;
-    console.log('Request Amount: ' + this.amount);
+**Here's a simple example of how to implement the Chain of Responsibility pattern in modern JavaScript:**
+
+```javascript
+class Handler {
+  constructor() {
+    this.next = null;
   }
 
-  get(bill) {
-    let count = Math.floor(this.amount / bill);
-    this.amount -= count * bill;
-    console.log('Dispense ' + count + ' $' + bill + ' bills');
-    return this;
+  setNext(handler) {
+    this.next = handler;
+  }
+
+  handle(request) {
+    let result = this.process(request);
+
+    if (result === 'next' && this.next) {
+      return this.next.handle(request);
+    }
+
+    return result;
+  }
+
+  process(request) {
+    throw new Error('Method process(request) not implemented.');
   }
 }
 
-function run() {
-  let request = new Request(378); //Requesting amount
-  request.get(100).get(50).get(20).get(10).get(5).get(1);
+class Handler1 extends Handler {
+  process(request) {
+    if (request === 'request1') {
+      return 'Handler1 is handling request1';
+    }
+
+    return 'next';
+  }
 }
 
-run();
+class Handler2 extends Handler {
+  process(request) {
+    if (request === 'request2') {
+      return 'Handler2 is handling request2';
+    }
 
-/*
- 
-OUTPUT
-
-Request Amount:378
-Dispense 3 $100 bills
-Dispense 1 $50 bills
-Dispense 1 $20 bills
-Dispense 0 $10 bills
-Dispense 1 $5 bills
-Dispense 3 $1 bills
- 
-*/
-```
-
-<strong className="codeExample">Code Example:</strong> ES5 Implementation<br /><br />
-
-```js
-let Request = function (amount) {
-  this.amount = amount;
-  console.log('Request Amount:' + this.amount);
-};
-
-Request.prototype = {
-  get: function (bill) {
-    let count = Math.floor(this.amount / bill);
-    this.amount -= count * bill;
-    console.log('Dispense ' + count + ' $' + bill + ' bills');
-    return this;
-  },
-};
-
-function run() {
-  let request = new Request(378); //Requesting amount
-  request.get(100).get(50).get(20).get(10).get(5).get(1);
+    return 'next';
+  }
 }
 
-run();
+class Handler3 extends Handler {
+  process(request) {
+    if (request === 'request3') {
+      return 'Handler3 is handling request3';
+    }
 
-/*
- 
-OUTPUT
+    return 'next';
+  }
+}
 
-Request Amount:378
-Dispense 3 $100 bills
-Dispense 1 $50 bills
-Dispense 1 $20 bills
-Dispense 0 $10 bills
-Dispense 1 $5 bills
-Dispense 3 $1 bills
- 
-*/
+// Set up the chain of responsibility
+const handler1 = new Handler1();
+const handler2 = new Handler2();
+const handler3 = new Handler3();
+
+handler1.setNext(handler2);
+handler2.setNext(handler3);
+
+// Send requests
+console.log(handler1.handle('request2')); // Output: Handler2 is handling request2
+console.log(handler1.handle('request3')); // Output: Handler3 is handling request3
+console.log(handler1.handle('request1')); // Output: Handler1 is handling request1
 ```
 
-</div>
- </div>
+In this example, `Handler1`, `Handler2`, and `Handler3` are all handlers. They each extend a base `Handler` class and override its `process` method to handle specific requests. If a handler can't handle a request, it passes the request along to the next handler in the chain. The chain is set up at runtime, with each handler holding a reference to the next handler in the chain.
 
-</details>
-
----
-
-### In what pattern category does the Chain of Responsibility pattern belong?
-
-<details>
-  <summary>
-    <strong>View Answer:</strong>
-  </summary>
-  <div>
-    <div>
-      <strong>Interview Response:</strong> The Chain of Responsibility pattern belongs to the behavioral design pattern category in JavaScript, which focuses on communication and interaction between objects.
-    </div>
   </div>
-</details>
-
----
-
-### Can you provide an example of a Chain of Responsibility Pattern use case?
-
-<details>
-  <summary>
-    <strong>View Answer:</strong>
-  </summary>
-  <div>
-  <div>
-      <strong>Interview Response:</strong> A Chain of Responsibility example in JavaScript is a middleware stack in a web framework, where each middleware handles a request, passing it on to the next if needed.
-    </div>
-<br />
-    <div>
-      <strong>Interview Response:</strong> You can use it if your program handles various requests differently without knowing beforehand the sequence and type of requests. It allows you to chain several handlers, thus, allowing all of them a chance to process the request.<br/><br/>An illustration of the chain of responsibility pattern is in event bubbling in the DOM. The event propagates through the nested elements, one of which may choose to handle the event.
-    </div>
-
-<br />
   </div>
 </details>
 
@@ -317,7 +275,84 @@ This pattern can lead to high runtime overhead and the handling order may not al
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, a handler in the chain can decide not to pass the request further down the chain.
+  <div><strong>Interview Response:</strong> Yes, it's possible to break the chain in the Chain of Responsibility pattern in modern JavaScript. A handler in the chain can decide not to pass the request further down the chain.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+class Handler {
+  constructor() {
+    this.next = null;
+  }
+
+  setNext(handler) {
+    this.next = handler;
+  }
+
+  handle(request) {
+    let result = this.process(request);
+
+    // If result isn't 'next', don't pass the request to the next handler
+    if (result !== 'next' || !this.next) {
+      return result;
+    }
+
+    return this.next.handle(request);
+  }
+
+  process(request) {
+    throw new Error('Method process(request) not implemented.');
+  }
+}
+
+class Handler1 extends Handler {
+  process(request) {
+    if (request === 'request1') {
+      return 'Handler1 is handling request1';
+    }
+
+    return 'next';
+  }
+}
+
+class Handler2 extends Handler {
+  process(request) {
+    // If this handler processes the request, don't pass it to the next handler
+    if (request === 'request2') {
+      return 'Handler2 is handling request2 and breaking the chain';
+    }
+
+    return 'next';
+  }
+}
+
+class Handler3 extends Handler {
+  process(request) {
+    if (request === 'request3') {
+      return 'Handler3 is handling request3';
+    }
+
+    return 'next';
+  }
+}
+
+// Set up the chain of responsibility
+const handler1 = new Handler1();
+const handler2 = new Handler2();
+const handler3 = new Handler3();
+
+handler1.setNext(handler2);
+handler2.setNext(handler3);
+
+// Send requests
+console.log(handler1.handle('request2')); // Output: Handler2 is handling request2 and breaking the chain
+console.log(handler1.handle('request3')); // Output: undefined, because the chain was broken by handler2
+```
+
+In this example, if `Handler2` processes a request, it breaks the chain and doesn't pass the request to `Handler3`. As a result, if you send 'request3' to `handler1`, the request won't reach `Handler3`, and the method `handler1.handle('request3')` returns `undefined`.
+
   </div>
   </div>
 </details>
@@ -354,6 +389,44 @@ This pattern can lead to high runtime overhead and the handling order may not al
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Middleware in JavaScript often follows this pattern where requests pass through functions until a response is sent.
+  </div><br />
+  <div><strong>Technical Response:</strong> The Chain of Responsibility pattern is very similar to the concept of middleware, especially as seen in JavaScript frameworks like Express.js. Middleware is essentially a chain of functions that get executed in the order they're defined, and each function has the ability to end the request-response cycle or pass control to the next middleware function in the chain.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's an example of how middleware works in Express.js, which is an implementation of the Chain of Responsibility pattern.
+
+```javascript
+const express = require('express');
+const app = express();
+
+// Middleware function 1
+app.use((req, res, next) => {
+  console.log('Middleware function 1');
+  next();
+});
+
+// Middleware function 2
+app.use((req, res, next) => {
+  console.log('Middleware function 2');
+  next();
+});
+
+// Middleware function 3
+app.use((req, res, next) => {
+  console.log('Middleware function 3');
+  res.send('Response from middleware function 3');
+});
+
+app.listen(3000, () => console.log('Server is running on port 3000'));
+```
+
+In this example, there are three middleware functions defined using `app.use()`. When a request comes in, it's passed to the first middleware function. This function logs a message, then calls `next()`, which passes the request to the next middleware function in the chain. The process continues until it reaches the third middleware function, which sends a response and ends the request-response cycle.
+
+This is an excellent example of the Chain of Responsibility pattern. Each middleware function is a handler that can either handle the request (by sending a response) or pass it to the next handler in the chain (by calling `next()`).
+
   </div>
   </div>
 </details>

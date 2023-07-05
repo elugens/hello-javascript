@@ -204,7 +204,7 @@ import StructuredData from './schemadata/WhatIsSchemaData.js';
     </div>
     <br/>
     <div>
-      <strong>Interview Response:</strong> Advantages of using design patterns:
+      <strong>Technical Response:</strong> Advantages of using design patterns:
     </div>
     <div></div>
 

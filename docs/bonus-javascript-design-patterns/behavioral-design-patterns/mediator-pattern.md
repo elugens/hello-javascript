@@ -51,12 +51,10 @@ import StructuredData from './schemadata/MediatorSchemaData.js';
   <div>
   <div>
       <strong>Interview Response:</strong> The Mediator design pattern is a behaviorial design pattern in JavaScript allows objects to communicate through a central mediator object, reducing dependencies between objects and improving maintainability and flexibility.
-<br/>
     </div>
     <br/>
     <div>
-      <strong>Technical Response:</strong> The Mediator Pattern is a design pattern that allows one item to notify another group of objects when an event or action occurs. The Mediator and Observer patterns vary in that the Mediator pattern allows one object to be alerted of events occurring in other objects. In contrast, the Observer pattern allows one object to subscribe to numerous events occurring in other objects.
-<br/>
+      <strong>Technical Response:</strong> The Mediator Design Pattern provides a unified interface through which different parts of a system may communicate. This pattern helps to decouple the code, reduce dependencies, and increase the ease of future modification or extension of code.
     </div>
     <div>
 </div><br />
@@ -80,85 +78,71 @@ import StructuredData from './schemadata/MediatorSchemaData.js';
 
 <br/>
 
-```js
-let Participant = function (name) {
-  this.name = name;
-  this.chatroom = null;
-};
+Let's consider an example of a Chat Room where multiple users can send and receive messages.
 
-Participant.prototype = {
-  send: function (message, to) {
-    this.chatroom.send(message, this, to);
-  },
-  receive: function (message, from) {
-    console.log(from.name + ' to ' + this.name + ': ' + message);
-  },
-};
+**Here is a JavaScript implementation of the Mediator Pattern:**
 
-let Chatroom = function () {
-  let participants = {};
+```javascript
+class User {
+    constructor(name) {
+        this.name = name;
+        this.chatRoom = null;
+    }
 
-  return {
-    register: function (participant) {
-      participants[participant.name] = participant;
-      participant.chatroom = this;
-    },
+    send(message, to) {
+        this.chatRoom.send(message, this, to);
+    }
 
-    send: function (message, from, to) {
-      if (to) {
-        // single message
-        to.receive(message, from);
-      } else {
-        // broadcast message
-        for (key in participants) {
-          if (participants[key] !== from) {
-            participants[key].receive(message, from);
-          }
-        }
-      }
-    },
-  };
-};
-
-function run() {
-  let yoko = new Participant('Yoko');
-  let john = new Participant('John');
-  let paul = new Participant('Paul');
-  let ringo = new Participant('Ringo');
-
-  let chatroom = new Chatroom();
-  chatroom.register(yoko);
-  chatroom.register(john);
-  chatroom.register(paul);
-  chatroom.register(ringo);
-
-  yoko.send('All you need is love.');
-  yoko.send('I love you John.');
-  john.send('Hey, no need to broadcast', yoko);
-  paul.send('Ha, I heard that!');
-  ringo.send('Paul, what do you think?', paul);
+    receive(message, from) {
+        console.log(`${from.name} to ${this.name}: ${message}`);
+    }
 }
 
-run();
+class ChatRoom {
+    constructor() {
+        this.users = {};
+    }
 
-/*
+    register(user) {
+        this.users[user.name] = user;
+        user.chatRoom = this;
+    }
 
-Output:
+    send(message, from, to) {
+        if (to) {
+            // Single user message
+            to.receive(message, from);
+        } else {
+            // Broadcast message
+            for (let key in this.users) {
+                if (this.users[key] !== from) {
+                    this.users[key].receive(message, from);
+                }
+            }
+        }
+    }
+}
 
-Yoko to John: All you need is love.
-Yoko to Paul: All you need is love.
-Yoko to Ringo: All you need is love.
-Yoko to John: I love you John.
-Yoko to Paul: I love you John.
-Yoko to Ringo: I love you John.
-John to Yoko: Hey, no need to broadcast
-Paul to Yoko: Ha, I heard that!
-Paul to John: Ha, I heard that!
-Paul to Ringo: Ha, I heard that!
-Ringo to Paul: Paul, what do you think?
+// Create users
+let brad = new User('Brad');
+let jeff = new User('Jeff');
+let sara = new User('Sara');
 
-*/
+// Create chatroom
+let chatroom = new ChatRoom();
+
+// Register users in chatroom
+chatroom.register(brad);
+chatroom.register(jeff);
+chatroom.register(sara);
+
+// Users send and receive messages
+brad.send('Hello Jeff', jeff);
+sara.send('Hello Brad, you are the best!', brad);
+jeff.send('Hello Everyone!');
 ```
+
+In the above example, `User` objects can send and receive messages from each other but they are doing it using the `ChatRoom` mediator. The `ChatRoom` object knows how to redirect the messages among users and it encapsulates this logic so that the `User` objects don't need to know about the details of each other directly. This makes `User` objects loosely coupled and they can communicate with each other effectively via the `ChatRoom` mediator.
 
 </div>
  </div>
@@ -269,9 +253,8 @@ Ringo to Paul: Paul, what do you think?
   </summary>
   <div>
   <div>
-      <strong>Interview Response:</strong> Yes, alternatives to the Mediator pattern in JavaScript include using the Observer pattern or event-driven architecture, or implementing direct communication between objects.
+      <strong>Interview Response:</strong> Yes, alternatives to the Mediator pattern in JavaScript include using the Observer pattern, event-driven architecture, or implementing direct communication between objects.
     </div>
-    <br />
   </div>
 </details>
 
@@ -282,7 +265,81 @@ Ringo to Paul: Paul, what do you think?
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The main components are the mediator, colleagues, and the concrete mediator.
+  <div><strong>Interview Response:</strong> The main components of the Mediator pattern in JavaScript are the Mediator (which centralizes communication) and Colleagues (which are the components that interact with each other through the Mediator).
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's an example with comments highlighting the main components.
+
+```javascript
+// Mediator - central communication hub
+class ChatRoom {
+    constructor() {
+        this.users = {};
+    }
+
+    // Register function acts as the means of adding Colleagues
+    register(user) {
+        this.users[user.name] = user;
+        user.chatRoom = this;
+    }
+
+    // This is where communication between Colleagues happens
+    send(message, from, to) {
+        if (to) {
+            // Single user message
+            to.receive(message, from);
+        } else {
+            // Broadcast message
+            for (let key in this.users) {
+                if (this.users[key] !== from) {
+                    this.users[key].receive(message, from);
+                }
+            }
+        }
+    }
+}
+
+// Colleague - the components that are communicating via the Mediator
+class User {
+    constructor(name) {
+        this.name = name;
+        this.chatRoom = null; // A reference to the Mediator
+    }
+
+    send(message, to) {
+        // Interact with the Mediator to send messages
+        this.chatRoom.send(message, this, to);
+    }
+
+    receive(message, from) {
+        console.log(`${from.name} to ${this.name}: ${message}`);
+    }
+}
+
+// Creating colleagues
+let bob = new User('Bob');
+let alice = new User('Alice');
+let charlie = new User('Charlie');
+
+// Creating a mediator
+let chatroom = new ChatRoom();
+
+// Registering colleagues with the mediator
+chatroom.register(bob);
+chatroom.register(alice);
+chatroom.register(charlie);
+
+// Colleagues interacting with each other via the mediator
+bob.send('Hey, Alice', alice);
+alice.send('Hi, Bob!', bob);
+charlie.send('Hello everyone!');
+```
+
+In this example, `ChatRoom` is the Mediator and `User` instances (Bob, Alice, Charlie) are Colleagues. The Colleagues communicate with each other via the Mediator (`ChatRoom`), which handles and routes messages. This reduces the direct communication paths between the Colleagues, leading to a system that's easier to manage and extend.
+
   </div>
   </div>
 </details>

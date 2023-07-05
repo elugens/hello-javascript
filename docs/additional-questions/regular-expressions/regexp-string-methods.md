@@ -48,13 +48,43 @@ import StructuredData from './schemadata/RegExpStringSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The `match()` and `matchAll()` methods are used to find matches in JavaScript strings using regular expressions, returning the matches or an iterator of matches, respectively.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let string = "Hello, world!";
+let regex = /world/;
+let result = string.match(regex);
+
+console.log(result);  // Logs: ["world"]
+```
+
+In this example, `match()` is used to find the word "world" in the string. The method returns an array with the matched results, or `null` if no matches were found.
+
+In addition to `match()`, the `RegExp` object's `exec()` method can also be used to find matches in a string, offering more flexibility and control such as global and sticky searching.
+
+Here's an example using `exec()`:
+
+```javascript
+let string = "Hello, world!";
+let regex = /world/g;  // 'g' for global search
+let result;
+while ((result = regex.exec(string)) !== null) {
+    console.log(`Found ${result[0]} at index ${result.index}`);
+}
+```
+
+This will log all the matches along with their indices.
+
   </div>
   </div>
 </details>
 
 ---
 
-### Can you explain the function and syntax of the match() string method?
+### Can you explain the function of the match() string method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -108,7 +138,7 @@ let result = str.match(regexp) || [];
 
 ---
 
-### Can you explain the function and syntax of the matchAll() string method?
+### Can you explain the function of the matchAll() string method?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -150,8 +180,8 @@ alert(firstMatch.input); // <h1>Hello, world!</h1>
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The `match()` method only returns the first match, while `matchAll()` returns all matches including group captures.
-    </div>
-  <div><strong>Technical Response:</strong> There are three differences between str.match(regexp) and str.match(regexp) string methods. The matchAll method returns an iterable object with matches instead of an array. We can make a regular array from it using Array.from. Every match gets returned as an array with capturing groups (the same format as str.match without flag g). If there are no results, it returns not null but an empty iterable object. If we use the for..of to loop over matchAll matches, then the Array.from method is unnecessary because the matchall() method returns an iterable object as its result.
+    </div><br/>
+  <div><strong>Technical Response:</strong> There are three differences between str.match(regexp) and str.matchAll(regexp) string methods. The matchAll method returns an iterable object with matches instead of an array. We can make a regular array from it using Array.from. Every match gets returned as an array with capturing groups (the same format as str.match without flag g). If there are no results, it returns not null but an empty iterable object. If we use the for..of to loop over matchAll matches, then the Array.from method is unnecessary because the matchall() method returns an iterable object as its result.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -380,7 +410,7 @@ alert(regexp.test(str)); // false (no match)
 
 ---
 
-### Are there any ramifications when we run global regexp.tests repeatedly on different sources?
+### Are there any ramifications when we run global regexp.test repeatedly on different sources?
 
 <details>
   <summary><strong>View Answer:</strong></summary>

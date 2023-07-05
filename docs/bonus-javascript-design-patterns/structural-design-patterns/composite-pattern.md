@@ -42,7 +42,7 @@ import StructuredData from './schemadata/CompositeSchemaData.js';
 
 ---
 
-### Could you please explain the composite design pattern?
+### What is the composite design pattern in Modern JavaScript?
 
 <details className='answer'>
   <summary>
@@ -50,125 +50,94 @@ import StructuredData from './schemadata/CompositeSchemaData.js';
   </summary>
   <div>
   <div>
-      <strong>Interview Response:</strong> The Composite pattern in JavaScript is a structural pattern that allows you to treat objects and groups of objects uniformly, forming hierarchical tree-like structures.
+      <strong>Interview Response:</strong> The composite pattern is a structural design pattern that lets you compose objects into tree structures and then work with these structures as if they were individual objects.
     </div><br />
     <div>
-      <strong>Technical Response:</strong> The Composite Pattern, structurally, allows you to compose objects into a tree-like structure, allowing us to work with them as individual objects. Partitioning is another term for this. The Composite pattern enables the creation of objects with primitive items or a collection of object properties. Each item in the group can hold other collections, allowing for deeply nested structures.<br/>
+      <strong>Technical Response:</strong> The Composite Pattern, structurally, allows you to compose objects into a tree-like structure, allowing us to work with them as individual objects. Partitioning is another term for this. The Composite pattern enables the creation of objects with primitive items or a collection of object properties. Each item in the group can hold other collections, allowing for deeply nested structures.
     </div><br />
-  <div><strong className="codeExample">Diagram:</strong><br /><br />
-
-  <div></div>
-
-</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
 
-```js
-//Component
-class Employee {
-  constructor(name, position, progress) {
-    this.name = name;
-    this.position = position;
-    this.progress = progress;
+```javascript
+class Component {
+  constructor(name) {
+    this._name = name;
   }
-  getProgress() {}
+
+  getNodeName() {
+    return this._name;
+  }
+
+  // This method should be overridden by the Composite class
+  add() {}
+
+  // This method should be overridden by the Composite class
+  remove() {}
+
+  // This method should be overridden by the Leaf class
+  display() {}
 }
 
-//Leaf subclass
-class Developers extends Employee {
-  constructor(name, position, progress) {
-    super(name, position, progress);
+class Leaf extends Component {
+  constructor(name) {
+    super(name);
   }
-  getProgress() {
-    return this.progress;
+
+  // Override the display method of the Component class
+  display(depth = 0) {
+    console.log(`${"-".repeat(depth)}${this._name}`);
   }
 }
 
-//Leaf subclass
-class FreeLanceDev extends Employee {
-  constructor(name, position, progress) {
-    super(name, position, progress);
-  }
-  getProgress() {
-    return this.progress();
-  }
-}
-
-//Composite subclass
-class DevTeamLead extends Employee {
-  constructor(name, position) {
-    super(name, position);
-    this.teamMembers = [];
-  }
-  addMember(employee) {
-    this.teamMembers.push(employee);
+class Composite extends Component {
+  constructor(name) {
+    super(name);
+    this._children = [];
   }
 
-  removeMember(employee) {
-    for (var i = 0; i < this.teamMembers.length; i++) {
-      if (this.teamMembers[i] == employee) {
-        this.teamMembers.splice(i, 1);
-      }
-    }
-    return this.teamMembers;
+  // Override the add method of the Component class
+  add(component) {
+    this._children.push(component);
   }
 
-  getProgress() {
-    for (var i = 0; i < this.teamMembers.length; i++) {
-      console.log(this.teamMembers[i].getProgress());
+  // Override the remove method of the Component class
+  remove(component) {
+    const componentIndex = this._children.indexOf(component);
+    if (componentIndex !== -1) {
+      this._children.splice(componentIndex, 1);
     }
   }
 
-  showTeam() {
-    for (var i = 0; i < this.teamMembers.length; i++) {
-      console.log(this.teamMembers[i].name);
+  // Override the display method of the Component class
+  display(depth = 0) {
+    console.log(`${"-".repeat(depth)}${this._name}`);
+    for (let i = 0; i < this._children.length; i++) {
+      this._children[i].display(depth + 2);
     }
   }
 }
 
-function run() {
-  const seniorDev = new Developers('Rachel', 'Senior Developer', '60%');
-  const juniorDev = new Developers('Joey', 'Junior Developer', '50%');
-  const teamLead = new DevTeamLead('Regina', 'Dev Team Lead', '90%');
-  teamLead.addMember(seniorDev);
-  teamLead.addMember(juniorDev);
-  console.log('Team members list:');
-  teamLead.showTeam();
-  console.log('Get Team members progress:');
-  teamLead.getProgress();
-  console.log('Removing Rachel from team:');
-  teamLead.removeMember(seniorDev);
-  console.log('Updated team members list:');
-  teamLead.showTeam();
-  const freelanceDev = new Developers('Ross', 'Free Lancer', '80%');
-  console.log("Get freelance developer's progress:");
-  console.log(freelanceDev.getProgress());
-}
+// Example usage
+const tree = new Composite("root");
+const branch1 = new Composite("branch1");
+const branch2 = new Composite("branch2");
+const leaf1 = new Leaf("leaf1");
+const leaf2 = new Leaf("leaf2");
+const leaf3 = new Leaf("leaf3");
 
-run();
-
-/*
-output:
-
-Team members list:
-Rachel
-Joey
-Get Team members progress:
-60%
-50%
-Removing Rachel from team:
-Updated team members list:
-Joey
-Get freelance developer's progress:
-80%
-
- */
+branch1.add(leaf1);
+branch1.add(leaf2);
+branch2.add(leaf3);
+tree.add(branch1);
+tree.add(branch2);
+tree.display();
 ```
 
-</div>
- </div>
+In this example, we're creating a tree-like structure. Each 'branch' can contain other branches or leaves, but leaves can't contain other components. When the display method is called on the root node, it recursively displays all of its children.
 
+  </div>
+ </div>
 </details>
 
 ---
@@ -211,9 +180,93 @@ Get freelance developer's progress:
       <strong>Interview Response:</strong> Composite pattern is powerful as it allows us to treat an object as a composite. Since both single and composite objects share the same interface, it enables reusing objects without worrying about their compatibility.
     </div><br/>
     <div>
-      <strong>Technical Response:</strong> The Composite Pattern describes a collection of objects treated in the same way that a single instance of an object can.<br/><br/>This approach allows us to treat individual objects and compositions uniformly, which means the same behavior is applied when working with one or a thousand items.<br/><br/>We use this pattern to create a scalable application with many objects, and it is useful when dealing with an object hierarchy that resembles a tree. Your operating system, for example, uses this pattern to create directories and sub-directories. Some libraries also use composite patterns such as React and Vue to create reusable interfaces.
-    </div>
+      <strong>Technical Response:</strong> The Composite Pattern describes a collection of objects treated in the same way that a single instance of an object can. This approach allows us to treat individual objects and compositions uniformly, which means the same behavior is applied when working with one or a thousand items. We use this pattern to create a scalable application with many objects, and it is useful when dealing with an object hierarchy that resembles a tree. Your operating system, for example, uses this pattern to create directories and sub-directories. Some libraries also use composite patterns such as React and Vue to create reusable interfaces.
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
+  <div></div>
+
+Let's consider a scenario where we want to represent a nested menu structure using composite pattern. Each menu could contain other submenus or menu items (which cannot contain anything).
+
+Here is an example in modern JavaScript:
+
+```javascript
+class MenuComponent {
+  constructor(name) {
+    this._name = name;
+  }
+
+  getName() {
+    return this._name;
+  }
+
+  add() {}
+
+  remove() {}
+
+  display() {}
+}
+
+class MenuItem extends MenuComponent {
+  constructor(name, url) {
+    super(name);
+    this._url = url;
+  }
+
+  display() {
+    console.log(`${this._name}: ${this._url}`);
+  }
+}
+
+class SubMenu extends MenuComponent {
+  constructor(name) {
+    super(name);
+    this._menuComponents = [];
+  }
+
+  add(menuComponent) {
+    this._menuComponents.push(menuComponent);
+  }
+
+  remove(menuComponent) {
+    const menuComponentIndex = this._menuComponents.indexOf(menuComponent);
+    if (menuComponentIndex !== -1) {
+      this._menuComponents.splice(menuComponentIndex, 1);
+    }
+  }
+
+  display() {
+    console.log(`${this._name}`);
+    for (let i = 0; i < this._menuComponents.length; i++) {
+      this._menuComponents[i].display();
+    }
+  }
+}
+
+// Example usage
+const mainMenu = new SubMenu("Main Menu");
+
+const fileMenu = new SubMenu("File");
+const newFile = new MenuItem("New", "/file/new");
+const openFile = new MenuItem("Open", "/file/open");
+fileMenu.add(newFile);
+fileMenu.add(openFile);
+
+const editMenu = new SubMenu("Edit");
+const cut = new MenuItem("Cut", "/edit/cut");
+const copy = new MenuItem("Copy", "/edit/copy");
+editMenu.add(cut);
+editMenu.add(copy);
+
+mainMenu.add(fileMenu);
+mainMenu.add(editMenu);
+
+mainMenu.display();
+```
+
+In this example, we're creating a menu-like structure. Each 'SubMenu' can contain other 'SubMenu' objects or 'MenuItem' objects, but 'MenuItem' objects can't contain other components. When the display method is called on the main menu, it recursively displays all of its children.
+
+  </div>
   </div>
 </details>
 
@@ -232,15 +285,89 @@ Get freelance developer's progress:
     <br />
     <div>
       <strong>Technical Response:</strong> The participating objects in the Composite Pattern include the Component, Leaf, and Composite objects.
-    </div>
-    <br />
-    <div></div>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-- **Component** – The component declares the interface for the objects in the composition.
-- **Leaf** – The leaf represents leaf objects in the composition, and a leaf gets defined as an object with no children in this pattern.
-- **Composite** – The Composite object represents branches of subtrees in the composition and maintains a collection of child components.
+  <div></div>
 
-<br />
+In the Composite Pattern, there are typically three roles that objects can take on:
+
+1. **Component**: This is a base class that defines the common interface for both simple (Leaf) and complex (Composite) objects in the composition.
+
+2. **Leaf**: These are the basic elements of the composition and do not have their own sub-elements.
+
+3. **Composite**: These are elements that can have sub-elements. Composites contain leaf elements and other composites.
+
+Here's a code example in modern JavaScript demonstrating these roles:
+
+```javascript
+// Component
+class Graphic {
+  constructor(name) {
+    this._name = name;
+  }
+
+  getName() {
+    return this._name;
+  }
+
+  draw() {}
+
+  add() {}
+
+  remove() {}
+}
+
+// Leaf
+class Circle extends Graphic {
+  constructor(name) {
+    super(name);
+  }
+
+  draw() {
+    console.log(`Draw ${this._name}`);
+  }
+}
+
+// Composite
+class CompoundGraphic extends Graphic {
+  constructor(name) {
+    super(name);
+    this._children = [];
+  }
+
+  add(graphic) {
+    this._children.push(graphic);
+  }
+
+  remove(graphic) {
+    const graphicIndex = this._children.indexOf(graphic);
+    if (graphicIndex !== -1) {
+      this._children.splice(graphicIndex, 1);
+    }
+  }
+
+  draw() {
+    console.log(`Draw ${this._name}`);
+    for (let i = 0; i < this._children.length; i++) {
+      this._children[i].draw();
+    }
+  }
+}
+
+// Example usage
+const circle1 = new Circle("circle1");
+const circle2 = new Circle("circle2");
+const graphic = new CompoundGraphic("graphic");
+
+graphic.add(circle1);
+graphic.add(circle2);
+graphic.draw();
+```
+
+In this example, `Graphic` is the Component, `Circle` is the Leaf, and `CompoundGraphic` is the Composite. You can see how `CompoundGraphic` can contain both Leaf (i.e., `Circle`) and Composite (i.e., other `CompoundGraphic`) objects, and work with them uniformly via the `draw` method.
+
+  </div>
   </div>
 </details>
 
@@ -287,7 +414,7 @@ Get freelance developer's progress:
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The Composite objects manage their children (add/remove), while Leaf objects have no children to manage.
+  <div><strong>Interview Response:</strong> The Composite Pattern uses add() and remove() methods in the Composite class to manage child Component objects, allowing uniform handling of both individual (Leaf) and composite objects.
   </div>
   </div>
 </details>
@@ -353,9 +480,8 @@ Get freelance developer's progress:
   </summary>
   <div>
   <div>
-      <strong>Interview Response:</strong> Yes, other patterns like the decorator pattern, observer pattern, and mediator pattern can also be used to simplify and organize complex JavaScript code.
+      <strong>Interview Response:</strong> Yes, alternatives include nested arrays/objects, tree data structures, or using other design patterns like Decorator, depending on the complexity and requirements of your use case.
     </div>
-    <br />
   </div>
 </details>
 
@@ -366,7 +492,7 @@ Get freelance developer's progress:
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> It allows clients to treat individual objects and compositions uniformly, simplifying the client code.
+  <div><strong>Interview Response:</strong> The Composite Pattern allows clients to treat individual objects (Leaf) and compositions of objects (Composite) uniformly, simplifying interaction with complex tree-like structures.
   </div>
   </div>
 </details>
@@ -390,7 +516,7 @@ Get freelance developer's progress:
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, it often collaborates with Iterator and Visitor design patterns.
+  <div><strong>Interview Response:</strong> Yes, Composite Pattern can be combined with others like Iterator for traversing composite trees, or Visitor for executing operations over elements of a composite.
   </div>
   </div>
 </details>

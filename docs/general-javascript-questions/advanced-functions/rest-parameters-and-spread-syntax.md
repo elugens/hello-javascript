@@ -81,19 +81,6 @@ import StructuredData from './schemadata/RestParamSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The rest parameter is a syntax that allows functions to accept any number of arguments, aggregating them into a single array.
-<br /><br />
-  </div>
-  </div>
-</details>
-
----
-
-### How does the spread syntax differ from the rest parameter?
-
-<details>
-  <summary><strong>View Answer:</strong></summary>
-  <div>
   <div><strong>Interview Response:</strong> The spread syntax is the opposite of the rest parameter. The rest parameter collects items into an array, while the spread operator unpacks the collected elements into single elements. Both use the same (...) notation.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />

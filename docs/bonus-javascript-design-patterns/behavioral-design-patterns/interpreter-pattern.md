@@ -42,7 +42,7 @@ import StructuredData from './schemadata/InterpreterSchemaData.js';
 
 ---
 
-### Can you explain the Interpreter design pattern?
+### What is the Interpreter design pattern in JavaScript?
 
 <details className='answer'>
   <summary>
@@ -50,12 +50,8 @@ import StructuredData from './schemadata/InterpreterSchemaData.js';
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The Interpreter pattern is a design pattern in JavaScript that defines a grammar and an interpreter for that grammar, enabling the interpretation of expressions and commands.<br/>
-    </div>
-    <br/>
-    <div>
-      <strong>Technical Response:</strong> The interpreter approach is appealing because it allows you to create a custom language. This implementation may sound like an absurd idea, yet we're already making custom languages in JavaScript. Why should we create a new language? Domain-specific languages (DSLs) have had a rebirth since the publication of the GoF book. When developing a language tailored to a specific demand is beneficial. For example, structured Query Language (SQL) is exceptionally good at defining the querying of relational databases. On the other hand, regular expressions have shown to be highly successful at parsing and altering the text.<br/>
-    </div>
+      <strong>Interview Response:</strong> The Interpreter pattern is a design pattern that specifies how to evaluate sentences in a language. The basic idea is to have a class for each symbol (terminal or nonterminal) in a specialized language. The syntax tree of a sentence in the language is an instance of the composite pattern and is used to evaluate (interpret) the sentence for a client.
+    </div><br/>
     <div>
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -85,75 +81,48 @@ import StructuredData from './schemadata/InterpreterSchemaData.js';
 
 <br/>
 
-```js
-let Context = function (input) {
-  this.input = input;
-  this.output = 0;
-};
+**Here is an example of how we can implement the Interpreter pattern in JavaScript to interpret Roman numerals.**
 
-Context.prototype = {
-  startsWith: function (str) {
-    return this.input.substr(0, str.length) === str;
-  },
-};
+In this example, we will have classes to interpret each Roman numeral (I, V, X, L, C, D, M). Then, we use these interpreters to translate a Roman numeral string to an integer.
 
-let Expression = function (name, one, four, five, nine, multiplier) {
-  this.name = name;
-  this.one = one;
-  this.four = four;
-  this.five = five;
-  this.nine = nine;
-  this.multiplier = multiplier;
-};
-
-Expression.prototype = {
-  interpret: function (context) {
-    if (context.input.length == 0) {
-      return;
-    } else if (context.startsWith(this.nine)) {
-      context.output += 9 * this.multiplier;
-      context.input = context.input.substr(2);
-    } else if (context.startsWith(this.four)) {
-      context.output += 4 * this.multiplier;
-      context.input = context.input.substr(2);
-    } else if (context.startsWith(this.five)) {
-      context.output += 5 * this.multiplier;
-      context.input = context.input.substr(1);
+```javascript
+class Interpreter {
+    constructor() {
+        this.grammar = {
+            "M": 1000,
+            "D": 500,
+            "C": 100,
+            "L": 50,
+            "X": 10,
+            "V": 5,
+            "I": 1
+        };
     }
-    while (context.startsWith(this.one)) {
-      context.output += 1 * this.multiplier;
-      context.input = context.input.substr(1);
+    
+    interpret(input) {
+        let output = 0;
+        for(let i = 0; i < input.length; i++) {
+            let current = this.grammar[input[i]];
+            let next = this.grammar[input[i + 1]];
+            if(next && current < next) {
+                output -= current;
+            } else {
+                output += current;
+            }
+        }
+        return output;
     }
-  },
-};
-
-function run() {
-  let roman = 'MCMXXVIII';
-  let context = new Context(roman);
-  let tree = [];
-
-  tree.push(new Expression('thousand', 'M', ' ', ' ', ' ', 1000));
-  tree.push(new Expression('hundred', 'C', 'CD', 'D', 'CM', 100));
-  tree.push(new Expression('ten', 'X', 'XL', 'L', 'XC', 10));
-  tree.push(new Expression('one', 'I', 'IV', 'V', 'IX', 1));
-
-  for (let i = 0, len = tree.length; i < len; i++) {
-    tree[i].interpret(context);
-  }
-
-  console.log(roman + ' = ' + context.output);
 }
 
-run();
+// Usage
+let interpreter = new Interpreter();
 
-/*
-
-OUTPUT:
-
-MCMXXVIII = 1928
-
-*/
+console.log(interpreter.interpret('MCMXCIV')); // Output: 1994
+console.log(interpreter.interpret('IX')); // Output: 9
+console.log(interpreter.interpret('LVIII')); // Output: 58
 ```
+
+In this example, the `interpret` function walks through the input string, adding the current symbol value to the total output, or subtracting if the next symbol's value is larger. By doing so, it's able to correctly interpret Roman numeral strings.
 
 </div>
  </div>
@@ -167,7 +136,7 @@ MCMXXVIII = 1928
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> It typically consists of an AbstractExpression interface and Terminal and NonTerminal expressions that implement this interface.
+  <div><strong>Interview Response:</strong> In JavaScript's Interpreter pattern, objects include the 'Interpreter' that contains grammar definitions and the 'interpret' function that evaluates expressions based on this grammar.
   </div>
   </div>
 </details>
@@ -195,8 +164,7 @@ MCMXXVIII = 1928
   <div>
     <div>
       <strong>Interview Response:</strong> The Interpreter pattern in JavaScript belongs to the Behavioral design pattern category, which focuses on communication and behavior between objects.
-    </div>
-    <br/>
+    </div><br/>
     <div>
       <strong>Technical Response:</strong> The Interpreter pattern in JavaScript belongs to the Behavioral design pattern category. This category is concerned with communication and behavior between objects, and the Interpreter pattern specifically defines a grammar and an interpreter for that grammar. This enables the interpretation of expressions and commands, making it useful for parsing and evaluating user input or domain-specific languages.
     </div>
@@ -278,14 +246,10 @@ MCMXXVIII = 1928
   <div>
   <div>
       <strong>Interview Response:</strong> Yes, there are alternative patterns to the Interpreter pattern in JavaScript, such as the Visitor pattern or the Strategy pattern.
-    </div>
-    <br />
+    </div><br />
     <div>
       <strong>Technical Response:</strong> Yes, there are alternative patterns to the Interpreter pattern in JavaScript. The Visitor pattern allows for operations to be performed on an object structure without modifying the objects themselves. The Strategy pattern defines a family of algorithms, encapsulating each one, and making them interchangeable at runtime. These patterns can offer similar functionality to the Interpreter pattern without some of its potential drawbacks.
     </div>
-    <br />
-    <div></div>
-<br />
   </div>
 </details>
 
@@ -308,7 +272,60 @@ MCMXXVIII = 1928
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Terminal expressions represent the most elemental, indivisible expressions. Non-Terminal expressions are composed of these terminal expressions.
+  <div><strong>Interview Response:</strong> In the Interpreter pattern, terminal expressions represent the simplest, indivisible forms of a language. Non-terminal expressions are compositions of one or more terminal or other non-terminal expressions.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here is an example of an arithmetic expression interpreter using modern JavaScript.
+
+```javascript
+class TerminalExpression {
+    constructor(value) {
+        this.value = value;
+    }
+    
+    interpret() {
+        return this.value;
+    }
+}
+
+class AddExpression {
+    constructor(expr1, expr2) {
+        this.expr1 = expr1;
+        this.expr2 = expr2;
+    }
+    
+    interpret() {
+        return this.expr1.interpret() + this.expr2.interpret();
+    }
+}
+
+class MultiplyExpression {
+    constructor(expr1, expr2) {
+        this.expr1 = expr1;
+        this.expr2 = expr2;
+    }
+    
+    interpret() {
+        return this.expr1.interpret() * this.expr2.interpret();
+    }
+}
+
+// Terminal expressions
+let five = new TerminalExpression(5);
+let three = new TerminalExpression(3);
+
+// Non-terminal expressions
+let add = new AddExpression(five, three);
+let multiply = new MultiplyExpression(add, three);
+
+console.log(multiply.interpret()); // Output: 24
+```
+
+In this example, `TerminalExpression` represents terminal expressions, which are the numbers themselves. `AddExpression` and `MultiplyExpression` are non-terminal expressions, they represent arithmetic operations that involve other expressions.
+
   </div>
   </div>
 </details>

@@ -53,8 +53,42 @@ import StructuredData from './schemadata/ConstructorSchemaData.js';
       <strong>Interview Response:</strong> The constructor pattern is a creational design pattern in JavaScript that allows creating multiple instances of an object using a constructor function, with each instance sharing properties and methods.
     </div><br />
     <div>
-      <strong>Technical Response:</strong> The constructor pattern is a design pattern that uses a class or function to create unique types of objects. A constructor is a one-of-a-kind method for initializing a newly created object after allocated memory.<br/><br/>Constructor patterns are among the most fundamental, extensively used, and modern JavaScript patterns. The objective of this pattern, as hinted by the name, is to facilitate constructor creation.
+      <strong>Technical Response:</strong> The constructor pattern is a design pattern that uses a class or function to create unique types of objects. A constructor is a one-of-a-kind method for initializing a newly created object after allocated memory.<br/><br/>The "Constructor Pattern" in JavaScript is one of the most commonly used design patterns in the language. The constructor pattern is a special method that is used to initialize a newly created object once memory has been allocated for it. It's the way JavaScript creates an 'object' to keep track of values.
     </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+function Car(make, model, year) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+
+  this.displayCar = function() {
+    return `${this.year} ${this.make} ${this.model}`;
+  }
+}
+
+const myCar = new Car('Toyota', 'Corolla', '2006');
+console.log(myCar.displayCar());  // Outputs: 2006 Toyota Corolla
+```
+
+In this example, `Car` is a constructor function. When you call `new Car(...)`, JavaScript creates a new object, and then calls the `Car` function with `this` set to the new object.
+
+The properties `make`, `model`, and `year` are data properties of the new object. The `displayCar` function is a method of the new object: it's a property whose value is a function.
+
+The `new` keyword is very important when using the constructor pattern. If you forget it, `this` inside the constructor will not refer to the newly created object.
+
+While this traditional approach works fine, it has some issues:
+
+1. It's not efficient. Each time we create an object using `new Car(...)`, we're creating a new copy of the `displayCar` method. It would be more memory-efficient if all `Car` objects shared a single copy of that method.
+
+2. There's no easy way to create "private" properties or methods.
+
+To address these issues, you might want to consider the "Prototype Pattern" or "Module Pattern", which are other JavaScript design patterns that are more complex but offer additional features. However, for simple cases, the constructor pattern can be quite useful.
+
+  </div>
   </div>
 </details>
 
@@ -80,8 +114,66 @@ import StructuredData from './schemadata/ConstructorSchemaData.js';
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> We can create a wide variety of objects using the constructor pattern, including plain objects, arrays, and custom objects like users, products, or events, to complex ones such as UI components, data processors, or network handlers. Each instance can have unique properties and methods.
+      <strong>Interview Response:</strong> In JavaScript, the constructor pattern can create any type of object, such as Books, Students, Employees, Cars, Animals, Products, or any custom objects as per the requirements. Basically, you can use this pattern to create any object that has specific characteristics or behaviors.
     </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+**1. Book Object**
+
+```javascript
+function Book(title, author, pages) {
+  this.title = title;
+  this.author = author;
+  this.pages = pages;
+  
+  this.getSummary = function() {
+    return `${this.title} by ${this.author}, ${this.pages} pages`;
+  }
+}
+
+let book1 = new Book('Harry Potter', 'J.K. Rowling', 500);
+console.log(book1.getSummary()); // Outputs: Harry Potter by J.K. Rowling, 500 pages
+```
+
+**2. Student Object**
+
+```javascript
+function Student(name, grade, subject) {
+  this.name = name;
+  this.grade = grade;
+  this.subject = subject;
+
+  this.introduction = function() {
+    return `Hello, my name is ${this.name}. I am in grade ${this.grade} and I am studying ${this.subject}.`;
+  }
+}
+
+let student1 = new Student('John', '10', 'Mathematics');
+console.log(student1.introduction()); // Outputs: Hello, my name is John. I am in grade 10 and I am studying Mathematics.
+```
+
+**3. Employee Object**
+
+```javascript
+function Employee(name, position, salary) {
+  this.name = name;
+  this.position = position;
+  this.salary = salary;
+  
+  this.displayEmployee = function() {
+    return `${this.name} works as a ${this.position} and earns $${this.salary} per year.`;
+  }
+}
+
+let employee1 = new Employee('Alice', 'Software Engineer', 120000);
+console.log(employee1.displayEmployee()); // Outputs: Alice works as a Software Engineer and earns $120000 per year.
+```
+
+Remember, you can create any type of object using the constructor pattern. Just define a constructor function for that type, and use the `new` keyword to create instances of that type.
+
+  </div>
   </div>
 </details>
 
@@ -110,8 +202,32 @@ import StructuredData from './schemadata/ConstructorSchemaData.js';
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The class object is used in ES6, which provides a more understandable syntax for defining constructor functions and prototypes.
-    </div>
+      <strong>Interview Response:</strong> The Constructor pattern in ES6 is usually implemented using "classes". The class syntax in ES6 is a more advanced and succinct way of creating constructors and dealing with inheritance.
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+class Car {
+  constructor(make, model, year) {
+    this.make = make;
+    this.model = model;
+    this.year = year;
+  }
+
+  displayCar() {
+    return `${this.year} ${this.make} ${this.model}`;
+  }
+}
+
+const myCar = new Car('Toyota', 'Corolla', '2006');
+console.log(myCar.displayCar());  // Outputs: 2006 Toyota Corolla
+```
+
+In this ES6 example, `class Car` is basically a constructor function. The `constructor` keyword is used to create and initialize an object created from a class. Also, methods are added directly to the class and are part of the prototype. This is more efficient than the earlier example where each new object would get its own copy of the method.
+
+  </div>
   </div>
 </details>
 
@@ -280,7 +396,31 @@ console.log(yourPhone === myPhone); // false
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A common mitigation is the use of Prototypes. Instead of defining methods inside the constructor function, they're attached to the constructor's prototype. This avoids method duplication across instances.
+  <div><strong>Interview Response:</strong> A common mitigation technique is the use of Prototypes. Instead of defining methods inside the constructor function, they're attached to the constructor's prototype. This avoids method duplication across instances.
+  </div><br/>
+  <div><strong>Technical Response:</strong> One of the downsides of the constructor pattern in JavaScript is that it is not very efficient. Each time we create an object using the constructor, we're creating a new copy of all methods. This can be mitigated by using JavaScript's prototype, which allows us to add methods and properties shared across all instances of a constructor.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+function Car(make, model, year) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+}
+
+Car.prototype.displayCar = function() {
+  return `${this.year} ${this.make} ${this.model}`;
+}
+
+const myCar = new Car('Toyota', 'Corolla', '2006');
+console.log(myCar.displayCar());  // Outputs: 2006 Toyota Corolla
+```
+
+In this example, we've added `displayCar` method to the prototype of the `Car` constructor. All instances of `Car` now share this single `displayCar` method, which makes this approach more memory-efficient. This technique is often used in JavaScript to add methods to an object after the constructor has been defined.
+
   </div>
   </div>
 </details>
@@ -292,7 +432,41 @@ console.log(yourPhone === myPhone); // false
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, you can modify a constructor's prototype after its creation. Any changes to the prototype will be immediately accessible to all instances, even those created before the changes.
+  <div><strong>Interview Response:</strong> Yes, you can modify a constructor's prototype even after instances have been created from it. The changes will apply to all instances, including those that were created before the modification. This is possible because objects in JavaScript are linked to their prototype, not a copy of the prototype.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+function Car(make, model, year) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+}
+
+const myCar = new Car('Toyota', 'Corolla', '2006');
+
+// Let's add a method to the Car prototype
+Car.prototype.displayCar = function() {
+  return `${this.year} ${this.make} ${this.model}`;
+}
+
+// Even though myCar was created before we added displayCar method, it can still use it
+console.log(myCar.displayCar());  // Outputs: 2006 Toyota Corolla
+
+// Let's now add another method to the Car prototype
+Car.prototype.getAge = function() {
+  const currentYear = new Date().getFullYear();
+  return currentYear - this.year;
+}
+
+// Again, myCar can use the new method, even though it was created before the method was added
+console.log(myCar.getAge());  // Outputs: the age of the car, depending on the current year
+```
+
+In this example, even though `myCar` was created before the methods `displayCar` and `getAge` were added to the `Car` prototype, `myCar` can still use those methods. This is because `myCar` has a live link to the `Car` prototype.
+
   </div>
   </div>
 </details>
@@ -304,7 +478,58 @@ console.log(yourPhone === myPhone); // false
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, you can create private variables in a constructor pattern in JavaScript by declaring variables with the 'var' keyword inside the constructor. These won't be directly accessible outside the function.
+  <div><strong>Interview Response:</strong> Yes, JavaScript allows for private variables in a constructor pattern through closure, although it's not as straightforward as it is in languages like Java or C++. However, as of ECMAScript 2020, JavaScript also introduced true private class fields using a hash `#` prefix.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here is how to achieve private variables in a constructor pattern:
+
+```javascript
+function Car(make, model, year) {
+  // public variables
+  this.make = make;
+  this.model = model;
+
+  // private variable
+  let _year = year;
+
+  // public method accessing private variable
+  this.getCarYear = function() {
+    return _year;
+  }
+}
+
+const myCar = new Car('Toyota', 'Corolla', '2006');
+console.log(myCar.getCarYear());  // Outputs: 2006
+```
+
+In this example, `_year` is a private variable, because it's not accessible outside the `Car` constructor. You can't access it directly with something like `myCar._year`. However, it can be accessed through the `getCarYear` method, which is defined in the same scope as `_year`.
+
+Now, here is how you can create private fields in JavaScript classes as of ECMAScript 2020:
+
+```javascript
+class Car {
+  #year; // private field
+
+  constructor(make, model, year) {
+    this.make = make;
+    this.model = model;
+    this.#year = year;
+  }
+
+  getCarYear() {
+    return this.#year;
+  }
+}
+
+const myCar = new Car('Toyota', 'Corolla', '2006');
+console.log(myCar.getCarYear());  // Outputs: 2006
+```
+
+In this example, `#year` is a private field. You can't access it directly with `myCar.#year`, even though it's defined on the object. However, you can still access it through the `getCarYear` method, which is part of the `Car` class.
+
   </div>
   </div>
 </details>
@@ -328,7 +553,43 @@ console.log(yourPhone === myPhone); // false
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Inheritance in the constructor pattern involves using the "call" or "apply" methods to invoke the parent constructor within the child constructor. Then the child's prototype is set to an instance of the parent.
+  <div><strong>Interview Response:</strong> In JavaScript, you can implement inheritance using the constructor pattern and the prototype property. You can set up inheritance by assigning an instance of the parent constructor to the child's prototype.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```js
+// Parent constructor
+function Vehicle(make, model) {
+  this.make = make;
+  this.model = model;
+}
+
+Vehicle.prototype.display = function() {
+  return `${this.make} ${this.model}`;
+}
+
+// Child constructor
+function Car(make, model, year) {
+  Vehicle.call(this, make, model);  // call the parent constructor
+  this.year = year;
+}
+
+// Set up inheritance
+Car.prototype = Object.create(Vehicle.prototype);
+
+// Make sure the constructor property points back to Car
+Car.prototype.constructor = Car;
+
+Car.prototype.displayCar = function() {
+  return this.display() + `, Year: ${this.year}`;
+}
+
+const myCar = new Car('Toyota', 'Corolla', '2006');
+console.log(myCar.displayCar());  // Outputs: Toyota Corolla, Year: 2006
+```
+
   </div>
   </div>
 </details>
@@ -353,6 +614,51 @@ console.log(yourPhone === myPhone); // false
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The pseudo-classical pattern in JavaScript involves creating constructors, using 'new' to instantiate objects, and setting methods on the constructor's prototype, mimicking traditional class-based languages like Java.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+function Car(make, model, year) {
+    this.make = make;
+    this.model = model;
+    this.year = year;
+}
+
+Car.prototype.getDetails = function() {
+    return this.make + ' ' + this.model + ' (' + this.year + ')';
+}
+
+var myCar = new Car('Toyota', 'Corolla', 2007);
+console.log(myCar.getDetails()); // Toyota Corolla (2007)
+```
+
+In this example, `Car` is a constructor function that creates new objects with `make`, `model`, and `year` properties. The `getDetails` function is added to the `Car`'s prototype, meaning all instances of `Car` will have access to this method.
+
+The introduction of ES6 brought the `class` syntax, which simplifies the process of defining constructor functions and their prototypes. Here's how you'd implement the same functionality using JavaScript classes:
+
+```javascript
+class Car {
+    constructor(make, model, year) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
+    }
+
+    getDetails() {
+        return this.make + ' ' + this.model + ' (' + this.year + ')';
+    }
+}
+
+const myCar = new Car('Toyota', 'Corolla', 2007);
+console.log(myCar.getDetails()); // Toyota Corolla (2007)
+```
+
+Whether you should use the pseudo-classical pattern or JavaScript classes really depends on your project and team preferences. JavaScript classes, being newer and more similar to classes in other programming languages, are often considered more readable and are generally preferred in modern codebases. However, it's worth noting that under the hood, they do the same thing: both are using JavaScript's prototypal inheritance.
+
+For browsers or environments that don't support ES6 syntax, you might need to use the pseudo-classical pattern, or transpile your ES6 code to ES5 using tools like Babel.
+
   </div>
   </div>
 </details>
@@ -365,6 +671,69 @@ console.log(yourPhone === myPhone); // false
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Static properties and methods are attached directly to the constructor function, not instances. They're shared across all instances and typically used for functionality not tied to a specific instance.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+function Car(make, model, year) {
+    this.make = make;
+    this.model = model;
+    this.year = year;
+}
+
+// Instance method
+Car.prototype.getDetails = function() {
+    return this.make + ' ' + this.model + ' (' + this.year + ')';
+}
+
+// Static property
+Car.numberOfWheels = 4;
+
+// Static method
+Car.isCar = function(obj) {
+    return obj instanceof Car;
+}
+
+var myCar = new Car('Toyota', 'Corolla', 2007);
+console.log(myCar.getDetails()); // Toyota Corolla (2007)
+console.log(Car.numberOfWheels); // 4
+console.log(Car.isCar(myCar)); // true
+```
+
+In the example above, `numberOfWheels` is a static property, meaning it is a property of the `Car` function itself, not of instances created with `new Car()`. Similarly, `isCar` is a static method.
+
+You can do the same with ES6 classes:
+
+```javascript
+class Car {
+    constructor(make, model, year) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
+    }
+
+    getDetails() {
+        return this.make + ' ' + this.model + ' (' + this.year + ')';
+    }
+
+    static isCar(obj) {
+        return obj instanceof Car;
+    }
+}
+
+// Static property
+Car.numberOfWheels = 4;
+
+const myCar = new Car('Toyota', 'Corolla', 2007);
+console.log(myCar.getDetails()); // Toyota Corolla (2007)
+console.log(Car.numberOfWheels); // 4
+console.log(Car.isCar(myCar)); // true
+```
+
+In this code, `numberOfWheels` and `isCar()` are still static properties and methods, respectively, but the class syntax makes it clear that `isCar()` is a method that does not depend on a particular instance of the `Car` class.
+
   </div>
   </div>
 </details>

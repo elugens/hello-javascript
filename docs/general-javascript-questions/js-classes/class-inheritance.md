@@ -423,41 +423,38 @@ rabbit.stop(); // White Rabbit stands still. White Rabbit hides!
 
 ---
 
-### In classes, How does super behave inside of arrow functions?
+### How does super behave inside of class based arrow functions?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Inside arrow functions, super behaves the same as in regular methods. Arrow functions don't have their own this or super, so they inherit super from the surrounding non-arrow method or class context.
+  <div><strong>Interview Response:</strong> In classes, the super keyword isn't available inside arrow functions. This is because arrow functions don't have their own this context, and super is closely related to this. You should use super inside traditional class methods.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
 
-```js
-class Animal {
-  constructor() {
-    // ...
-  }
-  stop() {
-    console.log('stop what you are doing with super');
-  }
-}
-class Rabbit extends Animal {
-  stop() {
-    setTimeout(() => super.stop(), 1000); // called from the parent stop after 1 sec
+```javascript
+class Parent {
+  greet() {
+    return "Hello from Parent";
   }
 }
 
-let rabbit = new Rabbit();
+class Child extends Parent {
+  greet() {
+    let arrowFunc = () => {
+      console.log(super.greet()); // Accesses parent's greet method
+    };
+    arrowFunc();
+  }
+}
 
-rabbit.stop();
-
-setTimeout(() => {
-  super.stop();
-}, 1000);
-// Syntax Error: 'super' outside of function or class
+let child = new Child();
+child.greet(); // Output: "Hello from Parent"
 ```
+
+In this example, the `Child` class extends the `Parent` class. Inside the `greet` method of `Child`, we define an arrow function `arrowFunc` that accesses `super.greet()` to call the `greet` method of the parent class. The output will be "Hello from Parent" as it successfully accesses the parent's `greet` method using `super`.
 
   </div>
   </div>
@@ -549,25 +546,18 @@ alert(rabbit.earLength); // 10
   <div></div>
 
 ```js
-class Animal {
-  showName() {
-    // instead of this.name = 'animal'
-    console.log('animal');
-  }
-
-  constructor() {
-    this.showName(); // instead of console.log(this.name);
-  }
+class Parent {
+  // this is a class field
+  greeting = "Hello from Parent";
 }
 
-class Rabbit extends Animal {
-  showName() {
-    console.log('rabbit');
-  }
+class Child extends Parent {
+  // overriding class field in parent
+  greeting = "Hello from Child";
 }
 
-new Animal(); // animal
-new Rabbit(); // rabbit
+let child = new Child();
+console.log(child.greeting); // Output: "Hello from Child"
 ```
 
   </div>
