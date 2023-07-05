@@ -21,7 +21,7 @@ export default function Home() {
       <Head>
         <script
           async
-          src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9546383196522386'
+          src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5606137173126649'
           crossorigin='anonymous'
         ></script>
       </Head>
