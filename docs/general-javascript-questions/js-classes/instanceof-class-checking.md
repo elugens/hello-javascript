@@ -563,6 +563,29 @@ console.log(typeof myNumber); // logs "number"
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> We can't always rely on the `constructor` property for class checking in JavaScript because it can be overwritten or it might be undefined if the object was created using `Object.create(null)`.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+function MyClass() {}
+
+const myInstance = new MyClass();
+
+console.log(myInstance.constructor === MyClass); // true
+
+MyClass.prototype.constructor = null;
+
+console.log(myInstance.constructor === MyClass); // false
+
+const noConstructor = Object.create(null);
+
+console.log(noConstructor.constructor); // undefined
+```
+
+This code demonstrates that relying on the `constructor` property for class checking can be unreliable.
+
   </div>
   </div>
 </details>
@@ -586,7 +609,63 @@ console.log(typeof myNumber); // logs "number"
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, class checking methods like `instanceof` cannot be used to identify `null` or `undefined` values. Instead, you should directly compare the variable to `null` or `undefined`.
+  <div><strong>Interview Response:</strong> No, `instanceof` in JavaScript does not work with primitive types. It is only used to check if an object is an instance of a particular class or constructor.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let myString = "Hello, World!";
+let myNumber = 42;
+
+console.log(myString instanceof String); // false
+console.log(myNumber instanceof Number); // false
+```
+
+In both checks, `instanceof` returns `false` because these are not instances of `String` or `Number` objects, but primitive string and number types.
+
+  </div>
+  </div>
+</details>
+
+---
+
+### Is instanceof always accurate for arrays?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, instanceof can be accurate for arrays (including typed arrays like Int32Array) in JavaScript if used like someArray instanceof Array. However, it may not work accurately across different frames or iframes due to separate execution contexts.
+  </div>
+  </div>
+</details>
+
+---
+
+### How would you perform class checking for null or undefined?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In JavaScript, we can't use instanceof with null or undefined. To check for these, use a direct comparison: 'variable === null' or 'variable === undefined'.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+In JavaScript, you can use a direct comparison for checking `null` or `undefined`. Here's an example:
+
+```javascript
+let myNullValue = null;
+let myUndefinedValue = undefined;
+
+console.log(myNullValue === null); // true
+console.log(myUndefinedValue === undefined); // true
+```
+
+In this code, the `===` operator accurately checks if `myNullValue` is `null` and `myUndefinedValue` is `undefined`.
+
   </div>
   </div>
 </details>

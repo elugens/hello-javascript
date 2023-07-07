@@ -297,7 +297,7 @@ By setting the `mode` to `production`, Webpack automatically enables tree shakin
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> A Dynamic import returns a promise that resolves with the module object, enabling you to access the module's exports using the 'then' method or async/await syntax.
-  </div>
+  </div><br/>
   <div><strong>Technical Response:</strong> The dynamic import returns a Promise that resolves to the module object of the imported module. The module object represents the exported values from the module being imported. When you use dynamic import, you can access the exported values of the module by chaining a .then() method to the import() call and passing a callback function that receives the module object as an argument.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -357,7 +357,39 @@ try {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> You can use Promise.all() to load multiple modules concurrently, which resolves when all modules are imported, or use multiple dynamic imports sequentially based on application requirements.
+  <div><strong>Interview Response:</strong> In JavaScript, dynamically import multiple modules using `import()`, which returns a promise. Use `async/await` to handle these promises sequentially, making modules available for use.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+async function importModules() {
+    try {
+        const moduleA = await import('/path/to/moduleA.js');
+        const moduleB = await import('/path/to/moduleB.js');
+        const moduleC = await import('/path/to/moduleC.js');
+
+        // Now you can use the exported functions or variables from these modules.
+        console.log(moduleA.someFunction());
+        console.log(moduleB.someVariable);
+        console.log(moduleC.anotherFunction());
+    } catch (error) {
+        console.log('Error loading modules:', error);
+    }
+}
+
+importModules();
+```
+
+In this code, the `import()` function is used to dynamically import three different JavaScript modules: `moduleA.js`, `moduleB.js`, and `moduleC.js`. The `import()` function returns a promise that resolves to the module object of the imported module when the promise is fulfilled. The `await` keyword is used to pause and resume the `importModules()` async function execution based on the promise's resolution.
+
+The imported modules are then available for use within the `importModules()` function scope. The `console.log()` statements are using the exported variables or functions from these modules, where `someFunction`, `someVariable`, and `anotherFunction` are the exported members from the respective modules.
+
+Remember to replace `'/path/to/moduleA.js'`, `'/path/to/moduleB.js'`, and `'/path/to/moduleC.js'` with the actual paths of your modules. The `async` function `importModules` is then called to start the dynamic import process.
+
+If any of the imports fail, the error will be caught in the catch block and logged to the console. This can help with debugging if there are any issues with the dynamic imports.
+
   </div>
   </div>
 </details>
@@ -370,6 +402,22 @@ try {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Dynamic imports enable code splitting, which divides the application into smaller chunks that are loaded on-demand, reducing initial load time and improving overall performance.
+  </div><br/>
+  <div><strong>Technical Response:</strong> Dynamic imports help implement code splitting in a modern JavaScript application. Code splitting is a feature supported by bundlers like Webpack and Rollup, where the code is divided into various "chunks" that can be loaded on demand or in parallel.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+button.addEventListener('click', async () => {
+  const module = await import('./largeModule.js');
+  module.largeFunction();
+});
+```
+
+In the above example, `largeModule.js` will be separate from the main bundle. The module will only be fetched and loaded when the user clicks the button. This way, dynamic imports can help to reduce the initial load time of the application by deferring the loading of certain parts of the application until they are needed. This can lead to performance improvements, especially for larger applications with lots of code.
+
   </div>
   </div>
 </details>

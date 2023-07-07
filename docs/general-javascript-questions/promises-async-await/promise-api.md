@@ -54,12 +54,54 @@ import StructuredData from './schemadata/PromiseAPISchemaData.js';
 
 ---
 
-### Can you explain the three states a Promise can have?
+### Can you explain the three states of a Promise?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A Promise has three states: pending (initial state), fulfilled (operation completed successfully), and rejected (operation failed or error occurred).<br />
+  <div><strong>Interview Response:</strong> The three states are: Pending (initial state), Fulfilled (operation completed successfully), and Rejected (operation failed). Promises can only transition from Pending to Fulfilled or Rejected.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+A Promise in JavaScript can be in one of three states:
+
+1. Pending: Initial state, neither fulfilled nor rejected.
+2. Fulfilled: Meaning that the operation completed successfully.
+3. Rejected: Meaning that the operation failed.
+
+Here's an example:
+
+```javascript
+// 1. Pending
+let promise = new Promise((resolve, reject) => {
+    setTimeout(() => resolve('Done!'), 1000);
+});
+console.log(promise);  // Promise {<pending>}
+
+// 2. Fulfilled
+promise.then(value => console.log(value));  // After 1 second, outputs: "Done!"
+
+// To illustrate a rejected state, let's create another promise
+let rejectedPromise = new Promise((resolve, reject) => {
+    setTimeout(() => reject('Something went wrong!'), 1000);
+});
+
+// 3. Rejected
+rejectedPromise.catch(error => console.error(error));  // After 1 second, outputs: "Something went wrong!"
+```
+
+In this example, `promise` starts in the Pending state, then moves to the Fulfilled state after one second. `rejectedPromise` also starts in the Pending state, then moves to the Rejected state after one second.
+
+Once a Promise is either Fulfilled or Rejected, it is considered settled and its state cannot change. The Promise is said to be immutable after it is settled.
+
+---
+
+:::note
+Note that in practice, you can't directly access the state of a Promise, but its state is reflected in how it behaves. The Promise API ensures that the behavior of the Promise is consistent with its state.
+:::
+
   </div>
   </div>
 </details>
@@ -221,7 +263,7 @@ Promise.all([
   }),
   2,
   3,
-]).then(alert); // 1, 2, 3
+]).then(console.log); // 1, 2, 3
 ```
 
   </div>
@@ -350,7 +392,7 @@ Promise.any([
   <div>
   <div><strong>Interview Response:</strong> Promise.resolve() creates a new Promise that is immediately resolved with the provided value, or passes through an input Promise without altering its state or value.
 </div><br />
-  <div><strong>Interview Response:</strong> The Promise.resolve() method returns a Promise object that resolves with a given value. If the value is a promise, that promise returns; if the value is a `thenable` (i.e. has a "then" method), the returned promise will "follow" that `thenable`, adopting its eventual state; otherwise, the returned promise fulfills with the value.
+  <div><strong>Interview Response:</strong> Promise.resolve can also be used to handle values that may or may not be Promises. If the value is a Promise, it returns that Promise; if the value is not a Promise, it returns a new Promise that is immediately resolved with that value. This can be useful when writing functions that should be able to handle both synchronous and asynchronous inputs:
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -359,21 +401,21 @@ Promise.any([
   <div></div>
 
 ```js
-let cache = new Map();
-
-function loadCached(url) {
-  if (cache.has(url)) {
-    return Promise.resolve(cache.get(url)); // (*)
-  }
-
-  return fetch(url)
-    .then((response) => response.text())
-    .then((text) => {
-      cache.set(url, text);
-      return text;
+function maybeAsync(value) {
+    return Promise.resolve(value).then(result => {
+        // Now we can safely use .then() whether `value` was initially a Promise or not
+        console.log(result);
     });
 }
+
+// This will print: "Sync value"
+maybeAsync("Sync value");
+
+// This will print: "Async value" (after one second)
+maybeAsync(new Promise(resolve => setTimeout(() => resolve("Async value"), 1000)));
 ```
+
+As you can see, Promise.resolve can be a useful method when working with JavaScript Promises.
 
 :::note
 This function flattens nested layers of promise-like objects (e.g., a promise that resolves to a promise that resolves to something) into a single layer. Methods Promise.resolve and Promise.reject are rarely needed in modern code because async/await syntax makes them somewhat obsolete.
@@ -390,7 +432,7 @@ This function flattens nested layers of promise-like objects (e.g., a promise th
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Promise.reject() creates a new Promise that is immediately rejected with the provided reason, allowing you to generate a rejected Promise for error handling or testing purposes.
+  <div><strong>Interview Response:</strong> `Promise.reject` is a static method that returns a Promise object that is rejected with a given reason. It's often used when you want to start a Promise chain that's immediately rejected, or to turn a synchronous error into a rejected Promise for compatibility with Promise-based code.
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
   
@@ -398,18 +440,39 @@ This function flattens nested layers of promise-like objects (e.g., a promise th
 
   <div></div>
 
-```js
-function resolved(result) {
-  console.log('Resolved');
-}
+Here is a simple example of `Promise.reject`:
 
-function rejected(result) {
-  console.error(result);
-}
+```javascript
+// Let's create a Promise that is immediately rejected with a specific reason.
+let p = Promise.reject('Something went wrong!');
 
-Promise.reject(new Error('fail')).then(resolved, rejected);
-// expected output: Error: fail
+// You can then use the Promise as you would any other.
+// Since it's a rejected promise, .catch() is used to handle the error.
+p.catch(reason => console.log(reason)); // Outputs: "Something went wrong!"
 ```
+
+This Promise will immediately move to the `rejected` state, triggering any `.catch` handlers as soon as the event loop is free.
+
+Just like `Promise.resolve`, `Promise.reject` can be useful when writing functions that handle both synchronous and asynchronous errors. Here's an example:
+
+```javascript
+function maybeAsyncError(value, throwError) {
+    if (throwError) {
+        return Promise.reject(new Error('There was an error!'));
+    }
+    return Promise.resolve(value);
+}
+
+maybeAsyncError('Hello, world!', false)
+    .then(value => console.log(value)) // Outputs: "Hello, world!"
+    .catch(error => console.error(error));
+
+maybeAsyncError('Hello, world!', true)
+    .then(value => console.log(value))
+    .catch(error => console.error(error)); // Outputs: "Error: There was an error!"
+```
+
+In this example, the `maybeAsyncError` function either resolves with the provided value or rejects with an Error, based on the `throwError` argument. This allows it to be used with Promise-based code regardless of whether an error occurs.
 
 :::note
 Methods Promise.resolve and Promise.reject are rarely needed in modern code because async/await syntax makes them somewhat obsolete.
@@ -426,7 +489,44 @@ Methods Promise.resolve and Promise.reject are rarely needed in modern code beca
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The finally() method is used to execute code after a Promise has settled, regardless of whether it was fulfilled or rejected.<br />
+  <div><strong>Interview Response:</strong> The finally() method is used to execute code after a Promise has settled, regardless of whether it was fulfilled or rejected.
+  </div><br/>
+  <div><strong>Technical Response:</strong> The `finally()` method in JavaScript is a part of Promise API that is called when the Promise is settled, no matter it's resolved or rejected. This is often used for performing cleanup tasks after an asynchronous operation has finished, regardless of its outcome.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let p = new Promise((resolve, reject) => {
+    setTimeout(() => resolve('Hello, world!'), 1000);
+});
+
+p.then(value => console.log(value))  // Outputs: "Hello, world!"
+ .catch(error => console.error(error))
+ .finally(() => console.log('This is called no matter what.'));  // Outputs: "This is called no matter what."
+```
+
+In this case, `finally()` is called after `then()`, no matter the outcome of the Promise. If the Promise was rejected and you had a `catch()` method, `finally()` would still be called:
+
+```javascript
+let p = new Promise((resolve, reject) => {
+    setTimeout(() => reject('There was an error!'), 1000);
+});
+
+p.then(value => console.log(value))
+ .catch(error => console.log(error))  // Outputs: "There was an error!"
+ .finally(() => console.log('This is called no matter what.'));  // Outputs: "This is called no matter what."
+```
+
+In this case, the `catch()` method is called because the Promise is rejected, but `finally()` is still called afterwards.
+
+---
+
+:::note
+It's important to note that `finally()` does not receive any arguments, as it's not meant to process the Promise's result or error. Instead, it's meant for cleanup tasks that need to happen no matter what.
+:::
+
   </div>
   </div>
 </details>
@@ -438,9 +538,37 @@ Methods Promise.resolve and Promise.reject are rarely needed in modern code beca
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Promise.all() waits for all input promises to fulfill, while Promise.race() returns the result of the first settled promise, either fulfilled or rejected.<br />
+  <div><strong>Interview Response:</strong> Promise.all() waits for all input promises to fulfill, while Promise.race() returns the result of the first settled promise, either fulfilled or rejected.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here is an example demonstrating the difference:
+
+```javascript
+let promise1 = new Promise((resolve, reject) => setTimeout(resolve, 500, 'one'));
+let promise2 = new Promise((resolve, reject) => setTimeout(resolve, 1000, 'two'));
+let promise3 = new Promise((resolve, reject) => setTimeout(reject, 1200, 'I failed'));
+
+// Promise all
+Promise.all([promise1, promise2, promise3])
+    .then(values => console.log(values))
+    .catch(error => console.log("Promise.all error:", error));
+
+// Promise race
+Promise.race([promise1, promise2, promise3])
+    .then(value => console.log(value))
+    .catch(error => console.log("Promise.race error:", error));
+```
+
+In this example:
+
+The `Promise.all()` call will end up being rejected, because `promise3` is rejected before `promise1` and `promise2` are both resolved. It will print "Promise.all error: I failed" The `Promise.race()` call will resolve with the value `'one'`, because `promise1` resolves before either of the other two Promises settle. It will print `'one'`.
+
   </div>
   </div>
+
 </details>
 
 ---
@@ -477,7 +605,7 @@ In this code, `Promise.resolve` creates a promise that is resolved with the give
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A Promise chain's return value is a new Promise that resolves or rejects based on the outcome of the last Promise in the chain.<br />
+  <div><strong>Interview Response:</strong> A Promise chain's return value is a new Promise that resolves or rejects based on the outcome of the last Promise in the chain.
   </div>
   </div>
 </details>
@@ -517,7 +645,8 @@ In this code, `Promise.all` takes an array of promises. The promises are run con
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> JavaScript primitives are immutable, meaning their values cannot be changed after they are created. This ensures data consistency.</div><br />
+  <div><strong>Interview Response:</strong> Async/await and Promises are related; async/await is syntactic sugar over Promises, offering a simpler, cleaner syntax. However, Promises are more flexible for complex scenarios, like concurrent operations.
+  </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -586,6 +715,107 @@ promise
 ```
 
 In this code, the executor function decides whether to call `resolve()` or `reject()`. If `resolve()` is called, then the `.then()` block will execute. If `reject()` is called, then the `.catch()` block will execute.
+
+  </div>
+  </div>
+</details>
+
+---
+
+### How can you handle errors in a Promise chain?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In a Promise chain in JavaScript, you can handle errors by using the `.catch()` method. This method is called when a Promise is rejected, either directly or due to an error that is thrown in a `.then()` callback.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let p = new Promise((resolve, reject) => {
+    setTimeout(() => reject('There was an error!'), 1000);
+});
+
+p.then(value => console.log(value))
+ .catch(error => console.error(error));  // Outputs: "There was an error!"
+```
+
+In this case, because the Promise is rejected, the `.catch()` handler is called.
+
+You can also use `.catch()` to handle errors that are thrown in a `.then()` handler:
+
+```javascript
+let p = Promise.resolve('Hello, world!');
+
+p.then(value => {
+    throw new Error('There was an error in the handler!');
+})
+ .catch(error => console.error(error));  // Outputs: "Error: There was an error in the handler!"
+```
+
+In this case, the `.then()` handler throws an error, which is then caught and handled by the `.catch()` handler.
+
+**Note** that `.catch()` also returns a Promise. If you return a value in a `.catch()` handler, it will be the resolution value for that returned Promise. If you throw an error in a `.catch()` handler, the returned Promise will be rejected with that error.
+
+```javascript
+Promise.reject('Initial error')
+    .catch(error => {
+        console.error(error);  // Outputs: "Initial error"
+        return 'Recovered from error';
+    })
+    .then(value => console.log(value))  // Outputs: "Recovered from error"
+    .catch(error => console.error('Should not be called'));
+```
+
+In this case, even though the initial Promise is rejected, the `.catch()` handler recovers from the error by returning a new value. This makes the Promise returned by `.catch()` become resolved, so the `.then()` handler is called next, not the `.catch()` handler.
+
+  </div>
+  </div>
+</details>
+
+---
+
+### What happens if you don't handle a rejected Promise?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> If a rejected Promise is not handled, an "UnhandledPromiseRejectionWarning" will be logged, which may eventually lead to application termination in future JavaScript versions.
+  </div><br />
+  <div><strong>Technical Response:</strong> If a Promise is rejected and you don't handle it with a `.catch()` method, it becomes an unhandled promise rejection. This means that the error could potentially go unnoticed, as no code will be triggered to handle the error. Most JavaScript environments, such as browsers and Node.js, will log unhandled promise rejections to the console. Some environments, like newer versions of Node.js, will even crash the process on unhandled promise rejections.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let p = new Promise((resolve, reject) => {
+    setTimeout(() => reject('There was an error!'), 1000);
+});
+
+p.then(value => console.log(value));
+
+// No .catch() handler, so the rejection is unhandled.
+// Most environments will log something like:
+// "UnhandledPromiseRejectionWarning: There was an error!"
+```
+
+In this case, because there is no `.catch()` handler to catch the rejected Promise, it becomes an unhandled promise rejection.
+
+To prevent this, you should always handle Promise rejections with a `.catch()` handler, even if it's just to log the error:
+
+```javascript
+let p = new Promise((resolve, reject) => {
+    setTimeout(() => reject('There was an error!'), 1000);
+});
+
+p.then(value => console.log(value))
+ .catch(error => console.error(error));  // Outputs: "There was an error!"
+```
+
+In this case, the `.catch()` handler catches the rejected Promise, preventing an unhandled promise rejection.
 
   </div>
   </div>

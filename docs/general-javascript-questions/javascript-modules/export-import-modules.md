@@ -40,6 +40,231 @@ import StructuredData from './schemadata/ExportImportSchemaData.js';
 
 <CloseAllAnswers />
 
+---
+
+### What is the purpose of export keyword in JavaScript modules?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The export keyword in JavaScript is used to export functions, objects, or primitive values from a module so they can be used by other modules.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's a simple example. Suppose we have a module that calculates the area of a circle. We can use the `export` keyword to make the function available for other modules.
+
+```javascript
+// circle.js
+export function area(radius) {
+    return Math.PI * radius * radius;
+}
+```
+
+Here, the `area` function is exported from the `circle.js` module and can now be imported in another JavaScript file with the `import` statement.
+
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the purpose of import keyword in JavaScript modules?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The `import` keyword in JavaScript is used to bring in functions, objects, or values from another module into the current module, facilitating code reusability and organization.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's a simple example. Suppose you want to use the function `area` from the `circle.js` module mentioned earlier. You can use the `import` keyword to import that function.
+
+```javascript
+// app.js
+import { area } from './circle.js';
+
+let r = 5;
+console.log(`Area of the circle: ${area(r)}`);
+```
+
+In this `app.js` file, the `area` function is imported from the `circle.js` module, and then it is used to calculate the area of a circle with radius 5.
+
+  </div>
+  </div>
+</details>
+
+---
+
+### What are the two types of exports in JavaScript modules?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The two types of exports in JavaScript modules are "named exports", which allow multiple exports per module, and "default export", which allows for one per module.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+// mathOperations.js
+
+// Named export
+export function add(a, b) {
+    return a + b;
+}
+
+// Default export
+export default function multiply(a, b) {
+    return a * b;
+}
+```
+
+In this `mathOperations.js` module, `add` is a named export and `multiply` is a default export. You can have multiple named exports in a module, but only one default export.
+
+  </div>
+  </div>
+</details>
+
+---
+
+### Can a module have more than one default export?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> No, a module can only have one default export but it can have multiple named exports.
+  </div>
+  </div>
+</details>
+
+---
+
+### How can you import a default export?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In JavaScript, a default export can be imported using `import name from "module-name"`, where "name" is the name you choose.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+// import from 'mathOperations.js'
+import multiply from './mathOperations.js';
+
+console.log(multiply(5, 4)); // 20
+```
+
+In this code, the default export (the `multiply` function) from the `mathOperations.js` module is imported and used to multiply 5 and 4. The name `multiply` here can be anything you choose, as it's a default export.
+
+  </div>
+  </div>
+</details>
+
+---
+
+### How can you import a named export?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In JavaScript, a named export can be imported using import &#123; name &#125; from "module-name", where "name" is the exported entity's name.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+// import from 'mathOperations.js'
+import { add } from './mathOperations.js';
+
+console.log(add(5, 4)); // 9
+```
+
+In this code, the named export (the `add` function) from the `mathOperations.js` module is imported and used to add 5 and 4. The name `add` must match the exported name in the module.
+
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you import all named exports at once?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, you can import all named exports at once using `import * as aliasName from "module-name"`, which groups all exports under an alias.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+// assuming 'mathOperations.js' has multiple named exports
+
+// import from 'mathOperations.js'
+import * as mathOps from './mathOperations.js';
+
+console.log(mathOps.add(5, 4)); // 9
+console.log(mathOps.subtract(5, 4)); // 1
+```
+
+In this code, all named exports from `mathOperations.js` are imported into an object `mathOps`. The functions can then be accessed as properties of this object.
+
+  </div>
+  </div>
+</details>
+
+---
+
+### Is it possible to use both default and named exports in a module?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, a JavaScript module can have both default and named exports, providing flexibility in how items are exported and imported.
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you rename imports in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, imports can be renamed in JavaScript using the `as` keyword, like so: `import &#123; originalName as newName &#125; from "module-name"`.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+// Assuming 'mathOperations.js' has a named export 'add'
+
+// import from 'mathOperations.js'
+import { add as addition } from './mathOperations.js';
+
+console.log(addition(5, 4)); // 9
+```
+
+In this code, the named export `add` from `mathOperations.js` is imported and renamed to `addition`. You can now use `addition` to refer to the `add` function from the `mathOperations.js` module.
+
+  </div>
+  </div>
+</details>
+
+---
+
 ### How does the export keyword work with declarations in JavaScript?
 
 <details>
@@ -105,7 +330,7 @@ export function sayHi(user) {
 
 ---
 
-### Is there another way to export on declarations instead of an explicit export?
+### Is there another way to export declarations instead of an explicit export?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
@@ -394,6 +619,30 @@ export { User };
 // ...
 ```
 
+  </div>
+  </div>
+</details>
+
+---
+
+### Can you import modules conditionally or dynamically in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> Yes, JavaScript supports dynamic imports, allowing modules to be loaded conditionally or on demand at runtime, which can optimize performance.
+  </div>
+  </div>
+</details>
+
+---
+
+### What file extensions are typically associated with JavaScript modules?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> JavaScript modules are typically associated with the .js, .mjs (for ES modules), or .cjs (for CommonJS modules) file extensions.
   </div>
   </div>
 </details>
