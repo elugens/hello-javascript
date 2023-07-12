@@ -15,10 +15,7 @@
     "depcheck": "depcheck"
   },
   "dependencies": {
-    "@docusaurus/core": "^2.4.0",
-    "@docusaurus/plugin-pwa": "^2.4.0",
-    "@docusaurus/preset-classic": "^2.4.0",
-    "@docusaurus/theme-live-codeblock": "^2.4.0",
+    "@ctrl/react-adsense": "^1.7.0",
     "@docusaurus/core": "^2.4.1",
     "@docusaurus/plugin-pwa": "^2.4.1",
     "@docusaurus/preset-classic": "^2.4.1",

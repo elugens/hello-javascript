@@ -25,7 +25,7 @@ tags:
 ---
 
 <!-- Notes: Passed Rich Snippets validation. -->
-
+import {Adsense} from '@ctrl/react-adsense';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/JSBasicsSchemaData.js';
@@ -34,6 +34,8 @@ import StructuredData from './schemadata/JSBasicsSchemaData.js';
 
 <head>
   <title>Basic JavaScript Interview Questions and Answers</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5606137173126649"
+     crossorigin="anonymous"></script>
 </head>
 
 **JavaScript Basics: Basic JS Questions**
@@ -51,6 +53,17 @@ import StructuredData from './schemadata/JSBasicsSchemaData.js';
 >
 </iframe>
 </div>
+
+---
+
+<!-- responsive and native ads -->
+<Adsense
+  client="ca-pub-5606137173126649"
+  slot="3615666284"
+  style={{ display: 'block' }}
+  layout="in-article"
+  format="fluid"
+/>
 
 ---
 
