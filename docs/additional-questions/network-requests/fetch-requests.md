@@ -64,15 +64,29 @@ import StructuredData from './schemadata/FetchReqSchemaData.js';
 
   <div></div>
 
-```js
-fetch(url)
-    .then(response => {
-        // handle the response
-    })
-    .catch(error => {
-        // handle the error
-    });
+Sure, here is a basic example of a `fetch` request in JavaScript.
+
+```javascript
+fetch('https://api.example.com/data', {
+  method: 'GET', // or 'POST'
+  headers: {
+    'Content-Type': 'application/json',
+    // 'Authorization': 'Bearer your-token'(if needed)
+  },
+  // body: JSON.stringify(data), (if you're using POST)
+})
+.then(response => response.json()) // parse the response as JSON
+.then(data => console.log(data)) // here is where you handle your data
+.catch(error => console.error('Error:', error)); // handle any errors
 ```
+
+This code will perform a `GET` request to the URL '<https://api.example.com/data>'. If the server responds with data, it will be converted from JSON into JavaScript objects or arrays and logged to the console. If there is an error with the request, it will be logged to the console as well.
+
+---
+
+:::note
+Please note that this example is using the Fetch API, which returns Promises. This is a more modern approach to AJAX requests and might not be supported in all browsers (it's not supported in Internet Explorer). Make sure to use a polyfill or fallback if you want to support all browsers. Additionally, if your server-side API requires authorization or other custom headers, you would include them in the headers object. For `POST` requests, you would include the data you are sending as JSON in the body property.
+:::
 
   </div>
   </div>
@@ -87,6 +101,33 @@ fetch(url)
   <div>
   <div><strong>Interview Response:</strong> You can use the `.then()` method on the Promise returned by `fetch()` to handle the response. It allows you to access the response data and perform actions accordingly.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+fetch('https://api.example.com/data')
+.then(response => {
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  }
+  // If the response is okay, we return a call to response.json()
+  return response.json();
+})
+.then(data => {
+  // This block will be executed once the Promise returned by response.json() resolves
+  // Here you can use the data, which is the JSON object from the response
+  console.log(data);
+})
+.catch(error => {
+  // If there's an error during the Fetch API call or during the handling of the response, it will be caught here
+  console.error('Error:', error);
+});
+```
+
+This code sends a GET request to the URL '<https://api.example.com/data>'. If the response status is not okay (like 404 Not Found or 500 Internal Server Error), an error is thrown. If the response is okay, it gets parsed as JSON and the resulting data is logged to the console. Any error that gets thrown during the fetch call or during the handling of the response gets caught and logged to the console.
+
+  </div>
   </div>
 </details>
 
@@ -130,12 +171,27 @@ In this example, the `fetch` function sends a request to the provided URL. The `
 
   <div></div>
 
-```js
+```javascript
 fetch('https://api.example.com/data')
-  .then(response => response.json())
-  .then(data => console.log(data))
-  .catch(error => console.error('Error:', error));
+.then(response => {
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  }
+  // If the response is okay, we return a call to response.json()
+  return response.json();
+})
+.then(data => {
+  // This block will be executed once the Promise returned by response.json() resolves
+  // Here you can use the data, which is the JSON object from the response
+  console.log(data);
+})
+.catch(error => {
+  // If there's an error during the Fetch API call or during the handling of the response, it will be caught here
+  console.error('Error:', error);
+});
 ```
+
+This code sends a GET request to the URL '<https://api.example.com/data>'. If the response status is not okay (like 404 Not Found or 500 Internal Server Error), an error is thrown. If the response is okay, it gets parsed as JSON and the resulting data is logged to the console. Any error that gets thrown during the fetch call or during the handling of the response gets caught and logged to the console.
 
   </div>
   </div>
@@ -158,7 +214,7 @@ Here's an example of using the `Headers` object with the Fetch API:
 
 ```javascript
 let myHeaders = new Headers();
-myHeaders.append('Content-Type', 'application/json');
+myHeaders.append('Content-Type', 'application/json'); // adding Content-Type
 
 fetch('https://api.example.com/data', {
   method: 'GET',
@@ -182,8 +238,32 @@ In this code, a new `Headers` object is created, and a 'Content-Type' header is 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> You can set custom headers in a Fetch request using the Headers object, appending headers with the append method, and including them in the fetch options.
+  <div><strong>Interview Response:</strong> You can set custom headers in a Fetch request using the 'Headers' object, appending headers with the append method, and/or including them in the fetch options.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Sure, to set custom headers in a Fetch request, you would include a `headers` object in the options object that you pass to the `fetch` function. Here's an example:
+
+```javascript
+fetch('https://api.example.com/data', {
+  method: 'GET',
+  headers: {
+    'Content-Type': 'application/json',
+    'X-Custom-Header': 'CustomHeaderValue'
+  },
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error('Error:', error));
+```
+
+In this example, a `GET` request is made to the URL '<https://api.example.com/data>'. The `headers` object contains two headers: `Content-Type` and `X-Custom-Header`. The server will receive these headers and can use them to determine how to process the request. If the server responds with data, the data will be parsed as JSON and logged to the console. If there's an error with the request, the error will be logged to the console.
+
+Remember to replace 'CustomHeaderValue' with the actual value that you want to send for the 'X-Custom-Header' header. Different servers may require different custom headers, so you'll need to know what headers are expected by the server that you're making the request to.
+
+  </div>
   </div>
 </details>
 
@@ -196,6 +276,35 @@ In this code, a new `Headers` object is created, and a 'Content-Type' header is 
   <div>
   <div><strong>Interview Response:</strong> For cross-origin requests with Fetch, set the `mode` option to 'cors'. The server must also support CORS and respond with appropriate `Access-Control` headers.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+In JavaScript, cross-origin requests are handled by the CORS (Cross-Origin Resource Sharing) policy of the server. If the server's CORS policy allows it, you can send cross-origin requests using the `fetch` function just like same-origin requests. If the server's CORS policy doesn't allow it, you'll get a CORS error.
+
+Here's a basic example of a cross-origin `fetch` request:
+
+```javascript
+fetch('https://api.other-domain.com/data', {
+  method: 'GET',
+  mode: 'cors', // no-cors, *cors, same-origin
+  headers: {
+    'Content-Type': 'application/json',
+    // 'Authorization': 'Bearer your-token'(if needed)
+  },
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error('Error:', error));
+```
+
+The `mode: 'cors'` option tells the browser to send the request with CORS. This will make the browser include the Origin header with the request and handle CORS errors. If the server doesn't allow cross-origin requests from your origin, you'll get a CORS error.
+
+Remember that CORS is a security feature that's implemented by the server, not the client. The server decides whether to allow the request based on its CORS policy. If you're getting CORS errors, you'll need to change the server's CORS policy to allow your requests. This typically involves setting certain headers on the server's responses, like `Access-Control-Allow-Origin`. If you don't control the server, you'll need to ask the server's operator to do this. If this isn't possible, you might need to use a server-side proxy that can make the request on your behalf.
+
+Also, remember that not all requests are subject to CORS. For example, simple GET requests without custom headers aren't subject to CORS because they can't change server state. But most POST requests, as well as GET requests with custom headers, are subject to CORS.
+
+  </div>
   </div>
 </details>
 
@@ -208,6 +317,35 @@ In this code, a new `Headers` object is created, and a 'Content-Type' header is 
   <div>
   <div><strong>Interview Response:</strong> No, Fetch requests cannot be directly canceled. However, you can ignore the response or use the `AbortController` API to abort a request in progress.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+const controller = new AbortController();
+const signal = controller.signal;
+
+setTimeout(() => controller.abort(), 5000); // abort the fetch request after 5 seconds
+
+fetch('https://api.example.com/data', { signal })
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(err => {
+    if (err.name === 'AbortError') {
+      console.error('Fetch request has been aborted');
+    } else {
+      console.error('An error occurred:', err);
+    }
+  });
+```
+
+---
+
+:::note
+Please note, the `AbortController` is not supported in Internet Explorer. If you need to support Internet Explorer, you may need to use a polyfill or an alternative method to cancel fetch requests.
+:::
+
+  </div>
   </div>
 </details>
 
@@ -255,7 +393,7 @@ In this example, an object named `data` is defined. This object is then stringif
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Fetch is a built-in browser API for HTTP requests. Axios is a library providing more features like automatic JSON data transformation, request cancellation, and wider browser compatibility.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -312,7 +450,7 @@ In this example, a `timeout` function wraps the fetch request. It starts a timer
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> JavaScript primitives are immutable, meaning their values cannot be changed after they are created. This ensures data consistency.</div><br />
+  <div><strong>Interview Response:</strong> The `FormData` object is a built-in API to handle HTML form data. It allows you to construct and send form data in a Fetch request.</div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -407,8 +545,34 @@ if (!response.ok) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> You can include authentication information, such as tokens or cookies, in the request headers. The server can then validate the credentials and respond accordingly.
+  <div><strong>Interview Response:</strong> You can include authentication information, such as tokens or cookies, in the request headers. The server can then validate the credentials and respond accordingly. Typically, when dealing with authentication in Fetch requests, you might be using something like JWT (JSON Web Tokens) or Basic Auth, where an `Authorization` header is included in your Fetch request.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+fetch('https://api.example.com/data', {
+  method: 'GET',
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer your-jwt-token', // replace with your actual token
+  },
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error('Error:', error));
+```
+
+In the `headers` object, an `Authorization` property is included. The `Bearer your-jwt-token` part should be replaced with the actual token you received during authentication.
+
+---
+
+:::note
+Please note that you should securely handle and store this token. Do not expose it publicly, as it would allow anyone who obtains it to authenticate as the user. Also remember that the way you handle authentication may vary based on the specific authentication mechanism used by your API.
+:::
+
+  </div>
   </div>
 </details>
 
@@ -419,8 +583,37 @@ if (!response.ok) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The `Request` object represents a resource request. It allows you to customize the request method, headers, and body before sending it with `fetch()`.
+  <div><strong>Interview Response:</strong> The `Request` object is part of the Fetch API and allows you to create and manage the details of a HTTP request which can then be sent using the `fetch` method. It allows you to customize the request method, headers, and body before sending it with `fetch()`.
   </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+// Create a new Request object
+const myRequest = new Request('https://api.example.com/data', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    key1: 'value1',
+    key2: 'value2'
+  }),
+});
+
+// Use the Request object with the fetch function
+fetch(myRequest)
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));
+```
+
+In this example, we create a new `Request` object, specifying the URL, HTTP method, headers, and body data. We then pass this `Request` object into the `fetch` function. The `fetch` function sends the request and processes the response as before.
+
+The `Request` object is useful when you need more control over the details of a HTTP request, or when you want to use the same request details multiple times.
+
+  </div>
   </div>
 </details>
 
@@ -431,28 +624,7 @@ if (!response.ok) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Network requests are used to fetch data, send data, communicate, update software, monitor devices, collect data, manage data, and provide access to applications. They are a fundamental part of the modern web.
-  </div><br/>
-  <div>
-  <p>
-<strong>Here are some use cases of network requests:</strong>
-</p>
-<ul>
-
-<li>Web apps: Fetch data from remote servers.</li>
-
-<li>Mobile apps: Fetch data from remote servers.</li>
-
-<li>Server-to-server: Communication between servers.</li>
-
-<li>IoT: Communication between devices and servers.</li>
-
-<li>File sharing: Share files between devices.</li>
-
-<li>Streaming media: Deliver media content.</li>
-
-<li>Online gaming: Multiplayer gaming.</li>
-</ul>
+  <div><strong>Interview Response:</strong> Network requests are crucial for fetching data from APIs, submitting user data to servers, downloading files, uploading images, real-time communication in chat applications, and interacting with databases remotely.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -652,18 +824,24 @@ let parsed = await response.json(); // fails (already consumed)
 
   <div></div>
 
-```js
-let response = await fetch('https://api.github.com/repos/javascript-
-tutorial/en.javascript.info/commits');
+```javascript
+fetch('https://api.example.com/data')
+  .then(response => {
+    // Log all headers
+    for (let [key, value] of response.headers) {
+      console.log(`${key}: ${value}`);
+    }
 
-// get one header
-console.log(response.headers.get('Content-Type')); // application/json; charset=utf-8
+    // Log a specific header
+    console.log('Content-Type:', response.headers.get('Content-Type'));
 
-// iterate over all headers
-for (let [key, value] of response.headers) {
-  console.log(`${key} = ${value}`);
-}
+    return response.json();
+  })
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));
 ```
+
+In this example, the `response.headers` object represents the headers of the response. The `for...of` loop logs each header and its value. The `response.headers.get()` method is used to get the value of a specific header (`Content-Type` in this case). The body of the response is then processed as JSON and logged to the console. Any errors that occur during the fetch or response processing are caught and logged to the console.
 
   </div>
   </div>
@@ -676,19 +854,26 @@ for (let [key, value] of response.headers) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> We can use the headers option in fetch to set a request header, and it has an object with incoming and outgoing headers. There are several restrictions on what we may access in the HTTP header.
+  <div><strong>Interview Response:</strong> In JavaScript, request headers can be set as part of the options object provided to the `fetch` function. This is done through the `headers` property, which takes an object where the keys are the header names and the values are the header values.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
 
-```js
-let response = fetch(protectedUrl, {
+```javascript
+fetch('https://api.example.com/data', {
+  method: 'GET',
   headers: {
-    Authentication: 'secret',
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer your-jwt-token', // replace with your actual token
   },
-});
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error('Error:', error));
 ```
+
+In this example, we're making a GET request to '<https://api.example.com/data>'. In the options object provided to `fetch`, we're setting two headers: 'Content-Type' and 'Authorization'. The 'Content-Type' header tells the server that we're sending JSON data. The 'Authorization' header is often used for authentication, with 'Bearer your-jwt-token' being a placeholder for an actual token. After the request is sent, the response is processed as JSON and the resulting data is logged to the console. Any errors that occur are also logged to the console.
 
   </div>
   </div>
@@ -704,7 +889,32 @@ let response = fetch(protectedUrl, {
   <div><strong>Interview Response:</strong> One example of a forbidden header name is "Referer" as per the Fetch standard. These are typically set by the user agent and cannot be modified programmatically.
     </div><br/>
   <div><strong>Technical Details:</strong> A forbidden header name is the name of an HTTP header that cannot be modified programmatically; specifically, an HTTP request header name (in contrast with a Forbidden response header name). Modifying such headers is forbidden because the user agent (browser) retains complete control over them. Names starting with `Sec-` are reserved for creating new headers safe from APIs using Fetch that grant developer control over headers, such as XMLHttpRequest.
-    </div>
+    </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+fetch('https://api.example.com/data', {
+  method: 'GET',
+  headers: {
+    'Referer': 'https://malicious.com', // This will be ignored by the user agent
+  },
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error('Error:', error));
+```
+
+In this example, the code attempts to set the 'Referer' header, which is not allowed by the browser. The browser will simply ignore this header, and it will not be included in the request. This behavior protects users from potential security issues, such as Referer spoofing.
+
+---
+
+:::note
+Please note that the forbidden headers can't be set programmatically, but they will be set automatically by the user agent when making the request.
+:::
+
+  </div>
   </div>
 </details>
 

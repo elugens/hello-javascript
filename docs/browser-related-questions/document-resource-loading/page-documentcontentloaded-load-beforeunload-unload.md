@@ -45,12 +45,26 @@ import StructuredData from './schemadata/PageSchemaData.js';
 
 ---
 
+### What is the Page Lifecycle API?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The Page Lifecycle API in JavaScript provides events and methods for observing and responding to changes in a webpage's lifecycle, such as when it's loaded, becomes active/inactive, is hidden/visible, or is about to be unloaded.
+  </div>
+  </div>
+</details>
+
+---
+
 ### What are the three crucial events in the lifecycle of an HTML page?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The lifecycle of an HTML page has three critical events, including the DOMContentLoaded, load, and beforeunload/unload. DOMContentLoaded occurs when the browser fully loads HTML, and the DOM tree completely builds, but external resources like pictures &#8249;img&#8250; and stylesheets may not yet have loaded. The load is not only HTML is loaded but also all the external resources: images, styles, and others. The beforeunload/unload state happens when the user is leaving the page.
+  <div><strong>Interview Response:</strong> The three crucial events in the lifecycle of an HTML page are: `DOMContentLoaded` (HTML parsed), `load` (resources loaded), and `beforeunload/unload` (user navigates away).
+    </div><br />
+  <div><strong>Technical Response:</strong> The lifecycle of an HTML page has three critical events, including the DOMContentLoaded, load, and beforeunload/unload. DOMContentLoaded occurs when the browser fully loads HTML, and the DOM tree completely builds, but external resources like pictures &#8249;img&#8250; and stylesheets may not yet have loaded. The load is not only HTML is loaded but also all the external resources: images, styles, and others. The beforeunload/unload state happens when the user is leaving the page.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -130,10 +144,155 @@ Note that the `window.onload` event won't fire until all resources (e.g., images
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> DOMContentLoaded is used when initial HTML is fully loaded and parsed, enabling early interaction. Load event fires when all resources are loaded. beforeunload/unload events allow cleanup or confirmation before leaving a page.
+  <div><strong>Interview Response:</strong> DOMContentLoaded is used when initial HTML is fully loaded and parsed, enabling early interaction. The 'load' event fires when all resources are loaded. 'beforeunload/unload' events allow cleanup or confirmation before leaving a page.
     </div><br/>
   <div><strong>Technical Response:</strong> Each HTML lifecycle event is helpful in its way. The DOMContentLoaded event is when the DOM is ready, so the handler can lookup DOM nodes and initialize the interface. The load event is when external resources are loaded, so styles are applied and image sizes are known. The beforeunload event occurs when the user is leaving, we can check if the user saved the changes and ask them whether they want to leave. The unload event occurs when the user has almost left, but we still can initiate some operations, such as sending out statistics.
     </div>
+  </div>
+</details>
+
+---
+
+### What does the "loading" state signify?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The "loading" stage in HTML signifies that the browser is in the process of loading the HTML document but has not completed parsing the DOM tree yet. The browser is fetching the page's resources, such as HTML, CSS, and JavaScript files.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+if (document.readyState === "loading") {   // Checking if document is still loading
+  console.log("The document is currently loading.");
+} else { 
+  console.log("The document has finished loading.");
+}
+```
+
+This code logs a message to the console based on whether the document is still loading or has finished loading. The `readyState` property of the `document` object is used to get the current loading state of the document.
+
+  </div>
+  </div>
+</details>
+
+---
+
+### When does the "interactive" stage occur in HTML?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The "interactive" stage in HTML occurs when the document has been fully read and parsed, but sub-resources such as images, stylesheets, and scripts may still be loading.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+document.onreadystatechange = function () {
+    if (document.readyState === "interactive") {
+        console.log("The document has been fully read and parsed, sub-resources are still loading.");
+    }
+}
+```
+
+In this code, an event listener is set on `document.onreadystatechange` to log a message when the `readyState` property of the document object becomes "interactive", indicating that the HTML has been parsed but some resources may still be loading.
+
+  </div>
+  </div>
+</details>
+
+---
+
+### What happens during the "interactive" stage in an HTML Document?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> During the "interactive" stage in an HTML Document, the browser has parsed the HTML and built the DOM, but is still loading and processing sub-resources like images, stylesheets, and scripts.
+  </div>
+  </div>
+</details>
+
+---
+
+### What does the "complete" stage represent?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The "complete" stage in HTML represents the state where the entire page, including all dependent resources like images, stylesheets, and scripts, has been fully loaded and rendered.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+document.onreadystatechange = function () {
+    if (document.readyState === "complete") {
+        console.log("The entire page, including all dependent resources, has been fully loaded and rendered.");
+    }
+}
+```
+
+In this code, an event listener is set on `document.onreadystatechange` to log a message when the `readyState` property of the document object becomes "complete", indicating that all resources including images, stylesheets, and scripts are fully loaded and rendered.
+
+  </div>
+  </div>
+</details>
+
+---
+
+### How can you listen for the page load event in JavaScript?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In JavaScript, you can listen for the page load event using the `window.onload` event or `addEventListener` method.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here is a JavaScript code example that listens for the page load event:
+
+```javascript
+window.addEventListener('load', function() {
+    console.log('The page has fully loaded');
+});
+```
+
+In this example, we're using `addEventListener` on the `window` object to listen for the `load` event, which is fired when the entire page loads, including its content (images, CSS, scripts, etc.). When this event fires, it logs a message to the console.
+
+  </div>
+  </div>
+</details>
+
+---
+
+### How can you listen for the DOMContentLoaded event?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> To listen for the `DOMContentLoaded` event in JavaScript, you attach an event listener to the document that responds when the `DOMContentLoaded` event is fired, which indicates the DOM is fully loaded.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM fully loaded and parsed');
+});
+```
+
+In this example, `addEventListener` is used on the `document` object to listen for the `DOMContentLoaded` event, which is fired when the initial HTML document has been completely loaded and parsed, but sub-resources like stylesheets, images, and scripts may not have finished loading. When this event fires, it logs a message to the console.
+
+  </div>
   </div>
 </details>
 
@@ -144,7 +303,7 @@ Note that the `window.onload` event won't fire until all resources (e.g., images
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The DOMContentLoaded event happens on the document object, and we must use addEventListener to catch it. We should note a few peculiarities when we try to solicit information before the page is completely loaded, like image sizes, and the DOM loads first and then images and styles.
+  <div><strong>Interview Response:</strong> The `DOMContentLoaded` event occurs on the `document` object in JavaScript, indicating that the initial HTML document has been completely loaded and parsed.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -153,10 +312,10 @@ Note that the `window.onload` event won't fire until all resources (e.g., images
 ```html
 <script>
   function ready() {
-    alert('DOM is ready');
+    console.log('DOM is ready');
 
     // image is not yet loaded (unless it was cached), so the size is 0x0
-    alert(`Image size: ${img.offsetWidth}x${img.offsetHeight}`);
+    console.log(`Image size: ${img.offsetWidth}x${img.offsetHeight}`);
   }
 
   document.addEventListener('DOMContentLoaded', ready);
@@ -164,6 +323,12 @@ Note that the `window.onload` event won't fire until all resources (e.g., images
 
 <img id="img" src="https://en.js.cx/clipart/train.gif?speed=1&cache=0" />
 ```
+
+---
+
+:::note
+We should note a few peculiarities when we try to solicit information before the page is completely loaded, like image sizes, and the DOM loads first and then images and styles.
+:::
 
   </div>
   </div>
@@ -348,10 +513,10 @@ In this example, the script listens for the `DOMContentLoaded` event. Then, it w
 <script>
   window.onload = function () {
     // same as window.addEventListener('load', (event) => {
-    alert('Page loaded');
+    console.log('Page loaded');
 
     // image is loaded at this time
-    alert(`Image size: ${img.offsetWidth}x${img.offsetHeight}`);
+    console.log(`Image size: ${img.offsetWidth}x${img.offsetHeight}`);
   };
 </script>
 
@@ -411,7 +576,7 @@ In this example, if a user tries to close the tab, refresh the page, or navigate
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, it's best to avoid making complex operations, like AJAX requests, inside `unload` or `beforeunload` events. However, `Navigator.sendBeacon()` is specifically designed to be used in these situations where a normal AJAX request might be cancelled because the page is unloading.
+  <div><strong>Interview Response:</strong> Yes, `unload` and `beforeunload` may not work with `Navigator.sendBeacon` in some browsers, due to their page lifecycle policies. It's recommended to use `visibilitychange` or `pagehide` instead.
     </div><br/>
   <div><strong>Detailed Response:</strong> In many situations, especially on mobile devices, the browser does not fire the unload, beforeunload, or pagehide events. For example, these events do not fire in the following situations. The user loads the page and interacts with it. When they complete, they switch to a different app instead of closing the tab. Later, they close the browser app using the phone's app manager. Additionally, the unload event is incompatible with modern browsers' back/forward cache (bfcache). Using the unload event in conjunction with the sendBeacon method is not recommended.
     </div><br />
@@ -419,24 +584,27 @@ In this example, if a user tries to close the tab, refresh the page, or navigate
 
   <div></div>
 
-```html
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Unload Event</title>
-        <script>
-            window.addEventListener("unload", function (event) {
-                navigator.sendBeacon("/log", "User left the page.");
-            });
-        </script>
-    </head>
-    <body>
-        <h1>Try leaving this page</h1>
-    </body>
-</html>
+Sure, here's an example that demonstrates using `visibilitychange` and `pagehide` events with `navigator.sendBeacon()` method:
+
+```javascript
+window.addEventListener('visibilitychange', function() {
+  if (document.visibilityState === 'hidden') {
+    navigator.sendBeacon("/log", "User left the page");
+  }
+});
+
+window.addEventListener('pagehide', function() {
+  navigator.sendBeacon("/log", "Page is being unloaded");
+});
 ```
 
-In this example, when the user navigates away from the page, the `unload` event fires and `Navigator.sendBeacon()` is used to send some data ("/log", "User left the page.") to the server. This method is more reliable for sending data in such scenarios because it's asynchronous and doesn't delay the unloading of the page. It also has a higher success rate than traditional AJAX methods in the context of the page unload event.
+In some modern browsers like Safari, `unload` and `beforeunload` events don't guarantee the execution of asynchronous requests like `sendBeacon()`. Instead, `visibilitychange` and `pagehide` events provide a more reliable way to ensure the request is made.
+
+---
+
+:::note
+It's best to avoid making complex operations, like AJAX requests, inside `unload` or `beforeunload` events. However, `Navigator.sendBeacon()` is specifically designed to be used in these situations where a normal AJAX request might be cancelled because the page is unloading.
+:::
 
   </div>
   </div>
@@ -449,7 +617,7 @@ In this example, when the user navigates away from the page, the `unload` event 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Naturally, it never runs because the page has already loaded. If the `DOMContentLoaded` event has already fired, adding a new event handler after the fact won't trigger that handler, as the event is missed.
+  <div><strong>Interview Response:</strong> If you set the `DOMContentLoaded` handler after the document is loaded, the handler will not be executed because the event has already occurred and won't be fired again. It needs to be registered before the DOMContentLoaded event is fired.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -492,7 +660,7 @@ In this example, the first `DOMContentLoaded` event handler logs a message to th
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, we can check the loading state by invoking the `document.readyState` property. The `document.readyState` property describes the loading state of the document. When the value of this property changes, a readystatechange event fires on the document object.
+  <div><strong>Interview Response:</strong> Yes, the document.readyState property can be used to determine the loading state of the document. Its value can be "loading" (still loading), "interactive" (DOM is ready), or "complete" (document and resources are loaded).
     </div><br />
     <strong>Syntax: </strong> let string = document.readyState;<br /><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -537,7 +705,9 @@ In this example, an `onreadystatechange` event handler is registered, and it log
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The readyState can be one of three possible values, including the loading, interactive, and complete states. The “loading state” is relative to the page still loading. The “interactive state” is when the document has finished loading and parses, but sub-resources such as scripts, images, stylesheets, and frames are still loading. The “complete state” happens when the document and sub-resources have finished loading, and the state indicates that the load event is about to fire.
+  <div><strong>Interview Response:</strong> The three possible values of the readyState property are "loading" (document is still loading), "interactive" (DOM is ready), and "complete" (document and resources are loaded).
+    </div><br />
+  <div><strong>Technical Response:</strong> The readyState can be one of three possible values, including the loading, interactive, and complete states. The “loading state” is relative to the page still loading. The “interactive state” is when the document has finished loading and parses, but sub-resources such as scripts, images, stylesheets, and frames are still loading. The “complete state” happens when the document and sub-resources have finished loading, and the state indicates that the load event is about to fire.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -566,6 +736,277 @@ if (document.readyState == 'loading') {
   work();
 }
 ```
+
+  </div>
+  </div>
+</details>
+
+---
+
+### How can you prevent the page from being unloaded?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> You can attempt to prevent the page from being unloaded in JavaScript by using the `beforeunload` event and returning a string from the event handler.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+window.addEventListener('beforeunload', function (event) {
+    // Cancel the event and show a dialog prompt
+    event.preventDefault();
+    // Chrome requires returnValue to be set
+    event.returnValue = '';
+});
+```
+
+In this code, an event listener is attached to the `beforeunload` event. When the event is fired, which is right before the window is about to be unloaded, it prevents the default action and sets `event.returnValue` to an empty string, which may prompt the user to confirm they really want to leave. Note that this behavior may vary between browsers, and some may not support it at all for user experience reasons.
+
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the purpose of the Page Visibility API?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The Page Visibility API in JavaScript allows developers to observe and react to changes in the visibility of a webpage, optimizing resource usage and user experience.
+  </div>
+  </div>
+</details>
+
+---
+
+### How can you listen for changes in the page visibility state?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> You can listen for changes in the page visibility state by attaching an event listener to the document that responds to the `visibilitychange` event, indicating a change in the visibility of the page.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+document.addEventListener('visibilitychange', function() {
+    if (document.visibilityState === 'visible') {
+        console.log('Page is now visible');
+    } else {
+        console.log('Page is now hidden');
+    }
+});
+```
+
+In this example, we're using `addEventListener` on the `document` object to listen for the `visibilitychange` event. The callback function checks the `document.visibilityState` property and logs a message depending on whether the page is visible or not.
+
+  </div>
+  </div>
+</details>
+
+---
+
+### What are the possible visibility states?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The possible visibility states for a page in the Page Visibility API are "hidden" (the page is hidden), "visible" (the page is currently visible), and "prerender" (the page is being prerendered), which represent different visibility states a page can be in.
+  </div>
+  </div>
+</details>
+
+---
+
+### How can you pause/resume expensive operations when the page is not visible?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> You can use the Page Visibility API's `visibilitychange` event to pause/resume expensive operations. When the page is hidden, pause operations; when it's visible, resume them.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Sure, here is a JavaScript code snippet that pauses and resumes an operation based on the visibility of the page:
+
+```javascript
+let expensiveOperation = function() {
+    // Simulating an expensive operation
+    console.log("Running expensive operation");
+};
+
+document.addEventListener('visibilitychange', function() {
+    if (document.visibilityState === 'hidden') {
+        clearInterval(intervalId); // Pausing operation
+        console.log("Paused expensive operation");
+    } else {
+        intervalId = setInterval(expensiveOperation, 1000); // Resuming operation
+        console.log("Resumed expensive operation");
+    }
+});
+
+let intervalId = setInterval(expensiveOperation, 1000); // Start operation
+```
+
+In this code, `expensiveOperation` is a function that represents an operation that uses a lot of resources. When the page visibility changes (as detected by the `visibilitychange` event), it checks if the page is hidden and if so, it pauses the operation by clearing the interval. If the page becomes visible again, it resumes the operation by starting the interval again.
+
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the purpose of the Navigation Timing API?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The Navigation Timing API provides data that can be used to measure the performance of a website, such as page load time and other related timings.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+window.addEventListener('load', function() {
+    setTimeout(function() {
+        var performance = window.performance;
+
+        if(performance) {
+            var timing = performance.timing;
+            var loadTime = timing.loadEventEnd - timing.navigationStart;
+
+            console.log('Page load time is ' + loadTime + ' milliseconds.');
+        }
+    }, 0);
+});
+```
+
+In this example, once the window's `load` event has fired, it gets the `window.performance` object, which contains timing-related information. Specifically, it calculates the total time taken to load the page (from the start of navigation to when the `load` event ends) and logs it to the console.
+
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the Performance Timing API?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The Performance Timing API, part of the larger Web Performance API, provides data about the time it takes for various parts of a webpage to load, aiding in performance optimization.
+  </div>
+  </div>
+</details>
+
+---
+
+### How can you access the performance timing information?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> You can access the performance timing information in JavaScript using the `window.performance.timing` object, which provides properties for different timing metrics.
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the purpose of the Resource Timing API?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The Resource Timing API provides detailed timing information about the load performance of a webpage's resources such as scripts, CSS, images, aiding in performance optimization.
+  </div>
+  </div>
+</details>
+
+---
+
+### How can you access the resource timing information?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> You can access the resource timing information in JavaScript using the `window.performance.getEntriesByType('resource')` method, which returns an array of PerformanceResourceTiming objects.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's a JavaScript code example that uses the Resource Timing API to get some timing-related metrics for a specific resource:
+
+```javascript
+window.addEventListener('load', function() {
+    var resourceList = window.performance.getEntriesByType("resource");
+    for (let i = 0; i < resourceList.length; i++) {
+        if (resourceList[i].name === "http://example.com/my-resource.jpg") {
+            console.log("Duration of my-resource.jpg: " + resourceList[i].duration);
+            console.log("Response time of my-resource.jpg: " + resourceList[i].responseEnd);
+        }
+    }
+});
+```
+
+In this example, once the window's `load` event has fired, it gets a list of all resource timings using `window.performance.getEntriesByType("resource")`. It then goes through this list and for a specific resource (in this case, "<http://example.com/my-resource.jpg>"), it logs the total duration of the request and the time at which the final byte of the response was received.
+
+  </div>
+  </div>
+</details>
+
+---
+
+### What is the purpose of the Beacon API?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> The Beacon API in JavaScript allows for the efficient sending of data from the client to the server when a page is unloaded, useful for analytics and diagnostics without delaying the navigation.
+  </div>
+  </div>
+</details>
+
+---
+
+### How can you use the Beacon API to send data?
+
+<details>
+  <summary><strong>View Answer:</strong></summary>
+  <div>
+  <div><strong>Interview Response:</strong> In JavaScript, you can use the `navigator.sendBeacon()` method provided by the Beacon API to send data to a server when the page is unloaded or about to be unloaded.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+Here's a JavaScript code example that uses the Beacon API to send data:
+
+```javascript
+// Data to send
+let data = {
+  event: 'button click',
+  time: new Date().getTime()
+};
+
+// Convert the data to JSON
+let jsonData = JSON.stringify(data);
+
+// Send the data
+navigator.sendBeacon('https://example.com/collect-data', jsonData);
+```
+
+In this example, we first create a data object that represents some data we want to send. We then convert this data to JSON using `JSON.stringify()`. Finally, we send the data to a server using `navigator.sendBeacon()`. The `sendBeacon()` method returns `true` if the user agent is able to successfully queue the data for transfer, `false` otherwise.
 
   </div>
   </div>
