@@ -68,7 +68,7 @@ import StructuredData from './schemadata/CondBranchingSchemaData.js';
 
 ```js
 let year = prompt('In which year was ECMAScript-2015 published?', '');
-if (year == 2015) alert('You are right!'); // You are right!
+if (year == 2015) console.log('You are right!'); // You are right!
 ```
 
   </div>
@@ -153,7 +153,7 @@ if (temperature > 90) {
 ```js
 let cond = year == 2015; // equality evaluates to true or false
 if (cond) {
-  alert('Hello, World'); // returns Hello, World
+  console.log('Hello, World'); // returns Hello, World
 }
 ```
 
@@ -179,9 +179,9 @@ if (cond) {
 let year = prompt('In which year was the ECMAScript-2015 published?', '');
 
 if (year == 2015) {
-  alert('You guessed it right!');
+  console.log('You guessed it right!');
 } else {
-  alert('How can you be so wrong?'); // any value except 2015
+  console.log('How can you be so wrong?'); // any value except 2015
 }
 ```
 
@@ -205,11 +205,11 @@ if (year == 2015) {
 let year = prompt('In which year was the ECMAScript-2015  published?', '');
 
 if (year < 2015) {
-  alert('Too early...');
+  console.log('Too early...');
 } else if (year > 2015) {
-  alert('Too late');
+  console.log('Too late');
 } else {
-  alert('Exactly!');
+  console.log('Exactly!');
 }
 ```
 
@@ -239,7 +239,7 @@ if (age > 18) {
   accessAllowed = false;
 }
 
-alert(accessAllowed);
+console.log(accessAllowed);
 ```
 
   </div>

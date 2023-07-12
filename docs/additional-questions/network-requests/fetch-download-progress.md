@@ -935,7 +935,7 @@ let result = new TextDecoder('utf-8').decode(chunksAll);
 
 // We're done!
 let commits = JSON.parse(result);
-alert(commits[0].author.login);
+console.log(commits[0].author.login);
 ```
 
 :::note

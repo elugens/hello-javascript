@@ -96,17 +96,17 @@ console.log(sayHi.length); // length = 1, using build length method
 ```js
 // Regular Function
 function sayHi() {
-  alert('Hi');
+  console.log('Hi');
 }
 
-alert(sayHi.name); // sayHi
+console.log(sayHi.name); // sayHi
 
 // Anonymous Function Expression
 let sayHi = function () {
-  alert('Hi');
+  console.log('Hi');
 };
 
-alert(sayHi.name); // sayHi (there's a name!)
+console.log(sayHi.name); // sayHi (there's a name!)
 
 // Named Function Expression
 let sayHi = function saySomething() {
@@ -128,8 +128,8 @@ let user = {
   },
 };
 
-alert(user.sayHi.name); // sayHi
-alert(user.sayBye.name); // sayBye
+console.log(user.sayHi.name); // sayHi
+console.log(user.sayBye.name); // sayBye
 ```
 
 :::note
@@ -158,9 +158,9 @@ function f1(a) {}
 function f2(a, b) {}
 function many(a, b, ...more) {}
 
-alert(f1.length); // 1
-alert(f2.length); // 2
-alert(many.length); // 2, rest parameter not counted
+console.log(f1.length); // 1
+console.log(f2.length); // 2
+console.log(many.length); // 2, rest parameter not counted
 ```
 
   </div>
@@ -220,7 +220,7 @@ console.log(greet("Alice")); // Outputs: Hello, Alice!
 ```js
 let sayHi = function func(who) {
   if (who) {
-    alert(`Hello, ${who}`);
+    console.log(`Hello, ${who}`);
   } else {
     func('Guest'); // use func to re-call itself
   }
@@ -253,7 +253,7 @@ func(); // Error, func is not defined (not visible outside of the function)
 // Named Function Expression
 let sayHi = function func(who) {
   if (who) {
-    alert(`Hello, ${who}`);
+    console.log(`Hello, ${who}`);
   } else {
     func('Guest'); // Now all fine
   }
@@ -496,7 +496,7 @@ console.log(factorial(5)); // Outputs: 120
 var button = document.getElementById('myButton');
 
 button.addEventListener('click', function handleClick() {
-  alert('Button clicked!');
+  console.log('Button clicked!');
 
   // Remove this event listener after it's executed
   button.removeEventListener('click', handleClick); // <- self-unbinding

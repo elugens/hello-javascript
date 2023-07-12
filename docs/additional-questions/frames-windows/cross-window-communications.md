@@ -195,7 +195,7 @@ contentWindow.document.body.style.backgroundColor = "red";
       // ...but not to the document inside it
       let doc = iframe.contentDocument; // ERROR
     } catch (e) {
-      alert(e); // Security Error (another origin)
+      console.log(e); // Security Error (another origin)
     }
 
     // also we can't READ the URL of the page in iframe
@@ -203,7 +203,7 @@ contentWindow.document.body.style.backgroundColor = "red";
       // Can't read URL from the Location object
       let href = iframe.contentWindow.location.href; // ERROR
     } catch (e) {
-      alert(e); // Security Error
+      console.log(e); // Security Error
     }
 
     // ...we can WRITE into location (and thus load something else into the iframe)!
@@ -278,7 +278,7 @@ contentWindow.document.body.style.backgroundColor = "red";
   iframe.onload = function () {
     let newDoc = iframe.contentDocument;
     // the loaded document is not the same as initial!
-    alert(oldDoc == newDoc); // false
+    console.log(oldDoc == newDoc); // false
   };
 </script>
 ```
@@ -311,7 +311,7 @@ contentWindow.document.body.style.backgroundColor = "red";
     let newDoc = iframe.contentDocument;
     if (newDoc == oldDoc) return;
 
-    alert('New document is here!');
+    console.log('New document is here!');
 
     clearInterval(timer); // cancel setInterval, don't need it any more
   }, 100);
@@ -466,7 +466,7 @@ window.addEventListener('message', function (event) {
 let newWindow = window.open('https://www.example.com', '_blank');
 
 if (newWindow) {
-    alert('A new window or tab has been opened');
+    console.log('A new window or tab has been opened');
 }
 ```
 
@@ -714,10 +714,10 @@ let ws;
 function connect() {
   ws = new WebSocket("ws://localhost:8080/");
   ws.onopen = function() {
-    alert("Connection opened");
+    console.log("Connection opened");
   };
   ws.onmessage = function(event) {
-    alert(event.data);
+    console.log(event.data);
   };
 }
 

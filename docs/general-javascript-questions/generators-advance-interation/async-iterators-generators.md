@@ -618,7 +618,7 @@ let range = {
 (async () => {
   for await (let value of range) {
     // (4)
-    alert(value); // 1,2,3,4,5
+    console.log(value); // 1,2,3,4,5
   }
 })();
 ```

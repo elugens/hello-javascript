@@ -359,9 +359,9 @@ function mul(a, b) {
 
 let triple = mul.bind(null, 3);
 
-alert(triple(3)); // = mul(3, 3) = 9
-alert(triple(4)); // = mul(3, 4) = 12
-alert(triple(5)); // = mul(3, 5) = 15
+console.log(triple(3)); // = mul(3, 3) = 9
+console.log(triple(4)); // = mul(3, 4) = 12
+console.log(triple(5)); // = mul(3, 5) = 15
 ```
 
   </div>

@@ -677,7 +677,7 @@ let i32arr = new Int32Array([-1213292304]);
 ```js
 let uint8Array = new Uint8Array([72, 101, 108, 108, 111]);
 
-alert(new TextDecoder().decode(uint8Array)); // alerts Hello
+console.log(new TextDecoder().decode(uint8Array)); // logs Hello
 
 // We can decode a part of the buffer by creating a subarray view for it:
 
@@ -687,7 +687,7 @@ let uint8Array2 = new Uint8Array([0, 72, 101, 108, 108, 111, 0]);
 // create a new view over it, without copying anything
 let binaryString = uint8Array2.subarray(1, -1);
 
-alert(new TextDecoder().decode(binaryString)); // alerts Hello
+console.log(new TextDecoder().decode(binaryString)); // console.logs Hello
 ```
 
   </div>
@@ -716,7 +716,7 @@ alert(new TextDecoder().decode(binaryString)); // alerts Hello
 let encoder = new TextEncoder();
 
 let uint8Array = encoder.encode('Hello');
-alert(uint8Array); // 72,101,108,108,111
+console.log(uint8Array); // 72,101,108,108,111
 ```
 
   </div>

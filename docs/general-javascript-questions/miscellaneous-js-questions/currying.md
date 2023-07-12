@@ -71,7 +71,7 @@ function sum(a, b) {
 
 let curriedSum = curry(sum);
 
-alert(curriedSum(1)(2)); // 3
+console.log(curriedSum(1)(2)); // 3
 ```
 
   </div>
@@ -110,9 +110,9 @@ function sum(a, b, c) {
 
 let curriedSum = curry(sum);
 
-alert(curriedSum(1, 2, 3)); // 6, still callable normally
-alert(curriedSum(1)(2, 3)); // 6, currying of 1st arg
-alert(curriedSum(1)(2)(3)); // 6, full currying
+console.log(curriedSum(1, 2, 3)); // 6, still callable normally
+console.log(curriedSum(1)(2, 3)); // 6, currying of 1st arg
+console.log(curriedSum(1)(2)(3)); // 6, full currying
 ```
 
   </div>

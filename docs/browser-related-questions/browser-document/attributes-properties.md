@@ -82,11 +82,11 @@ document.body.myData = {
   title: 'Imperator',
 };
 
-alert(document.body.myData.title); // Imperator
+console.log(document.body.myData.title); // Imperator
 
 // Add new method
 document.body.sayTagName = function () {
-  alert(this.tagName);
+  console.log(this.tagName);
 };
 
 document.body.sayTagName();
@@ -94,7 +94,7 @@ document.body.sayTagName();
 
 // Add new method to all Elements
 Element.prototype.sayHi = function () {
-  alert(`Hello, I'm ${this.tagName}`);
+  console.log(`Hello, I'm ${this.tagName}`);
 };
 
 document.documentElement.sayHi(); // Hello, I'm HTML
@@ -198,8 +198,8 @@ DOM properties and methods behave just like those of regular JavaScript objects.
 <body id="body" type="...">
   <input id="input" type="text" />
   <script>
-    alert(input.type); // text
-    alert(body.type);
+    console.log(input.type); // text
+    console.log(body.type);
     // undefined: DOM property not created, because it is non-standard
   </script>
 </body>
@@ -232,9 +232,9 @@ The "type" attribute is standard for &#8249;input&#8250; (HTMLInputElement), but
 ```html
 <body id="test" something="non-standard">
   <script>
-    alert(document.body.id); // test
+    console.log(document.body.id); // test
     // non-standard attribute does not yield a property
-    alert(document.body.something); // undefined
+    console.log(document.body.something); // undefined
   </script>
 </body>
 ```
@@ -261,7 +261,7 @@ The "type" attribute is standard for &#8249;input&#8250; (HTMLInputElement), but
 ```html
 <body something="non-standard">
   <script>
-    alert(document.body.getAttribute('something')); // non-standard
+    console.log(document.body.getAttribute('something')); // non-standard
   </script>
 </body>
 ```
@@ -288,15 +288,15 @@ The "type" attribute is standard for &#8249;input&#8250; (HTMLInputElement), but
   <div id="elem" about="Elephant"></div>
 
   <script>
-    alert(elem.getAttribute('About')); // (1) 'Elephant', reading
+    console.log(elem.getAttribute('About')); // (1) 'Elephant', reading
 
     elem.setAttribute('Test', 123); // (2), writing
 
-    alert(elem.outerHTML); // (3), see if the attribute is in HTML (yes)
+    console.log(elem.outerHTML); // (3), see if the attribute is in HTML (yes)
 
     for (let attr of elem.attributes) {
       // (4) list all
-      alert(`${attr.name} = ${attr.value}`);
+      console.log(`${attr.name} = ${attr.value}`);
     }
   </script>
 </body>
@@ -327,11 +327,11 @@ The "type" attribute is standard for &#8249;input&#8250; (HTMLInputElement), but
 
   // attribute => property
   input.setAttribute('id', 'id');
-  alert(input.id); // id (updated)
+  console.log(input.id); // id (updated)
 
   // property => attribute
   input.id = 'newId';
-  alert(input.getAttribute('id')); // newId (updated)
+  console.log(input.getAttribute('id')); // newId (updated)
 </script>
 ```
 
@@ -358,11 +358,11 @@ The "type" attribute is standard for &#8249;input&#8250; (HTMLInputElement), but
 
   // attribute => property
   input.setAttribute('value', 'text');
-  alert(input.value); // text
+  console.log(input.value); // text
 
   // NOT property => attribute
   input.value = 'newValue';
-  alert(input.getAttribute('value')); // text (not updated!)
+  console.log(input.getAttribute('value')); // text (not updated!)
 </script>
 ```
 
@@ -392,8 +392,8 @@ That “feature” may come in handy because the user actions may lead to value 
 <input id="input" type="checkbox" checked />
 
 <script>
-  alert(input.getAttribute('checked')); // the attribute value is: empty string
-  alert(input.checked); // the property value is: true
+  console.log(input.getAttribute('checked')); // the attribute value is: empty string
+  console.log(input.checked); // the property value is: true
 </script>
 
 <!-- STYLE PROPERTY EXAMPLE -->
@@ -401,11 +401,11 @@ That “feature” may come in handy because the user actions may lead to value 
 
 <script>
   // string
-  alert(div.getAttribute('style')); // color:red;font-size:120%
+  console.log(div.getAttribute('style')); // color:red;font-size:120%
 
   // object
-  alert(div.style); // [object CSSStyleDeclaration]
-  alert(div.style.color); // red
+  console.log(div.style); // [object CSSStyleDeclaration]
+  console.log(div.style.color); // red
 </script>
 ```
 
@@ -513,7 +513,7 @@ We should note that this is not exactly the recommended approach for implementin
 ```html
 <body data-about="Elephants">
   <script>
-    alert(document.body.dataset.about); // Elephants
+    console.log(document.body.dataset.about); // Elephants
   </script>
 </body>
 ```
@@ -554,7 +554,7 @@ We should note that this is not exactly the recommended approach for implementin
 
 <script>
   // read
-  alert(order.dataset.orderState); // new
+  console.log(order.dataset.orderState); // new
 
   // modify
   order.dataset.orderState = 'pending'; // (*) camel case dataset property

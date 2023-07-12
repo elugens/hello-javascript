@@ -50,9 +50,9 @@ import StructuredData from './schemadata/GlobalSchemaData.js';
   <div></div>
 
 ```js
-alert('Hello');
+console.log('Hello');
 // is the same as
-window.alert('Hello');
+window.console.log('Hello');
 
 var foo = 'foobar';
 foo === window.foo; // Returns: true
@@ -70,9 +70,7 @@ greeting: function greeting() {
 ```
 
 :::note
-
 (In Node.js, this is not the case.) The global object's interface depends on the execution context in which the script is running.
-
 :::
 
   </div>
@@ -96,7 +94,7 @@ greeting: function greeting() {
 
 ```js
 if (!window.Promise) {
-  alert("Your browser is really old!");
+  console.log("Your browser is really old!");
 }
 
 if (!window.Promise) {

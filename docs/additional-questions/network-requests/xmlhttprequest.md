@@ -680,12 +680,12 @@ In this example, a GET request is sent to the URL `https://api.example.com/data`
 
 ```js
 xhr.onload = function () {
-  alert(`Loaded: ${xhr.status} ${xhr.response}`);
+  console.log(`Loaded: ${xhr.status} ${xhr.response}`);
 };
 
 xhr.onerror = function () {
   // only triggers if the request couldn't be made at all
-  alert(`Network Error`);
+  console.log(`Network Error`);
 };
 
 xhr.onprogress = function (event) {
@@ -693,7 +693,7 @@ xhr.onprogress = function (event) {
   // event.loaded - how many bytes downloaded
   // event.lengthComputable = true if the server sent Content-Length header
   // event.total - total number of bytes (if lengthComputable)
-  alert(`Received ${event.loaded} of ${event.total}`);
+  console.log(`Received ${event.loaded} of ${event.total}`);
 };
 ```
 
@@ -834,7 +834,7 @@ In this example, a timeout of 5 seconds is set using `setTimeout()`. If the requ
   <div>
   <div><strong>Interview Response:</strong> If the `async` parameter of the `open()` method is set to `false`, the mode of the XMLHttpRequest is synchronous, meaning the request blocks the execution of other code until it is completed.
     </div><br />
-  <div><strong>Technical Response:</strong> If the open method's third async parameter is set to false. The request is made in a synchronous manner. To put it another way, JavaScript execution pauses at send() and continues when the response is received. Similar to alert or prompt instructions. While synchronous calls appear to be a good idea, they are rarely used since they restrict in-page JavaScript from being run until the loading is complete. In some browsers, scrolling gets difficult. If the synchronous call takes too long, the browser may advise that the "hanging" webpage be closed.
+  <div><strong>Technical Response:</strong> If the open method's third async parameter is set to false. The request is made in a synchronous manner. To put it another way, JavaScript execution pauses at send() and continues when the response is received. Similar to console.log or prompt instructions. While synchronous calls appear to be a good idea, they are rarely used since they restrict in-page JavaScript from being run until the loading is complete. In some browsers, scrolling gets difficult. If the synchronous call takes too long, the browser may advise that the "hanging" webpage be closed.
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -850,13 +850,13 @@ xhr.open('GET', '/article/xmlhttprequest/hello.txt', false); // <-
 try {
   xhr.send();
   if (xhr.status != 200) {
-    alert(`Error ${xhr.status}: ${xhr.statusText}`);
+    console.log(`Error ${xhr.status}: ${xhr.statusText}`);
   } else {
-    alert(xhr.response);
+    console.log(xhr.response);
   }
 } catch (err) {
   // instead of onerror
-  alert('Request failed');
+  console.log('Request failed');
 }
 ```
 
@@ -1053,7 +1053,7 @@ let headers = xhr
   xhr.open('POST', '/article/xmlhttprequest/post/user');
   xhr.send(formData);
 
-  xhr.onload = () => alert(xhr.response);
+  xhr.onload = () => console.log(xhr.response);
 </script>
 ```
 

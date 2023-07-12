@@ -157,15 +157,15 @@ let regexp = /<(.*?)>/g;
 
 let matchAll = str.matchAll(regexp);
 
-alert(matchAll); // [object RegExp String Iterator], not array, but an iterable
+console.log(matchAll); // [object RegExp String Iterator], not array, but an iterable
 
 matchAll = Array.from(matchAll); // array now
 
 let firstMatch = matchAll[0];
-alert(firstMatch[0]); // <h1>
-alert(firstMatch[1]); // h1
-alert(firstMatch.index); // 0
-alert(firstMatch.input); // <h1>Hello, world!</h1>
+console.log(firstMatch[0]); // <h1>
+console.log(firstMatch[1]); // h1
+console.log(firstMatch.index); // 0
+console.log(firstMatch.input); // <h1>Hello, world!</h1>
 ```
 
   </div>
@@ -222,10 +222,10 @@ The `matchAll()` function returns more information about each match, including i
 
 ```js
 // Example: str.split(substring)
-alert('12-34-56'.split('-')); // array of ['12', '34', '56']
+console.log('12-34-56'.split('-')); // array of ['12', '34', '56']
 
 // Example: str.split(regexp)
-alert('12, 34, 56'.split(/,\s*/)); // array of ['12', '34', '56']
+console.log('12, 34, 56'.split(/,\s*/)); // array of ['12', '34', '56']
 ```
 
   </div>
@@ -310,7 +310,7 @@ console.log('Ho-Ho-ho'.replace(/ho/gi, (match, offset) => offset)); // 0-3-6
 
 ```js
 // replace all dashes by a colon
-alert('12-34-56'.replaceAll('-', ':')); // 12:34:56
+console.log('12-34-56'.replaceAll('-', ':')); // 12:34:56
 ```
 
   </div>
@@ -339,7 +339,7 @@ let regexp = /javascript/gi;
 let result;
 
 while ((result = regexp.exec(str))) {
-  alert(`Found ${result[0]} at position ${result.index}`);
+  console.log(`Found ${result[0]} at position ${result.index}`);
   // Found JavaScript at position 11, then
   // Found javascript at position 33
 }
@@ -350,7 +350,7 @@ let str = 'Hello, world!';
 let regexp = /\w+/g; // without flag "g", lastIndex property is ignored
 regexp.lastIndex = 5; // search from 5th position (from the comma)
 
-alert(regexp.exec(str)); // world
+console.log(regexp.exec(str)); // world
 
 // replace flag g with y
 let str = 'Hello, world!';
@@ -358,7 +358,7 @@ let str = 'Hello, world!';
 let regexp = /\w+/y;
 regexp.lastIndex = 5; // search exactly at position 5
 
-alert(regexp.exec(str)); // null
+console.log(regexp.exec(str)); // null
 ```
 
   </div>
@@ -385,14 +385,14 @@ alert(regexp.exec(str)); // null
 let str = 'I love JavaScript';
 
 // these two tests do the same
-alert(/love/i.test(str)); // true
-alert(str.search(/love/i) != -1); // true
+console.log(/love/i.test(str)); // true
+console.log(str.search(/love/i) != -1); // true
 
 // An example with the negative answer:
 let str = 'Bla-bla-bla';
 
-alert(/love/i.test(str)); // false
-alert(str.search(/love/i) != -1); // false
+console.log(/love/i.test(str)); // false
+console.log(str.search(/love/i) != -1); // false
 
 // Use it to search from a given position with flag g:
 let regexp = /love/gi;
@@ -401,7 +401,7 @@ let str = 'I love JavaScript';
 
 // start the search from position 10:
 regexp.lastIndex = 10;
-alert(regexp.test(str)); // false (no match)
+console.log(regexp.test(str)); // false (no match)
 ```
 
   </div>
@@ -426,8 +426,8 @@ alert(regexp.test(str)); // false (no match)
 ```js
 let regexp = /javascript/g; // (regexp just created: regexp.lastIndex=0)
 
-alert(regexp.test('javascript')); // true (regexp.lastIndex=10 now)
-alert(regexp.test('javascript')); // false
+console.log(regexp.test('javascript')); // true (regexp.lastIndex=10 now)
+console.log(regexp.test('javascript')); // false
 ```
 
   </div>

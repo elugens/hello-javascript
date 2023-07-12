@@ -597,7 +597,7 @@ let users = [
 // returns array of the first two users
 let someUsers = users.filter((item) => item.id < 3);
 
-alert(someUsers.length); // 2
+console.log(someUsers.length); // 2
 
 // filter method with a callback function
 function isBigEnough(value) {
@@ -884,13 +884,11 @@ let arr = [1, 2, 3, 4, 5];
 
 let result = arr.reduceRight((sum, current) => sum + current, 0);
 
-alert(result); // 15
+console.log(result); // 15
 ```
 
 :::note
-
 Conversely, the reduce() method does the same thing but from left to right.
-
 :::
 
   </div>

@@ -153,10 +153,10 @@ visitedSet.add(john); // John again
 // visitedSet has 2 users now
 
 // check if John visited?
-alert(visitedSet.has(john)); // true
+console.log(visitedSet.has(john)); // true
 
 // check if Mary visited?
-alert(visitedSet.has(mary)); // false
+console.log(visitedSet.has(mary)); // false
 
 john = null;
 

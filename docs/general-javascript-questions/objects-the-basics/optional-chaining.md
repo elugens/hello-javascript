@@ -66,10 +66,10 @@ import StructuredData from './schemadata/OptChainSchemaData.js';
 ```js
 let user = {}; // user has no address
 
-alert(user?.address?.street); // undefined (no error)
+console.log(user?.address?.street); // undefined (no error)
 
 let user2 = {};
-alert(user2.address.street); // returns a type error
+console.log(user2.address.street); // returns a type error
 ```
 
   </div>
@@ -92,10 +92,10 @@ alert(user2.address.street); // returns a type error
 ```js
 let user = null;
 
-alert(user?.address); // undefined
-alert(user?.address.street); // undefined
+console.log(user?.address); // undefined
+console.log(user?.address.street); // undefined
 
-alert(myUser?.address.street); // returns a reference error
+console.log(myUser?.address.street); // returns a reference error
 ```
 
   </div>
@@ -151,7 +151,7 @@ If it is not optional, it can result in a false scenario that goes unchecked. Th
 ```js
 let userAdmin = {
   admin() {
-    alert('I am admin');
+    console.log('I am admin');
   },
 };
 
@@ -176,8 +176,8 @@ let user1 = {
 
 let user2 = null;
 
-alert(user1?.[key]); // John
-alert(user2?.[key]); // undefined
+console.log(user1?.[key]); // John
+console.log(user2?.[key]); // undefined
 ```
 
   </div>

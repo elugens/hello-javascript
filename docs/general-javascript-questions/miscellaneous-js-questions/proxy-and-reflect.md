@@ -203,11 +203,11 @@ let target = {};
 let proxy = new Proxy(target, {}); // empty handler
 
 proxy.test = 5; // writing to proxy (1)
-alert(target.test); // 5, the property appeared in target!
+console.log(target.test); // 5, the property appeared in target!
 
-alert(proxy.test); // 5, we can read it from proxy too (2)
+console.log(proxy.test); // 5, we can read it from proxy too (2)
 
-for (let key in proxy) alert(key); // test, iteration works (3)
+for (let key in proxy) console.log(key); // test, iteration works (3)
 ```
 
   </div>
@@ -254,8 +254,8 @@ numbers = new Proxy(numbers, {
   },
 });
 
-alert(numbers[1]); // 1
-alert(numbers[4]); // 0 (no such item)
+console.log(numbers[1]); // 1
+console.log(numbers[4]); // 0 (no such item)
 ```
 
   </div>
@@ -296,8 +296,8 @@ dictionary = new Proxy(dictionary, {
 
 // Look up arbitrary phrases in the dictionary!
 // At worst, they're not translated.
-alert(dictionary['Hello']); // Hola
-alert(dictionary['Welcome to Proxy']); // Welcome to Proxy (no translation)
+console.log(dictionary['Hello']); // Hola
+console.log(dictionary['Welcome to Proxy']); // Welcome to Proxy (no translation)
 ```
 
 :::tip
@@ -352,11 +352,11 @@ numbers = new Proxy(numbers, {
 
 numbers.push(1); // added successfully
 numbers.push(2); // added successfully
-alert('Length is: ' + numbers.length); // 2
+console.log('Length is: ' + numbers.length); // 2
 
 numbers.push('test'); // TypeError ('set' on proxy returned false)
 
-alert('This line is never reached (error in the line above)');
+console.log('This line is never reached (error in the line above)');
 ```
 
   </div>
@@ -454,11 +454,11 @@ user = new Proxy(user, {
 });
 
 // "ownKeys" filters out _password
-for (let key in user) alert(key); // name, then: age
+for (let key in user) console.log(key); // name, then: age
 
 // same effect on these methods:
-alert(Object.keys(user)); // name,age
-alert(Object.values(user)); // John,30
+console.log(Object.keys(user)); // name,age
+console.log(Object.values(user)); // John,30
 ```
 
   </div>
@@ -535,12 +535,12 @@ function delay(f, ms) {
 }
 
 function sayHi(user) {
-  alert(`Hello, ${user}!`);
+  console.log(`Hello, ${user}!`);
 }
 
 sayHi = delay(sayHi, 3000);
 
-alert(sayHi.length);  // this would be 0 if we used a wrapper function
+console.log(sayHi.length);  // this would be 0 if we used a wrapper function
 
 // return 1 (*) proxy forwards "get length" operation to the target
 
@@ -598,7 +598,7 @@ let user = {};
 
 Reflect.set(user, 'name', 'John');
 
-alert(user.name); // John
+console.log(user.name); // John
 ```
 
   </div>
@@ -718,7 +718,7 @@ let user = new User();
 
 user = new Proxy(user, {});
 
-alert(user.getName()); // Error
+console.log(user.getName()); // Error
 
 // Example: Solution
 class User {
@@ -738,7 +738,7 @@ user = new Proxy(user, {
   },
 });
 
-alert(user.getName()); // Guest
+console.log(user.getName()); // Guest
 ```
 
 :::note
@@ -857,7 +857,7 @@ revokes.set(proxy, revoke);
 revoke = revokes.get(proxy);
 revoke();
 
-alert(proxy.data); // Error (revoked)
+console.log(proxy.data); // Error (revoked)
 ```
 
   </div>

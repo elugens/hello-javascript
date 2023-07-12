@@ -71,16 +71,16 @@ import StructuredData from './schemadata/CodeStructureSchemaData.js';
 
 ```javascript
 // This is a single statement
-alert('Hello');
+console.log('Hello');
 
 // This is a set of statements
-alert('Hello');
-alert('World');
+console.log('Hello');
+console.log('World');
 
 // Set of statements on separate lines (recommended)
-alert('Hello');
+console.log('Hello');
 
-alert('World');
+console.log('World');
 ```
 
   </div>
@@ -116,10 +116,10 @@ alert('World');
 ```javascript
 // Missing semi-colon (;) (note the missing semi-colon)
 
-// alert('Hello') <--
+// console.log('Hello') <--
 
 // correct implementation
-alert('JavaScript');
+console.log('JavaScript');
 ```
 
   </div>
@@ -168,16 +168,19 @@ let person = {
 
 ```javascript
 // This will work…
-alert(3 + 1 + 2);
+console.log(3 + 1 + 2);
 
 // This will result in an error…
-alert('There will be an error') // No semi-colon
-  [(1, 2)].forEach(alert); // results in an error
+console.log('There will be an error') // No semi-colon
+  [(1, 2)].forEach(console.log); // results in an error
+```
 
-// But everything is fine again if we add a semicolon after alert:
-alert('All fine now'); // uses a semi-colon alerts All fine now
+But everything is fine again if we add a semicolon after console.log:
 
-[1, 2].forEach(alert); // alerts 1 and then 2
+```javascript
+console.log('All fine now'); // uses a semi-colon console.logs All fine now
+
+[1, 2].forEach(console.log); // console.logs 1 and then 2
 ```
 
   </div>
@@ -232,9 +235,9 @@ console.log(generator.next().value); // Output: undefined
 
 ```javascript
 // This comment occupies a line of its own.
-alert('Hello');
+console.log('Hello');
 
-alert('JavaScript'); // This comment follows the statement
+console.log('JavaScript'); // This comment follows the statement
 ```
 
   </div>

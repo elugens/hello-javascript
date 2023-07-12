@@ -59,7 +59,7 @@ let regexp = /html|php|css|java(script)?/gi; // Alternation |
 
 let str = 'First HTML appeared, then CSS, then JavaScript';
 
-alert(str.match(regexp)); // 'HTML', 'CSS', 'JavaScript'
+console.log(str.match(regexp)); // 'HTML', 'CSS', 'JavaScript'
 ```
 
   </div>

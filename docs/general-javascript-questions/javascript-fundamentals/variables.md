@@ -130,8 +130,8 @@ message = hello;
 
 // now two variables hold the same data
 
-alert(hello); // Hello world!
-alert(message); // Hello world!
+console.log(hello); // Hello world!
+console.log(message); // Hello world!
 ```
 
   </div>
@@ -214,7 +214,7 @@ let test123;
 ```js
 let $ = 1; // declared a variable with the name "$"
 let _ = 2; // and now a variable with the name "_"
-alert($ + _); // 3
+console.log($ + _); // 3
 ```
 
 <strong className="codeExample">These names are not valid and should not be used:</strong><br /><br />
@@ -506,7 +506,7 @@ const COLOR_ORANGE = '#FF7F00';
 
 let color = COLOR_ORANGE;
 
-alert(color); // #FF7F00
+console.log(color); // #FF7F00
 ```
 
   </div>

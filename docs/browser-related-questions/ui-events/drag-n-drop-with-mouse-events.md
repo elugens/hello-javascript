@@ -474,7 +474,7 @@ droppableElement.addEventListener('drop', function(event) {
         event.preventDefault();
         // Get the transferred data
         var data = event.dataTransfer.getData("text/plain");
-        alert("Received data: " + data);
+        console.log("Received data: " + data);
       }
     </script>
   </head>

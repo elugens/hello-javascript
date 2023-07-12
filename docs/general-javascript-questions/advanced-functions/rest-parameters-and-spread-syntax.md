@@ -135,9 +135,9 @@ function sumAll(...args) {
   return sum;
 }
 
-alert(sumAll(1)); // 1
-alert(sumAll(1, 2)); // 3
-alert(sumAll(1, 2, 3)); // 6
+console.log(sumAll(1)); // 1
+console.log(sumAll(1, 2)); // 3
+console.log(sumAll(1, 2, 3)); // 6
 ```
 
   </div>
@@ -159,13 +159,13 @@ alert(sumAll(1, 2, 3)); // 6
 
 ```js
 function showName(firstName, lastName, ...titles) {
-  alert( firstName + ' ' + lastName ); // Julius Caesar
+  console.log( firstName + ' ' + lastName ); // Julius Caesar
 
   // the rest go into titles array
   // i.e. titles = ["Consul", "Imperator"]
-  alert( titles[0] ); // Consul
-  alert( titles[1] ); // Imperator
-  alert( titles.length ); // 2
+  console.log( titles[0] ); // Consul
+  console.log( titles[1] ); // Imperator
+  console.log( titles.length ); // 2
 }
 
 showName("Julius", "Caesar", "Consul", "Imperator");
@@ -197,12 +197,12 @@ function f(arg1, ...rest, arg2) { // arg2 after ...rest ?!
 
 ```js
 function showName() {
-  alert(arguments.length);
-  alert(arguments[0]);
-  alert(arguments[1]);
+  console.log(arguments.length);
+  console.log(arguments[0]);
+  console.log(arguments[1]);
 
   // it is iterable
-  // for(let arg of arguments) alert(arg);
+  // for(let arg of arguments) console.log(arg);
 }
 
 // shows: 2, Julius, Caesar
@@ -234,19 +234,19 @@ showName('Ilya');
 ```js
 let arr = [3, 5, 1];
 
-alert(Math.max(...arr)); // 5 (spread turns array into a list of arguments)
+console.log(Math.max(...arr)); // 5 (spread turns array into a list of arguments)
 
 // We also can pass multiple iterables this way:
 let arr1 = [1, -2, 3, 4];
 let arr2 = [8, 3, -8, 1];
 
-alert(Math.max(...arr1, ...arr2)); // 8
+console.log(Math.max(...arr1, ...arr2)); // 8
 
 // We can even combine the spread syntax with normal values:
 let arr1 = [1, -2, 3, 4];
 let arr2 = [8, 3, -8, 1];
 
-alert(Math.max(1, ...arr1, 2, ...arr2, 25)); // 25
+console.log(Math.max(1, ...arr1, 2, ...arr2, 25)); // 25
 
 // Also, the spread syntax can be used to merge arrays:
 let arr = [3, 5, 1];
@@ -254,12 +254,12 @@ let arr2 = [8, 9, 15];
 
 let merged = [0, ...arr, 2, ...arr2];
 
-alert(merged); // 0,3,5,1,2,8,9,15 (0, then arr, then 2, then arr2)
+console.log(merged); // 0,3,5,1,2,8,9,15 (0, then arr, then 2, then arr2)
 
 // here we use the spread syntax to turn the string into an array of characters:
 let str = 'Hello';
 
-alert([...str]); // H,e,l,l,o
+console.log([...str]); // H,e,l,l,o
 ```
 
   </div>

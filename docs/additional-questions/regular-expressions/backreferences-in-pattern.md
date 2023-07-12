@@ -63,14 +63,14 @@ let str = `He said: "She's the one!" "She's the one!".`;
 
 let regexp = /(['"])(.*?)\1/g;
 
-alert(str.match(regexp)); // "She's the one!"
+console.log(str.match(regexp)); // "She's the one!"
 
 // Backreference by name: \k<name>
 let str = `He said: "She's the one!".`;
 
 let regexp = /(?<quote>['"])(.*?)\k<quote>/g;
 
-alert(str.match(regexp)); // "She's the one!"
+console.log(str.match(regexp)); // "She's the one!"
 ```
 
   </div>

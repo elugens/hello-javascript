@@ -250,7 +250,7 @@ So, you can indeed customize the behavior of the `instanceof` operator in modern
 class Rabbit extends Animal {}
 
 let rabbit = new Rabbit();
-alert(rabbit instanceof Animal); // true
+console.log(rabbit instanceof Animal); // true
 
 // rabbit.__proto__ === Rabbit.prototype
 // rabbit.__proto__.__proto__ === Animal.prototype (match! return true)
@@ -278,14 +278,14 @@ let user = {
   [Symbol.toStringTag]: 'User',
 };
 
-alert({}.toString.call(user)); // [object User]
+console.log({}.toString.call(user)); // [object User]
 
 // toStringTag for the environment-specific object and class:
-alert(window[Symbol.toStringTag]); // Window
-alert(XMLHttpRequest.prototype[Symbol.toStringTag]); // XMLHttpRequest
+console.log(window[Symbol.toStringTag]); // Window
+console.log(XMLHttpRequest.prototype[Symbol.toStringTag]); // XMLHttpRequest
 
-alert({}.toString.call(window)); // [object Window]
-alert({}.toString.call(new XMLHttpRequest())); // [object XMLHttpRequest]
+console.log({}.toString.call(window)); // [object Window]
+console.log({}.toString.call(new XMLHttpRequest())); // [object XMLHttpRequest]
 ```
 
   </div>

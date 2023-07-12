@@ -603,8 +603,8 @@ You cannot attach a shadow root to every type of element, and some cannot have a
   `;
 
   // <p> is only visible from queries inside the shadow tree (3)
-  alert(document.querySelectorAll('p').length); // 0
-  alert(elem.shadowRoot.querySelectorAll('p').length); // 1
+  console.log(document.querySelectorAll('p').length); // 0
+  console.log(elem.shadowRoot.querySelectorAll('p').length); // 1
 </script>
 ```
 

@@ -134,11 +134,11 @@ Static imports, on the other hand, load all modules up front when the applicatio
 ```js
 // 📁 say.js
 export function hi() {
-  alert(`Hello`);
+  console.log(`Hello`);
 }
 
 export function bye() {
-  alert(`Bye`);
+  console.log(`Bye`);
 }
 
 // Then dynamic import can be like this

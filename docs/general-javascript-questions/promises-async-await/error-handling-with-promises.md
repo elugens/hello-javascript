@@ -103,13 +103,13 @@ fetchUserData()
 ```js
 new Promise((resolve, reject) => {
   throw new Error('Whoops!');
-}).catch(alert); // Error: Whoops!
+}).catch(console.log); // Error: Whoops!
 
 // Works exactly the same as this:
 
 new Promise((resolve, reject) => {
   reject(new Error('Whoops!'));
-}).catch(alert); // Error: Whoops!
+}).catch(console.log); // Error: Whoops!
 
 // Example in dot then
 new Promise((resolve, reject) => {
@@ -118,7 +118,7 @@ new Promise((resolve, reject) => {
   .then((result) => {
     throw new Error('Whoops!'); // rejects the promise
   })
-  .catch(alert); // Error: Whoops!
+  .catch(console.log); // Error: Whoops!
 ```
 
   </div>
@@ -144,9 +144,9 @@ new Promise((resolve, reject) => {
   throw new Error('Whoops!');
 })
   .catch(function (error) {
-    alert('The error is handled, continue normally');
+    console.log('The error is handled, continue normally');
   })
-  .then(() => alert('Next successful handler runs'));
+  .then(() => console.log('Next successful handler runs'));
 ```
 
   </div>
@@ -171,8 +171,8 @@ new Promise((resolve, reject) => {
 ```js
 window.addEventListener('unhandledrejection', function (event) {
   // the event object has two special properties:
-  alert(event.promise); // [object Promise] - the promise that generated the error
-  alert(event.reason); // Error: Whoops! - the unhandled error object
+  console.log(event.promise); // [object Promise] - the promise that generated the error
+  console.log(event.reason); // Error: Whoops! - the unhandled error object
 });
 
 new Promise(function () {

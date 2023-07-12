@@ -361,7 +361,7 @@ let obj = {
 
 let map = new Map(Object.entries(obj));
 
-alert(map.get('name')); // John
+console.log(map.get('name')); // John
 ```
 
   </div>
@@ -393,7 +393,7 @@ let obj = Object.fromEntries(map.entries()); // make a plain object (*)
 // done!
 // obj = { banana: 1, orange: 2, meat: 4 }
 
-alert(obj.orange); // 2
+console.log(obj.orange); // 2
 ```
 
   </div><br />
@@ -409,7 +409,7 @@ let obj = {
 
 let map = new Map(Object.entries(obj));
 
-alert(map.get('name')); // John
+console.log(map.get('name')); // John
 ```
 
   </div>
@@ -445,10 +445,10 @@ set.add(john);
 set.add(mary);
 
 // set keeps only unique values
-alert(set.size); // 3
+console.log(set.size); // 3
 
 for (let user of set) {
-  alert(user.name); // John (then Pete and Mary)
+  console.log(user.name); // John (then Pete and Mary)
 }
 ```
 
@@ -503,11 +503,11 @@ console.log(set.size); // outputs: 3, because "2" only counts once.
 ```js
 let set = new Set(['oranges', 'apples', 'bananas']);
 
-for (let value of set) alert(value);
+for (let value of set) console.log(value);
 
 // the same with forEach:
 set.forEach((value, valueAgain, set) => {
-  alert(value);
+  console.log(value);
 });
 ```
 

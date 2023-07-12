@@ -173,7 +173,7 @@ range[Symbol.iterator] = function () {
 
 // now it works!
 for (let num of range) {
-  alert(num); // 1, then 2, 3, 4, 5
+  console.log(num); // 1, then 2, 3, 4, 5
 }
 ```
 
@@ -198,7 +198,7 @@ for (let num of range) {
 let str = 'Hello';
 
 // does the same as
-// for (let char of str) alert(char);
+// for (let char of str) console.log(char);
 
 let iterator = str[Symbol.iterator]();
 

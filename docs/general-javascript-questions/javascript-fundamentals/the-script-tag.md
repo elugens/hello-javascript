@@ -123,7 +123,7 @@ import StructuredData from './schemadata/TheScriptTagSchemaData.js';
   <!-- inline script tag -->
  <script>
   function myFunction() {
-   alert("Hello, JavaScript!");
+   console.log("Hello, JavaScript!");
   }
  </script>
 </head>
@@ -180,7 +180,7 @@ import StructuredData from './schemadata/TheScriptTagSchemaData.js';
   <!-- inline script tag -->
  <script>
   function myFunction() {
-   alert("Hello, JavaScript!");
+   console.log("Hello, JavaScript!");
   }
  </script>
 </head>

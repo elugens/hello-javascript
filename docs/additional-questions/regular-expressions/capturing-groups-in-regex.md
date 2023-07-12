@@ -151,17 +151,17 @@ In the above example, the regular expression `/(?:ab)+c/` is used to match a seq
 
 ```js
 // Example: repeating word pattern
-alert('Gogogo now!'.match(/(go)+/gi)); // "Gogogo"
+console.log('Gogogo now!'.match(/(go)+/gi)); // "Gogogo"
 
 // Example: group of domains
 let regexp = /(\w+\.)+\w+/g;
 
-alert('site.com my.site.com'.match(regexp)); // site.com,my.site.com
+console.log('site.com my.site.com'.match(regexp)); // site.com,my.site.com
 
 // Example: email
 let regexp = /[-.\w]+@([\w-]+\.)+[\w-]+/g;
 
-alert('my@mail.com @ his@site.com.uk'.match(regexp));
+console.log('my@mail.com @ his@site.com.uk'.match(regexp));
 // my@mail.com, his@site.com.uk
 ```
 
@@ -189,8 +189,8 @@ let str = '<h1>Hello, world!</h1>';
 
 let tag = str.match(/<(.*?)>/);
 
-alert(tag[0]); // <h1>
-alert(tag[1]); // h1
+console.log(tag[0]); // <h1>
+console.log(tag[1]); // h1
 ```
 
   </div>
@@ -218,10 +218,10 @@ let str = '<span class="my">';
 let regexp = /<(([a-z]+)\s*([^>]*))>/;
 
 let result = str.match(regexp);
-alert(result[0]); // <span class="my">
-alert(result[1]); // span class="my"
-alert(result[2]); // span
-alert(result[3]); // class="my"
+console.log(result[0]); // <span class="my">
+console.log(result[1]); // span class="my"
+console.log(result[2]); // span
+console.log(result[3]); // class="my"
 ```
 
   </div>
@@ -244,19 +244,19 @@ alert(result[3]); // class="my"
 ```js
 let match = 'a'.match(/a(z)?(c)?/);
 
-alert(match.length); // 3
-alert(match[0]); // a (whole match)
-alert(match[1]); // undefined
-alert(match[2]); // undefined
+console.log(match.length); // 3
+console.log(match[0]); // a (whole match)
+console.log(match[1]); // undefined
+console.log(match[2]); // undefined
 
 /////////////////
 
 let match = 'ac'.match(/a(z)?(c)?/);
 
-alert(match.length); // 3
-alert(match[0]); // ac (whole match)
-alert(match[1]); // undefined, because there's nothing for (z)?
-alert(match[2]); // c
+console.log(match.length); // 3
+console.log(match[0]); // ac (whole match)
+console.log(match[1]); // undefined, because there's nothing for (z)?
+console.log(match[2]); // c
 ```
 
   </div>
@@ -281,21 +281,21 @@ alert(match[2]); // c
 let results = '<h1> <h2>'.matchAll(/<(.*?)>/gi);
 
 // results - is not an array, but an iterable object
-alert(results); // [object RegExp String Iterator]
+console.log(results); // [object RegExp String Iterator]
 
-alert(results[0]); // undefined (*)
+console.log(results[0]); // undefined (*)
 
 results = Array.from(results); // let's turn it into array <--
 
-alert(results[0]); // <h1>,h1 (1st tag)
-alert(results[1]); // <h2>,h2 (2nd tag)
+console.log(results[0]); // <h1>,h1 (1st tag)
+console.log(results[1]); // <h2>,h2 (2nd tag)
 
 // Using a LOOP to get our results - recommended
 let results = '<h1> <h2>'.matchAll(/<(.*?)>/gi);
 
 for (let result of results) {
-  alert(result);
-  // first alert: <h1>,h1
+  console.log(result);
+  // first console.log: <h1>,h1
   // second: <h2>,h2
 }
 
@@ -307,10 +307,10 @@ let results = '<h1> <h2>'.matchAll(/<(.*?)>/gi);
 
 let [tag1, tag2] = results;
 
-alert(tag1[0]); // <h1>
-alert(tag1[1]); // h1
-alert(tag1.index); // 0
-alert(tag1.input); // <h1> <h2>
+console.log(tag1[0]); // <h1>
+console.log(tag1[1]); // h1
+console.log(tag1.index); // 0
+console.log(tag1.input); // <h1> <h2>
 ```
 
   </div>
@@ -341,9 +341,9 @@ let str = "2019-04-30";
 
 let groups = str.match(dateRegexp).groups;
 
-alert(groups.year); // 2019
-alert(groups.month); // 04
-alert(groups.day); // 30
+console.log(groups.year); // 2019
+console.log(groups.month); // 04
+console.log(groups.day); // 30
 
 // Complex Approach
 let dateRegexp = /(?<year>[0-9]{4})-(?<month>[0-9]{2})-(?<day>[0-9]{2})/g; 
@@ -355,8 +355,8 @@ let results = str.matchAll(dateRegexp);
 for(let result of results) {
   let {year, month, day} = result.groups;
 
-  alert(`${day}.${month}.${year}`);
-  // first alert: 30.10.2019
+  console.log(`${day}.${month}.${year}`);
+  // first console.log: 30.10.2019
   // second: 01.01.2020
 }
 ```
@@ -385,14 +385,14 @@ for(let result of results) {
 let str = 'John Bull';
 let regexp = /(\w+) (\w+)/;
 
-alert(str.replace(regexp, '$2, $1')); // Bull, John
+console.log(str.replace(regexp, '$2, $1')); // Bull, John
 
 // More Complex example using capturing groups
 let regexp = /(?<year>[0-9]{4})-(?<month>[0-9]{2})-(?<day>[0-9]{2})/g;
 
 let str = '2019-10-30, 2020-01-01';
 
-alert(str.replace(regexp, '$<day>.$<month>.$<year>'));
+console.log(str.replace(regexp, '$<day>.$<month>.$<year>'));
 // 30.10.2019, 01.01.2020
 ```
 
@@ -423,9 +423,9 @@ let regexp = /(?:go)+ (\w+)/i;
 
 let result = str.match(regexp);
 
-alert(result[0]); // Gogogo John (full match)
-alert(result[1]); // John
-alert(result.length); // 2 (no more items in the array)
+console.log(result[0]); // Gogogo John (full match)
+console.log(result[1]); // John
+console.log(result.length); // 2 (no more items in the array)
 ```
 
   </div>

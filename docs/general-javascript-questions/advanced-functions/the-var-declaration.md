@@ -104,14 +104,14 @@ if (true) {
   var test = true; // use "var" instead of "let"
 }
 
-alert(test); // true, the variable lives after if
+console.log(test); // true, the variable lives after if
 
 // Using the modern let
 if (true) {
   let test = true; // use "let"
 }
 
-alert(test); // ReferenceError: test is not defined
+console.log(test); // ReferenceError: test is not defined
 
 // Notice that ‘var message’ is in the global scope of the function
 function getScope() {
@@ -154,11 +154,11 @@ function sayHi() {
     var phrase = 'Hello';
   }
 
-  alert(phrase); // works
+  console.log(phrase); // works
 }
 
 sayHi();
-alert(phrase); // ReferenceError: phrase is not defined
+console.log(phrase); // ReferenceError: phrase is not defined
 ```
 
 :::note
@@ -217,7 +217,7 @@ var user = 'Pete';
 var user = 'John'; // this "var" does nothing (already declared)
 // ...it doesn't trigger an error
 
-alert(user); // John
+console.log(user); // John
 
 // user-declared twice: error
 let user;

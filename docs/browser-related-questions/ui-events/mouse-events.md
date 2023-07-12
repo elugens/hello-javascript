@@ -227,7 +227,7 @@ In this code, every time the mouse moves, it logs the current mouse position rel
 ```html
 <!-- Before... -->
 
-<b ondblclick="alert('Click!')" onmousedown="return false"> Double-click me </b>
+<b ondblclick="console.log('Click!')" onmousedown="return false"> Double-click me </b>
 
 <!-- ...After -->
 ```
@@ -252,7 +252,7 @@ In this code, every time the mouse moves, it logs the current mouse position rel
   <div></div>
 
 ```html
-<div oncopy="alert('Copying forbidden!'); return false">
+<div oncopy="console.log('Copying forbidden!'); return false">
   Dear user, The copying is forbidden for you. If you know JS or HTML, then you
   can extract everything from the page source.
 </div>

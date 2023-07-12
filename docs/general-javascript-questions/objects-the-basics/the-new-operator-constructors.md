@@ -93,8 +93,8 @@ function User(name) {
 
 let user = new User('Jack');
 
-alert(user.name); // Jack
-alert(user.isAdmin); // false
+console.log(user.name); // Jack
+console.log(user.isAdmin); // false
 ```
 
   </div>

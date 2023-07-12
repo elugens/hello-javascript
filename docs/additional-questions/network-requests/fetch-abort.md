@@ -623,13 +623,13 @@ let signal = controller.signal;
 // The party that performs a cancelable operation
 // gets the "signal" object
 // and sets the listener to trigger when controller.abort() is called
-signal.addEventListener('abort', () => alert('abort!'));
+signal.addEventListener('abort', () => console.log('abort!'));
 
 // The other party, that cancels (at any point later):
 controller.abort(); // abort!
 
 // The event triggers and signal.aborted becomes true
-alert(signal.aborted); // true
+console.log(signal.aborted); // true
 ```
 
   </div>

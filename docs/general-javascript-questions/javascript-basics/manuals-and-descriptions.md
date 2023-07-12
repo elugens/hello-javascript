@@ -64,7 +64,7 @@ import StructuredData from './schemadata/ManualsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The standard reference guides used by JavaScript developers include the ECMAScript documentation, Mozilla Developer Network (MDN), CanIUse, and W3Schools.</div><br/>
+  <div><strong>Interview Response:</strong> The standard reference guides used by JavaScript developers include the ECMAScript documentation, Mozilla Developer Network (MDN), CanIUse, and W3Schools.</div>
   </div>
 </details>
 
@@ -86,7 +86,7 @@ import StructuredData from './schemadata/ManualsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> ECMAScript is a specification that defines the scripting language used by JavaScript. JavaScript is an implementation of ECMAScript and includes additional features and APIs.</div><br/>
+  <div><strong>Interview Response:</strong> ECMAScript is a specification that defines the scripting language used by JavaScript. JavaScript is an implementation of ECMAScript and includes additional features and APIs.</div>
   </div>
 </details>
 
@@ -141,7 +141,7 @@ import StructuredData from './schemadata/ManualsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> My top recommendations for JavaScript books are: "JavaScript: The Definitive Guide," "Eloquent JavaScript," "JavaScript: The Good Parts," "You Don't Know JS," and "Effective JavaScript."</div><br/>
+  <div><strong>Interview Response:</strong> My top recommendations for JavaScript books are: "JavaScript: The Definitive Guide," "Eloquent JavaScript," "JavaScript: The Good Parts," "You Don't Know JS," and "Effective JavaScript."</div>
   </div>
 </details>
 

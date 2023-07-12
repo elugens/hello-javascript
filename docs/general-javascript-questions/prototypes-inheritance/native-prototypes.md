@@ -137,7 +137,7 @@ if (!String.prototype.repeat) {
   };
 }
 
-alert('La'.repeat(3)); // LaLaLa
+console.log('La'.repeat(3)); // LaLaLa
 ```
 
   </div>
@@ -166,7 +166,7 @@ let obj = {
 
 obj.join = Array.prototype.join;
 
-alert(obj.join(', ')); // Hello, JavaScript!
+console.log(obj.join(', ')); // Hello, JavaScript!
 ```
 
   </div>

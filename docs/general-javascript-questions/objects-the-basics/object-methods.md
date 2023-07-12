@@ -61,7 +61,7 @@ let user = {
 
 // Here sayHi is a method of the object user
 user.sayHi = function () {
-  alert('Hello, JavaScript');
+  console.log('Hello, JavaScript');
 };
 
 user.sayHi(); // Hello, JavaScript
@@ -166,7 +166,7 @@ let user = {
 let admin = user;
 user = null; // attempt to override the object fails
 
-admin.sayHi(); // alerts John
+admin.sayHi(); // console.logs John
 ```
 
   </div><br />

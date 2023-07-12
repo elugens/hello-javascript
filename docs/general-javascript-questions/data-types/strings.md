@@ -527,7 +527,7 @@ Both `indexOf` and `search` found the substring 'JavaScript' at the index 7 in t
 let str = 'Widget with id';
 
 if (str.indexOf('Widget')) {
-  alert('We found it'); // doesn't work!
+  console.log('We found it'); // doesn't work!
 }
 
 // Quick Fix: Use a -1 check
@@ -535,7 +535,7 @@ if (str.indexOf('Widget')) {
 let str = 'Widget with id';
 
 if (str.indexOf('Widget') != -1) {
-  alert('We found it'); // works now!
+  console.log('We found it'); // works now!
 }
 ```
 
@@ -558,10 +558,10 @@ if (str.indexOf('Widget') != -1) {
   <div></div>
 
 ```js
-alert(~2); // -3, the same as -(2+1)
-alert(~1); // -2, the same as -(1+1)
-alert(~0); // -1, the same as -(0+1)
-alert(~-1); // 0, the same as -(-1+1)
+console.log(~2); // -3, the same as -(2+1)
+console.log(~1); // -2, the same as -(1+1)
+console.log(~0); // -1, the same as -(0+1)
+console.log(~-1); // 0, the same as -(-1+1)
 ```
 
   </div>
@@ -585,7 +585,7 @@ alert(~-1); // 0, the same as -(-1+1)
 let str = 'Widget';
 
 if (~str.indexOf('Widget')) {
-  alert('Found it!'); // works
+  console.log('Found it!'); // works
 }
 ```
 
@@ -609,14 +609,14 @@ if (~str.indexOf('Widget')) {
   <div></div>
 
 ```js
-alert('Widget with id'.includes('Widget')); // true
+console.log('Widget with id'.includes('Widget')); // true
 
-alert('Hello'.includes('Bye')); // false
+console.log('Hello'.includes('Bye')); // false
 
 // The optional second argument:
 
-alert('Widget'.includes('id')); // true
-alert('Widget'.includes('id', 3)); // false, from position 3 there is no "id"
+console.log('Widget'.includes('id')); // true
+console.log('Widget'.includes('id', 3)); // false, from position 3 there is no "id"
 ```
 
 :::note
@@ -775,7 +775,7 @@ console.log(str.substr(2, 4)); // 'ring', from the 2nd position get 4 characters
 // The first argument may be negative, to count from the end:
 
 let str = 'stringify';
-alert(str.substr(-4, 2)); // 'gi', from the 4th position get 2 characters
+console.log(str.substr(-4, 2)); // 'gi', from the 4th position get 2 characters
 ```
 
 :::note
@@ -803,12 +803,12 @@ The `substr()` method does not change the original string.
 
 ```js
 let str = 'stringify';
-alert(str.substr(2, 4)); // 'ring', from the 2nd position get 4 characters
+console.log(str.substr(2, 4)); // 'ring', from the 2nd position get 4 characters
 
 // The first argument may be negative, to count from the end:
 
 let str = 'stringify';
-alert(str.substr(-4, 2)); // 'gi', from the 4th position get 2 characters
+console.log(str.substr(-4, 2)); // 'gi', from the 4th position get 2 characters
 ```
 
 :::note
@@ -991,7 +991,7 @@ The first character '𠮷' is an astral symbol that lies outside the BMP. `charC
   <div></div>
 
 ```js
-alert('Österreich'.localeCompare('Zealand')); // -1
+console.log('Österreich'.localeCompare('Zealand')); // -1
 ```
 
   </div>
@@ -1012,9 +1012,9 @@ alert('Österreich'.localeCompare('Zealand')); // -1
   <div></div>
 
 ```js
-alert('𝒳'.length); // 2, MATHEMATICAL SCRIPT CAPITAL X
-alert('😂'.length); // 2, FACE WITH TEARS OF JOY
-alert('𩷶'.length); // 2, a rare Chinese hieroglyph
+console.log('𝒳'.length); // 2, MATHEMATICAL SCRIPT CAPITAL X
+console.log('😂'.length); // 2, FACE WITH TEARS OF JOY
+console.log('𩷶'.length); // 2, a rare Chinese hieroglyph
 ```
 
   </div>

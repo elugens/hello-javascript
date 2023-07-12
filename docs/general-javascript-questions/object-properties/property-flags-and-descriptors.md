@@ -109,7 +109,7 @@ let user = {
 
 let descriptor = Object.getOwnPropertyDescriptor(user, 'name');
 
-alert(JSON.stringify(descriptor, null, 2));
+console.log(JSON.stringify(descriptor, null, 2));
 /* property descriptor:
 {
   "value": "John",
@@ -150,7 +150,7 @@ Object.defineProperty(user, 'name', {
 
 let descriptor = Object.getOwnPropertyDescriptor(user, 'name');
 
-alert(JSON.stringify(descriptor, null, 2));
+console.log(JSON.stringify(descriptor, null, 2));
 /*
 {
   "value": "John",

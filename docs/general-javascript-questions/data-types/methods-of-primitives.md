@@ -251,7 +251,7 @@ let user = {
 let john = {
   name: 'John',
   sayHi: function () {
-    alert('Hi buddy!');
+    console.log('Hi buddy!');
   },
 };
 
@@ -304,13 +304,13 @@ console.log(typeof 0); // "number"
 
 console.log(typeof new Number(0)); // "object"! – not a number Huh!
 
-// Objects are always truthy in if, so here the alert will show up:
+// Objects are always truthy in if, so here the console.log will show up:
 
 let zero = new Number(0);
 
 if (zero) {
   // zero is true, because it's an object
-  alert('zero is truthy!?!');
+  console.log('zero is truthy!?!');
 }
 
 // this is entirely valid:

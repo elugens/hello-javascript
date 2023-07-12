@@ -864,7 +864,7 @@ openRequest.onsuccess = function() {
 
   db.onversionchange = function() {
     db.close();
-    alert("Database is outdated, please reload the page.")
+    console.log("Database is outdated, please reload the page.")
   };
 
   // ...the db is ready, use it...

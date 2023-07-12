@@ -556,7 +556,7 @@ So the answer to your question is, when multiple elements have the same slot nam
               this.items = slot
                 .assignedElements()
                 .map((elem) => elem.textContent);
-              alert('Items: ' + this.items);
+              console.log('Items: ' + this.items);
             }
           }
         );

@@ -397,13 +397,13 @@ interface HTMLInputElement: HTMLElement {
     let elem = document.body;
 
     // let us examine what it is?
-    alert(elem.nodeType); // 1 => element
+    console.log(elem.nodeType); // 1 => element
 
     // and the first child is...
-    alert(elem.firstChild.nodeType); // 3 => text
+    console.log(elem.firstChild.nodeType); // 3 => text
 
     // for the document object, the type is 9
-    alert(document.nodeType); // 9
+    console.log(document.nodeType); // 9
   </script>
 </body>
 ```
@@ -434,12 +434,12 @@ interface HTMLInputElement: HTMLElement {
 
   <script>
     // for comment
-    alert(document.body.firstChild.tagName); // undefined (not an element)
-    alert(document.body.firstChild.nodeName); // #comment
+    console.log(document.body.firstChild.tagName); // undefined (not an element)
+    console.log(document.body.firstChild.nodeName); // #comment
 
     // for document
-    alert(document.tagName); // undefined (not an element)
-    alert(document.nodeName); // #document
+    console.log(document.tagName); // undefined (not an element)
+    console.log(document.nodeName); // #document
   </script>
 </body>
 ```
@@ -482,7 +482,7 @@ interface HTMLInputElement: HTMLElement {
   <div>A div</div>
 
   <script>
-    alert(document.body.innerHTML); // read the current contents
+    console.log(document.body.innerHTML); // read the current contents
     document.body.innerHTML = 'The new BODY!';
     // replaces and returns The New Body in the HTML
   </script>
@@ -607,7 +607,7 @@ In this updated example, instead of using `innerHTML +=`, we create a new `<p>` 
   div.outerHTML = '<p>A new element</p>'; // (*)
 
   // Wow! 'div' is still the same!
-  alert(div.outerHTML); // <div>Hello, world!</div> (**)
+  console.log(div.outerHTML); // <div>Hello, world!</div> (**)
 </script>
 ```
 
@@ -635,10 +635,10 @@ In this updated example, instead of using `innerHTML +=`, we create a new `<p>` 
   <!-- My Comment -->
   <script>
     let text = document.body.firstChild;
-    alert(text.data); // returns Hello JavaScript
+    console.log(text.data); // returns Hello JavaScript
 
     let comment = text.nextSibling;
-    alert(comment.data); // returns My Comment
+    console.log(comment.data); // returns My Comment
   </script>
 </body>
 ```

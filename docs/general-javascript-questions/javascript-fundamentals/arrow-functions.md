@@ -141,7 +141,7 @@ obj.c(); // prints 10, Object {...}
 
 ```js
 // Arrow Function with no argument
-let sayHi = () => alert('Hello!');
+let sayHi = () => console.log('Hello!');
 
 sayHi(); // returns Hello!
 ```
@@ -197,7 +197,7 @@ sayHi(); // returns Hello!
 ```js
 let age = prompt('What is your age?', 18);
 
-let welcome = age < 18 ? () => alert('Hello') : () => alert('Greetings!');
+let welcome = age < 18 ? () => console.log('Hello') : () => console.log('Greetings!');
 
 welcome();
 ```

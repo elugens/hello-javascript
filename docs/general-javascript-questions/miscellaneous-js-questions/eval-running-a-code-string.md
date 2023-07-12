@@ -102,8 +102,8 @@ Remember, always sanitize and validate any user-provided data if you absolutely 
   <div></div>
 
 ```js
-let code = 'alert("Hello")';
-eval(code); // alerts Hello
+let code = 'console.log("Hello")';
+eval(code); // logs Hello
 ```
 
   </div>

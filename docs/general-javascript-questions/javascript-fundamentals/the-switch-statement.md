@@ -213,13 +213,13 @@ let a = 2 + 2;
 
 switch (a) {
   case 3:
-    alert('Too small');
+    console.log('Too small');
   case 4:
-    alert('Exactly!');
+    console.log('Exactly!');
   case 5:
-    alert('Too big');
+    console.log('Too big');
   default:
-    alert("I don't know such values");
+    console.log("I don't know such values");
 }
 
 // Output:
@@ -295,17 +295,17 @@ let a = 3;
 
 switch (a) {
   case 4:
-    alert('Right!');
+    console.log('Right!');
     break;
 
   case 3: // (*) grouped two cases
   case 5:
-    alert('Wrong!');
-    alert("Why don't you take a math class?");
+    console.log('Wrong!');
+    console.log("Why don't you take a math class?");
     break;
 
   default:
-    alert('The result is strange. Really.');
+    console.log('The result is strange. Really.');
 }
 ```
 
@@ -331,18 +331,18 @@ let arg = prompt('Enter a value?');
 switch (arg) {
   case '0':
   case '1':
-    alert('One or zero');
+    console.log('One or zero');
     break;
 
   case '2':
-    alert('Two');
+    console.log('Two');
     break;
 
   case 3:
-    alert('Never executes!');
+    console.log('Never executes!');
     break;
   default:
-    alert('An unknown value');
+    console.log('An unknown value');
 }
 ```
 

@@ -125,7 +125,7 @@ class Animal {
 
   run(speed = 0) {
     this.speed += speed;
-    alert(`${this.name} runs with speed ${this.speed}.`);
+    console.log(`${this.name} runs with speed ${this.speed}.`);
   }
 
   static compare(animalA, animalB) {
@@ -136,7 +136,7 @@ class Animal {
 // Inherit from Animal
 class Rabbit extends Animal {
   hide() {
-    alert(`${this.name} hides!`);
+    console.log(`${this.name} hides!`);
   }
 }
 
@@ -146,7 +146,7 @@ rabbits.sort(Rabbit.compare);
 
 rabbits[0].run(); // Black Rabbit runs with speed 5.
 
-alert(Rabbit.planet); // Earth
+console.log(Rabbit.planet); // Earth
 ```
 
   </div>

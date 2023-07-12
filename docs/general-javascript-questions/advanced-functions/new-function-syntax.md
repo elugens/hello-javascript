@@ -61,7 +61,7 @@ console.log(sum(1, 2)); // 3
 
 // new Function without a function body
 
-let sayHi = new Function('alert("Hello, JavaScript")');
+let sayHi = new Function('console.log("Hello, JavaScript")'); // this will not work in the dev console
 
 sayHi(); // Hello, JavaScript
 ```

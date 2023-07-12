@@ -192,8 +192,8 @@ console.log('Message no. 5: Sync');
 
 ```js
 Promise.resolve()
-  .then(() => alert('promise done!'))
-  .then(() => alert('code finished'));
+  .then(() => console.log('promise done!'))
+  .then(() => console.log('code finished'));
 ```
 
   </div>
@@ -215,29 +215,29 @@ Promise.resolve()
 
 ```js
 let promise = Promise.reject(new Error('Promise Failed!'));
-promise.catch((err) => alert('caught'));
+promise.catch((err) => console.log('caught'));
 
 // doesn't run: error handled
-window.addEventListener('unhandledrejection', (event) => alert(event.reason));
+window.addEventListener('unhandledrejection', (event) => console.log(event.reason));
 
 //////////////////////////////////////
 
 // Example: if we don't handle our errors
 
 let promise = Promise.reject(new Error('Promise Failed!'));
-promise.catch((err) => alert('caught'));
+promise.catch((err) => console.log('caught'));
 
 // doesn't run: error handled
-window.addEventListener('unhandledrejection', (event) => alert(event.reason));
+window.addEventListener('unhandledrejection', (event) => console.log(event.reason));
 
 //////////////////////////////////////
 
 // Example: if we handle errors later in our code
 let promise = Promise.reject(new Error('Promise Failed!'));
-setTimeout(() => promise.catch((err) => alert('caught')), 1000); // handling error 1 second later
+setTimeout(() => promise.catch((err) => console.log('caught')), 1000); // handling error 1 second later
 
 // Error: Promise Failed!
-window.addEventListener('unhandledrejection', (event) => alert(event.reason));
+window.addEventListener('unhandledrejection', (event) => console.log(event.reason));
 ```
 
   </div>

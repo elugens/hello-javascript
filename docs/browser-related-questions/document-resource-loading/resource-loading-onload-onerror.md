@@ -109,7 +109,7 @@ document.head.append(script);
 
 script.onload = function () {
   // the script creates a variable "_"
-  alert(_.VERSION); // shows library version
+  console.log(_.VERSION); // shows library version
 };
 ```
 
@@ -136,7 +136,7 @@ script.src = 'https://example.com/404.js'; // no such script
 document.head.append(script);
 
 script.onerror = function () {
-  alert('Error loading ' + this.src); // Error loading https://example.com/404.js
+  console.log('Error loading ' + this.src); // Error loading https://example.com/404.js
 };
 ```
 
@@ -181,11 +181,11 @@ let img = document.createElement('img');
 img.src = 'https://js.cx/clipart/train.gif'; // (*)
 
 img.onload = function () {
-  alert(`Image loaded, size ${img.width}x${img.height}`);
+  console.log(`Image loaded, size ${img.width}x${img.height}`);
 };
 
 img.onerror = function () {
-  alert('Error occurred while loading image');
+  console.log('Error occurred while loading image');
 };
 ```
 
@@ -325,7 +325,7 @@ Now, if the server includes `Access-Control-Allow-Origin: *` (or the specific or
 ```html
 <script>
   window.onerror = function (message, url, line, col, errorObj) {
-    alert(`${message}\n${url}, ${line}:${col}`);
+    console.log(`${message}\n${url}, ${line}:${col}`);
   };
 </script>
 <script
@@ -642,7 +642,7 @@ Note that preloaded resources need to be consumed by a matching resource request
     <script>
         $(document).ready(function() {
             $('#clickMe').click(function() {
-                alert('You clicked the button!');
+                console.log('You clicked the button!');
             });
         });
     </script>

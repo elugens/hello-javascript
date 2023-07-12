@@ -372,7 +372,7 @@ let obj = {
   return: 3,
 };
 
-alert(obj.for + obj.let + obj.return); // 6
+console.log(obj.for + obj.let + obj.return); // 6
 ```
 
   </div>
@@ -395,7 +395,7 @@ alert(obj.for + obj.let + obj.return); // 6
 ```js
 let obj = {};
 obj.__proto__ = 5; // assign a number
-alert(obj.__proto__); // [object Object] - the value is an object, didn't work as intended
+console.log(obj.__proto__); // [object Object] - the value is an object, didn't work as intended
 ```
 
   </div>
@@ -458,7 +458,7 @@ let codes = {
 };
 
 for (let code in codes) {
-  alert(code); // 1, 41, 44, 49
+  console.log(code); // 1, 41, 44, 49
 }
 
 let user = {
@@ -469,7 +469,7 @@ user.age = 25; // add one more
 
 // non-integer properties are listed in the creation order
 for (let prop in user) {
-  alert(prop); // name, surname, age
+  console.log(prop); // name, surname, age
 }
 ```
 

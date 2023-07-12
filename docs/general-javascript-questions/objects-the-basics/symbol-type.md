@@ -139,11 +139,11 @@ The description can be identical, but the value is unique and returns false if b
 
 ```js
 let id = Symbol('id');
-alert(id); // TypeError: Cannot convert a Symbol value to a string
+console.log(id); // TypeError: Cannot convert a Symbol value to a string
 
 // Solution
 let id = Symbol('id');
-alert(id.toString()); // Symbol(id), now it works
+console.log(id.toString()); // Symbol(id), now it works
 ```
 
 :::note
@@ -171,7 +171,7 @@ The intentional "language guard" prevents unintended conversions between strings
 
 ```js
 let id = Symbol('id');
-alert(id.toString()); // Symbol(id), now it works
+console.log(id.toString()); // Symbol(id), now it works
 ```
 
   </div>
@@ -424,7 +424,7 @@ let id = Symbol.for('id'); // if the symbol did not exist, it is created
 let idAgain = Symbol.for('id');
 
 // the same symbol
-alert(id === idAgain); // true
+console.log(id === idAgain); // true
 ```
 
   </div>
@@ -450,8 +450,8 @@ let sym = Symbol.for('name');
 let sym2 = Symbol.for('id');
 
 // get name by symbol
-alert(Symbol.keyFor(sym)); // name
-alert(Symbol.keyFor(sym2)); // id
+console.log(Symbol.keyFor(sym)); // name
+console.log(Symbol.keyFor(sym2)); // id
 ```
 
   </div>
@@ -475,10 +475,10 @@ alert(Symbol.keyFor(sym2)); // id
 let globalSymbol = Symbol.for('name');
 let localSymbol = Symbol('name');
 
-alert(Symbol.keyFor(globalSymbol)); // name, global symbol
-alert(Symbol.keyFor(localSymbol)); // undefined, not global
+console.log(Symbol.keyFor(globalSymbol)); // name, global symbol
+console.log(Symbol.keyFor(localSymbol)); // undefined, not global
 
-alert(localSymbol.description); // name
+console.log(localSymbol.description); // name
 ```
 
   </div>

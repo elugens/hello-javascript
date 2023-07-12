@@ -563,7 +563,7 @@ async function f() {
     let user = await response.json();
   } catch (err) {
     // catches errors both in fetch and response.json
-    alert(err);
+    console.log(err);
   }
 }
 
@@ -575,7 +575,7 @@ async function f() {
 }
 
 // f() becomes a rejected promise
-f().catch(alert); // TypeError: failed to fetch // (*)
+f().catch(console.log); // TypeError: failed to fetch // (*)
 ```
 
   </div>

@@ -205,7 +205,7 @@ function defer(f, ms) {
 }
 
 function sayHi(who) {
-  alert('Hello, ' + who);
+  console.log('Hello, ' + who);
 }
 
 let sayHiDeferred = defer(sayHi, 2000);
@@ -308,9 +308,7 @@ repeat(3, (n) => {
 ```
 
 :::note
-
 Functions that operate on other functions are called higher-order functions, either by taking them as arguments or returning them.
-
 :::
 
   </div>

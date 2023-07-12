@@ -337,7 +337,7 @@ let promise = new Promise((resolve, reject) => {
 });
 
 // .catch(f) is the same as promise.then(null, f)
-promise.catch(alert); // shows "Error: Whoops!" after 1 second
+promise.catch(console.log); // shows "Error: Whoops!" after 1 second
 ```
 
   </div>
@@ -364,8 +364,8 @@ promise.catch(alert); // shows "Error: Whoops!" after 1 second
 new Promise((resolve, reject) => {
   setTimeout(() => resolve('result'), 2000);
 })
-  .finally(() => alert('Promise ready'))
-  .then((result) => alert(result)); // <-- .then handles the result
+  .finally(() => console.log('Promise ready'))
+  .then((result) => console.log(result)); // <-- .then handles the result
 ```
 
 :::note
@@ -395,8 +395,8 @@ We use it to perform cleanup tasks once the promise settles, as it always execut
 new Promise((resolve, reject) => {
   setTimeout(() => resolve('result'), 2000);
 })
-  .finally(() => alert('Promise ready'))
-  .then((result) => alert(result)); // <-- .then handles the result
+  .finally(() => console.log('Promise ready'))
+  .then((result) => console.log(result)); // <-- .then handles the result
 ```
 
   </div>

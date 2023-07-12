@@ -291,7 +291,7 @@ function* generateSequence() {
 let generator = generateSequence();
 
 for (let value of generator) {
-  alert(value); // 1, then 2, no 3
+  console.log(value); // 1, then 2, no 3
 }
 ```
 
@@ -377,7 +377,7 @@ function* gen() {
   // Pass a question to the outer code and wait for an answer
   let result = yield '2 + 2 = ?'; // (*)
 
-  alert(result);
+  console.log(result);
 }
 
 let generator = gen();

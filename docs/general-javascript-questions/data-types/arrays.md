@@ -259,9 +259,9 @@ queue.shift();   // ["b"]
 ```js
 let fruits = ['Apple', 'Orange', 'Pear'];
 
-alert(fruits.pop()); // remove "Pear" and alert it
+console.log(fruits.pop()); // remove "Pear" and console.log it
 
-alert(fruits); // Apple, Orange
+console.log(fruits); // Apple, Orange
 
 // Works with array like objects (required: length property)
 
@@ -306,7 +306,7 @@ let fruits = ['Apple', 'Orange'];
 
 fruits.push('Pear');
 
-alert(fruits); // Apple, Orange, Pear
+console.log(fruits); // Apple, Orange, Pear
 
 // Pushing multiple elements
 let sports = ['soccer', 'baseball'];
@@ -339,9 +339,9 @@ console.log(total); // 4
 ```js
 let fruits = ['Apple', 'Orange', 'Pear'];
 
-alert(fruits.shift()); // remove Apple and alert it
+console.log(fruits.shift()); // remove Apple and console.log it
 
-alert(fruits); // Orange, Pear
+console.log(fruits); // Orange, Pear
 ```
 
   </div>

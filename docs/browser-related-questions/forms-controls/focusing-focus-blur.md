@@ -170,7 +170,11 @@ Here's a simple example of how you might use the `tabindex` attribute in a form:
 
 In this example, despite being first in the source order, the "first" input field will receive focus after the "second" field when the user navigates through the form using the Tab key. This is because "second" has a lower `tabindex`.
 
+---
+
+:::note
 Note: Use `tabindex` sparingly and wisely, because overuse can lead to navigation issues, particularly for keyboard-only and screen reader users. It's generally best to rely on the default tab order unless there's a compelling reason not to.
+:::
 
   </div>
   </div>

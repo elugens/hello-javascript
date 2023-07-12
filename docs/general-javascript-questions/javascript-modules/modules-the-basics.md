@@ -56,13 +56,13 @@ import StructuredData from './schemadata/ModulesSchemaData.js';
 // we have a file sayHi.js exporting a function:
 // 📁 sayHi.js
 export function sayHi(user) {
-  alert(`Hello, ${user}!`);
+  console.log(`Hello, ${user}!`);
 }
 
 // Then another file may import and use it:
 import { sayHi } from './sayHi.js';
 
-alert(sayHi); // function...
+console.log(sayHi); // function...
 sayHi('John'); // Hello, John!
 ```
 
@@ -235,16 +235,16 @@ This is a powerful feature that helps you write cleaner, more maintainable code 
   <div></div>
 
 ```js
-// 📁 alert.js
-alert("Module is evaluated!");
+// 📁 console.log.js
+console.log("Module is evaluated!");
 
 // Import the same module from different files
 
 // 📁 1.js
-import `./alert.js`; // Module is evaluated!
+import `./console.log.js`; // Module is evaluated!
 
 // 📁 2.js
-import `./alert.js`; // (shows nothing)
+import `./console.log.js`; // (shows nothing)
 
 ```
 
@@ -272,7 +272,7 @@ import `./alert.js`; // (shows nothing)
 ```js
 <script type='module'>
   // returns script url - url of the html page for an inline script
-  alert(import.meta.url);
+  console.log(import.meta.url);
 </script>
 ```
 
@@ -295,11 +295,11 @@ import `./alert.js`; // (shows nothing)
 
 ```js
 <script>
-  alert(this); // window
+  console.log(this); // window
 </script>
 
 <script type="module">
-  alert(this); // undefined
+  console.log(this); // undefined
 </script>
 
 ```
@@ -324,7 +324,7 @@ import `./alert.js`; // (shows nothing)
 
 ```html
 <script type="module">
-  alert(typeof button); // object: the script can 'see' the button below // as
+  console.log(typeof button); // object: the script can 'see' the button below // as
   modules are deferred, the script runs after the whole page is loaded
 </script>
 ```
@@ -336,7 +336,7 @@ import `./alert.js`; // (shows nothing)
 
 ```html
 <script>
-  alert(typeof button); // button is undefined, the script can't see elements below
+  console.log(typeof button); // button is undefined, the script can't see elements below
 
   // regular scripts run immediately, before the rest of the page is processed
 </script>
@@ -450,12 +450,12 @@ Certain environments, such as Node.js or bundle tools, allow bare modules with n
 
 ```html
 <script type="module">
-  alert('Runs in modern browsers');
+  console.log('Runs in modern browsers');
 </script>
 
 <script nomodule>
-  alert('Modern browsers know both type=module and nomodule, so skip this');
-  alert(
+  console.log('Modern browsers know both type=module and nomodule, so skip this');
+  console.log(
     'Old browsers ignore script with unknown type=module, but execute this.'
   );
 </script>

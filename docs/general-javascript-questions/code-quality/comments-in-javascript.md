@@ -127,7 +127,7 @@ function showPrimes(n) {
       if (i % j == 0) continue nextPrime;
     }
 
-    alert(i);
+    console.log(i);
   }
 }
 ```
@@ -143,7 +143,7 @@ function showPrimes(n) {
   for (let i = 2; i < n; i++) {
     if (!isPrime(i)) continue;
 
-    alert(i);
+    console.log(i);
   }
 }
 

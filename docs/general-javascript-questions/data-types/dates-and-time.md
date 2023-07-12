@@ -243,7 +243,7 @@ console.log(Dec31_1969);
 
 ```js
 let date = new Date('2017-01-26');
-alert(date);
+console.log(date);
 // The time is not set, so it's assumed to be midnight GMT and
 // is adjusted according to the timezone the code is run in
 // So the result could be
@@ -452,10 +452,10 @@ console.log(utcYear, utcMonth, utcDate, utcHours, utcMinutes, utcSeconds);
 let today = new Date();
 
 today.setHours(0);
-alert(today); // still today, but the hour is changed to 0
+console.log(today); // still today, but the hour is changed to 0
 
 today.setHours(0, 0, 0, 0);
-alert(today); // still today, now 00:00:00 sharp.
+console.log(today); // still today, now 00:00:00 sharp.
 ```
 
   </div>
@@ -479,13 +479,13 @@ alert(today); // still today, now 00:00:00 sharp.
 
 ```js
 let date = new Date(2013, 0, 32); // 32 Jan 2013 ?!?
-alert(date); // ...is 1st Feb 2013!
+console.log(date); // ...is 1st Feb 2013!
 
 // Another example
 let date = new Date(2016, 1, 28);
 date.setDate(date.getDate() + 2);
 
-alert(date); // 1 Mar 2016
+console.log(date); // 1 Mar 2016
 ```
 
   </div>
@@ -508,7 +508,7 @@ alert(date); // 1 Mar 2016
 ```js
 // Date to number conversion using the unary operator
 let date = new Date();
-alert(+date); // returns the number of milliseconds, same as date.getTime()
+console.log(+date); // returns the number of milliseconds, same as date.getTime()
 
 // Time Measurement: Speed Test
 let start = new Date(); // start measuring time
@@ -520,7 +520,7 @@ for (let i = 0; i < 100000; i++) {
 
 let end = new Date(); // end measuring time
 
-alert(`The loop took ${end - start} ms`);
+console.log(`The loop took ${end - start} ms`);
 ```
 
 :::note
@@ -559,7 +559,7 @@ for (let i = 0; i < 100000; i++) {
 
 let end = Date.now(); // done
 
-alert(`The loop took ${end - start} ms`); // subtract numbers, not dates
+console.log(`The loop took ${end - start} ms`); // subtract numbers, not dates
 ```
 
   </div>
@@ -585,13 +585,13 @@ alert(`The loop took ${end - start} ms`); // subtract numbers, not dates
 ```js
 let ms = Date.parse('2012-01-26T13:51:50.417-07:00');
 
-alert(ms); // 1327611110417  (timestamp)
+console.log(ms); // 1327611110417  (timestamp)
 
 // We can instantly create a new Date object from the timestamp
 
 let date = new Date(Date.parse('2012-01-26T13:51:50.417-07:00'));
 
-alert(date);
+console.log(date);
 ```
 
   </div>

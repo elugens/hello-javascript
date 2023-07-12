@@ -152,7 +152,7 @@ Promise.all([
   new Promise((resolve) => setTimeout(() => resolve(1), 3000)), // 1
   new Promise((resolve) => setTimeout(() => resolve(2), 2000)), // 2
   new Promise((resolve) => setTimeout(() => resolve(3), 1000)), // 3
-]).then(alert); // 1,2,3 when promises are ready: each promise contributes an array member
+]).then(console.log); // 1,2,3 when promises are ready: each promise contributes an array member
 
 // Another Example:
 const promise1 = Promise.resolve(3);
@@ -232,7 +232,7 @@ Promise.all([
     setTimeout(() => reject(new Error('Whoops!')), 2000)
   ),
   new Promise((resolve, reject) => setTimeout(() => resolve(3), 3000)),
-]).catch(alert); // Error: Whoops!
+]).catch(console.log); // Error: Whoops!
 ```
 
   </div>

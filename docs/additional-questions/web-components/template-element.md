@@ -68,7 +68,7 @@ import StructuredData from './schemadata/TemplateElementSchemaData.js';
     }
   </style>
   <script>
-    alert('Hello');
+    console.log('Hello');
   </script>
 </template>
 ```
@@ -461,7 +461,7 @@ When this code is rendered, it will create a layout with two nested div elements
 ```html
 <template id="tmpl">
   <script>
-    alert('Hello');
+    console.log('Hello');
   </script>
   <div class="message">Hello, world!</div>
 </template>

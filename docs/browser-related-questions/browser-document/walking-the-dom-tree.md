@@ -58,7 +58,7 @@ import StructuredData from './schemadata/WalkingSchemaData.js';
   <div></div>
 
 ```js
-alert(document.documentElement); // alerts [object HTMLHtmlElement] <html> node
+console.log(document.documentElement); // console.logs [object HTMLHtmlElement] <html> node
 ```
 
   </div>
@@ -313,7 +313,7 @@ if (parent.hasChildNodes()) {
   <div></div>
 
 ```js
-console.log(document.documentElement); // alerts [object HTMLHtmlElement] <html> node
+console.log(document.documentElement); // console.logs [object HTMLHtmlElement] <html> node
 ```
 
   </div>

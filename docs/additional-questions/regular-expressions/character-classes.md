@@ -517,7 +517,7 @@ console.log(match);
   <div></div>
 
 ```js
-alert('I love HTML5!'.match(/\s\w\w\w\w\d/)); // alerts ' HTML5'
+console.log('I love HTML5!'.match(/\s\w\w\w\w\d/)); // console.logs ' HTML5'
 ```
 
   </div>
@@ -541,12 +541,12 @@ alert('I love HTML5!'.match(/\s\w\w\w\w\d/)); // alerts ' HTML5'
 // When we use \d we have to use the join method.
 let str = '+7(903)-123-45-67';
 
-alert(str.match(/\d/g).join('')); // 79031234567
+console.log(str.match(/\d/g).join('')); // 79031234567
 
 // When we use \D we do not have to use the join method.
 let str = '+7(903)-123-45-67';
 
-alert(str.replace(/\D/g, '')); // 79031234567
+console.log(str.replace(/\D/g, '')); // 79031234567
 ```
 
   </div>
@@ -567,15 +567,15 @@ alert(str.replace(/\D/g, '')); // 79031234567
   <div></div>
 
 ```js
-alert('Z'.match(/./)); // Z
+console.log('Z'.match(/./)); // Z
 
 let regexp = /CS.4/;
 
-alert('CSS4'.match(regexp)); // CSS4
-alert('CS-4'.match(regexp)); // CS-4
-alert('CS 4'.match(regexp)); // CS 4 (space is also a character)\
+console.log('CSS4'.match(regexp)); // CSS4
+console.log('CS-4'.match(regexp)); // CS-4
+console.log('CS 4'.match(regexp)); // CS 4 (space is also a character)\
 
-alert('CS4'.match(/CS.4/)); // null
+console.log('CS4'.match(/CS.4/)); // null
 // no match because there is no character for the dot
 ```
 
@@ -647,13 +647,13 @@ console.log('A\nB'.match(/A[\s\S]B/)); // A\nB (match!)
 
 ```js
 // Wrong Approach
-alert('1 - 5'.match(/\d-\d/)); // null, no match!
+console.log('1 - 5'.match(/\d-\d/)); // null, no match!
 
 // Correct Approach
-alert('1 - 5'.match(/\d - \d/)); // 1 - 5, now it works
+console.log('1 - 5'.match(/\d - \d/)); // 1 - 5, now it works
 
 // or we can use \s class:
-alert('1 - 5'.match(/\d\s-\s\d/)); // 1 - 5, also works
+console.log('1 - 5'.match(/\d\s-\s\d/)); // 1 - 5, also works
 ```
 
   </div>

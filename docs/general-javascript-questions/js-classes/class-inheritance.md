@@ -356,7 +356,7 @@ d.speak(); // Mitzie barks.
 function f(phrase) {
   return class {
     sayHi() {
-      alert(phrase);
+      console.log(phrase);
     }
   };
 }
@@ -391,18 +391,18 @@ class Animal {
 
   run(speed) {
     this.speed = speed;
-    alert(`${this.name} runs with speed ${this.speed}.`);
+    console.log(`${this.name} runs with speed ${this.speed}.`);
   }
 
   stop() {
     this.speed = 0;
-    alert(`${this.name} stands still.`);
+    console.log(`${this.name} stands still.`);
   }
 }
 
 class Rabbit extends Animal {
   hide() {
-    alert(`${this.name} hides!`);
+    console.log(`${this.name} hides!`);
   }
 
   stop() {
@@ -522,8 +522,8 @@ class Rabbit extends Animal {
 
 // now fine
 let rabbit = new Rabbit('White Rabbit', 10);
-alert(rabbit.name); // White Rabbit
-alert(rabbit.earLength); // 10
+console.log(rabbit.name); // White Rabbit
+console.log(rabbit.earLength); // 10
 ```
 
   </div>
@@ -584,7 +584,7 @@ let animal = {
   name: 'Animal',
   eat() {
     // animal.eat.[[HomeObject]] == animal
-    alert(`${this.name} eats.`);
+    console.log(`${this.name} eats.`);
   },
 };
 

@@ -106,14 +106,14 @@ import StructuredData from './schemadata/LocalSessionSchemaData.js';
 ```js
 // localStorage getter/setter
 localStorage.setItem('test', 1); // set name/value
-alert(localStorage.getItem('test')); // get value alert 1
+console.log(localStorage.getItem('test')); // get value console.log 1
 
 // Object-like access
 // set key
 localStorage.test = 2;
 
 // get key
-alert(localStorage.test); // 2
+console.log(localStorage.test); // 2
 
 // remove key
 delete localStorage.test;
@@ -162,12 +162,12 @@ localStorage[key] = 5; // Error, cannot assign length
 // loop over the object as an array
 for (let i = 0; i < localStorage.length; i++) {
   let key = localStorage.key(i);
-  alert(`${key}: ${localStorage.getItem(key)}`);
+  console.log(`${key}: ${localStorage.getItem(key)}`);
 }
 
 // Loop over it using a "for in key" loop - bad try
 for (let key in localStorage) {
-  alert(key); // shows getItem, setItem and other built-in stuff
+  console.log(key); // shows getItem, setItem and other built-in stuff
 }
 
 // Loop using hasOwnProperty check
@@ -175,13 +175,13 @@ for (let key in localStorage) {
   if (!localStorage.hasOwnProperty(key)) {
     continue; // skip keys like "setItem", "getItem" etc
   }
-  alert(`${key}: ${localStorage.getItem(key)}`);
+  console.log(`${key}: ${localStorage.getItem(key)}`);
 }
 
 // Loop using for of loop and Object.keys ( ** recommended ** )
 let keys = Object.keys(localStorage);
 for (let key of keys) {
-  alert(`${key}: ${localStorage.getItem(key)}`);
+  console.log(`${key}: ${localStorage.getItem(key)}`);
 }
 ```
 
@@ -205,17 +205,17 @@ for (let key of keys) {
 ```js
 // Base implementation
 sessionStorage.user = { name: 'John' };
-alert(sessionStorage.user); // [object Object]
+console.log(sessionStorage.user); // [object Object]
 
 // Stringfy Object
 sessionStorage.user = JSON.stringify({ name: 'John' });
 
 // sometime later
 let user = JSON.parse(sessionStorage.user);
-alert(user.name); // John
+console.log(user.name); // John
 
 // added formatting options to JSON.stringify to make the object look nicer
-alert(JSON.stringify(localStorage, null, 2));
+console.log(JSON.stringify(localStorage, null, 2));
 ```
 
   </div>
@@ -239,7 +239,7 @@ alert(JSON.stringify(localStorage, null, 2));
 // Set the storage item key value
 sessionStorage.setItem('test', 1);
 // Refresh the page and the data still exists
-alert(sessionStorage.getItem('test')); // after refresh: 1
+console.log(sessionStorage.getItem('test')); // after refresh: 1
 ```
 
   </div>
@@ -264,7 +264,7 @@ alert(sessionStorage.getItem('test')); // after refresh: 1
 window.onstorage = (event) => {
   // same as window.addEventListener('storage', event => {
   if (event.key != 'now') return;
-  alert(event.key + ':' + event.newValue + ' at ' + event.url);
+  console.log(event.key + ':' + event.newValue + ' at ' + event.url);
 };
 
 localStorage.setItem('now', Date.now());

@@ -61,20 +61,20 @@ const sameBigint = BigInt('1234567890123456789012345678901234567890');
 
 const bigintFromNumber = BigInt(10); // same as 10n
 
-alert(1n + 2n); // 3
+console.log(1n + 2n); // 3
 
-alert(5n / 2n); // 2
+console.log(5n / 2n); // 2
 
-alert(1n + 2); // Error: Cannot mix BigInt and other types
+console.log(1n + 2); // Error: Cannot mix BigInt and other types
 
 let bigint = 1n;
 let number = 2;
 
 // number to bigint
-alert(bigint + BigInt(number)); // 3
+console.log(bigint + BigInt(number)); // 3
 
 // bigint to number
-alert(Number(bigint) + number); // 3
+console.log(Number(bigint) + number); // 3
 ```
 
   </div>
@@ -159,10 +159,10 @@ console.log(result); // 12345678901234567000
 
 ```js
 // Regular Numbers
-alert(5 / 2); // 2.5
+console.log(5 / 2); // 2.5
 
 // BigInt
-alert(5n / 2n); // 2, rounds towards zero
+console.log(5n / 2n); // 2, rounds towards zero
 ```
 
   </div>
@@ -251,17 +251,17 @@ console.log(mySet.has(valueBigInt)); // Output: true
   <div></div>
 
 ```js
-alert(1n + 2); // Error: Cannot mix BigInt and other types
+console.log(1n + 2); // Error: Cannot mix BigInt and other types
 
 // Explicit Conversion
 let bigint = 1n;
 let number = 2;
 
 // number to bigint
-alert(bigint + BigInt(number)); // 3
+console.log(bigint + BigInt(number)); // 3
 
 // bigint to number
-alert(Number(bigint) + number); // 3
+console.log(Number(bigint) + number); // 3
 ```
 
   </div>
@@ -313,9 +313,9 @@ console.log(+bigIntVal); // TypeError: Cannot convert a BigInt value to a number
   <div></div>
 
 ```js
-alert(1 == 1n); // true
+console.log(1 == 1n); // true
 
-alert(1 === 1n); // false
+console.log(1 === 1n); // false
 ```
 
   </div>

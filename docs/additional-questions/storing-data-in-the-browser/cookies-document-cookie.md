@@ -97,7 +97,7 @@ import StructuredData from './schemadata/CookiesSchemaData.js';
 
 ```js
 document.cookie = 'user=John'; // update only cookie named 'user'
-alert(document.cookie); // show all cookies, not just user
+console.log(document.cookie); // show all cookies, not just user
 ```
 
   </div>
@@ -127,7 +127,7 @@ let value = 'John Smith';
 // encodes the cookie as my%20name=John%20Smith
 document.cookie = encodeURIComponent(name) + '=' + encodeURIComponent(value);
 
-alert(document.cookie); // ...; my%20name=John%20Smith
+console.log(document.cookie); // ...; my%20name=John%20Smith
 ```
 
   </div>

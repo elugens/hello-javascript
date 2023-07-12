@@ -234,13 +234,13 @@ In this example, the logical AND operator (`&&`) is used to check if both `x` is
 ```js
 // if the first operand is truthy,
 // AND returns the second operand:
-alert(1 && 0); // 0
-alert(1 && 5); // 5
+console.log(1 && 0); // 0
+console.log(1 && 5); // 5
 
 // if the first operand is falsie,
 // AND returns it. The second operand is ignored
-alert(null && 5); // null
-alert(0 && 'no matter what'); // 0
+console.log(null && 5); // null
+console.log(0 && 'no matter what'); // 0
 ```
 
   </div>
@@ -331,13 +331,13 @@ In this case, the `b && c` operation happens first due to `&&` having higher pre
 ```js
 let x = 1;
 
-x > 0 && alert('Greater than zero!');
+x > 0 && console.log('Greater than zero!');
 
 // the if example is cleaner and obvious
 
 let x = 1;
 
-if (x > 0) alert('Greater than zero!');
+if (x > 0) console.log('Greater than zero!');
 ```
 
   </div>
@@ -409,12 +409,12 @@ console.log(!!null); // false
   <div></div>
 
 ```js
-alert(!!'non-empty string'); // true
-alert(!!null); // false
+console.log(!!'non-empty string'); // true
+console.log(!!null); // false
 
 // Example of the Boolean method
-alert(Boolean('non-empty string')); // true
-alert(Boolean(null)); // false
+console.log(Boolean('non-empty string')); // true
+console.log(Boolean(null)); // false
 ```
 
   </div>

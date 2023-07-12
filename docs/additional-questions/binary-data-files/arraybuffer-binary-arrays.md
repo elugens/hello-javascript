@@ -92,7 +92,7 @@ import StructuredData from './schemadata/ArrayBufferSchemaData.js';
 
 ```js
 let buffer = new ArrayBuffer(16); // create a buffer of length 16
-alert(buffer.byteLength); // alerts 16
+console.log(buffer.byteLength); // console.logs 16
 ```
 
   </div>
@@ -136,17 +136,17 @@ let buffer = new ArrayBuffer(16); // create a buffer of length 16
 
 let view = new Uint32Array(buffer); // treat buffer as a sequence of 32-bit integers
 
-alert(Uint32Array.BYTES_PER_ELEMENT); // 4 bytes per integer
+console.log(Uint32Array.BYTES_PER_ELEMENT); // 4 bytes per integer
 
-alert(view.length); // 4, it stores that many integers
-alert(view.byteLength); // 16, the size in bytes
+console.log(view.length); // 4, it stores that many integers
+console.log(view.byteLength); // 16, the size in bytes
 
 // let's write a value
 view[0] = 123456;
 
 // iterate over values
 for (let num of view) {
-  alert(num); // 123456, then 0, 0, 0 (4 values total)
+  console.log(num); // 123456, then 0, 0, 0 (4 values total)
 }
 ```
 
@@ -275,13 +275,13 @@ let arr16 = new Uint16Array(arr8.buffer);
 let uint8array = new Uint8Array(16);
 
 let num = 256;
-alert(num.toString(2)); // 100000000 (binary representation)
+console.log(num.toString(2)); // 100000000 (binary representation)
 
 uint8array[0] = 256;
 uint8array[1] = 257;
 
-alert(uint8array[0]); // 0
-alert(uint8array[1]); // 1
+console.log(uint8array[0]); // 0
+console.log(uint8array[1]); // 1
 ```
 
   </div>
@@ -358,13 +358,13 @@ let buffer = new Uint8Array([255, 255, 255, 255]).buffer;
 let dataView = new DataView(buffer);
 
 // get 8-bit number at offset 0
-alert(dataView.getUint8(0)); // 255
+console.log(dataView.getUint8(0)); // 255
 
 // now get 16-bit number at offset 0, it consists of 2 bytes, together interpreted as 65535
-alert(dataView.getUint16(0)); // 65535 (biggest 16-bit unsigned int)
+console.log(dataView.getUint16(0)); // 65535 (biggest 16-bit unsigned int)
 
 // get 32-bit number at offset 0
-alert(dataView.getUint32(0)); // 4294967295 (biggest 32-bit unsigned int)
+console.log(dataView.getUint32(0)); // 4294967295 (biggest 32-bit unsigned int)
 
 dataView.setUint32(0, 0); // set 4-byte number to zero, thus setting all bytes to 0
 ```

@@ -806,15 +806,15 @@ In this example, the `EventSource` object connects to the server located at "<ht
 
 ```js
 eventSource.addEventListener('join', (event) => {
-  alert(`Joined ${event.data}`);
+  console.log(`Joined ${event.data}`);
 });
 
 eventSource.addEventListener('message', (event) => {
-  alert(`Said: ${event.data}`);
+  console.log(`Said: ${event.data}`);
 });
 
 eventSource.addEventListener('leave', (event) => {
-  alert(`Left ${event.data}`);
+  console.log(`Left ${event.data}`);
 });
 ```
 

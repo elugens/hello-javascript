@@ -63,14 +63,14 @@ let arr = ['John', 'Smith'];
 // and surname = arr[1]
 let [firstName, surname] = arr;
 
-alert(firstName); // John
-alert(surname); // Smith
+console.log(firstName); // John
+console.log(surname); // Smith
 
 // Another example using the split() method
 
 let [firstName, surname] = 'John Smith'.split(' ');
-alert(firstName); // John
-alert(surname); // Smith
+console.log(firstName); // John
+console.log(surname); // Smith
 
 /////////////////////////////////////////////
 
@@ -268,7 +268,7 @@ let user = {
 
 // loop over keys-and-values
 for (let [key, value] of Object.entries(user)) {
-  alert(`${key}:${value}`); // name:John, then age:30
+  console.log(`${key}:${value}`); // name:John, then age:30
 }
 
 // The similar code for a Map is simpler, as it’s iterable:
@@ -278,7 +278,7 @@ user.set('age', '30');
 
 // Map iterates as [key, value] pairs, very convenient for destructuring
 for (let [key, value] of user) {
-  alert(`${key}:${value}`); // name:John, then age:30
+  console.log(`${key}:${value}`); // name:John, then age:30
 }
 ```
 
@@ -306,7 +306,7 @@ let admin = 'Pete';
 // Let's swap the values: make guest=Pete, admin=Jane
 [guest, admin] = [admin, guest];
 
-alert(`${guest} ${admin}`); // Pete Jane (successfully swapped!)
+console.log(`${guest} ${admin}`); // Pete Jane (successfully swapped!)
 ```
 
   </div>
@@ -330,8 +330,8 @@ alert(`${guest} ${admin}`); // Pete Jane (successfully swapped!)
 ```js
 let [name1, name2] = ['Julius', 'Caesar', 'Consul', 'of the Roman Republic'];
 
-alert(name1); // Julius
-alert(name2); // Caesar
+console.log(name1); // Julius
+console.log(name2); // Caesar
 // Further items are not assigned anywhere
 
 /// HOW TO FIX AND ACCESS REMAINING VARIABLES ///
@@ -345,9 +345,9 @@ let [name1, name2, ...rest] = [
 ];
 
 // rest is array of items, starting from the 3rd one
-alert(rest[0]); // Consul
-alert(rest[1]); // of the Roman Republic
-alert(rest.length); // 2
+console.log(rest[0]); // Consul
+console.log(rest[1]); // of the Roman Republic
+console.log(rest.length); // 2
 ```
 
   </div>
@@ -430,8 +430,8 @@ let [name1, name2, ...titles] = [
 ```js
 let [firstName, surname] = [];
 
-alert(firstName); // undefined
-alert(surname); // undefined
+console.log(firstName); // undefined
+console.log(surname); // undefined
 ```
 
 :::note
@@ -508,14 +508,14 @@ console.log(city); // Output: London
 // default values
 let [name = 'Guest', surname = 'Anonymous'] = ['Julius'];
 
-alert(name); // Julius (from array)
-alert(surname); // Anonymous (default used)
+console.log(name); // Julius (from array)
+console.log(surname); // Anonymous (default used)
 
 // runs only prompt for surname
 let [name = prompt('name?'), surname = prompt('surname?')] = ['Julius'];
 
-alert(name); // Julius (from array)
-alert(surname); // whatever prompt gets
+console.log(name); // Julius (from array)
+console.log(surname); // whatever prompt gets
 ```
 
   </div>
@@ -747,8 +747,8 @@ let options = {
 let { title, ...rest } = options;
 
 // now title="Menu", rest={height: 200, width: 100}
-alert(rest.height); // 200
-alert(rest.width); // 100
+console.log(rest.height); // 200
+console.log(rest.width); // 100
 ```
 
 :::note
@@ -857,7 +857,7 @@ let title, width, height;
 // okay now
 ({title, width, height} = {title: "Menu", width: 200, height: 100});
 
-alert( title ); // Menu
+console.log( title ); // Menu
 
 ```
 
@@ -900,11 +900,11 @@ let {
   title = 'Menu', // not present in the object (default value is used)
 } = options;
 
-alert(title); // Menu
-alert(width); // 100
-alert(height); // 200
-alert(item1); // Cake
-alert(item2); // Donut
+console.log(title); // Menu
+console.log(width); // 100
+console.log(height); // 200
+console.log(item1); // Cake
+console.log(item2); // Donut
 ```
 
   </div>

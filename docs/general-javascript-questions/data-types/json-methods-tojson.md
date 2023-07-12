@@ -111,9 +111,9 @@ let student = {
 
 let json = JSON.stringify(student);
 
-alert(typeof json); // we've got a string!
+console.log(typeof json); // we've got a string!
 
-alert(json);
+console.log(json);
 ```
 
   </div><br />
@@ -150,14 +150,14 @@ alert(json);
 
 ```js
 // a number in JSON is just a number
-alert(JSON.stringify(1)); // 1
+console.log(JSON.stringify(1)); // 1
 
 // a string in JSON is still a string, but double-quoted
-alert(JSON.stringify('test')); // "test"
+console.log(JSON.stringify('test')); // "test"
 
-alert(JSON.stringify(true)); // true
+console.log(JSON.stringify(true)); // true
 
-alert(JSON.stringify([1, 2, 3])); // [1,2,3]
+console.log(JSON.stringify([1, 2, 3])); // [1,2,3]
 ```
 
   </div>
@@ -181,7 +181,7 @@ alert(JSON.stringify([1, 2, 3])); // [1,2,3]
 let user = {
   sayHi() {
     // ignored
-    alert('Hello');
+    console.log('Hello');
   },
   [Symbol('id')]: 123, // ignored
   something: undefined, // ignored
@@ -345,7 +345,7 @@ let numbers = '[0, 1, 2, 3]';
 
 numbers = JSON.parse(numbers);
 
-alert(numbers[1]); // 1
+console.log(numbers[1]); // 1
 
 // Example: Using the option second argument reviver
 JSON.parse('{"1": 1, "2": 2, "3": {"4": 4, "5": {"6": 6}}}', (key, value) => {

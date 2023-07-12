@@ -458,22 +458,22 @@ The `URLSearchParams` interface is very useful for manipulating the query string
 let url1 = new URL('https://javascript.info/profile/admin');
 let url2 = new URL('/profile/admin', 'https://javascript.info');
 
-alert(url1); // https://javascript.info/profile/admin
-alert(url2); // https://javascript.info/profile/admin
+console.log(url1); // https://javascript.info/profile/admin
+console.log(url2); // https://javascript.info/profile/admin
 
 // We can easily create a new URL based on
 // the path relative to an existing URL:
 let url = new URL('https://javascript.info/profile/admin');
 let newUrl = new URL('tester', url);
 
-alert(newUrl); // https://javascript.info/profile/tester
+console.log(newUrl); // https://javascript.info/profile/tester
 
 // The URL object immediately allows us to access its components
 let url = new URL('https://javascript.info/url');
 
-alert(url.protocol); // https:
-alert(url.host); // javascript.info
-alert(url.pathname); // /url
+console.log(url.protocol); // https:
+console.log(url.host); // javascript.info
+console.log(url.pathname); // /url
 ```
 
   </div>
@@ -590,7 +590,7 @@ let age = parseInt(params.get('age')); // is the number 18
 let url = new URL('https://ru.wikipedia.org/wiki/Тест');
 
 url.searchParams.set('key', 'ъ');
-alert(url); //https://ru.wikipedia.org/wiki/%D0%A2%D0%B5%D1%81%D1%82?key=%D1%8A
+console.log(url); //https://ru.wikipedia.org/wiki/%D0%A2%D0%B5%D1%81%D1%82?key=%D1%8A
 ```
 
   </div>

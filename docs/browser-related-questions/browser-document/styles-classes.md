@@ -82,7 +82,7 @@ elem.style.top = top; // e.g '456px'
 ```html
 <body class="main page">
   <script>
-    alert(document.body.className); // returns main page
+    console.log(document.body.className); // returns main page
   </script>
 </body>
 ```
@@ -110,7 +110,7 @@ elem.style.top = top; // e.g '456px'
     // add a class
     document.body.classList.add('article');
 
-    alert(document.body.className); // main page article
+    console.log(document.body.className); // main page article
   </script>
 </body>
 ```
@@ -217,7 +217,7 @@ setTimeout(() => (document.body.style.display = ''), 1000); // back to normal
     text-align: center;
   `;
 
-  alert(div.style.cssText);
+  console.log(div.style.cssText);
 </script>
 ```
 
@@ -243,14 +243,14 @@ setTimeout(() => (document.body.style.display = ''), 1000); // back to normal
   <script>
     // doesn't work!
     document.body.style.margin = 20;
-    alert(document.body.style.margin); // '' (empty string, the assignment is ignored)
+    console.log(document.body.style.margin); // '' (empty string, the assignment is ignored)
 
     // now add the CSS unit (px) - and it works
     document.body.style.margin = '20px';
-    alert(document.body.style.margin); // 20px
+    console.log(document.body.style.margin); // 20px
 
-    alert(document.body.style.marginTop); // 20px
-    alert(document.body.style.marginLeft); // 20px
+    console.log(document.body.style.marginTop); // 20px
+    console.log(document.body.style.marginLeft); // 20px
   </script>
 </body>
 ```
@@ -291,8 +291,8 @@ For instance, we should not set elem.style.top to 10, but rather to 10px. Otherw
 
     // now we can read the margin and the color from it
 
-    alert(computedStyle.marginTop); // 5px
-    alert(computedStyle.color); // rgb(255, 0, 0)
+    console.log(computedStyle.marginTop); // 5px
+    console.log(computedStyle.color); // rgb(255, 0, 0)
   </script>
 </body>
 ```

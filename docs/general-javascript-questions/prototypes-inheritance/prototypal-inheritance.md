@@ -67,8 +67,8 @@ let rabbit = {
 rabbit.__proto__ = animal; // (*) __proto__ deprecated
 
 // we can find both properties in rabbit now:
-alert(rabbit.eats); // true (**)
-alert(rabbit.jumps); // true
+console.log(rabbit.eats); // true (**)
+console.log(rabbit.jumps); // true
 ```
 
 :::note
@@ -341,9 +341,9 @@ for (let prop in rabbit) {
   let isOwn = rabbit.hasOwnProperty(prop);
 
   if (isOwn) {
-    alert(`Our: ${prop}`); // Our: jumps
+    console.log(`Our: ${prop}`); // Our: jumps
   } else {
-    alert(`Inherited: ${prop}`); // Inherited: eats
+    console.log(`Inherited: ${prop}`); // Inherited: eats
   }
 }
 ```

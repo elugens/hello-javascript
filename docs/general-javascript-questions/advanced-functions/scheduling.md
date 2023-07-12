@@ -101,7 +101,7 @@ setInterval(function() {
 
 ```js
 function sayHi() {
-  alert('Hello');
+  console.log('Hello');
 }
 
 setTimeout(sayHi, 1000);
@@ -109,13 +109,13 @@ setTimeout(sayHi, 1000);
 // setTimeout without arguments:
 
 function sayHi(phrase, who) {
-  alert(phrase + ', ' + who);
+  console.log(phrase + ', ' + who);
 }
 
 setTimeout(sayHi, 1000, 'Hello', 'John'); // Hello, John
 
 // Arrow function implementation
-setTimeout(() => alert('Hello'), 1000);
+setTimeout(() => console.log('Hello'), 1000);
 ```
 
   </div>
@@ -168,11 +168,11 @@ clearTimeout(timeoutId);
   <div></div>
 
 ```js
-let timerID = setTimeout(() => alert('never happens'), 1000);
-alert(timerID); // timer identifier
+let timerID = setTimeout(() => console.log('never happens'), 1000);
+console.log(timerID); // timer identifier
 
 clearTimeout(timerID);
-alert(timerID); // same identifier (does not become null after canceling)
+console.log(timerID); // same identifier (does not become null after canceling)
 ```
 
 :::note
@@ -201,12 +201,12 @@ It's worth noting that the pool of IDs used by setTimeout() and setInterval() ar
 
 ```js
 // repeat with the interval of 2 seconds
-let timerId = setInterval(() => alert('tick'), 2000);
+let timerId = setInterval(() => console.log('tick'), 2000);
 
 // after 5 seconds stop
 setTimeout(() => {
   clearInterval(timerId);
-  alert('stop');
+  console.log('stop');
 }, 5000);
 ```
 

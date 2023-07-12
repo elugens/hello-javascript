@@ -72,15 +72,15 @@ let admin = user;
 
 admin.name = 'Pete'; // changed by the "admin" reference
 
-alert(user.name); // 'Pete', changes are seen from the "user" reference
+console.log(user.name); // 'Pete', changes are seen from the "user" reference
 
 // Two objects are equal only if they are the same object.
 
 let a = {};
 let b = a; // copy the reference
 
-alert(a == b); // true, both variables reference the same object
-alert(a === b); // true
+console.log(a == b); // true, both variables reference the same object
+console.log(a === b); // true
 ```
 
   </div>
@@ -105,8 +105,8 @@ alert(a === b); // true
 let a = {};
 let b = a; // copy the reference
 
-alert(a == b); // true, both variables reference the same object
-alert(a === b); // true
+console.log(a == b); // true, both variables reference the same object
+console.log(a === b); // true
 
 ////////////////////////////
 
@@ -115,7 +115,7 @@ alert(a === b); // true
 let a = {};
 let b = {};
 
-alert(a == b); // false
+console.log(a == b); // false
 ```
 
   </div>

@@ -205,9 +205,9 @@ Keep in mind that not all types in JavaScript have a `toString()` method. For in
 ```js
 let value = true;
 
-alert(typeof value); // boolean
+console.log(typeof value); // boolean
 value = String(value); // now value is a string "true"
-alert(typeof value); // string
+console.log(typeof value); // string
 ```
 
   </div>
@@ -273,9 +273,9 @@ In all these examples, JavaScript converts the non-number data types to numbers 
 
 ```js
 let str = '123';
-alert(typeof str); // string
+console.log(typeof str); // string
 let num = Number(str); // becomes a number 123
-alert(typeof num); // number
+console.log(typeof num); // number
 ```
 
   </div>

@@ -66,7 +66,7 @@ Rabbit.prototype = animal; // references animal
 
 let rabbit = new Rabbit('White Rabbit'); //  rabbit.__proto__ == animal
 
-alert(rabbit.eats); // true
+console.log(rabbit.eats); // true
 ```
 
   </div>
@@ -94,7 +94,7 @@ function Rabbit() {}
 
 let rabbit = new Rabbit(); // inherits from {constructor: Rabbit}
 
-alert(rabbit.constructor == Rabbit); // true (from prototype)
+console.log(rabbit.constructor == Rabbit); // true (from prototype)
 ```
 
   </div>

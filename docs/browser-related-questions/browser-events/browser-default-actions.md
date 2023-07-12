@@ -153,14 +153,14 @@ button.addEventListener('click', function(event) {
 <script>
   elem.oncontextmenu = function (event) {
     event.preventDefault();
-    alert('Button context menu');
+    console.log('Button context menu');
   };
 
   document.oncontextmenu = function (event) {
     if (event.defaultPrevented) return;
 
     event.preventDefault();
-    alert('Document context menu');
+    console.log('Document context menu');
   };
 </script>
 ```

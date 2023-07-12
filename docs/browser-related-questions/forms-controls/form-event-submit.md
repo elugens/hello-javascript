@@ -84,13 +84,13 @@ Here's a simple one showing form validation in JavaScript:
 document.querySelector("form").addEventListener("submit", function(event) {
     var input = this.querySelector("input[type=text]");
     if (!input.value || input.value.length < 5) {
-        alert("Please provide at least 5 characters.");
+        console.log("Please provide at least 5 characters.");
         event.preventDefault();
     }
 });
 ```
 
-This code attaches a submit event listener to a form, and then checks to see if a text input's value is not empty and has at least 5 characters. If these conditions are not met, it displays an alert and cancels the form submission.
+This code attaches a submit event listener to a form, and then checks to see if a text input's value is not empty and has at least 5 characters. If these conditions are not met, it runs a console.log and cancels the form submission.
 
   </div>
   </div>
@@ -259,7 +259,7 @@ The first method directly submits the form. The second method creates a new `sub
   <div></div>
 
 ```html
-<form onsubmit="alert('submit!');return false">
+<form onsubmit="console.log('submit!');return false">
   First: Enter in the input field <input type="text" value="text" /><br />
   Second: Click "submit": <input type="submit" value="Submit" />
 </form>
@@ -285,7 +285,7 @@ The first method directly submits the form. The second method creates a new `sub
 ```html
 <form onsubmit="return false">
   <input type="text" size="30" value="Focus here and press enter" />
-  <input type="submit" value="Submit" onclick="alert('click')" />
+  <input type="submit" value="Submit" onclick="console.log('click')" />
 </form>
 ```
 

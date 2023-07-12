@@ -78,7 +78,7 @@ document.forms[0]; // the first form in the document
   // get the element
   let elem = form.elements.one; // <input name="one"> element
 
-  alert(elem.value); // 1
+  console.log(elem.value); // 1
 </script>
 ```
 
@@ -112,7 +112,7 @@ document.forms[0]; // the first form in the document
 
   let ageElems = form.elements.age;
 
-  alert(ageElems[0]); // [object HTMLInputElement]
+  console.log(ageElems[0]); // [object HTMLInputElement]
 </script>
 ```
 
@@ -143,13 +143,13 @@ document.forms[0]; // the first form in the document
   </form>
 
   <script>
-    alert(form.elements.login); // <input name="login">
+    console.log(form.elements.login); // <input name="login">
 
     let fieldset = form.elements.userFields;
-    alert(fieldset); // HTMLFieldSetElement
+    console.log(fieldset); // HTMLFieldSetElement
 
     // we can access the input by name both from the form and from the fieldset
-    alert(fieldset.elements.login == form.elements.login); // true
+    console.log(fieldset.elements.login == form.elements.login); // true
   </script>
 </body>
 ```
@@ -177,16 +177,16 @@ document.forms[0]; // the first form in the document
 </form>
 
 <script>
-  alert(form.elements.login == form.login); // true, the same <input>
+  console.log(form.elements.login == form.login); // true, the same <input>
 
   form.login.name = 'username'; // change the name of the input
 
   // form.elements updated the name:
-  alert(form.elements.login); // undefined
-  alert(form.elements.username); // input
+  console.log(form.elements.login); // undefined
+  console.log(form.elements.username); // input
 
   // form allows both names: the new one and the old one
-  alert(form.username == form.login); // true
+  console.log(form.username == form.login); // true
 </script>
 ```
 
@@ -217,7 +217,7 @@ document.forms[0]; // the first form in the document
   let login = form.login;
 
   // element -> form
-  alert(login.form); // HTMLFormElement
+  console.log(login.form); // HTMLFormElement
 </script>
 ```
 
@@ -348,7 +348,7 @@ document.forms[0]; // the first form in the document
 
     // validate the option
     if (name.value == '') {
-      alert('Please enter the name.');
+      console.log('Please enter the name.');
       return;
     }
     // create a new option

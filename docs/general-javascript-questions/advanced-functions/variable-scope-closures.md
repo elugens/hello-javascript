@@ -154,22 +154,22 @@ var num = 1;
 {
   let message = 'Hello'; // only visible in this block
 
-  alert(message); // Hello
+  console.log(message); // Hello
 }
 
-alert(message); // Error: message is not defined
+console.log(message); // Error: message is not defined
 
 // We can use this to isolate a piece of code
 {
   // show message
   let message = 'Hello';
-  alert(message); // returns Hello
+  console.log(message); // returns Hello
 }
 
 {
   // show another message
   let message = 'Goodbye';
-  alert(message); // returns Goodbye
+  console.log(message); // returns Goodbye
 }
 ```
 
@@ -193,11 +193,11 @@ alert(message); // Error: message is not defined
 ```js
 // show message
 let message = 'Hello';
-alert(message);
+console.log(message);
 
 // show another message
 let message = 'Goodbye'; // Error: variable already declared
-alert(message);
+console.log(message);
 ```
 
   </div>
@@ -224,8 +224,8 @@ function sayHiBye(firstName, lastName) {
     return firstName + ' ' + lastName;
   }
 
-  alert('Hello, ' + getFullName());
-  alert('Bye, ' + getFullName());
+  console.log('Hello, ' + getFullName());
+  console.log('Bye, ' + getFullName());
 }
 ```
 
@@ -345,7 +345,7 @@ function f() {
   let value = 123;
 
   return function () {
-    alert(value);
+    console.log(value);
   };
 }
 
@@ -356,7 +356,7 @@ function f() {
   let value = 123;
 
   return function () {
-    alert(value);
+    console.log(value);
   };
 }
 

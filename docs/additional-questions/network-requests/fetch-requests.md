@@ -752,7 +752,7 @@ if (response.ok) {
   // get the response body (the method explained below)
   let json = await response.json();
 } else {
-  alert('HTTP-Error: ' + response.status);
+  console.log('HTTP-Error: ' + response.status);
 }
 ```
 

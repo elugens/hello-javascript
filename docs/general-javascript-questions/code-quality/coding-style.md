@@ -94,9 +94,9 @@ Several code styling guides help programmers reach this goal.
 ```js
 // conditional if statement
 if (n < 0) {
-  alert(`Power ${n} is not supported`);
+  console.log(`Power ${n} is not supported`);
 } else {
-  alert(`Power ${n} is supported`);
+  console.log(`Power ${n} is supported`);
 }
 ```
 
@@ -219,7 +219,7 @@ function pow(x, n) {
 ```js
 function pow(x, n) {
   if (n < 0) {
-    alert("Negative 'n' not supported");
+    console.log("Negative 'n' not supported");
   } else {
     let result = 1;
 
@@ -240,7 +240,7 @@ function pow(x, n) {
 ```js
 function pow(x, n) {
   if (n < 0) {
-    alert("Negative 'n' not supported");
+    console.log("Negative 'n' not supported");
     return;
   }
 

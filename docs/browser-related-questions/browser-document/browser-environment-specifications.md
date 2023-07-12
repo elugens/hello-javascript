@@ -183,7 +183,7 @@ setTimeout(() => (document.body.style.background = ''), 1000);
 
 ```js
 // Here’s how we can use the location object:
-alert(location.href); // shows current URL
+console.log(location.href); // shows current URL
 
 if (confirm('Go to Wikipedia?')) {
   location.href = 'https://wikipedia.org'; // redirect the browser to another URL

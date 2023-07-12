@@ -93,7 +93,7 @@ pokemonName.apply(pokemon, ['sushi', 'algorithms']);
 ```js
 function slow(x) {
   // there can be a heavy CPU-intensive job here
-  alert(`Called with ${x}`);
+  console.log(`Called with ${x}`);
   return x;
 }
 
@@ -115,11 +115,11 @@ function cachingDecorator(func) {
 
 slow = cachingDecorator(slow);
 
-alert(slow(1)); // slow(1) is cached and the result returned
-alert('Again: ' + slow(1)); // slow(1) result returned from cache
+console.log(slow(1)); // slow(1) is cached and the result returned
+console.log('Again: ' + slow(1)); // slow(1) result returned from cache
 
-alert(slow(2)); // slow(2) is cached and the result returned
-alert('Again: ' + slow(2)); // slow(2) result returned from cache
+console.log(slow(2)); // slow(2) is cached and the result returned
+console.log('Again: ' + slow(2)); // slow(2) result returned from cache
 ```
 
   </div>

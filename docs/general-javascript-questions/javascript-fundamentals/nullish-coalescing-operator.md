@@ -191,7 +191,7 @@ let lastName = null;
 let nickName = 'Supercoder';
 
 // shows the first truthy value:
-alert(firstName || lastName || nickName || 'Anonymous'); // Supercoder
+console.log(firstName || lastName || nickName || 'Anonymous'); // Supercoder
 ```
 
   </div>
@@ -245,7 +245,7 @@ let width = null;
 // important: use parentheses
 let area = (height ?? 100) * (width ?? 50);
 
-alert(area); // 5000
+console.log(area); // 5000
 ```
 
   </div>
@@ -273,7 +273,7 @@ let x = 1 && 2 ?? 3; // Error: Syntax error
 // Use explicit parentheses to work around it
 let x = (1 && 2) ?? 3; // Works
 
-alert(x); // 2
+console.log(x); // 2
 ```
 
   </div>

@@ -159,7 +159,7 @@ function name(parameters) {
 
 ```js
 function showMessage(name) {
-  alert('Hello, ' + name);
+  console.log('Hello, ' + name);
 }
 
 showMessage('John'); // Hello, John
@@ -187,12 +187,12 @@ showMessage('Jane'); // Hello, Jane
 function showMessage() {
   let message = "Hello, I'm JavaScript!"; // local variable
 
-  alert(message);
+  console.log(message);
 }
 
 showMessage(); // Hello, I'm JavaScript!
 
-alert(message); // <-- Error! The variable is local to the function.
+console.log(message); // <-- Error! The variable is local to the function.
 ```
 
   </div>
@@ -343,7 +343,7 @@ showMessage('Ann', "What's up?"); // Ann: What's up? (**)
 ```js
 function showMessage(from, text) {
   // arguments: from, text
-  alert(from + ': ' + text);
+  console.log(from + ': ' + text);
 }
 
 showMessage('Ann'); // "Ann: undefined"
@@ -396,7 +396,7 @@ function showMessage(text) {
     text = 'empty message';
   }
 
-  alert(text);
+  console.log(text);
 }
 
 showMessage(); // empty message
@@ -440,9 +440,9 @@ function checkAge(age) {
 let age = prompt('How old are you?', 18);
 
 if (checkAge(age)) {
-  alert('Access granted');
+  console.log('Access granted');
 } else {
-  alert('Access denied');
+  console.log('Access denied');
 }
 ```
 
@@ -480,7 +480,7 @@ function showMovie(age) {
     return;
   }
 
-  alert('Showing you the movie'); // (*)
+  console.log('Showing you the movie'); // (*)
   // ...
 }
 ```
@@ -507,7 +507,7 @@ function doNothing() {
   /* empty */
 }
 
-alert(doNothing() === undefined); // true
+console.log(doNothing() === undefined); // true
 
 // An empty return is also the same as return undefined:
 
@@ -515,7 +515,7 @@ function doNothing() {
   return;
 }
 
-alert(doNothing() === undefined); // true
+console.log(doNothing() === undefined); // true
 ```
 
   </div>
@@ -609,7 +609,7 @@ function showPrimes(n) {
       if (i % j == 0) continue nextPrime;
     }
 
-    alert(i); // a prime
+    console.log(i); // a prime
   }
 }
 ```
@@ -624,7 +624,7 @@ function showPrimes(n) {
   for (let i = 2; i < n; i++) {
     if (!isPrime(i)) continue;
 
-    alert(i); // a prime
+    console.log(i); // a prime
   }
 }
 

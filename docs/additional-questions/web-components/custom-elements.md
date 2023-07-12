@@ -690,7 +690,7 @@ It does not trigger unlisted properties (for performance reasons).
     'user-info',
     class extends HTMLElement {
       connectedCallback() {
-        alert(this.innerHTML); // alert is empty (*)
+        console.log(this.innerHTML); // console.log is empty (*)
       }
     }
   );
@@ -722,7 +722,7 @@ It does not trigger unlisted properties (for performance reasons).
     'user-info',
     class extends HTMLElement {
       connectedCallback() {
-        setTimeout(() => alert(this.innerHTML)); // John (*)
+        setTimeout(() => console.log(this.innerHTML)); // John (*)
       }
     }
   );
@@ -754,7 +754,7 @@ It does not trigger unlisted properties (for performance reasons).
   class HelloButton extends HTMLButtonElement {
     constructor() {
       super();
-      this.addEventListener('click', () => alert('Hello!'));
+      this.addEventListener('click', () => console.log('Hello!'));
     }
   }
 

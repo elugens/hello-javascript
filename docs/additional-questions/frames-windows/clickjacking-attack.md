@@ -91,7 +91,7 @@ Here's a simplified code example to demonstrate a clickjacking attack:
       // and is visually hidden, tricking users into clicking it
       document.getElementById("invisibleButton").addEventListener("click", function () {
         // Perform malicious action here, such as unauthorized transactions or data theft
-        alert("You have been clickjacked!");
+        console.log("You have been clickjacked!");
       });
     </script>
   </body>
@@ -99,7 +99,7 @@ Here's a simplified code example to demonstrate a clickjacking attack:
 
 ```
 
-In this example, the attacker creates a malicious webpage (`attacker.html`) with an invisible button (`#invisibleButton`) layered on top of a legitimate website shown within an iframe. When unsuspecting users visit the attacker's page, they are tricked into clicking the invisible button, triggering the malicious action (in this case, an alert message).
+In this example, the attacker creates a malicious webpage (`attacker.html`) with an invisible button (`#invisibleButton`) layered on top of a legitimate website shown within an iframe. When unsuspecting users visit the attacker's page, they are tricked into clicking the invisible button, triggering the malicious action (in this case, an console.log message).
 
 It's important to note that actual clickjacking attacks can be more sophisticated and involve complex techniques to conceal the malicious elements and deceive users effectively.
 
@@ -231,7 +231,7 @@ Here's a simple JavaScript code snippet that checks if a page is being framed, w
 ```javascript
 if (window.top !== window.self) {
    // The page is in a frame, this could be a clickjacking attempt
-   alert("This page may be subject to a Clickjacking attack!");
+   console.log("This page may be subject to a Clickjacking attack!");
 }
 ```
 

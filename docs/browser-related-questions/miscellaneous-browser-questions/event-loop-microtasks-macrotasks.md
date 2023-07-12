@@ -135,15 +135,15 @@ count();
   <div></div>
 
 ```js
-// 3rd: alerts "timeout" - timeout shows last because it is a macrotask.
-setTimeout(() => alert("timeout"));
+// 3rd: console.logs "timeout" - timeout shows last because it is a macrotask.
+setTimeout(() => console.log("timeout"));
 
-// 2nd: alerts "promise" -
+// 2nd: console.logs "promise" -
 // promise shows second, because .then passes through the microtask queue
 Promise.resolve()
-  .then(() => alert("promise"));
+  .then(() => console.log("promise"));
 
-// 1st: alerts "code" –
+// 1st: console.logs "code" –
 // code shows first because it is a regular synchronous call.
 console.log("code");
 ```
@@ -389,14 +389,14 @@ Promises are resolved before timeouts because promise callbacks run in the micro
 
 ```javascript
 document.getElementById('myButton').addEventListener('click', function() {
-  alert('Button was clicked!');
+  console.log('Button was clicked!');
 });
 ```
 
 In this code:
 
 **1.** An event listener is attached to a button with the id 'myButton'.
-**2.** When the 'click' event is detected (i.e., the user clicks the button), the function is triggered, and an alert is displayed on the screen. This is an example of event-driven programming because the execution of the function is determined by the 'click' event.
+**2.** When the 'click' event is detected (i.e., the user clicks the button), the function is triggered, and an console.log is displayed in the console. This is an example of event-driven programming because the execution of the function is determined by the 'click' event.
 
   </div>
   </div>

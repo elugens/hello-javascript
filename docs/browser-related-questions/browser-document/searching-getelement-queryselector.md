@@ -186,7 +186,7 @@ let element = document.querySelector(".myClass");
   let elements = document.querySelectorAll('ul > li:last-child');
 
   for (let elem of elements) {
-    alert(elem.innerHTML); // "test", "passed"
+    console.log(elem.innerHTML); // "test", "passed"
   }
 </script>
 ```
@@ -333,7 +333,7 @@ Please note that `querySelectorAll()` returns a NodeList. Although a NodeList is
   // can be any collection instead of document.body.children
   for (let elem of document.body.children) {
     if (elem.matches('a[href$="zip"]')) {
-      alert('The archive reference: ' + elem.href);
+      console.log('The archive reference: ' + elem.href);
     }
   }
 </script>
@@ -373,10 +373,10 @@ Please note that `querySelectorAll()` returns a NodeList. Although a NodeList is
 <script>
   let chapter = document.querySelector('.chapter'); // LI
 
-  alert(chapter.closest('.book')); // UL
-  alert(chapter.closest('.contents')); // DIV
+  console.log(chapter.closest('.book')); // UL
+  console.log(chapter.closest('.contents')); // DIV
 
-  alert(chapter.closest('h1')); // null (because h1 is not an ancestor)
+  console.log(chapter.closest('h1')); // null (because h1 is not an ancestor)
 </script>
 ```
 
@@ -424,7 +424,7 @@ Please note that `querySelectorAll()` returns a NodeList. Although a NodeList is
   let inputs = table.getElementsByTagName('input');
 
   for (let input of inputs) {
-    alert(input.value + ': ' + input.checked); // alerts young: true
+    console.log(input.value + ': ' + input.checked); // console.logs young: true
   }
 </script>
 ```
@@ -483,13 +483,13 @@ Novice coders mistake the getElementsByTagName return for an element, which is i
 
 <script>
   let divs = document.getElementsByTagName('div');
-  alert(divs.length); // 1
+  console.log(divs.length); // 1
 </script>
 
 <div>Second div</div>
 
 <script>
-  alert(divs.length); // 2
+  console.log(divs.length); // 2
 </script>
 
 <!-- STATIC COLLECTION -->
@@ -497,13 +497,13 @@ Novice coders mistake the getElementsByTagName return for an element, which is i
 
 <script>
   let divs = document.querySelectorAll('div');
-  alert(divs.length); // 1
+  console.log(divs.length); // 1
 </script>
 
 <div>Second div</div>
 
 <script>
-  alert(divs.length); // 1
+  console.log(divs.length); // 1
 </script>
 ```
 

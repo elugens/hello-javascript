@@ -242,7 +242,7 @@ console.log('Voila'.match(/V[oi]la/)); // null, no matches
   <div></div>
 
 ```js
-alert('Exception 0xAF'.match(/x[0-9A-F][0-9A-F]/g)); // xAF
+console.log('Exception 0xAF'.match(/x[0-9A-F][0-9A-F]/g)); // xAF
 ```
 
   </div>
@@ -306,7 +306,7 @@ In these examples, `\p{Script=Han}` matches any character in the Han (Chinese) s
   <div></div>
 
 ```js
-alert('alice15@gmail.com'.match(/[^\d\sA-Z]/gi)); // returns @ and .
+console.log('alice15@gmail.com'.match(/[^\d\sA-Z]/gi)); // returns @ and .
 ```
 
   </div>

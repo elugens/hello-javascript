@@ -55,10 +55,10 @@ import StructuredData from './schemadata/WindowSizeSchemaData.js';
 
 ```js
 // full window width
-alert(window.innerWidth);
+console.log(window.innerWidth);
 
 // window width minus the scrollbar
-alert(document.documentElement.clientWidth);
+console.log(document.documentElement.clientWidth);
 ```
 
   </div>
@@ -80,10 +80,10 @@ alert(document.documentElement.clientWidth);
 
 ```js
 // full window width
-alert(window.innerWidth); // includes the scrollbar size in the return value
+console.log(window.innerWidth); // includes the scrollbar size in the return value
 
 // window width minus the scrollbar
-alert(document.documentElement.clientWidth);
+console.log(document.documentElement.clientWidth);
 ```
 
   </div>
@@ -125,7 +125,7 @@ let scrollHeight = Math.max(
   document.documentElement.clientHeight
 );
 
-alert('Full document height, with scrolled out part: ' + scrollHeight);
+console.log('Full document height, with scrolled out part: ' + scrollHeight);
 ```
 
   </div>
@@ -147,8 +147,8 @@ alert('Full document height, with scrolled out part: ' + scrollHeight);
   <div></div>
 
 ```js
-alert('Current scroll from the top: ' + window.pageYOffset);
-alert('Current scroll from the left: ' + window.pageXOffset);
+console.log('Current scroll from the top: ' + window.pageYOffset);
+console.log('Current scroll from the left: ' + window.pageXOffset);
 ```
 
   </div>

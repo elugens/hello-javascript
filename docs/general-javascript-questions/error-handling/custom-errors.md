@@ -199,10 +199,10 @@ try {
   let user = readUser('{ "age": 25 }');
 } catch (err) {
   if (err instanceof ValidationError) {
-    alert('Invalid data: ' + err.message); // Invalid data: No field: name
+    console.log('Invalid data: ' + err.message); // Invalid data: No field: name
   } else if (err instanceof SyntaxError) {
     // (*)
-    alert('JSON Syntax Error: ' + err.message);
+    console.log('JSON Syntax Error: ' + err.message);
   } else {
     throw err; // unknown error, rethrow it (**)
   }
@@ -276,11 +276,11 @@ try {
   let user = readUser('{ "age": 25 }');
 } catch (err) {
   if (err instanceof ValidationError) {
-    alert("Invalid data: " + err.message); // Invalid data: No property: name
-    alert(err.name); // PropertyRequiredError
-    alert(err.property); // name
+    console.log("Invalid data: " + err.message); // Invalid data: No property: name
+    console.log(err.name); // PropertyRequiredError
+    console.log(err.property); // name
   } else if (err instanceof SyntaxError) {
-    alert("JSON Syntax Error: " + err.message);
+    console.log("JSON Syntax Error: " + err.message);
   } else {
     throw err; // unknown error, rethrow it
   }

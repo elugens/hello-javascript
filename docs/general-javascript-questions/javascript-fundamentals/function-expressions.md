@@ -175,7 +175,7 @@ console.log(result); // Output: 12
 sayHi('John'); // Hello, John
 
 function sayHi(name) {
-  alert(`Hello, ${name}`);
+  console.log(`Hello, ${name}`);
 }
 ```
 
@@ -189,7 +189,7 @@ sayHi('John'); // error!
 
 let sayHi = function (name) {
   // (*) no magic any more
-  alert(`Hello, ${name}`);
+  console.log(`Hello, ${name}`);
 };
 ```
 
@@ -363,7 +363,7 @@ There’s no need for a semicolon ( ; ) at the end of code blocks and syntax str
 
 ```js
 function greeting(name) {
-  alert('Hello ' + name);
+  console.log('Hello ' + name);
 }
 
 function processUserInput(callback) {
@@ -400,11 +400,11 @@ let age = prompt('What is your age?', 18);
 // conditionally declare a function
 if (age < 18) {
   function welcome() {
-    alert('Hello!');
+    console.log('Hello!');
   }
 } else {
   function welcome() {
-    alert('Greetings!');
+    console.log('Greetings!');
   }
 }
 
@@ -424,11 +424,11 @@ let welcome;
 
 if (age < 18) {
   welcome = function () {
-    alert('Hello!');
+    console.log('Hello!');
   };
 } else {
   welcome = function () {
-    alert('Greetings!');
+    console.log('Greetings!');
   };
 }
 
@@ -457,7 +457,7 @@ welcome(); // ok now
 sayHi('John'); // Function invoked before it is defined: returns Hello, John.
 
 function sayHi(name) {
-  alert(`Hello, ${name}`);
+  console.log(`Hello, ${name}`);
 }
 ```
 
@@ -471,7 +471,7 @@ sayHi('John'); // error: we called it too early.
 
 let sayHi = function (name) {
   // no magic any more
-  alert(`Hello, ${name}`);
+  console.log(`Hello, ${name}`);
 };
 ```
 

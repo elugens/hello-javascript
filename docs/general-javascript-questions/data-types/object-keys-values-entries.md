@@ -66,7 +66,7 @@ let doublePrices = Object.fromEntries(
   Object.entries(prices).map(([key, value]) => [key, value * 2])
 );
 
-alert(doublePrices.meat); // 8
+console.log(doublePrices.meat); // 8
 
 // Object
 let obj = { a: 1, b: 2, c: 3 };
@@ -320,7 +320,7 @@ let doublePrices = Object.fromEntries(
   Object.entries(prices).map(([key, value]) => [key, value * 2])
 );
 
-alert(doublePrices.meat); // 8
+console.log(doublePrices.meat); // 8
 ```
 
   </div>

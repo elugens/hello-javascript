@@ -81,9 +81,9 @@ The width may vary between devices and browsers.
 </main>
 
 <script>
-  alert(example.offsetParent.id); // main
-  alert(example.offsetLeft); // 180 (note: a number, not a string "180px")
-  alert(example.offsetTop); // 180
+  console.log(example.offsetParent.id); // main
+  console.log(example.offsetLeft); // 180 (note: a number, not a string "180px")
+  console.log(example.offsetTop); // 180
 </script>
 ```
 

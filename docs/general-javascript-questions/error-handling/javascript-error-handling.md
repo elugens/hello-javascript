@@ -129,13 +129,13 @@ try {
 
 ```js
 try {
-  alert('Start of try runs'); // (1) <--
+ console.log('Start of try runs'); // (1) <--
 
   lalala; // error, variable is not defined!
 
-  alert('End of try (never reached)'); // (2)
+ console.log('End of try (never reached)'); // (2)
 } catch (err) {
-  alert(`Error has occurred!`); // (3) <--
+ console.log(`Error has occurred!`); // (3) <--
 }
 ```
 
@@ -161,7 +161,7 @@ try {
 try {
   {{{{{{{{{{{{ // Syntax error will be invoked and not caught by catch handler
 } catch(e) {
-  alert("The engine can't understand this code, it's invalid");
+ console.log("The engine can't understand this code, it's invalid");
 }
 
 ```
@@ -190,7 +190,7 @@ try {
     noSuchVariable; // script will die here
   }, 1000);
 } catch (e) {
-  alert("won't work");
+ console.log("won't work");
 }
 
 //////// HOW TO FIX THIS ////////
@@ -200,7 +200,7 @@ setTimeout(function () {
   try {
     noSuchVariable; // try..catch handles the error!
   } catch {
-    alert('error is caught here!');
+   console.log('error is caught here!');
   }
 }, 1000);
 ```
@@ -227,13 +227,13 @@ setTimeout(function () {
 try {
   lalala; // error, variable is not defined!
 } catch (err) {
-  alert(err.name); // ReferenceError
-  alert(err.message); // lalala is not defined
-  alert(err.stack); // ReferenceError: lalala is not defined at (...call stack)
+ console.log(err.name); // ReferenceError
+ console.log(err.message); // lalala is not defined
+ console.log(err.stack); // ReferenceError: lalala is not defined at (...call stack)
 
   // Can also show an error as a whole
   // The error is converted to string as "name: message"
-  alert(err); // ReferenceError: lalala is not defined
+ console.log(err); // ReferenceError: lalala is not defined
 }
 ```
 
@@ -262,7 +262,7 @@ In addition to the name and message properties, other non-standard properties ar
 try {
   lalala; // error, variable is not defined!
 } catch (err) {
-  alert(err.stack); // ReferenceError: lalala is not defined at (...call stack)
+ console.log(err.stack); // ReferenceError: lalala is not defined at (...call stack)
 }
 ```
 
@@ -354,10 +354,10 @@ try {
 
   blabla(); // unexpected error
 
-  alert(user.name);
+ console.log(user.name);
 } catch (e) {
   if (e instanceof SyntaxError) {
-    alert('JSON Error: ' + e.message);
+   console.log('JSON Error: ' + e.message);
   } else {
     throw e; // rethrow (*)
   }
@@ -448,7 +448,7 @@ console.log(hello); // ReferenceError: hello is not defined
 
 ```js
 window.onerror = function (message, url, line, col, error) {
-  alert(`${message}\n At ${line}:${col} of ${url}`);
+ console.log(`${message}\n At ${line}:${col} of ${url}`);
 };
 
 function readData() {

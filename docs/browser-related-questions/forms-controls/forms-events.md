@@ -84,7 +84,7 @@ Form events can be used to validate user input, update the page based on user in
       var name = document.getElementById("name").value;
 
       // Display a message with the submitted name
-      alert("Hello, " + name + "!");
+      console.log("Hello, " + name + "!");
 
       // Additional logic or actions can be performed here
 
@@ -98,7 +98,7 @@ Form events can be used to validate user input, update the page based on user in
 
 In this example, we have an HTML form with an input field for the user's name and a submit button. The JavaScript code adds an event listener to the form's "submit" event. When the user submits the form, the event listener callback function is executed.
 
-Inside the callback function, we prevent the default form submission behavior using `event.preventDefault()`. Then we retrieve the value entered in the input field, display a message using `alert()`, perform any additional logic or actions as needed, and finally reset the form using `form.reset()`.
+Inside the callback function, we prevent the default form submission behavior using `event.preventDefault()`. Then we retrieve the value entered in the input field, display a message in the console using `console.log()`, perform any additional logic or actions as needed, and finally reset the form using `form.reset()`.
 
 This is a basic example, but it demonstrates how to handle a form event in JavaScript and perform actions based on the user's input.
 
@@ -169,7 +169,7 @@ This is a basic example, but it demonstrates how to handle a form event in JavaS
 
       // Example: Display a message instead of submitting the form
       var name = document.getElementById("name").value;
-      alert("Hello, " + name + "! Form submission prevented.");
+      console.log("Hello, " + name + "! Form submission prevented.");
     });
   </script>
 </body>
@@ -180,7 +180,7 @@ In this example, we have an HTML form with an input field for the user's name an
 
 When the user submits the form, the event listener callback function is executed. Inside the function, we prevent the default form submission behavior using `event.preventDefault()`. This stops the form from being submitted to the server.
 
-You can perform additional logic or validation within the event listener function. In this example, we retrieve the value entered in the input field, `name`, using `getElementById()`. Then we display an alert message with the submitted name, indicating that the form submission has been prevented.
+You can perform additional logic or validation within the event listener function. In this example, we retrieve the value entered in the input field, `name`, using `getElementById()`. Then we display a message with the submitted name, indicating that the form submission has been prevented.
 
 By preventing the form from submitting, you can control the behavior and perform custom actions based on your requirements, such as displaying messages, performing validations, or executing other JavaScript logic.
 
@@ -474,12 +474,12 @@ document.getElementById('myForm').addEventListener('submit', function(event) {
     let input = document.getElementById('myInput').value;
     if(input === '') {
         event.preventDefault();
-        alert('Input field cannot be empty!');
+        console.log('Input field cannot be empty!');
     }
 });
 ```
 
-In this example, the form's submit event is intercepted and checked if the input field with the ID 'myInput' is empty. If it is, the form submission is prevented, and an alert is displayed.
+In this example, the form's submit event is intercepted and checked if the input field with the ID 'myInput' is empty. If it is, the form submission is prevented, and a log is displayed in the console.
 
   </div>
   </div>
@@ -530,7 +530,7 @@ In this example, when the form is submitted, the default action is prevented, th
   <div></div>
 
 ```html
-<input type="text" onchange="alert(this.value)" />
+<input type="text" onchange="console.log(this.value)" />
 <input type="button" value="Button" />
 ```
 
@@ -540,7 +540,7 @@ In this example, when the form is submitted, the default action is prevented, th
   <div></div>
 
 ```html
-<select onchange="alert(this.value)">
+<select onchange="console.log(this.value)">
   <option value="">Select something</option>
   <option value="1">Option 1</option>
   <option value="2">Option 2</option>
@@ -616,7 +616,7 @@ After we update the value, the input event happens. As a result, we are unable t
     input.oncopy =
     input.onpaste =
       function (event) {
-        alert(event.type + ' - ' + event.clipboardData.getData('text/plain'));
+        console.log(event.type + ' - ' + event.clipboardData.getData('text/plain'));
         return false;
       };
 </script>
@@ -652,7 +652,7 @@ It is possible to copy/paste everything, not just text. For example, we can copy
     input.oncopy =
     input.onpaste =
       function (event) {
-        alert(event.type + ' - ' + event.clipboardData.getData('text/plain'));
+        console.log(event.type + ' - ' + event.clipboardData.getData('text/plain'));
         return false;
       };
 </script>

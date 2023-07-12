@@ -320,7 +320,7 @@ export class User {
 
 ```js
 export function sayHi(user) {
-  alert(`Hello, ${user}!`);
+  console.log(`Hello, ${user}!`);
 } // no ; at the end
 ```
 
@@ -344,11 +344,11 @@ export function sayHi(user) {
 ```js
 // 📁 say.js
 function sayHi(user) {
-  alert(`Hello, ${user}!`);
+  console.log(`Hello, ${user}!`);
 }
 
 function sayBye(user) {
-  alert(`Bye, ${user}!`);
+  console.log(`Bye, ${user}!`);
 }
 
 export { sayHi, sayBye }; // a list of exported variables
@@ -486,7 +486,7 @@ export default class { // no class name
 }
 
 export default function(user) { // no function name
-  alert(`Hello, ${user}!`);
+  console.log(`Hello, ${user}!`);
 }
 
 // export a single value, without making a variable
@@ -514,7 +514,7 @@ export default ['Jan', 'Feb', 'Mar','Apr', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 ```js
 // export a function separately from its definition
 function sayHi(user) {
-  alert(`Hello, ${user}!`);
+  console.log(`Hello, ${user}!`);
 }
 
 // same as if we added "export default" before the function
@@ -547,7 +547,7 @@ export default class User {
 }
 
 export function sayHi(user) {
-  alert(`Hello, ${user}!`);
+  console.log(`Hello, ${user}!`);
 }
 
 // 📁 main.js

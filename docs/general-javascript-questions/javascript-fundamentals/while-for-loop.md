@@ -211,7 +211,7 @@ do {
 ```js
 let i = 0;
 do {
-  alert(i);
+  console.log(i);
   i++;
 } while (i < 3);
 ```
@@ -241,23 +241,23 @@ do {
   <div></div>
 
 ```js
-// for (let i = 0; i < 3; i++) alert(i)
+// for (let i = 0; i < 3; i++) console.log(i)
 
 // run begin
 let i = 0;
 // if condition → run body and run step
 if (i < 3) {
-  alert(i);
+  console.log(i);
   i++;
 }
 // if condition → run body and run step
 if (i < 3) {
-  alert(i);
+  console.log(i);
   i++;
 }
 // if condition → run body and run step
 if (i < 3) {
-  alert(i);
+  console.log(i);
   i++;
 }
 // ...finish, because now i == 3
@@ -328,7 +328,7 @@ let i = 0; // we have i already declared and assigned
 
 for (; i < 3; i++) {
   // no need for "start"
-  alert(i); // 0, 1, 2
+  console.log(i); // 0, 1, 2
 }
 ```
 
@@ -362,7 +362,7 @@ while (true) {
   sum += value;
 }
 
-alert('Sum: ' + sum);
+console.log('Sum: ' + sum);
 ```
 
   </div>
@@ -412,7 +412,7 @@ for (let i = 0; i < 10; i++) {
   // if true, skip the remaining part of the body
   if (i % 2 == 0) continue;
 
-  alert(i); // 1, then 3, 5, 7, 9
+  console.log(i); // 1, then 3, 5, 7, 9
 }
 ```
 
@@ -500,7 +500,7 @@ outer: for (let i = 0; i < 3; i++) {
   }
 }
 
-alert('Done!');
+console.log('Done!');
 ```
 
   </div>

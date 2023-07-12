@@ -44,8 +44,8 @@ import StructuredData from './schemadata/JavaScriptSpecialsSchemaData.js';
 
 ```js
 // automatic semicolon inserted by the JavaScript (V8) engine
-// alert('Hello')
-// alert('World'); <-- semicolon inserted
+// console.log('Hello')
+// console.log('World'); <-- semicolon inserted
 ```
 
   </div>
@@ -213,7 +213,7 @@ let sum = (a, b) => {
 };
 
 // without arguments
-let sayHi = () => alert('Hello');
+let sayHi = () => console.log('Hello');
 
 // with a single argument
 let double = (n) => n * 2;

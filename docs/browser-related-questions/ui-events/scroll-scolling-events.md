@@ -54,15 +54,15 @@ import StructuredData from './schemadata/ScrollingEventSchemaData.js';
 
   <div></div>
 
-Here's a simple example in JavaScript. This code alerts a message when the user scrolls.
+Here's a simple example in JavaScript. This code logs a message when the user scrolls.
 
 ```javascript
 window.addEventListener('scroll', function() {
-    alert('You just scrolled!');
+    console.log('You just scrolled!');
 });
 ```
 
-Please replace `alert` with a more user-friendly function in a real application, as multiple scrolls could lead to many alert boxes.
+Please replace `console.log` with a more user-friendly function in a real application, as multiple scrolls could lead to many logs.
 
   </div>
   </div>

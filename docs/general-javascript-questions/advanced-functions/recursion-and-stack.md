@@ -85,7 +85,7 @@ function pow(x, n) {
   return n == 1 ? x : x * pow(x, n - 1);
 }
 
-alert(pow(2, 3)); // 8
+console.log(pow(2, 3)); // 8
 ```
 
   </div>
@@ -283,7 +283,7 @@ function printIteratively(list) {
   let tmp = list;
 
   while (tmp) {
-    alert(tmp.value);
+   console.log(tmp.value);
     tmp = tmp.next;
   }
 }
@@ -293,7 +293,7 @@ printIteratively(list);
 // Recursive Approach
 
 function printRecursively(list) {
-  alert(list.value); // output the current item
+  console.log(list.value); // output the current item
 
   if (list.next) {
     printRecursively(list.next); // do the same for the rest of the list

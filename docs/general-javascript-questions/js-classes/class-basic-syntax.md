@@ -628,7 +628,7 @@ class User {
   name = 'John';
 
   sayHi() {
-    alert(`Hello, ${this.name}!`);
+    console.log(`Hello, ${this.name}!`);
   }
 }
 
@@ -636,8 +636,8 @@ new User().sayHi(); // Hello, John!
 
 // As you can see: Class.prototype returns undefined
 let user = new User();
-alert(user.name); // John
-alert(User.prototype.name); // undefined
+console.log(user.name); // John
+console.log(User.prototype.name); // undefined
 
 // You can also use more complex expressions and function calls
 class User {
@@ -645,7 +645,7 @@ class User {
 }
 
 let user = new User();
-alert(user.name); // John
+console.log(user.name); // John
 ```
 
   </div>

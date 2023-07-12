@@ -436,7 +436,7 @@ In this example, the `async` and `defer` scripts will not block the DOMContentLo
 <link type="text/css" rel="stylesheet" href="style.css" />
 <script>
   // the script doesn't not execute until the stylesheet is loaded
-  alert(getComputedStyle(document.body).marginTop);
+  console.log(getComputedStyle(document.body).marginTop);
 </script>
 ```
 

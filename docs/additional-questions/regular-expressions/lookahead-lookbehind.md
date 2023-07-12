@@ -223,13 +223,13 @@ Because this password doesn't contain the word "password" and it's at least 8 ch
 ```js
 let str = '1 turkey costs 30€';
 
-alert(str.match(/\d+(?=€)/));
+console.log(str.match(/\d+(?=€)/));
 // 30, the number 1 is ignored, as it is not followed by €
 
 // EXAMPLE: Negative Lookahead
 let str = '2 turkeys cost 60€';
 
-alert(str.match(/\d+\b(?!€)/g));
+console.log(str.match(/\d+\b(?!€)/g));
 // 2 (the price is not matched)
 ```
 

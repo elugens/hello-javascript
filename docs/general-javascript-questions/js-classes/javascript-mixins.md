@@ -58,10 +58,10 @@ import StructuredData from './schemadata/MixinsSchemaData.js';
 // mixin
 let sayHiMixin = {
   sayHi() {
-    alert(`Hello ${this.name}`);
+    console.log(`Hello ${this.name}`);
   },
   sayBye() {
-    alert(`Bye ${this.name}`);
+    console.log(`Bye ${this.name}`);
   },
 };
 

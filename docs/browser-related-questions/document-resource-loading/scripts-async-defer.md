@@ -200,7 +200,7 @@ import StructuredData from './schemadata/ScriptsSchemaData.js';
 
 <script>
   document.addEventListener('DOMContentLoaded', () =>
-    alert('DOM ready after defer!')
+    console.log('DOM ready after defer!')
   );
 </script>
 
@@ -261,7 +261,7 @@ import StructuredData from './schemadata/ScriptsSchemaData.js';
 <p>...content before scripts...</p>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => alert('DOM ready!'));
+  document.addEventListener('DOMContentLoaded', () => console.log('DOM ready!'));
 </script>
 
 <script
