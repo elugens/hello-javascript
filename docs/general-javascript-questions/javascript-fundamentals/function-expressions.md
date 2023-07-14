@@ -61,7 +61,7 @@ import StructuredData from './schemadata/FuncExpressionSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> In JavaScript, a function is both a function and an object. It can be called and passed around like any other object.
-</div>
+</div><br/>
 <div><strong>Technical Response:</strong> In JavaScript, functions are first-class objects because they can have properties and methods just like any other object. What distinguishes them from other objects is that functions get called. In simple terms, they are Function objects.
 </div>
   </div>
@@ -206,7 +206,8 @@ In this example, the function declaration is hoisted to the top of it's scope, w
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Function declarations are loaded before any code is executed, while function expressions are only loaded when their defining line is reached.</div><br/>
+  <div><strong>Interview Response:</strong> Function declarations are loaded before any code is executed, while function expressions are only loaded when their defining line is reached.
+  </div>
   </div>
 </details>
 
@@ -327,7 +328,8 @@ console.log(add5(3));  // Output: 8
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A function expression uses a semi-colon because we declare it by assignment, and all assignments must use a semi-colon to terminate the statement.</div><br />
+  <div><strong>Interview Response:</strong> A function expression uses a semi-colon because we declare it by assignment, and all assignments must use a semi-colon to terminate the statement.
+  </div><br />
   <div><strong>Technical Response:</strong> A Function Expression gets used inside a statement as a value, and it is not a code block but rather an assignment. The semicolon ( ; ) is recommended at the end of statements, no matter what the value is. So, the semicolon is not related to the Function Expression itself, and it just terminates the statement.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -446,7 +448,8 @@ welcome(); // ok now
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, a Function Declaration is visible in the whole script, no matter where it is. As soon as it initializes, it is available.</div><br />
+  <div><strong>Interview Response:</strong> Yes, a Function Declaration is visible in the whole script, no matter where it is. As soon as it initializes, it is available.
+  </div><br />
   <div><strong>Technical Response:</strong> Yes, a global Function Declaration is visible in the whole script, no matter where it is. When JavaScript prepares to run the script, it first looks for global Function Declarations and creates the functions. We can think of it as an “initialization stage”. And after all Function Declarations are processed, the code is executed. So, it has access to these functions. Function expressions do not have this capability, which is an important factor when choosing between the two.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong> Function Declaration, it works…<br /><br />
@@ -486,7 +489,8 @@ let sayHi = function (name) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, you cannot call a function expression before it's defined, as they are not hoisted like function declarations, resulting in a reference error if attempted.</div><br/>
+  <div><strong>Interview Response:</strong> No, you cannot call a function expression before it's defined, as they are not hoisted like function declarations, resulting in a reference error if attempted.
+  </div>
   </div>
 </details>
 

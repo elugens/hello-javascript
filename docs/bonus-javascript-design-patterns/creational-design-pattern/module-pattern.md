@@ -99,7 +99,6 @@ testModule.resetCounter();
 ```
 
 </div>
-<br />
   </div>
 </details>
 
@@ -125,9 +124,8 @@ testModule.resetCounter();
   </summary>
   <div>
   <div>
-      <strong>Interview Response:</strong> The Module pattern in JavaScript belongs to the Creational design pattern family. It provides a way to encapsulate and organize code into self-contained modules with private and public interfaces.<br/>
+      <strong>Interview Response:</strong> The Module pattern in JavaScript belongs to the Creational design pattern family. It provides a way to encapsulate and organize code into self-contained modules with private and public interfaces.
     </div>
-    <br/>
   </div>
 </details>
 
@@ -141,9 +139,8 @@ testModule.resetCounter();
   </summary>
   <div>
   <div>
-      <strong>Interview Response:</strong> The Module Pattern in JavaScript is useful when you want to encapsulate related code into a single, reusable module with a clear interface, preventing naming collisions and global namespace pollution.<br/>
+      <strong>Interview Response:</strong> The Module Pattern in JavaScript is useful when you want to encapsulate related code into a single, reusable module with a clear interface, preventing naming collisions and global namespace pollution.
     </div>
-    <br/>
   </div>
 </details>
 
@@ -161,9 +158,8 @@ testModule.resetCounter();
     </div>
     <br/>
     <div>
-      <strong>Technical Response:</strong> The Module pattern in JavaScript offers a number of benefits. By encapsulating related code, it can help prevent naming collisions and global namespace pollution. It also promotes modularity, allowing developers to create self-contained, reusable modules with clear interfaces. This makes code easier to maintain and update. Additionally, the Module pattern enables the creation of private and public properties and methods, providing a way to protect sensitive information and create reusable code blocks. Overall, the Module pattern is a useful tool for organizing and managing complex JavaScript code.<br/>
+      <strong>Technical Response:</strong> The Module pattern in JavaScript offers a number of benefits. By encapsulating related code, it can help prevent naming collisions and global namespace pollution. It also promotes modularity, allowing developers to create self-contained, reusable modules with clear interfaces. This makes code easier to maintain and update. Additionally, the Module pattern enables the creation of private and public properties and methods, providing a way to protect sensitive information and create reusable code blocks. Overall, the Module pattern is a useful tool for organizing and managing complex JavaScript code.
     </div>
-    <br/>
   </div>
 </details>
 
@@ -182,7 +178,6 @@ testModule.resetCounter();
     <div>
       <strong>Technical Response:</strong> Although the Module pattern in JavaScript has many benefits, there are also some disadvantages. It can lead to increased complexity and reduced flexibility, making it harder to modify code. Additionally, the use of private variables and methods can make unit testing and dependency management more challenging. Finally, the pattern can create hidden dependencies between modules, making it harder to understand and maintain code.
     </div>
-    <br/>
   </div>
 </details>
 

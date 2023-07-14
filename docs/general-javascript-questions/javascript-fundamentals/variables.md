@@ -58,7 +58,8 @@ import StructuredData from './schemadata/VariablesSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A variable in JavaScript is a named container for storing values, like numbers, strings, objects, or arrays, that can be reassigned, and used throughout your code.</div>
+  <div><strong>Interview Response:</strong> A variable in JavaScript is a named container for storing values, like numbers, strings, objects, or arrays, that can be reassigned, and used throughout your code.
+  </div>
   </div>
 </details>
 
@@ -239,7 +240,8 @@ let for = "loop";    // Cannot use reserved keyword
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Lower Camel Case, also known as 'camelCase' or medial capitals, is a naming convention in which words are joined together, and the first letter of each word after the first is capitalized, except for the first word which is in lowercase.</div><br />
+  <div><strong>Interview Response:</strong> Lower Camel Case, also known as 'camelCase' or medial capitals, is a naming convention in which words are joined together, and the first letter of each word after the first is capitalized, except for the first word which is in lowercase.
+  </div><br />
   <div><strong className="codeExample">Code Example:</strong> Here is an example of Lower Camel Case in JavaScript.<br /><br />
 
   <div></div>
@@ -265,7 +267,8 @@ let favoriteColor = "blue";
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> CamelCase is a naming convention where words have no spaces and first letters capitalized. In JavaScript, we use CamelCase for variables, functions, and object properties. Pascal Case is used for classes and constructors.</div><br />
+  <div><strong>Interview Response:</strong> CamelCase is a naming convention where words have no spaces and first letters capitalized. In JavaScript, we use CamelCase for variables, functions, and object properties. Pascal Case is used for classes and constructors.
+  </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -290,7 +293,8 @@ console.log(myFavoriteColor); // returns 'blue'
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, the most commonly used stylization rule for naming multi-word variables is Camel Case, in which each subsequent word starts with an uppercase letter and no spaces or underscores are used between the words.</div><br />
+  <div><strong>Interview Response:</strong> In JavaScript, the most commonly used stylization rule for naming multi-word variables is Camel Case, in which each subsequent word starts with an uppercase letter and no spaces or underscores are used between the words.
+  </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -310,7 +314,8 @@ let myUserName;
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, multi-word constructor names are typically written in PascalCase, which means that each word in the name starts with a capital letter and there are no spaces between the words. This convention is used to make the constructor names more readable and easier to distinguish from other types of variables in the code.</div><br />
+  <div><strong>Interview Response:</strong> In JavaScript, multi-word constructor names are typically written in PascalCase, which means that each word in the name starts with a capital letter and there are no spaces between the words. This convention is used to make the constructor names more readable and easier to distinguish from other types of variables in the code.
+  </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -338,7 +343,8 @@ var myCar = new CarModel("Honda", "Civic", 2022);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, variable case does matter in JavaScript, as it is a case-sensitive language. This means that two variables with different casing are considered to be different variables. </div><br />
+  <div><strong>Interview Response:</strong> Yes, variable case does matter in JavaScript, as it is a case-sensitive language. This means that two variables with different casing are considered to be different variables.
+  </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -429,7 +435,6 @@ console.log(myVariable); // error thrown
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> One main difference is that var is function-scoped, while let is block-scoped. This means that variables declared with var are accessible within the entire function in which they are declared, while variables declared with let are only accessible within the block in which they are declared.
-
 </div><br />
   <div><strong className="codeExample">Code Example:</strong> Take a quick look at this code snippet.<br /><br />
 
@@ -520,7 +525,8 @@ console.log(color); // #FF7F00
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Aliases are easy to remember, avoids repetition, enhances code organization, reduces cognitive load, and simplifies complex expressions.</div>
+  <div><strong>Interview Response:</strong> Aliases are easy to remember, avoids repetition, enhances code organization, reduces cognitive load, and simplifies complex expressions.
+  </div>
   </div>
 </details>
 
@@ -565,7 +571,8 @@ console.log(color); // #FF7F00
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A variable name is always camelCase and should begin with a noun to differentiate variables from functions, which generally should begin with a verb.</div>
+  <div><strong>Interview Response:</strong> A variable name is always camelCase and should begin with a noun to differentiate variables from functions, which generally should begin with a verb.
+  </div>
   </div>
 </details>
 
@@ -576,7 +583,8 @@ console.log(color); // #FF7F00
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A global variable is declared outside of a function and can be accessed anywhere in the code, while a local variable is declared inside a function and can only be accessed within that function.</div>
+  <div><strong>Interview Response:</strong> A global variable is declared outside of a function and can be accessed anywhere in the code, while a local variable is declared inside a function and can only be accessed within that function.
+  </div>
   </div>
 </details>
 
@@ -587,7 +595,8 @@ console.log(color); // #FF7F00
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The scope of a variable in JavaScript is the region of the code where the variable is accessible. In general, variables declared inside a function are only accessible within that function, while variables declared outside of a function are accessible throughout the entire scope of the code.</div>
+  <div><strong>Interview Response:</strong> The scope of a variable in JavaScript is the region of the code where the variable is accessible. In general, variables declared inside a function are only accessible within that function, while variables declared outside of a function are accessible throughout the entire scope of the code.
+  </div>
   </div>
 </details>
 
@@ -616,7 +625,7 @@ foo();
 console.log(x); // prints 10
 ```
 
-<p>In the above example, the variable x is defined in the global scope with a value of 10. Inside the foo function, a local variable with the same name is declared and assigned the value of 20. This variable shadowing causes the outer x variable to be temporarily hidden and inaccessible within the foo function. When the console.log statement is called inside foo, it prints the value of the local x variable, which is 20. However, when the console.log statement is called outside the foo function, it prints the value of the outer x variable, which is 10. This is because the local x variable has a different scope and does not affect the value of the outer x variable.</p>
+In the above example, the variable x is defined in the global scope with a value of 10. Inside the foo function, a local variable with the same name is declared and assigned the value of 20. This variable shadowing causes the outer x variable to be temporarily hidden and inaccessible within the foo function. When the console.log statement is called inside foo, it prints the value of the local x variable, which is 20. However, when the console.log statement is called outside the foo function, it prints the value of the outer x variable, which is 10. This is because the local x variable has a different scope and does not affect the value of the outer x variable.
 
   </div>
   </div>
@@ -642,7 +651,7 @@ console.log(x); // prints undefined
 console.log(y); // prints null
 ```
 
-<p>In the above example, x is declared but not assigned a value, so it has the value of undefined. On the other hand, y is explicitly assigned the value of null. When console.log is called on x, it prints undefined. When console.log is called on y, it prints null. It's important to note that undefined is also returned by a function when a return statement is not provided or when accessing an object property that doesn't exist.</p>
+In the above example, x is declared but not assigned a value, so it has the value of undefined. On the other hand, y is explicitly assigned the value of null. When console.log is called on x, it prints undefined. When console.log is called on y, it prints null. It's important to note that undefined is also returned by a function when a return statement is not provided or when accessing an object property that doesn't exist.
 
   </div>
   </div>
@@ -655,7 +664,8 @@ console.log(y); // prints null
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> NaN is a value that represents a "Not a Number" value, which can occur in math operations that produce undefined or non-numeric results. Infinity is a value that represents a positive or negative infinity, which can occur in math operations that produce very large or very small numbers.</div><br/>
+  <div><strong>Interview Response:</strong> NaN is a value that represents a "Not a Number" value, which can occur in math operations that produce undefined or non-numeric results. Infinity is a value that represents a positive or negative infinity, which can occur in math operations that produce very large or very small numbers.
+  </div>
   </div>
 </details>
 

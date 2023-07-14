@@ -464,7 +464,6 @@ In this example, `Car` is the Component, `ModelS` is the ConcreteComponent, `Car
   <div>
       <strong>Interview Response:</strong> Yes, there are alternative patterns to achieve similar functionality as the Decorator pattern in JavaScript, such as using mixins, composition, or inheritance.
     </div>
-    <br />
   </div>
 </details>
 

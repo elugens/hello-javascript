@@ -100,7 +100,11 @@ document.addEventListener('click', (e) => {
 
 When you click on the text "Click me!", the `click` event originates from the `div` inside the shadow tree. The event listener inside the shadow DOM logs the original target (`div`) and the retargeted target (`my-shadow-elem`), while the event listener attached to the document logs the retargeted target (`my-shadow-elem`). The retargeted target is the closest ancestor of the original target that is also an ancestor of the event listener, in this case, the custom element itself.
 
+---
+
+:::note
 Note that, in this example, the `div` inside the shadow DOM is encapsulated and not exposed to the light DOM. The event propagation also respects the encapsulation provided by the Shadow DOM.
+:::
 
   </div>
   </div>

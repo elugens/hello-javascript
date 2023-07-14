@@ -206,8 +206,6 @@ In the usage section, we create instances of `BankAccount` and `Command`, execut
     <div>
       <strong>Interview Response:</strong> Drawbacks of the Command pattern in JavaScript include increased complexity, potential performance overhead, and difficulty with implementing some commands that require a state.
     </div>
-    <br />
-    <div></div>
   </div>
 </details>
 
@@ -223,8 +221,6 @@ In the usage section, we create instances of `BankAccount` and `Command`, execut
     <div>
       <strong>Interview Response:</strong> Yes, there are several alternatives to the Command pattern in JavaScript, including the Strategy, Observer, and Mediator patterns, among others.
     </div>
-    <br />
-    <div></div>
   </div>
 </details>
 

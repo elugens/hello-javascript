@@ -317,7 +317,7 @@ Please note that CORS (Cross-Origin Resource Sharing) and the Origin header work
 
   <div></div>
 
-```js
+```bash
 101 Switching Protocols
 Upgrade: websocket
 Connection: Upgrade
@@ -368,8 +368,8 @@ Sec-WebSocket-Accept: hsBlbuDTkk24srzEOTBUlZAlC2g=
 
   <div></div>
 
-```js
-GET /chat
+```bash
+GET/chat
 Host: javascript.info
 Upgrade: websocket
 Connection: Upgrade
@@ -385,7 +385,7 @@ Sec-WebSocket-Protocol: soap, wamp
 
   <div></div>
 
-```js
+```bash
 101 Switching Protocols
 Upgrade: websocket
 Connection: Upgrade

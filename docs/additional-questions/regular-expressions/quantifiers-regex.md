@@ -106,7 +106,7 @@ for (const str of strings) {
 
 **Output:**
 
-```html
+```bash
 "Match found: ac"
 "No match found: bc"
 "Match found: abc"
@@ -191,7 +191,7 @@ for (const str of strings) {
 
 When you run this code, you will see the following output:
 
-```sql
+```html
 Match found: ac
 Match found: abc
 No match found: abbc
@@ -233,7 +233,7 @@ for (const str of strings) {
 
 When you run this code, you will see the following output:
 
-```sql
+```html
 No match found: ab
 Match found: aab
 Match found: aaab
@@ -276,7 +276,7 @@ for (const str of strings) {
 
 When you run this code, you will see the following output:
 
-```sql
+```html
 No match found: ab
 Match found: aab
 Match found: aaab

@@ -938,6 +938,8 @@ let commits = JSON.parse(result);
 console.log(commits[0].author.login);
 ```
 
+---
+
 :::note
 for await...of doesn't work with async iterators that are not async iterables. We should implement a while loop in this configuration instead.
 :::

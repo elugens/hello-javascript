@@ -410,7 +410,7 @@ new Promise((resolve, reject) => {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The .then() is used for handling fulfilled Promises, while .catch() is for handling rejected Promises.<br />
+  <div><strong>Interview Response:</strong> The .then() is used for handling fulfilled Promises, while .catch() is for handling rejected Promises.
   </div>
   </div>
 </details>

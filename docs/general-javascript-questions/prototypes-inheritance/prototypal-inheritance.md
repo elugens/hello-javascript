@@ -348,10 +348,10 @@ for (let prop in rabbit) {
 }
 ```
 
+---
+
 :::warning
-
 The **proto** notation is not recommended in JavaScript because it is deprecated. The proto notation is a way of creating objects that inherit from other objects. However, the proto notation is not as efficient as other methods of creating objects, and it can be difficult to use. Therefore, it is recommended to use other methods of creating objects, such as the constructor function.
-
 :::
 
   </div>

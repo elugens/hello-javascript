@@ -244,6 +244,8 @@ menu.appendChild(createMenuItem('About Us'));
 </script>
 ```
 
+---
+
 :::note
 Once you have cloned the node, you use the appendChild() or insertBefore() method to insert the cloned node into the document. If you want a deep clone, you set the deep parameter value to true if you want to clone all descendants (children); otherwise, false.
 :::
@@ -291,6 +293,8 @@ Once you have cloned the node, you use the appendChild() or insertBefore() metho
   <li>3</li>
 </ul> -->
 ```
+
+---
 
 :::note
 We rarely use DocumentFragment explicitly. Why append to a special kind of node if we can return an array of nodes instead?
@@ -343,6 +347,8 @@ Output:
 -->
 ```
 
+---
+
 :::note
 These methods come from ancient times. Nowadays, there is no reason to use them, as modern methods, such as append, prepend, before, after, remove, replaceWith, are more flexible. This information helps to understand old scripts, but now we do not need it for new development.
 :::
@@ -374,6 +380,8 @@ These methods come from ancient times. Nowadays, there is no reason to use them,
   setTimeout(() => document.write('<b>...By this.</b>'), 1000);
 </script>
 ```
+
+---
 
 :::note
 Because document.write() writes to the document stream, calling document.write() on a closed (loaded) document automatically calls document.open(), which will clear (overwrite) the document. The method comes from times when there was no DOM, no standards… Old times. It still lives because scripts are using it. In modern scripts, we can rarely see it because If we call it afterward, the existing document content gets erased. There are some use cases for this, but very few.

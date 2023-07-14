@@ -159,7 +159,7 @@ document.onkeyup = function(event) {
 ---
 
 :::warning Deprecated
-It should be noted that event.keyCode is **deprecated** and should no longer be used.
+It should be noted that event.keyCode is **deprecated** and should no longer be used, but you may come across in older code.
 :::
 
   </div>
@@ -386,7 +386,7 @@ In this example, if the user presses Ctrl+S, the 'Save action triggered' message
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The order of execution for keyboard events is  'keydown', 'keypress', and then 'keyup' events.
-  </div><br />
+  </div>
   </div>
 </details>
 

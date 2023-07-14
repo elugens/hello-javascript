@@ -503,7 +503,7 @@ xhr.onabort = function() {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The Same Origin Policy is a security measure that restricts how a document or script loaded from one origin can interact with a resource from another origin, impacting XMLHttpRequests.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -981,7 +981,7 @@ xhr.getResponseHeader('Content-Type');
 
   <div></div>
 
-```js
+```bash
 Cache-Control: max-age=31536000
 
 Content-Length: 4260

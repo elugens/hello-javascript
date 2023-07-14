@@ -172,7 +172,8 @@ result = prompt(title, [default]);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Providing a second argument, or default, for the prompt function in JavaScript is essential because it provides an initial value for the input field. This approach ensures that the browser (internet explorer) does not return undefined. </div><br />
+  <div><strong>Interview Response:</strong> Providing a second argument, or default, for the prompt function in JavaScript is essential because it provides an initial value for the input field. This approach ensures that the browser (internet explorer) does not return undefined.
+  </div><br />
   <div><strong>Technical Response:</strong> There is a chance that the user is using a browser such as Internet Explorer, which returns undefined if there is no default. This action could have ramifications that could affect the application adversely.
   </div>
   </div>

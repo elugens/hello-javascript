@@ -47,7 +47,7 @@ import StructuredData from './schemadata/PromiseAPISchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A Promise is a JavaScript object representing the eventual completion or failure of an asynchronous operation. It's useful for handling asynchronous code, improving readability and maintainability.<br />
+  <div><strong>Interview Response:</strong> A Promise is a JavaScript object representing the eventual completion or failure of an asynchronous operation. It's useful for handling asynchronous code, improving readability and maintainability.
   </div>
   </div>
 </details>
@@ -113,7 +113,7 @@ Note that in practice, you can't directly access the state of a Promise, but its
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The two main methods to handle Promises are then() for fulfilled promises, and catch() for rejected promises.<br />
+  <div><strong>Interview Response:</strong> The two main methods to handle Promises are then() for fulfilled promises, and catch() for rejected promises.
   </div>
   </div>
 </details>

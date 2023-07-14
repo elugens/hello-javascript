@@ -743,7 +743,7 @@ Access-Control-Expose-Headers: Content-Length, API-Key // <--
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> A preflight request is a CORS mechanism where the browser sends an initial HTTP OPTIONS request to the server to check if the actual request is safe and allowed.
-    </div>
+    </div><br/>
   <div><strong>Technical Response:</strong> A preflight request is a small request sent by the browser before the actual submission. It contains information like which HTTP method we used and if any custom HTTP headers are present. The preflight gives the server a chance to examine what the actual request looks like before it transmits. If the server agrees to serve the requests, it should respond with an empty body, status 200, and headers. The preflight request occurs “behind the scenes” and is invisible to JavaScript.
     </div>
   </div>

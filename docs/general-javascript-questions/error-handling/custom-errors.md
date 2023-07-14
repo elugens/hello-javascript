@@ -90,7 +90,7 @@ By using custom errors, developers can have more control and expressiveness in t
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Creating a custom error class allows more specific error types, aiding in precise error handling and providing clearer error context, improving debugging and error reporting.<br />
+  <div><strong>Interview Response:</strong> Creating a custom error class allows more specific error types, aiding in precise error handling and providing clearer error context, improving debugging and error reporting.
   </div>
   </div>
 </details>

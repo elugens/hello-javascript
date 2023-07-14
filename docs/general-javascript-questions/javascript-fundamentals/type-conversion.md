@@ -529,7 +529,8 @@ console.log(stringZero); // returns true
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> String, Number, and Boolean conversions are the most widely used type conversions in JavaScript.</div>
+  <div><strong>Interview Response:</strong> String, Number, and Boolean conversions are the most widely used type conversions in JavaScript.
+  </div>
   </div>
 </details>
 
@@ -540,7 +541,8 @@ console.log(stringZero); // returns true
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Type coercion in JavaScript refers to the automatic or implicit conversion of values from one data type to another during the execution of operations involving different types.</div>
+  <div><strong>Interview Response:</strong> Type coercion in JavaScript refers to the automatic or implicit conversion of values from one data type to another during the execution of operations involving different types.
+  </div>
   </div>
 </details>
 
@@ -551,7 +553,8 @@ console.log(stringZero); // returns true
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The `toString()` method in JavaScript converts and returns a value as a string. It's commonly used on numbers, booleans, and objects.</div>
+  <div><strong>Interview Response:</strong> The `toString()` method in JavaScript converts and returns a value as a string. It's commonly used on numbers, booleans, and objects.
+  </div>
   </div>
 </details>
 

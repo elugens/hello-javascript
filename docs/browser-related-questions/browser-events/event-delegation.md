@@ -383,7 +383,7 @@ In this example, we attempt to use event delegation with focus, blur, and mousee
   <div><strong>Interview Response:</strong> Event bubbling, or event propagation, is a process in JavaScript where an event triggers on the target element and then successively triggers on its ancestors, moving up through the DOM tree hierarchy.
     </div><br />  
   <div><strong>Technical Response:</strong> When an element triggers an event, the event handler/event listener associated with that event gets called. When an event fires on a parent element, it goes through a "bubbling" phase. The browser checks to determine if the element that caused the event has an event handler registered to it during the "bubbling" phase. If it does, the event handler executes. If it does not, it proceeds to the parent element and checks to see if it has an event handler assigned to it. The browser proceeds up the parent element chain, checking for and executing registered event handlers until it reaches the root element.
-    </div><br />  
+    </div>  
   </div>
 </details>
 

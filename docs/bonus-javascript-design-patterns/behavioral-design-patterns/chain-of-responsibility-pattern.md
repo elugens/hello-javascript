@@ -195,7 +195,8 @@ In this example, `Handler1`, `Handler2`, and `Handler3` are all handlers. They e
   <div>
       <strong>Interview Response:</strong> Disadvantages of using the Chain of Responsibility pattern in JavaScript include the potential for requests to go unhandled, increased complexity and potential performance issues with long chains.
     </div>
-    <br />
+
+---
 
 :::warning
 This pattern can lead to high runtime overhead and the handling order may not always be predictable.
@@ -216,7 +217,6 @@ This pattern can lead to high runtime overhead and the handling order may not al
   <div>
       <strong>Interview Response:</strong> Yes, some alternatives to the Chain of Responsibility pattern in JavaScript include the Command pattern, the Observer pattern, and the Strategy pattern.
     </div>
-    <br />
   </div>
 </details>
 

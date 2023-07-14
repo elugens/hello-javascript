@@ -293,13 +293,13 @@ for (let prop in user) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> No, because toString and valueOf came before Symbols debuted in the JavaScript codebase. They are regular string-name methods.</div><br />
-  <div><strong>Technical Response:</strong> No, toString and valueOf are not considered Symbols in JavaScript. They are standard methods that come from JavaScript's Object.prototype and have been in the language since its inception.<br /><br />
+  <div><strong>Technical Response:</strong> No, toString and valueOf are not considered Symbols in JavaScript. They are standard methods that come from JavaScript's Object.prototype and have been in the language since its inception.
   </div>
 
+---
+
 :::note
-
 In ECMAScript 2015 (ES6), the Symbol.toPrimitive method was introduced as a way to customize primitive value conversion in a more modern and comprehensive way.
-
 :::
 
   </div>
@@ -337,7 +337,7 @@ console.log(user.valueOf() === user); // true
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> There is no error, but such value gets ignored.</div><br />
-  <div><strong>Technical Response:</strong> For historical reasons, if toString or valueOf returns an object, there is no error, but such value is ignored (like if the method did not exist). That is because, in ancient times, there was no good "error" concept in JavaScript.<br /><br />
+  <div><strong>Technical Response:</strong> For historical reasons, if toString or valueOf returns an object, there is no error, but such value is ignored (like if the method did not exist). That is because, in ancient times, there was no good "error" concept in JavaScript.
   </div>
   </div>
 </details>
@@ -383,7 +383,7 @@ console.log(obj * 2); // 4, object converted to primitive "2", then multiplicati
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, when passing an object as an argument, it's passed by reference, meaning the function receives a reference to the original object, not a copy. This means that changes to the object will persist outside of the function.<br /><br />
+  <div><strong>Interview Response:</strong> In JavaScript, when passing an object as an argument, it's passed by reference, meaning the function receives a reference to the original object, not a copy. This means that changes to the object will persist outside of the function.
   </div>
   </div>
 </details>

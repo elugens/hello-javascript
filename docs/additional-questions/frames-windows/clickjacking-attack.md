@@ -142,7 +142,7 @@ if (top != self) {
 
 However, this simple frame-busting method can be circumvented by modern "frame-busting busting" techniques. A more secure solution, whenever possible, is to use the `X-Frame-Options` HTTP response header:
 
-```
+```bash
 X-Frame-Options: SAMEORIGIN
 ```
 
@@ -259,7 +259,7 @@ Here are code examples for each:
 1. X-Frame-Options HTTP Response Headers:
    If you're in control of the server, you can include this HTTP header in your responses:
 
-```js
+```bash
 X-Frame-Options: SAMEORIGIN
 ```
 
@@ -272,6 +272,8 @@ if (top !== self) top.location.replace(self.location.href);
 ```
 
 This code checks if the current window (`self`) is the topmost window (`top`). If it's not (meaning the page is being framed), it changes the topmost URL to match the current page's URL, essentially breaking out of the frame.
+
+---
 
 :::note
 Please note that these code examples provide a basic understanding of the approaches and may need to be adapted based on specific server configurations and coding practices.
@@ -418,7 +420,7 @@ In this Node.js/Express example, the server sets the `frame-ancestors` directive
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The `window.blur()` method can't effectively counter clickjacking. Its function is to remove focus from the current window, but it doesn't prevent a site from being framed or users from interacting with hidden elements.
-  </div>WW
+  </div>
   </div>
 </details>
 
@@ -430,7 +432,7 @@ In this Node.js/Express example, the server sets the `frame-ancestors` directive
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Mobile clickjacking is challenging due to user-interface redressing, smaller screens causing overlapping elements, lack of visibility of full URLs, and less robust security options available in mobile browsers.
-  </div><br />
+  </div>
   </div>
 </details>
 

@@ -191,7 +191,8 @@ In the first `switch` statement, because there's no case for "apple", the `defau
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The `break` statement in a JavaScript `switch` statement is used to prevent the code from running into the next `case` once a match is found and its code has been executed.</div><br/>
+  <div><strong>Interview Response:</strong> The `break` statement in a JavaScript `switch` statement is used to prevent the code from running into the next `case` once a match is found and its code has been executed.
+  </div>
   </div>
 </details>
 

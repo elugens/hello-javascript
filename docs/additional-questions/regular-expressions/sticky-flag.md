@@ -331,6 +331,8 @@ for (let match of matches) {
 // [ 'abc', index: 6, input: 'abcabcabc', groups: undefined ]
 ```
 
+---
+
 :::note
 The Official ECMA Specification, ECMA-262 as of February 15, 2020, states that if there is no g flag present, that matchAll should throw a TypeError. ( See here <https://tc39.es/ecma262/#sec-string.prototype.matchall> )
 :::

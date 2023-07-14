@@ -263,8 +263,8 @@ In this example, `curry` is a higher-order function that takes a function `fn` a
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Arity refers to the number of arguments a function accepts. In currying, functions are broken down into a series of functions with an arity of one.<br />
-  </div><br />
+  <div><strong>Interview Response:</strong> Arity refers to the number of arguments a function accepts. In currying, functions are broken down into a series of functions with an arity of one.
+  </div>
   </div>
 </details>
 

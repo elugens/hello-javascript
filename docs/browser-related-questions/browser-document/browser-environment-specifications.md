@@ -45,7 +45,6 @@ import StructuredData from './schemadata/BrowserEnvSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> It's a set of standards defining how JavaScript interacts with web browsers, including the DOM, events, and communication with servers via AJAX.
-
 </div>
   </div>
 </details>
@@ -156,7 +155,8 @@ setTimeout(() => (document.body.style.background = ''), 1000);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The CSS Object Model (CSSOM) is a browser API that represents stylesheets, allowing JavaScript to interact with and manipulate CSS rules and styles applied to HTML elements.</div><br />
+  <div><strong>Interview Response:</strong> The CSS Object Model (CSSOM) is a browser API that represents stylesheets, allowing JavaScript to interact with and manipulate CSS rules and styles applied to HTML elements.
+  </div><br />
   <div><strong>Technical Response:</strong> The CSS Object Model is a set of APIs that allow JavaScript to manipulate CSS. It is similar to the DOM, but for CSS rather than HTML. It enables users to view and alter CSS styles in real-time. It is independent of the DOM, yet they collaborate when we change the document's style rules. CSSOM, on the other hand, is rarely a necessity in reality.
   </div>
   </div>
@@ -226,7 +226,7 @@ if (confirm('Go to Wikipedia?')) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The HTML Living Standard is an evolving specification that defines HTML, DOM, and browser-related APIs, ensuring consistent behavior across browsers and addressing modern web development needs.<br />
+  <div><strong>Interview Response:</strong> The HTML Living Standard is an evolving specification that defines HTML, DOM, and browser-related APIs, ensuring consistent behavior across browsers and addressing modern web development needs.
   </div>
   </div>
 </details>
@@ -258,7 +258,7 @@ if (confirm('Go to Wikipedia?')) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Events are actions or occurrences, like clicks or keypresses, that trigger functions or event listeners to execute code in response to user interactions.<br />
+  <div><strong>Interview Response:</strong> Events are actions or occurrences, like clicks or keypresses, that trigger functions or event listeners to execute code in response to user interactions.
   </div>
   </div>
 </details>
@@ -270,7 +270,7 @@ if (confirm('Go to Wikipedia?')) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The 'window' object represents the browser window and provides properties, methods, and events for interacting with the global environment and document content.<br />
+  <div><strong>Interview Response:</strong> The <strong>window</strong> object represents the browser window and provides properties, methods, and events for interacting with the global environment and document content.<br />
   </div>
   </div>
 </details>
@@ -455,7 +455,7 @@ if ("geolocation" in navigator) {
 Modernizr is a JavaScript library that automates this process for many features, allowing you to test for support with a simple conditional statement.
 :::
 
-Please note that feature detection doesn't tell you what browser or version the user is using, it only tells you whether a particular feature is available or not.
+Please **note** that feature detection doesn't tell you what browser or version the user is using, it only tells you whether a particular feature is available or not.
 
   </div>
   </div>

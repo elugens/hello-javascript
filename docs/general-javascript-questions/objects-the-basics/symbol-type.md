@@ -146,10 +146,10 @@ let id = Symbol('id');
 console.log(id.toString()); // Symbol(id), now it works
 ```
 
+---
+
 :::note
-
 The intentional "language guard" prevents unintended conversions between strings and symbols, as they are fundamentally different. This behavior serves to avoid accidental mistakes and ensures the appropriate handling of strings and symbols.
-
 :::
 
   </div>

@@ -255,7 +255,7 @@ let nullValue = null;
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Two ways to access a value in an object: dot notation (obj.key), and bracket notation (obj['key']). Both return the corresponding value.</div><br />
-  <div><strong>Technical Response:</strong> In JavaScript, the dot notation and bracket notation get used in accessing object attributes. The dot notation commonly gets used because it is easier to read and grasp and is less verbose. The primary distinction between dot notation and bracket notation is that bracket notation allows us to access object characteristics through variables.<br />
+  <div><strong>Technical Response:</strong> In JavaScript, the dot notation and bracket notation get used in accessing object attributes. The dot notation commonly gets used because it is easier to read and grasp and is less verbose. The primary distinction between dot notation and bracket notation is that bracket notation allows us to access object characteristics through variables.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -290,7 +290,7 @@ console.log(sound);
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Technically, JavaScript allows multi-word properties in objects, but this approach does not meet specifications because it can lead to errors. We should use camel-case as recommended by most style guides.</div><br />
-  <div><strong>Technical Response:</strong> Technically, JavaScript enables multi-word properties in Objects, but it is not encouraged since it might create issues later in your code when you try to access it. The problem becomes evident when you try to access the property using dot notation. When naming functions, objects, attributes, and variables in JavaScript, you should always use the camelCase naming style.<br />
+  <div><strong>Technical Response:</strong> Technically, JavaScript enables multi-word properties in Objects, but it is not encouraged since it might create issues later in your code when you try to access it. The problem becomes evident when you try to access the property using dot notation. When naming functions, objects, attributes, and variables in JavaScript, you should always use the camelCase naming style.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -358,7 +358,7 @@ console.log(bag.appleComputers); // logs 5
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Object property names in JavaScript can be any string or Symbol. They should not conflict with built-in method names or reserved keywords, and avoid special characters.</div><br />
-  <div><strong>Technical Response:</strong> There are no known constraints on naming Object properties. However, we should not use reserved keywords in most JavaScript components. It is possible to utilize reserved keywords as property names without making a mistake, although it is not encouraged. They can be strings or symbols (a specific form of identifier).<br />
+  <div><strong>Technical Response:</strong> There are no known constraints on naming Object properties. However, we should not use reserved keywords in most JavaScript components. It is possible to utilize reserved keywords as property names without making a mistake, although it is not encouraged. They can be strings or symbols (a specific form of identifier).
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -649,7 +649,7 @@ rabbit.__proto__ = animal; // set rabbit's prototype to animal
 console.log(rabbit.eats); // Output: true
 ```
 
-<p>In this example, rabbit inherits the eats property from animal through the prototype chain, thanks to the __proto__ property. However, the use of __proto__ is not recommended due to compatibility and performance issues. Instead, you should use Object.create(), Object.getPrototypeOf(), and Object.setPrototypeOf().</p>
+In this example, rabbit inherits the eats property from animal through the prototype chain, thanks to the **proto** property. However, the use of **proto** is not recommended due to compatibility and performance issues. Instead, you should use Object.create(), Object.getPrototypeOf(), and Object.setPrototypeOf().
 
   </div>
   </div>
@@ -685,7 +685,7 @@ user.fullName = "Jane Doe";
 console.log(user.fullName); // Output: Jane Doe
 ```
 
-<p>In this example, fullName is a getter that returns the concatenation of firstName and lastName, and a setter that splits a name into firstName and lastName.</p>
+In this example, fullName is a getter that returns the concatenation of firstName and lastName, and a setter that splits a name into firstName and lastName.
 
   </div>
   </div>

@@ -106,7 +106,6 @@ When a client interacts with the `Facade` instance (by calling `simpleOperation`
 
   </div>
  </div>
-
 </details>
 
 ---
@@ -239,8 +238,6 @@ The subsystem classes may be complex and difficult to use directly, so the facad
     <div>
       <strong>Interview Response:</strong> Some benefits of using the Facade pattern in JavaScript include its ability to simplify complex systems for clients, improve code readability and maintainability, and reduce coupling between clients and subsystems.
     </div>
-
-<br />
   </div>
 </details>
 
@@ -256,7 +253,6 @@ The subsystem classes may be complex and difficult to use directly, so the facad
     <div>
       <strong>Interview Response:</strong> Some disadvantages of using the Facade pattern in JavaScript include the potential for introducing a single point of failure, limiting flexibility, and increasing the complexity of the Facade itself.
     </div>
-<br />
   </div>
 </details>
 
@@ -272,7 +268,6 @@ The subsystem classes may be complex and difficult to use directly, so the facad
     <div>
       <strong>Interview Response:</strong> Yes, there are alternative patterns that can simplify complex systems in JavaScript, such as using dependency injection, adapters, or proxies.
     </div>
-<br />
   </div>
 </details>
 

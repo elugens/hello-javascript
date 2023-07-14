@@ -47,7 +47,7 @@ import StructuredData from './schemadata/MicroTasksSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The Microtask Queue is a task queue in the JavaScript event loop that processes microtasks, which are small, short-lived tasks created by asynchronous operations like Promises, MutationObserver, or queueMicrotask.<br />
+  <div><strong>Interview Response:</strong> The Microtask Queue is a task queue in the JavaScript event loop that processes microtasks, which are small, short-lived tasks created by asynchronous operations like Promises, MutationObserver, or queueMicrotask.
   </div>
   </div>
 </details>
@@ -71,7 +71,7 @@ import StructuredData from './schemadata/MicroTasksSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Promises use the Microtask Queue to schedule the execution of their "then" and "catch" callbacks, ensuring these callbacks are executed after the current synchronous code finishes and before any other tasks.<br />
+  <div><strong>Interview Response:</strong> Promises use the Microtask Queue to schedule the execution of their "then" and "catch" callbacks, ensuring these callbacks are executed after the current synchronous code finishes and before any other tasks.
   </div>
   </div>
 </details>
@@ -83,7 +83,7 @@ import StructuredData from './schemadata/MicroTasksSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> After the current synchronous code finishes, the Microtask Queue is processed. All micro tasks are executed one by one until the queue is empty. Then, the event loop proceeds to the Task Queue.<br />
+  <div><strong>Interview Response:</strong> After the current synchronous code finishes, the Microtask Queue is processed. All micro tasks are executed one by one until the queue is empty. Then, the event loop proceeds to the Task Queue.
   </div>
   </div>
 </details>
@@ -345,7 +345,7 @@ Even though `setTimeout` is called before `queueMicrotask`, the microtask execut
 
   <div></div>
 
-Sure, here's an example. Let's say we want to watch for changes to a DOM element. We can use the `MutationObserver` API for this purpose, and its callbacks will be queued in the Microtask Queue:
+Here's an example. Let's say we want to watch for changes to a DOM element. We can use the `MutationObserver` API for this purpose, and its callbacks will be queued in the Microtask Queue:
 
 ```javascript
 let div = document.createElement('div');

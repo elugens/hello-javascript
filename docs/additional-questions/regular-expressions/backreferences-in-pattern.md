@@ -298,6 +298,8 @@ Here is a simple comparison table of backreference support in various regular ex
 
 Again, some engines may support backreferences but with certain limitations or variations, so always check the documentation specific to your use case.
 
+---
+
 :::note
 Please note that this information is accurate as of March 2021. For the most accurate and up-to-date information, refer to the official documentation for each engine.
 :::
@@ -556,6 +558,7 @@ In this regular expression, `(b?)` is a capturing group that matches zero or one
 Even though JavaScript does not directly support conditional backreferences, you can often achieve similar functionality by using multiple regular expressions and controlling the logic with JavaScript code.
 
 For up-to-date information, always refer to the official JavaScript or ECMAScript documentation or reliable sources that keep track of the evolving JavaScript language specifications.
+
   </div>
   <div><strong className="codeExample">Here's an example of using JavaScript code to conditionally handle regex matches.</strong><br /><br />
 

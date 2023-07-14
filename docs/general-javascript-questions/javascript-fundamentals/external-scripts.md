@@ -63,7 +63,8 @@ import StructuredData from './schemadata/ExternalScriptsSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> An external script is a JavaScript file that is separate from the HTML file that it is used in. It is linked to the HTML file using the &#60;script&#62; tag and is usually saved with a .js file extension.</div><br/>
+  <div><strong>Interview Response:</strong> An external script is a JavaScript file that is separate from the HTML file that it is used in. It is linked to the HTML file using the &#60;script&#62; tag and is usually saved with a .js file extension.
+  </div>
   </div>
 </details>
 
@@ -229,7 +230,8 @@ The example above can be split into two scripts to work:<br />
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Using external scripts can help to separate your code into manageable pieces, make it easier to maintain and debug, and improve the overall performance of your website by allowing the browser to cache the script.</div><br/>
+  <div><strong>Interview Response:</strong> Using external scripts can help to separate your code into manageable pieces, make it easier to maintain and debug, and improve the overall performance of your website by allowing the browser to cache the script.
+  </div>
   </div>
 </details>
 

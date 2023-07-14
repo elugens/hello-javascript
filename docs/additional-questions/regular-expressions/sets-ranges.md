@@ -77,7 +77,6 @@ console.log(result); // Outputs: ['e', 'u', 'i', 'o', 'o', 'u', 'o', 'e', 'e', '
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, a set in Regex can include a range. You can specify a range of characters using a hyphen `-`. For instance, `[a-z]` matches any lowercase letter, `[A-Z]` matches any uppercase letter, and `[0-9]` matches any digit.
-
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

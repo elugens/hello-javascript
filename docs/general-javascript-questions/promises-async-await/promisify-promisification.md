@@ -79,7 +79,7 @@ let loadScriptPromise = function (src) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Promisification simplifies asynchronous code, helps avoid callback hell, and allows for better error handling and chaining of asynchronous operations using Promise chaining or async/await.<br />
+  <div><strong>Interview Response:</strong> Promisification simplifies asynchronous code, helps avoid callback hell, and allows for better error handling and chaining of asynchronous operations using Promise chaining or async/await.
   </div>
   </div>
 </details>
@@ -91,7 +91,7 @@ let loadScriptPromise = function (src) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A Promise is an object representing the eventual completion or failure of an asynchronous operation, allowing developers to attach callbacks to handle results or errors.<br />
+  <div><strong>Interview Response:</strong> A Promise is an object representing the eventual completion or failure of an asynchronous operation, allowing developers to attach callbacks to handle results or errors.
   </div>
   </div>
 </details>
@@ -217,7 +217,7 @@ In this example, if `operationSuccessful` is `false`, we call `reject` with a ne
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A common pattern is to create a function that returns a new Promise. The executor function of the Promise wraps the original callback-based function and calls `resolve` or `reject` in the callback.<br />
+  <div><strong>Interview Response:</strong> A common pattern is to create a function that returns a new Promise. The executor function of the Promise wraps the original callback-based function and calls `resolve` or `reject` in the callback.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -526,7 +526,7 @@ In this example, `Promise.race()` is used to start `fetchData()` and `timeout(30
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Promisification is an excellent approach, especially when using async/await, but not a total replacement for callbacks. Remember, a promise may have only one result, but a callback may technically be called many times. So promisification is only meant for functions that call the callback once, and further calls get ignored.W
+  <div><strong>Interview Response:</strong> Promisification is an excellent approach, especially when using async/await, but not a total replacement for callbacks. Remember, a promise may have only one result, but a callback may technically be called many times. So promisification is only meant for functions that call the callback once, and further calls get ignored.
 </div>
   </div>
 </details>

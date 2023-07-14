@@ -98,7 +98,6 @@ console.log(str.match(regexp)); // 'HTML', 'CSS', 'JavaScript'
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> No, Regex alternation doesn't match multiple patterns simultaneously. It works on an "OR" basis, matching the first pattern that fits from left to right.
-
   </div>
   </div>
 </details>

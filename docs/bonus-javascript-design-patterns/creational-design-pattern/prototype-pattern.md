@@ -110,7 +110,6 @@ In this example, `carPrototype` is the prototype object with methods common to a
 By using the prototype, any car we create has access to the `start` and `stop` methods. This allows us to have common functionality across all instances of a type (in this case, `Car`), while still allowing individual instances to have their own properties (in this case, `model` and `year`).
 
   </div>
-
   </div>
 </details>
 
@@ -235,7 +234,7 @@ In this example, the `clone` function creates a new object that is a copy of an 
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> Disadvantages include difficulty handling cloning for objects with circular references, risks of Prototype Pollution, and potentially confusing behavior for developers unfamiliar with prototypal inheritance.<br />
+      <strong>Interview Response:</strong> Disadvantages include difficulty handling cloning for objects with circular references, risks of Prototype Pollution, and potentially confusing behavior for developers unfamiliar with prototypal inheritance.
     </div>
   </div>
 </details>

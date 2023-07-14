@@ -60,7 +60,8 @@ import StructuredData from './schemadata/NullishSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Introduced in ES2020, The nullish coalescing operator is a binary operator (??) that returns a value based on a null or undefined condition.</div><br/>
+  <div><strong>Interview Response:</strong> Introduced in ES2020, The nullish coalescing operator is a binary operator (??) that returns a value based on a null or undefined condition.
+  </div>
   </div>
 </details>
 
@@ -287,7 +288,8 @@ console.log(x); // 2
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The nullish coalescing operator treats falsy values (such as 0, '', and false) as truthy values, and returns the left-hand side operand if it's not null or undefined.</div><br/>
+  <div><strong>Interview Response:</strong> The nullish coalescing operator treats falsy values (such as 0, '', and false) as truthy values, and returns the left-hand side operand if it's not null or undefined.
+  </div>
   </div>
 </details>
 
@@ -298,7 +300,8 @@ console.log(x); // 2
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> If the left-hand side operand of the nullish coalescing operator is a non-nullish value, it's simply returned and the right-hand side operand is not evaluated.</div><br/>
+  <div><strong>Interview Response:</strong> If the left-hand side operand of the nullish coalescing operator is a non-nullish value, it's simply returned and the right-hand side operand is not evaluated.
+  </div>
   </div>
 </details>
 

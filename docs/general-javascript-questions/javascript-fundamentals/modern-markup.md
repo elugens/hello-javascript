@@ -110,7 +110,10 @@ import StructuredData from './schemadata/ModernMarkupSchemaData.js';
 </html>
 ```
 
-<div>In this example, we use an arrow function and template literals for cleaner code, default parameters for flexibility, destructuring for easier assignment, ES6 module exports, and class syntax for object-oriented programming.</div><br/>
+In this example, we use an arrow function and template literals for cleaner code, default parameters for flexibility, destructuring for easier assignment, ES6 module exports, and class syntax for object-oriented programming.
+
+<div>
+</div>
 </details>
 
 ---
@@ -296,7 +299,10 @@ fetchData()
   });
 ```
 
-<div>In this example, fetchData returns a Promise that simulates an asynchronous operation using setTimeout. The resolve function is called with the resulting data once the operation is complete. The then method handles the fulfilled Promise, logging the response, while the catch method handles errors.</div><br/>
+In this example, fetchData returns a Promise that simulates an asynchronous operation using setTimeout. The resolve function is called with the resulting data once the operation is complete. The then method handles the fulfilled Promise, logging the response, while the catch method handles errors.
+
+<div>
+</div>
 </details>
 
 ---
@@ -335,7 +341,10 @@ async function main() {
 main();
 ```
 
-<div>In this example, fetchData returns a Promise simulating an asynchronous operation. The main function is declared as async, allowing the use of await to pause execution until the Promise resolves. This results in more readable and synchronous-like code while handling asynchronous operations.</div><br/>
+In this example, fetchData returns a Promise simulating an asynchronous operation. The main function is declared as async, allowing the use of await to pause execution until the Promise resolves. This results in more readable and synchronous-like code while handling asynchronous operations.
+
+<div>
+</div>
 </details>
 
 ---
@@ -369,8 +378,10 @@ const arrayWithZero = [0, ...arr1];
 console.log(arrayWithZero); // Output: [0, 1, 2, 3]
 ```
 
-<div>In this example, the spread operator is used to merge arrays, create a copy of an array, and insert elements into a new array. It simplifies array manipulation and improves code readability.
-</div><br/>
+In this example, the spread operator is used to merge arrays, create a copy of an array, and insert elements into a new array. It simplifies array manipulation and improves code readability.
+
+<div>
+</div>
 </details>
 
 ---
@@ -397,8 +408,10 @@ function Welcome(props) {
 export default Welcome;
 ```
 
-<div>In this example, the Welcome component is defined using JSX. The &#60;h1&#62; element is written with HTML-like syntax directly in the JavaScript code.  &#123;props.name&#125; is a JavaScript expression within the JSX, displaying the value of the name prop when the component is rendered. The component can be imported and used in other parts of a React application, making it easier to manage UI components.
-</div><br/>
+In this example, the Welcome component is defined using JSX. The &#60;h1&#62; element is written with HTML-like syntax directly in the JavaScript code.  &#123;props.name&#125; is a JavaScript expression within the JSX, displaying the value of the name prop when the component is rendered. The component can be imported and used in other parts of a React application, making it easier to manage UI components.
+
+<div>
+</div>
 </details>
 
 ---
@@ -408,8 +421,8 @@ export default Welcome;
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> ES6, or ECMAScript 2015, is a major update to JavaScript introducing new features and syntax, enhancing readability, modularity, and maintainability, and promoting better programming practices.<br/>
-  </div><br/>
+  <div><strong>Interview Response:</strong> ES6, or ECMAScript 2015, is a major update to JavaScript introducing new features and syntax, enhancing readability, modularity, and maintainability, and promoting better programming practices.
+  </div>
   </div>
 </details>
 
@@ -420,8 +433,8 @@ export default Welcome;
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> ES6 introduced features such as arrow functions, classes, template literals, destructuring, Promises, modules (import/export), let and const, default parameters, rest and spread operators, and more.<br/>
-  </div><br/>
+  <div><strong>Interview Response:</strong> ES6 introduced features such as arrow functions, classes, template literals, destructuring, Promises, modules (import/export), let and const, default parameters, rest and spread operators, and more.
+  </div>
   </div>
 </details>
 
@@ -453,8 +466,10 @@ function example() {
 example();
 ```
 
-<div>In this example, varVariable has function scope, so it's accessible throughout the example function, including outside the if block. In contrast, letVariable has block scope and is only accessible within the if block. Attempting to access letVariable outside the block results in a ReferenceError. Using let provides better control over variable scope and reduces the risk of unintentional access or modification.
-</div><br/>
+In this example, varVariable has function scope, so it's accessible throughout the example function, including outside the if block. In contrast, letVariable has block scope and is only accessible within the if block. Attempting to access letVariable outside the block results in a ReferenceError. Using let provides better control over variable scope and reduces the risk of unintentional access or modification.
+
+<div>
+</div>
 </details>
 
 ---
@@ -484,8 +499,10 @@ console.log(squareTraditional(4)); // 16
 console.log(squareArrow(4)); // 16
 ```
 
-<div>In this example, squareTraditional is a traditional function expression, while squareArrow is an arrow function. The arrow function has a more concise syntax, with an implicit return for single expressions. Both functions calculate the square of a number and produce the same result, but the arrow function makes the code shorter and more readable.
-</div><br/>
+In this example, squareTraditional is a traditional function expression, while squareArrow is an arrow function. The arrow function has a more concise syntax, with an implicit return for single expressions. Both functions calculate the square of a number and produce the same result, but the arrow function makes the code shorter and more readable.
+
+<div>
+</div>
 </details>
 
 ---
@@ -516,8 +533,10 @@ console.log(greetingTraditional); // Hello, John. You are 30 years old.
 console.log(greetingLiteral); // Hello, John. You are 30 years old.
 ```
 
-<div>In this example, greetingTraditional uses traditional string concatenation with single quotes and + operators. greetingLiteral uses a template literal, enclosed in backticks, with embedded expressions inside $&#123;&#125;. Both strings produce the same result, but the template literal is more readable and easier to work with, especially for complex strings.
-</div><br/>
+In this example, greetingTraditional uses traditional string concatenation with single quotes and + operators. greetingLiteral uses a template literal, enclosed in backticks, with embedded expressions inside $&#123;&#125;. Both strings produce the same result, but the template literal is more readable and easier to work with, especially for complex strings.
+
+<div>
+</div>
 </details>
 
 ---
@@ -556,8 +575,14 @@ const dog = new Dog('Rex');
 dog.speak(); // Rex barks.
 ```
 
-<div>In this example, we define an Animal class using the class keyword. The constructor function initializes the object with a name property. The speak method is added to the class prototype.<br/><br/>The Dog class extends the Animal class, inheriting its properties and methods. We override the speak method to provide a custom implementation for dogs.<br/><br/>Finally, we create a Dog instance and call its speak method. The ES6 class syntax provides a more intuitive way to define and work with objects and inheritance in JavaScript.
-</div><br/>
+In this example, we define an Animal class using the class keyword. The constructor function initializes the object with a name property. The speak method is added to the class prototype.
+
+The Dog class extends the Animal class, inheriting its properties and methods. We override the speak method to provide a custom implementation for dogs.
+
+Finally, we create a Dog instance and call its speak method. The ES6 class syntax provides a more intuitive way to define and work with objects and inheritance in JavaScript.
+
+<div>
+</div>
 </details>
 
 ---
@@ -589,9 +614,12 @@ console.log(age);  // 30
 console.log(city); // 'New York'
 ```
 
-<div>In this example, we have a person object with three properties: name, age, and city. We use destructuring assignment to extract the properties into individual variables.<br/><br/>The line const &#123; name, age, city &#125; = person; creates three new variables with the same names as the properties and assigns the corresponding property values. This concise syntax improves readability, especially when working with complex data structures.<br/>
+In this example, we have a person object with three properties: name, age, and city. We use destructuring assignment to extract the properties into individual variables.
+
+The line const &#123; name, age, city &#125; = person; creates three new variables with the same names as the properties and assigns the corresponding property values. This concise syntax improves readability, especially when working with complex data structures.
+
+<div>
 </div>
-<br/>
 </details>
 
 ---
@@ -632,8 +660,8 @@ greet('John', 'Hi'); // 'Hi, John!'
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> JavaScript modules are separate files containing reusable code, promoting modularity, maintainability, and organization by enabling import/export of functions, classes, or variables across projects.<br/>
-  </div><br/>
+  <div><strong>Interview Response:</strong> JavaScript modules are separate files containing reusable code, promoting modularity, maintainability, and organization by enabling import/export of functions, classes, or variables across projects.
+  </div>
   </div>
 </details>
 

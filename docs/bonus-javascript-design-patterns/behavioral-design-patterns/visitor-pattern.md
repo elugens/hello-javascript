@@ -242,7 +242,6 @@ This is a simple example, and the real value of the Visitor pattern comes when t
     <div>
       <strong>Interview Response:</strong> There are several alternatives to the Visitor pattern including the Command Pattern, using sealed types, lambda expressions, or polymorphism.
     </div>
-    <br />
   </div>
 </details>
 

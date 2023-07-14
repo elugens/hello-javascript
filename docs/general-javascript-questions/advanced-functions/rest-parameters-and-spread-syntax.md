@@ -43,7 +43,6 @@ import StructuredData from './schemadata/RestParamSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The spread syntax (...) in JavaScript is used to expand iterable objects into individual elements or key-value pairs. It's useful for array concatenation, cloning, and function argument passing.
-<br /><br />
   </div>
   </div>
 </details>
@@ -56,7 +55,6 @@ import StructuredData from './schemadata/RestParamSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The rest parameter was introduced in ECMAScript 2015, also known as ES6.
-<br /><br />
   </div>
   </div>
 </details>
@@ -69,7 +67,6 @@ import StructuredData from './schemadata/RestParamSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The rest parameter is a syntax that allows functions to accept any number of arguments, aggregating them into a single array.
-<br /><br />
   </div>
   </div>
 </details>
@@ -301,7 +298,7 @@ function example(...args) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The rest parameter allows a function to accept an indefinite number of arguments, making it more flexible and adaptable to different use cases. It can also make the code shorter and easier to read by eliminating the need for explicit argument handling.<br /><br />
+  <div><strong>Interview Response:</strong> The rest parameter allows a function to accept an indefinite number of arguments, making it more flexible and adaptable to different use cases. It can also make the code shorter and easier to read by eliminating the need for explicit argument handling.
   </div>
   </div>
 </details>
@@ -397,7 +394,7 @@ let obj2 = {...obj1, c: 3}; // obj2: {a: 1, b: 2, c: 3}
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The spread syntax was introduced in ECMAScript 6 (ES6), also known as ECMAScript 2015, which is a version of JavaScript released in 2015.<br /><br />
+  <div><strong>Interview Response:</strong> The spread syntax was introduced in ECMAScript 6 (ES6), also known as ECMAScript 2015, which is a version of JavaScript released in 2015.
   </div>
   </div>
 </details>
@@ -409,7 +406,7 @@ let obj2 = {...obj1, c: 3}; // obj2: {a: 1, b: 2, c: 3}
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In ES9 (ECMAScript 2018), both the spread syntax and the rest parameter were updated to allow them to be used with objects as well as arrays, providing more flexibility for handling object properties as well as array elements.<br /><br />
+  <div><strong>Interview Response:</strong> In ES9 (ECMAScript 2018), both the spread syntax and the rest parameter were updated to allow them to be used with objects as well as arrays, providing more flexibility for handling object properties as well as array elements.
   </div>
   </div>
 </details>
@@ -449,8 +446,8 @@ console.log(copiedObject); // { a: 1, b: 2, c: 3 }
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, the spread syntax can be used to merge multiple arrays or objects by spreading their elements or properties into a new array or object, respectively.<br /><br />
-  </div>
+  <div><strong>Interview Response:</strong> Yes, the spread syntax can be used to merge multiple arrays or objects by spreading their elements or properties into a new array or object, respectively.
+  </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>

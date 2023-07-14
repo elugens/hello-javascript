@@ -112,14 +112,11 @@ Although not typically "modern" as of 2023, revealing module pattern has been us
 ### To which pattern family does the Revealing pattern belong?
 
 <details className='answer'>
-  <summary>
-    <strong>View Answer:</strong>
-  </summary>
+  <summary><strong>View Answer:</strong></summary>
   <div>
   <div>
       <strong>Interview Response:</strong> The JavaScript Revealing Pattern is a member of the module pattern family, which is a group of design patterns used to organize and structure code in a modular way for better code maintainability and reusability.
     </div>
-    <br/>
 </div>
 </details>
 
@@ -128,14 +125,11 @@ Although not typically "modern" as of 2023, revealing module pattern has been us
 ### When should you utilize the JavaScript Revealing Pattern?
 
 <details className='answer'>
-  <summary>
-    <strong>View Answer:</strong>
-  </summary>
+  <summary><strong>View Answer:</strong></summary>
   <div>
   <div>
       <strong>Interview Response:</strong> The JavaScript Revealing Pattern should be used when there is a need to expose only specific functions and variables publicly while keeping others private.
     </div>
-    <br/>
 </div>
 </details>
 
@@ -151,7 +145,6 @@ Although not typically "modern" as of 2023, revealing module pattern has been us
   <div>
       <strong>Interview Response:</strong> The Revealing Pattern in JavaScript allows developers to expose only the necessary data and functions while keeping the rest private, resulting in more modular, readable, and maintainable code.
     </div>
-    <br/>
 </div>
 </details>
 
@@ -167,7 +160,6 @@ Although not typically "modern" as of 2023, revealing module pattern has been us
   <div>
       <strong>Interview Response:</strong> The Revealing Pattern in JavaScript can lead to name collisions, making it difficult to debug and maintain. It can also make code harder to understand for developers unfamiliar with the pattern.
     </div>
-    <br/>
 </div>
 </details>
 
@@ -183,7 +175,6 @@ Although not typically "modern" as of 2023, revealing module pattern has been us
   <div>
       <strong>Interview Response:</strong> Yes, there are alternatives to the Revealing Pattern in JavaScript, such as the Module Pattern, ES6 modules, and the Prototype Pattern, each with their own advantages and disadvantages.
     </div>
-    <br/>
 </div>
 </details>
 

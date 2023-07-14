@@ -81,7 +81,6 @@ Remember, always sanitize and validate any user-provided data if you absolutely 
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> In general, it is discouraged to use `eval` in production code due to security risks and potential performance implications. There are usually alternative approaches to achieve the desired functionality.
-<br />
   </div>
   </div>
 </details>

@@ -137,7 +137,7 @@ let element = document.querySelector(".myClass");
   <div>
   <div><strong>Interview Response:</strong> The main rule for naming an element's ID attribute is that it must be unique within the document, ensuring each ID refers to only one specific element.
 </div><br/>
-  <div><strong>Technical Response:</strong> The id has to be unique. In the document, there can only be one element with the supplied id. When there are several elements with the same id, the behavior of methods that use it, such as documents, is unpredictable. getElementById may return an element at random from this list. Please abide by the rules and keep your id unique. In addition, you should avoid
+  <div><strong>Technical Response:</strong> The id has to be unique. In the document, there can only be one element with the supplied id. When there are several elements with the same id, the behavior of methods that use it, such as documents, is unpredictable. getElementById may return an element at random from this list. Please abide by the rules and keep your id unique.
 </div>
   </div>
 </details>
@@ -454,6 +454,8 @@ document.getElementsByTagName('input').value = 5;
 document.getElementsByTagName('input')[0].value = 5;
 ```
 
+---
+
 :::note
 Novice coders mistake the getElementsByTagName return for an element, which is incorrect. That fails because it takes a collection of inputs and assigns the value rather than the elements inside it. We should either loop over the collection or retrieve an element by index and assign it.
 :::
@@ -707,7 +709,7 @@ In this example, the script first selects the element with the class `parent-cla
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> getElementById is generally faster than querySelector since it's optimized for ID-based searches, while querySelector performs more general CSS selector searches.
-  </div><br />
+  </div>
   </div>
 </details>
 

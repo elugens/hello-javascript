@@ -449,14 +449,13 @@ let results = db.readTransaction(function(tx) {
 console.log(results);
 ```
 
-  </div>
-
 ---
 
 :::warning
 Please note that **openDatabaseSync()** is a deprecated API, and it's recommended to use the asynchronous IndexedDB API for most modern applications.
 :::
 
+  </div>
   </div>
 </details>
 
@@ -482,7 +481,7 @@ Please note that **openDatabaseSync()** is a deprecated API, and it's recommende
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, IndexedDB is a standard web API supported by all modern browsers. However, implementation details may vary.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -701,6 +700,8 @@ openRequest.onerror = function(event) {
 
 You will have to wrap this code in your service worker. Here is a link if you would like to see a complete implemenation of the code. [Integrating IndexedDB into site with a Service Worker](https://gist.github.com/prof3ssorSt3v3/7724c092b7acd45048a2499c3ba223b4)
 
+---
+
 :::note
 It's important to note that IndexedDB in a Service Worker operates in a different context compared to IndexedDB in a web page. The Service Worker has its own global scope, separate from web pages, and can persistently store data even when web pages are closed or not actively in use.
 :::
@@ -776,7 +777,7 @@ openRequest.onsuccess = function () {
   <div>
     <div>
       <strong>Interview Response:</strong> IndexedDB follows the same-origin policy, meaning data stored in IndexedDB is restricted to the same domain where it was created and can't be accessed cross-domain.
-    </div>
+    </div><br/>
     <div>
       <strong>Technical Details:</strong> We can have many databases with different names, but all exist within the current origin (domain/protocol/port). Different websites cannot access each other’s databases. Some novice programmers may attempt to access the database within an &#8249;iframe&#8250;, but this approach does not meet the recommendation, because it is insecure.
     </div>
@@ -1253,8 +1254,7 @@ let transaction = db.transaction('books', 'readwrite'); // (1)
   <div>
     <div>
       <strong>Interview Response:</strong> The two methods for storing data in an IndexedDB object store are `put()` and `add()`. Both store key-value pairs, but behave differently on key conflict.
-    </div>
-    <br />
+    </div><br />
     <div>
       <strong>Interview Response:</strong> Object stores support two methods: the put() and add() methods that store values. The put(value, &#91;key&#93;) adds values to the store. The object store supplies the key only if the object store does not have keyPath or autoIncrement option. If there is already a value with the same key, it gets replaced. The add(value, &#91;key&#93;) function is the same as the put method, except if a value with the same key already exists, the request fails, and an error with the name "ConstraintError" gets created.
     </div>

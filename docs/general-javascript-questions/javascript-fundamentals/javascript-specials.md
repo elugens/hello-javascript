@@ -60,8 +60,7 @@ import StructuredData from './schemadata/JavaScriptSpecialsSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> To enable strict mode in JavaScript, add the directive "use strict" at the beginning of a script or function, which enables stricter parsing and error handling.</div><br />
-  <div><strong>Technical Response:</strong> In JavaScript, To enforce strict mode, we must use the “use strict;” directive placed at the top of our code or function body. The directive must appear at the beginning of a script or at the start of a function body. Everything still works without "use strict", but some features behave in the old fashion, “compatible” way. We would generally prefer modern behavior.<br /><br />
-
+  <div><strong>Technical Response:</strong> In JavaScript, To enforce strict mode, we must use the “use strict;” directive placed at the top of our code or function body. The directive must appear at the beginning of a script or at the start of a function body. Everything still works without "use strict", but some features behave in the old fashion, “compatible” way. We would generally prefer modern behavior.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -181,7 +180,6 @@ console.log(beverage); // "Beer"
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> JavaScript functions commonly used, in application development, include named functions, anonymous functions, and arrow functions, each serving different purposes and offering unique syntax.
-
 </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

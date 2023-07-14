@@ -387,7 +387,7 @@ if (e.isTrusted) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, custom events in JavaScript can bubble up through the DOM if the `bubbles` property is set to `true` in the options object when creating the event.
+  <div><strong>Interview Response:</strong> Yes, custom events in JavaScript can bubble up through the DOM if the <strong>bubbles</strong> property is set to `true` in the options object when creating the event.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong> Showing a custom event bubbling up through the DOM.<br /><br />
 

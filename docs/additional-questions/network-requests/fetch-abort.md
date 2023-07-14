@@ -334,7 +334,7 @@ function handleInput(input) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The response object of an aborted fetch is not fully received or processed. Attempting to read from it will reject the promise with an `AbortError`.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -509,7 +509,7 @@ As always, be sure to check for compatibility as not all APIs or browsers may su
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> AbortController is part of the Web API provided by browsers, not part of the core JavaScript language. It's specified in the DOM Living standard.
-  </div><br />
+  </div>
   </div>
 </details>
 

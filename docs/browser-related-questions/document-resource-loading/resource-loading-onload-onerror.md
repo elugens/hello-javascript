@@ -49,7 +49,7 @@ import StructuredData from './schemadata/ResourceLoadingSchemaData.js';
   <div><strong>Interview Response:</strong> It's the process of loading external resources like images, scripts, stylesheets, etc., which are necessary for the proper functioning of a web application.
   </div><br />
   <div><strong>Technical Details:</strong> When it comes to web development, loading external resources such as images, scripts, and stylesheets is crucial to ensure that the web application functions properly. This process is known as resource loading, and it's essential to make sure that all necessary files are available before the page can be displayed. Depending on the requirements of the application, there are various techniques to load resources in the most optimal way possible. Regardless of the approach used, it's vital to minimize latency and improve the user experience.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -152,7 +152,9 @@ script.onerror = function () {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, limitations exist. `onload` and `onerror` can't catch errors from syntax issues within scripts or track loading of resources that don't fire load/error events. Errors that may occur during script processing and execution are out of scope for these events.
-    </div><br />
+    </div>
+
+---
 
 :::note
 The onload event triggers if a script is successfully loaded, even with programming mistakes. We can use the window.onerror global handler to track script errors.
@@ -219,7 +221,7 @@ fetch('https://api.different-domain.com/data')
 
 In this case, the server `https://api.different-domain.com` must include the appropriate CORS headers to allow the request. The server could respond with headers like:
 
-```
+```html
 Access-Control-Allow-Origin: https://your-domain.com
 ```
 
@@ -227,13 +229,17 @@ This tells the browser that it's okay to make a request from `https://your-domai
 
 However, without the appropriate server configuration, the CORS policy will block the request. You would see an error in your browser's console along the lines of:
 
-```
+```html
 Access to fetch at 'https://api.different-domain.com/data' from origin 'https://your-domain.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.
 ```
 
 That's why it's important to properly set up your server's CORS policy when you expect to serve resources to different domains.
 
-(Note: This is a simplified explanation. The actual CORS policy and implementation can be more complex and involves other headers as well, like `Access-Control-Allow-Methods`, `Access-Control-Allow-Headers`, `Access-Control-Max-Age`, etc.)
+---
+
+:::note
+Note: This is a simplified explanation. The actual CORS policy and implementation can be more complex and involves other headers as well, like `Access-Control-Allow-Methods`, `Access-Control-Allow-Headers`, `Access-Control-Max-Age`, etc.
+:::
 
   </div>
   </div>
@@ -442,6 +448,8 @@ link.as = "script";
 document.head.appendChild(link);
 ```
 
+---
+
 :::note
 Note: Ensure you're using preloading judiciously, as too much preloading can degrade the initial page load performance.
 :::
@@ -583,6 +591,8 @@ Here is an example of how you can use the `rel="preload"` attribute in HTML:
 ```
 
 In this HTML document, the styles from "style.css" and the JavaScript from "script.js" are preloaded. This means the browser begins downloading these resources as soon as possible, even before they are requested by the `<script>` and `<link>` tags. This can improve performance if these resources are needed soon after the HTML starts parsing.
+
+---
 
 :::note
 Note that preloaded resources need to be consumed by a matching resource request in your JavaScript or CSS, otherwise they may be fetched twice.
@@ -759,7 +769,7 @@ This checks if the browser supports service workers, and if it does, it register
 
 HTTP caching is typically handled on the server-side within HTTP headers. Here is an example of how it might look in an HTTP response:
 
-```
+```bash
 HTTP/1.1 200 OK
 Date: Sat, 04 Jun 2023 16:00:00 GMT
 Content-Type: text/html
@@ -871,7 +881,11 @@ app.listen(port, () => {
 
 In this example, any static files served from the `public` directory will include the `Cache-Control: public, max-age=86400` header in the response. This tells clients that they're allowed to publicly cache the resource and that the resource is considered fresh for 24 hours (86400 seconds). After that, the client needs to check back with the server to see if the resource has been updated.
 
+---
+
+:::note
 Please note that different types of resources might need different caching strategies. For example, you might want to cache images, CSS, and JavaScript files for a longer period because they might not change frequently, but HTML files could be cached for a shorter period or not cached at all if they are dynamic and change frequently.
+:::
 
   </div>
   </div>

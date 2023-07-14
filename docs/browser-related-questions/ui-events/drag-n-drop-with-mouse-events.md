@@ -234,7 +234,7 @@ import StructuredData from './schemadata/DragDropSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> We need to prevent the default behavior in the 'dragover' event to allow the drop target to accept the dragged element and define custom behavior instead of the default behavior defined by the browser.
-  </div><br />
+  </div>
   </div>
 </details>
 

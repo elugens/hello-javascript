@@ -126,7 +126,6 @@ The client code creates `Soldier` objects via the factory. If two soldiers belon
 
 </div>
  </div>
-
 </details>
 
 ---
@@ -232,13 +231,11 @@ In this example, the `Color` objects are the flyweights, which are created and m
   <div>
   <div>
       <strong>Interview Response:</strong> The Flyweight pattern should be used when there is a large number of objects with similar characteristics, and memory usage needs to be optimized by sharing common data.
-    </div>
-<br />
+    </div><br />
     <div>
       <strong>Technical Response:</strong> We should use this pattern when our application has many objects that consume the same data or when memory storage costs are high. JavaScript uses this pattern to distribute a list of immutable strings throughout the program.<br/><br/>
       This pattern most commonly gets found in network programs or word processors, and it can be used in internet browsers to prevent the same images from loading. The flyweight pattern enables image caching. As a result, only new images are loaded from the Web when a web page loads, while existing ones get extracted from the cache.
     </div>
-<br />
   </div>
 </details>
 
@@ -254,8 +251,6 @@ In this example, the `Color` objects are the flyweights, which are created and m
     <div>
       <strong>Interview Response:</strong> Advantages of using the Flyweight pattern in JavaScript include reduced memory usage, improved performance, and increased scalability and flexibility in managing large sets of similar objects.
     </div>
-
-<br />
   </div>
 </details>
 

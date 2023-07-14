@@ -35,16 +35,18 @@ import StructuredData from './schemadata/RefTypesSchemaData.js';
 <JsonLD data={StructuredData} /> -->
 
 <head>
-  <title>Reference Types | JavaScript Frontend Phone Interview Answer</title>
+  <title>Reference Type | JavaScript Frontend Phone Interview Answer</title>
 </head>
 
-**Miscellaneous: Reference Types**
+**Miscellaneous: Reference Type**
 
 <CloseAllAnswers />
 
 ---
 
-Please Read more about reference types here: <https://javascript.info/reference-type>
+### Reference Type - Advanced Topic
+
+Please Read more about reference type here: <https://javascript.info/reference-type>
 
 <details>
   <summary><strong>View Code Example:</strong></summary>

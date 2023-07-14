@@ -440,7 +440,7 @@ observer.observe(document.body, { attributes: true, childList: true, subtree: tr
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> A MutationRecord provides details about a specific mutation, like the type of mutation, target node, and the previous and new values.
-  </div><br />
+  </div>
   </div>
 </details>
 

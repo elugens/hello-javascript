@@ -233,7 +233,7 @@ In this example, a CSS custom property `--main-color` is defined in the main doc
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, external stylesheets can be applied to Shadow DOM by including a &#60;link rel="stylesheet"&#62; element inside the Shadow Root. However, global styles from the main document still won't penetrate the Shadow DOM.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -245,7 +245,7 @@ In this example, a CSS custom property `--main-color` is defined in the main doc
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The `::slotted()` pseudo-element in CSS targets light DOM children that have been placed into slots in a Shadow DOM. It allows you to style slotted content from within the Shadow DOM.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -257,7 +257,7 @@ In this example, a CSS custom property `--main-color` is defined in the main doc
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> To handle browser compatibility with Shadow DOM, you can use polyfills like ShadyDOM and ShadyCSS for non-supporting browsers. Checking compatibility tables and progressively enhancing your features is also a good practice.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -269,7 +269,7 @@ In this example, a CSS custom property `--main-color` is defined in the main doc
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Parts and themes in Shadow DOM refer to the `part` and `::part` CSS features. They allow developers to style certain elements in a Shadow DOM from the main document, increasing the flexibility of web components.
-  </div><br />
+  </div>
   </div>
 </details>
 

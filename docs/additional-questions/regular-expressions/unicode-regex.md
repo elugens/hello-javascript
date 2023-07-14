@@ -48,7 +48,7 @@ import StructuredData from './schemadata/UnicodeSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Unicode is a standard for representing a wide range of characters from different languages and symbols in JavaScript and other programming languages.
-  </div><br />
+  </div>
   </div>
 </details>
 

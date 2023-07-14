@@ -212,13 +212,10 @@ mySportsCar.driveSideways();
 ### To which design pattern family does the Mixin pattern belong?
 
 <details className='answer'>
-  <summary>
-    <strong>View Answer:</strong>
-  </summary>
+  <summary><strong>View Answer:</strong></summary>
   <div>
     <div>
       <strong>Interview Response:</strong> The Mixin pattern is a structural design pattern. It belongs to a family of patterns that deal with how classes and objects are composed to form larger structures. Some other structural patterns are Adapter, Bridge, Composite, Decorator, Facade, Flyweight and Proxy.
-<br/>
     </div>
   </div>
 </details>
@@ -246,12 +243,9 @@ mySportsCar.driveSideways();
   <div>
     <div>
       <strong>Interview Response:</strong> You should use the Mixin pattern when you want to add multiple behaviors to a class without inheritance.
-<br/>
-    </div>
-    <br/>
+    </div><br/>
     <div>
       <strong>Technical Response:</strong> You should use the Mixin pattern when you want to add multiple behaviors to a class without inheritance. For example, you can use mixins to add event-handling, logging, validation or other features to a class. Mixins are useful when you want to reuse code across different classes that do not share a common ancestor.
-<br/>
     </div>
   </div>
 </details>
@@ -296,7 +290,6 @@ mySportsCar.driveSideways();
     <div>
       <strong>Interview Response:</strong> The main drawback is the potential for naming collisions, since Mixins can inadvertently overwrite existing methods in a class. The Mixin pattern can make the code more complex and harder to understand, especially if the mixin objects are not well-documented or if there are conflicts between the mixin and target objects.
     </div>
-    <br/>
   </div>
 </details>
 
@@ -405,6 +398,8 @@ In this example:
 
 - `duck` is the target object. After the `mixin` function is called with `duck`, `CanWalk`, and `CanSwim`, the `duck` object has both the `walk` and `swim` methods.
 
+---
+
 :::tip Note:
 Note that the Mixin pattern can be implemented with both objects and classes in JavaScript. In the example above, objects are used for simplicity.
 :::
@@ -429,7 +424,6 @@ Note that the Mixin pattern can be implemented with both objects and classes in 
     <div>
       <strong>Technical Response:</strong> Inheritance is a way of creating a new object that inherits properties and methods from a parent object, while the Mixin pattern is a way of adding functionality to an object by mixing in the properties and methods of other objects.
     </div>
-    <br/>
   </div>
 </details>
 

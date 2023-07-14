@@ -221,7 +221,7 @@ for (let key in proxy) console.log(key); // test, iteration works (3)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A trap is a function in the handler object that gets called when a specific operation, like property access or function invocation, is performed on the target object wrapped by the Proxy.<br />
+  <div><strong>Interview Response:</strong> A trap is a function in the handler object that gets called when a specific operation, like property access or function invocation, is performed on the target object wrapped by the Proxy.
   </div>
   </div>
 </details>
@@ -370,8 +370,7 @@ console.log('This line is never reached (error in the line above)');
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Semantics that remain unchanged when implementing custom operations are called invariants. Invariants in JavaScript proxies refer to rules enforced by the language that must be followed when implementing proxy traps, ensuring consistency and preventing unexpected behavior or errors in the code.
- If you violate the invariants of a handler, a TypeError gets thrown.
+  <div><strong>Interview Response:</strong> Semantics that remain unchanged when implementing custom operations are called invariants. Invariants in JavaScript proxies refer to rules enforced by the language that must be followed when implementing proxy traps, ensuring consistency and preventing unexpected behavior or errors in the code. If you violate the invariants of a handler, a TypeError gets thrown.
  </div><br />
   <div><strong>Technical Response:</strong> In the context of JavaScript Proxies, "invariants" refer to rules that JavaScript's internal methods must follow. These rules help maintain the consistency and predictability of the language. The Proxy API is designed to respect these invariants. That means, when you define a handler for a Proxy, it's expected that your handler logic will also respect these invariants. If it doesn't, JavaScript will throw a TypeError to prevent the invariant violation.
   </div><br />
@@ -558,7 +557,7 @@ sayHi("John"); // Hello, John! (after 3 seconds)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The Reflect API is a built-in JavaScript object that provides methods for performing low-level operations on objects, making it easier to create dynamic and extensible code, often used in conjunction with Proxies.<br />
+  <div><strong>Interview Response:</strong> The Reflect API is a built-in JavaScript object that provides methods for performing low-level operations on objects, making it easier to create dynamic and extensible code, often used in conjunction with Proxies.
   </div>
   </div>
 </details>

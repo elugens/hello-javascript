@@ -88,7 +88,7 @@ if (newWindow) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, users can block JavaScript popup windows using their web browser's built-in pop-up blocker settings, browser extensions, or adjusting privacy settings to disallow JavaScript execution.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -426,7 +426,7 @@ newWindow.onload = function () {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> No, from a user's perspective, it's generally not possible to distinguish between a user-initiated and a script-initiated popup, as both appear as new browser windows or tabs.
-  </div><br />
+  </div>
   </div>
 </details>
 

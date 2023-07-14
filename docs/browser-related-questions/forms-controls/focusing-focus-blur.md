@@ -48,7 +48,7 @@ import StructuredData from './schemadata/FocusingSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Form focus refers to an element's state where it's ready to receive user input. For instance, a text field gaining focus allows the user to type into it.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -60,7 +60,7 @@ import StructuredData from './schemadata/FocusingSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The 'focus' event occurs when an element gets focus. This can be achieved by clicking on an input element or using the tab key to navigate.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -130,7 +130,7 @@ In this example, we first get a reference to an input element using `document.ge
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> 'focusin' and 'focusout' are events that bubble in the document's hierarchy. They are triggered when an element gains or loses focus, respectively.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -142,7 +142,7 @@ In this example, we first get a reference to an input element using `document.ge
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The main difference is that 'focus/blur' events do not bubble up through the DOM tree, whereas 'focusin/focusout' events do.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -188,7 +188,7 @@ Note: Use `tabindex` sparingly and wisely, because overuse can lead to navigatio
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> You can prevent a form element from getting focus by setting its 'tabindex' to '-1'. This removes the element from the tab order.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -200,7 +200,7 @@ Note: Use `tabindex` sparingly and wisely, because overuse can lead to navigatio
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The 'autofocus' attribute automatically focuses the cursor on a particular form input field when the page loads.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -212,7 +212,7 @@ Note: Use `tabindex` sparingly and wisely, because overuse can lead to navigatio
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The 'autofocus' attribute automatically focuses the cursor on a particular form input field when the page loads.
-  </div><br />
+  </div>
   </div>
 </details>
 

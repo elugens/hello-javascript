@@ -214,7 +214,9 @@ customElements.define('my-element', MyElement);
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The five methods included in the lifecycle callbacks are the constructor(), connectedCallback(), disconnectedCallback(), attributeChangedCallback(), and adoptedCallback().
-    </div><br/>
+    </div>
+
+---
 
 :::note
 The constructor is used to set up element properties. However, connectedCallback is preferred for setup work because certain attributes may not be defined at construction.
@@ -660,6 +662,8 @@ In this example, if you tried to set `innerHTML` in the `constructor`, it might 
   setInterval(() => elem.setAttribute('datetime', new Date()), 1000); // (5)
 </script>
 ```
+
+---
 
 :::note
 It does not trigger unlisted properties (for performance reasons).

@@ -46,7 +46,7 @@ import StructuredData from './schemadata/AttrPropsSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The browser fetches the HTML, parses it into the Document Object Model (DOM), applies CSS styles, runs JavaScript, and then renders the final visual representation on the screen.
-  </div><br/>
+  </div>
   </div>
 </details>
 
@@ -58,7 +58,7 @@ import StructuredData from './schemadata/AttrPropsSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Attributes are defined on HTML elements and represent the initial state. Properties are in DOM objects, reflecting the current state of elements and can change over time.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -101,6 +101,8 @@ document.documentElement.sayHi(); // Hello, I'm HTML
 document.body.sayHi(); // Hello, I'm BODY
 ```
 
+---
+
 :::note
 DOM properties and methods behave just like those of regular JavaScript objects. They can have any value and are case-sensitive (write elem.nodeType, not elem.NoDeTyPe).
 :::
@@ -117,7 +119,7 @@ DOM properties and methods behave just like those of regular JavaScript objects.
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> You can get the value of an attribute using the `getAttribute()` method on the element, passing the attribute name as the argument.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -129,7 +131,7 @@ DOM properties and methods behave just like those of regular JavaScript objects.
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> You can set an attribute value using the `setAttribute()` method on the element, passing the attribute name and the new value as arguments.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -141,7 +143,7 @@ DOM properties and methods behave just like those of regular JavaScript objects.
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> You can remove an attribute using the `removeAttribute()` method on the element, passing the attribute name as the argument.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -153,7 +155,7 @@ DOM properties and methods behave just like those of regular JavaScript objects.
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The `className` property gets or sets the value of the `class` attribute, allowing you to manipulate CSS classes of an element.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -165,7 +167,7 @@ DOM properties and methods behave just like those of regular JavaScript objects.
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The `dataset` property is an object that holds all the custom data attributes (`data-*`) of an element, allowing easy access and manipulation.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -177,7 +179,7 @@ DOM properties and methods behave just like those of regular JavaScript objects.
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> To modify the `src` attribute, you can use the `setAttribute()` method or directly update the `src` property of the `img` element.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -204,6 +206,8 @@ DOM properties and methods behave just like those of regular JavaScript objects.
   </script>
 </body>
 ```
+
+---
 
 :::note
 The "type" attribute is standard for &#8249;input&#8250; (HTMLInputElement), but not for &#8249;body&#8250; (HTMLBodyElement). Standard attributes are described in the specification for the corresponding element class. So, if an attribute is non-standard, there will not be a DOM-property for it.
@@ -366,6 +370,8 @@ The "type" attribute is standard for &#8249;input&#8250; (HTMLInputElement), but
 </script>
 ```
 
+---
+
 :::note
 That “feature” may come in handy because the user actions may lead to value changes, and then after them, if we want to recover the “original” value from HTML, it is in the attribute.
 :::
@@ -487,6 +493,8 @@ That “feature” may come in handy because the user actions may lead to value 
 <div class="order" order-state="canceled">A canceled order.</div>
 ```
 
+---
+
 :::warning
 We should note that this is not exactly the recommended approach for implementing custom attributes in HTML.
 :::
@@ -562,18 +570,6 @@ We should note that this is not exactly the recommended approach for implementin
 ```
 
   </div>
-  </div>
-</details>
-
----
-
-### What is the difference between attributes and properties in JavaScript?
-
-<details>
-  <summary><strong>View Answer:</strong></summary>
-  <div>
-  <div><strong>Interview Response:</strong> The five primitive wrapper objects in JavaScript are: String, Number, Boolean, Symbol, and BigInt.
-  </div><br />
   </div>
 </details>
 

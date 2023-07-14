@@ -134,7 +134,8 @@ if (temperature > 90) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The JavaScript "if" statement uses implicit type coercion, converting the condition to a boolean value. This is done through the Abstract Equality Comparison algorithm, often called "loose" comparison.</div>
+  <div><strong>Interview Response:</strong> The JavaScript "if" statement uses implicit type coercion, converting the condition to a boolean value. This is done through the Abstract Equality Comparison algorithm, often called "loose" comparison.
+  </div>
   </div>
 </details>
 
@@ -286,7 +287,8 @@ let accessAllowed = age > 18;
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, the syntax for an if statement starts with the keyword 'if', followed by a condition in parentheses. Then, code blocks for true and optional false conditions are enclosed in curly braces.</div>
+  <div><strong>Interview Response:</strong> In JavaScript, the syntax for an if statement starts with the keyword 'if', followed by a condition in parentheses. Then, code blocks for true and optional false conditions are enclosed in curly braces.
+  </div>
   </div>
 </details>
 
@@ -297,7 +299,8 @@ let accessAllowed = age > 18;
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The "else" keyword is used in conjunction with an "if" statement to provide an alternative code block to execute when the condition of the "if" statement is false.</div><br/>
+  <div><strong>Interview Response:</strong> The "else" keyword is used in conjunction with an "if" statement to provide an alternative code block to execute when the condition of the "if" statement is false.
+  </div>
   </div>
 </details>
 
@@ -418,7 +421,8 @@ In this example, the if statement combines two conditions using the logical AND 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> JavaScript has three primary conditional branching methods: if-else statements, switch statements, and the ternary operator, each serving different use cases and levels of complexity.</div>
+  <div><strong>Interview Response:</strong> JavaScript has three primary conditional branching methods: if-else statements, switch statements, and the ternary operator, each serving different use cases and levels of complexity.
+  </div>
   </div>
 </details>
 

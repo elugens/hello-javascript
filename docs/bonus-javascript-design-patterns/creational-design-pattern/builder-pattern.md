@@ -183,9 +183,8 @@ In this example, `CarBuilder` is the builder. It has a `setMake`, `setModel`, `s
       <strong>Interview Response:</strong> The most common reason to use the Builder Pattern is to create complex or composite objects with many configurable parameters, while improving code readability and maintainability.
     </div><br/>
     <div>
-      <strong>Technical Response:</strong> The most common reason for using Builder is to make client code that creates complex objects that are simpler to comprehend. The client can still direct the Builder's actions without knowing how the actual work gets completed. Because the procedures involved are frequently repetitive and complex, builders frequently encapsulate the construction of Composite objects (another GoF design pattern).<br/><br/>It is usually the last step that returns the newly created object, making it simple for a Builder to participate in fluent interfaces where multiple method calls separated by dot operators get chained next to each other.<br/><br/>
+      <strong>Technical Response:</strong> The most common reason for using Builder is to make client code that creates complex objects that are simpler to comprehend. The client can still direct the Builder's actions without knowing how the actual work gets completed. Because the procedures involved are frequently repetitive and complex, builders frequently encapsulate the construction of Composite objects (another GoF design pattern).<br/><br/>It is usually the last step that returns the newly created object, making it simple for a Builder to participate in fluent interfaces where multiple method calls separated by dot operators get chained next to each other.
     </div>
-
   </div>
 </details>
 

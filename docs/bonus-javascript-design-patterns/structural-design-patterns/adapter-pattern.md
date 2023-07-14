@@ -202,7 +202,6 @@ New cost: $39.50
 ```
 
   </div>
-
   </div>
 </details>
 
@@ -245,7 +244,6 @@ New cost: $39.50
     <div>
       <strong>Interview Response:</strong> The most noticeable feature of the Adapter pattern in JavaScript is its ability to allow objects with incompatible interfaces to work together seamlessly by creating a middle layer adapter.
     </div>
-
   </div>
 </details>
 
@@ -323,7 +321,6 @@ New cost: $39.50
     <div>
       <strong>Interview Response:</strong> Yes, some alternatives to the Adapter pattern in JavaScript include refactoring the code to use a common interface, using the Facade pattern, or using the Decorator pattern.
     </div>
-
   </div>
 </details>
 

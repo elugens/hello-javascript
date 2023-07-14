@@ -126,7 +126,6 @@ button.addEventListener('click', function(event) {
     console.log('The event did not have a default action');
   }
 });
-
 ```
 
   </div>
@@ -282,7 +281,7 @@ In this example, when the child button is clicked, 'Child clicked!' is logged to
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Preventing the default action of a `click` event on a hyperlink will stop the browser from navigating to the hyperlink's URL.
+  <div><strong>Interview Response:</strong> Preventing the default action of a <strong>click</strong> event on a hyperlink will stop the browser from navigating to the hyperlink's URL.
   </div>
   </div>
 </details>
@@ -294,7 +293,7 @@ In this example, when the child button is clicked, 'Child clicked!' is logged to
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Preventing default on a form's `submit` event stops the form from being submitted to the server, which is useful when handling form submission via JavaScript or AJAX.
+  <div><strong>Interview Response:</strong> Preventing default on a form's <strong>submit</strong> event stops the form from being submitted to the server, which is useful when handling form submission via JavaScript or AJAX.
   </div>
   </div>
 </details>

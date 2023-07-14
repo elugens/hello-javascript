@@ -48,7 +48,9 @@ import StructuredData from './schemadata/ElementSizeSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> If the scrollbar is 16px wide, then only 300 - 16 = 284px remains, and we should consider it. Some browsers (not all) reserve the space for it by taking it from the content. Our content may look off or overlap if we do not account for the scrollbar width.
-    </div><br /><br />
+    </div>
+
+---
 
 :::note
 The width may vary between devices and browsers.
@@ -166,7 +168,9 @@ function isHidden(elem) {
   <div>
   <div><strong>Interview Response:</strong> The limits are the width of an element's left boundary in pixels contained within the element. It contains the width of the vertical scrollbar if the element's text orientation is right–to–left, and an overflow occurs, resulting in the display of a left vertical scrollbar. ClientLeft does not contain the left margin or padding, and it is a read-only attribute.
     </div><br />
-  <strong>Syntax: </strong> let left = element.clientLeft;<br /><br />
+  <strong>Syntax: </strong> let left = element.clientLeft;
+
+---
 
 :::note
 These are not border widths and heights, but relative coordinates of the inner and outer sides. This behavior is apparent when the scrollbar is on the left, and RTL (right to left) languages, such as Hebrew or Arabic. The scrollbar gets pushed to the left as part of their specification.
@@ -210,7 +214,9 @@ These are not border widths and heights, but relative coordinates of the inner a
   <div>
   <div><strong>Interview Response:</strong> The Element.scrollWidth read-only property measures the width of an element's content, including content not visible on the screen due to overflow. The scrollWidth value equals the minimum width the element would require to fit all the content in the viewport without using a horizontal scrollbar.
     </div><br />
-  <strong>Syntax: </strong> let xScrollWidth = element.scrollWidth<br /><br />
+  <strong>Syntax: </strong> let xScrollWidth = element.scrollWidth
+
+---
 
 :::note
 The width gets measured the same way as clientWidth: it includes the element's padding but not its border, margin, or vertical scrollbar (if present). It can also include the width of pseudo-elements such as ::before or ::after. If the element's content can fit without a need for a horizontal scrollbar, its scrollWidth is equal to clientWidth.
@@ -253,7 +259,9 @@ The width gets measured the same way as clientWidth: it includes the element's p
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> First, CSS width/height depends on another property: box-sizing that defines “what is” CSS width and height. A change in box-sizing for CSS purposes may break such JavaScript. Second, CSS width/height may get set to auto. From the CSS standpoint, width:auto is perfectly normal, but we need an exact size in pixels in JavaScript that we can use in calculations. So, in this case, CSS width is useless. And there is one more reason: a scrollbar. Sometimes the code that works fine without a scrollbar becomes buggy because a scrollbar takes the space from the content in some browsers. So, the actual width available for the content is less than the CSS width. And clientWidth/clientHeight take that into account. Another issue is browser inconsistencies with returned values. Some browsers like Firefox do not account for the scrollbar in their calculations for the width of an element.
-    </div><br />
+    </div>
+
+---
 
 :::note
 The described difference is only about reading getComputedStyle(...) width from JavaScript. Visually, everything is correct.

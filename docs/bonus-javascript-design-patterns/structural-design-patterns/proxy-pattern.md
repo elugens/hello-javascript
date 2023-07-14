@@ -128,7 +128,6 @@ In this example, a `ProxyObject` class is created that mimics the `RealObject` c
 
  </div>
  </div>
-
 </details>
 
 ---
@@ -274,7 +273,6 @@ In this example, every time you get or set a property on the `proxyObject`, it l
   <div>
       <strong>Interview Response:</strong> Yes, there are alternative patterns to the Proxy pattern in JavaScript, including the Decorator pattern, the Adapter pattern, and the Facade pattern.
     </div>
-    <br />
   </div>
 </details>
 

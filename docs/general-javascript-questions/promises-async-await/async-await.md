@@ -521,9 +521,7 @@ fetchWithRejection();
 
 In this example, we're awaiting a Promise that is immediately rejected. Because 'await' throws any rejections as errors, the rejection is caught by the catch block and logged to the console. If there was no catch block, the Promise returned by `fetchWithRejection` would be rejected with the error.
 
----
-
-This is a simplified example to show the difference between throwing an error vs using Promise.reject().
+**This is a simplified example to show the difference between throwing an error vs using Promise.reject().**
 
 ```js
 async function f() {

@@ -47,7 +47,7 @@ import StructuredData from './schemadata/ArrayMethodsSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The splice() method is used to add, remove, or replace elements in an array. It has three arguments including the start index, delete count, and items to add.</div><br />
-  <div><strong>Technical Response:</strong> The splice method is a swiss army knife for arrays; it can do everything. The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place. The basic syntax of the splice method includes modifying arrays starting from the index start: removes deleteCount elements and then inserts elem1, ..., elemN in their place. Then it returns the array of removed elements.<br />
+  <div><strong>Technical Response:</strong> The splice method is a swiss army knife for arrays; it can do everything. The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place. The basic syntax of the splice method includes modifying arrays starting from the index start: removes deleteCount elements and then inserts elem1, ..., elemN in their place. Then it returns the array of removed elements.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -85,7 +85,7 @@ console.log(months);
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Negative array indexes count from the end of the array, with -1 representing the last element, -2 representing the second-to-last, and so on.</div><br />
-  <div><strong>Technical Response:</strong> Most array methods allow negative indexes. A negative index begins at the end of an array and steps back towards the front of the array, such as -1 being one index step from the end. There is no zero-index position at the end of the array.<br />
+  <div><strong>Technical Response:</strong> Most array methods allow negative indexes. A negative index begins at the end of an array and steps back towards the front of the array, such as -1 being one index step from the end. There is no zero-index position at the end of the array.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -338,9 +338,7 @@ console.log(sum); // Output: 15
   </div>
 
 :::note
-
 Additionally, break and continue statements are not valid statements, resulting in a Syntax error.
-
 :::
 
   </div>
@@ -731,9 +729,7 @@ console.log(wordArr); // wordArr = ["o", "l", "l", "e", "H"]
 ```
 
 :::note
-
 We should note that you cannot use the reverse method to reverse a string. Its strictly used for arrays, but this can give insight into the reverse method's first step to reversing string. Simply (It’s not that simple), it turns the string into an array.
-
 :::
 
   </div>

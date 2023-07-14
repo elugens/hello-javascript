@@ -560,7 +560,7 @@ In this example, the regular expression `/^apple.*$/gm` matches any line that st
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong>  The dot (.) matches any character except newline. Multiline mode changes how '^' and '$' behave, but does not affect the '.' dot.
-  </div><br />
+  </div>
   </div>
 </details>
 

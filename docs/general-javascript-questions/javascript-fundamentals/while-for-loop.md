@@ -62,7 +62,8 @@ import StructuredData from './schemadata/WhileForSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Loops in JavaScript are used to execute a block of code repeatedly until a certain condition is met or a specified number of iterations have been completed.</div>
+  <div><strong>Interview Response:</strong> Loops in JavaScript are used to execute a block of code repeatedly until a certain condition is met or a specified number of iterations have been completed.
+  </div>
   </div>
 </details>
 
@@ -316,7 +317,8 @@ console.log(i); // 3, visible, because declared outside of the loop
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> It is possible to skip any or all parts of the for-loop in JavaScript. However, omitting all parts will create an infinite loop, and semicolons must still be included to avoid syntax errors.</div><br />
+  <div><strong>Interview Response:</strong> It is possible to skip any or all parts of the for-loop in JavaScript. However, omitting all parts will create an infinite loop, and semicolons must still be included to avoid syntax errors.
+  </div><br />
   <div><strong>Technical Response:</strong> Yes, it is possible to omit parts or all the for-loop settings. If you remove all the parts, it results in an endless loop. Please note that the two semicolons (;) must be present, and otherwise, there would be a syntax error.<br />
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
@@ -343,7 +345,8 @@ for (; i < 3; i++) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, you can stop a loop, based on a specific condition, by placing a 'break' statement inside an 'if' block that evaluates the desired condition within the loop body.</div><br />
+  <div><strong>Interview Response:</strong> In JavaScript, you can stop a loop, based on a specific condition, by placing a 'break' statement inside an 'if' block that evaluates the desired condition within the loop body.
+  </div><br />
   <div><strong>Technical Response:</strong> Yes, You can achieve this by using the break directive or statement to stop the loop at any time. This approach is ideal for cases when you need to pause the loop in the middle or at various points along its length. The break directive works with all traditional looping structures. (It does not work with forEach).<br /><br />
   </div><br />
   
@@ -427,7 +430,8 @@ for (let i = 0; i < 10; i++) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, The break statement terminates the entire loop, while the continue directive skips the current iteration and proceeds to the next iteration in the loop.</div><br />
+  <div><strong>Interview Response:</strong> In JavaScript, The break statement terminates the entire loop, while the continue directive skips the current iteration and proceeds to the next iteration in the loop.
+  </div><br />
   <div><strong>Technical Response:</strong> The break statement stops the loop in the middle or several places of its body. The continue directive is a “lighter version” of break. It does not stop the whole loop; instead, it stops the current iteration and forces the loop to start a new one (if the condition allows).<br /><br />
   </div>
   </div>
@@ -538,7 +542,8 @@ label: for (...)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, while-loops check a condition before execution, while for-loops have an initialization, condition, and update expression within the loop statement.</div><br/>
+  <div><strong>Interview Response:</strong> In JavaScript, while-loops check a condition before execution, while for-loops have an initialization, condition, and update expression within the loop statement.
+  </div>
   </div>
 </details>
 
@@ -649,10 +654,10 @@ Remember, this code will run indefinitely and print 'This is an intentional infi
 
 Infinite loops should be used with caution, as they can cause your program to become unresponsive and may consume a lot of CPU resources. Always make sure there's a good reason to use them, and they are managed correctly.
 
+---
+
 :::note
-
 This questions is intended to give the interviewee the chance to show whether they have a clear understanding of loop dynamics in programming.
-
 :::
 
   </div>
@@ -666,7 +671,8 @@ This questions is intended to give the interviewee the chance to show whether th
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The structure of a For loop consists of three components: initialization, a condition, and an iteration, enclosed in parentheses and followed by a code block.</div>
+  <div><strong>Interview Response:</strong> The structure of a For loop consists of three components: initialization, a condition, and an iteration, enclosed in parentheses and followed by a code block.
+  </div>
   </div>
 </details>
 
@@ -677,7 +683,8 @@ This questions is intended to give the interviewee the chance to show whether th
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, the syntax for a while loop consists of the keyword, while, followed by a condition enclosed in parentheses, and then a block of code, or loop body, enclosed in curly braces.</div>
+  <div><strong>Interview Response:</strong> In JavaScript, the syntax for a while loop consists of the keyword, while, followed by a condition enclosed in parentheses, and then a block of code, or loop body, enclosed in curly braces.
+  </div>
   </div>
 </details>
 

@@ -226,7 +226,7 @@ In this example, when the mouse comes from outside the window or goes outside th
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Yes, the mouse triggers `mouseover` and `mouseout` events for every element it crosses. However, `mouseenter` and `mouseleave` events only trigger for the targeted element.
-    </div>
+    </div><br/>
   <div><strong>Technical Response:</strong> No, the mousemove event triggers when the mouse moves. But that does not guarantee that every pixel leads to an event. The browser checks the mouse position from time to time. And if it notices changes then it triggers the events. Some DOM elements may get skipped if the visitor is moving the mouse extremely fast. That is good for performance because there may be many intermediate elements. We do not want to process in and out of each one.
     </div>
   </div>
@@ -266,7 +266,7 @@ In this example, when the mouse comes from outside the window or goes outside th
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> While some touch devices may trigger mouse events, it's inconsistent across devices and browsers. Instead, it's recommended to use touch events like `touchstart`, `touchend`.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -278,7 +278,7 @@ In this example, when the mouse comes from outside the window or goes outside th
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Upon entering an element: `mouseover`, then `mouseenter`. Upon leaving an element: `mouseout`, then `mouseleave`. Note that these events do not fire in the same way for child elements.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -290,7 +290,7 @@ In this example, when the mouse comes from outside the window or goes outside th
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> A "dead zone" in mouse events refers to an area within an element where, despite mouse movement, mouseleave or mouseout events aren't triggered, preventing unintentional event firing.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -337,7 +337,7 @@ In this code, a `mouseover` event is created and then dispatched on the element 
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Event bubbling with mouse events means the event propagates from the innermost element (target) outwards. If a child and parent both have a `mouseover` event, the child's fires first.
-  </div><br />
+  </div>
   </div>
 </details>
 

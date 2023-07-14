@@ -352,7 +352,7 @@ it[Symbol.iterator] = function* () {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The "yield" keyword is used in generator functions to pause execution and return a value to the caller.<br />
+  <div><strong>Interview Response:</strong> The "yield" keyword is used in generator functions to pause execution and return a value to the caller.
   </div>
   </div>
 </details>
@@ -398,7 +398,7 @@ generator.next(4); // --> pass the result into the generator
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A regular function runs to completion, while a generator function can pause its execution and be resumed later.<br />
+  <div><strong>Interview Response:</strong> A regular function runs to completion, while a generator function can pause its execution and be resumed later.
   </div>
   </div>
 </details>
@@ -410,7 +410,7 @@ generator.next(4); // --> pass the result into the generator
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> You call a generator function like a regular function, but it returns a generator object, which you can use to control the generator's execution.<br />
+  <div><strong>Interview Response:</strong> You call a generator function like a regular function, but it returns a generator object, which you can use to control the generator's execution.
   </div>
   </div>
 </details>

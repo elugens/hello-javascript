@@ -100,7 +100,9 @@ Please remember that extending native prototypes can be dangerous. You can unint
   <div>
   <div><strong>Interview Response:</strong> If future browser versions implement Array.prototype.myExtension, their implementation gets overwritten by our extended method, which will not only be less efficient but may also produce a different, nonstandard result. Whether internal or external, conflicts between libraries are another issue that emerges.</div><br />
   <div><strong>Technical Response:</strong> If future browser versions implement Array.prototype.myExtension (either as part of an upgrade to the EcmaScript standard or on their initiative), their implementation gets overridden by the custom one, which will not only be less productive (we can't change browser engine internals in the service of method optimization), but may also produce a different, nonstandard result. However, there is a technique to reduce the danger by testing for the presence of the native property. This choice might result in varying results between browser versions and device platforms. Whether internal or external, conflicts between libraries are another issue that emerges.
-  </div><br />
+  </div>
+
+---
 
 :::note
 Although, there is a way to mitigate the risk by checking for the existence of native properties. This behavior could lead to different results in different browsers versions and across device platforms.

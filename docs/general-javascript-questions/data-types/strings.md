@@ -1099,10 +1099,10 @@ let decoded = decoder.decode(encoded);
 console.log(decoded);  // "Hello UTF-8"
 ```
 
+---
+
 :::note
-
 It's important to note that JavaScript strings are sequences of UTF-16 code units, so converting to and from UTF-8 is necessary when interacting with systems that use UTF-8.
-
 :::
 
   </div>

@@ -129,7 +129,7 @@ In this example, the `readystatechange` event listener is used to detect the int
 
 ---
 
-:::ntoe
+:::note
 Note that the `window.onload` event won't fire until all resources (e.g., images, stylesheets) have finished loading, not just the DOM.
 :::
 

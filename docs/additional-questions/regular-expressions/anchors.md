@@ -61,7 +61,7 @@ import StructuredData from './schemadata/AnchorsSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> In JavaScript Regex, there are two types of anchors: caret "^" for start-of-string or line anchor, and dollar sign "$" for end-of-string or line anchor.
-  </div><br />
+  </div>
   </div>
 </details>
 

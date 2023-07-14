@@ -589,7 +589,7 @@ for (let pair of formData.entries()) {
 
 Output:
 
-```html
+```bash
 "username: JohnDoe"
 "email: john@doe.com"
 ```

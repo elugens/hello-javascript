@@ -185,12 +185,10 @@ In this example, the `TrafficLight` class represents the Context, and it maintai
   <div>
   <div>
       <strong>Interview Response:</strong> You should utilize the JavaScript State Pattern when you have an object with multiple behaviors that depend on its internal state, leading to complex conditional statements.
-    </div>
-    <br />
+    </div><br/>
     <div>
       <strong>Technical Response:</strong> In a real-world application, the State pattern could be handy for introducing new states that we haven't yet considered, possibly more simply than a switch case. Each state is contained and has its own set of internal functions.
     </div>
-    <br />
   </div>
 </details>
 
@@ -248,7 +246,6 @@ In this example, the `TrafficLight` class represents the Context, and it maintai
     <div>
       <strong>Interview Response:</strong> Yes, alternatives to using the State pattern in JavaScript include using conditional statements, using the Strategy pattern, or using polymorphism to represent different states.
     </div>
-<br />
   </div>
 </details>
 

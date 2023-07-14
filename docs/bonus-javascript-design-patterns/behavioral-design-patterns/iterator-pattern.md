@@ -259,8 +259,7 @@ false
   <div>
   <div>
       <strong>Interview Response:</strong> The Iterator Pattern in JavaScript should be utilized when iterating over complex data structures such as trees and graphs, or when implementing lazy evaluation and custom iteration behaviors.
-    </div>
-<br />
+    </div><br />
     <div>
       <strong>Technical Response:</strong> This pattern helps deal with iteration-related challenges, constructing flexible looping constructs, and retrieving items from a complex collection without knowing the underlying representation. We can use it to create a generic iterator that efficiently explores any collection regardless of its type.
     </div>
@@ -278,8 +277,7 @@ false
   <div>
   <div>
       <strong>Interview Response:</strong> The Iterator pattern in JavaScript provides a standardized interface for iterating over complex data structures, enables lazy evaluation, simplifies code, and supports custom iteration behaviors.
-    </div>
-    <br />
+    </div><br />
     <div>
       <strong>Interview Response:</strong> Benefits of the Iterator Pattern
     </div>

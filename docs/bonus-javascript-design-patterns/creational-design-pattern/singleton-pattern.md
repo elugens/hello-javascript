@@ -106,7 +106,6 @@ In this example, we try to instantiate `Singleton` twice with different data. Bu
 The key point here is `Singleton.instance = this;` where we store the first instance created. On subsequent instantiations, `Singleton.instance` would be truthy, so the constructor will return this first instance rather than creating a new one.
 
   </div>
-
   </div>
 </details>
 

@@ -94,7 +94,7 @@ We can use a local web server, such as static-server, or use the live server cap
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Modules promote modularity, maintainability, and reusability, while helping to organize code, prevent naming conflicts, and manage dependencies in large-scale applications.<br />
+  <div><strong>Interview Response:</strong> Modules promote modularity, maintainability, and reusability, while helping to organize code, prevent naming conflicts, and manage dependencies in large-scale applications.
   </div>
   </div>
 </details>
@@ -106,8 +106,8 @@ We can use a local web server, such as static-server, or use the live server cap
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To create a module, write code in a separate file and export the desired functionality using the export keyword. Then, import it using the import keyword.<br />
-  </div>
+  <div><strong>Interview Response:</strong> To create a module, write code in a separate file and export the desired functionality using the export keyword. Then, import it using the import keyword.
+  </div><br />
 
 **Here's a simple example of a JavaScript module:**
 
@@ -143,7 +143,6 @@ console.log(sayHello('JavaScript')); // Outputs: Hello, JavaScript!
   In top-level modules, this is undefined.<br /><br />
   Module scripts always defer, same as the defer property for external and inline scripts.<br /><br />
   For non-module scripts, the async attribute only works on external scripts. Async scripts run immediately when ready, independently of other scripts or the HTML document. For module scripts, it works on inline scripts as well.
-
 </div>
   </div>
 </details>

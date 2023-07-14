@@ -255,6 +255,8 @@ setTimeout(() => (document.body.style.display = ''), 1000); // back to normal
 </body>
 ```
 
+---
+
 :::note
 For instance, we should not set elem.style.top to 10, but rather to 10px. Otherwise, it would not work as intended and return a string instead of setting the top to 10px.
 :::
@@ -310,7 +312,9 @@ For instance, we should not set elem.style.top to 10, but rather to 10px. Otherw
   <div>
   <div><strong>Interview Response:</strong> A computed style value is the value after all CSS rules, and CSS inheritance gets applied due to the CSS cascade. A resolved style value is the one finally applied to the element. </div><br />
   <div><strong>Technical Response:</strong> We can obtain a computed style value after all CSS rules and CSS inheritance due to the CSS cascade. It may appear as height:1em or font-size:125 percent. The style value that eventually gets applied to the element is a resolved style value. Values like 1em and 125 percent are relative. The browser uses the calculated value and makes all units constant and absolute, such as height:20px or font-size:16px. Resolved values for geometry attributes may have a floating-point value, such as width:50.5px. Originally, getComputedStyle was intended to yield calculated values, but a discovery revealed that resolved values are significantly more helpful. As a result, the standard got revised. As a result, getComputedStyles returns a property's resolved value.
-  </div><br /><br />
+  </div>
+
+---
 
 :::note
 We should note that getComputedStyles returns the resolved value of a property.
@@ -327,7 +331,9 @@ We should note that getComputedStyles returns the resolved value of a property.
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> We should always ask for the exact (full property name) property that we want, like paddingLeft or marginTop or borderTopWidth. Otherwise, the correct result is not guaranteed.
-    </div><br /><br />
+    </div>
+
+---
 
 :::note
 If there are properties paddingLeft/paddingTop, then what should we get for getComputedStyle(elem).padding? Nothing, or maybe a “generated” value from known paddings? There is no standard rule here, but we should always ask for the full property name.

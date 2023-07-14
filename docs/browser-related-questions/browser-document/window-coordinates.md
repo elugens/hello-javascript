@@ -257,6 +257,8 @@ function handleClick(event) {
 
 In this example, we add a click event listener to the document. When the document is clicked, the `handleClick` function is called. Inside the function, we retrieve the `screenX/Y` coordinates, which represent the position relative to the screen, and the `clientX/Y` coordinates, which represent the position relative to the viewport. We then log these coordinates to the console.
 
+---
+
 :::note
 Please note that the values logged in the console will vary depending on where you click on the screen.
 :::

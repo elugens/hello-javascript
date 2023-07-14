@@ -142,7 +142,9 @@ asyncCall();
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A callback is a function passed as an argument to another function, and a callback function can run after another function has finished. JavaScript functions execute in the sequence they get called, not in the defined sequence.<br /><br />
+  <div><strong>Interview Response:</strong> A callback is a function passed as an argument to another function, and a callback function can run after another function has finished. JavaScript functions execute in the sequence they get called, not in the defined sequence.
+
+---
 
 :::note
 Functions running in parallel with other functions are called asynchronous.
@@ -477,7 +479,7 @@ console.log("Program execution continues...");
 
 In this example, we have a synchronous callback function named `syncCallback`. The `performSyncOperation` function performs a synchronous operation, invoking the callback immediately within the operation. The program execution waits for the callback to complete before moving on to the next line of code. The output will be:
 
-```
+```bash
 Performing synchronous operation...
 Synchronous callback executed!
 Synchronous operation completed.
@@ -505,7 +507,7 @@ console.log("Program execution continues...");
 
 In this example, we have an asynchronous callback function named `asyncCallback`. The `performAsyncOperation` function simulates an asynchronous operation using `setTimeout`. The callback is invoked after a delay of 2000 milliseconds (2 seconds). The program execution continues without waiting for the callback to finish. The output will be:
 
-```
+```bash
 Performing asynchronous operation...
 Program execution continues...
 Asynchronous callback executed!

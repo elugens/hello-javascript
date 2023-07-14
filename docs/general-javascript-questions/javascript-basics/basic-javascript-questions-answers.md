@@ -111,8 +111,8 @@ It should be noted, to maintain efficient speed in the browser, V8 translates Ja
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> JavaScript's main features include dynamic typing, object-oriented programming, first-class functions, closures, asynchronous programming (promises, async/await), event-driven interaction, and integration with web technologies like HTML and CSS.<br/><br/>
-    </div>
+      <strong>Interview Response:</strong> JavaScript's main features include dynamic typing, object-oriented programming, first-class functions, closures, asynchronous programming (promises, async/await), event-driven interaction, and integration with web technologies like HTML and CSS.
+    </div><br/>
 
 Here's an example illustrating a few key features of JavaScript, including dynamic typing, object-oriented programming, and asynchronous programming:
 
@@ -283,8 +283,7 @@ Here's a simple table of differences between Interpreted and Compiled languages 
     <div>
       <strong>Interview Response:</strong> JavaScript works in any environment
       that has a JS engine.
-    </div>
-    <br />
+    </div><br />
     <div>
       <strong>Technical Response:</strong> JavaScript is a flexible language that can run on a wide range of platforms, as long as they support a JavaScript engine, such as web browsers, servers, desktop applications, and IoT devices.
     </div>
@@ -358,18 +357,15 @@ These engines are used to parse and execute JavaScript code in their respective 
   <div>
     <div>
       <strong>Interview Response:</strong> In-browser JavaScript can't access files or data on the user's computer, for security reasons. It also can't perform certain network requests, due to CORS policies. The aim is to prevent a malicious website from accessing users' data or harming them.
-    </div>
-    <br />
+    </div><br />
     <div>
       <strong>Technical Response:</strong> JavaScript's capabilities in the
       browser are limited to safeguard the user's safety. The purpose is to
       prevent a malicious website from acquiring private information or
       inflicting data damage to users.
-    </div>
+    </div><br/>
     <div>
-      <strong>Examples of such constraints include:</strong>
-      <br />
-      <br />
+      <strong>Examples of such constraints include:</strong><br /><br />
       <ol>
         <li>
           JavaScript permits us to read/write files directly on the hard disk,
@@ -417,7 +413,6 @@ These engines are used to parse and execute JavaScript code in their respective 
     <div>
       <strong>Interview Response:</strong> JavaScript is unique because it fully integrates with HTML and CSS, and all major browsers support it. JavaScript is the only browser technology that combines, all three of these features. That distinguishes JavaScript, and explains why it is the most widely used technology for designing browser interfaces.
     </div>
-    <br />
   </div>
 </details>
 
@@ -519,8 +514,7 @@ Finally, `console.log(greeter.greet());` calls the `greet` method on the `greete
   <div>
     <div>
       <strong>Interview Response:</strong> "Undefined" means a variable has been declared but not assigned a value. "Null" is an assignment value that means no value or no object. It implies absence of value.
-    </div>
-    <br />
+    </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>

@@ -371,7 +371,6 @@ interface HTMLInputElement: HTMLElement {
   void select();
   //...
 }
-
 ```
 
   </div>
@@ -543,7 +542,6 @@ interface HTMLInputElement: HTMLElement {
     </script>
 </body>
 </html>
-
 ```
 
 **The Solution:**

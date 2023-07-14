@@ -201,10 +201,10 @@ let user = {
 console.log(user.sizes.height); // 182
 ```
 
+---
+
 :::note
-
 Notably, this means that values of properties are not necessarily primitive.
-
 :::
 
   </div>

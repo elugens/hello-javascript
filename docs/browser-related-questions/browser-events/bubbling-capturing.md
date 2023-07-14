@@ -694,7 +694,7 @@ When you click on the inner element, the `handleClick` event handler will be cal
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> No, the default direction of event propagation (bubbling phase) cannot be modified. It always occurs from the innermost element to its parent elements in the DOM hierarchy.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -738,6 +738,8 @@ When you click on the inner element, the `handleClick` event handler will be cal
   }
 </script>
 ```
+
+---
 
 :::note
 While there are three phases, the second ("target phase": the event reached the element) is not handled independently in theory: handlers from both the capturing and bubbling phases fire at that time.

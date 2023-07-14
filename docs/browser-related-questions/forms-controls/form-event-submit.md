@@ -49,7 +49,7 @@ import StructuredData from './schemadata/FormEventSubmitSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Form submission events in JavaScript are triggered actions that occur when a form is submitted. They allow manipulation and validation of form data before it's sent to a server.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -61,7 +61,7 @@ import StructuredData from './schemadata/FormEventSubmitSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The `submit` event in JavaScript is triggered when a form is submitted. It allows developers to handle, validate, or modify form data before it's sent to the server.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -204,7 +204,7 @@ The first method directly submits the form. The second method creates a new `sub
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Event bubbling in form submission context refers to an event propagating up the DOM tree, allowing parent elements to respond to a submission event triggered on a child form element.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -229,7 +229,7 @@ The first method directly submits the form. The second method creates a new `sub
   <div><strong>Interview Response:</strong> You can use FormData object or access form elements directly to get their values.
   </div><br />
   <div><strong>Technical Response:</strong> When working with form elements, there are two main ways to retrieve the values submitted by the user. The first method is to access the form elements directly, which involves referencing the specific input, select, or textarea element and retrieving its value property. Alternatively, you can make use of the FormData object, which provides a more efficient and streamlined way of accessing form data. With the FormData object, you can easily retrieve all the form data at once and send it to the server for further processing.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -313,7 +313,7 @@ The first method directly submits the form. The second method creates a new `sub
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The FormData object lets you compile a set of key/value pairs to send using XMLHttpRequest or fetch.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -325,7 +325,7 @@ The first method directly submits the form. The second method creates a new `sub
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Synchronous submission refreshes the page. Asynchronous, using AJAX or Fetch API, submits data without refreshing.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -337,7 +337,7 @@ The first method directly submits the form. The second method creates a new `sub
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> event.stopPropagation() stops the event from bubbling up the DOM tree, event.preventDefault() prevents the default form submission.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -349,7 +349,7 @@ The first method directly submits the form. The second method creates a new `sub
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The action attribute defines the URL where the form data is sent on submission.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -465,7 +465,7 @@ That's it! This is a basic approach to handle file uploads in JavaScript form su
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> AJAX allows asynchronous form submissions, providing a smoother user experience by not requiring a page reload.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -538,7 +538,7 @@ This example demonstrates how CSRF can be exploited to perform unauthorized acti
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> JavaScript can iterate over input elements in a form, using their name or ID to access and process the data.
-  </div><br />
+  </div>
   </div>
 </details>
 

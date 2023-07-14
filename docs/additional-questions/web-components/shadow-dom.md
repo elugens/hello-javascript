@@ -389,7 +389,7 @@ This code assumes there's a custom element `<my-element>` in the document with a
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> No, elements in a closed Shadow DOM cannot be accessed from outside the Shadow DOM using JavaScript. The `shadowRoot` property of the host element returns null when the Shadow DOM is closed.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -462,6 +462,8 @@ let shadowRoot = hostElement.shadowRoot; // Access the shadow root
 
 let shadowElement = shadowRoot.querySelector('.shadow-element'); // Access element within the shadow DOM
 ```
+
+---
 
 :::note
 This assumes an element with the id `shadow-host` contains a Shadow DOM, and there's an element with the class `shadow-element` within that Shadow DOM.
@@ -561,6 +563,8 @@ shadow.innerHTML = '<p>Hello from the shadow DOM!</p>';
 ```
 
 In this example, the `attachShadow` method is used to create a new shadow root for the `customElement`. The content of the shadow root is then set to a paragraph with the text "Hello from the shadow DOM!".
+
+---
 
 :::note
 You cannot attach a shadow root to every type of element, and some cannot have a shadow DOM for security reasons (for example, `<a>`) and more besides.

@@ -191,7 +191,7 @@ new Promise(function () {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Unhandled promise rejections generate a warning in most environments and may be treated as uncaught exceptions, potentially causing memory leaks or unexpected application behavior if not properly addressed.<br />
+  <div><strong>Interview Response:</strong> Unhandled promise rejections generate a warning in most environments and may be treated as uncaught exceptions, potentially causing memory leaks or unexpected application behavior if not properly addressed.
   </div>
   </div>
 </details>
@@ -203,7 +203,7 @@ new Promise(function () {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A single catch() method in a promise chain will handle any errors from preceding promises, allowing centralized error handling and reducing the need for multiple error handlers in the chain.<br />
+  <div><strong>Interview Response:</strong> A single catch() method in a promise chain will handle any errors from preceding promises, allowing centralized error handling and reducing the need for multiple error handlers in the chain.
   </div>
   </div>
 </details>
@@ -215,7 +215,7 @@ new Promise(function () {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To handle different errors in a promise chain, place catch() methods after each then() method, allowing you to specifically handle errors related to each individual asynchronous operation or use conditional statements within a single catch().<br />
+  <div><strong>Interview Response:</strong> To handle different errors in a promise chain, place catch() methods after each then() method, allowing you to specifically handle errors related to each individual asynchronous operation or use conditional statements within a single catch().
   </div>
   </div>
 </details>
@@ -227,7 +227,7 @@ new Promise(function () {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, you can recover from an error in a promise chain by returning a new promise or value from within a catch() method, allowing the chain to continue or perform a different action based on the error.<br />
+  <div><strong>Interview Response:</strong> Yes, you can recover from an error in a promise chain by returning a new promise or value from within a catch() method, allowing the chain to continue or perform a different action based on the error.
   </div>
   </div>
 </details>
@@ -239,7 +239,7 @@ new Promise(function () {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To handle errors that occur in a catch() method, attach another catch() method after the first one, which will handle any errors thrown or unhandled rejections from the preceding catch() callback.<br />
+  <div><strong>Interview Response:</strong> To handle errors that occur in a catch() method, attach another catch() method after the first one, which will handle any errors thrown or unhandled rejections from the preceding catch() callback.
   </div>
   </div>
 </details>
@@ -251,7 +251,7 @@ new Promise(function () {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The finally() method in promises executes regardless of the promise's outcome, allowing you to run cleanup or follow-up code after both successful resolution and error rejection, without impacting error handling.<br />
+  <div><strong>Interview Response:</strong> The finally() method in promises executes regardless of the promise's outcome, allowing you to run cleanup or follow-up code after both successful resolution and error rejection, without impacting error handling.
   </div>
   </div>
 </details>
@@ -263,7 +263,7 @@ new Promise(function () {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To handle timeouts or retries with promises, use Promise.race() or custom logic within a promise executor function to reject or resolve based on time elapsed, then handle the resulting error or retry within a catch() method.<br />
+  <div><strong>Interview Response:</strong> To handle timeouts or retries with promises, use Promise.race() or custom logic within a promise executor function to reject or resolve based on time elapsed, then handle the resulting error or retry within a catch() method.
   </div>
   </div>
 </details>
@@ -275,19 +275,19 @@ new Promise(function () {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Promises improve error handling compared to callbacks by providing a cleaner, more maintainable structure through chaining, centralized error handling with catch(), and better propagation of errors across asynchronous operations.<br />
+  <div><strong>Interview Response:</strong> Promises improve error handling compared to callbacks by providing a cleaner, more maintainable structure through chaining, centralized error handling with catch(), and better propagation of errors across asynchronous operations.
   </div>
   </div>
 </details>
 
 ---
 
-### Can you use async/await for error handling with promises?
+### Can you use async/await to handle errors with promises?
 
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, async/await can be used for error handling with promises by using try-catch blocks within async functions, allowing you to handle promise rejections in a synchronous-like manner, improving code readability and structure.<br />
+  <div><strong>Interview Response:</strong> Yes, async/await can be used for error handling with promises by using try-catch blocks within async functions, allowing you to handle promise rejections in a synchronous-like manner, improving code readability and structure.
   </div>
   </div>
 </details>

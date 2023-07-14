@@ -216,10 +216,8 @@ Please note, JavaScript does not have a concept of 'abstract' classes or interfa
     <strong>View Answer:</strong>
   </summary>
   <div>
-  <div>
-      <strong>Interview Response:</strong> Delegating object construction promotes loose coupling, testability, and flexibility, allowing you to switch between different product families without changing the client code.
-    </div>
-    <br/>
+  <div><strong>Interview Response:</strong> Delegating object construction promotes loose coupling, testability, and flexibility, allowing you to switch between different product families without changing the client code.
+  </div><br/>
     <div>
       <strong>Technical Response:</strong> When object creation is tightly coupled to object usage, changes to object construction logic can have a ripple effect throughout the codebase. Delegating this responsibility to an abstract factory promotes loose coupling, allowing for easier maintenance, testing, and swapping out of object implementations, while also enabling the creation of related object families with a unified interface.
     </div>
@@ -398,7 +396,7 @@ The abstract factory pattern offers various advantages, which we can describe in
       <strong>Interview Response:</strong> Alternatives include the Factory Method, Builder, and Prototype patterns, or Dependency Injection techniques. Each of these patterns has its own strengths and weaknesses.
     </div><br />
     <div>
-      <strong>Technical Response:</strong> There are several alternative patterns that can be used instead of the Abstract Factory pattern, depending on the specific requirements of the application. Some examples include the Factory Method pattern, the Builder pattern, and the Prototype pattern. Each of these patterns has its own strengths and weaknesses and can be used to solve different problems related to object creation and instantiation.<br />
+      <strong>Technical Response:</strong> There are several alternative patterns that can be used instead of the Abstract Factory pattern, depending on the specific requirements of the application. Some examples include the Factory Method pattern, the Builder pattern, and the Prototype pattern. Each of these patterns has its own strengths and weaknesses and can be used to solve different problems related to object creation and instantiation.
     </div>
   </div>
 </details>

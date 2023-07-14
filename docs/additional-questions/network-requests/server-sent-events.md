@@ -449,7 +449,7 @@ Remember, you need to properly handle events and clear any intervals or timeouts
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> SSE requires a server response with HTTP status code 200, "Content-Type" header set to "text/event-stream", and messages formatted according to the SSE specification (fields like "data", "id", "event").
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -461,7 +461,7 @@ Remember, you need to properly handle events and clear any intervals or timeouts
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Like any API, you must consider Cross-Origin Resource Sharing (CORS) issues, Cross-Site Scripting (XSS) prevention, and secure transmission using HTTPS.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -725,7 +725,7 @@ In this example, the server sends a message every second. If the connection is l
 
   <div></div>
 
-```js
+```bash
 data: Message 1
 id: 1
 

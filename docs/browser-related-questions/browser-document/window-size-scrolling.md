@@ -269,6 +269,8 @@ window.scrollTo({
 });
 ```
 
+---
+
 :::note
 It is like setting scrollLeft/scrollTop. To scroll to the beginning, we can use scrollTo(0,0). These methods function in the same way for all browsers. Window.scrollTo() moves the cursor to a specific set of coordinates in the document. The scrollTo() method of the element interface scrolls to a particular set of coordinates inside a given element.
 :::
@@ -309,6 +311,8 @@ document.body.style.overflow = 'hidden';
 // Unfreeze the page
 document.body.style.overflow = '';
 ```
+
+---
 
 :::note
 If it occupied some space, that space is now free, and the content “jumps” to fill it. That looks odd, but if we compare clientWidth before and after the freeze, there is a workaround. If it increased (the scrollbar disappeared), add padding to document.body in place of the scrollbar to keep the content width the same.

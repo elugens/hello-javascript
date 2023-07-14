@@ -173,7 +173,9 @@ According to the MDN, its advised to use Object.create(obj) instead of this meth
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> According to the MDN, the creators replaced it with getPrototypeOf and setPrototypeOf, because of the performance issues related to its use. The MDN has also warned against using setPrototypeOf for the same reason.
-</div><br />
+</div>
+
+---
 
 :::warning
 If you care about performance, you should avoid setting the [[Prototype]] of an object. Instead, create a new object with the desired [[Prototype]] using Object.create() instead of Object.setPrototypeOf().
@@ -233,7 +235,6 @@ In the first case, each new Car object will have its own `display` method. In th
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Prototype methods are shared among all object instances, using only one memory allocation for the function. Regular methods are replicated per instance, causing more memory usage. Thus, prototype methods save memory.
-
   </div>
   </div>
 </details>

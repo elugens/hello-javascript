@@ -47,7 +47,7 @@ import StructuredData from './schemadata/FetchReqSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> A fetch request is a way to retrieve data from a server using JavaScript. It allows you to make an HTTP request to a specified URL and receive a response. The data can be in various formats such as JSON, XML, or plain text. Fetch requests are commonly used in web development to dynamically update content without refreshing the entire page.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -691,6 +691,7 @@ The XMLHttpRequest API is a legacy API that has been around for many years. It i
 The Fetch API is a newer, more modern API that was introduced in 2015. It is an asynchronous API, which means that it does not block the main thread while the request is in progress. This can lead to improved user experience, especially on mobile devices. The Fetch API also supports streams, which makes it easier to work with large amounts of data.
 
 Overall, the Fetch API is a more modern and powerful API than XMLHttpRequest. It is recommended to use the Fetch API whenever possible.
+
   </div>
   </div>
 </details>

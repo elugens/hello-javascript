@@ -267,7 +267,7 @@ showGlobalVar();
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The modern JavaScript rule for using global variables is to minimize their usage, as they can cause conflicts and make code harder to maintain and debug. We should use local variables and function parameters to ensure proper encapsulation of data.<br /><br />
+  <div><strong>Interview Response:</strong> The modern JavaScript rule for using global variables is to minimize their usage, as they can cause conflicts and make code harder to maintain and debug. We should use local variables and function parameters to ensure proper encapsulation of data.
   </div>
   </div>
 </details>
@@ -457,7 +457,8 @@ if (checkAge(age)) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Using multiple return statements in JavaScript can make code harder to read, debug, and maintain, as it increases complexity and creates multiple exit points within a function.</div><br/>
+  <div><strong>Interview Response:</strong> Using multiple return statements in JavaScript can make code harder to read, debug, and maintain, as it increases complexity and creates multiple exit points within a function.
+  </div>
   </div>
 </details>
 
@@ -774,7 +775,8 @@ In this code, add is a pure function. Given the same arguments (5 and 3), it wil
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Using pure functions in JavaScript ensures predictability, testability, and easier debugging, and allows for code optimization and functional programming patterns.</div><br/>
+  <div><strong>Interview Response:</strong> Using pure functions in JavaScript ensures predictability, testability, and easier debugging, and allows for code optimization and functional programming patterns.
+  </div>
   </div>
 </details>
 
@@ -847,7 +849,7 @@ In this code, the `greet` function is called before it's defined. But because Ja
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Data declared within a function has a local scope and is only accessible within that function.
-</div><br/>
+</div>
   </div>
 </details>
 

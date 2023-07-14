@@ -898,6 +898,8 @@ customElements.define('my-component', MyComponent);
 
 In this example, the server renders the markup for the web component `<my-component>` and sends it to the client. The client receives the markup, renders the static content, and then hydrates and initializes the web component using JavaScript. The `MyComponent` class is defined in a separate `MyComponent.js` file.
 
+---
+
 :::tip
 Frameworks/libraries (React, Angular, Lit, Vue.js, Solid.js) optimize rendering, provide developer-friendly APIs, ensure consistency, offer community support, and provide additional features, simplifying server-side rendering of web components and improving development efficiency and user experience.
 :::

@@ -310,7 +310,6 @@ console.log(yourPhone === myPhone); // false
 ```
 
   </div>
-
   </div>
 </details>
 
@@ -325,7 +324,7 @@ console.log(yourPhone === myPhone); // false
   <div>
     <div>
       <strong>Interview Response:</strong> The constructor pattern promotes reusability and encapsulation. It's efficient for creating multiple instances of an object with the same structure and behavior, providing consistency and organization.
-    </div><br />
+    </div>
     </div>
 </details>
 
@@ -340,7 +339,7 @@ console.log(yourPhone === myPhone); // false
   <div>
     <div>
       <strong>Interview Response:</strong> The constructor pattern can be memory inefficient, as each instance gets its own copy of methods. It can also have issues with instance recognition when inheritance is involved.
-    </div><br />
+    </div>
     </div>
 </details>
 

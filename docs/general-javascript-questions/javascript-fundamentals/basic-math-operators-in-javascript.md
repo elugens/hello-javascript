@@ -328,7 +328,8 @@ console.log(c); // 4
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Chained assignments in JavaScript can lead to unintended side effects due to the right-to-left evaluation, making the code harder to read, understand, debug, and maintain.</div>
+  <div><strong>Interview Response:</strong> Chained assignments in JavaScript can lead to unintended side effects due to the right-to-left evaluation, making the code harder to read, understand, debug, and maintain.
+  </div>
   </div>
 </details>
 

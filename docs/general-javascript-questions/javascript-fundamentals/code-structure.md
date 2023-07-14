@@ -94,7 +94,8 @@ console.log('World');
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, an array is defined using square brackets and consists of comma-separated values. Array elements can be of any data type.</div>
+  <div><strong>Interview Response:</strong> In JavaScript, an array is defined using square brackets and consists of comma-separated values. Array elements can be of any data type.
+  </div>
   </div><br/>
 </details>
 

@@ -99,7 +99,8 @@ myFunction();
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> ECMAScript 5 (ES5) was released in December 2009 as the fifth edition of the ECMAScript language specification, which defines the standard for JavaScript.</div>
+  <div><strong>Interview Response:</strong> ECMAScript 5 (ES5) was released in December 2009 as the fifth edition of the ECMAScript language specification, which defines the standard for JavaScript.
+  </div>
   </div>
 </details>
 
@@ -110,7 +111,8 @@ myFunction();
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> ES5 features can be enabled by setting the "use strict" directive at the beginning of a JavaScript file, which enforces strict mode and activates ES5 features. You need to enable them with a special directive explicitly: "use strict".</div>
+  <div><strong>Interview Response:</strong> ES5 features can be enabled by setting the "use strict" directive at the beginning of a JavaScript file, which enforces strict mode and activates ES5 features. You need to enable them with a special directive explicitly: "use strict".
+  </div>
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
   
@@ -193,7 +195,8 @@ In this example, an octal literal (a number prefixed with a zero) is used, which
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, there is no directive like "no use strict" that reverts the engine to the old behavior. Once we enter strict mode, there is no going back.</div>
+  <div><strong>Interview Response:</strong> No, there is no directive like "no use strict" that reverts the engine to the old behavior. Once we enter strict mode, there is no going back.
+  </div>
   </div>
 </details>
 
@@ -204,7 +207,8 @@ In this example, an octal literal (a number prefixed with a zero) is used, which
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, the browser developer console does not implement strict mode by default. Strict mode must be enabled explicitly by using the "use strict" directive. We must place it at the first console line for it to work.</div>
+  <div><strong>Interview Response:</strong> No, the browser developer console does not implement strict mode by default. Strict mode must be enabled explicitly by using the "use strict" directive. We must place it at the first console line for it to work.
+  </div>
   </div>
 </details>
 
@@ -258,7 +262,7 @@ In this example, an octal literal (a number prefixed with a zero) is used, which
   <div>
   <div><strong>Interview Response:</strong> Yes, it's generally recommended to use "use strict" in modern applications as it helps catch errors and enforces stricter syntax and behavior in JavaScript.</div><br />
   <div><strong>Technical Response:</strong> Yes, it remains recommended to use strict mode in all modern applications. Although it may not be essential in some cases, we should provide the strict-mode functionality.
-  </div><br/>
+  </div>
   </div>
 </details>
 
@@ -280,7 +284,8 @@ In this example, an octal literal (a number prefixed with a zero) is used, which
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Strict Mode in JavaScript enforces stricter rules for parsing and error handling, preventing common coding mistakes and making it easier to optimize code for better performance.</div>
+  <div><strong>Interview Response:</strong> Strict Mode in JavaScript enforces stricter rules for parsing and error handling, preventing common coding mistakes and making it easier to optimize code for better performance.
+  </div>
   </div>
 </details>
 
@@ -291,7 +296,8 @@ In this example, an octal literal (a number prefixed with a zero) is used, which
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The use of undeclared variables, assigning values to non-writable properties, deleting non-configurable properties, and using duplicate parameter names in function declarations are disallowed in strict mode in JavaScript.</div>
+  <div><strong>Interview Response:</strong> The use of undeclared variables, assigning values to non-writable properties, deleting non-configurable properties, and using duplicate parameter names in function declarations are disallowed in strict mode in JavaScript.
+  </div>
   </div>
 </details>
 

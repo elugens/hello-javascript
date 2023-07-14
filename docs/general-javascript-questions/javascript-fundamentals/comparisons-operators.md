@@ -103,7 +103,8 @@ console.log(2 != 1); // true (correct)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> JavaScript comparison operators include equality (==, ===), inequality (!=, !==), and relational (&#62;, &#60;, &#62;=, &#60;=) operators. They compare values for equality, inequality, or relative size, respectively.</div>
+  <div><strong>Interview Response:</strong> JavaScript comparison operators include equality (==, ===), inequality (!=, !==), and relational (&#62;, &#60;, &#62;=, &#60;=) operators. They compare values for equality, inequality, or relative size, respectively.
+  </div>
   </div>
 </details>
 
@@ -138,7 +139,8 @@ console.log(true !== 1);  // Output: true (Strict inequality without type coerci
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Type coercion converts values to a common data type during comparisons. It occurs with loose comparison operators (==, !=) but not strict operators (===, !==).</div><br/>
+  <div><strong>Interview Response:</strong> Type coercion converts values to a common data type during comparisons. It occurs with loose comparison operators (==, !=) but not strict operators (===, !==).
+  </div>
   </div>
 </details>
 
@@ -375,7 +377,8 @@ console.log(undefined == 0); // false (3)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Two values are "equal" in JavaScript if they have the same value after type coercion.</div><br/>
+  <div><strong>Interview Response:</strong> Two values are "equal" in JavaScript if they have the same value after type coercion.
+  </div>
   </div>
 </details>
 
@@ -412,7 +415,8 @@ console.log(obj1 === obj3);  // Output: true (Same object reference)
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Two values are "identical" in JavaScript if they have the same value and the same type.</div><br/>
+  <div><strong>Interview Response:</strong> Two values are "identical" in JavaScript if they have the same value and the same type.
+  </div>
   </div>
 </details>
 

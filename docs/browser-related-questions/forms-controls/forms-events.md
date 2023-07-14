@@ -348,7 +348,7 @@ In this example, a new 'submit' event is created and then dispatched to the form
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The 'change' event triggers when an input field's value changes and loses focus, while the 'input' event fires immediately as the user types or alters the input field's value.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -576,6 +576,8 @@ In this example, when the form is submitted, the default action is prevented, th
 </script>
 ```
 
+---
+
 :::note
 After we update the value, the input event happens. As a result, we are unable to use event. It's too late to use preventDefault() there — the consequence would be null.
 :::
@@ -621,6 +623,8 @@ After we update the value, the input event happens. As a result, we are unable t
       };
 </script>
 ```
+
+---
 
 :::note
 It is possible to copy/paste everything, not just text. For example, we can copy and paste a file from the OS file manager. This behavior is because clipboardData implements the DataTransfer interface, which we often use for drag'n'drop and copy/paste.

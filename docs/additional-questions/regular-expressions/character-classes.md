@@ -389,7 +389,7 @@ console.log(match);
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> To match either digits or alphanumeric characters, you can use \d or \w.
-  </div><br />
+  </div>
   </div>
 </details>
 
@@ -401,7 +401,7 @@ console.log(match);
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> We can include shorthand character classes within brackets like [abc\w] to match 'a', 'b', 'c', or any alphanumeric character.
-  </div><br />
+  </div>
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
   <div></div>
@@ -475,7 +475,7 @@ In this example, the regex /\d+/g matches one or more digits in the string. The 
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The '.' matches any character except newline, while \w matches only alphanumeric characters and underscore.
-  </div><br />
+  </div>
   </div>
 </details>
 

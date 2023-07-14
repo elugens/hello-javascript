@@ -245,9 +245,7 @@ console.log(a == b); // true, the same number 255 at both sides
 ```
 
 :::note
-
 Hexadecimal is base 16, The decimal is base 10, Octal is base 8, and Binary is base 2.
-
 :::
 
   </div>

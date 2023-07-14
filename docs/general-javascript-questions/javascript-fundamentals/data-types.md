@@ -184,7 +184,8 @@ console.log(myNumber.toFixed(2)); // Output: 0.30
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> In JavaScript, BigInts can be instantiated by appending "n" to the end of an integer literal or by calling the BigInt() constructor with an integer or a string representing an integer as its argument.</div>
+  <div><strong>Interview Response:</strong> In JavaScript, BigInts can be instantiated by appending "n" to the end of an integer literal or by calling the BigInt() constructor with an integer or a string representing an integer as its argument.
+  </div>
   </div>
 </details>
 
@@ -258,10 +259,10 @@ World!`;
 
 Remember, all three can be used to define strings, but only backticks offer string interpolation and multi-line features.
 
+---
+
 :::note
-
 Please note that we can only implement this with backticks in JavaScript. Other quotes (single and double) do not have this embedding functionality! We should make every effort to understand backticks and template literals.
-
 :::
 
   </div>
@@ -369,7 +370,8 @@ console.log(age); // "undefined"
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> typeof x acts as an operator, and typeof(x) is a function, but they work with parentheses or without them. The result is the same.</div>
+  <div><strong>Interview Response:</strong> typeof x acts as an operator, and typeof(x) is a function, but they work with parentheses or without them. The result is the same.
+  </div>
   </div>
 </details>
 
@@ -380,7 +382,8 @@ console.log(age); // "undefined"
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The typeof operator returns a string with the name of the type, like "number" if it is a number or “function” if it’s a function.</div>
+  <div><strong>Interview Response:</strong> The typeof operator returns a string with the name of the type, like "number" if it is a number or “function” if it’s a function.
+  </div>
   </div>
 </details>
 
@@ -391,7 +394,8 @@ console.log(age); // "undefined"
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The primitive data types in JavaScript include the Number, String, Boolean, BigInt, Null, Undefined, and Symbol types.</div>
+  <div><strong>Interview Response:</strong> The primitive data types in JavaScript include the Number, String, Boolean, BigInt, Null, Undefined, and Symbol types.
+  </div>
   </div>
 </details>
 
@@ -415,10 +419,10 @@ console.log(myUndefinedVariable); // Output: undefined
 console.log(myNullVariable); // Output: null
 ```
 
+---
+
 :::note
-
 Note that typeof undefined returns "undefined", while typeof null returns "object", which is a quirk in the language's design that cannot be fixed for backward compatibility reasons.
-
 :::
 
   </div>
@@ -445,10 +449,10 @@ console.log(typeof myNaN); // Output: number
 console.log(Number.isNaN(myNaN)); // Output: true
 ```
 
+---
+
 :::note
-
 Note that typeof NaN returns "number", indicating that NaN is a numeric value, but Number.isNaN() is a method that can be used to check whether a value is equal to NaN.
-
 :::
 
   </div>
@@ -513,10 +517,10 @@ console.log(myObject); // Output: {name: "Alice", age: 30, isStudent: true}
 console.log(typeof myObject); // Output: object
 ```
 
+---
+
 :::note
-
 The main difference between primitive data types and object data types is that primitive data types are immutable (i.e., their values cannot be changed), while object data types are mutable (i.e., their values can be changed by adding, updating, or deleting key-value pairs). Additionally, primitive data types are passed by value, while object data types are passed by reference.
-
 :::
 
   </div>

@@ -72,8 +72,7 @@ import StructuredData from './schemadata/WhatIsSchemaData.js';
   <div>
   <div>
       <strong>Interview Response:</strong> Design patterns in JavaScript help improve code organization, maintainability, and scalability by providing tested and proven solutions to common software development problems.
-    </div>
-    <br/>
+    </div><br/>
     <div>
       <strong>Technical Response:</strong> Design patterns provide us with a common vocabulary to describe solutions to problems within our applications. This approach can be significantly simpler than describing syntax and semantics when we are trying to show a way of structuring a proper solution in code form.
     </div>
@@ -91,8 +90,7 @@ import StructuredData from './schemadata/WhatIsSchemaData.js';
   <div>
     <div>
       <strong>Interview Response:</strong> One of the most important aspects of writing maintainable code is to make it easy to understand and modify. Good coding practices, include keeping functions small and simple, to enhance readability and maintainability.
-    </div>
-    <br/>
+    </div><br/>
     <div>
       <strong>Technical Response:</strong> One of the most important aspects of writing maintainable code is to make it easy to understand and modify. This means writing code that is clear, concise, and well-organized, with comments and documentation to explain its purpose and structure. By making code easy to understand and modify, developers can make it easier to maintain over time.
     </div>
@@ -181,8 +179,7 @@ import StructuredData from './schemadata/WhatIsSchemaData.js';
   <div>
     <div>
       <strong>Interview Response:</strong> No, design patterns in JavaScript are not exact solutions. They are guidelines or templates that solve common problems in software design. They need to be adapted and modified to fit specific needs of each unique application.
-    </div>
-    <br/>
+    </div><br/>
     <div>
       <strong>Technical Response:</strong> No, design patterns are not an exact solution, but it is essential to remember that the role of a pattern is merely to provide us with a solution scheme. Patterns do not solve all design problems, nor do they replace good software designers; however, they support them. Design patterns provide developers with a framework for solving problems in a flexible and reusable way, but they may need to be adapted or combined with other patterns to fit specific situations.
     </div>

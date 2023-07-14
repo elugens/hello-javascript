@@ -524,10 +524,10 @@ for (let i = set.values(), val = null; (val = i.next().value); ) {
 }
 ```
 
+---
+
 :::note
-
 You can also use a traditional iterative for loop, but it is much more complex and not recommended.
-
 :::
 
   </div>

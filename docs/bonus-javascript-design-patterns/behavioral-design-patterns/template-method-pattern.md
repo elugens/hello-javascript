@@ -255,8 +255,7 @@ When you run this program, you'll see the steps of baking bread printed out. The
   <div>
   <div>
       <strong>Interview Response:</strong> Yes, some alternatives to the Template Method pattern in JavaScript include the Strategy pattern, the Command pattern, and the Decorator pattern.
-    </div>
-    <br />
+    </div><br />
     <div>
       <strong>Technical Response:</strong> Yes, there are several alternatives to the Template Method pattern in JavaScript, including the Strategy pattern, which uses composition instead of inheritance, the Command pattern, which encapsulates requests as objects, and the Decorator pattern, which adds functionality to objects dynamically at runtime.
     </div>

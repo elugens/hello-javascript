@@ -46,7 +46,7 @@ import StructuredData from './schemadata/VariableScopeSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Variable scope in JavaScript refers to the context in which a variable is accessible or visible within a program, determined by where it's declared (global, function, or block scope).<br /><br />
+  <div><strong>Interview Response:</strong> Variable scope in JavaScript refers to the context in which a variable is accessible or visible within a program, determined by where it's declared (global, function, or block scope).
   </div>
   </div>
 </details>
@@ -58,7 +58,7 @@ import StructuredData from './schemadata/VariableScopeSchemaData.js';
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The three types of variable scope in JavaScript are global, function, and block scope, each with its own rules for variable accessibility and visibility.<br /><br />
+  <div><strong>Interview Response:</strong> The three types of variable scope in JavaScript are global, function, and block scope, each with its own rules for variable accessibility and visibility.
   </div>
   </div>
 </details>
@@ -95,7 +95,7 @@ var num = 1;
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> "var" creates function or global scoped variables, while "let" and "const" create block scoped variables, offering better control over variable visibility and usage.<br /><br />
+  <div><strong>Interview Response:</strong> "var" creates function or global scoped variables, while "let" and "const" create block scoped variables, offering better control over variable visibility and usage.
   </div>
   </div>
 </details>
@@ -107,7 +107,7 @@ var num = 1;
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Hoisting is JavaScript's mechanism of moving variable and function declarations to the top of their scope before code execution, affecting variable initialization and function availability.<br /><br />
+  <div><strong>Interview Response:</strong> Hoisting is JavaScript's mechanism of moving variable and function declarations to the top of their scope before code execution, affecting variable initialization and function availability.
   </div>
   </div>
 </details>
@@ -119,7 +119,7 @@ var num = 1;
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Shadowing occurs when an inner-scoped variable has the same name as an outer-scoped variable, causing the inner variable to temporarily "hide" or "shadow" the outer variable within the inner scope.<br /><br />
+  <div><strong>Interview Response:</strong> Shadowing occurs when an inner-scoped variable has the same name as an outer-scoped variable, causing the inner variable to temporarily "hide" or "shadow" the outer variable within the inner scope.
   </div>
   </div>
 </details>
@@ -131,7 +131,7 @@ var num = 1;
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Best practices include using "let" and "const" over "var", minimizing global variables, keeping functions small, and avoiding unintended closures to prevent memory leaks and improve code readability.<br /><br />
+  <div><strong>Interview Response:</strong> Best practices include using "let" and "const" over "var", minimizing global variables, keeping functions small, and avoiding unintended closures to prevent memory leaks and improve code readability.
   </div>
   </div>
 </details>
@@ -376,7 +376,7 @@ g = null; // ...and now the memory is cleaned up
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Common use cases for closures include data encapsulation, function factories, memoization, implementing decorators, and maintaining state in asynchronous programming.<br /><br />
+  <div><strong>Interview Response:</strong> Common use cases for closures include data encapsulation, function factories, memoization, implementing decorators, and maintaining state in asynchronous programming.
   </div>
   </div>
 </details>
@@ -388,7 +388,7 @@ g = null; // ...and now the memory is cleaned up
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Closures in JavaScript enable data privacy, function factories, and use of function state after execution. They help create powerful, maintainable and modular code, benefiting from JavaScript's functional nature.<br /><br />
+  <div><strong>Interview Response:</strong> Closures in JavaScript enable data privacy, function factories, and use of function state after execution. They help create powerful, maintainable and modular code, benefiting from JavaScript's functional nature.
   </div>
   </div>
 </details>
@@ -400,7 +400,7 @@ g = null; // ...and now the memory is cleaned up
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Disadvantages of closures include potential memory leaks due to retained references to outer environments and increased complexity in code readability and debugging.<br /><br />
+  <div><strong>Interview Response:</strong> Disadvantages of closures include potential memory leaks due to retained references to outer environments and increased complexity in code readability and debugging.
   </div>
   </div>
 </details>
@@ -412,7 +412,7 @@ g = null; // ...and now the memory is cleaned up
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Closures retaining references to outer environments prevent garbage collection until the closure itself becomes unreachable, potentially causing memory leaks if not managed properly.<br /><br />
+  <div><strong>Interview Response:</strong> Closures retaining references to outer environments prevent garbage collection until the closure itself becomes unreachable, potentially causing memory leaks if not managed properly.
   </div>
   </div>
 </details>
@@ -424,7 +424,7 @@ g = null; // ...and now the memory is cleaned up
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> To mitigate memory leaks with closures, ensure proper release of references to outer environments by nullifying them when no longer needed and avoid creating unnecessary closures.<br /><br />
+  <div><strong>Interview Response:</strong> To mitigate memory leaks with closures, ensure proper release of references to outer environments by nullifying them when no longer needed and avoid creating unnecessary closures.
   </div>
   </div>
 </details>
@@ -436,7 +436,7 @@ g = null; // ...and now the memory is cleaned up
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The lexical environment is a conceptual, theoretical object used to describe the way scoping and variable lookup work in JavaScript. It represents the mapping between variable names and their values within a given scope.<br /><br />
+  <div><strong>Interview Response:</strong> The lexical environment is a conceptual, theoretical object used to describe the way scoping and variable lookup work in JavaScript. It represents the mapping between variable names and their values within a given scope.
   </div>
   </div>
 </details>

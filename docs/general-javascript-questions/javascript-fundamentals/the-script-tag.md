@@ -94,7 +94,6 @@ import StructuredData from './schemadata/TheScriptTagSchemaData.js';
     <div>
       <strong>Interview Response:</strong> The script tag is an HTML element used to include JavaScript code in a web page. It can be used to define inline JavaScript or to reference external JavaScript files.
     </div>
-    <br />
   </div>
 </details>
 
@@ -151,7 +150,6 @@ import StructuredData from './schemadata/TheScriptTagSchemaData.js';
     <div>
       <strong>Interview Response:</strong> You can include an external JavaScript file in an HTML document by adding a script tag with a src="" attribute pointing to the URL of the JavaScript file.
     </div>
-    <br />
   </div>
 </details>
 
