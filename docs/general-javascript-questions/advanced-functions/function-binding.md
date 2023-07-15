@@ -331,6 +331,8 @@ console.log(boundGetX());
 // expected output: 42
 ```
 
+---
+
 :::note
 This is useful for passing functions into other functions, like setTimeout(), which later invokes and won't necessarily bind the invoked function to the correct object without being coerced. The first parameter is the context object, and all other parameters are individually listed, like the call method.
 :::

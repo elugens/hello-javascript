@@ -132,6 +132,8 @@ console.log(user.sayHi.name); // sayHi
 console.log(user.sayBye.name); // sayBye
 ```
 
+---
+
 :::note
 You should not confuse this question with a question about how to name a function.
 :::
@@ -274,6 +276,8 @@ sayHi = null;
 
 welcome('JavaScript'); // Hello, JavaScript
 ```
+
+---
 
 :::note
 You should note that a regular function declaration can be used to achieve the same result.

@@ -214,7 +214,7 @@ Please note that the server should be set up to expect and correctly handle bina
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The 'encode' method converts a JavaScript string into a Uint8Array of UTF-8 bytes.
+  <div><strong>Interview Response:</strong> The 'encode' method of the TextEncoder object converts a JavaScript string into a Uint8Array containing the text's UTF-8 encoded binary representation, facilitating operations on binary data.
   </div>
   </div>
 </details>
@@ -238,7 +238,7 @@ Please note that the server should be set up to expect and correctly handle bina
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The 'decode' method of TextDecoder converts a sequence of bytes into a string using a specified encoding scheme.
+  <div><strong>Interview Response:</strong> The 'decode' method of the TextDecoder object in JavaScript converts encoded binary data, typically in a Uint8Array or ArrayBuffer, into a string using the specified text encoding.
   </div>
   </div>
 </details>
@@ -250,7 +250,7 @@ Please note that the server should be set up to expect and correctly handle bina
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, TextEncoder can handle Unicode symbols because it uses UTF-8 encoding, which supports all Unicode characters.
+  <div><strong>Interview Response:</strong> Yes, TextEncoder in JavaScript can handle Unicode symbols. It encodes input string into a Uint8Array of UTF-8 encoded bytes, a Unicode-compatible encoding.
   </div>
   </div>
 </details>
@@ -262,7 +262,7 @@ Please note that the server should be set up to expect and correctly handle bina
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> If TextDecoder encounters an invalid byte sequence, it replaces it with the Unicode replacement character unless the "fatal" option is set.
+  <div><strong>Interview Response:</strong> If TextDecoder encounters an invalid byte sequence, it replaces it with the Unicode replacement character unless the "fatal" option is set to true, which will throw an error.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -294,7 +294,7 @@ In this example, `[0xC3, 0x28]` is not a valid sequence of bytes for the UTF-8 e
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> No, TextEncoder is locked to the UTF-8 encoding scheme and doesn't support other encodings.
+  <div><strong>Interview Response:</strong> No, TextEncoder is locked to the UTF-8 encoding scheme and does not allow for changing the encoding scheme.
   </div>
   </div>
 </details>
@@ -306,7 +306,7 @@ In this example, `[0xC3, 0x28]` is not a valid sequence of bytes for the UTF-8 e
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, TextDecoder can handle different text encodings like windows-1252, UTF-16 and ISO-8859-2, but UTF-8 is the most commonly used.
+  <div><strong>Interview Response:</strong> Yes, the TextDecoder object in JavaScript can handle various text encoding schemes, such as windows-1252, UTF-8, UTF-16, and ISO-8859-2. The desired encoding is specified when creating the TextDecoder instance.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -348,7 +348,7 @@ Also, it's important to note that the 'windows-1252' encoding is not supported i
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> The `encodeInto` method of the `TextEncoder` object takes a source string and a destination Uint8Array, and encodes the string into the array. It returns a dictionary indicating the number of units read and the number of units written.
+  <div><strong>Interview Response:</strong> The `**encodeInto**` method of the `TextEncoder` object takes a source string and a destination Uint8Array, and encodes the string into the array. It returns a dictionary indicating the number of units read and the number of units written.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 

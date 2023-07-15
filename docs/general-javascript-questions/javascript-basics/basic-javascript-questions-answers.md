@@ -92,10 +92,10 @@ console.log(sayHello("JavaScript")); // Prints: Hello, JavaScript!
 
 This code defines a function that concatenates a string with an input name, and logs the output to the console.
 
+---
+
 :::note
-
 It should be noted, to maintain efficient speed in the browser, V8 translates JavaScript code into more efficient machine code instead of using an interpreter. During execution, it compiles JavaScript code into machine code using a JIT (Just-In-Time) compiler, much like SpiderMonkey or Rhino in the Mozilla browser.
-
 :::
 
   </div>

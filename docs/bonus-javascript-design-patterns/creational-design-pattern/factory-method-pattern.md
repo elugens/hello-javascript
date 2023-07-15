@@ -80,9 +80,7 @@ import StructuredData from './schemadata/FactoryMethodSchemaData.js';
 <br />
 
 :::note
-
 Though the definition particularly mentions that an interface needs to be defined, we do not have interfaces in JavaScript. Therefore, we must implement it so that JavaScript translates into an interface.
-
 :::
 
 </div><br />

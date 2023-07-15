@@ -150,6 +150,8 @@ promise.then(function (result) {
 });
 ```
 
+---
+
 :::note
 An example of breaking the chain of Promises is using the promise.then, in an individual invocation, subscribe to a promise.
 :::

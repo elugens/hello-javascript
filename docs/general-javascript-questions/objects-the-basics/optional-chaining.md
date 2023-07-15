@@ -124,10 +124,10 @@ user?.sayHi(x++); // no "sayHi", so the execution doesn't reach x++
 console.log(x); // 0, value not incremented.
 ```
 
+---
+
 :::note
-
 If it is not optional, it can result in a false scenario that goes unchecked. This behavior could result in silent coding errors and become more challenging to debug.
-
 :::
 
   </div>

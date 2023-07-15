@@ -142,6 +142,8 @@ let bool = true;
 console.log(bool.toString()); // "true"
 ```
 
+---
+
 :::note
 Note that null and undefined primitive types do not have any associated methods. Also remember, these methods do not change the original value, but rather return a new value.
 :::

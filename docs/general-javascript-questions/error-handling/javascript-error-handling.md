@@ -237,6 +237,8 @@ try {
 }
 ```
 
+---
+
 :::note
 In addition to the name and message properties, other non-standard properties are available in most environments.
 :::
@@ -314,6 +316,8 @@ let error = new Error('Things happen o_O');
 alert(error.name); // Error
 alert(error.message); // Things happen o_O
 ```
+
+---
 
 :::note
 The program terminates if no catch block exists among caller functions. JavaScript has many built-in constructors for standard errors: Error, SyntaxError, ReferenceError, TypeError, and others, and we can use them to create error objects.

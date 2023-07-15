@@ -300,6 +300,8 @@ console.log(dictionary['Hello']); // Hola
 console.log(dictionary['Welcome to Proxy']); // Welcome to Proxy (no translation)
 ```
 
+---
+
 :::tip
 Note: You should ever make a reference to the target object after it has been proxied. Otherwise, it can be easy to make mistakes and harder to debug.
 :::
@@ -680,6 +682,8 @@ let proxy = new Proxy(map, {});
 proxy.set('test', 1); // Error
 ```
 
+---
+
 :::note Notable Exception:
 Built-in Array does not use internal slots. That is for historical reasons, as it appeared so long ago. So, there is no such problem when proxying an array.
 :::
@@ -739,6 +743,8 @@ user = new Proxy(user, {
 
 console.log(user.getName()); // Guest
 ```
+
+---
 
 :::note
 The solution has drawbacks. It exposes the original object to the method, potentially allowing it to be passed further and breaking other proxied functionality.

@@ -71,6 +71,8 @@ console.log(rabbit.eats); // true (**)
 console.log(rabbit.jumps); // true
 ```
 
+---
+
 :::note
 You should be familiar with the `__proto__` because you may see it in older code.
 :::
@@ -153,10 +155,10 @@ console.log(rabbit.isSleeping); // true
 console.log(animal.isSleeping); // undefined (no such property)
 ```
 
+---
+
 :::note
-
 Prototypes do not affect "this", regardless of the method the location in an object or prototype. This structure is always the object before the dot in a method call.
-
 :::
 
   </div>

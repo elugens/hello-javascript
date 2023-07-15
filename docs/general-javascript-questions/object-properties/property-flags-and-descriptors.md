@@ -161,6 +161,8 @@ console.log(JSON.stringify(descriptor, null, 2));
  */
 ```
 
+---
+
 :::note
 You should note that writable, enumerable, and configurable are all set to false, by default, on empty objects. If you do not set the property attributes when using the defineProperty method on empty objects, they return false by default.
 :::
@@ -197,6 +199,8 @@ Object.defineProperty(user, 'toString', {
 // Now our custom toString method disappears:
 for (let key in user) console.log(key); // returns name, but no toString
 ```
+
+---
 
 :::note
 We should note that they are all set to false by default when using the defineProperty method on an empty Object.
@@ -335,6 +339,8 @@ try {
 // expected output: TypeError: Cannot define property property1, object is not extensible
 ```
 
+---
+
 :::note
 You should note that the attributes of a non-extensible object can still be erased in general. Adding additional attributes to a non-extensible object fails silently or with a TypeError (most commonly, but not exclusively, when strict mode is enabled).
 :::
@@ -372,6 +378,8 @@ delete object1.property1; // cannot delete when sealed
 console.log(object1.property1);
 // expected output: 33
 ```
+
+---
 
 :::note
 Attempting to delete or add properties to a sealed object, convert a data property to an accessor, or vice versa, fails, either silently or by throwing a TypeError (most commonly, although not exclusively, when in strict mode code).

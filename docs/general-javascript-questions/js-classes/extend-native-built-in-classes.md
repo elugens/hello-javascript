@@ -289,7 +289,9 @@ console.log(sliced instanceof Array); // true
 console.log(sliced instanceof MyArray); // false
 ```
 
-<p>In this example, the Symbol.species accessor property is used to ensure that the slice method returns a new instance of the built-in Array class, instead of a MyArray instance.</p>
+In this example, the Symbol.species accessor property is used to ensure that the slice method returns a new instance of the built-in Array class, instead of a MyArray instance.
+
+---
 
 :::note
 To guarantee that you are accessing the correct array, maintain track of the supplied object (Array). If the method returns a new array like the filter() method, it may unexpectedly negatively affect your application when used in conjunction with the species Symbol. There are benefits to this behavior that allow us to customize specific interactions within the inheriting class.

@@ -332,6 +332,8 @@ console.log(sofa.description()); // Vintage Sofa
 
 In this example, `FurnitureFactory` is the Abstract Factory, `ModernFurnitureFactory` and `VintageFurnitureFactory` are Concrete Factories, `Chair` and `Sofa` are Abstract Products, and `ModernChair`, `ModernSofa`, `VintageChair`, and `VintageSofa` are Concrete Products.
 
+---
+
 :::note
 Though the definition particularly mentions that an interface needs to be defined, we don’t have interfaces in _Vanilla JavaScript_. Therefore, we must implement it in a way that JavaScript translates into an interface.
 :::

@@ -118,12 +118,13 @@ setTimeout(sayHi, 1000, 'Hello', 'John'); // Hello, John
 setTimeout(() => console.log('Hello'), 1000);
 ```
 
-  </div>
+---
 
 :::note
 We can use the clearTimeout method to clear setTimeout in our code.
 :::
 
+  </div>
   </div>
 </details>
 

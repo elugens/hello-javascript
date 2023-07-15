@@ -152,6 +152,8 @@ let obj = {
 console.log(obj.prop); // 123
 ```
 
+---
+
 :::note
 The first solution provides no encapsulation or control over how your data is accessed when comparing the two. The 2nd lets you specify if your value gets read 'get accessor', written 'set accessor', or both.
 :::

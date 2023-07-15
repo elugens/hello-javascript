@@ -137,6 +137,8 @@ myObj.foo = 1;
 console.log(Object.keys(myObj)); // console: ['foo']
 ```
 
+---
+
 :::note
 If you want all properties including non-enumerables ones; see Object.getOwnPropertyNames().
 :::

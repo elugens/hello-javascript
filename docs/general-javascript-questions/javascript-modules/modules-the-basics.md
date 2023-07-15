@@ -78,12 +78,14 @@ sayHi('John'); // Hello, John!
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> No, if you try to open a web page locally, via file:// protocol, you find that import/export directives do not work. JavaScript modules don't work with the file:// protocol due to CORS restrictions. To use modules locally, you need to set up a local web server or use a development environment.
-</div><br /><br />
+
+---
 
 :::note
 We can use a local web server, such as static-server, or use the live server capability of your editor, such as VS Code Live Server Extension, to test modules.
 :::
 
+</div>
   </div>
 </details>
 
@@ -400,6 +402,8 @@ import `./console.log.js`; // (shows nothing)
 <script type="module" src="http://another-site.com/their.js"></script>
 ```
 
+---
+
 :::note
 If a module script gets fetched from another origin, the remote server must supply a header Access-Control-Allow-Origin allowing the fetch. That ensures better security by default.
 :::
@@ -425,6 +429,8 @@ If a module script gets fetched from another origin, the remote server must supp
 import { sayHi } from 'sayHi'; // Error, "bare" module
 // the module must have a path, e.g. './sayHi.js' or wherever the module is
 ```
+
+---
 
 :::note
 Certain environments, such as Node.js or bundle tools, allow bare modules with no path since they have methods of identifying modules and hooks to fine-tune them. However, browsers do not currently allow bare modules.

@@ -871,6 +871,8 @@ xhr.onloadend = function (e) {
 xhr.send();
 ```
 
+---
+
 :::note
 Note that the Fetch API doesn't directly support download progress tracking. Therefore, this example uses the older XMLHttpRequest API, which does.
 :::

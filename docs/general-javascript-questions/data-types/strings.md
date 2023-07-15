@@ -436,10 +436,10 @@ while (true) {
 }
 ```
 
+---
+
 :::note
-
-The indexOf() method cannot take powerful search values (regular expressions) as the search method. We should note that the indexOf search is case-sensitive.
-
+The `indexOf()` method cannot take powerful search values (regular expressions) as the search method. We should note that the indexOf search is case-sensitive.
 :::
 
   </div>
@@ -619,10 +619,10 @@ console.log('Widget'.includes('id')); // true
 console.log('Widget'.includes('id', 3)); // false, from position 3 there is no "id"
 ```
 
+---
+
 :::note
-
-The includes() method is case sensitive.
-
+The **includes()** method is case sensitive.
 :::
 
   </div>
@@ -658,10 +658,10 @@ var o = str2.endsWith('world', 11);
 console.log(o); // returns true
 ```
 
+---
+
 :::note
-
-Both the startsWith() and endsWith() methods are case sensitive.
-
+Both the **startsWith()** and **endsWith()** methods are case sensitive.
 :::
 
   </div>
@@ -778,10 +778,10 @@ let str = 'stringify';
 console.log(str.substr(-4, 2)); // 'gi', from the 4th position get 2 characters
 ```
 
+---
+
 :::note
-
 The `substr()` method does not change the original string.
-
 :::
 
   </div>
@@ -811,10 +811,10 @@ let str = 'stringify';
 console.log(str.substr(-4, 2)); // 'gi', from the 4th position get 2 characters
 ```
 
+---
+
 :::note
-
-The substr() method does not change the original string.
-
+The `substr()` method does not change the original string.
 :::
 
   </div>

@@ -156,7 +156,9 @@ console.log(Object.getPrototypeOf(object1) === prototype1);
   <div><strong>Interview Response:</strong> The Object.setPrototypeOf() method sets the prototype of a specified object to another object or null. According to the MDN, its advised to use Object.create(obj) instead of this method.
 </div><br />
 
-<strong>Syntax: </strong> Object.setPrototypeOf(obj, proto);<br /><br />
+<strong>Syntax: </strong> Object.setPrototypeOf(obj, proto);
+
+---
 
 :::warning
 According to the MDN, its advised to use Object.create(obj) instead of this method.

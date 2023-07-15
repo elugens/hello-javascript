@@ -214,6 +214,8 @@ myFunction();
 })();
 ```
 
+---
+
 :::note
 This is not a modern way to handle passing of string related code. It is recommended that you use higher order functions to encapsulate the passing of dynamic strings.
 :::
@@ -397,7 +399,9 @@ try {
 
 ```
 
-<p>In the above example, createSafeFunction checks if the provided code only contains digits, spaces, parentheses, or arithmetic operators. If any other characters are found, an error is thrown. Otherwise, the function is created and returned.</p>
+In the above example, createSafeFunction checks if the provided code only contains digits, spaces, parentheses, or arithmetic operators. If any other characters are found, an error is thrown. Otherwise, the function is created and returned.
+
+---
 
 :::note
 Please note, the above example is very simple and the actual implementation would need to be far more robust to ensure safety in a production environment. It is typically recommended to avoid using new Function with user input or untrusted code.

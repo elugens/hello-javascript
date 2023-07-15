@@ -67,14 +67,33 @@ import StructuredData from './schemadata/CodingStyleSchemaData.js';
   <strong>Interview Response:</strong> The goal is to take a complex task and code it correctly and in a human-readable manner.
 </div><div><br/>
   <strong>Technical Response:</strong> The goal of coding style and application development is to create maintainable, efficient, and readable code, ensuring optimal functionality, collaboration, and ease of understanding for developers and users alike.
-</div>
 
-<div></div><br />
+---
 
 :::note
 Several code styling guides help programmers reach this goal.
 :::
 
+Here's a table of some commonly used style guides in web development:
+
+| Style Guide | URL |
+| ----------- | --- |
+| Airbnb JavaScript Style Guide | [Link](https://github.com/airbnb/javascript) |
+| Google JavaScript Style Guide | [Link](https://google.github.io/styleguide/jsguide.html) |
+| Google HTML/CSS Style Guide | [Link](https://google.github.io/styleguide/htmlcssguide.html) |
+| Mozilla CSS Style Guide | [Link](https://developer.mozilla.org/en-US/docs/MDN/Guidelines/CSS_style_guide) |
+| W3C's CSS Guidelines | [Link](https://www.w3.org/Style/CSS/) |
+| Idiomatic.js (Principles of JavaScript Style) | [Link](https://github.com/rwaldron/idiomatic.js) |
+| Bootstrap CSS Code Guide | [Link](https://codeguide.co/#css) |
+| StandardJS (JavaScript Style Guide, Linter, and Formatter) | [Link](https://standardjs.com/) |
+
+---
+
+:::note
+Please note that you should follow the style guide recommended or required by your team, project, or organization. Also, note that the URLs above were valid as of my last training data in September 2021 and might have changed since.
+:::
+
+</div>
   </div>
 </details>
 
@@ -131,14 +150,13 @@ if (id === 123 && moonPhase === 'Waning Gibbous' && zodiacSign === 'Libra') {
 }
 ```
 
-  </div>
+---
 
 :::note
-
 A great example would be long paragraphs longer than 120 characters. We can use backticks to handle lines longer than 120 characters.
-
 :::
 
+  </div>
   </div>
 </details>
 
@@ -266,14 +284,14 @@ function pow(x, n) {
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> A linter in JavaScript helps identify potential errors, enforce coding conventions, improve code quality, maintain consistency, and provide suggestions for best practices during development.
-</div><br/>
+
+---
 
 :::note
-
 The great thing about linters is that style-checking can also find bugs, like typos in variable or function names. Because of this feature, using a linter is recommended even if you do not want to stick to one particular code style.
-
 :::
 
+</div>
   </div>
 </details>
 

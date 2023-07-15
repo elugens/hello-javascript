@@ -307,6 +307,8 @@ promise2.then(
 );
 ```
 
+---
+
 :::note
 If we are interested only in errors, we can use null as the first argument ( .then(null, errorHandlingFunction); ). The then method/function returns a Promise which allows for method chaining.
 :::
@@ -367,6 +369,8 @@ new Promise((resolve, reject) => {
   .finally(() => console.log('Promise ready'))
   .then((result) => console.log(result)); // <-- .then handles the result
 ```
+
+---
 
 :::note
 We use it to perform cleanup tasks once the promise settles, as it always executes irrespective of whether the promise is fulfilled or rejected.

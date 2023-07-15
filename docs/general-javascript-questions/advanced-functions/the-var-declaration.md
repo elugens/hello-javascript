@@ -161,6 +161,8 @@ sayHi();
 console.log(phrase); // ReferenceError: phrase is not defined
 ```
 
+---
+
 :::note
 This was part of the old rules in JavaScript when there was no lexical environment.
 :::
@@ -224,10 +226,10 @@ let user;
 let user; // SyntaxError: 'user' has already been declared
 ```
 
+---
+
 :::note
-
-If we try to do this with the let declaration, it results in an error because JavaScript does not allow "let" to have multiple variables of the same name.
-
+If we try to do this with the let declaration, it results in an error because JavaScript does not allow "let" to have multiple variables with the same name.
 :::
 
   </div>
@@ -337,6 +339,8 @@ Here's an example of using 'var' with an Immediately Invoked Function Expression
 ```
 
 In this example, `i` is declared with `var`, so it's hoisted to the top of the function scope created by the IIFE. Therefore, all of the callback functions share the same `i`.
+
+---
 
 :::note
 It is not something we should use in modern JavaScript code, but you can still find them in old scripts. So, you should know what they are when you see them in code.

@@ -204,6 +204,8 @@ Promise.all(requests).then((responses) =>
 );
 ```
 
+---
+
 :::tip
  Use Case: A common trick is to map an array of job data into an array of promises and then wrap that into Promise.all.
 :::
@@ -417,6 +419,8 @@ maybeAsync(new Promise(resolve => setTimeout(() => resolve("Async value"), 1000)
 
 As you can see, Promise.resolve can be a useful method when working with JavaScript Promises.
 
+---
+
 :::note
 This function flattens nested layers of promise-like objects (e.g., a promise that resolves to a promise that resolves to something) into a single layer. Methods Promise.resolve and Promise.reject are rarely needed in modern code because async/await syntax makes them somewhat obsolete.
 :::
@@ -473,6 +477,8 @@ maybeAsyncError('Hello, world!', true)
 ```
 
 In this example, the `maybeAsyncError` function either resolves with the provided value or rejects with an Error, based on the `throwError` argument. This allows it to be used with Promise-based code regardless of whether an error occurs.
+
+---
 
 :::note
 Methods Promise.resolve and Promise.reject are rarely needed in modern code because async/await syntax makes them somewhat obsolete.

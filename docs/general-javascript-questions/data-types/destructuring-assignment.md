@@ -434,10 +434,10 @@ console.log(firstName); // undefined
 console.log(surname); // undefined
 ```
 
+---
+
 :::note
-
 There are no errors if the array is shorter than the list of variables at the left. Missing values are considered undefined on return.
-
 :::
 
   </div>
@@ -575,10 +575,10 @@ console.log(height); // 200
 let { height, width, title } = { title: 'Menu', height: 200, width: 100 };
 ```
 
+---
+
 :::note
-
 In an array, the order of the elements is relevant. It depends on your intent, the rule for arrays does not apply to objects, and order is insignificant.
-
 :::
 
   </div>
@@ -751,10 +751,10 @@ console.log(rest.height); // 200
 console.log(rest.width); // 100
 ```
 
+---
+
 :::note
-
 Some older browsers do not support it (IE, use Babel to polyfill it), but it works in modern browsers.
-
 :::
 
   </div>

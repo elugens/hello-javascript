@@ -523,6 +523,8 @@ console.log(b);  // Output: 3
 console.log(c);  // Output: 4
 ```
 
+---
+
 :::note
 While this code demonstrates the evaluation and side effects of using commas in expressions, it's generally recommended to use separate statements or more explicit and readable code for better code maintainability.
 :::
@@ -709,6 +711,8 @@ let num = 7.14159;
 let roundedNum = num.toFixed(2);
 console.log(roundedNum);  // Output: "7.14"
 ```
+
+---
 
 :::note
 Please note that the toFixed() method returns a string, so if you need a numeric value, you may need to convert it back using parseFloat() or Number().

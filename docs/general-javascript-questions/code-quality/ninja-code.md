@@ -574,13 +574,14 @@ In the second example, an event listener is used to attach the `handleButtonClic
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The 'with' statement in JavaScript can lead to ambiguity and unpredictable results, as it changes the scope chain, potentially modifying unintended variables. Its use is generally discouraged to maintain code clarity and predictability.
-</div><br/>
+
+---
 
 :::warning
-
-The ‘with’ statement is deprecated and no longer recommended, according to the MDN.
-
+The **with** statement is **deprecated** and no longer recommended, according to the MDN.
 :::
+
+</div>
   </div>
 </details>
 

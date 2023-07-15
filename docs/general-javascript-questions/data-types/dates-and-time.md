@@ -301,10 +301,10 @@ let year = date.getFullYear();
 console.log(year); // returns 2021
 ```
 
+---
+
 :::warning
-
-The getYear() method is **deprecated**, and you should not use it.
-
+The getYear() method is **deprecated**, and you should not use it. Use **getFullYear()** instead.
 :::
 
   </div>
@@ -523,10 +523,10 @@ let end = new Date(); // end measuring time
 console.log(`The loop took ${end - start} ms`);
 ```
 
+---
+
 :::note
-
 The critical side effect: JavaScript can subtract date numbers; the result is their difference in milliseconds. That can be used for time measurements and equip an application with more powerful time-related features.
-
 :::
 
   </div>

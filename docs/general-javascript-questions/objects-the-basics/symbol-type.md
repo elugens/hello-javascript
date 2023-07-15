@@ -114,10 +114,10 @@ console.log(id1 == id2); // false
 console.log(id1.description === id2.description); // true
 ```
 
+---
+
 :::note
-
 The description can be identical, but the value is unique and returns false if both values get compared.
-
 :::
 
   </div>

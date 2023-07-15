@@ -229,10 +229,10 @@ function sayHiBye(firstName, lastName) {
 }
 ```
 
+---
+
 :::note
-
 Nested functions are pretty standard in JavaScript because of their dynamic abilities, which allow an extension of the originating function.
-
 :::
 
   </div>
@@ -248,14 +248,14 @@ Nested functions are pretty standard in JavaScript because of their dynamic abil
   <div>
   <div><strong>Interview Response:</strong> The Lexical Environment is a theoretical specification object, comprising the environment record (holding identifier-variable mappings) and a reference to the outer lexical environment, explaining scope and closure behavior.</div><br />
   <div><strong>Technical Response:</strong> "Lexical Environment" is a specification object: it only exists "theoretically" in the language specification to describe how things work. We cannot access this object in our code and manipulate it directly. JavaScript engines may also optimize it, discard unused variables to save memory, and perform other internal tricks if the visible behavior remains as described. The Lexical Environment object consists of two parts, including the environment record and a reference to the outer lexical environment. The Environment Record is an object that stores local variables as its properties (and some other information like the value of this).
-  </div><br/><br/>
+
+---
 
 :::note
-
 The Environment Record is an object that stores all local variables as its properties and some other information like the value of this.
-
 :::
 
+  </div>
   </div>
 </details>
 
@@ -295,14 +295,14 @@ word = 'Hello'; // word: "Hello"
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> Function declarations are hoisted and fully initialized upon script load, while variable declarations are hoisted but remain uninitialized until assigned a value during code execution.
-</div><br />
+
+---
 
 :::note
-
 You should be aware that this only applies to function declarations, not function expressions.
-
 :::
 
+</div>
   </div>
 </details>
 
@@ -315,14 +315,14 @@ You should be aware that this only applies to function declarations, not functio
   <div>
   <div><strong>Interview Response:</strong> A closure in JavaScript is a function that has access to its own scope, the outer function's scope, and the global scope, even after the outer function has finished execution.</div><br />
   <div><strong>Technical Response:</strong> A closure is a function that remembers its outer variables and can access them. In some languages, that is impossible, or a function is written in a special way to make it happen. In JavaScript, all functions are naturally Closures (there is only one exception, The "new Function" syntax). Functions automatically remember where their point of creation is using a hidden [[Environment]] property, and then their code can access outer variables.
-  </div><br />
+
+---
 
 :::note
-
 This should not be confused with a code block.
-
 :::
 
+  </div>
   </div>
 </details>
 

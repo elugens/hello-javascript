@@ -144,10 +144,10 @@ let user = {
 };
 ```
 
+---
+
 :::note
-
 In JavaScript, objects penetrate almost every aspect of the language.
-
 :::
 
   </div>

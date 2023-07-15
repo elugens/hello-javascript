@@ -567,6 +567,8 @@ main();
 
 In this example, we've defined a `Stream` class that extends `EventEmitter` and simulates emitting events asynchronously. The `main` function then listens for these events and logs them as they're received. The `for await...of` loop allows us to handle these events asynchronously.
 
+---
+
 :::note
 Note: This example requires Node.js and its built-in `events` module to run.
 :::

@@ -161,7 +161,7 @@ for (let num of view) {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Uint stands for unsigned integer in JavaScript.
+  <div><strong>Interview Response:</strong> Uint in JavaScript stands for "Unsigned Integer". It's a type of numeric data type that can only represent non-negative integers. For instance, Uint8Array can store 8-bit unsigned integers.
     </div>
   </div>
 </details>
@@ -217,7 +217,7 @@ console.log(typedArray2);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, typed arrays behave like regular arrays. They also have indexes that are iterable.
+  <div><strong>Interview Response:</strong> Yes, both TypedArray and regular Array in JavaScript can store multiple values. However, TypedArray is used for binary data, handling raw memory buffers, and has specific types like Uint8, Float32, etc.
     </div>
   </div>
 </details>

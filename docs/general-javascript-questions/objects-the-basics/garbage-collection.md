@@ -62,7 +62,6 @@ import StructuredData from './schemadata/GCSchemaData.js';
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> JavaScript automatically allocates memory when objects are created and clears the memory when the object no longer references it. (Garbage Collection)
-</div>
 
 ---
 
@@ -70,6 +69,7 @@ import StructuredData from './schemadata/GCSchemaData.js';
 This type of automaticity is a potential source of confusion: it can give developers the false impression that they do not need to worry about memory management.
 :::
 
+</div>
   </div>
 </details>
 
@@ -188,10 +188,10 @@ null:
 // global -> var a -> null
 ```
 
+---
+
 :::note
-
 JavaScript cannot delete Global variables directly, and the global variable must be set to null before the memory can be collected. However, the variable still exists and references null (nothingness).
-
 :::
 
   </div>
@@ -311,7 +311,6 @@ family = null;
   <summary><strong>View Answer:</strong></summary>
   <div>
   <div><strong>Interview Response:</strong> The three standard garbage collection optimizations are generational collection, incremental collection, and idle-time collection in JavaScript.
-</div>
 
 ---
 
@@ -319,6 +318,7 @@ family = null;
 You should note that each engine implements different tweaks and techniques when it comes to garbage collection.
 :::
 
+</div>
   </div>
 </details>
 

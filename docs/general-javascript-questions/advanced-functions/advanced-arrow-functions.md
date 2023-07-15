@@ -136,6 +136,8 @@ x = new X(); // X is not a constructor
 y = new Y(); // Y does not execute
 ```
 
+---
+
 :::note
 This is relatively simple, as seen by the engine's reaction to any call of "new" on arrow functions. Because "blank is not a constructor," it results in an uncaught type error.
 :::

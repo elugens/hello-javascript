@@ -342,6 +342,8 @@ let sayHi = function () {
 }; // <-- semicolon here closes out the statement.
 ```
 
+---
+
 :::note
 There’s no need for a semicolon ( ; ) at the end of code blocks and syntax structures that use them like if { ... }, for { }, function f { } etc.
 :::

@@ -610,6 +610,8 @@ let longEar = {
 longEar.eat(); // Long Ear eats.
 ```
 
+---
+
 :::note
 You should never call **proto** in your code. In this case, just call super.
 :::

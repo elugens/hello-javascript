@@ -69,6 +69,8 @@ greeting: function greeting() {
 }
 ```
 
+---
+
 :::note
 (In Node.js, this is not the case.) The global object's interface depends on the execution context in which the script is running.
 :::
@@ -134,6 +136,8 @@ window.setTimeout(() => console.log('Browser timer'), 1000); // Sets a timer
 console.log(global); // Outputs the global object and its properties
 global.setTimeout(() => console.log('Node.js timer'), 1000); // Sets a timer
 ```
+
+---
 
 :::note
 Please note that `setTimeout` function can be called directly without referencing the global object in both environments.

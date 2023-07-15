@@ -99,6 +99,8 @@ let newArr = [...myArr, 'FrontEnd', 24];
 console.log(newArr); // ["Marina" , "Magdy" , "Shafiq" , "FrontEnd" , 24 ] ;
 ```
 
+---
+
 :::note
 If you call a function and send several arguments, you receive them into the rest parameter in the function implementation.
 :::

@@ -588,6 +588,8 @@ fetch('https://example.com/data', {
 .catch(error => console.error('Error:', error));
 ```
 
+---
+
 :::note
 Note: If the target server at "<https://example.com/data>" doesn't have CORS headers set to accept requests from your domain, the browser will block the request.
 :::

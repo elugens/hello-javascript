@@ -93,6 +93,8 @@ User.staticMethod = function () {
 User.staticMethod(); // true
 ```
 
+---
+
 :::note
 The easiest way to remember how static methods work is to always call the method on the class name directly. Example: Rabbit.methodName - We are not required to declare a new Class Object for static methods or properties (class fields).
 :::

@@ -335,12 +335,13 @@ array.forEach((element) => {
 console.log(sum); // Output: 15
 ```
 
-  </div>
+---
 
 :::note
 Additionally, break and continue statements are not valid statements, resulting in a Syntax error.
 :::
 
+  </div>
   </div>
 </details>
 
@@ -519,10 +520,10 @@ let user = users.find((item) => item.id == 1);
 console.log(user.name); // expected output: John
 ```
 
+---
+
 :::note
-
 You should remember that index 0 gets interpreted as a falsie value in conditional statement checks on the find method.
-
 :::
 
   </div>
@@ -728,6 +729,8 @@ wordArr.reverse(); // reverse ['H', 'e', 'l', 'l', 'o']
 console.log(wordArr); // wordArr = ["o", "l", "l", "e", "H"]
 ```
 
+---
+
 :::note
 We should note that you cannot use the reverse method to reverse a string. Its strictly used for arrays, but this can give insight into the reverse method's first step to reversing string. Simply (It’s not that simple), it turns the string into an array.
 :::
@@ -838,10 +841,10 @@ let result = arr.reduce((sum, current) => sum + current, 0);
 console.log(result); // 15
 ```
 
+---
+
 :::note
-
 The reduce method does not execute the function for array elements without values or change the original array.
-
 :::
 
   </div>
@@ -882,6 +885,8 @@ let result = arr.reduceRight((sum, current) => sum + current, 0);
 
 console.log(result); // 15
 ```
+
+---
 
 :::note
 Conversely, the reduce() method does the same thing but from left to right.
@@ -936,10 +941,10 @@ Array.isArray(new Uint8Array(32));
 Array.isArray({ __proto__: Array.prototype });
 ```
 
+---
+
 :::note
-
 It is better to use the typeof operator to determine the object type.
-
 :::
 
   </div>

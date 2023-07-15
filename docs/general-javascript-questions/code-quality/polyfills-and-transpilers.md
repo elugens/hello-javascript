@@ -34,10 +34,10 @@ height = height ?? 100;
 height = height !== undefined && height !== null ? height : 100;
 ```
 
+---
+
 :::note
-
 Before 2020, JavaScript did not have a nullish coalescing operator (??). We needed a piece of software to convert it into workable code for older browsers to do work.
-
 :::
 
   </div>

@@ -624,6 +624,8 @@ let url = `https://google.com/search?q=${music}`;
 console.log(url); // https://google.com/search?q=Rock&Roll
 ```
 
+---
+
 :::note
 We should note that encoding can be a bit touchy, and you should pay attention to any characters that encodeURI can misinterpret.
 :::

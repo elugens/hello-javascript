@@ -79,6 +79,8 @@ Object.assign(User.prototype, sayHiMixin);
 new User('Dude').sayHi(); // Hello Dude!
 ```
 
+---
+
 :::note
 In JavaScript, we can only inherit from a single object. There can be only one `[[Prototype]]` for an object. And a class may extend to only one other class. That is a limiting factor in “class” inheritance that may require the use of a mixin.
 :::

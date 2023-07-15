@@ -68,7 +68,7 @@ const blob = new Blob(data, {type: 'text/plain'});
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> It's created using the Blob constructor, which takes an array of data parts and optional MIME type.
+  <div><strong>Interview Response:</strong> In JavaScript, a Blob object can be created using the Blob constructor, which takes an array of BlobParts (like Strings, ArrayBuffer, other Blobs) and an optional options object.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
@@ -128,7 +128,7 @@ console.log(myBlob.type + ' is the type');
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Blobs are often used for handling file uploads, download, reading large files, and managing binary data.
+  <div><strong>Interview Response:</strong> Blobs in JavaScript are commonly used for handling large binary data like images, audio files, or video streams. They're useful in file manipulation (reading and writing), AJAX requests, and in the File API.
   </div>
   </div>
 </details>
@@ -167,7 +167,26 @@ reader.onload = function() {
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> Yes, Blob data can be converted to a text string, binary string, or a data URL.
+  <div><strong>Interview Response:</strong> Yes, Blob data can be converted to other formats in JavaScript. For instance, FileReader's readAsDataURL method can convert a Blob into a base64 encoded data URL.
+  </div><br />
+  <div><strong className="codeExample">Code Example:</strong><br /><br />
+
+  <div></div>
+
+```javascript
+let blob = new Blob(["Hello World"], {type: "text/plain"});
+
+let reader = new FileReader();
+
+reader.onload = function() {
+  console.log(reader.result);  // this will output the base64 string
+}
+
+reader.readAsDataURL(blob);
+```
+
+In this code, `reader.result` will contain a base64 encoded data URL representing the text "Hello World".
+
   </div>
   </div>
 </details>
@@ -292,7 +311,7 @@ console.log('Blob URL:', blobURL);
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A Blob is a file-like object of immutable, raw data, useful for storing large data, while an ArrayBuffer is a low-level, mutable binary data buffer, ideal for complex data manipulation.
+  <div><strong>Interview Response:</strong> In JavaScript, Blob is used for handling large binary data as immutable objects. ArrayBuffer is a low-level interface used for reading/writing raw binary data, and unlike Blob, its content can be manipulated.
   </div>
   </div>
 </details>
@@ -361,7 +380,7 @@ In this example, we're storing a simple text Blob in an IndexedDB store. The 're
 <details>
   <summary><strong>View Answer:</strong></summary>
   <div>
-  <div><strong>Interview Response:</strong> A Blob URL is a URL that points to a Blob or File object. It's created using the URL.createObjectURL() function in JavaScript.
+  <div><strong>Interview Response:</strong> A Blob URL in JavaScript is a URL representing data generated programmatically, often binary large objects (Blobs). It's created using URL.createObjectURL() and can be used to display images or download files.
   </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
