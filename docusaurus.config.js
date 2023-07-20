@@ -229,9 +229,14 @@ const config = {
     // 'https://docusaurus.io/script.js',
     // Object format.
     {
-      src: '/js/scripts.js',
+      src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5606137173126649',
       async: true,
+      crossorigin: 'anonymous',
     },
+    // {
+    //   src: '/js/scripts.js',
+    //   async: true,
+    // },
   ],
 
   // plugins config

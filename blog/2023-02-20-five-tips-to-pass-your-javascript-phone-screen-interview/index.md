@@ -3,7 +3,7 @@ title: 5 Tips to Pass Your JavaScript Phone Screen
 description: Passing a phone screen is an important step in the hiring process for any job, and it's no different for a JavaScript developer.
 authors: [elugens]
 tags: [phone screen,frontend,developer,engineer]
-keywords: [learning,frontend,developer,engineer,html,css,javascript]
+keywords: [learning,frontend,developer,engineer,html,css,javascript,interview,oral,frontend developer interview]
 ---
 
 ## "5 Tips to Pass Your JavaScript Phone Screen: A Guide for Job Seekers"

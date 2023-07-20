@@ -24,8 +24,7 @@ tags:
   - interview questions
 ---
 
-<!-- Notes: Passed Rich Snippets validation. -->
-import {Adsense} from '@ctrl/react-adsense';
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/JSBasicsSchemaData.js';
@@ -34,8 +33,6 @@ import StructuredData from './schemadata/JSBasicsSchemaData.js';
 
 <head>
   <title>Basic JavaScript Interview Questions and Answers</title>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5606137173126649"
-     crossorigin="anonymous"></script>
 </head>
 
 **JavaScript Basics: Basic JS Questions**
@@ -43,27 +40,19 @@ import StructuredData from './schemadata/JSBasicsSchemaData.js';
 ---
 
 <div class='videoWrapper'>
-<iframe
-    width="640"
-    height="480"
-    src="https://www.youtube.com/embed/5Re-egzK7fU"
-    frameborder="0"
-    allow="autoplay; encrypted-media"
+  <iframe
+    width='640'
+    height='480'
+    src='https://www.youtube.com/embed/5Re-egzK7fU'
+    frameborder='0'
+    allow='autoplay; encrypted-media'
     allowfullscreen
->
-</iframe>
+  ></iframe>
 </div>
 
 ---
 
-<!-- responsive and native ads -->
-<Adsense
-  client="ca-pub-5606137173126649"
-  slot="3615666284"
-  style={{ display: 'block' }}
-  layout="in-article"
-  format="fluid"
-/>
+<AdSense />
 
 ---
 
@@ -84,10 +73,10 @@ Here is a simple JavaScript code example:
 
 ```javascript
 function sayHello(name) {
-    return "Hello, " + name + "!";
+  return 'Hello, ' + name + '!';
 }
 
-console.log(sayHello("JavaScript")); // Prints: Hello, JavaScript!
+console.log(sayHello('JavaScript')); // Prints: Hello, JavaScript!
 ```
 
 This code defines a function that concatenates a string with an input name, and logs the output to the console.
@@ -119,13 +108,13 @@ Here's an example illustrating a few key features of JavaScript, including dynam
 ```javascript
 // Object-oriented programming
 let student = {
-    firstName: 'John',
-    lastName: 'Doe',
-    age: 20,
-    getFullName: function() {
-        return this.firstName + ' ' + this.lastName;
-    }
-}
+  firstName: 'John',
+  lastName: 'Doe',
+  age: 20,
+  getFullName: function () {
+    return this.firstName + ' ' + this.lastName;
+  },
+};
 
 // Dynamic typing
 let variable = 'Hello, ';
@@ -133,8 +122,8 @@ variable = variable + student.getFullName();
 console.log(variable); // Prints: Hello, John Doe
 
 // Asynchronous programming
-setTimeout(function() {
-    console.log('This is printed after 2 seconds');
+setTimeout(function () {
+  console.log('This is printed after 2 seconds');
 }, 2000);
 ```
 
@@ -157,7 +146,9 @@ In this code, `student` is an object with properties and a method. We demonstrat
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-  <div></div>
+{' '}
+
+<div></div>
 
 Here is an example of high-level programming language code (JavaScript):
 
@@ -225,17 +216,19 @@ In this assembly code, we manually load the values of `a` and `b` into a registe
     </div><br />
   <div><strong className="codeExample">Table: Interpreted vs Compiled</strong><br /><br />
 
-  <div></div>
+{' '}
+
+<div></div>
 
 Here's a simple table of differences between Interpreted and Compiled languages using JavaScript as an example of an interpreted language and C++ as an example of a compiled language:
 
-| Criteria | JavaScript (Interpreted) | C++ (Compiled) |
-|----------|--------------------------|----------------|
-| Compilation | No separate compilation step. Code is typically parsed and executed line-by-line by a JavaScript engine using JIT compilation. | Requires a separate compilation step before running, where the source code is translated to machine code. |
-| Execution Speed | Generally slower, due to the overhead of interpreting code or JIT compiling at runtime. | Generally faster, as the code is already compiled to machine code before execution. |
-| Debugging | Easier to debug, errors appear at runtime, line by line. | Debugging can be more complex. Errors not caught at compile time may cause unpredictable behaviors. |
-| Portability | Highly portable as long as the host system has a JavaScript engine (like a web browser). | Compiled binaries are platform-dependent and may require recompiling for different systems. |
-| Use Case | Commonly used for web development, enhancing interactivity in web pages. | Used for system software, game development, and where performance is critical. |
+| Criteria        | JavaScript (Interpreted)                                                                                                       | C++ (Compiled)                                                                                            |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------- |
+| Compilation     | No separate compilation step. Code is typically parsed and executed line-by-line by a JavaScript engine using JIT compilation. | Requires a separate compilation step before running, where the source code is translated to machine code. |
+| Execution Speed | Generally slower, due to the overhead of interpreting code or JIT compiling at runtime.                                        | Generally faster, as the code is already compiled to machine code before execution.                       |
+| Debugging       | Easier to debug, errors appear at runtime, line by line.                                                                       | Debugging can be more complex. Errors not caught at compile time may cause unpredictable behaviors.       |
+| Portability     | Highly portable as long as the host system has a JavaScript engine (like a web browser).                                       | Compiled binaries are platform-dependent and may require recompiling for different systems.               |
+| Use Case        | Commonly used for web development, enhancing interactivity in web pages.                                                       | Used for system software, game development, and where performance is critical.                            |
 
   </div>
   </div>
@@ -251,7 +244,9 @@ Here's a simple table of differences between Interpreted and Compiled languages 
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> The name of the JavaScript scripting language specification is called ECMAScript, which is maintained by the ECMA International Standards organization.
+      <strong>Interview Response:</strong> The name of the JavaScript scripting
+      language specification is called ECMAScript, which is maintained by the
+      ECMA International Standards organization.
     </div>
   </div>
 </details>
@@ -266,7 +261,12 @@ Here's a simple table of differences between Interpreted and Compiled languages 
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> In 1995, JavaScript was created by Brendan Eich at Netscape Communications Corporation, originally named Mocha and then Live Script, before being renamed to JavaScript. The name was chosen to capitalize on Java's popularity and attract Java developers to the web. Despite its name, JavaScript is a distinct language with its own unique syntax and features.
+      <strong>Interview Response:</strong> In 1995, JavaScript was created by
+      Brendan Eich at Netscape Communications Corporation, originally named
+      Mocha and then Live Script, before being renamed to JavaScript. The name
+      was chosen to capitalize on Java's popularity and attract Java developers
+      to the web. Despite its name, JavaScript is a distinct language with its
+      own unique syntax and features.
     </div>
   </div>
 </details>
@@ -283,9 +283,13 @@ Here's a simple table of differences between Interpreted and Compiled languages 
     <div>
       <strong>Interview Response:</strong> JavaScript works in any environment
       that has a JS engine.
-    </div><br />
+    </div>
+    <br />
     <div>
-      <strong>Technical Response:</strong> JavaScript is a flexible language that can run on a wide range of platforms, as long as they support a JavaScript engine, such as web browsers, servers, desktop applications, and IoT devices.
+      <strong>Technical Response:</strong> JavaScript is a flexible language
+      that can run on a wide range of platforms, as long as they support a
+      JavaScript engine, such as web browsers, servers, desktop applications,
+      and IoT devices.
     </div>
   </div>
 </details>
@@ -306,18 +310,20 @@ Here's a simple table of differences between Interpreted and Compiled languages 
     </div><br />
   <div><strong className="codeExample">Code Names:</strong><br /><br />
 
-  <div></div>
+{' '}
+
+<div></div>
 
 Here's a table of some commonly used JavaScript engines and their code names:
 
-| JavaScript Engine | Code Name |
-|-------------------|-----------|
-| Google Chrome     | V8        |
-| Firefox           | SpiderMonkey |
-| Safari            | JavaScriptCore (Nitro) |
-| Edge (pre-Chromium) | Chakra  |
-| Node.js           | V8        |
-| Opera             | Carakan (pre-2013), V8 (post-2013) |
+| JavaScript Engine   | Code Name                          |
+| ------------------- | ---------------------------------- |
+| Google Chrome       | V8                                 |
+| Firefox             | SpiderMonkey                       |
+| Safari              | JavaScriptCore (Nitro)             |
+| Edge (pre-Chromium) | Chakra                             |
+| Node.js             | V8                                 |
+| Opera               | Carakan (pre-2013), V8 (post-2013) |
 
 These engines are used to parse and execute JavaScript code in their respective environments.
 
@@ -356,16 +362,23 @@ These engines are used to parse and execute JavaScript code in their respective 
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> In-browser JavaScript can't access files or data on the user's computer, for security reasons. It also can't perform certain network requests, due to CORS policies. The aim is to prevent a malicious website from accessing users' data or harming them.
-    </div><br />
+      <strong>Interview Response:</strong> In-browser JavaScript can't access
+      files or data on the user's computer, for security reasons. It also can't
+      perform certain network requests, due to CORS policies. The aim is to
+      prevent a malicious website from accessing users' data or harming them.
+    </div>
+    <br />
     <div>
       <strong>Technical Response:</strong> JavaScript's capabilities in the
       browser are limited to safeguard the user's safety. The purpose is to
       prevent a malicious website from acquiring private information or
       inflicting data damage to users.
-    </div><br/>
+    </div>
+    <br />
     <div>
-      <strong>Examples of such constraints include:</strong><br /><br />
+      <strong>Examples of such constraints include:</strong>
+      <br />
+      <br />
       <ol>
         <li>
           JavaScript permits us to read/write files directly on the hard disk,
@@ -411,7 +424,11 @@ These engines are used to parse and execute JavaScript code in their respective 
   </summary>
   <div>
     <div>
-      <strong>Interview Response:</strong> JavaScript is unique because it fully integrates with HTML and CSS, and all major browsers support it. JavaScript is the only browser technology that combines, all three of these features. That distinguishes JavaScript, and explains why it is the most widely used technology for designing browser interfaces.
+      <strong>Interview Response:</strong> JavaScript is unique because it fully
+      integrates with HTML and CSS, and all major browsers support it.
+      JavaScript is the only browser technology that combines, all three of
+      these features. That distinguishes JavaScript, and explains why it is the
+      most widely used technology for designing browser interfaces.
     </div>
   </div>
 </details>
@@ -470,24 +487,26 @@ These engines are used to parse and execute JavaScript code in their respective 
     </div><br />
   <div><strong className="codeExample">Code Example:</strong> TypeScript<br /><br />
 
-  <div></div>
+{' '}
+
+<div></div>
 
 TypeScript is a strongly typed, object-oriented, compiled language. It is a super-set of JavaScript. TypeScript adds optional types, classes, and modules to JavaScript.
 
 ```typescript
 class Greeter {
-    greeting: string;
+  greeting: string;
 
-    constructor(message: string) {
-        this.greeting = message;
-    }
+  constructor(message: string) {
+    this.greeting = message;
+  }
 
-    greet() {
-        return "Hello, " + this.greeting;
-    }
+  greet() {
+    return 'Hello, ' + this.greeting;
+  }
 }
 
-let greeter = new Greeter("JavaScript!");
+let greeter = new Greeter('JavaScript!');
 console.log(greeter.greet()); // Outputs: Hello, JavaScript!
 ```
 
@@ -517,10 +536,12 @@ Finally, `console.log(greeter.greet());` calls the `greet` method on the `greete
     </div><br />
   <div><strong className="codeExample">Code Example:</strong><br /><br />
 
-  <div></div>
+{' '}
+
+<div></div>
 
 ```js
-let test; 
+let test;
 console.log(test); // Outputs: undefined
 
 test = null;
