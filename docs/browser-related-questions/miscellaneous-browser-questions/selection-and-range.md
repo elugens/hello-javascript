@@ -27,6 +27,7 @@ tags:
   - interview questions
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/SelectionSchemaData.js';
@@ -39,9 +40,13 @@ import StructuredData from './schemadata/SelectionSchemaData.js';
 
 **Miscellaneous: Selection and Range**
 
-<CloseAllAnswers />
+---
+
+<AdSense />
 
 ---
+
+<CloseAllAnswers />
 
 ### Can you describe the fundamentals of selection in JavaScript?
 

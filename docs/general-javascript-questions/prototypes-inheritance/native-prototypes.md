@@ -25,6 +25,8 @@ tags:
   - interview questions
 ---
 
+
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/NativeSchemaData.js';
@@ -37,9 +39,13 @@ import StructuredData from './schemadata/NativeSchemaData.js';
 
 **Prototypes / Inheritance: Native Prototypes**
 
-<CloseAllAnswers />
+---
+
+<AdSense />
 
 ---
+
+<CloseAllAnswers />
 
 ### What is a native prototype in JavaScript?
 

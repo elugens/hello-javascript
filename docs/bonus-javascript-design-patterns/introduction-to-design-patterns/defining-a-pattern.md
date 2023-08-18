@@ -26,6 +26,7 @@ tags:
   - interview questions
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/DefiningPatternSchemaData.js';
@@ -40,9 +41,13 @@ import StructuredData from './schemadata/DefiningPatternSchemaData.js';
 
 **Introduction: Defining a Pattern**
 
-<CloseAllAnswers />
+---
+
+<AdSense />
 
 ---
+
+<CloseAllAnswers />
 
 ### What is a pattern language in design patterns?
 

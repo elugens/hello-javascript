@@ -25,6 +25,7 @@ tags:
   - interview questions
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/PointerEventSchemaData.js';
@@ -37,9 +38,13 @@ import StructuredData from './schemadata/PointerEventSchemaData.js';
 
 **UI Events: Pointer Events**
 
-<CloseAllAnswers />
+---
+
+<AdSense />
 
 ---
+
+<CloseAllAnswers />
 
 ### What are Pointer Events in JavaScript?
 

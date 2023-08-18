@@ -27,6 +27,7 @@ tags:
   - interview questions
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/FetchCrossSchemaData.js';
@@ -39,9 +40,13 @@ import StructuredData from './schemadata/FetchCrossSchemaData.js';
 
 **Network Requests: Fetch: Cross-Origin Requests**
 
-<CloseAllAnswers />
+---
+
+<AdSense />
 
 ---
+
+<CloseAllAnswers />
 
 ### What is CORS, and why is it needed?
 

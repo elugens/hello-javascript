@@ -26,6 +26,7 @@ tags:
   - interview questions
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/ObjectRefSchemaData.js';
@@ -38,9 +39,13 @@ import StructuredData from './schemadata/ObjectRefSchemaData.js';
 
 **Objects the Basics: References/Copying**
 
-<CloseAllAnswers />
+---
+
+<AdSense />
 
 ---
+
+<CloseAllAnswers />
 
 ### Can you explain the difference between an object and primitive value copying?
 

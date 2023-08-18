@@ -28,6 +28,7 @@ tags:
 lastmod: 2022-05-01T18:11:50.564Z
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/CodingStyleSchemaData.js';
@@ -39,6 +40,10 @@ import StructuredData from './schemadata/CodingStyleSchemaData.js';
 </head>
 
 **Code Quality: Code Style**
+
+---
+
+<AdSense />
 
 ---
 

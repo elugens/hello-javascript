@@ -5,6 +5,7 @@ sidebar_position: 3
 sidebar_label: Drag'n'Drop
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/DragDropSchemaData.js';
@@ -13,9 +14,13 @@ import StructuredData from './schemadata/DragDropSchemaData.js';
 
 **UI Events: Drag'n'Drop with mouse events**
 
-<CloseAllAnswers />
+---
+
+<AdSense />
 
 ---
+
+<CloseAllAnswers />
 
 ### What is the Drag and Drop API in JavaScript?
 

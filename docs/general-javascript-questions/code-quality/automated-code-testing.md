@@ -27,6 +27,7 @@ tags:
 lastmod: 2022-05-01T18:05:22.130Z
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/AutomatedTestSchemaData.js';
@@ -38,6 +39,12 @@ import StructuredData from './schemadata/AutomatedTestSchemaData.js';
 </head>
 
 **Code Quality: Automated Testing**
+
+---
+
+<AdSense />
+
+---
 
 <CloseAllAnswers />
 

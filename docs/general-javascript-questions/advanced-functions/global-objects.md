@@ -24,6 +24,7 @@ tags:
   - interview questions
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/GlobalSchemaData.js';
@@ -35,6 +36,12 @@ import StructuredData from './schemadata/GlobalSchemaData.js';
 </head>
 
 **Advanced Functions: Global Object**
+
+---
+
+<AdSense />
+
+---
 
 <CloseAllAnswers />
 

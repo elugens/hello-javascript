@@ -30,6 +30,7 @@ tags:
 lastmod: 2022-05-01T18:23:05.202Z
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/CommentsSchemaData.js';
@@ -41,6 +42,10 @@ import StructuredData from './schemadata/CommentsSchemaData.js';
 </head>
 
 **Code Quality: Comments in JavaScript**
+
+---
+
+<AdSense />
 
 ---
 

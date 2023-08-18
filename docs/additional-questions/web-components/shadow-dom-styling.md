@@ -26,6 +26,7 @@ tags:
   - interview questions
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/ShadowDOMStylingSchemaData.js';
@@ -38,9 +39,13 @@ import StructuredData from './schemadata/ShadowDOMStylingSchemaData.js';
 
 **Web Components: Shadow DOM Styling**
 
-<CloseAllAnswers />
+---
+
+<AdSense />
 
 ---
+
+<CloseAllAnswers />
 
 ### Can you include CSS styles in a Shadow DOM template?
 

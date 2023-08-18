@@ -26,6 +26,7 @@ tags:
   - interview questions
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/BackReferenceSchemaData.js';
@@ -38,11 +39,13 @@ import StructuredData from './schemadata/BackReferenceSchemaData.js';
 
 **Regular Expressions: Backreference Pattern**
 
-<CloseAllAnswers />
+---
+
+<AdSense />
 
 ---
 
-**Regular expressions: Backreferences in pattern: \N and \k&#60;name&#62;**
+<CloseAllAnswers />
 
 ### What is backreferencing in regular JavaScript expressions?
 

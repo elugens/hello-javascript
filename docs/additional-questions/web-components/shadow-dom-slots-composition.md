@@ -26,6 +26,7 @@ tags:
   - interview questions
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/ShadowDOMSlotsSchemaData.js';
@@ -38,9 +39,13 @@ import StructuredData from './schemadata/ShadowDOMSlotsSchemaData.js';
 
 **Web Components: Shadow DOM Slots - Composition**
 
-<CloseAllAnswers />
+---
+
+<AdSense />
 
 ---
+
+<CloseAllAnswers />
 
 ### What is the HTML named `<slot>` element used for in web development?
 

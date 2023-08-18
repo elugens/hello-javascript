@@ -26,13 +26,7 @@ tags:
   - interview questions
 ---
 
-Note: Reference types
-
-<!-- import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
-import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
-import StructuredData from './schemadata/RefTypesSchemaData.js';
-
-<JsonLD data={StructuredData} /> -->
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 
 <head>
   <title>Reference Type | JavaScript Frontend Phone Interview Answer</title>
@@ -40,7 +34,9 @@ import StructuredData from './schemadata/RefTypesSchemaData.js';
 
 **Miscellaneous: Reference Type**
 
-<CloseAllAnswers />
+---
+
+<AdSense />
 
 ---
 

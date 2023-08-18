@@ -26,6 +26,7 @@ tags:
   - interview questions
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/SymbolSchemaData.js';
@@ -38,9 +39,13 @@ import StructuredData from './schemadata/SymbolSchemaData.js';
 
 **Objects the Basics: Symbol Type**
 
-<CloseAllAnswers />
+---
+
+<AdSense />
 
 ---
+
+<CloseAllAnswers />
 
 ### What are the two types of object property keys in JavaScript?
 

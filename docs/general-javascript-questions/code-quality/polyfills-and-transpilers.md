@@ -5,6 +5,7 @@ sidebar_position: 6
 sidebar_label: Polyfills & Transpilers
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/PolyfillsSchemaData.js';
@@ -12,6 +13,12 @@ import StructuredData from './schemadata/PolyfillsSchemaData.js';
 <JsonLD data={StructuredData} />
 
 **Code Quality: Polyfills & Transpilers**
+
+---
+
+<AdSense />
+
+---
 
 <CloseAllAnswers />
 

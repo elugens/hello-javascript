@@ -28,6 +28,7 @@ tags:
   - interview questions
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/WordBoundarySchemaData.js';
@@ -40,9 +41,13 @@ import StructuredData from './schemadata/WordBoundarySchemaData.js';
 
 **Regular Expressions: Word Boundary**
 
-<CloseAllAnswers />
+---
+
+<AdSense />
 
 ---
+
+<CloseAllAnswers />
 
 ### What does a word boundary in regex denote in JavaScript?
 

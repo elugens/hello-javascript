@@ -29,6 +29,7 @@ tags:
   - interview questions
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/PageSchemaData.js';
@@ -41,9 +42,13 @@ import StructuredData from './schemadata/PageSchemaData.js';
 
 **Document / Resource Loading: Page Lifecycle**
 
-<CloseAllAnswers />
+---
+
+<AdSense />
 
 ---
+
+<CloseAllAnswers />
 
 ### What is the Page Lifecycle API?
 

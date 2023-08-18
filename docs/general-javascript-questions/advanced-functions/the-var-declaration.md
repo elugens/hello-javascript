@@ -26,6 +26,7 @@ tags:
 lastmod: 2022-05-01T17:44:13.207Z
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/TheVarSchemaData.js';
@@ -37,6 +38,12 @@ import StructuredData from './schemadata/TheVarSchemaData.js';
 </head>
 
 **Advanced Functions: Var Declaration**
+
+---
+
+<AdSense />
+
+---
 
 <CloseAllAnswers />
 

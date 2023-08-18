@@ -25,6 +25,7 @@ tags:
   - interview questions
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/FetchAPISchemaData.js';
@@ -37,9 +38,13 @@ import StructuredData from './schemadata/FetchAPISchemaData.js';
 
 **Network Requests: Fetch API**
 
-<CloseAllAnswers />
+---
+
+<AdSense />
 
 ---
+
+<CloseAllAnswers />
 
 ### What is the Fetch API in JavaScript?
 

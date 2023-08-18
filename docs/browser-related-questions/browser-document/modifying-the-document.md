@@ -26,6 +26,7 @@ tags:
   - interview questions
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/ModifyingDocSchemaData.js';
@@ -38,9 +39,13 @@ import StructuredData from './schemadata/ModifyingDocSchemaData.js';
 
 **Browser Document: Modifying the Document**
 
-<CloseAllAnswers />
+---
+
+<AdSense />
 
 ---
+
+<CloseAllAnswers />
 
 ### How do you create new DOM nodes in JavaScript?
 

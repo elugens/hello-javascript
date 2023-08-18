@@ -25,6 +25,7 @@ tags:
   - interview questions
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/FetchDownloadSchemaData.js';
@@ -37,9 +38,13 @@ import StructuredData from './schemadata/FetchDownloadSchemaData.js';
 
 **Network Requests: Fetch - Download Progress**
 
-<CloseAllAnswers />
+---
+
+<AdSense />
 
 ---
+
+<CloseAllAnswers />
 
 ### What is the purpose of a download progress bar in JavaScript applications?
 

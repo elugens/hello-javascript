@@ -26,6 +26,7 @@ tags:
   - interview questions
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/TheNewOpSchemaData.js';
@@ -38,9 +39,13 @@ import StructuredData from './schemadata/TheNewOpSchemaData.js';
 
 **Objects the Basics: The "new" Operator**
 
-<CloseAllAnswers />
+---
+
+<AdSense />
 
 ---
+
+<CloseAllAnswers />
 
 ### What is the new Operator used for in JavaScript?
 

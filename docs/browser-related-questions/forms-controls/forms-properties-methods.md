@@ -28,6 +28,7 @@ tags:
   - interview questions
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/FormPropsSchemaData.js';
@@ -40,9 +41,13 @@ import StructuredData from './schemadata/FormPropsSchemaData.js';
 
 **Forms / Controls: Form Properties / Methods**
 
-<CloseAllAnswers />
+---
+
+<AdSense />
 
 ---
+
+<CloseAllAnswers />
 
 ### Document forms are part of what unique collection?
 

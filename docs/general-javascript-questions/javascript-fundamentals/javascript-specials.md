@@ -5,6 +5,7 @@ sidebar_position: 20
 sidebar_label: JavaScript Specials
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/JavaScriptSpecialsSchemaData.js';
@@ -26,6 +27,10 @@ import StructuredData from './schemadata/JavaScriptSpecialsSchemaData.js';
 >
 </iframe>
 </div>
+
+---
+
+<AdSense />
 
 ---
 

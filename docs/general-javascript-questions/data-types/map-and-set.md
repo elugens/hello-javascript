@@ -28,6 +28,7 @@ tags:
 lastmod: 2022-05-01T21:31:29.703Z
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/MapSetSchemaData.js';
@@ -39,6 +40,12 @@ import StructuredData from './schemadata/MapSetSchemaData.js';
 </head>
 
 **Data Types: Map and Set**
+
+---
+
+<AdSense />
+
+---
 
 <CloseAllAnswers />
 

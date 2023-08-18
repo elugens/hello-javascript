@@ -28,6 +28,7 @@ tags:
 lastmod: 2022-05-01T21:25:38.596Z
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/JSONMethodsSchemaData.js';
@@ -39,6 +40,12 @@ import StructuredData from './schemadata/JSONMethodsSchemaData.js';
 </head>
 
 **Data Types: JSON Methods**
+
+---
+
+<AdSense />
+
+---
 
 <CloseAllAnswers />
 

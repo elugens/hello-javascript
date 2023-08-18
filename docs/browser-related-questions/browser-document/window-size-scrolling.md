@@ -26,6 +26,7 @@ tags:
   - interview questions
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/WindowSizeSchemaData.js';
@@ -38,9 +39,13 @@ import StructuredData from './schemadata/WindowSizeSchemaData.js';
 
 **Browser Document: Window Sizes / Scrolling**
 
-<CloseAllAnswers />
+---
+
+<AdSense />
 
 ---
+
+<CloseAllAnswers />
 
 ### How do we find the width and height of the browser window?
 

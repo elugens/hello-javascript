@@ -24,6 +24,7 @@ tags:
   - interview questions
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/OptChainSchemaData.js';
@@ -36,9 +37,13 @@ import StructuredData from './schemadata/OptChainSchemaData.js';
 
 **Objects the Basics: Optional Chaining**
 
-<CloseAllAnswers />
+---
+
+<AdSense />
 
 ---
+
+<CloseAllAnswers />
 
 ### What is the optional chaining operator in JavaScript?
 

@@ -23,6 +23,7 @@ tags:
   - interview questions
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/PromChainSchemaData.js';
@@ -35,9 +36,13 @@ import StructuredData from './schemadata/PromChainSchemaData.js';
 
 **Promises/Async/Await: Promises Chaining**
 
-<CloseAllAnswers />
+---
+
+<AdSense />
 
 ---
+
+<CloseAllAnswers />
 
 ### What is promise chaining in JavaScript?
 

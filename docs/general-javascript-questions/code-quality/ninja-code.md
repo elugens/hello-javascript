@@ -27,6 +27,7 @@ tags:
 lastmod: 2022-05-01T20:43:26.657Z
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/NinjaCodeSchemaData.js';
@@ -38,6 +39,12 @@ import StructuredData from './schemadata/NinjaCodeSchemaData.js';
 </head>
 
 **Code Quality: Ninja Code - Bad Coding Practices**
+
+---
+
+<AdSense />
+
+---
 
 <CloseAllAnswers />
 

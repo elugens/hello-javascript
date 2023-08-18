@@ -27,6 +27,7 @@ tags:
   - interview questions
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/MovingSchemaData.js';
@@ -38,6 +39,12 @@ import StructuredData from './schemadata/MovingSchemaData.js';
 </head>
 
 **UI Events: Moving the Mouse: mouseover/out, mouseenter/leave**
+
+---
+
+<AdSense />
+
+---
 
 <CloseAllAnswers />
 

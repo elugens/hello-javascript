@@ -26,6 +26,7 @@ tags:
   - interview questions
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/BrowserEventsSchemaData.js';
@@ -38,9 +39,13 @@ import StructuredData from './schemadata/BrowserEventsSchemaData.js';
 
 **Browser Events: Browser Events**
 
-<CloseAllAnswers />
+---
+
+<AdSense />
 
 ---
+
+<CloseAllAnswers />
 
 ### What is an event in relation to the DOM, Browser, and JavaScript?
 

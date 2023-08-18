@@ -25,6 +25,7 @@ tags:
   - interview questions
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/ScriptsSchemaData.js';
@@ -37,9 +38,13 @@ import StructuredData from './schemadata/ScriptsSchemaData.js';
 
 **Document / Resource Loading: Scripts - Async/Defer**
 
-<CloseAllAnswers />
+---
+
+<AdSense />
 
 ---
+
+<CloseAllAnswers />
 
 ### How do scripts load in an HTML document?
 

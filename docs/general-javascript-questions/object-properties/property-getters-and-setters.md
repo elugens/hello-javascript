@@ -28,6 +28,7 @@ tags:
   - interview questions
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/PropGetterSchemaData.js';
@@ -40,9 +41,13 @@ import StructuredData from './schemadata/PropGetterSchemaData.js';
 
 **Object Properties Configuration: Property Getters & Setters**
 
-<CloseAllAnswers />
+---
+
+<AdSense />
 
 ---
+
+<CloseAllAnswers />
 
 ### Can you explain what getters and setters are as it pertains to JavaScript?
 

@@ -26,7 +26,7 @@ tags:
   - interview questions
 ---
 
-
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/ErrorSchemaData.js';
@@ -39,9 +39,13 @@ import StructuredData from './schemadata/ErrorSchemaData.js';
 
 **Promises/Async/Await: Error / Promises**
 
-<CloseAllAnswers />
+---
+
+<AdSense />
 
 ---
+
+<CloseAllAnswers />
 
 ### How does error handling work with JavaScript promises?
 

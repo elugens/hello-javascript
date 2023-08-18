@@ -28,6 +28,7 @@ tags:
 lastmod: 2022-05-01T22:17:16.765Z
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/WeakMapSetSchemaData.js';
@@ -39,6 +40,12 @@ import StructuredData from './schemadata/WeakMapSetSchemaData.js';
 </head>
 
 **Data Types: WeakMap / WeakSet**
+
+---
+
+<AdSense />
+
+---
 
 <CloseAllAnswers />
 

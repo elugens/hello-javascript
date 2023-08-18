@@ -31,6 +31,7 @@ tags:
   - interview questions
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/SchedulingSchemaData.js';
@@ -42,6 +43,12 @@ import StructuredData from './schemadata/SchedulingSchemaData.js';
 </head>
 
 **Advanced Functions: Scheduling: setTimeout / setInterval**
+
+---
+
+<AdSense />
+
+---
 
 <CloseAllAnswers />
 

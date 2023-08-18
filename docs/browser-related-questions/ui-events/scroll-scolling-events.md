@@ -27,6 +27,7 @@ tags:
   - interview questions
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/ScrollingEventSchemaData.js';
@@ -39,9 +40,13 @@ import StructuredData from './schemadata/ScrollingEventSchemaData.js';
 
 **UI Events: Scrolling Events**
 
-<CloseAllAnswers />
+---
+
+<AdSense />
 
 ---
+
+<CloseAllAnswers />
 
 ### What is a scroll event in JavaScript?
 

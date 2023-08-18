@@ -27,6 +27,7 @@ tags:
 
 <!-- Notes: Passed Rich Snippets validation. -->
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/TheScriptTagSchemaData.js';
@@ -52,6 +53,10 @@ import StructuredData from './schemadata/TheScriptTagSchemaData.js';
 >
 </iframe>
 </div>
+
+---
+
+<AdSense />
 
 ---
 

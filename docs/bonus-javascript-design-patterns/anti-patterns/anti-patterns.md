@@ -25,6 +25,7 @@ tags:
   - interview questions
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/AntiPatternsSchemaData.js';
@@ -37,9 +38,13 @@ import StructuredData from './schemadata/AntiPatternsSchemaData.js';
 
 **Anti-Patterns: Understanding Anti-Patterns**
 
-<CloseAllAnswers />
+---
+
+<AdSense />
 
 ---
+
+<CloseAllAnswers />
 
 ### What exactly is an anti-pattern in application development?
 

@@ -25,6 +25,7 @@ tags:
   - interview questions
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/TextDecoderSchemaData.js';
@@ -37,9 +38,13 @@ import StructuredData from './schemadata/TextDecoderSchemaData.js';
 
 **Binary Data / Files: TextDecoder / TextEncoder**
 
-<CloseAllAnswers />
+---
+
+<AdSense />
 
 ---
+
+<CloseAllAnswers />
 
 ### What is TextEncoder in JavaScript?
 

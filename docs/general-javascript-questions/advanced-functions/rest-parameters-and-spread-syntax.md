@@ -23,6 +23,7 @@ tags:
 lastmod: 2022-05-01T17:33:46.661Z
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/RestParamSchemaData.js';
@@ -34,6 +35,12 @@ import StructuredData from './schemadata/RestParamSchemaData.js';
 </head>
 
 **Advanced Functions: Rest Parameters / Spread Syntax**
+
+---
+
+<AdSense />
+
+---
 
 <CloseAllAnswers />
 

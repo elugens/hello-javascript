@@ -25,6 +25,7 @@ tags:
   - interview questions
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/BubbleCapSchemaData.js';
@@ -37,9 +38,13 @@ import StructuredData from './schemadata/BubbleCapSchemaData.js';
 
 **Browser Events: Bubbling / Capturing**
 
-<CloseAllAnswers />
+---
+
+<AdSense />
 
 ---
+
+<CloseAllAnswers />
 
 ### Can you explain event bubbling in JavaScript?
 

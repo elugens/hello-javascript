@@ -26,6 +26,7 @@ tags:
   - interview questions
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/VisitorSchemaData.js';
@@ -38,9 +39,13 @@ import StructuredData from './schemadata/VisitorSchemaData.js';
 
 **Structural: Visitor Pattern**
 
-<CloseAllAnswers />
+---
+
+<AdSense />
 
 ---
+
+<CloseAllAnswers />
 
 ### What is the Visitor Design Pattern in JavaScript?
 

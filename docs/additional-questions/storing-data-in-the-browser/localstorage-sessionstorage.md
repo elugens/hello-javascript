@@ -28,6 +28,7 @@ tags:
   - interview questions
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/LocalSessionSchemaData.js';
@@ -40,9 +41,13 @@ import StructuredData from './schemadata/LocalSessionSchemaData.js';
 
 **Storing Browser Data: LocalStorage / sessionStorage**
 
-<CloseAllAnswers />
+---
+
+<AdSense />
 
 ---
+
+<CloseAllAnswers />
 
 ### What purpose do localStorage and sessionStorage serve?
 

@@ -23,6 +23,7 @@ tags:
   - interview questions
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/CallApplySchemaData.js';
@@ -34,6 +35,12 @@ import StructuredData from './schemadata/CallApplySchemaData.js';
 </head>
 
 **Advanced-JS Functions: Call and Apply**
+
+---
+
+<AdSense />
+
+---
 
 <CloseAllAnswers />
 

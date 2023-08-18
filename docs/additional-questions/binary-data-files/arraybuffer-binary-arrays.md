@@ -27,6 +27,7 @@ tags:
   - interview questions
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/ArrayBufferSchemaData.js';
@@ -39,9 +40,13 @@ import StructuredData from './schemadata/ArrayBufferSchemaData.js';
 
 **Binary Data / Files: ArrayBuffer, Binary Arrays**
 
-<CloseAllAnswers />
+---
+
+<AdSense />
 
 ---
+
+<CloseAllAnswers />
 
 ### What are some of the situations when we would encounter binary data?
 

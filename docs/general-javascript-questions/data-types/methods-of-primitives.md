@@ -27,6 +27,7 @@ tags:
 lastmod: 2022-05-01T21:44:10.727Z
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/MethodsOfSchemaData.js';
@@ -38,6 +39,12 @@ import StructuredData from './schemadata/MethodsOfSchemaData.js';
 </head>
 
 **Data Types: Methods of Primitives**
+
+---
+
+<AdSense />
+
+---
 
 <CloseAllAnswers />
 

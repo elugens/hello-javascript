@@ -24,6 +24,7 @@ tags:
   - interview questions
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/AttrPropsSchemaData.js';
@@ -36,9 +37,13 @@ import StructuredData from './schemadata/AttrPropsSchemaData.js';
 
 **Browser Document: Attributes / Properties**
 
-<CloseAllAnswers />
+---
+
+<AdSense />
 
 ---
+
+<CloseAllAnswers />
 
 ### What happens to the HTML when the browser loads the page?
 

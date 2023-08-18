@@ -26,6 +26,7 @@ tags:
   - interview questions
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/GreedyLazySchemaData.js';
@@ -38,9 +39,13 @@ import StructuredData from './schemadata/GreedyLazySchemaData.js';
 
 **Regular Expressions: Greedy / Lazy Quantifiers**
 
-<CloseAllAnswers />
+---
+
+<AdSense />
 
 ---
+
+<CloseAllAnswers />
 
 ### What is a lazy quantifier in regex?
 

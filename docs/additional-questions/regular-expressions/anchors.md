@@ -27,6 +27,7 @@ tags:
   - interview questions
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/AnchorsSchemaData.js';
@@ -39,9 +40,13 @@ import StructuredData from './schemadata/AnchorsSchemaData.js';
 
 **Regular Expressions: Anchors**
 
-<CloseAllAnswers />
+---
+
+<AdSense />
 
 ---
+
+<CloseAllAnswers />
 
 ### What are Regex Anchors in JavaScript?
 

@@ -26,6 +26,7 @@ tags:
   - interview questions
 ---
 
+import AdSense from '../../../src/components/Adsense/Adsense.js';
 import CloseAllAnswers from '../../../src/components/CloseAnswers/CloseAllAnswers.js';
 import JsonLD from '../../../src/components/JsonLD/JsonLD.js';
 import StructuredData from './schemadata/RegExpStringSchemaData.js';
@@ -38,9 +39,13 @@ import StructuredData from './schemadata/RegExpStringSchemaData.js';
 
 **Regular Expressions: Regex / String Methods**
 
-<CloseAllAnswers />
+---
+
+<AdSense />
 
 ---
+
+<CloseAllAnswers />
 
 ### Which string method would you use to find matches in JavaScript using regex?
 
